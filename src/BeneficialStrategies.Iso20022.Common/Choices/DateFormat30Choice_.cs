@@ -1,0 +1,38 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using System.Text.Json.Serialization;
+using System.Xml;
+using System.Xml.Linq;
+
+#if NET6_0_OR_GREATER // C# 10 
+#else
+using System.DateOnly=System.DateTime; // So data types will degrade gracefully
+using System.TimeOnly=System.DateTime; // Same with this data type
+#endif
+namespace BeneficialStrategies.Iso20022.Choices
+{
+    /// <summary>
+    /// Choice between an ISODate format or a date code.
+    /// </summary>
+    [KnownType(typeof(DateFormat30Choice.Date))]
+    [KnownType(typeof(DateFormat30Choice.DateCode))]
+    #if NET7_0_OR_GREATER // C# 11 Records, required members
+    [JsonDerivedType(typeof(DateFormat30Choice.Date),nameof(DateFormat30Choice.Date))]
+    [JsonDerivedType(typeof(DateFormat30Choice.DateCode),nameof(DateFormat30Choice.DateCode))]
+    #endif
+    [IsoId("_X1sw4UECEeWVgfuHGaKtRQ")]
+    [DisplayName("Date Format 30 Choice")]
+    #if DECLARE_SERIALIZABLE
+    [Serializable]
+    #endif
+    #if DECLARE_DATACONTRACT
+    [DataContract]
+    #endif
+    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
+    public abstract partial record DateFormat30Choice_
+    #else
+    public abstract partial class DateFormat30Choice_
+    #endif
+    {
+    }
+}

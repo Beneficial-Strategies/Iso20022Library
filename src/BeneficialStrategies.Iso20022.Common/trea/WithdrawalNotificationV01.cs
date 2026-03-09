@@ -1,0 +1,111 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+
+#if NET6_0_OR_GREATER // C# 10 
+#else
+using System.DateOnly=System.DateTime; // So data types will degrade gracefully
+using System.TimeOnly=System.DateTime; // Same with this data type
+#endif
+
+
+namespace BeneficialStrategies.Iso20022.trea;
+
+/// <summary>
+/// This record is an implementation of the trea.013.001.01 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// Scope
+/// The WithdrawalNotification message is sent by a central system to notify the withdrawal of a trade which was previously notified to the receiver as an alleged trade.
+/// Usage
+/// The message is used to confirm the cancellation of a previously notified trade.
+/// 
+/// This message is obsolete please use WithdrawalNotificationV02 - fxtr.013.001.02
+/// </summary>
+[Description(@"Scope|The WithdrawalNotification message is sent by a central system to notify the withdrawal of a trade which was previously notified to the receiver as an alleged trade.|Usage|The message is used to confirm the cancellation of a previously notified trade.||This message is obsolete please use WithdrawalNotificationV02 - fxtr.013.001.02")]
+[IsoId("_V5V16NE8Ed-BzquC8wXy7w_-1324281")]
+[DisplayName("Withdrawal Notification V")]
+#if DECLARE_SERIALIZABLE
+[Serializable]
+#endif
+#if DECLARE_DATACONTRACT
+[DataContract]
+#endif
+public partial record WithdrawalNotificationV01 : IOuterRecord
+{
+    
+    /// <summary>
+    /// The official ISO 20022 designation for this version of this message.
+    /// </summary>
+    public const string IsoIdentifier = "trea.013.001.01";
+    
+    /// <summary>
+    /// The ISO specified XML tag that should be used for standardized serialization of this message.
+    /// </summary>
+    public const string XmlTag = "WdrwlNtfctnV01";
+    
+    /// <summary>
+    /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
+    /// </summary>
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:trea.013.001.01";
+    
+    /// <summary>
+    /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
+    /// </summary>
+    public const string DocumentElementName = "Document";
+    
+    /// <summary>
+    /// The XML namespace in which this message is delivered.
+    /// </summary>
+    public static string IsoXmlNamspace => DocumentNamespace;
+    
+    #if NET8_0_OR_GREATER // C# 12 Global type alias
+    // No constructor needed for NET8 and above.
+    #else
+    /// <summary>
+    /// Constructs a WithdrawalNotificationV01 instance using the members the ISO20022 deems required.
+    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
+    /// </summary>
+    public WithdrawalNotificationV01( MessageReference reqMatchingSystemUniqueReference )
+    {
+        MatchingSystemUniqueReference = reqMatchingSystemUniqueReference;
+    }
+    #endif
+    #nullable enable
+    
+    /// <summary>
+    /// Reference assigned by the central matching system which is notifying the deletion of a previously reported trade.
+    /// </summary>
+    [IsoId("_V5e_0NE8Ed-BzquC8wXy7w_-2008623152")]
+    [DisplayName("Matching System Unique Reference")]
+    #if DECLARE_DATACONTRACT
+    [DataMember(Name="MtchgSysUnqRef")]
+    #endif
+    [IsoXmlTag("MtchgSysUnqRef")]
+    #if NET8_0_OR_GREATER // C# 12 Global type alias
+    public required MessageReference MatchingSystemUniqueReference { get; init; } 
+    #elif NET7_0_OR_GREATER // C# 11 Records, required members
+    public required MessageReference MatchingSystemUniqueReference { get; init; } 
+    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
+    public MessageReference MatchingSystemUniqueReference { get; init; } 
+    #else
+    public MessageReference MatchingSystemUniqueReference { get; set; } 
+    #endif
+    
+    
+    #nullable disable
+    
+}
+
+
+// Since WithdrawalNotificationV01Document is not really part of the logical business domain model, 
+// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
+// Some of the constants previously declared there have been relocated to WithdrawalNotificationV01.
+
