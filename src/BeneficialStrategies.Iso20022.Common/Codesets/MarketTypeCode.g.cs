@@ -136,5 +136,14 @@ public enum MarketTypeCode
     [IsoId("_tWXyUDxHEeWZTovCemTvqg")]
     [Description(@"Specified type of market is counter market.")]
     Counter,
-    
+
+    /// <summary>
+    /// Source of price quotation is a smart contract automated pricing system.
+    /// Encoded/decoded by serializers as &quot;SCAS&quot;.
+    /// </summary>
+    [EnumMember(Value = "SCAS")]
+    [IsoId("")]
+    [Description(@"Source of price quotation is a smart contract automated pricing system.")]
+    SmartContractAutomatedPricingSystem,
+
 }

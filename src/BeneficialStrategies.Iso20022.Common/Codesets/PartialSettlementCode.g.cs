@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZxlM09p-Ed-ak6NoX_4Aeg_1795335735")]
 [Description(@"Information about partial settlement.")]
 [Derivations(typeof(PartialSettlement1Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum PartialSettlementCode
 {
     /// <summary>

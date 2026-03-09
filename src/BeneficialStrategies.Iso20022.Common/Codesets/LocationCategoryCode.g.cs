@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_TUvzEAEcEeCQm6a_G2yO_w_-212887785")]
 [Description(@"Location category code of the place where the merchant actually performed the transaction.")]
 [Derivations(typeof(LocationCategory1Code),typeof(LocationCategory2Code),typeof(LocationCategory3Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum LocationCategoryCode
 {
     /// <summary>

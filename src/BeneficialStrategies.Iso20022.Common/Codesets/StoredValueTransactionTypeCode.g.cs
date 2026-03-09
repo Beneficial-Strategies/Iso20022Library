@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_OuAlgNuNEeiB5uLfkg9ZJA")]
 [Description(@"Identification of operation to proceed on the stored value account or the stored value card.")]
-[Derivations(typeof(StoredValueTransactionType2Code))]
+[Derivations(typeof(StoredValueTransactionType2Code),typeof(StoredValueTransactionType3Code))]
 public enum StoredValueTransactionTypeCode
 {
     /// <summary>
@@ -100,5 +100,14 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_W6mtgIa1EemfPtKsRXC1Ag")]
     [Description(@"Close the account.")]
     CloseAccount,
-    
+
+    /// <summary>
+    /// Balance enquiry.
+    /// Encoded/decoded by serializers as &quot;BALC&quot;.
+    /// </summary>
+    [EnumMember(Value = "BALC")]
+    [IsoId("")]
+    [Description(@"Balance enquiry.")]
+    Balance,
+
 }

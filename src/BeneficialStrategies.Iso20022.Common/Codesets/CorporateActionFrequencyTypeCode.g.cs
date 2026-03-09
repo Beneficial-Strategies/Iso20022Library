@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bKGe89p-Ed-ak6NoX_4Aeg_1953823274")]
 [Description(@"Automatic Reinvestment of Cash distributed by accumulating funds.")]
 [Derivations(typeof(CorporateActionFrequencyType1Code),typeof(CorporateActionFrequencyType2Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum CorporateActionFrequencyTypeCode
 {
     /// <summary>

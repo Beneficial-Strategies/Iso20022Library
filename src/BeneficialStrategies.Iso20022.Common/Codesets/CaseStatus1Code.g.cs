@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_VnJzwdp-Ed-ak6NoX_4Aeg_-1043344711")]
 [Description(@"Specifies the status of an investigation case.||Note: |The Cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown.")]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum CaseStatus1Code
 {
     /// <summary>

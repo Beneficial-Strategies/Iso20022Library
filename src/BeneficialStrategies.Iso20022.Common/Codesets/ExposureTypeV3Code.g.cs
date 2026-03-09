@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_7qsobiW3EeyT3chuyX0PgA")]
 [Description(@"Specifies the underlying business area/type of trade causing the collateral movement.")]
-[Derivations(typeof(ExposureType11Code),typeof(ExposureType13Code),typeof(ExposureType14Code),typeof(ExposureType12Code))]
+[Derivations(typeof(ExposureType11Code),typeof(ExposureType13Code),typeof(ExposureType14Code),typeof(ExposureType12Code),typeof(ExposureType15Code))]
 public enum ExposureTypeV3Code
 {
     /// <summary>

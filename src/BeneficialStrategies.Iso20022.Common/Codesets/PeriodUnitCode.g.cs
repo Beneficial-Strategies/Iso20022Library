@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_UpPVgRfkEeS1K9gYCN87fQ")]
 [Description(@"Unit of time.")]
-[Derivations(typeof(PeriodUnit3Code),typeof(PeriodUnit2Code))]
+[Derivations(typeof(PeriodUnit3Code),typeof(PeriodUnit2Code),typeof(PeriodUnit4Code))]
 public enum PeriodUnitCode
 {
     /// <summary>

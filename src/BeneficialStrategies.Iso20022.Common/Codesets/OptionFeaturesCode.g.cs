@@ -154,5 +154,23 @@ public enum OptionFeaturesCode
     [IsoId("_F_hDcLaCEeiN--kDwanlkA")]
     [Description(@"Indicates usage of a reference number to identify an investor or a shareholder with the issuer or the registration provider (for instance allocation code).")]
     ShareholderNumber,
-    
+
+    /// <summary>
+    /// Gross dividend is reinvested.
+    /// Encoded/decoded by serializers as &quot;RGRS&quot;.
+    /// </summary>
+    [EnumMember(Value = "RGRS")]
+    [IsoId("")]
+    [Description(@"Gross dividend is reinvested.")]
+    GrossDividendReinvestment,
+
+    /// <summary>
+    /// Dividend reinvestment is processed net of withholding tax.
+    /// Encoded/decoded by serializers as &quot;RNET&quot;.
+    /// </summary>
+    [EnumMember(Value = "RNET")]
+    [IsoId("")]
+    [Description(@"Dividend reinvestment is processed net of withholding tax.")]
+    NetDividendReinvestment,
+
 }

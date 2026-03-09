@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_bVIDONp-Ed-ak6NoX_4Aeg_627416389")]
 [Description(@"Indicates how a date is adjusted when it falls on a non-business day.")]
 [Derivations(typeof(BusinessDayConvention1Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum BusinessDayConventionCode
 {
     /// <summary>

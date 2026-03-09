@@ -595,5 +595,23 @@ public enum CardPaymentServiceTypeCode
     [IsoId("_WWy7EE7DEeyGi9JAv6wq7Q")]
     [Description(@"Acceptor claims for guarantee of payment.")]
     GuaranteeOfPayment,
-    
+
+    /// <summary>
+    /// DeferredClearing identifies transactions, like ones related to health care system, that allows a delay in clearing which ensure the payer to be refunded by a system, for example an insurance, before its bank account is debited.
+    /// Encoded/decoded by serializers as &quot;DFCL&quot;.
+    /// </summary>
+    [EnumMember(Value = "DFCL")]
+    [IsoId("")]
+    [Description(@"DeferredClearing identifies transactions, like ones related to health care system, that allows a delay in clearing which ensure the payer to be refunded by a system, for example an insurance, before its bank account is debited.")]
+    DeferredClearing,
+
+    /// <summary>
+    /// Used to inform the POI that it could select the payment instrument type to use.
+    /// Encoded/decoded by serializers as &quot;PPMS&quot;.
+    /// </summary>
+    [EnumMember(Value = "PPMS")]
+    [IsoId("")]
+    [Description(@"Used to inform the POI that it could select the payment instrument type to use.")]
+    POIPaymentMethodSelection,
+
 }

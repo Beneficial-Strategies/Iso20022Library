@@ -2197,5 +2197,293 @@ public enum RejectionReasonV3Code
     [IsoId("_KNuFIBrpEeyhRdHRjakS2w")]
     [Description(@"Instruction rejected due to the method of participation not supported by the account servicer.")]
     ParticipationMethodNotSupported,
-    
+
+    /// <summary>
+    /// Payout type is missing.
+    /// Encoded/decoded by serializers as &quot;PTYP&quot;.
+    /// </summary>
+    [EnumMember(Value = "PTYP")]
+    [IsoId("")]
+    [Description(@"Payout type is missing.")]
+    MissingPayoutType,
+
+    /// <summary>
+    /// Rights transferrable flag is missing.
+    /// Encoded/decoded by serializers as &quot;RITR&quot;.
+    /// </summary>
+    [EnumMember(Value = "RITR")]
+    [IsoId("")]
+    [Description(@"Rights transferrable flag is missing.")]
+    MissingRightsTransferrableFlag,
+
+    /// <summary>
+    /// Rounding factor is missing.
+    /// Encoded/decoded by serializers as &quot;ROUN&quot;.
+    /// </summary>
+    [EnumMember(Value = "ROUN")]
+    [IsoId("")]
+    [Description(@"Rounding factor is missing.")]
+    MissingRoudingFactor,
+
+    /// <summary>
+    /// Securities rate is missing.
+    /// Encoded/decoded by serializers as &quot;SERT&quot;.
+    /// </summary>
+    [EnumMember(Value = "SERT")]
+    [IsoId("")]
+    [Description(@"Securities rate is missing.")]
+    MissingSecuritiesRate,
+
+    /// <summary>
+    /// Solicitation dealer fee flag is missing.
+    /// Encoded/decoded by serializers as &quot;SFEE&quot;.
+    /// </summary>
+    [EnumMember(Value = "SFEE")]
+    [IsoId("")]
+    [Description(@"Solicitation dealer fee flag is missing.")]
+    MissingSolicitationDealerFeeFlag,
+
+    /// <summary>
+    /// Subscription charge flag is missing.
+    /// Encoded/decoded by serializers as &quot;SUCH&quot;.
+    /// </summary>
+    [EnumMember(Value = "SUCH")]
+    [IsoId("")]
+    [Description(@"Subscription charge flag is missing.")]
+    MissingSubscriptionChargeFlag,
+
+    /// <summary>
+    /// Subscription price is missing.
+    /// Encoded/decoded by serializers as &quot;SUPR&quot;.
+    /// </summary>
+    [EnumMember(Value = "SUPR")]
+    [IsoId("")]
+    [Description(@"Subscription price is missing.")]
+    MissingSubscriptionPrice,
+
+    /// <summary>
+    /// Unspecified price allowed is missing.
+    /// Encoded/decoded by serializers as &quot;UNSP&quot;.
+    /// </summary>
+    [EnumMember(Value = "UNSP")]
+    [IsoId("")]
+    [Description(@"Unspecified price allowed is missing.")]
+    MissingUnspecifiedPriceAllowed,
+
+    /// <summary>
+    /// Instruction was received prior to entitlement date.
+    /// Encoded/decoded by serializers as &quot;IPED&quot;.
+    /// </summary>
+    [EnumMember(Value = "IPED")]
+    [IsoId("")]
+    [Description(@"Instruction was received prior to entitlement date.")]
+    InstructionPriorToEntitlementDate,
+
+    /// <summary>
+    /// Back end odd lot quantity is missing.
+    /// Encoded/decoded by serializers as &quot;BACK&quot;.
+    /// </summary>
+    [EnumMember(Value = "BACK")]
+    [IsoId("")]
+    [Description(@"Back end odd lot quantity is missing.")]
+    MissingBackEndOddLotQuantity,
+
+    /// <summary>
+    /// Bid interval is missing.
+    /// Encoded/decoded by serializers as &quot;BIDI&quot;.
+    /// </summary>
+    [EnumMember(Value = "BIDI")]
+    [IsoId("")]
+    [Description(@"Bid interval is missing.")]
+    MissingBidInterval,
+
+    /// <summary>
+    /// Cash in lieu price is missing.
+    /// Encoded/decoded by serializers as &quot;CINL&quot;.
+    /// </summary>
+    [EnumMember(Value = "CINL")]
+    [IsoId("")]
+    [Description(@"Cash in lieu price is missing.")]
+    MissingCashInLieuPrice,
+
+    /// <summary>
+    /// Conditional tenders accepted flag is missing.
+    /// Encoded/decoded by serializers as &quot;COND&quot;.
+    /// </summary>
+    [EnumMember(Value = "COND")]
+    [IsoId("")]
+    [Description(@"Conditional tenders accepted flag is missing.")]
+    MissingConditionalTendersAcceptedFlag,
+
+    /// <summary>
+    /// Cash rate is missing.
+    /// Encoded/decoded by serializers as &quot;CSRT&quot;.
+    /// </summary>
+    [EnumMember(Value = "CSRT")]
+    [IsoId("")]
+    [Description(@"Cash rate is missing.")]
+    MissingCashRate,
+
+    /// <summary>
+    /// First bid increment is missing.
+    /// Encoded/decoded by serializers as &quot;FIRS&quot;.
+    /// </summary>
+    [EnumMember(Value = "FIRS")]
+    [IsoId("")]
+    [Description(@"First bid increment is missing.")]
+    MissingFirstBidIncrement,
+
+    /// <summary>
+    /// Fractional disposition is missing.
+    /// Encoded/decoded by serializers as &quot;FRAC&quot;.
+    /// </summary>
+    [EnumMember(Value = "FRAC")]
+    [IsoId("")]
+    [Description(@"Fractional disposition is missing.")]
+    MissingFractionalDisposition,
+
+    /// <summary>
+    /// Disbursed security identification is missing.
+    /// Encoded/decoded by serializers as &quot;IDIS&quot;.
+    /// </summary>
+    [EnumMember(Value = "IDIS")]
+    [IsoId("")]
+    [Description(@"Disbursed security identification is missing.")]
+    InvalidDisbursedSecurityIdentification,
+
+    /// <summary>
+    /// Issuer agent contact information is invalid or missing.
+    /// Encoded/decoded by serializers as &quot;ISSC&quot;.
+    /// </summary>
+    [EnumMember(Value = "ISSC")]
+    [IsoId("")]
+    [Description(@"Issuer agent contact information is invalid or missing.")]
+    InvalidOrMissingIssuerAgentContactInformation,
+
+    /// <summary>
+    /// Issuer agent is missing.
+    /// Encoded/decoded by serializers as &quot;ISSR&quot;.
+    /// </summary>
+    [EnumMember(Value = "ISSR")]
+    [IsoId("")]
+    [Description(@"Issuer agent is missing.")]
+    MissingIssuerAgent,
+
+    /// <summary>
+    /// Last bid increment is missing.
+    /// Encoded/decoded by serializers as &quot;LAST&quot;.
+    /// </summary>
+    [EnumMember(Value = "LAST")]
+    [IsoId("")]
+    [Description(@"Last bid increment is missing.")]
+    MissingLastBidIncrement,
+
+    /// <summary>
+    /// Maximum price is missing.
+    /// Encoded/decoded by serializers as &quot;MAXP&quot;.
+    /// </summary>
+    [EnumMember(Value = "MAXP")]
+    [IsoId("")]
+    [Description(@"Maximum price is missing.")]
+    MissingMaximumPrice,
+
+    /// <summary>
+    /// Disbursed security identification is missing.
+    /// Encoded/decoded by serializers as &quot;MDIS&quot;.
+    /// </summary>
+    [EnumMember(Value = "MDIS")]
+    [IsoId("")]
+    [Description(@"Disbursed security identification is missing.")]
+    MissingDisbursedSecurityIdentification,
+
+    /// <summary>
+    /// Full conditional flag is missing.
+    /// Encoded/decoded by serializers as &quot;MFCF&quot;.
+    /// </summary>
+    [EnumMember(Value = "MFCF")]
+    [IsoId("")]
+    [Description(@"Full conditional flag is missing.")]
+    MissingFullConditionalFlag,
+
+    /// <summary>
+    /// Minimum price is missing.
+    /// Encoded/decoded by serializers as &quot;MINP&quot;.
+    /// </summary>
+    [EnumMember(Value = "MINP")]
+    [IsoId("")]
+    [Description(@"Minimum price is missing.")]
+    MissingMinimumPrice,
+
+    /// <summary>
+    /// Proration rounding indicator is missing.
+    /// Encoded/decoded by serializers as &quot;MPRI&quot;.
+    /// </summary>
+    [EnumMember(Value = "MPRI")]
+    [IsoId("")]
+    [Description(@"Proration rounding indicator is missing.")]
+    MissingProrationRoundingIndicator,
+
+    /// <summary>
+    /// Odd lot priority flag is missing.
+    /// Encoded/decoded by serializers as &quot;ODLT&quot;.
+    /// </summary>
+    [EnumMember(Value = "ODLT")]
+    [IsoId("")]
+    [Description(@"Odd lot priority flag is missing.")]
+    MissingOddLotPriorityFlag,
+
+    /// <summary>
+    /// Oversubscription charge flag is missing.
+    /// Encoded/decoded by serializers as &quot;OVCH&quot;.
+    /// </summary>
+    [EnumMember(Value = "OVCH")]
+    [IsoId("")]
+    [Description(@"Oversubscription charge flag is missing.")]
+    MissingOversubscriptionChargeFlag,
+
+    /// <summary>
+    /// Oversubscription flag is missing.
+    /// Encoded/decoded by serializers as &quot;OVFL&quot;.
+    /// </summary>
+    [EnumMember(Value = "OVFL")]
+    [IsoId("")]
+    [Description(@"Oversubscription flag is missing.")]
+    MissingOversubscriptionFlag,
+
+    /// <summary>
+    /// Oversubscription price is missing.
+    /// Encoded/decoded by serializers as &quot;OVPR&quot;.
+    /// </summary>
+    [EnumMember(Value = "OVPR")]
+    [IsoId("")]
+    [Description(@"Oversubscription price is missing.")]
+    MissingOversubscriptionPrice,
+
+    /// <summary>
+    /// Price basis is missing.
+    /// Encoded/decoded by serializers as &quot;PBAS&quot;.
+    /// </summary>
+    [EnumMember(Value = "PBAS")]
+    [IsoId("")]
+    [Description(@"Price basis is missing.")]
+    MissingPriceBasis,
+
+    /// <summary>
+    /// Protect charge indicator is missing.
+    /// Encoded/decoded by serializers as &quot;PRCH&quot;.
+    /// </summary>
+    [EnumMember(Value = "PRCH")]
+    [IsoId("")]
+    [Description(@"Protect charge indicator is missing.")]
+    MissingProtectChargeIndicator,
+
+    /// <summary>
+    /// Proration rate is missing.
+    /// Encoded/decoded by serializers as &quot;PROR&quot;.
+    /// </summary>
+    [EnumMember(Value = "PROR")]
+    [IsoId("")]
+    [Description(@"Proration rate is missing.")]
+    MissingProrationRate,
+
 }

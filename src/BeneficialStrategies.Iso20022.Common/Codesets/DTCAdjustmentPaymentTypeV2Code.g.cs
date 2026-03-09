@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cmC3IHxsEeOCOoRiuJeDeg")]
 [Description(@"Specifies the type of the payment adjustment.")]
 [Derivations(typeof(DTCAdjustmentPaymentType2Code),typeof(DTCAdjustmentPaymentType3Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum DTCAdjustmentPaymentTypeV2Code
 {
     /// <summary>

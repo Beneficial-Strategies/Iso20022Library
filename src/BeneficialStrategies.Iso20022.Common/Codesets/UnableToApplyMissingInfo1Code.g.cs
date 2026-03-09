@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Y1YqVNp-Ed-ak6NoX_4Aeg_1310461274")]
 [Description(@"Used when the unable to apply is due to missing information.")]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum UnableToApplyMissingInfo1Code
 {
     /// <summary>

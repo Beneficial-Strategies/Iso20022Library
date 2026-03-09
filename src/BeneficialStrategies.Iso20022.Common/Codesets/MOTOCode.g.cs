@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_CPEMoDHLEeyTT91yHXSlSQ")]
 [Description(@"A code that identifies the type of MOTO transaction.")]
 [Derivations(typeof(MOTO1Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum MOTOCode
 {
     /// <summary>

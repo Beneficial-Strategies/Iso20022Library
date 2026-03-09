@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_YZOSyNp-Ed-ak6NoX_4Aeg_539037705")]
 [Description(@"Specifies the role of a trading party in a transaction.")]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum TradingCapacity2Code
 {
     /// <summary>

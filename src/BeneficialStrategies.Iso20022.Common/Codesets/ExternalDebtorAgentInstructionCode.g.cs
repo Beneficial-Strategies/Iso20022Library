@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_hokV-ssaEemxFbEZK-FMzw")]
 [Description(@"Specifies further instructions concerning the processing of a payment instruction, as provided to the creditor agent.")]
+[Derivations(typeof(ExternalDebtorAgentInstruction1Code))]
 public enum ExternalDebtorAgentInstructionCode
 {
     /// <summary>

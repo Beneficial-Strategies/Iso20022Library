@@ -1153,5 +1153,14 @@ public enum PendingFailingReasonV2Code
     [IsoId("_hkGOcCgKEeym1_Zp1BTvEw")]
     [Description(@"Disagreement on partial indicator preventing partial settlement.")]
     PartialDiffer,
-    
+
+    /// <summary>
+    /// Instruction was received prior to entitlement date.
+    /// Encoded/decoded by serializers as &quot;IPED&quot;.
+    /// </summary>
+    [EnumMember(Value = "IPED")]
+    [IsoId("")]
+    [Description(@"Instruction was received prior to entitlement date.")]
+    InstructionPriorToEntitlementDate,
+
 }

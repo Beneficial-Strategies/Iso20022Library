@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_1wRygjL3EeKU9IrkkToqcw_-786409042")]
 [Description(@"DTC (The Depository Trust Company) security sub-issue type code list.")]
 [DerivedFrom(typeof(DTCAssetTypeCode))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum DTCAssetType1Code
 {
     /// <summary>

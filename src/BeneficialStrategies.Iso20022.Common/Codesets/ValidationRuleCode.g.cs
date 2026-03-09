@@ -227,5 +227,14 @@ public enum ValidationRuleCode
     [IsoId("_lDCkUH-0Ee27G9oJfa4a8Q")]
     [Description(@"Request for Cancellation has been acknowledged as delivered to payment processing/last payment processing agent.")]
     RequestForCancellationDeliveryAcknowledgement,
-    
+
+    /// <summary>
+    /// Responder is requested to review an earlier response as the requestor objects to it.
+    /// Encoded/decoded by serializers as &quot;RQOB&quot;.
+    /// </summary>
+    [EnumMember(Value = "RQOB")]
+    [IsoId("")]
+    [Description(@"Responder is requested to review an earlier response as the requestor objects to it.")]
+    RequestObjection,
+
 }

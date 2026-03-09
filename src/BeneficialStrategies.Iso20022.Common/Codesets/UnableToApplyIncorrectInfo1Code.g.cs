@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Vncustp-Ed-ak6NoX_4Aeg_1226420909")]
 [Description(@"Used when the unable to apply is due to incorrect information.")]
 [DerivedFrom(typeof(UnableToApplyIncorrectInfoCode))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum UnableToApplyIncorrectInfo1Code
 {
     /// <summary>

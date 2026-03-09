@@ -1675,5 +1675,14 @@ public enum MessageFunctionCode
     [IsoId("_o9UMsHC6Ee2bmOA3bkVsMg")]
     [Description(@"Response with catalogue of Currency Conversion rates.")]
     CurrencyConversionRateResponse,
-    
+
+    /// <summary>
+    /// Concatenation of multiple exchanges in one file.
+    /// Encoded/decoded by serializers as &quot;ATAF&quot;.
+    /// </summary>
+    [EnumMember(Value = "ATAF")]
+    [IsoId("")]
+    [Description(@"Concatenation of multiple exchanges in one file.")]
+    AcceptorToAcquirerBatchFileExchange,
+
 }

@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_YqqBBtp-Ed-ak6NoX_4Aeg_-1705783512")]
 [Description(@"Specifies the role of a trading party in a transaction.")]
-[Derivations(typeof(TradingCapacity3Code),typeof(TradingCapacity4Code),typeof(TradingCapacity6Code),typeof(TradingCapacity5Code),typeof(TradingCapacity7Code),typeof(TradingCapacity8Code))]
+[Derivations(typeof(TradingCapacity3Code),typeof(TradingCapacity4Code),typeof(TradingCapacity6Code),typeof(TradingCapacity5Code),typeof(TradingCapacity7Code),typeof(TradingCapacity8Code),typeof(TradingCapacity9Code))]
 public enum TradingCapacityCode
 {
     /// <summary>
@@ -154,5 +154,23 @@ public enum TradingCapacityCode
     [IsoId("__5haAtojEeC60axPepSq7g_1566773702")]
     [Description(@"Party appointed by the Fund Management Company. It updates records of investor accounts to reflect the daily investor purchases, redemptions, switches, transfers, and re-registrations. It ensures the timely settlement of transactions, and may provide tax information to the investor and/or to its intermediaries. It may calculate, collect, and rebate commissions. It prepares and distributes confirmations reflecting transactions, resulting in unit or cash account movements to the investor or the investor's intermediary. It responds to inquiries concerning account status, and processes the income distribution.")]
     TransferAgent,
-    
+
+    /// <summary>
+    /// Counterparties neogiate trading details to execute trades. Bilateral confirmation, that is, the Sender and the Receiver are the principals.
+    /// Encoded/decoded by serializers as &quot;BILA&quot;.
+    /// </summary>
+    [EnumMember(Value = "BILA")]
+    [IsoId("")]
+    [Description(@"Counterparties neogiate trading details to execute trades. Bilateral confirmation, that is, the Sender and the Receiver are the principals.")]
+    Bilateral,
+
+    /// <summary>
+    /// Trade executed through a broker. The confirmation is sent by a money broker.
+    /// Encoded/decoded by serializers as &quot;BROK&quot;.
+    /// </summary>
+    [EnumMember(Value = "BROK")]
+    [IsoId("")]
+    [Description(@"Trade executed through a broker. The confirmation is sent by a money broker.")]
+    Broker,
+
 }

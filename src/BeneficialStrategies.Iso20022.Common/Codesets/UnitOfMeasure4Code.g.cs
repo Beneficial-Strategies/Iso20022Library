@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_Y3ne9dp-Ed-ak6NoX_4Aeg_735997635")]
 [Description(@"Identifies the unit of measure by means of a code. The code is taken from UN/ECE Recommendation 20.")]
 [DerivedFrom(typeof(UnitOfMeasure2Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum UnitOfMeasure4Code
 {
     /// <summary>

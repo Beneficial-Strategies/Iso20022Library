@@ -17,7 +17,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_amB7QM0UEeuAE-cYsQdwHQ")]
 [Description(@"Specifies whether the product is compatible with investors that have sustainability preferences. ")]
-[Derivations(typeof(SustainabilityPreferences1Code))]
+[Derivations(typeof(SustainabilityPreferences1Code),typeof(SustainabilityPreferences2Code))]
 public enum SustainabilityPreferencesCode
 {
     /// <summary>
@@ -46,5 +46,14 @@ public enum SustainabilityPreferencesCode
     [IsoId("_5kohcM0UEeuAE-cYsQdwHQ")]
     [Description(@"Preference for products having sustainable objectives.")]
     SustainablePreference,
-    
+
+    /// <summary>
+    /// Yes, is applicable.
+    /// Encoded/decoded by serializers as &quot;YSCO&quot;.
+    /// </summary>
+    [EnumMember(Value = "YSCO")]
+    [IsoId("")]
+    [Description(@"Yes, is applicable.")]
+    InScope,
+
 }

@@ -18,6 +18,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_YdP3Kdp-Ed-ak6NoX_4Aeg_-169908687")]
 [Description(@"Specifies the reason why the instruction/cancellation request has a rejected status.")]
 [Derivations(typeof(RejectionReason29Code),typeof(RejectionReason42Code),typeof(RejectionReason38Code),typeof(HoldingRejectionReason41Code),typeof(RejectionReason23Code),typeof(RejectionReasonV021Code),typeof(RejectionReason35Code),typeof(RejectionReason34Code),typeof(RejectionReason37Code),typeof(RejectionReason26Code),typeof(RejectionReason24Code),typeof(RejectionReason43Code),typeof(RejectionReason31Code),typeof(RejectionReason32Code),typeof(RejectionReason27Code),typeof(RejectionReason25Code),typeof(RejectionReason39Code),typeof(RejectionReason16Code),typeof(RejectionReason21Code),typeof(RejectionReason22Code),typeof(RejectionReason30Code),typeof(RejectionReason33Code),typeof(RejectionReason40Code))]
+[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
 public enum RejectionReasonV2Code
 {
     /// <summary>
