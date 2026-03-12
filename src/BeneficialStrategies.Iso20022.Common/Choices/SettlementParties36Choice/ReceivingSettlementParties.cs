@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.SettlementParties36Choice
 {
     /// <summary>
@@ -20,31 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties36Choice
     /// </summary>
     [IsoId("_WKI1IyqSEeyR9JrVGfaMKw")]
     [DisplayName("Receiving Settlement Parties")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record ReceivingSettlementParties : SettlementParties36Choice_
-    #else
-    public partial class ReceivingSettlementParties : SettlementParties36Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a ReceivingSettlementParties instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public ReceivingSettlementParties( PartyIdentification239Choice_ reqDepository,PartyIdentificationAndAccount200 reqParty1 )
-        {
-            Depository = reqDepository;
-            Party1 = reqParty1;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -52,55 +22,24 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties36Choice
         /// </summary>
         [IsoId("_T4ZcBSqSEeyR9JrVGfaMKw")]
         [DisplayName("Depository")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Dpstry")]
-        #endif
         [IsoXmlTag("Dpstry")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required PartyIdentification239Choice_ Depository { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required PartyIdentification239Choice_ Depository { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public PartyIdentification239Choice_ Depository { get; init; } 
-        #else
-        public PartyIdentification239Choice_ Depository { get; set; } 
-        #endif
         
         /// <summary>
         /// Party that, in a settlement chain interacts with the depository.
         /// </summary>
         [IsoId("_T4ZcByqSEeyR9JrVGfaMKw")]
         [DisplayName("Party")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Pty1")]
-        #endif
         [IsoXmlTag("Pty1")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required PartyIdentificationAndAccount200 Party1 { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required PartyIdentificationAndAccount200 Party1 { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public PartyIdentificationAndAccount200 Party1 { get; init; } 
-        #else
-        public PartyIdentificationAndAccount200 Party1 { get; set; } 
-        #endif
         
         /// <summary>
         /// Party that, in a settlement chain interacts with the party 1.
         /// </summary>
         [IsoId("_T4ZcCSqSEeyR9JrVGfaMKw")]
         [DisplayName("Party")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Pty2")]
-        #endif
         [IsoXmlTag("Pty2")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public PartyIdentificationAndAccount201? Party2 { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public PartyIdentificationAndAccount201? Party2 { get; init; } 
-        #else
-        public PartyIdentificationAndAccount201? Party2 { get; set; } 
-        #endif
         
         
         #nullable disable

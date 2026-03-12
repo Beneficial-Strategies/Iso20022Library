@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VR_cE9p-Ed-ak6NoX_4Aeg_-1494522709")]
 [DisplayName("Tax Type")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TaxType3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TaxType3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TaxType3( TaxType6Code reqStructured )
-    {
-        Structured = reqStructured;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,38 +23,18 @@ public partial record TaxType3
     /// </summary>
     [IsoId("_VR_cFNp-Ed-ak6NoX_4Aeg_-1446498286")]
     [DisplayName("Structured")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Strd")]
-    #endif
     [IsoXmlTag("Strd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TaxType6Code Structured { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TaxType6Code Structured { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TaxType6Code Structured { get; init; } 
-    #else
-    public TaxType6Code Structured { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information about the type of tax.
     /// </summary>
     [IsoId("_VR_cFdp-Ed-ak6NoX_4Aeg_-1446498269")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax350Text? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalInformation { get; init; } 
-    #else
-    public System.String? AdditionalInformation { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.admi;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.admi;
 [Description(@"The ReportQueryRequest message is exchanged between system member and system transaction administrator.|It aims at querying the latest available report data of a specific report type. A report is stored and available for query until the event occurs again report is replaced.")]
 [IsoId("_5Ql0IZb3Eee4htziCyV8eA")]
 [DisplayName("Report Query Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReportQueryRequestV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record ReportQueryRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReportQueryRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReportQueryRequestV01( MessageHeader7 reqMessageHeader )
-    {
-        MessageHeader = reqMessageHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,53 +57,24 @@ public partial record ReportQueryRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_5Ql0I5b3Eee4htziCyV8eA")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader7 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader7 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader7 MessageHeader { get; init; } 
-    #else
-    public MessageHeader7 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Definition of the report query criteria.
     /// </summary>
     [IsoId("_5Ql0JZb3Eee4htziCyV8eA")]
     [DisplayName("Report Query Criteria")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptQryCrit")]
-    #endif
     [IsoXmlTag("RptQryCrit")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReportQueryCriteria2? ReportQueryCriteria { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportQueryCriteria2? ReportQueryCriteria { get; init; } 
-    #else
-    public ReportQueryCriteria2? ReportQueryCriteria { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_5Ql0J5b3Eee4htziCyV8eA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

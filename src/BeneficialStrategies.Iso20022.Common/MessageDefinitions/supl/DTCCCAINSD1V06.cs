@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAINSD1 message extends ISO corporate action instruction message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_q_pKgQ4zEeuIpNw_GxsBOw")]
 [DisplayName("DTCCCAINSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAINSD1V06 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAINSD1V06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,43 +57,22 @@ public partial record DTCCCAINSD1V06 : IOuterRecord
     /// </summary>
     [IsoId("_q_pKgw4zEeuIpNw_GxsBOw")]
     [DisplayName("Optional Dividend")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnlDvdd")]
-    #endif
     [IsoXmlTag("OptnlDvdd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OptionalDividendAccountQuantitySD3? OptionalDividend { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OptionalDividendAccountQuantitySD3? OptionalDividend { get; init; } 
-    #else
-    public OptionalDividendAccountQuantitySD3? OptionalDividend { get; set; } 
-    #endif
     
     /// <summary>
     /// DTC (The Depository Trust Corporation) tax exempt service election.
     /// </summary>
     [IsoId("_q_pKiw4zEeuIpNw_GxsBOw")]
     [DisplayName("Tax Exempt")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxXmpt")]
-    #endif
     [IsoXmlTag("TaxXmpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TaxExemptQuantitySD2? TaxExempt { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TaxExemptQuantitySD2? TaxExempt { get; init; } 
-    #else
-    public TaxExemptQuantitySD2? TaxExempt { get; set; } 
-    #endif
     
     /// <summary>
     /// Tax category number assigned on the announcement to provide a breakdown at a category level on the inbound instruction to determine tax treatment as required by issuers, their agents, or tax authorities.
     /// </summary>
     [IsoId("_q_pKkw4zEeuIpNw_GxsBOw")]
     [DisplayName("Tax Category")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxCtgy")]
-    #endif
     [IsoXmlTag("TaxCtgy")]
     [MinLength(0)]
     [MaxLength(99)]
@@ -120,34 +83,16 @@ public partial record DTCCCAINSD1V06 : IOuterRecord
     /// </summary>
     [IsoId("_q_pKlQ4zEeuIpNw_GxsBOw")]
     [DisplayName("Wire Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="WireInstr")]
-    #endif
     [IsoXmlTag("WireInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public WireInstructionSD3? WireInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public WireInstructionSD3? WireInstruction { get; init; } 
-    #else
-    public WireInstructionSD3? WireInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to instruction message for reorganisation events.
     /// </summary>
     [IsoId("_q_pKnQ4zEeuIpNw_GxsBOw")]
     [DisplayName("Reorganisation Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReorgInstrDtls")]
-    #endif
     [IsoXmlTag("ReorgInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReorganisationInstructionSD10? ReorganisationInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReorganisationInstructionSD10? ReorganisationInstructionDetails { get; init; } 
-    #else
-    public ReorganisationInstructionSD10? ReorganisationInstructionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

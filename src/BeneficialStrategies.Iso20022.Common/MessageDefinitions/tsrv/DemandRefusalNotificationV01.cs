@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsrv;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 [Description(@"The DemandRefusalNotification message is sent to the beneficiary or presenter by the party obligated on the undertaking and to whom a demand for payment has been made, either directly or via one or more advising parties. It notifies the beneficiary or presenter that the demand has been refused.")]
 [IsoId("_9iijAHltEeG7BsjMvd1mEw_2131850524")]
 [DisplayName("Demand Refusal Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DemandRefusalNotificationV01 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DemandRefusalNotificationV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,34 +57,16 @@ public partial record DemandRefusalNotificationV01 : IOuterRecord
     /// </summary>
     [IsoId("_9iijAXltEeG7BsjMvd1mEw_1591105840")]
     [DisplayName("Demand Refusal Notification Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DmndRfslNtfctnDtls")]
-    #endif
     [IsoXmlTag("DmndRfslNtfctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DemandRefusal1? DemandRefusalNotificationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DemandRefusal1? DemandRefusalNotificationDetails { get; init; } 
-    #else
-    public DemandRefusal1? DemandRefusalNotificationDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Digital signature of the notification.
     /// </summary>
     [IsoId("_9iijAnltEeG7BsjMvd1mEw_-509775412")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature2? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature2? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature2? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -22,7 +17,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstructionProcessingStatus36Choice.PendingCancellation))]
     [KnownType(typeof(InstructionProcessingStatus36Choice.Covered))]
     [KnownType(typeof(InstructionProcessingStatus36Choice.Uncovered))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(InstructionProcessingStatus36Choice.Accepted),nameof(InstructionProcessingStatus36Choice.Accepted))]
     [JsonDerivedType(typeof(InstructionProcessingStatus36Choice.Cancelled),nameof(InstructionProcessingStatus36Choice.Cancelled))]
     [JsonDerivedType(typeof(InstructionProcessingStatus36Choice.AcceptedForFurtherProcessing),nameof(InstructionProcessingStatus36Choice.AcceptedForFurtherProcessing))]
@@ -31,20 +25,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(InstructionProcessingStatus36Choice.PendingCancellation),nameof(InstructionProcessingStatus36Choice.PendingCancellation))]
     [JsonDerivedType(typeof(InstructionProcessingStatus36Choice.Covered),nameof(InstructionProcessingStatus36Choice.Covered))]
     [JsonDerivedType(typeof(InstructionProcessingStatus36Choice.Uncovered),nameof(InstructionProcessingStatus36Choice.Uncovered))]
-    #endif
     [IsoId("_UUGOEf0oEeiKOe8GCUL1Lg")]
     [DisplayName("Instruction Processing Status 36 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record InstructionProcessingStatus36Choice_
-    #else
-    public abstract partial class InstructionProcessingStatus36Choice_
-    #endif
     {
     }
 }

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"The ShareholdersIdentificationDisclosureResponseCancellationAdvice message is sent by any intermediaries to the recipient designated by the issuer (such as an issuer's agent) in the disclosure request message in order to cancel the shareholder identification disclosure response whether previously sent in a single message or in a set of multipart/paginated response messages.")]
 [IsoId("_mi0doEV8EemRx7jyevcLwg")]
 [DisplayName("Shareholder Identification Disclosure Response Cancellation Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ShareholderIdentificationDisclosureResponseCancellationAdviceV01 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record ShareholderIdentificationDisclosureResponseCancellationAdv
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ShareholderIdentificationDisclosureResponseCancellationAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ShareholderIdentificationDisclosureResponseCancellationAdviceV01( System.String reqDisclosureResponseIdentification,DisclosureRequestIdentification1 reqIssuerDisclosureRequestReference,PartyIdentification215 reqRespondingIntermediary )
-    {
-        DisclosureResponseIdentification = reqDisclosureResponseIdentification;
-        IssuerDisclosureRequestReference = reqIssuerDisclosureRequestReference;
-        RespondingIntermediary = reqRespondingIntermediary;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,76 +58,34 @@ public partial record ShareholderIdentificationDisclosureResponseCancellationAdv
     /// </summary>
     [IsoId("_1ZW-okV9EemRx7jyevcLwg")]
     [DisplayName("Disclosure Response Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DsclsrRspnId")]
-    #endif
     [IsoXmlTag("DsclsrRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text DisclosureResponseIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String DisclosureResponseIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String DisclosureResponseIdentification { get; init; } 
-    #else
-    public System.String DisclosureResponseIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Official and unique identification assigned to a shareholders identification disclosure request process by the issuer or third party nominated by it and for which a response is sent.
     /// </summary>
     [IsoId("_s9Y_YbRAEem2T48lBgJbww")]
     [DisplayName("Issuer Disclosure Request Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IssrDsclsrReqRef")]
-    #endif
     [IsoXmlTag("IssrDsclsrReqRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DisclosureRequestIdentification1 IssuerDisclosureRequestReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DisclosureRequestIdentification1 IssuerDisclosureRequestReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DisclosureRequestIdentification1 IssuerDisclosureRequestReference { get; init; } 
-    #else
-    public DisclosureRequestIdentification1 IssuerDisclosureRequestReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification of the intermediary party responding to the shareholders identification disclosure request.
     /// </summary>
     [IsoId("_1ZW-o0V9EemRx7jyevcLwg")]
     [DisplayName("Responding Intermediary")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RspndgIntrmy")]
-    #endif
     [IsoXmlTag("RspndgIntrmy")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification215 RespondingIntermediary { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification215 RespondingIntermediary { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification215 RespondingIntermediary { get; init; } 
-    #else
-    public PartyIdentification215 RespondingIntermediary { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_1__BQbRAEem2T48lBgJbww")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

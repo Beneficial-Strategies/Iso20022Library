@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"Scope|The AccountRequestAcknowledgement message is sent from a financial institution to an organisation. This message is sent in response to a request message from the organisation. It is sent after the request has been validated from an authentication and authorization point of view. The business content has not yet been validated at this stage.|Usage|This message should only be sent after the request has been validated from an authentication and authorization point of view.")]
 [IsoId("_wMT98tE9Ed-BzquC8wXy7w_-1760678511")]
 [DisplayName("Account Request Acknowledgement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountRequestAcknowledgementV01 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record AccountRequestAcknowledgementV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountRequestAcknowledgementV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountRequestAcknowledgementV01( References5 reqReferences,OrganisationIdentification6 reqOrganisationIdentification,BranchAndFinancialInstitutionIdentification4 reqAccountServicerIdentification )
-    {
-        References = reqReferences;
-        OrganisationIdentification = reqOrganisationIdentification;
-        AccountServicerIdentification = reqAccountServicerIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,91 +60,40 @@ public partial record AccountRequestAcknowledgementV01 : IOuterRecord
     /// </summary>
     [IsoId("_wMT989E9Ed-BzquC8wXy7w_1295593479")]
     [DisplayName("References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Refs")]
-    #endif
     [IsoXmlTag("Refs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required References5 References { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required References5 References { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References5 References { get; init; } 
-    #else
-    public References5 References { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identification of the account between the account owner and the account servicer.
     /// </summary>
     [IsoId("_wMT99NE9Ed-BzquC8wXy7w_-800492608")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountForAction1? AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountForAction1? AccountIdentification { get; init; } 
-    #else
-    public AccountForAction1? AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifier for an organisation.
     /// </summary>
     [IsoId("_wMT99dE9Ed-BzquC8wXy7w_297553784")]
     [DisplayName("Organisation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgId")]
-    #endif
     [IsoXmlTag("OrgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OrganisationIdentification6 OrganisationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrganisationIdentification6 OrganisationIdentification { get; init; } 
-    #else
-    public OrganisationIdentification6 OrganisationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. |.
     /// </summary>
     [IsoId("_wMT99tE9Ed-BzquC8wXy7w_1393402158")]
     [DisplayName("Account Servicer Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcrId")]
-    #endif
     [IsoXmlTag("AcctSvcrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
     /// </summary>
     [IsoId("_wMT999E9Ed-BzquC8wXy7w_1931364103")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature1? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature1? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature1? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

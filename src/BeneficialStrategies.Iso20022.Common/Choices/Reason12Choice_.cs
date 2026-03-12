@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -27,7 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Reason12Choice.RepairReason))]
     [KnownType(typeof(Reason12Choice.PendingModificationReason))]
     [KnownType(typeof(Reason12Choice.UnmatchedReason))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(Reason12Choice.RepoCallAcknowledgementReason),nameof(Reason12Choice.RepoCallAcknowledgementReason))]
     [JsonDerivedType(typeof(Reason12Choice.CancellationReason),nameof(Reason12Choice.CancellationReason))]
     [JsonDerivedType(typeof(Reason12Choice.PendingCancellationReason),nameof(Reason12Choice.PendingCancellationReason))]
@@ -41,20 +35,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reason12Choice.RepairReason),nameof(Reason12Choice.RepairReason))]
     [JsonDerivedType(typeof(Reason12Choice.PendingModificationReason),nameof(Reason12Choice.PendingModificationReason))]
     [JsonDerivedType(typeof(Reason12Choice.UnmatchedReason),nameof(Reason12Choice.UnmatchedReason))]
-    #endif
     [IsoId("_CekpyyRhEeO8sskhVI3IDA")]
     [DisplayName("Reason 12 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record Reason12Choice_
-    #else
-    public abstract partial class Reason12Choice_
-    #endif
     {
     }
 }

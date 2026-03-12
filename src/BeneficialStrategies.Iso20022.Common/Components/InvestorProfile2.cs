@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TCoJUe6SEemVDc1WJaqofw")]
 [DisplayName("Investor Profile")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InvestorProfile2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,85 +23,40 @@ public partial record InvestorProfile2
     /// </summary>
     [IsoId("_TXAd4e6SEemVDc1WJaqofw")]
     [DisplayName("Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tp")]
-    #endif
     [IsoXmlTag("Tp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ProfileType1Choice_? Type { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProfileType1Choice_? Type { get; init; } 
-    #else
-    public ProfileType1Choice_? Type { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the profile.
     /// </summary>
     [IsoId("_TXAd4-6SEemVDc1WJaqofw")]
     [DisplayName("Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sts")]
-    #endif
     [IsoXmlTag("Sts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public InvestorProfileStatus1Choice_? Status { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InvestorProfileStatus1Choice_? Status { get; init; } 
-    #else
-    public InvestorProfileStatus1Choice_? Status { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the profile for treasury trading.
     /// </summary>
     [IsoId("_TXAd5e6SEemVDc1WJaqofw")]
     [DisplayName("Treasury")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Trsr")]
-    #endif
     [IsoXmlTag("Trsr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TreasuryProfile1? Treasury { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TreasuryProfile1? Treasury { get; init; } 
-    #else
-    public TreasuryProfile1? Treasury { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the profile for high frequency trading.
     /// </summary>
     [IsoId("_TXAd5-6SEemVDc1WJaqofw")]
     [DisplayName("High Frequency Trading")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HghFrqcyTradg")]
-    #endif
     [IsoXmlTag("HghFrqcyTradg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public HighFrequencyTradingProfile1? HighFrequencyTrading { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public HighFrequencyTradingProfile1? HighFrequencyTrading { get; init; } 
-    #else
-    public HighFrequencyTradingProfile1? HighFrequencyTrading { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the profile for a market marker.
     /// </summary>
     [IsoId("_TXAd6e6SEemVDc1WJaqofw")]
     [DisplayName("Market Maker")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktMakr")]
-    #endif
     [IsoXmlTag("MktMakr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MarketMakerProfile2? MarketMaker { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarketMakerProfile2? MarketMaker { get; init; } 
-    #else
-    public MarketMakerProfile2? MarketMaker { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The Case Status Report message is sent by a case assignee to a case creator or case assigner.|This message is used to report on the status of a case.|Usage|A Case Status Report message is sent in reply to a Case Status Report Request message. This message|- covers one and only one case at a time. (If a case assignee needs to report on several cases, then multiple Case Status Report messages must be sent.)|- may be forwarded to subsequent case assigner(s) until it reaches the end point|- is able to indicate the fact that a case has been assigned to a party downstream in the payment processing chain|- may not be used in place of a Resolution Of Investigation (except for the condition given in the next bullet point) or Notification Of Case Assignment message|- may be skipped and replaced by a Resolution Of Investigation message when the request for a investigation status is received at the time the assigner has resolved the case. (In this case a Resolution Of Investigation message can be sent instead of a Case Status Report and the case may be closed.).")]
 [IsoId("_sVp9glkyEeGeoaLUQk__nA_-1954850313")]
 [DisplayName("Case Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CaseStatusReportV04 : IOuterRecord
 {
     
@@ -70,20 +59,6 @@ public partial record CaseStatusReportV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CaseStatusReportV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CaseStatusReportV04( ReportHeader4 reqHeader,Case3 reqCase,CaseStatus2 reqStatus )
-    {
-        Header = reqHeader;
-        Case = reqCase;
-        Status = reqStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -91,91 +66,40 @@ public partial record CaseStatusReportV04 : IOuterRecord
     /// </summary>
     [IsoId("_sVzHcFkyEeGeoaLUQk__nA_-366423921")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportHeader4 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportHeader4 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportHeader4 Header { get; init; } 
-    #else
-    public ReportHeader4 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_sVzHcVkyEeGeoaLUQk__nA_-1249657208")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Case3 Case { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Case3 Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case3 Case { get; init; } 
-    #else
-    public Case3 Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines the status of the case.
     /// </summary>
     [IsoId("_sVzHclkyEeGeoaLUQk__nA_360770913")]
     [DisplayName("Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sts")]
-    #endif
     [IsoXmlTag("Sts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseStatus2 Status { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseStatus2 Status { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseStatus2 Status { get; init; } 
-    #else
-    public CaseStatus2 Status { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the change of an assignment for an investigation case from an assigner to a new assignee.|Usage: The Assigner must be the sender of this confirmation and the Assignee must be the receiver.
     /// </summary>
     [IsoId("_sV84cFkyEeGeoaLUQk__nA_246931847")]
     [DisplayName("New Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewAssgnmt")]
-    #endif
     [IsoXmlTag("NewAssgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CaseAssignment3? NewAssignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment3? NewAssignment { get; init; } 
-    #else
-    public CaseAssignment3? NewAssignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_sV84cVkyEeGeoaLUQk__nA_-686689479")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

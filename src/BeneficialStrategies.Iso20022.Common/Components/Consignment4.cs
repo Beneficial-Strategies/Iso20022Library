@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XkzG4cNTEeWGDrnsYu2p6g")]
 [DisplayName("Consignment")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Consignment4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,51 +23,24 @@ public partial record Consignment4
     /// </summary>
     [IsoId("_Xw_v0cNTEeWGDrnsYu2p6g")]
     [DisplayName("Consignor")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Consgnr")]
-    #endif
     [IsoXmlTag("Consgnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradeParty3? Consignor { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeParty3? Consignor { get; init; } 
-    #else
-    public TradeParty3? Consignor { get; set; } 
-    #endif
     
     /// <summary>
     /// Party to which goods are consigned.
     /// </summary>
     [IsoId("_Xw_v08NTEeWGDrnsYu2p6g")]
     [DisplayName("Consignee")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Consgn")]
-    #endif
     [IsoXmlTag("Consgn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradeParty3? Consignee { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeParty3? Consignee { get; init; } 
-    #else
-    public TradeParty3? Consignee { get; set; } 
-    #endif
     
     /// <summary>
     /// Particular aircraft, vehicle, vessel or other device used for the transport of a consignment.
     /// </summary>
     [IsoId("_Xw_v1cNTEeWGDrnsYu2p6g")]
     [DisplayName("Transport Means")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrnsprtMeans")]
-    #endif
     [IsoXmlTag("TrnsprtMeans")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransportMeans3? TransportMeans { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransportMeans3? TransportMeans { get; init; } 
-    #else
-    public TransportMeans3? TransportMeans { get; set; } 
-    #endif
     
     
     #nullable disable

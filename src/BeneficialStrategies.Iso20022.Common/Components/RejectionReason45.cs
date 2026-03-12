@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Tr7yRcrdEeii_5g6VX90qQ")]
 [DisplayName("Rejection Reason")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RejectionReason45
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RejectionReason45 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RejectionReason45( System.String reqMessageReportIdentification,ReportingMessageStatus1Code reqStatus )
-    {
-        MessageReportIdentification = reqMessageReportIdentification;
-        Status = reqStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,57 +23,26 @@ public partial record RejectionReason45
     /// </summary>
     [IsoId("_T1Bc0crdEeii_5g6VX90qQ")]
     [DisplayName("Message Report Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgRptId")]
-    #endif
     [IsoXmlTag("MsgRptId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax140Text MessageReportIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MessageReportIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MessageReportIdentification { get; init; } 
-    #else
-    public System.String MessageReportIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Information on status of submitted transactions.
     /// </summary>
     [IsoId("_T1Bc08rdEeii_5g6VX90qQ")]
     [DisplayName("Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sts")]
-    #endif
     [IsoXmlTag("Sts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportingMessageStatus1Code Status { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportingMessageStatus1Code Status { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportingMessageStatus1Code Status { get; init; } 
-    #else
-    public ReportingMessageStatus1Code Status { get; set; } 
-    #endif
     
     /// <summary>
     /// Acceptance criteria of the transaction.
     /// </summary>
     [IsoId("_T1Bc1crdEeii_5g6VX90qQ")]
     [DisplayName("Detailed Validation Rule")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtldVldtnRule")]
-    #endif
     [IsoXmlTag("DtldVldtnRule")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericValidationRuleIdentification1? DetailedValidationRule { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericValidationRuleIdentification1? DetailedValidationRule { get; init; } 
-    #else
-    public GenericValidationRuleIdentification1? DetailedValidationRule { get; set; } 
-    #endif
     
     
     #nullable disable

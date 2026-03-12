@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwKYhdp-Ed-ak6NoX_4Aeg_-1697995766")]
 [DisplayName("Transfer Reference")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferReference2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,76 +23,40 @@ public partial record TransferReference2
     /// </summary>
     [IsoId("_SwKYhtp-Ed-ak6NoX_4Aeg_-201663289")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MasterReference { get; init; } 
-    #else
-    public System.String? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier for a transfer instruction, as assigned by the instructing party.
     /// </summary>
     [IsoId("_SwKYh9p-Ed-ak6NoX_4Aeg_-738456715")]
     [DisplayName("Transfer Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfRef")]
-    #endif
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? TransferReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TransferReference { get; init; } 
-    #else
-    public System.String? TransferReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
     /// </summary>
     [IsoId("_SwKYiNp-Ed-ak6NoX_4Aeg_-738456690")]
     [DisplayName("Client Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClntRef")]
-    #endif
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? ClientReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClientReference { get; init; } 
-    #else
-    public System.String? ClientReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier for a transfer execution, as assigned by a confirming party.
     /// </summary>
     [IsoId("_SwKYidp-Ed-ak6NoX_4Aeg_-738456673")]
     [DisplayName("Transfer Confirmation Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfConfRef")]
-    #endif
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? TransferConfirmationReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TransferConfirmationReference { get; init; } 
-    #else
-    public System.String? TransferConfirmationReference { get; set; } 
-    #endif
     
     
     #nullable disable

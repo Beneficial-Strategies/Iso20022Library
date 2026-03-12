@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"Scope:|The PartyCreationRequest message is sent by an instructing party to the executing party to request for the creation of party reference data for a new party in the executing system.||Usage:|It aims at instructing the creation of a new party with corresponding details.|Processing and confirmation of the party creation request are provided via a party status advice.")]
 [IsoId("_lfqucZeTEeen_cyMrluY4w")]
 [DisplayName("Party Creation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PartyCreationRequestV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record PartyCreationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PartyCreationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PartyCreationRequestV01( SystemParty4 reqParty )
-    {
-        Party = reqParty;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,53 +57,24 @@ public partial record PartyCreationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_c7obABivEeiGdqyppFhcBA")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader1? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1? MessageHeader { get; init; } 
-    #else
-    public MessageHeader1? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the details of the party to be created in the system.
     /// </summary>
     [IsoId("_H_lCYBiwEei5IMHVES5gUw")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty")]
-    #endif
     [IsoXmlTag("Pty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SystemParty4 Party { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SystemParty4 Party { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SystemParty4 Party { get; init; } 
-    #else
-    public SystemParty4 Party { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_lfque5eTEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

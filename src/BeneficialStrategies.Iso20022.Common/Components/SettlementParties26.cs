@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0fzamAlIEeGATtfOBToyew_1078318702")]
 [DisplayName("Settlement Parties")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SettlementParties26
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,68 +23,32 @@ public partial record SettlementParties26
     /// </summary>
     [IsoId("_0f8kgAlIEeGATtfOBToyew_2022929891")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty2")]
-    #endif
     [IsoXmlTag("Pty2")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount42? Party2 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount42? Party2 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount42? Party2 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 2.
     /// </summary>
     [IsoId("_0f8kgQlIEeGATtfOBToyew_12973033")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty3")]
-    #endif
     [IsoXmlTag("Pty3")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount42? Party3 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount42? Party3 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount42? Party3 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 3.
     /// </summary>
     [IsoId("_0f8kgglIEeGATtfOBToyew_338090540")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty4")]
-    #endif
     [IsoXmlTag("Pty4")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount42? Party4 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount42? Party4 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount42? Party4 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 4.
     /// </summary>
     [IsoId("_0f8kgwlIEeGATtfOBToyew_2013156681")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty5")]
-    #endif
     [IsoXmlTag("Pty5")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount42? Party5 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount42? Party5 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount42? Party5 { get; set; } 
-    #endif
     
     
     #nullable disable

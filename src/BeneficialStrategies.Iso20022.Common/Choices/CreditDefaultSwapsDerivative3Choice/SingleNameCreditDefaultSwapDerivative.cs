@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Choice
 {
     /// <summary>
@@ -20,31 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
     /// </summary>
     [IsoId("_xfbL1X5eEea2k7EBUopqxw")]
     [DisplayName("Single Name Credit Default Swap Derivative")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record SingleNameCreditDefaultSwapDerivative : CreditDefaultSwapsDerivative3Choice_
-    #else
-    public partial class SingleNameCreditDefaultSwapDerivative : CreditDefaultSwapsDerivative3Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a SingleNameCreditDefaultSwapDerivative instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public SingleNameCreditDefaultSwapDerivative( System.String reqObligationIdentification,CreditDefaultSwapSingleName2 reqSingleName )
-        {
-            ObligationIdentification = reqObligationIdentification;
-            SingleName = reqSingleName;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -52,57 +22,26 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
         /// </summary>
         [IsoId("_Nmrxc35fEea2k7EBUopqxw")]
         [DisplayName("Underlying Name Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="UndrlygNmId")]
-        #endif
         [IsoXmlTag("UndrlygNmId")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoISINOct2015Identifier? UnderlyingNameIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? UnderlyingNameIdentification { get; init; } 
-        #else
-        public System.String? UnderlyingNameIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Identification of the reference obligation for a derivative on a credit default swap.
         /// </summary>
         [IsoId("_NmrxdX5fEea2k7EBUopqxw")]
         [DisplayName("Obligation Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="OblgtnId")]
-        #endif
         [IsoXmlTag("OblgtnId")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoISINOct2015Identifier ObligationIdentification { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.String ObligationIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String ObligationIdentification { get; init; } 
-        #else
-        public System.String ObligationIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Describes the single name specific details the derivative is being made on.
         /// </summary>
         [IsoId("_Nmrxd35fEea2k7EBUopqxw")]
         [DisplayName("Single Name")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="SnglNm")]
-        #endif
         [IsoXmlTag("SnglNm")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required CreditDefaultSwapSingleName2 SingleName { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required CreditDefaultSwapSingleName2 SingleName { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public CreditDefaultSwapSingleName2 SingleName { get; init; } 
-        #else
-        public CreditDefaultSwapSingleName2 SingleName { get; set; } 
-        #endif
         
         
         #nullable disable

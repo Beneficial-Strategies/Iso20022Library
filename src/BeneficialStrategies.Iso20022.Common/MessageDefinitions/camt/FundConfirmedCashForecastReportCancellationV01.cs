@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The FundConfirmedCashForecastReportCancellation message is sent by a report provider, such as a transfer agent or a designated agent of the fund, to a report user, such as an investment manager, a fund accountant or any other interested party.|This message is used to cancel a previously sent FundConfirmedCashForecastReport message.|Usage|The FundConfirmedCashForecastReportCancellation message is used to cancel an entire FundConfirmedCashForecastReport message that was previously sent by the report provider.|This message must contain the reference of the message to be cancelled. This message may also contain details of the message to be cancelled, but this is not recommended.")]
 [IsoId("_Y7HS6NE-Ed-BzquC8wXy7w_1651868953")]
 [DisplayName("Fund Confirmed Cash Forecast Report Cancellation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FundConfirmedCashForecastReportCancellationV01 : IOuterRecord
 {
     
@@ -66,18 +55,6 @@ public partial record FundConfirmedCashForecastReportCancellationV01 : IOuterRec
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FundConfirmedCashForecastReportCancellationV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FundConfirmedCashForecastReportCancellationV01( AdditionalReference3 reqPreviousReference )
-    {
-        PreviousReference = reqPreviousReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,70 +62,32 @@ public partial record FundConfirmedCashForecastReportCancellationV01 : IOuterRec
     /// </summary>
     [IsoId("_Y7HS6dE-Ed-BzquC8wXy7w_-1558209079")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_Y7RD4NE-Ed-BzquC8wXy7w_-823433048")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference3 PreviousReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference3 PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3 PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3 PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_Y7RD4dE-Ed-BzquC8wXy7w_-895465901")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// The FundDetailedConfirmedCashForecastReport to be cancelled.
     /// </summary>
     [IsoId("_Y7RD4tE-Ed-BzquC8wXy7w_-412467197")]
     [DisplayName("Cash Forecast Report To Be Cancelled")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshFcstRptToBeCanc")]
-    #endif
     [IsoXmlTag("CshFcstRptToBeCanc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FundConfirmedCashForecastReport1? CashForecastReportToBeCancelled { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FundConfirmedCashForecastReport1? CashForecastReportToBeCancelled { get; init; } 
-    #else
-    public FundConfirmedCashForecastReport1? CashForecastReportToBeCancelled { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The MisMatchAcceptance message is sent by the party requested to accept or reject data set mis-matches to the matching application.|This message is used to accept mis-matches between data sets and the related baseline.|Usage|The MisMatchAcceptance message can be sent by the party requested to accept or reject data set mis-matches to inform that it accepts the data sets.|The message can be sent in response to a DataSetMatchReport message conveying mis-matches.|The information about the acceptance of the mis-matched data sets will be forwarded by the matching application to the submitter of the data sets by a MisMatchAcceptanceNotification message.|The rejection of mis-matched data sets can be achieved by sending a MisMatchRejection message.")]
 [IsoId("_rmuIWNE8Ed-BzquC8wXy7w_-505567278")]
 [DisplayName("Mis Match Acceptance V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MisMatchAcceptanceV02 : IOuterRecord
 {
     
@@ -68,20 +57,6 @@ public partial record MisMatchAcceptanceV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MisMatchAcceptanceV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MisMatchAcceptanceV02( MessageIdentification1 reqAcceptanceIdentification,SimpleIdentificationInformation reqTransactionIdentification,MessageIdentification1 reqDataSetMatchReportReference )
-    {
-        AcceptanceIdentification = reqAcceptanceIdentification;
-        TransactionIdentification = reqTransactionIdentification;
-        DataSetMatchReportReference = reqDataSetMatchReportReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,74 +64,32 @@ public partial record MisMatchAcceptanceV02 : IOuterRecord
     /// </summary>
     [IsoId("_rmuIWdE8Ed-BzquC8wXy7w_-505566937")]
     [DisplayName("Acceptance Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AccptncId")]
-    #endif
     [IsoXmlTag("AccptncId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 AcceptanceIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 AcceptanceIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 AcceptanceIdentification { get; init; } 
-    #else
-    public MessageIdentification1 AcceptanceIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.
     /// </summary>
     [IsoId("_rmuIWtE8Ed-BzquC8wXy7w_-505567246")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #else
-    public SimpleIdentificationInformation TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the transaction for the requesting financial institution.
     /// </summary>
     [IsoId("_rm35UNE8Ed-BzquC8wXy7w_-505567275")]
     [DisplayName("Submitter Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubmitrTxRef")]
-    #endif
     [IsoXmlTag("SubmitrTxRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SimpleIdentificationInformation? SubmitterTransactionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation? SubmitterTransactionReference { get; init; } 
-    #else
-    public SimpleIdentificationInformation? SubmitterTransactionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the identification of the report that contained the difference.
     /// </summary>
     [IsoId("_rm35UdE8Ed-BzquC8wXy7w_-505567215")]
     [DisplayName("Data Set Match Report Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DataSetMtchRptRef")]
-    #endif
     [IsoXmlTag("DataSetMtchRptRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 DataSetMatchReportReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 DataSetMatchReportReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 DataSetMatchReportReference { get; init; } 
-    #else
-    public MessageIdentification1 DataSetMatchReportReference { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -27,7 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(IdentificationReference8Choice.CommonIdentification))]
     [KnownType(typeof(IdentificationReference8Choice.ComplianceIdentification))]
     [KnownType(typeof(IdentificationReference8Choice.CollateralTransactionIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(IdentificationReference8Choice.InstructingPartyTransactionIdentification),nameof(IdentificationReference8Choice.InstructingPartyTransactionIdentification))]
     [JsonDerivedType(typeof(IdentificationReference8Choice.ExecutingPartyTransactionIdentification),nameof(IdentificationReference8Choice.ExecutingPartyTransactionIdentification))]
     [JsonDerivedType(typeof(IdentificationReference8Choice.MarketInfrastructureTransactionIdentification),nameof(IdentificationReference8Choice.MarketInfrastructureTransactionIdentification))]
@@ -41,20 +35,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(IdentificationReference8Choice.CommonIdentification),nameof(IdentificationReference8Choice.CommonIdentification))]
     [JsonDerivedType(typeof(IdentificationReference8Choice.ComplianceIdentification),nameof(IdentificationReference8Choice.ComplianceIdentification))]
     [JsonDerivedType(typeof(IdentificationReference8Choice.CollateralTransactionIdentification),nameof(IdentificationReference8Choice.CollateralTransactionIdentification))]
-    #endif
     [IsoId("_AcF7kdokEeC60axPepSq7g_1350300624")]
     [DisplayName("Identification Reference 8 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record IdentificationReference8Choice_
-    #else
-    public abstract partial class IdentificationReference8Choice_
-    #endif
     {
     }
 }

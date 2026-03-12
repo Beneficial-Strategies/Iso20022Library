@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.secl;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.secl;
 [Description(@"Scope|The Net Position Report message is sent by the central counterparty (CCP) to a clearing member to confirm the net position of all trade legs reported during the day.||The message definition is intended for use with the ISO 20022 Business Application Header.||Usage|The central counterparty (CCP) nets all the positions per clearing account and sends the Net Position report message to the Clearing member.")]
 [IsoId("_9C7fsS0lEeSRe9rElPHBfg")]
 [DisplayName("Net Position V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NetPositionV03 : IOuterRecord
 {
     
@@ -67,21 +56,6 @@ public partial record NetPositionV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NetPositionV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NetPositionV03( ReportParameters1 reqReportParameters,Pagination reqPagination,PartyIdentification35Choice_ reqClearingMember,NetPosition3 reqNetPositionReport )
-    {
-        ReportParameters = reqReportParameters;
-        Pagination = reqPagination;
-        ClearingMember = reqClearingMember;
-        NetPositionReport = reqNetPositionReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,57 +63,24 @@ public partial record NetPositionV03 : IOuterRecord
     /// </summary>
     [IsoId("_9C7fsy0lEeSRe9rElPHBfg")]
     [DisplayName("Report Parameters")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptParams")]
-    #endif
     [IsoXmlTag("RptParams")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportParameters1 ReportParameters { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportParameters1 ReportParameters { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportParameters1 ReportParameters { get; init; } 
-    #else
-    public ReportParameters1 ReportParameters { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the number of used pages.
     /// </summary>
     [IsoId("_9C7ftS0lEeSRe9rElPHBfg")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination Pagination { get; init; } 
-    #else
-    public Pagination Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the identification of the account owner, that is the clearing member (individual clearing member or general clearing member).
     /// </summary>
     [IsoId("_9C7fty0lEeSRe9rElPHBfg")]
     [DisplayName("Clearing Member")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrMmb")]
-    #endif
     [IsoXmlTag("ClrMmb")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification35Choice_ ClearingMember { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification35Choice_ ClearingMember { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification35Choice_ ClearingMember { get; init; } 
-    #else
-    public PartyIdentification35Choice_ ClearingMember { get; set; } 
-    #endif
     
     /// <summary>
     /// Clearing organisation that will clear the trade.
@@ -147,53 +88,24 @@ public partial record NetPositionV03 : IOuterRecord
     /// </summary>
     [IsoId("_9C7fuS0lEeSRe9rElPHBfg")]
     [DisplayName("Clearing Segment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrSgmt")]
-    #endif
     [IsoXmlTag("ClrSgmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification35Choice_? ClearingSegment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification35Choice_? ClearingSegment { get; init; } 
-    #else
-    public PartyIdentification35Choice_? ClearingSegment { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the net position details such as the average deal price and net quantity.
     /// </summary>
     [IsoId("_9C7fuy0lEeSRe9rElPHBfg")]
     [DisplayName("Net Position Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetPosRpt")]
-    #endif
     [IsoXmlTag("NetPosRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NetPosition3 NetPositionReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NetPosition3 NetPositionReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NetPosition3 NetPositionReport { get; init; } 
-    #else
-    public NetPosition3 NetPositionReport { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_9C7fvS0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

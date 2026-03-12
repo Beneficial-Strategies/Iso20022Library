@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The CreateStandingOrder message is sent by a member to the transaction administrator.|It is used to create a permanent order for the transfer of funds between two accounts belonging to the same member and being held at the transaction administrator.|Usage|Based on the criteria defined in the CreateStandingOrder message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
 [IsoId("_P8uPkckHEem3UrxZgQhVAw")]
 [DisplayName("Create Standing Order V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CreateStandingOrderV01 : IOuterRecord
 {
     
@@ -65,20 +54,6 @@ public partial record CreateStandingOrderV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CreateStandingOrderV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CreateStandingOrderV01( MessageHeader1 reqMessageHeader,StandingOrderIdentification4 reqStandingOrderIdentification,StandingOrder7 reqValueSet )
-    {
-        MessageHeader = reqMessageHeader;
-        StandingOrderIdentification = reqStandingOrderIdentification;
-        ValueSet = reqValueSet;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,74 +61,32 @@ public partial record CreateStandingOrderV01 : IOuterRecord
     /// </summary>
     [IsoId("_P8uPmckHEem3UrxZgQhVAw")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the standing order.
     /// </summary>
     [IsoId("_P8uPm8kHEem3UrxZgQhVAw")]
     [DisplayName("Standing Order Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StgOrdrId")]
-    #endif
     [IsoXmlTag("StgOrdrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StandingOrderIdentification4 StandingOrderIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StandingOrderIdentification4 StandingOrderIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StandingOrderIdentification4 StandingOrderIdentification { get; init; } 
-    #else
-    public StandingOrderIdentification4 StandingOrderIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of values for the standing order.
     /// </summary>
     [IsoId("_P8uPnckHEem3UrxZgQhVAw")]
     [DisplayName("Value Set")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValSet")]
-    #endif
     [IsoXmlTag("ValSet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StandingOrder7 ValueSet { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StandingOrder7 ValueSet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StandingOrder7 ValueSet { get; init; } 
-    #else
-    public StandingOrder7 ValueSet { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_P8uPn8kHEem3UrxZgQhVAw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

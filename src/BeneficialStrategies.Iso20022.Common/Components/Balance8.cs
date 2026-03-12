@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x1JDwWd1EeWat_Nmu_xY2g")]
 [DisplayName("Balance")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Balance8
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Balance8 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Balance8( BalanceQuantity8Choice_ reqQuantity )
-    {
-        Quantity = reqQuantity;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,36 +23,16 @@ public partial record Balance8
     /// </summary>
     [IsoId("_yHwdwWd1EeWat_Nmu_xY2g")]
     [DisplayName("Short Long Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ShrtLngInd")]
-    #endif
     [IsoXmlTag("ShrtLngInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ShortLong1Code? ShortLongIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ShortLong1Code? ShortLongIndicator { get; init; } 
-    #else
-    public ShortLong1Code? ShortLongIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Total quantity of financial instruments of the balance.
     /// </summary>
     [IsoId("_yHwdyWd1EeWat_Nmu_xY2g")]
     [DisplayName("Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Qty")]
-    #endif
     [IsoXmlTag("Qty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BalanceQuantity8Choice_ Quantity { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BalanceQuantity8Choice_ Quantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceQuantity8Choice_ Quantity { get; init; } 
-    #else
-    public BalanceQuantity8Choice_ Quantity { get; set; } 
-    #endif
     
     
     #nullable disable

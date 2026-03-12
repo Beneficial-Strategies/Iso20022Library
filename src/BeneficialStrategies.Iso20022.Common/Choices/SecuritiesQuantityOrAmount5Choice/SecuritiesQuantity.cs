@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount5Choice
 {
     /// <summary>
@@ -20,30 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount5Choic
     /// </summary>
     [IsoId("_qY_3q_fREeiNZp_PtLohLw")]
     [DisplayName("Securities Quantity")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record SecuritiesQuantity : SecuritiesQuantityOrAmount5Choice_
-    #else
-    public partial class SecuritiesQuantity : SecuritiesQuantityOrAmount5Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a SecuritiesQuantity instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public SecuritiesQuantity( Quantity40Choice_ reqInstructedQuantity )
-        {
-            InstructedQuantity = reqInstructedQuantity;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -51,53 +22,24 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount5Choic
         /// </summary>
         [IsoId("_qY_3s_fREeiNZp_PtLohLw")]
         [DisplayName("Conditional Quantity")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="CondlQty")]
-        #endif
         [IsoXmlTag("CondlQty")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public FinancialInstrumentQuantity15Choice_? ConditionalQuantity { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public FinancialInstrumentQuantity15Choice_? ConditionalQuantity { get; init; } 
-        #else
-        public FinancialInstrumentQuantity15Choice_? ConditionalQuantity { get; set; } 
-        #endif
         
         /// <summary>
         /// Quantity of securities to which this instruction applies.
         /// </summary>
         [IsoId("_qY_3u_fREeiNZp_PtLohLw")]
         [DisplayName("Instructed Quantity")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="InstdQty")]
-        #endif
         [IsoXmlTag("InstdQty")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required Quantity40Choice_ InstructedQuantity { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required Quantity40Choice_ InstructedQuantity { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public Quantity40Choice_ InstructedQuantity { get; init; } 
-        #else
-        public Quantity40Choice_ InstructedQuantity { get; set; } 
-        #endif
         
         /// <summary>
         /// Quantity of additional shares requested due to the difference of “round-up against payment” practice between the account servicer and the account holder (for instance for French dividend option).
         /// </summary>
         [IsoId("_qY_3vffREeiNZp_PtLohLw")]
         [DisplayName("Additional Round Up Quantity")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="AddtlRndUpQty")]
-        #endif
         [IsoXmlTag("AddtlRndUpQty")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public FinancialInstrumentQuantity15Choice_? AdditionalRoundUpQuantity { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public FinancialInstrumentQuantity15Choice_? AdditionalRoundUpQuantity { get; init; } 
-        #else
-        public FinancialInstrumentQuantity15Choice_? AdditionalRoundUpQuantity { get; set; } 
-        #endif
         
         
         #nullable disable

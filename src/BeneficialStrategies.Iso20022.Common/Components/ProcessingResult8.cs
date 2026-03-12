@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QVynMUQlEeiO2efj8UFv0A")]
 [DisplayName("Processing Result")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ProcessingResult8
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,17 +23,8 @@ public partial record ProcessingResult8
     /// </summary>
     [IsoId("_Qh_QIUQlEeiO2efj8UFv0A")]
     [DisplayName("Result Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsltData")]
-    #endif
     [IsoXmlTag("RsltData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ResultData1? ResultData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ResultData1? ResultData { get; init; } 
-    #else
-    public ResultData1? ResultData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information relevant for the destination.
@@ -57,17 +32,8 @@ public partial record ProcessingResult8
     /// </summary>
     [IsoId("_Qh_QJUQlEeiO2efj8UFv0A")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalInformation20? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalInformation20? AdditionalInformation { get; init; } 
-    #else
-    public AdditionalInformation20? AdditionalInformation { get; set; } 
-    #endif
     
     
     #nullable disable

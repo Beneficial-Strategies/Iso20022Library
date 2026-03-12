@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.casp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"A Message Rejection is sent by one of the parties when it detects a technical or functional error in a previous received message.")]
 [IsoId("_4R49hN6cEeiwsev40qZGEQ")]
 [DisplayName("Sale To POI Message Rejection V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SaleToPOIMessageRejectionV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SaleToPOIMessageRejectionV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SaleToPOIMessageRejectionV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SaleToPOIMessageRejectionV01( Header37 reqHeader,AcceptorRejection2 reqReject )
-    {
-        Header = reqHeader;
-        Reject = reqReject;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,38 +57,16 @@ public partial record SaleToPOIMessageRejectionV01 : IOuterRecord
     /// </summary>
     [IsoId("_4R49ht6cEeiwsev40qZGEQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header37 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header37 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header37 Header { get; init; } 
-    #else
-    public Header37 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reject.
     /// </summary>
     [IsoId("_vgCQ4d6dEeiwsev40qZGEQ")]
     [DisplayName("Reject")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rjct")]
-    #endif
     [IsoXmlTag("Rjct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorRejection2 Reject { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorRejection2 Reject { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorRejection2 Reject { get; init; } 
-    #else
-    public AcceptorRejection2 Reject { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -38,12 +33,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An executing party, eg, a transfer agent, sends the TransferCancellationStatusReport message to the instructing party, eg, an investment manager or one of its authorised representatives to provide the status of a previously received transfer cancellation instruction.|Usage|The TransferCancellationStatusReport message is used to report on the status of a transfer in or transfer out cancellation request.|The reference of the transfer instruction for which the cancellation status is reported is identified in TransferReference. The message identification of the transfer cancellation request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|The message identification of the transfer instruction request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|One of the following statuses can be reported:|- the transfer cancellation is accepted, or,|- the transfer cancellation has been sent to the next party, or,|- the transfer cancellation is complete and the reason for the status,|- the transfer cancellation pending and the reason for the status,|- the transfer cancellation is rejected and the reason for the status.")]
 [IsoId("_HnZFINE6Ed-BzquC8wXy7w_1645958483")]
 [DisplayName("Transfer Cancellation Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferCancellationStatusReportV02 : IOuterRecord
 {
     
@@ -72,19 +61,6 @@ public partial record TransferCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferCancellationStatusReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferCancellationStatusReportV02( MessageIdentification1 reqMessageIdentification,CancellationStatusAndReason2 reqStatusReport )
-    {
-        MessageIdentification = reqMessageIdentification;
-        StatusReport = reqStatusReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -92,28 +68,14 @@ public partial record TransferCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_HnZFIdE6Ed-BzquC8wXy7w_-2063886787")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_HnZFItE6Ed-BzquC8wXy7w_1645958501")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
     [MinLength(0)]
     [MaxLength(2)]
@@ -124,9 +86,6 @@ public partial record TransferCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_HnZFI9E6Ed-BzquC8wXy7w_1645958519")]
     [DisplayName("Other Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrRef")]
-    #endif
     [IsoXmlTag("OthrRef")]
     [MinLength(0)]
     [MaxLength(2)]
@@ -137,36 +96,16 @@ public partial record TransferCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_HnZFJNE6Ed-BzquC8wXy7w_-665648289")]
     [DisplayName("Status Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsRpt")]
-    #endif
     [IsoXmlTag("StsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CancellationStatusAndReason2 StatusReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CancellationStatusAndReason2 StatusReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CancellationStatusAndReason2 StatusReport { get; init; } 
-    #else
-    public CancellationStatusAndReason2 StatusReport { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_HnZFJdE6Ed-BzquC8wXy7w_97152090")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

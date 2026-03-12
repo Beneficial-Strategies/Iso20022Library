@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y75JsYmKEeybbN9emGqfiw")]
 [DisplayName("Posted Margin Or Collateral")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PostedMarginOrCollateral6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -40,17 +24,8 @@ public partial record PostedMarginOrCollateral6
     /// </summary>
     [IsoId("_Y8_88YmKEeybbN9emGqfiw")]
     [DisplayName("Initial Margin Posted Pre Haircut")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InitlMrgnPstdPreHrcut")]
-    #endif
     [IsoXmlTag("InitlMrgnPstdPreHrcut")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPreHaircut { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPreHaircut { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPreHaircut { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of the initial margin posted by the reporting counterparty to the other counterparty.
@@ -59,17 +34,8 @@ public partial record PostedMarginOrCollateral6
     /// </summary>
     [IsoId("_Y8_884mKEeybbN9emGqfiw")]
     [DisplayName("Initial Margin Posted Post Haircut")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InitlMrgnPstdPstHrcut")]
-    #endif
     [IsoXmlTag("InitlMrgnPstdPstHrcut")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPostHaircut { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPostHaircut { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPostHaircut { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of the variation margin posted, including cash settled, by the reporting counterparty to the other counterparty.
@@ -77,17 +43,8 @@ public partial record PostedMarginOrCollateral6
     /// </summary>
     [IsoId("_Y8_89YmKEeybbN9emGqfiw")]
     [DisplayName("Variation Margin Posted Pre Haircut")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VartnMrgnPstdPreHrcut")]
-    #endif
     [IsoXmlTag("VartnMrgnPstdPreHrcut")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPreHaircut { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPreHaircut { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPreHaircut { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of the variation margin posted, including cash settled, by the reporting counterparty to the other counterparty.
@@ -96,34 +53,16 @@ public partial record PostedMarginOrCollateral6
     /// </summary>
     [IsoId("_Y8_894mKEeybbN9emGqfiw")]
     [DisplayName("Variation Margin Posted Post Haircut")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VartnMrgnPstdPstHrcut")]
-    #endif
     [IsoXmlTag("VartnMrgnPstdPstHrcut")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPostHaircut { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPostHaircut { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPostHaircut { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of collateral posted in excess of the required collateral.
     /// </summary>
     [IsoId("_Y8_8-YmKEeybbN9emGqfiw")]
     [DisplayName("Excess Collateral Posted")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XcssCollPstd")]
-    #endif
     [IsoXmlTag("XcssCollPstd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAnd20DecimalAmount? ExcessCollateralPosted { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? ExcessCollateralPosted { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? ExcessCollateralPosted { get; set; } 
-    #endif
     
     
     #nullable disable

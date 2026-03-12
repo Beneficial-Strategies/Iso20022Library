@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferOutCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent TransferOutInstruction.|Usage|The TransferOutCancellationRequest message is used to request cancellation of a previously sent TransferOutInstruction. There are two ways to specify the transfer cancellation request. Either:|- the transfer reference of the original transfer is quoted, or,|- all the details of the original transfer (this includes TransferReference) are quoted but this is not recommended.|The message identification of the TransferOutInstruction message in which the original transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferOutInstruction message by quoting its message identification in PreviousReference.")]
 [IsoId("_00hfQRXgEeOocOqSQt5Jbw")]
 [DisplayName("Transfer Out Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferOutCancellationRequestV05 : IOuterRecord
 {
     
@@ -67,19 +56,6 @@ public partial record TransferOutCancellationRequestV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferOutCancellationRequestV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferOutCancellationRequestV05( MessageIdentification1 reqMessageIdentification,Cancellation4Choice_ reqCancellation )
-    {
-        MessageIdentification = reqMessageIdentification;
-        Cancellation = reqCancellation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,89 +63,40 @@ public partial record TransferOutCancellationRequestV05 : IOuterRecord
     /// </summary>
     [IsoId("_00hfQxXgEeOocOqSQt5Jbw")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.
     /// </summary>
     [IsoId("_00hfRRXgEeOocOqSQt5Jbw")]
     [DisplayName("References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Refs")]
-    #endif
     [IsoXmlTag("Refs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public References15? References { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References15? References { get; init; } 
-    #else
-    public References15? References { get; set; } 
-    #endif
     
     /// <summary>
     /// Choice between cancellation by reference or by transfer details.
     /// </summary>
     [IsoId("_00hfRxXgEeOocOqSQt5Jbw")]
     [DisplayName("Cancellation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cxl")]
-    #endif
     [IsoXmlTag("Cxl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Cancellation4Choice_ Cancellation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Cancellation4Choice_ Cancellation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Cancellation4Choice_ Cancellation { get; init; } 
-    #else
-    public Cancellation4Choice_ Cancellation { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the market practice to which the message conforms.
     /// </summary>
     [IsoId("_2kha8Rw7EeOIveEnnb_1-A")]
     [DisplayName("Market Practice Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktPrctcVrsn")]
-    #endif
     [IsoXmlTag("MktPrctcVrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    #else
-    public MarketPracticeVersion1? MarketPracticeVersion { get; set; } 
-    #endif
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [IsoId("_00hfSRXgEeOocOqSQt5Jbw")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation2? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation2? CopyDetails { get; init; } 
-    #else
-    public CopyInformation2? CopyDetails { get; set; } 
-    #endif
     
     
     #nullable disable

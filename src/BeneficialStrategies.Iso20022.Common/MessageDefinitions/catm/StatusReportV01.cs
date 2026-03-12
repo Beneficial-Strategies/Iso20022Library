@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catm;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.catm;
 [Description(@"Scope|The StatusReport message is sent by the card acceptor to the master terminal manager or delegated terminal manager to inform these entities about the status of the acceptor system.|Usage|The StatusReport message may embed the information required by the master terminal manager or delegated terminal manager for preparing the needed TMS actions in the management plan to be replaced and the acceptor parameters to be updated.")]
 [IsoId("_8ki24OQWEeCGktPI9k4Dlw_716782601")]
 [DisplayName("Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StatusReportV01 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record StatusReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a StatusReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public StatusReportV01( Header4 reqHeader,StatusReport1 reqStatusReport,ContentInformationType1 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        StatusReport = reqStatusReport;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,57 +60,24 @@ public partial record StatusReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_8ki24eQWEeCGktPI9k4Dlw_817647362")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header4 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header4 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header4 Header { get; init; } 
-    #else
-    public Header4 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the point of interaction (POI), its components and their installed versions.
     /// </summary>
     [IsoId("_8ki24uQWEeCGktPI9k4Dlw_2054938442")]
     [DisplayName("Status Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsRpt")]
-    #endif
     [IsoXmlTag("StsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StatusReport1 StatusReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StatusReport1 StatusReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatusReport1 StatusReport { get; init; } 
-    #else
-    public StatusReport1 StatusReport { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_8ki24-QWEeCGktPI9k4Dlw_1773797778")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType1 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType1 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType1 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType1 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

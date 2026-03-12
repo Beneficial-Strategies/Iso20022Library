@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The CreateReservation message is used to request for the creation of one particular reservation by the member and managed by the transaction administrator.|Usage|Based on the criteria defined in the CreateReservation message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
 [IsoId("_ThLiq9b6Eeq_l4BJLVUF2Q")]
 [DisplayName("Create Reservation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CreateReservationV02 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record CreateReservationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CreateReservationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CreateReservationV02( MessageHeader1 reqMessageHeader,ReservationIdentification3 reqReservationIdentification,Reservation4 reqValueSet )
-    {
-        MessageHeader = reqMessageHeader;
-        ReservationIdentification = reqReservationIdentification;
-        ValueSet = reqValueSet;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,74 +60,32 @@ public partial record CreateReservationV02 : IOuterRecord
     /// </summary>
     [IsoId("_ThMwtdb6Eeq_l4BJLVUF2Q")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the default reservation.
     /// </summary>
     [IsoId("_ThMwt9b6Eeq_l4BJLVUF2Q")]
     [DisplayName("Reservation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsvatnId")]
-    #endif
     [IsoXmlTag("RsvatnId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReservationIdentification3 ReservationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReservationIdentification3 ReservationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReservationIdentification3 ReservationIdentification { get; init; } 
-    #else
-    public ReservationIdentification3 ReservationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// New reservation values.
     /// </summary>
     [IsoId("_ThMwudb6Eeq_l4BJLVUF2Q")]
     [DisplayName("Value Set")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValSet")]
-    #endif
     [IsoXmlTag("ValSet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Reservation4 ValueSet { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Reservation4 ValueSet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Reservation4 ValueSet { get; init; } 
-    #else
-    public Reservation4 ValueSet { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_ThMwu9b6Eeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

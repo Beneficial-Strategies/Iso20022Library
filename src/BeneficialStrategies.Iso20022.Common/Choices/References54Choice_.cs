@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -23,7 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References54Choice.CommonIdentification))]
     [KnownType(typeof(References54Choice.TradeIdentification))]
     [KnownType(typeof(References54Choice.OtherTransactionIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(References54Choice.SecuritiesSettlementTransactionIdentification),nameof(References54Choice.SecuritiesSettlementTransactionIdentification))]
     [JsonDerivedType(typeof(References54Choice.IntraPositionMovementIdentification),nameof(References54Choice.IntraPositionMovementIdentification))]
     [JsonDerivedType(typeof(References54Choice.IntraBalanceMovementIdentification),nameof(References54Choice.IntraBalanceMovementIdentification))]
@@ -33,20 +27,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(References54Choice.CommonIdentification),nameof(References54Choice.CommonIdentification))]
     [JsonDerivedType(typeof(References54Choice.TradeIdentification),nameof(References54Choice.TradeIdentification))]
     [JsonDerivedType(typeof(References54Choice.OtherTransactionIdentification),nameof(References54Choice.OtherTransactionIdentification))]
-    #endif
     [IsoId("_6GW87ZNLEeWGlc8L7oPDIg")]
     [DisplayName("References 54 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record References54Choice_
-    #else
-    public abstract partial class References54Choice_
-    #endif
     {
     }
 }

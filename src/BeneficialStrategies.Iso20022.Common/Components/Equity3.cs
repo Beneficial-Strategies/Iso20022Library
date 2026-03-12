@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4YmZIeLZEeWFtOV72FbX9w")]
 [DisplayName("Equity")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Equity3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Equity3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Equity3( PreferenceToIncome5Choice_ reqPreferenceToIncome )
-    {
-        PreferenceToIncome = reqPreferenceToIncome;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,89 +23,42 @@ public partial record Equity3
     /// </summary>
     [IsoId("_4jwgQeLZEeWFtOV72FbX9w")]
     [DisplayName("Preference To Income")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrefToIncm")]
-    #endif
     [IsoXmlTag("PrefToIncm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PreferenceToIncome5Choice_ PreferenceToIncome { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PreferenceToIncome5Choice_ PreferenceToIncome { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PreferenceToIncome5Choice_ PreferenceToIncome { get; init; } 
-    #else
-    public PreferenceToIncome5Choice_ PreferenceToIncome { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time at which the security will no longer exist, for example, redeemable preference shares.
     /// </summary>
     [IsoId("_4jwgQ-LZEeWFtOV72FbX9w")]
     [DisplayName("Maturity Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtrtyDt")]
-    #endif
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODateTime? MaturityDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime? MaturityDate { get; init; } 
-    #else
-    public System.DateTime? MaturityDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Nominal amount which is not paid yet.
     /// </summary>
     [IsoId("_4jwgReLZEeWFtOV72FbX9w")]
     [DisplayName("Non Paid Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NonPdAmt")]
-    #endif
     [IsoXmlTag("NonPdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? NonPaidAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? NonPaidAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? NonPaidAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Nominal value of an equity security.
     /// </summary>
     [IsoId("_4jwgR-LZEeWFtOV72FbX9w")]
     [DisplayName("Par Value")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ParVal")]
-    #endif
     [IsoXmlTag("ParVal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ParValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ParValue { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ParValue { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of voting rights per share.
     /// </summary>
     [IsoId("_4jwgSeLZEeWFtOV72FbX9w")]
     [DisplayName("Voting Rights Per Share")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VtngRghtsPerShr")]
-    #endif
     [IsoXmlTag("VtngRghtsPerShr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? VotingRightsPerShare { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? VotingRightsPerShare { get; init; } 
-    #else
-    public System.UInt64? VotingRightsPerShare { get; set; } 
-    #endif
     
     
     #nullable disable

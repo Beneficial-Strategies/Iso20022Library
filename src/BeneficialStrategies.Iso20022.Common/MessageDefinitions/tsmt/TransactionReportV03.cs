@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The TransactionReport message is sent by the matching application to the requester of a transaction report.|This message is used to report on various details of transactions registered in the matching application.|Usage|The TransactionReport message can be sent by the matching application to report on various details of transactions that the requester of the report asked for. The message is sent in response to a TransactionReportRequest message.")]
 [IsoId("_2UxmeNE8Ed-BzquC8wXy7w_-1389761233")]
 [DisplayName("Transaction Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransactionReportV03 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record TransactionReportV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransactionReportV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransactionReportV03( MessageIdentification1 reqReportIdentification,MessageIdentification1 reqRelatedMessageReference )
-    {
-        ReportIdentification = reqReportIdentification;
-        RelatedMessageReference = reqRelatedMessageReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,55 +61,24 @@ public partial record TransactionReportV03 : IOuterRecord
     /// </summary>
     [IsoId("_2UxmedE8Ed-BzquC8wXy7w_-1389761119")]
     [DisplayName("Report Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptId")]
-    #endif
     [IsoXmlTag("RptId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 ReportIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 ReportIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 ReportIdentification { get; init; } 
-    #else
-    public MessageIdentification1 ReportIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the previous message requesting the report.
     /// </summary>
     [IsoId("_2U6wYNE8Ed-BzquC8wXy7w_-1389760800")]
     [DisplayName("Related Message Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdMsgRef")]
-    #endif
     [IsoXmlTag("RltdMsgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 RelatedMessageReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 RelatedMessageReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 RelatedMessageReference { get; init; } 
-    #else
-    public MessageIdentification1 RelatedMessageReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Detailed description of the items that correspond to the parameters set in the request.
     /// </summary>
     [IsoId("_2U6wYdE8Ed-BzquC8wXy7w_-1389761189")]
     [DisplayName("Reported Items")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptdItms")]
-    #endif
     [IsoXmlTag("RptdItms")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionReportItems3? ReportedItems { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionReportItems3? ReportedItems { get; init; } 
-    #else
-    public TransactionReportItems3? ReportedItems { get; set; } 
-    #endif
     
     
     #nullable disable

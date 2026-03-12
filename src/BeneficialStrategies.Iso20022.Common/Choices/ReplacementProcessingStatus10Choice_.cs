@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -25,7 +20,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ReplacementProcessingStatus10Choice.Rejected))]
     [KnownType(typeof(ReplacementProcessingStatus10Choice.ModificationRequested))]
     [KnownType(typeof(ReplacementProcessingStatus10Choice.ProprietaryStatus))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(ReplacementProcessingStatus10Choice.Accepted),nameof(ReplacementProcessingStatus10Choice.Accepted))]
     [JsonDerivedType(typeof(ReplacementProcessingStatus10Choice.Completed),nameof(ReplacementProcessingStatus10Choice.Completed))]
     [JsonDerivedType(typeof(ReplacementProcessingStatus10Choice.Denied),nameof(ReplacementProcessingStatus10Choice.Denied))]
@@ -37,20 +31,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ReplacementProcessingStatus10Choice.Rejected),nameof(ReplacementProcessingStatus10Choice.Rejected))]
     [JsonDerivedType(typeof(ReplacementProcessingStatus10Choice.ModificationRequested),nameof(ReplacementProcessingStatus10Choice.ModificationRequested))]
     [JsonDerivedType(typeof(ReplacementProcessingStatus10Choice.ProprietaryStatus),nameof(ReplacementProcessingStatus10Choice.ProprietaryStatus))]
-    #endif
     [IsoId("_RPMBxQeDEe2fOITqoTnSLQ")]
     [DisplayName("Replacement Processing Status 10 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record ReplacementProcessingStatus10Choice_
-    #else
-    public abstract partial class ReplacementProcessingStatus10Choice_
-    #endif
     {
     }
 }

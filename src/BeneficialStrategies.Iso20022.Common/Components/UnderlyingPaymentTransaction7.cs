@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UnDPEXfJEe2A6pitLvwC_g")]
 [DisplayName("Underlying Payment Transaction")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UnderlyingPaymentTransaction7
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,161 +23,80 @@ public partial record UnderlyingPaymentTransaction7
     /// </summary>
     [IsoId("_UwdCs3fJEe2A6pitLvwC_g")]
     [DisplayName("Original Group Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlGrpInf")]
-    #endif
     [IsoXmlTag("OrgnlGrpInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public UnderlyingGroupInformation1? OriginalGroupInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UnderlyingGroupInformation1? OriginalGroupInformation { get; init; } 
-    #else
-    public UnderlyingGroupInformation1? OriginalGroupInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
     /// </summary>
     [IsoId("_UwdCtXfJEe2A6pitLvwC_g")]
     [DisplayName("Original Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlInstrId")]
-    #endif
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? OriginalInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OriginalInstructionIdentification { get; init; } 
-    #else
-    public System.String? OriginalInstructionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
     /// </summary>
     [IsoId("_UwdCt3fJEe2A6pitLvwC_g")]
     [DisplayName("Original End To End Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlEndToEndId")]
-    #endif
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? OriginalEndToEndIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OriginalEndToEndIdentification { get; init; } 
-    #else
-    public System.String? OriginalEndToEndIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification, as assigned by the original first instructing agent, to unambiguously identify the transaction.
     /// </summary>
     [IsoId("_UwdCuXfJEe2A6pitLvwC_g")]
     [DisplayName("Original Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlTxId")]
-    #endif
     [IsoXmlTag("OrgnlTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? OriginalTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OriginalTransactionIdentification { get; init; } 
-    #else
-    public System.String? OriginalTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
     /// </summary>
     [IsoId("_UwdCu3fJEe2A6pitLvwC_g")]
     [DisplayName("Original UETR")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlUETR")]
-    #endif
     [IsoXmlTag("OrgnlUETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoUUIDv4Identifier? OriginalUETR { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OriginalUETR { get; init; } 
-    #else
-    public System.String? OriginalUETR { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money moved between the instructing agent and the instructed agent, as provided in the original instruction.
     /// </summary>
     [IsoId("_UwdCvXfJEe2A6pitLvwC_g")]
     [DisplayName("Original Interbank Settlement Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlIntrBkSttlmAmt")]
-    #endif
     [IsoXmlTag("OrgnlIntrBkSttlmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInterbankSettlementAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Date, as provided in the original transaction, on which the amount of money ceases to be available to the agent that owes it and when the amount of money becomes available to the agent to which it is due.
     /// </summary>
     [IsoId("_UwdCv3fJEe2A6pitLvwC_g")]
     [DisplayName("Original Interbank Settlement Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlIntrBkSttlmDt")]
-    #endif
     [IsoXmlTag("OrgnlIntrBkSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODate? OriginalInterbankSettlementDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly? OriginalInterbankSettlementDate { get; init; } 
-    #else
-    public System.DateOnly? OriginalInterbankSettlementDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.
     /// </summary>
     [IsoId("_UwdCwXfJEe2A6pitLvwC_g")]
     [DisplayName("Original Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlTxRef")]
-    #endif
     [IsoXmlTag("OrgnlTxRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OriginalTransactionReference35? OriginalTransactionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalTransactionReference35? OriginalTransactionReference { get; init; } 
-    #else
-    public OriginalTransactionReference35? OriginalTransactionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Agreement under which or rules under which the transaction should be processed.
     /// </summary>
     [IsoId("_XFN6oXfJEe2A6pitLvwC_g")]
     [DisplayName("Original Service Level")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlSvcLvl")]
-    #endif
     [IsoXmlTag("OrgnlSvcLvl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ServiceLevel8Choice_? OriginalServiceLevel { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ServiceLevel8Choice_? OriginalServiceLevel { get; init; } 
-    #else
-    public ServiceLevel8Choice_? OriginalServiceLevel { get; set; } 
-    #endif
     
     
     #nullable disable

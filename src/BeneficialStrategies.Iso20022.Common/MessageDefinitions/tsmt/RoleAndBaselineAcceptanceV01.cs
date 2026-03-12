@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The RoleAndBaselineAcceptance message is sent by a secondary bank to the matching application if it accepts to join the transaction based on the baseline and the role that it is expected to play.|Usage|The RoleAndBaselineAcceptance message is sent in response to a message that is a direct request to join a transaction.")]
 [IsoId("_tSUHeNE8Ed-BzquC8wXy7w_1282098535")]
 [DisplayName("Role And Baseline Acceptance V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RoleAndBaselineAcceptanceV01 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record RoleAndBaselineAcceptanceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RoleAndBaselineAcceptanceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RoleAndBaselineAcceptanceV01( MessageIdentification1 reqAcceptanceIdentification,MessageIdentification1 reqRelatedMessageReference,SimpleIdentificationInformation reqTransactionIdentification )
-    {
-        AcceptanceIdentification = reqAcceptanceIdentification;
-        RelatedMessageReference = reqRelatedMessageReference;
-        TransactionIdentification = reqTransactionIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,57 +60,24 @@ public partial record RoleAndBaselineAcceptanceV01 : IOuterRecord
     /// </summary>
     [IsoId("_tSdRYNE8Ed-BzquC8wXy7w_1282098561")]
     [DisplayName("Acceptance Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AccptncId")]
-    #endif
     [IsoXmlTag("AccptncId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 AcceptanceIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 AcceptanceIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 AcceptanceIdentification { get; init; } 
-    #else
-    public MessageIdentification1 AcceptanceIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the message that contained the baseline and is accepted.
     /// </summary>
     [IsoId("_tSdRYdE8Ed-BzquC8wXy7w_1662420594")]
     [DisplayName("Related Message Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdMsgRef")]
-    #endif
     [IsoXmlTag("RltdMsgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 RelatedMessageReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 RelatedMessageReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 RelatedMessageReference { get; init; } 
-    #else
-    public MessageIdentification1 RelatedMessageReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.|.
     /// </summary>
     [IsoId("_tSdRYtE8Ed-BzquC8wXy7w_1282098638")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #else
-    public SimpleIdentificationInformation TransactionIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

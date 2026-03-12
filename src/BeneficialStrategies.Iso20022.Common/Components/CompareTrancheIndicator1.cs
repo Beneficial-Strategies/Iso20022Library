@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KvKvcE6pEeyEpI66tm807w")]
 [DisplayName("Compare Tranche Indicator")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CompareTrancheIndicator1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record CompareTrancheIndicator1
     /// </summary>
     [IsoId("_Sk_cME6pEeyEpI66tm807w")]
     [DisplayName("Value")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Val1")]
-    #endif
     [IsoXmlTag("Val1")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TrancheIndicator3Choice_? Value1 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TrancheIndicator3Choice_? Value1 { get; init; } 
-    #else
-    public TrancheIndicator3Choice_? Value1 { get; set; } 
-    #endif
     
     /// <summary>
     /// Information for the second side of the transaction.
     /// </summary>
     [IsoId("_U7G_AE6pEeyEpI66tm807w")]
     [DisplayName("Value")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Val2")]
-    #endif
     [IsoXmlTag("Val2")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TrancheIndicator3Choice_? Value2 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TrancheIndicator3Choice_? Value2 { get; init; } 
-    #else
-    public TrancheIndicator3Choice_? Value2 { get; set; } 
-    #endif
     
     
     #nullable disable

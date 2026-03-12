@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"This AcceptorTransactionLogReportResponse message is sent by an Acquirer or its IntermediaryAgent to provide the report previously expected by a POI.")]
 [IsoId("_gO2yUXMsEe2vXY6MoVq19w")]
 [DisplayName("Acceptor Transaction Log Report Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorTransactionLogReportResponseV03 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcceptorTransactionLogReportResponseV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorTransactionLogReportResponseV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorTransactionLogReportResponseV03( Header70 reqHeader,ReportResponse6 reqReportResponse )
-    {
-        Header = reqHeader;
-        ReportResponse = reqReportResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcceptorTransactionLogReportResponseV03 : IOuterRecord
     /// </summary>
     [IsoId("_gO2yU3MsEe2vXY6MoVq19w")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header70 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header70 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header70 Header { get; init; } 
-    #else
-    public Header70 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response of a report request.
     /// </summary>
     [IsoId("_gO2yVXMsEe2vXY6MoVq19w")]
     [DisplayName("Report Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptRspn")]
-    #endif
     [IsoXmlTag("RptRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportResponse6 ReportResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportResponse6 ReportResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportResponse6 ReportResponse { get; init; } 
-    #else
-    public ReportResponse6 ReportResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_gO2yV3MsEe2vXY6MoVq19w")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType36? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType36? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType36? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

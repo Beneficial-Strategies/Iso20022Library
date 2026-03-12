@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UEgVR9p-Ed-ak6NoX_4Aeg_-412792550")]
 [DisplayName("Corporate Action Option")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionOption9
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CorporateActionOption9 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CorporateActionOption9( OptionNumber1Choice_ reqOptionNumber,CorporateActionOption5Choice_ reqOptionType )
-    {
-        OptionNumber = reqOptionNumber;
-        OptionType = reqOptionType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,193 +23,90 @@ public partial record CorporateActionOption9
     /// </summary>
     [IsoId("_UEgVSNp-Ed-ak6NoX_4Aeg_-412792540")]
     [DisplayName("Option Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnNb")]
-    #endif
     [IsoXmlTag("OptnNb")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OptionNumber1Choice_ OptionNumber { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OptionNumber1Choice_ OptionNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OptionNumber1Choice_ OptionNumber { get; init; } 
-    #else
-    public OptionNumber1Choice_ OptionNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
     /// </summary>
     [IsoId("_UEgVSdp-Ed-ak6NoX_4Aeg_-412792241")]
     [DisplayName("Option Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnTp")]
-    #endif
     [IsoXmlTag("OptnTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionOption5Choice_ OptionType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionOption5Choice_ OptionType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionOption5Choice_ OptionType { get; init; } 
-    #else
-    public CorporateActionOption5Choice_ OptionType { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that owns the account.
     /// </summary>
     [IsoId("_UEgVStp-Ed-ak6NoX_4Aeg_-412792211")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification13Choice_? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification13Choice_? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification13Choice_? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account where financial instruments are maintained.
     /// </summary>
     [IsoId("_UEgVS9p-Ed-ak6NoX_4Aeg_-412792149")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? SafekeepingAccount { get; init; } 
-    #else
-    public System.String? SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Account on which a securities entry is made.
     /// </summary>
     [IsoId("_UEqGQNp-Ed-ak6NoX_4Aeg_-412792119")]
     [DisplayName("Cash Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAcct")]
-    #endif
     [IsoXmlTag("CshAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccountIdentification5Choice_? CashAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccountIdentification5Choice_? CashAccount { get; init; } 
-    #else
-    public CashAccountIdentification5Choice_? CashAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Location where the financial instruments are/will be safekept.
     /// </summary>
     [IsoId("_UEqGQdp-Ed-ak6NoX_4Aeg_-412792057")]
     [DisplayName("Safekeeping Place")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgPlc")]
-    #endif
     [IsoXmlTag("SfkpgPlc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SafekeepingPlaceFormat2Choice_? SafekeepingPlace { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafekeepingPlaceFormat2Choice_? SafekeepingPlace { get; init; } 
-    #else
-    public SafekeepingPlaceFormat2Choice_? SafekeepingPlace { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the financial instrument.
     /// </summary>
     [IsoId("_UEqGQtp-Ed-ak6NoX_4Aeg_-412792027")]
     [DisplayName("Security Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyId")]
-    #endif
     [IsoXmlTag("SctyId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecurityIdentification11? SecurityIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecurityIdentification11? SecurityIdentification { get; init; } 
-    #else
-    public SecurityIdentification11? SecurityIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Total balance of securities eligible for this corporate action event. The entitlement calculation is based on this balance.
     /// </summary>
     [IsoId("_UEqGQ9p-Ed-ak6NoX_4Aeg_-351838754")]
     [DisplayName("Total Eligible Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlElgblBal")]
-    #endif
     [IsoXmlTag("TtlElgblBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat1? TotalEligibleBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat1? TotalEligibleBalance { get; init; } 
-    #else
-    public SignedQuantityFormat1? TotalEligibleBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Balance of instructed position.
     /// </summary>
     [IsoId("_UEqGRNp-Ed-ak6NoX_4Aeg_-412791996")]
     [DisplayName("Instructed Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InstdBal")]
-    #endif
     [IsoXmlTag("InstdBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat1? InstructedBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat1? InstructedBalance { get; init; } 
-    #else
-    public SignedQuantityFormat1? InstructedBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Balance of uninstructed position.
     /// </summary>
     [IsoId("_UEqGRdp-Ed-ak6NoX_4Aeg_-412791995")]
     [DisplayName("Uninstructed Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UinstdBal")]
-    #endif
     [IsoXmlTag("UinstdBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat1? UninstructedBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat1? UninstructedBalance { get; init; } 
-    #else
-    public SignedQuantityFormat1? UninstructedBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether the quantity of financial instrument is a status quantity or a quantity to receive.
     /// </summary>
     [IsoId("_UEqGRtp-Ed-ak6NoX_4Aeg_-412791965")]
     [DisplayName("Status Quantity Or Quantity To Receive")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsQtyOrQtyToRcv")]
-    #endif
     [IsoXmlTag("StsQtyOrQtyToRcv")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public StatusOrQuantityToReceive1Choice_? StatusQuantityOrQuantityToReceive { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatusOrQuantityToReceive1Choice_? StatusQuantityOrQuantityToReceive { get; init; } 
-    #else
-    public StatusOrQuantityToReceive1Choice_? StatusQuantityOrQuantityToReceive { get; set; } 
-    #endif
     
     
     #nullable disable

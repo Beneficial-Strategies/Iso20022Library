@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The ReconciliationInitiation message is sent by an acquirer or an agent to an issuer or an agent, to initiate an exchange of totals to be reconciled for debits, credits, chargebacks and other transactions.")]
 [IsoId("_k8erYHu5EeSLmfFG0DG7zQ")]
 [DisplayName("Reconciliation Initiation")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReconciliationInitiation : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ReconciliationInitiation : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReconciliationInitiation instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReconciliationInitiation( Header17 reqHeader,AcquirerReconciliationInitiation1 reqReconciliationInitiationValue )
-    {
-        Header = reqHeader;
-        ReconciliationInitiationValue = reqReconciliationInitiationValue;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ReconciliationInitiation : IOuterRecord
     /// </summary>
     [IsoId("_vvDdIHu5EeSLmfFG0DG7zQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header17 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header17 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header17 Header { get; init; } 
-    #else
-    public Header17 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reconciliation.
     /// </summary>
     [IsoId("_35V-AHu5EeSLmfFG0DG7zQ")]
     [DisplayName("Reconciliation Initiation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnInitn")]
-    #endif
     [IsoXmlTag("RcncltnInitn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcquirerReconciliationInitiation1 ReconciliationInitiationValue { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcquirerReconciliationInitiation1 ReconciliationInitiationValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcquirerReconciliationInitiation1 ReconciliationInitiationValue { get; init; } 
-    #else
-    public AcquirerReconciliationInitiation1 ReconciliationInitiationValue { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_7qmk8HvAEeSLmfFG0DG7zQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

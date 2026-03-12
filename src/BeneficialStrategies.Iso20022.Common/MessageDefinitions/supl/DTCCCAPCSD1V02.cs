@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAPCSD1 message extends ISO corporate action Movement Preliminary Advice Cancellation Advice (CAPC) message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_x6QSWwB6EeqouY-yI_q3qQ")]
 [DisplayName("DTCCCAPCSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAPCSD1V02 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAPCSD1V02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,17 +57,8 @@ public partial record DTCCCAPCSD1V02 : IOuterRecord
     /// </summary>
     [IsoId("_x6QSXQB6EeqouY-yI_q3qQ")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionGeneralInformationSD45? CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformationSD45? CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformationSD45? CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     
     #nullable disable

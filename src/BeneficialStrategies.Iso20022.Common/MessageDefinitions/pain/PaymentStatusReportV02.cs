@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The PaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The PaymentStatusReport message is exchanged between an agent and a non-financial institution customer to provide status information on instructions previously sent. Its usage will always be governed by a bilateral agreement between the agent and the non-financial institution customer.|The PaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of the initiation of a credit transfer, a direct debit, as well as on the initiation of other customer instructions (e.g. PaymentCancellationRequest).|The PaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The PaymentStatusReport message can be used in domestic and cross-border scenarios.|The PaymentStatusReport message exchanged between agents and non-financial institution customers is identified in the schema as follows: urn:iso:std:iso:20022:tech:xsd:pain.002.001.02.")]
 [IsoId("_GZkBENEvEd-BzquC8wXy7w_-408419624")]
 [DisplayName("Payment Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PaymentStatusReportV02 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record PaymentStatusReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PaymentStatusReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PaymentStatusReportV02( GroupHeader5 reqGroupHeader,OriginalGroupInformation1 reqOriginalGroupInformationAndStatus )
-    {
-        GroupHeader = reqGroupHeader;
-        OriginalGroupInformationAndStatus = reqOriginalGroupInformationAndStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,55 +64,24 @@ public partial record PaymentStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_GZkBEdEvEd-BzquC8wXy7w_-407499552")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader5 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader5 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader5 GroupHeader { get; init; } 
-    #else
-    public GroupHeader5 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Original group information concerning the group of transactions, to which the status report message refers to.
     /// </summary>
     [IsoId("_GZkBEtEvEd-BzquC8wXy7w_-408419593")]
     [DisplayName("Original Group Information And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlGrpInfAndSts")]
-    #endif
     [IsoXmlTag("OrgnlGrpInfAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OriginalGroupInformation1 OriginalGroupInformationAndStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OriginalGroupInformation1 OriginalGroupInformationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalGroupInformation1 OriginalGroupInformationAndStatus { get; init; } 
-    #else
-    public OriginalGroupInformation1 OriginalGroupInformationAndStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the original transactions, to which the status report message refers.
     /// </summary>
     [IsoId("_GZkBE9EvEd-BzquC8wXy7w_-408419562")]
     [DisplayName("Transaction Information And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxInfAndSts")]
-    #endif
     [IsoXmlTag("TxInfAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentTransactionInformation1? TransactionInformationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentTransactionInformation1? TransactionInformationAndStatus { get; init; } 
-    #else
-    public PaymentTransactionInformation1? TransactionInformationAndStatus { get; set; } 
-    #endif
     
     
     #nullable disable

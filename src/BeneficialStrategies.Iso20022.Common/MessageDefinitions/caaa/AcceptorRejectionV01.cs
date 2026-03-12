@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"Scope|The AcceptorRejection message is used by the acquirer to reject a message received from the card acceptor. The acquirer uses this message as a substitute to a response or an advice response message sent to the card acceptor.|Usage|The AcceptorRejection message is used to indicate that the received message could not be processed by the acquirer (for example, unable to read or process the message, security error, duplicate message).")]
 [IsoId("_NR9PhaMVEeCJ6YNENx4h-w_449190071")]
 [DisplayName("Acceptor Rejection V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorRejectionV01 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record AcceptorRejectionV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorRejectionV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorRejectionV01( Header1 reqHeader,AcceptorRejection1 reqReject )
-    {
-        Header = reqHeader;
-        Reject = reqReject;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,38 +60,16 @@ public partial record AcceptorRejectionV01 : IOuterRecord
     /// </summary>
     [IsoId("_NR9PhqMVEeCJ6YNENx4h-w_-1188630353")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header1 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header1 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header1 Header { get; init; } 
-    #else
-    public Header1 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reject.
     /// </summary>
     [IsoId("_NR9Ph6MVEeCJ6YNENx4h-w_-377399680")]
     [DisplayName("Reject")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rjct")]
-    #endif
     [IsoXmlTag("Rjct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorRejection1 Reject { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorRejection1 Reject { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorRejection1 Reject { get; init; } 
-    #else
-    public AcceptorRejection1 Reject { get; set; } 
-    #endif
     
     
     #nullable disable

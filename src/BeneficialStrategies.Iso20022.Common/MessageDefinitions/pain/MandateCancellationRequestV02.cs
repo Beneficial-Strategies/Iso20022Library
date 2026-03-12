@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The MandateCancellationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateCancellationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateCancellationRequest message is used to request the cancellation of an existing mandate. If accepted, this MandateCancellationRequest message together with the MandateAcceptanceReport message confirming the acceptance will be considered a valid cancellation of an existing mandate, agreed upon by all parties.|Usage|The MandateCancellationRequest message can contain only one request to cancel one specific mandate.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateCancellationRequest message can be used in domestic and cross-border scenarios.")]
 [IsoId("_r0RuwFkyEeGeoaLUQk__nA_893031254")]
 [DisplayName("Mandate Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MandateCancellationRequestV02 : IOuterRecord
 {
     
@@ -69,19 +58,6 @@ public partial record MandateCancellationRequestV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MandateCancellationRequestV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MandateCancellationRequestV02( GroupHeader47 reqGroupHeader,MandateCancellation2 reqUnderlyingCancellationDetails )
-    {
-        GroupHeader = reqGroupHeader;
-        UnderlyingCancellationDetails = reqUnderlyingCancellationDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,55 +65,24 @@ public partial record MandateCancellationRequestV02 : IOuterRecord
     /// </summary>
     [IsoId("_r0a4sFkyEeGeoaLUQk__nA_1977602072")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader47 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader47 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader47 GroupHeader { get; init; } 
-    #else
-    public GroupHeader47 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide details on the cancellation request.
     /// </summary>
     [IsoId("_r0a4sVkyEeGeoaLUQk__nA_1094368785")]
     [DisplayName("Underlying Cancellation Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygCxlDtls")]
-    #endif
     [IsoXmlTag("UndrlygCxlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MandateCancellation2 UnderlyingCancellationDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MandateCancellation2 UnderlyingCancellationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MandateCancellation2 UnderlyingCancellationDetails { get; init; } 
-    #else
-    public MandateCancellation2 UnderlyingCancellationDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_r0kpsFkyEeGeoaLUQk__nA_-961186885")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

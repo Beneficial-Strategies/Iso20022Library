@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -37,12 +32,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The CustomerDirectDebitInitiation message is sent by the initiating party to the forwarding agent or creditor agent. It is used to request single or bulk collection(s) of funds from one or various debtor's account(s) for a creditor.|Usage|The CustomerDirectDebitInitiation message can contain one or more direct debit instructions.|The message can be used in a direct or a relay scenario:|- In a direct scenario, the message is sent directly to the creditor agent. The creditor agent is the account servicer of the creditor.|- In a relay scenario, the message is sent to a forwarding agent. The forwarding agent acts as a concentrating financial institution. It will forward the CustomerDirectDebitInitiation message to the creditor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor. This caters for example for the scenario of a payments factory initiating all payments on behalf of a large corporate.|The CustomerDirectDebitInitiation message can be used in domestic and cross-border scenarios.|The CustomerDirectDebitInitiation may or may not contain mandate related information, i.e. extracts from a mandate, such as MandateIdentification or DateOfSignature. The CustomerDirectDebitInitiation message must not be considered as a mandate.|The CustomerDirectDebitInitiation message must not be used by the creditor agent to execute the direct debit instruction(s). The FIToFICustomerDirectDebit message must be used instead.")]
 [IsoId("_GW35ftEvEd-BzquC8wXy7w_2046495786")]
 [DisplayName("Customer Direct Debit Initiation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CustomerDirectDebitInitiationV02 : IOuterRecord
 {
     
@@ -71,19 +60,6 @@ public partial record CustomerDirectDebitInitiationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CustomerDirectDebitInitiationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CustomerDirectDebitInitiationV02( GroupHeader39 reqGroupHeader,PaymentInstructionInformation4 reqPaymentInformation )
-    {
-        GroupHeader = reqGroupHeader;
-        PaymentInformation = reqPaymentInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -91,38 +67,16 @@ public partial record CustomerDirectDebitInitiationV02 : IOuterRecord
     /// </summary>
     [IsoId("_GW35f9EvEd-BzquC8wXy7w_2046495818")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader39 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader39 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader39 GroupHeader { get; init; } 
-    #else
-    public GroupHeader39 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of characteristics that apply to the credit side of the payment transactions included in the direct debit transaction initiation.
     /// </summary>
     [IsoId("_GW35gNEvEd-BzquC8wXy7w_2046495879")]
     [DisplayName("Payment Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInf")]
-    #endif
     [IsoXmlTag("PmtInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PaymentInstructionInformation4 PaymentInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PaymentInstructionInformation4 PaymentInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentInstructionInformation4 PaymentInformation { get; init; } 
-    #else
-    public PaymentInstructionInformation4 PaymentInformation { get; set; } 
-    #endif
     
     
     #nullable disable

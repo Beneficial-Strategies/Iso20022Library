@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.admi;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.admi;
 [Description(@"The Processing Request message is sent by a participant to a central system to request the initiation of a system process supported by a central system.")]
 [IsoId("_1MsY4QR4Ee29PP19jELcvQ")]
 [DisplayName("Processing Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ProcessingRequestV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ProcessingRequestV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ProcessingRequestV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ProcessingRequestV02( System.String reqMessageIdentification,RequestDetails30 reqRequest )
-    {
-        MessageIdentification = reqMessageIdentification;
-        Request = reqRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,75 +57,35 @@ public partial record ProcessingRequestV02 : IOuterRecord
     /// </summary>
     [IsoId("_1Ms_8QR4Ee29PP19jELcvQ")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MessageIdentification { get; init; } 
-    #else
-    public System.String MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates the requested CLS Settlement Session that the related trade is part of.
     /// </summary>
     [IsoId("_1Ms_8wR4Ee29PP19jELcvQ")]
     [DisplayName("Settlement Session Identifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmSsnIdr")]
-    #endif
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? SettlementSessionIdentifier { get; init; } 
-    #else
-    public System.String? SettlementSessionIdentifier { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the details of the processing request.
     /// </summary>
     [IsoId("_1Ms_9QR4Ee29PP19jELcvQ")]
     [DisplayName("Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Req")]
-    #endif
     [IsoXmlTag("Req")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RequestDetails30 Request { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RequestDetails30 Request { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RequestDetails30 Request { get; init; } 
-    #else
-    public RequestDetails30 Request { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_36KEsQR4Ee29PP19jELcvQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

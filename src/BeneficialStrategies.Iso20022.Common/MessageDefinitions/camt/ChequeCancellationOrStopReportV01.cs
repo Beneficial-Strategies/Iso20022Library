@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"The ChequeCancellationOrStopReport message is sent by the drawee agent (on which a cheque is drawn) to the drawer agent or the agent acting on behalf of the drawer agent to indicate what actions have been taken in attempting to cancel the presentment and/or stop the payment of the cheque referred to in the message.")]
 [IsoId("_QUITMbSJEeq3lpO-mRtrig")]
 [DisplayName("Cheque Cancellation Or Stop Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ChequeCancellationOrStopReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ChequeCancellationOrStopReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ChequeCancellationOrStopReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ChequeCancellationOrStopReportV01( GroupHeader103 reqGroupHeader,Cheque14 reqCheque )
-    {
-        GroupHeader = reqGroupHeader;
-        Cheque = reqCheque;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ChequeCancellationOrStopReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_GewUESm6EeutWNGMV2XKIQ")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader103 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader103 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader103 GroupHeader { get; init; } 
-    #else
-    public GroupHeader103 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the details of the cheque.
     /// </summary>
     [IsoId("_s-k9grtwEeq_cfXrH83Rcw")]
     [DisplayName("Cheque")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Chq")]
-    #endif
     [IsoXmlTag("Chq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Cheque14 Cheque { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Cheque14 Cheque { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Cheque14 Cheque { get; init; } 
-    #else
-    public Cheque14 Cheque { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Vgrws7tlEeq_cfXrH83Rcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

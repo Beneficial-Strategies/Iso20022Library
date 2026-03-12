@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eoALASHCEeK_0OuuIoS2mw")]
 [DisplayName("Charges")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Charges4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record Charges4
     /// </summary>
     [IsoId("_e8RK1SHCEeK_0OuuIoS2mw")]
     [DisplayName("Total Charges And Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlChrgsAndTaxAmt")]
-    #endif
     [IsoXmlTag("TtlChrgsAndTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAndAmount? TotalChargesAndTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount? TotalChargesAndTaxAmount { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount? TotalChargesAndTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details of the individual charges record.
     /// </summary>
     [IsoId("_e8RK2SHCEeK_0OuuIoS2mw")]
     [DisplayName("Record")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rcrd")]
-    #endif
     [IsoXmlTag("Rcrd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ChargesRecord2? Record { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ChargesRecord2? Record { get; init; } 
-    #else
-    public ChargesRecord2? Record { get; set; } 
-    #endif
     
     
     #nullable disable

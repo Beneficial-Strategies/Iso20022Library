@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VqWwgXJ2Ee299ZbWCkdR_w")]
 [DisplayName("Management Plan")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ManagementPlan11
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ManagementPlan11 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ManagementPlan11( GenericIdentification176 reqTerminalManagerIdentification,TerminalManagementDataSet32 reqDataSet )
-    {
-        TerminalManagerIdentification = reqTerminalManagerIdentification;
-        DataSet = reqDataSet;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,55 +23,24 @@ public partial record ManagementPlan11
     /// </summary>
     [IsoId("_Vwz90XJ2Ee299ZbWCkdR_w")]
     [DisplayName("POI Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="POIId")]
-    #endif
     [IsoXmlTag("POIId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification176? POIIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification176? POIIdentification { get; init; } 
-    #else
-    public GenericIdentification176? POIIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the terminal management system (TMS) sending the management plan.
     /// </summary>
     [IsoId("_Vwz903J2Ee299ZbWCkdR_w")]
     [DisplayName("Terminal Manager Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TermnlMgrId")]
-    #endif
     [IsoXmlTag("TermnlMgrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GenericIdentification176 TerminalManagerIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GenericIdentification176 TerminalManagerIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification176 TerminalManagerIdentification { get; init; } 
-    #else
-    public GenericIdentification176 TerminalManagerIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Data set related to the sequence of actions to be performed by a point of interaction (POI).
     /// </summary>
     [IsoId("_Vwz91XJ2Ee299ZbWCkdR_w")]
     [DisplayName("Data Set")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DataSet")]
-    #endif
     [IsoXmlTag("DataSet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TerminalManagementDataSet32 DataSet { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TerminalManagementDataSet32 DataSet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TerminalManagementDataSet32 DataSet { get; init; } 
-    #else
-    public TerminalManagementDataSet32 DataSet { get; set; } 
-    #endif
     
     
     #nullable disable

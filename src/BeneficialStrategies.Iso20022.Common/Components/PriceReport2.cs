@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RLuxUtp-Ed-ak6NoX_4Aeg_166863578")]
 [DisplayName("Price Report")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PriceReport2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record PriceReport2
     /// </summary>
     [IsoId("_RLuxU9p-Ed-ak6NoX_4Aeg_167787161")]
     [DisplayName("Price Valuation Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PricValtnDtls")]
-    #endif
     [IsoXmlTag("PricValtnDtls")]
     public ValueList<PriceValuation3> PriceValuationDetails { get; init; } = new ValueList<PriceValuation3>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _RLuxU9p-Ed-ak6NoX_4Aeg_167787161
@@ -51,17 +32,8 @@ public partial record PriceReport2
     /// </summary>
     [IsoId("_RLuxVNp-Ed-ak6NoX_4Aeg_166864214")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
 {
     /// <summary>
@@ -20,33 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
     /// </summary>
     [IsoId("_weKLGTbsEead9bDRE_1DAQ")]
     [DisplayName("Payment Card Details")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record PaymentCardDetails : PaymentInstrument20Choice_
-    #else
-    public partial class PaymentCardDetails : PaymentInstrument20Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a PaymentCardDetails instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public PaymentCardDetails( CardType1Code reqType,System.String reqNumber,System.String reqHolderName,System.UInt16 reqExpiryDate )
-        {
-            Type = reqType;
-            Number = reqNumber;
-            HolderName = reqHolderName;
-            ExpiryDate = reqExpiryDate;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -54,173 +22,84 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         /// </summary>
         [IsoId("_xp4-YTbsEead9bDRE_1DAQ")]
         [DisplayName("Type")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Tp")]
-        #endif
         [IsoXmlTag("Tp")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required CardType1Code Type { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required CardType1Code Type { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public CardType1Code Type { get; init; } 
-        #else
-        public CardType1Code Type { get; set; } 
-        #endif
         
         /// <summary>
         /// Number embossed on a card that links the card to the account owner and account servicer.
         /// </summary>
         [IsoId("_xp4-YzbsEead9bDRE_1DAQ")]
         [DisplayName("Number")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Nb")]
-        #endif
         [IsoXmlTag("Nb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoMax35Text Number { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.String Number { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String Number { get; init; } 
-        #else
-        public System.String Number { get; set; } 
-        #endif
         
         /// <summary>
         /// Party entitled by a card issuer to use a card.
         /// </summary>
         [IsoId("_xp4-ZTbsEead9bDRE_1DAQ")]
         [DisplayName("Holder Name")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="HldrNm")]
-        #endif
         [IsoXmlTag("HldrNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoMax35Text HolderName { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.String HolderName { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String HolderName { get; init; } 
-        #else
-        public System.String HolderName { get; set; } 
-        #endif
         
         /// <summary>
         /// Year and month the card is available for use.
         /// </summary>
         [IsoId("_xp4-ZzbsEead9bDRE_1DAQ")]
         [DisplayName("Start Date")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="StartDt")]
-        #endif
         [IsoXmlTag("StartDt")]
         [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoISOYearMonth? StartDate { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.UInt16? StartDate { get; init; } 
-        #else
-        public System.UInt16? StartDate { get; set; } 
-        #endif
         
         /// <summary>
         /// Year and month the card expires.
         /// </summary>
         [IsoId("_xp4-aTbsEead9bDRE_1DAQ")]
         [DisplayName("Expiry Date")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="XpryDt")]
-        #endif
         [IsoXmlTag("XpryDt")]
         [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoISOYearMonth ExpiryDate { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.UInt16 ExpiryDate { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.UInt16 ExpiryDate { get; init; } 
-        #else
-        public System.UInt16 ExpiryDate { get; set; } 
-        #endif
         
         /// <summary>
         /// Party that issues a payment card, as expressed by a numeric identification of the card issuer according to ISO/IEC 7812-1.
         /// </summary>
         [IsoId("_xp4-azbsEead9bDRE_1DAQ")]
         [DisplayName("Card Issuer Name")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="CardIssrNm")]
-        #endif
         [IsoXmlTag("CardIssrNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax35Text? CardIssuerName { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? CardIssuerName { get; init; } 
-        #else
-        public System.String? CardIssuerName { get; set; } 
-        #endif
         
         /// <summary>
         /// Party that issues a payment card, as expressed by a numeric identification of the card issuer according to ISO/IEC 7812-1.
         /// </summary>
         [IsoId("_xp4-bTbsEead9bDRE_1DAQ")]
         [DisplayName("Card Issuer Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="CardIssrId")]
-        #endif
         [IsoXmlTag("CardIssrId")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public PartyIdentification113? CardIssuerIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public PartyIdentification113? CardIssuerIdentification { get; init; } 
-        #else
-        public PartyIdentification113? CardIssuerIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Security code written on, or in, the card.
         /// </summary>
         [IsoId("_xp4-bzbsEead9bDRE_1DAQ")]
         [DisplayName("Security Code")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="SctyCd")]
-        #endif
         [IsoXmlTag("SctyCd")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax35Text? SecurityCode { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? SecurityCode { get; init; } 
-        #else
-        public System.String? SecurityCode { get; set; } 
-        #endif
         
         /// <summary>
         /// Number distinguishing two or more payment cards with the same account number.
         /// </summary>
         [IsoId("_xp4-cTbsEead9bDRE_1DAQ")]
         [DisplayName("Sequence Number")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="SeqNb")]
-        #endif
         [IsoXmlTag("SeqNb")]
         [IsoSimpleType(IsoSimpleType.Max3Text)]
         [StringLength(maximumLength: 3 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax3Text? SequenceNumber { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? SequenceNumber { get; init; } 
-        #else
-        public System.String? SequenceNumber { get; set; } 
-        #endif
         
         
         #nullable disable

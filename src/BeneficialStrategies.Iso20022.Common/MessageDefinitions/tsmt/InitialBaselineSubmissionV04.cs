@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The InitialBaselineSubmission message is sent by the initiator of a transaction to the matching application.|This message is used to initiate a transaction.|Usage|The InitialBaselineSubmission message can be sent by a party to register a transaction in the matching application. The message can be submitted with either lodge or push-through instruction.|When the push-through instruction is present, the matching application acknowledges the receipt of the message to the sender by sending an Acknowledgement message, stores the submitted information and informs the counterparty about the registration of the transaction by sending a FullPushThroughReport message. With the BaselineReSubmission message the counterparty responds with matching baseline information in order to establish the transaction (baseline).|When the lodge instruction is present, the matching application acknowledges the receipt of the message to the sender by sending an Acknowledgement message and stores the submitted information. No matching of the submitted baseline data with other baseline information will take place. For example the submission of an InitialBaselineSubmission message containing a lodge instruction establishes the transaction (baseline) in the matching application.|The InitialBaselineSubmission message consists of data which relates to the purchasing agreement covered by the transaction, for example line item details, shipping details.")]
 [IsoId("_7DK6cdNTEeK-v49t1oWkNA")]
 [DisplayName("Initial Baseline Submission V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InitialBaselineSubmissionV04 : IOuterRecord
 {
     
@@ -68,22 +57,6 @@ public partial record InitialBaselineSubmissionV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a InitialBaselineSubmissionV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public InitialBaselineSubmissionV04( MessageIdentification1 reqSubmissionIdentification,SimpleIdentificationInformation reqSubmitterTransactionReference,InstructionType1 reqInstruction,Baseline4 reqBaseline,BankContactPerson1Choice_ reqBankContactPerson )
-    {
-        SubmissionIdentification = reqSubmissionIdentification;
-        SubmitterTransactionReference = reqSubmitterTransactionReference;
-        Instruction = reqInstruction;
-        Baseline = reqBaseline;
-        BankContactPerson = reqBankContactPerson;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -91,146 +64,64 @@ public partial record InitialBaselineSubmissionV04 : IOuterRecord
     /// </summary>
     [IsoId("_7DK6ddNTEeK-v49t1oWkNA")]
     [DisplayName("Submission Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubmissnId")]
-    #endif
     [IsoXmlTag("SubmissnId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 SubmissionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 SubmissionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 SubmissionIdentification { get; init; } 
-    #else
-    public MessageIdentification1 SubmissionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the transaction for the requesting financial institution.
     /// </summary>
     [IsoId("_7DK6d9NTEeK-v49t1oWkNA")]
     [DisplayName("Submitter Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubmitrTxRef")]
-    #endif
     [IsoXmlTag("SubmitrTxRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SimpleIdentificationInformation SubmitterTransactionReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SimpleIdentificationInformation SubmitterTransactionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation SubmitterTransactionReference { get; init; } 
-    #else
-    public SimpleIdentificationInformation SubmitterTransactionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the instruction requested by the submitter by means of a code.
     /// </summary>
     [IsoId("_7DK6edNTEeK-v49t1oWkNA")]
     [DisplayName("Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Instr")]
-    #endif
     [IsoXmlTag("Instr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InstructionType1 Instruction { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InstructionType1 Instruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InstructionType1 Instruction { get; init; } 
-    #else
-    public InstructionType1 Instruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the commercial details of the underlying transaction.
     /// </summary>
     [IsoId("_7DK6e9NTEeK-v49t1oWkNA")]
     [DisplayName("Baseline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Baseln")]
-    #endif
     [IsoXmlTag("Baseln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Baseline4 Baseline { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Baseline4 Baseline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Baseline4 Baseline { get; init; } 
-    #else
-    public Baseline4 Baseline { get; set; } 
-    #endif
     
     /// <summary>
     /// Person to be contacted in the organisation of the buyer.
     /// </summary>
     [IsoId("_7DK6fdNTEeK-v49t1oWkNA")]
     [DisplayName("Buyer Contact Person")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BuyrCtctPrsn")]
-    #endif
     [IsoXmlTag("BuyrCtctPrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContactIdentification1? BuyerContactPerson { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContactIdentification1? BuyerContactPerson { get; init; } 
-    #else
-    public ContactIdentification1? BuyerContactPerson { get; set; } 
-    #endif
     
     /// <summary>
     /// Person to be contacted in the organisation of the seller.
     /// </summary>
     [IsoId("_7DK6f9NTEeK-v49t1oWkNA")]
     [DisplayName("Seller Contact Person")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SellrCtctPrsn")]
-    #endif
     [IsoXmlTag("SellrCtctPrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContactIdentification1? SellerContactPerson { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContactIdentification1? SellerContactPerson { get; init; } 
-    #else
-    public ContactIdentification1? SellerContactPerson { get; set; } 
-    #endif
     
     /// <summary>
     /// Person to be contacted in the seller&apos;s bank or buyer&apos;s bank.
     /// </summary>
     [IsoId("_NtDmsDAaEeOKib24wnHaFg")]
     [DisplayName("Bank Contact Person")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BkCtctPrsn")]
-    #endif
     [IsoXmlTag("BkCtctPrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BankContactPerson1Choice_ BankContactPerson { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BankContactPerson1Choice_ BankContactPerson { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BankContactPerson1Choice_ BankContactPerson { get; init; } 
-    #else
-    public BankContactPerson1Choice_ BankContactPerson { get; set; } 
-    #endif
     
     /// <summary>
     /// Person to be contacted in another bank than seller or buyer&apos;s bank.
     /// </summary>
     [IsoId("_7DK6hdNTEeK-v49t1oWkNA")]
     [DisplayName("Other Bank Contact Person")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrBkCtctPrsn")]
-    #endif
     [IsoXmlTag("OthrBkCtctPrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContactIdentification3? OtherBankContactPerson { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContactIdentification3? OtherBankContactPerson { get; init; } 
-    #else
-    public ContactIdentification3? OtherBankContactPerson { get; set; } 
-    #endif
     
     
     #nullable disable

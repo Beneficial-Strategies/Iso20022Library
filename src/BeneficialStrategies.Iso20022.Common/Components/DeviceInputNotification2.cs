@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cLmfgQ0cEeqUVL7sB4m7NA")]
 [DisplayName("Device Input Notification")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DeviceInputNotification2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DeviceInputNotification2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DeviceInputNotification2( System.String reqExchangeIdentification,ActionMessage7 reqOutputContent )
-    {
-        ExchangeIdentification = reqExchangeIdentification;
-        OutputContent = reqOutputContent;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,40 +23,18 @@ public partial record DeviceInputNotification2
     /// </summary>
     [IsoId("_cW37YQ0cEeqUVL7sB4m7NA")]
     [DisplayName("Exchange Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XchgId")]
-    #endif
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text ExchangeIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String ExchangeIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String ExchangeIdentification { get; init; } 
-    #else
-    public System.String ExchangeIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Updated content of the message to display before input.
     /// </summary>
     [IsoId("_cW4icQ0cEeqUVL7sB4m7NA")]
     [DisplayName("Output Content")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OutptCntt")]
-    #endif
     [IsoXmlTag("OutptCntt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActionMessage7 OutputContent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActionMessage7 OutputContent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActionMessage7 OutputContent { get; init; } 
-    #else
-    public ActionMessage7 OutputContent { get; set; } 
-    #endif
     
     
     #nullable disable

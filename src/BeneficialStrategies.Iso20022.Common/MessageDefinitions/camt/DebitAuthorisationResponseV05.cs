@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The DebitAuthorisationResponse message is sent by an account owner to its account servicing institution. This message is used to approve or reject a debit authorisation request.|Usage|The DebitAuthorisationResponse message:|- is used to reply to a Debit Authorisation Request message;|- covers one and only one payment instruction at a time. If an account owner needs to reply to several DebitAuthorisationRequest messages, then multiple DebitAuthorisationResponse messages must be sent;|- indicates whether the account owner agrees with the request by means of a code. It also allows further details to be given about the debit authorisation, such as acceptable amount and value date for the debit;|- must be used exclusively between the account owner and the account servicing institution. It must not be used in place of a Resolution Of Investigation message between subsequent agents.")]
 [IsoId("_eYI_H22PEei3KuUgpx7Xcw")]
 [DisplayName("Debit Authorisation Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DebitAuthorisationResponseV05 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record DebitAuthorisationResponseV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DebitAuthorisationResponseV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DebitAuthorisationResponseV05( CaseAssignment5 reqAssignment,DebitAuthorisationConfirmation2 reqConfirmation )
-    {
-        Assignment = reqAssignment;
-        Confirmation = reqConfirmation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,72 +65,32 @@ public partial record DebitAuthorisationResponseV05 : IOuterRecord
     /// </summary>
     [IsoId("_eYI_IW2PEei3KuUgpx7Xcw")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignment5 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignment5 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment5 Assignment { get; init; } 
-    #else
-    public CaseAssignment5 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_eYI_I22PEei3KuUgpx7Xcw")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Case5? Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case5? Case { get; init; } 
-    #else
-    public Case5? Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates if the debit authorisation is granted or not.
     /// </summary>
     [IsoId("_eYI_JW2PEei3KuUgpx7Xcw")]
     [DisplayName("Confirmation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Conf")]
-    #endif
     [IsoXmlTag("Conf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DebitAuthorisationConfirmation2 Confirmation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DebitAuthorisationConfirmation2 Confirmation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DebitAuthorisationConfirmation2 Confirmation { get; init; } 
-    #else
-    public DebitAuthorisationConfirmation2 Confirmation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_eYI_J22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

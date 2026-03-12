@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|The SwitchOrderConfirmationCancellationInstruction message is sent by an executing party, for example, a transfer agent, to the instructing party, for example, an investment manager or its authorised representative, to cancel a previously sent SwitchOrderConfirmation.|Usage|To request the cancellation of one or more individual order executions, the order reference and deal reference of each individual order execution in the original SwitchOrderConfirmation are specified in the order reference and deal reference elements respectively. The message identification of the SwitchOrderConfirmation message in which the individual order execution was conveyed may also be quoted in PreviousReference but this is not recommended. The AmendmentIndicator is used to specify whether the switch order confirmation cancellation is to be followed by an amendment An amendment of a switch order confirmation is carried out by sending a SwitchOrderConfirmation message in which the AmendmentIndicator contains the value ‘true’.")]
 [IsoId("_Aab8CzbLEead9bDRE_1DAQ")]
 [DisplayName("Switch Order Confirmation Cancellation Instruction V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SwitchOrderConfirmationCancellationInstructionV02 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record SwitchOrderConfirmationCancellationInstructionV02 : IOuter
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SwitchOrderConfirmationCancellationInstructionV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SwitchOrderConfirmationCancellationInstructionV02( MessageIdentification1 reqMessageIdentification,System.String reqAmendmentIndicator,InvestmentFundOrder11 reqOrderReferences )
-    {
-        MessageIdentification = reqMessageIdentification;
-        AmendmentIndicator = reqAmendmentIndicator;
-        OrderReferences = reqOrderReferences;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,145 +60,67 @@ public partial record SwitchOrderConfirmationCancellationInstructionV02 : IOuter
     /// </summary>
     [IsoId("_Aab8ETbLEead9bDRE_1DAQ")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_Aab8EzbLEead9bDRE_1DAQ")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference9? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference9? PoolReference { get; init; } 
-    #else
-    public AdditionalReference9? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_Aab8FTbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference8? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference8? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference8? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_Aab8FzbLEead9bDRE_1DAQ")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference8? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference8? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference8? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether a confirmation amendment message will follow the confirmation cancellation instruction or not.
     /// </summary>
     [IsoId("_8YrRs1AZEea5nPE5ezGuuw")]
     [DisplayName("Amendment Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AmdmntInd")]
-    #endif
     [IsoXmlTag("AmdmntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoYesNoIndicator AmendmentIndicator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String AmendmentIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String AmendmentIndicator { get; init; } 
-    #else
-    public System.String AmendmentIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.
     /// </summary>
     [IsoId("_8YrRtFAZEea5nPE5ezGuuw")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MasterReference { get; init; } 
-    #else
-    public System.String? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the individual order confirmation to be cancelled.
     /// </summary>
     [IsoId("_8YrRtVAZEea5nPE5ezGuuw")]
     [DisplayName("Order References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrdrRefs")]
-    #endif
     [IsoXmlTag("OrdrRefs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InvestmentFundOrder11 OrderReferences { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InvestmentFundOrder11 OrderReferences { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InvestmentFundOrder11 OrderReferences { get; init; } 
-    #else
-    public InvestmentFundOrder11 OrderReferences { get; set; } 
-    #endif
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [IsoId("_Aab8HTbLEead9bDRE_1DAQ")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation4? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation4? CopyDetails { get; init; } 
-    #else
-    public CopyInformation4? CopyDetails { get; set; } 
-    #endif
     
     
     #nullable disable

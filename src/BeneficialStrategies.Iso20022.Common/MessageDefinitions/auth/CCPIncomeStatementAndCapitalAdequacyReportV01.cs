@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The CCPIncomeStatementAndCapitalAdequacyReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority about the financial performance and regulatory capital holdings of the central counterparty.")]
 [IsoId("_DzbYceUUEem3X-64-NKdqg")]
 [DisplayName("CCP Income Statement And Capital Adequacy Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterRecord
 {
     
@@ -61,22 +50,6 @@ public partial record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterReco
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CCPIncomeStatementAndCapitalAdequacyReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CCPIncomeStatementAndCapitalAdequacyReportV01( IncomeStatement1 reqIncomeStatement,CapitalRequirement1 reqCapitalRequirements,ActiveCurrencyAndAmount reqTotalCapital,ActiveCurrencyAndAmount reqLiquidFinancialResources,HypotheticalCapitalMeasure1 reqHypotheticalCapitalMeasure )
-    {
-        IncomeStatement = reqIncomeStatement;
-        CapitalRequirements = reqCapitalRequirements;
-        TotalCapital = reqTotalCapital;
-        LiquidFinancialResources = reqLiquidFinancialResources;
-        HypotheticalCapitalMeasure = reqHypotheticalCapitalMeasure;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,112 +57,48 @@ public partial record CCPIncomeStatementAndCapitalAdequacyReportV01 : IOuterReco
     /// </summary>
     [IsoId("_DzbYeeUUEem3X-64-NKdqg")]
     [DisplayName("Income Statement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IncmStmt")]
-    #endif
     [IsoXmlTag("IncmStmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IncomeStatement1 IncomeStatement { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IncomeStatement1 IncomeStatement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IncomeStatement1 IncomeStatement { get; init; } 
-    #else
-    public IncomeStatement1 IncomeStatement { get; set; } 
-    #endif
     
     /// <summary>
     /// Report of the breakdown of the components for the capital requirement for central counterparty.
     /// </summary>
     [IsoId("_DzbYe-UUEem3X-64-NKdqg")]
     [DisplayName("Capital Requirements")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CptlRqrmnts")]
-    #endif
     [IsoXmlTag("CptlRqrmnts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CapitalRequirement1 CapitalRequirements { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CapitalRequirement1 CapitalRequirements { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CapitalRequirement1 CapitalRequirements { get; init; } 
-    #else
-    public CapitalRequirement1 CapitalRequirements { get; set; } 
-    #endif
     
     /// <summary>
     /// Sum of the CCP&apos;s capital requirements for operational expenses; for winding down or restructuring its activities; for overall operational and legal risk; for uncovered credit, counterparty credit and market risks and business risks.
     /// </summary>
     [IsoId("_DzbYfeUUEem3X-64-NKdqg")]
     [DisplayName("Total Capital")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlCptl")]
-    #endif
     [IsoXmlTag("TtlCptl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveCurrencyAndAmount TotalCapital { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveCurrencyAndAmount TotalCapital { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount TotalCapital { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount TotalCapital { get; set; } 
-    #endif
     
     /// <summary>
     /// Total capital resources invested in liquid financial resources.
     /// </summary>
     [IsoId("_DzbYf-UUEem3X-64-NKdqg")]
     [DisplayName("Liquid Financial Resources")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LqdFinRsrcs")]
-    #endif
     [IsoXmlTag("LqdFinRsrcs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveCurrencyAndAmount LiquidFinancialResources { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveCurrencyAndAmount LiquidFinancialResources { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount LiquidFinancialResources { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount LiquidFinancialResources { get; set; } 
-    #endif
     
     /// <summary>
     /// Hypothetical capital requirement due to counterparty credit risk exposures to all clearing members.
     /// </summary>
     [IsoId("_DzbYgeUUEem3X-64-NKdqg")]
     [DisplayName("Hypothetical Capital Measure")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HpthtclCptlMeasr")]
-    #endif
     [IsoXmlTag("HpthtclCptlMeasr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required HypotheticalCapitalMeasure1 HypotheticalCapitalMeasure { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required HypotheticalCapitalMeasure1 HypotheticalCapitalMeasure { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public HypotheticalCapitalMeasure1 HypotheticalCapitalMeasure { get; init; } 
-    #else
-    public HypotheticalCapitalMeasure1 HypotheticalCapitalMeasure { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_DzbYg-UUEem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

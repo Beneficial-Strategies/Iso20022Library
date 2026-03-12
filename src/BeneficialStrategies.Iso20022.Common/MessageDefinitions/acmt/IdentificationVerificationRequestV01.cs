@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"Scope|The IdentificationVerificationRequest message is sent by an assigner to an assignee. It is used to request the verification of party and/or account identification information.|Usage|The IdentificationVerificationRequest message is sent before the sending of one or several transactions messages.|The IdentificationVerificationRequest message can contain one or more verification requests.")]
 [IsoId("_sRylWGtdEeCY4-KZ9JEyUQ_-1959332273")]
 [DisplayName("Identification Verification Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IdentificationVerificationRequestV01 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record IdentificationVerificationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IdentificationVerificationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IdentificationVerificationRequestV01( IdentificationAssignment1 reqAssignment,IdentificationVerification1 reqVerification )
-    {
-        Assignment = reqAssignment;
-        Verification = reqVerification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,38 +61,16 @@ public partial record IdentificationVerificationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_sRylWWtdEeCY4-KZ9JEyUQ_-1079532632")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IdentificationAssignment1 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IdentificationAssignment1 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IdentificationAssignment1 Assignment { get; init; } 
-    #else
-    public IdentificationAssignment1 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the identification data that is requested to be verified.
     /// </summary>
     [IsoId("_sRylWmtdEeCY4-KZ9JEyUQ_731202779")]
     [DisplayName("Verification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Vrfctn")]
-    #endif
     [IsoXmlTag("Vrfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IdentificationVerification1 Verification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IdentificationVerification1 Verification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IdentificationVerification1 Verification { get; init; } 
-    #else
-    public IdentificationVerification1 Verification { get; set; } 
-    #endif
     
     
     #nullable disable

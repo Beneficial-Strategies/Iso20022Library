@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fw8YN_vmEeCBQp5TnX1XKQ")]
 [DisplayName("Status And Reason")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StatusAndReason9
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a StatusAndReason9 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public StatusAndReason9( Status9Choice_ reqStatusAndReason )
-    {
-        StatusAndReason = reqStatusAndReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,36 +23,16 @@ public partial record StatusAndReason9
     /// </summary>
     [IsoId("_fw8YPfvmEeCBQp5TnX1XKQ")]
     [DisplayName("Status And Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsAndRsn")]
-    #endif
     [IsoXmlTag("StsAndRsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Status9Choice_ StatusAndReason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Status9Choice_ StatusAndReason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Status9Choice_ StatusAndReason { get; init; } 
-    #else
-    public Status9Choice_ StatusAndReason { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the transactions reported.
     /// </summary>
     [IsoId("_fw8YR_vmEeCBQp5TnX1XKQ")]
     [DisplayName("Transaction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tx")]
-    #endif
     [IsoXmlTag("Tx")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Transaction20? Transaction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Transaction20? Transaction { get; init; } 
-    #else
-    public Transaction20? Transaction { get; set; } 
-    #endif
     
     
     #nullable disable

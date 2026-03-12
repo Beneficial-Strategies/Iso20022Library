@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.casp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"The SaleToPOIEventNotification message is sent by a POI or a sale terminal to inform the other about the happening of an event.")]
 [IsoId("_3PF2AQ1TEeqjM-rxn3HuXQ")]
 [DisplayName("Sale To POI Event Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SaleToPOIEventNotificationV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SaleToPOIEventNotificationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SaleToPOIEventNotificationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SaleToPOIEventNotificationV02( Header41 reqHeader,SystemEventNotification3 reqEventNotification )
-    {
-        Header = reqHeader;
-        EventNotification = reqEventNotification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record SaleToPOIEventNotificationV02 : IOuterRecord
     /// </summary>
     [IsoId("_3PF2Aw1TEeqjM-rxn3HuXQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header41 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header41 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header41 Header { get; init; } 
-    #else
-    public Header41 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the notification of an event.
     /// </summary>
     [IsoId("_3PF2BQ1TEeqjM-rxn3HuXQ")]
     [DisplayName("Event Notification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtNtfctn")]
-    #endif
     [IsoXmlTag("EvtNtfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SystemEventNotification3 EventNotification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SystemEventNotification3 EventNotification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SystemEventNotification3 EventNotification { get; init; } 
-    #else
-    public SystemEventNotification3 EventNotification { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_3PF2Bw1TEeqjM-rxn3HuXQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType21? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType21? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType21? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

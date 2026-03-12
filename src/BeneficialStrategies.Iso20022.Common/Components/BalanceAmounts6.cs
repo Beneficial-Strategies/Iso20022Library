@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WQRpSNp-Ed-ak6NoX_4Aeg_-87925160")]
 [DisplayName("Balance Amounts")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record BalanceAmounts6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a BalanceAmounts6 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public BalanceAmounts6( AmountAndDirection14 reqHoldingValue )
-    {
-        HoldingValue = reqHoldingValue;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,53 +23,24 @@ public partial record BalanceAmounts6
     /// </summary>
     [IsoId("_WQbaQNp-Ed-ak6NoX_4Aeg_1920939692")]
     [DisplayName("Holding Value")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HldgVal")]
-    #endif
     [IsoXmlTag("HldgVal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AmountAndDirection14 HoldingValue { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AmountAndDirection14 HoldingValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndDirection14 HoldingValue { get; init; } 
-    #else
-    public AmountAndDirection14 HoldingValue { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of a financial instrument, as booked/acquired in an account. It may be used to establish capital gain tax liability.
     /// </summary>
     [IsoId("_WQbaQdp-Ed-ak6NoX_4Aeg_-1396676687")]
     [DisplayName("Book Value")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BookVal")]
-    #endif
     [IsoXmlTag("BookVal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AmountAndDirection14? BookValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndDirection14? BookValue { get; init; } 
-    #else
-    public AmountAndDirection14? BookValue { get; set; } 
-    #endif
     
     /// <summary>
     /// Difference between holding value and the book value.
     /// </summary>
     [IsoId("_WQbaQtp-Ed-ak6NoX_4Aeg_20912616")]
     [DisplayName("Unrealised Gain Loss")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UrlsdGnLoss")]
-    #endif
     [IsoXmlTag("UrlsdGnLoss")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AmountAndDirection14? UnrealisedGainLoss { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndDirection14? UnrealisedGainLoss { get; init; } 
-    #else
-    public AmountAndDirection14? UnrealisedGainLoss { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The ReturnStandingOrder message is sent by a transaction administrator to a member.|It is used to provide information on the details of one or more standing orders, based on specific request and return criteria.|in response to a request a on information on standing and predefined orders.|Usage|The ReturnStandingOrder message lists the standing order based on the following possible return criteria: |- Generic standing order details,|- Details of a specific predefined or standing liquidity transfer orders,|- Details on the set to which the standing order belongs to,|- List of all predefined and standing liquidity transfer standing orders and/or per set,|- Total amount of predefined and standing liquidity transfer orders defined in the system.")]
 [IsoId("_jwlcMRbvEeiyVv5j1vf1VQ")]
 [DisplayName("Return Standing Order V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReturnStandingOrderV04 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ReturnStandingOrderV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReturnStandingOrderV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReturnStandingOrderV04( MessageHeader6 reqMessageHeader,StandingOrderOrError5Choice_ reqReportOrError )
-    {
-        MessageHeader = reqMessageHeader;
-        ReportOrError = reqReportOrError;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ReturnStandingOrderV04 : IOuterRecord
     /// </summary>
     [IsoId("_jwlcMxbvEeiyVv5j1vf1VQ")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader6 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader6 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader6 MessageHeader { get; init; } 
-    #else
-    public MessageHeader6 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Reports on standing orders.
     /// </summary>
     [IsoId("_jwlcNRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Report Or Error")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptOrErr")]
-    #endif
     [IsoXmlTag("RptOrErr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StandingOrderOrError5Choice_ ReportOrError { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StandingOrderOrError5Choice_ ReportOrError { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StandingOrderOrError5Choice_ ReportOrError { get; init; } 
-    #else
-    public StandingOrderOrError5Choice_ ReportOrError { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jwlcNxbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

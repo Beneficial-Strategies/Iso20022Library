@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"This FinancialInstrumentReportingReferenceDataReport message is sent by the trading venue to the national competent authority to report on the reference data used in the securities transactions.")]
 [IsoId("_JRfSUSX6EeigZbhgJcrASA")]
 [DisplayName("Financial Instrument Reporting Reference Data Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingReferenceDataReportV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record FinancialInstrumentReportingReferenceDataReportV02 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingReferenceDataReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingReferenceDataReportV02( SecuritiesMarketReportHeader1 reqReportHeader,SecuritiesReferenceDataReport6 reqReferenceData )
-    {
-        ReportHeader = reqReportHeader;
-        ReferenceData = reqReferenceData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record FinancialInstrumentReportingReferenceDataReportV02 : IOute
     /// </summary>
     [IsoId("_JRfSUyX6EeigZbhgJcrASA")]
     [DisplayName("Report Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptHdr")]
-    #endif
     [IsoXmlTag("RptHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #else
-    public SecuritiesMarketReportHeader1 ReportHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the reference data reported by the trading venue.
     /// </summary>
     [IsoId("_JRfSVSX6EeigZbhgJcrASA")]
     [DisplayName("Reference Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RefData")]
-    #endif
     [IsoXmlTag("RefData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesReferenceDataReport6 ReferenceData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesReferenceDataReport6 ReferenceData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesReferenceDataReport6 ReferenceData { get; init; } 
-    #else
-    public SecuritiesReferenceDataReport6 ReferenceData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_JRfSVyX6EeigZbhgJcrASA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

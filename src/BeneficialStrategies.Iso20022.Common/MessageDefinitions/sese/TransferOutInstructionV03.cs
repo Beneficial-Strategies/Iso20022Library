@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferOutInstruction message to the executing party, for example, a transfer agent, to instruct the delivery of a financial instrument, free of payment, on a given date from a specified party.|This message may also be used to instruct the delivery of a financial instrument, free of payment, to another of the instructing parties own accounts or to a third party.|Usage|The TransferOutInstruction message is used to instruct the withdrawal of a financial instrument from one account and deliver it to either another account or to a third party.")]
 [IsoId("_oqwXcfpbEeCPwaG9zjUPNQ")]
 [DisplayName("Transfer Out Instruction V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferOutInstructionV03 : IOuterRecord
 {
     
@@ -65,21 +54,6 @@ public partial record TransferOutInstructionV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferOutInstructionV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferOutInstructionV03( MessageIdentification1 reqMessageIdentification,Transfer11 reqTransferDetails,InvestmentAccount22 reqAccountDetails,ReceiveInformation5 reqSettlementDetails )
-    {
-        MessageIdentification = reqMessageIdentification;
-        TransferDetails = reqTransferDetails;
-        AccountDetails = reqAccountDetails;
-        SettlementDetails = reqSettlementDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,197 +61,90 @@ public partial record TransferOutInstructionV03 : IOuterRecord
     /// </summary>
     [IsoId("_oqwXdfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_AbTUwENIEeGHJ_bHJRPaIQ_783055233")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? PoolReference { get; init; } 
-    #else
-    public AdditionalReference2? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference of the linked message that was previously sent.
     /// </summary>
     [IsoId("_C11dgENIEeGHJ_bHJRPaIQ_-1654471506")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference2? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_C11dgUNIEeGHJ_bHJRPaIQ_796626801")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference2? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
     /// </summary>
     [IsoId("_C11dgkNIEeGHJ_bHJRPaIQ_1379273282")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MasterReference { get; init; } 
-    #else
-    public System.String? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Requested date at which the instructing party places the transfer instruction.
     /// </summary>
     [IsoId("_NJMYn_peEeCPwaG9zjUPNQ")]
     [DisplayName("Requested Transfer Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqdTrfDt")]
-    #endif
     [IsoXmlTag("ReqdTrfDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat1Choice_? RequestedTransferDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat1Choice_? RequestedTransferDate { get; init; } 
-    #else
-    public DateFormat1Choice_? RequestedTransferDate { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_oqwXhfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Transfer Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfDtls")]
-    #endif
     [IsoXmlTag("TrfDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Transfer11 TransferDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Transfer11 TransferDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Transfer11 TransferDetails { get; init; } 
-    #else
-    public Transfer11 TransferDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the account from which the financial instrument is to be withdrawn.
     /// </summary>
     [IsoId("_oqwXjfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctDtls")]
-    #endif
     [IsoXmlTag("AcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InvestmentAccount22 AccountDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InvestmentAccount22 AccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InvestmentAccount22 AccountDetails { get; init; } 
-    #else
-    public InvestmentAccount22 AccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the receiving side of the transfer.
     /// </summary>
     [IsoId("_oqwXkfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Settlement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmDtls")]
-    #endif
     [IsoXmlTag("SttlmDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReceiveInformation5 SettlementDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReceiveInformation5 SettlementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReceiveInformation5 SettlementDetails { get; init; } 
-    #else
-    public ReceiveInformation5 SettlementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [IsoId("_oqwXlfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation2? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation2? CopyDetails { get; init; } 
-    #else
-    public CopyInformation2? CopyDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_oqwXmfpbEeCPwaG9zjUPNQ")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

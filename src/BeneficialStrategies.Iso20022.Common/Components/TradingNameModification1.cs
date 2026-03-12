@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ogVZgA4jEeK3IMoVvcTkkg")]
 [DisplayName("Trading Name Modification")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TradingNameModification1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TradingNameModification1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TradingNameModification1( System.String reqTradingName )
-    {
-        TradingName = reqTradingName;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,38 +23,18 @@ public partial record TradingNameModification1
     /// </summary>
     [IsoId("_1Ha10A4jEeK3IMoVvcTkkg")]
     [DisplayName("Modification Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ModCd")]
-    #endif
     [IsoXmlTag("ModCd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Modification1Code? ModificationCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Modification1Code? ModificationCode { get; init; } 
-    #else
-    public Modification1Code? ModificationCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Name used by a business for commercial purposes, although its registered legal name, used for contracts and other formal situations, may be another.
     /// </summary>
     [IsoId("_4tgywA4jEeK3IMoVvcTkkg")]
     [DisplayName("Trading Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradgNm")]
-    #endif
     [IsoXmlTag("TradgNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax350Text TradingName { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TradingName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TradingName { get; init; } 
-    #else
-    public System.String TradingName { get; set; } 
-    #endif
     
     
     #nullable disable

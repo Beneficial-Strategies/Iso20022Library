@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The CCPAvailableFinancialResourcesReport message is sent from the central counterparty to the national competent authority. It is used to inform the national competent authority of the aggregate quantum of resources available in each default waterfall to absorb losses resulting from the failure of one or more clearing member(s).")]
 [IsoId("_omGWYeUREem3X-64-NKdqg")]
 [DisplayName("CCP Available Financial Resources Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CCPAvailableFinancialResourcesReportV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record CCPAvailableFinancialResourcesReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CCPAvailableFinancialResourcesReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CCPAvailableFinancialResourcesReportV01( AvailableFinancialResourcesAmount1 reqAvailableFinancialResourcesAmount )
-    {
-        AvailableFinancialResourcesAmount = reqAvailableFinancialResourcesAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,53 +57,24 @@ public partial record CCPAvailableFinancialResourcesReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_omGWaeUREem3X-64-NKdqg")]
     [DisplayName("Available Financial Resources Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AvlblFinRsrcsAmt")]
-    #endif
     [IsoXmlTag("AvlblFinRsrcsAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AvailableFinancialResourcesAmount1 AvailableFinancialResourcesAmount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AvailableFinancialResourcesAmount1 AvailableFinancialResourcesAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AvailableFinancialResourcesAmount1 AvailableFinancialResourcesAmount { get; init; } 
-    #else
-    public AvailableFinancialResourcesAmount1 AvailableFinancialResourcesAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Breakdown of other CCP prefunded resources required as part of the default waterfall.
     /// </summary>
     [IsoId("_omGWa-UREem3X-64-NKdqg")]
     [DisplayName("Other Prefunded Resources")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrPrfnddRsrcs")]
-    #endif
     [IsoXmlTag("OthrPrfnddRsrcs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReportingAssetBreakdown1? OtherPrefundedResources { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportingAssetBreakdown1? OtherPrefundedResources { get; init; } 
-    #else
-    public ReportingAssetBreakdown1? OtherPrefundedResources { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_omGWbeUREem3X-64-NKdqg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

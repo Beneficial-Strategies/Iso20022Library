@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"The DeleteStandingOrder message is sent by the system member to delete one or more standing orders within the static data held by the system transaction administrator.")]
 [IsoId("_jwlbXxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Delete Standing Order V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DeleteStandingOrderV03 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record DeleteStandingOrderV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DeleteStandingOrderV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DeleteStandingOrderV03( MessageHeader1 reqMessageHeader,StandingOrderOrAll2Choice_ reqStandingOrderDetails )
-    {
-        MessageHeader = reqMessageHeader;
-        StandingOrderDetails = reqStandingOrderDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record DeleteStandingOrderV03 : IOuterRecord
     /// </summary>
     [IsoId("_jwlbYRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies one particular limit set by the member and managed by the transaction administrator.
     /// </summary>
     [IsoId("_jwlbYxbvEeiyVv5j1vf1VQ")]
     [DisplayName("Standing Order Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StgOrdrDtls")]
-    #endif
     [IsoXmlTag("StgOrdrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StandingOrderOrAll2Choice_ StandingOrderDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StandingOrderOrAll2Choice_ StandingOrderDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StandingOrderOrAll2Choice_ StandingOrderDetails { get; init; } 
-    #else
-    public StandingOrderOrAll2Choice_ StandingOrderDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jwlbZRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

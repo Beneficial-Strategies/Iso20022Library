@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"The AccountSwitchInformationRequest message is sent by the new account servicer to the account servicer which previously held the account to initiate the account switch process. It provides information sufficient for the old account servicer to identify the old account and validate the account parties. The new account servicer is able to inform the old bank of the maximum funding the new account will provide to settle a negative closing balance and the proposed balance transfer window.")]
 [IsoId("_LvzYf8P_Eemsic1bQcEtLA")]
 [DisplayName("Account Switch Information Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountSwitchInformationRequestV03 : IOuterRecord
 {
     
@@ -61,21 +50,6 @@ public partial record AccountSwitchInformationRequestV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountSwitchInformationRequestV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountSwitchInformationRequestV03( MessageIdentification1 reqMessageIdentification,AccountSwitchDetails1 reqAccountSwitchDetails,NewAccount2 reqNewAccount,CashAccount39 reqOldAccount )
-    {
-        MessageIdentification = reqMessageIdentification;
-        AccountSwitchDetails = reqAccountSwitchDetails;
-        NewAccount = reqNewAccount;
-        OldAccount = reqOldAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,110 +57,48 @@ public partial record AccountSwitchInformationRequestV03 : IOuterRecord
     /// </summary>
     [IsoId("_LvzYgcP_Eemsic1bQcEtLA")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains information about the details of the account switch.
     /// </summary>
     [IsoId("_LvzYg8P_Eemsic1bQcEtLA")]
     [DisplayName("Account Switch Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSwtchDtls")]
-    #endif
     [IsoXmlTag("AcctSwtchDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #else
-    public AccountSwitchDetails1 AccountSwitchDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Account servicer holding the account to which the switch will be made. That is, the acquiring account servicer.
     /// </summary>
     [IsoId("_LvzYhcP_Eemsic1bQcEtLA")]
     [DisplayName("New Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewAcct")]
-    #endif
     [IsoXmlTag("NewAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NewAccount2 NewAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NewAccount2 NewAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NewAccount2 NewAccount { get; init; } 
-    #else
-    public NewAccount2 NewAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Account held at the old account servicer being switched to the new account servicer.
     /// </summary>
     [IsoId("_LvzYh8P_Eemsic1bQcEtLA")]
     [DisplayName("Old Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OdAcct")]
-    #endif
     [IsoXmlTag("OdAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CashAccount39 OldAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CashAccount39 OldAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount39 OldAccount { get; init; } 
-    #else
-    public CashAccount39 OldAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Information that enables the receiving account servicer to reconcile the payment with the request.
     /// </summary>
     [IsoId("_LvzYicP_Eemsic1bQcEtLA")]
     [DisplayName("Balance Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalTrf")]
-    #endif
     [IsoXmlTag("BalTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BalanceTransfer3? BalanceTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceTransfer3? BalanceTransfer { get; init; } 
-    #else
-    public BalanceTransfer3? BalanceTransfer { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_LvzYi8P_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

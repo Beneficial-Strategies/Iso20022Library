@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -25,7 +20,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Reference2Choice.InterestPaymentRequestIdentification))]
     [KnownType(typeof(Reference2Choice.InterestPaymentResponseIdentification))]
     [KnownType(typeof(Reference2Choice.InterestPaymentStatementIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(Reference2Choice.MarginCallRequestIdentification),nameof(Reference2Choice.MarginCallRequestIdentification))]
     [JsonDerivedType(typeof(Reference2Choice.MarginCallResponseIdentification),nameof(Reference2Choice.MarginCallResponseIdentification))]
     [JsonDerivedType(typeof(Reference2Choice.CollateralProposalIdentification),nameof(Reference2Choice.CollateralProposalIdentification))]
@@ -37,20 +31,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reference2Choice.InterestPaymentRequestIdentification),nameof(Reference2Choice.InterestPaymentRequestIdentification))]
     [JsonDerivedType(typeof(Reference2Choice.InterestPaymentResponseIdentification),nameof(Reference2Choice.InterestPaymentResponseIdentification))]
     [JsonDerivedType(typeof(Reference2Choice.InterestPaymentStatementIdentification),nameof(Reference2Choice.InterestPaymentStatementIdentification))]
-    #endif
     [IsoId("_TYNGkKerEeCq2KR6DaC1kQ_992102367")]
     [DisplayName("Reference 2 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record Reference2Choice_
-    #else
-    public abstract partial class Reference2Choice_
-    #endif
     {
     }
 }

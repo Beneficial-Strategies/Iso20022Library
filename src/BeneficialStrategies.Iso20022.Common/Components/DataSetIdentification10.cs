@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8CiyQXGYEe2TbaNWBpRZpQ")]
 [DisplayName("Data Set Identification")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DataSetIdentification10
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DataSetIdentification10 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DataSetIdentification10( DataSetCategory18Code reqType )
-    {
-        Type = reqType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,75 +23,37 @@ public partial record DataSetIdentification10
     /// </summary>
     [IsoId("_8Kz9cXGYEe2TbaNWBpRZpQ")]
     [DisplayName("Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Nm")]
-    #endif
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax256Text? Name { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Name { get; init; } 
-    #else
-    public System.String? Name { get; set; } 
-    #endif
     
     /// <summary>
     /// Category of data set.
     /// </summary>
     [IsoId("_8Kz9c3GYEe2TbaNWBpRZpQ")]
     [DisplayName("Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tp")]
-    #endif
     [IsoXmlTag("Tp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DataSetCategory18Code Type { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DataSetCategory18Code Type { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DataSetCategory18Code Type { get; init; } 
-    #else
-    public DataSetCategory18Code Type { get; set; } 
-    #endif
     
     /// <summary>
     /// Version of the data set.
     /// </summary>
     [IsoId("_8Kz9dXGYEe2TbaNWBpRZpQ")]
     [DisplayName("Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Vrsn")]
-    #endif
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax256Text? Version { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Version { get; init; } 
-    #else
-    public System.String? Version { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time of creation of the data set.
     /// </summary>
     [IsoId("_8Kz9d3GYEe2TbaNWBpRZpQ")]
     [DisplayName("Creation Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CreDtTm")]
-    #endif
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODateTime? CreationDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime? CreationDateTime { get; init; } 
-    #else
-    public System.DateTime? CreationDateTime { get; set; } 
-    #endif
     
     
     #nullable disable

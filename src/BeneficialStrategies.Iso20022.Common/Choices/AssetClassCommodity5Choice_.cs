@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -28,7 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodity5Choice.MultiCommodityExotic))]
     [KnownType(typeof(AssetClassCommodity5Choice.OfficialEconomicStatistics))]
     [KnownType(typeof(AssetClassCommodity5Choice.Other))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(AssetClassCommodity5Choice.Agricultural),nameof(AssetClassCommodity5Choice.Agricultural))]
     [JsonDerivedType(typeof(AssetClassCommodity5Choice.Energy),nameof(AssetClassCommodity5Choice.Energy))]
     [JsonDerivedType(typeof(AssetClassCommodity5Choice.Environmental),nameof(AssetClassCommodity5Choice.Environmental))]
@@ -43,20 +37,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AssetClassCommodity5Choice.MultiCommodityExotic),nameof(AssetClassCommodity5Choice.MultiCommodityExotic))]
     [JsonDerivedType(typeof(AssetClassCommodity5Choice.OfficialEconomicStatistics),nameof(AssetClassCommodity5Choice.OfficialEconomicStatistics))]
     [JsonDerivedType(typeof(AssetClassCommodity5Choice.Other),nameof(AssetClassCommodity5Choice.Other))]
-    #endif
     [IsoId("_omaPsbtIEeiLRYqS-r-R-A")]
     [DisplayName("Asset Class Commodity 5 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record AssetClassCommodity5Choice_
-    #else
-    public abstract partial class AssetClassCommodity5Choice_
-    #endif
     {
     }
 }

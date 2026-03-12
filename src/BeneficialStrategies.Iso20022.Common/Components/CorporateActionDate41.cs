@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UqUT7VhsEeS5jeC8QHrlrg")]
 [DisplayName("Corporate Action Date")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionDate41
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,51 +23,24 @@ public partial record CorporateActionDate41
     /// </summary>
     [IsoId("_VF1yQ1hsEeS5jeC8QHrlrg")]
     [DisplayName("Record Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcrdDt")]
-    #endif
     [IsoXmlTag("RcrdDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat19Choice_? RecordDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat19Choice_? RecordDate { get; init; } 
-    #else
-    public DateFormat19Choice_? RecordDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time as from which trading (including exchange and OTC trading) occurs on the underlying security without the benefit.
     /// </summary>
     [IsoId("_VF1yS1hsEeS5jeC8QHrlrg")]
     [DisplayName("Ex Dividend Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ExDvddDt")]
-    #endif
     [IsoXmlTag("ExDvddDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat19Choice_? ExDividendDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat19Choice_? ExDividendDate { get; init; } 
-    #else
-    public DateFormat19Choice_? ExDividendDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time on which the lottery is run and applied to the holder&apos;s positions. This is also applicable to partial calls.
     /// </summary>
     [IsoId("_Z7AKZFhsEeS5jeC8QHrlrg")]
     [DisplayName("Lottery Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LtryDt")]
-    #endif
     [IsoXmlTag("LtryDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat19Choice_? LotteryDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat19Choice_? LotteryDate { get; init; } 
-    #else
-    public DateFormat19Choice_? LotteryDate { get; set; } 
-    #endif
     
     
     #nullable disable

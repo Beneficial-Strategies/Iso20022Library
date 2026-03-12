@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAICSD1 message extends ISO corporate action Instruction Cancellation Request (CAIC) message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_b8UwkL5OEeexmbB7KsjCwA")]
 [DisplayName("DTCCCAICSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAICSD1V01 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAICSD1V01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,9 +57,6 @@ public partial record DTCCCAICSD1V01 : IOuterRecord
     /// </summary>
     [IsoId("_fcQ_wMYxEeesocHIuVGr7g")]
     [DisplayName("Reorganisation Instruction Cancellation Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReorgInstrCxlDtls")]
-    #endif
     [IsoXmlTag("ReorgInstrCxlDtls")]
     [MinLength(0)]
     [MaxLength(12)]

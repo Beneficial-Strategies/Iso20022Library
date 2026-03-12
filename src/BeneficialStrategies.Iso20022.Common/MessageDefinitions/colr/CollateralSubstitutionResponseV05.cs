@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.colr;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.colr;
 [Description(@"Scope|The CollateralSubstitutionResponse message is sent by either the collateral taker or its collateral manager to the collateral giver or its collateral manager. This is a response to the CollateralSubstitutionRequest message and the collateral proposed in the substitution request can be accepted or rejected. If the collateral proposed is rejected then a new CollateralSubstitutionRequest should be sent. Note: There are cases where the collateral giver will send this message when the collateral taker has initiated the CollateralSubstitutionRequest message, for example in case of breach in the concentration limit.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|This is a response to the CollateralSubstitutionRequest message and the collateral proposed in the substitution request can be accepted or rejected.")]
 [IsoId("_J4YklSgrEeyB747fKu7_rw")]
 [DisplayName("Collateral Substitution Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CollateralSubstitutionResponseV05 : IOuterRecord
 {
     
@@ -67,20 +56,6 @@ public partial record CollateralSubstitutionResponseV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CollateralSubstitutionResponseV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CollateralSubstitutionResponseV05( System.String reqTransactionIdentification,Obligation9 reqObligation,SubstitutionResponse2 reqSubstitutionResponse )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        Obligation = reqObligation;
-        SubstitutionResponse = reqSubstitutionResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,93 +63,42 @@ public partial record CollateralSubstitutionResponseV05 : IOuterRecord
     /// </summary>
     [IsoId("_J4YkmygrEeyB747fKu7_rw")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransactionIdentification { get; init; } 
-    #else
-    public System.String TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.
     /// </summary>
     [IsoId("_J4YknSgrEeyB747fKu7_rw")]
     [DisplayName("Obligation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Oblgtn")]
-    #endif
     [IsoXmlTag("Oblgtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Obligation9 Obligation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Obligation9 Obligation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Obligation9 Obligation { get; init; } 
-    #else
-    public Obligation9 Obligation { get; set; } 
-    #endif
     
     /// <summary>
     /// Agreement details for the over the counter market.
     /// </summary>
     [IsoId("_J4YknygrEeyB747fKu7_rw")]
     [DisplayName("Agreement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Agrmt")]
-    #endif
     [IsoXmlTag("Agrmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Agreement4? Agreement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Agreement4? Agreement { get; init; } 
-    #else
-    public Agreement4? Agreement { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details about the collateral substitution response.
     /// </summary>
     [IsoId("_J4YkoSgrEeyB747fKu7_rw")]
     [DisplayName("Substitution Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SbstitnRspn")]
-    #endif
     [IsoXmlTag("SbstitnRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SubstitutionResponse2 SubstitutionResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SubstitutionResponse2 SubstitutionResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubstitutionResponse2 SubstitutionResponse { get; init; } 
-    #else
-    public SubstitutionResponse2 SubstitutionResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_J4YkoygrEeyB747fKu7_rw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

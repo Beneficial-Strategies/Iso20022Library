@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vyh5HZqLEeWcAIE4lEkF_Q")]
 [DisplayName("Safekeeping Place Type And Text")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SafekeepingPlaceTypeAndText25
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SafekeepingPlaceTypeAndText25 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SafekeepingPlaceTypeAndText25( SafekeepingPlace2Code reqSafekeepingPlaceType )
-    {
-        SafekeepingPlaceType = reqSafekeepingPlaceType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,38 +23,18 @@ public partial record SafekeepingPlaceTypeAndText25
     /// </summary>
     [IsoId("_Vyh5H5qLEeWcAIE4lEkF_Q")]
     [DisplayName("Safekeeping Place Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgPlcTp")]
-    #endif
     [IsoXmlTag("SfkpgPlcTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SafekeepingPlace2Code SafekeepingPlaceType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SafekeepingPlace2Code SafekeepingPlaceType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafekeepingPlace2Code SafekeepingPlaceType { get; init; } 
-    #else
-    public SafekeepingPlace2Code SafekeepingPlaceType { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information about the place of safekeeping.
     /// </summary>
     [IsoId("_Vyh5J5qLEeWcAIE4lEkF_Q")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
     [StringLength(maximumLength: 30 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax30Text? Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Identification { get; init; } 
-    #else
-    public System.String? Identification { get; set; } 
-    #endif
     
     
     #nullable disable

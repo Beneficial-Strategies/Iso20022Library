@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -38,12 +33,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The Reject Case Assignment message is sent by a case assignee to a case creator or case assigner to reject a case given to him.|Usage|The Reject Case Assignment message is used to notify the case creator or case assigner the rejection of an assignment by the case assignee in a:|- request to cancel payment case|- request to modify payment case|- unable to apply case|- claim non receipt case|Rejecting a case assignment occurs when the case assignee is unable to trace the original payment instruction or when the case assignee is unable, or does not have authority, to process the assigned case.|The Reject Case Assignment message covers one and only one case at a time. If the case assignee needs to reject several case assignments, then multiple Reject Case Assignment messages must be sent.|The Reject Case Assignment message must be forwarded by all subsequent case assignee(s) until it reaches the case assigner.|The Reject Case Assignment message must not be used in place of a Resolution Of Investigation or Case Status Report message.")]
 [IsoId("_PxiCwtE_Ed-BzquC8wXy7w_-313128527")]
 [DisplayName("Reject Case Assignment")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RejectCaseAssignment : IOuterRecord
 {
     
@@ -72,20 +61,6 @@ public partial record RejectCaseAssignment : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RejectCaseAssignment instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RejectCaseAssignment( CaseAssignment reqAssignment,Case reqCase,CaseAssignmentRejectionJustification reqJustification )
-    {
-        Assignment = reqAssignment;
-        Case = reqCase;
-        Justification = reqJustification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,57 +68,24 @@ public partial record RejectCaseAssignment : IOuterRecord
     /// </summary>
     [IsoId("_PxiCw9E_Ed-BzquC8wXy7w_2109597961")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignment Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignment Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment Assignment { get; init; } 
-    #else
-    public CaseAssignment Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the case.
     /// </summary>
     [IsoId("_PxiCxNE_Ed-BzquC8wXy7w_2125297631")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Case Case { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Case Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case Case { get; init; } 
-    #else
-    public Case Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the reason for not accepting a Case.
     /// </summary>
     [IsoId("_PxiCxdE_Ed-BzquC8wXy7w_-1282168665")]
     [DisplayName("Justification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Justfn")]
-    #endif
     [IsoXmlTag("Justfn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignmentRejectionJustification Justification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignmentRejectionJustification Justification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignmentRejectionJustification Justification { get; init; } 
-    #else
-    public CaseAssignmentRejectionJustification Justification { get; set; } 
-    #endif
     
     
     #nullable disable

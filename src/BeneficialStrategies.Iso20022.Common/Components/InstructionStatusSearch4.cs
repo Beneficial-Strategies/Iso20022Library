@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yttMb5lcEeeE1Ya-LgRsuQ")]
 [DisplayName("Instruction Status Search")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InstructionStatusSearch4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,53 +23,26 @@ public partial record InstructionStatusSearch4
     /// </summary>
     [IsoId("_y1nyQ5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Instruction Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstrSts")]
-    #endif
     [IsoXmlTag("PmtInstrSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentStatusCodeSearch2Choice_? PaymentInstructionStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentStatusCodeSearch2Choice_? PaymentInstructionStatus { get; init; } 
-    #else
-    public PaymentStatusCodeSearch2Choice_? PaymentInstructionStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time at which the status was assigned to the transfer.
     /// </summary>
     [IsoId("_y1nyRZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Instruction Status Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstrStsDtTm")]
-    #endif
     [IsoXmlTag("PmtInstrStsDtTm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateTimePeriod1Choice_? PaymentInstructionStatusDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateTimePeriod1Choice_? PaymentInstructionStatusDateTime { get; init; } 
-    #else
-    public DateTimePeriod1Choice_? PaymentInstructionStatusDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines the reason that has been used by the Target2 SSP system to reject the transaction.
     /// </summary>
     [IsoId("_y1nyR5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Proprietary Status Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtryStsRsn")]
-    #endif
     [IsoXmlTag("PrtryStsRsn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
     [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax4AlphaNumericText? ProprietaryStatusReason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ProprietaryStatusReason { get; init; } 
-    #else
-    public System.String? ProprietaryStatusReason { get; set; } 
-    #endif
     
     
     #nullable disable

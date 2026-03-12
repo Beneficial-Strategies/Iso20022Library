@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ttIGwFkyEeGeoaLUQk__nA_2058261380")]
 [DisplayName("Statement Resolution Entry")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StatementResolutionEntry2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,106 +23,52 @@ public partial record StatementResolutionEntry2
     /// </summary>
     [IsoId("_ttIGwVkyEeGeoaLUQk__nA_-1850669866")]
     [DisplayName("Original Group Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlGrpInf")]
-    #endif
     [IsoXmlTag("OrgnlGrpInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OriginalGroupInformation3? OriginalGroupInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalGroupInformation3? OriginalGroupInformation { get; init; } 
-    #else
-    public OriginalGroupInformation3? OriginalGroupInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification, as assigned by the account servicer, to unambiguously identify the original statement.
     /// </summary>
     [IsoId("_ttIGwlkyEeGeoaLUQk__nA_1775619466")]
     [DisplayName("Original Statement Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlStmtId")]
-    #endif
     [IsoXmlTag("OrgnlStmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? OriginalStatementIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OriginalStatementIdentification { get; init; } 
-    #else
-    public System.String? OriginalStatementIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique reference, as assigned by the account servicing institution, to unambiguously identify the entry.
     /// </summary>
     [IsoId("_ttIGw1kyEeGeoaLUQk__nA_-708512893")]
     [DisplayName("Account Servicer Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcrRef")]
-    #endif
     [IsoXmlTag("AcctSvcrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? AccountServicerReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AccountServicerReference { get; init; } 
-    #else
-    public System.String? AccountServicerReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Corrected debit or credit amount, compared to the original entry where the amount is incorrect.||Usage: This amount may only be present if an incorrect statement entry has been reported.
     /// </summary>
     [IsoId("_ttIGxFkyEeGeoaLUQk__nA_52252260")]
     [DisplayName("Corrected Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CrrctdAmt")]
-    #endif
     [IsoXmlTag("CrrctdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAndAmount? CorrectedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount? CorrectedAmount { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount? CorrectedAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information on the charges included in the original entry amount.
     /// </summary>
     [IsoId("_ttR3wFkyEeGeoaLUQk__nA_-1665746860")]
     [DisplayName("Charges")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Chrgs")]
-    #endif
     [IsoXmlTag("Chrgs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Charges3? Charges { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Charges3? Charges { get; init; } 
-    #else
-    public Charges3? Charges { get; set; } 
-    #endif
     
     /// <summary>
     /// Underlying reason for the payment transaction.|Usage: Purpose is used by the end-customers, that is initiating party, (ultimate) debtor, (ultimate) creditor to provide information concerning the nature of the payment. Purpose is a content element, which is not used for processing by any of the agents involved in the payment chain.
     /// </summary>
     [IsoId("_ttR3wVkyEeGeoaLUQk__nA_-1193638900")]
     [DisplayName("Purpose")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Purp")]
-    #endif
     [IsoXmlTag("Purp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Purpose2Choice_? Purpose { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Purpose2Choice_? Purpose { get; init; } 
-    #else
-    public Purpose2Choice_? Purpose { get; set; } 
-    #endif
     
     
     #nullable disable

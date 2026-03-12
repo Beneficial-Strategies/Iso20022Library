@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -47,12 +42,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An account owner sends a SecuritiesSettlementConditionsModificationRequest to an account servicer to request the modification of a processing indicator or another non-matching information.||The account owner/servicer relationship may be:|- a central securities depository participant which has an account with a central securities depository.|It could also be, if agreed in a service level agreement:|- a global custodian which has an account with its local agent (sub-custodian), or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.||In markets where this applies (for example, securities market infrastructures with no pre-settlement matching process), it is used by a party to approve, cancel or reject a transaction instructed by the counterparty.||This message cannot be used to request the modification of trade or event details.|The use of AdditionalInformation and its fields must be pre-agreed between account servicer and account owner. The fields in that sequence cannot be used to amend a trade or event detail unless authorised by country market practice.")]
 [IsoId("_vYSqsdBmEeihG9bKfarOOA")]
 [DisplayName("Securities Settlement Conditions Modification Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementConditionsModificationRequestV08 : IOuterRecord
 {
     
@@ -81,19 +70,6 @@ public partial record SecuritiesSettlementConditionsModificationRequestV08 : IOu
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementConditionsModificationRequestV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementConditionsModificationRequestV08( SecuritiesAccount19 reqSafekeepingAccount,RequestDetails20 reqRequestDetails )
-    {
-        SafekeepingAccount = reqSafekeepingAccount;
-        RequestDetails = reqRequestDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -101,89 +77,40 @@ public partial record SecuritiesSettlementConditionsModificationRequestV08 : IOu
     /// </summary>
     [IsoId("_vYSqtdBmEeihG9bKfarOOA")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification144? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification144? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification144? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_vYSqt9BmEeihG9bKfarOOA")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount19 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the request.
     /// </summary>
     [IsoId("_vYSqudBmEeihG9bKfarOOA")]
     [DisplayName("Request Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqDtls")]
-    #endif
     [IsoXmlTag("ReqDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RequestDetails20 RequestDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RequestDetails20 RequestDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RequestDetails20 RequestDetails { get; init; } 
-    #else
-    public RequestDetails20 RequestDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_vYSqu9BmEeihG9bKfarOOA")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalInformation16? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalInformation16? AdditionalInformation { get; init; } 
-    #else
-    public AdditionalInformation16? AdditionalInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_vYSqvdBmEeihG9bKfarOOA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

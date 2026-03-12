@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The MandateAcceptanceReport message is sent from the agent of the receiver (debtor or creditor) of the MandateRequest message (initiation, amendment or cancellation) to the agent of the initiator of the MandateRequest message (debtor or creditor).|A MandateAcceptanceReport message is used to confirm the acceptance or rejection of a MandateRequest message. |Where acceptance is part of the full process flow, a MandateRequest message only becomes valid after a confirmation of acceptance is received through a MandateAcceptanceReport message from the agent of the receiver.|Usage|The MandateAcceptanceReport message can contain only one confirmation of acceptance of rejection of one specific MandateRequest message.|The messages can be exchanged between debtor agent and creditor agent and between debtor agent and debtor and creditor agent and creditor.|The MandateAcceptanceReport message can be used in domestic and cross-border scenarios.")]
 [IsoId("_GX7CUtEvEd-BzquC8wXy7w_2092980503")]
 [DisplayName("Mandate Acceptance Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MandateAcceptanceReportV01 : IOuterRecord
 {
     
@@ -67,19 +56,6 @@ public partial record MandateAcceptanceReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MandateAcceptanceReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MandateAcceptanceReportV01( GroupHeader31 reqGroupHeader,MandateAcceptance1 reqUnderlyingAcceptanceDetails )
-    {
-        GroupHeader = reqGroupHeader;
-        UnderlyingAcceptanceDetails = reqUnderlyingAcceptanceDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,38 +63,16 @@ public partial record MandateAcceptanceReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_GX7CU9EvEd-BzquC8wXy7w_-1730068754")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader31 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader31 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader31 GroupHeader { get; init; } 
-    #else
-    public GroupHeader31 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide information on the acception or rejection of the mandate request.
     /// </summary>
     [IsoId("_GX7CVNEvEd-BzquC8wXy7w_1787356156")]
     [DisplayName("Underlying Acceptance Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygAccptncDtls")]
-    #endif
     [IsoXmlTag("UndrlygAccptncDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MandateAcceptance1 UnderlyingAcceptanceDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MandateAcceptance1 UnderlyingAcceptanceDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MandateAcceptance1 UnderlyingAcceptanceDetails { get; init; } 
-    #else
-    public MandateAcceptance1 UnderlyingAcceptanceDetails { get; set; } 
-    #endif
     
     
     #nullable disable

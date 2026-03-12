@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hSAnJcK4EeuFNp8LZAnorg")]
 [DisplayName("Trade Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TradeData29
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record TradeData29
     /// </summary>
     [IsoId("_hTXSAcK4EeuFNp8LZAnorg")]
     [DisplayName("Report Statistics")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptSttstcs")]
-    #endif
     [IsoXmlTag("RptSttstcs")]
     public ValueList<DetailedReportStatistics5> ReportStatistics { get; init; } = new ValueList<DetailedReportStatistics5>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _hTXSAcK4EeuFNp8LZAnorg
@@ -51,9 +32,6 @@ public partial record TradeData29
     /// </summary>
     [IsoId("_hTXSA8K4EeuFNp8LZAnorg")]
     [DisplayName("Transaction Statistics")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxSttstcs")]
-    #endif
     [IsoXmlTag("TxSttstcs")]
     public ValueList<DetailedTransactionStatistics2Choice_> TransactionStatistics { get; init; } = new ValueList<DetailedTransactionStatistics2Choice_>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _hTXSA8K4EeuFNp8LZAnorg
@@ -63,17 +41,8 @@ public partial record TradeData29
     /// </summary>
     [IsoId("_hTXSBcK4EeuFNp8LZAnorg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -4,11 +4,6 @@ using BeneficialStrategies.Iso20022.Components;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.UserDefined;
 
 /// <summary>
@@ -17,12 +12,6 @@ namespace BeneficialStrategies.Iso20022.UserDefined;
 /// </summary>
 [IsoId("_YWiyNdp-Ed-ak6NoX_4Aeg_-332034688")]
 [DisplayName("Extension Contents")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ExtensionContents1
 {
     #nullable enable

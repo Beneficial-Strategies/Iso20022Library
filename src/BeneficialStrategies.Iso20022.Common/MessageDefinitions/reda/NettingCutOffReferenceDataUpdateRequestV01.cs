@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The Netting Cut Off Reference Data Update Request message is sent to a central system by a participant to request an update to a participant's netting cut off held at the central system.")]
 [IsoId("_CYWUEJVFEeaYkf5FCqYMeA")]
 [DisplayName("Netting Cut Off Reference Data Update Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NettingCutOffReferenceDataUpdateRequestV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record NettingCutOffReferenceDataUpdateRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NettingCutOffReferenceDataUpdateRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NettingCutOffReferenceDataUpdateRequestV01( RequestData1 reqRequestData,NettingCutOff1 reqNettingCutOffRequest )
-    {
-        RequestData = reqRequestData;
-        NettingCutOffRequest = reqNettingCutOffRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record NettingCutOffReferenceDataUpdateRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_5WY5cJVGEeaYkf5FCqYMeA")]
     [DisplayName("Request Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqData")]
-    #endif
     [IsoXmlTag("ReqData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RequestData1 RequestData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RequestData1 RequestData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RequestData1 RequestData { get; init; } 
-    #else
-    public RequestData1 RequestData { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the information regarding the changes to the netting cut off.
     /// </summary>
     [IsoId("_-cihoJVLEeaYkf5FCqYMeA")]
     [DisplayName("Netting Cut Off Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetgCutOffReq")]
-    #endif
     [IsoXmlTag("NetgCutOffReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NettingCutOff1 NettingCutOffRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NettingCutOff1 NettingCutOffRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NettingCutOff1 NettingCutOffRequest { get; init; } 
-    #else
-    public NettingCutOff1 NettingCutOffRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Yna6IJVMEeaYkf5FCqYMeA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

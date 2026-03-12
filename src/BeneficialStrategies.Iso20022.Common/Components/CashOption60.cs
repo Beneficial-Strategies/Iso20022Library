@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_skzEd83wEee5nJBZsW8MFQ")]
 [DisplayName("Cash Option")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CashOption60
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CashOption60 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CashOption60( CreditDebitCode reqCreditDebitIndicator,CorporateActionAmounts45 reqAmountDetails,CorporateActionDate65 reqDateDetails )
-    {
-        CreditDebitIndicator = reqCreditDebitIndicator;
-        AmountDetails = reqAmountDetails;
-        DateDetails = reqDateDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,244 +23,112 @@ public partial record CashOption60
     /// </summary>
     [IsoId("_skzEgc3wEee5nJBZsW8MFQ")]
     [DisplayName("Credit Debit Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtDbtInd")]
-    #endif
     [IsoXmlTag("CdtDbtInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CreditDebitCode CreditDebitIndicator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CreditDebitCode CreditDebitIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CreditDebitCode CreditDebitIndicator { get; init; } 
-    #else
-    public CreditDebitCode CreditDebitIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer or upon receipt of proceeds from the issuer.
     /// </summary>
     [IsoId("_skzEic3wEee5nJBZsW8MFQ")]
     [DisplayName("Contractual Payment Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrctlPmtInd")]
-    #endif
     [IsoXmlTag("CtrctlPmtInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Payment1Code? ContractualPaymentIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Payment1Code? ContractualPaymentIndicator { get; init; } 
-    #else
-    public Payment1Code? ContractualPaymentIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Proceeds are taxable according to the information provided by the issuer / offeror.
     /// </summary>
     [IsoId("_skzEkc3wEee5nJBZsW8MFQ")]
     [DisplayName("Issuer Offeror Taxability Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IssrOfferrTaxbltyInd")]
-    #endif
     [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IssuerOfferorTaxabilityIndicator1Choice_? IssuerOfferorTaxabilityIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IssuerOfferorTaxabilityIndicator1Choice_? IssuerOfferorTaxabilityIndicator { get; init; } 
-    #else
-    public IssuerOfferorTaxabilityIndicator1Choice_? IssuerOfferorTaxabilityIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the type of income.|The lists of income type codes to be used, are available on the SMPG website at www.smpg.info.
     /// </summary>
     [IsoId("_skzEk83wEee5nJBZsW8MFQ")]
     [DisplayName("Income Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IncmTp")]
-    #endif
     [IsoXmlTag("IncmTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification47? IncomeType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification47? IncomeType { get; init; } 
-    #else
-    public GenericIdentification47? IncomeType { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the basis for the reduced rate of withholding.
     /// </summary>
     [IsoId("_skzEm83wEee5nJBZsW8MFQ")]
     [DisplayName("Exemption Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XmptnTp")]
-    #endif
     [IsoXmlTag("XmptnTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification47? ExemptionType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification47? ExemptionType { get; init; } 
-    #else
-    public GenericIdentification47? ExemptionType { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates the country from which the income originates.
     /// </summary>
     [IsoId("_skzEnc3wEee5nJBZsW8MFQ")]
     [DisplayName("Country Of Income Source")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtryOfIncmSrc")]
-    #endif
     [IsoXmlTag("CtryOfIncmSrc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CountryCode? CountryOfIncomeSource { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public string? CountryOfIncomeSource { get; init; } 
-    #else
-    public string? CountryOfIncomeSource { get; set; } 
-    #endif
     
     /// <summary>
     /// Choice between a cash account, a charges account or a tax account.
     /// </summary>
     [IsoId("_skzEn83wEee5nJBZsW8MFQ")]
     [DisplayName("Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Acct")]
-    #endif
     [IsoXmlTag("Acct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Account9Choice_? Account { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Account9Choice_? Account { get; init; } 
-    #else
-    public Account9Choice_? Account { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about cash parties.
     /// </summary>
     [IsoId("_skzEp83wEee5nJBZsW8MFQ")]
     [DisplayName("Cash Parties")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshPties")]
-    #endif
     [IsoXmlTag("CshPties")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashParties29? CashParties { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashParties29? CashParties { get; init; } 
-    #else
-    public CashParties29? CashParties { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the amounts related to a cash movement.
     /// </summary>
     [IsoId("_skzEr83wEee5nJBZsW8MFQ")]
     [DisplayName("Amount Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AmtDtls")]
-    #endif
     [IsoXmlTag("AmtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionAmounts45 AmountDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionAmounts45 AmountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionAmounts45 AmountDetails { get; init; } 
-    #else
-    public CorporateActionAmounts45 AmountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the dates related to a cash movement.
     /// </summary>
     [IsoId("_skzEt83wEee5nJBZsW8MFQ")]
     [DisplayName("Date Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtDtls")]
-    #endif
     [IsoXmlTag("DtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionDate65 DateDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionDate65 DateDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionDate65 DateDetails { get; init; } 
-    #else
-    public CorporateActionDate65 DateDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Exchange rate between the amount and the resulting amount.
     /// </summary>
     [IsoId("_skzEv83wEee5nJBZsW8MFQ")]
     [DisplayName("Foreign Exchange Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FXDtls")]
-    #endif
     [IsoXmlTag("FXDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ForeignExchangeTerms27? ForeignExchangeDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ForeignExchangeTerms27? ForeignExchangeDetails { get; init; } 
-    #else
-    public ForeignExchangeTerms27? ForeignExchangeDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the tax voucher related to a cash movement.
     /// </summary>
     [IsoId("_skzEx83wEee5nJBZsW8MFQ")]
     [DisplayName("Tax Voucher Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxVchrDtls")]
-    #endif
     [IsoXmlTag("TaxVchrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TaxVoucher5? TaxVoucherDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TaxVoucher5? TaxVoucherDetails { get; init; } 
-    #else
-    public TaxVoucher5? TaxVoucherDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the corporate action option.
     /// </summary>
     [IsoId("_skzEz83wEee5nJBZsW8MFQ")]
     [DisplayName("Rate And Amount Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RateAndAmtDtls")]
-    #endif
     [IsoXmlTag("RateAndAmtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public RateDetails33? RateAndAmountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RateDetails33? RateAndAmountDetails { get; init; } 
-    #else
-    public RateDetails33? RateAndAmountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the prices related to a corporate action option.
     /// </summary>
     [IsoId("_skzE0c3wEee5nJBZsW8MFQ")]
     [DisplayName("Price Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PricDtls")]
-    #endif
     [IsoXmlTag("PricDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PriceDetails24? PriceDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PriceDetails24? PriceDetails { get; init; } 
-    #else
-    public PriceDetails24? PriceDetails { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.admi;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.admi;
 [Description(@"Scope|The SystemEventNotification message is sent by a central system to notify the occurrence of an event in a central system.|Usage|The message can be used by a central settlement system to inform its participants of an event that is going to occur in the system, for instance that the system will be down at a certain time, etc.")]
 [IsoId("_pgC-EU7TEeSGH6dwL1uJcg")]
 [DisplayName("System Event Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SystemEventNotificationV02 : IOuterRecord
 {
     
@@ -64,18 +53,6 @@ public partial record SystemEventNotificationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SystemEventNotificationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SystemEventNotificationV02( Event2 reqEventInformation )
-    {
-        EventInformation = reqEventInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,19 +60,8 @@ public partial record SystemEventNotificationV02 : IOuterRecord
     /// </summary>
     [IsoId("_pgC-E07TEeSGH6dwL1uJcg")]
     [DisplayName("Event Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtInf")]
-    #endif
     [IsoXmlTag("EvtInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Event2 EventInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Event2 EventInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Event2 EventInformation { get; init; } 
-    #else
-    public Event2 EventInformation { get; set; } 
-    #endif
     
     
     #nullable disable

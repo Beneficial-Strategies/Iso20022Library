@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"This message is sent by the authorities (police, customs, tax authorities, enforcement authorities) to a financial institution to inform the financial institution that the confidentiality status of the investigation has changed.")]
 [IsoId("_fQEyMzz1EeGl7N0Cd54dlw")]
 [DisplayName("Information Request Status Change Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InformationRequestStatusChangeNotificationV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record InformationRequestStatusChangeNotificationV01 : IOuterReco
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a InformationRequestStatusChangeNotificationV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public InformationRequestStatusChangeNotificationV01( System.String reqOriginalBusinessQuery,System.String reqConfidentialityStatus )
-    {
-        OriginalBusinessQuery = reqOriginalBusinessQuery;
-        ConfidentialityStatus = reqConfidentialityStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,58 +57,27 @@ public partial record InformationRequestStatusChangeNotificationV01 : IOuterReco
     /// </summary>
     [IsoId("_tqPSWz2QEeGG64_ngBNdUg")]
     [DisplayName("Original Business Query")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlBizQry")]
-    #endif
     [IsoXmlTag("OrgnlBizQry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text OriginalBusinessQuery { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String OriginalBusinessQuery { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String OriginalBusinessQuery { get; init; } 
-    #else
-    public System.String OriginalBusinessQuery { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the confidentiality status of the investigation.
     /// </summary>
     [IsoId("_0ikcBT2QEeGG64_ngBNdUg")]
     [DisplayName("Confidentiality Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CnfdtltySts")]
-    #endif
     [IsoXmlTag("CnfdtltySts")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoYesNoIndicator ConfidentialityStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String ConfidentialityStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String ConfidentialityStatus { get; init; } 
-    #else
-    public System.String ConfidentialityStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_2tmJOz2QEeGG64_ngBNdUg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

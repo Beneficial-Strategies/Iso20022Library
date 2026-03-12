@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1AIewZEKEem-9Y6mq5ZH3Q")]
 [DisplayName("Fee")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Fee7
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Fee7 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Fee7( ChargeType6Choice_ reqType,ActiveCurrencyAndAmount reqAmount )
-    {
-        Type = reqType;
-        Amount = reqAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,106 +23,48 @@ public partial record Fee7
     /// </summary>
     [IsoId("_1T69cZEKEem-9Y6mq5ZH3Q")]
     [DisplayName("Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tp")]
-    #endif
     [IsoXmlTag("Tp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ChargeType6Choice_ Type { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ChargeType6Choice_ Type { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ChargeType6Choice_ Type { get; init; } 
-    #else
-    public ChargeType6Choice_ Type { get; set; } 
-    #endif
     
     /// <summary>
     /// Method used to calculate the fee.
     /// </summary>
     [IsoId("_1T69c5EKEem-9Y6mq5ZH3Q")]
     [DisplayName("Basis")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Bsis")]
-    #endif
     [IsoXmlTag("Bsis")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ChargeBasis2Choice_? Basis { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ChargeBasis2Choice_? Basis { get; init; } 
-    #else
-    public ChargeBasis2Choice_? Basis { get; set; } 
-    #endif
     
     /// <summary>
     /// Fee amount.
     /// </summary>
     [IsoId("_1T69dZEKEem-9Y6mq5ZH3Q")]
     [DisplayName("Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Amt")]
-    #endif
     [IsoXmlTag("Amt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveCurrencyAndAmount Amount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveCurrencyAndAmount Amount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount Amount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount Amount { get; set; } 
-    #endif
     
     /// <summary>
     /// Discount or waiver applied to the fee.
     /// </summary>
     [IsoId("_1T69d5EKEem-9Y6mq5ZH3Q")]
     [DisplayName("Discount Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DscntDtls")]
-    #endif
     [IsoXmlTag("DscntDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ChargeOrCommissionDiscount2? DiscountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ChargeOrCommissionDiscount2? DiscountDetails { get; init; } 
-    #else
-    public ChargeOrCommissionDiscount2? DiscountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that bears the fee.
     /// </summary>
     [IsoId("_1T69eZEKEem-9Y6mq5ZH3Q")]
     [DisplayName("Charge Bearer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ChrgBr")]
-    #endif
     [IsoXmlTag("ChrgBr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ChargeBearer1Code? ChargeBearer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ChargeBearer1Code? ChargeBearer { get; init; } 
-    #else
-    public ChargeBearer1Code? ChargeBearer { get; set; } 
-    #endif
     
     /// <summary>
     /// Party entitled to the amount of money resulting from the fee.
     /// </summary>
     [IsoId("_1T69e5EKEem-9Y6mq5ZH3Q")]
     [DisplayName("Recipient Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcptId")]
-    #endif
     [IsoXmlTag("RcptId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification139? RecipientIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification139? RecipientIdentification { get; init; } 
-    #else
-    public PartyIdentification139? RecipientIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

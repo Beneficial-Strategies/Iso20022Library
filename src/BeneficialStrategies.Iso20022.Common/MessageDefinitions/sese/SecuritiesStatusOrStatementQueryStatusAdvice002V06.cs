@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -38,12 +33,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An account servicer sends a SecuritiesStatusOrStatementQueryStatusAdvice to an account owner to advise the status of a status query or statement query previously sent by the account owner.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
 [IsoId("_gBHMozi8Eeydid5dcNPKvg")]
 [DisplayName("Securities Status Or Statement Query Status Advice 002 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesStatusOrStatementQueryStatusAdvice002V06 : IOuterRecord
 {
     
@@ -72,19 +61,6 @@ public partial record SecuritiesStatusOrStatementQueryStatusAdvice002V06 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesStatusOrStatementQueryStatusAdvice002V06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesStatusOrStatementQueryStatusAdvice002V06( DocumentIdentification55 reqQueryDetails,ProcessingStatus95Choice_ reqProcessingStatus )
-    {
-        QueryDetails = reqQueryDetails;
-        ProcessingStatus = reqProcessingStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -92,123 +68,56 @@ public partial record SecuritiesStatusOrStatementQueryStatusAdvice002V06 : IOute
     /// </summary>
     [IsoId("_gBHMrDi8Eeydid5dcNPKvg")]
     [DisplayName("Query Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="QryDtls")]
-    #endif
     [IsoXmlTag("QryDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification55 QueryDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification55 QueryDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification55 QueryDetails { get; init; } 
-    #else
-    public DocumentIdentification55 QueryDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_gBHMrji8Eeydid5dcNPKvg")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification156? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification156? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification156? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_gBHMsDi8Eeydid5dcNPKvg")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount30? SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [IsoId("_gBHMsji8Eeydid5dcNPKvg")]
     [DisplayName("Block Chain Address Or Wallet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlckChainAdrOrWllt")]
-    #endif
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; init; } 
-    #else
-    public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the request.
     /// </summary>
     [IsoId("_gBHMtDi8Eeydid5dcNPKvg")]
     [DisplayName("Status Or Statement Requested")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsOrStmtReqd")]
-    #endif
     [IsoXmlTag("StsOrStmtReqd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public StatusOrStatement12Choice_? StatusOrStatementRequested { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatusOrStatement12Choice_? StatusOrStatementRequested { get; init; } 
-    #else
-    public StatusOrStatement12Choice_? StatusOrStatementRequested { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the processing status of the request.
     /// </summary>
     [IsoId("_gBHMtji8Eeydid5dcNPKvg")]
     [DisplayName("Processing Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgSts")]
-    #endif
     [IsoXmlTag("PrcgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ProcessingStatus95Choice_ ProcessingStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ProcessingStatus95Choice_ ProcessingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProcessingStatus95Choice_ ProcessingStatus { get; init; } 
-    #else
-    public ProcessingStatus95Choice_ ProcessingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_gBHMuDi8Eeydid5dcNPKvg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

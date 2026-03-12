@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAISSD1 message extends ISO corporate action instruction status advice message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_myaAeVB5Ee2KGNXAcFL5RA")]
 [DisplayName("DTCCCAISSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAISSD1V07 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAISSD1V07 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,34 +57,16 @@ public partial record DTCCCAISSD1V07 : IOuterRecord
     /// </summary>
     [IsoId("_myaAe1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Reorganisation Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReorgInstrDtls")]
-    #endif
     [IsoXmlTag("ReorgInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReorganisationInstructionSD12? ReorganisationInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReorganisationInstructionSD12? ReorganisationInstructionDetails { get; init; } 
-    #else
-    public ReorganisationInstructionSD12? ReorganisationInstructionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to instruction status message for distribution events.
     /// </summary>
     [IsoId("_O1nlIFB7Ee2KGNXAcFL5RA")]
     [DisplayName("Distribution Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DstrbtnInstrDtls")]
-    #endif
     [IsoXmlTag("DstrbtnInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DistributionInstructionSD1? DistributionInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DistributionInstructionSD1? DistributionInstructionDetails { get; init; } 
-    #else
-    public DistributionInstructionSD1? DistributionInstructionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

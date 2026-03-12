@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCompletionAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the outcome of the payment at the acceptor, and to transfer the financial data of the transaction to the acquirer (capture).|A AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully.")]
 [IsoId("_AZsHQTJLEeOkpIB9tKITlw")]
 [DisplayName("Acceptor Completion Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCompletionAdviceV03 : IOuterRecord
 {
     
@@ -62,20 +51,6 @@ public partial record AcceptorCompletionAdviceV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCompletionAdviceV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCompletionAdviceV03( Header8 reqHeader,AcceptorCompletionAdvice3 reqCompletionAdvice,ContentInformationType8 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        CompletionAdvice = reqCompletionAdvice;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,57 +58,24 @@ public partial record AcceptorCompletionAdviceV03 : IOuterRecord
     /// </summary>
     [IsoId("_AZsHQzJLEeOkpIB9tKITlw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header8 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header8 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header8 Header { get; init; } 
-    #else
-    public Header8 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the completion advice.
     /// </summary>
     [IsoId("_AZsHRTJLEeOkpIB9tKITlw")]
     [DisplayName("Completion Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmpltnAdvc")]
-    #endif
     [IsoXmlTag("CmpltnAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCompletionAdvice3 CompletionAdvice { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCompletionAdvice3 CompletionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCompletionAdvice3 CompletionAdvice { get; init; } 
-    #else
-    public AcceptorCompletionAdvice3 CompletionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_AZsHRzJLEeOkpIB9tKITlw")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType8 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType8 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType8 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType8 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

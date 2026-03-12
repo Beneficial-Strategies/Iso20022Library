@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_j1HYEZBeEeakHoV5BVecAQ")]
 [DisplayName("Clearing")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Clearing5
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record Clearing5
     /// </summary>
     [IsoId("_kEl-gZBeEeakHoV5BVecAQ")]
     [DisplayName("Clearing Member")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrMmb")]
-    #endif
     [IsoXmlTag("ClrMmb")]
     public ValueList<PartyIdentificationAndAccount149> ClearingMember { get; init; } = new ValueList<PartyIdentificationAndAccount149>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _kEl-gZBeEeakHoV5BVecAQ
@@ -52,17 +33,8 @@ public partial record Clearing5
     /// </summary>
     [IsoId("_kEl-g5BeEeakHoV5BVecAQ")]
     [DisplayName("Clearing Segment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrSgmt")]
-    #endif
     [IsoXmlTag("ClrSgmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification127Choice_? ClearingSegment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification127Choice_? ClearingSegment { get; init; } 
-    #else
-    public PartyIdentification127Choice_? ClearingSegment { get; set; } 
-    #endif
     
     
     #nullable disable

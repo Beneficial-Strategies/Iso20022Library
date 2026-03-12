@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jLluU-5NEeCisYr99QEiWA_-2124206208")]
 [DisplayName("Exchange Payload")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ExchangePayload1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ExchangePayload1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ExchangePayload1( LaxProcessing reqAny )
-    {
-        Any = reqAny;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,19 +23,8 @@ public partial record ExchangePayload1
     /// </summary>
     [IsoId("_jLluVO5NEeCisYr99QEiWA_1978501179")]
     [DisplayName("Any")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Any")]
-    #endif
     [IsoXmlTag("Any")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required LaxProcessing Any { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required LaxProcessing Any { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public LaxProcessing Any { get; init; } 
-    #else
-    public LaxProcessing Any { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"Scope|The AcceptorBatchTransferResponse message is sent by the acquirer to the card acceptor to acknowledge the proper reception of the AcceptorBatchTransfer.|Usage|The AcceptorBatchTransferResponse message is used by an acquirer to inform the card acceptor of the card payment transactions that could not be captured in the AcceptorBatchTransfer.")]
 [IsoId("_fHr69KMVEeCJ6YNENx4h-w_-1884462176")]
 [DisplayName("Acceptor Batch Transfer Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorBatchTransferResponseV01 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record AcceptorBatchTransferResponseV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorBatchTransferResponseV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorBatchTransferResponseV01( Header3 reqHeader,CardPaymentDataSet2 reqDataSet,ContentInformationType1 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        DataSet = reqDataSet;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,57 +60,24 @@ public partial record AcceptorBatchTransferResponseV01 : IOuterRecord
     /// </summary>
     [IsoId("_fHr69aMVEeCJ6YNENx4h-w_-1280012543")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header3 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header3 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header3 Header { get; init; } 
-    #else
-    public Header3 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the previously sent set of transaction.
     /// </summary>
     [IsoId("_fHr69qMVEeCJ6YNENx4h-w_-71921900")]
     [DisplayName("Data Set")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DataSet")]
-    #endif
     [IsoXmlTag("DataSet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentDataSet2 DataSet { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentDataSet2 DataSet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentDataSet2 DataSet { get; init; } 
-    #else
-    public CardPaymentDataSet2 DataSet { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_fHr696MVEeCJ6YNENx4h-w_977823991")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType1 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType1 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType1 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType1 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -48,12 +43,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer sends a SecuritiesMessageCancellationAdvice to an account owner to inform of the cancellation of a securities message previously sent by an account servicer. |The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The previously sent message may be:|- a securities settlement transaction confirmation|- a report (transactions, pending transactions, allegements, accounting and custody securities balance)|- a allegement notification (when sent by mistake or because the counterparty cancelled its instruction)|- a portfolio transfer notification |- an intra-position movement confirmation|- a transaction generation notification||The previously sent message cannot be a status advice message (any). If a status advice should not have been sent, a new status advice with the correct status should be sent, not a cancellation advice.|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
 [IsoId("_dgY8Uzi8Eeydid5dcNPKvg")]
 [DisplayName("Securities Message Cancellation Advice 002 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesMessageCancellationAdvice002V07 : IOuterRecord
 {
     
@@ -82,18 +71,6 @@ public partial record SecuritiesMessageCancellationAdvice002V07 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesMessageCancellationAdvice002V07 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesMessageCancellationAdvice002V07( References79Choice_ reqReference )
-    {
-        Reference = reqReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -101,87 +78,40 @@ public partial record SecuritiesMessageCancellationAdvice002V07 : IOuterRecord
     /// </summary>
     [IsoId("_dgY8XTi8Eeydid5dcNPKvg")]
     [DisplayName("Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ref")]
-    #endif
     [IsoXmlTag("Ref")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required References79Choice_ Reference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required References79Choice_ Reference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References79Choice_ Reference { get; init; } 
-    #else
-    public References79Choice_ Reference { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_dgY8Xzi8Eeydid5dcNPKvg")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification156? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification156? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification156? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_dgY8YTi8Eeydid5dcNPKvg")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount30? SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [IsoId("_dgY8Yzi8Eeydid5dcNPKvg")]
     [DisplayName("Block Chain Address Or Wallet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlckChainAdrOrWllt")]
-    #endif
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; init; } 
-    #else
-    public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_dgY8ZTi8Eeydid5dcNPKvg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

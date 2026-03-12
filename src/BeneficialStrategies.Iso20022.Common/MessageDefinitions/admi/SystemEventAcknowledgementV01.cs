@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.admi;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.admi;
 [Description(@"The SystemEventAcknowledgement message is sent by a participant of a central system to the central system to acknowledge the notification of an occurrence of an event in a central system.|")]
 [IsoId("_-4fJISzhEeKZfox_pyYpTA")]
 [DisplayName("System Event Acknowledgement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SystemEventAcknowledgementV01 : IOuterRecord
 {
     
@@ -62,18 +51,6 @@ public partial record SystemEventAcknowledgementV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SystemEventAcknowledgementV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SystemEventAcknowledgementV01( System.String reqMessageIdentification )
-    {
-        MessageIdentification = reqMessageIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,92 +58,45 @@ public partial record SystemEventAcknowledgementV01 : IOuterRecord
     /// </summary>
     [IsoId("_38ITWTp8EeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MessageIdentification { get; init; } 
-    #else
-    public System.String MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Represents the original reference of the system event notification for which the acknowledgement is given, as assigned by the central system.
     /// </summary>
     [IsoId("_-PT44DqNEeKXK8qRvydwAw")]
     [DisplayName("Originator Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgtrRef")]
-    #endif
     [IsoXmlTag("OrgtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? OriginatorReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OriginatorReference { get; init; } 
-    #else
-    public System.String? OriginatorReference { get; set; } 
-    #endif
     
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
     /// </summary>
     [IsoId("_Pq-14zqfEeKqTf3MbquCbA")]
     [DisplayName("Settlement Session Identifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmSsnIdr")]
-    #endif
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? SettlementSessionIdentifier { get; init; } 
-    #else
-    public System.String? SettlementSessionIdentifier { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the system event being acknowledged.
     /// </summary>
     [IsoId("_-4fJJSzhEeKZfox_pyYpTA")]
     [DisplayName("Acknowledgement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AckDtls")]
-    #endif
     [IsoXmlTag("AckDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Event1? AcknowledgementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Event1? AcknowledgementDetails { get; init; } 
-    #else
-    public Event1? AcknowledgementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_E4uhVy53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

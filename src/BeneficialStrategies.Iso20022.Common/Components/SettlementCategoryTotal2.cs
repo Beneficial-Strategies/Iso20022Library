@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-LcTQZMmEeuleeHpFMMhmQ")]
 [DisplayName("Settlement Category Total")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SettlementCategoryTotal2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SettlementCategoryTotal2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SettlementCategoryTotal2( Amount17 reqAmount )
-    {
-        Amount = reqAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,71 +23,33 @@ public partial record SettlementCategoryTotal2
     /// </summary>
     [IsoId("_-SNpoZMmEeuleeHpFMMhmQ")]
     [DisplayName("Count")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cnt")]
-    #endif
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? Count { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? Count { get; init; } 
-    #else
-    public System.UInt64? Count { get; set; } 
-    #endif
     
     /// <summary>
     /// Gross amount.
     /// </summary>
     [IsoId("_-SNpo5MmEeuleeHpFMMhmQ")]
     [DisplayName("Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Amt")]
-    #endif
     [IsoXmlTag("Amt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Amount17 Amount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Amount17 Amount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Amount17 Amount { get; init; } 
-    #else
-    public Amount17 Amount { get; set; } 
-    #endif
     
     /// <summary>
     /// Interchange fee amount.
     /// </summary>
     [IsoId("_-SNppZMmEeuleeHpFMMhmQ")]
     [DisplayName("Interchange Fee")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrchngFee")]
-    #endif
     [IsoXmlTag("IntrchngFee")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Amount17? InterchangeFee { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Amount17? InterchangeFee { get; init; } 
-    #else
-    public Amount17? InterchangeFee { get; set; } 
-    #endif
     
     /// <summary>
     /// Processing fee.
     /// </summary>
     [IsoId("_-SNpp5MmEeuleeHpFMMhmQ")]
     [DisplayName("Processing Fee")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgFee")]
-    #endif
     [IsoXmlTag("PrcgFee")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Amount17? ProcessingFee { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Amount17? ProcessingFee { get; init; } 
-    #else
-    public Amount17? ProcessingFee { get; set; } 
-    #endif
     
     
     #nullable disable

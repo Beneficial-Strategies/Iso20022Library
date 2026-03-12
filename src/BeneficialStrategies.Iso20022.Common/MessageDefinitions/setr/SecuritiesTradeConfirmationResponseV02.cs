@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|Sent by an instructing party, a custodian or an affirming party to an executing party (local matching) or to Central Matching Utility (CMU) to affirm (accept) or disaffirm (reject) (central matching) the SecuritiesTradeConfirmation message. If accepting the SecuritiesTradeConfirmation message, then the trade is ready for settlement processing. If rejecting the SecuritiesTradeConfirmation message, then the trade is not ready for settlement.|The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager or of other categories of investors.|The custodian or an affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.|The ISO 20022 Business Application Header must be used|Usage|Initiator: Both in local and central matching, the Initiator may be the Instructing Party, Custodian or Affirming party.|Respondent: Executing party does not need to respond if an affirmation. Executing party may respond with modification or cancellation of the rejected SecuritiesTradeConfirmation message.")]
 [IsoId("_s7RRwQNmEe2P7e2qGFFOGg")]
 [DisplayName("Securities Trade Confirmation Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesTradeConfirmationResponseV02 : IOuterRecord
 {
     
@@ -69,20 +58,6 @@ public partial record SecuritiesTradeConfirmationResponseV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesTradeConfirmationResponseV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesTradeConfirmationResponseV02( TransactiontIdentification4 reqIdentification,Linkages52 reqReferences,StatusAndReason46 reqStatus )
-    {
-        Identification = reqIdentification;
-        References = reqReferences;
-        Status = reqStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -90,108 +65,48 @@ public partial record SecuritiesTradeConfirmationResponseV02 : IOuterRecord
     /// </summary>
     [IsoId("_s7RRxwNmEe2P7e2qGFFOGg")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactiontIdentification4 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactiontIdentification4 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactiontIdentification4 Identification { get; init; } 
-    #else
-    public TransactiontIdentification4 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Link to another transaction that must be processed after, before or at the same time.
     /// </summary>
     [IsoId("_s7RRyQNmEe2P7e2qGFFOGg")]
     [DisplayName("References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Refs")]
-    #endif
     [IsoXmlTag("Refs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Linkages52 References { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Linkages52 References { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Linkages52 References { get; init; } 
-    #else
-    public Linkages52 References { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the processing status of the trade.
     /// </summary>
     [IsoId("_s7RRywNmEe2P7e2qGFFOGg")]
     [DisplayName("Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sts")]
-    #endif
     [IsoXmlTag("Sts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StatusAndReason46 Status { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StatusAndReason46 Status { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatusAndReason46 Status { get; init; } 
-    #else
-    public StatusAndReason46 Status { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides clearing member information.
     /// </summary>
     [IsoId("_s7RRzQNmEe2P7e2qGFFOGg")]
     [DisplayName("Clearing Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrDtls")]
-    #endif
     [IsoXmlTag("ClrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Clearing6? ClearingDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Clearing6? ClearingDetails { get; init; } 
-    #else
-    public Clearing6? ClearingDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Parties involved in the confirmation of the details of a trade.
     /// </summary>
     [IsoId("_s7RRzwNmEe2P7e2qGFFOGg")]
     [DisplayName("Confirmation Parties")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ConfPties")]
-    #endif
     [IsoXmlTag("ConfPties")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ConfirmationParties8? ConfirmationParties { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ConfirmationParties8? ConfirmationParties { get; init; } 
-    #else
-    public ConfirmationParties8? ConfirmationParties { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_s7RR0QNmEe2P7e2qGFFOGg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

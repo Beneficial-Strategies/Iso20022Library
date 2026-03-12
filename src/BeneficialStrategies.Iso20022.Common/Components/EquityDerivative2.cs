@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PVUIgWlNEeaLAKoEUNsD9g")]
 [DisplayName("Equity Derivative")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record EquityDerivative2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a EquityDerivative2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public EquityDerivative2( EquityDerivative3Choice_ reqUnderlyingType )
-    {
-        UnderlyingType = reqUnderlyingType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,36 +23,16 @@ public partial record EquityDerivative2
     /// </summary>
     [IsoId("_PeXW0WlNEeaLAKoEUNsD9g")]
     [DisplayName("Underlying Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygTp")]
-    #endif
     [IsoXmlTag("UndrlygTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EquityDerivative3Choice_ UnderlyingType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EquityDerivative3Choice_ UnderlyingType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EquityDerivative3Choice_ UnderlyingType { get; init; } 
-    #else
-    public EquityDerivative3Choice_ UnderlyingType { get; set; } 
-    #endif
     
     /// <summary>
     /// Return parameter for the equity derivative.
     /// </summary>
     [IsoId("_PeXW02lNEeaLAKoEUNsD9g")]
     [DisplayName("Parameter")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Param")]
-    #endif
     [IsoXmlTag("Param")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public EquityReturnParameter1Code? Parameter { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EquityReturnParameter1Code? Parameter { get; init; } 
-    #else
-    public EquityReturnParameter1Code? Parameter { get; set; } 
-    #endif
     
     
     #nullable disable

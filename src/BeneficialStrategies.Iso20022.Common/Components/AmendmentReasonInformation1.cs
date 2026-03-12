@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TOt8wdp-Ed-ak6NoX_4Aeg_-588729591")]
 [DisplayName("Amendment Reason Information")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AmendmentReasonInformation1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AmendmentReasonInformation1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AmendmentReasonInformation1( MandateReason1Choice_ reqReason )
-    {
-        Reason = reqReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,55 +23,26 @@ public partial record AmendmentReasonInformation1
     /// </summary>
     [IsoId("_TOt8wtp-Ed-ak6NoX_4Aeg_-1482635343")]
     [DisplayName("Originator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Orgtr")]
-    #endif
     [IsoXmlTag("Orgtr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification32? Originator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification32? Originator { get; init; } 
-    #else
-    public PartyIdentification32? Originator { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the reason for the amendment request.
     /// </summary>
     [IsoId("_TOt8w9p-Ed-ak6NoX_4Aeg_640498191")]
     [DisplayName("Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsn")]
-    #endif
     [IsoXmlTag("Rsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MandateReason1Choice_ Reason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MandateReason1Choice_ Reason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MandateReason1Choice_ Reason { get; init; } 
-    #else
-    public MandateReason1Choice_ Reason { get; set; } 
-    #endif
     
     /// <summary>
     /// Further details on the amendment request reason.
     /// </summary>
     [IsoId("_TOt8xNp-Ed-ak6NoX_4Aeg_-1877900838")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
     [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax105Text? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalInformation { get; init; } 
-    #else
-    public System.String? AdditionalInformation { get; set; } 
-    #endif
     
     
     #nullable disable

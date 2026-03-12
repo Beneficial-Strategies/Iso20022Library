@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -31,7 +26,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References71Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification))]
     [KnownType(typeof(References71Choice.TripartyCollateralStatusAdviceIdentification))]
     [KnownType(typeof(References71Choice.TripartyCollateralAndExposureReportIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(References71Choice.SecuritiesSettlementTransactionConfirmationIdentification),nameof(References71Choice.SecuritiesSettlementTransactionConfirmationIdentification))]
     [JsonDerivedType(typeof(References71Choice.IntraPositionMovementConfirmationIdentification),nameof(References71Choice.IntraPositionMovementConfirmationIdentification))]
     [JsonDerivedType(typeof(References71Choice.SecuritiesBalanceAccountingReportIdentification),nameof(References71Choice.SecuritiesBalanceAccountingReportIdentification))]
@@ -49,20 +43,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(References71Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification),nameof(References71Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification))]
     [JsonDerivedType(typeof(References71Choice.TripartyCollateralStatusAdviceIdentification),nameof(References71Choice.TripartyCollateralStatusAdviceIdentification))]
     [JsonDerivedType(typeof(References71Choice.TripartyCollateralAndExposureReportIdentification),nameof(References71Choice.TripartyCollateralAndExposureReportIdentification))]
-    #endif
     [IsoId("_KDxvryAaEeu4a6pNulzZ4Q")]
     [DisplayName("References 71 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record References71Choice_
-    #else
-    public abstract partial class References71Choice_
-    #endif
     {
     }
 }

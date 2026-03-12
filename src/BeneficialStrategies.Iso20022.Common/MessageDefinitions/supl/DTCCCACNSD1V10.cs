@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCACNSD1 message extends ISO corporate action cancellation advice (CACN) message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_q_pKaQ4zEeuIpNw_GxsBOw")]
 [DisplayName("DTCCCACNSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCACNSD1V10 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCACNSD1V10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,102 +57,48 @@ public partial record DTCCCACNSD1V10 : IOuterRecord
     /// </summary>
     [IsoId("_q_pKaw4zEeuIpNw_GxsBOw")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Pagination1? Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1? Pagination { get; init; } 
-    #else
-    public Pagination1? Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Notification information to be extended as supplementary data to cancellation advice.
     /// </summary>
     [IsoId("_q_pKbQ4zEeuIpNw_GxsBOw")]
     [DisplayName("Notification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ntfctn")]
-    #endif
     [IsoXmlTag("Ntfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionNotificationSD10? Notification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionNotificationSD10? Notification { get; init; } 
-    #else
-    public CorporateActionNotificationSD10? Notification { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to general information.
     /// </summary>
     [IsoId("_q_pKbw4zEeuIpNw_GxsBOw")]
     [DisplayName("General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GnlInf")]
-    #endif
     [IsoXmlTag("GnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionGeneralInformationSD40? GeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformationSD40? GeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformationSD40? GeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [IsoId("_hJwvUQ-pEeuE0Pnt-OcNOA")]
     [DisplayName("Underlying Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygScty")]
-    #endif
     [IsoXmlTag("UndrlygScty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; init; } 
-    #else
-    public FinancialInstrumentAttributesSD20? UnderlyingSecurity { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to events linkage.
     /// </summary>
     [IsoId("_q_pKcQ4zEeuIpNw_GxsBOw")]
     [DisplayName("Events Linkage")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtsLkg")]
-    #endif
     [IsoXmlTag("EvtsLkg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionCancellationSD3? EventsLinkage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionCancellationSD3? EventsLinkage { get; init; } 
-    #else
-    public CorporateActionCancellationSD3? EventsLinkage { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as external comments to cancellation advice.
     /// </summary>
     [IsoId("_q_pKcw4zEeuIpNw_GxsBOw")]
     [DisplayName("External Comments")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XtrnlCmnts")]
-    #endif
     [IsoXmlTag("XtrnlCmnts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionCancellationSD4? ExternalComments { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionCancellationSD4? ExternalComments { get; init; } 
-    #else
-    public CorporateActionCancellationSD4? ExternalComments { get; set; } 
-    #endif
     
     
     #nullable disable

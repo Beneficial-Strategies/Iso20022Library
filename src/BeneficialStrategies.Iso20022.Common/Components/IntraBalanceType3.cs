@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NXCxMTqFEemJ3KLLPeYl6g")]
 [DisplayName("Intra Balance Type")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntraBalanceType3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record IntraBalanceType3
     /// </summary>
     [IsoId("_NhoQkzqFEemJ3KLLPeYl6g")]
     [DisplayName("Balance From")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalFr")]
-    #endif
     [IsoXmlTag("BalFr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashSubBalanceTypeAndQuantityBreakdown3? BalanceFrom { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashSubBalanceTypeAndQuantityBreakdown3? BalanceFrom { get; init; } 
-    #else
-    public CashSubBalanceTypeAndQuantityBreakdown3? BalanceFrom { get; set; } 
-    #endif
     
     /// <summary>
     /// Balance to which the amount of money is moved.
     /// </summary>
     [IsoId("_NhoQmzqFEemJ3KLLPeYl6g")]
     [DisplayName("Balance To")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalTo")]
-    #endif
     [IsoXmlTag("BalTo")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashSubBalanceTypeAndQuantityBreakdown3? BalanceTo { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashSubBalanceTypeAndQuantityBreakdown3? BalanceTo { get; init; } 
-    #else
-    public CashSubBalanceTypeAndQuantityBreakdown3? BalanceTo { get; set; } 
-    #endif
     
     
     #nullable disable

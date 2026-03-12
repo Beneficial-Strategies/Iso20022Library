@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"Scope|The AcceptorCancellationRequest message is sent by a card acceptor to cancel a successfully completed card payment transaction. The message can be sent directly to the acquirer or through an agent.|Usage|The AcceptorCancellationRequest message is used when the card acceptor is unaware of the cancellation of the transaction by the acquirer.")]
 [IsoId("_cMhxZaMVEeCJ6YNENx4h-w_602094635")]
 [DisplayName("Acceptor Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCancellationRequestV01 : IOuterRecord
 {
     
@@ -64,20 +53,6 @@ public partial record AcceptorCancellationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCancellationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCancellationRequestV01( Header1 reqHeader,AcceptorCancellationRequest1 reqCancellationRequest,ContentInformationType3 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        CancellationRequest = reqCancellationRequest;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,57 +60,24 @@ public partial record AcceptorCancellationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_cMhxZqMVEeCJ6YNENx4h-w_368944245")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header1 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header1 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header1 Header { get; init; } 
-    #else
-    public Header1 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the cancellation request.
     /// </summary>
     [IsoId("_cMq7UKMVEeCJ6YNENx4h-w_-1782226179")]
     [DisplayName("Cancellation Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlReq")]
-    #endif
     [IsoXmlTag("CxlReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCancellationRequest1 CancellationRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCancellationRequest1 CancellationRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCancellationRequest1 CancellationRequest { get; init; } 
-    #else
-    public AcceptorCancellationRequest1 CancellationRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_cMq7UaMVEeCJ6YNENx4h-w_2083735573")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType3 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType3 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType3 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType3 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

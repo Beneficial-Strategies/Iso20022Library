@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_REb2gdp-Ed-ak6NoX_4Aeg_691417052")]
 [DisplayName("Investment Account Modification Details")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InvestmentAccountModificationDetails
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,38 +23,20 @@ public partial record InvestmentAccountModificationDetails
     /// </summary>
     [IsoId("_REb2gtp-Ed-ak6NoX_4Aeg_-1729726619")]
     [DisplayName("Modification Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ModRsn")]
-    #endif
     [IsoXmlTag("ModRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax350Text? ModificationReason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ModificationReason { get; init; } 
-    #else
-    public System.String? ModificationReason { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier of the account modification request.
     /// </summary>
     [IsoId("_REb2g9p-Ed-ak6NoX_4Aeg_-1729726542")]
     [DisplayName("Account Application Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctApplId")]
-    #endif
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? AccountApplicationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AccountApplicationIdentification { get; init; } 
-    #else
-    public System.String? AccountApplicationIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

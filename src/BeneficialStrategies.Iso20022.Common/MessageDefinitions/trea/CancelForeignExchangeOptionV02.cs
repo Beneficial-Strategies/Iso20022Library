@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.trea;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.trea;
 [Description(@"Scope|The CancelForeignExchangeOption message is sent by a participant to a central system or to a counterparty to notify the cancellation of a foreign currency option contract.|Usage|The message will contain a Related Reference to link it to the previously sent notification. It may contain a reason for cancellation.|This message is only suitable for Simple (i.e. not Barrier) Vanilla (i.e. not Binary, Digital, Notouch) Foreign Exchange Options.")]
 [IsoId("_KP1cKNE8Ed-BzquC8wXy7w_-352671200")]
 [DisplayName("Cancel Foreign Exchange Option V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CancelForeignExchangeOptionV02 : IOuterRecord
 {
     
@@ -65,18 +54,6 @@ public partial record CancelForeignExchangeOptionV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CancelForeignExchangeOptionV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CancelForeignExchangeOptionV02( TradeAgreement2 reqTradeInformation )
-    {
-        TradeInformation = reqTradeInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,70 +61,32 @@ public partial record CancelForeignExchangeOptionV02 : IOuterRecord
     /// </summary>
     [IsoId("_KP1cKdE8Ed-BzquC8wXy7w_1862314429")]
     [DisplayName("Trade Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradInf")]
-    #endif
     [IsoXmlTag("TradInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeAgreement2 TradeInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeAgreement2 TradeInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeAgreement2 TradeInformation { get; init; } 
-    #else
-    public TradeAgreement2 TradeInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the trading side of the currency option trade which is cancelled.
     /// </summary>
     [IsoId("_KP1cKtE8Ed-BzquC8wXy7w_-332565898")]
     [DisplayName("Trading Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradgSdId")]
-    #endif
     [IsoXmlTag("TradgSdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentification4? TradingSideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification4? TradingSideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification4? TradingSideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the counterparty of the currency option trade which is cancelled.
     /// </summary>
     [IsoId("_KP1cK9E8Ed-BzquC8wXy7w_-131240239")]
     [DisplayName("Counterparty Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtySdId")]
-    #endif
     [IsoXmlTag("CtrPtySdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentification4? CounterpartySideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification4? CounterpartySideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification4? CounterpartySideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the parameters of the currency option which is bought by the trading side.
     /// </summary>
     [IsoId("_KP1cLNE8Ed-BzquC8wXy7w_-743534321")]
     [DisplayName("Option")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Optn")]
-    #endif
     [IsoXmlTag("Optn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Option3? Option { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Option3? Option { get; init; } 
-    #else
-    public Option3? Option { get; set; } 
-    #endif
     
     
     #nullable disable

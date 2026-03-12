@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -23,7 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TradeReport15Choice.Compression))]
     [KnownType(typeof(TradeReport15Choice.Error))]
     [KnownType(typeof(TradeReport15Choice.Other))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(TradeReport15Choice.New),nameof(TradeReport15Choice.New))]
     [JsonDerivedType(typeof(TradeReport15Choice.Modification),nameof(TradeReport15Choice.Modification))]
     [JsonDerivedType(typeof(TradeReport15Choice.Correction),nameof(TradeReport15Choice.Correction))]
@@ -33,20 +27,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(TradeReport15Choice.Compression),nameof(TradeReport15Choice.Compression))]
     [JsonDerivedType(typeof(TradeReport15Choice.Error),nameof(TradeReport15Choice.Error))]
     [JsonDerivedType(typeof(TradeReport15Choice.Other),nameof(TradeReport15Choice.Other))]
-    #endif
     [IsoId("_oKFn1Xg-Eeu3kecHd7QKUQ")]
     [DisplayName("Trade Report 15 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record TradeReport15Choice_
-    #else
-    public abstract partial class TradeReport15Choice_
-    #endif
     {
     }
 }

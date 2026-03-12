@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -42,12 +37,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An account owner sends a SecuritiesSettlementTransactionCounterpartyResponse to advise the account servicer that:|- the allegement received is either rejected (that is counterparty's transaction is unknown) or accepted (i.e. either the allegement was passed to the client or the transaction is know with or without mismatches)|- the modification or cancellation request sent by the counterparty for a matched transaction is affirmed or not. The account servicer will therefore proceed or not with the counterparty's request to modify or cancel the transaction.|The account servicer may be a central securities depository or another settlement market infrastructure acting on behalf of their participants|The account owner may be:|- a central securities depository participant which has an account with a central securities depository or a market infrastructure|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message sent by the account owner to the account servicer,|- provide a third party with a copy of a message being sent by the account owner for information,|- re-send to a third party a copy of a message being sent by the account owner for information|using the relevant elements in the Business Application Header.")]
 [IsoId("_VltAJZNSEeWGlc8L7oPDIg")]
 [DisplayName("Securities Settlement Transaction Counterparty Response 002 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementTransactionCounterpartyResponse002V02 : IOuterRecord
 {
     
@@ -76,19 +65,6 @@ public partial record SecuritiesSettlementTransactionCounterpartyResponse002V02 
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementTransactionCounterpartyResponse002V02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementTransactionCounterpartyResponse002V02( TransactionIdentification7 reqTransactionIdentification,ResponseStatus8Choice_ reqResponseStatus )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        ResponseStatus = reqResponseStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -96,72 +72,32 @@ public partial record SecuritiesSettlementTransactionCounterpartyResponse002V02 
     /// </summary>
     [IsoId("_VltAJ5NSEeWGlc8L7oPDIg")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactionIdentification7 TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactionIdentification7 TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionIdentification7 TransactionIdentification { get; init; } 
-    #else
-    public TransactionIdentification7 TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the response status related to an allegement or a counterparty&apos;s instruction.
     /// </summary>
     [IsoId("_VltAKZNSEeWGlc8L7oPDIg")]
     [DisplayName("Response Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RspnSts")]
-    #endif
     [IsoXmlTag("RspnSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ResponseStatus8Choice_ ResponseStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ResponseStatus8Choice_ ResponseStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ResponseStatus8Choice_ ResponseStatus { get; init; } 
-    #else
-    public ResponseStatus8Choice_ ResponseStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the details of the transaction.
     /// </summary>
     [IsoId("_VltAK5NSEeWGlc8L7oPDIg")]
     [DisplayName("Transaction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxDtls")]
-    #endif
     [IsoXmlTag("TxDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionDetails92? TransactionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionDetails92? TransactionDetails { get; init; } 
-    #else
-    public TransactionDetails92? TransactionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_VltALZNSEeWGlc8L7oPDIg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

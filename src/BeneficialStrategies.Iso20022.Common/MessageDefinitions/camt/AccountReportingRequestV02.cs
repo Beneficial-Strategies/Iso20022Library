@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The AccountReportingRequest message is sent by the account owner, either directly or through a forwarding agent, to one of its account servicing institutions. It is used to ask the account servicing institution to send a report on the account owner's account in a BankToCustomerAccountReport (camt.052.001.02), a BankToCustomerStatement (camt.053.001.02) or a BankToCustomerDebitCreditNotification (camt.054.001.02).|Usage|The AccountReportingRequest message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.")]
 [IsoId("_sd2raGtdEeCY4-KZ9JEyUQ_1430848689")]
 [DisplayName("Account Reporting Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountReportingRequestV02 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record AccountReportingRequestV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountReportingRequestV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountReportingRequestV02( GroupHeader43 reqGroupHeader,ReportingRequest2 reqReportingRequest )
-    {
-        GroupHeader = reqGroupHeader;
-        ReportingRequest = reqReportingRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,38 +60,16 @@ public partial record AccountReportingRequestV02 : IOuterRecord
     /// </summary>
     [IsoId("_sd2raWtdEeCY4-KZ9JEyUQ_1191907994")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader43 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader43 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader43 GroupHeader { get; init; } 
-    #else
-    public GroupHeader43 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide further details on the reporting request.
     /// </summary>
     [IsoId("_seAcYGtdEeCY4-KZ9JEyUQ_308674707")]
     [DisplayName("Reporting Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptgReq")]
-    #endif
     [IsoXmlTag("RptgReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportingRequest2 ReportingRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportingRequest2 ReportingRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportingRequest2 ReportingRequest { get; init; } 
-    #else
-    public ReportingRequest2 ReportingRequest { get; set; } 
-    #endif
     
     
     #nullable disable

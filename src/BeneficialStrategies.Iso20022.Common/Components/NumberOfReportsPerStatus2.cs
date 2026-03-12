@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XANm0SmsEeerta_tWXAsWQ")]
 [DisplayName("Number Of Reports Per Status")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NumberOfReportsPerStatus2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NumberOfReportsPerStatus2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NumberOfReportsPerStatus2( System.String reqDetailedNumberOfReports,PairedReconciled1Code reqDetailedStatus )
-    {
-        DetailedNumberOfReports = reqDetailedNumberOfReports;
-        DetailedStatus = reqDetailedStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,39 +23,17 @@ public partial record NumberOfReportsPerStatus2
     /// </summary>
     [IsoId("_XNl7gSmsEeerta_tWXAsWQ")]
     [DisplayName("Detailed Number Of Reports")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtldNbOfRpts")]
-    #endif
     [IsoXmlTag("DtldNbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax15NumericText DetailedNumberOfReports { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String DetailedNumberOfReports { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String DetailedNumberOfReports { get; init; } 
-    #else
-    public System.String DetailedNumberOfReports { get; set; } 
-    #endif
     
     /// <summary>
     /// Common report status for all individual reports sent / received.
     /// </summary>
     [IsoId("_XNl7gymsEeerta_tWXAsWQ")]
     [DisplayName("Detailed Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtldSts")]
-    #endif
     [IsoXmlTag("DtldSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PairedReconciled1Code DetailedStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PairedReconciled1Code DetailedStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PairedReconciled1Code DetailedStatus { get; init; } 
-    #else
-    public PairedReconciled1Code DetailedStatus { get; set; } 
-    #endif
     
     
     #nullable disable

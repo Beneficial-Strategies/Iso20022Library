@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_96-4OHltEeG7BsjMvd1mEw_-1699635040")]
 [DisplayName("Presentation")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Presentation1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,60 +23,30 @@ public partial record Presentation1
     /// </summary>
     [IsoId("_97IpMHltEeG7BsjMvd1mEw_285308407")]
     [DisplayName("Medium")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Mdm")]
-    #endif
     [IsoXmlTag("Mdm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PresentationMedium1Choice_? Medium { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PresentationMedium1Choice_? Medium { get; init; } 
-    #else
-    public PresentationMedium1Choice_? Medium { get; set; } 
-    #endif
     
     /// <summary>
     /// Choice of representation for the place of presentation.
     /// </summary>
     [IsoId("_97IpMXltEeG7BsjMvd1mEw_-2054994062")]
     [DisplayName("Place Of Presentation Or Under Confirmation Choice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PlcOfPresntnOrUdrConfChc")]
-    #endif
     [IsoXmlTag("PlcOfPresntnOrUdrConfChc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PlaceOrUnderConfirmationChoice1_? PlaceOfPresentationOrUnderConfirmationChoice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PlaceOrUnderConfirmationChoice1_? PlaceOfPresentationOrUnderConfirmationChoice { get; init; } 
-    #else
-    public PlaceOrUnderConfirmationChoice1_? PlaceOfPresentationOrUnderConfirmationChoice { get; set; } 
-    #endif
     
     /// <summary>
     /// Document required to be presented.
     /// </summary>
     [IsoId("_97IpMnltEeG7BsjMvd1mEw_882759480")]
     [DisplayName("Document")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Doc")]
-    #endif
     [IsoXmlTag("Doc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Document8? Document { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Document8? Document { get; init; } 
-    #else
-    public Document8? Document { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information related to the presentation.
     /// </summary>
     [IsoId("_97IpM3ltEeG7BsjMvd1mEw_-1393168814")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]

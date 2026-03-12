@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LTvzAXG7Ee2TbaNWBpRZpQ")]
 [DisplayName("Card Payment Transaction")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardPaymentTransaction128
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CardPaymentTransaction128 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CardPaymentTransaction128( AuthorisationResult17 reqAuthorisationResult )
-    {
-        AuthorisationResult = reqAuthorisationResult;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,155 +23,72 @@ public partial record CardPaymentTransaction128
     /// </summary>
     [IsoId("_LaAMAXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Authorisation Result")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AuthstnRslt")]
-    #endif
     [IsoXmlTag("AuthstnRslt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AuthorisationResult17 AuthorisationResult { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AuthorisationResult17 AuthorisationResult { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AuthorisationResult17 AuthorisationResult { get; init; } 
-    #else
-    public AuthorisationResult17 AuthorisationResult { get; set; } 
-    #endif
     
     /// <summary>
     /// Result of the verifications performed by the issuer to deliver or decline the authorisation.
     /// </summary>
     [IsoId("_LaAzEXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Transaction Verification Result")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxVrfctnRslt")]
-    #endif
     [IsoXmlTag("TxVrfctnRslt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionVerificationResult4? TransactionVerificationResult { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionVerificationResult4? TransactionVerificationResult { get; init; } 
-    #else
-    public TransactionVerificationResult4? TransactionVerificationResult { get; set; } 
-    #endif
     
     /// <summary>
     /// Product code which are allowed by the payment card.
     /// </summary>
     [IsoId("_LaAzE3G7Ee2TbaNWBpRZpQ")]
     [DisplayName("Allowed Product Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AllwdPdctCd")]
-    #endif
     [IsoXmlTag("AllwdPdctCd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Product4? AllowedProductCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Product4? AllowedProductCode { get; init; } 
-    #else
-    public Product4? AllowedProductCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Product code not allowed by the payment card.
     /// </summary>
     [IsoId("_LaCoQXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Not Allowed Product Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NotAllwdPdctCd")]
-    #endif
     [IsoXmlTag("NotAllwdPdctCd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Product4? NotAllowedProductCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Product4? NotAllowedProductCode { get; init; } 
-    #else
-    public Product4? NotAllowedProductCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Products that may be added to the purchase after the authorisation.
     /// </summary>
     [IsoId("_LaDPUXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Additional Available Product")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlAvlblPdct")]
-    #endif
     [IsoXmlTag("AddtlAvlblPdct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Product5? AdditionalAvailableProduct { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Product5? AdditionalAvailableProduct { get; init; } 
-    #else
-    public Product5? AdditionalAvailableProduct { get; set; } 
-    #endif
     
     /// <summary>
     /// Balance and currency code of the account, related to the payment.
     /// </summary>
     [IsoId("_LaDPU3G7Ee2TbaNWBpRZpQ")]
     [DisplayName("Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Bal")]
-    #endif
     [IsoXmlTag("Bal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AmountAndDirection93? Balance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndDirection93? Balance { get; init; } 
-    #else
-    public AmountAndDirection93? Balance { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted balance of the account.
     /// </summary>
     [IsoId("_LaDPVXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Protected Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdBal")]
-    #endif
     [IsoXmlTag("PrtctdBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType35? ProtectedBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType35? ProtectedBalance { get; init; } 
-    #else
-    public ContentInformationType35? ProtectedBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of actions to be performed by the POI (Point Of Interaction) system.
     /// </summary>
     [IsoId("_LaDPV3G7Ee2TbaNWBpRZpQ")]
     [DisplayName("Action")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Actn")]
-    #endif
     [IsoXmlTag("Actn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Action14? Action { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Action14? Action { get; init; } 
-    #else
-    public Action14? Action { get; set; } 
-    #endif
     
     /// <summary>
     /// Conversion between the currency of a card acceptor and the currency of a card issuer, provided by a dedicated service provider. The currency conversion has to be proposed to the cardholder.
     /// </summary>
     [IsoId("_LaDPWXG7Ee2TbaNWBpRZpQ")]
     [DisplayName("Currency Conversion Eligibility")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CcyConvsElgblty")]
-    #endif
     [IsoXmlTag("CcyConvsElgblty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CurrencyConversion26? CurrencyConversionEligibility { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyConversion26? CurrencyConversionEligibility { get; init; } 
-    #else
-    public CurrencyConversion26? CurrencyConversionEligibility { get; set; } 
-    #endif
     
     
     #nullable disable

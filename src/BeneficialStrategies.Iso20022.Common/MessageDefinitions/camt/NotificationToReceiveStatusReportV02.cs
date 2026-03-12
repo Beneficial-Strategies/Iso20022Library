@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The NotificationToReceiveStatusReport message is sent by an account servicing institution to an account owner or to a party acting on the account owner's behalf. It is used to notify the account owner about the status of one or more expected payments that were advised in a previous NotificationToReceive message.|Usage|The NotificationToReceiveStatusReport message is sent in response to a NotificationToReceive message and can be used in either a direct or a relay scenario. It is used to advise the account owner of receipt of the funds as expected. It is also used to notify the account owner of non-receipt of funds or of discrepancies in the funds received.")]
 [IsoId("_sZFgJWtdEeCY4-KZ9JEyUQ_-1390141251")]
 [DisplayName("Notification To Receive Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NotificationToReceiveStatusReportV02 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record NotificationToReceiveStatusReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NotificationToReceiveStatusReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NotificationToReceiveStatusReportV02( GroupHeader44 reqGroupHeader,OriginalNotification3 reqOriginalNotificationAndStatus )
-    {
-        GroupHeader = reqGroupHeader;
-        OriginalNotificationAndStatus = reqOriginalNotificationAndStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,38 +60,16 @@ public partial record NotificationToReceiveStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_sZZCIGtdEeCY4-KZ9JEyUQ_1005512460")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader44 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader44 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader44 GroupHeader { get; init; } 
-    #else
-    public GroupHeader44 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to identify the original notification and to provide the status.
     /// </summary>
     [IsoId("_sZZCIWtdEeCY4-KZ9JEyUQ_122279173")]
     [DisplayName("Original Notification And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlNtfctnAndSts")]
-    #endif
     [IsoXmlTag("OrgnlNtfctnAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OriginalNotification3 OriginalNotificationAndStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OriginalNotification3 OriginalNotificationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalNotification3 OriginalNotificationAndStatus { get; init; } 
-    #else
-    public OriginalNotification3 OriginalNotificationAndStatus { get; set; } 
-    #endif
     
     
     #nullable disable

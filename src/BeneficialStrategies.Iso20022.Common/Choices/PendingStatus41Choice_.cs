@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -16,23 +11,11 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PendingStatus41Choice.NoSpecifiedReason))]
     [KnownType(typeof(PendingStatus41Choice.Reason))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(PendingStatus41Choice.NoSpecifiedReason),nameof(PendingStatus41Choice.NoSpecifiedReason))]
     [JsonDerivedType(typeof(PendingStatus41Choice.Reason),nameof(PendingStatus41Choice.Reason))]
-    #endif
     [IsoId("_tDTUwUGSEeWqy4niLuXETA")]
     [DisplayName("Pending Status 41 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record PendingStatus41Choice_
-    #else
-    public abstract partial class PendingStatus41Choice_
-    #endif
     {
     }
 }

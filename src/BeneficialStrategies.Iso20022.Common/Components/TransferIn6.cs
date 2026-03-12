@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_j9WUd_r3EeCJc7cZxzE2fg")]
 [DisplayName("Transfer In")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferIn6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferIn6 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferIn6( InvestmentAccount22 reqAccountDetails,DeliverInformation7 reqSettlementDetails )
-    {
-        AccountDetails = reqAccountDetails;
-        SettlementDetails = reqSettlementDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,9 +23,6 @@ public partial record TransferIn6
     /// </summary>
     [IsoId("_j9WUffr3EeCJc7cZxzE2fg")]
     [DisplayName("Transfer Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfDtls")]
-    #endif
     [IsoXmlTag("TrfDtls")]
     public ValueList<Transfer17> TransferDetails { get; init; } = new ValueList<Transfer17>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _j9WUffr3EeCJc7cZxzE2fg
@@ -59,55 +32,24 @@ public partial record TransferIn6
     /// </summary>
     [IsoId("_j9WUhfr3EeCJc7cZxzE2fg")]
     [DisplayName("Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctDtls")]
-    #endif
     [IsoXmlTag("AcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InvestmentAccount22 AccountDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InvestmentAccount22 AccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InvestmentAccount22 AccountDetails { get; init; } 
-    #else
-    public InvestmentAccount22 AccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the delivering side of the transfer.
     /// </summary>
     [IsoId("_j9WUifr3EeCJc7cZxzE2fg")]
     [DisplayName("Settlement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmDtls")]
-    #endif
     [IsoXmlTag("SttlmDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DeliverInformation7 SettlementDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DeliverInformation7 SettlementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DeliverInformation7 SettlementDetails { get; init; } 
-    #else
-    public DeliverInformation7 SettlementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_j9WUjfr3EeCJc7cZxzE2fg")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

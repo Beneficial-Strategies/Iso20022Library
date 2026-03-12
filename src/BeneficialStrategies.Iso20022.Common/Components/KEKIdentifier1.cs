@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sw1NuwEcEeCQm6a_G2yO_w_607012210")]
 [DisplayName("KEK Identifier")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record KEKIdentifier1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a KEKIdentifier1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public KEKIdentifier1( System.String reqKeyIdentification,System.String reqKeyVersion )
-    {
-        KeyIdentification = reqKeyIdentification;
-        KeyVersion = reqKeyVersion;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,59 +23,28 @@ public partial record KEKIdentifier1
     /// </summary>
     [IsoId("_Sw1NvAEcEeCQm6a_G2yO_w_-1402944648")]
     [DisplayName("Key Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="KeyId")]
-    #endif
     [IsoXmlTag("KeyId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax140Text KeyIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String KeyIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String KeyIdentification { get; init; } 
-    #else
-    public System.String KeyIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Version of the cryptographic key.
     /// </summary>
     [IsoId("_Sw1NvQEcEeCQm6a_G2yO_w_-792542720")]
     [DisplayName("Key Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="KeyVrsn")]
-    #endif
     [IsoXmlTag("KeyVrsn")]
     [IsoSimpleType(IsoSimpleType.Exact10Text)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoExact10Text KeyVersion { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String KeyVersion { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String KeyVersion { get; init; } 
-    #else
-    public System.String KeyVersion { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification used for derivation of a unique key from a master key provided for the data protection.
     /// </summary>
     [IsoId("_Sw1NvgEcEeCQm6a_G2yO_w_-1001700130")]
     [DisplayName("Derivation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DerivtnId")]
-    #endif
     [IsoXmlTag("DerivtnId")]
     [IsoSimpleType(IsoSimpleType.Min5Max16Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMin5Max16Binary? DerivationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? DerivationIdentification { get; init; } 
-    #else
-    public System.Byte[]? DerivationIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

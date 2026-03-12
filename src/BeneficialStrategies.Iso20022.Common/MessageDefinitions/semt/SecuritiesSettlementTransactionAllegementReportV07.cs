@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -39,12 +34,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
 [IsoId("_J8TKgaRAEeeO7MWB4EajhQ")]
 [DisplayName("Securities Settlement Transaction Allegement Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementTransactionAllegementReportV07 : IOuterRecord
 {
     
@@ -73,20 +62,6 @@ public partial record SecuritiesSettlementTransactionAllegementReportV07 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementTransactionAllegementReportV07 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementTransactionAllegementReportV07( Pagination1 reqPagination,Statement63 reqStatementGeneralDetails,SecuritiesAccount19 reqSafekeepingAccount )
-    {
-        Pagination = reqPagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-        SafekeepingAccount = reqSafekeepingAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -94,91 +69,40 @@ public partial record SecuritiesSettlementTransactionAllegementReportV07 : IOute
     /// </summary>
     [IsoId("_J8TKh6RAEeeO7MWB4EajhQ")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to report.
     /// </summary>
     [IsoId("_J8TKiaRAEeeO7MWB4EajhQ")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement63 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement63 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement63 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement63 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_J8TKi6RAEeeO7MWB4EajhQ")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification98? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification98? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification98? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_J8TKjaRAEeeO7MWB4EajhQ")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount19 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the allegement.
     /// </summary>
     [IsoId("_J8TKj6RAEeeO7MWB4EajhQ")]
     [DisplayName("Allegement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AllgmtDtls")]
-    #endif
     [IsoXmlTag("AllgmtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesTradeDetails71? AllegementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesTradeDetails71? AllegementDetails { get; init; } 
-    #else
-    public SecuritiesTradeDetails71? AllegementDetails { get; set; } 
-    #endif
     
     
     #nullable disable

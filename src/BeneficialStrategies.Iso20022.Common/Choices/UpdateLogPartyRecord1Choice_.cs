@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -26,7 +21,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UpdateLogPartyRecord1Choice.LockStatus))]
     [KnownType(typeof(UpdateLogPartyRecord1Choice.Restriction))]
     [KnownType(typeof(UpdateLogPartyRecord1Choice.Other))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(UpdateLogPartyRecord1Choice.Address),nameof(UpdateLogPartyRecord1Choice.Address))]
     [JsonDerivedType(typeof(UpdateLogPartyRecord1Choice.ContactDetails),nameof(UpdateLogPartyRecord1Choice.ContactDetails))]
     [JsonDerivedType(typeof(UpdateLogPartyRecord1Choice.OpeningDate),nameof(UpdateLogPartyRecord1Choice.OpeningDate))]
@@ -39,20 +33,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(UpdateLogPartyRecord1Choice.LockStatus),nameof(UpdateLogPartyRecord1Choice.LockStatus))]
     [JsonDerivedType(typeof(UpdateLogPartyRecord1Choice.Restriction),nameof(UpdateLogPartyRecord1Choice.Restriction))]
     [JsonDerivedType(typeof(UpdateLogPartyRecord1Choice.Other),nameof(UpdateLogPartyRecord1Choice.Other))]
-    #endif
     [IsoId("_xPtUfWjNEeiRg5NzP0jkQg")]
     [DisplayName("Update Log Party Record 1 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record UpdateLogPartyRecord1Choice_
-    #else
-    public abstract partial class UpdateLogPartyRecord1Choice_
-    #endif
     {
     }
 }

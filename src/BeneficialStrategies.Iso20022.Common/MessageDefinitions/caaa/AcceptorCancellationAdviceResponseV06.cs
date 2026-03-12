@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCancellationAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) about the notification of the payment cancellation.")]
 [IsoId("_w7YG8ap5EeanIZ10Ka8PnA")]
 [DisplayName("Acceptor Cancellation Advice Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCancellationAdviceResponseV06 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcceptorCancellationAdviceResponseV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCancellationAdviceResponseV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCancellationAdviceResponseV06( Header24 reqHeader,AcceptorCancellationAdviceResponse6 reqCancellationAdviceResponse )
-    {
-        Header = reqHeader;
-        CancellationAdviceResponse = reqCancellationAdviceResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcceptorCancellationAdviceResponseV06 : IOuterRecord
     /// </summary>
     [IsoId("_w7YG9ap5EeanIZ10Ka8PnA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header24 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header24 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header24 Header { get; init; } 
-    #else
-    public Header24 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the cancellation advice response.
     /// </summary>
     [IsoId("_w7YG96p5EeanIZ10Ka8PnA")]
     [DisplayName("Cancellation Advice Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlAdvcRspn")]
-    #endif
     [IsoXmlTag("CxlAdvcRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCancellationAdviceResponse6 CancellationAdviceResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCancellationAdviceResponse6 CancellationAdviceResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCancellationAdviceResponse6 CancellationAdviceResponse { get; init; } 
-    #else
-    public AcceptorCancellationAdviceResponse6 CancellationAdviceResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_w7YG-ap5EeanIZ10Ka8PnA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

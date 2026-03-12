@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCancellationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to return the outcome of the cancellation request. If the response is positive, the acquirer has voided the financial data from the captured transaction.")]
 [IsoId("_8SQq0U0EEeybj420QgWBkA")]
 [DisplayName("Acceptor Cancellation Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCancellationResponseV10 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcceptorCancellationResponseV10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCancellationResponseV10 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCancellationResponseV10( Header59 reqHeader,AcceptorCancellationResponse10 reqCancellationResponse )
-    {
-        Header = reqHeader;
-        CancellationResponse = reqCancellationResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcceptorCancellationResponseV10 : IOuterRecord
     /// </summary>
     [IsoId("_8SQq1U0EEeybj420QgWBkA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header59 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header59 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header59 Header { get; init; } 
-    #else
-    public Header59 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the cancellation response.
     /// </summary>
     [IsoId("_8SQq100EEeybj420QgWBkA")]
     [DisplayName("Cancellation Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlRspn")]
-    #endif
     [IsoXmlTag("CxlRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCancellationResponse10 CancellationResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCancellationResponse10 CancellationResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCancellationResponse10 CancellationResponse { get; init; } 
-    #else
-    public AcceptorCancellationResponse10 CancellationResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_8SQq2U0EEeybj420QgWBkA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType31? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType31? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType31? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

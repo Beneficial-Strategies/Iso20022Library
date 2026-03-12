@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorAuthorisationRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check with the issuer (or its agent) that the account associated to the card has the resources to fund the payment. This checking will include validation of the card data and any additional transaction data provided.")]
 [IsoId("_51NNAWedEeSh-d9-KfCEyA")]
 [DisplayName("Acceptor Authorisation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorAuthorisationRequestV04 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record AcceptorAuthorisationRequestV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorAuthorisationRequestV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorAuthorisationRequestV04( Header10 reqHeader,AcceptorAuthorisationRequest4 reqAuthorisationRequest,ContentInformationType11 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        AuthorisationRequest = reqAuthorisationRequest;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,57 +57,24 @@ public partial record AcceptorAuthorisationRequestV04 : IOuterRecord
     /// </summary>
     [IsoId("_51NNBWedEeSh-d9-KfCEyA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header10 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header10 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header10 Header { get; init; } 
-    #else
-    public Header10 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the authorisation request.
     /// </summary>
     [IsoId("_51NNB2edEeSh-d9-KfCEyA")]
     [DisplayName("Authorisation Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AuthstnReq")]
-    #endif
     [IsoXmlTag("AuthstnReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorAuthorisationRequest4 AuthorisationRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorAuthorisationRequest4 AuthorisationRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorAuthorisationRequest4 AuthorisationRequest { get; init; } 
-    #else
-    public AcceptorAuthorisationRequest4 AuthorisationRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_51NNCWedEeSh-d9-KfCEyA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType11 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType11 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType11 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType11 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

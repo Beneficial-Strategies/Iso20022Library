@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WZEY6Np-Ed-ak6NoX_4Aeg_1475713728")]
 [DisplayName("Corporate Action Narrative")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionNarrative12
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,114 +23,60 @@ public partial record CorporateActionNarrative12
     /// </summary>
     [IsoId("_WZEY6dp-Ed-ak6NoX_4Aeg_-518430978")]
     [DisplayName("Additional Text")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlTxt")]
-    #endif
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax350Text? AdditionalText { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalText { get; init; } 
-    #else
-    public System.String? AdditionalText { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields of this message, - or narrative information not needed for automatic processing.
     /// </summary>
     [IsoId("_WZEY6tp-Ed-ak6NoX_4Aeg_-1629342397")]
     [DisplayName("Narrative Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NrrtvVrsn")]
-    #endif
     [IsoXmlTag("NrrtvVrsn")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax350Text? NarrativeVersion { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? NarrativeVersion { get; init; } 
-    #else
-    public System.String? NarrativeVersion { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information required for the registration.
     /// </summary>
     [IsoId("_WZOJ4Np-Ed-ak6NoX_4Aeg_785319259")]
     [DisplayName("Registration Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RegnDtls")]
-    #endif
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax350Text? RegistrationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? RegistrationDetails { get; init; } 
-    #else
-    public System.String? RegistrationDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
     /// </summary>
     [IsoId("_WZOJ4dp-Ed-ak6NoX_4Aeg_1556661713")]
     [DisplayName("Party Contact Narrative")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PtyCtctNrrtv")]
-    #endif
     [IsoXmlTag("PtyCtctNrrtv")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PartyContactNarrative { get; init; } 
-    #else
-    public System.String? PartyContactNarrative { get; set; } 
-    #endif
     
     /// <summary>
     /// Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.
     /// </summary>
     [IsoId("_WZOJ4tp-Ed-ak6NoX_4Aeg_445750294")]
     [DisplayName("Disclaimer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Dsclmr")]
-    #endif
     [IsoXmlTag("Dsclmr")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax350Text? Disclaimer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Disclaimer { get; init; } 
-    #else
-    public System.String? Disclaimer { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides additional information on the basket or index underlying a security, for example a warrant.
     /// </summary>
     [IsoId("_WZOJ49p-Ed-ak6NoX_4Aeg_-1434555346")]
     [DisplayName("Basket Or Index Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BsktOrIndxInf")]
-    #endif
     [IsoXmlTag("BsktOrIndxInf")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax350Text? BasketOrIndexInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? BasketOrIndexInformation { get; init; } 
-    #else
-    public System.String? BasketOrIndexInformation { get; set; } 
-    #endif
     
     
     #nullable disable

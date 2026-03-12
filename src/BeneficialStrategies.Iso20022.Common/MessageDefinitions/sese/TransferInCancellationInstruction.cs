@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|TheTransferInCancellationInstruction message is sent by an instructing party, or an instructing party's designated agent, to the executing party.|This message is used to request the cancellation of a TransferInInstruction that was previously sent by the instructing party.|Usage|TheTransferInCancellationInstruction message is sent by an instructing party to request cancellation of a previously sent TransferInInstruction.|This message must contain the reference of the message to be cancelled. The message may also contain all the details of the message to be cancelled, but this is not recommended.")]
 [IsoId("_IJ9muNE6Ed-BzquC8wXy7w_-1440956956")]
 [DisplayName("Transfer In Cancellation Instruction")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferInCancellationInstruction : IOuterRecord
 {
     
@@ -66,18 +55,6 @@ public partial record TransferInCancellationInstruction : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferInCancellationInstruction instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferInCancellationInstruction( AdditionalReference2 reqPreviousReference )
-    {
-        PreviousReference = reqPreviousReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,70 +62,32 @@ public partial record TransferInCancellationInstruction : IOuterRecord
     /// </summary>
     [IsoId("_IJ9mudE6Ed-BzquC8wXy7w_-793090656")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference2 PreviousReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference2 PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2 PreviousReference { get; init; } 
-    #else
-    public AdditionalReference2 PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_IJ9mutE6Ed-BzquC8wXy7w_288100882")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? PoolReference { get; init; } 
-    #else
-    public AdditionalReference2? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_IJ9mu9E6Ed-BzquC8wXy7w_-198593769")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference2? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// The transfer in request message to cancel.
     /// </summary>
     [IsoId("_IKGwoNE6Ed-BzquC8wXy7w_97276648")]
     [DisplayName("Transfer In To Be Cancelled")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfInToBeCanc")]
-    #endif
     [IsoXmlTag("TrfInToBeCanc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransferIn2? TransferInToBeCancelled { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransferIn2? TransferInToBeCancelled { get; init; } 
-    #else
-    public TransferIn2? TransferInToBeCancelled { get; set; } 
-    #endif
     
     
     #nullable disable

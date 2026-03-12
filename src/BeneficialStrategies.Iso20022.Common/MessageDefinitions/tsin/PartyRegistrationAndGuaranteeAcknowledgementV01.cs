@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsin;
@@ -29,12 +24,6 @@ namespace BeneficialStrategies.Iso20022.tsin;
 [Description(@"The message PartyManagementPaymentAcknowledgement is sent from a trade partner to any partner requested through a PartyManagementPaymentAcknowledgemenNotification message to acknowledge the notified factoring service agreement. Depending on legal contexts, the acknowledgement may be required in order for the financial service agreement to become effective.|The message references related messages and may include referenced data.|The message can carry digital signatures if required by context.")]
 [IsoId("_OTgzNDkx-AOSNFX-8224506")]
 [DisplayName("Party Registration And Guarantee Acknowledgement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRecord
 {
     
@@ -63,20 +52,6 @@ public partial record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRe
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PartyRegistrationAndGuaranteeAcknowledgementV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PartyRegistrationAndGuaranteeAcknowledgementV01( BusinessLetter1 reqHeader,FinancingAgreementList1 reqAcknowledgementList,System.String reqAcknowledgementCount )
-    {
-        Header = reqHeader;
-        AcknowledgementList = reqAcknowledgementList;
-        AcknowledgementCount = reqAcknowledgementCount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,111 +59,51 @@ public partial record PartyRegistrationAndGuaranteeAcknowledgementV01 : IOuterRe
     /// </summary>
     [IsoId("_OTgzNDky-AOSNFX-8224507")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BusinessLetter1 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BusinessLetter1 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BusinessLetter1 Header { get; init; } 
-    #else
-    public BusinessLetter1 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// List of party management acknowledgements.
     /// </summary>
     [IsoId("_OTgzNDkz-AOSNFX-8224507")]
     [DisplayName("Acknowledgement List")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AckList")]
-    #endif
     [IsoXmlTag("AckList")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FinancingAgreementList1 AcknowledgementList { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FinancingAgreementList1 AcknowledgementList { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancingAgreementList1 AcknowledgementList { get; init; } 
-    #else
-    public FinancingAgreementList1 AcknowledgementList { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of acknowledgement lists as control value.
     /// </summary>
     [IsoId("_OTgzNDk0-AOSNFX-8224507")]
     [DisplayName("Acknowledgement Count")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AckCnt")]
-    #endif
     [IsoXmlTag("AckCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax15NumericText AcknowledgementCount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String AcknowledgementCount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String AcknowledgementCount { get; init; } 
-    #else
-    public System.String AcknowledgementCount { get; set; } 
-    #endif
     
     /// <summary>
     /// Total number of individual items in all lists.
     /// </summary>
     [IsoId("_OTgzNDk1-AOSNFX-8224507")]
     [DisplayName("Item Count")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ItmCnt")]
-    #endif
     [IsoXmlTag("ItmCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax15NumericText? ItemCount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ItemCount { get; init; } 
-    #else
-    public System.String? ItemCount { get; set; } 
-    #endif
     
     /// <summary>
     /// Total of all individual amounts included in all lists, irrespective of currencies or direction.
     /// </summary>
     [IsoId("_OTgzNDk2-AOSNFX-8224507")]
     [DisplayName("Control Sum")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrlSum")]
-    #endif
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoDecimalNumber? ControlSum { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? ControlSum { get; init; } 
-    #else
-    public System.UInt64? ControlSum { get; set; } 
-    #endif
     
     /// <summary>
     /// Referenced or related business message.
     /// </summary>
     [IsoId("_OTgzNDk3-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AttchdMsg")]
-    #endif
     [IsoXmlTag("AttchdMsg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public EncapsulatedBusinessMessage1? AttachedMessage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; } 
-    #else
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; set; } 
-    #endif
     
     
     #nullable disable

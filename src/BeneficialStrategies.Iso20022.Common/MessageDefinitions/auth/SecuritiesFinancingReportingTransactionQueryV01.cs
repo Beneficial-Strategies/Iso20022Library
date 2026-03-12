@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The SecuritiesFinancingReportingTransactionQuery message is sent by the authority to the trade repositories, to query data based on the search criteria for the  transactions as defined by the system user.")]
 [IsoId("_2zvMFQuAEeqVvtu9Ny8FDA")]
 [DisplayName("Securities Financing Reporting Transaction Query V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesFinancingReportingTransactionQueryV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SecuritiesFinancingReportingTransactionQueryV01 : IOuterRe
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesFinancingReportingTransactionQueryV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesFinancingReportingTransactionQueryV01( PartyIdentification121Choice_ reqRequestingAuthority,TradeReportQuery8Choice_ reqTradeQueryData )
-    {
-        RequestingAuthority = reqRequestingAuthority;
-        TradeQueryData = reqTradeQueryData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record SecuritiesFinancingReportingTransactionQueryV01 : IOuterRe
     /// </summary>
     [IsoId("_2zvMFwuAEeqVvtu9Ny8FDA")]
     [DisplayName("Requesting Authority")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RqstngAuthrty")]
-    #endif
     [IsoXmlTag("RqstngAuthrty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification121Choice_ RequestingAuthority { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification121Choice_ RequestingAuthority { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification121Choice_ RequestingAuthority { get; init; } 
-    #else
-    public PartyIdentification121Choice_ RequestingAuthority { get; set; } 
-    #endif
     
     /// <summary>
     /// Criteria for defining recurrent and ad-hoc queries.
     /// </summary>
     [IsoId("_2zvMGQuAEeqVvtu9Ny8FDA")]
     [DisplayName("Trade Query Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradQryData")]
-    #endif
     [IsoXmlTag("TradQryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeReportQuery8Choice_ TradeQueryData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeReportQuery8Choice_ TradeQueryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeReportQuery8Choice_ TradeQueryData { get; init; } 
-    #else
-    public TradeReportQuery8Choice_ TradeQueryData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_2zvMGwuAEeqVvtu9Ny8FDA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

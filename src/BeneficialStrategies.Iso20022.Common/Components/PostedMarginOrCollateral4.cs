@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_riA0Va2kEeujnrmCqLd8pg")]
 [DisplayName("Posted Margin Or Collateral")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PostedMarginOrCollateral4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -40,17 +24,8 @@ public partial record PostedMarginOrCollateral4
     /// </summary>
     [IsoId("_rwnQ8a2kEeujnrmCqLd8pg")]
     [DisplayName("Initial Margin Posted")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InitlMrgnPstd")]
-    #endif
     [IsoXmlTag("InitlMrgnPstd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAndAmount? InitialMarginPosted { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount? InitialMarginPosted { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount? InitialMarginPosted { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of the variation margin posted, including cash settled, by the reporting counterparty to the other counterparty.
@@ -58,34 +33,16 @@ public partial record PostedMarginOrCollateral4
     /// </summary>
     [IsoId("_rwnQ862kEeujnrmCqLd8pg")]
     [DisplayName("Variation Margin Posted")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VartnMrgnPstd")]
-    #endif
     [IsoXmlTag("VartnMrgnPstd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAndAmount? VariationMarginPosted { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount? VariationMarginPosted { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount? VariationMarginPosted { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of collateral posted in excess of the required collateral.
     /// </summary>
     [IsoId("_rwnQ9a2kEeujnrmCqLd8pg")]
     [DisplayName("Excess Collateral Posted")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XcssCollPstd")]
-    #endif
     [IsoXmlTag("XcssCollPstd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAndAmount? ExcessCollateralPosted { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount? ExcessCollateralPosted { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount? ExcessCollateralPosted { get; set; } 
-    #endif
     
     
     #nullable disable

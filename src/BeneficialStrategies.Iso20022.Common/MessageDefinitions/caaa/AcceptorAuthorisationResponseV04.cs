@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorAuthorisationResponse message is sent by the acquirer (or its agent) to an acceptor (or its agent), to return the result of the validation made by issuer about the payment transaction.")]
 [IsoId("_NVsYsWkgEeSTIuB9A-QJ6g")]
 [DisplayName("Acceptor Authorisation Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorAuthorisationResponseV04 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record AcceptorAuthorisationResponseV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorAuthorisationResponseV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorAuthorisationResponseV04( Header10 reqHeader,AcceptorAuthorisationResponse4 reqAuthorisationResponse,ContentInformationType11 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        AuthorisationResponse = reqAuthorisationResponse;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,57 +57,24 @@ public partial record AcceptorAuthorisationResponseV04 : IOuterRecord
     /// </summary>
     [IsoId("_NVsYtWkgEeSTIuB9A-QJ6g")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header10 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header10 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header10 Header { get; init; } 
-    #else
-    public Header10 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response of the authorisation.
     /// </summary>
     [IsoId("_NVsYt2kgEeSTIuB9A-QJ6g")]
     [DisplayName("Authorisation Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AuthstnRspn")]
-    #endif
     [IsoXmlTag("AuthstnRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorAuthorisationResponse4 AuthorisationResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorAuthorisationResponse4 AuthorisationResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorAuthorisationResponse4 AuthorisationResponse { get; init; } 
-    #else
-    public AcceptorAuthorisationResponse4 AuthorisationResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_NVsYuWkgEeSTIuB9A-QJ6g")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType11 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType11 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType11 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType11 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

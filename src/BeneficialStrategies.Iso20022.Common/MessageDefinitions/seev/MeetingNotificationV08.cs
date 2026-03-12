@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|The MeetingNotification message is sent by a notifying party, for example, an issuer, its agent or an intermediary to another intermediary, a party holding the right to vote, a registered security holder or to a beneficial holder to announce a meeting.|Usage|The MeetingNotification message is used to announce a meeting, for example, it provides information on the participation details and requirements for the meeting, the vote parameters and the resolutions. The MeetingNotification message may also be used to announce an update.|This message definition is intended for use with the Business Application Header (BAH).")]
 [IsoId("_sVpAIfEkEeqRfth943bvEA")]
 [DisplayName("Meeting Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MeetingNotificationV08 : IOuterRecord
 {
     
@@ -65,20 +54,6 @@ public partial record MeetingNotificationV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MeetingNotificationV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MeetingNotificationV08( NotificationGeneralInformation2 reqNotificationGeneralInformation,MeetingNotice6 reqMeeting,IssuerInformation3 reqIssuer )
-    {
-        NotificationGeneralInformation = reqNotificationGeneralInformation;
-        Meeting = reqMeeting;
-        Issuer = reqIssuer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,81 +61,38 @@ public partial record MeetingNotificationV08 : IOuterRecord
     /// </summary>
     [IsoId("_sVpAMfEkEeqRfth943bvEA")]
     [DisplayName("Notification General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtfctnGnlInf")]
-    #endif
     [IsoXmlTag("NtfctnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NotificationGeneralInformation2 NotificationGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NotificationGeneralInformation2 NotificationGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NotificationGeneralInformation2 NotificationGeneralInformation { get; init; } 
-    #else
-    public NotificationGeneralInformation2 NotificationGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information specific to notification amendment as for instance the identification to a previous meeting notification.
     /// </summary>
     [IsoId("_sVpAM_EkEeqRfth943bvEA")]
     [DisplayName("Notification Update")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtfctnUpd")]
-    #endif
     [IsoXmlTag("NtfctnUpd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public NotificationUpdate2? NotificationUpdate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NotificationUpdate2? NotificationUpdate { get; init; } 
-    #else
-    public NotificationUpdate2? NotificationUpdate { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of another meeting event that needs to be closely linked to the processing of the event notified in this meeting notification.
     /// </summary>
     [IsoId("_sVpANfEkEeqRfth943bvEA")]
     [DisplayName("Events Linkage")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtsLkg")]
-    #endif
     [IsoXmlTag("EvtsLkg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MeetingEventReference1? EventsLinkage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingEventReference1? EventsLinkage { get; init; } 
-    #else
-    public MeetingEventReference1? EventsLinkage { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the meeting like meeting identifications, various deadlines, contact persons, electronic and postal locations for accessing information and proxy assignment parameters.
     /// </summary>
     [IsoId("_sVpAN_EkEeqRfth943bvEA")]
     [DisplayName("Meeting")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Mtg")]
-    #endif
     [IsoXmlTag("Mtg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MeetingNotice6 Meeting { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MeetingNotice6 Meeting { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingNotice6 Meeting { get; init; } 
-    #else
-    public MeetingNotice6 Meeting { get; set; } 
-    #endif
     
     /// <summary>
     /// Dates and details of the shareholders meeting.
     /// </summary>
     [IsoId("_sVpAOfEkEeqRfth943bvEA")]
     [DisplayName("Meeting Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtgDtls")]
-    #endif
     [IsoXmlTag("MtgDtls")]
     [MinLength(1)]
     [MaxLength(5)]
@@ -171,28 +103,14 @@ public partial record MeetingNotificationV08 : IOuterRecord
     /// </summary>
     [IsoId("_sVpAO_EkEeqRfth943bvEA")]
     [DisplayName("Issuer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Issr")]
-    #endif
     [IsoXmlTag("Issr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IssuerInformation3 Issuer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IssuerInformation3 Issuer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IssuerInformation3 Issuer { get; init; } 
-    #else
-    public IssuerInformation3 Issuer { get; set; } 
-    #endif
     
     /// <summary>
     /// Agent of the issuer.
     /// </summary>
     [IsoId("_sVpAPfEkEeqRfth943bvEA")]
     [DisplayName("Issuer Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IssrAgt")]
-    #endif
     [IsoXmlTag("IssrAgt")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -203,9 +121,6 @@ public partial record MeetingNotificationV08 : IOuterRecord
     /// </summary>
     [IsoId("_sVyKEfEkEeqRfth943bvEA")]
     [DisplayName("Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Scty")]
-    #endif
     [IsoXmlTag("Scty")]
     [MinLength(1)]
     [MaxLength(200)]
@@ -216,9 +131,6 @@ public partial record MeetingNotificationV08 : IOuterRecord
     /// </summary>
     [IsoId("_sVyKE_EkEeqRfth943bvEA")]
     [DisplayName("Resolution")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsltn")]
-    #endif
     [IsoXmlTag("Rsltn")]
     [MinLength(0)]
     [MaxLength(1000)]
@@ -229,68 +141,32 @@ public partial record MeetingNotificationV08 : IOuterRecord
     /// </summary>
     [IsoId("_sVyKFfEkEeqRfth943bvEA")]
     [DisplayName("Vote")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Vote")]
-    #endif
     [IsoXmlTag("Vote")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public VoteParameters6? Vote { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public VoteParameters6? Vote { get; init; } 
-    #else
-    public VoteParameters6? Vote { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the use of power of attorney.
     /// </summary>
     [IsoId("_sVyKF_EkEeqRfth943bvEA")]
     [DisplayName("Power Of Attorney Requirements")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PwrOfAttnyRqrmnts")]
-    #endif
     [IsoXmlTag("PwrOfAttnyRqrmnts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PowerOfAttorneyRequirements4? PowerOfAttorneyRequirements { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PowerOfAttorneyRequirements4? PowerOfAttorneyRequirements { get; init; } 
-    #else
-    public PowerOfAttorneyRequirements4? PowerOfAttorneyRequirements { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional narrative information about the meeting event.
     /// </summary>
     [IsoId("_sVyKGfEkEeqRfth943bvEA")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateEventNarrative3? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateEventNarrative3? AdditionalInformation { get; init; } 
-    #else
-    public CorporateEventNarrative3? AdditionalInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_sVyKG_EkEeqRfth943bvEA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

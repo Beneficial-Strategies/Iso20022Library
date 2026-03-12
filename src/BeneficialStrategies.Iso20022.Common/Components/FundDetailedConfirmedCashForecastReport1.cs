@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uu-Omtp-Ed-ak6NoX_4Aeg_1656814301")]
 [DisplayName("Fund Detailed Confirmed Cash Forecast Report")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FundDetailedConfirmedCashForecastReport1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record FundDetailedConfirmedCashForecastReport1
     /// </summary>
     [IsoId("_UvH_kNp-Ed-ak6NoX_4Aeg_490161983")]
     [DisplayName("Fund Cash Forecast Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FndCshFcstDtls")]
-    #endif
     [IsoXmlTag("FndCshFcstDtls")]
     public ValueList<FundCashForecast2> FundCashForecastDetails { get; init; } = new ValueList<FundCashForecast2>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _UvH_kNp-Ed-ak6NoX_4Aeg_490161983
@@ -51,17 +32,8 @@ public partial record FundDetailedConfirmedCashForecastReport1
     /// </summary>
     [IsoId("_UvH_kdp-Ed-ak6NoX_4Aeg_556654600")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

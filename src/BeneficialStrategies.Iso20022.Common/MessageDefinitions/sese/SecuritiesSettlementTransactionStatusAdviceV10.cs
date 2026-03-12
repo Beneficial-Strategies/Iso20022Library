@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -39,12 +34,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionStatusAdvice to an account owner to advise the status of a securities settlement transaction instruction previously sent by the account owner or the status of a settlement transaction existing in the books of the servicer for the account of the owner. The status may be a processing, pending processing, internal matching, matching and/or settlement status.|The status advice may be sent as a response to the request of the account owner or not.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
 [IsoId("_H4jpkdBpEeihG9bKfarOOA")]
 [DisplayName("Securities Settlement Transaction Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementTransactionStatusAdviceV10 : IOuterRecord
 {
     
@@ -73,18 +62,6 @@ public partial record SecuritiesSettlementTransactionStatusAdviceV10 : IOuterRec
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementTransactionStatusAdviceV10 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementTransactionStatusAdviceV10( TransactionIdentifications31 reqTransactionIdentification )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -92,138 +69,64 @@ public partial record SecuritiesSettlementTransactionStatusAdviceV10 : IOuterRec
     /// </summary>
     [IsoId("_H4jpn9BpEeihG9bKfarOOA")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactionIdentifications31 TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactionIdentifications31 TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionIdentifications31 TransactionIdentification { get; init; } 
-    #else
-    public TransactionIdentifications31 TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Link to another transaction - provided for information only.
     /// </summary>
     [IsoId("_H4jpodBpEeihG9bKfarOOA")]
     [DisplayName("Linkages")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Lnkgs")]
-    #endif
     [IsoXmlTag("Lnkgs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Linkages41? Linkages { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Linkages41? Linkages { get; init; } 
-    #else
-    public Linkages41? Linkages { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the processing status of the transaction.
     /// </summary>
     [IsoId("_H4jpo9BpEeihG9bKfarOOA")]
     [DisplayName("Processing Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgSts")]
-    #endif
     [IsoXmlTag("PrcgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ProcessingStatus74Choice_? ProcessingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProcessingStatus74Choice_? ProcessingStatus { get; init; } 
-    #else
-    public ProcessingStatus74Choice_? ProcessingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the matching status of an instruction as per the account servicer based on an allegement. At this time no matching took place on the market (at the CSD/ICSD).
     /// </summary>
     [IsoId("_H4jppdBpEeihG9bKfarOOA")]
     [DisplayName("Inferred Matching Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IfrrdMtchgSts")]
-    #endif
     [IsoXmlTag("IfrrdMtchgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MatchingStatus24Choice_? InferredMatchingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MatchingStatus24Choice_? InferredMatchingStatus { get; init; } 
-    #else
-    public MatchingStatus24Choice_? InferredMatchingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the matching status of the instruction.
     /// </summary>
     [IsoId("_H4jpp9BpEeihG9bKfarOOA")]
     [DisplayName("Matching Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtchgSts")]
-    #endif
     [IsoXmlTag("MtchgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MatchingStatus24Choice_? MatchingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MatchingStatus24Choice_? MatchingStatus { get; init; } 
-    #else
-    public MatchingStatus24Choice_? MatchingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the status of settlement of a transaction.
     /// </summary>
     [IsoId("_H4jpqdBpEeihG9bKfarOOA")]
     [DisplayName("Settlement Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmSts")]
-    #endif
     [IsoXmlTag("SttlmSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementStatus17Choice_? SettlementStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementStatus17Choice_? SettlementStatus { get; init; } 
-    #else
-    public SettlementStatus17Choice_? SettlementStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the details of the transaction.
     /// </summary>
     [IsoId("_H4jpq9BpEeihG9bKfarOOA")]
     [DisplayName("Transaction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxDtls")]
-    #endif
     [IsoXmlTag("TxDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionDetails113? TransactionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionDetails113? TransactionDetails { get; init; } 
-    #else
-    public TransactionDetails113? TransactionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_H4jprdBpEeihG9bKfarOOA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

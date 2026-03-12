@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A6t5UeXtEemEj48jhmlA0Q")]
 [DisplayName("Corporate Action Amounts")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionAmounts56
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CorporateActionAmounts56 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CorporateActionAmounts56( ActiveCurrencyAndAmount reqPostingAmount )
-    {
-        PostingAmount = reqPostingAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,954 +23,448 @@ public partial record CorporateActionAmounts56
     /// </summary>
     [IsoId("_BLrGc-XtEemEj48jhmlA0Q")]
     [DisplayName("Posting Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PstngAmt")]
-    #endif
     [IsoXmlTag("PstngAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveCurrencyAndAmount PostingAmount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveCurrencyAndAmount PostingAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount PostingAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount PostingAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money before any deductions and allowances have been made.
     /// </summary>
     [IsoId("_BLrGe-XtEemEj48jhmlA0Q")]
     [DisplayName("Gross Cash Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrssCshAmt")]
-    #endif
     [IsoXmlTag("GrssCshAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? GrossCashAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? GrossCashAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? GrossCashAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money after deductions and allowances have been made, if any, that is, the total amount +/- charges/fees.
     /// </summary>
     [IsoId("_BLrGg-XtEemEj48jhmlA0Q")]
     [DisplayName("Net Cash Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetCshAmt")]
-    #endif
     [IsoXmlTag("NetCshAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? NetCashAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? NetCashAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? NetCashAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Cash premium made available if the securities holder consents or participates to an event, for example consent fees or solicitation fees.
     /// </summary>
     [IsoId("_BLrGi-XtEemEj48jhmlA0Q")]
     [DisplayName("Solicitation Fees")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SlctnFees")]
-    #endif
     [IsoXmlTag("SlctnFees")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? SolicitationFees { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? SolicitationFees { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? SolicitationFees { get; set; } 
-    #endif
     
     /// <summary>
     /// Cash disbursement in lieu of a fractional quantity of, for example, equity.
     /// </summary>
     [IsoId("_BLrGk-XtEemEj48jhmlA0Q")]
     [DisplayName("Cash In Lieu Of Share")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshInLieuOfShr")]
-    #endif
     [IsoXmlTag("CshInLieuOfShr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? CashInLieuOfShare { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? CashInLieuOfShare { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? CashInLieuOfShare { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money distributed as the result of a capital gain.
     /// </summary>
     [IsoId("_BLrGm-XtEemEj48jhmlA0Q")]
     [DisplayName("Capital Gain")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CptlGn")]
-    #endif
     [IsoXmlTag("CptlGn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? CapitalGain { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? CapitalGain { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? CapitalGain { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money representing a coupon payment.
     /// </summary>
     [IsoId("_BLrGo-XtEemEj48jhmlA0Q")]
     [DisplayName("Interest Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrstAmt")]
-    #endif
     [IsoXmlTag("IntrstAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? InterestAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? InterestAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? InterestAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money resulting from a market claim.
     /// </summary>
     [IsoId("_BLrGq-XtEemEj48jhmlA0Q")]
     [DisplayName("Market Claim Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktClmAmt")]
-    #endif
     [IsoXmlTag("MktClmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? MarketClaimAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? MarketClaimAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? MarketClaimAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// (Unique to France) Amount due to a buyer of securities dealt prior to ex date which may be subject to different rate of taxation.
     /// </summary>
     [IsoId("_BLrGs-XtEemEj48jhmlA0Q")]
     [DisplayName("Indemnity Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IndmntyAmt")]
-    #endif
     [IsoXmlTag("IndmntyAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? IndemnityAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? IndemnityAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? IndemnityAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money that the borrower pays to the lender as a compensation. It does not entitle the lender to reclaim any tax credit and is sometimes treated differently by the local tax authorities of the lender. Also covers compensation/indemnity of missed dividend concerning early/late settlements if applicable to a market.
     /// </summary>
     [IsoId("_BLrGu-XtEemEj48jhmlA0Q")]
     [DisplayName("Manufactured Dividend Payment Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ManfctrdDvddPmtAmt")]
-    #endif
     [IsoXmlTag("ManfctrdDvddPmtAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ManufacturedDividendPaymentAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ManufacturedDividendPaymentAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ManufacturedDividendPaymentAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money reinvested in additional securities.
     /// </summary>
     [IsoId("_BLrGveXtEemEj48jhmlA0Q")]
     [DisplayName("Reinvestment Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RinvstmtAmt")]
-    #endif
     [IsoXmlTag("RinvstmtAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ReinvestmentAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ReinvestmentAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ReinvestmentAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount resulting from a fully franked dividend paid by a company; amount includes tax credit for companies that have made sufficient tax payments during the fiscal period.
     /// </summary>
     [IsoId("_BLrGxeXtEemEj48jhmlA0Q")]
     [DisplayName("Fully Franked Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FullyFrnkdAmt")]
-    #endif
     [IsoXmlTag("FullyFrnkdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? FullyFrankedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? FullyFrankedAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? FullyFrankedAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount resulting from an unfranked dividend paid by a company; the amount does not include tax credit and is subject to withholding tax.
     /// </summary>
     [IsoId("_BLrGzeXtEemEj48jhmlA0Q")]
     [DisplayName("Unfranked Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UfrnkdAmt")]
-    #endif
     [IsoXmlTag("UfrnkdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? UnfrankedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? UnfrankedAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? UnfrankedAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money related to taxable income that cannot be categorised.
     /// </summary>
     [IsoId("_BLrG1eXtEemEj48jhmlA0Q")]
     [DisplayName("Sundry Or Other Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SndryOrOthrAmt")]
-    #endif
     [IsoXmlTag("SndryOrOthrAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? SundryOrOtherAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? SundryOrOtherAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? SundryOrOtherAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money that has not been subject to taxation.
     /// </summary>
     [IsoId("_BLrG3eXtEemEj48jhmlA0Q")]
     [DisplayName("Tax Free Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxFreeAmt")]
-    #endif
     [IsoXmlTag("TaxFreeAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TaxFreeAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TaxFreeAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TaxFreeAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of income eligible for deferred taxation.
     /// </summary>
     [IsoId("_BLrG5eXtEemEj48jhmlA0Q")]
     [DisplayName("Tax Deferred Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxDfrrdAmt")]
-    #endif
     [IsoXmlTag("TaxDfrrdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TaxDeferredAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TaxDeferredAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TaxDeferredAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Tax on value added.
     /// </summary>
     [IsoId("_BLrG7eXtEemEj48jhmlA0Q")]
     [DisplayName("Value Added Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValAddedTaxAmt")]
-    #endif
     [IsoXmlTag("ValAddedTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ValueAddedTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ValueAddedTaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ValueAddedTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of stamp duty.
     /// </summary>
     [IsoId("_BLrG9eXtEemEj48jhmlA0Q")]
     [DisplayName("Stamp Duty Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmpDtyAmt")]
-    #endif
     [IsoXmlTag("StmpDtyAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? StampDutyAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? StampDutyAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? StampDutyAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount that was paid in excess of actual tax obligation and was reclaimed.
     /// </summary>
     [IsoId("_BLrG_eXtEemEj48jhmlA0Q")]
     [DisplayName("Tax Reclaim Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxRclmAmt")]
-    #endif
     [IsoXmlTag("TaxRclmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TaxReclaimAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TaxReclaimAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TaxReclaimAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of taxes that have been previously paid in relation to the taxable event.
     /// </summary>
     [IsoId("_BLrHBeXtEemEj48jhmlA0Q")]
     [DisplayName("Tax Credit Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxCdtAmt")]
-    #endif
     [IsoXmlTag("TaxCdtAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TaxCreditAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TaxCreditAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TaxCreditAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of additional taxes that cannot be categorised.
     /// </summary>
     [IsoId("_BLrHDeXtEemEj48jhmlA0Q")]
     [DisplayName("Additional Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlTaxAmt")]
-    #endif
     [IsoXmlTag("AddtlTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? AdditionalTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? AdditionalTaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? AdditionalTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of a cash distribution that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.
     /// </summary>
     [IsoId("_BLrHFeXtEemEj48jhmlA0Q")]
     [DisplayName("Withholding Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="WhldgTaxAmt")]
-    #endif
     [IsoXmlTag("WhldgTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? WithholdingTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? WithholdingTaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? WithholdingTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible. It is levied in complement or offset of the withholding tax rate levied by the jurisdiction of the issuer’s tax domicile.
     /// </summary>
     [IsoId("_BLrHHeXtEemEj48jhmlA0Q")]
     [DisplayName("Second Level Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ScndLvlTaxAmt")]
-    #endif
     [IsoXmlTag("ScndLvlTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? SecondLevelTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? SecondLevelTaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? SecondLevelTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of fiscal tax to apply.
     /// </summary>
     [IsoId("_BLrHH-XtEemEj48jhmlA0Q")]
     [DisplayName("Fiscal Stamp Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FsclStmpAmt")]
-    #endif
     [IsoXmlTag("FsclStmpAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? FiscalStampAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? FiscalStampAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? FiscalStampAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money paid to an executing broker as a commission.
     /// </summary>
     [IsoId("_BLrHJ-XtEemEj48jhmlA0Q")]
     [DisplayName("Executing Broker Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ExctgBrkrAmt")]
-    #endif
     [IsoXmlTag("ExctgBrkrAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ExecutingBrokerAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ExecutingBrokerAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ExecutingBrokerAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of paying/sub-paying agent commission.
     /// </summary>
     [IsoId("_BLrHL-XtEemEj48jhmlA0Q")]
     [DisplayName("Paying Agent Commission Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PngAgtComssnAmt")]
-    #endif
     [IsoXmlTag("PngAgtComssnAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? PayingAgentCommissionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? PayingAgentCommissionAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? PayingAgentCommissionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Local broker&apos;s commission.
     /// </summary>
     [IsoId("_BLrHN-XtEemEj48jhmlA0Q")]
     [DisplayName("Local Broker Commission Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LclBrkrComssnAmt")]
-    #endif
     [IsoXmlTag("LclBrkrComssnAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? LocalBrokerCommissionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? LocalBrokerCommissionAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? LocalBrokerCommissionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money charged by a regulatory authority, for example, Securities and Exchange fees.
     /// </summary>
     [IsoId("_BLrHP-XtEemEj48jhmlA0Q")]
     [DisplayName("Regulatory Fees Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RgltryFeesAmt")]
-    #endif
     [IsoXmlTag("RgltryFeesAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? RegulatoryFeesAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? RegulatoryFeesAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? RegulatoryFeesAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// All costs related to the physical delivery of documents such as stamps, postage, carrier fees, insurances or messenger services.
     /// </summary>
     [IsoId("_BLrHR-XtEemEj48jhmlA0Q")]
     [DisplayName("Shipping Fees Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ShppgFeesAmt")]
-    #endif
     [IsoXmlTag("ShppgFeesAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ShippingFeesAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ShippingFeesAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ShippingFeesAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money paid for the provision of financial services that cannot be categorised by another qualifier.
     /// </summary>
     [IsoId("_BLrHT-XtEemEj48jhmlA0Q")]
     [DisplayName("Charges Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ChrgsAmt")]
-    #endif
     [IsoXmlTag("ChrgsAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ChargesAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ChargesAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ChargesAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates cash retained from previous dividend.
     /// </summary>
     [IsoId("_BLrHV-XtEemEj48jhmlA0Q")]
     [DisplayName("Cash Amount Brought Forward")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAmtBrghtFwd")]
-    #endif
     [IsoXmlTag("CshAmtBrghtFwd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? CashAmountBroughtForward { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? CashAmountBroughtForward { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? CashAmountBroughtForward { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates the balance carried forward to next dividend.
     /// </summary>
     [IsoId("_BLrHX-XtEemEj48jhmlA0Q")]
     [DisplayName("Cash Amount Carried Forward")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAmtCrrdFwd")]
-    #endif
     [IsoXmlTag("CshAmtCrrdFwd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? CashAmountCarriedForward { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? CashAmountCarriedForward { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? CashAmountCarriedForward { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of cash that would have been payable if the dividend had been taken in the form of cash rather than shares.
     /// </summary>
     [IsoId("_BLrHZ-XtEemEj48jhmlA0Q")]
     [DisplayName("Notional Dividend Payable Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtnlDvddPyblAmt")]
-    #endif
     [IsoXmlTag("NtnlDvddPyblAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? NotionalDividendPayableAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? NotionalDividendPayableAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? NotionalDividendPayableAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Where new securities are issued in lieu of a cash dividend, the notional tax is the tax on the amount of cash that would have been paid.
     /// </summary>
     [IsoId("_BLrHb-XtEemEj48jhmlA0Q")]
     [DisplayName("Notional Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtnlTaxAmt")]
-    #endif
     [IsoXmlTag("NtnlTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? NotionalTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? NotionalTaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? NotionalTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money paid by the tax authorities in addition to the payment of the tax refund itself.
     /// </summary>
     [IsoId("_BLrHd-XtEemEj48jhmlA0Q")]
     [DisplayName("Tax Arrears Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxArrearsAmt")]
-    #endif
     [IsoXmlTag("TaxArrearsAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TaxArrearsAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TaxArrearsAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TaxArrearsAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Posting/settlement Amount in its original currency when conversion from/into another currency has occurred.
     /// </summary>
     [IsoId("_BLrHf-XtEemEj48jhmlA0Q")]
     [DisplayName("Original Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlAmt")]
-    #endif
     [IsoXmlTag("OrgnlAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? OriginalAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? OriginalAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? OriginalAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money representing a distribution of a bond&apos;s principal, for example, repayment of outstanding debt.
     /// </summary>
     [IsoId("_BLrHh-XtEemEj48jhmlA0Q")]
     [DisplayName("Principal Or Corpus")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrncplOrCrps")]
-    #endif
     [IsoXmlTag("PrncplOrCrps")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? PrincipalOrCorpus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? PrincipalOrCorpus { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? PrincipalOrCorpus { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money (not interest) in addition to the principal at the redemption of a bond.
     /// </summary>
     [IsoId("_BLrHj-XtEemEj48jhmlA0Q")]
     [DisplayName("Redemption Premium Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RedPrmAmt")]
-    #endif
     [IsoXmlTag("RedPrmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? RedemptionPremiumAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? RedemptionPremiumAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? RedemptionPremiumAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount relating to the underlying security for which income is distributed.
     /// </summary>
     [IsoId("_BLrHl-XtEemEj48jhmlA0Q")]
     [DisplayName("Income Portion")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IncmPrtn")]
-    #endif
     [IsoXmlTag("IncmPrtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? IncomePortion { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? IncomePortion { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? IncomePortion { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of stock exchange tax.
     /// </summary>
     [IsoId("_BLrHn-XtEemEj48jhmlA0Q")]
     [DisplayName("Stock Exchange Tax")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StockXchgTax")]
-    #endif
     [IsoXmlTag("StockXchgTax")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? StockExchangeTax { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? StockExchangeTax { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? StockExchangeTax { get; set; } 
-    #endif
     
     /// <summary>
     /// Total amount of tax withheld at source in conformance with the EU Savings Directive.
     /// </summary>
     [IsoId("_BLrHp-XtEemEj48jhmlA0Q")]
     [DisplayName("EU Tax Retention Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EUTaxRtntnAmt")]
-    #endif
     [IsoXmlTag("EUTaxRtntnAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? EUTaxRetentionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? EUTaxRetentionAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? EUTaxRetentionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of interest that has been accrued in between coupon payment periods.
     /// </summary>
     [IsoId("_BLrHr-XtEemEj48jhmlA0Q")]
     [DisplayName("Accrued Interest Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcrdIntrstAmt")]
-    #endif
     [IsoXmlTag("AcrdIntrstAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? AccruedInterestAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? AccruedInterestAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? AccruedInterestAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Portion of the fund distribution amount which represents the average accrued income included in the purchase price for units bought during the account period.
     /// </summary>
     [IsoId("_BLrHt-XtEemEj48jhmlA0Q")]
     [DisplayName("Equalisation Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EqulstnAmt")]
-    #endif
     [IsoXmlTag("EqulstnAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? EqualisationAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? EqualisationAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? EqualisationAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// FATCA (Foreign Account Tax Compliance Act) related tax amount.
     /// </summary>
     [IsoId("_BLrHueXtEemEj48jhmlA0Q")]
     [DisplayName("FATCA Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FATCATaxAmt")]
-    #endif
     [IsoXmlTag("FATCATaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? FATCATaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? FATCATaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? FATCATaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of tax related income subject to NRA (Non Resident Alien).
     /// </summary>
     [IsoId("_BLrHu-XtEemEj48jhmlA0Q")]
     [DisplayName("NRA Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NRATaxAmt")]
-    #endif
     [IsoXmlTag("NRATaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? NRATaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? NRATaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? NRATaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of tax related to back up withholding.
     /// </summary>
     [IsoId("_BLrHveXtEemEj48jhmlA0Q")]
     [DisplayName("Back Up Withholding Tax Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BckUpWhldgTaxAmt")]
-    #endif
     [IsoXmlTag("BckUpWhldgTaxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? BackUpWithholdingTaxAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? BackUpWithholdingTaxAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? BackUpWithholdingTaxAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of overall tax withheld at source by fund managers prior to considering the tax obligation of each unit holder.
     /// </summary>
     [IsoId("_BLrHv-XtEemEj48jhmlA0Q")]
     [DisplayName("Tax On Income Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxOnIncmAmt")]
-    #endif
     [IsoXmlTag("TaxOnIncmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TaxOnIncomeAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TaxOnIncomeAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TaxOnIncomeAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of transaction tax.
     /// </summary>
     [IsoId("_BLrHweXtEemEj48jhmlA0Q")]
     [DisplayName("Transaction Tax")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxTax")]
-    #endif
     [IsoXmlTag("TxTax")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? TransactionTax { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? TransactionTax { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? TransactionTax { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of proceeds which is not actually paid to the security holder but on which withholding tax is applicable.
     /// </summary>
     [IsoId("_BLrHw-XtEemEj48jhmlA0Q")]
     [DisplayName("Deemed Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DmdAmt")]
-    #endif
     [IsoXmlTag("DmdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? DeemedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? DeemedAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? DeemedAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount relating to a foreign income such as a conduit foreign income.
     /// </summary>
     [IsoId("_BLrHxeXtEemEj48jhmlA0Q")]
     [DisplayName("Foreign Income Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FrgnIncmAmt")]
-    #endif
     [IsoXmlTag("FrgnIncmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? ForeignIncomeAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? ForeignIncomeAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? ForeignIncomeAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Deemed amount resulting from the difference between the rate of dividend proceeds attributed to the security holder for the taxable year and the rate of dividend proceeds previously notified to the security holder in relation to cash distributions for the year.
     /// </summary>
     [IsoId("_BLrHx-XtEemEj48jhmlA0Q")]
     [DisplayName("Deemed Dividend Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DmdDvddAmt")]
-    #endif
     [IsoXmlTag("DmdDvddAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? DeemedDividendAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? DeemedDividendAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? DeemedDividendAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Deemed amount resulting from the difference between the rate of the proceeds components comprising a fund payment attributed to the security holder for the taxable year and the rate of the fund proceeds previously notified to the security holder in relation to cash distributions for the year.
     /// </summary>
     [IsoId("_BLrHyeXtEemEj48jhmlA0Q")]
     [DisplayName("Deemed Fund Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DmdFndAmt")]
-    #endif
     [IsoXmlTag("DmdFndAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? DeemedFundAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? DeemedFundAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? DeemedFundAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Deemed amount resulting from the difference between the rate of interest proceeds attributed to the security holder for the taxable year and the rate of interest proceeds previously notified to the security holder in relation to cash distributions for the year.
     /// </summary>
     [IsoId("_BLrHy-XtEemEj48jhmlA0Q")]
     [DisplayName("Deemed Interest Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DmdIntrstAmt")]
-    #endif
     [IsoXmlTag("DmdIntrstAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? DeemedInterestAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? DeemedInterestAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? DeemedInterestAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Deemed amount resulting from the difference between the rate of royalty proceeds attributed to the security holder for the taxable year and the rate of royalty proceeds previously notified to the security holder in relation to cash distributions for the year.
     /// </summary>
     [IsoId("_BLrHzeXtEemEj48jhmlA0Q")]
     [DisplayName("Deemed Royalties Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DmdRyltsAmt")]
-    #endif
     [IsoXmlTag("DmdRyltsAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? DeemedRoyaltiesAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? DeemedRoyaltiesAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? DeemedRoyaltiesAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money debited or credited to adjust for the difference between the estimated and the final subscription rate for Rights Exercise events.
     /// </summary>
     [IsoId("_BLrHz-XtEemEj48jhmlA0Q")]
     [DisplayName("Adjusted Subscription Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AdjstdSbcptAmt")]
-    #endif
     [IsoXmlTag("AdjstdSbcptAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? AdjustedSubscriptionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? AdjustedSubscriptionAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? AdjustedSubscriptionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money refunded from the original subscription cost for a Rights Exercise event.  This occurs when the event is prorated and the subscription cost relating to the unaffected (unaccepted) balance is returned to the holder.
     /// </summary>
     [IsoId("_BLrH0eXtEemEj48jhmlA0Q")]
     [DisplayName("Refunded Subscription Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RfnddSbcptAmt")]
-    #endif
     [IsoXmlTag("RfnddSbcptAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? RefundedSubscriptionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? RefundedSubscriptionAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? RefundedSubscriptionAmount { get; set; } 
-    #endif
     
     
     #nullable disable

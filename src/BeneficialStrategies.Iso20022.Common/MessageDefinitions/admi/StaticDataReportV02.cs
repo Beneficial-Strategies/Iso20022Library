@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.admi;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.admi;
 [Description(@"The StaticDataReport message is sent by a central system to the participant to provide static data held in the system.|")]
 [IsoId("_Zy71kRnXEeKKXqHkeUjBbw")]
 [DisplayName("Static Data Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StaticDataReportV02 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record StaticDataReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a StaticDataReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public StaticDataReportV02( System.String reqMessageIdentification,RequestDetails5 reqReportDetails )
-    {
-        MessageIdentification = reqMessageIdentification;
-        ReportDetails = reqReportDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,75 +58,35 @@ public partial record StaticDataReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_y5aAVzp8EeKXK8qRvydwAw")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MessageIdentification { get; init; } 
-    #else
-    public System.String MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
     /// </summary>
     [IsoId("_vSr6ox3bEeKXIbeXfdPzuw")]
     [DisplayName("Settlement Session Identifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmSsnIdr")]
-    #endif
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? SettlementSessionIdentifier { get; init; } 
-    #else
-    public System.String? SettlementSessionIdentifier { get; set; } 
-    #endif
     
     /// <summary>
     /// Report type and returned data.
     /// </summary>
     [IsoId("_Zy71lxnXEeKKXqHkeUjBbw")]
     [DisplayName("Report Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptDtls")]
-    #endif
     [IsoXmlTag("RptDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RequestDetails5 ReportDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RequestDetails5 ReportDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RequestDetails5 ReportDetails { get; init; } 
-    #else
-    public RequestDetails5 ReportDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Dw3hYy53EeKwTrPDLMbLxA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

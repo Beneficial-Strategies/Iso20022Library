@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uRU2sR6hEeOolf0-cMYhrw")]
 [DisplayName("Account")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Account16
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Account16 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Account16( System.String reqIdentification )
-    {
-        Identification = reqIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,57 +23,28 @@ public partial record Account16
     /// </summary>
     [IsoId("_un7_4R6hEeOolf0-cMYhrw")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String Identification { get; init; } 
-    #else
-    public System.String Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
     /// </summary>
     [IsoId("_un7_4x6hEeOolf0-cMYhrw")]
     [DisplayName("Designation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Dsgnt")]
-    #endif
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? Designation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Designation { get; init; } 
-    #else
-    public System.String? Designation { get; set; } 
-    #endif
     
     /// <summary>
     /// Institution that maintains the records where the account is held.
     /// </summary>
     [IsoId("_un7_5R6hEeOolf0-cMYhrw")]
     [DisplayName("Servicer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Svcr")]
-    #endif
     [IsoXmlTag("Svcr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification2Choice_? Servicer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification2Choice_? Servicer { get; init; } 
-    #else
-    public PartyIdentification2Choice_? Servicer { get; set; } 
-    #endif
     
     
     #nullable disable

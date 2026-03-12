@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MIdVI_JuEeiJn9rM2Znz2w")]
 [DisplayName("Sale")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Sale1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record Sale1
     /// </summary>
     [IsoId("_MId8MPJuEeiJn9rM2Znz2w")]
     [DisplayName("Summary")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Summry")]
-    #endif
     [IsoXmlTag("Summry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SaleSummary1? Summary { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SaleSummary1? Summary { get; init; } 
-    #else
-    public SaleSummary1? Summary { get; set; } 
-    #endif
     
     /// <summary>
     /// Sale line item information.
     /// </summary>
     [IsoId("_MIdVJPJuEeiJn9rM2Znz2w")]
     [DisplayName("Line Item")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LineItm")]
-    #endif
     [IsoXmlTag("LineItm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SaleItem2? LineItem { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SaleItem2? LineItem { get; init; } 
-    #else
-    public SaleItem2? LineItem { get; set; } 
-    #endif
     
     
     #nullable disable

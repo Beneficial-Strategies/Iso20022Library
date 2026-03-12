@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PIUQ8Xu4EeS2Z_kGi7H1VQ")]
 [DisplayName("Card Transaction Detail")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardTransactionDetail6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CardTransactionDetail6 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CardTransactionDetail6( CardTransactionAmount5 reqTransactionAmounts )
-    {
-        TransactionAmounts = reqTransactionAmounts;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,53 +23,24 @@ public partial record CardTransactionDetail6
     /// </summary>
     [IsoId("_PU1C8Xu4EeS2Z_kGi7H1VQ")]
     [DisplayName("Transaction Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxAmts")]
-    #endif
     [IsoXmlTag("TxAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardTransactionAmount5 TransactionAmounts { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardTransactionAmount5 TransactionAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardTransactionAmount5 TransactionAmounts { get; init; } 
-    #else
-    public CardTransactionAmount5 TransactionAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Fees between acquirer and issuer exclusive of the transaction amount, and expressed in the currency of the reconciliation.
     /// </summary>
     [IsoId("_4uVxEIN0EeSXtJ8rlirVJw")]
     [DisplayName("Transaction Fees")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxFees")]
-    #endif
     [IsoXmlTag("TxFees")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DetailedAmount11? TransactionFees { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DetailedAmount11? TransactionFees { get; init; } 
-    #else
-    public DetailedAmount11? TransactionFees { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional amounts from the processor or the issuer without financial impacts on the transaction amount.
     /// </summary>
     [IsoId("__cFbcIN0EeSXtJ8rlirVJw")]
     [DisplayName("Additional Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlAmts")]
-    #endif
     [IsoXmlTag("AddtlAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DetailedAmount10? AdditionalAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DetailedAmount10? AdditionalAmounts { get; init; } 
-    #else
-    public DetailedAmount10? AdditionalAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Data related to an integrated circuit card application.
@@ -100,18 +48,9 @@ public partial record CardTransactionDetail6
     /// </summary>
     [IsoId("_PU1C-3u4EeS2Z_kGi7H1VQ")]
     [DisplayName("ICC Related Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ICCRltdData")]
-    #endif
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax10000Binary? ICCRelatedData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? ICCRelatedData { get; init; } 
-    #else
-    public System.Byte[]? ICCRelatedData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -37,12 +32,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer, for example, a transfer agent sends the CustodyStatementOfHoldings message to the account owner, for example, a fund manager or an account owner's designated agent to provide detailed holdings of the portfolio at a specified moment in time.|The message provides, at a moment in time, the quantity and identification of the financial instruments that the account servicer holds for the account owner. The message can also include availability and the location of holdings to facilitate trading and minimise settlement issues.|The message reports all information per financial instrument, ie, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided.|Usage|The CustodyStatementOfHoldings message is used to provide detailed quantity and availability information for financial instrument holdings of a portfolio. The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner.|This message can be also be used to report where the financial instruments are safe-kept, physically or notionally. If a security is held in more than one safekeeping place, this can also be indicated.|This message can reflect all outstanding holding information or may only contain changes since the previously sent statement.|The CustodyStatementOfHoldings message can only be used to list the holdings of a single (master) account. However, it is possible to break down these holdings into one or several sub-accounts. Therefore, this message can be used to either specify holdings at|- the main account level, or,|- the sub-account level.")]
 [IsoId("_Magh_dFSEd-BzquC8wXy7w_1153922186")]
 [DisplayName("Custody Statement Of Holdings V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CustodyStatementOfHoldingsV02 : IOuterRecord
 {
     
@@ -71,21 +60,6 @@ public partial record CustodyStatementOfHoldingsV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CustodyStatementOfHoldingsV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CustodyStatementOfHoldingsV02( MessageIdentification1 reqMessageIdentification,Pagination reqMessagePagination,Statement7 reqStatementGeneralDetails,SafekeepingAccount2 reqAccountDetails )
-    {
-        MessageIdentification = reqMessageIdentification;
-        MessagePagination = reqMessagePagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-        AccountDetails = reqAccountDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,178 +67,80 @@ public partial record CustodyStatementOfHoldingsV02 : IOuterRecord
     /// </summary>
     [IsoId("_Magh_tFSEd-BzquC8wXy7w_-51538454")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_Magh_9FSEd-BzquC8wXy7w_1153922222")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference2? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_Mapr4NFSEd-BzquC8wXy7w_1153922204")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference2? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Pagination of the message.
     /// </summary>
     [IsoId("_Mapr4dFSEd-BzquC8wXy7w_1153922479")]
     [DisplayName("Message Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgPgntn")]
-    #endif
     [IsoXmlTag("MsgPgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination MessagePagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination MessagePagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination MessagePagination { get; init; } 
-    #else
-    public Pagination MessagePagination { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to the custody statement of holdings.
     /// </summary>
     [IsoId("_Mapr4tFSEd-BzquC8wXy7w_1153922264")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement7 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement7 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement7 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement7 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// The safekeeping or investment account.
     /// </summary>
     [IsoId("_Mapr49FSEd-BzquC8wXy7w_1153922307")]
     [DisplayName("Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctDtls")]
-    #endif
     [IsoXmlTag("AcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SafekeepingAccount2 AccountDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SafekeepingAccount2 AccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafekeepingAccount2 AccountDetails { get; init; } 
-    #else
-    public SafekeepingAccount2 AccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.
     /// </summary>
     [IsoId("_Mapr5NFSEd-BzquC8wXy7w_1153922402")]
     [DisplayName("Balance For Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalForAcct")]
-    #endif
     [IsoXmlTag("BalForAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AggregateBalanceInformation4? BalanceForAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AggregateBalanceInformation4? BalanceForAccount { get; init; } 
-    #else
-    public AggregateBalanceInformation4? BalanceForAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// The sub-account of the safekeeping or investment account.
     /// </summary>
     [IsoId("_Mapr5dFSEd-BzquC8wXy7w_1153922324")]
     [DisplayName("Sub Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubAcctDtls")]
-    #endif
     [IsoXmlTag("SubAcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SubAccountIdentification5? SubAccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubAccountIdentification5? SubAccountDetails { get; init; } 
-    #else
-    public SubAccountIdentification5? SubAccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of total holdings reported.
     /// </summary>
     [IsoId("_Mapr5tFSEd-BzquC8wXy7w_1153922359")]
     [DisplayName("Total Values")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlVals")]
-    #endif
     [IsoXmlTag("TtlVals")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TotalValueInPageAndStatement? TotalValues { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TotalValueInPageAndStatement? TotalValues { get; init; } 
-    #else
-    public TotalValueInPageAndStatement? TotalValues { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Mapr59FSEd-BzquC8wXy7w_1153922437")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

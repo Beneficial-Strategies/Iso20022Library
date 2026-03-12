@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The FinancialInstrumentReportingNonWorkingDayReport message is sent by the reporting entity to the competent authority to report on non-working days.")]
 [IsoId("_4LUGIURNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Non Working Day Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingNonWorkingDayReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record FinancialInstrumentReportingNonWorkingDayReportV01 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingNonWorkingDayReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingNonWorkingDayReportV01( SecuritiesMarketReportHeader1 reqReportHeader,SecuritiesNonTradingDayReport1 reqNonWorkingDay )
-    {
-        ReportHeader = reqReportHeader;
-        NonWorkingDay = reqNonWorkingDay;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record FinancialInstrumentReportingNonWorkingDayReportV01 : IOute
     /// </summary>
     [IsoId("_4LUGI0RNEee7JdgA9zPESA")]
     [DisplayName("Report Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptHdr")]
-    #endif
     [IsoXmlTag("RptHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #else
-    public SecuritiesMarketReportHeader1 ReportHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the days a venue is not open.
     /// </summary>
     [IsoId("_4LUGJURNEee7JdgA9zPESA")]
     [DisplayName("Non Working Day")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NonWorkgDay")]
-    #endif
     [IsoXmlTag("NonWorkgDay")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesNonTradingDayReport1 NonWorkingDay { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesNonTradingDayReport1 NonWorkingDay { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesNonTradingDayReport1 NonWorkingDay { get; init; } 
-    #else
-    public SecuritiesNonTradingDayReport1 NonWorkingDay { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_4LUGJ0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

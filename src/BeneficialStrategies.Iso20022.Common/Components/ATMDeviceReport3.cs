@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mOcRQbTlEeeQy4o2AayYHg")]
 [DisplayName("ATM Device Report")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMDeviceReport3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMDeviceReport3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMDeviceReport3( ATMEnvironment6 reqEnvironment,ATMStatus1 reqATMGlobalStatus )
-    {
-        Environment = reqEnvironment;
-        ATMGlobalStatus = reqATMGlobalStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,89 +23,40 @@ public partial record ATMDeviceReport3
     /// </summary>
     [IsoId("_mXKIYbTlEeeQy4o2AayYHg")]
     [DisplayName("Environment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Envt")]
-    #endif
     [IsoXmlTag("Envt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ATMEnvironment6 Environment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ATMEnvironment6 Environment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMEnvironment6 Environment { get; init; } 
-    #else
-    public ATMEnvironment6 Environment { get; set; } 
-    #endif
     
     /// <summary>
     /// Global status of the ATM.
     /// </summary>
     [IsoId("_mXKIY7TlEeeQy4o2AayYHg")]
     [DisplayName("ATM Global Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMGblSts")]
-    #endif
     [IsoXmlTag("ATMGblSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ATMStatus1 ATMGlobalStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ATMStatus1 ATMGlobalStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMStatus1 ATMGlobalStatus { get; init; } 
-    #else
-    public ATMStatus1 ATMGlobalStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Result of a maintenance command performed by the ATM.
     /// </summary>
     [IsoId("_mXKIZbTlEeeQy4o2AayYHg")]
     [DisplayName("Command Result")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmdRslt")]
-    #endif
     [IsoXmlTag("CmdRslt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMCommand11? CommandResult { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMCommand11? CommandResult { get; init; } 
-    #else
-    public ATMCommand11? CommandResult { get; set; } 
-    #endif
     
     /// <summary>
     /// Maintenance command which has requested the device report.
     /// </summary>
     [IsoId("_mXKIZ7TlEeeQy4o2AayYHg")]
     [DisplayName("Command Context")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmdCntxt")]
-    #endif
     [IsoXmlTag("CmdCntxt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMCommand12? CommandContext { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMCommand12? CommandContext { get; init; } 
-    #else
-    public ATMCommand12? CommandContext { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to security commands.
     /// </summary>
     [IsoId("_mXKIabTlEeeQy4o2AayYHg")]
     [DisplayName("ATM Security Context")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMSctyCntxt")]
-    #endif
     [IsoXmlTag("ATMSctyCntxt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMSecurityContext5? ATMSecurityContext { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMSecurityContext5? ATMSecurityContext { get; init; } 
-    #else
-    public ATMSecurityContext5? ATMSecurityContext { get; set; } 
-    #endif
     
     
     #nullable disable

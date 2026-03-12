@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The NotificationToReceiveCancellationAdvice message is sent by an account owner or by a party acting on the account owner's behalf to one of the account owner's account servicing institutions. It is used to advise the account servicing institution about the cancellation of one or more notifications in a previous NotificationToReceive message.|Usage|The NotificationToReceiveCancellationAdvice message is used to advise the account servicing institution that the funds are no longer expected. The message can be used in either a direct or a relay scenario.")]
 [IsoId("_VJ9wARPeEeSVo-TFVwFHvA")]
 [DisplayName("Notification To Receive Cancellation Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NotificationToReceiveCancellationAdviceV04 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record NotificationToReceiveCancellationAdviceV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NotificationToReceiveCancellationAdviceV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NotificationToReceiveCancellationAdviceV04( GroupHeader59 reqGroupHeader,OriginalNotification8 reqOriginalNotification )
-    {
-        GroupHeader = reqGroupHeader;
-        OriginalNotification = reqOriginalNotification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,55 +60,24 @@ public partial record NotificationToReceiveCancellationAdviceV04 : IOuterRecord
     /// </summary>
     [IsoId("_VJ9wAxPeEeSVo-TFVwFHvA")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader59 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader59 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader59 GroupHeader { get; init; } 
-    #else
-    public GroupHeader59 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to identify the original notification, to which the cancellation advice refers.
     /// </summary>
     [IsoId("_VJ9wBRPeEeSVo-TFVwFHvA")]
     [DisplayName("Original Notification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlNtfctn")]
-    #endif
     [IsoXmlTag("OrgnlNtfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OriginalNotification8 OriginalNotification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OriginalNotification8 OriginalNotification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalNotification8 OriginalNotification { get; init; } 
-    #else
-    public OriginalNotification8 OriginalNotification { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_VJ9wBxPeEeSVo-TFVwFHvA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

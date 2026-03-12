@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The MoneyMarketOvernightIndexSwapsStatisticalReport message is sent by the reporting agents to the relevant competent authority, to report the daily overnight index swaps (OIS) transactions.")]
 [IsoId("_HeIa8aicEeWHO_l3hf2rlA")]
 [DisplayName("Money Market Overnight Index Swaps Statistical Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MoneyMarketOvernightIndexSwapsStatisticalReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record MoneyMarketOvernightIndexSwapsStatisticalReportV01 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MoneyMarketOvernightIndexSwapsStatisticalReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MoneyMarketOvernightIndexSwapsStatisticalReportV01( MoneyMarketReportHeader1 reqReportHeader,OvernightIndexSwap3Choice_ reqOvernightIndexSwapsReport )
-    {
-        ReportHeader = reqReportHeader;
-        OvernightIndexSwapsReport = reqOvernightIndexSwapsReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record MoneyMarketOvernightIndexSwapsStatisticalReportV01 : IOute
     /// </summary>
     [IsoId("_HeIa86icEeWHO_l3hf2rlA")]
     [DisplayName("Report Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptHdr")]
-    #endif
     [IsoXmlTag("RptHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MoneyMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MoneyMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MoneyMarketReportHeader1 ReportHeader { get; init; } 
-    #else
-    public MoneyMarketReportHeader1 ReportHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the reason why no activity is reported or the required list of transactions for the overnight index swaps segment.
     /// </summary>
     [IsoId("_HeIa9aicEeWHO_l3hf2rlA")]
     [DisplayName("Overnight Index Swaps Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OvrnghtIndxSwpsRpt")]
-    #endif
     [IsoXmlTag("OvrnghtIndxSwpsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OvernightIndexSwap3Choice_ OvernightIndexSwapsReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OvernightIndexSwap3Choice_ OvernightIndexSwapsReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OvernightIndexSwap3Choice_ OvernightIndexSwapsReport { get; init; } 
-    #else
-    public OvernightIndexSwap3Choice_ OvernightIndexSwapsReport { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_HeIa96icEeWHO_l3hf2rlA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

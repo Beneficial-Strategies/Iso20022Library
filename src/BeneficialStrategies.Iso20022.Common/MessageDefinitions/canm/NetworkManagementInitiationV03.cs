@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.canm;
@@ -29,12 +24,6 @@ namespace BeneficialStrategies.Iso20022.canm;
 [Description(@"The NetworkManagementlInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer) connected to a network. It covers the range of activities that control the operating conditions of the network.|||")]
 [IsoId("_OANFUYv8EeumSPwlS1PkxQ")]
 [DisplayName("Network Management Initiation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NetworkManagementInitiationV03 : IOuterRecord
 {
     
@@ -63,19 +52,6 @@ public partial record NetworkManagementInitiationV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NetworkManagementInitiationV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NetworkManagementInitiationV03( Header63 reqHeader,NetworkManagementInitiation2 reqBody )
-    {
-        Header = reqHeader;
-        Body = reqBody;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,55 +59,24 @@ public partial record NetworkManagementInitiationV03 : IOuterRecord
     /// </summary>
     [IsoId("_OANFU4v8EeumSPwlS1PkxQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header63 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header63 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header63 Header { get; init; } 
-    #else
-    public Header63 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reversal of an authorisation or financial transaction.
     /// </summary>
     [IsoId("_OANFVYv8EeumSPwlS1PkxQ")]
     [DisplayName("Body")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Body")]
-    #endif
     [IsoXmlTag("Body")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NetworkManagementInitiation2 Body { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NetworkManagementInitiation2 Body { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NetworkManagementInitiation2 Body { get; init; } 
-    #else
-    public NetworkManagementInitiation2 Body { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC
     /// </summary>
     [IsoId("_OANFV4v8EeumSPwlS1PkxQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType20? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType20? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType20? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

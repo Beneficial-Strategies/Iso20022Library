@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer, for example, a transfer agent, sends the AccountingStatementofHoldingsCancellation message to the account owner, for example, a fund manager or an account owner's designated agent, to notify the cancellation of a previously sent AccountingStatementOfHoldings message.|Usage|The AccountingStatementOfHoldingsCancellation message is used to cancel a previously sent AccountingStatementOfHoldings message. This message must contain the reference of the message to be cancelled.|This message may also contain all the details of the message to be cancelled, but this is not recommended.")]
 [IsoId("_McJgvtFSEd-BzquC8wXy7w_-1129601452")]
 [DisplayName("Accounting Statement Of Holdings Cancellation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountingStatementOfHoldingsCancellationV02 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record AccountingStatementOfHoldingsCancellationV02 : IOuterRecor
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountingStatementOfHoldingsCancellationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountingStatementOfHoldingsCancellationV02( MessageIdentification1 reqMessageIdentification,Pagination reqMessagePagination )
-    {
-        MessageIdentification = reqMessageIdentification;
-        MessagePagination = reqMessagePagination;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,89 +61,40 @@ public partial record AccountingStatementOfHoldingsCancellationV02 : IOuterRecor
     /// </summary>
     [IsoId("_McSqoNFSEd-BzquC8wXy7w_-312284977")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_McSqodFSEd-BzquC8wXy7w_-1129601449")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference2? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_McSqotFSEd-BzquC8wXy7w_-1129601408")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference2? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Pagination of the message.
     /// </summary>
     [IsoId("_McSqo9FSEd-BzquC8wXy7w_-1129601090")]
     [DisplayName("Message Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgPgntn")]
-    #endif
     [IsoXmlTag("MsgPgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination MessagePagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination MessagePagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination MessagePagination { get; init; } 
-    #else
-    public Pagination MessagePagination { get; set; } 
-    #endif
     
     /// <summary>
     /// The Accounting Statement of Holdings message to cancel.
     /// </summary>
     [IsoId("_McSqpNFSEd-BzquC8wXy7w_-1129601373")]
     [DisplayName("Statement To Be Cancelled")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtToBeCanc")]
-    #endif
     [IsoXmlTag("StmtToBeCanc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountingStatementOfHoldings2? StatementToBeCancelled { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountingStatementOfHoldings2? StatementToBeCancelled { get; init; } 
-    #else
-    public AccountingStatementOfHoldings2? StatementToBeCancelled { get; set; } 
-    #endif
     
     
     #nullable disable

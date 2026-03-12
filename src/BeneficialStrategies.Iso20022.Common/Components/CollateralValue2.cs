@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cLR5seLXEeWFtOV72FbX9w")]
 [DisplayName("Collateral Value")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CollateralValue2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CollateralValue2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CollateralValue2( System.String reqSecurityIdentification,System.DateOnly reqValuationDate,AmountOrCoefficientPrice1Choice_ reqValuationPrice )
-    {
-        SecurityIdentification = reqSecurityIdentification;
-        ValuationDate = reqValuationDate;
-        ValuationPrice = reqValuationPrice;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,76 +23,34 @@ public partial record CollateralValue2
     /// </summary>
     [IsoId("_cWS24eLXEeWFtOV72FbX9w")]
     [DisplayName("Security Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyId")]
-    #endif
     [IsoXmlTag("SctyId")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoISINOct2015Identifier SecurityIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String SecurityIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String SecurityIdentification { get; init; } 
-    #else
-    public System.String SecurityIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation date for the price.
     /// </summary>
     [IsoId("_cWS24-LXEeWFtOV72FbX9w")]
     [DisplayName("Valuation Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValtnDt")]
-    #endif
     [IsoXmlTag("ValtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoISODate ValuationDate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.DateOnly ValuationDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly ValuationDate { get; init; } 
-    #else
-    public System.DateOnly ValuationDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details of the currency of the valuation.
     /// </summary>
     [IsoId("_cWS25eLXEeWFtOV72FbX9w")]
     [DisplayName("Valuation Currency")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValtnCcy")]
-    #endif
     [IsoXmlTag("ValtnCcy")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyCode? ValuationCurrency { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public string? ValuationCurrency { get; init; } 
-    #else
-    public string? ValuationCurrency { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details of the price provided for the security.
     /// </summary>
     [IsoId("_cWS25-LXEeWFtOV72FbX9w")]
     [DisplayName("Valuation Price")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValtnPric")]
-    #endif
     [IsoXmlTag("ValtnPric")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AmountOrCoefficientPrice1Choice_ ValuationPrice { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AmountOrCoefficientPrice1Choice_ ValuationPrice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountOrCoefficientPrice1Choice_ ValuationPrice { get; init; } 
-    #else
-    public AmountOrCoefficientPrice1Choice_ ValuationPrice { get; set; } 
-    #endif
     
     
     #nullable disable

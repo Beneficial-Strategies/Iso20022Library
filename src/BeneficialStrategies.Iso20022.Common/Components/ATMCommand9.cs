@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4eQxAa47EeWRfYPBaeOY8w")]
 [DisplayName("ATM Command")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMCommand9
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMCommand9 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMCommand9( ATMCommand5Code reqType )
-    {
-        Type = reqType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,36 +23,16 @@ public partial record ATMCommand9
     /// </summary>
     [IsoId("_4pcGQa47EeWRfYPBaeOY8w")]
     [DisplayName("Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tp")]
-    #endif
     [IsoXmlTag("Tp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ATMCommand5Code Type { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ATMCommand5Code Type { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMCommand5Code Type { get; init; } 
-    #else
-    public ATMCommand5Code Type { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the entity issuing the command.
     /// </summary>
     [IsoId("_4pcGQ647EeWRfYPBaeOY8w")]
     [DisplayName("Command Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmdId")]
-    #endif
     [IsoXmlTag("CmdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMCommandIdentification1? CommandIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMCommandIdentification1? CommandIdentification { get; init; } 
-    #else
-    public ATMCommandIdentification1? CommandIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

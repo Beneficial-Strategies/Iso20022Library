@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TN9u59p-Ed-ak6NoX_4Aeg_1202086664")]
 [DisplayName("Instruction For Creditor Agent")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InstructionForCreditorAgent1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,36 +23,18 @@ public partial record InstructionForCreditorAgent1
     /// </summary>
     [IsoId("_TN9u6Np-Ed-ak6NoX_4Aeg_2092361005")]
     [DisplayName("Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cd")]
-    #endif
     [IsoXmlTag("Cd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Instruction3Code? Code { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Instruction3Code? Code { get; init; } 
-    #else
-    public Instruction3Code? Code { get; set; } 
-    #endif
     
     /// <summary>
     /// Further information complementing the coded instruction or instruction to the creditor&apos;s agent that is bilaterally agreed or specific to a user community.
     /// </summary>
     [IsoId("_TOHf0Np-Ed-ak6NoX_4Aeg_2092361313")]
     [DisplayName("Instruction Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InstrInf")]
-    #endif
     [IsoXmlTag("InstrInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? InstructionInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? InstructionInformation { get; init; } 
-    #else
-    public System.String? InstructionInformation { get; set; } 
-    #endif
     
     
     #nullable disable

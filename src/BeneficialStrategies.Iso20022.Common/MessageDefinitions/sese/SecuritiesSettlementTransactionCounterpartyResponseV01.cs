@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An account owner sends a SecuritiesSettlementTransactionCounterpartyResponse to advise the account servicer that:|- the allegement received is either rejected (that is counterparty's transaction is unknown) or accepted (i.e. either the allegement was passed to the client or the transaction is know with or without mismatches)|- the modification or cancellation request sent by the counterparty for a matched transaction is affirmed or not. The account servicer will therefore proceed or not with the counterparty's request to modify or cancel the transaction.|The account servicer may be a central securities depository or another settlement market infrastructure acting on behalf of their participants|The account owner may be:|- a central securities depository participant which has an account with a central securities depository or a market infrastructure|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message sent by the account owner to the account servicer,|- provide a third party with a copy of a message being sent by the account owner for information,|- re-send to a third party a copy of a message being sent by the account owner for information|using the relevant elements in the Business Application Header.||ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
 [IsoId("_0Z18hQlIEeGATtfOBToyew_-281695721")]
 [DisplayName("Securities Settlement Transaction Counterparty Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementTransactionCounterpartyResponseV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SecuritiesSettlementTransactionCounterpartyResponseV01 : I
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementTransactionCounterpartyResponseV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementTransactionCounterpartyResponseV01( TransactionIdentification2 reqTransactionIdentification,ResponseStatus3Choice_ reqResponseStatus )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        ResponseStatus = reqResponseStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,72 +57,32 @@ public partial record SecuritiesSettlementTransactionCounterpartyResponseV01 : I
     /// </summary>
     [IsoId("_0Z18hglIEeGATtfOBToyew_709903212")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactionIdentification2 TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactionIdentification2 TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionIdentification2 TransactionIdentification { get; init; } 
-    #else
-    public TransactionIdentification2 TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the response status related to an allegement or a counterparty&apos;s instruction.
     /// </summary>
     [IsoId("_0Z_GcAlIEeGATtfOBToyew_-2072906974")]
     [DisplayName("Response Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RspnSts")]
-    #endif
     [IsoXmlTag("RspnSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ResponseStatus3Choice_ ResponseStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ResponseStatus3Choice_ ResponseStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ResponseStatus3Choice_ ResponseStatus { get; init; } 
-    #else
-    public ResponseStatus3Choice_ ResponseStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the details of the transaction.
     /// </summary>
     [IsoId("_0Z_GcQlIEeGATtfOBToyew_667709329")]
     [DisplayName("Transaction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxDtls")]
-    #endif
     [IsoXmlTag("TxDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionDetails40? TransactionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionDetails40? TransactionDetails { get; init; } 
-    #else
-    public TransactionDetails40? TransactionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_0Z_GcglIEeGATtfOBToyew_-2075725968")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

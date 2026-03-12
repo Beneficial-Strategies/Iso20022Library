@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rYiS0SFNEey8XKHwKquEQw")]
 [DisplayName("Card Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardData10
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -40,18 +24,9 @@ public partial record CardData10
     /// </summary>
     [IsoId("_re1IESFNEey8XKHwKquEQw")]
     [DisplayName("PAN")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PAN")]
-    #endif
     [IsoXmlTag("PAN")]
     [IsoSimpleType(IsoSimpleType.Max19NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax19NumericText? PAN { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PAN { get; init; } 
-    #else
-    public System.String? PAN { get; set; } 
-    #endif
     
     /// <summary>
     /// To indicate whether the PAN is using ProtectedData for encryption or not.
@@ -61,18 +36,9 @@ public partial record CardData10
     /// </summary>
     [IsoId("_re1IEyFNEey8XKHwKquEQw")]
     [DisplayName("Protected PAN Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdPANInd")]
-    #endif
     [IsoXmlTag("PrtctdPANInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? ProtectedPANIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ProtectedPANIndicator { get; init; } 
-    #else
-    public System.String? ProtectedPANIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Distinguishes between instances of the same payment card.
@@ -80,18 +46,9 @@ public partial record CardData10
     /// </summary>
     [IsoId("_re1IFSFNEey8XKHwKquEQw")]
     [DisplayName("Card Sequence Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CardSeqNb")]
-    #endif
     [IsoXmlTag("CardSeqNb")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMin2Max3NumericText? CardSequenceNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CardSequenceNumber { get; init; } 
-    #else
-    public System.String? CardSequenceNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// A unique non-financial reference assigned to a given payment account. May be used to link all transaction activity associated with the same payment account. 
@@ -101,73 +58,37 @@ public partial record CardData10
     /// </summary>
     [IsoId("_re1IFyFNEey8XKHwKquEQw")]
     [DisplayName("Payment Account Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtAcctRef")]
-    #endif
     [IsoXmlTag("PmtAcctRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? PaymentAccountReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PaymentAccountReference { get; init; } 
-    #else
-    public System.String? PaymentAccountReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Leading digits of the PAN that identifies the card portfolio (for example, Issuer Identification Number). This data should not to be presented to the card acceptor or its environment. (for example, acquirer should not to send or make available to merchant).
     /// </summary>
     [IsoId("_re1IGSFNEey8XKHwKquEQw")]
     [DisplayName("PAN Account Range")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PANAcctRg")]
-    #endif
     [IsoXmlTag("PANAcctRg")]
     [IsoSimpleType(IsoSimpleType.Max19NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax19NumericText? PANAccountRange { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PANAccountRange { get; init; } 
-    #else
-    public System.String? PANAccountRange { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the card portfolio. 
     /// </summary>
     [IsoId("_re1IGyFNEey8XKHwKquEQw")]
     [DisplayName("Card Portfolio Identifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CardPrtflIdr")]
-    #endif
     [IsoXmlTag("CardPrtflIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CardPortfolioIdentifier { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CardPortfolioIdentifier { get; init; } 
-    #else
-    public System.String? CardPortfolioIdentifier { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional card issuer specific data.
     /// </summary>
     [IsoId("_re1IHSFNEey8XKHwKquEQw")]
     [DisplayName("Additional Card Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlCardData")]
-    #endif
     [IsoXmlTag("AddtlCardData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalData1? AdditionalCardData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalData1? AdditionalCardData { get; init; } 
-    #else
-    public AdditionalData1? AdditionalCardData { get; set; } 
-    #endif
     
     
     #nullable disable

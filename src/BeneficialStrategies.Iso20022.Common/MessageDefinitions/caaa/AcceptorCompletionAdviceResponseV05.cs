@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCompletionAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) of the outcome of the payment transaction, and the transfer the financial data of the transaction contained in the completion advice.")]
 [IsoId("_wjV0QY0-EeWPUZwhUA4U-w")]
 [DisplayName("Acceptor Completion Advice Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCompletionAdviceResponseV05 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcceptorCompletionAdviceResponseV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCompletionAdviceResponseV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCompletionAdviceResponseV05( Header24 reqHeader,AcceptorCompletionAdviceResponse5 reqCompletionAdviceResponse )
-    {
-        Header = reqHeader;
-        CompletionAdviceResponse = reqCompletionAdviceResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcceptorCompletionAdviceResponseV05 : IOuterRecord
     /// </summary>
     [IsoId("_wjV0RY0-EeWPUZwhUA4U-w")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header24 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header24 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header24 Header { get; init; } 
-    #else
-    public Header24 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the completion advice response.
     /// </summary>
     [IsoId("_wjV0R40-EeWPUZwhUA4U-w")]
     [DisplayName("Completion Advice Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmpltnAdvcRspn")]
-    #endif
     [IsoXmlTag("CmpltnAdvcRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCompletionAdviceResponse5 CompletionAdviceResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCompletionAdviceResponse5 CompletionAdviceResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCompletionAdviceResponse5 CompletionAdviceResponse { get; init; } 
-    #else
-    public AcceptorCompletionAdviceResponse5 CompletionAdviceResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_wjV0SY0-EeWPUZwhUA4U-w")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R-sfVNp-Ed-ak6NoX_4Aeg_372802545")]
 [DisplayName("Eligible Position")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record EligiblePosition3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,45 +23,24 @@ public partial record EligiblePosition3
     /// </summary>
     [IsoId("_R-sfVdp-Ed-ak6NoX_4Aeg_372802554")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AccountIdentification { get; init; } 
-    #else
-    public System.String? AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies party that legally owns the account.
     /// </summary>
     [IsoId("_R-sfVtp-Ed-ak6NoX_4Aeg_373722979")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification9Choice_? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification9Choice_? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification9Choice_? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Net position of a segregated holding of a single security within the overall position held in a securities account, eg, sub-balance per status.
     /// </summary>
     [IsoId("_R-sfV9p-Ed-ak6NoX_4Aeg_372802863")]
     [DisplayName("Holding Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HldgBal")]
-    #endif
     [IsoXmlTag("HldgBal")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -88,9 +51,6 @@ public partial record EligiblePosition3
     /// </summary>
     [IsoId("_R-sfWNp-Ed-ak6NoX_4Aeg_372802947")]
     [DisplayName("Rights Holder")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RghtsHldr")]
-    #endif
     [IsoXmlTag("RghtsHldr")]
     [MinLength(0)]
     [MaxLength(10)]

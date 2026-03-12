@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"Scope|The RequestForAccountManagementStatusReport message is sent by an account owner, for example, an investor or its designated agent, to the account servicer, for example, a registrar, transfer agent, custodian bank or securities depository to request the status of an AccountOpeningInstruction, GetAccountDetails or an AccountModificationInstruction.|Usage|The RequestForAccountManagementStatusReport message is used to request the processing status of a previously sent AccountOpeningInstruction, GetAccountDetails or an AccountModificationInstruction message for which an AccountDetailsConfirmation message has not yet been received.")]
 [IsoId("_rpQ9MZDiEem7fvtoGpNpow")]
 [DisplayName("Request For Account Management Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RequestForAccountManagementStatusReportV06 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record RequestForAccountManagementStatusReportV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RequestForAccountManagementStatusReportV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RequestForAccountManagementStatusReportV06( MessageIdentification1 reqMessageIdentification,AccountManagementMessageReference5 reqRequestDetails )
-    {
-        MessageIdentification = reqMessageIdentification;
-        RequestDetails = reqRequestDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,38 +60,16 @@ public partial record RequestForAccountManagementStatusReportV06 : IOuterRecord
     /// </summary>
     [IsoId("_rpQ9M5DiEem7fvtoGpNpow")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the account for which the status of the account management instruction is requested.
     /// </summary>
     [IsoId("_rpQ9NZDiEem7fvtoGpNpow")]
     [DisplayName("Request Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqDtls")]
-    #endif
     [IsoXmlTag("ReqDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountManagementMessageReference5 RequestDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountManagementMessageReference5 RequestDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountManagementMessageReference5 RequestDetails { get; init; } 
-    #else
-    public AccountManagementMessageReference5 RequestDetails { get; set; } 
-    #endif
     
     
     #nullable disable

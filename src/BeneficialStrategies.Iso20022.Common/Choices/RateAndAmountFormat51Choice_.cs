@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -19,26 +14,14 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RateAndAmountFormat51Choice.NotSpecifiedRate))]
     [KnownType(typeof(RateAndAmountFormat51Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(RateAndAmountFormat51Choice.RateTypeAndRate))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(RateAndAmountFormat51Choice.Rate),nameof(RateAndAmountFormat51Choice.Rate))]
     [JsonDerivedType(typeof(RateAndAmountFormat51Choice.Amount),nameof(RateAndAmountFormat51Choice.Amount))]
     [JsonDerivedType(typeof(RateAndAmountFormat51Choice.NotSpecifiedRate),nameof(RateAndAmountFormat51Choice.NotSpecifiedRate))]
     [JsonDerivedType(typeof(RateAndAmountFormat51Choice.RateTypeAndAmountAndRateStatus),nameof(RateAndAmountFormat51Choice.RateTypeAndAmountAndRateStatus))]
     [JsonDerivedType(typeof(RateAndAmountFormat51Choice.RateTypeAndRate),nameof(RateAndAmountFormat51Choice.RateTypeAndRate))]
-    #endif
     [IsoId("_eN9Dj5SiEeeh5JjedkaA_g")]
     [DisplayName("Rate And Amount Format 51 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record RateAndAmountFormat51Choice_
-    #else
-    public abstract partial class RateAndAmountFormat51Choice_
-    #endif
     {
     }
 }

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|The RedemptionBulkOrderConfirmation message is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to confirm the details of the execution of a RedemptionBulkOrder message.|Usage|The RedemptionBulkOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.|There is usually one bulk confirmation message for one bulk order message.|A RedemptionBulkOrder must in all cases be responded to by a RedemptionBulkOrderConfirmation and in no circumstances by a RedemptionMultipleOrderConfirmation.|If the executing party needs to confirm a RedemptionMultipleOrder message, then the RedemptionMultipleOrderConfirmation message must be used.")]
 [IsoId("_pGD-5dE7Ed-BzquC8wXy7w_314405258")]
 [DisplayName("Redemption Bulk Order Confirmation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RedemptionBulkOrderConfirmationV02 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record RedemptionBulkOrderConfirmationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RedemptionBulkOrderConfirmationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RedemptionBulkOrderConfirmationV02( AdditionalReference3 reqRelatedReference,RedemptionBulkExecution2 reqBulkExecutionDetails )
-    {
-        RelatedReference = reqRelatedReference;
-        BulkExecutionDetails = reqBulkExecutionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,98 +64,46 @@ public partial record RedemptionBulkOrderConfirmationV02 : IOuterRecord
     /// </summary>
     [IsoId("_pGD-5tE7Ed-BzquC8wXy7w_1787375845")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? MasterReference { get; init; } 
-    #else
-    public AdditionalReference3? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_pGD-59E7Ed-BzquC8wXy7w_1776292588")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_pGD-6NE7Ed-BzquC8wXy7w_1774443914")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_pGD-6dE7Ed-BzquC8wXy7w_1778141211")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3 RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3 RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to the execution of investment fund orders.
     /// </summary>
     [IsoId("_pGNI0NE7Ed-BzquC8wXy7w_735528322")]
     [DisplayName("Bulk Execution Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlkExctnDtls")]
-    #endif
     [IsoXmlTag("BlkExctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RedemptionBulkExecution2 BulkExecutionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RedemptionBulkExecution2 BulkExecutionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RedemptionBulkExecution2 BulkExecutionDetails { get; init; } 
-    #else
-    public RedemptionBulkExecution2 BulkExecutionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to an intermediary.
     /// </summary>
     [IsoId("_pGNI0dE7Ed-BzquC8wXy7w_-833250151")]
     [DisplayName("Intermediary Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrmyDtls")]
-    #endif
     [IsoXmlTag("IntrmyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -190,34 +114,16 @@ public partial record RedemptionBulkOrderConfirmationV02 : IOuterRecord
     /// </summary>
     [IsoId("_pGNI0tE7Ed-BzquC8wXy7w_-1336774752")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation1? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation1? CopyDetails { get; init; } 
-    #else
-    public CopyInformation1? CopyDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_pGNI09E7Ed-BzquC8wXy7w_-338730008")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The GetReservation message is sent by a member to the transaction administrator.|It is used to request information on the details of one or more reservation facilities set by the member and managed by the transaction administrator.|Usage|The member can request reservations information based on the following elements:|- identification of the system;|- identification of the account;|- status of the reservation (default and/or current);|- type of reservation.|This message will be replied to by a ReturnReservation message.")]
 [IsoId("_4DhGEQy9Ee2Wmf2RrXviyA")]
 [DisplayName("Get Reservation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record GetReservationV07 : IOuterRecord
 {
     
@@ -70,18 +59,6 @@ public partial record GetReservationV07 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a GetReservationV07 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public GetReservationV07( MessageHeader9 reqMessageHeader )
-    {
-        MessageHeader = reqMessageHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,53 +66,24 @@ public partial record GetReservationV07 : IOuterRecord
     /// </summary>
     [IsoId("_4DhGFwy9Ee2Wmf2RrXviyA")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader9 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader9 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader9 MessageHeader { get; init; } 
-    #else
-    public MessageHeader9 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Definition of the reservation query.
     /// </summary>
     [IsoId("_4DhGGQy9Ee2Wmf2RrXviyA")]
     [DisplayName("Reservation Query Definition")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsvatnQryDef")]
-    #endif
     [IsoXmlTag("RsvatnQryDef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReservationQuery5? ReservationQueryDefinition { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReservationQuery5? ReservationQueryDefinition { get; init; } 
-    #else
-    public ReservationQuery5? ReservationQueryDefinition { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_4DhGGwy9Ee2Wmf2RrXviyA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

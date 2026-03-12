@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B-239QN1Ee2-vqzwMUAewg")]
 [DisplayName("Netting Cut Off")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NettingCutOff2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NettingCutOff2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NettingCutOff2( NettingIdentification2Choice_ reqNettingIdentification )
-    {
-        NettingIdentification = reqNettingIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,28 +23,14 @@ public partial record NettingCutOff2
     /// </summary>
     [IsoId("_CEZfQQN1Ee2-vqzwMUAewg")]
     [DisplayName("Netting Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetgId")]
-    #endif
     [IsoXmlTag("NetgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NettingIdentification2Choice_ NettingIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NettingIdentification2Choice_ NettingIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NettingIdentification2Choice_ NettingIdentification { get; init; } 
-    #else
-    public NettingIdentification2Choice_ NettingIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the information regarding the updated netting cut off.
     /// </summary>
     [IsoId("_CEZfQwN1Ee2-vqzwMUAewg")]
     [DisplayName("New Cut Off")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewCutOff")]
-    #endif
     [IsoXmlTag("NewCutOff")]
     public ValueList<CutOff1> NewCutOff { get; init; } = new ValueList<CutOff1>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _CEZfQwN1Ee2-vqzwMUAewg

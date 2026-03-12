@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XgbC4SgyEeyhTqybPBSPFQ")]
 [DisplayName("Settlement Type And Additional Parameters")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SettlementTypeAndAdditionalParameters21
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SettlementTypeAndAdditionalParameters21 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SettlementTypeAndAdditionalParameters21( ReceiveDelivery1Code reqSecuritiesMovementType,DeliveryReceiptType2Code reqPayment )
-    {
-        SecuritiesMovementType = reqSecuritiesMovementType;
-        Payment = reqPayment;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,170 +23,85 @@ public partial record SettlementTypeAndAdditionalParameters21
     /// </summary>
     [IsoId("_X4asISgyEeyhTqybPBSPFQ")]
     [DisplayName("Securities Movement Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesMvmntTp")]
-    #endif
     [IsoXmlTag("SctiesMvmntTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReceiveDelivery1Code SecuritiesMovementType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReceiveDelivery1Code SecuritiesMovementType { get; init; } 
-    #else
-    public ReceiveDelivery1Code SecuritiesMovementType { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies how the transaction is to be settled, for example, against payment.
     /// </summary>
     [IsoId("_X4asLygyEeyhTqybPBSPFQ")]
     [DisplayName("Payment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pmt")]
-    #endif
     [IsoXmlTag("Pmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DeliveryReceiptType2Code Payment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DeliveryReceiptType2Code Payment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DeliveryReceiptType2Code Payment { get; init; } 
-    #else
-    public DeliveryReceiptType2Code Payment { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
     /// </summary>
     [IsoId("_X4asPSgyEeyhTqybPBSPFQ")]
     [DisplayName("Common Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmonId")]
-    #endif
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CommonIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CommonIdentification { get; init; } 
-    #else
-    public System.String? CommonIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
     /// </summary>
     [IsoId("_X4asRSgyEeyhTqybPBSPFQ")]
     [DisplayName("Corporate Action Event Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnEvtId")]
-    #endif
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CorporateActionEventIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CorporateActionEventIdentification { get; init; } 
-    #else
-    public System.String? CorporateActionEventIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.
     /// </summary>
     [IsoId("_X4asTSgyEeyhTqybPBSPFQ")]
     [DisplayName("Reconciliation Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnInd")]
-    #endif
     [IsoXmlTag("RcncltnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoYesNoIndicator? ReconciliationIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ReconciliationIndicator { get; init; } 
-    #else
-    public System.String? ReconciliationIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
     /// </summary>
     [IsoId("_X4asVSgyEeyhTqybPBSPFQ")]
     [DisplayName("Client Collateral Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClntCollInstrId")]
-    #endif
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? ClientCollateralInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClientCollateralInstructionIdentification { get; init; } 
-    #else
-    public System.String? ClientCollateralInstructionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the client&apos;s point of view.
     /// </summary>
     [IsoId("_X4asVygyEeyhTqybPBSPFQ")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClntTrptyCollTxId")]
-    #endif
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClientTripartyCollateralTransactionIdentification { get; init; } 
-    #else
-    public System.String? ClientTripartyCollateralTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
     /// </summary>
     [IsoId("_X4asWSgyEeyhTqybPBSPFQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrptyAgtSvcPrvdrCollTxId")]
-    #endif
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; } 
-    #else
-    public System.String? TripartyAgentServiceProviderCollateralTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
     /// </summary>
     [IsoId("_X4asWygyEeyhTqybPBSPFQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrptyAgtSvcPrvdrCollInstrId")]
-    #endif
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; } 
-    #else
-    public System.String? TripartyAgentServiceProviderCollateralInstructionIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

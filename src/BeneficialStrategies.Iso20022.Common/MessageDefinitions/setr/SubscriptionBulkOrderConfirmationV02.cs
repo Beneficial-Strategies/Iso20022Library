@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|The SubscriptionBulkOrderConfirmation message is sent by an executing party, eg, a transfer agent, to an instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to confirm the details of the execution of a SubscriptionBulkOrder message.|Usage|The SubscriptionBulkOrderConfirmation message is sent, after the price has been determined, to confirm the execution of all individual orders.|There is usually one bulk confirmation message for one bulk order message.|A SubscriptionBulkOrder must in all cases be responded to by a SubscriptionBulkOrderConfirmation and in no circumstances by a SubscriptionMultipleOrderConfirmation.|If the executing party needs to confirm a SubscriptionMultipleOrder message, then the SubscriptionMultipleOrderConfirmation message must be used.")]
 [IsoId("_y7Cf-NE7Ed-BzquC8wXy7w_-384105664")]
 [DisplayName("Subscription Bulk Order Confirmation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SubscriptionBulkOrderConfirmationV02 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record SubscriptionBulkOrderConfirmationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SubscriptionBulkOrderConfirmationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SubscriptionBulkOrderConfirmationV02( AdditionalReference3 reqRelatedReference,SubscriptionBulkExecution2 reqBulkExecutionDetails )
-    {
-        RelatedReference = reqRelatedReference;
-        BulkExecutionDetails = reqBulkExecutionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,98 +64,46 @@ public partial record SubscriptionBulkOrderConfirmationV02 : IOuterRecord
     /// </summary>
     [IsoId("_y7Cf-dE7Ed-BzquC8wXy7w_786016250")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? MasterReference { get; init; } 
-    #else
-    public AdditionalReference3? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_y7Cf-tE7Ed-BzquC8wXy7w_772163807")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_y7Cf-9E7Ed-BzquC8wXy7w_783244126")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_y7Lp4NE7Ed-BzquC8wXy7w_788786679")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3 RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3 RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to the execution of investment orders.
     /// </summary>
     [IsoId("_y7Lp4dE7Ed-BzquC8wXy7w_-168002725")]
     [DisplayName("Bulk Execution Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlkExctnDtls")]
-    #endif
     [IsoXmlTag("BlkExctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SubscriptionBulkExecution2 BulkExecutionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SubscriptionBulkExecution2 BulkExecutionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubscriptionBulkExecution2 BulkExecutionDetails { get; init; } 
-    #else
-    public SubscriptionBulkExecution2 BulkExecutionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to an intermediary.
     /// </summary>
     [IsoId("_y7Lp4tE7Ed-BzquC8wXy7w_-355126411")]
     [DisplayName("Intermediary Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrmyDtls")]
-    #endif
     [IsoXmlTag("IntrmyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -190,34 +114,16 @@ public partial record SubscriptionBulkOrderConfirmationV02 : IOuterRecord
     /// </summary>
     [IsoId("_y7Lp49E7Ed-BzquC8wXy7w_-1785604561")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation1? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation1? CopyDetails { get; init; } 
-    #else
-    public CopyInformation1? CopyDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_y7Lp5NE7Ed-BzquC8wXy7w_1147481101")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

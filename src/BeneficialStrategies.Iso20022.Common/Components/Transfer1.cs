@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,30 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VORZs9p-Ed-ak6NoX_4Aeg_-1697955805")]
 [DisplayName("Transfer")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Transfer1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Transfer1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Transfer1( System.String reqTransferReference,DateFormat1Choice_ reqRequestedTransferDate,FinancialInstrumentQuantity1 reqTotalUnitsNumber,System.Decimal reqPortfolioTransferOutRate,System.String reqOwnAccountTransferIndicator )
-    {
-        TransferReference = reqTransferReference;
-        RequestedTransferDate = reqRequestedTransferDate;
-        TotalUnitsNumber = reqTotalUnitsNumber;
-        PortfolioTransferOutRate = reqPortfolioTransferOutRate;
-        OwnAccountTransferIndicator = reqOwnAccountTransferIndicator;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -50,133 +23,60 @@ public partial record Transfer1
     /// </summary>
     [IsoId("_VORZtNp-Ed-ak6NoX_4Aeg_878647420")]
     [DisplayName("Transfer Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfRef")]
-    #endif
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransferReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransferReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransferReference { get; init; } 
-    #else
-    public System.String TransferReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
     /// </summary>
     [IsoId("_VORZtdp-Ed-ak6NoX_4Aeg_-191344923")]
     [DisplayName("Requested Transfer Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqdTrfDt")]
-    #endif
     [IsoXmlTag("ReqdTrfDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DateFormat1Choice_ RequestedTransferDate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DateFormat1Choice_ RequestedTransferDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat1Choice_ RequestedTransferDate { get; init; } 
-    #else
-    public DateFormat1Choice_ RequestedTransferDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Total quantity of securities to be settled.
     /// </summary>
     [IsoId("_VORZttp-Ed-ak6NoX_4Aeg_433269489")]
     [DisplayName("Total Units Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlUnitsNb")]
-    #endif
     [IsoXmlTag("TtlUnitsNb")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FinancialInstrumentQuantity1 TotalUnitsNumber { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FinancialInstrumentQuantity1 TotalUnitsNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentQuantity1 TotalUnitsNumber { get; init; } 
-    #else
-    public FinancialInstrumentQuantity1 TotalUnitsNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Total quantity of securities to be settled.
     /// </summary>
     [IsoId("_VORZt9p-Ed-ak6NoX_4Aeg_433270005")]
     [DisplayName("Portfolio Transfer Out Rate")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtflTrfOutRate")]
-    #endif
     [IsoXmlTag("PrtflTrfOutRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoPercentageRate PortfolioTransferOutRate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.Decimal PortfolioTransferOutRate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Decimal PortfolioTransferOutRate { get; init; } 
-    #else
-    public System.Decimal PortfolioTransferOutRate { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the units to be transferred.
     /// </summary>
     [IsoId("_VORZuNp-Ed-ak6NoX_4Aeg_1997856008")]
     [DisplayName("Units Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UnitsDtls")]
-    #endif
     [IsoXmlTag("UnitsDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Unit1? UnitsDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Unit1? UnitsDetails { get; init; } 
-    #else
-    public Unit1? UnitsDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the transfer results in a change of beneficial owner.
     /// </summary>
     [IsoId("_VORZudp-Ed-ak6NoX_4Aeg_-975762790")]
     [DisplayName("Own Account Transfer Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OwnAcctTrfInd")]
-    #endif
     [IsoXmlTag("OwnAcctTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoYesNoIndicator OwnAccountTransferIndicator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String OwnAccountTransferIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String OwnAccountTransferIndicator { get; init; } 
-    #else
-    public System.String OwnAccountTransferIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Value of a security, as booked in an account. Book value is often different from the current market value of the security.
     /// </summary>
     [IsoId("_VORZutp-Ed-ak6NoX_4Aeg_-609063923")]
     [DisplayName("Average Price")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AvrgPric")]
-    #endif
     [IsoXmlTag("AvrgPric")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveOrHistoricCurrencyAnd13DecimalAmount? AveragePrice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAnd13DecimalAmount? AveragePrice { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAnd13DecimalAmount? AveragePrice { get; set; } 
-    #endif
     
     
     #nullable disable

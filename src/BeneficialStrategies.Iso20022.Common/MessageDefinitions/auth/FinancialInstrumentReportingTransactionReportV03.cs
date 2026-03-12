@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The FinancialInstrumentReportingTransactionReport message is sent by the reporting agent to the competent authority to report on the securities transactions or by the competent authority to another competent authority when the transaction needs to be exchanged between the competent authorities.")]
 [IsoId("_YfqlMQxPEe6IZ4NJLf_INA")]
 [DisplayName("Financial Instrument Reporting Transaction Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingTransactionReportV03 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record FinancialInstrumentReportingTransactionReportV03 : IOuterR
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingTransactionReportV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingTransactionReportV03( ReportingTransactionType3Choice_ reqTransaction )
-    {
-        Transaction = reqTransaction;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record FinancialInstrumentReportingTransactionReportV03 : IOuterR
     /// </summary>
     [IsoId("_YfqlNQxPEe6IZ4NJLf_INA")]
     [DisplayName("Transaction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tx")]
-    #endif
     [IsoXmlTag("Tx")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportingTransactionType3Choice_ Transaction { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportingTransactionType3Choice_ Transaction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportingTransactionType3Choice_ Transaction { get; init; } 
-    #else
-    public ReportingTransactionType3Choice_ Transaction { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_YfrMQQxPEe6IZ4NJLf_INA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

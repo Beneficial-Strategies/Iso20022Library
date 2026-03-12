@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4_T1k7v5EeSOSvzq0yuABw")]
 [DisplayName("Floating Rate Note")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FloatingRateNote1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FloatingRateNote1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FloatingRateNote1( System.String reqReferenceRateIndex,System.UInt64 reqBasisPointSpread )
-    {
-        ReferenceRateIndex = reqReferenceRateIndex;
-        BasisPointSpread = reqBasisPointSpread;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,20 +23,9 @@ public partial record FloatingRateNote1
     /// </summary>
     [IsoId("_4_T1lLv5EeSOSvzq0yuABw")]
     [DisplayName("Reference Rate Index")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RefRateIndx")]
-    #endif
     [IsoXmlTag("RefRateIndx")]
     [IsoSimpleType(IsoSimpleType.ISINIdentifier)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoISINIdentifier ReferenceRateIndex { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String ReferenceRateIndex { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String ReferenceRateIndex { get; init; } 
-    #else
-    public System.String ReferenceRateIndex { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.
@@ -68,20 +33,9 @@ public partial record FloatingRateNote1
     /// </summary>
     [IsoId("_4_T1lbv5EeSOSvzq0yuABw")]
     [DisplayName("Basis Point Spread")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BsisPtSprd")]
-    #endif
     [IsoXmlTag("BsisPtSprd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoNumber BasisPointSpread { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.UInt64 BasisPointSpread { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64 BasisPointSpread { get; init; } 
-    #else
-    public System.UInt64 BasisPointSpread { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xa1IQRytEey6gI8SKlv7rg")]
 [DisplayName("Driver")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Driver2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,164 +23,83 @@ public partial record Driver2
     /// </summary>
     [IsoId("_XkokgRytEey6gI8SKlv7rg")]
     [DisplayName("Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Nm")]
-    #endif
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? Name { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Name { get; init; } 
-    #else
-    public System.String? Name { get; set; } 
-    #endif
     
     /// <summary>
     /// Fleet driver identification.
     /// </summary>
     [IsoId("_XkokgxytEey6gI8SKlv7rg")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Identification { get; init; } 
-    #else
-    public System.String? Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Driving license details.
     /// </summary>
     [IsoId("_XkokhRytEey6gI8SKlv7rg")]
     [DisplayName("Driving License")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DrvgLic")]
-    #endif
     [IsoXmlTag("DrvgLic")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DrivingLicense2? DrivingLicense { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DrivingLicense2? DrivingLicense { get; init; } 
-    #else
-    public DrivingLicense2? DrivingLicense { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the employer information. 
     /// </summary>
     [IsoId("_XkokhxytEey6gI8SKlv7rg")]
     [DisplayName("Employer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Mplyr")]
-    #endif
     [IsoXmlTag("Mplyr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? Employer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Employer { get; init; } 
-    #else
-    public System.String? Employer { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the employee identification number as assigned by the fleet operator. 
     /// </summary>
     [IsoId("_XkokiRytEey6gI8SKlv7rg")]
     [DisplayName("Employee Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MplyeeId")]
-    #endif
     [IsoXmlTag("MplyeeId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? EmployeeIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? EmployeeIdentification { get; init; } 
-    #else
-    public System.String? EmployeeIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the fleet driver&apos;s department number as assigned by the fleet operator.
     /// </summary>
     [IsoId("_XkokixytEey6gI8SKlv7rg")]
     [DisplayName("Department Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DeptNb")]
-    #endif
     [IsoXmlTag("DeptNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? DepartmentNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? DepartmentNumber { get; init; } 
-    #else
-    public System.String? DepartmentNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional identification used for the driver.
     /// </summary>
     [IsoId("_XkokjRytEey6gI8SKlv7rg")]
     [DisplayName("Additional Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlId")]
-    #endif
     [IsoXmlTag("AddtlId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TravelDocument2? AdditionalIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TravelDocument2? AdditionalIdentification { get; init; } 
-    #else
-    public TravelDocument2? AdditionalIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Date of birth of vehicle rental driver. 
     /// </summary>
     [IsoId("_XkokjxytEey6gI8SKlv7rg")]
     [DisplayName("Date Of Birth")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtOfBirth")]
-    #endif
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODate? DateOfBirth { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly? DateOfBirth { get; init; } 
-    #else
-    public System.DateOnly? DateOfBirth { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional fleet summary-level information. 
     /// </summary>
     [IsoId("_XkokkRytEey6gI8SKlv7rg")]
     [DisplayName("Additional Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlData")]
-    #endif
     [IsoXmlTag("AddtlData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalData1? AdditionalData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalData1? AdditionalData { get; init; } 
-    #else
-    public AdditionalData1? AdditionalData { get; set; } 
-    #endif
     
     
     #nullable disable

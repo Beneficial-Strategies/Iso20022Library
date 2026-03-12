@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The DerivativesTradeReport is sent by the reporting entities to provide transaction data to the trade repositories (TRs) or by the trade repositories (TRs) to the competent authorities.")]
 [IsoId("_6ULEkHg8Eeu3kecHd7QKUQ")]
 [DisplayName("Derivatives Trade Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DerivativesTradeReportV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record DerivativesTradeReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DerivativesTradeReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DerivativesTradeReportV02( TradeQueryHeader4 reqReportHeader,TradeData19Choice_ reqTradeData )
-    {
-        ReportHeader = reqReportHeader;
-        TradeData = reqTradeData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record DerivativesTradeReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_6ULEkng8Eeu3kecHd7QKUQ")]
     [DisplayName("Report Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptHdr")]
-    #endif
     [IsoXmlTag("RptHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeQueryHeader4 ReportHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeQueryHeader4 ReportHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeQueryHeader4 ReportHeader { get; init; } 
-    #else
-    public TradeQueryHeader4 ReportHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Data concerning the reporting trade.
     /// </summary>
     [IsoId("_6ULElHg8Eeu3kecHd7QKUQ")]
     [DisplayName("Trade Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradData")]
-    #endif
     [IsoXmlTag("TradData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeData19Choice_ TradeData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeData19Choice_ TradeData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeData19Choice_ TradeData { get; init; } 
-    #else
-    public TradeData19Choice_ TradeData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_6ULElng8Eeu3kecHd7QKUQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

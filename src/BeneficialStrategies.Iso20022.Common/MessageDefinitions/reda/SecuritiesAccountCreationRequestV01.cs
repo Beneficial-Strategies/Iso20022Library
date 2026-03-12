@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The SecuritiesAccountCreationRequest message message is sent by an instructing party to the executing party to instruct the creation of a new securities account with the required account attributes details.|||Usage:||Processing and confirmation of the securities account creation request message are provided via a SecuritiesAccountStatusAdvice message.")]
 [IsoId("_KAlNzZ2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Creation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesAccountCreationRequestV01 : IOuterRecord
 {
     
@@ -64,18 +53,6 @@ public partial record SecuritiesAccountCreationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesAccountCreationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesAccountCreationRequestV01( SystemSecuritiesAccount7 reqSecuritiesAccount )
-    {
-        SecuritiesAccount = reqSecuritiesAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,53 +60,24 @@ public partial record SecuritiesAccountCreationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_gl0bMJ5GEemQg7pJhFUUYg")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader1? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1? MessageHeader { get; init; } 
-    #else
-    public MessageHeader1? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Securities account to be created in the executing party system.
     /// </summary>
     [IsoId("_KAu-l52fEem_Be8NuxvF7Q")]
     [DisplayName("Securities Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesAcct")]
-    #endif
     [IsoXmlTag("SctiesAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SystemSecuritiesAccount7 SecuritiesAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SystemSecuritiesAccount7 SecuritiesAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SystemSecuritiesAccount7 SecuritiesAccount { get; init; } 
-    #else
-    public SystemSecuritiesAccount7 SecuritiesAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_KAu-mZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

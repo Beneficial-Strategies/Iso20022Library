@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.pacs;
 [Description(@"Scope|The FinancialInstitutionToFinancialInstitutionCustomerDirectDebit message is sent by the creditor agent to the debtor agent, directly or through other agents and/or a payment clearing and settlement system.|It is used to collect funds from a debtor account for a creditor.|Usage|The FItoFICustomerDirectDebit message can contain one or more customer direct debit instructions.|The FIToFICustomerDirectDebit message does not allow for grouping.|The FItoFICustomerDirectDebit message may or may not contain mandate related information, that is extracts from a mandate, such as the MandateIdentification or DateOfSignature. The FIToFICustomerDirectDebit message must not be considered as a mandate.|The FItoFICustomerDirectDebit message can be used in domestic and cross-border scenarios.")]
 [IsoId("_jMYzIdcBEeq_l4BJLVUF2Q")]
 [DisplayName("FI To FI Customer Direct Debit V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FIToFICustomerDirectDebitV09 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record FIToFICustomerDirectDebitV09 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FIToFICustomerDirectDebitV09 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FIToFICustomerDirectDebitV09( GroupHeader98 reqGroupHeader,DirectDebitTransactionInformation29 reqDirectDebitTransactionInformation )
-    {
-        GroupHeader = reqGroupHeader;
-        DirectDebitTransactionInformation = reqDirectDebitTransactionInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,55 +64,24 @@ public partial record FIToFICustomerDirectDebitV09 : IOuterRecord
     /// </summary>
     [IsoId("_jMYzN9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader98 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader98 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader98 GroupHeader { get; init; } 
-    #else
-    public GroupHeader98 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements providing information specific to the individual direct debit(s).
     /// </summary>
     [IsoId("_jMYzOdcBEeq_l4BJLVUF2Q")]
     [DisplayName("Direct Debit Transaction Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DrctDbtTxInf")]
-    #endif
     [IsoXmlTag("DrctDbtTxInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DirectDebitTransactionInformation29 DirectDebitTransactionInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DirectDebitTransactionInformation29 DirectDebitTransactionInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DirectDebitTransactionInformation29 DirectDebitTransactionInformation { get; init; } 
-    #else
-    public DirectDebitTransactionInformation29 DirectDebitTransactionInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jMYzO9cBEeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

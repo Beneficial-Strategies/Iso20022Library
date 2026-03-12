@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6T-oFpqlEeGSON8vddiWzQ_-2049181846")]
 [DisplayName("Financial Institution Identification")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstitutionIdentification9
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,52 +23,25 @@ public partial record FinancialInstitutionIdentification9
     /// </summary>
     [IsoId("_6T-oF5qlEeGSON8vddiWzQ_-1460045446")]
     [DisplayName("BICFI")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BICFI")]
-    #endif
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoBICFIIdentifier? BICFI { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? BICFI { get; init; } 
-    #else
-    public System.String? BICFI { get; set; } 
-    #endif
     
     /// <summary>
     /// Information used to identify a member within a clearing system.
     /// </summary>
     [IsoId("_6T-oGJqlEeGSON8vddiWzQ_700420690")]
     [DisplayName("Clearing System Member Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrSysMmbId")]
-    #endif
     [IsoXmlTag("ClrSysMmbId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; } 
-    #else
-    public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification of an agent, as assigned by an institution, using an identification scheme.
     /// </summary>
     [IsoId("_6T-oGZqlEeGSON8vddiWzQ_1934580671")]
     [DisplayName("Other")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Othr")]
-    #endif
     [IsoXmlTag("Othr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericFinancialIdentification1? Other { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericFinancialIdentification1? Other { get; init; } 
-    #else
-    public GenericFinancialIdentification1? Other { get; set; } 
-    #endif
     
     
     #nullable disable

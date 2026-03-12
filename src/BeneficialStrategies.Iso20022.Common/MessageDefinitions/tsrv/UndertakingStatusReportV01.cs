@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsrv;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 [Description(@"The UndertakingStatusReport message is exchanged between parties that have an interest in the referenced undertaking transaction. It notifies the recipient of the status of the transaction, such as acceptance or rejection, withdrawal, or non-conformation. The sender may add additional information, as appropriate.")]
 [IsoId("_9h8tJXltEeG7BsjMvd1mEw_-329334493")]
 [DisplayName("Undertaking Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UndertakingStatusReportV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record UndertakingStatusReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a UndertakingStatusReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public UndertakingStatusReportV01( UndertakingStatusAdvice1 reqUndertakingStatusReportDetails )
-    {
-        UndertakingStatusReportDetails = reqUndertakingStatusReportDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record UndertakingStatusReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_9h8tJnltEeG7BsjMvd1mEw_-1217857261")]
     [DisplayName("Undertaking Status Report Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UdrtkgStsRptDtls")]
-    #endif
     [IsoXmlTag("UdrtkgStsRptDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required UndertakingStatusAdvice1 UndertakingStatusReportDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required UndertakingStatusAdvice1 UndertakingStatusReportDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UndertakingStatusAdvice1 UndertakingStatusReportDetails { get; init; } 
-    #else
-    public UndertakingStatusAdvice1 UndertakingStatusReportDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Digital signature of the report.
     /// </summary>
     [IsoId("_9h8tJ3ltEeG7BsjMvd1mEw_1390197264")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature2? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature2? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature2? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

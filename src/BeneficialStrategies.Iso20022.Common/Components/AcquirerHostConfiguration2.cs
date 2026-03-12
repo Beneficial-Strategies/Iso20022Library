@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LFhAYCmlEeKIjpr--01h3Q")]
 [DisplayName("Acquirer Host Configuration")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcquirerHostConfiguration2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcquirerHostConfiguration2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcquirerHostConfiguration2( System.String reqHostIdentification )
-    {
-        HostIdentification = reqHostIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,38 +23,18 @@ public partial record AcquirerHostConfiguration2
     /// </summary>
     [IsoId("_LTDtISmlEeKIjpr--01h3Q")]
     [DisplayName("Host Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HstId")]
-    #endif
     [IsoXmlTag("HstId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text HostIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String HostIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String HostIdentification { get; init; } 
-    #else
-    public System.String HostIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Types of message to sent to this host.
     /// </summary>
     [IsoId("_LTDtJSmlEeKIjpr--01h3Q")]
     [DisplayName("Message To Send")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgToSnd")]
-    #endif
     [IsoXmlTag("MsgToSnd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageFunction3Code? MessageToSend { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageFunction3Code? MessageToSend { get; init; } 
-    #else
-    public MessageFunction3Code? MessageToSend { get; set; } 
-    #endif
     
     
     #nullable disable

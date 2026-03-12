@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -28,7 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(IdentificationReference11Choice.ComplianceIdentification))]
     [KnownType(typeof(IdentificationReference11Choice.CancellationRequestIdentification))]
     [KnownType(typeof(IdentificationReference11Choice.CollateralTransactionIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(IdentificationReference11Choice.InstructingPartyTransactionIdentification),nameof(IdentificationReference11Choice.InstructingPartyTransactionIdentification))]
     [JsonDerivedType(typeof(IdentificationReference11Choice.ExecutingPartyTransactionIdentification),nameof(IdentificationReference11Choice.ExecutingPartyTransactionIdentification))]
     [JsonDerivedType(typeof(IdentificationReference11Choice.MarketInfrastructureTransactionIdentification),nameof(IdentificationReference11Choice.MarketInfrastructureTransactionIdentification))]
@@ -43,20 +37,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(IdentificationReference11Choice.ComplianceIdentification),nameof(IdentificationReference11Choice.ComplianceIdentification))]
     [JsonDerivedType(typeof(IdentificationReference11Choice.CancellationRequestIdentification),nameof(IdentificationReference11Choice.CancellationRequestIdentification))]
     [JsonDerivedType(typeof(IdentificationReference11Choice.CollateralTransactionIdentification),nameof(IdentificationReference11Choice.CollateralTransactionIdentification))]
-    #endif
     [IsoId("_AdlJUtokEeC60axPepSq7g_197856577")]
     [DisplayName("Identification Reference 11 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record IdentificationReference11Choice_
-    #else
-    public abstract partial class IdentificationReference11Choice_
-    #endif
     {
     }
 }

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.casp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"The SaleTOPOIDeviceRequest message is sent by the sale system to POI system to request a device service.")]
 [IsoId("_mok3wXPMEe2pK6udhxEaHA")]
 [DisplayName("Sale To POI Device Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SaleToPOIDeviceRequestV05 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SaleToPOIDeviceRequestV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SaleToPOIDeviceRequestV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SaleToPOIDeviceRequestV05( Header41 reqHeader,DeviceRequest6 reqDeviceRequest )
-    {
-        Header = reqHeader;
-        DeviceRequest = reqDeviceRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record SaleToPOIDeviceRequestV05 : IOuterRecord
     /// </summary>
     [IsoId("_mok3w3PMEe2pK6udhxEaHA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header41 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header41 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header41 Header { get; init; } 
-    #else
-    public Header41 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to a device request.
     /// </summary>
     [IsoId("_mok3xXPMEe2pK6udhxEaHA")]
     [DisplayName("Device Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DvcReq")]
-    #endif
     [IsoXmlTag("DvcReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DeviceRequest6 DeviceRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DeviceRequest6 DeviceRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DeviceRequest6 DeviceRequest { get; init; } 
-    #else
-    public DeviceRequest6 DeviceRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_mok3x3PMEe2pK6udhxEaHA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType33? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType33? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType33? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

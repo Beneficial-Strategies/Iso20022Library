@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The PartyAuditTrailReport message is sent by the executing party to an instructing party to provide detailed information on the requested party audit trail recorded in the system.")]
 [IsoId("_88xHgZeSEeen_cyMrluY4w")]
 [DisplayName("Party Audit Trail Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PartyAuditTrailReportV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record PartyAuditTrailReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PartyAuditTrailReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PartyAuditTrailReportV01( PartyAuditTrailOrError1Choice_ reqReportOrError )
-    {
-        ReportOrError = reqReportOrError;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,53 +57,24 @@ public partial record PartyAuditTrailReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_QvJJ0VhGEeih3fUfzR38Ig")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader12? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader12? MessageHeader { get; init; } 
-    #else
-    public MessageHeader12? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the party audit trail data or error resulting from the audit trail query request.
     /// </summary>
     [IsoId("_88xHi5eSEeen_cyMrluY4w")]
     [DisplayName("Report Or Error")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptOrErr")]
-    #endif
     [IsoXmlTag("RptOrErr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyAuditTrailOrError1Choice_ ReportOrError { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyAuditTrailOrError1Choice_ ReportOrError { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAuditTrailOrError1Choice_ ReportOrError { get; init; } 
-    #else
-    public PartyAuditTrailOrError1Choice_ ReportOrError { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_88xHjZeSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

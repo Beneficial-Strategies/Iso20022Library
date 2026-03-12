@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"The Net Report message is sent to a participant by a central system to provide details of the of the bi-lateral payment obligations, calculated by the central system per currency.")]
 [IsoId("_kBNA9QM-Ee2nqoJcXIhTdw")]
 [DisplayName("Net Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NetReportV02 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record NetReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NetReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NetReportV02( NetReportData2 reqNetReportData,PartyIdentification242Choice_ reqNetServiceParticipantIdentification,NetObligation2 reqNetObligation )
-    {
-        NetReportData = reqNetReportData;
-        NetServiceParticipantIdentification = reqNetServiceParticipantIdentification;
-        NetObligation = reqNetObligation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,91 +57,40 @@ public partial record NetReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_kBNA-QM-Ee2nqoJcXIhTdw")]
     [DisplayName("Net Report Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetRptData")]
-    #endif
     [IsoXmlTag("NetRptData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NetReportData2 NetReportData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NetReportData2 NetReportData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NetReportData2 NetReportData { get; init; } 
-    #else
-    public NetReportData2 NetReportData { get; set; } 
-    #endif
     
     /// <summary>
     /// Describes the participant receiving the net report.
     /// </summary>
     [IsoId("_kBNA-wM-Ee2nqoJcXIhTdw")]
     [DisplayName("Net Service Participant Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetSvcPtcptId")]
-    #endif
     [IsoXmlTag("NetSvcPtcptId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification242Choice_ NetServiceParticipantIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification242Choice_ NetServiceParticipantIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification242Choice_ NetServiceParticipantIdentification { get; init; } 
-    #else
-    public PartyIdentification242Choice_ NetServiceParticipantIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Describes the counterparty participant involved in (all of) the obligations of the report.
     /// </summary>
     [IsoId("_kBNA_QM-Ee2nqoJcXIhTdw")]
     [DisplayName("Net Service Counterparty Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetSvcCtrPtyId")]
-    #endif
     [IsoXmlTag("NetSvcCtrPtyId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; init; } 
-    #else
-    public PartyIdentification242Choice_? NetServiceCounterpartyIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the amount, direct parties or netting groups involved in the obligation.
     /// </summary>
     [IsoId("_kBNA_wM-Ee2nqoJcXIhTdw")]
     [DisplayName("Net Obligation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetOblgtn")]
-    #endif
     [IsoXmlTag("NetOblgtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NetObligation2 NetObligation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NetObligation2 NetObligation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NetObligation2 NetObligation { get; init; } 
-    #else
-    public NetObligation2 NetObligation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_kBNBAQM-Ee2nqoJcXIhTdw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

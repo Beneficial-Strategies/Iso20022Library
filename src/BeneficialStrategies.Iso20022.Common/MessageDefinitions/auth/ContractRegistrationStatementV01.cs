@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The ContractRegistrationStatement message is sent by the registration agent to the reporting party, in response to a request or at a pre-agreed date, to send a statement of the operations related to the registered contract subject to currency control.")]
 [IsoId("_CHHT4NnQEeS--7IJLPC9lw")]
 [DisplayName("Contract Registration Statement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ContractRegistrationStatementV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ContractRegistrationStatementV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ContractRegistrationStatementV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ContractRegistrationStatementV01( CurrencyControlHeader2 reqGroupHeader,ContractRegistrationStatement1 reqStatement )
-    {
-        GroupHeader = reqGroupHeader;
-        Statement = reqStatement;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ContractRegistrationStatementV01 : IOuterRecord
     /// </summary>
     [IsoId("_RtrZEdnQEeS--7IJLPC9lw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrencyControlHeader2 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrencyControlHeader2 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyControlHeader2 GroupHeader { get; init; } 
-    #else
-    public CurrencyControlHeader2 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the contract registration statement, which includes all journals on the activities related to the contract.
     /// </summary>
     [IsoId("_J5DJsNnREeS--7IJLPC9lw")]
     [DisplayName("Statement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Stmt")]
-    #endif
     [IsoXmlTag("Stmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContractRegistrationStatement1 Statement { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContractRegistrationStatement1 Statement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContractRegistrationStatement1 Statement { get; init; } 
-    #else
-    public ContractRegistrationStatement1 Statement { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_sAFV4dnQEeS--7IJLPC9lw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__InD0BrmEeyhRdHRjakS2w")]
 [DisplayName("Mail Address")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MailAddress1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record MailAddress1
     /// </summary>
     [IsoId("_j1WRgBrnEeyhRdHRjakS2w")]
     [DisplayName("Correspondence")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Crspdc")]
-    #endif
     [IsoXmlTag("Crspdc")]
     [MinLength(0)]
     [MaxLength(5)]
@@ -52,9 +33,6 @@ public partial record MailAddress1
     /// </summary>
     [IsoId("_vo1tsRrnEeyhRdHRjakS2w")]
     [DisplayName("Email Address")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EmailAdr")]
-    #endif
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [MinLength(0)]

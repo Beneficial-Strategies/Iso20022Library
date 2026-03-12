@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The AccountReportingRequest message is sent by the account owner, either directly or through a forwarding agent, to one of its account servicing institutions. It is used to ask the account servicing institution to send a report on the account owner's account in a BankToCustomerAccountReport (camt.052.001.03), a BankToCustomerStatement (camt.053.001.03) or a BankToCustomerDebitCreditNotification (camt.054.001.03).|Usage|The AccountReportingRequest message is used to advise the account servicing institution of funds that the account owner expects to have credited to its account. The message can be used in either a direct or a relay scenario.")]
 [IsoId("_XlRbQV1rEeehlLdFiIrRgQ")]
 [DisplayName("Account Reporting Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountReportingRequestV04 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record AccountReportingRequestV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountReportingRequestV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountReportingRequestV04( GroupHeader76 reqGroupHeader,ReportingRequest4 reqReportingRequest )
-    {
-        GroupHeader = reqGroupHeader;
-        ReportingRequest = reqReportingRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,55 +60,24 @@ public partial record AccountReportingRequestV04 : IOuterRecord
     /// </summary>
     [IsoId("_XlRbQ11rEeehlLdFiIrRgQ")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader76 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader76 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader76 GroupHeader { get; init; } 
-    #else
-    public GroupHeader76 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide further details on the reporting request.
     /// </summary>
     [IsoId("_XlRbRV1rEeehlLdFiIrRgQ")]
     [DisplayName("Reporting Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptgReq")]
-    #endif
     [IsoXmlTag("RptgReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportingRequest4 ReportingRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportingRequest4 ReportingRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportingRequest4 ReportingRequest { get; init; } 
-    #else
-    public ReportingRequest4 ReportingRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_XlRbR11rEeehlLdFiIrRgQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

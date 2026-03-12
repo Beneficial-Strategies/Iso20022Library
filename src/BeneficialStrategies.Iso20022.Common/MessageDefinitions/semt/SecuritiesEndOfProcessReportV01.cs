@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|Sent by an executing party or an instructing party to the custodian or an affirming party to notify that all the necessary SecuritiesTradeConfirmation message or any other notification of the process have been sent.|It may also be sent through Central Matching Utility (CMU).|The instructing party is typically the investment manager or an intermediary system/vendor communicating on behalf of the investment manager.|The executing party is typically the broker/dealer or an intermediary system/vendor communicating on behalf of the broker/dealer.|The custodian or an affirming party is typically the custodian, trustee, financial institution, intermediary system/vendor communicating on behalf of them, or their agent.|The ISO 20022 Business Application Header must be used|Usage|Initiator: Executing Party, CMU or Instructing Party|Respondent: Custodian or an affirming party does not need to respond.")]
 [IsoId("_CwVqwOQXEeCGktPI9k4Dlw_-1232982722")]
 [DisplayName("Securities End Of Process Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesEndOfProcessReportV01 : IOuterRecord
 {
     
@@ -70,18 +59,6 @@ public partial record SecuritiesEndOfProcessReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesEndOfProcessReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesEndOfProcessReportV01( Report3 reqReportGeneralDetails )
-    {
-        ReportGeneralDetails = reqReportGeneralDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,87 +66,40 @@ public partial record SecuritiesEndOfProcessReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_CwVqweQXEeCGktPI9k4Dlw_552533910")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Pagination? Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination? Pagination { get; init; } 
-    #else
-    public Pagination? Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Notifies the type of report transmitted.
     /// </summary>
     [IsoId("_CwVqwuQXEeCGktPI9k4Dlw_1253691050")]
     [DisplayName("Report General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptGnlDtls")]
-    #endif
     [IsoXmlTag("RptGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Report3 ReportGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Report3 ReportGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Report3 ReportGeneralDetails { get; init; } 
-    #else
-    public Report3 ReportGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Parties involved in the confirmation of the details of a trade.
     /// </summary>
     [IsoId("_CwfbwOQXEeCGktPI9k4Dlw_-1313694772")]
     [DisplayName("Confirmation Parties")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ConfPties")]
-    #endif
     [IsoXmlTag("ConfPties")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ConfirmationParties2? ConfirmationParties { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ConfirmationParties2? ConfirmationParties { get; init; } 
-    #else
-    public ConfirmationParties2? ConfirmationParties { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that identifies the underlying investor.
     /// </summary>
     [IsoId("_CwfbweQXEeCGktPI9k4Dlw_-582829199")]
     [DisplayName("Investor")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Invstr")]
-    #endif
     [IsoXmlTag("Invstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount79? Investor { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount79? Investor { get; init; } 
-    #else
-    public PartyIdentificationAndAccount79? Investor { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_CwfbwuQXEeCGktPI9k4Dlw_603070920")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

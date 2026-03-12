@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zQe54Th4Ee2PxMOcF-jxEw")]
 [DisplayName("Technical Attributes")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TechnicalAttributes6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,37 +23,19 @@ public partial record TechnicalAttributes6
     /// </summary>
     [IsoId("_zXW98Th4Ee2PxMOcF-jxEw")]
     [DisplayName("Technical Record Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TechRcrdId")]
-    #endif
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? TechnicalRecordIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TechnicalRecordIdentification { get; init; } 
-    #else
-    public System.String? TechnicalRecordIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates the date and time of the receipt of the submission of the report to the trade repository as recorded by the trade repository. This item should only be present in a message from the trade repository to an authority and/or other recipients of the message.
     /// </summary>
     [IsoId("_zXW99Th4Ee2PxMOcF-jxEw")]
     [DisplayName("Report Receipt Time Stamp")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptRctTmStmp")]
-    #endif
     [IsoXmlTag("RptRctTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODateTime? ReportReceiptTimeStamp { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime? ReportReceiptTimeStamp { get; init; } 
-    #else
-    public System.DateTime? ReportReceiptTimeStamp { get; set; } 
-    #endif
     
     
     #nullable disable

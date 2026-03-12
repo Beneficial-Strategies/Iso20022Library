@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -30,7 +25,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Reference3Choice.MarginCallResponseIdentification))]
     [KnownType(typeof(Reference3Choice.TripartyAgentServiceProviderCollateralInstructionIdentification))]
     [KnownType(typeof(Reference3Choice.TripartyAgentServiceProviderCollateralTransactionIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(Reference3Choice.ClientCollateralInstructionIdentification),nameof(Reference3Choice.ClientCollateralInstructionIdentification))]
     [JsonDerivedType(typeof(Reference3Choice.ClientCollateralTransactionIdentification),nameof(Reference3Choice.ClientCollateralTransactionIdentification))]
     [JsonDerivedType(typeof(Reference3Choice.CollateralProposalIdentification),nameof(Reference3Choice.CollateralProposalIdentification))]
@@ -47,20 +41,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Reference3Choice.MarginCallResponseIdentification),nameof(Reference3Choice.MarginCallResponseIdentification))]
     [JsonDerivedType(typeof(Reference3Choice.TripartyAgentServiceProviderCollateralInstructionIdentification),nameof(Reference3Choice.TripartyAgentServiceProviderCollateralInstructionIdentification))]
     [JsonDerivedType(typeof(Reference3Choice.TripartyAgentServiceProviderCollateralTransactionIdentification),nameof(Reference3Choice.TripartyAgentServiceProviderCollateralTransactionIdentification))]
-    #endif
     [IsoId("_d0qV3ALyEeutW5-TpeYJhA")]
     [DisplayName("Reference 3 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record Reference3Choice_
-    #else
-    public abstract partial class Reference3Choice_
-    #endif
     {
     }
 }

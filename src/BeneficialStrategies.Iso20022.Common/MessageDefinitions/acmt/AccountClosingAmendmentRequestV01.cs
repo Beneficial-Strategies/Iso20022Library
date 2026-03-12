@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"Scope|The AccountClosingAmendmentRequest message is sent from an organisation to a financial institution as part of the account closing process. It is sent in response to a request from the financial institution to send additional information.|Usage|This message may only be sent in response to a request from the financial institution to send additional information.|It could be sent together with other related documents.")]
 [IsoId("_nlQomNE9Ed-BzquC8wXy7w_1266077822")]
 [DisplayName("Account Closing Amendment Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountClosingAmendmentRequestV01 : IOuterRecord
 {
     
@@ -65,21 +54,6 @@ public partial record AccountClosingAmendmentRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountClosingAmendmentRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountClosingAmendmentRequestV01( References4 reqReferences,AccountForAction1 reqAccountIdentification,BranchAndFinancialInstitutionIdentification4 reqAccountServicerIdentification,OrganisationIdentification6 reqOrganisationIdentification )
-    {
-        References = reqReferences;
-        AccountIdentification = reqAccountIdentification;
-        AccountServicerIdentification = reqAccountServicerIdentification;
-        OrganisationIdentification = reqOrganisationIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,144 +61,64 @@ public partial record AccountClosingAmendmentRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_nlQomdE9Ed-BzquC8wXy7w_-908345623")]
     [DisplayName("References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Refs")]
-    #endif
     [IsoXmlTag("Refs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required References4 References { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required References4 References { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References4 References { get; init; } 
-    #else
-    public References4 References { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identification of the account between the account owner and the account servicer.
     /// </summary>
     [IsoId("_nlQomtE9Ed-BzquC8wXy7w_-1865223147")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountForAction1 AccountIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountForAction1 AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountForAction1 AccountIdentification { get; init; } 
-    #else
-    public AccountForAction1 AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme. |.
     /// </summary>
     [IsoId("_nlaZkNE9Ed-BzquC8wXy7w_-814283343")]
     [DisplayName("Account Servicer Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcrId")]
-    #endif
     [IsoXmlTag("AcctSvcrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification4 AccountServicerIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the organisation requesting the change.
     /// </summary>
     [IsoId("_nlaZkdE9Ed-BzquC8wXy7w_1006271356")]
     [DisplayName("Organisation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgId")]
-    #endif
     [IsoXmlTag("OrgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OrganisationIdentification6 OrganisationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OrganisationIdentification6 OrganisationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrganisationIdentification6 OrganisationIdentification { get; init; } 
-    #else
-    public OrganisationIdentification6 OrganisationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies target dates.
     /// </summary>
     [IsoId("_nlaZktE9Ed-BzquC8wXy7w_-53663536")]
     [DisplayName("Contract Dates")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrctDts")]
-    #endif
     [IsoXmlTag("CtrctDts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountContract4? ContractDates { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountContract4? ContractDates { get; init; } 
-    #else
-    public AccountContract4? ContractDates { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the account to which the remaining positive balance of the account to be closed must be transferred or account from which funds can be moved to the account to be closed and which balance is negative. This account must be held in the same financial institution as the account to be closed if the transfer account is used to compensate a negative balance. For a positive balance to be transferred, an account in another financial institution might be used. In that case the account servicer is mandatory.
     /// </summary>
     [IsoId("_nlaZk9E9Ed-BzquC8wXy7w_-114881708")]
     [DisplayName("Balance Transfer Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalTrfAcct")]
-    #endif
     [IsoXmlTag("BalTrfAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountForAction1? BalanceTransferAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountForAction1? BalanceTransferAccount { get; init; } 
-    #else
-    public AccountForAction1? BalanceTransferAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier of a financial institution, as assigned under an internationally recognised or proprietary identification scheme, that is the servicer of the transfer account.
     /// </summary>
     [IsoId("_nlaZlNE9Ed-BzquC8wXy7w_258218512")]
     [DisplayName("Transfer Account Servicer Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfAcctSvcrId")]
-    #endif
     [IsoXmlTag("TrfAcctSvcrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BranchAndFinancialInstitutionIdentification4? TransferAccountServicerIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification4? TransferAccountServicerIdentification { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification4? TransferAccountServicerIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the signature with its components, namely signed info, signature value, key info and the object.
     /// </summary>
     [IsoId("_nlaZldE9Ed-BzquC8wXy7w_-944215031")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature1? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature1? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature1? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

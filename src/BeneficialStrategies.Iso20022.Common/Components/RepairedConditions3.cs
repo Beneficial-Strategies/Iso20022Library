@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RLb2ZNp-Ed-ak6NoX_4Aeg_-1888312620")]
 [DisplayName("Repaired Conditions")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RepairedConditions3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record RepairedConditions3
     /// </summary>
     [IsoId("_RLb2Zdp-Ed-ak6NoX_4Aeg_-1888312329")]
     [DisplayName("Repaired Charge")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RprdChrg")]
-    #endif
     [IsoXmlTag("RprdChrg")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -52,9 +33,6 @@ public partial record RepairedConditions3
     /// </summary>
     [IsoId("_RLb2Ztp-Ed-ak6NoX_4Aeg_-1888312610")]
     [DisplayName("Repaired Commission")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RprdComssn")]
-    #endif
     [IsoXmlTag("RprdComssn")]
     [MinLength(0)]
     [MaxLength(10)]

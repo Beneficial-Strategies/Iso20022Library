@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"The AccountSwitchCancelExistingPayment message is sent by the new account servicer to the previous account servicer to identify which payment arrangements are to be cancelled on the account owner's account and when they are to be cancelled. This message is used during a partial switch of the account and may be sent multiple times to allow for the account parties to transfer different payment arrangements at different times during the switch. ")]
 [IsoId("_7HK1f242EeiU9cctagi5ow")]
 [DisplayName("Account Switch Cancel Existing Payment V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountSwitchCancelExistingPaymentV02 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record AccountSwitchCancelExistingPaymentV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountSwitchCancelExistingPaymentV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountSwitchCancelExistingPaymentV02( MessageIdentification1 reqMessageIdentification,AccountSwitchDetails1 reqAccountSwitchDetails,CashAccount39 reqOldAccount )
-    {
-        MessageIdentification = reqMessageIdentification;
-        AccountSwitchDetails = reqAccountSwitchDetails;
-        OldAccount = reqOldAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,108 +57,48 @@ public partial record AccountSwitchCancelExistingPaymentV02 : IOuterRecord
     /// </summary>
     [IsoId("_7HK1gW42EeiU9cctagi5ow")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains information about the details of the account switch.
     /// </summary>
     [IsoId("_7HK1g242EeiU9cctagi5ow")]
     [DisplayName("Account Switch Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSwtchDtls")]
-    #endif
     [IsoXmlTag("AcctSwtchDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #else
-    public AccountSwitchDetails1 AccountSwitchDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the old account.
     /// </summary>
     [IsoId("_7HK1hW42EeiU9cctagi5ow")]
     [DisplayName("Old Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OdAcct")]
-    #endif
     [IsoXmlTag("OdAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CashAccount39 OldAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CashAccount39 OldAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount39 OldAccount { get; init; } 
-    #else
-    public CashAccount39 OldAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of a debit payment arrangement associated with the old account. The payment may be a standing order, a bill payment arrangement or a future dated payment.
     /// </summary>
     [IsoId("_7HK1h242EeiU9cctagi5ow")]
     [DisplayName("Payment Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstr")]
-    #endif
     [IsoXmlTag("PmtInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentInstruction28? PaymentInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentInstruction28? PaymentInstruction { get; init; } 
-    #else
-    public PaymentInstruction28? PaymentInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of a direct debit Instruction associated with the old account.
     /// </summary>
     [IsoId("_7HK1iW42EeiU9cctagi5ow")]
     [DisplayName("Direct Debit Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DrctDbtInstr")]
-    #endif
     [IsoXmlTag("DrctDbtInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DirectDebitInstructionDetails2? DirectDebitInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DirectDebitInstructionDetails2? DirectDebitInstruction { get; init; } 
-    #else
-    public DirectDebitInstructionDetails2? DirectDebitInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_7HK1i242EeiU9cctagi5ow")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

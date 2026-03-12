@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-mkXAdpmEeearpaEPXv9UA")]
 [DisplayName("Acceptor Cancellation Request")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCancellationRequest7
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCancellationRequest7 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCancellationRequest7( CardPaymentEnvironment68 reqEnvironment,CardPaymentContext26 reqContext,CardPaymentTransaction82 reqTransaction )
-    {
-        Environment = reqEnvironment;
-        Context = reqContext;
-        Transaction = reqTransaction;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,57 +23,24 @@ public partial record AcceptorCancellationRequest7
     /// </summary>
     [IsoId("_-v-xsdpmEeearpaEPXv9UA")]
     [DisplayName("Environment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Envt")]
-    #endif
     [IsoXmlTag("Envt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentEnvironment68 Environment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentEnvironment68 Environment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentEnvironment68 Environment { get; init; } 
-    #else
-    public CardPaymentEnvironment68 Environment { get; set; } 
-    #endif
     
     /// <summary>
     /// Context in which the transaction is performed (payment and sale).
     /// </summary>
     [IsoId("_-v-xs9pmEeearpaEPXv9UA")]
     [DisplayName("Context")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cntxt")]
-    #endif
     [IsoXmlTag("Cntxt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentContext26 Context { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentContext26 Context { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentContext26 Context { get; init; } 
-    #else
-    public CardPaymentContext26 Context { get; set; } 
-    #endif
     
     /// <summary>
     /// Cancellation transaction between an acceptor and an acquirer.
     /// </summary>
     [IsoId("_-v-xtdpmEeearpaEPXv9UA")]
     [DisplayName("Transaction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tx")]
-    #endif
     [IsoXmlTag("Tx")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentTransaction82 Transaction { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentTransaction82 Transaction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentTransaction82 Transaction { get; init; } 
-    #else
-    public CardPaymentTransaction82 Transaction { get; set; } 
-    #endif
     
     
     #nullable disable

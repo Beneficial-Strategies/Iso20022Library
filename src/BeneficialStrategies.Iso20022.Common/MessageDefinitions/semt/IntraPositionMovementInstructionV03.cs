@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account owner sends a IntraPositionMovementInstruction to an account servicer to instruct the movement of securities within its holding from one sub-balance to another, for example, blocking of securities.|The account owner/servicer relationship may be:|- a global custodian which has an account with its local agent (sub-custodian), or|- an investment management institution which manage a fund account opened at a custodian, or|- a broker which has an account with a custodian, or|- a central securities depository participant which has an account with a central securities depository, or|- a central securities depository which has an account with a custodian, another central securities depository or another settlement market infrastructure.|Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information.|using the relevant elements in the Business Application Header.|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
 [IsoId("_tJGM4fvNEeCBQp5TnX1XKQ")]
 [DisplayName("Intra Position Movement Instruction V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntraPositionMovementInstructionV03 : IOuterRecord
 {
     
@@ -61,21 +50,6 @@ public partial record IntraPositionMovementInstructionV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IntraPositionMovementInstructionV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IntraPositionMovementInstructionV03( System.String reqTransactionIdentification,SecuritiesAccount13 reqSafekeepingAccount,SecurityIdentification14 reqFinancialInstrumentIdentification,IntraPositionDetails21 reqIntraPositionDetails )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        SafekeepingAccount = reqSafekeepingAccount;
-        FinancialInstrumentIdentification = reqFinancialInstrumentIdentification;
-        IntraPositionDetails = reqIntraPositionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,197 +57,90 @@ public partial record IntraPositionMovementInstructionV03 : IOuterRecord
     /// </summary>
     [IsoId("_tJGM7fvNEeCBQp5TnX1XKQ")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransactionIdentification { get; init; } 
-    #else
-    public System.String TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
     /// </summary>
     [IsoId("_tJGM8fvNEeCBQp5TnX1XKQ")]
     [DisplayName("Corporate Action Event Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnEvtId")]
-    #endif
     [IsoXmlTag("CorpActnEvtId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Identification1? CorporateActionEventIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Identification1? CorporateActionEventIdentification { get; init; } 
-    #else
-    public Identification1? CorporateActionEventIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Count of the number of transactions linked.
     /// </summary>
     [IsoId("_3N7Eb_7ZEeCtrO5qCU90cA")]
     [DisplayName("Number Counts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NbCounts")]
-    #endif
     [IsoXmlTag("NbCounts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public NumberCount1Choice_? NumberCounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NumberCount1Choice_? NumberCounts { get; init; } 
-    #else
-    public NumberCount1Choice_? NumberCounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Link to another transaction that must be processed after, before or at the same time.
     /// </summary>
     [IsoId("_tJGM9fvNEeCBQp5TnX1XKQ")]
     [DisplayName("Linkages")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Lnkgs")]
-    #endif
     [IsoXmlTag("Lnkgs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Linkages19? Linkages { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Linkages19? Linkages { get; init; } 
-    #else
-    public Linkages19? Linkages { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_tJGM-fvNEeCBQp5TnX1XKQ")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification36Choice_? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification36Choice_? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification36Choice_? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_tJGM_fvNEeCBQp5TnX1XKQ")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount13 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
     /// </summary>
     [IsoId("_tJGNAfvNEeCBQp5TnX1XKQ")]
     [DisplayName("Safekeeping Place")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgPlc")]
-    #endif
     [IsoXmlTag("SfkpgPlc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; init; } 
-    #else
-    public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial instrument representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
     [IsoId("_tJGNBfvNEeCBQp5TnX1XKQ")]
     [DisplayName("Financial Instrument Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmId")]
-    #endif
     [IsoXmlTag("FinInstrmId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecurityIdentification14 FinancialInstrumentIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecurityIdentification14 FinancialInstrumentIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecurityIdentification14 FinancialInstrumentIdentification { get; init; } 
-    #else
-    public SecurityIdentification14 FinancialInstrumentIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Elements characterising a financial instrument.
     /// </summary>
     [IsoId("_tJGNCfvNEeCBQp5TnX1XKQ")]
     [DisplayName("Financial Instrument Attributes")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmAttrbts")]
-    #endif
     [IsoXmlTag("FinInstrmAttrbts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentAttributes36? FinancialInstrumentAttributes { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentAttributes36? FinancialInstrumentAttributes { get; init; } 
-    #else
-    public FinancialInstrumentAttributes36? FinancialInstrumentAttributes { get; set; } 
-    #endif
     
     /// <summary>
     /// Intra-position movement transaction details.
     /// </summary>
     [IsoId("_tJGNDfvNEeCBQp5TnX1XKQ")]
     [DisplayName("Intra Position Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntraPosDtls")]
-    #endif
     [IsoXmlTag("IntraPosDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IntraPositionDetails21 IntraPositionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IntraPositionDetails21 IntraPositionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IntraPositionDetails21 IntraPositionDetails { get; init; } 
-    #else
-    public IntraPositionDetails21 IntraPositionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_tJGNEfvNEeCBQp5TnX1XKQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

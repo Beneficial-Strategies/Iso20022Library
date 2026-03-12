@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SqIIywEcEeCQm6a_G2yO_w_1845614557")]
 [DisplayName("Cardholder")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Cardholder1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,106 +23,52 @@ public partial record Cardholder1
     /// </summary>
     [IsoId("_SqIIzAEcEeCQm6a_G2yO_w_318846073")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CardholderIdentification1? Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardholderIdentification1? Identification { get; init; } 
-    #else
-    public CardholderIdentification1? Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Cardholder name associated with the card.
     /// </summary>
     [IsoId("_SqIIzQEcEeCQm6a_G2yO_w_1361073626")]
     [DisplayName("Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Nm")]
-    #endif
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
     [StringLength(maximumLength: 45 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax45Text? Name { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Name { get; init; } 
-    #else
-    public System.String? Name { get; set; } 
-    #endif
     
     /// <summary>
     /// Language selected for the cardholder interface during the transaction.
     /// </summary>
     [IsoId("_SqR5wAEcEeCQm6a_G2yO_w_1171267529")]
     [DisplayName("Language")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Lang")]
-    #endif
     [IsoXmlTag("Lang")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ISO2ALanguageCode? Language { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public string? Language { get; init; } 
-    #else
-    public string? Language { get; set; } 
-    #endif
     
     /// <summary>
     /// Data related to the authentication of the cardholder.
     /// </summary>
     [IsoId("_SqR5wQEcEeCQm6a_G2yO_w_1813932456")]
     [DisplayName("Authentication")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Authntcn")]
-    #endif
     [IsoXmlTag("Authntcn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CardholderAuthentication1? Authentication { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardholderAuthentication1? Authentication { get; init; } 
-    #else
-    public CardholderAuthentication1? Authentication { get; set; } 
-    #endif
     
     /// <summary>
     /// Numeric characters of the cardholder&apos;s address for verification.
     /// </summary>
     [IsoId("_SqR5wgEcEeCQm6a_G2yO_w_-1891636161")]
     [DisplayName("Address Verification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AdrVrfctn")]
-    #endif
     [IsoXmlTag("AdrVrfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AddressVerification1? AddressVerification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AddressVerification1? AddressVerification { get; init; } 
-    #else
-    public AddressVerification1? AddressVerification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies personal data related to the cardholder.
     /// </summary>
     [IsoId("_SqR5wwEcEeCQm6a_G2yO_w_719216994")]
     [DisplayName("Personal Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrsnlData")]
-    #endif
     [IsoXmlTag("PrsnlData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? PersonalData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PersonalData { get; init; } 
-    #else
-    public System.String? PersonalData { get; set; } 
-    #endif
     
     
     #nullable disable

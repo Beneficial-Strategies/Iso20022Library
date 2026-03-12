@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catm;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.catm;
 [Description(@"The CertificateManagementRequest message is sent by a POI terminal or any intermediary entity either to a terminal manager acting as a certificate authority for managing X.509 certificate of a public key owned by the initiating party, or for requesting the inclusion or the removal of the POI to a white list of the terminal manager.|")]
 [IsoId("_RC0PQXPXEe2pK6udhxEaHA")]
 [DisplayName("Certificate Management Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CertificateManagementRequestV06 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record CertificateManagementRequestV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CertificateManagementRequestV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CertificateManagementRequestV06( TMSHeader1 reqHeader,CertificateManagementRequest3 reqCertificateManagementRequest )
-    {
-        Header = reqHeader;
-        CertificateManagementRequest = reqCertificateManagementRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,55 +58,24 @@ public partial record CertificateManagementRequestV06 : IOuterRecord
     /// </summary>
     [IsoId("_RC0PQ3PXEe2pK6udhxEaHA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TMSHeader1 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TMSHeader1 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TMSHeader1 Header { get; init; } 
-    #else
-    public TMSHeader1 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the request of certificate management.
     /// </summary>
     [IsoId("_RC0PRXPXEe2pK6udhxEaHA")]
     [DisplayName("Certificate Management Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CertMgmtReq")]
-    #endif
     [IsoXmlTag("CertMgmtReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CertificateManagementRequest3 CertificateManagementRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CertificateManagementRequest3 CertificateManagementRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CertificateManagementRequest3 CertificateManagementRequest { get; init; } 
-    #else
-    public CertificateManagementRequest3 CertificateManagementRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_RC0PR3PXEe2pK6udhxEaHA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType33? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType33? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType33? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

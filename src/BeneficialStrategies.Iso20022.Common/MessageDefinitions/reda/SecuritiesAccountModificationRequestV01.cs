@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The SecuritiesAccountModificationRequest message is sent by an instructing party to the executing party to instruct the update of an existing securities account by amending its existing attributes or by providing additional attibutes details.||Usage:|Processing and confirmation of the securities account creation request message are provided via a SecuritiesAccountStatusAdvice message.")]
 [IsoId("_KAu-rZ2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Modification Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesAccountModificationRequestV01 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record SecuritiesAccountModificationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesAccountModificationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesAccountModificationRequestV01( SecuritiesAccount19 reqAccountIdentification,SecuritiesAccountModification2 reqModification )
-    {
-        AccountIdentification = reqAccountIdentification;
-        Modification = reqModification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,72 +60,32 @@ public partial record SecuritiesAccountModificationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_Za_90J5HEemQg7pJhFUUYg")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader1? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1? MessageHeader { get; init; } 
-    #else
-    public MessageHeader1? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the securities account to be updated in the executing party system.
     /// </summary>
     [IsoId("_KAu-u52fEem_Be8NuxvF7Q")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount19 AccountIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount19 AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19 AccountIdentification { get; init; } 
-    #else
-    public SecuritiesAccount19 AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Further details about the requested modification.
     /// </summary>
     [IsoId("_KAu-vZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Modification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Mod")]
-    #endif
     [IsoXmlTag("Mod")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccountModification2 Modification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccountModification2 Modification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccountModification2 Modification { get; init; } 
-    #else
-    public SecuritiesAccountModification2 Modification { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_KAu-v52fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -40,12 +35,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The CancelCaseAssignment message is sent by a case creator or case assigner to a case assignee. This message is used to request the cancellation of a case.|Usage|The CancelCaseAssignment message is used to stop the processing of a case at a case assignee when a case assignment is incorrect or when the root cause for the case disappears (such as the account owner was able to reconcile after sending a ClaimNonReceipt message).|The CancelCaseAssignment message can be used to stop the processing of a:|- request to cancel payment case;|- request to modify payment case;|- unable to apply case;|- claim non receipt case.|The CancelCaseAssignment message covers one and only one case at a time. If several case assignments need to be cancelled, then multiple CancelCaseAssignment messages must be sent.|The CancelCaseAssignment message must be forwarded by all subsequent case assignee(s) in the case processing chain until it reaches the end point.|When an agent re-assigns the CancelCaseAssignment to a subsequent case assignee, this agent must send a NotificationOfCaseAssignment message to its assigner.|When the CancelCaseAssignment instruction has been acted upon by the relevant case assignee, a ResolutionOfInvestigation message is sent to the case assigner or case creator, in reply.|The CancelCaseAssignment message must not be used for other purposes. If, for example, a request to modify payment fails, and the case creator requests the cancellation of the payment, then a CustomerPaymentCancellationRequest or FIToFIPaymentCancellationRequest message must be used, with the case identification of the original RequestToModifyPayment message. In this context it is incorrect to use the CancelCaseAssignment message.")]
 [IsoId("_eX_OnW2PEei3KuUgpx7Xcw")]
 [DisplayName("Cancel Case Assignment V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CancelCaseAssignmentV04 : IOuterRecord
 {
     
@@ -74,19 +63,6 @@ public partial record CancelCaseAssignmentV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CancelCaseAssignmentV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CancelCaseAssignmentV04( CaseAssignment5 reqAssignment,Case5 reqCase )
-    {
-        Assignment = reqAssignment;
-        Case = reqCase;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -95,55 +71,24 @@ public partial record CancelCaseAssignmentV04 : IOuterRecord
     /// </summary>
     [IsoId("_eX_On22PEei3KuUgpx7Xcw")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignment5 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignment5 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment5 Assignment { get; init; } 
-    #else
-    public CaseAssignment5 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_eX_OoW2PEei3KuUgpx7Xcw")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Case5 Case { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Case5 Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case5 Case { get; init; } 
-    #else
-    public Case5 Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_eX_Oo22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

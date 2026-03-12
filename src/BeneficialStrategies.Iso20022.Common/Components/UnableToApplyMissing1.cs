@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fXkdxUgoEeaGKYpLDboHPQ")]
 [DisplayName("Unable To Apply Missing")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UnableToApplyMissing1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a UnableToApplyMissing1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public UnableToApplyMissing1( UnableToApplyMissingInformation3Code reqCode )
-    {
-        Code = reqCode;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,38 +23,18 @@ public partial record UnableToApplyMissing1
     /// </summary>
     [IsoId("_fXkdyEgoEeaGKYpLDboHPQ")]
     [DisplayName("Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cd")]
-    #endif
     [IsoXmlTag("Cd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required UnableToApplyMissingInformation3Code Code { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required UnableToApplyMissingInformation3Code Code { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UnableToApplyMissingInformation3Code Code { get; init; } 
-    #else
-    public UnableToApplyMissingInformation3Code Code { get; set; } 
-    #endif
     
     /// <summary>
     /// Further details about the missing information.
     /// </summary>
     [IsoId("_j2rbcUgqEeaGKYpLDboHPQ")]
     [DisplayName("Additional Missing Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlMssngInf")]
-    #endif
     [IsoXmlTag("AddtlMssngInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? AdditionalMissingInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalMissingInformation { get; init; } 
-    #else
-    public System.String? AdditionalMissingInformation { get; set; } 
-    #endif
     
     
     #nullable disable

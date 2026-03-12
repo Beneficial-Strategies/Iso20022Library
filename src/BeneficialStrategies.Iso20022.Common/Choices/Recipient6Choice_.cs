@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -17,24 +12,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Recipient6Choice.KeyTransport))]
     [KnownType(typeof(Recipient6Choice.KEK))]
     [KnownType(typeof(Recipient6Choice.KeyIdentifier))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(Recipient6Choice.KeyTransport),nameof(Recipient6Choice.KeyTransport))]
     [JsonDerivedType(typeof(Recipient6Choice.KEK),nameof(Recipient6Choice.KEK))]
     [JsonDerivedType(typeof(Recipient6Choice.KeyIdentifier),nameof(Recipient6Choice.KeyIdentifier))]
-    #endif
     [IsoId("__h4SMds2Eee9e6xduATmQg")]
     [DisplayName("Recipient 6 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record Recipient6Choice_
-    #else
-    public abstract partial class Recipient6Choice_
-    #endif
     {
     }
 }

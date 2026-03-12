@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCurrencyConversionAdvice message is sent by the card acceptor to inform the currency conversion service provider of the outcome of the card currency conversion.|")]
 [IsoId("_BlOYEds5Eee9e6xduATmQg")]
 [DisplayName("Acceptor Currency Conversion Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCurrencyConversionAdviceV02 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record AcceptorCurrencyConversionAdviceV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCurrencyConversionAdviceV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCurrencyConversionAdviceV02( Header36 reqHeader,AcceptorCurrencyConversionAdvice2 reqAcceptorCurrencyConversionAdvice )
-    {
-        Header = reqHeader;
-        AcceptorCurrencyConversionAdvice = reqAcceptorCurrencyConversionAdvice;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,55 +58,24 @@ public partial record AcceptorCurrencyConversionAdviceV02 : IOuterRecord
     /// </summary>
     [IsoId("_BlOYFds5Eee9e6xduATmQg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header36 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header36 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header36 Header { get; init; } 
-    #else
-    public Header36 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the outcome of the currency conversion.
     /// </summary>
     [IsoId("_BlOYF9s5Eee9e6xduATmQg")]
     [DisplayName("Acceptor Currency Conversion Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AccptrCcyConvsAdvc")]
-    #endif
     [IsoXmlTag("AccptrCcyConvsAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCurrencyConversionAdvice2 AcceptorCurrencyConversionAdvice { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCurrencyConversionAdvice2 AcceptorCurrencyConversionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCurrencyConversionAdvice2 AcceptorCurrencyConversionAdvice { get; init; } 
-    #else
-    public AcceptorCurrencyConversionAdvice2 AcceptorCurrencyConversionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_BlOYGds5Eee9e6xduATmQg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType16? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType16? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType16? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

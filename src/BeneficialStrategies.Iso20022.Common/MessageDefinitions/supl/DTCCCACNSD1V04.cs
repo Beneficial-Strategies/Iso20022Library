@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCACNSD1 message extends ISO corporate action cancellation advise (CACN) message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_lhqvQWJKEeOfOt7Y7nAPUA")]
 [DisplayName("DTCCCACNSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCACNSD1V04 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCACNSD1V04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,68 +57,32 @@ public partial record DTCCCACNSD1V04 : IOuterRecord
     /// </summary>
     [IsoId("_lhqvQ2JKEeOfOt7Y7nAPUA")]
     [DisplayName("Notification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ntfctn")]
-    #endif
     [IsoXmlTag("Ntfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionNotificationSD1? Notification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionNotificationSD1? Notification { get; init; } 
-    #else
-    public CorporateActionNotificationSD1? Notification { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to cancellation advice general information.
     /// </summary>
     [IsoId("_lhqvRWJKEeOfOt7Y7nAPUA")]
     [DisplayName("General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GnlInf")]
-    #endif
     [IsoXmlTag("GnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionGeneralInformationSD15? GeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformationSD15? GeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformationSD15? GeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as events linkage supplementary data to events to cancellation advice.
     /// </summary>
     [IsoId("_lhqvR2JKEeOfOt7Y7nAPUA")]
     [DisplayName("Events Linkage")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtsLkg")]
-    #endif
     [IsoXmlTag("EvtsLkg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionCancellationSD1? EventsLinkage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionCancellationSD1? EventsLinkage { get; init; } 
-    #else
-    public CorporateActionCancellationSD1? EventsLinkage { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as external comments to cancellation advice.
     /// </summary>
     [IsoId("_lhqvSWJKEeOfOt7Y7nAPUA")]
     [DisplayName("External Comments")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XtrnlCmnts")]
-    #endif
     [IsoXmlTag("XtrnlCmnts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionCancellationSD2? ExternalComments { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionCancellationSD2? ExternalComments { get; init; } 
-    #else
-    public CorporateActionCancellationSD2? ExternalComments { get; set; } 
-    #endif
     
     
     #nullable disable

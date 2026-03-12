@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The FundDetailedConfirmedCashForecastReport message is sent by a report provider, such as a transfer agent or a designated agent of the fund, to a report user, such as an investment manager, a fund accountant or any other interested party.|This message is used to report confirmed cash incomings and outgoings, sorted by country, institution or some other criteria defined by the user. This message can be used to report the confirmed cash movements of one or more investment funds, on one or more trade dates. These cash movements may result from, for example, redemption, subscription, switch transactions or dividends.|Usage|The FundDetailedConfirmedCashForecastReport is used to provide definitive cash movements, i.e., it is sent after the cut-off time and/or the price valuation of the fund.")]
 [IsoId("_b0VixdE-Ed-BzquC8wXy7w_1495578419")]
 [DisplayName("Fund Detailed Confirmed Cash Forecast Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FundDetailedConfirmedCashForecastReportV02 : IOuterRecord
 {
     
@@ -65,18 +54,6 @@ public partial record FundDetailedConfirmedCashForecastReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FundDetailedConfirmedCashForecastReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FundDetailedConfirmedCashForecastReportV02( FundCashForecast2 reqFundCashForecastDetails )
-    {
-        FundCashForecastDetails = reqFundCashForecastDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,87 +61,40 @@ public partial record FundDetailedConfirmedCashForecastReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_b0VixtE-Ed-BzquC8wXy7w_-1352828548")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_b0Vix9E-Ed-BzquC8wXy7w_-1583705960")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_b0ViyNE-Ed-BzquC8wXy7w_-1570778354")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the cash-in and cash-out flows for a specific trade date as a result of investment fund transactions, for example, subscriptions, redemptions or switches to/from a specified investment fund. The information provided is sorted by pre-defined criteria such as country, institution, currency or user defined criteria.
     /// </summary>
     [IsoId("_b0ViydE-Ed-BzquC8wXy7w_1567017889")]
     [DisplayName("Fund Cash Forecast Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FndCshFcstDtls")]
-    #endif
     [IsoXmlTag("FndCshFcstDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FundCashForecast2 FundCashForecastDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FundCashForecast2 FundCashForecastDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FundCashForecast2 FundCashForecastDetails { get; init; } 
-    #else
-    public FundCashForecast2 FundCashForecastDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_b0ViytE-Ed-BzquC8wXy7w_-439464245")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

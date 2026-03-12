@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L13eAa4jEemG7MmivSuE5g")]
 [DisplayName("Communication Address")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CommunicationAddress11
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,38 +23,20 @@ public partial record CommunicationAddress11
     /// </summary>
     [IsoId("_MPdpwa4jEemG7MmivSuE5g")]
     [DisplayName("Email Address")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EmailAdr")]
-    #endif
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax256Text? EmailAddress { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? EmailAddress { get; init; } 
-    #else
-    public System.String? EmailAddress { get; set; } 
-    #endif
     
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service.
     /// </summary>
     [IsoId("_MPdpw64jEemG7MmivSuE5g")]
     [DisplayName("URL Address")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="URLAdr")]
-    #endif
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax2048Text? URLAddress { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? URLAddress { get; init; } 
-    #else
-    public System.String? URLAddress { get; set; } 
-    #endif
     
     
     #nullable disable

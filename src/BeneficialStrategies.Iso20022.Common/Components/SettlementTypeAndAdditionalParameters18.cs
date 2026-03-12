@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_62NFvZNLEeWGlc8L7oPDIg")]
 [DisplayName("Settlement Type And Additional Parameters")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SettlementTypeAndAdditionalParameters18
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,90 +23,45 @@ public partial record SettlementTypeAndAdditionalParameters18
     /// </summary>
     [IsoId("_62NFv5NLEeWGlc8L7oPDIg")]
     [DisplayName("Securities Movement Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesMvmntTp")]
-    #endif
     [IsoXmlTag("SctiesMvmntTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReceiveDelivery1Code? SecuritiesMovementType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReceiveDelivery1Code? SecuritiesMovementType { get; init; } 
-    #else
-    public ReceiveDelivery1Code? SecuritiesMovementType { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies how the transaction is to be settled, for example, against payment.
     /// </summary>
     [IsoId("_62NFzZNLEeWGlc8L7oPDIg")]
     [DisplayName("Payment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pmt")]
-    #endif
     [IsoXmlTag("Pmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DeliveryReceiptType2Code? Payment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DeliveryReceiptType2Code? Payment { get; init; } 
-    #else
-    public DeliveryReceiptType2Code? Payment { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
     /// </summary>
     [IsoId("_62NF25NLEeWGlc8L7oPDIg")]
     [DisplayName("Common Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmonId")]
-    #endif
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? CommonIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CommonIdentification { get; init; } 
-    #else
-    public System.String? CommonIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
     /// </summary>
     [IsoId("_62NF45NLEeWGlc8L7oPDIg")]
     [DisplayName("Corporate Action Event Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnEvtId")]
-    #endif
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? CorporateActionEventIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CorporateActionEventIdentification { get; init; } 
-    #else
-    public System.String? CorporateActionEventIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the settlement transaction was already sent on the market and that it is only sent by an account owner to an account servicer for reconciliation purposes.
     /// </summary>
     [IsoId("_62NF65NLEeWGlc8L7oPDIg")]
     [DisplayName("Reconciliation Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnInd")]
-    #endif
     [IsoXmlTag("RcncltnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoYesNoIndicator? ReconciliationIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ReconciliationIndicator { get; init; } 
-    #else
-    public System.String? ReconciliationIndicator { get; set; } 
-    #endif
     
     
     #nullable disable

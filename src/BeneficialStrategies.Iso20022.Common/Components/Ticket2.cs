@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__KxJscWkEeuhguwJmlgagQ")]
 [DisplayName("Ticket")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Ticket2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,92 +23,47 @@ public partial record Ticket2
     /// </summary>
     [IsoId("__PZLAcWkEeuhguwJmlgagQ")]
     [DisplayName("Ticket Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TcktNb")]
-    #endif
     [IsoXmlTag("TcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? TicketNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TicketNumber { get; init; } 
-    #else
-    public System.String? TicketNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Name of the issuing ticket agent. 
     /// </summary>
     [IsoId("__PZLA8WkEeuhguwJmlgagQ")]
     [DisplayName("Ticket Issuer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TcktIssr")]
-    #endif
     [IsoXmlTag("TcktIssr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification258? TicketIssuer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification258? TicketIssuer { get; init; } 
-    #else
-    public PartyIdentification258? TicketIssuer { get; set; } 
-    #endif
     
     /// <summary>
     /// Date the ticket was issued.
     /// </summary>
     [IsoId("__PZLBcWkEeuhguwJmlgagQ")]
     [DisplayName("Ticket Issue Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TcktIsseDt")]
-    #endif
     [IsoXmlTag("TcktIsseDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODate? TicketIssueDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly? TicketIssueDate { get; init; } 
-    #else
-    public System.DateOnly? TicketIssueDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Location where ticket was issued.
     /// </summary>
     [IsoId("__PZLB8WkEeuhguwJmlgagQ")]
     [DisplayName("Ticket Issue Location")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TcktIsseLctn")]
-    #endif
     [IsoXmlTag("TcktIsseLctn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? TicketIssueLocation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TicketIssueLocation { get; init; } 
-    #else
-    public System.String? TicketIssueLocation { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of a ticket that contains additional coupons for an itinerary that contains more than four segments. 
     /// </summary>
     [IsoId("__PZLCcWkEeuhguwJmlgagQ")]
     [DisplayName("Conjunction Ticket Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CnjnctnTcktNb")]
-    #endif
     [IsoXmlTag("CnjnctnTcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? ConjunctionTicketNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ConjunctionTicketNumber { get; init; } 
-    #else
-    public System.String? ConjunctionTicketNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether or not restrictions apply to the ticket.
@@ -133,18 +72,9 @@ public partial record Ticket2
     /// </summary>
     [IsoId("__PZLC8WkEeuhguwJmlgagQ")]
     [DisplayName("Restricted Ticket Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RstrctdTcktInd")]
-    #endif
     [IsoXmlTag("RstrctdTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? RestrictedTicketIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? RestrictedTicketIndicator { get; init; } 
-    #else
-    public System.String? RestrictedTicketIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether or not the ticket is open-ended. 
@@ -153,37 +83,19 @@ public partial record Ticket2
     /// </summary>
     [IsoId("__PZLDcWkEeuhguwJmlgagQ")]
     [DisplayName("Open Ticket Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OpnTcktInd")]
-    #endif
     [IsoXmlTag("OpnTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? OpenTicketIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OpenTicketIndicator { get; init; } 
-    #else
-    public System.String? OpenTicketIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the specific restriction applicable to the ticket.
     /// </summary>
     [IsoId("__PZyEcWkEeuhguwJmlgagQ")]
     [DisplayName("Restrictions")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rstrctns")]
-    #endif
     [IsoXmlTag("Rstrctns")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? Restrictions { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Restrictions { get; init; } 
-    #else
-    public System.String? Restrictions { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether or not the ticket was exchanged (reissued or new ticket generated). 
@@ -192,73 +104,37 @@ public partial record Ticket2
     /// </summary>
     [IsoId("__PZyE8WkEeuhguwJmlgagQ")]
     [DisplayName("Exchanged Ticket Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XchgdTcktInd")]
-    #endif
     [IsoXmlTag("XchgdTcktInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? ExchangedTicketIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ExchangedTicketIndicator { get; init; } 
-    #else
-    public System.String? ExchangedTicketIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains the original ticket number that was replaced by the new ticket number. 
     /// </summary>
     [IsoId("__PZyFcWkEeuhguwJmlgagQ")]
     [DisplayName("Exchanged Ticket Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XchgdTcktNb")]
-    #endif
     [IsoXmlTag("XchgdTcktNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? ExchangedTicketNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ExchangedTicketNumber { get; init; } 
-    #else
-    public System.String? ExchangedTicketNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Ticket record locator number.
     /// </summary>
     [IsoId("__PZyF8WkEeuhguwJmlgagQ")]
     [DisplayName("Record Locator Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcrdLctrNb")]
-    #endif
     [IsoXmlTag("RcrdLctrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? RecordLocatorNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? RecordLocatorNumber { get; init; } 
-    #else
-    public System.String? RecordLocatorNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Reservation number or identifier. 
     /// </summary>
     [IsoId("__PZyGcWkEeuhguwJmlgagQ")]
     [DisplayName("Reservation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsvatn")]
-    #endif
     [IsoXmlTag("Rsvatn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ReservationDetails3? Reservation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReservationDetails3? Reservation { get; init; } 
-    #else
-    public ReservationDetails3? Reservation { get; set; } 
-    #endif
     
     
     #nullable disable

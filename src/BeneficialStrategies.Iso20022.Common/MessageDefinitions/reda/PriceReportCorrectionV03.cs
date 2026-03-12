@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"Scope|A report provider, eg, a transfer agent, fund accountant or market data provider, sends the PriceReportCorrection message to the report recipient, eg, a fund management company, transfer agent, market data provider, regulator or any other interested party to correct at least one of the prices for a financial instrument that was reported in a previously sent PriceReport message.|Usage|The PriceReportCorrection message is used to correct information reported in a previously sent PriceReport.|If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport sent.")]
 [IsoId("_ZtBOz9EvEd-BzquC8wXy7w_-770509177")]
 [DisplayName("Price Report Correction V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PriceReportCorrectionV03 : IOuterRecord
 {
     
@@ -65,20 +54,6 @@ public partial record PriceReportCorrectionV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PriceReportCorrectionV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PriceReportCorrectionV03( MessageIdentification1 reqMessageIdentification,Pagination reqMessagePagination,PriceCorrection3 reqPriceCorrectionDetails )
-    {
-        MessageIdentification = reqMessageIdentification;
-        MessagePagination = reqMessagePagination;
-        PriceCorrectionDetails = reqPriceCorrectionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,91 +61,40 @@ public partial record PriceReportCorrectionV03 : IOuterRecord
     /// </summary>
     [IsoId("_ZtBO0NEvEd-BzquC8wXy7w_1796163719")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_ZtKYsNEvEd-BzquC8wXy7w_133617453")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_ZtKYsdEvEd-BzquC8wXy7w_144699623")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Pagination of the message.
     /// </summary>
     [IsoId("_ZtKYstEvEd-BzquC8wXy7w_-1002757457")]
     [DisplayName("Message Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgPgntn")]
-    #endif
     [IsoXmlTag("MsgPgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination MessagePagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination MessagePagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination MessagePagination { get; init; } 
-    #else
-    public Pagination MessagePagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the correction of a price of a financial instrument.
     /// </summary>
     [IsoId("_ZtKYs9EvEd-BzquC8wXy7w_1468107589")]
     [DisplayName("Price Correction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PricCrrctnDtls")]
-    #endif
     [IsoXmlTag("PricCrrctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PriceCorrection3 PriceCorrectionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PriceCorrection3 PriceCorrectionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PriceCorrection3 PriceCorrectionDetails { get; init; } 
-    #else
-    public PriceCorrection3 PriceCorrectionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

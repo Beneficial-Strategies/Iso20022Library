@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cafm;
@@ -29,12 +24,6 @@ namespace BeneficialStrategies.Iso20022.cafm;
 [Description(@"The FileActionInitiation message can be initiated by any party and received by any party (acquirer, agent or issuer).||This message is used to inquire, add, change, delete or replace a file or a record.")]
 [IsoId("_LQXFYIKwEeu4svNQ5N-l6w")]
 [DisplayName("File Action Initiation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FileActionInitiationV02 : IOuterRecord
 {
     
@@ -63,19 +52,6 @@ public partial record FileActionInitiationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FileActionInitiationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FileActionInitiationV02( Header68 reqHeader,FileActionInitiation2 reqBody )
-    {
-        Header = reqHeader;
-        Body = reqBody;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,38 +59,16 @@ public partial record FileActionInitiationV02 : IOuterRecord
     /// </summary>
     [IsoId("_LQXFYoKwEeu4svNQ5N-l6w")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header68 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header68 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header68 Header { get; init; } 
-    #else
-    public Header68 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the initiation of a file action.
     /// </summary>
     [IsoId("_LQXFZIKwEeu4svNQ5N-l6w")]
     [DisplayName("Body")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Body")]
-    #endif
     [IsoXmlTag("Body")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FileActionInitiation2 Body { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FileActionInitiation2 Body { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FileActionInitiation2 Body { get; init; } 
-    #else
-    public FileActionInitiation2 Body { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
@@ -122,17 +76,8 @@ public partial record FileActionInitiationV02 : IOuterRecord
     /// </summary>
     [IsoId("_LQXFZoKwEeu4svNQ5N-l6w")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType20? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType20? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType20? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

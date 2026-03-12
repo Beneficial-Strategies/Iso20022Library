@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d3zpQUgqEeaGKYpLDboHPQ")]
 [DisplayName("Missing Or Incorrect Information")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MissingOrIncorrectInformation3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,27 +23,15 @@ public partial record MissingOrIncorrectInformation3
     /// </summary>
     [IsoId("_eA4sw0gqEeaGKYpLDboHPQ")]
     [DisplayName("Anti Money Laundering Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AMLReq")]
-    #endif
     [IsoXmlTag("AMLReq")]
     [IsoSimpleType(IsoSimpleType.AMLIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoAMLIndicator? AntiMoneyLaunderingRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AntiMoneyLaunderingRequest { get; init; } 
-    #else
-    public System.String? AntiMoneyLaunderingRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates the missing information.
     /// </summary>
     [IsoId("_eA4sxUgqEeaGKYpLDboHPQ")]
     [DisplayName("Missing Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MssngInf")]
-    #endif
     [IsoXmlTag("MssngInf")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -70,9 +42,6 @@ public partial record MissingOrIncorrectInformation3
     /// </summary>
     [IsoId("_eA4sx0gqEeaGKYpLDboHPQ")]
     [DisplayName("Incorrect Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IncrrctInf")]
-    #endif
     [IsoXmlTag("IncrrctInf")]
     [MinLength(0)]
     [MaxLength(10)]

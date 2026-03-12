@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCASTSD1 message extends ISO Corporate Action Instruction Statement Report message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_LAGyq75MEeexmbB7KsjCwA")]
 [DisplayName("DTCCCASTSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCASTSD1V02 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCASTSD1V02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,68 +57,32 @@ public partial record DTCCCASTSD1V02 : IOuterRecord
     /// </summary>
     [IsoId("_LAGyrb5MEeexmbB7KsjCwA")]
     [DisplayName("Event Balance Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtBalDtls")]
-    #endif
     [IsoXmlTag("EvtBalDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionBalanceSD5? EventBalanceDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionBalanceSD5? EventBalanceDetails { get; init; } 
-    #else
-    public CorporateActionBalanceSD5? EventBalanceDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action balance details at option level.
     /// </summary>
     [IsoId("_LAGyr75MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Balance Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlInstdBalOptnBalDtls")]
-    #endif
     [IsoXmlTag("TtlInstdBalOptnBalDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionInstructedBalanceOptionBalanceDetailsSD2? TotalInstructedBalanceOptionBalanceDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInstructedBalanceOptionBalanceDetailsSD2? TotalInstructedBalanceOptionBalanceDetails { get; init; } 
-    #else
-    public CorporateActionInstructedBalanceOptionBalanceDetailsSD2? TotalInstructedBalanceOptionBalanceDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action balance details at option instruction details level. Option level instruction details are referenced by unique instruction identification, instruction date, quantity and status of instruction.
     /// </summary>
     [IsoId("_LAGysb5MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlInstdBalOptnInstrDtls")]
-    #endif
     [IsoXmlTag("TtlInstdBalOptnInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionInstructedBalanceOptionInstructionDetailsSD2? TotalInstructedBalanceOptionInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInstructedBalanceOptionInstructionDetailsSD2? TotalInstructedBalanceOptionInstructionDetails { get; init; } 
-    #else
-    public CorporateActionInstructedBalanceOptionInstructionDetailsSD2? TotalInstructedBalanceOptionInstructionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action balance details at option protect instruction details level.
     /// </summary>
     [IsoId("_LAGys75MEeexmbB7KsjCwA")]
     [DisplayName("Total Instructed Balance Option Protect Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlInstdBalOptnPrtctInstrDtls")]
-    #endif
     [IsoXmlTag("TtlInstdBalOptnPrtctInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2? TotalInstructedBalanceOptionProtectInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2? TotalInstructedBalanceOptionProtectInstructionDetails { get; init; } 
-    #else
-    public CorporateActionInstructedBalanceOptionProtectInstructionDetailsSD2? TotalInstructedBalanceOptionProtectInstructionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

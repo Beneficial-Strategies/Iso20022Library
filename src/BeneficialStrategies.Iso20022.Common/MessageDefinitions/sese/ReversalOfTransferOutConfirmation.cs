@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|The ReversalOfTransferOutConfirmation message is sent by an executing party to the instructing party or the instructing party's designated agent. This message is used to reverse a TransferOutConfirmation that was previously sent by the instructing party.|Usage|The ReversalOfTransferOutConfirmation message is sent by an executing party to reverse a previously sent TransferOutConfirmation.|This message must contain the reference of the message to be reversed. The message may also contain all the details of the reversed message, but this is not recommended.")]
 [IsoId("_pokg9tE5Ed-BzquC8wXy7w_938886633")]
 [DisplayName("Reversal Of Transfer Out Confirmation")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReversalOfTransferOutConfirmation : IOuterRecord
 {
     
@@ -65,18 +54,6 @@ public partial record ReversalOfTransferOutConfirmation : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReversalOfTransferOutConfirmation instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReversalOfTransferOutConfirmation( AdditionalReference2 reqPreviousReference )
-    {
-        PreviousReference = reqPreviousReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,70 +61,32 @@ public partial record ReversalOfTransferOutConfirmation : IOuterRecord
     /// </summary>
     [IsoId("_pokg99E5Ed-BzquC8wXy7w_-910378416")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference2 PreviousReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference2 PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2 PreviousReference { get; init; } 
-    #else
-    public AdditionalReference2 PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_pokg-NE5Ed-BzquC8wXy7w_233612787")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? PoolReference { get; init; } 
-    #else
-    public AdditionalReference2? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_pokg-dE5Ed-BzquC8wXy7w_-541223381")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference2? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Copy of the transfer out confirmation to reverse.
     /// </summary>
     [IsoId("_pokg-tE5Ed-BzquC8wXy7w_1772260838")]
     [DisplayName("Transfer Out Confirmation To Be Reversed")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfOutConfToBeRvsd")]
-    #endif
     [IsoXmlTag("TrfOutConfToBeRvsd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransferOut1? TransferOutConfirmationToBeReversed { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransferOut1? TransferOutConfirmationToBeReversed { get; init; } 
-    #else
-    public TransferOut1? TransferOutConfirmationToBeReversed { get; set; } 
-    #endif
     
     
     #nullable disable

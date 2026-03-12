@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -44,12 +39,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer sends a SecuritiesBalanceCustodyReport to an account owner to provide, at a moment in time, the quantity and identification of the financial instruments that the account servicer holds for the account owner.||The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants, or|- an agent (sub-custodian) acting on behalf of their global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer, or|- a transfer agent acting on behalf of a fund manager or an account owner's designated agent.||Usage|The message can also include availability and the location of holdings to facilitate trading and minimise settlement issues. The message reports all information per financial instrument, that is, when a financial instrument is held at multiple places of safekeeping, the total holdings for all locations can be provided. |The message should be sent at a frequency agreed bi-laterally between the account servicer and the account owner. The message may be provided on a trade date, contractual or settlement date basis. |There may be one or more intermediary parties, for example, an intermediary or a concentrator between the account owner and account servicer.||The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
 [IsoId("_cO51odB_EeiO-eodGv5iKQ")]
 [DisplayName("Securities Balance Custody Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesBalanceCustodyReportV10 : IOuterRecord
 {
     
@@ -78,20 +67,6 @@ public partial record SecuritiesBalanceCustodyReportV10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesBalanceCustodyReportV10 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesBalanceCustodyReportV10( Pagination1 reqPagination,Statement73 reqStatementGeneralDetails,SecuritiesAccount26 reqSafekeepingAccount )
-    {
-        Pagination = reqPagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-        SafekeepingAccount = reqSafekeepingAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -99,100 +74,46 @@ public partial record SecuritiesBalanceCustodyReportV10 : IOuterRecord
     /// </summary>
     [IsoId("_cO51q9B_EeiO-eodGv5iKQ")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides general information on the report.
     /// </summary>
     [IsoId("_cO51rdB_EeiO-eodGv5iKQ")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement73 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement73 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement73 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement73 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_cO51r9B_EeiO-eodGv5iKQ")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification144? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification144? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification144? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
     /// </summary>
     [IsoId("_cO51sdB_EeiO-eodGv5iKQ")]
     [DisplayName("Account Servicer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcr")]
-    #endif
     [IsoXmlTag("AcctSvcr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification136? AccountServicer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification136? AccountServicer { get; init; } 
-    #else
-    public PartyIdentification136? AccountServicer { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_cO51s9B_EeiO-eodGv5iKQ")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount26 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount26 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount26 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount26 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the party that provides services relating to financial products to investors, for example, advice on products and placement of orders for the investment fund.
     /// </summary>
     [IsoId("_cO51tdB_EeiO-eodGv5iKQ")]
     [DisplayName("Intermediary Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrmyInf")]
-    #endif
     [IsoXmlTag("IntrmyInf")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -203,51 +124,24 @@ public partial record SecuritiesBalanceCustodyReportV10 : IOuterRecord
     /// </summary>
     [IsoId("_cO51t9B_EeiO-eodGv5iKQ")]
     [DisplayName("Balance For Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalForAcct")]
-    #endif
     [IsoXmlTag("BalForAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AggregateBalanceInformation35? BalanceForAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AggregateBalanceInformation35? BalanceForAccount { get; init; } 
-    #else
-    public AggregateBalanceInformation35? BalanceForAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Sub-account of the safekeeping or investment account.
     /// </summary>
     [IsoId("_cO51udB_EeiO-eodGv5iKQ")]
     [DisplayName("Sub Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubAcctDtls")]
-    #endif
     [IsoXmlTag("SubAcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SubAccountIdentification55? SubAccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubAccountIdentification55? SubAccountDetails { get; init; } 
-    #else
-    public SubAccountIdentification55? SubAccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Total valuation amounts provided in the base currency of the account.
     /// </summary>
     [IsoId("_cO51u9B_EeiO-eodGv5iKQ")]
     [DisplayName("Account Base Currency Total Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctBaseCcyTtlAmts")]
-    #endif
     [IsoXmlTag("AcctBaseCcyTtlAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TotalValueInPageAndStatement1? AccountBaseCurrencyTotalAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TotalValueInPageAndStatement1? AccountBaseCurrencyTotalAmounts { get; init; } 
-    #else
-    public TotalValueInPageAndStatement1? AccountBaseCurrencyTotalAmounts { get; set; } 
-    #endif
     
     
     #nullable disable

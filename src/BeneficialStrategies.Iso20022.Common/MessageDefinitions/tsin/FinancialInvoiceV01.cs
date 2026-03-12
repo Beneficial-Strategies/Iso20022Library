@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsin;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.tsin;
 [Description(@"Scope|The FinancialInvoice message is used to support the provision of financial and related services where there is a requirement to exchange invoice information.|Usage|While the prime function of the FinancialInvoice message is as a request from the seller to the buyer for payment, the FinancialInvoice message can also serve to evidence an invoice in support of a financial service such as invoice factoring, letters of credit, and bank payment obligations, to enable Web based services such as electronic bill payment and presentment, and as the basis to transfer invoice information via third parties such as e-invoicing service providers.|A consequence of the receipt of an invoice by the buyer is that it acts as a trigger for the use of related messages that are already defined in ISO 20022, notably where the information contained in the Financial Invoice enables payment for the goods or services received, and/or is provided in support of a request for invoice financing. While certain of these related messages, such as the CreditTransfer and PaymentInitiation messages, are shown in the sequence diagram they are out of scope. They are shown only to illustrate a given scenario and to place the invoice in the context of the financial banking processes that might be conducted between different financial institutions.|The use of self-billing by the buyer to the seller, where the buyer acts as the invoice issuer or the process of handling an incorrect invoice, is not in scope.")]
 [IsoId("_BU_0In1LEeCF8NjrBemJWQ_-1866907401")]
 [DisplayName("Financial Invoice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInvoiceV01 : IOuterRecord
 {
     
@@ -66,21 +55,6 @@ public partial record FinancialInvoiceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInvoiceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInvoiceV01( InvoiceHeader1 reqInvoiceHeader,TradeAgreement6 reqTradeAgreement,TradeDelivery1 reqTradeDelivery,TradeSettlement1 reqTradeSettlement )
-    {
-        InvoiceHeader = reqInvoiceHeader;
-        TradeAgreement = reqTradeAgreement;
-        TradeDelivery = reqTradeDelivery;
-        TradeSettlement = reqTradeSettlement;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,93 +62,40 @@ public partial record FinancialInvoiceV01 : IOuterRecord
     /// </summary>
     [IsoId("_BU_0I31LEeCF8NjrBemJWQ_-1198026434")]
     [DisplayName("Invoice Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InvcHdr")]
-    #endif
     [IsoXmlTag("InvcHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InvoiceHeader1 InvoiceHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InvoiceHeader1 InvoiceHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InvoiceHeader1 InvoiceHeader { get; init; } 
-    #else
-    public InvoiceHeader1 InvoiceHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Commercial information such as terms of commerce, parties, and documentation, related to the trading agreement under which this invoice is issued.
     /// </summary>
     [IsoId("_BU_0JH1LEeCF8NjrBemJWQ_-1506571269")]
     [DisplayName("Trade Agreement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradAgrmt")]
-    #endif
     [IsoXmlTag("TradAgrmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeAgreement6 TradeAgreement { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeAgreement6 TradeAgreement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeAgreement6 TradeAgreement { get; init; } 
-    #else
-    public TradeAgreement6 TradeAgreement { get; set; } 
-    #endif
     
     /// <summary>
     /// Supply chain shipping arrangements for delivery of invoiced products and/or services.
     /// </summary>
     [IsoId("_BU_0JX1LEeCF8NjrBemJWQ_-1892382855")]
     [DisplayName("Trade Delivery")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradDlvry")]
-    #endif
     [IsoXmlTag("TradDlvry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeDelivery1 TradeDelivery { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeDelivery1 TradeDelivery { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeDelivery1 TradeDelivery { get; init; } 
-    #else
-    public TradeDelivery1 TradeDelivery { get; set; } 
-    #endif
     
     /// <summary>
     /// Settlement information that enables the financial reconciliation and payment of this invoice.
     /// </summary>
     [IsoId("_BU_0Jn1LEeCF8NjrBemJWQ_1308887526")]
     [DisplayName("Trade Settlement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradSttlm")]
-    #endif
     [IsoXmlTag("TradSttlm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeSettlement1 TradeSettlement { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeSettlement1 TradeSettlement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeSettlement1 TradeSettlement { get; init; } 
-    #else
-    public TradeSettlement1 TradeSettlement { get; set; } 
-    #endif
     
     /// <summary>
     /// Unit of information in this invoice showning the related provision of products and/or services and monetary summations reported as a discrete line item.
     /// </summary>
     [IsoId("_BU_0J31LEeCF8NjrBemJWQ_-1744265877")]
     [DisplayName("Line Item")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LineItm")]
-    #endif
     [IsoXmlTag("LineItm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public LineItem10? LineItem { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public LineItem10? LineItem { get; init; } 
-    #else
-    public LineItem10? LineItem { get; set; } 
-    #endif
     
     
     #nullable disable

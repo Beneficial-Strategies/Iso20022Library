@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMPINManagementResponse message is sent by an ATM manager or its agent to the ATM to provide the information and the outcome of the cardholder PIN operation requested in the ATMPINManagementRequest.")]
 [IsoId("_52hnca4aEeW_TaP-ygI0SQ")]
 [DisplayName("ATMPIN Management Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMPINManagementResponseV02 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record ATMPINManagementResponseV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMPINManagementResponseV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMPINManagementResponseV02( Header31 reqHeader )
-    {
-        Header = reqHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,70 +57,32 @@ public partial record ATMPINManagementResponseV02 : IOuterRecord
     /// </summary>
     [IsoId("_52hnc64aEeW_TaP-ygI0SQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header31 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header31 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header31 Header { get; init; } 
-    #else
-    public Header31 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted body of the message.
     /// </summary>
     [IsoId("_52hnda4aEeW_TaP-ygI0SQ")]
     [DisplayName("Protected ATMPIN Management Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdATMPINMgmtRspn")]
-    #endif
     [IsoXmlTag("PrtctdATMPINMgmtRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedATMPINManagementResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedATMPINManagementResponse { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedATMPINManagementResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response of an ATM PIN Management from an ATM manager.
     /// </summary>
     [IsoId("_52hnd64aEeW_TaP-ygI0SQ")]
     [DisplayName("ATMPIN Management Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMPINMgmtRspn")]
-    #endif
     [IsoXmlTag("ATMPINMgmtRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMPINManagementResponse2? ATMPINManagementResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMPINManagementResponse2? ATMPINManagementResponse { get; init; } 
-    #else
-    public ATMPINManagementResponse2? ATMPINManagementResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_52hnea4aEeW_TaP-ygI0SQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

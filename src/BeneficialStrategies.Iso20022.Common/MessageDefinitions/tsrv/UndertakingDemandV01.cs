@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsrv;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 [Description(@"The UndertakingDemand message and other required documents are sent by the beneficiary to the party that issued the undertaking, either directly or via a presenting or nominated party. It is a demand for payment and may include a request to extend the undertaking expiry date. The demand itself must be contained in an enclosed file within the message or must be specified as narrative text within the message. It may contain other required documents in addition to the demand.")]
 [IsoId("_9hDVQnltEeG7BsjMvd1mEw_2036606327")]
 [DisplayName("Undertaking Demand V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UndertakingDemandV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record UndertakingDemandV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a UndertakingDemandV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public UndertakingDemandV01( Demand1 reqUndertakingDemandDetails )
-    {
-        UndertakingDemandDetails = reqUndertakingDemandDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,28 +57,14 @@ public partial record UndertakingDemandV01 : IOuterRecord
     /// </summary>
     [IsoId("_9hDVQ3ltEeG7BsjMvd1mEw_-612873100")]
     [DisplayName("Undertaking Demand Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UdrtkgDmndDtls")]
-    #endif
     [IsoXmlTag("UdrtkgDmndDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Demand1 UndertakingDemandDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Demand1 UndertakingDemandDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Demand1 UndertakingDemandDetails { get; init; } 
-    #else
-    public Demand1 UndertakingDemandDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information specific to the bank-to-bank communication.
     /// </summary>
     [IsoId("_AIs9UBVIEeKVqNjC36CBuQ")]
     [DisplayName("Bank To Bank Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BkToBkInf")]
-    #endif
     [IsoXmlTag("BkToBkInf")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
@@ -114,17 +77,8 @@ public partial record UndertakingDemandV01 : IOuterRecord
     /// </summary>
     [IsoId("_9hDVRHltEeG7BsjMvd1mEw_-415271236")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature2? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature2? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature2? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

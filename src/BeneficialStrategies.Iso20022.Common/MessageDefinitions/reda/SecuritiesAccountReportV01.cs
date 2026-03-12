@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The SecuritiesAccountReport message sent by the executing party to an instructing party to provide the details of the securities account details as requested in the query.")]
 [IsoId("_KAu-1Z2fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesAccountReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SecuritiesAccountReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesAccountReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesAccountReportV01( Pagination1 reqPagination,SecuritiesAccountOrOperationalError3Choice_ reqReportOrError )
-    {
-        Pagination = reqPagination;
-        ReportOrError = reqReportOrError;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,72 +57,32 @@ public partial record SecuritiesAccountReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_KAu-352fEem_Be8NuxvF7Q")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader3? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader3? MessageHeader { get; init; } 
-    #else
-    public MessageHeader3? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the page number of the message.
     /// </summary>
     [IsoId("_KAu-4Z2fEem_Be8NuxvF7Q")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information on report or error resulting from the originating query message.
     /// </summary>
     [IsoId("_KAu-552fEem_Be8NuxvF7Q")]
     [DisplayName("Report Or Error")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptOrErr")]
-    #endif
     [IsoXmlTag("RptOrErr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccountOrOperationalError3Choice_ ReportOrError { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccountOrOperationalError3Choice_ ReportOrError { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccountOrOperationalError3Choice_ ReportOrError { get; init; } 
-    #else
-    public SecuritiesAccountOrOperationalError3Choice_ ReportOrError { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_KAu-6Z2fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

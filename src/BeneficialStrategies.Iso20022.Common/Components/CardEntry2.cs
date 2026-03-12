@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GZZGWWREEeSXi86_neFd1g")]
 [DisplayName("Card Entry")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardEntry2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,68 +23,32 @@ public partial record CardEntry2
     /// </summary>
     [IsoId("_GmfHAWREEeSXi86_neFd1g")]
     [DisplayName("Card")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Card")]
-    #endif
     [IsoXmlTag("Card")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentCard4? Card { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentCard4? Card { get; init; } 
-    #else
-    public PaymentCard4? Card { get; set; } 
-    #endif
     
     /// <summary>
     /// Physical or logical card payment terminal containing software and hardware components.
     /// </summary>
     [IsoId("_GmfHA2REEeSXi86_neFd1g")]
     [DisplayName("POI")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="POI")]
-    #endif
     [IsoXmlTag("POI")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PointOfInteraction1? POI { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PointOfInteraction1? POI { get; init; } 
-    #else
-    public PointOfInteraction1? POI { get; set; } 
-    #endif
     
     /// <summary>
     /// Card entry details, based on card transaction aggregated data performed by the account servicer.
     /// </summary>
     [IsoId("_GmfHBWREEeSXi86_neFd1g")]
     [DisplayName("Aggregated Entry")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AggtdNtry")]
-    #endif
     [IsoXmlTag("AggtdNtry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CardAggregated1? AggregatedEntry { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardAggregated1? AggregatedEntry { get; init; } 
-    #else
-    public CardAggregated1? AggregatedEntry { get; set; } 
-    #endif
     
     /// <summary>
     /// Prepaid account for the transfer or loading of an amount of money.
     /// </summary>
     [IsoId("_VV2ecWREEeSXi86_neFd1g")]
     [DisplayName("Pre Paid Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrePdAcct")]
-    #endif
     [IsoXmlTag("PrePdAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccount24? PrePaidAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount24? PrePaidAccount { get; init; } 
-    #else
-    public CashAccount24? PrePaidAccount { get; set; } 
-    #endif
     
     
     #nullable disable

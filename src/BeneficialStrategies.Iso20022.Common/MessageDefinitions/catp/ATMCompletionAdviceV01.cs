@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMCompletionAdvice message is sent by an ATM to an acquirer or its agent to inform of the result of a transaction performed on the ATM.")]
 [IsoId("_cohY4IqmEeS4a4abTJTSSw")]
 [DisplayName("ATM Completion Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMCompletionAdviceV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record ATMCompletionAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMCompletionAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMCompletionAdviceV01( Header21 reqHeader )
-    {
-        Header = reqHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,70 +57,32 @@ public partial record ATMCompletionAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_nsI3UIqmEeS4a4abTJTSSw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header21 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header21 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header21 Header { get; init; } 
-    #else
-    public Header21 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted body of the message.
     /// </summary>
     [IsoId("_rVpUoIqmEeS4a4abTJTSSw")]
     [DisplayName("Protected ATM Completion Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdATMCmpltnAdvc")]
-    #endif
     [IsoXmlTag("PrtctdATMCmpltnAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedATMCompletionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedATMCompletionAdvice { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedATMCompletionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the completion of an operation on the ATM.
     /// </summary>
     [IsoId("_4wqIQIqmEeS4a4abTJTSSw")]
     [DisplayName("ATM Completion Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMCmpltnAdvc")]
-    #endif
     [IsoXmlTag("ATMCmpltnAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMCompletionAdvice1? ATMCompletionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMCompletionAdvice1? ATMCompletionAdvice { get; init; } 
-    #else
-    public ATMCompletionAdvice1? ATMCompletionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_8YVZkIqmEeS4a4abTJTSSw")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

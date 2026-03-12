@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.fxtr;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 [Description(@"Scope||The ForeignExchangeTradeStatusNotification message is sent by a central system to the participant to notify the current status of a foreign exchange trade in the system.||Usage||This ForeignExchangeTradeStatusNotification message will be sent at specific times agreed upon by the central settlement system and a participant in a central settlement system.")]
 [IsoId("_r8LGMZR5Eeak6e8_Fc5fQg")]
 [DisplayName("Foreign Exchange Trade Status Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ForeignExchangeTradeStatusNotificationV06 : IOuterRecord
 {
     
@@ -64,18 +53,6 @@ public partial record ForeignExchangeTradeStatusNotificationV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ForeignExchangeTradeStatusNotificationV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ForeignExchangeTradeStatusNotificationV06( TradeData15 reqTradeData )
-    {
-        TradeData = reqTradeData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,53 +60,24 @@ public partial record ForeignExchangeTradeStatusNotificationV06 : IOuterRecord
     /// </summary>
     [IsoId("_r8LGM5R5Eeak6e8_Fc5fQg")]
     [DisplayName("Trade Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradData")]
-    #endif
     [IsoXmlTag("TradData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeData15 TradeData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeData15 TradeData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeData15 TradeData { get; init; } 
-    #else
-    public TradeData15 TradeData { get; set; } 
-    #endif
     
     /// <summary>
     /// Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.
     /// </summary>
     [IsoId("_r8LGNZR5Eeak6e8_Fc5fQg")]
     [DisplayName("Regulatory Reporting")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RgltryRptg")]
-    #endif
     [IsoXmlTag("RgltryRptg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public RegulatoryReporting6? RegulatoryReporting { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RegulatoryReporting6? RegulatoryReporting { get; init; } 
-    #else
-    public RegulatoryReporting6? RegulatoryReporting { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_r8LGN5R5Eeak6e8_Fc5fQg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

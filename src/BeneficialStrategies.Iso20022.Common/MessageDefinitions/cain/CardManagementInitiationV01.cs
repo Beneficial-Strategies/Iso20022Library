@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The CardManagementInitiation message is sent by the acquirer to an issuer or agent to fulfil a request initiated by the cardholder at the point of service for an operation on the card account.")]
 [IsoId("_XXmzJVgPEeedJb6VxsnkPg")]
 [DisplayName("Card Management Initiation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardManagementInitiationV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record CardManagementInitiationV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CardManagementInitiationV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CardManagementInitiationV01( Header39 reqHeader,CardManagementInitiation1 reqBody )
-    {
-        Header = reqHeader;
-        Body = reqBody;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record CardManagementInitiationV01 : IOuterRecord
     /// </summary>
     [IsoId("_XXmzKFgPEeedJb6VxsnkPg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header39 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header39 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header39 Header { get; init; } 
-    #else
-    public Header39 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the card management initiation.
     /// </summary>
     [IsoId("_XXmzJ1gPEeedJb6VxsnkPg")]
     [DisplayName("Body")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Body")]
-    #endif
     [IsoXmlTag("Body")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardManagementInitiation1 Body { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardManagementInitiation1 Body { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardManagementInitiation1 Body { get; init; } 
-    #else
-    public CardManagementInitiation1 Body { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC
     /// </summary>
     [IsoId("_XXmzKVgPEeedJb6VxsnkPg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType20? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType20? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType20? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"The message InvoicePaymentReconciliationStatus is sent from a payee to a payer to acknowledge attribution of payments.|A payee that has received payment reconciliation information uses this message to confirm or to question common understanding of payments and instalments.|The payee may include references to the corresponding items of an InvoicePaymentReconciliationAdvice message or to other messages and may include the referenced data.|The message can carry digital signatures if required by context.")]
 [IsoId("_OTgzNTA1-AOSNFX-8224507")]
 [DisplayName("Invoice Payment Reconciliation Status V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InvoicePaymentReconciliationStatusV01 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record InvoicePaymentReconciliationStatusV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a InvoicePaymentReconciliationStatusV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public InvoicePaymentReconciliationStatusV01( BusinessLetter1 reqHeader,ReconciliationList1 reqReconciliationList )
-    {
-        Header = reqHeader;
-        ReconciliationList = reqReconciliationList;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,109 +60,51 @@ public partial record InvoicePaymentReconciliationStatusV01 : IOuterRecord
     /// </summary>
     [IsoId("_OTgzNTA2-AOSNFX-8224507")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BusinessLetter1 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BusinessLetter1 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BusinessLetter1 Header { get; init; } 
-    #else
-    public BusinessLetter1 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// List of payment reconciliation information.
     /// </summary>
     [IsoId("_OTgzNTA3-AOSNFX-822450")]
     [DisplayName("Reconciliation List")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnList")]
-    #endif
     [IsoXmlTag("RcncltnList")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReconciliationList1 ReconciliationList { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReconciliationList1 ReconciliationList { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReconciliationList1 ReconciliationList { get; init; } 
-    #else
-    public ReconciliationList1 ReconciliationList { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the number of reconciliation lists.
     /// </summary>
     [IsoId("_OTgzNTA4-AOSNFX-8224507")]
     [DisplayName("Reconciliation Count")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnCnt")]
-    #endif
     [IsoXmlTag("RcncltnCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax15NumericText? ReconciliationCount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ReconciliationCount { get; init; } 
-    #else
-    public System.String? ReconciliationCount { get; set; } 
-    #endif
     
     /// <summary>
     /// Total number of individual items in all lists.
     /// </summary>
     [IsoId("_OTgzNTA5-AOSNFX-8224507")]
     [DisplayName("Item Count")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ItmCnt")]
-    #endif
     [IsoXmlTag("ItmCnt")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax15NumericText? ItemCount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ItemCount { get; init; } 
-    #else
-    public System.String? ItemCount { get; set; } 
-    #endif
     
     /// <summary>
     /// Total of all individual amounts included in all lists, irrespective of currencies or direction.
     /// </summary>
     [IsoId("_OTgzNTEw-AOSNFX-8224507")]
     [DisplayName("Control Sum")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrlSum")]
-    #endif
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoDecimalNumber? ControlSum { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? ControlSum { get; init; } 
-    #else
-    public System.UInt64? ControlSum { get; set; } 
-    #endif
     
     /// <summary>
     /// Referenced or related business message.
     /// </summary>
     [IsoId("_OTgzNTEx-AOSNFX-8224507")]
     [DisplayName("Attached Message")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AttchdMsg")]
-    #endif
     [IsoXmlTag("AttchdMsg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public EncapsulatedBusinessMessage1? AttachedMessage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; init; } 
-    #else
-    public EncapsulatedBusinessMessage1? AttachedMessage { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|The IntraPositionMovementPostingReport is sent by an account servicer to an account owner to provide the details of increases and decreases in securities with a given status within a holding, that is, intra-position transfers, which occurred during a specified period, for all or selected securities in a specified safekeeping account which the account servicer holds for the account owner. |||The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of its participant|- an agent (sub-custodian) acting on behalf of its global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|:|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information |using the relevant elements in the Business Application Header.")]
 [IsoId("__5H8IemfEemm4qhb2yFPOw")]
 [DisplayName("Intra Position Movement Posting Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntraPositionMovementPostingReportV08 : IOuterRecord
 {
     
@@ -70,20 +59,6 @@ public partial record IntraPositionMovementPostingReportV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IntraPositionMovementPostingReportV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IntraPositionMovementPostingReportV08( Pagination1 reqPagination,Statement80 reqStatementGeneralDetails,SecuritiesAccount19 reqSafekeepingAccount )
-    {
-        Pagination = reqPagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-        SafekeepingAccount = reqSafekeepingAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -91,91 +66,40 @@ public partial record IntraPositionMovementPostingReportV08 : IOuterRecord
     /// </summary>
     [IsoId("__5H8KemfEemm4qhb2yFPOw")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to the report.
     /// </summary>
     [IsoId("__5H8K-mfEemm4qhb2yFPOw")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement80 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement80 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement80 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement80 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("__5H8LemfEemm4qhb2yFPOw")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification127Choice_? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification127Choice_? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification127Choice_? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("__5H8L-mfEemm4qhb2yFPOw")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount19 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Reporting per financial instrument.
     /// </summary>
     [IsoId("__5H8MemfEemm4qhb2yFPOw")]
     [DisplayName("Financial Instrument")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrm")]
-    #endif
     [IsoXmlTag("FinInstrm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentDetails34? FinancialInstrument { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentDetails34? FinancialInstrument { get; init; } 
-    #else
-    public FinancialInstrumentDetails34? FinancialInstrument { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3WK3YdTLEeKvJeoOII0e7w")]
 [DisplayName("Settlement Parties")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SettlementParties32
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SettlementParties32 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SettlementParties32( PartyIdentification63 reqDepository )
-    {
-        Depository = reqDepository;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,104 +23,48 @@ public partial record SettlementParties32
     /// </summary>
     [IsoId("_3tE7idTLEeKvJeoOII0e7w")]
     [DisplayName("Depository")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Dpstry")]
-    #endif
     [IsoXmlTag("Dpstry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification63 Depository { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification63 Depository { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification63 Depository { get; init; } 
-    #else
-    public PartyIdentification63 Depository { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain, interacts with the depository. This may also be known as the “local agent”, “sub-custodian”, “receiving agent” or “delivering agent”.
     /// </summary>
     [IsoId("_3tE7kdTLEeKvJeoOII0e7w")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty1")]
-    #endif
     [IsoXmlTag("Pty1")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount95? Party1 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount95? Party1 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount95? Party1 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain, interacts with party 1. This may also be known as the “investment manager” or “custodian”.
     /// </summary>
     [IsoId("_3tE7mdTLEeKvJeoOII0e7w")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty2")]
-    #endif
     [IsoXmlTag("Pty2")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount95? Party2 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount95? Party2 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount95? Party2 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain, interacts with party 2.
     /// </summary>
     [IsoId("_3tE7s9TLEeKvJeoOII0e7w")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty3")]
-    #endif
     [IsoXmlTag("Pty3")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount95? Party3 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount95? Party3 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount95? Party3 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain, interacts with party 3.
     /// </summary>
     [IsoId("_3tE7x9TLEeKvJeoOII0e7w")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty4")]
-    #endif
     [IsoXmlTag("Pty4")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount95? Party4 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount95? Party4 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount95? Party4 { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that, in a settlement chain, interacts with party 4.
     /// </summary>
     [IsoId("_3tE71dTLEeKvJeoOII0e7w")]
     [DisplayName("Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pty5")]
-    #endif
     [IsoXmlTag("Pty5")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount95? Party5 { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount95? Party5 { get; init; } 
-    #else
-    public PartyIdentificationAndAccount95? Party5 { get; set; } 
-    #endif
     
     
     #nullable disable

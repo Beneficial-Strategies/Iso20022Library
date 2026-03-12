@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"The AccountSwitchInformationResponse message is sent by the account servicer that previously held the account to the new account servicer to signal whether the account owner's account can be switched and to pass details of payment arrangements to be transferred to the new account servicer if the account may be switched. Confirmation of the balance transfer window is permitted by the old account servicer.")]
 [IsoId("_Lv0mkcP_Eemsic1bQcEtLA")]
 [DisplayName("Account Switch Information Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountSwitchInformationResponseV03 : IOuterRecord
 {
     
@@ -61,21 +50,6 @@ public partial record AccountSwitchInformationResponseV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountSwitchInformationResponseV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountSwitchInformationResponseV03( MessageIdentification1 reqMessageIdentification,AccountSwitchDetails1 reqAccountSwitchDetails,CashAccount39 reqNewAccount,CashAccount39 reqOldAccount )
-    {
-        MessageIdentification = reqMessageIdentification;
-        AccountSwitchDetails = reqAccountSwitchDetails;
-        NewAccount = reqNewAccount;
-        OldAccount = reqOldAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,127 +57,56 @@ public partial record AccountSwitchInformationResponseV03 : IOuterRecord
     /// </summary>
     [IsoId("_Lv1NocP_Eemsic1bQcEtLA")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains information about the details of the account switch.
     /// </summary>
     [IsoId("_Lv1No8P_Eemsic1bQcEtLA")]
     [DisplayName("Account Switch Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSwtchDtls")]
-    #endif
     [IsoXmlTag("AcctSwtchDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountSwitchDetails1 AccountSwitchDetails { get; init; } 
-    #else
-    public AccountSwitchDetails1 AccountSwitchDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// New account to which the switch will be made (destination account).
     /// </summary>
     [IsoId("_Lv1NpcP_Eemsic1bQcEtLA")]
     [DisplayName("New Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewAcct")]
-    #endif
     [IsoXmlTag("NewAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CashAccount39 NewAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CashAccount39 NewAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount39 NewAccount { get; init; } 
-    #else
-    public CashAccount39 NewAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Account held at the old account servicer being switched to the new account servicer.
     /// </summary>
     [IsoId("_Lv1Np8P_Eemsic1bQcEtLA")]
     [DisplayName("Old Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OdAcct")]
-    #endif
     [IsoXmlTag("OdAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CashAccount39 OldAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CashAccount39 OldAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount39 OldAccount { get; init; } 
-    #else
-    public CashAccount39 OldAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of debit payment arrangements associated with the old account. For example the payment may be a standing order, a bill payment arrangement or a future dated payment.
     /// </summary>
     [IsoId("_Lv1NqcP_Eemsic1bQcEtLA")]
     [DisplayName("Payment Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstr")]
-    #endif
     [IsoXmlTag("PmtInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentInstruction36? PaymentInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentInstruction36? PaymentInstruction { get; init; } 
-    #else
-    public PaymentInstruction36? PaymentInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of a direct debit instruction associated with the old account.
     /// </summary>
     [IsoId("_Lv1Nq8P_Eemsic1bQcEtLA")]
     [DisplayName("Direct Debit Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DrctDbtInstr")]
-    #endif
     [IsoXmlTag("DrctDbtInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DirectDebitInstructionDetails2? DirectDebitInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DirectDebitInstructionDetails2? DirectDebitInstruction { get; init; } 
-    #else
-    public DirectDebitInstructionDetails2? DirectDebitInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Lv1NrcP_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

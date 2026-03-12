@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The FinancialInstrumentReportingInvalidReferenceDataReport message is sent by the trading venue to the national competent authority to report on all records that have become invalid based on updates that have been received or that have passed the termination date original set for the instrument.")]
 [IsoId("_4LK8W0RNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Invalid Reference Data Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingInvalidReferenceDataReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record FinancialInstrumentReportingInvalidReferenceDataReportV01 
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingInvalidReferenceDataReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingInvalidReferenceDataReportV01( Period4Choice_ reqDatePeriod,SecuritiesInvalidReferenceDataReport3 reqFinancialInstruments )
-    {
-        DatePeriod = reqDatePeriod;
-        FinancialInstruments = reqFinancialInstruments;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,73 +59,33 @@ public partial record FinancialInstrumentReportingInvalidReferenceDataReportV01 
     /// </summary>
     [IsoId("_4LK8XURNEee7JdgA9zPESA")]
     [DisplayName("Date Period")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtPrd")]
-    #endif
     [IsoXmlTag("DtPrd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Period4Choice_ DatePeriod { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Period4Choice_ DatePeriod { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Period4Choice_ DatePeriod { get; init; } 
-    #else
-    public Period4Choice_ DatePeriod { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of invalid records in this message.
     /// </summary>
     [IsoId("_4LK8X0RNEee7JdgA9zPESA")]
     [DisplayName("Number Of Records")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NbOfRcrds")]
-    #endif
     [IsoXmlTag("NbOfRcrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? NumberOfRecords { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? NumberOfRecords { get; init; } 
-    #else
-    public System.UInt64? NumberOfRecords { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the details of the financial instruments.
     /// </summary>
     [IsoId("_4LK8YURNEee7JdgA9zPESA")]
     [DisplayName("Financial Instruments")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrms")]
-    #endif
     [IsoXmlTag("FinInstrms")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesInvalidReferenceDataReport3 FinancialInstruments { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesInvalidReferenceDataReport3 FinancialInstruments { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesInvalidReferenceDataReport3 FinancialInstruments { get; init; } 
-    #else
-    public SecuritiesInvalidReferenceDataReport3 FinancialInstruments { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_4LK8Y0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

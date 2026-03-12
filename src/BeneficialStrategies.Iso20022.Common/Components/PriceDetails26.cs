@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q6K9VRuyEeyhRdHRjakS2w")]
 [DisplayName("Price Details")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PriceDetails26
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record PriceDetails26
     /// </summary>
     [IsoId("_RPeeUxuyEeyhRdHRjakS2w")]
     [DisplayName("Generic Cash Price Paid Per Product")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GncCshPricPdPerPdct")]
-    #endif
     [IsoXmlTag("GncCshPricPdPerPdct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PriceFormat51Choice_? GenericCashPricePaidPerProduct { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PriceFormat51Choice_? GenericCashPricePaidPerProduct { get; init; } 
-    #else
-    public PriceFormat51Choice_? GenericCashPricePaidPerProduct { get; set; } 
-    #endif
     
     /// <summary>
     /// Generic cash price received per product by the underlying security holder either as a percentage or an amount, for example, redemption price.
     /// </summary>
     [IsoId("_RPeeVRuyEeyhRdHRjakS2w")]
     [DisplayName("Generic Cash Price Received Per Product")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GncCshPricRcvdPerPdct")]
-    #endif
     [IsoXmlTag("GncCshPricRcvdPerPdct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PriceFormat64Choice_? GenericCashPriceReceivedPerProduct { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PriceFormat64Choice_? GenericCashPriceReceivedPerProduct { get; init; } 
-    #else
-    public PriceFormat64Choice_? GenericCashPriceReceivedPerProduct { get; set; } 
-    #endif
     
     
     #nullable disable

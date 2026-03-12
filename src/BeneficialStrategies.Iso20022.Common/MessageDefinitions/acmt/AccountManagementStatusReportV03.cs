@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"Scope|An account servicer, for example, a registrar, transfer agent or custodian bank sends the AccountManagementStatusReport message to the account owner or its designated agent, for example, an investor to report on the receipt or the processing status of a previously received AccountOpeningInstruction or AccountModificationInstruction or GetAccountDetails message.|Usage|The AccountManagementStatusReport message is used to provide the processing status of a previously received AccountOpeningInstruction or of an AccountModificationInstruction message.|The AccountManagementStatusReport message is also used by an account servicer to reject an AccountOpeningInstruction or AccountModificationInstruction or GetAccountDetails message when the message is not compliant with the agreed SLA or when the account cannot be uniquely identified.|The account owner may report that the status of the instruction is either rejected, accepted, that the instruction is being processed or that the instruction has been forwarded to the next intermediary party for further processing.")]
 [IsoId("_NL03ERGzEeKVqeHljBM1MQ")]
 [DisplayName("Account Management Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountManagementStatusReportV03 : IOuterRecord
 {
     
@@ -66,19 +55,6 @@ public partial record AccountManagementStatusReportV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountManagementStatusReportV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountManagementStatusReportV03( MessageIdentification1 reqMessageIdentification,AccountManagementStatusAndReason2 reqStatusReport )
-    {
-        MessageIdentification = reqMessageIdentification;
-        StatusReport = reqStatusReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,28 +62,14 @@ public partial record AccountManagementStatusReportV03 : IOuterRecord
     /// </summary>
     [IsoId("_NL03ExGzEeKVqeHljBM1MQ")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_NL03FxGzEeKVqeHljBM1MQ")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
@@ -118,19 +80,8 @@ public partial record AccountManagementStatusReportV03 : IOuterRecord
     /// </summary>
     [IsoId("_NL03GxGzEeKVqeHljBM1MQ")]
     [DisplayName("Status Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsRpt")]
-    #endif
     [IsoXmlTag("StsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountManagementStatusAndReason2 StatusReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountManagementStatusAndReason2 StatusReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountManagementStatusAndReason2 StatusReport { get; init; } 
-    #else
-    public AccountManagementStatusAndReason2 StatusReport { get; set; } 
-    #endif
     
     
     #nullable disable

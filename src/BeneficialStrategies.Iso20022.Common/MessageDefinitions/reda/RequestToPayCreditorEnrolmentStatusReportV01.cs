@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The RequestToPayCreditorEnrolmentStatusReport message is sent from the RTP (Request To Pay) directory provider to the creditor RTP provider and optionally from the creditor RTP provider to the creditor or any of the forwarding agent to provide the status of the initial creation, amendment or cancellation request.")]
 [IsoId("_rNNBr-HzEeqbls7Gk4-ckA")]
 [DisplayName("Request To Pay Creditor Enrolment Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecor
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RequestToPayCreditorEnrolmentStatusReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RequestToPayCreditorEnrolmentStatusReportV01( EnrolmentHeader2 reqHeader,EnrolmentStatus2 reqOriginalEnrolmentAndStatus )
-    {
-        Header = reqHeader;
-        OriginalEnrolmentAndStatus = reqOriginalEnrolmentAndStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record RequestToPayCreditorEnrolmentStatusReportV01 : IOuterRecor
     /// </summary>
     [IsoId("_rNNBs-HzEeqbls7Gk4-ckA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EnrolmentHeader2 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EnrolmentHeader2 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EnrolmentHeader2 Header { get; init; } 
-    #else
-    public EnrolmentHeader2 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the creditor enrolment instruction (that is request, amendment or cancellation).
     /// </summary>
     [IsoId("_rNNBteHzEeqbls7Gk4-ckA")]
     [DisplayName("Original Enrolment And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlEnrlmntAndSts")]
-    #endif
     [IsoXmlTag("OrgnlEnrlmntAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EnrolmentStatus2 OriginalEnrolmentAndStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EnrolmentStatus2 OriginalEnrolmentAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EnrolmentStatus2 OriginalEnrolmentAndStatus { get; init; } 
-    #else
-    public EnrolmentStatus2 OriginalEnrolmentAndStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_rNNBt-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

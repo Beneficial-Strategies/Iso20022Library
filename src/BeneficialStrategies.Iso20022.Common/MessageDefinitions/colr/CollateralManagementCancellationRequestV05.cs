@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.colr;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.colr;
 [Description(@"Scope|The CollateralManagementCancellationRequest message is sent by:|- the collateral taker or its collateral manager to the collateral giver or its collateral manager,|- the collateral giver or its collateral manager to the collateral taker or its collateral manager|This message is used to request the cancellation of a previously sent MarginCallRequest message, MarginCallResponse message, CollateralProposal message, CollateralProposalResponse message, MarginCallDisputeNotification message or a CollateralSubstitutionRequest message.|The message definition is intended for use with the ISO20022 Business Application Header.|Usage|The CollateralManagementCancellationRequest message is used to request the cancellation of a collateral message. When requesting the cancellation of a message there must be a cancellation reason specified.|When the CollateralManagementCancellationRequest message is used to cancel a collateral message the reference of the original message must be specified. The rejection or acceptance of a CollateralManagementCancellationRequest message is made using a CollateralManagementCancellationStatus message.")]
 [IsoId("_sKvngQFmEeutW5-TpeYJhA")]
 [DisplayName("Collateral Management Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CollateralManagementCancellationRequestV05 : IOuterRecord
 {
     
@@ -69,20 +58,6 @@ public partial record CollateralManagementCancellationRequestV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CollateralManagementCancellationRequestV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CollateralManagementCancellationRequestV05( Reference3Choice_ reqReference,Obligation7 reqObligation,CollateralCancellationReason1 reqCancellationReason )
-    {
-        Reference = reqReference;
-        Obligation = reqObligation;
-        CancellationReason = reqCancellationReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -90,74 +65,32 @@ public partial record CollateralManagementCancellationRequestV05 : IOuterRecord
     /// </summary>
     [IsoId("_sKvniQFmEeutW5-TpeYJhA")]
     [DisplayName("Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ref")]
-    #endif
     [IsoXmlTag("Ref")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Reference3Choice_ Reference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Reference3Choice_ Reference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Reference3Choice_ Reference { get; init; } 
-    #else
-    public Reference3Choice_ Reference { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.
     /// </summary>
     [IsoId("_sKvniwFmEeutW5-TpeYJhA")]
     [DisplayName("Obligation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Oblgtn")]
-    #endif
     [IsoXmlTag("Oblgtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Obligation7 Obligation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Obligation7 Obligation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Obligation7 Obligation { get; init; } 
-    #else
-    public Obligation7 Obligation { get; set; } 
-    #endif
     
     /// <summary>
     /// It is used to detail the reason for the cancellation of a previously sent request.
     /// </summary>
     [IsoId("_sKvnjQFmEeutW5-TpeYJhA")]
     [DisplayName("Cancellation Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlRsn")]
-    #endif
     [IsoXmlTag("CxlRsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CollateralCancellationReason1 CancellationReason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CollateralCancellationReason1 CancellationReason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CollateralCancellationReason1 CancellationReason { get; init; } 
-    #else
-    public CollateralCancellationReason1 CancellationReason { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_sKvnjwFmEeutW5-TpeYJhA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The SecuritiesAccountStatusAdvice message is send by the the executing party to an instructing party to provide the status of the execution of an creation, modification or deletion of securities account reference data.||Usage: |When processing information is negative – a failure occurred in applying the changes the message accordingly also delivers information about the reason why the creation or update could not be processed. |When the processing is succesfully performed, the message includes the related securities account identification.")]
 [IsoId("_KAu-652fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesAccountStatusAdviceV01 : IOuterRecord
 {
     
@@ -65,18 +54,6 @@ public partial record SecuritiesAccountStatusAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesAccountStatusAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesAccountStatusAdviceV01( SecuritiesAccountStatus2 reqSecuritiesAccountStatus )
-    {
-        SecuritiesAccountStatus = reqSecuritiesAccountStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,53 +61,24 @@ public partial record SecuritiesAccountStatusAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_EqxEkJ5REemQg7pJhFUUYg")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader12? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader12? MessageHeader { get; init; } 
-    #else
-    public MessageHeader12? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the securities account involved in the originating message.
     /// </summary>
     [IsoId("_KAu--52fEem_Be8NuxvF7Q")]
     [DisplayName("Securities Account Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesAcctSts")]
-    #endif
     [IsoXmlTag("SctiesAcctSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccountStatus2 SecuritiesAccountStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccountStatus2 SecuritiesAccountStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccountStatus2 SecuritiesAccountStatus { get; init; } 
-    #else
-    public SecuritiesAccountStatus2 SecuritiesAccountStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_KAu-_Z2fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

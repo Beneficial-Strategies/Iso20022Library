@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria3Choice
 {
     /// <summary>
@@ -20,23 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria3Choice
     /// </summary>
     [IsoId("_GMtiU24-EeiU9cctagi5ow")]
     [DisplayName("New Criteria")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record NewCriteria : StandingOrderCriteria3Choice_
-    #else
-    public partial class NewCriteria : StandingOrderCriteria3Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        // No constructor needed for < NET8 because this type has no required members.
-        #endif
         #nullable enable
         
         /// <summary>
@@ -44,53 +22,26 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria3Choice
         /// </summary>
         [IsoId("_GWGH024-EeiU9cctagi5ow")]
         [DisplayName("New Query Name")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="NewQryNm")]
-        #endif
         [IsoXmlTag("NewQryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax35Text? NewQueryName { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? NewQueryName { get; init; } 
-        #else
-        public System.String? NewQueryName { get; set; } 
-        #endif
         
         /// <summary>
         /// Defines the criteria to be used to extract the standing order information.
         /// </summary>
         [IsoId("_GWGH1W4-EeiU9cctagi5ow")]
         [DisplayName("Search Criteria")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="SchCrit")]
-        #endif
         [IsoXmlTag("SchCrit")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public StandingOrderSearchCriteria3? SearchCriteria { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public StandingOrderSearchCriteria3? SearchCriteria { get; init; } 
-        #else
-        public StandingOrderSearchCriteria3? SearchCriteria { get; set; } 
-        #endif
         
         /// <summary>
         /// Defines the expected standing order report.
         /// </summary>
         [IsoId("_GWGH124-EeiU9cctagi5ow")]
         [DisplayName("Return Criteria")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="RtrCrit")]
-        #endif
         [IsoXmlTag("RtrCrit")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public StandingOrderReturnCriteria1? ReturnCriteria { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public StandingOrderReturnCriteria1? ReturnCriteria { get; init; } 
-        #else
-        public StandingOrderReturnCriteria1? ReturnCriteria { get; set; } 
-        #endif
         
         
         #nullable disable

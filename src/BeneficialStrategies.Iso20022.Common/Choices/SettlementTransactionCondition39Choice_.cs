@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -16,23 +11,11 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementTransactionCondition39Choice.Code))]
     [KnownType(typeof(SettlementTransactionCondition39Choice.Proprietary))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(SettlementTransactionCondition39Choice.Code),nameof(SettlementTransactionCondition39Choice.Code))]
     [JsonDerivedType(typeof(SettlementTransactionCondition39Choice.Proprietary),nameof(SettlementTransactionCondition39Choice.Proprietary))]
-    #endif
     [IsoId("_NIiaMSAdEeuyDZ-ukt4YRg")]
     [DisplayName("Settlement Transaction Condition 39 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record SettlementTransactionCondition39Choice_
-    #else
-    public abstract partial class SettlementTransactionCondition39Choice_
-    #endif
     {
     }
 }

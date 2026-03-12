@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y8Y6uyC6EeWPMvNwVtiMsA")]
 [DisplayName("Reinvestment")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Reinvestment2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Reinvestment2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Reinvestment2( FinancialInstrument51 reqFinancialInstrumentDetails,System.Decimal reqReinvestmentPercentage )
-    {
-        FinancialInstrumentDetails = reqFinancialInstrumentDetails;
-        ReinvestmentPercentage = reqReinvestmentPercentage;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,56 +23,25 @@ public partial record Reinvestment2
     /// </summary>
     [IsoId("_zarZASC6EeWPMvNwVtiMsA")]
     [DisplayName("Financial Instrument Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmDtls")]
-    #endif
     [IsoXmlTag("FinInstrmDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FinancialInstrument51 FinancialInstrumentDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FinancialInstrument51 FinancialInstrumentDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrument51 FinancialInstrumentDetails { get; init; } 
-    #else
-    public FinancialInstrument51 FinancialInstrumentDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Currency to be used for pricing the fund. This currency must be among the set of currencies in which the price may be expressed, as stated in the prospectus.
     /// </summary>
     [IsoId("_zarZAyC6EeWPMvNwVtiMsA")]
     [DisplayName("Requested NAV Currency")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqdNAVCcy")]
-    #endif
     [IsoXmlTag("ReqdNAVCcy")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyCode? RequestedNAVCurrency { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public string? RequestedNAVCurrency { get; init; } 
-    #else
-    public string? RequestedNAVCurrency { get; set; } 
-    #endif
     
     /// <summary>
     /// Percentage of the reinvestment.
     /// </summary>
     [IsoId("_zarZBSC6EeWPMvNwVtiMsA")]
     [DisplayName("Reinvestment Percentage")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RinvstmtPctg")]
-    #endif
     [IsoXmlTag("RinvstmtPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoPercentageRate ReinvestmentPercentage { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.Decimal ReinvestmentPercentage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Decimal ReinvestmentPercentage { get; init; } 
-    #else
-    public System.Decimal ReinvestmentPercentage { get; set; } 
-    #endif
     
     
     #nullable disable

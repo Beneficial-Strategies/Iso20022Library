@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.trea;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.trea;
 [Description(@"Scope|The AmendForeignExchangeOption message is sent by a participant to a central system or to a counterparty to notify the amendment of a foreign currency option contract.|Usage|The message contains a Related Reference to link it to the previously sent notification and may contain an reason for amendment.|This message is only suitable for Simple (i.e. not Barrier) Vanilla (i.e. not Binary, Digital, Notouch) Foreign Exchange Options.")]
 [IsoId("_HQD4WNE8Ed-BzquC8wXy7w_-1614590929")]
 [DisplayName("Amend Foreign Exchange Option V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AmendForeignExchangeOptionV02 : IOuterRecord
 {
     
@@ -65,21 +54,6 @@ public partial record AmendForeignExchangeOptionV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AmendForeignExchangeOptionV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AmendForeignExchangeOptionV02( TradeAgreement2 reqTradeInformation,TradePartyIdentification4 reqTradingSideIdentification,TradePartyIdentification4 reqCounterpartySideIdentification,Option3 reqOption )
-    {
-        TradeInformation = reqTradeInformation;
-        TradingSideIdentification = reqTradingSideIdentification;
-        CounterpartySideIdentification = reqCounterpartySideIdentification;
-        Option = reqOption;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,76 +61,32 @@ public partial record AmendForeignExchangeOptionV02 : IOuterRecord
     /// </summary>
     [IsoId("_HQD4WdE8Ed-BzquC8wXy7w_-277529666")]
     [DisplayName("Trade Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradInf")]
-    #endif
     [IsoXmlTag("TradInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeAgreement2 TradeInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeAgreement2 TradeInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeAgreement2 TradeInformation { get; init; } 
-    #else
-    public TradeAgreement2 TradeInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the trading side of the currency option trade which is amended.
     /// </summary>
     [IsoId("_HQD4WtE8Ed-BzquC8wXy7w_-515469288")]
     [DisplayName("Trading Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradgSdId")]
-    #endif
     [IsoXmlTag("TradgSdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradePartyIdentification4 TradingSideIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradePartyIdentification4 TradingSideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification4 TradingSideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification4 TradingSideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the counterparty of the currency option trade which is amended.
     /// </summary>
     [IsoId("_HQD4W9E8Ed-BzquC8wXy7w_296306803")]
     [DisplayName("Counterparty Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtySdId")]
-    #endif
     [IsoXmlTag("CtrPtySdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradePartyIdentification4 CounterpartySideIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradePartyIdentification4 CounterpartySideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification4 CounterpartySideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification4 CounterpartySideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the parameters of the currency option which is bought by the trading side.
     /// </summary>
     [IsoId("_HQNCQNE8Ed-BzquC8wXy7w_1463318138")]
     [DisplayName("Option")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Optn")]
-    #endif
     [IsoXmlTag("Optn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Option3 Option { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Option3 Option { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Option3 Option { get; init; } 
-    #else
-    public Option3 Option { get; set; } 
-    #endif
     
     
     #nullable disable

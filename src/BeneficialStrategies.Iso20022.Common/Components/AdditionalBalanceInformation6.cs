@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QYBcf9p-Ed-ak6NoX_4Aeg_-935871262")]
 [DisplayName("Additional Balance Information")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AdditionalBalanceInformation6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AdditionalBalanceInformation6 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AdditionalBalanceInformation6( SubBalanceType6Choice_ reqSubBalanceType,SubBalanceQuantity3Choice_ reqQuantity )
-    {
-        SubBalanceType = reqSubBalanceType;
-        Quantity = reqQuantity;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,57 +23,26 @@ public partial record AdditionalBalanceInformation6
     /// </summary>
     [IsoId("_QYLNcNp-Ed-ak6NoX_4Aeg_-1049710328")]
     [DisplayName("Sub Balance Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubBalTp")]
-    #endif
     [IsoXmlTag("SubBalTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SubBalanceType6Choice_ SubBalanceType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SubBalanceType6Choice_ SubBalanceType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubBalanceType6Choice_ SubBalanceType { get; init; } 
-    #else
-    public SubBalanceType6Choice_ SubBalanceType { get; set; } 
-    #endif
     
     /// <summary>
     /// Quantity of securities in the sub-balance.
     /// </summary>
     [IsoId("_QYLNcdp-Ed-ak6NoX_4Aeg_-1932943615")]
     [DisplayName("Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Qty")]
-    #endif
     [IsoXmlTag("Qty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SubBalanceQuantity3Choice_ Quantity { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SubBalanceQuantity3Choice_ Quantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubBalanceQuantity3Choice_ Quantity { get; init; } 
-    #else
-    public SubBalanceQuantity3Choice_ Quantity { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides additional subbalance information.
     /// </summary>
     [IsoId("_QYLNctp-Ed-ak6NoX_4Aeg_-1754824943")]
     [DisplayName("Sub Balance Additional Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubBalAddtlDtls")]
-    #endif
     [IsoXmlTag("SubBalAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? SubBalanceAdditionalDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? SubBalanceAdditionalDetails { get; init; } 
-    #else
-    public System.String? SubBalanceAdditionalDetails { get; set; } 
-    #endif
     
     
     #nullable disable

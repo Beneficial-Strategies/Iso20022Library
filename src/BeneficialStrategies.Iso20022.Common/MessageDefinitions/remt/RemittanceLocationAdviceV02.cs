@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.remt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.remt;
 [Description(@"The RemittanceLocationAdvice message allows the originator of the message to identify where the remittance advice is located for a related payment.")]
 [IsoId("_bf9SWW2PEei3KuUgpx7Xcw")]
 [DisplayName("Remittance Location Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RemittanceLocationAdviceV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record RemittanceLocationAdviceV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RemittanceLocationAdviceV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RemittanceLocationAdviceV02( GroupHeader79 reqGroupHeader,RemittanceLocation5 reqRemittanceLocation )
-    {
-        GroupHeader = reqGroupHeader;
-        RemittanceLocation = reqRemittanceLocation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record RemittanceLocationAdviceV02 : IOuterRecord
     /// </summary>
     [IsoId("_bf9SXW2PEei3KuUgpx7Xcw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader79 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader79 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader79 GroupHeader { get; init; } 
-    #else
-    public GroupHeader79 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information related to location and/or delivery of the remittance information. This information is used to enable the matching of an entry with the items that the associated payment is intended to settle.
     /// </summary>
     [IsoId("_bf9SX22PEei3KuUgpx7Xcw")]
     [DisplayName("Remittance Location")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RmtLctn")]
-    #endif
     [IsoXmlTag("RmtLctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RemittanceLocation5 RemittanceLocation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RemittanceLocation5 RemittanceLocation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RemittanceLocation5 RemittanceLocation { get; init; } 
-    #else
-    public RemittanceLocation5 RemittanceLocation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_bf9SYW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yfzO8Qz2Ee2YoLD-1vFj0g")]
 [DisplayName("Non Financial Institution Sector")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NonFinancialInstitutionSector10
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record NonFinancialInstitutionSector10
     /// </summary>
     [IsoId("_ygiOwQz2Ee2YoLD-1vFj0g")]
     [DisplayName("Sector")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sctr")]
-    #endif
     [IsoXmlTag("Sctr")]
     public ValueList<GenericIdentification175> Sector { get; init; } = new ValueList<GenericIdentification175>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _ygiOwQz2Ee2YoLD-1vFj0g
@@ -52,18 +33,9 @@ public partial record NonFinancialInstitutionSector10
     /// </summary>
     [IsoId("_ygiOxQz2Ee2YoLD-1vFj0g")]
     [DisplayName("Clearing Threshold")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrThrshld")]
-    #endif
     [IsoXmlTag("ClrThrshld")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? ClearingThreshold { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClearingThreshold { get; init; } 
-    #else
-    public System.String? ClearingThreshold { get; set; } 
-    #endif
     
     /// <summary>
     /// Directly linked to commercial activity or treasury financing: Information on whether the contract is objectively measurable as directly linked to the counterparty&apos;s commercial or treasury financing activity.
@@ -71,18 +43,9 @@ public partial record NonFinancialInstitutionSector10
     /// </summary>
     [IsoId("_ygiOxwz2Ee2YoLD-1vFj0g")]
     [DisplayName("Directly Linked Activity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DrctlyLkdActvty")]
-    #endif
     [IsoXmlTag("DrctlyLkdActvty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? DirectlyLinkedActivity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? DirectlyLinkedActivity { get; init; } 
-    #else
-    public System.String? DirectlyLinkedActivity { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the counterparty is an entity established pursuant to federal law like for example a federal authority or a government corporation.
@@ -90,18 +53,9 @@ public partial record NonFinancialInstitutionSector10
     /// </summary>
     [IsoId("_2Oz3UAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Federal Institution")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FdrlInstn")]
-    #endif
     [IsoXmlTag("FdrlInstn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? FederalInstitution { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? FederalInstitution { get; init; } 
-    #else
-    public System.String? FederalInstitution { get; set; } 
-    #endif
     
     
     #nullable disable

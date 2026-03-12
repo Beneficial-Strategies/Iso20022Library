@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferOutCancellationRequest message to the executing party, for example, a transfer agent, to request the cancellation of a previously sent TransferOutInstruction.|Usage|The TransferOutCancellationRequest message is used to request cancellation of a previously sent TransferOutInstruction. There are two ways to specify the transfer cancellation request. Either:|- the transfer reference of the original transfer is quoted, or,|- all the details of the original transfer (this includes TransferReference) are quoted but this is not recommended.|The message identification of the TransferOutInstruction message in which the original transfer was conveyed may also be quoted in PreviousReference. It is also possible to request the cancellation of a TransferOutInstruction message by quoting its message identification in PreviousReference.")]
 [IsoId("_EmP8-RgCEeKqWJINzXcn5g")]
 [DisplayName("Transfer Out Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferOutCancellationRequestV04 : IOuterRecord
 {
     
@@ -67,20 +56,6 @@ public partial record TransferOutCancellationRequestV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferOutCancellationRequestV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferOutCancellationRequestV04( MessageIdentification1 reqMessageIdentification,References11 reqReferences,Cancellation1Choice_ reqCancellation )
-    {
-        MessageIdentification = reqMessageIdentification;
-        References = reqReferences;
-        Cancellation = reqCancellation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,74 +63,32 @@ public partial record TransferOutCancellationRequestV04 : IOuterRecord
     /// </summary>
     [IsoId("_EmP9AxgCEeKqWJINzXcn5g")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the transaction identifier issued by the counterparty. Building block may also be used to reference a previous transaction, or tie a set of messages together.
     /// </summary>
     [IsoId("_EmP9BxgCEeKqWJINzXcn5g")]
     [DisplayName("References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Refs")]
-    #endif
     [IsoXmlTag("Refs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required References11 References { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required References11 References { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References11 References { get; init; } 
-    #else
-    public References11 References { get; set; } 
-    #endif
     
     /// <summary>
     /// Choice between cancellation by reference or by transfer details.
     /// </summary>
     [IsoId("_zgCr4Bg1EeK-_89we2b-bA")]
     [DisplayName("Cancellation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cxl")]
-    #endif
     [IsoXmlTag("Cxl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Cancellation1Choice_ Cancellation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Cancellation1Choice_ Cancellation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Cancellation1Choice_ Cancellation { get; init; } 
-    #else
-    public Cancellation1Choice_ Cancellation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [IsoId("_EmP9ExgCEeKqWJINzXcn5g")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation2? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation2? CopyDetails { get; init; } 
-    #else
-    public CopyInformation2? CopyDetails { get; set; } 
-    #endif
     
     
     #nullable disable

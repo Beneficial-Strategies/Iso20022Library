@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -28,7 +23,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Status22Choice.CancellationProcessingStatus))]
     [KnownType(typeof(Status22Choice.SettlementStatus))]
     [KnownType(typeof(Status22Choice.SettlementConditionModificationStatus))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(Status22Choice.AffirmationStatus),nameof(Status22Choice.AffirmationStatus))]
     [JsonDerivedType(typeof(Status22Choice.AllocationStatus),nameof(Status22Choice.AllocationStatus))]
     [JsonDerivedType(typeof(Status22Choice.RepoCallRequestStatus),nameof(Status22Choice.RepoCallRequestStatus))]
@@ -43,20 +37,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(Status22Choice.CancellationProcessingStatus),nameof(Status22Choice.CancellationProcessingStatus))]
     [JsonDerivedType(typeof(Status22Choice.SettlementStatus),nameof(Status22Choice.SettlementStatus))]
     [JsonDerivedType(typeof(Status22Choice.SettlementConditionModificationStatus),nameof(Status22Choice.SettlementConditionModificationStatus))]
-    #endif
     [IsoId("_8QboH5NLEeWGlc8L7oPDIg")]
     [DisplayName("Status 22 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record Status22Choice_
-    #else
-    public abstract partial class Status22Choice_
-    #endif
     {
     }
 }

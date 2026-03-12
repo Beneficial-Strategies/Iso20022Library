@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -43,12 +38,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The GetAccount message is sent by a member to the transaction administrator.|It is used to request information on the details of one or more accounts held at the transaction administrator, including information on the balances.|Usage|At any time during the operating hours of the system, the member can query the transaction administrator to get information about the account(s) that the transaction administrator maintains for the member.|For example, this may be necessary in order to perform the appropriate liquidity management and the funds transfers between accounts.|The member can request information about accounts through a series of criteria, corresponding to the known information stored at the transaction administrator.|The query can concern one or more specific accounts, accounts of a particular identification, or a particular type. The purpose of the query may be to obtain one or more types of balance.|The member can request information based on the following elements:|- account identification|- account type (this element can be used to refine the query when the account identification represents, for example, a group of accounts)|- balance type (if not present, all balances are requested)|- type of counterparty: bilateral or multilateral (note that, by default, a balance is multilateral unless a particular counterparty is specified)|- identification of the counterparty when a bilateral balance is requested|- balance value date (if not present in the GetAccount message, the ReturnAccount message will contain the latest available balance)|This message will be answered by a ReturnAccount message.|Additional information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.")]
 [IsoId("_jwlbZxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Get Account V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record GetAccountV07 : IOuterRecord
 {
     
@@ -77,18 +66,6 @@ public partial record GetAccountV07 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a GetAccountV07 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public GetAccountV07( MessageHeader9 reqMessageHeader )
-    {
-        MessageHeader = reqMessageHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -96,53 +73,24 @@ public partial record GetAccountV07 : IOuterRecord
     /// </summary>
     [IsoId("_jwlbaRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader9 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader9 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader9 MessageHeader { get; init; } 
-    #else
-    public MessageHeader9 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines the account query criteria.
     /// </summary>
     [IsoId("_jwlbaxbvEeiyVv5j1vf1VQ")]
     [DisplayName("Account Query Definition")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctQryDef")]
-    #endif
     [IsoXmlTag("AcctQryDef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountQuery3? AccountQueryDefinition { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountQuery3? AccountQueryDefinition { get; init; } 
-    #else
-    public AccountQuery3? AccountQueryDefinition { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jwlbbRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

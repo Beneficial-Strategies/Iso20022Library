@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The ReversalInitiation message is sent by an acquirer, an originator or an agent to an issuer to request or advise of the reversal of an authorisation by the issuer. A reversal is a partial or complete nullification of the effects of a previous authorisation, financial presentment or financial accumulation presentment that cannot be processed as instructed (for example, is undeliverable and cancelled or the acquirer timed out waiting for a response).")]
 [IsoId("_U0x9oYHOEeuwq_rv81SdXw")]
 [DisplayName("Reversal Initiation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReversalInitiationV03 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ReversalInitiationV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReversalInitiationV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReversalInitiationV03( Header62 reqHeader,ReversalInitiation2 reqBody )
-    {
-        Header = reqHeader;
-        Body = reqBody;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ReversalInitiationV03 : IOuterRecord
     /// </summary>
     [IsoId("_U0yksYHOEeuwq_rv81SdXw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header62 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header62 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header62 Header { get; init; } 
-    #else
-    public Header62 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reversal of an authorisation or financial transaction.
     /// </summary>
     [IsoId("_U0yks4HOEeuwq_rv81SdXw")]
     [DisplayName("Body")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Body")]
-    #endif
     [IsoXmlTag("Body")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReversalInitiation2 Body { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReversalInitiation2 Body { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReversalInitiation2 Body { get; init; } 
-    #else
-    public ReversalInitiation2 Body { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC
     /// </summary>
     [IsoId("_U0yktYHOEeuwq_rv81SdXw")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType20? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType20? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType20? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

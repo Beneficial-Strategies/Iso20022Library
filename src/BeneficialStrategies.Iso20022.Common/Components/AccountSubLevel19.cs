@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tyPfYVjCEea1XpTdyimpLA")]
 [DisplayName("Account Sub Level")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountSubLevel19
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AccountSubLevel19 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AccountSubLevel19( SecuritiesAccount19 reqAccountIdentification,PartyIdentification100 reqAccountOwner,PartyIdentification100 reqAccountServicer )
-    {
-        AccountIdentification = reqAccountIdentification;
-        AccountOwner = reqAccountOwner;
-        AccountServicer = reqAccountServicer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,108 +23,48 @@ public partial record AccountSubLevel19
     /// </summary>
     [IsoId("_uLiJIVjCEea1XpTdyimpLA")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount19 AccountIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount19 AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19 AccountIdentification { get; init; } 
-    #else
-    public SecuritiesAccount19 AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the sub-account.
     /// </summary>
     [IsoId("_uLiJI1jCEea1XpTdyimpLA")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification100 AccountOwner { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification100 AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification100 AccountOwner { get; init; } 
-    #else
-    public PartyIdentification100 AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that manages the sub-account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
     /// </summary>
     [IsoId("_uLiJJVjCEea1XpTdyimpLA")]
     [DisplayName("Account Servicer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcr")]
-    #endif
     [IsoXmlTag("AcctSvcr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification100 AccountServicer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification100 AccountServicer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification100 AccountServicer { get; init; } 
-    #else
-    public PartyIdentification100 AccountServicer { get; set; } 
-    #endif
     
     /// <summary>
     /// Individual or entity that is ultimately entitled to the benefit of income and rights in a financial instrument, as opposed to a nominal or legal owner.
     /// </summary>
     [IsoId("_uLiJJ1jCEea1XpTdyimpLA")]
     [DisplayName("Beneficial Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BnfclOwnr")]
-    #endif
     [IsoXmlTag("BnfclOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BeneficialOwner2? BeneficialOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BeneficialOwner2? BeneficialOwner { get; init; } 
-    #else
-    public BeneficialOwner2? BeneficialOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Report on the net position of a financial instrument on the sub-account (sub-account level 9), for a certain date. The agent, for example, a trade intermediary, may also be specified.
     /// </summary>
     [IsoId("_w2LxgVjCEea1XpTdyimpLA")]
     [DisplayName("Balance Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalDtls")]
-    #endif
     [IsoXmlTag("BalDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AggregateHoldingBalance3? BalanceDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AggregateHoldingBalance3? BalanceDetails { get; init; } 
-    #else
-    public AggregateHoldingBalance3? BalanceDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_uLiJLVjCEea1XpTdyimpLA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

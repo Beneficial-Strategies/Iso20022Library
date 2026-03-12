@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catm;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catm;
 [Description(@"The CertificateManagementResponse is sent by a terminal manager in response to a CertificateManagementRequest to provide the outcome of the requested service.")]
 [IsoId("_MtCPodtdEee9e6xduATmQg")]
 [DisplayName("Certificate Management Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CertificateManagementResponseV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record CertificateManagementResponseV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CertificateManagementResponseV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CertificateManagementResponseV02( Header29 reqHeader,CertificateManagementResponse1 reqCertificateManagementResponse )
-    {
-        Header = reqHeader;
-        CertificateManagementResponse = reqCertificateManagementResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record CertificateManagementResponseV02 : IOuterRecord
     /// </summary>
     [IsoId("_MtCPo9tdEee9e6xduATmQg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header29 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header29 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header29 Header { get; init; } 
-    #else
-    public Header29 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the result of the certificate management request.
     /// </summary>
     [IsoId("_MtCPpdtdEee9e6xduATmQg")]
     [DisplayName("Certificate Management Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CertMgmtRspn")]
-    #endif
     [IsoXmlTag("CertMgmtRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CertificateManagementResponse1 CertificateManagementResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CertificateManagementResponse1 CertificateManagementResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CertificateManagementResponse1 CertificateManagementResponse { get; init; } 
-    #else
-    public CertificateManagementResponse1 CertificateManagementResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_MtCPp9tdEee9e6xduATmQg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType18? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType18? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType18? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

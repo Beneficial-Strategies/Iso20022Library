@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QqREEZ9uEee7Qpz45yWJJw")]
 [DisplayName("Party Audit Trail Report")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PartyAuditTrailReport3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PartyAuditTrailReport3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PartyAuditTrailReport3( PartyAuditTrailOrError2Choice_ reqPartyAuditTrailOrError,SystemPartyIdentification8 reqPartyIdentification )
-    {
-        PartyAuditTrailOrError = reqPartyAuditTrailOrError;
-        PartyIdentification = reqPartyIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,55 +23,24 @@ public partial record PartyAuditTrailReport3
     /// </summary>
     [IsoId("_Qy5boZ9uEee7Qpz45yWJJw")]
     [DisplayName("Party Audit Trail Or Error")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PtyAudtTrlOrErr")]
-    #endif
     [IsoXmlTag("PtyAudtTrlOrErr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyAuditTrailOrError2Choice_ PartyAuditTrailOrError { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyAuditTrailOrError2Choice_ PartyAuditTrailOrError { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAuditTrailOrError2Choice_ PartyAuditTrailOrError { get; init; } 
-    #else
-    public PartyAuditTrailOrError2Choice_ PartyAuditTrailOrError { get; set; } 
-    #endif
     
     /// <summary>
     /// Period in dates for which the audit trail is provided.
     /// </summary>
     [IsoId("_Qy5bo59uEee7Qpz45yWJJw")]
     [DisplayName("Date Period")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtPrd")]
-    #endif
     [IsoXmlTag("DtPrd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DatePeriod3Choice_? DatePeriod { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DatePeriod3Choice_? DatePeriod { get; init; } 
-    #else
-    public DatePeriod3Choice_? DatePeriod { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the party for which the audit trail is provided.
     /// </summary>
     [IsoId("_Qy5bpZ9uEee7Qpz45yWJJw")]
     [DisplayName("Party Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PtyId")]
-    #endif
     [IsoXmlTag("PtyId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SystemPartyIdentification8 PartyIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SystemPartyIdentification8 PartyIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SystemPartyIdentification8 PartyIdentification { get; init; } 
-    #else
-    public SystemPartyIdentification8 PartyIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

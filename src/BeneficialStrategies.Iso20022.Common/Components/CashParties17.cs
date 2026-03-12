@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sg7YQQz-EeKd14R19frrfQ")]
 [DisplayName("Cash Parties")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CashParties17
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,85 +23,40 @@ public partial record CashParties17
     /// </summary>
     [IsoId("_s2ib5Qz-EeKd14R19frrfQ")]
     [DisplayName("Debtor")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Dbtr")]
-    #endif
     [IsoXmlTag("Dbtr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount39? Debtor { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount39? Debtor { get; init; } 
-    #else
-    public PartyIdentificationAndAccount39? Debtor { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution servicing an account for the debtor.
     /// </summary>
     [IsoId("_s2icAQz-EeKd14R19frrfQ")]
     [DisplayName("Debtor Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DbtrAgt")]
-    #endif
     [IsoXmlTag("DbtrAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount50? DebtorAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount50? DebtorAgent { get; init; } 
-    #else
-    public PartyIdentificationAndAccount50? DebtorAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Party to which an amount of money is due.
     /// </summary>
     [IsoId("_s2icHQz-EeKd14R19frrfQ")]
     [DisplayName("Creditor")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cdtr")]
-    #endif
     [IsoXmlTag("Cdtr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount39? Creditor { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount39? Creditor { get; init; } 
-    #else
-    public PartyIdentificationAndAccount39? Creditor { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution servicing an account for the creditor.
     /// </summary>
     [IsoId("_s2icOQz-EeKd14R19frrfQ")]
     [DisplayName("Creditor Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtrAgt")]
-    #endif
     [IsoXmlTag("CdtrAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount50? CreditorAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount50? CreditorAgent { get; init; } 
-    #else
-    public PartyIdentificationAndAccount50? CreditorAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution through which the transaction must pass to reach the account with institution.
     /// </summary>
     [IsoId("_FLJ2UAz_EeKd14R19frrfQ")]
     [DisplayName("Intermediary")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Intrmy")]
-    #endif
     [IsoXmlTag("Intrmy")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentificationAndAccount50? Intermediary { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentificationAndAccount50? Intermediary { get; init; } 
-    #else
-    public PartyIdentificationAndAccount50? Intermediary { get; set; } 
-    #endif
     
     
     #nullable disable

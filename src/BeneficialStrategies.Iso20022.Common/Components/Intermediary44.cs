@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AXBpQdLDEeiN28wlpBQScw")]
 [DisplayName("Intermediary")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Intermediary44
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Intermediary44 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Intermediary44( PartyIdentification136 reqIdentification )
-    {
-        Identification = reqIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,53 +23,24 @@ public partial record Intermediary44
     /// </summary>
     [IsoId("_AoInY9LDEeiN28wlpBQScw")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification136 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification136 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification136 Identification { get; init; } 
-    #else
-    public PartyIdentification136 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Function performed by the intermediary (investment funds).
     /// </summary>
     [IsoId("_AoInZdLDEeiN28wlpBQScw")]
     [DisplayName("Role")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Role")]
-    #endif
     [IsoXmlTag("Role")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Role6Choice_? Role { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Role6Choice_? Role { get; init; } 
-    #else
-    public Role6Choice_? Role { get; set; } 
-    #endif
     
     /// <summary>
     /// Business relationship between two entities; one entity is the account owner, the other entity is the account servicer.
     /// </summary>
     [IsoId("_AoInZ9LDEeiN28wlpBQScw")]
     [DisplayName("Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Acct")]
-    #endif
     [IsoXmlTag("Acct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Account29? Account { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Account29? Account { get; init; } 
-    #else
-    public Account29? Account { get; set; } 
-    #endif
     
     
     #nullable disable

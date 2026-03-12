@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.pacs;
 [Description(@"Scope|The FinancialInstitutionCreditTransfer message is sent by a debtor financial institution to a creditor financial institution, directly or through other agents and/or a payment clearing and settlement system.|It is used to move funds from a debtor account to a creditor, where both debtor and creditor are financial institutions.|Usage|The FinancialInstitutionCreditTransfer message is exchanged between agents and can contain one or more credit transfer instructions where debtor and creditor are both financial institutions.|The FinancialInstitutionCreditTransfer message does not allow for grouping: a CreditTransferTransactionInformation block must be present for each credit transfer transaction.|The FinancialInstitutionCreditTransfer message can be used in domestic and cross-border scenarios.")]
 [IsoId("_8IwqkWYLEeaFd-H7jvMAPA")]
 [DisplayName("Financial Institution Credit Transfer V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstitutionCreditTransferV07 : IOuterRecord
 {
     
@@ -67,19 +56,6 @@ public partial record FinancialInstitutionCreditTransferV07 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstitutionCreditTransferV07 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstitutionCreditTransferV07( GroupHeader70 reqGroupHeader,CreditTransferTransaction31 reqCreditTransferTransactionInformation )
-    {
-        GroupHeader = reqGroupHeader;
-        CreditTransferTransactionInformation = reqCreditTransferTransactionInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,55 +63,24 @@ public partial record FinancialInstitutionCreditTransferV07 : IOuterRecord
     /// </summary>
     [IsoId("_8Iwqo2YLEeaFd-H7jvMAPA")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader70 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader70 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader70 GroupHeader { get; init; } 
-    #else
-    public GroupHeader70 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements providing information specific to the individual credit transfer(s).
     /// </summary>
     [IsoId("_8IwqpWYLEeaFd-H7jvMAPA")]
     [DisplayName("Credit Transfer Transaction Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtTrfTxInf")]
-    #endif
     [IsoXmlTag("CdtTrfTxInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CreditTransferTransaction31 CreditTransferTransactionInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CreditTransferTransaction31 CreditTransferTransactionInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CreditTransferTransaction31 CreditTransferTransactionInformation { get; init; } 
-    #else
-    public CreditTransferTransaction31 CreditTransferTransactionInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_8Iwqp2YLEeaFd-H7jvMAPA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

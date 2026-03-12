@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCANOCustodianSD1 message extends ISO corporate action notification (CANO) message with DTCC validation custodian service specific data elements that are not covered by the standard message.")]
 [IsoId("_1LBwZjL3EeKU9IrkkToqcw_-1345555435")]
 [DisplayName("DTCCCANO Custodian SD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCANOCustodianSD1V03 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCANOCustodianSD1V03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,34 +57,16 @@ public partial record DTCCCANOCustodianSD1V03 : IOuterRecord
     /// </summary>
     [IsoId("_1LBwZzL3EeKU9IrkkToqcw_764430494")]
     [DisplayName("Custodian Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtdnDtls")]
-    #endif
     [IsoXmlTag("CtdnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CustodianDetailsSD1? CustodianDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CustodianDetailsSD1? CustodianDetails { get; init; } 
-    #else
-    public CustodianDetailsSD1? CustodianDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as custodian service supplementary data to option details.
     /// </summary>
     [IsoId("_1LK6UDL3EeKU9IrkkToqcw_780588655")]
     [DisplayName("Custodian Option Date Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtdnOptnDtDtls")]
-    #endif
     [IsoXmlTag("CtdnOptnDtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CustodianOptionDateDetailsSD1? CustodianOptionDateDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CustodianOptionDateDetailsSD1? CustodianOptionDateDetails { get; init; } 
-    #else
-    public CustodianOptionDateDetailsSD1? CustodianOptionDateDetails { get; set; } 
-    #endif
     
     
     #nullable disable

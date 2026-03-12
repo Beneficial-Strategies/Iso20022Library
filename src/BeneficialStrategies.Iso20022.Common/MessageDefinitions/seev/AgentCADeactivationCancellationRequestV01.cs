@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|This message is sent by an issuer (or its agent) to the CSD to request the cancellation of a previously sent corporate action deactivation instruction.|Usage|This message is used to request the cancellation of a pending deactivation instruction. The cancellation must apply to exactly the same level as the original instruction, ie to the entire CA event or to an option as per the original instruction.|This message must be sent before the deactivation execution date.|In case a corporate action or option is already deactivated, this message can not be used to reactivate the corporate action entire event or option; the notification advice message must be used to reactivate a corporate action or option.")]
 [IsoId("_TL9gGdEwEd-BzquC8wXy7w_1830397138")]
 [DisplayName("Agent CA Deactivation Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AgentCADeactivationCancellationRequestV01 : IOuterRecord
 {
     
@@ -66,20 +55,6 @@ public partial record AgentCADeactivationCancellationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AgentCADeactivationCancellationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AgentCADeactivationCancellationRequestV01( DocumentIdentification8 reqIdentification,DocumentIdentification8 reqAgentCADeactivationInstructionIdentification,CorporateActionInformation1 reqCorporateActionGeneralInformation )
-    {
-        Identification = reqIdentification;
-        AgentCADeactivationInstructionIdentification = reqAgentCADeactivationInstructionIdentification;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,74 +62,32 @@ public partial record AgentCADeactivationCancellationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_TMHRENEwEd-BzquC8wXy7w_118262265")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 Identification { get; init; } 
-    #else
-    public DocumentIdentification8 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the Agent CA Deactivation Instruction to be cancelled.
     /// </summary>
     [IsoId("_TMHREdEwEd-BzquC8wXy7w_-1093662480")]
     [DisplayName("Agent CA Deactivation Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgtCADeactvtnInstrId")]
-    #endif
     [IsoXmlTag("AgtCADeactvtnInstrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 AgentCADeactivationInstructionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 AgentCADeactivationInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 AgentCADeactivationInstructionIdentification { get; init; } 
-    #else
-    public DocumentIdentification8 AgentCADeactivationInstructionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_TMHREtEwEd-BzquC8wXy7w_-541518720")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the deactivation instruction to be cancelled.
     /// </summary>
     [IsoId("_TMHRE9EwEd-BzquC8wXy7w_-1594611016")]
     [DisplayName("Deactivation Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DeactvtnInstrDtls")]
-    #endif
     [IsoXmlTag("DeactvtnInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionDeactivationInstruction1? DeactivationInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionDeactivationInstruction1? DeactivationInstructionDetails { get; init; } 
-    #else
-    public CorporateActionDeactivationInstruction1? DeactivationInstructionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

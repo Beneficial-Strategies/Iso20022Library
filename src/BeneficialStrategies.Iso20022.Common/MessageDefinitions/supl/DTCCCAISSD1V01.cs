@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAISSD1 message extends ISO Corporate Action Instruction Status Advice message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_O4RgAJCFEeaSk9d1hvTrHg")]
 [DisplayName("DTCCCAISSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAISSD1V01 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAISSD1V01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,17 +57,8 @@ public partial record DTCCCAISSD1V01 : IOuterRecord
     /// </summary>
     [IsoId("_fNpxwZYREeaME6y1kTGR7Q")]
     [DisplayName("Securities Quantity Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesQtyDtls")]
-    #endif
     [IsoXmlTag("SctiesQtyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesQuantityDetailsSD1? SecuritiesQuantityDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesQuantityDetailsSD1? SecuritiesQuantityDetails { get; init; } 
-    #else
-    public SecuritiesQuantityDetailsSD1? SecuritiesQuantityDetails { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -39,12 +34,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|SecuritiesTransactionPendingReport  is sent by an account servicer to an account owner to provide, as at a specified time, the details of pending increases and decreases of holdings, for all or selected securities in a specified safekeeping account, for all or selected reasons why the transaction is pending. |The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of its participants|- an agent (sub-custodian) acting on behalf of its global custodian customer, or |- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The statement may also include future settlement or forward transactions which have become binding on the account owner.|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information using the relevant elements in the Business Application Header.")]
 [IsoId("_gEHdUzi8Eeydid5dcNPKvg")]
 [DisplayName("Securities Transaction Pending Report 002 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesTransactionPendingReport002V13 : IOuterRecord
 {
     
@@ -73,19 +62,6 @@ public partial record SecuritiesTransactionPendingReport002V13 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesTransactionPendingReport002V13 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesTransactionPendingReport002V13( Pagination1 reqPagination,Statement70 reqStatementGeneralDetails )
-    {
-        Pagination = reqPagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,123 +69,56 @@ public partial record SecuritiesTransactionPendingReport002V13 : IOuterRecord
     /// </summary>
     [IsoId("_gEIEZDi8Eeydid5dcNPKvg")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides general information to the report.
     /// </summary>
     [IsoId("_gEIEZji8Eeydid5dcNPKvg")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement70 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement70 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement70 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement70 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_gEIEaDi8Eeydid5dcNPKvg")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification156? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification156? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification156? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_gEIEaji8Eeydid5dcNPKvg")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount30? SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [IsoId("_gEIEbDi8Eeydid5dcNPKvg")]
     [DisplayName("Block Chain Address Or Wallet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlckChainAdrOrWllt")]
-    #endif
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; init; } 
-    #else
-    public BlockChainAddressWallet7? BlockChainAddressOrWallet { get; set; } 
-    #endif
     
     /// <summary>
     /// Status information.
     /// </summary>
     [IsoId("_gEIEbji8Eeydid5dcNPKvg")]
     [DisplayName("Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sts")]
-    #endif
     [IsoXmlTag("Sts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public StatusAndReason45? Status { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatusAndReason45? Status { get; init; } 
-    #else
-    public StatusAndReason45? Status { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the transactions reported.
     /// </summary>
     [IsoId("_gEIEcDi8Eeydid5dcNPKvg")]
     [DisplayName("Transactions")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Txs")]
-    #endif
     [IsoXmlTag("Txs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Transaction125? Transactions { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Transaction125? Transactions { get; init; } 
-    #else
-    public Transaction125? Transactions { get; set; } 
-    #endif
     
     
     #nullable disable

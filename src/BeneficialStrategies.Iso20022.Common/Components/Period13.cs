@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HDCAEckbEee7W-rN1yqPMg")]
 [DisplayName("Period")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Period13
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Period13 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Period13( DateFormat47Choice_ reqStartDate,DateFormat47Choice_ reqEndDate )
-    {
-        StartDate = reqStartDate;
-        EndDate = reqEndDate;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,38 +23,16 @@ public partial record Period13
     /// </summary>
     [IsoId("_HVVRAckbEee7W-rN1yqPMg")]
     [DisplayName("Start Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StartDt")]
-    #endif
     [IsoXmlTag("StartDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DateFormat47Choice_ StartDate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DateFormat47Choice_ StartDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat47Choice_ StartDate { get; init; } 
-    #else
-    public DateFormat47Choice_ StartDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time at which the range ends.
     /// </summary>
     [IsoId("_HVVRA8kbEee7W-rN1yqPMg")]
     [DisplayName("End Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EndDt")]
-    #endif
     [IsoXmlTag("EndDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DateFormat47Choice_ EndDate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DateFormat47Choice_ EndDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat47Choice_ EndDate { get; init; } 
-    #else
-    public DateFormat47Choice_ EndDate { get; set; } 
-    #endif
     
     
     #nullable disable

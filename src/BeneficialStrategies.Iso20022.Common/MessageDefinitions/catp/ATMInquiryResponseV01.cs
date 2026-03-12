@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMInquiryResponse message is sent by an ATM manager or its agent to the ATM to provide the information and the outcome of the verifications requested in the ATMInquiryRequest.")]
 [IsoId("_ni6eUIqwEeSIDtZ76p6McQ")]
 [DisplayName("ATM Inquiry Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMInquiryResponseV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record ATMInquiryResponseV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMInquiryResponseV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMInquiryResponseV01( Header20 reqHeader )
-    {
-        Header = reqHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,70 +57,32 @@ public partial record ATMInquiryResponseV01 : IOuterRecord
     /// </summary>
     [IsoId("_wJq4wIqwEeSIDtZ76p6McQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header20 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header20 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header20 Header { get; init; } 
-    #else
-    public Header20 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted body of the message.
     /// </summary>
     [IsoId("_9db04IqwEeSIDtZ76p6McQ")]
     [DisplayName("Protected ATM Inquiry Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdATMNqryRspn")]
-    #endif
     [IsoXmlTag("PrtctdATMNqryRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedATMInquiryResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedATMInquiryResponse { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedATMInquiryResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response of an ATM inquiry from an ATM manager.
     /// </summary>
     [IsoId("_GOZUMIqxEeSIDtZ76p6McQ")]
     [DisplayName("ATM Inquiry Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMNqryRspn")]
-    #endif
     [IsoXmlTag("ATMNqryRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMInquiryResponse1? ATMInquiryResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMInquiryResponse1? ATMInquiryResponse { get; init; } 
-    #else
-    public ATMInquiryResponse1? ATMInquiryResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_MBxBAIqxEeSIDtZ76p6McQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

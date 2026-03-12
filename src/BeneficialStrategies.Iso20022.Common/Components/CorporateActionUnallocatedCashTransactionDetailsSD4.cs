@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eaSTUZ2IEeW-bsa36JFb9A")]
 [DisplayName("Corporate Action Unallocated Cash Transaction Details SD")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionUnallocatedCashTransactionDetailsSD4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CorporateActionUnallocatedCashTransactionDetailsSD4 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CorporateActionUnallocatedCashTransactionDetailsSD4( CreditDebitCode reqCreditDebitIndicator )
-    {
-        CreditDebitIndicator = reqCreditDebitIndicator;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,106 +23,50 @@ public partial record CorporateActionUnallocatedCashTransactionDetailsSD4
     /// </summary>
     [IsoId("_expDYZ2IEeW-bsa36JFb9A")]
     [DisplayName("Credit Debit Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtDbtInd")]
-    #endif
     [IsoXmlTag("CdtDbtInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CreditDebitCode CreditDebitIndicator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CreditDebitCode CreditDebitIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CreditDebitCode CreditDebitIndicator { get; init; } 
-    #else
-    public CreditDebitCode CreditDebitIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Transaction reason.
     /// </summary>
     [IsoId("_expDaZ2IEeW-bsa36JFb9A")]
     [DisplayName("Reason Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsnCd")]
-    #endif
     [IsoXmlTag("RsnCd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DTCAdjustmentPaymentType3Code? ReasonCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DTCAdjustmentPaymentType3Code? ReasonCode { get; init; } 
-    #else
-    public DTCAdjustmentPaymentType3Code? ReasonCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Resulting cash amount concerned in this transaction.
     /// </summary>
     [IsoId("_expDcZ2IEeW-bsa36JFb9A")]
     [DisplayName("Transaction Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxAmt")]
-    #endif
     [IsoXmlTag("TxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public RestrictedFINActiveCurrencyAndAmount? TransactionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RestrictedFINActiveCurrencyAndAmount? TransactionAmount { get; init; } 
-    #else
-    public RestrictedFINActiveCurrencyAndAmount? TransactionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Reason for the unallocation.
     /// </summary>
     [IsoId("_expDeZ2IEeW-bsa36JFb9A")]
     [DisplayName("Unallocated Reason Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UallctdRsnCd")]
-    #endif
     [IsoXmlTag("UallctdRsnCd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DTCUnallocatedAdjustmentReason2Code? UnallocatedReasonCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DTCUnallocatedAdjustmentReason2Code? UnallocatedReasonCode { get; init; } 
-    #else
-    public DTCUnallocatedAdjustmentReason2Code? UnallocatedReasonCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Transaction contra participant identification when shares are distributed / delivered to / from another participant.
     /// </summary>
     [IsoId("_expDgZ2IEeW-bsa36JFb9A")]
     [DisplayName("Contra Participant Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ContraPtcptNb")]
-    #endif
     [IsoXmlTag("ContraPtcptNb")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
     [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax8Text? ContraParticipantNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ContraParticipantNumber { get; init; } 
-    #else
-    public System.String? ContraParticipantNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time at which the movement was due to take place (cash and/or securities).
     /// </summary>
     [IsoId("_expDiZ2IEeW-bsa36JFb9A")]
     [DisplayName("Earliest Payment Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EarlstPmtDt")]
-    #endif
     [IsoXmlTag("EarlstPmtDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat28Choice_? EarliestPaymentDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat28Choice_? EarliestPaymentDate { get; init; } 
-    #else
-    public DateFormat28Choice_? EarliestPaymentDate { get; set; } 
-    #endif
     
     
     #nullable disable

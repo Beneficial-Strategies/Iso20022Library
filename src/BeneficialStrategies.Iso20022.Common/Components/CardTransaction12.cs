@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xhplsXvFEeSKFIcWw3l4Yw")]
 [DisplayName("Card Transaction")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardTransaction12
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CardTransaction12 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CardTransaction12( CardServiceType2Code reqNetworkManagementType,ResponseType2 reqTransactionResponse )
-    {
-        NetworkManagementType = reqNetworkManagementType;
-        TransactionResponse = reqTransactionResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,92 +23,43 @@ public partial record CardTransaction12
     /// </summary>
     [IsoId("_xzrw4XvFEeSKFIcWw3l4Yw")]
     [DisplayName("Network Management Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtwkMgmtTp")]
-    #endif
     [IsoXmlTag("NtwkMgmtTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardServiceType2Code NetworkManagementType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardServiceType2Code NetworkManagementType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardServiceType2Code NetworkManagementType { get; init; } 
-    #else
-    public CardServiceType2Code NetworkManagementType { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time of the transaction.
     /// </summary>
     [IsoId("_FRBTMIShEeScnfYByhaIWA")]
     [DisplayName("Initiator Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InitrDtTm")]
-    #endif
     [IsoXmlTag("InitrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODateTime? InitiatorDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime? InitiatorDateTime { get; init; } 
-    #else
-    public System.DateTime? InitiatorDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of messages in the store and forward queue.
     /// </summary>
     [IsoId("_xzrw43vFEeSKFIcWw3l4Yw")]
     [DisplayName("Number Of Messages")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NbOfMsgs")]
-    #endif
     [IsoXmlTag("NbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? NumberOfMessages { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? NumberOfMessages { get; init; } 
-    #else
-    public System.UInt64? NumberOfMessages { get; set; } 
-    #endif
     
     /// <summary>
     /// Maximum number of messages in the store and forward queue.
     /// </summary>
     [IsoId("_xzrw5XvFEeSKFIcWw3l4Yw")]
     [DisplayName("Maximum Number Of Messages")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MaxNbOfMsgs")]
-    #endif
     [IsoXmlTag("MaxNbOfMsgs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? MaximumNumberOfMessages { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? MaximumNumberOfMessages { get; init; } 
-    #else
-    public System.UInt64? MaximumNumberOfMessages { get; set; } 
-    #endif
     
     /// <summary>
     /// Response to the network management request.
     /// </summary>
     [IsoId("_GQXQcHvGEeSKFIcWw3l4Yw")]
     [DisplayName("Transaction Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxRspn")]
-    #endif
     [IsoXmlTag("TxRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ResponseType2 TransactionResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ResponseType2 TransactionResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ResponseType2 TransactionResponse { get; init; } 
-    #else
-    public ResponseType2 TransactionResponse { get; set; } 
-    #endif
     
     
     #nullable disable

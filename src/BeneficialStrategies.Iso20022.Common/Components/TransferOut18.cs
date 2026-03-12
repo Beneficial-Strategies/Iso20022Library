@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A3mRISPwEeWQjryFgN2ITg")]
 [DisplayName("Transfer Out")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferOut18
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,28 +23,16 @@ public partial record TransferOut18
     /// </summary>
     [IsoId("_BTuMYSPwEeWQjryFgN2ITg")]
     [DisplayName("Cancellation Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlRef")]
-    #endif
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CancellationReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CancellationReference { get; init; } 
-    #else
-    public System.String? CancellationReference { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_BTuMYyPwEeWQjryFgN2ITg")]
     [DisplayName("Transfer Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfDtls")]
-    #endif
     [IsoXmlTag("TrfDtls")]
     public ValueList<Transfer30> TransferDetails { get; init; } = new ValueList<Transfer30>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _BTuMYyPwEeWQjryFgN2ITg

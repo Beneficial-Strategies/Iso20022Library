@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MPdpxa4jEemG7MmivSuE5g")]
 [DisplayName("Vote Methods")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record VoteMethods3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record VoteMethods3
     /// </summary>
     [IsoId("_Mm0Z064jEemG7MmivSuE5g")]
     [DisplayName("Vote Through Network")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VoteThrghNtwk")]
-    #endif
     [IsoXmlTag("VoteThrghNtwk")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     [MinLength(0)]
@@ -53,9 +34,6 @@ public partial record VoteMethods3
     /// </summary>
     [IsoId("_Mm0Z1a4jEemG7MmivSuE5g")]
     [DisplayName("Vote By Mail")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VoteByMail")]
-    #endif
     [IsoXmlTag("VoteByMail")]
     [MinLength(0)]
     [MaxLength(5)]
@@ -66,9 +44,6 @@ public partial record VoteMethods3
     /// </summary>
     [IsoId("_Mm0Z164jEemG7MmivSuE5g")]
     [DisplayName("Electronic Vote")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ElctrncVote")]
-    #endif
     [IsoXmlTag("ElctrncVote")]
     [MinLength(0)]
     [MaxLength(5)]
@@ -79,9 +54,6 @@ public partial record VoteMethods3
     /// </summary>
     [IsoId("_Mm0Z2a4jEemG7MmivSuE5g")]
     [DisplayName("Vote By Telephone")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VoteByTel")]
-    #endif
     [IsoXmlTag("VoteByTel")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]

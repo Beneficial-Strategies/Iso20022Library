@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The SecuritiesAccountDeletionRequest message is sent by an instructing party to the executing party to request for the deletion of a securities account from the securities account reference data defined in the system of the executing party.||Usage: |It aims at instructing the deletion of an existing securities account providing securities account identification.|The result of the deletion is provided through a SecuritiesAccountStatusAdvice message.")]
 [IsoId("_KAu-m52fEem_Be8NuxvF7Q")]
 [DisplayName("Securities Account Deletion Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesAccountDeletionRequestV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record SecuritiesAccountDeletionRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesAccountDeletionRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesAccountDeletionRequestV01( SecuritiesAccount19 reqAccountIdentification )
-    {
-        AccountIdentification = reqAccountIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,53 +57,24 @@ public partial record SecuritiesAccountDeletionRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_tpug8J5HEemQg7pJhFUUYg")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader1? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1? MessageHeader { get; init; } 
-    #else
-    public MessageHeader1? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the securities account to be deleted from the executing party system.
     /// </summary>
     [IsoId("_KAu-qZ2fEem_Be8NuxvF7Q")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount19 AccountIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount19 AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19 AccountIdentification { get; init; } 
-    #else
-    public SecuritiesAccount19 AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_KAu-q52fEem_Be8NuxvF7Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YhyLATAOEeOqioR9srQH1g")]
 [DisplayName("Card Payment Context")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardPaymentContext5
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CardPaymentContext5 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CardPaymentContext5( PaymentContext5 reqPaymentContext )
-    {
-        PaymentContext = reqPaymentContext;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,36 +23,16 @@ public partial record CardPaymentContext5
     /// </summary>
     [IsoId("_Yx2AQTAOEeOqioR9srQH1g")]
     [DisplayName("Payment Context")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtCntxt")]
-    #endif
     [IsoXmlTag("PmtCntxt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PaymentContext5 PaymentContext { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PaymentContext5 PaymentContext { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentContext5 PaymentContext { get; init; } 
-    #else
-    public PaymentContext5 PaymentContext { get; set; } 
-    #endif
     
     /// <summary>
     /// Context of the sale involving the card payment transaction.
     /// </summary>
     [IsoId("_Yx2AQzAOEeOqioR9srQH1g")]
     [DisplayName("Sale Context")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SaleCntxt")]
-    #endif
     [IsoXmlTag("SaleCntxt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SaleContext1? SaleContext { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SaleContext1? SaleContext { get; init; } 
-    #else
-    public SaleContext1? SaleContext { get; set; } 
-    #endif
     
     
     #nullable disable

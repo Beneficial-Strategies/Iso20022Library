@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6QGNoJqlEeGSON8vddiWzQ_173630706")]
 [DisplayName("Billing Method")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record BillingMethod3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a BillingMethod3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public BillingMethod3( AmountAndDirection34 reqServiceTaxPriceAmount )
-    {
-        ServiceTaxPriceAmount = reqServiceTaxPriceAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,19 +23,8 @@ public partial record BillingMethod3
     /// </summary>
     [IsoId("_6QGNoZqlEeGSON8vddiWzQ_-823441647")]
     [DisplayName("Service Tax Price Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SvcTaxPricAmt")]
-    #endif
     [IsoXmlTag("SvcTaxPricAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AmountAndDirection34 ServiceTaxPriceAmount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AmountAndDirection34 ServiceTaxPriceAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndDirection34 ServiceTaxPriceAmount { get; init; } 
-    #else
-    public AmountAndDirection34 ServiceTaxPriceAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides for the specific tax identification within the same tax region. 
@@ -66,9 +32,6 @@ public partial record BillingMethod3
     /// </summary>
     [IsoId("_6QGNopqlEeGSON8vddiWzQ_480308590")]
     [DisplayName("Tax Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxId")]
-    #endif
     [IsoXmlTag("TaxId")]
     [MinLength(1)]
     [MaxLength(3)]

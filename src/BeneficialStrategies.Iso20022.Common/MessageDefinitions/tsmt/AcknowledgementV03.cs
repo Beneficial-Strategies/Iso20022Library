@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The Acknowledgement message is sent by the matching application to the party from which it received a message.|This message is used to acknowledge the receipt of a message by the matching application.|Usage|The Acknowledgement message can be sent to a party from which the matching application received a message to acknowledge the receipt of that message. The message is sent when the matching application does not send any other message in response to a received message.")]
 [IsoId("_hJ9OiNE8Ed-BzquC8wXy7w_-2019493432")]
 [DisplayName("Acknowledgement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcknowledgementV03 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record AcknowledgementV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcknowledgementV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcknowledgementV03( MessageIdentification1 reqAcknowledgementIdentification,MessageIdentification1 reqAcknowledgedMessageReference )
-    {
-        AcknowledgementIdentification = reqAcknowledgementIdentification;
-        AcknowledgedMessageReference = reqAcknowledgedMessageReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,79 +61,38 @@ public partial record AcknowledgementV03 : IOuterRecord
     /// </summary>
     [IsoId("_hJ9OidE8Ed-BzquC8wXy7w_-2019493414")]
     [DisplayName("Acknowledgement Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AckId")]
-    #endif
     [IsoXmlTag("AckId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 AcknowledgementIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 AcknowledgementIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 AcknowledgementIdentification { get; init; } 
-    #else
-    public MessageIdentification1 AcknowledgementIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.
     /// </summary>
     [IsoId("_hKG_gNE8Ed-BzquC8wXy7w_-2019492484")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SimpleIdentificationInformation? TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation? TransactionIdentification { get; init; } 
-    #else
-    public SimpleIdentificationInformation? TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned by the matching application to the baseline when it is established.
     /// </summary>
     [IsoId("_hKG_gdE8Ed-BzquC8wXy7w_-2019493025")]
     [DisplayName("Established Baseline Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EstblishdBaselnId")]
-    #endif
     [IsoXmlTag("EstblishdBaselnId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DocumentIdentification3? EstablishedBaselineIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification3? EstablishedBaselineIdentification { get; init; } 
-    #else
-    public DocumentIdentification3? EstablishedBaselineIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the status of the transaction by means of a code.
     /// </summary>
     [IsoId("_hKG_gtE8Ed-BzquC8wXy7w_-2019492904")]
     [DisplayName("Transaction Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxSts")]
-    #endif
     [IsoXmlTag("TxSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionStatus4? TransactionStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionStatus4? TransactionStatus { get; init; } 
-    #else
-    public TransactionStatus4? TransactionStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the transaction for the financial institution that is the sender of the acknowledged message.
     /// </summary>
     [IsoId("_hKG_g9E8Ed-BzquC8wXy7w_-2019492381")]
     [DisplayName("User Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UsrTxRef")]
-    #endif
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
@@ -168,36 +103,16 @@ public partial record AcknowledgementV03 : IOuterRecord
     /// </summary>
     [IsoId("_hKG_hNE8Ed-BzquC8wXy7w_-2019493336")]
     [DisplayName("Acknowledged Message Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AckdMsgRef")]
-    #endif
     [IsoXmlTag("AckdMsgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 AcknowledgedMessageReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 AcknowledgedMessageReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 AcknowledgedMessageReference { get; init; } 
-    #else
-    public MessageIdentification1 AcknowledgedMessageReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Information on the next processing step required.
     /// </summary>
     [IsoId("_hKG_hdE8Ed-BzquC8wXy7w_-2019492579")]
     [DisplayName("Request For Action")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqForActn")]
-    #endif
     [IsoXmlTag("ReqForActn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PendingActivity2? RequestForAction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PendingActivity2? RequestForAction { get; init; } 
-    #else
-    public PendingActivity2? RequestForAction { get; set; } 
-    #endif
     
     
     #nullable disable

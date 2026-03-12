@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CShKUa2BEeWMg5rOByfExw")]
 [DisplayName("Action")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Action7
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Action7 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Action7( ActionType6Code reqActionType )
-    {
-        ActionType = reqActionType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,53 +23,24 @@ public partial record Action7
     /// </summary>
     [IsoId("_Cd_aga2BEeWMg5rOByfExw")]
     [DisplayName("Action Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ActnTp")]
-    #endif
     [IsoXmlTag("ActnTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActionType6Code ActionType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActionType6Code ActionType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActionType6Code ActionType { get; init; } 
-    #else
-    public ActionType6Code ActionType { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to display, print or log.
     /// </summary>
     [IsoId("_Cd_ag62BEeWMg5rOByfExw")]
     [DisplayName("Message To Present")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgToPres")]
-    #endif
     [IsoXmlTag("MsgToPres")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActionMessage4? MessageToPresent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActionMessage4? MessageToPresent { get; init; } 
-    #else
-    public ActionMessage4? MessageToPresent { get; set; } 
-    #endif
     
     /// <summary>
     /// Message to send before the completion of the transaction.
     /// </summary>
     [IsoId("_Cd_aha2BEeWMg5rOByfExw")]
     [DisplayName("Request To Perform")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqToPrfrm")]
-    #endif
     [IsoXmlTag("ReqToPrfrm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageFunction11Code? RequestToPerform { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageFunction11Code? RequestToPerform { get; init; } 
-    #else
-    public MessageFunction11Code? RequestToPerform { get; set; } 
-    #endif
     
     
     #nullable disable

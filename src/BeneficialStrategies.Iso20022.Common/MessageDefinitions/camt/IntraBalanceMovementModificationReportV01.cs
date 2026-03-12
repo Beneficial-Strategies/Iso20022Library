@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"The IntraBalanceMovementModificationReport message is sent from a settlement infrastructure to an account owner/requestor to provide full details or current status values of the intra-balance movement modification request(s), as defined within the query. ||The message may also be used to: |- re-send a message previously sent (the sub-function of the message is ""Duplicate"") |- provide a third party with a copy of a message for information (the sub-function of the message is ""Copy"") |- re-send to a third party a copy of a message for information (the sub-function of the message is ""Copy Duplicate"").")]
 [IsoId("_DLtK2TncEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement Modification Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntraBalanceMovementModificationReportV01 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record IntraBalanceMovementModificationReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IntraBalanceMovementModificationReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IntraBalanceMovementModificationReportV01( Pagination1 reqPagination,IntraBalanceReport5 reqReportGeneralDetails )
-    {
-        Pagination = reqPagination;
-        ReportGeneralDetails = reqReportGeneralDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,89 +60,40 @@ public partial record IntraBalanceMovementModificationReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_DLtK6TncEem7JZMuWtwtsg")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DocumentIdentification51? Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification51? Identification { get; init; } 
-    #else
-    public DocumentIdentification51? Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Pagination of the message.
     /// </summary>
     [IsoId("_DLtK6zncEem7JZMuWtwtsg")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// General characteristics related to the report information.
     /// </summary>
     [IsoId("_DLtK7TncEem7JZMuWtwtsg")]
     [DisplayName("Report General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptGnlDtls")]
-    #endif
     [IsoXmlTag("RptGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IntraBalanceReport5 ReportGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IntraBalanceReport5 ReportGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IntraBalanceReport5 ReportGeneralDetails { get; init; } 
-    #else
-    public IntraBalanceReport5 ReportGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information on report or error resulting from the originating query message.
     /// </summary>
     [IsoId("_DLtK7zncEem7JZMuWtwtsg")]
     [DisplayName("Report Or Error")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptOrErr")]
-    #endif
     [IsoXmlTag("RptOrErr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IntraBalanceOrOperationalError8Choice_? ReportOrError { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IntraBalanceOrOperationalError8Choice_? ReportOrError { get; init; } 
-    #else
-    public IntraBalanceOrOperationalError8Choice_? ReportOrError { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_DLtK8TncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

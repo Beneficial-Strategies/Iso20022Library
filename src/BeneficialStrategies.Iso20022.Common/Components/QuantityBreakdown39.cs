@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5W4BE5NLEeWGlc8L7oPDIg")]
 [DisplayName("Quantity Breakdown")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record QuantityBreakdown39
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,136 +23,64 @@ public partial record QuantityBreakdown39
     /// </summary>
     [IsoId("_5W4noZNLEeWGlc8L7oPDIg")]
     [DisplayName("Lot Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotNb")]
-    #endif
     [IsoXmlTag("LotNb")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification39? LotNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification39? LotNumber { get; init; } 
-    #else
-    public GenericIdentification39? LotNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Quantity of financial instruments that is part of the lot described.
     /// </summary>
     [IsoId("_5W4nqZNLEeWGlc8L7oPDIg")]
     [DisplayName("Lot Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotQty")]
-    #endif
     [IsoXmlTag("LotQty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Balance11? LotQuantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Balance11? LotQuantity { get; init; } 
-    #else
-    public Balance11? LotQuantity { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time at which the lot was purchased.
     /// </summary>
     [IsoId("_5W4nsZNLEeWGlc8L7oPDIg")]
     [DisplayName("Lot Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotDtTm")]
-    #endif
     [IsoXmlTag("LotDtTm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateAndDateTimeChoice_? LotDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateAndDateTimeChoice_? LotDateTime { get; init; } 
-    #else
-    public DateAndDateTimeChoice_? LotDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// Price at which the lot was purchased.
     /// </summary>
     [IsoId("_5W4nuZNLEeWGlc8L7oPDIg")]
     [DisplayName("Lot Price")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotPric")]
-    #endif
     [IsoXmlTag("LotPric")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Price3? LotPrice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Price3? LotPrice { get; init; } 
-    #else
-    public Price3? LotPrice { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the type of price and information about the price.
     /// </summary>
     [IsoId("_5W4nwZNLEeWGlc8L7oPDIg")]
     [DisplayName("Type Of Price")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TpOfPric")]
-    #endif
     [IsoXmlTag("TpOfPric")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TypeOfPrice32Choice_? TypeOfPrice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TypeOfPrice32Choice_? TypeOfPrice { get; init; } 
-    #else
-    public TypeOfPrice32Choice_? TypeOfPrice { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation amounts for the lot provided in the base currency of the account.
     /// </summary>
     [IsoId("_5W4nyZNLEeWGlc8L7oPDIg")]
     [DisplayName("Account Base Currency Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctBaseCcyAmts")]
-    #endif
     [IsoXmlTag("AcctBaseCcyAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BalanceAmounts6? AccountBaseCurrencyAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceAmounts6? AccountBaseCurrencyAmounts { get; init; } 
-    #else
-    public BalanceAmounts6? AccountBaseCurrencyAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation amounts for the lot provided in the currency of the financial instrument.
     /// </summary>
     [IsoId("_5W4n0ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Instrument Currency Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InstrmCcyAmts")]
-    #endif
     [IsoXmlTag("InstrmCcyAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BalanceAmounts6? InstrumentCurrencyAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceAmounts6? InstrumentCurrencyAmounts { get; init; } 
-    #else
-    public BalanceAmounts6? InstrumentCurrencyAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation amounts for the lot provided in another currency than the base currency of the account.
     /// </summary>
     [IsoId("_5W4n2ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Alternate Reporting Currency Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AltrnRptgCcyAmts")]
-    #endif
     [IsoXmlTag("AltrnRptgCcyAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BalanceAmounts6? AlternateReportingCurrencyAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceAmounts6? AlternateReportingCurrencyAmounts { get; init; } 
-    #else
-    public BalanceAmounts6? AlternateReportingCurrencyAmounts { get; set; } 
-    #endif
     
     
     #nullable disable

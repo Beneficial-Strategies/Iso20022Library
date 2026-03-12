@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h-cOwcQIEemsic1bQcEtLA")]
 [DisplayName("Charges")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Charges8
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Charges8 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Charges8( ActiveOrHistoricCurrencyAndAmount reqAmount,BranchAndFinancialInstitutionIdentification6 reqAgent )
-    {
-        Amount = reqAmount;
-        Agent = reqAgent;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,55 +23,24 @@ public partial record Charges8
     /// </summary>
     [IsoId("_iKDo48QIEemsic1bQcEtLA")]
     [DisplayName("Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Amt")]
-    #endif
     [IsoXmlTag("Amt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    #else
-    public ActiveOrHistoricCurrencyAndAmount Amount { get; set; } 
-    #endif
     
     /// <summary>
     /// Agent that takes the transaction charges or to which the transaction charges are due.
     /// </summary>
     [IsoId("_iKDo5cQIEemsic1bQcEtLA")]
     [DisplayName("Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Agt")]
-    #endif
     [IsoXmlTag("Agt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BranchAndFinancialInstitutionIdentification6 Agent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BranchAndFinancialInstitutionIdentification6 Agent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification6 Agent { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification6 Agent { get; set; } 
-    #endif
     
     /// <summary>
     /// Unambiguous identification of the account of the agent to which a credit entry will be made as a result of the charges.
     /// </summary>
     [IsoId("_j2sJ0cQIEemsic1bQcEtLA")]
     [DisplayName("Agent Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgtAcct")]
-    #endif
     [IsoXmlTag("AgtAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccount38? AgentAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount38? AgentAccount { get; init; } 
-    #else
-    public CashAccount38? AgentAccount { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -17,24 +12,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UnderlyingTransaction6Choice.Initiation))]
     [KnownType(typeof(UnderlyingTransaction6Choice.Interbank))]
     [KnownType(typeof(UnderlyingTransaction6Choice.StatementEntry))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(UnderlyingTransaction6Choice.Initiation),nameof(UnderlyingTransaction6Choice.Initiation))]
     [JsonDerivedType(typeof(UnderlyingTransaction6Choice.Interbank),nameof(UnderlyingTransaction6Choice.Interbank))]
     [JsonDerivedType(typeof(UnderlyingTransaction6Choice.StatementEntry),nameof(UnderlyingTransaction6Choice.StatementEntry))]
-    #endif
     [IsoId("_xBEjS8loEem0vqvvoqYsqQ")]
     [DisplayName("Underlying Transaction 6 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record UnderlyingTransaction6Choice_
-    #else
-    public abstract partial class UnderlyingTransaction6Choice_
-    #endif
     {
     }
 }

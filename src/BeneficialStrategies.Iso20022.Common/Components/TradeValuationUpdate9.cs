@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HKRZEc0HEeufhKfUxzsnrQ")]
 [DisplayName("Trade Valuation Update")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TradeValuationUpdate9
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TradeValuationUpdate9 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TradeValuationUpdate9( CounterpartyData88 reqCounterpartySpecificData,LoanData113 reqLoanData )
-    {
-        CounterpartySpecificData = reqCounterpartySpecificData;
-        LoanData = reqLoanData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,74 +23,34 @@ public partial record TradeValuationUpdate9
     /// </summary>
     [IsoId("_HL-CMc0HEeufhKfUxzsnrQ")]
     [DisplayName("Technical Record Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TechRcrdId")]
-    #endif
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? TechnicalRecordIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TechnicalRecordIdentification { get; init; } 
-    #else
-    public System.String? TechnicalRecordIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Data specific to counterparties and related fields.
     /// </summary>
     [IsoId("_HL-CM80HEeufhKfUxzsnrQ")]
     [DisplayName("Counterparty Specific Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtySpcfcData")]
-    #endif
     [IsoXmlTag("CtrPtySpcfcData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CounterpartyData88 CounterpartySpecificData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CounterpartyData88 CounterpartySpecificData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CounterpartyData88 CounterpartySpecificData { get; init; } 
-    #else
-    public CounterpartyData88 CounterpartySpecificData { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the loan used for financing the transaction.
     /// </summary>
     [IsoId("_HL-CNc0HEeufhKfUxzsnrQ")]
     [DisplayName("Loan Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LnData")]
-    #endif
     [IsoXmlTag("LnData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required LoanData113 LoanData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required LoanData113 LoanData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public LoanData113 LoanData { get; init; } 
-    #else
-    public LoanData113 LoanData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_HL-CN80HEeufhKfUxzsnrQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

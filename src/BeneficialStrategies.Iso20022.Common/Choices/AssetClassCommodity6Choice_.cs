@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -29,7 +24,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodity6Choice.OtherC10))]
     [KnownType(typeof(AssetClassCommodity6Choice.Paper))]
     [KnownType(typeof(AssetClassCommodity6Choice.Polypropylene))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(AssetClassCommodity6Choice.Agricultural),nameof(AssetClassCommodity6Choice.Agricultural))]
     [JsonDerivedType(typeof(AssetClassCommodity6Choice.Energy),nameof(AssetClassCommodity6Choice.Energy))]
     [JsonDerivedType(typeof(AssetClassCommodity6Choice.Environmental),nameof(AssetClassCommodity6Choice.Environmental))]
@@ -45,20 +39,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(AssetClassCommodity6Choice.OtherC10),nameof(AssetClassCommodity6Choice.OtherC10))]
     [JsonDerivedType(typeof(AssetClassCommodity6Choice.Paper),nameof(AssetClassCommodity6Choice.Paper))]
     [JsonDerivedType(typeof(AssetClassCommodity6Choice.Polypropylene),nameof(AssetClassCommodity6Choice.Polypropylene))]
-    #endif
     [IsoId("_1anjQRZXEe2QNcZTDeoKnQ")]
     [DisplayName("Asset Class Commodity 6 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record AssetClassCommodity6Choice_
-    #else
-    public abstract partial class AssetClassCommodity6Choice_
-    #endif
     {
     }
 }

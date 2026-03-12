@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
 {
     /// <summary>
@@ -24,31 +17,8 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
     /// </summary>
     [IsoId("_4EhKppaNEemfCcEf5rVTyg")]
     [DisplayName("PIN Data")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record PINData : VerificationValue1Choice_
-    #else
-    public partial class PINData : VerificationValue1Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a PINData instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public PINData( System.String reqPINBlockFormat,System.String reqEncryptedPINBlock )
-        {
-            PINBlockFormat = reqPINBlockFormat;
-            EncryptedPINBlock = reqEncryptedPINBlock;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -58,18 +28,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_1o494InMEeiHerJAHfwamw")]
         [DisplayName("Control")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Ctrl")]
-        #endif
         [IsoXmlTag("Ctrl")]
         [IsoSimpleType(IsoSimpleType.Exact1HexBinaryText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoExact1HexBinaryText? Control { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? Control { get; init; } 
-        #else
-        public System.String? Control { get; set; } 
-        #endif
         
         /// <summary>
         /// key-set identifier is a number that uniquely identifies a group of related keys that are all different but have certain characteristics in common.
@@ -78,18 +39,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_d0W1wotNEei2ytxdCDTOFQ")]
         [DisplayName("Key Set Identifier")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="KeySetIdr")]
-        #endif
         [IsoXmlTag("KeySetIdr")]
         [IsoSimpleType(IsoSimpleType.Max8NumericText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax8NumericText? KeySetIdentifier { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? KeySetIdentifier { get; init; } 
-        #else
-        public System.String? KeySetIdentifier { get; set; } 
-        #endif
         
         /// <summary>
         /// Contains Derived Info or Device ID and Transaction Counter.
@@ -98,18 +50,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_03k44InQEeiHerJAHfwamw")]
         [DisplayName("Derived Information")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="DrvdInf")]
-        #endif
         [IsoXmlTag("DrvdInf")]
         [IsoSimpleType(IsoSimpleType.Max32HexBinaryText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax32HexBinaryText? DerivedInformation { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? DerivedInformation { get; init; } 
-        #else
-        public System.String? DerivedInformation { get; set; } 
-        #endif
         
         /// <summary>
         /// Used to select the encryption algorithm to encipher the keys contained in the associated key management data element. 
@@ -117,18 +60,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_XqXiYInREeiHerJAHfwamw")]
         [DisplayName("Algorithm")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Algo")]
-        #endif
         [IsoXmlTag("Algo")]
         [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax2NumericText? Algorithm { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? Algorithm { get; init; } 
-        #else
-        public System.String? Algorithm { get; set; } 
-        #endif
         
         /// <summary>
         /// Specifies the length of the keys being transported, not the encrypting key.
@@ -136,18 +70,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_u95wootNEei2ytxdCDTOFQ")]
         [DisplayName("Key Length")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="KeyLngth")]
-        #endif
         [IsoXmlTag("KeyLngth")]
         [IsoSimpleType(IsoSimpleType.Max4NumericText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax4NumericText? KeyLength { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? KeyLength { get; init; } 
-        #else
-        public System.String? KeyLength { get; set; } 
-        #endif
         
         /// <summary>
         /// Mechanism used to provide key confidentiality and integrity. 
@@ -155,18 +80,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_W9lC8YnTEeiHerJAHfwamw")]
         [DisplayName("Key Protection")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="KeyPrtcn")]
-        #endif
         [IsoXmlTag("KeyPrtcn")]
         [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax2NumericText? KeyProtection { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? KeyProtection { get; init; } 
-        #else
-        public System.String? KeyProtection { get; set; } 
-        #endif
         
         /// <summary>
         /// Identifies a unique key set when multiple keys with the same key set identifier are used (for example, key rotation).
@@ -175,38 +91,18 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_85vZYotNEei2ytxdCDTOFQ")]
         [DisplayName("Key Index")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="KeyIndx")]
-        #endif
         [IsoXmlTag("KeyIndx")]
         [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax5NumericText? KeyIndex { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? KeyIndex { get; init; } 
-        #else
-        public System.String? KeyIndex { get; set; } 
-        #endif
         
         /// <summary>
         /// As defined in ISO 9564-1. 
         /// </summary>
         [IsoId("_DiyMQYnVEeiHerJAHfwamw")]
         [DisplayName("PIN Block Format")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="PINBlckFrmt")]
-        #endif
         [IsoXmlTag("PINBlckFrmt")]
         [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoMax2NumericText PINBlockFormat { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.String PINBlockFormat { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String PINBlockFormat { get; init; } 
-        #else
-        public System.String PINBlockFormat { get; set; } 
-        #endif
         
         /// <summary>
         /// As defined in ISO 9564-1. 
@@ -214,20 +110,9 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
         /// </summary>
         [IsoId("_BbKmMInaEei2ytxdCDTOFQ")]
         [DisplayName("Encrypted PIN Block")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="NcrptdPINBlck")]
-        #endif
         [IsoXmlTag("NcrptdPINBlck")]
         [IsoSimpleType(IsoSimpleType.Max16HexBinaryText)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoMax16HexBinaryText EncryptedPINBlock { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.String EncryptedPINBlock { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String EncryptedPINBlock { get; init; } 
-        #else
-        public System.String EncryptedPINBlock { get; set; } 
-        #endif
         
         
         #nullable disable

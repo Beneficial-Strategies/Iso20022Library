@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qn0zC9p-Ed-ak6NoX_4Aeg_468227563")]
 [DisplayName("Supplementary Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SupplementaryData1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SupplementaryData1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SupplementaryData1( SupplementaryDataEnvelope1 reqEnvelope )
-    {
-        Envelope = reqEnvelope;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,38 +24,18 @@ public partial record SupplementaryData1
     /// </summary>
     [IsoId("_Qn988Np-Ed-ak6NoX_4Aeg_354388497")]
     [DisplayName("Place And Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PlcAndNm")]
-    #endif
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax350Text? PlaceAndName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PlaceAndName { get; init; } 
-    #else
-    public System.String? PlaceAndName { get; set; } 
-    #endif
     
     /// <summary>
     /// Technical element wrapping the supplementary data.
     /// </summary>
     [IsoId("_Qn988dp-Ed-ak6NoX_4Aeg_-642683856")]
     [DisplayName("Envelope")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Envlp")]
-    #endif
     [IsoXmlTag("Envlp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SupplementaryDataEnvelope1 Envelope { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SupplementaryDataEnvelope1 Envelope { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryDataEnvelope1 Envelope { get; init; } 
-    #else
-    public SupplementaryDataEnvelope1 Envelope { get; set; } 
-    #endif
     
     
     #nullable disable

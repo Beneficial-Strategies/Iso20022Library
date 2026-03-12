@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The ModifyReservation message is used to request modifications in the details of one particular reservation set by the member and managed by the transaction administrator.|Usage|After the receipt of a ModifyReservation message the transaction administrator checks whether the amount of liquidity on the member account is sufficient to set the reservation.|If there is enough liquidity available, the requested amount will be reserved. In case the requested amount exceeds the available liquidity, only the available liquidity will be reserved. The difference will not be blocked at a later point, even if the account balance of the member reaches the level of the initial reservation request.|The reservation can be effected directly by the member, who has the possibility to: |- reset the reserved liquidity to zero|- change the reservation amount during the day with immediate effect|- input a default reservation amount for the following day(s); valid until a new reservation amount is requested|After the receipt of a ModifyReservation message the transaction administrator checks whether the amount of liquidity on the member account is sufficient to set the reservation.")]
 [IsoId("_jwlb0xbvEeiyVv5j1vf1VQ")]
 [DisplayName("Modify Reservation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ModifyReservationV05 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record ModifyReservationV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ModifyReservationV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ModifyReservationV05( MessageHeader1 reqMessageHeader,CurrentOrDefaultReservation2Choice_ reqReservationIdentification,Reservation4 reqNewReservationValueSet )
-    {
-        MessageHeader = reqMessageHeader;
-        ReservationIdentification = reqReservationIdentification;
-        NewReservationValueSet = reqNewReservationValueSet;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,74 +57,32 @@ public partial record ModifyReservationV05 : IOuterRecord
     /// </summary>
     [IsoId("_jwlb1RbvEeiyVv5j1vf1VQ")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the default reservation.
     /// </summary>
     [IsoId("_jwlb1xbvEeiyVv5j1vf1VQ")]
     [DisplayName("Reservation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsvatnId")]
-    #endif
     [IsoXmlTag("RsvatnId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrentOrDefaultReservation2Choice_ ReservationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrentOrDefaultReservation2Choice_ ReservationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrentOrDefaultReservation2Choice_ ReservationIdentification { get; init; } 
-    #else
-    public CurrentOrDefaultReservation2Choice_ ReservationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// New reservation values.
     /// </summary>
     [IsoId("_jwlb2RbvEeiyVv5j1vf1VQ")]
     [DisplayName("New Reservation Value Set")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewRsvatnValSet")]
-    #endif
     [IsoXmlTag("NewRsvatnValSet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Reservation4 NewReservationValueSet { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Reservation4 NewReservationValueSet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Reservation4 NewReservationValueSet { get; init; } 
-    #else
-    public Reservation4 NewReservationValueSet { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jwlb2xbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

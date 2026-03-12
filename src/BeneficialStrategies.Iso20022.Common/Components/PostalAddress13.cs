@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zlTVEUuAEeOC3MFxIpMwug")]
 [DisplayName("Postal Address")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PostalAddress13
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PostalAddress13 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PostalAddress13( System.String reqPostCode,System.String reqTownName,string reqCountry )
-    {
-        PostCode = reqPostCode;
-        TownName = reqTownName;
-        Country = reqCountry;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,9 +23,6 @@ public partial record PostalAddress13
     /// </summary>
     [IsoId("_zwLIU0uAEeOC3MFxIpMwug")]
     [DisplayName("Address Line")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AdrLine")]
-    #endif
     [IsoXmlTag("AdrLine")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [MinLength(0)]
@@ -62,118 +34,58 @@ public partial record PostalAddress13
     /// </summary>
     [IsoId("_zwLIVUuAEeOC3MFxIpMwug")]
     [DisplayName("Street Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StrtNm")]
-    #endif
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax70Text? StreetName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? StreetName { get; init; } 
-    #else
-    public System.String? StreetName { get; set; } 
-    #endif
     
     /// <summary>
     /// Number that identifies the position of a building on a street.
     /// </summary>
     [IsoId("_zwLIV0uAEeOC3MFxIpMwug")]
     [DisplayName("Building Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BldgNb")]
-    #endif
     [IsoXmlTag("BldgNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax16Text? BuildingNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? BuildingNumber { get; init; } 
-    #else
-    public System.String? BuildingNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
     /// </summary>
     [IsoId("_zwLIWUuAEeOC3MFxIpMwug")]
     [DisplayName("Post Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PstCd")]
-    #endif
     [IsoXmlTag("PstCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax16Text PostCode { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String PostCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String PostCode { get; init; } 
-    #else
-    public System.String PostCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
     /// </summary>
     [IsoId("_zwLIW0uAEeOC3MFxIpMwug")]
     [DisplayName("Town Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TwnNm")]
-    #endif
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TownName { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TownName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TownName { get; init; } 
-    #else
-    public System.String TownName { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies a subdivision of a country eg, state, region, county.
     /// </summary>
     [IsoId("_zwLIXUuAEeOC3MFxIpMwug")]
     [DisplayName("Country Sub Division")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrySubDvsn")]
-    #endif
     [IsoXmlTag("CtrySubDvsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CountrySubDivision { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CountrySubDivision { get; init; } 
-    #else
-    public System.String? CountrySubDivision { get; set; } 
-    #endif
     
     /// <summary>
     /// Nation with its own government, occupying a particular territory.
     /// </summary>
     [IsoId("_zwLIX0uAEeOC3MFxIpMwug")]
     [DisplayName("Country")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ctry")]
-    #endif
     [IsoXmlTag("Ctry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CountryCode Country { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required string Country { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public string Country { get; init; } 
-    #else
-    public string Country { get; set; } 
-    #endif
     
     
     #nullable disable

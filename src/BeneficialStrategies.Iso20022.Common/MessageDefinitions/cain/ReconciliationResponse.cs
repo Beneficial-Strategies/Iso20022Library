@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The ReconciliationResponse message is sent by an issuer or an agent to return the reconciled totals for debits, credits, chargebacks and other transactions.")]
 [IsoId("_A6xeEHvBEeSLmfFG0DG7zQ")]
 [DisplayName("Reconciliation Response")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReconciliationResponse : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ReconciliationResponse : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReconciliationResponse instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReconciliationResponse( Header17 reqHeader,AcquirerReconciliationResponse1 reqReconciliationResponseValue )
-    {
-        Header = reqHeader;
-        ReconciliationResponseValue = reqReconciliationResponseValue;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ReconciliationResponse : IOuterRecord
     /// </summary>
     [IsoId("_QMmpYHvBEeSLmfFG0DG7zQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header17 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header17 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header17 Header { get; init; } 
-    #else
-    public Header17 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response to a reconciliation.
     /// </summary>
     [IsoId("_ZV0QoHvBEeSLmfFG0DG7zQ")]
     [DisplayName("Reconciliation Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnRspn")]
-    #endif
     [IsoXmlTag("RcncltnRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcquirerReconciliationResponse1 ReconciliationResponseValue { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcquirerReconciliationResponse1 ReconciliationResponseValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcquirerReconciliationResponse1 ReconciliationResponseValue { get; init; } 
-    #else
-    public AcquirerReconciliationResponse1 ReconciliationResponseValue { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_Z6ywgHvCEeSLmfFG0DG7zQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

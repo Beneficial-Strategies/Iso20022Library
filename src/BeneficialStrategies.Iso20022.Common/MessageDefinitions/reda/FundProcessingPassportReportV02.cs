@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"Scope|A report provider, for example, a fund promoter, fund management company, transfer agent, or market data provider, sends the FundProcessingPassportReport message to the report recipient, for, a professional investor, investment fund distributor, market data provider, regulator or other interested party to provide the key reference data for financial instruments to facilitate trading.|Usage|A unique FundProcessingPassportReport should be prepared for each class of unit/share (for which an individual ISIN should have been allocated), in respect of its ""home"" market.|The FundProcessingPassportReport may be used in various models or environments:|- stand alone environment, for example, initiated by the Report Provider (fund promoter, fund manager and / or reference data vendors) sent on a regular frequency, or when changes are needed.|- in a request / response environment, with the InvestmentFundReportRequest, for example, initiated by report users (data vendors, professional investors, regulators or investment fund distributors) in enabling the user to control the flow and updates of information.|- in a reference data vendor environment, for example, market infrastructure and reference data providers may collate and store all fund processing passport information centrally for access via database or regular distribution information. A reference data vendor may assume the role of both report provider and report user.")]
 [IsoId("_ZsRA2NEvEd-BzquC8wXy7w_2012426718")]
 [DisplayName("Fund Processing Passport Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FundProcessingPassportReportV02 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record FundProcessingPassportReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FundProcessingPassportReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FundProcessingPassportReportV02( MessageIdentification1 reqMessageIdentification,FundProcessingPassport1 reqFundProcessingPassport )
-    {
-        MessageIdentification = reqMessageIdentification;
-        FundProcessingPassport = reqFundProcessingPassport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,19 +64,8 @@ public partial record FundProcessingPassportReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_ZsRA2dEvEd-BzquC8wXy7w_1111943337")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     ///  Fund Processing Passsport (FPP) is a fully harmonised document with all key operational information that fund promoters
@@ -108,19 +73,8 @@ public partial record FundProcessingPassportReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_ZsRA2tEvEd-BzquC8wXy7w_-23910655")]
     [DisplayName("Fund Processing Passport")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FPP")]
-    #endif
     [IsoXmlTag("FPP")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FundProcessingPassport1 FundProcessingPassport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FundProcessingPassport1 FundProcessingPassport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FundProcessingPassport1 FundProcessingPassport { get; init; } 
-    #else
-    public FundProcessingPassport1 FundProcessingPassport { get; set; } 
-    #endif
     
     
     #nullable disable

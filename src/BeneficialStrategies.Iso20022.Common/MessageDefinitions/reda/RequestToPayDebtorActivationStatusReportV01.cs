@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The RequestToPayDebtorActivationStatusReport message is sent from the recipient of the debtor activation request message (initiation, amendment or cancellation), such as the creditor RTP provider or the creditor, to the initiator of the debtor activation request message (debtor, debtor RTP provider or any of the forwarding agent) to provide the status of the request. |")]
 [IsoId("_rNNB1-HzEeqbls7Gk4-ckA")]
 [DisplayName("Request To Pay Debtor Activation Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RequestToPayDebtorActivationStatusReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RequestToPayDebtorActivationStatusReportV01( ActivationHeader2 reqHeader,ActivationStatus2 reqOriginalActivationAndStatus )
-    {
-        Header = reqHeader;
-        OriginalActivationAndStatus = reqOriginalActivationAndStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,55 +58,24 @@ public partial record RequestToPayDebtorActivationStatusReportV01 : IOuterRecord
     /// </summary>
     [IsoId("_rNNB2-HzEeqbls7Gk4-ckA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActivationHeader2 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActivationHeader2 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActivationHeader2 Header { get; init; } 
-    #else
-    public ActivationHeader2 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the debtor activation instruction (that is request, amendment or cancellation).
     /// </summary>
     [IsoId("_rNNB3eHzEeqbls7Gk4-ckA")]
     [DisplayName("Original Activation And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlActvtnAndSts")]
-    #endif
     [IsoXmlTag("OrgnlActvtnAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActivationStatus2 OriginalActivationAndStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActivationStatus2 OriginalActivationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActivationStatus2 OriginalActivationAndStatus { get; init; } 
-    #else
-    public ActivationStatus2 OriginalActivationAndStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_rNNB3-HzEeqbls7Gk4-ckA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

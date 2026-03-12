@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -29,12 +24,6 @@ namespace BeneficialStrategies.Iso20022.pacs;
 [Description(@"The MultilateralSettlementRequest message is sent from an instructing agent to a market infrastructure to settle obligations between their participants using accounts held in a settlement service.||Usage: The MultilateralSettlementRequest message can contain one or more settlement instructions with multiple movements between accounts. By default, all movements present in an individual instruction shall be processed as a batch entry rather than a single entry per individual movement.")]
 [IsoId("_vsvOgQcYEeyTDbUIoCmuCw")]
 [DisplayName("Multilateral Settlement Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MultilateralSettlementRequestV01 : IOuterRecord
 {
     
@@ -63,19 +52,6 @@ public partial record MultilateralSettlementRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MultilateralSettlementRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MultilateralSettlementRequestV01( GroupHeader104 reqGroupHeader,MultilateralSettlementRequest2 reqSettlementRequest )
-    {
-        GroupHeader = reqGroupHeader;
-        SettlementRequest = reqSettlementRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -83,55 +59,24 @@ public partial record MultilateralSettlementRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_vsvOgwcYEeyTDbUIoCmuCw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader104 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader104 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader104 GroupHeader { get; init; } 
-    #else
-    public GroupHeader104 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements providing information specific to the individual settlement request(s).
     /// </summary>
     [IsoId("_vsvOhQcYEeyTDbUIoCmuCw")]
     [DisplayName("Settlement Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmReq")]
-    #endif
     [IsoXmlTag("SttlmReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MultilateralSettlementRequest2 SettlementRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MultilateralSettlementRequest2 SettlementRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MultilateralSettlementRequest2 SettlementRequest { get; init; } 
-    #else
-    public MultilateralSettlementRequest2 SettlementRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_vsvOhwcYEeyTDbUIoCmuCw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

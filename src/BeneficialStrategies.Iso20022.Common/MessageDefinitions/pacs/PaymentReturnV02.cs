@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.pacs;
 [Description(@"Scope|The PaymentReturn message is sent by an agent to the previous agent in the payment chain to undo a payment previously settled.|Usage|The PaymentReturn message is exchanged between agents to return funds after settlement of credit transfer instructions (i.e. FIToFICustomerCreditTransfer message and FinancialInstitutionCreditTransfer message) or direct debit instructions (FIToFICustomerDirectDebit message).|The PaymentReturn message should not be used between agents and non-financial institution customers. Non-financial institution customers will be informed about a debit or a credit on their account(s) through a BankToCustomerDebitCreditNotification message ('notification') and/or BankToCustomerAccountReport/BankToCustomerStatement message ('statement').|The PaymentReturn message can be used to return single instructions or multiple instructions from one or different files.|The PaymentReturn message can be used in domestic and cross-border scenarios.|The PaymentReturn message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.")]
 [IsoId("_eqYWKtEuEd-BzquC8wXy7w_-993933741")]
 [DisplayName("Payment Return V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PaymentReturnV02 : IOuterRecord
 {
     
@@ -68,18 +57,6 @@ public partial record PaymentReturnV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PaymentReturnV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PaymentReturnV02( GroupHeader38 reqGroupHeader )
-    {
-        GroupHeader = reqGroupHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,53 +64,24 @@ public partial record PaymentReturnV02 : IOuterRecord
     /// </summary>
     [IsoId("_eqhgANEuEd-BzquC8wXy7w_-993933711")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader38 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader38 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader38 GroupHeader { get; init; } 
-    #else
-    public GroupHeader38 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the original group of transactions, to which the message refers.
     /// </summary>
     [IsoId("_eqhgAdEuEd-BzquC8wXy7w_-993933370")]
     [DisplayName("Original Group Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlGrpInf")]
-    #endif
     [IsoXmlTag("OrgnlGrpInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OriginalGroupInformation21? OriginalGroupInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalGroupInformation21? OriginalGroupInformation { get; init; } 
-    #else
-    public OriginalGroupInformation21? OriginalGroupInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the original transactions, to which the return message refers.
     /// </summary>
     [IsoId("_eqhgAtEuEd-BzquC8wXy7w_-993933649")]
     [DisplayName("Transaction Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxInf")]
-    #endif
     [IsoXmlTag("TxInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentTransactionInformation27? TransactionInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentTransactionInformation27? TransactionInformation { get; init; } 
-    #else
-    public PaymentTransactionInformation27? TransactionInformation { get; set; } 
-    #endif
     
     
     #nullable disable

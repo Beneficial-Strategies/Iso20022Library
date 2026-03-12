@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catp;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMWithdrawalCompletionAdvice message is sent by an ATM to an acquirer or its agent to inform of the result of a withdrawal transaction at an ATM.|If the ATM is configured to only send negative completion, a generic completion message should be used instead of ATMCompletionAdvice.")]
 [IsoId("_zg0SUa4JEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Withdrawal Completion Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMWithdrawalCompletionAdviceV02 : IOuterRecord
 {
     
@@ -62,18 +51,6 @@ public partial record ATMWithdrawalCompletionAdviceV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMWithdrawalCompletionAdviceV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMWithdrawalCompletionAdviceV02( Header32 reqHeader )
-    {
-        Header = reqHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,70 +58,32 @@ public partial record ATMWithdrawalCompletionAdviceV02 : IOuterRecord
     /// </summary>
     [IsoId("_zg0SU64JEeWZgJQOa6iKCQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header32 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header32 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header32 Header { get; init; } 
-    #else
-    public Header32 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted body of the message.
     /// </summary>
     [IsoId("_zg0SVa4JEeWZgJQOa6iKCQ")]
     [DisplayName("Protected ATM Withdrawal Completion Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdATMWdrwlCmpltnAdvc")]
-    #endif
     [IsoXmlTag("PrtctdATMWdrwlCmpltnAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedATMWithdrawalCompletionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedATMWithdrawalCompletionAdvice { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedATMWithdrawalCompletionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the completion of a withdrawal transaction on the ATM.
     /// </summary>
     [IsoId("_zg0SV64JEeWZgJQOa6iKCQ")]
     [DisplayName("ATM Withdrawal Completion Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMWdrwlCmpltnAdvc")]
-    #endif
     [IsoXmlTag("ATMWdrwlCmpltnAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMWithdrawalCompletionAdvice2? ATMWithdrawalCompletionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMWithdrawalCompletionAdvice2? ATMWithdrawalCompletionAdvice { get; init; } 
-    #else
-    public ATMWithdrawalCompletionAdvice2? ATMWithdrawalCompletionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_zg0SWa4JEeWZgJQOa6iKCQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The Proprietary Format Investigation message type is used by financial institutions, with their own offices, and/or with other financial institutions with which they have established bilateral agreements.|Usage|The user should ensure that an existing standard message cannot be used before using the proprietary message.|As defined in the scope, this ProprietaryFormatInvestigation message may only be used when bilaterally agreed.|It is used as an envelope for a non standard message and provides means to manage an exception or investigation which falls outside the scope or capability of any other formatted message.|The ProprietaryData element must contain a well formed XML document. This means XML special characters such as '<' must be used in a way that is consistent with XML well-formedness criteria.|.")]
 [IsoId("_sW_aQlkyEeGeoaLUQk__nA_781357375")]
 [DisplayName("Proprietary Format Investigation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ProprietaryFormatInvestigationV03 : IOuterRecord
 {
     
@@ -67,20 +56,6 @@ public partial record ProprietaryFormatInvestigationV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ProprietaryFormatInvestigationV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ProprietaryFormatInvestigationV03( CaseAssignment3 reqAssignment,Case3 reqCase,ProprietaryData4 reqProprietaryData )
-    {
-        Assignment = reqAssignment;
-        Case = reqCase;
-        ProprietaryData = reqProprietaryData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,74 +63,32 @@ public partial record ProprietaryFormatInvestigationV03 : IOuterRecord
     /// </summary>
     [IsoId("_sXJLQFkyEeGeoaLUQk__nA_1165442141")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignment3 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignment3 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment3 Assignment { get; init; } 
-    #else
-    public CaseAssignment3 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_sXJLQVkyEeGeoaLUQk__nA_282208854")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Case3 Case { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Case3 Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case3 Case { get; init; } 
-    #else
-    public Case3 Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Proprietary information.
     /// </summary>
     [IsoId("_sXJLQlkyEeGeoaLUQk__nA_168369788")]
     [DisplayName("Proprietary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtryData")]
-    #endif
     [IsoXmlTag("PrtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ProprietaryData4 ProprietaryData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ProprietaryData4 ProprietaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProprietaryData4 ProprietaryData { get; init; } 
-    #else
-    public ProprietaryData4 ProprietaryData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_sXJLQ1kyEeGeoaLUQk__nA_1922221803")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

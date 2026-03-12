@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_I-td0ZTAEemqYPWMBuVawg")]
 [DisplayName("Cash Settlement")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CashSettlement3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record CashSettlement3
     /// </summary>
     [IsoId("_JRwVoZTAEemqYPWMBuVawg")]
     [DisplayName("Cash Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAcctDtls")]
-    #endif
     [IsoXmlTag("CshAcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccount204? CashAccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount204? CashAccountDetails { get; init; } 
-    #else
-    public CashAccount204? CashAccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Method of payment other than a cash account.
     /// </summary>
     [IsoId("_JRwVo5TAEemqYPWMBuVawg")]
     [DisplayName("Other Cash Settlement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrCshSttlmDtls")]
-    #endif
     [IsoXmlTag("OthrCshSttlmDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentInstrument17? OtherCashSettlementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentInstrument17? OtherCashSettlementDetails { get; init; } 
-    #else
-    public PaymentInstrument17? OtherCashSettlementDetails { get; set; } 
-    #endif
     
     
     #nullable disable

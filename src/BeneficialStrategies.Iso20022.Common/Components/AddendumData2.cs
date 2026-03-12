@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AG2Jwf5pEeiLerArw36g0w")]
 [DisplayName("Addendum Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AddendumData2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,34 +23,16 @@ public partial record AddendumData2
     /// </summary>
     [IsoId("_AP7NXf5pEeiLerArw36g0w")]
     [DisplayName("Fleet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Fleet")]
-    #endif
     [IsoXmlTag("Fleet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FleetData3? Fleet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FleetData3? Fleet { get; init; } 
-    #else
-    public FleetData3? Fleet { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains additional data for the addendum.
     /// </summary>
     [IsoId("_3ZTS8f75Eeic54G0fOJNMg")]
     [DisplayName("Additional Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlData")]
-    #endif
     [IsoXmlTag("AddtlData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalData1? AdditionalData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalData1? AdditionalData { get; init; } 
-    #else
-    public AdditionalData1? AdditionalData { get; set; } 
-    #endif
     
     
     #nullable disable

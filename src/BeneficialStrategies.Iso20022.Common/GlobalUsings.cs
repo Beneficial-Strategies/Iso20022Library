@@ -1,9 +1,17 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 // For source code clarity, the primative types used in this implementation are represented in source code as their ISO-declared types.
-// Because too many were clashing with Microsoft framework types, all names are prefixed with 'Iso' for disambiguation. 
+// Because too many were clashing with Microsoft framework types, all names are prefixed with 'Iso' for disambiguation.
 
-#if NET8_0_OR_GREATER // C# 12 Global type alias
+// Global namespace usings required by generated code
+global using BeneficialStrategies.Iso20022.Amounts;
+global using BeneficialStrategies.Iso20022.Codesets;
+global using BeneficialStrategies.Iso20022.Framework;
+global using BeneficialStrategies.Iso20022.Metadata;
+global using System.ComponentModel;
+global using System.Runtime.Serialization;
+
+#if NET8_0_OR_GREATER // C# 12 global type aliases
 global using IsoMax35Text = System.String; // Text
 global using IsoMax70Text = System.String; // Text
 global using IsoMax140Text = System.String; // Text

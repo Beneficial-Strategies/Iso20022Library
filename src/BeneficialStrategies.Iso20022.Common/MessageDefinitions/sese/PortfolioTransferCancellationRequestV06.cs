@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An instructing party, for example, a (new) plan manager (Transferee), sends the PortfolioTransferCancellationRequest message to the executing party, for example, a (old) plan manager (Transferor), to request the cancellation of a previously sent PortfolioTransferInstruction.|Usage|The PortfolioTransferCancellationRequest message is used to request the cancellation of an entire PortfolioTransferInstruction message, ie, all the product transfers that it contained. The cancellation request can be specified either by:|- quoting the transfer references of all the product transfers listed in the PortfolioTransferInstruction message, or,|- quoting the details of all the product transfers (this includes TransferReference) listed in PortfolioTransferInstruction message.|The message identification of the PortfolioTransferInstruction may also be quoted in PreviousReference. It is also possible to request the cancellation of PortfolioTransferInstruction by just quoting its message identification in PreviousReference.")]
 [IsoId("_-zqTYQgLEeSFYfyUKDXKaw")]
 [DisplayName("Portfolio Transfer Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PortfolioTransferCancellationRequestV06 : IOuterRecord
 {
     
@@ -67,19 +56,6 @@ public partial record PortfolioTransferCancellationRequestV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PortfolioTransferCancellationRequestV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PortfolioTransferCancellationRequestV06( MessageIdentification1 reqMessageReference,Cancellation7Choice_ reqCancellation )
-    {
-        MessageReference = reqMessageReference;
-        Cancellation = reqCancellation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,106 +63,48 @@ public partial record PortfolioTransferCancellationRequestV06 : IOuterRecord
     /// </summary>
     [IsoId("_-zqTYwgLEeSFYfyUKDXKaw")]
     [DisplayName("Message Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgRef")]
-    #endif
     [IsoXmlTag("MsgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageReference { get; init; } 
-    #else
-    public MessageIdentification1 MessageReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_-zqTZQgLEeSFYfyUKDXKaw")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_-zqTZwgLEeSFYfyUKDXKaw")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_-zqTaQgLEeSFYfyUKDXKaw")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Choice between cancellation by transfer details or reference.
     /// </summary>
     [IsoId("_-zqTawgLEeSFYfyUKDXKaw")]
     [DisplayName("Cancellation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cxl")]
-    #endif
     [IsoXmlTag("Cxl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Cancellation7Choice_ Cancellation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Cancellation7Choice_ Cancellation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Cancellation7Choice_ Cancellation { get; init; } 
-    #else
-    public Cancellation7Choice_ Cancellation { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the market practice to which the message conforms.
     /// </summary>
     [IsoId("_-zqTbQgLEeSFYfyUKDXKaw")]
     [DisplayName("Market Practice Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktPrctcVrsn")]
-    #endif
     [IsoXmlTag("MktPrctcVrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    #else
-    public MarketPracticeVersion1? MarketPracticeVersion { get; set; } 
-    #endif
     
     
     #nullable disable

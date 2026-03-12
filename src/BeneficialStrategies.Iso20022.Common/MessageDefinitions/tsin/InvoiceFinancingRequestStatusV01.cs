@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsin;
@@ -42,12 +37,6 @@ namespace BeneficialStrategies.Iso20022.tsin;
 [Description(@"Scope|The InvoiceFinancingRequestStatus message is sent by the First Agent to the Financing Requestor, alternatively through an Intermediary Agent (relay scenario). It is used to inform the Financing Requestor about the positive or negative status of a financing request or a financing cancellation request.|Usage|The InvoiceFinancingRequestStatus message flows from the First Agent to the Financing Requestor (alternatively through an Intermediary Agent) to provide status information about a request previously sent.|Its usage will always be governed by a bilateral agreement between the First Agent and the Financing Requestor.|The InvoiceFinancingRequestStatus message can be used two fold:|- to provide information about the reception status (eg rejection, acceptance) of a request message. In this case the status message is the result of a technical validation performed by the First Agent on the request message received;|- to inform the Financing Requestor about the business status of the financing process initiated. In this case the First Agent can:|* communicate that a single financing request has been granted, is pending or has not been granted at all;|* inform that a financing cancellation request has been allowed or denied.|Note.|If the Financing Requestor requests financing for more than one instalment related to the same invoice, the First Agent can decide to finance only some of the instalments. In such case the status message contains details and status of every single instalment (financed, not financed).|The message can be used in a direct or in a relay scenario:|- In a direct scenario, the message is sent directly by the First Agent to the Financing Requestor;|- In a relay scenario, the message is sent first by the First Agent to the Intermediary Agent, who forwards it to the Financing Requestor.|The InvoiceFinancingRequestStatus message refers to the original request(s) by means of references and a set of data elements included into the original request.")]
 [IsoId("_BUZXMH1LEeCF8NjrBemJWQ_1543411923")]
 [DisplayName("Invoice Financing Request Status V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InvoiceFinancingRequestStatusV01 : IOuterRecord
 {
     
@@ -76,19 +65,6 @@ public partial record InvoiceFinancingRequestStatusV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a InvoiceFinancingRequestStatusV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public InvoiceFinancingRequestStatusV01( MessageIdentification1 reqStatusIdentification,OriginalRequestInformation1 reqOriginalRequestInformationAndStatus )
-    {
-        StatusIdentification = reqStatusIdentification;
-        OriginalRequestInformationAndStatus = reqOriginalRequestInformationAndStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -96,55 +72,24 @@ public partial record InvoiceFinancingRequestStatusV01 : IOuterRecord
     /// </summary>
     [IsoId("_BUZXMX1LEeCF8NjrBemJWQ_746296789")]
     [DisplayName("Status Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsId")]
-    #endif
     [IsoXmlTag("StsId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 StatusIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 StatusIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 StatusIdentification { get; init; } 
-    #else
-    public MessageIdentification1 StatusIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of summary information that unambiguously identifies the original invoice financing (or cancellation) request to which the status is referred. The status of the original request is also given in this block.|.
     /// </summary>
     [IsoId("_BUZXMn1LEeCF8NjrBemJWQ_1550684151")]
     [DisplayName("Original Request Information And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlReqInfAndSts")]
-    #endif
     [IsoXmlTag("OrgnlReqInfAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OriginalRequestInformation1 OriginalRequestInformationAndStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OriginalRequestInformation1 OriginalRequestInformationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalRequestInformation1 OriginalRequestInformationAndStatus { get; init; } 
-    #else
-    public OriginalRequestInformation1 OriginalRequestInformationAndStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the business status of a financing request.
     /// </summary>
     [IsoId("_BUZXM31LEeCF8NjrBemJWQ_740712719")]
     [DisplayName("Financing Information And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FincgInfAndSts")]
-    #endif
     [IsoXmlTag("FincgInfAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancingInformationAndStatus1? FinancingInformationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancingInformationAndStatus1? FinancingInformationAndStatus { get; init; } 
-    #else
-    public FinancingInformationAndStatus1? FinancingInformationAndStatus { get; set; } 
-    #endif
     
     
     #nullable disable

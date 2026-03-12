@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t4bwwYNvEeSXtJ8rlirVJw")]
 [DisplayName("Card Transaction Amount")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CardTransactionAmount3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CardTransactionAmount3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CardTransactionAmount3( CurrencyAndAmount reqTotalAmount )
-    {
-        TotalAmount = reqTotalAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,70 +24,32 @@ public partial record CardTransactionAmount3
     /// </summary>
     [IsoId("_uGQxYYNvEeSXtJ8rlirVJw")]
     [DisplayName("Total Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlAmt")]
-    #endif
     [IsoXmlTag("TtlAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrencyAndAmount TotalAmount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrencyAndAmount TotalAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyAndAmount TotalAmount { get; init; } 
-    #else
-    public CurrencyAndAmount TotalAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Qualifies the amount of the transaction.
     /// </summary>
     [IsoId("_uGQxY4NvEeSXtJ8rlirVJw")]
     [DisplayName("Amount Qualifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AmtQlfr")]
-    #endif
     [IsoXmlTag("AmtQlfr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TypeOfAmount1Code? AmountQualifier { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TypeOfAmount1Code? AmountQualifier { get; init; } 
-    #else
-    public TypeOfAmount1Code? AmountQualifier { get; set; } 
-    #endif
     
     /// <summary>
     /// Present when cardholder billing currency differs from transaction currency expressed in TransactionAmount. It may be populated by the scheme or intermediary processor as normally Acceptor does not know cardholder billing currency.
     /// </summary>
     [IsoId("_uGQxZYNvEeSXtJ8rlirVJw")]
     [DisplayName("Cardholder Billing Transaction Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CrdhldrBllgTxAmt")]
-    #endif
     [IsoXmlTag("CrdhldrBllgTxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DetailedAmount8? CardholderBillingTransactionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DetailedAmount8? CardholderBillingTransactionAmount { get; init; } 
-    #else
-    public DetailedAmount8? CardholderBillingTransactionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Only present within financial transactions when reconciliation currency differs from transaction currency. It may be populated by acquirers in the request or by the schemes in the responses, depending where the reconciliation point is located.
     /// </summary>
     [IsoId("_5RukQINvEeSXtJ8rlirVJw")]
     [DisplayName("Reconciliation Transaction Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnTxAmt")]
-    #endif
     [IsoXmlTag("RcncltnTxAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DetailedAmount8? ReconciliationTransactionAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DetailedAmount8? ReconciliationTransactionAmount { get; init; } 
-    #else
-    public DetailedAmount8? ReconciliationTransactionAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the transaction amount, for informational purpose, for instance to be included within cardholder statement.
@@ -118,17 +57,8 @@ public partial record CardTransactionAmount3
     /// </summary>
     [IsoId("_uGQxZ4NvEeSXtJ8rlirVJw")]
     [DisplayName("Detailed Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtldAmt")]
-    #endif
     [IsoXmlTag("DtldAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DetailedAmount9? DetailedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DetailedAmount9? DetailedAmount { get; init; } 
-    #else
-    public DetailedAmount9? DetailedAmount { get; set; } 
-    #endif
     
     
     #nullable disable

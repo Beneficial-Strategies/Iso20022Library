@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.trea;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.trea;
 [Description(@"Scope|The ForeignExchangeOptionNotification message is sent by a central system to a participant to provide details of a foreign exchange option trade.|Usage|The notification is sent by the central settlement system to the two trading parties after it has received Create, Amend or Cancel messages from both. The message may also contain information on the settlement of the trade and/or premium.")]
 [IsoId("_QCIK6NE8Ed-BzquC8wXy7w_-2045814163")]
 [DisplayName("Foreign Exchange Option Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ForeignExchangeOptionNotificationV02 : IOuterRecord
 {
     
@@ -64,21 +53,6 @@ public partial record ForeignExchangeOptionNotificationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ForeignExchangeOptionNotificationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ForeignExchangeOptionNotificationV02( TradePartyIdentification4 reqTradingSideIdentification,TradePartyIdentification4 reqCounterpartySideIdentification,OptionData2 reqOptionData,TradeStatus1 reqTradeStatus )
-    {
-        TradingSideIdentification = reqTradingSideIdentification;
-        CounterpartySideIdentification = reqCounterpartySideIdentification;
-        OptionData = reqOptionData;
-        TradeStatus = reqTradeStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,93 +60,40 @@ public partial record ForeignExchangeOptionNotificationV02 : IOuterRecord
     /// </summary>
     [IsoId("_QCIK6dE8Ed-BzquC8wXy7w_-28711885")]
     [DisplayName("Trading Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradgSdId")]
-    #endif
     [IsoXmlTag("TradgSdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradePartyIdentification4 TradingSideIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradePartyIdentification4 TradingSideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification4 TradingSideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification4 TradingSideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the counterparty of the non deliverable trade which is reported.
     /// </summary>
     [IsoId("_QCIK6tE8Ed-BzquC8wXy7w_-1363683318")]
     [DisplayName("Counterparty Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtySdId")]
-    #endif
     [IsoXmlTag("CtrPtySdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradePartyIdentification4 CounterpartySideIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradePartyIdentification4 CounterpartySideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification4 CounterpartySideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification4 CounterpartySideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information on the conditions of the option.
     /// </summary>
     [IsoId("_QCIK69E8Ed-BzquC8wXy7w_1138794159")]
     [DisplayName("Option Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnData")]
-    #endif
     [IsoXmlTag("OptnData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OptionData2 OptionData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OptionData2 OptionData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OptionData2 OptionData { get; init; } 
-    #else
-    public OptionData2 OptionData { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information on the status of a trade in a settlement system.
     /// </summary>
     [IsoId("_QCR74NE8Ed-BzquC8wXy7w_1207820711")]
     [DisplayName("Trade Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradSts")]
-    #endif
     [IsoXmlTag("TradSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeStatus1 TradeStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeStatus1 TradeStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeStatus1 TradeStatus { get; init; } 
-    #else
-    public TradeStatus1 TradeStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information on the settlement of a trade.
     /// </summary>
     [IsoId("_QCR74dE8Ed-BzquC8wXy7w_949234653")]
     [DisplayName("Settlement Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmData")]
-    #endif
     [IsoXmlTag("SttlmData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementData2? SettlementData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementData2? SettlementData { get; init; } 
-    #else
-    public SettlementData2? SettlementData { get; set; } 
-    #endif
     
     
     #nullable disable

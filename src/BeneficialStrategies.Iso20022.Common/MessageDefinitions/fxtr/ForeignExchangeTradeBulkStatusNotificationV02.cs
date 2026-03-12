@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.fxtr;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 [Description(@"Scope||The ForeignExchangeTradeBulkStatusNotification message is sent by a central system to the participant to provide notification of the current status of one or more foreign exchange trades.")]
 [IsoId("_9QLmwRnWEeKKXqHkeUjBbw")]
 [DisplayName("Foreign Exchange Trade Bulk Status Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ForeignExchangeTradeBulkStatusNotificationV02 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record ForeignExchangeTradeBulkStatusNotificationV02 : IOuterReco
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ForeignExchangeTradeBulkStatusNotificationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ForeignExchangeTradeBulkStatusNotificationV02( TradeData10 reqStatusDetails,TradeData8 reqTradeData )
-    {
-        StatusDetails = reqStatusDetails;
-        TradeData = reqTradeData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,72 +58,32 @@ public partial record ForeignExchangeTradeBulkStatusNotificationV02 : IOuterReco
     /// </summary>
     [IsoId("_9QLmwxnWEeKKXqHkeUjBbw")]
     [DisplayName("Status Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsDtls")]
-    #endif
     [IsoXmlTag("StsDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeData10 StatusDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeData10 StatusDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeData10 StatusDetails { get; init; } 
-    #else
-    public TradeData10 StatusDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies one or more trades for which the status notification is sent.
     /// </summary>
     [IsoId("_9QLmxxnWEeKKXqHkeUjBbw")]
     [DisplayName("Trade Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradData")]
-    #endif
     [IsoXmlTag("TradData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeData8 TradeData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeData8 TradeData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeData8 TradeData { get; init; } 
-    #else
-    public TradeData8 TradeData { get; set; } 
-    #endif
     
     /// <summary>
     /// Page number of the message (within the status report) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the report.
     /// </summary>
     [IsoId("_9QLmyxnWEeKKXqHkeUjBbw")]
     [DisplayName("Message Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgPgntn")]
-    #endif
     [IsoXmlTag("MsgPgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Pagination? MessagePagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination? MessagePagination { get; init; } 
-    #else
-    public Pagination? MessagePagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_ghz5LSnBEeKqmMA7_Y42sg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

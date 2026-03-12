@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.secl;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.secl;
 [Description(@"Scope|The BuyInResponse message is sent by the clearing member to the central counterparty as a response to the previous buy-in notification message.||The message definition is intended for use with the ISO 20022 Business Application Header.||Usage|The BuyInResponse may be sent in response to the BuyInNotification message. However, the use of this message in the buy in process is optional and depends on the rules set by each central counterparty.")]
 [IsoId("_2_0twS0lEeSRe9rElPHBfg")]
 [DisplayName("Buy In Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record BuyInResponseV03 : IOuterRecord
 {
     
@@ -67,18 +56,6 @@ public partial record BuyInResponseV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a BuyInResponseV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public BuyInResponseV03( BuyIn3 reqBuyInResponseDetails )
-    {
-        BuyInResponseDetails = reqBuyInResponseDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,72 +63,34 @@ public partial record BuyInResponseV03 : IOuterRecord
     /// </summary>
     [IsoId("_2_0twy0lEeSRe9rElPHBfg")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TransactionIdentification { get; init; } 
-    #else
-    public System.String? TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides response details such as a request for delay and the number of days associated to that request.
     /// </summary>
     [IsoId("_2_0txS0lEeSRe9rElPHBfg")]
     [DisplayName("Buy In Response Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BuyInRspnDtls")]
-    #endif
     [IsoXmlTag("BuyInRspnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BuyIn3 BuyInResponseDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BuyIn3 BuyInResponseDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BuyIn3 BuyInResponseDetails { get; init; } 
-    #else
-    public BuyIn3 BuyInResponseDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details about the original settlement obligation that did not settle and for which the buy in process will be launched.
     /// </summary>
     [IsoId("_2_0txy0lEeSRe9rElPHBfg")]
     [DisplayName("Original Settlement Obligation Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlSttlmOblgtnDtls")]
-    #endif
     [IsoXmlTag("OrgnlSttlmOblgtnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementObligation7? OriginalSettlementObligationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementObligation7? OriginalSettlementObligationDetails { get; init; } 
-    #else
-    public SettlementObligation7? OriginalSettlementObligationDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_2_0tyS0lEeSRe9rElPHBfg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

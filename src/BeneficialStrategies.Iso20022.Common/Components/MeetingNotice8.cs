@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gmYNETUIEe2tRf29bleifQ")]
 [DisplayName("Meeting Notice")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MeetingNotice8
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MeetingNotice8 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MeetingNotice8( System.String reqMeetingIdentification,MeetingType4Code reqType )
-    {
-        MeetingIdentification = reqMeetingIdentification;
-        Type = reqType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,192 +23,95 @@ public partial record MeetingNotice8
     /// </summary>
     [IsoId("_g8u3kzUIEe2tRf29bleifQ")]
     [DisplayName("Meeting Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtgId")]
-    #endif
     [IsoXmlTag("MtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text MeetingIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MeetingIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MeetingIdentification { get; init; } 
-    #else
-    public System.String MeetingIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification assigned to the meeting by the issuer. It must be unique for the issuer.
     /// </summary>
     [IsoId("_g8u3lTUIEe2tRf29bleifQ")]
     [DisplayName("Issuer Meeting Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IssrMtgId")]
-    #endif
     [IsoXmlTag("IssrMtgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? IssuerMeetingIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? IssuerMeetingIdentification { get; init; } 
-    #else
-    public System.String? IssuerMeetingIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Type of security holders meeting.
     /// </summary>
     [IsoId("_g8u3lzUIEe2tRf29bleifQ")]
     [DisplayName("Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tp")]
-    #endif
     [IsoXmlTag("Tp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MeetingType4Code Type { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MeetingType4Code Type { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingType4Code Type { get; init; } 
-    #else
-    public MeetingType4Code Type { get; set; } 
-    #endif
     
     /// <summary>
     /// Classification of the meeting.
     /// </summary>
     [IsoId("_g8u3mTUIEe2tRf29bleifQ")]
     [DisplayName("Classification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Clssfctn")]
-    #endif
     [IsoXmlTag("Clssfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MeetingTypeClassification2Choice_? Classification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingTypeClassification2Choice_? Classification { get; init; } 
-    #else
-    public MeetingTypeClassification2Choice_? Classification { get; set; } 
-    #endif
     
     /// <summary>
     /// Official meeting announcement date.
     /// </summary>
     [IsoId("_g8u3mzUIEe2tRf29bleifQ")]
     [DisplayName("Announcement Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AnncmntDt")]
-    #endif
     [IsoXmlTag("AnncmntDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateAndDateTime2Choice_? AnnouncementDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateAndDateTime2Choice_? AnnouncementDate { get; init; } 
-    #else
-    public DateAndDateTime2Choice_? AnnouncementDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the meeting vote is held under the &quot;one-man-one-vote&quot; principle, also known as &quot;per capita vote&quot; whereby the shareholder attending the meeting has one vote only, regardless of the holding positions.
     /// </summary>
     [IsoId("_g8u3nTUIEe2tRf29bleifQ")]
     [DisplayName("One Man One Vote Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OneManOneVoteInd")]
-    #endif
     [IsoXmlTag("OneManOneVoteInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoYesNoIndicator? OneManOneVoteIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OneManOneVoteIndicator { get; init; } 
-    #else
-    public System.String? OneManOneVoteIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Method of voting participation to the general meeting and related voting deadline per method of participation.
     /// </summary>
     [IsoId("_g8u3nzUIEe2tRf29bleifQ")]
     [DisplayName("Participation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Prtcptn")]
-    #endif
     [IsoXmlTag("Prtcptn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ParticipationMethod2? Participation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ParticipationMethod2? Participation { get; init; } 
-    #else
-    public ParticipationMethod2? Participation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information and conditions for physical attendance at the general meeting.
     /// </summary>
     [IsoId("_g8u3oTUIEe2tRf29bleifQ")]
     [DisplayName("Attendance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Attndnc")]
-    #endif
     [IsoXmlTag("Attndnc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Attendance2? Attendance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Attendance2? Attendance { get; init; } 
-    #else
-    public Attendance2? Attendance { get; set; } 
-    #endif
     
     /// <summary>
     /// Address to use over the www (HTTP) service where additional information on the meeting may be found.
     /// </summary>
     [IsoId("_g8u3ozUIEe2tRf29bleifQ")]
     [DisplayName("Additional Documentation URL Address")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlDcmnttnURLAdr")]
-    #endif
     [IsoXmlTag("AddtlDcmnttnURLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax2048Text? AdditionalDocumentationURLAddress { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalDocumentationURLAddress { get; init; } 
-    #else
-    public System.String? AdditionalDocumentationURLAddress { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides web address of an account servicer (or of a service provider) that contains information solely intended for the immediate account holder to enable or facilitate event processing between parties.
     /// </summary>
     [IsoId("_g8u3pTUIEe2tRf29bleifQ")]
     [DisplayName("Event Processing Web Site Address")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtPrcgWebSiteAdr")]
-    #endif
     [IsoXmlTag("EvtPrcgWebSiteAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
     [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax2048Text? EventProcessingWebSiteAddress { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? EventProcessingWebSiteAddress { get; init; } 
-    #else
-    public System.String? EventProcessingWebSiteAddress { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional procedural information about the general meeting, specifying the participation requirements and the voting procedures. Alternatively, this may indicate where such information may be obtained.
     /// </summary>
     [IsoId("_g8u3pzUIEe2tRf29bleifQ")]
     [DisplayName("Additional Procedure Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlPrcdrDtls")]
-    #endif
     [IsoXmlTag("AddtlPrcdrDtls")]
     [MinLength(0)]
     [MaxLength(5)]
@@ -243,78 +122,39 @@ public partial record MeetingNotice8
     /// </summary>
     [IsoId("_g8u3qTUIEe2tRf29bleifQ")]
     [DisplayName("Total Number Of Securities Outstanding")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlNbOfSctiesOutsdng")]
-    #endif
     [IsoXmlTag("TtlNbOfSctiesOutsdng")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentQuantity18Choice_? TotalNumberOfSecuritiesOutstanding { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentQuantity18Choice_? TotalNumberOfSecuritiesOutstanding { get; init; } 
-    #else
-    public FinancialInstrumentQuantity18Choice_? TotalNumberOfSecuritiesOutstanding { get; set; } 
-    #endif
     
     /// <summary>
     /// Number of rights admitted to the vote.
     /// </summary>
     [IsoId("_g8u3qzUIEe2tRf29bleifQ")]
     [DisplayName("Total Number Of Voting Rights")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlNbOfVtngRghts")]
-    #endif
     [IsoXmlTag("TtlNbOfVtngRghts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? TotalNumberOfVotingRights { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? TotalNumberOfVotingRights { get; init; } 
-    #else
-    public System.UInt64? TotalNumberOfVotingRights { get; set; } 
-    #endif
     
     /// <summary>
     /// Address where the information on the proxy should be sent.
     /// </summary>
     [IsoId("_g8u3rTUIEe2tRf29bleifQ")]
     [DisplayName("Proxy Appointment Notification Address")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrxyAppntmntNtfctnAdr")]
-    #endif
     [IsoXmlTag("PrxyAppntmntNtfctnAdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PostalAddress1? ProxyAppointmentNotificationAddress { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PostalAddress1? ProxyAppointmentNotificationAddress { get; init; } 
-    #else
-    public PostalAddress1? ProxyAppointmentNotificationAddress { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the proxy or whether a proxy is not allowed.
     /// </summary>
     [IsoId("_g8u3rzUIEe2tRf29bleifQ")]
     [DisplayName("Proxy Choice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrxyChc")]
-    #endif
     [IsoXmlTag("PrxyChc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Proxy5Choice_? ProxyChoice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Proxy5Choice_? ProxyChoice { get; init; } 
-    #else
-    public Proxy5Choice_? ProxyChoice { get; set; } 
-    #endif
     
     /// <summary>
     /// Contact person at the party organising the meeting, at the issuer or at an intermediary.
     /// </summary>
     [IsoId("_g8u3sTUIEe2tRf29bleifQ")]
     [DisplayName("Contact Person Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtctPrsnDtls")]
-    #endif
     [IsoXmlTag("CtctPrsnDtls")]
     [MinLength(0)]
     [MaxLength(12)]
@@ -325,85 +165,40 @@ public partial record MeetingNotice8
     /// </summary>
     [IsoId("_g8u3szUIEe2tRf29bleifQ")]
     [DisplayName("Result Publication Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsltPblctnDt")]
-    #endif
     [IsoXmlTag("RsltPblctnDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat3Choice_? ResultPublicationDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat3Choice_? ResultPublicationDate { get; init; } 
-    #else
-    public DateFormat3Choice_? ResultPublicationDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date by which the blocking period for the securities should end.
     /// </summary>
     [IsoId("_g8u3tTUIEe2tRf29bleifQ")]
     [DisplayName("Securities Blocking Period End Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesBlckgPrdEndDt")]
-    #endif
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat60Choice_? SecuritiesBlockingPeriodEndDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat60Choice_? SecuritiesBlockingPeriodEndDate { get; init; } 
-    #else
-    public DateFormat60Choice_? SecuritiesBlockingPeriodEndDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date at which the positions are struck to record which parties will receive the entitlement, for example, record date, book close date.
     /// </summary>
     [IsoId("_g8u3tzUIEe2tRf29bleifQ")]
     [DisplayName("Entitlement Fixing Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EntitlmntFxgDt")]
-    #endif
     [IsoXmlTag("EntitlmntFxgDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat1? EntitlementFixingDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat1? EntitlementFixingDate { get; init; } 
-    #else
-    public DateFormat1? EntitlementFixingDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date by which the securities have to be registered. This deadline is specified by an intermediary.
     /// </summary>
     [IsoId("_g8u3uTUIEe2tRf29bleifQ")]
     [DisplayName("Registration Securities Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RegnSctiesDdln")]
-    #endif
     [IsoXmlTag("RegnSctiesDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat58Choice_? RegistrationSecuritiesDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat58Choice_? RegistrationSecuritiesDeadline { get; init; } 
-    #else
-    public DateFormat58Choice_? RegistrationSecuritiesDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Date by which the securities have to be registered. This deadline is set by the issuer.
     /// </summary>
     [IsoId("_g8u3uzUIEe2tRf29bleifQ")]
     [DisplayName("Registration Securities Market Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RegnSctiesMktDdln")]
-    #endif
     [IsoXmlTag("RegnSctiesMktDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat58Choice_? RegistrationSecuritiesMarketDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat58Choice_? RegistrationSecuritiesMarketDeadline { get; init; } 
-    #else
-    public DateFormat58Choice_? RegistrationSecuritiesMarketDeadline { get; set; } 
-    #endif
     
     
     #nullable disable

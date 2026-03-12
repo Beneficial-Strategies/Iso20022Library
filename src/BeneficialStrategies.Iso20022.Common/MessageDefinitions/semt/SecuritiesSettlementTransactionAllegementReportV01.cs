@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -37,12 +32,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer sends a SecuritiesSettlementTransactionAllegementReport to an account owner to provide, at a specified time, the status and details of pending settlement allegements, for all or selected securities in a specified safekeeping account.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate).|ISO 15022 - 20022 Coexistence|This ISO 20022 message is reversed engineered from ISO 15022. Both standards will coexist for a certain number of years. Until this coexistence period ends, the usage of certain data types is restricted to ensure interoperability between ISO 15022 and 20022 users. Compliance to these rules is mandatory in a coexistence environment. The coexistence restrictions are described in a Textual Rule linked to the Message Items they concern. These coexistence textual rules are clearly identified as follows: “CoexistenceXxxxRule”.")]
 [IsoId("_MgeACdFSEd-BzquC8wXy7w_1519664434")]
 [DisplayName("Securities Settlement Transaction Allegement Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementTransactionAllegementReportV01 : IOuterRecord
 {
     
@@ -71,21 +60,6 @@ public partial record SecuritiesSettlementTransactionAllegementReportV01 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementTransactionAllegementReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementTransactionAllegementReportV01( DocumentIdentification11 reqIdentification,Pagination reqPagination,Statement17 reqStatementGeneralDetails,SecuritiesAccount13 reqSafekeepingAccount )
-    {
-        Identification = reqIdentification;
-        Pagination = reqPagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-        SafekeepingAccount = reqSafekeepingAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,144 +67,64 @@ public partial record SecuritiesSettlementTransactionAllegementReportV01 : IOute
     /// </summary>
     [IsoId("_MgeACtFSEd-BzquC8wXy7w_1514910980")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification11 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification11 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification11 Identification { get; init; } 
-    #else
-    public DocumentIdentification11 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.
     /// </summary>
     [IsoId("_MgeAC9FSEd-BzquC8wXy7w_1526916661")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination Pagination { get; init; } 
-    #else
-    public Pagination Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// General information related to report.
     /// </summary>
     [IsoId("_MgnJ8NFSEd-BzquC8wXy7w_1537074322")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement17 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement17 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement17 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement17 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_MgnJ8dFSEd-BzquC8wXy7w_-1435415500")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification13Choice_? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification13Choice_? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification13Choice_? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_MgnJ8tFSEd-BzquC8wXy7w_-1705469091")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount13 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the allegement.
     /// </summary>
     [IsoId("_MgnJ89FSEd-BzquC8wXy7w_1913536278")]
     [DisplayName("Allegement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AllgmtDtls")]
-    #endif
     [IsoXmlTag("AllgmtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesTradeDetails4? AllegementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesTradeDetails4? AllegementDetails { get; init; } 
-    #else
-    public SecuritiesTradeDetails4? AllegementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that originated the message, if other than the sender.
     /// </summary>
     [IsoId("_MgnJ9NFSEd-BzquC8wXy7w_-1643795892")]
     [DisplayName("Message Originator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgOrgtr")]
-    #endif
     [IsoXmlTag("MsgOrgtr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification10Choice_? MessageOriginator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification10Choice_? MessageOriginator { get; init; } 
-    #else
-    public PartyIdentification10Choice_? MessageOriginator { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that is the final destination of the message, if other than the receiver.
     /// </summary>
     [IsoId("_MgnJ9dFSEd-BzquC8wXy7w_-1268845255")]
     [DisplayName("Message Recipient")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgRcpt")]
-    #endif
     [IsoXmlTag("MsgRcpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification10Choice_? MessageRecipient { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification10Choice_? MessageRecipient { get; init; } 
-    #else
-    public PartyIdentification10Choice_? MessageRecipient { get; set; } 
-    #endif
     
     
     #nullable disable

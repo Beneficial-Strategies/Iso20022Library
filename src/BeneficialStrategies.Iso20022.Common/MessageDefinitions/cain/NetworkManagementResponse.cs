@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The NetworkManagementResponse message is sent by an acquirer, an issuer or an agent to answer to an NetworkManagementInitiation message.")]
 [IsoId("_Goob8HvFEeSKFIcWw3l4Yw")]
 [DisplayName("Network Management Response")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NetworkManagementResponse : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record NetworkManagementResponse : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NetworkManagementResponse instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NetworkManagementResponse( Header17 reqHeader,AcquirerNetworkManagementResponse1 reqNetworkManagementResponseValue )
-    {
-        Header = reqHeader;
-        NetworkManagementResponseValue = reqNetworkManagementResponseValue;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record NetworkManagementResponse : IOuterRecord
     /// </summary>
     [IsoId("_UehNsHvFEeSKFIcWw3l4Yw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header17 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header17 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header17 Header { get; init; } 
-    #else
-    public Header17 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response to the network management.
     /// </summary>
     [IsoId("_gRKVUHvFEeSKFIcWw3l4Yw")]
     [DisplayName("Network Management Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtwkMgmtRspn")]
-    #endif
     [IsoXmlTag("NtwkMgmtRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcquirerNetworkManagementResponse1 NetworkManagementResponseValue { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcquirerNetworkManagementResponse1 NetworkManagementResponseValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcquirerNetworkManagementResponse1 NetworkManagementResponseValue { get; init; } 
-    #else
-    public AcquirerNetworkManagementResponse1 NetworkManagementResponseValue { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_OCK_4HvGEeSKFIcWw3l4Yw")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

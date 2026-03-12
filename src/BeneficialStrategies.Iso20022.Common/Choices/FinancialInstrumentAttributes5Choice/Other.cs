@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Choice
 {
     /// <summary>
@@ -20,31 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
     /// </summary>
     [IsoId("_6geZA5icEe2f7NHvXATP5g")]
     [DisplayName("Other")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record Other : FinancialInstrumentAttributes5Choice_
-    #else
-    public partial class Other : FinancialInstrumentAttributes5Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a Other instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public Other( SecurityInstrumentDescription23 reqFinancialInstrumentGeneralAttributes,DerivativeInstrument6 reqDerivativeInstrumentAttributes )
-        {
-            FinancialInstrumentGeneralAttributes = reqFinancialInstrumentGeneralAttributes;
-            DerivativeInstrumentAttributes = reqDerivativeInstrumentAttributes;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -52,55 +22,24 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
         /// </summary>
         [IsoId("_2oQU0ZidEe2f7NHvXATP5g")]
         [DisplayName("Financial Instrument General Attributes")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="FinInstrmGnlAttrbts")]
-        #endif
         [IsoXmlTag("FinInstrmGnlAttrbts")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required SecurityInstrumentDescription23 FinancialInstrumentGeneralAttributes { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required SecurityInstrumentDescription23 FinancialInstrumentGeneralAttributes { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public SecurityInstrumentDescription23 FinancialInstrumentGeneralAttributes { get; init; } 
-        #else
-        public SecurityInstrumentDescription23 FinancialInstrumentGeneralAttributes { get; set; } 
-        #endif
         
         /// <summary>
         /// Attributes specific to debt instruments.
         /// </summary>
         [IsoId("_2oQU05idEe2f7NHvXATP5g")]
         [DisplayName("Debt Instrument Attributes")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="DebtInstrmAttrbts")]
-        #endif
         [IsoXmlTag("DebtInstrmAttrbts")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public DebtInstrument4? DebtInstrumentAttributes { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public DebtInstrument4? DebtInstrumentAttributes { get; init; } 
-        #else
-        public DebtInstrument4? DebtInstrumentAttributes { get; set; } 
-        #endif
         
         /// <summary>
         /// Attributes specific to derivative instruments.
         /// </summary>
         [IsoId("_2oQU1ZidEe2f7NHvXATP5g")]
         [DisplayName("Derivative Instrument Attributes")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="DerivInstrmAttrbts")]
-        #endif
         [IsoXmlTag("DerivInstrmAttrbts")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required DerivativeInstrument6 DerivativeInstrumentAttributes { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required DerivativeInstrument6 DerivativeInstrumentAttributes { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public DerivativeInstrument6 DerivativeInstrumentAttributes { get; init; } 
-        #else
-        public DerivativeInstrument6 DerivativeInstrumentAttributes { get; set; } 
-        #endif
         
         
         #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"Scope|The AcceptorReconciliationRequest message is sent by the card acceptor to the acquirer or an agent to communicate the totals of the card payment transaction for a reconciliation period. An agent never forwards the message.|Usage|The AcceptorReconciliationRequest message is used to ensure that the debits and credits correspond to the balances computed by the acquirer or its agent for the same reconciliation period.|The AcceptorReconciliationRequest message is also used to close a reconciliation period.")]
 [IsoId("_PNo5FaMVEeCJ6YNENx4h-w_-594784238")]
 [DisplayName("Acceptor Reconciliation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorReconciliationRequestV01 : IOuterRecord
 {
     
@@ -65,20 +54,6 @@ public partial record AcceptorReconciliationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorReconciliationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorReconciliationRequestV01( Header1 reqHeader,AcceptorReconciliationRequest1 reqReconciliationRequest,ContentInformationType3 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        ReconciliationRequest = reqReconciliationRequest;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,57 +61,24 @@ public partial record AcceptorReconciliationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_PNo5FqMVEeCJ6YNENx4h-w_734688010")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header1 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header1 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header1 Header { get; init; } 
-    #else
-    public Header1 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reconcilliation request.
     /// </summary>
     [IsoId("_PNo5F6MVEeCJ6YNENx4h-w_-572887118")]
     [DisplayName("Reconciliation Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnReq")]
-    #endif
     [IsoXmlTag("RcncltnReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorReconciliationRequest1 ReconciliationRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorReconciliationRequest1 ReconciliationRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorReconciliationRequest1 ReconciliationRequest { get; init; } 
-    #else
-    public AcceptorReconciliationRequest1 ReconciliationRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_PNyDAKMVEeCJ6YNENx4h-w_654221226")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType3 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType3 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType3 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType3 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

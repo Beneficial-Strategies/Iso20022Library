@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sp1N7QEcEeCQm6a_G2yO_w_-1349782575")]
 [DisplayName("Party Identification")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PartyIdentification44
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PartyIdentification44 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PartyIdentification44( System.String reqAnyBIC )
-    {
-        AnyBIC = reqAnyBIC;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,29 +23,15 @@ public partial record PartyIdentification44
     /// </summary>
     [IsoId("_Sp1N7gEcEeCQm6a_G2yO_w_-1463621641")]
     [DisplayName("Any BIC")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AnyBIC")]
-    #endif
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoAnyBICIdentifier AnyBIC { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String AnyBIC { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String AnyBIC { get; init; } 
-    #else
-    public System.String AnyBIC { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
     /// </summary>
     [IsoId("_Sp1N7wEcEeCQm6a_G2yO_w_1948112368")]
     [DisplayName("Alternative Identifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AltrntvIdr")]
-    #endif
     [IsoXmlTag("AltrntvIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]

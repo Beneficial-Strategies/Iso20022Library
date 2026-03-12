@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,29 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pg0Qk8QHEemsic1bQcEtLA")]
 [DisplayName("Compensation")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Compensation3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Compensation3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Compensation3( ActiveCurrencyAndAmount reqAmount,BranchAndFinancialInstitutionIdentification6 reqDebtorAgent,BranchAndFinancialInstitutionIdentification6 reqCreditorAgent,CompensationReason1Choice_ reqReason )
-    {
-        Amount = reqAmount;
-        DebtorAgent = reqDebtorAgent;
-        CreditorAgent = reqCreditorAgent;
-        Reason = reqReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -49,19 +23,8 @@ public partial record Compensation3
     /// </summary>
     [IsoId("_pr10wcQHEemsic1bQcEtLA")]
     [DisplayName("Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Amt")]
-    #endif
     [IsoXmlTag("Amt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveCurrencyAndAmount Amount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveCurrencyAndAmount Amount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount Amount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount Amount { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution servicing an account for the debtor.
@@ -69,36 +32,16 @@ public partial record Compensation3
     /// </summary>
     [IsoId("_pr10w8QHEemsic1bQcEtLA")]
     [DisplayName("Debtor Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DbtrAgt")]
-    #endif
     [IsoXmlTag("DbtrAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BranchAndFinancialInstitutionIdentification6 DebtorAgent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BranchAndFinancialInstitutionIdentification6 DebtorAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification6 DebtorAgent { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification6 DebtorAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Unambiguous identification of the account of the debtor agent at its servicing agent in the payment chain.
     /// </summary>
     [IsoId("_sII4EsQHEemsic1bQcEtLA")]
     [DisplayName("Debtor Agent Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DbtrAgtAcct")]
-    #endif
     [IsoXmlTag("DbtrAgtAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccount38? DebtorAgentAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount38? DebtorAgentAccount { get; init; } 
-    #else
-    public CashAccount38? DebtorAgentAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution servicing an account for the creditor.
@@ -106,55 +49,24 @@ public partial record Compensation3
     /// </summary>
     [IsoId("_pr10xcQHEemsic1bQcEtLA")]
     [DisplayName("Creditor Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtrAgt")]
-    #endif
     [IsoXmlTag("CdtrAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BranchAndFinancialInstitutionIdentification6 CreditorAgent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BranchAndFinancialInstitutionIdentification6 CreditorAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification6 CreditorAgent { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification6 CreditorAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Unambiguous identification of the account of the creditor agent at its servicing agent to which a credit entry will be made as a result of the payment transaction.
     /// </summary>
     [IsoId("_sII4E8QHEemsic1bQcEtLA")]
     [DisplayName("Creditor Agent Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtrAgtAcct")]
-    #endif
     [IsoXmlTag("CdtrAgtAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccount38? CreditorAgentAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount38? CreditorAgentAccount { get; init; } 
-    #else
-    public CashAccount38? CreditorAgentAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Reason for the payment compensation.
     /// </summary>
     [IsoId("_pr10x8QHEemsic1bQcEtLA")]
     [DisplayName("Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsn")]
-    #endif
     [IsoXmlTag("Rsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CompensationReason1Choice_ Reason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CompensationReason1Choice_ Reason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CompensationReason1Choice_ Reason { get; init; } 
-    #else
-    public CompensationReason1Choice_ Reason { get; set; } 
-    #endif
     
     
     #nullable disable

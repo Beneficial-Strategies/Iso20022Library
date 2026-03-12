@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hjB2Z2liEeGaMcKyqKNRfQ_-1911828030")]
 [DisplayName("Securities Account Return Criteria")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesAccountReturnCriteria
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,162 +23,81 @@ public partial record SecuritiesAccountReturnCriteria
     /// </summary>
     [IsoId("_hjB2aGliEeGaMcKyqKNRfQ_-1979285068")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AccountIdentification { get; init; } 
-    #else
-    public System.String? AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the identification of the party owning the account is requested.
     /// </summary>
     [IsoId("_hjB2aWliEeGaMcKyqKNRfQ_1420289725")]
     [DisplayName("Party Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PtyId")]
-    #endif
     [IsoXmlTag("PtyId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? PartyIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PartyIdentification { get; init; } 
-    #else
-    public System.String? PartyIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the type of the party owning the account is requested.
     /// </summary>
     [IsoId("_hjB2amliEeGaMcKyqKNRfQ_817359905")]
     [DisplayName("Party Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PtyTp")]
-    #endif
     [IsoXmlTag("PtyTp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? PartyType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PartyType { get; init; } 
-    #else
-    public System.String? PartyType { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the account servicer is requested.
     /// </summary>
     [IsoId("_hjB2a2liEeGaMcKyqKNRfQ_-1406786554")]
     [DisplayName("Account Servicer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcr")]
-    #endif
     [IsoXmlTag("AcctSvcr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? AccountServicer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AccountServicer { get; init; } 
-    #else
-    public System.String? AccountServicer { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the account type is requested.
     /// </summary>
     [IsoId("_hjB2bGliEeGaMcKyqKNRfQ_-713957965")]
     [DisplayName("Account Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctTp")]
-    #endif
     [IsoXmlTag("AcctTp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? AccountType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AccountType { get; init; } 
-    #else
-    public System.String? AccountType { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the opening date for the account is requested.
     /// </summary>
     [IsoId("_hjB2bWliEeGaMcKyqKNRfQ_81224670")]
     [DisplayName("Opening Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OpngDt")]
-    #endif
     [IsoXmlTag("OpngDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? OpeningDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OpeningDate { get; init; } 
-    #else
-    public System.String? OpeningDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the closing date for the account is requested.
     /// </summary>
     [IsoId("_hjB2bmliEeGaMcKyqKNRfQ_841989823")]
     [DisplayName("Closing Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClsgDt")]
-    #endif
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? ClosingDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClosingDate { get; init; } 
-    #else
-    public System.String? ClosingDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies information to identify securities accounts where allocation instructions are posted.
     /// </summary>
     [IsoId("_hjB2b2liEeGaMcKyqKNRfQ_-140662419")]
     [DisplayName("End Investor Flag")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EndInvstrFlg")]
-    #endif
     [IsoXmlTag("EndInvstrFlg")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? EndInvestorFlag { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? EndInvestorFlag { get; init; } 
-    #else
-    public System.String? EndInvestorFlag { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines how the price is applied to the securities account.
     /// </summary>
     [IsoId("_hjB2cGliEeGaMcKyqKNRfQ_131386874")]
     [DisplayName("Pricing Scheme")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PricgSchme")]
-    #endif
     [IsoXmlTag("PricgSchme")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? PricingScheme { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PricingScheme { get; init; } 
-    #else
-    public System.String? PricingScheme { get; set; } 
-    #endif
     
     
     #nullable disable

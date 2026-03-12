@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The Amendment message can be initiated by any party and received by any party (acquirer, agent or issuer). ||This message is used to inform the originator that the original message has been corrected/amended and then forwarded to the destination on behalf of the originator. It contains a copy of the original message and any errors found. It may also contain any corrections and/or amendments that were made to the original message.|")]
 [IsoId("_5FbJsRykEeyVgKPonV4SjQ")]
 [DisplayName("Amendment V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AmendmentV02 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record AmendmentV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AmendmentV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AmendmentV02( Header65 reqHeader,Amendment11 reqBody )
-    {
-        Header = reqHeader;
-        Body = reqBody;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,55 +60,24 @@ public partial record AmendmentV02 : IOuterRecord
     /// </summary>
     [IsoId("_5FbwwRykEeyVgKPonV4SjQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header65 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header65 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header65 Header { get; init; } 
-    #else
-    public Header65 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the Amendment message.
     /// </summary>
     [IsoId("_5FbwwxykEeyVgKPonV4SjQ")]
     [DisplayName("Body")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Body")]
-    #endif
     [IsoXmlTag("Body")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Amendment11 Body { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Amendment11 Body { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Amendment11 Body { get; init; } 
-    #else
-    public Amendment11 Body { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC
     /// </summary>
     [IsoId("_5FbwxRykEeyVgKPonV4SjQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType20? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType20? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType20? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

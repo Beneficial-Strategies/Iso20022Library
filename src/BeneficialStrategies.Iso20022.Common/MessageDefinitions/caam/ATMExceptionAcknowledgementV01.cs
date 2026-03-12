@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caam;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caam;
 [Description(@"The ATMExceptionAcknowledgement message is sent by an acquirer or its agent to an ATM to acknowledge the receipt of an ATMExceptionAdvice message.")]
 [IsoId("_YFLI0K5GEeWCgYcWSNgX5g")]
 [DisplayName("ATM Exception Acknowledgement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMExceptionAcknowledgementV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record ATMExceptionAcknowledgementV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMExceptionAcknowledgementV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMExceptionAcknowledgementV01( Header32 reqHeader )
-    {
-        Header = reqHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,70 +57,32 @@ public partial record ATMExceptionAcknowledgementV01 : IOuterRecord
     /// </summary>
     [IsoId("_fpPXMK5GEeWCgYcWSNgX5g")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header32 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header32 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header32 Header { get; init; } 
-    #else
-    public Header32 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted body of the message.
     /// </summary>
     [IsoId("_k_u6wK5GEeWCgYcWSNgX5g")]
     [DisplayName("Protected ATM Exception Acknowledgement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdATMXcptnAck")]
-    #endif
     [IsoXmlTag("PrtctdATMXcptnAck")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedATMExceptionAcknowledgement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedATMExceptionAcknowledgement { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedATMExceptionAcknowledgement { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the acknowledgement of an ATM exception.
     /// </summary>
     [IsoId("_ogUFkK5GEeWCgYcWSNgX5g")]
     [DisplayName("ATM Exception Acknowledgement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMXcptnAck")]
-    #endif
     [IsoXmlTag("ATMXcptnAck")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMExceptionAcknowledgement1? ATMExceptionAcknowledgement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMExceptionAcknowledgement1? ATMExceptionAcknowledgement { get; init; } 
-    #else
-    public ATMExceptionAcknowledgement1? ATMExceptionAcknowledgement { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_kRgtYK5HEeWCgYcWSNgX5g")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

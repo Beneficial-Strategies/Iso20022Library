@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_01K7cGHNEeGknP6xAc4fKw")]
 [DisplayName("Counterparty Details Type")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CounterpartyDetailsType1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CounterpartyDetailsType1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CounterpartyDetailsType1( SecurityIdentification15 reqFinancialInstrumentIdentification,System.String reqAbbreviatedLocalLanguageSecurityName )
-    {
-        FinancialInstrumentIdentification = reqFinancialInstrumentIdentification;
-        AbbreviatedLocalLanguageSecurityName = reqAbbreviatedLocalLanguageSecurityName;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,19 +23,8 @@ public partial record CounterpartyDetailsType1
     /// </summary>
     [IsoId("_Jd4r4GHOEeGknP6xAc4fKw")]
     [DisplayName("Financial Instrument Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmId")]
-    #endif
     [IsoXmlTag("FinInstrmId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecurityIdentification15 FinancialInstrumentIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecurityIdentification15 FinancialInstrumentIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecurityIdentification15 FinancialInstrumentIdentification { get; init; } 
-    #else
-    public SecurityIdentification15 FinancialInstrumentIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Classification of the Issuer or the Counterparty institution in case of a merger.
@@ -68,17 +33,8 @@ public partial record CounterpartyDetailsType1
     /// </summary>
     [IsoId("_Xq3vAGHOEeGknP6xAc4fKw")]
     [DisplayName("Post Effective Date Classification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PstFctvDtClssfctn")]
-    #endif
     [IsoXmlTag("PstFctvDtClssfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public InstitutionalClassificationCode? PostEffectiveDateClassification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InstitutionalClassificationCode? PostEffectiveDateClassification { get; init; } 
-    #else
-    public InstitutionalClassificationCode? PostEffectiveDateClassification { get; set; } 
-    #endif
     
     /// <summary>
     /// Abbreviated name of underlying securities in the local language.
@@ -87,21 +43,10 @@ public partial record CounterpartyDetailsType1
     /// </summary>
     [IsoId("_2kS6QGHOEeGknP6xAc4fKw")]
     [DisplayName("Abbreviated Local Language Security Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AbbrvtdLclLangSctyNm")]
-    #endif
     [IsoXmlTag("AbbrvtdLclLangSctyNm")]
     [IsoSimpleType(IsoSimpleType.Max240Text)]
     [StringLength(maximumLength: 240 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax240Text AbbreviatedLocalLanguageSecurityName { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String AbbreviatedLocalLanguageSecurityName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String AbbreviatedLocalLanguageSecurityName { get; init; } 
-    #else
-    public System.String AbbreviatedLocalLanguageSecurityName { get; set; } 
-    #endif
     
     
     #nullable disable

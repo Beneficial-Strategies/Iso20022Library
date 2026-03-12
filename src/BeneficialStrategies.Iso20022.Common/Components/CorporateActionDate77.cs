@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_v6YTEe2_Eeqc-LCjwLsUVg")]
 [DisplayName("Corporate Action Date")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionDate77
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,187 +23,88 @@ public partial record CorporateActionDate77
     /// </summary>
     [IsoId("_wPpYc-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Early Response Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EarlyRspnDdln")]
-    #endif
     [IsoXmlTag("EarlyRspnDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? EarlyResponseDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? EarlyResponseDeadline { get; init; } 
-    #else
-    public DateFormat43Choice_? EarlyResponseDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Last day a holder can deliver the securities that it had elected on and/or previously protected.
     /// </summary>
     [IsoId("_wPpYe-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Cover Expiration Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CoverXprtnDdln")]
-    #endif
     [IsoXmlTag("CoverXprtnDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? CoverExpirationDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? CoverExpirationDeadline { get; init; } 
-    #else
-    public DateFormat43Choice_? CoverExpirationDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Last date/time a holder can request to defer delivery of securities pursuant to a notice of guaranteed delivery or other required documentation.
     /// </summary>
     [IsoId("_wPpYg-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Protect Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctDdln")]
-    #endif
     [IsoXmlTag("PrtctDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? ProtectDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? ProtectDeadline { get; init; } 
-    #else
-    public DateFormat43Choice_? ProtectDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Issuer or issuer&apos;s agent deadline to respond with an instruction to an outstanding offer or privilege.
     /// </summary>
     [IsoId("_wPpYi-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Market Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktDdln")]
-    #endif
     [IsoXmlTag("MktDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? MarketDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? MarketDeadline { get; init; } 
-    #else
-    public DateFormat43Choice_? MarketDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time at which the account servicer has set as the deadline to respond, with instructions, to an outstanding event. 
     /// </summary>
     [IsoId("_wPpYk-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Response Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RspnDdln")]
-    #endif
     [IsoXmlTag("RspnDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat44Choice_? ResponseDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat44Choice_? ResponseDeadline { get; init; } 
-    #else
-    public DateFormat44Choice_? ResponseDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time at which an order expires or on which a privilege or offer terminates.
     /// </summary>
     [IsoId("_wPpYm-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Expiry Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XpryDt")]
-    #endif
     [IsoXmlTag("XpryDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? ExpiryDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? ExpiryDate { get; init; } 
-    #else
-    public DateFormat43Choice_? ExpiryDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time by which cash must be in place in order to take part in the event.
     /// </summary>
     [IsoId("_wPpYo-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Subscription Cost Debit Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SbcptCostDbtDt")]
-    #endif
     [IsoXmlTag("SbcptCostDbtDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? SubscriptionCostDebitDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? SubscriptionCostDebitDate { get; init; } 
-    #else
-    public DateFormat43Choice_? SubscriptionCostDebitDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Last day that a participant of the depository can deliver securities that it had elected on and/or previously protected.
     /// </summary>
     [IsoId("_wPpYq-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Depository Cover Expiration Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DpstryCoverXprtnDt")]
-    #endif
     [IsoXmlTag("DpstryCoverXprtnDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? DepositoryCoverExpirationDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? DepositoryCoverExpirationDate { get; init; } 
-    #else
-    public DateFormat43Choice_? DepositoryCoverExpirationDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time set as the deadline to respond, with instructions, to an outstanding event, for which the underlying security is out on loan.
     /// </summary>
     [IsoId("_wPpYs-2_Eeqc-LCjwLsUVg")]
     [DisplayName("Stock Lending Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StockLndgDdln")]
-    #endif
     [IsoXmlTag("StockLndgDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat43Choice_? StockLendingDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat43Choice_? StockLendingDeadline { get; init; } 
-    #else
-    public DateFormat43Choice_? StockLendingDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the party borrowing stocks and the associated stock lending deadline assigned to the borrower.
     /// </summary>
     [IsoId("_wPpYte2_Eeqc-LCjwLsUVg")]
     [DisplayName("Borrower Stock Lending Deadline")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BrrwrStockLndgDdln")]
-    #endif
     [IsoXmlTag("BrrwrStockLndgDdln")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BorrowerLendingDeadline5? BorrowerStockLendingDeadline { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BorrowerLendingDeadline5? BorrowerStockLendingDeadline { get; init; } 
-    #else
-    public BorrowerLendingDeadline5? BorrowerStockLendingDeadline { get; set; } 
-    #endif
     
     /// <summary>
     /// Date until which  the blocking of securities can occur upon instructing this option.
     /// </summary>
     [IsoId("_TQxY4O3AEeqc-LCjwLsUVg")]
     [DisplayName("End Of Securities Blocking Period")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EndOfSctiesBlckgPrd")]
-    #endif
     [IsoXmlTag("EndOfSctiesBlckgPrd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateFormat59Choice_? EndOfSecuritiesBlockingPeriod { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateFormat59Choice_? EndOfSecuritiesBlockingPeriod { get; init; } 
-    #else
-    public DateFormat59Choice_? EndOfSecuritiesBlockingPeriod { get; set; } 
-    #endif
     
     
     #nullable disable

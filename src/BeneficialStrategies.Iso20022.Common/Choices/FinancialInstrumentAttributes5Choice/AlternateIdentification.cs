@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Choice
 {
     /// <summary>
@@ -20,23 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
     /// </summary>
     [IsoId("_-6AlEJicEe2f7NHvXATP5g")]
     [DisplayName("Alternate Identification")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record AlternateIdentification : FinancialInstrumentAttributes5Choice_
-    #else
-    public partial class AlternateIdentification : FinancialInstrumentAttributes5Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        // No constructor needed for < NET8 because this type has no required members.
-        #endif
         #nullable enable
         
         /// <summary>
@@ -44,54 +22,27 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
         /// </summary>
         [IsoId("_iDjE24lXEeWPSZi0kAOXhg")]
         [DisplayName("ISIN")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="ISIN")]
-        #endif
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoISINOct2015Identifier? ISIN { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? ISIN { get; init; } 
-        #else
-        public System.String? ISIN { get; set; } 
-        #endif
         
         /// <summary>
         /// Identification of a security by proprietary or domestic identification scheme.
         /// </summary>
         [IsoId("_iDjE3YlXEeWPSZi0kAOXhg")]
         [DisplayName("Other Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="OthrId")]
-        #endif
         [IsoXmlTag("OthrId")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public OtherIdentification1? OtherIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public OtherIdentification1? OtherIdentification { get; init; } 
-        #else
-        public OtherIdentification1? OtherIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Textual description of a security instrument.
         /// </summary>
         [IsoId("_iDjE34lXEeWPSZi0kAOXhg")]
         [DisplayName("Description")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Desc")]
-        #endif
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
         [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax140Text? Description { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? Description { get; init; } 
-        #else
-        public System.String? Description { get; set; } 
-        #endif
         
         
         #nullable disable

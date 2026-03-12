@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A3gsQNokEeC60axPepSq7g_556617430")]
 [DisplayName("Clearing")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Clearing3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record Clearing3
     /// </summary>
     [IsoId("_A3qdQNokEeC60axPepSq7g_428053950")]
     [DisplayName("Clearing Member")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrMmb")]
-    #endif
     [IsoXmlTag("ClrMmb")]
     public ValueList<PartyIdentificationAndAccount78> ClearingMember { get; init; } = new ValueList<PartyIdentificationAndAccount78>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _A3qdQNokEeC60axPepSq7g_428053950
@@ -52,17 +33,8 @@ public partial record Clearing3
     /// </summary>
     [IsoId("_A3qdQdokEeC60axPepSq7g_1991091600")]
     [DisplayName("Clearing Segment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClrSgmt")]
-    #endif
     [IsoXmlTag("ClrSgmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification35Choice_? ClearingSegment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification35Choice_? ClearingSegment { get; init; } 
-    #else
-    public PartyIdentification35Choice_? ClearingSegment { get; set; } 
-    #endif
     
     
     #nullable disable

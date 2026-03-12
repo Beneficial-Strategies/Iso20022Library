@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -21,7 +16,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(OrderStatus4Choice.Suspended))]
     [KnownType(typeof(OrderStatus4Choice.InRepair))]
     [KnownType(typeof(OrderStatus4Choice.PartiallySettled))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(OrderStatus4Choice.Status),nameof(OrderStatus4Choice.Status))]
     [JsonDerivedType(typeof(OrderStatus4Choice.Cancelled),nameof(OrderStatus4Choice.Cancelled))]
     [JsonDerivedType(typeof(OrderStatus4Choice.ConditionallyAccepted),nameof(OrderStatus4Choice.ConditionallyAccepted))]
@@ -29,20 +23,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(OrderStatus4Choice.Suspended),nameof(OrderStatus4Choice.Suspended))]
     [JsonDerivedType(typeof(OrderStatus4Choice.InRepair),nameof(OrderStatus4Choice.InRepair))]
     [JsonDerivedType(typeof(OrderStatus4Choice.PartiallySettled),nameof(OrderStatus4Choice.PartiallySettled))]
-    #endif
     [IsoId("_9XxY8UH8EeaV3ab_pHzFIQ")]
     [DisplayName("Order Status 4 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record OrderStatus4Choice_
-    #else
-    public abstract partial class OrderStatus4Choice_
-    #endif
     {
     }
 }

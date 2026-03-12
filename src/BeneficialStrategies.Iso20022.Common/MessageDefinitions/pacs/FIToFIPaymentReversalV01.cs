@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.pacs;
 [Description(@"Scope|The FinancialInstitutionToFinancialInstitutionPaymentReversal message is sent by an agent to the next party in the payment chain. It is used to reverse a payment previously executed.|Usage|The FIToFIPaymentReversal message is exchanged between agents to reverse a FIToFICustomerDirectDebit message that has been settled. The result will be a credit on the debtor account.|The FIToFIPaymentReversal message may or may not be the follow-up of a CustomerDirectDebitInitiation message.|The FIToFIPaymentReversal message refers to the original FIToFICustomerDirectDebit message by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentReversal message can be used in domestic and cross-border scenarios.|")]
 [IsoId("_elKe5dEuEd-BzquC8wXy7w_-1796587382")]
 [DisplayName("FI To FI Payment Reversal V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FIToFIPaymentReversalV01 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record FIToFIPaymentReversalV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FIToFIPaymentReversalV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FIToFIPaymentReversalV01( GroupHeader9 reqGroupHeader,OriginalGroupInformation5 reqOriginalGroupInformation )
-    {
-        GroupHeader = reqGroupHeader;
-        OriginalGroupInformation = reqOriginalGroupInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,55 +64,24 @@ public partial record FIToFIPaymentReversalV01 : IOuterRecord
     /// </summary>
     [IsoId("_elKe5tEuEd-BzquC8wXy7w_421348727")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader9 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader9 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader9 GroupHeader { get; init; } 
-    #else
-    public GroupHeader9 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the original group of transactions, to which the message refers.
     /// </summary>
     [IsoId("_elKe59EuEd-BzquC8wXy7w_357436312")]
     [DisplayName("Original Group Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlGrpInf")]
-    #endif
     [IsoXmlTag("OrgnlGrpInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OriginalGroupInformation5 OriginalGroupInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OriginalGroupInformation5 OriginalGroupInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalGroupInformation5 OriginalGroupInformation { get; init; } 
-    #else
-    public OriginalGroupInformation5 OriginalGroupInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the original transactions, to which the reversal message refers.
     /// </summary>
     [IsoId("_elKe6NEuEd-BzquC8wXy7w_-191011416")]
     [DisplayName("Transaction Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxInf")]
-    #endif
     [IsoXmlTag("TxInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PaymentTransactionInformation5? TransactionInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentTransactionInformation5? TransactionInformation { get; init; } 
-    #else
-    public PaymentTransactionInformation5? TransactionInformation { get; set; } 
-    #endif
     
     
     #nullable disable

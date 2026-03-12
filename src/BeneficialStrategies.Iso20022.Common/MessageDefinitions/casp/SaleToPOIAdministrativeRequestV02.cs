@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.casp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.casp;
 [Description(@"The SaleToPOIAdministrativeRequest message is sent by a sale system to POI System to request for an Administrative service.")]
 [IsoId("_kjvmoQ1SEeqjM-rxn3HuXQ")]
 [DisplayName("Sale To POI Administrative Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SaleToPOIAdministrativeRequestV02 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record SaleToPOIAdministrativeRequestV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SaleToPOIAdministrativeRequestV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SaleToPOIAdministrativeRequestV02( Header41 reqHeader,AdministrativeRequest3 reqAdministrativeRequest )
-    {
-        Header = reqHeader;
-        AdministrativeRequest = reqAdministrativeRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record SaleToPOIAdministrativeRequestV02 : IOuterRecord
     /// </summary>
     [IsoId("_kjvmow1SEeqjM-rxn3HuXQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header41 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header41 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header41 Header { get; init; } 
-    #else
-    public Header41 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the administrative request.
     /// </summary>
     [IsoId("_kjvmpQ1SEeqjM-rxn3HuXQ")]
     [DisplayName("Administrative Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AdmstvReq")]
-    #endif
     [IsoXmlTag("AdmstvReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdministrativeRequest3 AdministrativeRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdministrativeRequest3 AdministrativeRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdministrativeRequest3 AdministrativeRequest { get; init; } 
-    #else
-    public AdministrativeRequest3 AdministrativeRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_kjvmpw1SEeqjM-rxn3HuXQ")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType21? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType21? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType21? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

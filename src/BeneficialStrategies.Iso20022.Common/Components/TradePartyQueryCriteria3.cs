@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QAVRoZQTEeiok48Eh9lW9Q")]
 [DisplayName("Trade Party Query Criteria")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TradePartyQueryCriteria3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TradePartyQueryCriteria3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TradePartyQueryCriteria3( Operation3Code reqOperator )
-    {
-        Operator = reqOperator;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,121 +23,56 @@ public partial record TradePartyQueryCriteria3
     /// </summary>
     [IsoId("_QLO6E5QTEeiok48Eh9lW9Q")]
     [DisplayName("Operator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Oprtr")]
-    #endif
     [IsoXmlTag("Oprtr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Operation3Code Operator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Operation3Code Operator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Operation3Code Operator { get; init; } 
-    #else
-    public Operation3Code Operator { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the reporting counterparty of the contract.
     /// </summary>
     [IsoId("_QLO6FZQTEeiok48Eh9lW9Q")]
     [DisplayName("Reporting Counterparty")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptgCtrPty")]
-    #endif
     [IsoXmlTag("RptgCtrPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentificationQuery8? ReportingCounterparty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentificationQuery8? ReportingCounterparty { get; init; } 
-    #else
-    public TradePartyIdentificationQuery8? ReportingCounterparty { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the other counterparty of the contract.
     /// </summary>
     [IsoId("_QLO6F5QTEeiok48Eh9lW9Q")]
     [DisplayName("Other Counterparty")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrCtrPty")]
-    #endif
     [IsoXmlTag("OthrCtrPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentificationQuery8? OtherCounterparty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentificationQuery8? OtherCounterparty { get; init; } 
-    #else
-    public TradePartyIdentificationQuery8? OtherCounterparty { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the party subject to the rights and obligations arising from the contract.
     /// </summary>
     [IsoId("_QLO6GZQTEeiok48Eh9lW9Q")]
     [DisplayName("Beneficiary")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Bnfcry")]
-    #endif
     [IsoXmlTag("Bnfcry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentificationQuery8? Beneficiary { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentificationQuery8? Beneficiary { get; init; } 
-    #else
-    public TradePartyIdentificationQuery8? Beneficiary { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the submitting agent of the reported of the contract.
     /// </summary>
     [IsoId("_QLO6G5QTEeiok48Eh9lW9Q")]
     [DisplayName("Submitting Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubmitgAgt")]
-    #endif
     [IsoXmlTag("SubmitgAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentificationQuery8? SubmittingAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentificationQuery8? SubmittingAgent { get; init; } 
-    #else
-    public TradePartyIdentificationQuery8? SubmittingAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the broker who acts as an intermediary for the reporting counterparty.
     /// </summary>
     [IsoId("_QLO6HZQTEeiok48Eh9lW9Q")]
     [DisplayName("Broker")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Brkr")]
-    #endif
     [IsoXmlTag("Brkr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentificationQuery8? Broker { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentificationQuery8? Broker { get; init; } 
-    #else
-    public TradePartyIdentificationQuery8? Broker { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique code for the CCP that has cleared the contract.
     /// </summary>
     [IsoId("_QLO6H5QTEeiok48Eh9lW9Q")]
     [DisplayName("CCP")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CCP")]
-    #endif
     [IsoXmlTag("CCP")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradePartyIdentificationQuery8? CCP { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentificationQuery8? CCP { get; init; } 
-    #else
-    public TradePartyIdentificationQuery8? CCP { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yd5rQZlbEeeE1Ya-LgRsuQ")]
 [DisplayName("Instruction Status Return Criteria")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InstructionStatusReturnCriteria1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a InstructionStatusReturnCriteria1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public InstructionStatusReturnCriteria1( System.String reqPaymentInstructionStatusIndicator )
-    {
-        PaymentInstructionStatusIndicator = reqPaymentInstructionStatusIndicator;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,56 +23,27 @@ public partial record InstructionStatusReturnCriteria1
     /// </summary>
     [IsoId("_yl0RIZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Instruction Status Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstrStsInd")]
-    #endif
     [IsoXmlTag("PmtInstrStsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoRequestedIndicator PaymentInstructionStatusIndicator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String PaymentInstructionStatusIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String PaymentInstructionStatusIndicator { get; init; } 
-    #else
-    public System.String PaymentInstructionStatusIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates if the status date and time are requested.
     /// </summary>
     [IsoId("_yl0RI5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Instruction Status Date Time Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstrStsDtTmInd")]
-    #endif
     [IsoXmlTag("PmtInstrStsDtTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? PaymentInstructionStatusDateTimeIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PaymentInstructionStatusDateTimeIndicator { get; init; } 
-    #else
-    public System.String? PaymentInstructionStatusDateTimeIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates if the status reason is requested.
     /// </summary>
     [IsoId("_yl0RJZlbEeeE1Ya-LgRsuQ")]
     [DisplayName("Payment Instruction Status Reason Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInstrStsRsnInd")]
-    #endif
     [IsoXmlTag("PmtInstrStsRsnInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRequestedIndicator? PaymentInstructionStatusReasonIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PaymentInstructionStatusReasonIndicator { get; init; } 
-    #else
-    public System.String? PaymentInstructionStatusReasonIndicator { get; set; } 
-    #endif
     
     
     #nullable disable

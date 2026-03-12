@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_peMCcZ9BEeqxTNfi5y7ywQ")]
 [DisplayName("Costs And Charges")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CostsAndCharges2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,27 +23,15 @@ public partial record CostsAndCharges2
     /// </summary>
     [IsoId("_-J7n4cpmEeqy06E9zwBYlQ")]
     [DisplayName("Ex Ante Reference Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ExAnteRefDt")]
-    #endif
     [IsoXmlTag("ExAnteRefDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODate? ExAnteReferenceDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly? ExAnteReferenceDate { get; init; } 
-    #else
-    public System.DateOnly? ExAnteReferenceDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Individual cost or charge associated with the distribution of selling of the financial instrument. This may be one-off or recurring. This may be ex ante (intended) or post ante (actual).
     /// </summary>
     [IsoId("_p37YLZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Individual Cost Or Charge")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IndvCostOrChrg")]
-    #endif
     [IsoXmlTag("IndvCostOrChrg")]
     public ValueList<IndividualCostOrCharge2> IndividualCostOrCharge { get; init; } = new ValueList<IndividualCostOrCharge2>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _p37YLZ9BEeqxTNfi5y7ywQ
@@ -69,17 +41,8 @@ public partial record CostsAndCharges2
     /// </summary>
     [IsoId("_p37YL59BEeqxTNfi5y7ywQ")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalInformation15? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    #else
-    public AdditionalInformation15? AdditionalInformation { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qVGz9-aPEd-q8fx_Zl_34A")]
 [DisplayName("Quantity And Account")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record QuantityAndAccount16
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a QuantityAndAccount16 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public QuantityAndAccount16( FinancialInstrumentQuantity1Choice_ reqSettlementQuantity,SecuritiesAccount13 reqSafekeepingAccount )
-    {
-        SettlementQuantity = reqSettlementQuantity;
-        SafekeepingAccount = reqSafekeepingAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,89 +23,40 @@ public partial record QuantityAndAccount16
     /// </summary>
     [IsoId("_qVGz-eaPEd-q8fx_Zl_34A")]
     [DisplayName("Settlement Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmQty")]
-    #endif
     [IsoXmlTag("SttlmQty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; } 
-    #else
-    public FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_qVGz--aPEd-q8fx_Zl_34A")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification36Choice_? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification36Choice_? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification36Choice_? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_qVGz_eaPEd-q8fx_Zl_34A")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount13 SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a cash entry is made.
     /// </summary>
     [IsoId("_qVGz_-aPEd-q8fx_Zl_34A")]
     [DisplayName("Cash Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAcct")]
-    #endif
     [IsoXmlTag("CshAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CashAccountIdentification5Choice_? CashAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccountIdentification5Choice_? CashAccount { get; init; } 
-    #else
-    public CashAccountIdentification5Choice_? CashAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
     /// </summary>
     [IsoId("_qVG0AeaPEd-q8fx_Zl_34A")]
     [DisplayName("Safekeeping Place")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgPlc")]
-    #endif
     [IsoXmlTag("SfkpgPlc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; init; } 
-    #else
-    public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; set; } 
-    #endif
     
     
     #nullable disable

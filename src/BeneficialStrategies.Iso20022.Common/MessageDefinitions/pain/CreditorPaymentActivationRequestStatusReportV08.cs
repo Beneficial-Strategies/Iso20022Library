@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"The CreditorPaymentActivationRequestStatusReport message is sent by a party to the next party in the creditor payment activation request chain. It is used to inform the latter about the positive or negative status of a creditor payment activation request (either single or file).")]
 [IsoId("_Lv8ie8P_Eemsic1bQcEtLA")]
 [DisplayName("Creditor Payment Activation Request Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CreditorPaymentActivationRequestStatusReportV08 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record CreditorPaymentActivationRequestStatusReportV08 : IOuterRe
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CreditorPaymentActivationRequestStatusReportV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CreditorPaymentActivationRequestStatusReportV08( GroupHeader87 reqGroupHeader,OriginalGroupInformation30 reqOriginalGroupInformationAndStatus )
-    {
-        GroupHeader = reqGroupHeader;
-        OriginalGroupInformationAndStatus = reqOriginalGroupInformationAndStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,72 +57,32 @@ public partial record CreditorPaymentActivationRequestStatusReportV08 : IOuterRe
     /// </summary>
     [IsoId("_Lv8ijcP_Eemsic1bQcEtLA")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader87 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader87 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader87 GroupHeader { get; init; } 
-    #else
-    public GroupHeader87 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Original group information concerning the group of transactions, to which the status report message refers to.
     /// </summary>
     [IsoId("_Lv8ij8P_Eemsic1bQcEtLA")]
     [DisplayName("Original Group Information And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlGrpInfAndSts")]
-    #endif
     [IsoXmlTag("OrgnlGrpInfAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OriginalGroupInformation30 OriginalGroupInformationAndStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OriginalGroupInformation30 OriginalGroupInformationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalGroupInformation30 OriginalGroupInformationAndStatus { get; init; } 
-    #else
-    public OriginalGroupInformation30 OriginalGroupInformationAndStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the original payment information, to which the status report message refers.
     /// </summary>
     [IsoId("_Lv8ikcP_Eemsic1bQcEtLA")]
     [DisplayName("Original Payment Information And Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlPmtInfAndSts")]
-    #endif
     [IsoXmlTag("OrgnlPmtInfAndSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OriginalPaymentInstruction39? OriginalPaymentInformationAndStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalPaymentInstruction39? OriginalPaymentInformationAndStatus { get; init; } 
-    #else
-    public OriginalPaymentInstruction39? OriginalPaymentInformationAndStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Lv8ik8P_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

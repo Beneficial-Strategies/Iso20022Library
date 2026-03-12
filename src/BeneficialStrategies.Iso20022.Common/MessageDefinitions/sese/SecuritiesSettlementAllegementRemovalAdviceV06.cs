@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -39,12 +34,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An account servicer sends a SecuritiesSettlementAllegementRemovalAdvice to an account owner to acknowledge that a previously sent allegement is no longer outstanding, because the alleged party sent its instruction.|The account servicer/owner relationship may be:|- a central securities depository or another settlement market infrastructure acting on behalf of their participants|- an agent (sub-custodian) acting on behalf of their global custodian customer, or|- a custodian acting on behalf of an investment management institution or a broker/dealer.||Usage|The message may also be used to:|- re-send a message previously sent,|- provide a third party with a copy of a message for information,|- re-send to a third party a copy of a message for information|using the relevant elements in the Business Application Header.")]
 [IsoId("_Qyns8SgYEey2k_sfZmJz4g")]
 [DisplayName("Securities Settlement Allegement Removal Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRecord
 {
     
@@ -73,18 +62,6 @@ public partial record SecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRec
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesSettlementAllegementRemovalAdviceV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesSettlementAllegementRemovalAdviceV06( SettlementTypeAndIdentification18 reqAccountServicerTransactionIdentification )
-    {
-        AccountServicerTransactionIdentification = reqAccountServicerTransactionIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -92,142 +69,68 @@ public partial record SecuritiesSettlementAllegementRemovalAdviceV06 : IOuterRec
     /// </summary>
     [IsoId("_Qyns_ygYEey2k_sfZmJz4g")]
     [DisplayName("Account Servicer Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcrTxId")]
-    #endif
     [IsoXmlTag("AcctSvcrTxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SettlementTypeAndIdentification18 AccountServicerTransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SettlementTypeAndIdentification18 AccountServicerTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementTypeAndIdentification18 AccountServicerTransactionIdentification { get; init; } 
-    #else
-    public SettlementTypeAndIdentification18 AccountServicerTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [IsoId("_QyntASgYEey2k_sfZmJz4g")]
     [DisplayName("Market Infrastructure Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktInfrstrctrTxId")]
-    #endif
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MarketInfrastructureTransactionIdentification { get; init; } 
-    #else
-    public System.String? MarketInfrastructureTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of a counterparty transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [IsoId("_WDFhASgYEey2k_sfZmJz4g")]
     [DisplayName("Counterparty Market Infrastructure Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtyMktInfrstrctrTxId")]
-    #endif
     [IsoXmlTag("CtrPtyMktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CounterpartyMarketInfrastructureTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CounterpartyMarketInfrastructureTransactionIdentification { get; init; } 
-    #else
-    public System.String? CounterpartyMarketInfrastructureTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_QyntAygYEey2k_sfZmJz4g")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification144? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification144? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification144? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_QyntBSgYEey2k_sfZmJz4g")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesAccount19? SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19? SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount19? SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [IsoId("_8DHikyqJEeyR9JrVGfaMKw")]
     [DisplayName("Block Chain Address Or Wallet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlckChainAdrOrWllt")]
-    #endif
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; } 
-    #else
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the details of the transaction.
     /// </summary>
     [IsoId("_QyntBygYEey2k_sfZmJz4g")]
     [DisplayName("Transaction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxDtls")]
-    #endif
     [IsoXmlTag("TxDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionDetails153? TransactionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionDetails153? TransactionDetails { get; init; } 
-    #else
-    public TransactionDetails153? TransactionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_QyntCSgYEey2k_sfZmJz4g")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

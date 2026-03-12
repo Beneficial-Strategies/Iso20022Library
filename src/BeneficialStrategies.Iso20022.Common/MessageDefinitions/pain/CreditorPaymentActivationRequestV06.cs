@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"The CreditorPaymentActivationRequest message is sent by the Creditor sending party to the Debtor receiving party, directly or through agents. It is used by a Creditor to request movement of funds from the debtor account to a creditor.")]
 [IsoId("_ApJ-gZRtEeazAtAtDSg0Nw")]
 [DisplayName("Creditor Payment Activation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CreditorPaymentActivationRequestV06 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record CreditorPaymentActivationRequestV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CreditorPaymentActivationRequestV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CreditorPaymentActivationRequestV06( GroupHeader45 reqGroupHeader,PaymentInstruction23 reqPaymentInformation )
-    {
-        GroupHeader = reqGroupHeader;
-        PaymentInformation = reqPaymentInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record CreditorPaymentActivationRequestV06 : IOuterRecord
     /// </summary>
     [IsoId("_ApJ-hZRtEeazAtAtDSg0Nw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader45 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader45 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader45 GroupHeader { get; init; } 
-    #else
-    public GroupHeader45 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of characteristics that applies to the debit side of the payment transactions included in the creditor payment initiation.
     /// </summary>
     [IsoId("_ApJ-h5RtEeazAtAtDSg0Nw")]
     [DisplayName("Payment Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInf")]
-    #endif
     [IsoXmlTag("PmtInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PaymentInstruction23 PaymentInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PaymentInstruction23 PaymentInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentInstruction23 PaymentInformation { get; init; } 
-    #else
-    public PaymentInstruction23 PaymentInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_ApJ-iZRtEeazAtAtDSg0Nw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

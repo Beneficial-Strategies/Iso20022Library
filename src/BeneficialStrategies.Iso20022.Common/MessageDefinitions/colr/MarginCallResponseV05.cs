@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.colr;
@@ -39,12 +34,6 @@ namespace BeneficialStrategies.Iso20022.colr;
 [Description(@"Scope|The MarginCallResponse message is sent by the collateral giver or its collateral manager to the collateral taker or its collateral manager or vice versa. This is a response to the MarginCallRequest message. The margin call can be accepted, fully disputed or partially disputed.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|When sent by the collateral giver the MarginCallResponse message is used to:|- fully accept the MarginCallRequest|- or partially accept the MarginCallRequest.||When sent by the collateral taker the MarginCallResponse message is used to:|- fully accept the recall of collateral|- or partially accept the recall of collateral.")]
 [IsoId("_J4YkLygrEeyB747fKu7_rw")]
 [DisplayName("Margin Call Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MarginCallResponseV05 : IOuterRecord
 {
     
@@ -73,19 +62,6 @@ public partial record MarginCallResponseV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MarginCallResponseV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MarginCallResponseV05( System.String reqTransactionIdentification,Obligation9 reqObligation )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        Obligation = reqObligation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,159 +69,74 @@ public partial record MarginCallResponseV05 : IOuterRecord
     /// </summary>
     [IsoId("_J4YkNSgrEeyB747fKu7_rw")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransactionIdentification { get; init; } 
-    #else
-    public System.String TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.
     /// </summary>
     [IsoId("_J4YkNygrEeyB747fKu7_rw")]
     [DisplayName("Obligation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Oblgtn")]
-    #endif
     [IsoXmlTag("Oblgtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Obligation9 Obligation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Obligation9 Obligation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Obligation9 Obligation { get; init; } 
-    #else
-    public Obligation9 Obligation { get; set; } 
-    #endif
     
     /// <summary>
     /// Agreement details for the over the counter market.
     /// </summary>
     [IsoId("_J4YkOSgrEeyB747fKu7_rw")]
     [DisplayName("Agreement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Agrmt")]
-    #endif
     [IsoXmlTag("Agrmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Agreement4? Agreement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Agreement4? Agreement { get; init; } 
-    #else
-    public Agreement4? Agreement { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details about the margin calculation that would be due to party A.
     /// </summary>
     [IsoId("_J4YkOygrEeyB747fKu7_rw")]
     [DisplayName("Margin Details Due To A")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MrgnDtlsDueToA")]
-    #endif
     [IsoXmlTag("MrgnDtlsDueToA")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MarginCall1? MarginDetailsDueToA { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarginCall1? MarginDetailsDueToA { get; init; } 
-    #else
-    public MarginCall1? MarginDetailsDueToA { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details about the margin calculation that would be due to party B.
     /// </summary>
     [IsoId("_J4YkPSgrEeyB747fKu7_rw")]
     [DisplayName("Margin Details Due To B")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MrgnDtlsDueToB")]
-    #endif
     [IsoXmlTag("MrgnDtlsDueToB")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MarginCall1? MarginDetailsDueToB { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarginCall1? MarginDetailsDueToB { get; init; } 
-    #else
-    public MarginCall1? MarginDetailsDueToB { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details about the agreed amount that would be due to party A.
     /// </summary>
     [IsoId("_J4YkPygrEeyB747fKu7_rw")]
     [DisplayName("Agreed Amount Due To A")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgrdAmtDueToA")]
-    #endif
     [IsoXmlTag("AgrdAmtDueToA")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AgreedAmount1Choice_? AgreedAmountDueToA { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AgreedAmount1Choice_? AgreedAmountDueToA { get; init; } 
-    #else
-    public AgreedAmount1Choice_? AgreedAmountDueToA { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details about the agreed amount that would be due to party B.
     /// </summary>
     [IsoId("_J4YkQSgrEeyB747fKu7_rw")]
     [DisplayName("Agreed Amount Due To B")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgrdAmtDueToB")]
-    #endif
     [IsoXmlTag("AgrdAmtDueToB")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AgreedAmount1Choice_? AgreedAmountDueToB { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AgreedAmount1Choice_? AgreedAmountDueToB { get; init; } 
-    #else
-    public AgreedAmount1Choice_? AgreedAmountDueToB { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides response details about the margin call.
     /// </summary>
     [IsoId("_J4YkQygrEeyB747fKu7_rw")]
     [DisplayName("Response Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RspnDtls")]
-    #endif
     [IsoXmlTag("RspnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Response1? ResponseDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Response1? ResponseDetails { get; init; } 
-    #else
-    public Response1? ResponseDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_J4YkRSgrEeyB747fKu7_rw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

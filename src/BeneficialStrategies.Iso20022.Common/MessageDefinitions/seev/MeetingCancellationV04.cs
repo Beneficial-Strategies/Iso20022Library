@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|The MeetingCancellation message is sent by the party that sent the MeetingNotification message to the original receiver. It is sent to cancel the previous MeetingNotification message or to advise the cancellation of a meeting.|Usage|The MeetingCancellation message is used in two different situations.|First, it is used to cancel a previously sent MeetingNotification message. In this case, the MessageCancellation, the MeetingReference and the Reason building blocks need to be present.|Second, it is used to advise that the meeting is cancelled. In this case, only the MeetingReference and Reason building blocks need to be present.")]
 [IsoId("_TlmIHtEwEd-BzquC8wXy7w_-1684108229")]
 [DisplayName("Meeting Cancellation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MeetingCancellationV04 : IOuterRecord
 {
     
@@ -66,20 +55,6 @@ public partial record MeetingCancellationV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MeetingCancellationV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MeetingCancellationV04( MessageIdentification1 reqIdentification,MeetingReference5 reqMeetingReference,MeetingCancellationReason2 reqReason )
-    {
-        Identification = reqIdentification;
-        MeetingReference = reqMeetingReference;
-        Reason = reqReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,81 +62,38 @@ public partial record MeetingCancellationV04 : IOuterRecord
     /// </summary>
     [IsoId("_TlmIH9EwEd-BzquC8wXy7w_26118050")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 Identification { get; init; } 
-    #else
-    public MessageIdentification1 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Information indicating that the cancellation of a message previously sent is requested (and not the cancellation of the meeting).
     /// </summary>
     [IsoId("_TlmIINEwEd-BzquC8wXy7w_2019170750")]
     [DisplayName("Message Cancellation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgCxl")]
-    #endif
     [IsoXmlTag("MsgCxl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AmendInformation1? MessageCancellation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmendInformation1? MessageCancellation { get; init; } 
-    #else
-    public AmendInformation1? MessageCancellation { get; set; } 
-    #endif
     
     /// <summary>
     /// Series of elements which allow to identify a meeting.
     /// </summary>
     [IsoId("_TlvSANEwEd-BzquC8wXy7w_-1689849520")]
     [DisplayName("Meeting Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtgRef")]
-    #endif
     [IsoXmlTag("MtgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MeetingReference5 MeetingReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MeetingReference5 MeetingReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingReference5 MeetingReference { get; init; } 
-    #else
-    public MeetingReference5 MeetingReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Party notifying the cancellation of the meeting.
     /// </summary>
     [IsoId("_TlvSAdEwEd-BzquC8wXy7w_-1235762251")]
     [DisplayName("Notifying Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtifngPty")]
-    #endif
     [IsoXmlTag("NtifngPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification9Choice_? NotifyingParty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification9Choice_? NotifyingParty { get; init; } 
-    #else
-    public PartyIdentification9Choice_? NotifyingParty { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the security for which the meeting was organised.
     /// </summary>
     [IsoId("_TlvSAtEwEd-BzquC8wXy7w_1987199986")]
     [DisplayName("Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Scty")]
-    #endif
     [IsoXmlTag("Scty")]
     [MinLength(0)]
     [MaxLength(200)]
@@ -172,36 +104,16 @@ public partial record MeetingCancellationV04 : IOuterRecord
     /// </summary>
     [IsoId("_TlvSA9EwEd-BzquC8wXy7w_-2140747415")]
     [DisplayName("Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsn")]
-    #endif
     [IsoXmlTag("Rsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MeetingCancellationReason2 Reason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MeetingCancellationReason2 Reason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingCancellationReason2 Reason { get; init; } 
-    #else
-    public MeetingCancellationReason2 Reason { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_TlvSBNEwEd-BzquC8wXy7w_-628495307")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension2? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension2? Extension { get; init; } 
-    #else
-    public Extension2? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

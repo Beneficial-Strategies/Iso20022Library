@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fsCM4E3zEeiQHa-q1Uephw")]
 [DisplayName("Payment Instrument")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PaymentInstrument14
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,36 +23,18 @@ public partial record PaymentInstrument14
     /// </summary>
     [IsoId("_oUR1EE3zEeiQHa-q1Uephw")]
     [DisplayName("Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ref")]
-    #endif
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? Reference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? Reference { get; init; } 
-    #else
-    public System.String? Reference { get; set; } 
-    #endif
     
     /// <summary>
     /// Payment instrument between a debtor and a creditor that flows through one or more financial institutions or systems.
     /// </summary>
     [IsoId("_rXUvUE3zEeiQHa-q1Uephw")]
     [DisplayName("Credit Transfer Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtTrfDtls")]
-    #endif
     [IsoXmlTag("CdtTrfDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CreditTransfer9? CreditTransferDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CreditTransfer9? CreditTransferDetails { get; init; } 
-    #else
-    public CreditTransfer9? CreditTransferDetails { get; set; } 
-    #endif
     
     
     #nullable disable

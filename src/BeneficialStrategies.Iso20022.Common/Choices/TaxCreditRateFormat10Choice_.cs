@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -18,25 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TaxCreditRateFormat10Choice.Amount))]
     [KnownType(typeof(TaxCreditRateFormat10Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(TaxCreditRateFormat10Choice.NotSpecifiedRate))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(TaxCreditRateFormat10Choice.Rate),nameof(TaxCreditRateFormat10Choice.Rate))]
     [JsonDerivedType(typeof(TaxCreditRateFormat10Choice.Amount),nameof(TaxCreditRateFormat10Choice.Amount))]
     [JsonDerivedType(typeof(TaxCreditRateFormat10Choice.RateTypeAndAmountAndRateStatus),nameof(TaxCreditRateFormat10Choice.RateTypeAndAmountAndRateStatus))]
     [JsonDerivedType(typeof(TaxCreditRateFormat10Choice.NotSpecifiedRate),nameof(TaxCreditRateFormat10Choice.NotSpecifiedRate))]
-    #endif
     [IsoId("_ctjhL5KQEeWHWpTQn1FFVg")]
     [DisplayName("Tax Credit Rate Format 10 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record TaxCreditRateFormat10Choice_
-    #else
-    public abstract partial class TaxCreditRateFormat10Choice_
-    #endif
     {
     }
 }

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m0ltayp6EeyR9JrVGfaMKw")]
 [DisplayName("Transaction Details")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransactionDetails152
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransactionDetails152 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransactionDetails152( SecurityIdentification19 reqFinancialInstrumentIdentification,Quantity51Choice_ reqSettlementQuantity,SettlementDate19Choice_ reqSettlementDate )
-    {
-        FinancialInstrumentIdentification = reqFinancialInstrumentIdentification;
-        SettlementQuantity = reqSettlementQuantity;
-        SettlementDate = reqSettlementDate;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,193 +23,88 @@ public partial record TransactionDetails152
     /// </summary>
     [IsoId("_nLiNgyp6EeyR9JrVGfaMKw")]
     [DisplayName("Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctOwnr")]
-    #endif
     [IsoXmlTag("AcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification144? AccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification144? AccountOwner { get; init; } 
-    #else
-    public PartyIdentification144? AccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_nLiNhSp6EeyR9JrVGfaMKw")]
     [DisplayName("Safekeeping Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgAcct")]
-    #endif
     [IsoXmlTag("SfkpgAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesAccount19? SafekeepingAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesAccount19? SafekeepingAccount { get; init; } 
-    #else
-    public SecuritiesAccount19? SafekeepingAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of safekeeping account for digital assets.
     /// </summary>
     [IsoId("_U8JHEyqJEeyR9JrVGfaMKw")]
     [DisplayName("Block Chain Address Or Wallet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlckChainAdrOrWllt")]
-    #endif
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; init; } 
-    #else
-    public BlockChainAddressWallet3? BlockChainAddressOrWallet { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
     [IsoId("_nLiNhyp6EeyR9JrVGfaMKw")]
     [DisplayName("Financial Instrument Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmId")]
-    #endif
     [IsoXmlTag("FinInstrmId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
-    #else
-    public SecurityIdentification19 FinancialInstrumentIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Total quantity of securities to be settled.
     /// </summary>
     [IsoId("_nLiNjyp6EeyR9JrVGfaMKw")]
     [DisplayName("Settlement Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmQty")]
-    #endif
     [IsoXmlTag("SttlmQty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Quantity51Choice_ SettlementQuantity { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Quantity51Choice_ SettlementQuantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Quantity51Choice_ SettlementQuantity { get; init; } 
-    #else
-    public Quantity51Choice_ SettlementQuantity { get; set; } 
-    #endif
     
     /// <summary>
     /// Total amount of money to be paid or received in exchange for the securities.
     /// </summary>
     [IsoId("_nLiNlyp6EeyR9JrVGfaMKw")]
     [DisplayName("Settlement Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmAmt")]
-    #endif
     [IsoXmlTag("SttlmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AmountAndDirection51? SettlementAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndDirection51? SettlementAmount { get; init; } 
-    #else
-    public AmountAndDirection51? SettlementAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the date/time on which the trade was executed.
     /// </summary>
     [IsoId("_nLiNnyp6EeyR9JrVGfaMKw")]
     [DisplayName("Trade Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradDt")]
-    #endif
     [IsoXmlTag("TradDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradeDate8Choice_? TradeDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeDate8Choice_? TradeDate { get; init; } 
-    #else
-    public TradeDate8Choice_? TradeDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
     /// </summary>
     [IsoId("_nLiNpyp6EeyR9JrVGfaMKw")]
     [DisplayName("Settlement Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmDt")]
-    #endif
     [IsoXmlTag("SttlmDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SettlementDate19Choice_ SettlementDate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SettlementDate19Choice_ SettlementDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementDate19Choice_ SettlementDate { get; init; } 
-    #else
-    public SettlementDate19Choice_ SettlementDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
     /// </summary>
     [IsoId("_nLiNryp6EeyR9JrVGfaMKw")]
     [DisplayName("Delivering Settlement Parties")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DlvrgSttlmPties")]
-    #endif
     [IsoXmlTag("DlvrgSttlmPties")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementParties97? DeliveringSettlementParties { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementParties97? DeliveringSettlementParties { get; init; } 
-    #else
-    public SettlementParties97? DeliveringSettlementParties { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the chain of receiving settlement parties.
     /// </summary>
     [IsoId("_nLiNtyp6EeyR9JrVGfaMKw")]
     [DisplayName("Receiving Settlement Parties")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcvgSttlmPties")]
-    #endif
     [IsoXmlTag("RcvgSttlmPties")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementParties97? ReceivingSettlementParties { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementParties97? ReceivingSettlementParties { get; init; } 
-    #else
-    public SettlementParties97? ReceivingSettlementParties { get; set; } 
-    #endif
     
     /// <summary>
     /// Party, either an individual or organisation, whose assets are being invested.
     /// </summary>
     [IsoId("_nLiNvyp6EeyR9JrVGfaMKw")]
     [DisplayName("Investor")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Invstr")]
-    #endif
     [IsoXmlTag("Invstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification149? Investor { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification149? Investor { get; init; } 
-    #else
-    public PartyIdentification149? Investor { get; set; } 
-    #endif
     
     
     #nullable disable

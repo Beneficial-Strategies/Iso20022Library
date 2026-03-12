@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The FinancialInstrumentReportingStatusAdvice message is sent by the national competent authority to the reporting agent to provide a status advice for the correctness, issues or errors that arise from the submitted report.")]
 [IsoId("_4LUGQURNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record FinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingStatusAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingStatusAdviceV01( MessageReportHeader4 reqStatusAdvice )
-    {
-        StatusAdvice = reqStatusAdvice;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record FinancialInstrumentReportingStatusAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_4LUGQ0RNEee7JdgA9zPESA")]
     [DisplayName("Status Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsAdvc")]
-    #endif
     [IsoXmlTag("StsAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageReportHeader4 StatusAdvice { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageReportHeader4 StatusAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageReportHeader4 StatusAdvice { get; init; } 
-    #else
-    public MessageReportHeader4 StatusAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_4LUGRURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

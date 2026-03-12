@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Li4wUaAiEea9x5aZm6UTkw")]
 [DisplayName("Split Trade Details")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SplitTradeDetails3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SplitTradeDetails3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SplitTradeDetails3( AmountsAndValueDate1 reqTradeAmounts )
-    {
-        TradeAmounts = reqTradeAmounts;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,53 +23,24 @@ public partial record SplitTradeDetails3
     /// </summary>
     [IsoId("_LtnZoaAiEea9x5aZm6UTkw")]
     [DisplayName("Status Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsDtls")]
-    #endif
     [IsoXmlTag("StsDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TradeData16? StatusDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeData16? StatusDetails { get; init; } 
-    #else
-    public TradeData16? StatusDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Amounts of the foreign exchange trade.
     /// </summary>
     [IsoId("_LtnZo6AiEea9x5aZm6UTkw")]
     [DisplayName("Trade Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradAmts")]
-    #endif
     [IsoXmlTag("TradAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AmountsAndValueDate1 TradeAmounts { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AmountsAndValueDate1 TradeAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountsAndValueDate1 TradeAmounts { get; init; } 
-    #else
-    public AmountsAndValueDate1 TradeAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Exchange rate as agreed by the traders.
     /// </summary>
     [IsoId("_LtnZpaAiEea9x5aZm6UTkw")]
     [DisplayName("Agreed Rate")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgrdRate")]
-    #endif
     [IsoXmlTag("AgrdRate")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AgreedRate3? AgreedRate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AgreedRate3? AgreedRate { get; init; } 
-    #else
-    public AgreedRate3? AgreedRate { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_miqdZSp_EeyR9JrVGfaMKw")]
 [DisplayName("Quantity Breakdown")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record QuantityBreakdown61
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,51 +23,24 @@ public partial record QuantityBreakdown61
     /// </summary>
     [IsoId("_m7P8gyp_EeyR9JrVGfaMKw")]
     [DisplayName("Lot Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotNb")]
-    #endif
     [IsoXmlTag("LotNb")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification37? LotNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification37? LotNumber { get; init; } 
-    #else
-    public GenericIdentification37? LotNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Quantity of financial instruments that is part of the lot described.
     /// </summary>
     [IsoId("_m7P8iyp_EeyR9JrVGfaMKw")]
     [DisplayName("Lot Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotQty")]
-    #endif
     [IsoXmlTag("LotQty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentQuantity33Choice_? LotQuantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentQuantity33Choice_? LotQuantity { get; init; } 
-    #else
-    public FinancialInstrumentQuantity33Choice_? LotQuantity { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).
     /// </summary>
     [IsoId("_m7P8kyp_EeyR9JrVGfaMKw")]
     [DisplayName("Securities Sub Balance Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesSubBalTp")]
-    #endif
     [IsoXmlTag("SctiesSubBalTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification30? SecuritiesSubBalanceType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification30? SecuritiesSubBalanceType { get; init; } 
-    #else
-    public GenericIdentification30? SecuritiesSubBalanceType { get; set; } 
-    #endif
     
     
     #nullable disable

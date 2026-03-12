@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The StatusReportRequest message is sent by a party involved in a transaction to the matching application.|This message is used to request a report on the status of transactions registered in the matching application.|Usage|The StatusReportRequest message can be sent by either party involved in a transaction to request a report on the status and sub-statuses of all transactions that the requester is involved in.|The application will respond to the request by sending a StatusReport message.")]
 [IsoId("_0n_7mNE8Ed-BzquC8wXy7w_-619721878")]
 [DisplayName("Status Report Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StatusReportRequestV03 : IOuterRecord
 {
     
@@ -66,18 +55,6 @@ public partial record StatusReportRequestV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a StatusReportRequestV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public StatusReportRequestV03( MessageIdentification1 reqRequestIdentification )
-    {
-        RequestIdentification = reqRequestIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,36 +62,16 @@ public partial record StatusReportRequestV03 : IOuterRecord
     /// </summary>
     [IsoId("_0n_7mdE8Ed-BzquC8wXy7w_-619721785")]
     [DisplayName("Request Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqId")]
-    #endif
     [IsoXmlTag("ReqId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 RequestIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 RequestIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 RequestIdentification { get; init; } 
-    #else
-    public MessageIdentification1 RequestIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the entities of the submitter for which the transactions have to be reported.
     /// </summary>
     [IsoId("_0n_7mtE8Ed-BzquC8wXy7w_-619721446")]
     [DisplayName("Entities To Be Reported")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NttiesToBeRptd")]
-    #endif
     [IsoXmlTag("NttiesToBeRptd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BICIdentification1? EntitiesToBeReported { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BICIdentification1? EntitiesToBeReported { get; init; } 
-    #else
-    public BICIdentification1? EntitiesToBeReported { get; set; } 
-    #endif
     
     
     #nullable disable

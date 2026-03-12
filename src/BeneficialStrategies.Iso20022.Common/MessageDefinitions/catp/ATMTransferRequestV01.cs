@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMTransferRequest message is sent by an ATM to an ATM manager to request the approval of a fund transfer at the ATM.")]
 [IsoId("_vueJoK4rEeWLdt0vLARX2Q")]
 [DisplayName("ATM Transfer Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMTransferRequestV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record ATMTransferRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMTransferRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMTransferRequestV01( Header31 reqHeader )
-    {
-        Header = reqHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,70 +57,32 @@ public partial record ATMTransferRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_7z5qYK4rEeWLdt0vLARX2Q")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header31 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header31 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header31 Header { get; init; } 
-    #else
-    public Header31 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted body of the message.
     /// </summary>
     [IsoId("_Ag7aMK4sEeWLdt0vLARX2Q")]
     [DisplayName("Protected ATM Transfer Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdATMTrfReq")]
-    #endif
     [IsoXmlTag("PrtctdATMTrfReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedATMTransferRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedATMTransferRequest { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedATMTransferRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the request of a fund transfer from an ATM.
     /// </summary>
     [IsoId("_HwpwQK4sEeWLdt0vLARX2Q")]
     [DisplayName("ATM Transfer Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMTrfReq")]
-    #endif
     [IsoXmlTag("ATMTrfReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ATMTransferRequest1? ATMTransferRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMTransferRequest1? ATMTransferRequest { get; init; } 
-    #else
-    public ATMTransferRequest1? ATMTransferRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_A9cA8K41EeWpsoxRhdX-8A")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

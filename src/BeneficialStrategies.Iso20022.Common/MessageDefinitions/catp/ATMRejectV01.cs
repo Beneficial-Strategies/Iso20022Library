@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catp;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catp;
 [Description(@"The ATMReject message is sent by any entity to reject a received message.")]
 [IsoId("_DvwXcIrFEeSRwL6n4K9igA")]
 [DisplayName("ATM Reject V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMRejectV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ATMRejectV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMRejectV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMRejectV01( Header22 reqHeader,ATMReject1 reqATMReject )
-    {
-        Header = reqHeader;
-        ATMReject = reqATMReject;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,38 +57,16 @@ public partial record ATMRejectV01 : IOuterRecord
     /// </summary>
     [IsoId("_fyheoIrFEeSRwL6n4K9igA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header22 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header22 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header22 Header { get; init; } 
-    #else
-    public Header22 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the reject of a message from an ATM or an ATM manager.
     /// </summary>
     [IsoId("_3TnxcIrFEeSRwL6n4K9igA")]
     [DisplayName("ATM Reject")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ATMRjct")]
-    #endif
     [IsoXmlTag("ATMRjct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ATMReject1 ATMReject { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ATMReject1 ATMReject { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ATMReject1 ATMReject { get; init; } 
-    #else
-    public ATMReject1 ATMReject { get; set; } 
-    #endif
     
     
     #nullable disable

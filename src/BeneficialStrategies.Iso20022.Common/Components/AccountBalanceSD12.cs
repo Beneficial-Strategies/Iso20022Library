@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qL6QMb5YEeexmbB7KsjCwA")]
 [DisplayName("Account Balance SD")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AccountBalanceSD12
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,87 +23,42 @@ public partial record AccountBalanceSD12
     /// </summary>
     [IsoId("_qcbYcb5YEeexmbB7KsjCwA")]
     [DisplayName("Place And Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PlcAndNm")]
-    #endif
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax350Text? PlaceAndName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PlaceAndName { get; init; } 
-    #else
-    public System.String? PlaceAndName { get; set; } 
-    #endif
     
     /// <summary>
     /// Balance of all uncovered protect instructions across all options.
     /// </summary>
     [IsoId("_qcbYc75YEeexmbB7KsjCwA")]
     [DisplayName("Uncovered Protect Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UcvrdPrtctBal")]
-    #endif
     [IsoXmlTag("UcvrdPrtctBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat9? UncoveredProtectBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat9? UncoveredProtectBalance { get; init; } 
-    #else
-    public SignedQuantityFormat9? UncoveredProtectBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Position held in DTC segregated account also called account 18. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.
     /// </summary>
     [IsoId("_qcbYdb5YEeexmbB7KsjCwA")]
     [DisplayName("Investment Unpledged Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InvstmtUpldgdBal")]
-    #endif
     [IsoXmlTag("InvstmtUpldgdBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat9? InvestmentUnpledgedBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat9? InvestmentUnpledgedBalance { get; init; } 
-    #else
-    public SignedQuantityFormat9? InvestmentUnpledgedBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Position held in DTC segregated account also called account 22. This position is not eligible for instruction processing but will be eligible for payment on mandatory events.
     /// </summary>
     [IsoId("_qcbYd75YEeexmbB7KsjCwA")]
     [DisplayName("Investment Pledged Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InvstmtPldgdBal")]
-    #endif
     [IsoXmlTag("InvstmtPldgdBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat9? InvestmentPledgedBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat9? InvestmentPledgedBalance { get; init; } 
-    #else
-    public SignedQuantityFormat9? InvestmentPledgedBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Position held in DTC memo segregated account. This position is eligible for payment.
     /// </summary>
     [IsoId("_qcbYeb5YEeexmbB7KsjCwA")]
     [DisplayName("Memo Segregation Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MemoSgrtnBal")]
-    #endif
     [IsoXmlTag("MemoSgrtnBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SignedQuantityFormat9? MemoSegregationBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SignedQuantityFormat9? MemoSegregationBalance { get; init; } 
-    #else
-    public SignedQuantityFormat9? MemoSegregationBalance { get; set; } 
-    #endif
     
     
     #nullable disable

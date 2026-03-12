@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Inna5NLEeWGlc8L7oPDIg")]
 [DisplayName("Amount And Direction")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AmountAndDirection72
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AmountAndDirection72 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AmountAndDirection72( RestrictedFINActiveOrHistoricCurrencyAndAmount reqAmount )
-    {
-        Amount = reqAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,53 +23,24 @@ public partial record AmountAndDirection72
     /// </summary>
     [IsoId("_6InnbZNLEeWGlc8L7oPDIg")]
     [DisplayName("Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Amt")]
-    #endif
     [IsoXmlTag("Amt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RestrictedFINActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RestrictedFINActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RestrictedFINActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    #else
-    public RestrictedFINActiveOrHistoricCurrencyAndAmount Amount { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether an entry is a credit or a debit.
     /// </summary>
     [IsoId("_6InndZNLEeWGlc8L7oPDIg")]
     [DisplayName("Credit Debit Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtDbtInd")]
-    #endif
     [IsoXmlTag("CdtDbtInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CreditDebitCode? CreditDebitIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CreditDebitCode? CreditDebitIndicator { get; init; } 
-    #else
-    public CreditDebitCode? CreditDebitIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
     /// </summary>
     [IsoId("_6InnfZNLEeWGlc8L7oPDIg")]
     [DisplayName("Foreign Exchange Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FXDtls")]
-    #endif
     [IsoXmlTag("FXDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ForeignExchangeTerms27? ForeignExchangeDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ForeignExchangeTerms27? ForeignExchangeDetails { get; init; } 
-    #else
-    public ForeignExchangeTerms27? ForeignExchangeDetails { get; set; } 
-    #endif
     
     
     #nullable disable

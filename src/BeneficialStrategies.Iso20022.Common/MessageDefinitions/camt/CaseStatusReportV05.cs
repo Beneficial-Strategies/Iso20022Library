@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The CaseStatusReport message is sent by a case assignee to a case creator or case assigner.|This message is used to report on the status of a case.|Usage|A CaseStatusReport message is sent in reply to a CaseStatusReportRequest message. This message|- covers one and only one case at a time. (If a case assignee needs to report on several cases, then multiple CaseStatusReport messages must be sent);|- may be forwarded to subsequent case assigner(s) until it reaches the end point;|- is able to indicate the fact that a case has been assigned to a party downstream in the payment processing chain;|- may not be used in place of a ResolutionOfInvestigation (except for the condition given in the next bullet point) or NotificationOfCaseAssignment message;|- may be skipped and replaced by a ResolutionOfInvestigation message when the request for a investigation status is received at the time the assigner has resolved the case. (In this case a ResolutionOfInvestigation message can be sent instead of a CaseStatusReport and the case may be closed).")]
 [IsoId("_eYI_PW2PEei3KuUgpx7Xcw")]
 [DisplayName("Case Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CaseStatusReportV05 : IOuterRecord
 {
     
@@ -70,20 +59,6 @@ public partial record CaseStatusReportV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CaseStatusReportV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CaseStatusReportV05( ReportHeader5 reqHeader,Case5 reqCase,CaseStatus2 reqStatus )
-    {
-        Header = reqHeader;
-        Case = reqCase;
-        Status = reqStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -91,57 +66,24 @@ public partial record CaseStatusReportV05 : IOuterRecord
     /// </summary>
     [IsoId("_eYI_P22PEei3KuUgpx7Xcw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportHeader5 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportHeader5 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportHeader5 Header { get; init; } 
-    #else
-    public ReportHeader5 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_eYI_QW2PEei3KuUgpx7Xcw")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Case5 Case { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Case5 Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case5 Case { get; init; } 
-    #else
-    public Case5 Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines the status of the case.
     /// </summary>
     [IsoId("_eYI_Q22PEei3KuUgpx7Xcw")]
     [DisplayName("Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Sts")]
-    #endif
     [IsoXmlTag("Sts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseStatus2 Status { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseStatus2 Status { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseStatus2 Status { get; init; } 
-    #else
-    public CaseStatus2 Status { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the change of an assignment for an investigation case from an assigner to a new assignee.
@@ -149,34 +91,16 @@ public partial record CaseStatusReportV05 : IOuterRecord
     /// </summary>
     [IsoId("_eYI_RW2PEei3KuUgpx7Xcw")]
     [DisplayName("New Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewAssgnmt")]
-    #endif
     [IsoXmlTag("NewAssgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CaseAssignment5? NewAssignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment5? NewAssignment { get; init; } 
-    #else
-    public CaseAssignment5? NewAssignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_eYI_R22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

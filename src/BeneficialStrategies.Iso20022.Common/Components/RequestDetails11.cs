@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uQtNwQ4EEeKN_Y-2Awiamw")]
 [DisplayName("Request Details")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RequestDetails11
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RequestDetails11 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RequestDetails11( References9 reqReference )
-    {
-        Reference = reqReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,207 +23,97 @@ public partial record RequestDetails11
     /// </summary>
     [IsoId("_unNCQQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ref")]
-    #endif
     [IsoXmlTag("Ref")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required References9 Reference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required References9 Reference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References9 Reference { get; init; } 
-    #else
-    public References9 Reference { get; set; } 
-    #endif
     
     /// <summary>
     /// Condition for automatic borrowing.
     /// </summary>
     [IsoId("_unNCSw4EEeKN_Y-2Awiamw")]
     [DisplayName("Automatic Borrowing")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AutomtcBrrwg")]
-    #endif
     [IsoXmlTag("AutomtcBrrwg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AutomaticBorrowing2Choice_? AutomaticBorrowing { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AutomaticBorrowing2Choice_? AutomaticBorrowing { get; init; } 
-    #else
-    public AutomaticBorrowing2Choice_? AutomaticBorrowing { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether the instruction due to expire is confirmed for settlement.
     /// </summary>
     [IsoId("_unNCVQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Retain Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RtnInd")]
-    #endif
     [IsoXmlTag("RtnInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoYesNoIndicator? RetainIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? RetainIndicator { get; init; } 
-    #else
-    public System.String? RetainIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the type of linkage requested.
     /// </summary>
     [IsoId("_unNCXw4EEeKN_Y-2Awiamw")]
     [DisplayName("Linkage")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Lkg")]
-    #endif
     [IsoXmlTag("Lkg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public LinkageType1Choice_? Linkage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public LinkageType1Choice_? Linkage { get; init; } 
-    #else
-    public LinkageType1Choice_? Linkage { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether the transaction is to be executed with a high priority.
     /// </summary>
     [IsoId("_unNCaQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Priority")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Prty")]
-    #endif
     [IsoXmlTag("Prty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PriorityNumeric1Choice_? Priority { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PriorityNumeric1Choice_? Priority { get; init; } 
-    #else
-    public PriorityNumeric1Choice_? Priority { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies another type of processing change request.
     /// </summary>
     [IsoId("_unNCcw4EEeKN_Y-2Awiamw")]
     [DisplayName("Other Processing")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrPrcg")]
-    #endif
     [IsoXmlTag("OthrPrcg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification20? OtherProcessing { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification20? OtherProcessing { get; init; } 
-    #else
-    public GenericIdentification20? OtherProcessing { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether partial settlement is allowed.
     /// </summary>
     [IsoId("_unNCfQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Partial Settlement Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtlSttlmInd")]
-    #endif
     [IsoXmlTag("PrtlSttlmInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; } 
-    #else
-    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.
     /// </summary>
     [IsoId("_unNChw4EEeKN_Y-2Awiamw")]
     [DisplayName("Securities RTGS")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesRTGS")]
-    #endif
     [IsoXmlTag("SctiesRTGS")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesRTGS1Choice_? SecuritiesRTGS { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesRTGS1Choice_? SecuritiesRTGS { get; init; } 
-    #else
-    public SecuritiesRTGS1Choice_? SecuritiesRTGS { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether the transaction is on hold/blocked/frozen.
     /// </summary>
     [IsoId("_unNCkQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Hold Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HldInd")]
-    #endif
     [IsoXmlTag("HldInd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public HoldIndicator4? HoldIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public HoldIndicator4? HoldIndicator { get; init; } 
-    #else
-    public HoldIndicator4? HoldIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the matching processing change requested.
     /// </summary>
     [IsoId("_unNCmw4EEeKN_Y-2Awiamw")]
     [DisplayName("Matching Denial")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtchgDnl")]
-    #endif
     [IsoXmlTag("MtchgDnl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MatchingDenied1Choice_? MatchingDenial { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MatchingDenied1Choice_? MatchingDenial { get; init; } 
-    #else
-    public MatchingDenied1Choice_? MatchingDenial { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies that the transaction is requested to be unilaterally split.
     /// </summary>
     [IsoId("_unNCpQ4EEeKN_Y-2Awiamw")]
     [DisplayName("Unilateral Split")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UnltrlSplt")]
-    #endif
     [IsoXmlTag("UnltrlSplt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public UnilateralSplit1Choice_? UnilateralSplit { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UnilateralSplit1Choice_? UnilateralSplit { get; init; } 
-    #else
-    public UnilateralSplit1Choice_? UnilateralSplit { get; set; } 
-    #endif
     
     /// <summary>
     /// Information regarding the linkage requested.
     /// </summary>
     [IsoId("_unNCrw4EEeKN_Y-2Awiamw")]
     [DisplayName("Linkages")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Lnkgs")]
-    #endif
     [IsoXmlTag("Lnkgs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Linkages27? Linkages { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Linkages27? Linkages { get; init; } 
-    #else
-    public Linkages27? Linkages { get; set; } 
-    #endif
     
     
     #nullable disable

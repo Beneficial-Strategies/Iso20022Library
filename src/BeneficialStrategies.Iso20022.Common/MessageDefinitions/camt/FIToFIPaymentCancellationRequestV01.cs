@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -39,12 +34,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The FIToFI Payment Cancellation Request message is sent by a case creator/case assigner to a case assignee.|This message is used to request the cancellation of an original payment instruction. The FIToFI Payment Cancellation Request message is exchanged between the instructing agent and the instructed agent to request the cancellation of a interbank payment message previously sent (such as FIToFICustomerCreditTransfer, FIToFICustomerDirectDebit or FinancialInstitutionCreditTransfer).|Usage|The FIToFI Payment Cancellation Request message must be answered with a:|- Resolution Of Investigation message with a positive final outcome when the case assignee can perform the requested cancellation|- Resolution Of Investigation message with a negative final outcome when the case assignee may perform the requested cancellation but fails to do so (too late, irrevocable instruction.)|- Reject Investigation message when the case assignee is unable or not authorised to perform the requested cancellation|- Notification Of Case Assignment message to indicate whether the case assignee will take on the case himself or reassign the case to a subsequent party in the payment processing chain.|A FIToFI Payment Cancellation Request message concerns one and only one original payment instruction at a time.|When a case assignee successfully performs a cancellation, it must return the corresponding funds to the case assigner. It may provide some details about the return in the Resolution Of Investigation message.|The processing of a FIToFI Payment Cancellation Request message case may lead to a Debit Authorisation Request message sent to the creditor by its account servicing institution.|The FIToFI Payment Cancellation Request message may be used to escalate a case after an unsuccessful request to modify the payment. In this scenario, the case identification remains the same as in the original FIToFI Payment Cancellation Request message and the element ReopenCaseIndication is set to 'Yes' or 'true'.")]
 [IsoId("_YcuGuNE-Ed-BzquC8wXy7w_390093478")]
 [DisplayName("FI To FI Payment Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FIToFIPaymentCancellationRequestV01 : IOuterRecord
 {
     
@@ -73,19 +62,6 @@ public partial record FIToFIPaymentCancellationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FIToFIPaymentCancellationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FIToFIPaymentCancellationRequestV01( CaseAssignment2 reqAssignment,UnderlyingTransaction2 reqUnderlying )
-    {
-        Assignment = reqAssignment;
-        Underlying = reqUnderlying;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,72 +69,32 @@ public partial record FIToFIPaymentCancellationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_YcuGudE-Ed-BzquC8wXy7w_518526020")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignment2 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignment2 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment2 Assignment { get; init; } 
-    #else
-    public CaseAssignment2 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_YcuGutE-Ed-BzquC8wXy7w_390093510")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Case2? Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case2? Case { get; init; } 
-    #else
-    public Case2? Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the number of transactions and the control sum of the message.
     /// </summary>
     [IsoId("_YcuGu9E-Ed-BzquC8wXy7w_533303218")]
     [DisplayName("Control Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrlData")]
-    #endif
     [IsoXmlTag("CtrlData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ControlData1? ControlData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ControlData1? ControlData { get; init; } 
-    #else
-    public ControlData1? ControlData { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the payment instruction to be cancelled.
     /// </summary>
     [IsoId("_YcuGvNE-Ed-BzquC8wXy7w_390093571")]
     [DisplayName("Underlying")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Undrlyg")]
-    #endif
     [IsoXmlTag("Undrlyg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required UnderlyingTransaction2 Underlying { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required UnderlyingTransaction2 Underlying { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UnderlyingTransaction2 Underlying { get; init; } 
-    #else
-    public UnderlyingTransaction2 Underlying { get; set; } 
-    #endif
     
     
     #nullable disable

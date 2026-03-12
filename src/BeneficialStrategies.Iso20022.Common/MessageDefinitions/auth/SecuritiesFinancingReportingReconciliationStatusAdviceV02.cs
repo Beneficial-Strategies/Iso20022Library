@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The SecuritesFinancingReportingReconciliationStatusAdvice message is sent by the trade repositories (TRs) ) to other TR and to the authority or made available to the report submitting entity and the reporting counterparty as well as the entity responsible for reporting, if applicable, to provide a status advice for reconciliation.")]
 [IsoId("_gt-cEcKvEeuzU9S_IANlog")]
 [DisplayName("Securities Financing Reporting Reconciliation Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesFinancingReportingReconciliationStatusAdviceV02 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record SecuritiesFinancingReportingReconciliationStatusAdviceV02 
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesFinancingReportingReconciliationStatusAdviceV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesFinancingReportingReconciliationStatusAdviceV02( TradeData34Choice_ reqReconciliationData )
-    {
-        ReconciliationData = reqReconciliationData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record SecuritiesFinancingReportingReconciliationStatusAdviceV02 
     /// </summary>
     [IsoId("_gt-cE8KvEeuzU9S_IANlog")]
     [DisplayName("Reconciliation Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnData")]
-    #endif
     [IsoXmlTag("RcncltnData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeData34Choice_ ReconciliationData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeData34Choice_ ReconciliationData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeData34Choice_ ReconciliationData { get; init; } 
-    #else
-    public TradeData34Choice_ ReconciliationData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_gt-cFcKvEeuzU9S_IANlog")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

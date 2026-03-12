@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The FinancialInstrumentReportingTradingVolumeCapDataReport message is sent by the trading venue to the national competent authority to report the total volume of trading and volumes of trading under reference price waiver and negotiated transactions waiver.")]
 [IsoId("_4LUGR0RNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Trading Volume Cap Data Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingTradingVolumeCapDataReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record FinancialInstrumentReportingTradingVolumeCapDataReportV01 
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingTradingVolumeCapDataReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingTradingVolumeCapDataReportV01( SecuritiesMarketReportHeader1 reqReportHeader,VolumeCapReport1 reqVolumeCapData )
-    {
-        ReportHeader = reqReportHeader;
-        VolumeCapData = reqVolumeCapData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record FinancialInstrumentReportingTradingVolumeCapDataReportV01 
     /// </summary>
     [IsoId("_4LUGSURNEee7JdgA9zPESA")]
     [DisplayName("Report Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptHdr")]
-    #endif
     [IsoXmlTag("RptHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #else
-    public SecuritiesMarketReportHeader1 ReportHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the volume of trades of financial instruments.
     /// </summary>
     [IsoId("_4LUGS0RNEee7JdgA9zPESA")]
     [DisplayName("Volume Cap Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VolCapData")]
-    #endif
     [IsoXmlTag("VolCapData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required VolumeCapReport1 VolumeCapData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required VolumeCapReport1 VolumeCapData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public VolumeCapReport1 VolumeCapData { get; init; } 
-    #else
-    public VolumeCapReport1 VolumeCapData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_4LUGTURNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

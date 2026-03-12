@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCACOSD1 message extends ISO corporate action movement confirmation message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_q_pKzQ4zEeuIpNw_GxsBOw")]
 [DisplayName("DTCCCACOSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCACOSD1V09 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCACOSD1V09 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,136 +57,64 @@ public partial record DTCCCACOSD1V09 : IOuterRecord
     /// </summary>
     [IsoId("_q_pKzw4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionGeneralInformationSD44? CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformationSD44? CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformationSD44? CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [IsoId("_q_pK1w4zEeuIpNw_GxsBOw")]
     [DisplayName("Underlying Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygScty")]
-    #endif
     [IsoXmlTag("UndrlygScty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; } 
-    #else
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action details.
     /// </summary>
     [IsoId("_q_pK2Q4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnDtls")]
-    #endif
     [IsoXmlTag("CorpActnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionSD20? CorporateActionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionSD20? CorporateActionDetails { get; init; } 
-    #else
-    public CorporateActionSD20? CorporateActionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to account balance.
     /// </summary>
     [IsoId("_q_pK2w4zEeuIpNw_GxsBOw")]
     [DisplayName("Account Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctBal")]
-    #endif
     [IsoXmlTag("AcctBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountBalanceSD14? AccountBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountBalanceSD14? AccountBalance { get; init; } 
-    #else
-    public AccountBalanceSD14? AccountBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action confirmation details.
     /// </summary>
     [IsoId("_q_pK3Q4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action Confirmation Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnConfDtls")]
-    #endif
     [IsoXmlTag("CorpActnConfDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionConfirmationDetailsSD2? CorporateActionConfirmationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionConfirmationDetailsSD2? CorporateActionConfirmationDetails { get; init; } 
-    #else
-    public CorporateActionConfirmationDetailsSD2? CorporateActionConfirmationDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as corporate action confirmation securities movement details.
     /// </summary>
     [IsoId("_q_pK3w4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action Confirmation Securities Movement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnConfSctiesMvmntDtls")]
-    #endif
     [IsoXmlTag("CorpActnConfSctiesMvmntDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionConfirmationSecuritiesMovementDetailsSD6? CorporateActionConfirmationSecuritiesMovementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionConfirmationSecuritiesMovementDetailsSD6? CorporateActionConfirmationSecuritiesMovementDetails { get; init; } 
-    #else
-    public CorporateActionConfirmationSecuritiesMovementDetailsSD6? CorporateActionConfirmationSecuritiesMovementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action confirmation cash movement details.
     /// </summary>
     [IsoId("_q_pK5w4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action Confirmation Cash Movement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnConfCshMvmntDtls")]
-    #endif
     [IsoXmlTag("CorpActnConfCshMvmntDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionConfirmationCashMovementDetailsSD5? CorporateActionConfirmationCashMovementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionConfirmationCashMovementDetailsSD5? CorporateActionConfirmationCashMovementDetails { get; init; } 
-    #else
-    public CorporateActionConfirmationCashMovementDetailsSD5? CorporateActionConfirmationCashMovementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to corporate action option details.
     /// </summary>
     [IsoId("_q_pK7w4zEeuIpNw_GxsBOw")]
     [DisplayName("Option Transaction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnTxDtls")]
-    #endif
     [IsoXmlTag("OptnTxDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OptionTransactionSD6? OptionTransactionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OptionTransactionSD6? OptionTransactionDetails { get; init; } 
-    #else
-    public OptionTransactionSD6? OptionTransactionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

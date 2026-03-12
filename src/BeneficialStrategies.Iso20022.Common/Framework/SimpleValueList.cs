@@ -45,40 +45,5 @@ namespace BeneficialStrategies.Iso20022
             return hashCode;
         }
 
-        #if DECLARE_INTERNALSERIALIZATION
-
-        /// <summary>
-        /// Serializes the collection one item at a time based using the Iso20022 standard serialization.
-        /// </summary>
-        /// <param name="writer">The xml writer to write to.</param>
-        /// <param name="xmlNamespace">The XML namespace for the message we are currently persisting.</param>
-        public void Serialize(XmlWriter writer, string xmlNamespace, string itemEnclosingElementName, Func<T,string> serializationFormatter)
-        {
-            foreach( var item in this)
-            {
-                // Todo: Need to get SerializationFormatter involved here.
-                if ( item is not null ) writer.WriteElementString(itemEnclosingElementName, xmlNamespace, serializationFormatter(item) );
-            }
-        }
-
-        /// <summary>
-        /// Deserializes the collection one item at a time.
-        /// </summary>
-        /// <param name="element">Element that has the container of child elements.</param>
-        /// <returns></returns>
-        /// <exception cref="NotImplementedException"></exception>
-        public static SimpleValueList<T> Deserialize(XElement element)
-        {
-            // var list = new ValueList<T>();
-            // foreach( var child in element.Elements())
-            // {
-            //     var newItem = T.Deserialize(child);
-            //     list.Add(newItem);
-            // }
-            // return list;
-            throw new NotImplementedException();
-        }
-
-        #endif
     }
 }

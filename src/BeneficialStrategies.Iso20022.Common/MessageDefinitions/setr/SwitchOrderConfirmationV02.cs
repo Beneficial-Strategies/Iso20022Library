@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|The SwitchOrderConfirmation message is sent by an executing party, eg, a transfer agent, to an instruction party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the instructing party and the executing party. The intermediary party is, for example, an intermediary or a concentrator.|This message is used to confirm the details of the execution of a SwitchOrder message.|Usage|The SwitchOrderConfirmation message is sent to confirm that all the legs of the switch have been executed.")]
 [IsoId("_7TxshtE7Ed-BzquC8wXy7w_-1591679635")]
 [DisplayName("Switch Order Confirmation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SwitchOrderConfirmationV02 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record SwitchOrderConfirmationV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SwitchOrderConfirmationV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SwitchOrderConfirmationV02( AdditionalReference3 reqRelatedReference,SwitchExecution3 reqSwitchExecutionDetails )
-    {
-        RelatedReference = reqRelatedReference;
-        SwitchExecutionDetails = reqSwitchExecutionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,98 +61,46 @@ public partial record SwitchOrderConfirmationV02 : IOuterRecord
     /// </summary>
     [IsoId("_7Txsh9E7Ed-BzquC8wXy7w_433338806")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? MasterReference { get; init; } 
-    #else
-    public AdditionalReference3? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_7TxsiNE7Ed-BzquC8wXy7w_444423035")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_7TxsidE7Ed-BzquC8wXy7w_428723166")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_7T7dgNE7Ed-BzquC8wXy7w_442574644")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3 RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3 RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to a switch execution.
     /// </summary>
     [IsoId("_7T7dgdE7Ed-BzquC8wXy7w_-1414365507")]
     [DisplayName("Switch Execution Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SwtchExctnDtls")]
-    #endif
     [IsoXmlTag("SwtchExctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SwitchExecution3 SwitchExecutionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SwitchExecution3 SwitchExecutionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SwitchExecution3 SwitchExecutionDetails { get; init; } 
-    #else
-    public SwitchExecution3 SwitchExecutionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Confirmation of the information related to an intermediary.
     /// </summary>
     [IsoId("_7T7dgtE7Ed-BzquC8wXy7w_1133369220")]
     [DisplayName("Intermediary Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrmyDtls")]
-    #endif
     [IsoXmlTag("IntrmyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
@@ -187,34 +111,16 @@ public partial record SwitchOrderConfirmationV02 : IOuterRecord
     /// </summary>
     [IsoId("_7T7dg9E7Ed-BzquC8wXy7w_976977118")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation1? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation1? CopyDetails { get; init; } 
-    #else
-    public CopyInformation1? CopyDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_7T7dhNE7Ed-BzquC8wXy7w_147041061")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

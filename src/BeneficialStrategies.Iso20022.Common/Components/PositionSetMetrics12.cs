@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oRNJEc9JEeubvZK8CMH-Eg")]
 [DisplayName("Position Set Metrics")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PositionSetMetrics12
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,17 +23,8 @@ public partial record PositionSetMetrics12
     /// </summary>
     [IsoId("_oTj5g89JEeubvZK8CMH-Eg")]
     [DisplayName("Volume Metrics")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="VolMtrcs")]
-    #endif
     [IsoXmlTag("VolMtrcs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public VolumeMetrics6? VolumeMetrics { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public VolumeMetrics6? VolumeMetrics { get; init; } 
-    #else
-    public VolumeMetrics6? VolumeMetrics { get; set; } 
-    #endif
     
     /// <summary>
     /// Collateral haircut, a risk control measure applied to underlying collateral whereby the value of that underlying collateral is calculated as the market value of the assets reduced by a certain percentage. 
@@ -58,35 +33,17 @@ public partial record PositionSetMetrics12
     /// </summary>
     [IsoId("_oTj5hc9JEeubvZK8CMH-Eg")]
     [DisplayName("Haircut Or Margin")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HrcutOrMrgn")]
-    #endif
     [IsoXmlTag("HrcutOrMrgn")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoPercentageRate? HaircutOrMargin { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Decimal? HaircutOrMargin { get; init; } 
-    #else
-    public System.Decimal? HaircutOrMargin { get; set; } 
-    #endif
     
     /// <summary>
     /// Quantity of the securities other than bonds.
     /// </summary>
     [IsoId("_oTj5h89JEeubvZK8CMH-Eg")]
     [DisplayName("Quantity Or Nominal Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="QtyOrNmnlAmt")]
-    #endif
     [IsoXmlTag("QtyOrNmnlAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public QuantityNominalValue2Choice_? QuantityOrNominalAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public QuantityNominalValue2Choice_? QuantityOrNominalAmount { get; init; } 
-    #else
-    public QuantityNominalValue2Choice_? QuantityOrNominalAmount { get; set; } 
-    #endif
     
     
     #nullable disable

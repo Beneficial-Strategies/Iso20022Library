@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsrv;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 [Description(@"The UndertakingAmendmentResponse message is sent by the beneficiary to the party that issued the undertaking, either directly or via one or more advising parties, to indicate acceptance or rejection by the beneficiary of the amendment.")]
 [IsoId("_9iGeInltEeG7BsjMvd1mEw_-1174691593")]
 [DisplayName("Undertaking Amendment Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UndertakingAmendmentResponseV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record UndertakingAmendmentResponseV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a UndertakingAmendmentResponseV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public UndertakingAmendmentResponseV01( Amendment7 reqUndertakingAmendmentResponseDetails )
-    {
-        UndertakingAmendmentResponseDetails = reqUndertakingAmendmentResponseDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record UndertakingAmendmentResponseV01 : IOuterRecord
     /// </summary>
     [IsoId("_9iGeI3ltEeG7BsjMvd1mEw_1688211765")]
     [DisplayName("Undertaking Amendment Response Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UdrtkgAmdmntRspnDtls")]
-    #endif
     [IsoXmlTag("UdrtkgAmdmntRspnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Amendment7 UndertakingAmendmentResponseDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Amendment7 UndertakingAmendmentResponseDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Amendment7 UndertakingAmendmentResponseDetails { get; init; } 
-    #else
-    public Amendment7 UndertakingAmendmentResponseDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Digital signature of the response.
     /// </summary>
     [IsoId("_9iGeJHltEeG7BsjMvd1mEw_-106555432")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature2? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature2? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature2? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

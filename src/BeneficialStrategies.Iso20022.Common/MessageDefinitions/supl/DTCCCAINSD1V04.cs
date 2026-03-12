@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAINSD1 message extends ISO corporate action instruction message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_LAGyL75MEeexmbB7KsjCwA")]
 [DisplayName("DTCCCAINSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAINSD1V04 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAINSD1V04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,60 +57,30 @@ public partial record DTCCCAINSD1V04 : IOuterRecord
     /// </summary>
     [IsoId("_LAGyMb5MEeexmbB7KsjCwA")]
     [DisplayName("Optional Dividend")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnlDvdd")]
-    #endif
     [IsoXmlTag("OptnlDvdd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OptionalDividendAccountQuantitySD3? OptionalDividend { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OptionalDividendAccountQuantitySD3? OptionalDividend { get; init; } 
-    #else
-    public OptionalDividendAccountQuantitySD3? OptionalDividend { get; set; } 
-    #endif
     
     /// <summary>
     /// DTC (The Depository Trust Corporation) tax exempt service election.
     /// </summary>
     [IsoId("_LAGyOb5MEeexmbB7KsjCwA")]
     [DisplayName("Tax Exempt")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxXmpt")]
-    #endif
     [IsoXmlTag("TaxXmpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TaxExemptQuantitySD2? TaxExempt { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TaxExemptQuantitySD2? TaxExempt { get; init; } 
-    #else
-    public TaxExemptQuantitySD2? TaxExempt { get; set; } 
-    #endif
     
     /// <summary>
     /// DTC (The Depository Trust Corporation) foreign currency payment service wire payment instruction.
     /// </summary>
     [IsoId("_LAGyQb5MEeexmbB7KsjCwA")]
     [DisplayName("Wire Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="WireInstr")]
-    #endif
     [IsoXmlTag("WireInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public WireInstructionSD3? WireInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public WireInstructionSD3? WireInstruction { get; init; } 
-    #else
-    public WireInstructionSD3? WireInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Supplementary data extending corporate action reorganisation instruction message with corporate action elements not covered in the standard message.
     /// </summary>
     [IsoId("_aEKXsMU2EeeWeZMpNX1JUQ")]
     [DisplayName("Reorganisation Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReorgInstrDtls")]
-    #endif
     [IsoXmlTag("ReorgInstrDtls")]
     [MinLength(0)]
     [MaxLength(12)]

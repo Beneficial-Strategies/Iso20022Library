@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t4lk8QivEeKn9O5oyej_zw")]
 [DisplayName("Named Key Encrypted Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NamedKeyEncryptedData2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NamedKeyEncryptedData2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NamedKeyEncryptedData2( EncryptedContent2 reqEncryptedContent )
-    {
-        EncryptedContent = reqEncryptedContent;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,56 +23,27 @@ public partial record NamedKeyEncryptedData2
     /// </summary>
     [IsoId("_uEpD8QivEeKn9O5oyej_zw")]
     [DisplayName("Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Vrsn")]
-    #endif
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? Version { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? Version { get; init; } 
-    #else
-    public System.UInt64? Version { get; set; } 
-    #endif
     
     /// <summary>
     /// Name of the key encryption key (KEK).
     /// </summary>
     [IsoId("_uEpD9QivEeKn9O5oyej_zw")]
     [DisplayName("Key Name")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="KeyNm")]
-    #endif
     [IsoXmlTag("KeyNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Text? KeyName { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? KeyName { get; init; } 
-    #else
-    public System.String? KeyName { get; set; } 
-    #endif
     
     /// <summary>
     /// Encrypted data with an encryption key.
     /// </summary>
     [IsoId("_uEpD-QivEeKn9O5oyej_zw")]
     [DisplayName("Encrypted Content")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NcrptdCntt")]
-    #endif
     [IsoXmlTag("NcrptdCntt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EncryptedContent2 EncryptedContent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EncryptedContent2 EncryptedContent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EncryptedContent2 EncryptedContent { get; init; } 
-    #else
-    public EncryptedContent2 EncryptedContent { get; set; } 
-    #endif
     
     
     #nullable disable

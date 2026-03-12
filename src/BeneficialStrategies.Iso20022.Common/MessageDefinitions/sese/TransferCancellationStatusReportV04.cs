@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -38,12 +33,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|An executing party, for example, a transfer agent, sends the TransferCancellationStatusReport message to the instructing party, for example, an investment manager or one of its authorised representatives to provide the status of a previously received transfer cancellation instruction.|Usage|The TransferCancellationStatusReport message is used to report on the status of a transfer in or transfer out cancellation request.|The reference of the transfer instruction for which the cancellation status is reported is identified in TransferReference. The message identification of the transfer cancellation request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|The message identification of the transfer instruction request message in which the transfer instruction was conveyed may also be quoted in RelatedReference.|One of the following statuses can be reported:|- the transfer cancellation is accepted, or,|- the transfer cancellation has been sent to the next party, or,|- the transfer cancellation is complete and the reason for the status,|- the transfer cancellation pending and the reason for the status,|- the transfer cancellation is rejected and the reason for the status.")]
 [IsoId("_QzhWMRXgEeOocOqSQt5Jbw")]
 [DisplayName("Transfer Cancellation Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferCancellationStatusReportV04 : IOuterRecord
 {
     
@@ -72,19 +61,6 @@ public partial record TransferCancellationStatusReportV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferCancellationStatusReportV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferCancellationStatusReportV04( MessageIdentification1 reqMessageIdentification,CancellationStatusAndReason2 reqStatusReport )
-    {
-        MessageIdentification = reqMessageIdentification;
-        StatusReport = reqStatusReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -92,106 +68,48 @@ public partial record TransferCancellationStatusReportV04 : IOuterRecord
     /// </summary>
     [IsoId("_QzhWORXgEeOocOqSQt5Jbw")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unambiguous identification of the transfer allocated by the counterparty.
     /// </summary>
     [IsoId("_QzhWOxXgEeOocOqSQt5Jbw")]
     [DisplayName("Counterparty Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtyRef")]
-    #endif
     [IsoXmlTag("CtrPtyRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference2? CounterpartyReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2? CounterpartyReference { get; init; } 
-    #else
-    public AdditionalReference2? CounterpartyReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the message or communication that was previously received.
     /// </summary>
     [IsoId("_j8hMwR6mEeOolf0-cMYhrw")]
     [DisplayName("Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ref")]
-    #endif
     [IsoXmlTag("Ref")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public References40Choice_? Reference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References40Choice_? Reference { get; init; } 
-    #else
-    public References40Choice_? Reference { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the transfer cancellation instruction.
     /// </summary>
     [IsoId("_QzhWQRXgEeOocOqSQt5Jbw")]
     [DisplayName("Status Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsRpt")]
-    #endif
     [IsoXmlTag("StsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CancellationStatusAndReason2 StatusReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CancellationStatusAndReason2 StatusReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CancellationStatusAndReason2 StatusReport { get; init; } 
-    #else
-    public CancellationStatusAndReason2 StatusReport { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the market practice to which the message conforms.
     /// </summary>
     [IsoId("_0bJBsRw9EeOIveEnnb_1-A")]
     [DisplayName("Market Practice Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktPrctcVrsn")]
-    #endif
     [IsoXmlTag("MktPrctcVrsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    #else
-    public MarketPracticeVersion1? MarketPracticeVersion { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_QzhWQxXgEeOocOqSQt5Jbw")]
     [DisplayName("Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Xtnsn")]
-    #endif
     [IsoXmlTag("Xtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Extension1? Extension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Extension1? Extension { get; init; } 
-    #else
-    public Extension1? Extension { get; set; } 
-    #endif
     
     
     #nullable disable

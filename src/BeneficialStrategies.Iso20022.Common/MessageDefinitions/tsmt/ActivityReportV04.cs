@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The ActivityReport message is sent by the matching application to the requester of an activity report.|This message is used to report on all transactions for which an activity has taken place within a given time span.|Usage|The ActivityReport message can be sent|- at a pre-determined time every 24 hours. The message reports on all transactions that the requester is involved in and for which an activity has taken place within the last 24 hours.|- on demand in response to an ActivityReportRequest message. The message reports on all transactions that the requester is involved in and for which an activity has taken place within a time span specified by the requester in the ActivityReportRequest message.")]
 [IsoId("_fPCaYefGEeKNfc-Rw_dPYg")]
 [DisplayName("Activity Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ActivityReportV04 : IOuterRecord
 {
     
@@ -67,18 +56,6 @@ public partial record ActivityReportV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ActivityReportV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ActivityReportV04( MessageIdentification1 reqReportIdentification )
-    {
-        ReportIdentification = reqReportIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,53 +63,24 @@ public partial record ActivityReportV04 : IOuterRecord
     /// </summary>
     [IsoId("_fPCaZefGEeKNfc-Rw_dPYg")]
     [DisplayName("Report Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptId")]
-    #endif
     [IsoXmlTag("RptId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 ReportIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 ReportIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 ReportIdentification { get; init; } 
-    #else
-    public MessageIdentification1 ReportIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the previous message requesting the report.
     /// </summary>
     [IsoId("_fPCaZ-fGEeKNfc-Rw_dPYg")]
     [DisplayName("Related Message Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdMsgRef")]
-    #endif
     [IsoXmlTag("RltdMsgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageIdentification1? RelatedMessageReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1? RelatedMessageReference { get; init; } 
-    #else
-    public MessageIdentification1? RelatedMessageReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Describes the events that occurred for one transaction.
     /// </summary>
     [IsoId("_fPCaaefGEeKNfc-Rw_dPYg")]
     [DisplayName("Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rpt")]
-    #endif
     [IsoXmlTag("Rpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActivityReportItems3? Report { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActivityReportItems3? Report { get; init; } 
-    #else
-    public ActivityReportItems3? Report { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rax58Np-Ed-ak6NoX_4Aeg_1462344534")]
 [DisplayName("Required Submission")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RequiredSubmission2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record RequiredSubmission2
     /// </summary>
     [IsoId("_Rax58dp-Ed-ak6NoX_4Aeg_1833600823")]
     [DisplayName("Submitter")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Submitr")]
-    #endif
     [IsoXmlTag("Submitr")]
     public ValueList<BICIdentification1> Submitter { get; init; } = new ValueList<BICIdentification1>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _Rax58dp-Ed-ak6NoX_4Aeg_1833600823

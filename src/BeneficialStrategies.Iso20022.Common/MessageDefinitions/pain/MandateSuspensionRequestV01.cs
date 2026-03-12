@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The MandateSuspensionRequest message is sent by the initiator of the request to its agent. The initiator can either be the debtor, debtor agent, creditor or creditor agent.|A MandateSuspensionRequest message is used to request the suspension of an existing mandate until the suspension is lifted. |Usage|The MandateSuspensionRequest message can contain one or more suspension requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The MandateSuspensionRequest message can be used in domestic and cross-border scenarios.|")]
 [IsoId("_0HNCMH5lEea7cqFPsAF3tQ")]
 [DisplayName("Mandate Suspension Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MandateSuspensionRequestV01 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record MandateSuspensionRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MandateSuspensionRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MandateSuspensionRequestV01( GroupHeader47 reqGroupHeader,MandateSuspension1 reqUnderlyingSuspensionDetails )
-    {
-        GroupHeader = reqGroupHeader;
-        UnderlyingSuspensionDetails = reqUnderlyingSuspensionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,55 +64,24 @@ public partial record MandateSuspensionRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_SNAisH5nEea7cqFPsAF3tQ")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader47 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader47 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader47 GroupHeader { get; init; } 
-    #else
-    public GroupHeader47 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide information on the suspension request of the mandate.
     /// </summary>
     [IsoId("_ka8SwH5nEea7cqFPsAF3tQ")]
     [DisplayName("Underlying Suspension Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygSspnsnDtls")]
-    #endif
     [IsoXmlTag("UndrlygSspnsnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MandateSuspension1 UnderlyingSuspensionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MandateSuspension1 UnderlyingSuspensionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MandateSuspension1 UnderlyingSuspensionDetails { get; init; } 
-    #else
-    public MandateSuspension1 UnderlyingSuspensionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_yoO34H5nEea7cqFPsAF3tQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

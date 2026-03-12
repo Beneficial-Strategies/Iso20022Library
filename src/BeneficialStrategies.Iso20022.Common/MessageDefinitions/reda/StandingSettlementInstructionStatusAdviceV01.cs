@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"Scope|The receiver of a StandingSettlementInstruction message sends the StandingSettlementInstructionStatusAdvice message to the instructing party (sender of the StandingSettlementInstruction message) to provide the status of a previously received StandingSettlementInstruction, StandingSettlementInstructionCancellation or StandingSettlementInstructionDeletion message.||Usage|The StandingSettlementInstructionStatusAdvice message is used to report one of the following statuses:|-	a received status, or, |-	an accepted status, or,|-	a rejected status, or,|-	a pending processing status, or,|-	a proprietary status.")]
 [IsoId("_5gmxoPRnEeK8G5J12Bcx2g")]
 [DisplayName("Standing Settlement Instruction Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StandingSettlementInstructionStatusAdviceV01 : IOuterRecord
 {
     
@@ -70,22 +59,6 @@ public partial record StandingSettlementInstructionStatusAdviceV01 : IOuterRecor
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a StandingSettlementInstructionStatusAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public StandingSettlementInstructionStatusAdviceV01( AccountIdentification26 reqAccountIdentification,MarketIdentificationOrCashPurpose1Choice_ reqMarketIdentification,PartyOrCurrency1Choice_ reqSettlementDetails,System.String reqRelatedMessageReference,ProcessingStatus43Choice_ reqProcessingStatus )
-    {
-        AccountIdentification = reqAccountIdentification;
-        MarketIdentification = reqMarketIdentification;
-        SettlementDetails = reqSettlementDetails;
-        RelatedMessageReference = reqRelatedMessageReference;
-        ProcessingStatus = reqProcessingStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,17 +66,8 @@ public partial record StandingSettlementInstructionStatusAdviceV01 : IOuterRecor
     /// </summary>
     [IsoId("_QP7bYPXrEeKpFY1yaoww4A")]
     [DisplayName("Effective Date Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FctvDtDtls")]
-    #endif
     [IsoXmlTag("FctvDtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public EffectiveDate1? EffectiveDateDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EffectiveDate1? EffectiveDateDetails { get; init; } 
-    #else
-    public EffectiveDate1? EffectiveDateDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous master identification known to the sender (or its authorised agent) and receiver (or its authorised agent), below which the SSI will be lodged. This may be an account number or reference to a fund.
@@ -111,114 +75,50 @@ public partial record StandingSettlementInstructionStatusAdviceV01 : IOuterRecor
     /// </summary>
     [IsoId("_QP7bYfXrEeKpFY1yaoww4A")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountIdentification26 AccountIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountIdentification26 AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountIdentification26 AccountIdentification { get; init; } 
-    #else
-    public AccountIdentification26 AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the market for the standing settlement instruction.
     /// </summary>
     [IsoId("_Va68wVK1EeOsJr32EK1NAQ")]
     [DisplayName("Market Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktId")]
-    #endif
     [IsoXmlTag("MktId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MarketIdentificationOrCashPurpose1Choice_ MarketIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MarketIdentificationOrCashPurpose1Choice_ MarketIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MarketIdentificationOrCashPurpose1Choice_ MarketIdentification { get; init; } 
-    #else
-    public MarketIdentificationOrCashPurpose1Choice_ MarketIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Settlement information that helps to identify the standing settlement instruction, cancellation or deletion for which the status is sent.
     /// </summary>
     [IsoId("_jd-AwVK1EeOsJr32EK1NAQ")]
     [DisplayName("Settlement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmDtls")]
-    #endif
     [IsoXmlTag("SttlmDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyOrCurrency1Choice_ SettlementDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyOrCurrency1Choice_ SettlementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyOrCurrency1Choice_ SettlementDetails { get; init; } 
-    #else
-    public PartyOrCurrency1Choice_ SettlementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_z8NGwPm-EeKDvJTxb9tKVw")]
     [DisplayName("Related Message Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdMsgRef")]
-    #endif
     [IsoXmlTag("RltdMsgRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text RelatedMessageReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String RelatedMessageReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String RelatedMessageReference { get; init; } 
-    #else
-    public System.String RelatedMessageReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the standing settlement instruction, deletion or cancellation.
     /// </summary>
     [IsoId("__JwQcFhJEeOMYfRGLS0NbA")]
     [DisplayName("Processing Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgSts")]
-    #endif
     [IsoXmlTag("PrcgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ProcessingStatus43Choice_ ProcessingStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ProcessingStatus43Choice_ ProcessingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProcessingStatus43Choice_ ProcessingStatus { get; init; } 
-    #else
-    public ProcessingStatus43Choice_ ProcessingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_1jvlQfXtEeKpFY1yaoww4A")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

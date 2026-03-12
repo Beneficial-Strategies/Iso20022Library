@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The TransactionAdvice message is sent by the Acquirer (or Agent) to provide to the POI the outcome of a transaction processed outside of this protocol. ")]
 [IsoId("_3aVR4BBiEeqgJK7e3n_EXA")]
 [DisplayName("Transaction Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransactionAdviceV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record TransactionAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransactionAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransactionAdviceV01( Header58 reqHeader,AcceptorCompletionAdvice9 reqTransactionAdvice )
-    {
-        Header = reqHeader;
-        TransactionAdvice = reqTransactionAdvice;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record TransactionAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_3t2OURBjEeqgJK7e3n_EXA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header58 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header58 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header58 Header { get; init; } 
-    #else
-    public Header58 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the outcome of the transaction.
     /// </summary>
     [IsoId("_7B_foRBjEeqgJK7e3n_EXA")]
     [DisplayName("Transaction Advice")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxAdvc")]
-    #endif
     [IsoXmlTag("TxAdvc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCompletionAdvice9 TransactionAdvice { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCompletionAdvice9 TransactionAdvice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCompletionAdvice9 TransactionAdvice { get; init; } 
-    #else
-    public AcceptorCompletionAdvice9 TransactionAdvice { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_79gFoRBjEeqgJK7e3n_EXA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType24? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType24? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType24? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GmtMcY39EeWRwov1g9WL_A")]
 [DisplayName("Merchant Configuration Parameters")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MerchantConfigurationParameters2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MerchantConfigurationParameters2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MerchantConfigurationParameters2( TerminalManagementAction3Code reqActionType,System.String reqVersion )
-    {
-        ActionType = reqActionType;
-        Version = reqVersion;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,94 +23,45 @@ public partial record MerchantConfigurationParameters2
     /// </summary>
     [IsoId("_QGReMI39EeWRwov1g9WL_A")]
     [DisplayName("Action Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ActnTp")]
-    #endif
     [IsoXmlTag("ActnTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TerminalManagementAction3Code ActionType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TerminalManagementAction3Code ActionType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TerminalManagementAction3Code ActionType { get; init; } 
-    #else
-    public TerminalManagementAction3Code ActionType { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the merchant for the MTM, if the POI manages several merchants.
     /// </summary>
     [IsoId("_Gxb1wY39EeWRwov1g9WL_A")]
     [DisplayName("Merchant Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MrchntId")]
-    #endif
     [IsoXmlTag("MrchntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MerchantIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MerchantIdentification { get; init; } 
-    #else
-    public System.String? MerchantIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Version of the merchant parameters.
     /// </summary>
     [IsoId("_Gxb1w439EeWRwov1g9WL_A")]
     [DisplayName("Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Vrsn")]
-    #endif
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax256Text Version { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String Version { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String Version { get; init; } 
-    #else
-    public System.String Version { get; set; } 
-    #endif
     
     /// <summary>
     /// Local proxy configuration.
     /// </summary>
     [IsoId("_oX6nsI3-EeWRwov1g9WL_A")]
     [DisplayName("Proxy")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Prxy")]
-    #endif
     [IsoXmlTag("Prxy")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public NetworkParameters6? Proxy { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NetworkParameters6? Proxy { get; init; } 
-    #else
-    public NetworkParameters6? Proxy { get; set; } 
-    #endif
     
     /// <summary>
     /// Other merchant parameters.
     /// </summary>
     [IsoId("_Gxb1xY39EeWRwov1g9WL_A")]
     [DisplayName("Other Parameters")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrParams")]
-    #endif
     [IsoXmlTag("OthrParams")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax10000Binary? OtherParameters { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? OtherParameters { get; init; } 
-    #else
-    public System.Byte[]? OtherParameters { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZR7QMS9BEeu125Ip9zFcsQ")]
 [DisplayName("Payment Receipt")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PaymentReceipt3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PaymentReceipt3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PaymentReceipt3( DocumentType7Code reqDocumentQualifier,ActionMessage8 reqOutputContent )
-    {
-        DocumentQualifier = reqDocumentQualifier;
-        OutputContent = reqOutputContent;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,74 +23,34 @@ public partial record PaymentReceipt3
     /// </summary>
     [IsoId("_Zf6o4S9BEeu125Ip9zFcsQ")]
     [DisplayName("Document Qualifier")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DocQlfr")]
-    #endif
     [IsoXmlTag("DocQlfr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentType7Code DocumentQualifier { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentType7Code DocumentQualifier { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentType7Code DocumentQualifier { get; init; } 
-    #else
-    public DocumentType7Code DocumentQualifier { get; set; } 
-    #endif
     
     /// <summary>
     /// Flag is the print is integrated to other prints.
     /// </summary>
     [IsoId("_Zf6o4y9BEeu125Ip9zFcsQ")]
     [DisplayName("Integrated Print Flag")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntgrtdPrtFlg")]
-    #endif
     [IsoXmlTag("IntgrtdPrtFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? IntegratedPrintFlag { get; init; } 
-    #else
-    public System.String? IntegratedPrintFlag { get; set; } 
-    #endif
     
     /// <summary>
     /// Flag to indicate that the cardholder payment receipt requires a signature by the customer.
     /// </summary>
     [IsoId("_Zf6o5S9BEeu125Ip9zFcsQ")]
     [DisplayName("Required Signature Flag")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqrdSgntrFlg")]
-    #endif
     [IsoXmlTag("ReqrdSgntrFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? RequiredSignatureFlag { get; init; } 
-    #else
-    public System.String? RequiredSignatureFlag { get; set; } 
-    #endif
     
     /// <summary>
     /// Document to print.
     /// </summary>
     [IsoId("_Zf6o5y9BEeu125Ip9zFcsQ")]
     [DisplayName("Output Content")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OutptCntt")]
-    #endif
     [IsoXmlTag("OutptCntt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActionMessage8 OutputContent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActionMessage8 OutputContent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActionMessage8 OutputContent { get; init; } 
-    #else
-    public ActionMessage8 OutputContent { get; set; } 
-    #endif
     
     
     #nullable disable

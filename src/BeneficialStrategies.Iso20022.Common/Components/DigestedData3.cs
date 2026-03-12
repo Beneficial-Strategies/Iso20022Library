@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LcnkgVW-EeOlEMHvp-ipJg")]
 [DisplayName("Digested Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DigestedData3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DigestedData3 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DigestedData3( EncapsulatedContent2 reqEncapsulatedContent,System.String reqDigest )
-    {
-        EncapsulatedContent = reqEncapsulatedContent;
-        Digest = reqDigest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,27 +23,15 @@ public partial record DigestedData3
     /// </summary>
     [IsoId("_LnfXwVW-EeOlEMHvp-ipJg")]
     [DisplayName("Version")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Vrsn")]
-    #endif
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? Version { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? Version { get; init; } 
-    #else
-    public System.UInt64? Version { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of a digest algorithm.
     /// </summary>
     [IsoId("_LnfXw1W-EeOlEMHvp-ipJg")]
     [DisplayName("Digest Algorithm")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgstAlgo")]
-    #endif
     [IsoXmlTag("DgstAlgo")]
     public ValueList<AlgorithmIdentification5> DigestAlgorithm { get; init; } = new ValueList<AlgorithmIdentification5>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _LnfXw1W-EeOlEMHvp-ipJg
@@ -77,40 +41,18 @@ public partial record DigestedData3
     /// </summary>
     [IsoId("_LnfXxVW-EeOlEMHvp-ipJg")]
     [DisplayName("Encapsulated Content")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NcpsltdCntt")]
-    #endif
     [IsoXmlTag("NcpsltdCntt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EncapsulatedContent2 EncapsulatedContent { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EncapsulatedContent2 EncapsulatedContent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EncapsulatedContent2 EncapsulatedContent { get; init; } 
-    #else
-    public EncapsulatedContent2 EncapsulatedContent { get; set; } 
-    #endif
     
     /// <summary>
     /// Result of data-digesting process.
     /// </summary>
     [IsoId("_LnfXx1W-EeOlEMHvp-ipJg")]
     [DisplayName("Digest")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Dgst")]
-    #endif
     [IsoXmlTag("Dgst")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
     [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax140Text Digest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String Digest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String Digest { get; init; } 
-    #else
-    public System.String Digest { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus5Choice
 {
     /// <summary>
@@ -20,31 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus5Choice
     /// </summary>
     [IsoId("_r15wxV6uEeSyc4g_pm5hbw")]
     [DisplayName("Detailed Instruction Status")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record DetailedInstructionStatus : InstructionStatus5Choice_
-    #else
-    public partial class DetailedInstructionStatus : InstructionStatus5Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a DetailedInstructionStatus instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public DetailedInstructionStatus( System.String reqInstructionIdentification,InstructionStatus6Choice_ reqInstructionStatus )
-        {
-            InstructionIdentification = reqInstructionIdentification;
-            InstructionStatus = reqInstructionStatus;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -52,78 +22,38 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus5Choice
         /// </summary>
         [IsoId("_tL-y5V6uEeSyc4g_pm5hbw")]
         [DisplayName("Instruction Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="InstrId")]
-        #endif
         [IsoXmlTag("InstrId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required IsoMax35Text InstructionIdentification { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required System.String InstructionIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String InstructionIdentification { get; init; } 
-        #else
-        public System.String InstructionIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Identifies the safekeeping account.
         /// </summary>
         [IsoId("_tL-y516uEeSyc4g_pm5hbw")]
         [DisplayName("Account Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="AcctId")]
-        #endif
         [IsoXmlTag("AcctId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax35Text? AccountIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? AccountIdentification { get; init; } 
-        #else
-        public System.String? AccountIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Identifies the subaccount of the safekeeping account.
         /// </summary>
         [IsoId("_tL-y6V6uEeSyc4g_pm5hbw")]
         [DisplayName("Sub Account Identification")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="SubAcctId")]
-        #endif
         [IsoXmlTag("SubAcctId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax35Text? SubAccountIdentification { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? SubAccountIdentification { get; init; } 
-        #else
-        public System.String? SubAccountIdentification { get; set; } 
-        #endif
         
         /// <summary>
         /// Status applying to individual instructions of a MeetingInstruction.
         /// </summary>
         [IsoId("_tL-y616uEeSyc4g_pm5hbw")]
         [DisplayName("Instruction Status")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="InstrSts")]
-        #endif
         [IsoXmlTag("InstrSts")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required InstructionStatus6Choice_ InstructionStatus { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required InstructionStatus6Choice_ InstructionStatus { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public InstructionStatus6Choice_ InstructionStatus { get; init; } 
-        #else
-        public InstructionStatus6Choice_ InstructionStatus { get; set; } 
-        #endif
         
         
         #nullable disable

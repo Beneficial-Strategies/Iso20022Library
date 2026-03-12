@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsrv;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 [Description(@"The UndertakingNonExtensionNotification message is sent by the party that issued the undertaking to the beneficiary, either directly or via one or more advising parties, to notify it of the non-extension of the referenced undertaking beyond the current expiry date.")]
 [IsoId("_9i_O8nltEeG7BsjMvd1mEw_-188871383")]
 [DisplayName("Undertaking Non Extension Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UndertakingNonExtensionNotificationV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record UndertakingNonExtensionNotificationV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a UndertakingNonExtensionNotificationV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public UndertakingNonExtensionNotificationV01( UndertakingNonExtensionStatusAdvice1 reqUndertakingNonExtensionNotificationDetails )
-    {
-        UndertakingNonExtensionNotificationDetails = reqUndertakingNonExtensionNotificationDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record UndertakingNonExtensionNotificationV01 : IOuterRecord
     /// </summary>
     [IsoId("_9i_O83ltEeG7BsjMvd1mEw_1181398282")]
     [DisplayName("Undertaking Non Extension Notification Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UdrtkgNonXtnsnNtfctnDtls")]
-    #endif
     [IsoXmlTag("UdrtkgNonXtnsnNtfctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required UndertakingNonExtensionStatusAdvice1 UndertakingNonExtensionNotificationDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required UndertakingNonExtensionStatusAdvice1 UndertakingNonExtensionNotificationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UndertakingNonExtensionStatusAdvice1 UndertakingNonExtensionNotificationDetails { get; init; } 
-    #else
-    public UndertakingNonExtensionStatusAdvice1 UndertakingNonExtensionNotificationDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Digital signature of the notification.
     /// </summary>
     [IsoId("_9i_O9HltEeG7BsjMvd1mEw_-676227762")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature2? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature2? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature2? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

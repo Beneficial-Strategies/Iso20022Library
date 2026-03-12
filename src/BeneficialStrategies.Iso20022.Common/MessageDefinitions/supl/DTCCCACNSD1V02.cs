@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCACNSD1 message extends ISO corporate action cancellation advise (CACN) message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_1OTt4zL3EeKU9IrkkToqcw_-1610896925")]
 [DisplayName("DTCCCACNSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCACNSD1V02 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCACNSD1V02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,68 +57,32 @@ public partial record DTCCCACNSD1V02 : IOuterRecord
     /// </summary>
     [IsoId("_1OTt5DL3EeKU9IrkkToqcw_-1238632619")]
     [DisplayName("Notification Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtfctnXtnsn")]
-    #endif
     [IsoXmlTag("NtfctnXtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionNotificationSD1? NotificationExtension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionNotificationSD1? NotificationExtension { get; init; } 
-    #else
-    public CorporateActionNotificationSD1? NotificationExtension { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to cancellation advice general information.
     /// </summary>
     [IsoId("_1OTt5TL3EeKU9IrkkToqcw_-2042507692")]
     [DisplayName("General Information Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GnlInfXtnsn")]
-    #endif
     [IsoXmlTag("GnlInfXtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionGeneralInformationSD2? GeneralInformationExtension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformationSD2? GeneralInformationExtension { get; init; } 
-    #else
-    public CorporateActionGeneralInformationSD2? GeneralInformationExtension { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as events linkage supplementary data to events to cancellation advice.
     /// </summary>
     [IsoId("_1OTt5jL3EeKU9IrkkToqcw_-1867503343")]
     [DisplayName("Events Linkage Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtsLkgXtnsn")]
-    #endif
     [IsoXmlTag("EvtsLkgXtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionCancellationSD1? EventsLinkageExtension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionCancellationSD1? EventsLinkageExtension { get; init; } 
-    #else
-    public CorporateActionCancellationSD1? EventsLinkageExtension { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as external comments to cancellation advice.
     /// </summary>
     [IsoId("_1OTt5zL3EeKU9IrkkToqcw_-551563388")]
     [DisplayName("External Comments Extension")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="XtrnlCmntsXtnsn")]
-    #endif
     [IsoXmlTag("XtrnlCmntsXtnsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionCancellationSD2? ExternalCommentsExtension { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionCancellationSD2? ExternalCommentsExtension { get; init; } 
-    #else
-    public CorporateActionCancellationSD2? ExternalCommentsExtension { get; set; } 
-    #endif
     
     
     #nullable disable

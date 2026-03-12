@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -38,12 +33,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The ModifyMember message is sent by a member to the transaction administrator.|It is used to request modifications to the static data related to the profile of a member that the transaction administrator maintains.|Usage|The transaction administrator is in charge of providing the members with business information. The term business information covers all information related to the management of the system, that is, not related to the transactions entered into the system. The type of business information available can vary depending on the system. Among other things, it can, refer to information about the membership of the system.|At any time during the operating hours of the system, the member can request the transaction administrator to modify the information it maintains about the member.|The member will submit a message requesting modifications in one or more of the following criteria:|- identification of the member|- contact information for the member organization: postal address, e-mail address, telephone or fax number|- identification of contact persons for the member, their role and/or details (postal address, e-mail address, telephone or fax number)|Based on the criteria received within the Modify Member message, the transaction administrator will execute or reject the requested modifications.|In principle, the transaction administrator may send a Receipt message as a reply to the ModifyMember request. To verify the outcome of the request, the member may submit a GetMember message with the appropriate search criteria.")]
 [IsoId("_jwlbxxbvEeiyVv5j1vf1VQ")]
 [DisplayName("Modify Member V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ModifyMemberV04 : IOuterRecord
 {
     
@@ -72,20 +61,6 @@ public partial record ModifyMemberV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ModifyMemberV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ModifyMemberV04( MessageHeader1 reqMessageHeader,MemberIdentification3Choice_ reqMemberIdentification,Member6 reqNewMemberValueSet )
-    {
-        MessageHeader = reqMessageHeader;
-        MemberIdentification = reqMemberIdentification;
-        NewMemberValueSet = reqNewMemberValueSet;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,74 +68,32 @@ public partial record ModifyMemberV04 : IOuterRecord
     /// </summary>
     [IsoId("_jwlbyxbvEeiyVv5j1vf1VQ")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique and unambiguous identifier of a system member, as assigned by the system, or the system administrator.
     /// </summary>
     [IsoId("_jwlbzRbvEeiyVv5j1vf1VQ")]
     [DisplayName("Member Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MmbId")]
-    #endif
     [IsoXmlTag("MmbId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MemberIdentification3Choice_ MemberIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MemberIdentification3Choice_ MemberIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MemberIdentification3Choice_ MemberIdentification { get; init; } 
-    #else
-    public MemberIdentification3Choice_ MemberIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// New member values.
     /// </summary>
     [IsoId("_jwlbzxbvEeiyVv5j1vf1VQ")]
     [DisplayName("New Member Value Set")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NewMmbValSet")]
-    #endif
     [IsoXmlTag("NewMmbValSet")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Member6 NewMemberValueSet { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Member6 NewMemberValueSet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Member6 NewMemberValueSet { get; init; } 
-    #else
-    public Member6 NewMemberValueSet { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jwlb0RbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

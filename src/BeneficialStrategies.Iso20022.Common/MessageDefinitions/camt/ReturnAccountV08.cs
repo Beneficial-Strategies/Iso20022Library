@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The ReturnAccount message is sent by the transaction administrator to a member.|It is used to provide information on the details of one or more accounts held at the transaction administrator, including information on the balances.|The Return Account message can be sent as a response to a related GetAccount message (pull mode) or initiated by the transaction administrator (push mode). The push of information can take place either at prearranged times or as a warning or alarm when a problem has occurred.|Usage|At any time during the operating hours of the system, the member can query the transaction administrator to get information about the account(s) that the transaction administrator maintains for the member.|For example, this may be necessary in order to perform the appropriate liquidity management and the necessary funds transfers between accounts.|The member can request information about accounts through a series of criteria, corresponding to the known information stored at the transaction administrator.|The query can concern one or more specific accounts, accounts of a particular identification, or a particular type. The purpose of the query may be to obtain one or more types of balance.|The transaction administrator may also send a ReturnAccount message with pre-defined information, at times previously agreed with the member, or to warn the member about a particular problem that may have arisen and which needs attention.|The message from the transaction administrator can contain information based on the following elements: |- account identification|- account name|- account type (this is used when the account identification represents, for example, a group of accounts)|- currency of the account (this is used for example when the account identification represents a group of account in various currencies, or when it is a multi-currency account with one single identifier)|- type of balance (if not present in the GetAccount message, all balances will be reported)|- bilateral or multilateral limits|- related counterparty (when the limit or balance is bilateral)|- balance value date (if not present in the GetAccount message, the ReturnAccount message will contain the latest available balance)|- number of payments to the additional account information on the generic design of the Get/Return messages can be found in the section How to Use the Cash Management Messages.")]
 [IsoId("_jwlb-RbvEeiyVv5j1vf1VQ")]
 [DisplayName("Return Account V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReturnAccountV08 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ReturnAccountV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReturnAccountV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReturnAccountV08( MessageHeader7 reqMessageHeader,AccountOrOperationalError4Choice_ reqReportOrError )
-    {
-        MessageHeader = reqMessageHeader;
-        ReportOrError = reqReportOrError;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ReturnAccountV08 : IOuterRecord
     /// </summary>
     [IsoId("_jwlb-xbvEeiyVv5j1vf1VQ")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader7 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader7 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader7 MessageHeader { get; init; } 
-    #else
-    public MessageHeader7 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Reports on accounts.
     /// </summary>
     [IsoId("_jwlb_RbvEeiyVv5j1vf1VQ")]
     [DisplayName("Report Or Error")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptOrErr")]
-    #endif
     [IsoXmlTag("RptOrErr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountOrOperationalError4Choice_ ReportOrError { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountOrOperationalError4Choice_ ReportOrError { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountOrOperationalError4Choice_ ReportOrError { get; init; } 
-    #else
-    public AccountOrOperationalError4Choice_ ReportOrError { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jwlb_xbvEeiyVv5j1vf1VQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

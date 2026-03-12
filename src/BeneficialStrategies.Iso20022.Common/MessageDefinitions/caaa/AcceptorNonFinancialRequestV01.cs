@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorNonFinancialRequest message is sent by the POI to receive additional information from the Acquirer (or its agent).")]
 [IsoId("_6n8LsC_bEeugIJ3Gvoevmg")]
 [DisplayName("Acceptor Non Financial Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorNonFinancialRequestV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcceptorNonFinancialRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorNonFinancialRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorNonFinancialRequestV01( Header59 reqHeader,NonFinancialRequestComponent1 reqNonFinancialRequest )
-    {
-        Header = reqHeader;
-        NonFinancialRequest = reqNonFinancialRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcceptorNonFinancialRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_jSU6sy_cEeugIJ3Gvoevmg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header59 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header59 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header59 Header { get; init; } 
-    #else
-    public Header59 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the non financial request.
     /// </summary>
     [IsoId("_mpdbUC_sEeugIJ3Gvoevmg")]
     [DisplayName("Non Financial Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NonFinReq")]
-    #endif
     [IsoXmlTag("NonFinReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NonFinancialRequestComponent1 NonFinancialRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NonFinancialRequestComponent1 NonFinancialRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NonFinancialRequestComponent1 NonFinancialRequest { get; init; } 
-    #else
-    public NonFinancialRequestComponent1 NonFinancialRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_jSU6tS_cEeugIJ3Gvoevmg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType27? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType27? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType27? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

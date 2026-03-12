@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gTjYeSglEey2k_sfZmJz4g")]
 [DisplayName("Aggregate Balance Information")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AggregateBalanceInformation40
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AggregateBalanceInformation40 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AggregateBalanceInformation40( SecurityIdentification19 reqFinancialInstrumentIdentification,Balance17 reqAggregateBalance,BalanceAmounts1 reqAccountBaseCurrencyAmounts )
-    {
-        FinancialInstrumentIdentification = reqFinancialInstrumentIdentification;
-        AggregateBalance = reqAggregateBalance;
-        AccountBaseCurrencyAmounts = reqAccountBaseCurrencyAmounts;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,132 +23,62 @@ public partial record AggregateBalanceInformation40
     /// </summary>
     [IsoId("_grsymSglEey2k_sfZmJz4g")]
     [DisplayName("Financial Instrument Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmId")]
-    #endif
     [IsoXmlTag("FinInstrmId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
-    #else
-    public SecurityIdentification19 FinancialInstrumentIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Elements characterising a financial instrument.
     /// </summary>
     [IsoId("_grsyoSglEey2k_sfZmJz4g")]
     [DisplayName("Financial Instrument Attributes")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmAttrbts")]
-    #endif
     [IsoXmlTag("FinInstrmAttrbts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; } 
-    #else
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; set; } 
-    #endif
     
     /// <summary>
     /// Elements characterising an investment funds financial instrument.
     /// </summary>
     [IsoId("_grsyqSglEey2k_sfZmJz4g")]
     [DisplayName("Investment Funds Financial Instrument Attributes")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InvstmtFndsFinInstrmAttrbts")]
-    #endif
     [IsoXmlTag("InvstmtFndsFinInstrmAttrbts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; init; } 
-    #else
-    public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the swap contract.
     /// </summary>
     [IsoId("_grsyqyglEey2k_sfZmJz4g")]
     [DisplayName("Additional Derivative Attributes")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlDerivAttrbts")]
-    #endif
     [IsoXmlTag("AddtlDerivAttrbts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DerivativeBasicAttributes1? AdditionalDerivativeAttributes { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DerivativeBasicAttributes1? AdditionalDerivativeAttributes { get; init; } 
-    #else
-    public DerivativeBasicAttributes1? AdditionalDerivativeAttributes { get; set; } 
-    #endif
     
     /// <summary>
     /// Total quantity of financial instruments of the balance.
     /// </summary>
     [IsoId("_grsysyglEey2k_sfZmJz4g")]
     [DisplayName("Aggregate Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AggtBal")]
-    #endif
     [IsoXmlTag("AggtBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Balance17 AggregateBalance { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Balance17 AggregateBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Balance17 AggregateBalance { get; init; } 
-    #else
-    public Balance17 AggregateBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
     /// </summary>
     [IsoId("_grsyuyglEey2k_sfZmJz4g")]
     [DisplayName("Safekeeping Place")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgPlc")]
-    #endif
     [IsoXmlTag("SfkpgPlc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SafeKeepingPlace3? SafekeepingPlace { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafeKeepingPlace3? SafekeepingPlace { get; init; } 
-    #else
-    public SafeKeepingPlace3? SafekeepingPlace { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
     /// </summary>
     [IsoId("_grsywyglEey2k_sfZmJz4g")]
     [DisplayName("Corporate Action Option Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnOptnTp")]
-    #endif
     [IsoXmlTag("CorpActnOptnTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionOption5Code? CorporateActionOptionType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionOption5Code? CorporateActionOptionType { get; init; } 
-    #else
-    public CorporateActionOption5Code? CorporateActionOptionType { get; set; } 
-    #endif
     
     /// <summary>
     /// Price of the financial instrument in one or more currencies.
     /// </summary>
     [IsoId("_grsyyyglEey2k_sfZmJz4g")]
     [DisplayName("Price Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PricDtls")]
-    #endif
     [IsoXmlTag("PricDtls")]
     public ValueList<PriceInformation20> PriceDetails { get; init; } = new ValueList<PriceInformation20>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _grsyyyglEey2k_sfZmJz4g
@@ -183,192 +88,91 @@ public partial record AggregateBalanceInformation40
     /// </summary>
     [IsoId("_grsy0yglEey2k_sfZmJz4g")]
     [DisplayName("Foreign Exchange Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FXDtls")]
-    #endif
     [IsoXmlTag("FXDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ForeignExchangeTerms34? ForeignExchangeDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ForeignExchangeTerms34? ForeignExchangeDetails { get; init; } 
-    #else
-    public ForeignExchangeTerms34? ForeignExchangeDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the number of days used for calculating the accrued interest amount.
     /// </summary>
     [IsoId("_grsy2yglEey2k_sfZmJz4g")]
     [DisplayName("Days Accrued")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DaysAcrd")]
-    #endif
     [IsoXmlTag("DaysAcrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoNumber? DaysAccrued { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? DaysAccrued { get; init; } 
-    #else
-    public System.UInt64? DaysAccrued { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation amounts provided in the base currency of the account.
     /// </summary>
     [IsoId("_grsy4yglEey2k_sfZmJz4g")]
     [DisplayName("Account Base Currency Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctBaseCcyAmts")]
-    #endif
     [IsoXmlTag("AcctBaseCcyAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceAmounts1 AccountBaseCurrencyAmounts { get; init; } 
-    #else
-    public BalanceAmounts1 AccountBaseCurrencyAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation amounts provided in the currency of the financial instrument.
     /// </summary>
     [IsoId("_grsy6yglEey2k_sfZmJz4g")]
     [DisplayName("Instrument Currency Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InstrmCcyAmts")]
-    #endif
     [IsoXmlTag("InstrmCcyAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BalanceAmounts1? InstrumentCurrencyAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceAmounts1? InstrumentCurrencyAmounts { get; init; } 
-    #else
-    public BalanceAmounts1? InstrumentCurrencyAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Valuation amounts provided in a currency other than the base currency of the account.
     /// </summary>
     [IsoId("_grsy8yglEey2k_sfZmJz4g")]
     [DisplayName("Alternate Reporting Currency Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AltrnRptgCcyAmts")]
-    #endif
     [IsoXmlTag("AltrnRptgCcyAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BalanceAmounts1? AlternateReportingCurrencyAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BalanceAmounts1? AlternateReportingCurrencyAmounts { get; init; } 
-    #else
-    public BalanceAmounts1? AlternateReportingCurrencyAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.
     /// </summary>
     [IsoId("_grsy-yglEey2k_sfZmJz4g")]
     [DisplayName("Quantity Breakdown")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="QtyBrkdwn")]
-    #endif
     [IsoXmlTag("QtyBrkdwn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public QuantityBreakdown58? QuantityBreakdown { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public QuantityBreakdown58? QuantityBreakdown { get; init; } 
-    #else
-    public QuantityBreakdown58? QuantityBreakdown { get; set; } 
-    #endif
     
     /// <summary>
     /// Breakdown of the aggregate balance per meaningful sub-balances and availability.
     /// </summary>
     [IsoId("_grszAyglEey2k_sfZmJz4g")]
     [DisplayName("Balance Breakdown")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalBrkdwn")]
-    #endif
     [IsoXmlTag("BalBrkdwn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SubBalanceInformation22? BalanceBreakdown { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SubBalanceInformation22? BalanceBreakdown { get; init; } 
-    #else
-    public SubBalanceInformation22? BalanceBreakdown { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
     /// </summary>
     [IsoId("_grszCyglEey2k_sfZmJz4g")]
     [DisplayName("Additional Balance Breakdown")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlBalBrkdwn")]
-    #endif
     [IsoXmlTag("AddtlBalBrkdwn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalBalanceInformation22? AdditionalBalanceBreakdown { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalBalanceInformation22? AdditionalBalanceBreakdown { get; init; } 
-    #else
-    public AdditionalBalanceInformation22? AdditionalBalanceBreakdown { get; set; } 
-    #endif
     
     /// <summary>
     /// Breakdown of positions per place of safekeeping (and optionally per place of listing).
     /// </summary>
     [IsoId("_grszEyglEey2k_sfZmJz4g")]
     [DisplayName("Balance At Safekeeping Place")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BalAtSfkpgPlc")]
-    #endif
     [IsoXmlTag("BalAtSfkpgPlc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AggregateBalancePerSafekeepingPlace37? BalanceAtSafekeepingPlace { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AggregateBalancePerSafekeepingPlace37? BalanceAtSafekeepingPlace { get; init; } 
-    #else
-    public AggregateBalancePerSafekeepingPlace37? BalanceAtSafekeepingPlace { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides additional information on the holding.
     /// </summary>
     [IsoId("_grszGyglEey2k_sfZmJz4g")]
     [DisplayName("Holding Additional Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="HldgAddtlDtls")]
-    #endif
     [IsoXmlTag("HldgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
     [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax350Text? HoldingAdditionalDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? HoldingAdditionalDetails { get; init; } 
-    #else
-    public System.String? HoldingAdditionalDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_grszIyglEey2k_sfZmJz4g")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

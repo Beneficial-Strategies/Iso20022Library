@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JLYF8ZjwEeWn2ur3BXxtdg")]
 [DisplayName("Safe Keeping Place")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SafeKeepingPlace2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,35 +23,17 @@ public partial record SafeKeepingPlace2
     /// </summary>
     [IsoId("_JaaAc5jwEeWn2ur3BXxtdg")]
     [DisplayName("Safekeeping Place Format")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SfkpgPlcFrmt")]
-    #endif
     [IsoXmlTag("SfkpgPlcFrmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SafekeepingPlaceFormat17Choice_? SafekeepingPlaceFormat { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SafekeepingPlaceFormat17Choice_? SafekeepingPlaceFormat { get; init; } 
-    #else
-    public SafekeepingPlaceFormat17Choice_? SafekeepingPlaceFormat { get; set; } 
-    #endif
     
     /// <summary>
     /// Legal entity identification as an alternate identification for a place of safekeeping.
     /// </summary>
     [IsoId("_JaaAdZjwEeWn2ur3BXxtdg")]
     [DisplayName("LEI")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LEI")]
-    #endif
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoLEIIdentifier? LEI { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? LEI { get; init; } 
-    #else
-    public System.String? LEI { get; set; } 
-    #endif
     
     
     #nullable disable

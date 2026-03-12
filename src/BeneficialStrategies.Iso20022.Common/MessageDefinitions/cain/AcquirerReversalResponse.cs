@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.cain;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.cain;
 [Description(@"The AcquirerReversalResponse message is sent by an issuer or an agent to answer to an AcquirerReversalInitiation message.")]
 [IsoId("_Se9ukHu2EeS2Z_kGi7H1VQ")]
 [DisplayName("Acquirer Reversal Response")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcquirerReversalResponse : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcquirerReversalResponse : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcquirerReversalResponse instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcquirerReversalResponse( Header18 reqHeader,AcquirerReversalResponse1 reqReversalResponse )
-    {
-        Header = reqHeader;
-        ReversalResponse = reqReversalResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcquirerReversalResponse : IOuterRecord
     /// </summary>
     [IsoId("_cIqMsHu2EeS2Z_kGi7H1VQ")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header18 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header18 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header18 Header { get; init; } 
-    #else
-    public Header18 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response of a reversal.
     /// </summary>
     [IsoId("_umfZ8Hu2EeS2Z_kGi7H1VQ")]
     [DisplayName("Reversal Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RvslRspn")]
-    #endif
     [IsoXmlTag("RvslRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcquirerReversalResponse1 ReversalResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcquirerReversalResponse1 ReversalResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcquirerReversalResponse1 ReversalResponse { get; init; } 
-    #else
-    public AcquirerReversalResponse1 ReversalResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_kiQwIIOyEeSWSLYdc10LRg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType15? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType15? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType15? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

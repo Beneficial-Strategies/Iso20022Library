@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
 {
     /// <summary>
@@ -20,23 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
     /// </summary>
     [IsoId("_4GLX1ZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record NewCriteria : AccountCriteria2Choice_
-    #else
-    public partial class NewCriteria : AccountCriteria2Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        // No constructor needed for < NET8 because this type has no required members.
-        #endif
         #nullable enable
         
         /// <summary>
@@ -44,53 +22,26 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
         /// </summary>
         [IsoId("_4OF9s5laEeeE1Ya-LgRsuQ")]
         [DisplayName("New Query Name")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="NewQryNm")]
-        #endif
         [IsoXmlTag("NewQryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax35Text? NewQueryName { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? NewQueryName { get; init; } 
-        #else
-        public System.String? NewQueryName { get; set; } 
-        #endif
         
         /// <summary>
         /// Defines the criteria to be used to extract the account information.
         /// </summary>
         [IsoId("_4OF9tZlaEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="SchCrit")]
-        #endif
         [IsoXmlTag("SchCrit")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public CashAccountSearchCriteria6? SearchCriteria { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public CashAccountSearchCriteria6? SearchCriteria { get; init; } 
-        #else
-        public CashAccountSearchCriteria6? SearchCriteria { get; set; } 
-        #endif
         
         /// <summary>
         /// Defines the expected account report.
         /// </summary>
         [IsoId("_4OF9t5laEeeE1Ya-LgRsuQ")]
         [DisplayName("Return Criteria")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="RtrCrit")]
-        #endif
         [IsoXmlTag("RtrCrit")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public CashAccountReturnCriteria4? ReturnCriteria { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public CashAccountReturnCriteria4? ReturnCriteria { get; init; } 
-        #else
-        public CashAccountReturnCriteria4? ReturnCriteria { get; set; } 
-        #endif
         
         
         #nullable disable

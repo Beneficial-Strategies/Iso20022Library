@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.trea;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.trea;
 [Description(@"Scope|The WithdrawalNotification message is sent by a central system to notify the withdrawal of a trade which was previously notified to the receiver as an alleged trade.|Usage|The message is used to confirm the cancellation of a previously notified trade.||This message is obsolete please use WithdrawalNotificationV02 - fxtr.013.001.02")]
 [IsoId("_V5V16NE8Ed-BzquC8wXy7w_-1324281")]
 [DisplayName("Withdrawal Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record WithdrawalNotificationV01 : IOuterRecord
 {
     
@@ -66,18 +55,6 @@ public partial record WithdrawalNotificationV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a WithdrawalNotificationV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public WithdrawalNotificationV01( MessageReference reqMatchingSystemUniqueReference )
-    {
-        MatchingSystemUniqueReference = reqMatchingSystemUniqueReference;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,19 +62,8 @@ public partial record WithdrawalNotificationV01 : IOuterRecord
     /// </summary>
     [IsoId("_V5e_0NE8Ed-BzquC8wXy7w_-2008623152")]
     [DisplayName("Matching System Unique Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtchgSysUnqRef")]
-    #endif
     [IsoXmlTag("MtchgSysUnqRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageReference MatchingSystemUniqueReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageReference MatchingSystemUniqueReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageReference MatchingSystemUniqueReference { get; init; } 
-    #else
-    public MessageReference MatchingSystemUniqueReference { get; set; } 
-    #endif
     
     
     #nullable disable

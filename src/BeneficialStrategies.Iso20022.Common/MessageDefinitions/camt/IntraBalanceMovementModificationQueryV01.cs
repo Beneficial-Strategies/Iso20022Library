@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"The IntraBalanceMovementModificationQuery message is sent from an account owner/requestor to a settlement infrastructure to query for the status of intra-balance movement modification instruction(s) based on a set of search criteria or business attributes.|The message may also be used to: |- re-send a message sent by the account owner to the account servicer (the sub-function of the message is ""Duplicate"") |- provide a third party with a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy"") |- re-send to a third party a copy of a message being sent by the account owner for information (the sub-function of the message is ""Copy Duplicate"").")]
 [IsoId("_DLtKyzncEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement Modification Query V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntraBalanceMovementModificationQueryV01 : IOuterRecord
 {
     
@@ -65,18 +54,6 @@ public partial record IntraBalanceMovementModificationQueryV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IntraBalanceMovementModificationQueryV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IntraBalanceMovementModificationQueryV01( IntraBalanceQueryDefinition8 reqQueryDefinition )
-    {
-        QueryDefinition = reqQueryDefinition;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,53 +61,24 @@ public partial record IntraBalanceMovementModificationQueryV01 : IOuterRecord
     /// </summary>
     [IsoId("_DLtK0zncEem7JZMuWtwtsg")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DocumentIdentification51? Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification51? Identification { get; init; } 
-    #else
-    public DocumentIdentification51? Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines the intra-balance movement modification query criteria.
     /// </summary>
     [IsoId("_DLtK1TncEem7JZMuWtwtsg")]
     [DisplayName("Query Definition")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="QryDef")]
-    #endif
     [IsoXmlTag("QryDef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IntraBalanceQueryDefinition8 QueryDefinition { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IntraBalanceQueryDefinition8 QueryDefinition { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IntraBalanceQueryDefinition8 QueryDefinition { get; init; } 
-    #else
-    public IntraBalanceQueryDefinition8 QueryDefinition { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_DLtK1zncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

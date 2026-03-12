@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to provide distribution breakdown information for the proceeds that are to be delivered outside the CSD (e.g. when the proceeds are not eligible in the CSD).|Usage|This message is used to provide distribution breakdown information (securities and/or cash) per account for a specific corporate action option.|Note: the delivery details are sent through the Agent Corporate Action Information Advice.")]
 [IsoId("_TMj9DtEwEd-BzquC8wXy7w_707588589")]
 [DisplayName("Agent CA Distribution Breakdown Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AgentCADistributionBreakdownAdviceV01 : IOuterRecord
 {
     
@@ -65,20 +54,6 @@ public partial record AgentCADistributionBreakdownAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AgentCADistributionBreakdownAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AgentCADistributionBreakdownAdviceV01( DocumentIdentification8 reqIdentification,CorporateActionInformation1 reqCorporateActionGeneralInformation,EntitlementAdvice1 reqCorporateActionDistributionDetails )
-    {
-        Identification = reqIdentification;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-        CorporateActionDistributionDetails = reqCorporateActionDistributionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,57 +61,24 @@ public partial record AgentCADistributionBreakdownAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_TMj9D9EwEd-BzquC8wXy7w_-123045337")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 Identification { get; init; } 
-    #else
-    public DocumentIdentification8 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_TMj9ENEwEd-BzquC8wXy7w_1139796912")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the CA option and the entitlements.
     /// </summary>
     [IsoId("_TMtG8NEwEd-BzquC8wXy7w_1455640472")]
     [DisplayName("Corporate Action Distribution Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnDstrbtnDtls")]
-    #endif
     [IsoXmlTag("CorpActnDstrbtnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EntitlementAdvice1 CorporateActionDistributionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EntitlementAdvice1 CorporateActionDistributionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EntitlementAdvice1 CorporateActionDistributionDetails { get; init; } 
-    #else
-    public EntitlementAdvice1 CorporateActionDistributionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

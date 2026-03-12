@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -33,7 +28,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus98Choice.TradingSuspendedByStockExchange))]
     [KnownType(typeof(ProcessingStatus98Choice.Treated))]
     [KnownType(typeof(ProcessingStatus98Choice.ProprietaryStatus))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(ProcessingStatus98Choice.AcknowledgedAccepted),nameof(ProcessingStatus98Choice.AcknowledgedAccepted))]
     [JsonDerivedType(typeof(ProcessingStatus98Choice.AlreadyMatchedAndAffirmed),nameof(ProcessingStatus98Choice.AlreadyMatchedAndAffirmed))]
     [JsonDerivedType(typeof(ProcessingStatus98Choice.DefaultAction),nameof(ProcessingStatus98Choice.DefaultAction))]
@@ -53,20 +47,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ProcessingStatus98Choice.TradingSuspendedByStockExchange),nameof(ProcessingStatus98Choice.TradingSuspendedByStockExchange))]
     [JsonDerivedType(typeof(ProcessingStatus98Choice.Treated),nameof(ProcessingStatus98Choice.Treated))]
     [JsonDerivedType(typeof(ProcessingStatus98Choice.ProprietaryStatus),nameof(ProcessingStatus98Choice.ProprietaryStatus))]
-    #endif
     [IsoId("_xnOQMQarEe2phaVG0lYKTw")]
     [DisplayName("Processing Status 98 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record ProcessingStatus98Choice_
-    #else
-    public abstract partial class ProcessingStatus98Choice_
-    #endif
     {
     }
 }

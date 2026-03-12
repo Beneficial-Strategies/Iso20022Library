@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.semt;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.semt;
 [Description(@"Scope|An account servicer, for example, a registrar, transfer agent or custodian bank, sends the SecuritiesMessageRejection message to the account owner, for example, an investor or its authorised agent, to reject a previously received message on which action cannot be taken.|The message may also be sent by an executing party, for example, transfer agent to the instructing party, for example, investment manager or its authorised representative to reject a previously received message on which action cannot be taken.|Usage|The SecuritiesMessageRejection message is used for the following reasons:|- the executing party does not recognise the linked reference, so the executing party cannot process the message|- the instructing party should not have sent the message.|Reasons that a receiver does not expect a message include no SLA in place between the Sender and the Receiver.|The SecuritiesMessageRejection message must not be used to reject an instruction message that cannot be processed for business reasons, for example, if information is missing in an instruction message or because securities are not available for settlement.")]
 [IsoId("_b2f30QgJEeSFYfyUKDXKaw")]
 [DisplayName("Securities Message Rejection V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecuritiesMessageRejectionV03 : IOuterRecord
 {
     
@@ -69,20 +58,6 @@ public partial record SecuritiesMessageRejectionV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecuritiesMessageRejectionV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecuritiesMessageRejectionV03( MessageIdentification1 reqMessageIdentification,AdditionalReference3 reqRelatedReference,RejectionReason23 reqReason )
-    {
-        MessageIdentification = reqMessageIdentification;
-        RelatedReference = reqRelatedReference;
-        Reason = reqReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -90,57 +65,24 @@ public partial record SecuritiesMessageRejectionV03 : IOuterRecord
     /// </summary>
     [IsoId("_b2f30wgJEeSFYfyUKDXKaw")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_b2f31QgJEeSFYfyUKDXKaw")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference3 RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3 RelatedReference { get; init; } 
-    #else
-    public AdditionalReference3 RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reason to reject the message.
     /// </summary>
     [IsoId("_b2f31wgJEeSFYfyUKDXKaw")]
     [DisplayName("Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsn")]
-    #endif
     [IsoXmlTag("Rsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RejectionReason23 Reason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RejectionReason23 Reason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RejectionReason23 Reason { get; init; } 
-    #else
-    public RejectionReason23 Reason { get; set; } 
-    #endif
     
     
     #nullable disable

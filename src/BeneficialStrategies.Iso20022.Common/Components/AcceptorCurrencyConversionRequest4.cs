@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uPKTIaqLEeanIZ10Ka8PnA")]
 [DisplayName("Acceptor Currency Conversion Request")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCurrencyConversionRequest4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCurrencyConversionRequest4 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCurrencyConversionRequest4( CardPaymentEnvironment63 reqEnvironment,CardPaymentTransaction72 reqTransaction )
-    {
-        Environment = reqEnvironment;
-        Transaction = reqTransaction;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,38 +23,16 @@ public partial record AcceptorCurrencyConversionRequest4
     /// </summary>
     [IsoId("_uaNskaqLEeanIZ10Ka8PnA")]
     [DisplayName("Environment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Envt")]
-    #endif
     [IsoXmlTag("Envt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentEnvironment63 Environment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentEnvironment63 Environment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentEnvironment63 Environment { get; init; } 
-    #else
-    public CardPaymentEnvironment63 Environment { get; set; } 
-    #endif
     
     /// <summary>
     /// Card payment transaction for which the currency conversion is requested.
     /// </summary>
     [IsoId("_uaNsk6qLEeanIZ10Ka8PnA")]
     [DisplayName("Transaction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tx")]
-    #endif
     [IsoXmlTag("Tx")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentTransaction72 Transaction { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentTransaction72 Transaction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentTransaction72 Transaction { get; init; } 
-    #else
-    public CardPaymentTransaction72 Transaction { get; set; } 
-    #endif
     
     
     #nullable disable

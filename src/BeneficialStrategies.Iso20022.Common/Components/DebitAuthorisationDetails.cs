@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9Wkbdp-Ed-ak6NoX_4Aeg_1878930583")]
 [DisplayName("Debit Authorisation Details")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DebitAuthorisationDetails
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DebitAuthorisationDetails instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DebitAuthorisationDetails( CancellationReason1Code reqCancellationReason )
-    {
-        CancellationReason = reqCancellationReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,54 +23,25 @@ public partial record DebitAuthorisationDetails
     /// </summary>
     [IsoId("_T9Wkbtp-Ed-ak6NoX_4Aeg_-3725158")]
     [DisplayName("Cancellation Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlRsn")]
-    #endif
     [IsoXmlTag("CxlRsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CancellationReason1Code CancellationReason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CancellationReason1Code CancellationReason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CancellationReason1Code CancellationReason { get; init; } 
-    #else
-    public CancellationReason1Code CancellationReason { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
     /// </summary>
     [IsoId("_T9gVYNp-Ed-ak6NoX_4Aeg_1362682200")]
     [DisplayName("Amount To Debit")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AmtToDbt")]
-    #endif
     [IsoXmlTag("AmtToDbt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CurrencyAndAmount? AmountToDebit { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyAndAmount? AmountToDebit { get; init; } 
-    #else
-    public CurrencyAndAmount? AmountToDebit { get; set; } 
-    #endif
     
     /// <summary>
     /// Value date for debiting the amount.
     /// </summary>
     [IsoId("_T9gVYdp-Ed-ak6NoX_4Aeg_-19191221")]
     [DisplayName("Value Date To Debit")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ValDtToDbt")]
-    #endif
     [IsoXmlTag("ValDtToDbt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODate? ValueDateToDebit { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly? ValueDateToDebit { get; init; } 
-    #else
-    public System.DateOnly? ValueDateToDebit { get; set; } 
-    #endif
     
     
     #nullable disable

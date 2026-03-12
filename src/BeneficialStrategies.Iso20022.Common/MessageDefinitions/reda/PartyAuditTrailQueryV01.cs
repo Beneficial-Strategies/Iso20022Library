@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"The PartyAuditTrailQuery message is sent by an instructing party to the executing party to query for the party audit trail recorded in the system.")]
 [IsoId("_-fQN8ZeSEeen_cyMrluY4w")]
 [DisplayName("Party Audit Trail Query V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PartyAuditTrailQueryV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record PartyAuditTrailQueryV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PartyAuditTrailQueryV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PartyAuditTrailQueryV01( PartyAuditTrailSearchCriteria2 reqSearchCriteria )
-    {
-        SearchCriteria = reqSearchCriteria;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,53 +57,24 @@ public partial record PartyAuditTrailQueryV01 : IOuterRecord
     /// </summary>
     [IsoId("_LFFxEVhGEeih3fUfzR38Ig")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader1? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1? MessageHeader { get; init; } 
-    #else
-    public MessageHeader1? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Defines the criteria to be used to query the party audit trail by the executing system.
     /// </summary>
     [IsoId("_-fQN-ZeSEeen_cyMrluY4w")]
     [DisplayName("Search Criteria")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SchCrit")]
-    #endif
     [IsoXmlTag("SchCrit")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyAuditTrailSearchCriteria2 SearchCriteria { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyAuditTrailSearchCriteria2 SearchCriteria { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAuditTrailSearchCriteria2 SearchCriteria { get; init; } 
-    #else
-    public PartyAuditTrailSearchCriteria2 SearchCriteria { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_-fQN-5eSEeen_cyMrluY4w")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

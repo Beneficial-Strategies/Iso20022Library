@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catm;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.catm;
 [Description(@"The MaintenanceDelegationRequest message is sent by a terminal manager to the master terminal manager to request delegation of maintenance functions or maintenance operation on the terminal estate managed by the master terminal manager.")]
 [IsoId("_fVEn4Si-Eeurkfo6MpvKDA")]
 [DisplayName("Maintenance Delegation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MaintenanceDelegationRequestV07 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record MaintenanceDelegationRequestV07 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MaintenanceDelegationRequestV07 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MaintenanceDelegationRequestV07( MaintenanceDelegationRequest7 reqMaintenanceDelegationRequest,ContentInformationType25 reqSecurityTrailer )
-    {
-        MaintenanceDelegationRequest = reqMaintenanceDelegationRequest;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record MaintenanceDelegationRequestV07 : IOuterRecord
     /// </summary>
     [IsoId("_fVEn4yi-Eeurkfo6MpvKDA")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TMSHeader1? Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TMSHeader1? Header { get; init; } 
-    #else
-    public TMSHeader1? Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the request of maintenance delegations.
     /// </summary>
     [IsoId("_fVEn5Si-Eeurkfo6MpvKDA")]
     [DisplayName("Maintenance Delegation Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MntncDlgtnReq")]
-    #endif
     [IsoXmlTag("MntncDlgtnReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MaintenanceDelegationRequest7 MaintenanceDelegationRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MaintenanceDelegationRequest7 MaintenanceDelegationRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MaintenanceDelegationRequest7 MaintenanceDelegationRequest { get; init; } 
-    #else
-    public MaintenanceDelegationRequest7 MaintenanceDelegationRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_fVEn5yi-Eeurkfo6MpvKDA")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType25 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType25 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType25 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType25 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

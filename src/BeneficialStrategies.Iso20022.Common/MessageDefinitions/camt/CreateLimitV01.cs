@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The CreateLimit message is sent by a member to the transaction administrator.|It is used to create one or several limits set by the member and managed by the transaction administrator.|Usage|Based on the criteria defined in the CreateLimit message, the transaction administrator will execute or reject the requested creation and respond with a Receipt message as a reply to the request.")]
 [IsoId("_P8tBcckHEem3UrxZgQhVAw")]
 [DisplayName("Create Limit V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CreateLimitV01 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record CreateLimitV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CreateLimitV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CreateLimitV01( MessageHeader1 reqMessageHeader,LimitStructure4 reqLimitData )
-    {
-        MessageHeader = reqMessageHeader;
-        LimitData = reqLimitData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,55 +61,24 @@ public partial record CreateLimitV01 : IOuterRecord
     /// </summary>
     [IsoId("_P8tBd8kHEem3UrxZgQhVAw")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies one particular limit set by the member and managed by the transaction administrator.
     /// </summary>
     [IsoId("_P8tBeckHEem3UrxZgQhVAw")]
     [DisplayName("Limit Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LmtData")]
-    #endif
     [IsoXmlTag("LmtData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required LimitStructure4 LimitData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required LimitStructure4 LimitData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public LimitStructure4 LimitData { get; init; } 
-    #else
-    public LimitStructure4 LimitData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_P8tBe8kHEem3UrxZgQhVAw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

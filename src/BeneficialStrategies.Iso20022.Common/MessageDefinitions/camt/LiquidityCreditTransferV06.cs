@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -37,12 +32,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The LiquidityCreditTransfer message is sent by a member to the transaction administrator.|It is used to request a transfer of funds between two accounts belonging to the same member or the same group of accounts, and being held at the transaction administrator.|Usage|At any time during the operating hours of the system, and to perform the appropriate liquidity management, the member can request the transaction administrator to execute the transfer of funds between two accounts that the transaction administrator maintains for the member. For instance, this may be an action resulting from a Get/Return Account pair of messages.|The LiquidityCreditTransfer message can be used when the transactions to/from the member are unbalanced in value for the business day, or to unlock pending transactions at the end of day.|The member can request the transfer by identifying the accounts stored at the transaction administrator:|- If the accounts involved in the requested transfer are known without doubt to the transaction administrator, it is possible to indicate only the type of the account to be credited.|- If, on the contrary, more clarity is desired, it is possible to identify the accounts from and to which the funds should be transferred.|Note that transfers are processed only when the balance in the account to be debited is sufficient to pass the liquidity transfer instruction and remain positive. Based on the criteria received within the LiquidityCreditTransfer message, the transaction administrator will execute or reject the requested transfer.|In principle, the transaction administrator may send a Receipt message as a reply to the liquidity transfer request. To verify the outcome of the request, the member may submit a GetTransaction or GetAccount message with the appropriate search criteria.")]
 [IsoId("_ThP0Adb6Eeq_l4BJLVUF2Q")]
 [DisplayName("Liquidity Credit Transfer V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record LiquidityCreditTransferV06 : IOuterRecord
 {
     
@@ -71,19 +60,6 @@ public partial record LiquidityCreditTransferV06 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a LiquidityCreditTransferV06 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public LiquidityCreditTransferV06( MessageHeader1 reqMessageHeader,LiquidityCreditTransfer3 reqLiquidityCreditTransfer )
-    {
-        MessageHeader = reqMessageHeader;
-        LiquidityCreditTransfer = reqLiquidityCreditTransfer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -91,55 +67,24 @@ public partial record LiquidityCreditTransferV06 : IOuterRecord
     /// </summary>
     [IsoId("_ThP0B9b6Eeq_l4BJLVUF2Q")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageHeader1 MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader1 MessageHeader { get; init; } 
-    #else
-    public MessageHeader1 MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the liquidity credit transfer.
     /// </summary>
     [IsoId("_ThP0Cdb6Eeq_l4BJLVUF2Q")]
     [DisplayName("Liquidity Credit Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LqdtyCdtTrf")]
-    #endif
     [IsoXmlTag("LqdtyCdtTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required LiquidityCreditTransfer3 LiquidityCreditTransfer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required LiquidityCreditTransfer3 LiquidityCreditTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public LiquidityCreditTransfer3 LiquidityCreditTransfer { get; init; } 
-    #else
-    public LiquidityCreditTransfer3 LiquidityCreditTransfer { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_ThP0C9b6Eeq_l4BJLVUF2Q")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

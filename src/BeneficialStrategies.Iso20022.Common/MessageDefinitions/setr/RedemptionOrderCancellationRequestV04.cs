@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|The RedemptionOrderCancellationRequest message is sent by an instructing party, for example, an investment manager or its authorised representative, to the executing party, for example, a transfer agent, to request the cancellation of a previously sent RedemptionOrder.|Usage|The RedemptionOrderCancellationRequest message is used to message is used to request the cancellation of one or more individual orders.|There is no amendment, but a cancellation and re-instruct policy.|To request the cancellation of one or more individual orders, the order reference of each individual order listed in the original RedemptionOrder message in the order reference element. The message identification of the RedemptionOrder message which contains the individual orders to be cancelled may also be quoted in PreviousReference but this is not recommended.|The deadline and acceptance of a cancellation request is subject to a service level agreement (SLA). This cancellation message is a cancellation request. There is no automatic acceptance of the cancellation.|The rejection or acceptance of a RedemptionOrderCancellationRequest is made using an OrderCancellationStatusReport message.")]
 [IsoId("_Aab6MTbLEead9bDRE_1DAQ")]
 [DisplayName("Redemption Order Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RedemptionOrderCancellationRequestV04 : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record RedemptionOrderCancellationRequestV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RedemptionOrderCancellationRequestV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RedemptionOrderCancellationRequestV04( MessageIdentification1 reqMessageIdentification,InvestmentFundOrder9 reqOrderReferences )
-    {
-        MessageIdentification = reqMessageIdentification;
-        OrderReferences = reqOrderReferences;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,108 +64,50 @@ public partial record RedemptionOrderCancellationRequestV04 : IOuterRecord
     /// </summary>
     [IsoId("_Aab6NzbLEead9bDRE_1DAQ")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 MessageIdentification { get; init; } 
-    #else
-    public MessageIdentification1 MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_Aab6OTbLEead9bDRE_1DAQ")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference9? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference9? PoolReference { get; init; } 
-    #else
-    public AdditionalReference9? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_Aab6OzbLEead9bDRE_1DAQ")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference8? PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference8? PreviousReference { get; init; } 
-    #else
-    public AdditionalReference8? PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.
     /// </summary>
     [IsoId("_Ox6eskTpEeaFv6weEmLwpA")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MasterReference { get; init; } 
-    #else
-    public System.String? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the individual order to be cancelled.
     /// </summary>
     [IsoId("_Ox6es0TpEeaFv6weEmLwpA")]
     [DisplayName("Order References")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrdrRefs")]
-    #endif
     [IsoXmlTag("OrdrRefs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InvestmentFundOrder9 OrderReferences { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InvestmentFundOrder9 OrderReferences { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InvestmentFundOrder9 OrderReferences { get; init; } 
-    #else
-    public InvestmentFundOrder9 OrderReferences { get; set; } 
-    #endif
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [IsoId("_Aab6QTbLEead9bDRE_1DAQ")]
     [DisplayName("Copy Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CpyDtls")]
-    #endif
     [IsoXmlTag("CpyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CopyInformation4? CopyDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CopyInformation4? CopyDetails { get; init; } 
-    #else
-    public CopyInformation4? CopyDetails { get; set; } 
-    #endif
     
     
     #nullable disable

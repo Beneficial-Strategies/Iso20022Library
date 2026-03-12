@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s8i-Y1kyEeGeoaLUQk__nA_845535139")]
 [DisplayName("Group Header")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record GroupHeader56
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a GroupHeader56 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public GroupHeader56( System.String reqMessageIdentification,System.DateTime reqCreationDateTime,System.String reqNumberOfTransactions )
-    {
-        MessageIdentification = reqMessageIdentification;
-        CreationDateTime = reqCreationDateTime;
-        NumberOfTransactions = reqNumberOfTransactions;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,50 +23,25 @@ public partial record GroupHeader56
     /// </summary>
     [IsoId("_s8svYFkyEeGeoaLUQk__nA_-518427658")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MessageIdentification { get; init; } 
-    #else
-    public System.String MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
     [IsoId("_s8svYVkyEeGeoaLUQk__nA_8568285")]
     [DisplayName("Creation Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CreDtTm")]
-    #endif
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoISODateTime CreationDateTime { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.DateTime CreationDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime CreationDateTime { get; init; } 
-    #else
-    public System.DateTime CreationDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// User identification or any user key to be used to check whether the initiating party is allowed to initiate transactions from the account specified in the message.||Usage: The content is not of a technical nature, but reflects the organisational structure at the initiating side.|The authorisation element can typically be used in relay scenarios, payment initiations, payment returns or payment reversals that are initiated on behalf of a party different from the initiating party.
     /// </summary>
     [IsoId("_s815UFkyEeGeoaLUQk__nA_113778283")]
     [DisplayName("Authorisation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Authstn")]
-    #endif
     [IsoXmlTag("Authstn")]
     [MinLength(0)]
     [MaxLength(2)]
@@ -102,124 +52,59 @@ public partial record GroupHeader56
     /// </summary>
     [IsoId("_s815UVkyEeGeoaLUQk__nA_102679506")]
     [DisplayName("Number Of Transactions")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NbOfTxs")]
-    #endif
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax15NumericText NumberOfTransactions { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String NumberOfTransactions { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String NumberOfTransactions { get; init; } 
-    #else
-    public System.String NumberOfTransactions { get; set; } 
-    #endif
     
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
     /// </summary>
     [IsoId("_s815UlkyEeGeoaLUQk__nA_-1777626134")]
     [DisplayName("Control Sum")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrlSum")]
-    #endif
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoDecimalNumber? ControlSum { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64? ControlSum { get; init; } 
-    #else
-    public System.UInt64? ControlSum { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the reversal applies to the whole group of transactions or to individual transactions within the original group.
     /// </summary>
     [IsoId("_s8_qUFkyEeGeoaLUQk__nA_-2025148337")]
     [DisplayName("Group Reversal")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpRvsl")]
-    #endif
     [IsoXmlTag("GrpRvsl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoTrueFalseIndicator? GroupReversal { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? GroupReversal { get; init; } 
-    #else
-    public System.String? GroupReversal { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that initiates the reversal message. |Usage: This can be either the creditor or a party that initiates the reversal of the direct debit on behalf of the creditor.
     /// </summary>
     [IsoId("_s8_qUVkyEeGeoaLUQk__nA_97555581")]
     [DisplayName("Initiating Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InitgPty")]
-    #endif
     [IsoXmlTag("InitgPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification43? InitiatingParty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification43? InitiatingParty { get; init; } 
-    #else
-    public PartyIdentification43? InitiatingParty { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution that receives the instruction from the initiating party and forwards it to the next agent in the payment chain.
     /// </summary>
     [IsoId("_s9JbUFkyEeGeoaLUQk__nA_1212498919")]
     [DisplayName("Forwarding Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FwdgAgt")]
-    #endif
     [IsoXmlTag("FwdgAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BranchAndFinancialInstitutionIdentification5? ForwardingAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification5? ForwardingAgent { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification5? ForwardingAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution servicing an account for the debtor.
     /// </summary>
     [IsoId("_s9JbUVkyEeGeoaLUQk__nA_1112653925")]
     [DisplayName("Debtor Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DbtrAgt")]
-    #endif
     [IsoXmlTag("DbtrAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BranchAndFinancialInstitutionIdentification5? DebtorAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification5? DebtorAgent { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification5? DebtorAgent { get; set; } 
-    #endif
     
     /// <summary>
     /// Financial institution servicing an account for the creditor.
     /// </summary>
     [IsoId("_s9JbUlkyEeGeoaLUQk__nA_-1285776647")]
     [DisplayName("Creditor Agent")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CdtrAgt")]
-    #endif
     [IsoXmlTag("CdtrAgt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BranchAndFinancialInstitutionIdentification5? CreditorAgent { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification5? CreditorAgent { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification5? CreditorAgent { get; set; } 
-    #endif
     
     
     #nullable disable

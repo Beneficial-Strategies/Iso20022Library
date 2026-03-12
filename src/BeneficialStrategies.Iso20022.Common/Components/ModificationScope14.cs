@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fZu8wROGEeKjmvxNCObNeQ")]
 [DisplayName("Modification Scope")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ModificationScope14
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ModificationScope14 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ModificationScope14( DataModification2Code reqModificationScopeIndication,PartyProfileInformation2 reqInvestorProfileValidation )
-    {
-        ModificationScopeIndication = reqModificationScopeIndication;
-        InvestorProfileValidation = reqInvestorProfileValidation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,38 +23,16 @@ public partial record ModificationScope14
     /// </summary>
     [IsoId("_fuTekROGEeKjmvxNCObNeQ")]
     [DisplayName("Modification Scope Indication")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ModScpIndctn")]
-    #endif
     [IsoXmlTag("ModScpIndctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DataModification2Code ModificationScopeIndication { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DataModification2Code ModificationScopeIndication { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DataModification2Code ModificationScopeIndication { get; init; } 
-    #else
-    public DataModification2Code ModificationScopeIndication { get; set; } 
-    #endif
     
     /// <summary>
     /// Detailed information about the party profile information.
     /// </summary>
     [IsoId("_fuTelROGEeKjmvxNCObNeQ")]
     [DisplayName("Investor Profile Validation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InvstrPrflVldtn")]
-    #endif
     [IsoXmlTag("InvstrPrflVldtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyProfileInformation2 InvestorProfileValidation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyProfileInformation2 InvestorProfileValidation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyProfileInformation2 InvestorProfileValidation { get; init; } 
-    #else
-    public PartyProfileInformation2 InvestorProfileValidation { get; set; } 
-    #endif
     
     
     #nullable disable

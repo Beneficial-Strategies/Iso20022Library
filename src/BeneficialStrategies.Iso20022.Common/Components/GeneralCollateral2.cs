@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N9NIEchuEeadgvwNGwK05w")]
 [DisplayName("General Collateral")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record GeneralCollateral2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record GeneralCollateral2
     /// </summary>
     [IsoId("_OFpSY8huEeadgvwNGwK05w")]
     [DisplayName("Eligible Financial Instrument Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ElgblFinInstrmId")]
-    #endif
     [IsoXmlTag("ElgblFinInstrmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     public SimpleValueList<System.String> EligibleFinancialInstrumentIdentification { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.

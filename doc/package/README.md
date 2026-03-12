@@ -25,9 +25,9 @@ Known limitations:
 
 For more information about the project, see [the repository](https://github.com/jefforyamos/Iso20022Library).
 
-This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community.  Should you find this library useful, we are seeking corporate sponsorship. Please email us at [sponsor@beneficialstrategies.com](mailto:sponsor@beneficialstrategies.com) if your company might be willing to contribute to this worthy cause.
+This is provided free of charge under a very non-restrictive license as a good-faith contribution to the community.  This library is a working proof of concept built using Claude Code and the Beneficial Strategies ISO20022 MCP server soon to be released.
 
-If you have questions or concerns about the implementation, please send developer comments or questions to [feedback@beneficialstrategies.com](mailto:feedback@beneficialstrategies.com).
+If you have questions or concerns about the implementation, please send developer comments or questions to [admin@beneficialstrategies.com](mailto:admin@beneficialstrategies.com).
 
 ## Trying out the library 
 

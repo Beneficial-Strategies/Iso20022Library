@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|The CorporateActionInstructionStatementReport message is sent by an account servicer to an account owner or its designated agent to report balances at the safekeeping account level for one or more corporate action events or at the corporate action event level for one or more safekeeping accounts.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
 [IsoId("_BBQd57T-EeiTob_PrFFUxA")]
 [DisplayName("Corporate Action Instruction Statement Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionInstructionStatementReportV08 : IOuterRecord
 {
     
@@ -67,20 +56,6 @@ public partial record CorporateActionInstructionStatementReportV08 : IOuterRecor
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CorporateActionInstructionStatementReportV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CorporateActionInstructionStatementReportV08( Pagination1 reqPagination,Statement72 reqStatementGeneralDetails,AccountIdentification45 reqAccountAndStatementDetails )
-    {
-        Pagination = reqPagination;
-        StatementGeneralDetails = reqStatementGeneralDetails;
-        AccountAndStatementDetails = reqAccountAndStatementDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,74 +63,32 @@ public partial record CorporateActionInstructionStatementReportV08 : IOuterRecor
     /// </summary>
     [IsoId("_BBQd7bT-EeiTob_PrFFUxA")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Pagination1 Pagination { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Pagination1 Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1 Pagination { get; init; } 
-    #else
-    public Pagination1 Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// General characteristics related to a statement which reports information.
     /// </summary>
     [IsoId("_BBQd77T-EeiTob_PrFFUxA")]
     [DisplayName("Statement General Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtGnlDtls")]
-    #endif
     [IsoXmlTag("StmtGnlDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement72 StatementGeneralDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement72 StatementGeneralDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement72 StatementGeneralDetails { get; init; } 
-    #else
-    public Statement72 StatementGeneralDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Account information and detailed account holdings information report for corporate action events.
     /// </summary>
     [IsoId("_BBQd8bT-EeiTob_PrFFUxA")]
     [DisplayName("Account And Statement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctAndStmtDtls")]
-    #endif
     [IsoXmlTag("AcctAndStmtDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountIdentification45 AccountAndStatementDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountIdentification45 AccountAndStatementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountIdentification45 AccountAndStatementDetails { get; init; } 
-    #else
-    public AccountIdentification45 AccountAndStatementDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_BBQd87T-EeiTob_PrFFUxA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

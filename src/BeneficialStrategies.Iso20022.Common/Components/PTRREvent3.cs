@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CElm0Vo4Ee23K4GXSpBSeg")]
 [DisplayName("PTRR Event")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PTRREvent3
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -43,34 +27,16 @@ public partial record PTRREvent3
     /// </summary>
     [IsoId("_CF_VAVo4Ee23K4GXSpBSeg")]
     [DisplayName("Technique")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tchnq")]
-    #endif
     [IsoXmlTag("Tchnq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public RiskReductionService1Code? Technique { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RiskReductionService1Code? Technique { get; init; } 
-    #else
-    public RiskReductionService1Code? Technique { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the post trade risk reduction service provider.
     /// </summary>
     [IsoId("_CF_VA1o4Ee23K4GXSpBSeg")]
     [DisplayName("Service Provider")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SvcPrvdr")]
-    #endif
     [IsoXmlTag("SvcPrvdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OrganisationIdentification15Choice_? ServiceProvider { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrganisationIdentification15Choice_? ServiceProvider { get; init; } 
-    #else
-    public OrganisationIdentification15Choice_? ServiceProvider { get; set; } 
-    #endif
     
     
     #nullable disable

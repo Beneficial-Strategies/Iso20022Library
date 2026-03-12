@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Pl8fuQVSEeqjd8n6wD9JVw")]
 [DisplayName("Rejected Status Reason")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RejectedStatusReason31
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RejectedStatusReason31 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RejectedStatusReason31( RejectedReason32Choice_ reqReasonCode )
-    {
-        ReasonCode = reqReasonCode;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,38 +23,18 @@ public partial record RejectedStatusReason31
     /// </summary>
     [IsoId("_Pl8fvQVSEeqjd8n6wD9JVw")]
     [DisplayName("Reason Code")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsnCd")]
-    #endif
     [IsoXmlTag("RsnCd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RejectedReason32Choice_ ReasonCode { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RejectedReason32Choice_ ReasonCode { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RejectedReason32Choice_ ReasonCode { get; init; } 
-    #else
-    public RejectedReason32Choice_ ReasonCode { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides additional information about the processed instruction.
     /// </summary>
     [IsoId("_Pl8fxQVSEeqjd8n6wD9JVw")]
     [DisplayName("Additional Reason Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlRsnInf")]
-    #endif
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
     [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax210Text? AdditionalReasonInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalReasonInformation { get; init; } 
-    #else
-    public System.String? AdditionalReasonInformation { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k6N0ofFoEd-Vb-3Q5jpLDA")]
 [DisplayName("Quantity Breakdown")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record QuantityBreakdown9
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,102 +23,48 @@ public partial record QuantityBreakdown9
     /// </summary>
     [IsoId("_k6N0o_FoEd-Vb-3Q5jpLDA")]
     [DisplayName("Lot Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotNb")]
-    #endif
     [IsoXmlTag("LotNb")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Number2Choice_? LotNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Number2Choice_? LotNumber { get; init; } 
-    #else
-    public Number2Choice_? LotNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Quantity of financial instruments that is part of the lot described.
     /// </summary>
     [IsoId("_k6N0pfFoEd-Vb-3Q5jpLDA")]
     [DisplayName("Lot Quantity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotQty")]
-    #endif
     [IsoXmlTag("LotQty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentQuantity1Choice_? LotQuantity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentQuantity1Choice_? LotQuantity { get; init; } 
-    #else
-    public FinancialInstrumentQuantity1Choice_? LotQuantity { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the securities sub balance type indicator (example restriction type for a market infrastructure).
     /// </summary>
     [IsoId("_AzNUwfFpEd-Vb-3Q5jpLDA")]
     [DisplayName("Securities Sub Balance Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesSubBalTp")]
-    #endif
     [IsoXmlTag("SctiesSubBalTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GenericIdentification19? SecuritiesSubBalanceType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GenericIdentification19? SecuritiesSubBalanceType { get; init; } 
-    #else
-    public GenericIdentification19? SecuritiesSubBalanceType { get; set; } 
-    #endif
     
     /// <summary>
     /// Date/time at which the lot was purchased.
     /// </summary>
     [IsoId("_k6N0p_FoEd-Vb-3Q5jpLDA")]
     [DisplayName("Lot Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotDtTm")]
-    #endif
     [IsoXmlTag("LotDtTm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateAndDateTimeChoice_? LotDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateAndDateTimeChoice_? LotDateTime { get; init; } 
-    #else
-    public DateAndDateTimeChoice_? LotDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// Price at which the lot was purchased.
     /// </summary>
     [IsoId("_k6N0qfFoEd-Vb-3Q5jpLDA")]
     [DisplayName("Lot Price")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="LotPric")]
-    #endif
     [IsoXmlTag("LotPric")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Price2? LotPrice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Price2? LotPrice { get; init; } 
-    #else
-    public Price2? LotPrice { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the type of price and information about the price.
     /// </summary>
     [IsoId("_k6N0q_FoEd-Vb-3Q5jpLDA")]
     [DisplayName("Type Of Price")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TpOfPric")]
-    #endif
     [IsoXmlTag("TpOfPric")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TypeOfPrice3Choice_? TypeOfPrice { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TypeOfPrice3Choice_? TypeOfPrice { get; init; } 
-    #else
-    public TypeOfPrice3Choice_? TypeOfPrice { get; set; } 
-    #endif
     
     
     #nullable disable

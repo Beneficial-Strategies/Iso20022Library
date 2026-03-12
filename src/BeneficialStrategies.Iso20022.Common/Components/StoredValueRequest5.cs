@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UzMk8U4AEey_VecAUE-C9Q")]
 [DisplayName("Stored Value Request")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record StoredValueRequest5
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,26 +23,14 @@ public partial record StoredValueRequest5
     /// </summary>
     [IsoId("_Re45gU7aEeyGi9JAv6wq7Q")]
     [DisplayName("Sale Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SaleTxId")]
-    #endif
     [IsoXmlTag("SaleTxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TransactionIdentifier1? SaleTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; } 
-    #else
-    public TransactionIdentifier1? SaleTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Data related to the stored value card.
     /// </summary>
     [IsoId("_U5bv0U4AEey_VecAUE-C9Q")]
     [DisplayName("Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Data")]
-    #endif
     [IsoXmlTag("Data")]
     public ValueList<StoredValueData5> Data { get; init; } = new ValueList<StoredValueData5>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _U5bv0U4AEey_VecAUE-C9Q

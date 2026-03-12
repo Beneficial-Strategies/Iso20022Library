@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -17,24 +12,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification47Choice.AnyBIC))]
     [KnownType(typeof(PartyIdentification47Choice.ProprietaryIdentification))]
     [KnownType(typeof(PartyIdentification47Choice.NameAndAddress))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(PartyIdentification47Choice.AnyBIC),nameof(PartyIdentification47Choice.AnyBIC))]
     [JsonDerivedType(typeof(PartyIdentification47Choice.ProprietaryIdentification),nameof(PartyIdentification47Choice.ProprietaryIdentification))]
     [JsonDerivedType(typeof(PartyIdentification47Choice.NameAndAddress),nameof(PartyIdentification47Choice.NameAndAddress))]
-    #endif
     [IsoId("_rFE_oeaMEd-q8fx_Zl_34A")]
     [DisplayName("Party Identification 47 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record PartyIdentification47Choice_
-    #else
-    public abstract partial class PartyIdentification47Choice_
-    #endif
     {
     }
 }

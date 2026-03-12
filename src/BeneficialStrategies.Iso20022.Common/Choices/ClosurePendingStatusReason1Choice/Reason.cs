@@ -5,14 +5,7 @@ using BeneficialStrategies.Iso20022.ExternalSchema;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
-#if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
 using System.ComponentModel.DataAnnotations;
-#endif
 namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choice
 {
     /// <summary>
@@ -20,30 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
     /// </summary>
     [IsoId("_UwXSs2CLEeabZtzjEVWYCQ")]
     [DisplayName("Reason")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public partial record Reason : ClosurePendingStatusReason1Choice_
-    #else
-    public partial class Reason : ClosurePendingStatusReason1Choice_
-    #endif
     {
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
-        // No constructor needed for NET8 and above.
-        #else
-        /// <summary>
-        /// Constructs a Reason instance using the members the ISO20022 deems required.
-        /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-        /// </summary>
-        public Reason( ClosurePendingStatusReason2Choice_ reqCode )
-        {
-            Code = reqCode;
-        }
-        #endif
         #nullable enable
         
         /// <summary>
@@ -51,38 +22,18 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosurePendingStatusReason1Choic
         /// </summary>
         [IsoId("_1EL_YWCLEeabZtzjEVWYCQ")]
         [DisplayName("Code")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="Cd")]
-        #endif
         [IsoXmlTag("Cd")]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public required ClosurePendingStatusReason2Choice_ Code { get; init; } 
-        #elif NET7_0_OR_GREATER // C# 11 Records, required members
-        public required ClosurePendingStatusReason2Choice_ Code { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public ClosurePendingStatusReason2Choice_ Code { get; init; } 
-        #else
-        public ClosurePendingStatusReason2Choice_ Code { get; set; } 
-        #endif
         
         /// <summary>
         /// Additional information about the reason for the closure pending status.
         /// </summary>
         [IsoId("_1EL_Y2CLEeabZtzjEVWYCQ")]
         [DisplayName("Additional Information")]
-        #if DECLARE_DATACONTRACT
-        [DataMember(Name="AddtlInf")]
-        #endif
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        #if NET8_0_OR_GREATER // C# 12 Global type alias
         public IsoMax350Text? AdditionalInformation { get; init; } 
-        #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-        public System.String? AdditionalInformation { get; init; } 
-        #else
-        public System.String? AdditionalInformation { get; set; } 
-        #endif
         
         
         #nullable disable

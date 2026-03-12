@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4KU98GpuEeSMqvBfBY1c9A")]
 [DisplayName("Local Date Time")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record LocalDateTime1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a LocalDateTime1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public LocalDateTime1( System.UInt64 reqUTCOffset )
-    {
-        UTCOffset = reqUTCOffset;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,56 +23,27 @@ public partial record LocalDateTime1
     /// </summary>
     [IsoId("_-wojkGpuEeSMqvBfBY1c9A")]
     [DisplayName("From Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FrDtTm")]
-    #endif
     [IsoXmlTag("FrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODateTime? FromDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime? FromDateTime { get; init; } 
-    #else
-    public System.DateTime? FromDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// Date time of the end of the period (exclusive).
     /// </summary>
     [IsoId("_GdqgsGpvEeSMqvBfBY1c9A")]
     [DisplayName("To Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ToDtTm")]
-    #endif
     [IsoXmlTag("ToDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoISODateTime? ToDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime? ToDateTime { get; init; } 
-    #else
-    public System.DateTime? ToDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// UTC offset in minutes, of the local time during the period. For instance, 120 for Central European Time, -720 for Central Standard Time (North America).
     /// </summary>
     [IsoId("_LJO38GpvEeSMqvBfBY1c9A")]
     [DisplayName("UTC Offset")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UTCOffset")]
-    #endif
     [IsoXmlTag("UTCOffset")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoNumber UTCOffset { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.UInt64 UTCOffset { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.UInt64 UTCOffset { get; init; } 
-    #else
-    public System.UInt64 UTCOffset { get; set; } 
-    #endif
     
     
     #nullable disable

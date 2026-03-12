@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -29,7 +24,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecurityIdentification23Choice.Belgian))]
     [KnownType(typeof(SecurityIdentification23Choice.Common))]
     [KnownType(typeof(SecurityIdentification23Choice.OtherProprietaryIdentification))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(SecurityIdentification23Choice.ISIN),nameof(SecurityIdentification23Choice.ISIN))]
     [JsonDerivedType(typeof(SecurityIdentification23Choice.SEDOL),nameof(SecurityIdentification23Choice.SEDOL))]
     [JsonDerivedType(typeof(SecurityIdentification23Choice.CUSIP),nameof(SecurityIdentification23Choice.CUSIP))]
@@ -45,20 +39,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(SecurityIdentification23Choice.Belgian),nameof(SecurityIdentification23Choice.Belgian))]
     [JsonDerivedType(typeof(SecurityIdentification23Choice.Common),nameof(SecurityIdentification23Choice.Common))]
     [JsonDerivedType(typeof(SecurityIdentification23Choice.OtherProprietaryIdentification),nameof(SecurityIdentification23Choice.OtherProprietaryIdentification))]
-    #endif
     [IsoId("_B2G4ASGQEeW7gKYhAMEFCw")]
     [DisplayName("Security Identification 23 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record SecurityIdentification23Choice_
-    #else
-    public abstract partial class SecurityIdentification23Choice_
-    #endif
     {
     }
 }

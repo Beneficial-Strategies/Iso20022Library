@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCancellationAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) about the notification of the payment cancellation.")]
 [IsoId("_7vg6sTSwEeKBdvYpL_aSEg")]
 [DisplayName("Acceptor Cancellation Advice Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCancellationAdviceResponseV02 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record AcceptorCancellationAdviceResponseV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCancellationAdviceResponseV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCancellationAdviceResponseV02( Header2 reqHeader,AcceptorCancellationAdviceResponse2 reqCancellationAdviceResponse,ContentInformationType6 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        CancellationAdviceResponse = reqCancellationAdviceResponse;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,57 +57,24 @@ public partial record AcceptorCancellationAdviceResponseV02 : IOuterRecord
     /// </summary>
     [IsoId("_7vg6szSwEeKBdvYpL_aSEg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header2 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header2 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header2 Header { get; init; } 
-    #else
-    public Header2 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the cancellation advice response.
     /// </summary>
     [IsoId("_7vg6tzSwEeKBdvYpL_aSEg")]
     [DisplayName("Cancellation Advice Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlAdvcRspn")]
-    #endif
     [IsoXmlTag("CxlAdvcRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCancellationAdviceResponse2 CancellationAdviceResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCancellationAdviceResponse2 CancellationAdviceResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCancellationAdviceResponse2 CancellationAdviceResponse { get; init; } 
-    #else
-    public AcceptorCancellationAdviceResponse2 CancellationAdviceResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_7vg6uzSwEeKBdvYpL_aSEg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType6 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType6 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType6 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType6 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

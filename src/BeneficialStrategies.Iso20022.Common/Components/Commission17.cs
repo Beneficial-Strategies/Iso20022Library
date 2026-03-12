@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,28 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2BohoRt9EeOqSdXzJ0oydA")]
 [DisplayName("Commission")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Commission17
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Commission17 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Commission17( CommissionType3Choice_ reqType,CommissionBasis1Choice_ reqBasis,ActiveCurrencyAnd13DecimalAmount reqAmount )
-    {
-        Type = reqType;
-        Basis = reqBasis;
-        Amount = reqAmount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -48,110 +23,50 @@ public partial record Commission17
     /// </summary>
     [IsoId("_4oDp8BuAEeOqSdXzJ0oydA")]
     [DisplayName("Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tp")]
-    #endif
     [IsoXmlTag("Tp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CommissionType3Choice_ Type { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CommissionType3Choice_ Type { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CommissionType3Choice_ Type { get; init; } 
-    #else
-    public CommissionType3Choice_ Type { get; set; } 
-    #endif
     
     /// <summary>
     /// Basis upon which a commission is charged, for example, flat fee.
     /// </summary>
     [IsoId("_EChssBuCEeOqSdXzJ0oydA")]
     [DisplayName("Basis")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Bsis")]
-    #endif
     [IsoXmlTag("Bsis")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CommissionBasis1Choice_ Basis { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CommissionBasis1Choice_ Basis { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CommissionBasis1Choice_ Basis { get; init; } 
-    #else
-    public CommissionBasis1Choice_ Basis { get; set; } 
-    #endif
     
     /// <summary>
     /// Commission expressed as an amount of money.
     /// </summary>
     [IsoId("_2aLkjRt9EeOqSdXzJ0oydA")]
     [DisplayName("Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Amt")]
-    #endif
     [IsoXmlTag("Amt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-    #else
-    public ActiveCurrencyAnd13DecimalAmount Amount { get; set; } 
-    #endif
     
     /// <summary>
     /// Party entitled to the amount of money resulting from a commission.
     /// </summary>
     [IsoId("_2aLkjxt9EeOqSdXzJ0oydA")]
     [DisplayName("Recipient Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcptId")]
-    #endif
     [IsoXmlTag("RcptId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification2Choice_? RecipientIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification2Choice_? RecipientIdentification { get; init; } 
-    #else
-    public PartyIdentification2Choice_? RecipientIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the agreement established between the fund and another party. This element, amongst others, defines the conditions of the commissions.
     /// </summary>
     [IsoId("_2aLkkRt9EeOqSdXzJ0oydA")]
     [DisplayName("Commercial Agreement Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ComrclAgrmtRef")]
-    #endif
     [IsoXmlTag("ComrclAgrmtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CommercialAgreementReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CommercialAgreementReference { get; init; } 
-    #else
-    public System.String? CommercialAgreementReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Voluntary non-enforcement of the right to part of a commission.
     /// </summary>
     [IsoId("_z9RD4BuCEeOqSdXzJ0oydA")]
     [DisplayName("Waiving Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="WvgDtls")]
-    #endif
     [IsoXmlTag("WvgDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CommissionWaiver4? WaivingDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CommissionWaiver4? WaivingDetails { get; init; } 
-    #else
-    public CommissionWaiver4? WaivingDetails { get; set; } 
-    #endif
     
     
     #nullable disable

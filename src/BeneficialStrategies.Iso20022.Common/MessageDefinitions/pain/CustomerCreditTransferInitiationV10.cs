@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -40,12 +35,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The CustomerCreditTransferInitiation message is sent by the initiating party to the forwarding agent or debtor agent. It is used to request movement of funds from the debtor account to a creditor.|Usage|The CustomerCreditTransferInitiation message can contain one or more customer credit transfer instructions.|The CustomerCreditTransferInitiation message is used to exchange:|- One or more instances of a credit transfer initiation;|- Payment transactions that result in book transfers at the debtor agent or payments to another financial institution;|- Payment transactions that result in an electronic cash transfer to the creditor account or in the emission of a cheque.|The message can be used in a direct or a relay scenario:|- In a direct scenario, the message is sent directly to the debtor agent. The debtor agent is the account servicer of the debtor.|- In a relay scenario, the message is sent to a forwarding agent. The forwarding agent acts as a concentrating financial institution. It will forward the CustomerCreditTransferInitiation message to the debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the debtor. This caters for example for the scenario of a payments factory initiating all payments on behalf of a large corporate.|The CustomerCreditTransferInitiation message can be used in domestic and cross-border scenarios.|The CustomerCreditTransferInitiation message must not be used by the debtor agent to execute the credit transfer instruction(s). The FIToFICustomerCreditTransfer message must be used instead.")]
 [IsoId("_LwD3L8P_Eemsic1bQcEtLA")]
 [DisplayName("Customer Credit Transfer Initiation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CustomerCreditTransferInitiationV10 : IOuterRecord
 {
     
@@ -74,19 +63,6 @@ public partial record CustomerCreditTransferInitiationV10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CustomerCreditTransferInitiationV10 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CustomerCreditTransferInitiationV10( GroupHeader95 reqGroupHeader,PaymentInstruction34 reqPaymentInformation )
-    {
-        GroupHeader = reqGroupHeader;
-        PaymentInformation = reqPaymentInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -94,55 +70,24 @@ public partial record CustomerCreditTransferInitiationV10 : IOuterRecord
     /// </summary>
     [IsoId("_LwD3N8P_Eemsic1bQcEtLA")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader95 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader95 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader95 GroupHeader { get; init; } 
-    #else
-    public GroupHeader95 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of characteristics that applies to the debit side of the payment transactions included in the credit transfer initiation.
     /// </summary>
     [IsoId("_LwD3OcP_Eemsic1bQcEtLA")]
     [DisplayName("Payment Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PmtInf")]
-    #endif
     [IsoXmlTag("PmtInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PaymentInstruction34 PaymentInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PaymentInstruction34 PaymentInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PaymentInstruction34 PaymentInformation { get; init; } 
-    #else
-    public PaymentInstruction34 PaymentInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_LwD3O8P_Eemsic1bQcEtLA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|This message is sent by an issuer (or its agent) to a CSD to request the cancellation of (a) movement(s) previously sent via an Agent Corporate Action Movement Instruction.|Usage|This message may be used to cancel an entire Agent Corporate Action Movement Instruction message that was previously sent by the issuer (or its agent) or specific movements.|This message must contain the identification of the Agent Corporate Action Movement Instruction containing the movement(s) to be cancelled, the agent identification and the corporate action references. This message must also contain details of the movement(s) to be cancelled.")]
 [IsoId("_TOWFvNEwEd-BzquC8wXy7w_1509391155")]
 [DisplayName("Agent CA Movement Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AgentCAMovementCancellationRequestV01 : IOuterRecord
 {
     
@@ -65,20 +54,6 @@ public partial record AgentCAMovementCancellationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AgentCAMovementCancellationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AgentCAMovementCancellationRequestV01( DocumentIdentification8 reqIdentification,DocumentIdentification8 reqAgentCAMovementInstructionIdentification,CorporateActionInformation1 reqCorporateActionGeneralInformation )
-    {
-        Identification = reqIdentification;
-        AgentCAMovementInstructionIdentification = reqAgentCAMovementInstructionIdentification;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,74 +61,32 @@ public partial record AgentCAMovementCancellationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_TOf2sNEwEd-BzquC8wXy7w_1790490668")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 Identification { get; init; } 
-    #else
-    public DocumentIdentification8 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the Agent CA Movement Instruction to be cancelled.
     /// </summary>
     [IsoId("_TOf2sdEwEd-BzquC8wXy7w_1808039955")]
     [DisplayName("Agent CA Movement Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgtCAMvmntInstrId")]
-    #endif
     [IsoXmlTag("AgtCAMvmntInstrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 AgentCAMovementInstructionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 AgentCAMovementInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 AgentCAMovementInstructionIdentification { get; init; } 
-    #else
-    public DocumentIdentification8 AgentCAMovementInstructionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_TOf2stEwEd-BzquC8wXy7w_2016403103")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the movement instructions to be cancelled.
     /// </summary>
     [IsoId("_TOf2s9EwEd-BzquC8wXy7w_1913625535")]
     [DisplayName("Movement Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MvmntDtls")]
-    #endif
     [IsoXmlTag("MvmntDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MovementInstruction1? MovementDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MovementInstruction1? MovementDetails { get; init; } 
-    #else
-    public MovementInstruction1? MovementDetails { get; set; } 
-    #endif
     
     
     #nullable disable

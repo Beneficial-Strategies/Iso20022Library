@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCAINSD1 message extends ISO corporate action instruction message with DTCC corporate action elements not covered in the standard message.")]
 [IsoId("_I7uei5CEEeaSk9d1hvTrHg")]
 [DisplayName("DTCCCAINSD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCAINSD1V03 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCAINSD1V03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,68 +57,32 @@ public partial record DTCCCAINSD1V03 : IOuterRecord
     /// </summary>
     [IsoId("_I7uejZCEEeaSk9d1hvTrHg")]
     [DisplayName("Optional Dividend")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnlDvdd")]
-    #endif
     [IsoXmlTag("OptnlDvdd")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OptionalDividendAccountQuantitySD2? OptionalDividend { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OptionalDividendAccountQuantitySD2? OptionalDividend { get; init; } 
-    #else
-    public OptionalDividendAccountQuantitySD2? OptionalDividend { get; set; } 
-    #endif
     
     /// <summary>
     /// DTC (The Depository Trust Corporation) Tax Exempt service election.
     /// </summary>
     [IsoId("_I7uelZCEEeaSk9d1hvTrHg")]
     [DisplayName("Tax Exempt")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxXmpt")]
-    #endif
     [IsoXmlTag("TaxXmpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public TaxExemptQuantitySD1? TaxExempt { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TaxExemptQuantitySD1? TaxExempt { get; init; } 
-    #else
-    public TaxExemptQuantitySD1? TaxExempt { get; set; } 
-    #endif
     
     /// <summary>
     /// DTC (The Depository Trust Corporation) Foreign Currency Payment service wire payment instruction.
     /// </summary>
     [IsoId("_I7uenZCEEeaSk9d1hvTrHg")]
     [DisplayName("Wire Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="WireInstr")]
-    #endif
     [IsoXmlTag("WireInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public WireInstructionSD2? WireInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public WireInstructionSD2? WireInstruction { get; init; } 
-    #else
-    public WireInstructionSD2? WireInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to security quantity details. Provides information about securities quantity linked to a corporate action option.
     /// </summary>
     [IsoId("_tHrSEJYQEeaME6y1kTGR7Q")]
     [DisplayName("Securities Quantity Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctiesQtyDtls")]
-    #endif
     [IsoXmlTag("SctiesQtyDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecuritiesQuantityDetailsSD1? SecuritiesQuantityDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesQuantityDetailsSD1? SecuritiesQuantityDetails { get; init; } 
-    #else
-    public SecuritiesQuantityDetailsSD1? SecuritiesQuantityDetails { get; set; } 
-    #endif
     
     
     #nullable disable

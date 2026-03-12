@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|The CorporateActionInstructionCancellationRequest message is sent by an account owner to an account servicer to request cancellation of a previously sent corporate action election instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
 [IsoId("_BBQdw7T-EeiTob_PrFFUxA")]
 [DisplayName("Corporate Action Instruction Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionInstructionCancellationRequestV08 : IOuterRecord
 {
     
@@ -67,21 +56,6 @@ public partial record CorporateActionInstructionCancellationRequestV08 : IOuterR
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CorporateActionInstructionCancellationRequestV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CorporateActionInstructionCancellationRequestV08( DocumentIdentification31 reqInstructionIdentification,CorporateActionGeneralInformation110 reqCorporateActionGeneralInformation,AccountIdentification46 reqAccountDetails,CorporateActionOption120 reqCorporateActionInstruction )
-    {
-        InstructionIdentification = reqInstructionIdentification;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-        AccountDetails = reqAccountDetails;
-        CorporateActionInstruction = reqCorporateActionInstruction;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,128 +63,57 @@ public partial record CorporateActionInstructionCancellationRequestV08 : IOuterR
     /// </summary>
     [IsoId("_BBQdybT-EeiTob_PrFFUxA")]
     [DisplayName("Change Instruction Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ChngInstrInd")]
-    #endif
     [IsoXmlTag("ChngInstrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoYesNoIndicator? ChangeInstructionIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ChangeInstructionIndicator { get; init; } 
-    #else
-    public System.String? ChangeInstructionIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of a previously sent instruction document.
     /// </summary>
     [IsoId("_BBQdy7T-EeiTob_PrFFUxA")]
     [DisplayName("Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InstrId")]
-    #endif
     [IsoXmlTag("InstrId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification31 InstructionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification31 InstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification31 InstructionIdentification { get; init; } 
-    #else
-    public DocumentIdentification31 InstructionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_BBQdzbT-EeiTob_PrFFUxA")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionGeneralInformation110 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionGeneralInformation110 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformation110 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformation110 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the safekeeping account and the account owner.
     /// </summary>
     [IsoId("_BBQdz7T-EeiTob_PrFFUxA")]
     [DisplayName("Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctDtls")]
-    #endif
     [IsoXmlTag("AcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountIdentification46 AccountDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountIdentification46 AccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountIdentification46 AccountDetails { get; init; } 
-    #else
-    public AccountIdentification46 AccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the corporate action option.
     /// </summary>
     [IsoId("_BBQd0bT-EeiTob_PrFFUxA")]
     [DisplayName("Corporate Action Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnInstr")]
-    #endif
     [IsoXmlTag("CorpActnInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionOption120 CorporateActionInstruction { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionOption120 CorporateActionInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionOption120 CorporateActionInstruction { get; init; } 
-    #else
-    public CorporateActionOption120 CorporateActionInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides detailed information on protect and cover protect instructions.
     /// </summary>
     [IsoId("_y3maQbpZEeilsanBGAzy4A")]
     [DisplayName("Protect Instruction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctInstr")]
-    #endif
     [IsoXmlTag("PrtctInstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ProtectInstruction3? ProtectInstruction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProtectInstruction3? ProtectInstruction { get; init; } 
-    #else
-    public ProtectInstruction3? ProtectInstruction { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_BBQd07T-EeiTob_PrFFUxA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -42,12 +37,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The NotificationOfCaseAssignment message is sent by a case assignee to a case creator/case assigner.|This message is used to inform the case assigner that:|- the assignee is reassigning the case to the next agent in the transaction processing chain for further action|- the assignee will work on the case himself, without re-assigning it to another party, and therefore indicating that the re-assignment has reached its end-point|Usage|The NotificationOfCaseAssignment message is used to notify the case creator or case assigner of further action undertaken by the case assignee in a:|- request to cancel payment case;|- request to modify payment case;|- unable to apply case;|- claim non receipt case.|The NotificationOfCaseAssignment message:|- covers one and only one case at a time. If the case assignee needs to inform a case creator or case assigner about several cases, then multiple Notification Of Case Assignment messages must be sent;|- except in the case where it is used to indicate that an agent is doing the correction himself, this message must be forwarded by all subsequent case assigner(s) until it reaches the case creator;|- must not be used in place of a Resolution Of Investigation or a Case Status Report message.|When the assignee does not reassign the case to another party (that is responding with a NotificationOfCaseAssignment message with notification MINE - The case is processed by the assignee), the case assignment should contain the case assignment elements as received in the original query.")]
 [IsoId("_eX_Oh22PEei3KuUgpx7Xcw")]
 [DisplayName("Notification Of Case Assignment V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record NotificationOfCaseAssignmentV05 : IOuterRecord
 {
     
@@ -76,21 +65,6 @@ public partial record NotificationOfCaseAssignmentV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a NotificationOfCaseAssignmentV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public NotificationOfCaseAssignmentV05( ReportHeader5 reqHeader,Case5 reqCase,CaseAssignment5 reqAssignment,CaseForwardingNotification3 reqNotification )
-    {
-        Header = reqHeader;
-        Case = reqCase;
-        Assignment = reqAssignment;
-        Notification = reqNotification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -98,38 +72,16 @@ public partial record NotificationOfCaseAssignmentV05 : IOuterRecord
     /// </summary>
     [IsoId("_eX_OiW2PEei3KuUgpx7Xcw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReportHeader5 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReportHeader5 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReportHeader5 Header { get; init; } 
-    #else
-    public ReportHeader5 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the investigation case.
     /// </summary>
     [IsoId("_eX_Oi22PEei3KuUgpx7Xcw")]
     [DisplayName("Case")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Case")]
-    #endif
     [IsoXmlTag("Case")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Case5 Case { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Case5 Case { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Case5 Case { get; init; } 
-    #else
-    public Case5 Case { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the assignment of an investigation case from an assigner to an assignee.
@@ -137,55 +89,24 @@ public partial record NotificationOfCaseAssignmentV05 : IOuterRecord
     /// </summary>
     [IsoId("_eX_OjW2PEei3KuUgpx7Xcw")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseAssignment5 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseAssignment5 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseAssignment5 Assignment { get; init; } 
-    #else
-    public CaseAssignment5 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Information about the type of action taken.
     /// </summary>
     [IsoId("_eX_Oj22PEei3KuUgpx7Xcw")]
     [DisplayName("Notification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Ntfctn")]
-    #endif
     [IsoXmlTag("Ntfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CaseForwardingNotification3 Notification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CaseForwardingNotification3 Notification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CaseForwardingNotification3 Notification { get; init; } 
-    #else
-    public CaseForwardingNotification3 Notification { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_eX_OkW2PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

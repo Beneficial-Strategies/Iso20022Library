@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The ContractRegistrationConfirmation message is sent by the registration agent to the reporting party to register the contract subject to currency control.")]
 [IsoId("_Nz8alx3pEeuiRvbpCaJe6A")]
 [DisplayName("Contract Registration Confirmation V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ContractRegistrationConfirmationV03 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record ContractRegistrationConfirmationV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ContractRegistrationConfirmationV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ContractRegistrationConfirmationV03( CurrencyControlHeader6 reqGroupHeader,RegisteredContract11 reqRegisteredContract )
-    {
-        GroupHeader = reqGroupHeader;
-        RegisteredContract = reqRegisteredContract;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record ContractRegistrationConfirmationV03 : IOuterRecord
     /// </summary>
     [IsoId("_Nz8amR3pEeuiRvbpCaJe6A")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrencyControlHeader6 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrencyControlHeader6 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyControlHeader6 GroupHeader { get; init; } 
-    #else
-    public CurrencyControlHeader6 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the contract details which is registered for currency control.
     /// </summary>
     [IsoId("_Nz8amx3pEeuiRvbpCaJe6A")]
     [DisplayName("Registered Contract")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RegdCtrct")]
-    #endif
     [IsoXmlTag("RegdCtrct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RegisteredContract11 RegisteredContract { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RegisteredContract11 RegisteredContract { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RegisteredContract11 RegisteredContract { get; init; } 
-    #else
-    public RegisteredContract11 RegisteredContract { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_Nz8anR3pEeuiRvbpCaJe6A")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

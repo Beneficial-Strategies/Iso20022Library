@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F-cr7R9REeuFz_FaCzCLgQ")]
 [DisplayName("Corporate Action General Information")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CorporateActionGeneralInformation161
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CorporateActionGeneralInformation161 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CorporateActionGeneralInformation161( System.String reqCorporateActionEventIdentification,CorporateActionEventType103Choice_ reqEventType )
-    {
-        CorporateActionEventIdentification = reqCorporateActionEventIdentification;
-        EventType = reqEventType;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,76 +23,36 @@ public partial record CorporateActionGeneralInformation161
     /// </summary>
     [IsoId("_F-cr9R9REeuFz_FaCzCLgQ")]
     [DisplayName("Corporate Action Event Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnEvtId")]
-    #endif
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoRestrictedFINXMax16Text CorporateActionEventIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String CorporateActionEventIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String CorporateActionEventIdentification { get; init; } 
-    #else
-    public System.String CorporateActionEventIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Official and unique reference assigned by the official central body/entity within each market at the beginning of a corporate action event.
     /// </summary>
     [IsoId("_F-cr_R9REeuFz_FaCzCLgQ")]
     [DisplayName("Official Corporate Action Event Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OffclCorpActnEvtId")]
-    #endif
     [IsoXmlTag("OffclCorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? OfficialCorporateActionEventIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? OfficialCorporateActionEventIdentification { get; init; } 
-    #else
-    public System.String? OfficialCorporateActionEventIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Type of corporate action event.
     /// </summary>
     [IsoId("_F-csBR9REeuFz_FaCzCLgQ")]
     [DisplayName("Event Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EvtTp")]
-    #endif
     [IsoXmlTag("EvtTp")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionEventType103Choice_ EventType { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionEventType103Choice_ EventType { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionEventType103Choice_ EventType { get; init; } 
-    #else
-    public CorporateActionEventType103Choice_ EventType { get; set; } 
-    #endif
     
     /// <summary>
     /// Security concerned by the corporate action.
     /// </summary>
     [IsoId("_F-csDR9REeuFz_FaCzCLgQ")]
     [DisplayName("Underlying Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygScty")]
-    #endif
     [IsoXmlTag("UndrlygScty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentAttributes84? UnderlyingSecurity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentAttributes84? UnderlyingSecurity { get; init; } 
-    #else
-    public FinancialInstrumentAttributes84? UnderlyingSecurity { get; set; } 
-    #endif
     
     
     #nullable disable

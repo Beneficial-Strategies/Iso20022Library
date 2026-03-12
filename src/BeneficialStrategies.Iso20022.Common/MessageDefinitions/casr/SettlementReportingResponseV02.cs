@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.casr;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.casr;
 [Description(@"The SettlementReportingResponse message is sent by any party (acquirer, agent or issuer) to an agent in response to a SettlementReportingInitiation message.|")]
 [IsoId("_VxHn5Mr9EeuNe7RtB4qFHw")]
 [DisplayName("Settlement Reporting Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SettlementReportingResponseV02 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record SettlementReportingResponseV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SettlementReportingResponseV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SettlementReportingResponseV02( Header66 reqHeader,SettlementReportingResponse2 reqBody )
-    {
-        Header = reqHeader;
-        Body = reqBody;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,19 +58,8 @@ public partial record SettlementReportingResponseV02 : IOuterRecord
     /// </summary>
     [IsoId("_VxHn5cr9EeuNe7RtB4qFHw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header66 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header66 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header66 Header { get; init; } 
-    #else
-    public Header66 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the response to the settlement initiation.
@@ -104,36 +69,16 @@ public partial record SettlementReportingResponseV02 : IOuterRecord
     /// </summary>
     [IsoId("_VxHn5sr9EeuNe7RtB4qFHw")]
     [DisplayName("Body")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Body")]
-    #endif
     [IsoXmlTag("Body")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SettlementReportingResponse2 Body { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SettlementReportingResponse2 Body { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementReportingResponse2 Body { get; init; } 
-    #else
-    public SettlementReportingResponse2 Body { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC
     /// </summary>
     [IsoId("_VxHn58r9EeuNe7RtB4qFHw")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType20? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType20? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType20? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

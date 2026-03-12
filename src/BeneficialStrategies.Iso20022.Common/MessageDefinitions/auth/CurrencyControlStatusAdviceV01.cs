@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The CurrencyControlStatusAdvice message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) to provide a status advice on a previously sent currency control message.||Usage: |The message may be sent in response to requests on the registration of the currency control contract, supporting document or on the payment regulatory information notification.")]
 [IsoId("_9ek38NnOEeS--7IJLPC9lw")]
 [DisplayName("Currency Control Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CurrencyControlStatusAdviceV01 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record CurrencyControlStatusAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CurrencyControlStatusAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CurrencyControlStatusAdviceV01( CurrencyControlHeader2 reqGroupHeader,CurrencyControlGroupStatus1 reqGroupStatus )
-    {
-        GroupHeader = reqGroupHeader;
-        GroupStatus = reqGroupStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,72 +60,32 @@ public partial record CurrencyControlStatusAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_TDEesdnQEeS--7IJLPC9lw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrencyControlHeader2 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrencyControlHeader2 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyControlHeader2 GroupHeader { get; init; } 
-    #else
-    public CurrencyControlHeader2 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the group status for the global message.
     /// </summary>
     [IsoId("_OWKlteFaEeSvv6t4Ka7B7A")]
     [DisplayName("Group Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpSts")]
-    #endif
     [IsoXmlTag("GrpSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrencyControlGroupStatus1 GroupStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrencyControlGroupStatus1 GroupStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyControlGroupStatus1 GroupStatus { get; init; } 
-    #else
-    public CurrencyControlGroupStatus1 GroupStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the status of the package in the message, which may contain the individual records.
     /// </summary>
     [IsoId("_lQl6EOFaEeSvv6t4Ka7B7A")]
     [DisplayName("Package Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PackgSts")]
-    #endif
     [IsoXmlTag("PackgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CurrencyControlPackageStatus1? PackageStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyControlPackageStatus1? PackageStatus { get; init; } 
-    #else
-    public CurrencyControlPackageStatus1? PackageStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_2c1oodnQEeS--7IJLPC9lw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

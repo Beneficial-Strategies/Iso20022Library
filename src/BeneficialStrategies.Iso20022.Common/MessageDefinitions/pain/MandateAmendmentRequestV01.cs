@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -36,12 +31,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The MandateAmendmentRequest message is sent by the initiator of the request to his agent and/or counterparty. The initiator can both be the debtor or the creditor (or where appropriate the debtor agent).|The MandateAmendmentRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateAmendmentRequest message is used to request the amendment of specific information in an existing mandate. |The MandateAmendmentRequest message must reflect the new data of the element(s) to be amended and at a minimum a unique reference to the existing mandate. If accepted, this MandateAmendmentRequest message together with the MandateAcceptanceReport message confirming the acceptance will be considered as a valid amendment on an existing mandate, agreed upon by all parties. The amended mandate will from then on be considered the valid mandate.|Usage|The MandateAmendmentRequest message can contain only one request to amend one specific mandate.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateAmendmentRequest message can be used in domestic and cross-border scenarios.|If all elements in the existing Mandate need to be amended or the underlying contract is different, then the MandateAmendmentRequest message should not be used. The existing Mandate has to be cancelled and a new Mandate has to be initiated.")]
 [IsoId("_GX7CXtEvEd-BzquC8wXy7w_-355407990")]
 [DisplayName("Mandate Amendment Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MandateAmendmentRequestV01 : IOuterRecord
 {
     
@@ -70,19 +59,6 @@ public partial record MandateAmendmentRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MandateAmendmentRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MandateAmendmentRequestV01( GroupHeader31 reqGroupHeader,MandateAmendment1 reqUnderlyingAmendmentDetails )
-    {
-        GroupHeader = reqGroupHeader;
-        UnderlyingAmendmentDetails = reqUnderlyingAmendmentDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -90,38 +66,16 @@ public partial record MandateAmendmentRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_GX7CX9EvEd-BzquC8wXy7w_65717989")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader31 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader31 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader31 GroupHeader { get; init; } 
-    #else
-    public GroupHeader31 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide details on the amendment request.
     /// </summary>
     [IsoId("_GYEMQNEvEd-BzquC8wXy7w_-389718479")]
     [DisplayName("Underlying Amendment Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygAmdmntDtls")]
-    #endif
     [IsoXmlTag("UndrlygAmdmntDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MandateAmendment1 UnderlyingAmendmentDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MandateAmendment1 UnderlyingAmendmentDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MandateAmendment1 UnderlyingAmendmentDetails { get; init; } 
-    #else
-    public MandateAmendment1 UnderlyingAmendmentDetails { get; set; } 
-    #endif
     
     
     #nullable disable

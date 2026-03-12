@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorBatchTransfer is sent by an acceptor (or its agent) to transfer the financial data of a collection of transactions to the acquirer (or its agent).")]
 [IsoId("_2pVhoWmEEeS7iYydEtv3Ug")]
 [DisplayName("Acceptor Batch Transfer V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorBatchTransferV04 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record AcceptorBatchTransferV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorBatchTransferV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorBatchTransferV04( Header12 reqHeader,CardPaymentBatchTransfer3 reqBatchTransfer,ContentInformationType12 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        BatchTransfer = reqBatchTransfer;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,57 +57,24 @@ public partial record AcceptorBatchTransferV04 : IOuterRecord
     /// </summary>
     [IsoId("_2pVhpWmEEeS7iYydEtv3Ug")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header12 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header12 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header12 Header { get; init; } 
-    #else
-    public Header12 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Card payment transactions from one or several data set of transactions.
     /// </summary>
     [IsoId("_2pVhp2mEEeS7iYydEtv3Ug")]
     [DisplayName("Batch Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BtchTrf")]
-    #endif
     [IsoXmlTag("BtchTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentBatchTransfer3 BatchTransfer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentBatchTransfer3 BatchTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentBatchTransfer3 BatchTransfer { get; init; } 
-    #else
-    public CardPaymentBatchTransfer3 BatchTransfer { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_2pVhqWmEEeS7iYydEtv3Ug")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType12 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType12 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType12 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType12 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

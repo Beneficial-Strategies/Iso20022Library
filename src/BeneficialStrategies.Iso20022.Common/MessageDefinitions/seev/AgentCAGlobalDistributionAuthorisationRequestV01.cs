@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|This message is sent by a CSD to an issuer (or its agent) to request the authorisation to process the entitlement movements (cash and/or securities) calculated by the CSD for a given corporate action entire event, a given corporate action option and optionally a given resource.|This message can also be sent to request the issuer (or its agent) to make available / deliver the relevant resources to the CSD.|Usage|This message is used to request the authorisation to process the entitlement movements calculated by the CSD for a given corporate action event and option. An Agent Corporate Action Global Distribution Authorisation Request message must be sent for each option and if several resources are associated to an option, an Agent Corporate Action Global Distribution Authorisation Request message can be sent for each resource.|This message can also be used to pre-advise a global distribution authorisation request, in which case the value of the field pre-advice indicator must be set to yes.")]
 [IsoId("_TNwP1dEwEd-BzquC8wXy7w_690310315")]
 [DisplayName("Agent CA Global Distribution Authorisation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AgentCAGlobalDistributionAuthorisationRequestV01 : IOuterRecord
 {
     
@@ -66,20 +55,6 @@ public partial record AgentCAGlobalDistributionAuthorisationRequestV01 : IOuterR
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AgentCAGlobalDistributionAuthorisationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AgentCAGlobalDistributionAuthorisationRequestV01( DocumentIdentification8 reqIdentification,CorporateActionInformation1 reqCorporateActionGeneralInformation,GlobalDistributionRequest1 reqGlobalDistributionDetails )
-    {
-        Identification = reqIdentification;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-        GlobalDistributionDetails = reqGlobalDistributionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,57 +62,24 @@ public partial record AgentCAGlobalDistributionAuthorisationRequestV01 : IOuterR
     /// </summary>
     [IsoId("_TNwP1tEwEd-BzquC8wXy7w_1189279537")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 Identification { get; init; } 
-    #else
-    public DocumentIdentification8 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_TNwP19EwEd-BzquC8wXy7w_806676079")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionInformation1 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides detailed information about the global distribution.
     /// </summary>
     [IsoId("_TNwP2NEwEd-BzquC8wXy7w_959712876")]
     [DisplayName("Global Distribution Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GblDstrbtnDtls")]
-    #endif
     [IsoXmlTag("GblDstrbtnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GlobalDistributionRequest1 GlobalDistributionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GlobalDistributionRequest1 GlobalDistributionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GlobalDistributionRequest1 GlobalDistributionDetails { get; init; } 
-    #else
-    public GlobalDistributionRequest1 GlobalDistributionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

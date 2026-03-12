@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KRjfA01KEeGAs6v-iSb2RQ")]
 [DisplayName("Payment Instrument Type")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PaymentInstrumentType1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PaymentInstrumentType1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PaymentInstrumentType1( System.String reqCardNumber )
-    {
-        CardNumber = reqCardNumber;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,29 +23,15 @@ public partial record PaymentInstrumentType1
     /// </summary>
     [IsoId("_Mvp5PE1KEeGAs6v-iSb2RQ")]
     [DisplayName("Card Number")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CardNb")]
-    #endif
     [IsoXmlTag("CardNb")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMin8Max28NumericText CardNumber { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String CardNumber { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String CardNumber { get; init; } 
-    #else
-    public System.String CardNumber { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the authority request type as a code.
     /// </summary>
     [IsoId("_PgYUYU1KEeGAs6v-iSb2RQ")]
     [DisplayName("Authority Request Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AuthrtyReqTp")]
-    #endif
     [IsoXmlTag("AuthrtyReqTp")]
     public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = new ValueList<AuthorityRequestType1>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _PgYUYU1KEeGAs6v-iSb2RQ
@@ -78,19 +41,10 @@ public partial record PaymentInstrumentType1
     /// </summary>
     [IsoId("_pJiNaV0wEeGwFY7pvwHH-g")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax500Text? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalInformation { get; init; } 
-    #else
-    public System.String? AdditionalInformation { get; set; } 
-    #endif
     
     
     #nullable disable

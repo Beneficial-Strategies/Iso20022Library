@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"The DTCCCANOEligibleBalanceSD1 message extends ISO corporate action notification (Eligible Balance market practice) message with DTCC corporate action eligible balance elements not covered in the standard message.")]
 [IsoId("_q_pKdQ4zEeuIpNw_GxsBOw")]
 [DisplayName("DTCCCANO Eligible Balance SD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DTCCCANOEligibleBalanceSD1V10 : IOuterRecord
 {
     
@@ -61,11 +50,6 @@ public partial record DTCCCANOEligibleBalanceSD1V10 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -73,85 +57,40 @@ public partial record DTCCCANOEligibleBalanceSD1V10 : IOuterRecord
     /// </summary>
     [IsoId("_q_pKdw4zEeuIpNw_GxsBOw")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionGeneralInformationSD42? CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformationSD42? CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformationSD42? CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [IsoId("_q_pKeQ4zEeuIpNw_GxsBOw")]
     [DisplayName("Underlying Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygScty")]
-    #endif
     [IsoXmlTag("UndrlygScty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; init; } 
-    #else
-    public FinancialInstrumentAttributesSD21? UnderlyingSecurity { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to account balance for distribution events.
     /// </summary>
     [IsoId("_q_pKew4zEeuIpNw_GxsBOw")]
     [DisplayName("Distribution Account Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DstrbtnAcctBal")]
-    #endif
     [IsoXmlTag("DstrbtnAcctBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountBalanceSD10? DistributionAccountBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountBalanceSD10? DistributionAccountBalance { get; init; } 
-    #else
-    public AccountBalanceSD10? DistributionAccountBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to account balance for redemptions events.
     /// </summary>
     [IsoId("_q_pKfQ4zEeuIpNw_GxsBOw")]
     [DisplayName("Redemption Account Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RedAcctBal")]
-    #endif
     [IsoXmlTag("RedAcctBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountBalanceSD11? RedemptionAccountBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountBalanceSD11? RedemptionAccountBalance { get; init; } 
-    #else
-    public AccountBalanceSD11? RedemptionAccountBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Information to be extended as supplementary data to account balance for reorganisation events.
     /// </summary>
     [IsoId("_q_pKfw4zEeuIpNw_GxsBOw")]
     [DisplayName("Reorganisation Account Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReorgAcctBal")]
-    #endif
     [IsoXmlTag("ReorgAcctBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AccountBalanceSD12? ReorganisationAccountBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountBalanceSD12? ReorganisationAccountBalance { get; init; } 
-    #else
-    public AccountBalanceSD12? ReorganisationAccountBalance { get; set; } 
-    #endif
     
     
     #nullable disable

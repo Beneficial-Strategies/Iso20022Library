@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.fxtr;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.fxtr;
 [Description(@"Scope||The ForeignExchangeTradeInstructionAmendment message is sent by a participant to a central settlement system to notify the amendment of the foreign exchange trade previously confirmed by the sender.||Usage||The ForeignExchangeTradeInstructionAmendment message is sent from a participant to a central settlement system to advise of the update of a previously sent notification. The ""Related Reference"" must be used to link it to the previous notification.")]
 [IsoId("_oq61AZRyEeak6e8_Fc5fQg")]
 [DisplayName("Foreign Exchange Trade Instruction Amendment V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ForeignExchangeTradeInstructionAmendmentV04 : IOuterRecord
 {
     
@@ -64,22 +53,6 @@ public partial record ForeignExchangeTradeInstructionAmendmentV04 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ForeignExchangeTradeInstructionAmendmentV04 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ForeignExchangeTradeInstructionAmendmentV04( TradeAgreement15 reqTradeInformation,TradePartyIdentification6 reqTradingSideIdentification,TradePartyIdentification6 reqCounterpartySideIdentification,AmountsAndValueDate1 reqTradeAmounts,AgreedRate3 reqAgreedRate )
-    {
-        TradeInformation = reqTradeInformation;
-        TradingSideIdentification = reqTradingSideIdentification;
-        CounterpartySideIdentification = reqCounterpartySideIdentification;
-        TradeAmounts = reqTradeAmounts;
-        AgreedRate = reqAgreedRate;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,197 +60,88 @@ public partial record ForeignExchangeTradeInstructionAmendmentV04 : IOuterRecord
     /// </summary>
     [IsoId("_oq61A5RyEeak6e8_Fc5fQg")]
     [DisplayName("Trade Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradInf")]
-    #endif
     [IsoXmlTag("TradInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradeAgreement15 TradeInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradeAgreement15 TradeInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradeAgreement15 TradeInformation { get; init; } 
-    #else
-    public TradeAgreement15 TradeInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Party(ies) on the trading side of the trade.
     /// </summary>
     [IsoId("_oq61BZRyEeak6e8_Fc5fQg")]
     [DisplayName("Trading Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradgSdId")]
-    #endif
     [IsoXmlTag("TradgSdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradePartyIdentification6 TradingSideIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradePartyIdentification6 TradingSideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification6 TradingSideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification6 TradingSideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Party(ies) on the counterparty side of the trade.
     /// </summary>
     [IsoId("_oq61B5RyEeak6e8_Fc5fQg")]
     [DisplayName("Counterparty Side Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtySdId")]
-    #endif
     [IsoXmlTag("CtrPtySdId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TradePartyIdentification6 CounterpartySideIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TradePartyIdentification6 CounterpartySideIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TradePartyIdentification6 CounterpartySideIdentification { get; init; } 
-    #else
-    public TradePartyIdentification6 CounterpartySideIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Amounts of the trade.
     /// </summary>
     [IsoId("_orEmAZRyEeak6e8_Fc5fQg")]
     [DisplayName("Trade Amounts")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradAmts")]
-    #endif
     [IsoXmlTag("TradAmts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AmountsAndValueDate1 TradeAmounts { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AmountsAndValueDate1 TradeAmounts { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountsAndValueDate1 TradeAmounts { get; init; } 
-    #else
-    public AmountsAndValueDate1 TradeAmounts { get; set; } 
-    #endif
     
     /// <summary>
     /// Exchange rate as agreed by the traders.
     /// </summary>
     [IsoId("_orEmA5RyEeak6e8_Fc5fQg")]
     [DisplayName("Agreed Rate")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AgrdRate")]
-    #endif
     [IsoXmlTag("AgrdRate")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AgreedRate3 AgreedRate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AgreedRate3 AgreedRate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AgreedRate3 AgreedRate { get; init; } 
-    #else
-    public AgreedRate3 AgreedRate { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the conditions for a non deliverable opening or fixing confirmation.
     /// </summary>
     [IsoId("_FuobkZUSEea7vKctaoIyEQ")]
     [DisplayName("Non Deliverable Forward Conditions")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NDFConds")]
-    #endif
     [IsoXmlTag("NDFConds")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public NonDeliverableForwardConditions1? NonDeliverableForwardConditions { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NonDeliverableForwardConditions1? NonDeliverableForwardConditions { get; init; } 
-    #else
-    public NonDeliverableForwardConditions1? NonDeliverableForwardConditions { get; set; } 
-    #endif
     
     /// <summary>
     /// Settlement instructions for the amounts received by the trading side.
     /// </summary>
     [IsoId("_orEmBZRyEeak6e8_Fc5fQg")]
     [DisplayName("Trading Side Settlement Instructions")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradgSdSttlmInstrs")]
-    #endif
     [IsoXmlTag("TradgSdSttlmInstrs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementParties29? TradingSideSettlementInstructions { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementParties29? TradingSideSettlementInstructions { get; init; } 
-    #else
-    public SettlementParties29? TradingSideSettlementInstructions { get; set; } 
-    #endif
     
     /// <summary>
     /// Settlement instructions for the amounts received by the counterparty.
     /// </summary>
     [IsoId("_orEmB5RyEeak6e8_Fc5fQg")]
     [DisplayName("Counterparty Side Settlement Instructions")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtrPtySdSttlmInstrs")]
-    #endif
     [IsoXmlTag("CtrPtySdSttlmInstrs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementParties29? CounterpartySideSettlementInstructions { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementParties29? CounterpartySideSettlementInstructions { get; init; } 
-    #else
-    public SettlementParties29? CounterpartySideSettlementInstructions { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies whether the trade is a block or an individual trade. It also contains supplementary information such as free format information, broker&apos;s identification, dealing branches and references.
     /// </summary>
     [IsoId("_orEmCZRyEeak6e8_Fc5fQg")]
     [DisplayName("Optional General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OptnlGnlInf")]
-    #endif
     [IsoXmlTag("OptnlGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public GeneralInformation5? OptionalGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GeneralInformation5? OptionalGeneralInformation { get; init; } 
-    #else
-    public GeneralInformation5? OptionalGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Information that is to be provided to trade repositories in the context of the regulatory standards around over-the-counter (OTC) derivatives, central counterparties and trade repositories.
     /// </summary>
     [IsoId("_orEmC5RyEeak6e8_Fc5fQg")]
     [DisplayName("Regulatory Reporting")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RgltryRptg")]
-    #endif
     [IsoXmlTag("RgltryRptg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public RegulatoryReporting6? RegulatoryReporting { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RegulatoryReporting6? RegulatoryReporting { get; init; } 
-    #else
-    public RegulatoryReporting6? RegulatoryReporting { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_orEmDZRyEeak6e8_Fc5fQg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

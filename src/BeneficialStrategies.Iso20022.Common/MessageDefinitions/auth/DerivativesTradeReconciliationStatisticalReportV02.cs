@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The DerivativesTradeReportReconciliationStatisticalReport message is sent by the trade repositories to the reporting counterparty, to report cumulative information within the reference period for the reconciliation status of the reported and outstanding derivatives.")]
 [IsoId("_pVVviWmFEe2DRvVJM2Qy-g")]
 [DisplayName("Derivatives Trade Reconciliation Statistical Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DerivativesTradeReconciliationStatisticalReportV02 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record DerivativesTradeReconciliationStatisticalReportV02 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DerivativesTradeReconciliationStatisticalReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DerivativesTradeReconciliationStatisticalReportV02( StatisticsPerCounterparty15Choice_ reqReconciliationStatistics )
-    {
-        ReconciliationStatistics = reqReconciliationStatistics;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record DerivativesTradeReconciliationStatisticalReportV02 : IOute
     /// </summary>
     [IsoId("_pVVvi2mFEe2DRvVJM2Qy-g")]
     [DisplayName("Reconciliation Statistics")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RcncltnSttstcs")]
-    #endif
     [IsoXmlTag("RcncltnSttstcs")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StatisticsPerCounterparty15Choice_ ReconciliationStatistics { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StatisticsPerCounterparty15Choice_ ReconciliationStatistics { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatisticsPerCounterparty15Choice_ ReconciliationStatistics { get; init; } 
-    #else
-    public StatisticsPerCounterparty15Choice_ ReconciliationStatistics { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_pVVvjWmFEe2DRvVJM2Qy-g")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

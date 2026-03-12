@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Jj8y8cg1EeuGrNSsxk3B0A")]
 [DisplayName("Counterparty Data")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CounterpartyData87
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CounterpartyData87 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CounterpartyData87( OrganisationIdentification15Choice_ reqReportSubmittingEntity,OrganisationIdentification15Choice_ reqReportingCounterparty )
-    {
-        ReportSubmittingEntity = reqReportSubmittingEntity;
-        ReportingCounterparty = reqReportingCounterparty;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,55 +23,24 @@ public partial record CounterpartyData87
     /// </summary>
     [IsoId("_Jlttgcg1EeuGrNSsxk3B0A")]
     [DisplayName("Report Submitting Entity")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptSubmitgNtty")]
-    #endif
     [IsoXmlTag("RptSubmitgNtty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OrganisationIdentification15Choice_ ReportSubmittingEntity { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OrganisationIdentification15Choice_ ReportSubmittingEntity { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrganisationIdentification15Choice_ ReportSubmittingEntity { get; init; } 
-    #else
-    public OrganisationIdentification15Choice_ ReportSubmittingEntity { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique code identifying the reporting counterparty.
     /// </summary>
     [IsoId("_Jlttg8g1EeuGrNSsxk3B0A")]
     [DisplayName("Reporting Counterparty")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptgCtrPty")]
-    #endif
     [IsoXmlTag("RptgCtrPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OrganisationIdentification15Choice_ ReportingCounterparty { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OrganisationIdentification15Choice_ ReportingCounterparty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrganisationIdentification15Choice_ ReportingCounterparty { get; init; } 
-    #else
-    public OrganisationIdentification15Choice_ ReportingCounterparty { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique code identifying the entity in the case where a financial counterparty is responsible for reporting on behalf of the other counterparty, the unique code identifying that counterparty.
     /// </summary>
     [IsoId("_Jltthcg1EeuGrNSsxk3B0A")]
     [DisplayName("Entity Responsible For Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NttyRspnsblForRpt")]
-    #endif
     [IsoXmlTag("NttyRspnsblForRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OrganisationIdentification15Choice_? EntityResponsibleForReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrganisationIdentification15Choice_? EntityResponsibleForReport { get; init; } 
-    #else
-    public OrganisationIdentification15Choice_? EntityResponsibleForReport { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mtxTt-mvEemUgrefIx730g")]
 [DisplayName("Other Parties")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record OtherParties39
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,51 +23,24 @@ public partial record OtherParties39
     /// </summary>
     [IsoId("_nbcSBemvEemUgrefIx730g")]
     [DisplayName("Investor")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Invstr")]
-    #endif
     [IsoXmlTag("Invstr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification149? Investor { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification149? Investor { get; init; } 
-    #else
-    public PartyIdentification149? Investor { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the stock exchange to which transaction reporting will be done.
     /// </summary>
     [IsoId("_nbcSDemvEemUgrefIx730g")]
     [DisplayName("Stock Exchange")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StockXchg")]
-    #endif
     [IsoXmlTag("StockXchg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification136? StockExchange { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification136? StockExchange { get; init; } 
-    #else
-    public PartyIdentification136? StockExchange { get; set; } 
-    #endif
     
     /// <summary>
     /// Institution to which a trade must be reported.
     /// </summary>
     [IsoId("_nbcSFemvEemUgrefIx730g")]
     [DisplayName("Trade Regulator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TradRgltr")]
-    #endif
     [IsoXmlTag("TradRgltr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification136? TradeRegulator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification136? TradeRegulator { get; init; } 
-    #else
-    public PartyIdentification136? TradeRegulator { get; set; } 
-    #endif
     
     
     #nullable disable

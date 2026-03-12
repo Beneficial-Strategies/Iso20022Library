@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCurrencyConversionResponse message is sent by currency conversion service provider to the card acceptor to return the result of a potential currency conversion for the cardholder.|")]
 [IsoId("_b-b8QU4DEey_VecAUE-C9Q")]
 [DisplayName("Acceptor Currency Conversion Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCurrencyConversionResponseV09 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record AcceptorCurrencyConversionResponseV09 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCurrencyConversionResponseV09 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCurrencyConversionResponseV09( Header59 reqHeader,AcceptorCurrencyConversionResponse9 reqCurrencyConversionResponse )
-    {
-        Header = reqHeader;
-        CurrencyConversionResponse = reqCurrencyConversionResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,55 +58,24 @@ public partial record AcceptorCurrencyConversionResponseV09 : IOuterRecord
     /// </summary>
     [IsoId("_b-b8RU4DEey_VecAUE-C9Q")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header59 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header59 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header59 Header { get; init; } 
-    #else
-    public Header59 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the outcome of the currency conversion.
     /// </summary>
     [IsoId("_b-b8R04DEey_VecAUE-C9Q")]
     [DisplayName("Currency Conversion Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CcyConvsRspn")]
-    #endif
     [IsoXmlTag("CcyConvsRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCurrencyConversionResponse9 CurrencyConversionResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCurrencyConversionResponse9 CurrencyConversionResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCurrencyConversionResponse9 CurrencyConversionResponse { get; init; } 
-    #else
-    public AcceptorCurrencyConversionResponse9 CurrencyConversionResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC (message authentication code).
     /// </summary>
     [IsoId("_b-b8SU4DEey_VecAUE-C9Q")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType31? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType31? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType31? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

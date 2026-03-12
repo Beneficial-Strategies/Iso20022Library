@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9MFBtSPvEeWQjryFgN2ITg")]
 [DisplayName("ISA Transfer")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ISATransfer25
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,28 +23,16 @@ public partial record ISATransfer25
     /// </summary>
     [IsoId("_9pFtsyPvEeWQjryFgN2ITg")]
     [DisplayName("Cancellation Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlRef")]
-    #endif
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? CancellationReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? CancellationReference { get; init; } 
-    #else
-    public System.String? CancellationReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information related to the asset(s) transferred.
     /// </summary>
     [IsoId("_9pFttSPvEeWQjryFgN2ITg")]
     [DisplayName("Product Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PdctTrf")]
-    #endif
     [IsoXmlTag("PdctTrf")]
     public ValueList<ISATransfer22> ProductTransfer { get; init; } = new ValueList<ISATransfer22>(){}; // Warning: Don't know multiplicity.
     // ID for the above is _9pFttSPvEeWQjryFgN2ITg

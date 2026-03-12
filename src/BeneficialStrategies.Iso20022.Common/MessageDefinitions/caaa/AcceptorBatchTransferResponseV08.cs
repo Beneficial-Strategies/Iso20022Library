@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorBatchTransferResponse is sent by the acquirer (or its agent) to inform the acceptor (or its agent) of the transfer in a previous AcceptorBatchTransfer of a collection of transactions.")]
 [IsoId("_s260IQuZEeqYM5yH99IYQw")]
 [DisplayName("Acceptor Batch Transfer Response V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorBatchTransferResponseV08 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record AcceptorBatchTransferResponseV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorBatchTransferResponseV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorBatchTransferResponseV08( Header56 reqHeader,CardPaymentBatchTransferResponse7 reqBatchTransferResponse )
-    {
-        Header = reqHeader;
-        BatchTransferResponse = reqBatchTransferResponse;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record AcceptorBatchTransferResponseV08 : IOuterRecord
     /// </summary>
     [IsoId("_s260JQuZEeqYM5yH99IYQw")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header56 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header56 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header56 Header { get; init; } 
-    #else
-    public Header56 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the previously sent set of transaction.
     /// </summary>
     [IsoId("_s260JwuZEeqYM5yH99IYQw")]
     [DisplayName("Batch Transfer Response")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BtchTrfRspn")]
-    #endif
     [IsoXmlTag("BtchTrfRspn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentBatchTransferResponse7 BatchTransferResponse { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentBatchTransferResponse7 BatchTransferResponse { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentBatchTransferResponse7 BatchTransferResponse { get; init; } 
-    #else
-    public CardPaymentBatchTransferResponse7 BatchTransferResponse { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_s260KQuZEeqYM5yH99IYQw")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType24? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType24? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType24? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

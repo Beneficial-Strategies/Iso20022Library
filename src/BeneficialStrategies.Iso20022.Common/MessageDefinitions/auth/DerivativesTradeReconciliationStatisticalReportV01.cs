@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The DerivativesTradeReportReconciliationStatisticalReport message is sent by the trade repositories to the supervisory authority system, to report cumulative information within the reference period for the reconciliation status of the reported and outstanding derivatives.")]
 [IsoId("_wdKwNxWsEeqvRcdYcNYAVw")]
 [DisplayName("Derivatives Trade Reconciliation Statistical Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record DerivativesTradeReconciliationStatisticalReportV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record DerivativesTradeReconciliationStatisticalReportV01 : IOute
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a DerivativesTradeReconciliationStatisticalReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public DerivativesTradeReconciliationStatisticalReportV01( StatisticsPerCounterparty1Choice_ reqStatisticsPerCounterparty )
-    {
-        StatisticsPerCounterparty = reqStatisticsPerCounterparty;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record DerivativesTradeReconciliationStatisticalReportV01 : IOute
     /// </summary>
     [IsoId("_wdKwORWsEeqvRcdYcNYAVw")]
     [DisplayName("Statistics Per Counterparty")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttstcsPerCtrPty")]
-    #endif
     [IsoXmlTag("SttstcsPerCtrPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required StatisticsPerCounterparty1Choice_ StatisticsPerCounterparty { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required StatisticsPerCounterparty1Choice_ StatisticsPerCounterparty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StatisticsPerCounterparty1Choice_ StatisticsPerCounterparty { get; init; } 
-    #else
-    public StatisticsPerCounterparty1Choice_ StatisticsPerCounterparty { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_wdKwOxWsEeqvRcdYcNYAVw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

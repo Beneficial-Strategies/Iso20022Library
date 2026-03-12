@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sotsttp-Ed-ak6NoX_4Aeg_975131994")]
 [DisplayName("Original And Current Quantities")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record OriginalAndCurrentQuantities1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a OriginalAndCurrentQuantities1 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public OriginalAndCurrentQuantities1( ImpliedCurrencyAndAmount reqFaceAmount,ImpliedCurrencyAndAmount reqAmortisedValue )
-    {
-        FaceAmount = reqFaceAmount;
-        AmortisedValue = reqAmortisedValue;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,38 +23,16 @@ public partial record OriginalAndCurrentQuantities1
     /// </summary>
     [IsoId("_Sotst9p-Ed-ak6NoX_4Aeg_1262349956")]
     [DisplayName("Face Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FaceAmt")]
-    #endif
     [IsoXmlTag("FaceAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ImpliedCurrencyAndAmount FaceAmount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ImpliedCurrencyAndAmount FaceAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ImpliedCurrencyAndAmount FaceAmount { get; init; } 
-    #else
-    public ImpliedCurrencyAndAmount FaceAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Quantity expressed as an amount representing the current amortised face amount of a bond, for example, a periodic reduction/increase of a bond&apos;s principal amount.
     /// </summary>
     [IsoId("_So3dsNp-Ed-ak6NoX_4Aeg_1277126235")]
     [DisplayName("Amortised Value")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AmtsdVal")]
-    #endif
     [IsoXmlTag("AmtsdVal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ImpliedCurrencyAndAmount AmortisedValue { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ImpliedCurrencyAndAmount AmortisedValue { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ImpliedCurrencyAndAmount AmortisedValue { get; init; } 
-    #else
-    public ImpliedCurrencyAndAmount AmortisedValue { get; set; } 
-    #endif
     
     
     #nullable disable

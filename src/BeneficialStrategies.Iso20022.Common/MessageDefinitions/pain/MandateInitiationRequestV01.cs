@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.pain;
 [Description(@"Scope|The MandateInitiationRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateInitiationRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|The MandateInitiationRequest message is used to set-up the instruction that allows the debtor agent to accept instructions from the creditor, through the creditor agent, to debit the account of the debtor.|Usage|The MandateInitiationRequest message can contain only one request to set-up one specific mandate.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateInitiationRequest message can be used in domestic and cross-border scenarios.")]
 [IsoId("_GYN9SdEvEd-BzquC8wXy7w_93398652")]
 [DisplayName("Mandate Initiation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MandateInitiationRequestV01 : IOuterRecord
 {
     
@@ -69,19 +58,6 @@ public partial record MandateInitiationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MandateInitiationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MandateInitiationRequestV01( GroupHeader31 reqGroupHeader,MandateInformation2 reqMandate )
-    {
-        GroupHeader = reqGroupHeader;
-        Mandate = reqMandate;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,38 +65,16 @@ public partial record MandateInitiationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_GYN9StEvEd-BzquC8wXy7w_508184194")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader31 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader31 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader31 GroupHeader { get; init; } 
-    #else
-    public GroupHeader31 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements used to provide the details of the mandate signed between the (ultimate) creditor and the (ultimate) debtor.
     /// </summary>
     [IsoId("_GYN9S9EvEd-BzquC8wXy7w_77760662")]
     [DisplayName("Mandate")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Mndt")]
-    #endif
     [IsoXmlTag("Mndt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MandateInformation2 Mandate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MandateInformation2 Mandate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MandateInformation2 Mandate { get; init; } 
-    #else
-    public MandateInformation2 Mandate { get; set; } 
-    #endif
     
     
     #nullable disable

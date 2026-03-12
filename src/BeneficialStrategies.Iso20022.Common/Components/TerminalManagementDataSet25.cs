@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IZmiEdqNEeearpaEPXv9UA")]
 [DisplayName("Terminal Management Data Set")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TerminalManagementDataSet25
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TerminalManagementDataSet25 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TerminalManagementDataSet25( DataSetIdentification7 reqIdentification )
-    {
-        Identification = reqIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,107 +23,51 @@ public partial record TerminalManagementDataSet25
     /// </summary>
     [IsoId("_IixFIdqNEeearpaEPXv9UA")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DataSetIdentification7 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DataSetIdentification7 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DataSetIdentification7 Identification { get; init; } 
-    #else
-    public DataSetIdentification7 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Point of interaction challenge for cryptographic key injection.
     /// </summary>
     [IsoId("_IixFI9qNEeearpaEPXv9UA")]
     [DisplayName("POI Challenge")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="POIChllng")]
-    #endif
     [IsoXmlTag("POIChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Binary? POIChallenge { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? POIChallenge { get; init; } 
-    #else
-    public System.Byte[]? POIChallenge { get; set; } 
-    #endif
     
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.
     /// </summary>
     [IsoId("_IixFJdqNEeearpaEPXv9UA")]
     [DisplayName("TM Challenge")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TMChllng")]
-    #endif
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax140Binary? TMChallenge { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? TMChallenge { get; init; } 
-    #else
-    public System.Byte[]? TMChallenge { get; set; } 
-    #endif
     
     /// <summary>
     /// Temporary encryption key that the host will use for protecting keys to download.
     /// </summary>
     [IsoId("_IixFJ9qNEeearpaEPXv9UA")]
     [DisplayName("Session Key")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SsnKey")]
-    #endif
     [IsoXmlTag("SsnKey")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CryptographicKey13? SessionKey { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CryptographicKey13? SessionKey { get; init; } 
-    #else
-    public CryptographicKey13? SessionKey { get; set; } 
-    #endif
     
     /// <summary>
     /// Proof of delegation to be validated by the terminal manager receiving a status report from a new POI.
     /// </summary>
     [IsoId("_IixFKdqNEeearpaEPXv9UA")]
     [DisplayName("Delegation Proof")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DlgtnProof")]
-    #endif
     [IsoXmlTag("DlgtnProof")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax5000Binary? DelegationProof { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? DelegationProof { get; init; } 
-    #else
-    public System.Byte[]? DelegationProof { get; set; } 
-    #endif
     
     /// <summary>
     /// Protected proof of delegation.
     /// </summary>
     [IsoId("_IixFK9qNEeearpaEPXv9UA")]
     [DisplayName("Protected Delegation Proof")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdDlgtnProof")]
-    #endif
     [IsoXmlTag("PrtctdDlgtnProof")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType19? ProtectedDelegationProof { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType19? ProtectedDelegationProof { get; init; } 
-    #else
-    public ContentInformationType19? ProtectedDelegationProof { get; set; } 
-    #endif
     
     
     #nullable disable

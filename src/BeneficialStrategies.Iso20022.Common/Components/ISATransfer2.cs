@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,30 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RHwDUfpfEeCLMa5EIHtDrg")]
 [DisplayName("ISA Transfer")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ISATransfer2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ISATransfer2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ISATransfer2( System.String reqTransferConfirmationIdentification,System.String reqTransferInstructionReference,System.DateOnly reqActualTransferDate,ISAPortfolio2Choice_ reqPortfolio,System.String reqAllOtherCash )
-    {
-        TransferConfirmationIdentification = reqTransferConfirmationIdentification;
-        TransferInstructionReference = reqTransferInstructionReference;
-        ActualTransferDate = reqActualTransferDate;
-        Portfolio = reqPortfolio;
-        AllOtherCash = reqAllOtherCash;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -50,154 +23,72 @@ public partial record ISATransfer2
     /// </summary>
     [IsoId("_RHwDX_pfEeCLMa5EIHtDrg")]
     [DisplayName("Master Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MstrRef")]
-    #endif
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MasterReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MasterReference { get; init; } 
-    #else
-    public System.String? MasterReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the confirmation assigned by the old plan manager to the transfer of account.
     /// </summary>
     [IsoId("_RHwDY_pfEeCLMa5EIHtDrg")]
     [DisplayName("Transfer Confirmation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfConfId")]
-    #endif
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransferConfirmationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransferConfirmationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransferConfirmationIdentification { get; init; } 
-    #else
-    public System.String TransferConfirmationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification received by the old plan manager and assigned by the new plan manager to the transfer of account.
     /// </summary>
     [IsoId("_RHwDZ_pfEeCLMa5EIHtDrg")]
     [DisplayName("Transfer Instruction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrfInstrRef")]
-    #endif
     [IsoXmlTag("TrfInstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransferInstructionReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransferInstructionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransferInstructionReference { get; init; } 
-    #else
-    public System.String TransferInstructionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Date when the transfer instruction was executed.
     /// </summary>
     [IsoId("_RHwDa_pfEeCLMa5EIHtDrg")]
     [DisplayName("Actual Transfer Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ActlTrfDt")]
-    #endif
     [IsoXmlTag("ActlTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoISODate ActualTransferDate { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.DateOnly ActualTransferDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateOnly ActualTransferDate { get; init; } 
-    #else
-    public System.DateOnly ActualTransferDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether there is cash in the account that is awaiting investment.
     /// </summary>
     [IsoId("_RHwDb_pfEeCLMa5EIHtDrg")]
     [DisplayName("Residual Cash")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RsdlCsh")]
-    #endif
     [IsoXmlTag("RsdlCsh")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ResidualCash1Code? ResidualCash { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ResidualCash1Code? ResidualCash { get; init; } 
-    #else
-    public ResidualCash1Code? ResidualCash { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies portfolio information or government schemes, for example Individual Savings Account (ISA) in the UK.
     /// </summary>
     [IsoId("_RHwDe_pfEeCLMa5EIHtDrg")]
     [DisplayName("Portfolio")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Prtfl")]
-    #endif
     [IsoXmlTag("Prtfl")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ISAPortfolio2Choice_ Portfolio { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ISAPortfolio2Choice_ Portfolio { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ISAPortfolio2Choice_ Portfolio { get; init; } 
-    #else
-    public ISAPortfolio2Choice_ Portfolio { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicator that all remaining assets in a portfolio not listed for transfer should be liquidated and transferred as cash.
     /// </summary>
     [IsoId("_yXrK0PsuEeCti6iVes2Qiw")]
     [DisplayName("All Other Cash")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AllOthrCsh")]
-    #endif
     [IsoXmlTag("AllOthrCsh")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoYesNoIndicator AllOtherCash { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String AllOtherCash { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String AllOtherCash { get; init; } 
-    #else
-    public System.String AllOtherCash { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies the underlying assets for the ISA or portfolio.
     /// </summary>
     [IsoId("_RHwDf_pfEeCLMa5EIHtDrg")]
     [DisplayName("Financial Instrument Asset For Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmAsstForTrf")]
-    #endif
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FinancialInstrument24? FinancialInstrumentAssetForTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialInstrument24? FinancialInstrumentAssetForTransfer { get; init; } 
-    #else
-    public FinancialInstrument24? FinancialInstrumentAssetForTransfer { get; set; } 
-    #endif
     
     
     #nullable disable

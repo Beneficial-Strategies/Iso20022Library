@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.catm;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.catm;
 [Description(@"Scope|The AcceptorConfigurationUpdate message is sent by the master terminal manager or delegated terminal manager to the acceptor system for the update of acquirer parameters, merchant parameters, vendor parameters or cryptographic keys of the acquirer.|Usage|The AcceptorConfigurationUpdate message may embed the information required by the acceptor system for the configuration of:|- the application parameters necessary for software applications processed by the POI system,|- the acquirer protocol parameters for the message content and message exchange behaviour of the acquirer protocol supported by the POI system,|- the host communication parameters to define the addresses of the connected acquirer hosts, and|- the merchant parameters needed for the retailer protocol settings of the POI system.")]
 [IsoId("_AgFfYOQXEeCGktPI9k4Dlw_1733626146")]
 [DisplayName("Acceptor Configuration Update V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorConfigurationUpdateV01 : IOuterRecord
 {
     
@@ -68,20 +57,6 @@ public partial record AcceptorConfigurationUpdateV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorConfigurationUpdateV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorConfigurationUpdateV01( Header4 reqHeader,AcceptorConfiguration1 reqAcceptorConfiguration,ContentInformationType1 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        AcceptorConfiguration = reqAcceptorConfiguration;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,57 +64,24 @@ public partial record AcceptorConfigurationUpdateV01 : IOuterRecord
     /// </summary>
     [IsoId("_AgFfYeQXEeCGktPI9k4Dlw_-1237434314")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header4 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header4 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header4 Header { get; init; } 
-    #else
-    public Header4 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Acceptor configuration to be downloaded from the terminal management system.
     /// </summary>
     [IsoId("_AgFfYuQXEeCGktPI9k4Dlw_950623241")]
     [DisplayName("Acceptor Configuration")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AccptrCfgtn")]
-    #endif
     [IsoXmlTag("AccptrCfgtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorConfiguration1 AcceptorConfiguration { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorConfiguration1 AcceptorConfiguration { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorConfiguration1 AcceptorConfiguration { get; init; } 
-    #else
-    public AcceptorConfiguration1 AcceptorConfiguration { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_AgFfY-QXEeCGktPI9k4Dlw_543485283")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType1 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType1 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType1 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType1 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

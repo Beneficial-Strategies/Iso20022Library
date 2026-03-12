@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -28,12 +23,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorCurrencyConversionRequest message is sent by the card acceptor to the currency conversion service provider to request if the cardholder is able to pay in the currency of its card.|")]
 [IsoId("_GiBpQds5Eee9e6xduATmQg")]
 [DisplayName("Acceptor Currency Conversion Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorCurrencyConversionRequestV05 : IOuterRecord
 {
     
@@ -62,19 +51,6 @@ public partial record AcceptorCurrencyConversionRequestV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorCurrencyConversionRequestV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorCurrencyConversionRequestV05( Header35 reqHeader,AcceptorCurrencyConversionRequest5 reqCurrencyConversionRequest )
-    {
-        Header = reqHeader;
-        CurrencyConversionRequest = reqCurrencyConversionRequest;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,55 +58,24 @@ public partial record AcceptorCurrencyConversionRequestV05 : IOuterRecord
     /// </summary>
     [IsoId("_GiBpRds5Eee9e6xduATmQg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header35 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header35 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header35 Header { get; init; } 
-    #else
-    public Header35 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the currency conversion request.
     /// </summary>
     [IsoId("_GiBpR9s5Eee9e6xduATmQg")]
     [DisplayName("Currency Conversion Request")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CcyConvsReq")]
-    #endif
     [IsoXmlTag("CcyConvsReq")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AcceptorCurrencyConversionRequest5 CurrencyConversionRequest { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AcceptorCurrencyConversionRequest5 CurrencyConversionRequest { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AcceptorCurrencyConversionRequest5 CurrencyConversionRequest { get; init; } 
-    #else
-    public AcceptorCurrencyConversionRequest5 CurrencyConversionRequest { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_GiBpSds5Eee9e6xduATmQg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType16? SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType16? SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType16? SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

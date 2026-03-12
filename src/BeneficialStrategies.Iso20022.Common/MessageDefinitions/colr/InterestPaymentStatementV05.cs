@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.colr;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.colr;
 [Description(@"Scope|The InterestPaymentStatement message is sent by either the collateral giver or its collateral manager to the collateral taker or its collateral manager. It is used to report the interest amounts calculated based on the effective posted collateral amount, over a specific period of time agreed by both parties.||The message definition is intended for use with the ISO20022 Business Application Header.||Usage|The InterestPaymentStatement message is used for reporting the interest per period on collateral held.")]
 [IsoId("_J4Yk4SgrEeyB747fKu7_rw")]
 [DisplayName("Interest Payment Statement V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InterestPaymentStatementV05 : IOuterRecord
 {
     
@@ -67,21 +56,6 @@ public partial record InterestPaymentStatementV05 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a InterestPaymentStatementV05 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public InterestPaymentStatementV05( System.String reqTransactionIdentification,Obligation9 reqObligation,Statement85 reqStatementParameters,InterestStatement5 reqInterestStatement )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        Obligation = reqObligation;
-        StatementParameters = reqStatementParameters;
-        InterestStatement = reqInterestStatement;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,129 +63,58 @@ public partial record InterestPaymentStatementV05 : IOuterRecord
     /// </summary>
     [IsoId("_J4Yk6SgrEeyB747fKu7_rw")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String TransactionIdentification { get; init; } 
-    #else
-    public System.String TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Agreement details for the over the counter market.
     /// </summary>
     [IsoId("_J4Yk6ygrEeyB747fKu7_rw")]
     [DisplayName("Agreement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Agrmt")]
-    #endif
     [IsoXmlTag("Agrmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Agreement4? Agreement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Agreement4? Agreement { get; init; } 
-    #else
-    public Agreement4? Agreement { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information like the identification of the party or parties associated with the collateral agreement, the exposure type and the valuation date.
     /// </summary>
     [IsoId("_J4Yk7SgrEeyB747fKu7_rw")]
     [DisplayName("Obligation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Oblgtn")]
-    #endif
     [IsoXmlTag("Oblgtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Obligation9 Obligation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Obligation9 Obligation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Obligation9 Obligation { get; init; } 
-    #else
-    public Obligation9 Obligation { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides general information on the report such as the statement identification.
     /// </summary>
     [IsoId("_J4Yk7ygrEeyB747fKu7_rw")]
     [DisplayName("Statement Parameters")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmtParams")]
-    #endif
     [IsoXmlTag("StmtParams")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Statement85 StatementParameters { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Statement85 StatementParameters { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Statement85 StatementParameters { get; init; } 
-    #else
-    public Statement85 StatementParameters { get; set; } 
-    #endif
     
     /// <summary>
     /// Page number of the message (within a statement) and continuation indicator to indicate that the statement is to continue or that the message is the last page of the statement.
     /// </summary>
     [IsoId("_J4Yk8SgrEeyB747fKu7_rw")]
     [DisplayName("Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Pgntn")]
-    #endif
     [IsoXmlTag("Pgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Pagination1? Pagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination1? Pagination { get; init; } 
-    #else
-    public Pagination1? Pagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the interest statement.
     /// </summary>
     [IsoId("_J4Yk8ygrEeyB747fKu7_rw")]
     [DisplayName("Interest Statement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IntrstStmt")]
-    #endif
     [IsoXmlTag("IntrstStmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required InterestStatement5 InterestStatement { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required InterestStatement5 InterestStatement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public InterestStatement5 InterestStatement { get; init; } 
-    #else
-    public InterestStatement5 InterestStatement { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_J4Yk9SgrEeyB747fKu7_rw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

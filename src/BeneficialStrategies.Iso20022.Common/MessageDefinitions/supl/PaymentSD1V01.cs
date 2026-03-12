@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.supl;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.supl;
 [Description(@"Supplementary data for payment message definitions.")]
 [IsoId("_ZAIu0PwLEeGHDMP28rpT3g_-1117810318")]
 [DisplayName("Payment SD 1 V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PaymentSD1V01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record PaymentSD1V01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PaymentSD1V01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PaymentSD1V01( TransactionData1 reqCardRemittanceInformation )
-    {
-        CardRemittanceInformation = reqCardRemittanceInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,19 +57,8 @@ public partial record PaymentSD1V01 : IOuterRecord
     /// </summary>
     [IsoId("_ZAIu0fwLEeGHDMP28rpT3g_-1719162242")]
     [DisplayName("Card Remittance Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CardRmtInf")]
-    #endif
     [IsoXmlTag("CardRmtInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactionData1 CardRemittanceInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactionData1 CardRemittanceInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionData1 CardRemittanceInformation { get; init; } 
-    #else
-    public TransactionData1 CardRemittanceInformation { get; set; } 
-    #endif
     
     
     #nullable disable

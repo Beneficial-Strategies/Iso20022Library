@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yqs64fsnEeCFH_HrG1Cfjg")]
 [DisplayName("Receive Information")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ReceiveInformation8
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ReceiveInformation8 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ReceiveInformation8( ReceivingPartiesAndAccount8 reqSettlementPartiesDetails )
-    {
-        SettlementPartiesDetails = reqSettlementPartiesDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,172 +23,80 @@ public partial record ReceiveInformation8
     /// </summary>
     [IsoId("_Yqs68_snEeCFH_HrG1Cfjg")]
     [DisplayName("Effective Settlement Date")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FctvSttlmDt")]
-    #endif
     [IsoXmlTag("FctvSttlmDt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DateAndDateTimeChoice_? EffectiveSettlementDate { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DateAndDateTimeChoice_? EffectiveSettlementDate { get; init; } 
-    #else
-    public DateAndDateTimeChoice_? EffectiveSettlementDate { get; set; } 
-    #endif
     
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
     /// </summary>
     [IsoId("_Yqs69_snEeCFH_HrG1Cfjg")]
     [DisplayName("Settlement Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmAmt")]
-    #endif
     [IsoXmlTag("SttlmAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? SettlementAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? SettlementAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? SettlementAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the settlement amount includes the stamp duty amount.
     /// </summary>
     [IsoId("_Yqs6-_snEeCFH_HrG1Cfjg")]
     [DisplayName("Stamp Duty")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StmpDty")]
-    #endif
     [IsoXmlTag("StmpDty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public StampDutyType2Code? StampDuty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public StampDutyType2Code? StampDuty { get; init; } 
-    #else
-    public StampDutyType2Code? StampDuty { get; set; } 
-    #endif
     
     /// <summary>
     /// Deal amount.
     /// </summary>
     [IsoId("_Yqs6__snEeCFH_HrG1Cfjg")]
     [DisplayName("Net Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NetAmt")]
-    #endif
     [IsoXmlTag("NetAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ActiveCurrencyAndAmount? NetAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ActiveCurrencyAndAmount? NetAmount { get; init; } 
-    #else
-    public ActiveCurrencyAndAmount? NetAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Charge related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_Yqs7A_snEeCFH_HrG1Cfjg")]
     [DisplayName("Charge Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ChrgDtls")]
-    #endif
     [IsoXmlTag("ChrgDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Charge20? ChargeDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Charge20? ChargeDetails { get; init; } 
-    #else
-    public Charge20? ChargeDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Commission related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_Yqs7B_snEeCFH_HrG1Cfjg")]
     [DisplayName("Commission Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ComssnDtls")]
-    #endif
     [IsoXmlTag("ComssnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Commission12? CommissionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Commission12? CommissionDetails { get; init; } 
-    #else
-    public Commission12? CommissionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_Yqs7C_snEeCFH_HrG1Cfjg")]
     [DisplayName("Tax Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TaxDtls")]
-    #endif
     [IsoXmlTag("TaxDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Tax15? TaxDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Tax15? TaxDetails { get; init; } 
-    #else
-    public Tax15? TaxDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.
     /// </summary>
     [IsoId("_Yqs7D_snEeCFH_HrG1Cfjg")]
     [DisplayName("Settlement Parties Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmPtiesDtls")]
-    #endif
     [IsoXmlTag("SttlmPtiesDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ReceivingPartiesAndAccount8 SettlementPartiesDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ReceivingPartiesAndAccount8 SettlementPartiesDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ReceivingPartiesAndAccount8 SettlementPartiesDetails { get; init; } 
-    #else
-    public ReceivingPartiesAndAccount8 SettlementPartiesDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Indicates whether the financial instrument is to be physically delivered.
     /// </summary>
     [IsoId("_Yqs7E_snEeCFH_HrG1Cfjg")]
     [DisplayName("Physical Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PhysTrf")]
-    #endif
     [IsoXmlTag("PhysTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PhysicalTransferType1Code? PhysicalTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PhysicalTransferType1Code? PhysicalTransfer { get; init; } 
-    #else
-    public PhysicalTransferType1Code? PhysicalTransfer { get; set; } 
-    #endif
     
     /// <summary>
     /// Parameters of a physical delivery.
     /// </summary>
     [IsoId("_Yqs7F_snEeCFH_HrG1Cfjg")]
     [DisplayName("Physical Transfer Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PhysTrfDtls")]
-    #endif
     [IsoXmlTag("PhysTrfDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DeliveryParameters4? PhysicalTransferDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DeliveryParameters4? PhysicalTransferDetails { get; init; } 
-    #else
-    public DeliveryParameters4? PhysicalTransferDetails { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|This message is sent by a CSD to the issuer (or its agent) to provide the issuer (or its agent) with the CSD's client details for the distribution of the proceeds of a corporate action event:|- Gross or net payments.|- Delivery details for securities that have to be delivered outside of the CSD.|- Delivery details for cash amounts that have to be delivered outside of the CSD.|Usage|This message is used to request the issuer (or its agent) to put a standing instruction in place for proceeds.|The amendment of a standing instruction is done through a cancel-and-replace mechanism. First a standing instruction cancellation request is sent followed by a new standing instruction request.")]
 [IsoId("_TR6-KdEwEd-BzquC8wXy7w_1831735017")]
 [DisplayName("Agent CA Standing Instruction Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AgentCAStandingInstructionRequestV01 : IOuterRecord
 {
     
@@ -68,20 +57,6 @@ public partial record AgentCAStandingInstructionRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AgentCAStandingInstructionRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AgentCAStandingInstructionRequestV01( DocumentIdentification8 reqIdentification,CorporateActionStandingInstructionGeneralInformation1 reqStandingInstructionGeneralInformation,CorporateActionStandingInstruction1 reqStandingInstructionDetails )
-    {
-        Identification = reqIdentification;
-        StandingInstructionGeneralInformation = reqStandingInstructionGeneralInformation;
-        StandingInstructionDetails = reqStandingInstructionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,74 +64,32 @@ public partial record AgentCAStandingInstructionRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_TR6-KtEwEd-BzquC8wXy7w_-325890589")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 Identification { get; init; } 
-    #else
-    public DocumentIdentification8 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the standing instruction.
     /// </summary>
     [IsoId("_TR6-K9EwEd-BzquC8wXy7w_199276822")]
     [DisplayName("Standing Instruction General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StgInstrGnlInf")]
-    #endif
     [IsoXmlTag("StgInstrGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionStandingInstructionGeneralInformation1 StandingInstructionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionStandingInstructionGeneralInformation1 StandingInstructionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionStandingInstructionGeneralInformation1 StandingInstructionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionStandingInstructionGeneralInformation1 StandingInstructionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides detailed information about the standing instruction.
     /// </summary>
     [IsoId("_TR6-LNEwEd-BzquC8wXy7w_1084668578")]
     [DisplayName("Standing Instruction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StgInstrDtls")]
-    #endif
     [IsoXmlTag("StgInstrDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionStandingInstruction1 StandingInstructionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionStandingInstruction1 StandingInstructionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionStandingInstruction1 StandingInstructionDetails { get; init; } 
-    #else
-    public CorporateActionStandingInstruction1 StandingInstructionDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Contact responsible for the transaction identified in the message.
     /// </summary>
     [IsoId("_TR6-LdEwEd-BzquC8wXy7w_1089871682")]
     [DisplayName("Contact Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CtctDtls")]
-    #endif
     [IsoXmlTag("CtctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContactPerson1? ContactDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContactPerson1? ContactDetails { get; init; } 
-    #else
-    public ContactPerson1? ContactDetails { get; set; } 
-    #endif
     
     
     #nullable disable

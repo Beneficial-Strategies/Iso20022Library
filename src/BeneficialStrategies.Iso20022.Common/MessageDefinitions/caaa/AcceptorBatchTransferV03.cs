@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.caaa;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.caaa;
 [Description(@"The AcceptorBatchTransfer is sent by an acceptor (or its agent) to transfer the financial data of a collection of transactions to the acquirer (or its agent).")]
 [IsoId("_jRTiATSeEeOnFuyVSIQZKg")]
 [DisplayName("Acceptor Batch Transfer V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcceptorBatchTransferV03 : IOuterRecord
 {
     
@@ -61,20 +50,6 @@ public partial record AcceptorBatchTransferV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcceptorBatchTransferV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcceptorBatchTransferV03( Header3 reqHeader,CardPaymentBatchTransfer2 reqBatchTransfer,ContentInformationType9 reqSecurityTrailer )
-    {
-        Header = reqHeader;
-        BatchTransfer = reqBatchTransfer;
-        SecurityTrailer = reqSecurityTrailer;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -82,57 +57,24 @@ public partial record AcceptorBatchTransferV03 : IOuterRecord
     /// </summary>
     [IsoId("_jRTiAzSeEeOnFuyVSIQZKg")]
     [DisplayName("Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Hdr")]
-    #endif
     [IsoXmlTag("Hdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Header3 Header { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Header3 Header { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Header3 Header { get; init; } 
-    #else
-    public Header3 Header { get; set; } 
-    #endif
     
     /// <summary>
     /// Card payment transactions from one or several data set of transactions.
     /// </summary>
     [IsoId("_jRTiBTSeEeOnFuyVSIQZKg")]
     [DisplayName("Batch Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BtchTrf")]
-    #endif
     [IsoXmlTag("BtchTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CardPaymentBatchTransfer2 BatchTransfer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CardPaymentBatchTransfer2 BatchTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardPaymentBatchTransfer2 BatchTransfer { get; init; } 
-    #else
-    public CardPaymentBatchTransfer2 BatchTransfer { get; set; } 
-    #endif
     
     /// <summary>
     /// Trailer of the message containing a MAC or a digital signature.
     /// </summary>
     [IsoId("_jRTiBzSeEeOnFuyVSIQZKg")]
     [DisplayName("Security Trailer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SctyTrlr")]
-    #endif
     [IsoXmlTag("SctyTrlr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ContentInformationType9 SecurityTrailer { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ContentInformationType9 SecurityTrailer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType9 SecurityTrailer { get; init; } 
-    #else
-    public ContentInformationType9 SecurityTrailer { get; set; } 
-    #endif
     
     
     #nullable disable

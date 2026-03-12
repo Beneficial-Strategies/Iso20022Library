@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T4lZI9p-Ed-ak6NoX_4Aeg_1996983846")]
 [DisplayName("Proxy")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Proxy1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record Proxy1
     /// </summary>
     [IsoId("_T4lZJNp-Ed-ak6NoX_4Aeg_1996983863")]
     [DisplayName("Proxy Type")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrxyTp")]
-    #endif
     [IsoXmlTag("PrxyTp")]
     [MinLength(1)]
     [MaxLength(2)]
@@ -52,17 +33,8 @@ public partial record Proxy1
     /// </summary>
     [IsoId("_T4lZJdp-Ed-ak6NoX_4Aeg_-1010516715")]
     [DisplayName("Preassigned Proxy")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrssgndPrxy")]
-    #endif
     [IsoXmlTag("PrssgndPrxy")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IndividualPerson14? PreassignedProxy { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IndividualPerson14? PreassignedProxy { get; init; } 
-    #else
-    public IndividualPerson14? PreassignedProxy { get; set; } 
-    #endif
     
     
     #nullable disable

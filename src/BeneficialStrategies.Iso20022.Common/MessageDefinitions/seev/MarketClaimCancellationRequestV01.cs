@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope and Usage|The MarketClaimCancellationRequest message is sent by the account holder to the account servicer. |It is sent to request the cancellation of a market claim transaction.|This message definition is intended for use with the Business Application Header (BAH).")]
 [IsoId("_mmNNYNsFEeqmdMJWobugpw")]
 [DisplayName("Market Claim Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MarketClaimCancellationRequestV01 : IOuterRecord
 {
     
@@ -64,21 +53,6 @@ public partial record MarketClaimCancellationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MarketClaimCancellationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MarketClaimCancellationRequestV01( DocumentIdentification9 reqMarketClaimCreationIdentification,References26 reqTransactionReference,CorporateActionGeneralInformation157 reqCorporateActionGeneralInformation,AccountIdentification46 reqAccountDetails )
-    {
-        MarketClaimCreationIdentification = reqMarketClaimCreationIdentification;
-        TransactionReference = reqTransactionReference;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-        AccountDetails = reqAccountDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,93 +60,40 @@ public partial record MarketClaimCancellationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_AiUsoNxwEeqmdMJWobugpw")]
     [DisplayName("Market Claim Creation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktClmCreId")]
-    #endif
     [IsoXmlTag("MktClmCreId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification9 MarketClaimCreationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification9 MarketClaimCreationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification9 MarketClaimCreationIdentification { get; init; } 
-    #else
-    public DocumentIdentification9 MarketClaimCreationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// References of the market claim for which cancellation is requested.
     /// </summary>
     [IsoId("_Iu5sgtxwEeqmdMJWobugpw")]
     [DisplayName("Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxRef")]
-    #endif
     [IsoXmlTag("TxRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required References26 TransactionReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required References26 TransactionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public References26 TransactionReference { get; init; } 
-    #else
-    public References26 TransactionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_zo9YEtxwEeqmdMJWobugpw")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionGeneralInformation157 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionGeneralInformation157 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionGeneralInformation157 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionGeneralInformation157 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the safekeeping account, owner and account balance.
     /// </summary>
     [IsoId("_zo9YE9xwEeqmdMJWobugpw")]
     [DisplayName("Account Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctDtls")]
-    #endif
     [IsoXmlTag("AcctDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AccountIdentification46 AccountDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AccountIdentification46 AccountDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AccountIdentification46 AccountDetails { get; init; } 
-    #else
-    public AccountIdentification46 AccountDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_QtiwUSgaEeuYwc3diVMizA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The CurrencyControlSupportingDocumentDelivery message is sent by either the reporting party (respectively the registration agent or the registration agent (respectively the reporting party) in response to the supporting document request.")]
 [IsoId("_5RUDUNLpEeSDLevdaFPXHw")]
 [DisplayName("Currency Control Supporting Document Delivery V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record CurrencyControlSupportingDocumentDeliveryV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record CurrencyControlSupportingDocumentDeliveryV01 : IOuterRecor
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a CurrencyControlSupportingDocumentDeliveryV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public CurrencyControlSupportingDocumentDeliveryV01( CurrencyControlHeader3 reqGroupHeader,SupportingDocument1 reqSupportingDocument )
-    {
-        GroupHeader = reqGroupHeader;
-        SupportingDocument = reqSupportingDocument;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record CurrencyControlSupportingDocumentDeliveryV01 : IOuterRecor
     /// </summary>
     [IsoId("_AKIVQNLqEeSDLevdaFPXHw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CurrencyControlHeader3 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CurrencyControlHeader3 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CurrencyControlHeader3 GroupHeader { get; init; } 
-    #else
-    public CurrencyControlHeader3 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Details of the supporting document provided for the registered contract.
     /// </summary>
     [IsoId("_9sPhENLqEeSDLevdaFPXHw")]
     [DisplayName("Supporting Document")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SpprtgDoc")]
-    #endif
     [IsoXmlTag("SpprtgDoc")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SupportingDocument1 SupportingDocument { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SupportingDocument1 SupportingDocument { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupportingDocument1 SupportingDocument { get; init; } 
-    #else
-    public SupportingDocument1 SupportingDocument { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_CltKYdLrEeSDLevdaFPXHw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

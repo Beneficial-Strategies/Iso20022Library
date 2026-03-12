@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|The RequestForTransferStatusReport is sent by an instructing party to the executing party.|This message requests the status of a transfer instruction or the status of a transfer cancellation instruction.|Usage|The RequestForTransferStatusReport is sent by an instructing party to the executing party to request|- the status of one or several transfer instructions or|- the status of one or several transfer cancellation instructions.")]
 [IsoId("_nnEjSNE5Ed-BzquC8wXy7w_-788060154")]
 [DisplayName("Request For Transfer Status Report")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record RequestForTransferStatusReport : IOuterRecord
 {
     
@@ -67,18 +56,6 @@ public partial record RequestForTransferStatusReport : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a RequestForTransferStatusReport instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public RequestForTransferStatusReport( MessageAndBusinessReference1 reqRequestDetails )
-    {
-        RequestDetails = reqRequestDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -86,19 +63,8 @@ public partial record RequestForTransferStatusReport : IOuterRecord
     /// </summary>
     [IsoId("_nnEjSdE5Ed-BzquC8wXy7w_-359483453")]
     [DisplayName("Request Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ReqDtls")]
-    #endif
     [IsoXmlTag("ReqDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageAndBusinessReference1 RequestDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageAndBusinessReference1 RequestDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageAndBusinessReference1 RequestDetails { get; init; } 
-    #else
-    public MessageAndBusinessReference1 RequestDetails { get; set; } 
-    #endif
     
     
     #nullable disable

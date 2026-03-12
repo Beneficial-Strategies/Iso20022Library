@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9qsqQYqvEeSIDtZ76p6McQ")]
 [DisplayName("ATM Transaction")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record ATMTransaction6
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a ATMTransaction6 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public ATMTransaction6( TransactionIdentifier1 reqTransactionIdentification )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,105 +23,49 @@ public partial record ATMTransaction6
     /// </summary>
     [IsoId("_93gXM4qvEeSIDtZ76p6McQ")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactionIdentifier1 TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactionIdentifier1 TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionIdentifier1 TransactionIdentification { get; init; } 
-    #else
-    public TransactionIdentifier1 TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unprotected account information.
     /// </summary>
     [IsoId("_93gXN4qvEeSIDtZ76p6McQ")]
     [DisplayName("Account Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctData")]
-    #endif
     [IsoXmlTag("AcctData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CardAccount3? AccountData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CardAccount3? AccountData { get; init; } 
-    #else
-    public CardAccount3? AccountData { get; set; } 
-    #endif
     
     /// <summary>
     /// Encryption of account information.
     /// </summary>
     [IsoId("_93gXOYqvEeSIDtZ76p6McQ")]
     [DisplayName("Protected Account Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdAcctData")]
-    #endif
     [IsoXmlTag("PrtctdAcctData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ContentInformationType10? ProtectedAccountData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ContentInformationType10? ProtectedAccountData { get; init; } 
-    #else
-    public ContentInformationType10? ProtectedAccountData { get; set; } 
-    #endif
     
     /// <summary>
     /// Amount to be authorised by the issuer.
     /// </summary>
     [IsoId("_93gXPYqvEeSIDtZ76p6McQ")]
     [DisplayName("Total Requested Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TtlReqdAmt")]
-    #endif
     [IsoXmlTag("TtlReqdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AmountAndCurrency1? TotalRequestedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AmountAndCurrency1? TotalRequestedAmount { get; init; } 
-    #else
-    public AmountAndCurrency1? TotalRequestedAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Amounts of the withdrawal transaction.
     /// </summary>
     [IsoId("_93gXO4qvEeSIDtZ76p6McQ")]
     [DisplayName("Detailed Requested Amount")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DtldReqdAmt")]
-    #endif
     [IsoXmlTag("DtldReqdAmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DetailedAmount12? DetailedRequestedAmount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DetailedAmount12? DetailedRequestedAmount { get; init; } 
-    #else
-    public DetailedAmount12? DetailedRequestedAmount { get; set; } 
-    #endif
     
     /// <summary>
     /// Sequence of one or more TLV data elements from the ATM application, in accordance with ISO 7816-6, not in a specific order. Present if the transaction is performed with an EMV chip card application.
     /// </summary>
     [IsoId("_93gXR4qvEeSIDtZ76p6McQ")]
     [DisplayName("ICC Related Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ICCRltdData")]
-    #endif
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax10000Binary? ICCRelatedData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.Byte[]? ICCRelatedData { get; init; } 
-    #else
-    public System.Byte[]? ICCRelatedData { get; set; } 
-    #endif
     
     
     #nullable disable

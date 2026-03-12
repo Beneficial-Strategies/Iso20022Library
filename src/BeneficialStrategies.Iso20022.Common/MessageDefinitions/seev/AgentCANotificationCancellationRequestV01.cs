@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|This message is sent by an issuer (or its agent) to a CSD to request the cancellation of a notification advice message.|Usage|When this message is used to request the cancellation of a notification advice message, the function of the message must be cancellation.|When this message is used to request the withdrawal of a Corporate Action event or option, then the function of the message must be withdrawal.|In both cases, the building block notification advice identification must be present to link this cancellation request to the notification advice that was previously sent.")]
 [IsoId("_TRVISdEwEd-BzquC8wXy7w_1381384285")]
 [DisplayName("Agent CA Notification Cancellation Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AgentCANotificationCancellationRequestV01 : IOuterRecord
 {
     
@@ -66,20 +55,6 @@ public partial record AgentCANotificationCancellationRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AgentCANotificationCancellationRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AgentCANotificationCancellationRequestV01( DocumentIdentification8 reqIdentification,NotificationCancellation1 reqNotificationCancellationTypeAndLinkage,CorporateActionInformation2 reqCorporateActionGeneralInformation )
-    {
-        Identification = reqIdentification;
-        NotificationCancellationTypeAndLinkage = reqNotificationCancellationTypeAndLinkage;
-        CorporateActionGeneralInformation = reqCorporateActionGeneralInformation;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,74 +62,32 @@ public partial record AgentCANotificationCancellationRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_TRVIStEwEd-BzquC8wXy7w_-958501125")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required DocumentIdentification8 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification8 Identification { get; init; } 
-    #else
-    public DocumentIdentification8 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides information about the type of notification cancellation request and linked message.
     /// </summary>
     [IsoId("_TRVIS9EwEd-BzquC8wXy7w_604000016")]
     [DisplayName("Notification Cancellation Type And Linkage")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtfctnCxlTpAndLkg")]
-    #endif
     [IsoXmlTag("NtfctnCxlTpAndLkg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required NotificationCancellation1 NotificationCancellationTypeAndLinkage { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required NotificationCancellation1 NotificationCancellationTypeAndLinkage { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public NotificationCancellation1 NotificationCancellationTypeAndLinkage { get; init; } 
-    #else
-    public NotificationCancellation1 NotificationCancellationTypeAndLinkage { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_TRVITNEwEd-BzquC8wXy7w_-624173928")]
     [DisplayName("Corporate Action General Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnGnlInf")]
-    #endif
     [IsoXmlTag("CorpActnGnlInf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CorporateActionInformation2 CorporateActionGeneralInformation { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CorporateActionInformation2 CorporateActionGeneralInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionInformation2 CorporateActionGeneralInformation { get; init; } 
-    #else
-    public CorporateActionInformation2 CorporateActionGeneralInformation { get; set; } 
-    #endif
     
     /// <summary>
     /// Detailed information of the notification advice to be cancelled.
     /// </summary>
     [IsoId("_TRVITdEwEd-BzquC8wXy7w_807888623")]
     [DisplayName("Corporate Action Notification Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CorpActnNtfctnDtls")]
-    #endif
     [IsoXmlTag("CorpActnNtfctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CorporateActionNotificationAdvice1? CorporateActionNotificationDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CorporateActionNotificationAdvice1? CorporateActionNotificationDetails { get; init; } 
-    #else
-    public CorporateActionNotificationAdvice1? CorporateActionNotificationDetails { get; set; } 
-    #endif
     
     
     #nullable disable

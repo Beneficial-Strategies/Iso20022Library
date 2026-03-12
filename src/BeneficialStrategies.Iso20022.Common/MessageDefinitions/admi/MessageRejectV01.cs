@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.admi;
@@ -30,12 +25,6 @@ namespace BeneficialStrategies.Iso20022.admi;
 [Description(@"Scope|The MessageReject message is sent by a central system to notify the rejection of a previously received message.|Usage|The message provides specific information about the rejection reason.")]
 [IsoId("_8LH5WNE9Ed-BzquC8wXy7w_-1942533103")]
 [DisplayName("Message Reject V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MessageRejectV01 : IOuterRecord
 {
     
@@ -64,19 +53,6 @@ public partial record MessageRejectV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MessageRejectV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MessageRejectV01( MessageReference reqRelatedReference,RejectionReason2 reqReason )
-    {
-        RelatedReference = reqRelatedReference;
-        Reason = reqReason;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -84,38 +60,16 @@ public partial record MessageRejectV01 : IOuterRecord
     /// </summary>
     [IsoId("_8LH5WdE9Ed-BzquC8wXy7w_-1383804009")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageReference RelatedReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageReference RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageReference RelatedReference { get; init; } 
-    #else
-    public MessageReference RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// General information about the reason of the message rejection.
     /// </summary>
     [IsoId("_8LH5WtE9Ed-BzquC8wXy7w_-223860119")]
     [DisplayName("Reason")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rsn")]
-    #endif
     [IsoXmlTag("Rsn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required RejectionReason2 Reason { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required RejectionReason2 Reason { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public RejectionReason2 Reason { get; init; } 
-    #else
-    public RejectionReason2 Reason { get; set; } 
-    #endif
     
     
     #nullable disable

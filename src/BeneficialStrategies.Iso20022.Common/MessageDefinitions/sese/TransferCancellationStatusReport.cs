@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.sese;
@@ -34,12 +29,6 @@ namespace BeneficialStrategies.Iso20022.sese;
 [Description(@"Scope|The TransferCancellationStatusReport message is sent by an executing party to the instructing party.|The message gives the status of a transfer cancellation instruction that was previously sent by the instructing party.|Usage|The TransferCancellationStatusReport message is sent by an executing party to the instructing party. The message can be used to report that either|- the cancellation has been acted upon or|- the cancellation is rejected.|In both cases, the reason must be specified using either a code or unstructured information.")]
 [IsoId("_HFtUYNE6Ed-BzquC8wXy7w_1729523466")]
 [DisplayName("Transfer Cancellation Status Report")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record TransferCancellationStatusReport : IOuterRecord
 {
     
@@ -68,19 +57,6 @@ public partial record TransferCancellationStatusReport : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a TransferCancellationStatusReport instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public TransferCancellationStatusReport( AdditionalReference2 reqOtherReference,CancellationStatusAndReason reqStatusReport )
-    {
-        OtherReference = reqOtherReference;
-        StatusReport = reqStatusReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,9 +64,6 @@ public partial record TransferCancellationStatusReport : IOuterRecord
     /// </summary>
     [IsoId("_HFtUYdE6Ed-BzquC8wXy7w_1157267444")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
@@ -101,38 +74,16 @@ public partial record TransferCancellationStatusReport : IOuterRecord
     /// </summary>
     [IsoId("_HFtUYtE6Ed-BzquC8wXy7w_1159114780")]
     [DisplayName("Other Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrRef")]
-    #endif
     [IsoXmlTag("OthrRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference2 OtherReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference2 OtherReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference2 OtherReference { get; init; } 
-    #else
-    public AdditionalReference2 OtherReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Status of the transfer cancellation instruction.
     /// </summary>
     [IsoId("_HFtUY9E6Ed-BzquC8wXy7w_-503487552")]
     [DisplayName("Status Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="StsRpt")]
-    #endif
     [IsoXmlTag("StsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CancellationStatusAndReason StatusReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CancellationStatusAndReason StatusReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CancellationStatusAndReason StatusReport { get; init; } 
-    #else
-    public CancellationStatusAndReason StatusReport { get; set; } 
-    #endif
     
     
     #nullable disable

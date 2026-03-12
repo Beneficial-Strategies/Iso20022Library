@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,29 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_owpLcYzMEeujJfnIQ4NlpQ")]
 [DisplayName("Financial Response")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialResponse2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialResponse2 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialResponse2( Environment26 reqEnvironment,Context13 reqContext,Transaction143 reqTransaction,ProcessingResult10 reqProcessingResult )
-    {
-        Environment = reqEnvironment;
-        Context = reqContext;
-        Transaction = reqTransaction;
-        ProcessingResult = reqProcessingResult;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -49,93 +23,40 @@ public partial record FinancialResponse2
     /// </summary>
     [IsoId("_o13CoYzMEeujJfnIQ4NlpQ")]
     [DisplayName("Environment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Envt")]
-    #endif
     [IsoXmlTag("Envt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Environment26 Environment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Environment26 Environment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Environment26 Environment { get; init; } 
-    #else
-    public Environment26 Environment { get; set; } 
-    #endif
     
     /// <summary>
     /// Context in which the card transaction is performed.
     /// </summary>
     [IsoId("_o13Co4zMEeujJfnIQ4NlpQ")]
     [DisplayName("Context")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Cntxt")]
-    #endif
     [IsoXmlTag("Cntxt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Context13 Context { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Context13 Context { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Context13 Context { get; init; } 
-    #else
-    public Context13 Context { get; set; } 
-    #endif
     
     /// <summary>
     /// Card transaction for which an authorisation is requested.
     /// </summary>
     [IsoId("_o13CpYzMEeujJfnIQ4NlpQ")]
     [DisplayName("Transaction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Tx")]
-    #endif
     [IsoXmlTag("Tx")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Transaction143 Transaction { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Transaction143 Transaction { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Transaction143 Transaction { get; init; } 
-    #else
-    public Transaction143 Transaction { get; set; } 
-    #endif
     
     /// <summary>
     /// Component contains data structures applicable to certain industries that require specific data within transaction messages. 
     /// </summary>
     [IsoId("_o13Cp4zMEeujJfnIQ4NlpQ")]
     [DisplayName("Addendum Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AdddmData")]
-    #endif
     [IsoXmlTag("AdddmData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AddendumData4? AddendumData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AddendumData4? AddendumData { get; init; } 
-    #else
-    public AddendumData4? AddendumData { get; set; } 
-    #endif
     
     /// <summary>
     /// Outcome of processing of the authorisation.
     /// </summary>
     [IsoId("_o13CqYzMEeujJfnIQ4NlpQ")]
     [DisplayName("Processing Result")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgRslt")]
-    #endif
     [IsoXmlTag("PrcgRslt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ProcessingResult10 ProcessingResult { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ProcessingResult10 ProcessingResult { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProcessingResult10 ProcessingResult { get; init; } 
-    #else
-    public ProcessingResult10 ProcessingResult { get; set; } 
-    #endif
     
     /// <summary>
     /// Data related to an integrated circuit card application embedded in the payment card of the cardholder.
@@ -143,52 +64,25 @@ public partial record FinancialResponse2
     /// </summary>
     [IsoId("_o13Cq4zMEeujJfnIQ4NlpQ")]
     [DisplayName("ICC Related Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ICCRltdData")]
-    #endif
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10KHexBinaryText)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax10KHexBinaryText? ICCRelatedData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ICCRelatedData { get; init; } 
-    #else
-    public System.String? ICCRelatedData { get; set; } 
-    #endif
     
     /// <summary>
     /// Contains protected data and the attributes used to protect the data.
     /// </summary>
     [IsoId("_o13CrYzMEeujJfnIQ4NlpQ")]
     [DisplayName("Protected Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtctdData")]
-    #endif
     [IsoXmlTag("PrtctdData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ProtectedData1? ProtectedData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProtectedData1? ProtectedData { get; init; } 
-    #else
-    public ProtectedData1? ProtectedData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
     /// </summary>
     [IsoId("_o13Cr4zMEeujJfnIQ4NlpQ")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__NTwD5wyEeazcsnODTksnQ")]
 [DisplayName("Additional Parameters")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AdditionalParameters31
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,129 +23,66 @@ public partial record AdditionalParameters31
     /// </summary>
     [IsoId("__NTwE5wyEeazcsnODTksnQ")]
     [DisplayName("Pre Confirmation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PreConf")]
-    #endif
     [IsoXmlTag("PreConf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PreConfirmation1Code? PreConfirmation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PreConfirmation1Code? PreConfirmation { get; init; } 
-    #else
-    public PreConfirmation1Code? PreConfirmation { get; set; } 
-    #endif
     
     /// <summary>
     /// Specifies partial settlement information.
     /// </summary>
     [IsoId("__NTwG5wyEeazcsnODTksnQ")]
     [DisplayName("Partial Settlement")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrtlSttlm")]
-    #endif
     [IsoXmlTag("PrtlSttlm")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartialSettlement2Code? PartialSettlement { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartialSettlement2Code? PartialSettlement { get; init; } 
-    #else
-    public PartialSettlement2Code? PartialSettlement { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the confirmation previously sent to confirm the partial settlement of a transaction.
     /// </summary>
     [IsoId("__NTwI5wyEeazcsnODTksnQ")]
     [DisplayName("Previous Partial Confirmation Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsPrtlConfId")]
-    #endif
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? PreviousPartialConfirmationIdentification { get; init; } 
-    #else
-    public System.String? PreviousPartialConfirmationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification identifying the triparty collateral management transaction from the triparty-agent&apos;s/service-provider&apos;s point of view.
     /// </summary>
     [IsoId("__NTwK5wyEeazcsnODTksnQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrptyAgtSvcPrvdrCollTxId")]
-    #endif
     [IsoXmlTag("TrptyAgtSvcPrvdrCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TripartyAgentServiceProviderCollateralTransactionIdentification { get; init; } 
-    #else
-    public System.String? TripartyAgentServiceProviderCollateralTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
     /// </summary>
     [IsoId("__NTwM5wyEeazcsnODTksnQ")]
     [DisplayName("Client Triparty Collateral Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClntTrptyCollTxId")]
-    #endif
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? ClientTripartyCollateralTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClientTripartyCollateralTransactionIdentification { get; init; } 
-    #else
-    public System.String? ClientTripartyCollateralTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned to the instruction by the client.
     /// </summary>
     [IsoId("__NTwO5wyEeazcsnODTksnQ")]
     [DisplayName("Client Collateral Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="ClntCollInstrId")]
-    #endif
     [IsoXmlTag("ClntCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? ClientCollateralInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ClientCollateralInstructionIdentification { get; init; } 
-    #else
-    public System.String? ClientCollateralInstructionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned to the instruction by the triparty-agent/service-provider.
     /// </summary>
     [IsoId("__NTwPZwyEeazcsnODTksnQ")]
     [DisplayName("Triparty Agent Service Provider Collateral Instruction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TrptyAgtSvcPrvdrCollInstrId")]
-    #endif
     [IsoXmlTag("TrptyAgtSvcPrvdrCollInstrId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
     [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoRestrictedFINXMax16Text? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? TripartyAgentServiceProviderCollateralInstructionIdentification { get; init; } 
-    #else
-    public System.String? TripartyAgentServiceProviderCollateralInstructionIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

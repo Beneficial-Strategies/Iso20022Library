@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsmt;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.tsmt;
 [Description(@"Scope|The IntentToPayNotification message is sent by a party to the matching application in order to provide details about a future payment.|This message contains details about an intention to pay a certain amount, on a certain date, in relation to one or several transactions known to the matching application.|Usage|The IntentToPayNotification message can be sent by a party to the transaction at any time as long as the transaction is established and not yet closed.|The message is unsolicited, that is, it is not sent in response to another message.")]
 [IsoId("_qS03gtE8Ed-BzquC8wXy7w_-674719643")]
 [DisplayName("Intent To Pay Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntentToPayNotificationV01 : IOuterRecord
 {
     
@@ -66,22 +55,6 @@ public partial record IntentToPayNotificationV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IntentToPayNotificationV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IntentToPayNotificationV01( MessageIdentification1 reqNotificationIdentification,SimpleIdentificationInformation reqTransactionIdentification,BICIdentification1 reqBuyerBank,BICIdentification1 reqSellerBank,IntentToPay1 reqIntentToPay )
-    {
-        NotificationIdentification = reqNotificationIdentification;
-        TransactionIdentification = reqTransactionIdentification;
-        BuyerBank = reqBuyerBank;
-        SellerBank = reqSellerBank;
-        IntentToPay = reqIntentToPay;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -89,112 +62,48 @@ public partial record IntentToPayNotificationV01 : IOuterRecord
     /// </summary>
     [IsoId("_qS03g9E8Ed-BzquC8wXy7w_163901085")]
     [DisplayName("Notification Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtfctnId")]
-    #endif
     [IsoXmlTag("NtfctnId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 NotificationIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 NotificationIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 NotificationIdentification { get; init; } 
-    #else
-    public MessageIdentification1 NotificationIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification assigned by the matching application to the transaction.|This identification is to be used in any communication between the parties.
     /// </summary>
     [IsoId("_qS03hNE8Ed-BzquC8wXy7w_152820680")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation TransactionIdentification { get; init; } 
-    #else
-    public SimpleIdentificationInformation TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to the transaction for the requesting financial institution.
     /// </summary>
     [IsoId("_qS03hdE8Ed-BzquC8wXy7w_1332333857")]
     [DisplayName("Submitter Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SubmitrTxRef")]
-    #endif
     [IsoXmlTag("SubmitrTxRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SimpleIdentificationInformation? SubmitterTransactionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SimpleIdentificationInformation? SubmitterTransactionReference { get; init; } 
-    #else
-    public SimpleIdentificationInformation? SubmitterTransactionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// The financial institution of the buyer, uniquely identified by its BIC. |.
     /// </summary>
     [IsoId("_qS03htE8Ed-BzquC8wXy7w_-1244476424")]
     [DisplayName("Buyer Bank")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BuyrBk")]
-    #endif
     [IsoXmlTag("BuyrBk")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BICIdentification1 BuyerBank { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BICIdentification1 BuyerBank { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BICIdentification1 BuyerBank { get; init; } 
-    #else
-    public BICIdentification1 BuyerBank { get; set; } 
-    #endif
     
     /// <summary>
     /// The financial institution of the seller, uniquely identified by its BIC. |.
     /// </summary>
     [IsoId("_qS03h9E8Ed-BzquC8wXy7w_-1235239055")]
     [DisplayName("Seller Bank")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SellrBk")]
-    #endif
     [IsoXmlTag("SellrBk")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required BICIdentification1 SellerBank { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required BICIdentification1 SellerBank { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BICIdentification1 SellerBank { get; init; } 
-    #else
-    public BICIdentification1 SellerBank { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the details of the intention to pay.
     /// </summary>
     [IsoId("_qS03iNE8Ed-BzquC8wXy7w_-1879861996")]
     [DisplayName("Intent To Pay")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InttToPay")]
-    #endif
     [IsoXmlTag("InttToPay")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IntentToPay1 IntentToPay { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IntentToPay1 IntentToPay { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IntentToPay1 IntentToPay { get; init; } 
-    #else
-    public IntentToPay1 IntentToPay { get; set; } 
-    #endif
     
     
     #nullable disable

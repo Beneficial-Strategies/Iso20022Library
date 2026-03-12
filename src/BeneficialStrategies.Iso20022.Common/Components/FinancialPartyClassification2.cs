@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0lQ2EbHXEemRPNDOvJwndA")]
 [DisplayName("Financial Party Classification")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialPartyClassification2
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,9 +23,6 @@ public partial record FinancialPartyClassification2
     /// </summary>
     [IsoId("_0uXHsbHXEemRPNDOvJwndA")]
     [DisplayName("Classification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Clssfctn")]
-    #endif
     [IsoXmlTag("Clssfctn")]
     [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
     public SimpleValueList<System.String> Classification { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
@@ -52,17 +33,8 @@ public partial record FinancialPartyClassification2
     /// </summary>
     [IsoId("_0ugRobHXEemRPNDOvJwndA")]
     [DisplayName("Investment Fund Classification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="InvstmtFndClssfctn")]
-    #endif
     [IsoXmlTag("InvstmtFndClssfctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public FundType2Code? InvestmentFundClassification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FundType2Code? InvestmentFundClassification { get; init; } 
-    #else
-    public FundType2Code? InvestmentFundClassification { get; set; } 
-    #endif
     
     
     #nullable disable

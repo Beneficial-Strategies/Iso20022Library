@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zoKi8SgtEeyB747fKu7_rw")]
 [DisplayName("Collateral")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record Collateral53
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a Collateral53 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public Collateral53( Summary3 reqReportSummary )
-    {
-        ReportSummary = reqReportSummary;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,70 +23,32 @@ public partial record Collateral53
     /// </summary>
     [IsoId("_0AdHISgtEeyB747fKu7_rw")]
     [DisplayName("Account Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctId")]
-    #endif
     [IsoXmlTag("AcctId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CollateralAccount3? AccountIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CollateralAccount3? AccountIdentification { get; init; } 
-    #else
-    public CollateralAccount3? AccountIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Blockchain address or wallet where digital assets are maintained. This is the equivalent of collateral account for digital assets.
     /// </summary>
     [IsoId("_21OOcyqWEeyR9JrVGfaMKw")]
     [DisplayName("Block Chain Address Or Wallet")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BlckChainAdrOrWllt")]
-    #endif
     [IsoXmlTag("BlckChainAdrOrWllt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BlockChainAddressWallet5? BlockChainAddressOrWallet { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BlockChainAddressWallet5? BlockChainAddressOrWallet { get; init; } 
-    #else
-    public BlockChainAddressWallet5? BlockChainAddressOrWallet { get; set; } 
-    #endif
     
     /// <summary>
     /// Summary of the collateral valuation.
     /// </summary>
     [IsoId("_0AdHIygtEeyB747fKu7_rw")]
     [DisplayName("Report Summary")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptSummry")]
-    #endif
     [IsoXmlTag("RptSummry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required Summary3 ReportSummary { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required Summary3 ReportSummary { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Summary3 ReportSummary { get; init; } 
-    #else
-    public Summary3 ReportSummary { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information about the collateral valuation that has been posted.
     /// </summary>
     [IsoId("_0AdHJSgtEeyB747fKu7_rw")]
     [DisplayName("Collateral Valuation")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CollValtn")]
-    #endif
     [IsoXmlTag("CollValtn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CollateralValuation13? CollateralValuation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CollateralValuation13? CollateralValuation { get; init; } 
-    #else
-    public CollateralValuation13? CollateralValuation { get; set; } 
-    #endif
     
     
     #nullable disable

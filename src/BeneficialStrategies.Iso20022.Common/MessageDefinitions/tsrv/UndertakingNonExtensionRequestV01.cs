@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.tsrv;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.tsrv;
 [Description(@"The UndertakingNonExtensionRequest message is sent by the party that requested issuance of the undertaking (applicant or obligor) to the party that issued the undertaking. It is used to request no further automatic extensions to the expiry of the referenced undertaking.")]
 [IsoId("_9gmpVXltEeG7BsjMvd1mEw_634999527")]
 [DisplayName("Undertaking Non Extension Request V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record UndertakingNonExtensionRequestV01 : IOuterRecord
 {
     
@@ -61,18 +50,6 @@ public partial record UndertakingNonExtensionRequestV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a UndertakingNonExtensionRequestV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public UndertakingNonExtensionRequestV01( UndertakingNonExtensionRequest1 reqUndertakingNonExtensionRequestDetails )
-    {
-        UndertakingNonExtensionRequestDetails = reqUndertakingNonExtensionRequestDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -80,36 +57,16 @@ public partial record UndertakingNonExtensionRequestV01 : IOuterRecord
     /// </summary>
     [IsoId("_9gmpVnltEeG7BsjMvd1mEw_1337678372")]
     [DisplayName("Undertaking Non Extension Request Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UdrtkgNonXtnsnReqDtls")]
-    #endif
     [IsoXmlTag("UdrtkgNonXtnsnReqDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required UndertakingNonExtensionRequest1 UndertakingNonExtensionRequestDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required UndertakingNonExtensionRequest1 UndertakingNonExtensionRequestDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public UndertakingNonExtensionRequest1 UndertakingNonExtensionRequestDetails { get; init; } 
-    #else
-    public UndertakingNonExtensionRequest1 UndertakingNonExtensionRequestDetails { get; set; } 
-    #endif
     
     /// <summary>
     /// Digital signature of the request.
     /// </summary>
     [IsoId("_9gmpV3ltEeG7BsjMvd1mEw_-238052912")]
     [DisplayName("Digital Signature")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="DgtlSgntr")]
-    #endif
     [IsoXmlTag("DgtlSgntr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyAndSignature2? DigitalSignature { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyAndSignature2? DigitalSignature { get; init; } 
-    #else
-    public PartyAndSignature2? DigitalSignature { get; set; } 
-    #endif
     
     
     #nullable disable

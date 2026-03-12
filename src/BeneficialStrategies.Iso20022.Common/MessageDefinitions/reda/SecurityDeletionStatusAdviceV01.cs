@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -40,12 +35,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"SCOPE|An executing/servicing party sends a SecurityDeletionStatusAdvice message to an instructing party to report the status of a SecurityDeletionRequest message previously sent by the instructing party. ||The SecurityDeletionStatusAdvice message is sent as a response to the request of the instructing party.||The instructing party - executing/servicing party relationship may be:|- Central Securities Depositories (CSD) who would like to publish security static data, or |- a Corporate, or|- a Bank, or|- a Market Infrastructure, or |- a Market Data Provider.||USAGE|Initiator: executing/servicing party.")]
 [IsoId("_jTumxx62Eeu31YsWNiv_cw")]
 [DisplayName("Security Deletion Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record SecurityDeletionStatusAdviceV01 : IOuterRecord
 {
     
@@ -74,18 +63,6 @@ public partial record SecurityDeletionStatusAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a SecurityDeletionStatusAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public SecurityDeletionStatusAdviceV01( ProcessingStatus72Choice_ reqProcessingStatus )
-    {
-        ProcessingStatus = reqProcessingStatus;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -93,70 +70,32 @@ public partial record SecurityDeletionStatusAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_OqBRUZIxEeuAlLVx8pyt3w")]
     [DisplayName("Message Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgHdr")]
-    #endif
     [IsoXmlTag("MsgHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageHeader12? MessageHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageHeader12? MessageHeader { get; init; } 
-    #else
-    public MessageHeader12? MessageHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the financial instrument.
     /// </summary>
     [IsoId("_jTum2R62Eeu31YsWNiv_cw")]
     [DisplayName("Financial Instrument Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinInstrmId")]
-    #endif
     [IsoXmlTag("FinInstrmId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SecurityIdentification39? FinancialInstrumentIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecurityIdentification39? FinancialInstrumentIdentification { get; init; } 
-    #else
-    public SecurityIdentification39? FinancialInstrumentIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Represents the processing status.
     /// </summary>
     [IsoId("_jTum2x62Eeu31YsWNiv_cw")]
     [DisplayName("Processing Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgSts")]
-    #endif
     [IsoXmlTag("PrcgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required ProcessingStatus72Choice_ ProcessingStatus { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required ProcessingStatus72Choice_ ProcessingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProcessingStatus72Choice_ ProcessingStatus { get; init; } 
-    #else
-    public ProcessingStatus72Choice_ ProcessingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_jTum4R62Eeu31YsWNiv_cw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

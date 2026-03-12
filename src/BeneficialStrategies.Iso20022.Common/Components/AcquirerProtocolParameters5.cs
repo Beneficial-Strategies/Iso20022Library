@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_C08NITY6EeOYzMAJn8nuYA")]
 [DisplayName("Acquirer Protocol Parameters")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record AcquirerProtocolParameters5
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a AcquirerProtocolParameters5 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public AcquirerProtocolParameters5( FinancialCapture1Code reqFinancialCapture )
-    {
-        FinancialCapture = reqFinancialCapture;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,70 +23,32 @@ public partial record AcquirerProtocolParameters5
     /// </summary>
     [IsoId("_DEHRkTY6EeOYzMAJn8nuYA")]
     [DisplayName("Financial Capture")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="FinCaptr")]
-    #endif
     [IsoXmlTag("FinCaptr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required FinancialCapture1Code FinancialCapture { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required FinancialCapture1Code FinancialCapture { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public FinancialCapture1Code FinancialCapture { get; init; } 
-    #else
-    public FinancialCapture1Code FinancialCapture { get; set; } 
-    #endif
     
     /// <summary>
     /// Configuration of the batch transfers.
     /// </summary>
     [IsoId("_DEHRkzY6EeOYzMAJn8nuYA")]
     [DisplayName("Batch Transfer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="BtchTrf")]
-    #endif
     [IsoXmlTag("BtchTrf")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ExchangeConfiguration4? BatchTransfer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ExchangeConfiguration4? BatchTransfer { get; init; } 
-    #else
-    public ExchangeConfiguration4? BatchTransfer { get; set; } 
-    #endif
     
     /// <summary>
     /// Configuration parameters of completion exchanges.
     /// </summary>
     [IsoId("_DEHRlTY6EeOYzMAJn8nuYA")]
     [DisplayName("Completion Exchange")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CmpltnXchg")]
-    #endif
     [IsoXmlTag("CmpltnXchg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ExchangeConfiguration5? CompletionExchange { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ExchangeConfiguration5? CompletionExchange { get; init; } 
-    #else
-    public ExchangeConfiguration5? CompletionExchange { get; set; } 
-    #endif
     
     /// <summary>
     /// Configuration of the cancellation exchanges.
     /// </summary>
     [IsoId("_DEHRlzY6EeOYzMAJn8nuYA")]
     [DisplayName("Cancellation Exchange")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlXchg")]
-    #endif
     [IsoXmlTag("CxlXchg")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public CancellationProcess1Code? CancellationExchange { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CancellationProcess1Code? CancellationExchange { get; init; } 
-    #else
-    public CancellationProcess1Code? CancellationExchange { get; set; } 
-    #endif
     
     
     #nullable disable

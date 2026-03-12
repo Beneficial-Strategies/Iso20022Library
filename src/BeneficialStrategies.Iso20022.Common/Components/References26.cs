@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vngwR90-Eeqr9MBu3-7tWg")]
 [DisplayName("References")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record References26
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a References26 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public References26( System.String reqAccountServicerTransactionIdentification )
-    {
-        AccountServicerTransactionIdentification = reqAccountServicerTransactionIdentification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,59 +23,30 @@ public partial record References26
     /// </summary>
     [IsoId("_vngwSt0-Eeqr9MBu3-7tWg")]
     [DisplayName("Account Servicer Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AcctSvcrTxId")]
-    #endif
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text AccountServicerTransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String AccountServicerTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String AccountServicerTransactionIdentification { get; init; } 
-    #else
-    public System.String AccountServicerTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
     [IsoId("_vngwSN0-Eeqr9MBu3-7tWg")]
     [DisplayName("Market Infrastructure Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MktInfrstrctrTxId")]
-    #endif
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? MarketInfrastructureTransactionIdentification { get; init; } 
-    #else
-    public System.String? MarketInfrastructureTransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identification of the transaction assigned by the processor of the transaction other than the account holder, the account servicer and the non-CSD market infrastructure.
     /// </summary>
     [IsoId("_vngwSd0-Eeqr9MBu3-7tWg")]
     [DisplayName("Processor Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcrTxId")]
-    #endif
     [IsoXmlTag("PrcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax35Text? ProcessorTransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? ProcessorTransactionIdentification { get; init; } 
-    #else
-    public System.String? ProcessorTransactionIdentification { get; set; } 
-    #endif
     
     
     #nullable disable

@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.seev;
@@ -32,12 +27,6 @@ namespace BeneficialStrategies.Iso20022.seev;
 [Description(@"Scope|An account servicer sends the MeetingEntitlementNotification to an issuer, its agent, an intermediary or an account owner to advise the entitlement in relation to a shareholders meeting.|Usage|This message is sent to advise the quantity of securities held by an account owner. The balance is specified for the securities for which the meeting is taking place.|This entitlement message is sent by the account servicer or the registrar to an intermediary, the issuer's agent or the issuer. It is also sent between the account servicer and the account owner or the party holding the right to vote.|The message is also used to amend a previously sent MeetingEntitlementNotification. To notify an update, the RelatedReference must be included in the message.")]
 [IsoId("_TmVu9dEwEd-BzquC8wXy7w_-1804204687")]
 [DisplayName("Meeting Entitlement Notification V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MeetingEntitlementNotificationV03 : IOuterRecord
 {
     
@@ -66,21 +55,6 @@ public partial record MeetingEntitlementNotificationV03 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MeetingEntitlementNotificationV03 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MeetingEntitlementNotificationV03( MessageIdentification1 reqIdentification,MeetingReference4 reqMeetingReference,PartyIdentification9Choice_ reqNotifyingParty,EligibilityDates1 reqEligibility )
-    {
-        Identification = reqIdentification;
-        MeetingReference = reqMeetingReference;
-        NotifyingParty = reqNotifyingParty;
-        Eligibility = reqEligibility;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,83 +62,38 @@ public partial record MeetingEntitlementNotificationV03 : IOuterRecord
     /// </summary>
     [IsoId("_TmVu9tEwEd-BzquC8wXy7w_918918333")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MessageIdentification1 Identification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MessageIdentification1 Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification1 Identification { get; init; } 
-    #else
-    public MessageIdentification1 Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the meeting entitlement message to be modified.
     /// </summary>
     [IsoId("_TmVu99EwEd-BzquC8wXy7w_875515202")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public MessageIdentification? RelatedReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MessageIdentification? RelatedReference { get; init; } 
-    #else
-    public MessageIdentification? RelatedReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Series of elements which allow to identify a meeting.
     /// </summary>
     [IsoId("_TmVu-NEwEd-BzquC8wXy7w_1200593255")]
     [DisplayName("Meeting Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MtgRef")]
-    #endif
     [IsoXmlTag("MtgRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required MeetingReference4 MeetingReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required MeetingReference4 MeetingReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public MeetingReference4 MeetingReference { get; init; } 
-    #else
-    public MeetingReference4 MeetingReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Party notifying the entitlement.
     /// </summary>
     [IsoId("_TmVu-dEwEd-BzquC8wXy7w_1246769790")]
     [DisplayName("Notifying Party")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="NtifngPty")]
-    #endif
     [IsoXmlTag("NtifngPty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PartyIdentification9Choice_ NotifyingParty { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PartyIdentification9Choice_ NotifyingParty { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification9Choice_ NotifyingParty { get; init; } 
-    #else
-    public PartyIdentification9Choice_ NotifyingParty { get; set; } 
-    #endif
     
     /// <summary>
     /// Identifies the security for which the meeting is organised, the account and the positions of the security holder.
     /// </summary>
     [IsoId("_TmVu-tEwEd-BzquC8wXy7w_1286480155")]
     [DisplayName("Security")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Scty")]
-    #endif
     [IsoXmlTag("Scty")]
     [MinLength(1)]
     [MaxLength(200)]
@@ -175,19 +104,8 @@ public partial record MeetingEntitlementNotificationV03 : IOuterRecord
     /// </summary>
     [IsoId("_TmVu-9EwEd-BzquC8wXy7w_1315108389")]
     [DisplayName("Eligibility")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Elgblty")]
-    #endif
     [IsoXmlTag("Elgblty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required EligibilityDates1 Eligibility { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required EligibilityDates1 Eligibility { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public EligibilityDates1 Eligibility { get; init; } 
-    #else
-    public EligibilityDates1 Eligibility { get; set; } 
-    #endif
     
     
     #nullable disable

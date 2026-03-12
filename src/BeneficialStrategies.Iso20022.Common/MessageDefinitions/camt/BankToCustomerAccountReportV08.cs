@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"Scope|The BankToCustomerAccountReport message is sent by the account servicer to an account owner or to a party authorised by the account owner to receive the message. It can be used to inform the account owner, or authorised party, of the entries reported to the account, and/or to provide the owner with balance information on the account at a given point in time.|Usage|The BankToCustomerAccountReport message can contain reports for more than one account. It provides information for cash management and/or reconciliation. It can be used to:|- report pending and booked items;|- provide balance information.|It can include underlying details of transactions that have been included in the entry.|It is possible that the receiver of the message is not the account owner, but a party entitled by the account owner to receive the account information (also known as recipient).|For a statement, the Bank-to-Customer Account Statement message should be used.")]
 [IsoId("_eYI_SW2PEei3KuUgpx7Xcw")]
 [DisplayName("Bank To Customer Account Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record BankToCustomerAccountReportV08 : IOuterRecord
 {
     
@@ -69,18 +58,6 @@ public partial record BankToCustomerAccountReportV08 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a BankToCustomerAccountReportV08 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public BankToCustomerAccountReportV08( GroupHeader81 reqGroupHeader )
-    {
-        GroupHeader = reqGroupHeader;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,28 +65,14 @@ public partial record BankToCustomerAccountReportV08 : IOuterRecord
     /// </summary>
     [IsoId("_eYI_T22PEei3KuUgpx7Xcw")]
     [DisplayName("Group Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="GrpHdr")]
-    #endif
     [IsoXmlTag("GrpHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required GroupHeader81 GroupHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required GroupHeader81 GroupHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public GroupHeader81 GroupHeader { get; init; } 
-    #else
-    public GroupHeader81 GroupHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Reports on a cash account.
     /// </summary>
     [IsoId("_eYI_UW2PEei3KuUgpx7Xcw")]
     [DisplayName("Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Rpt")]
-    #endif
     [IsoXmlTag("Rpt")]
     [MinLength(1)]
     public ValueList<AccountReport25> Report { get; init; } = new ValueList<AccountReport25>(){};
@@ -119,9 +82,6 @@ public partial record BankToCustomerAccountReportV08 : IOuterRecord
     /// </summary>
     [IsoId("_eYI_U22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = new ValueList<SupplementaryData1>(){};
     

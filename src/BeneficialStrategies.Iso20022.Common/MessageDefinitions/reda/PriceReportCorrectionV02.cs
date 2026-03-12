@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.reda;
@@ -31,12 +26,6 @@ namespace BeneficialStrategies.Iso20022.reda;
 [Description(@"Scope|The PriceReportCorrection message is sent by a report provider, eg, a fund accountant, transfer agent, market data provider, or any other interested party, to a report user, eg, a fund management company, a transfer agent, market data provider, regulator or any other interested party.|The message is used to correct at least one of the prices, of a financial instrument, that was quoted in a previously sent PriceReport message.|Usage|The PriceReportCorrection message is used to correct information in a PriceReport message that was previously sent by the fund accountant. If an entire PriceReport message must be corrected, eg, due to an incorrect trade date, it is recommended that a PriceReportCancellation message is used to cancel the entire PriceReport message and a new PriceReport message is sent.")]
 [IsoId("_Zs3dytEvEd-BzquC8wXy7w_-233980086")]
 [DisplayName("Price Report Correction V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record PriceReportCorrectionV02 : IOuterRecord
 {
     
@@ -65,19 +54,6 @@ public partial record PriceReportCorrectionV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a PriceReportCorrectionV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public PriceReportCorrectionV02( AdditionalReference3 reqPreviousReference,PriceCorrection2 reqPriceCorrectionDetails )
-    {
-        PreviousReference = reqPreviousReference;
-        PriceCorrectionDetails = reqPriceCorrectionDetails;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -85,55 +61,24 @@ public partial record PriceReportCorrectionV02 : IOuterRecord
     /// </summary>
     [IsoId("_Zs3dy9EvEd-BzquC8wXy7w_-1170807267")]
     [DisplayName("Pool Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PoolRef")]
-    #endif
     [IsoXmlTag("PoolRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public AdditionalReference3? PoolReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3? PoolReference { get; init; } 
-    #else
-    public AdditionalReference3? PoolReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_Zs3dzNEvEd-BzquC8wXy7w_-1180041935")]
     [DisplayName("Previous Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrvsRef")]
-    #endif
     [IsoXmlTag("PrvsRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required AdditionalReference3 PreviousReference { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required AdditionalReference3 PreviousReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public AdditionalReference3 PreviousReference { get; init; } 
-    #else
-    public AdditionalReference3 PreviousReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Information related to the correction of a price of a financial instrument.
     /// </summary>
     [IsoId("_Zs3dzdEvEd-BzquC8wXy7w_292430358")]
     [DisplayName("Price Correction Details")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PricCrrctnDtls")]
-    #endif
     [IsoXmlTag("PricCrrctnDtls")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required PriceCorrection2 PriceCorrectionDetails { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required PriceCorrection2 PriceCorrectionDetails { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PriceCorrection2 PriceCorrectionDetails { get; init; } 
-    #else
-    public PriceCorrection2 PriceCorrectionDetails { get; set; } 
-    #endif
     
     
     #nullable disable

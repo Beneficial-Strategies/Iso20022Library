@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.acmt;
@@ -33,12 +28,6 @@ namespace BeneficialStrategies.Iso20022.acmt;
 [Description(@"Scope|The IdentificationModificationAdvice message is sent by an assigner to an assignee. The message is used to advice on the correct party and/or account identification information.|Usage|The IdentificationModificationAdvice message is sent after the receipt of one or several transaction messages that included no longer valid party and/or account identification information.|The IdentificationModificationAdvice message is exchanged between financial institutions and between financial institutions and non financial institutions and can contain one or more modification advises.|There is no time limit on the time between the sending of an IdentificationModificationAdvice message and the receipt of the transaction messages that the IdentificationModificationAdvice refers to.|The IdentificationModificationAdvice includes the correct party and/or account identification information, the IdentificationModificationAdvice or the included information may be forwarded to the initiating party of the transaction messages.")]
 [IsoId("_sY77A1kyEeGeoaLUQk__nA_-164460400")]
 [DisplayName("Identification Modification Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IdentificationModificationAdviceV02 : IOuterRecord
 {
     
@@ -67,19 +56,6 @@ public partial record IdentificationModificationAdviceV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IdentificationModificationAdviceV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IdentificationModificationAdviceV02( IdentificationAssignment2 reqAssignment,IdentificationModification2 reqModification )
-    {
-        Assignment = reqAssignment;
-        Modification = reqModification;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -87,72 +63,32 @@ public partial record IdentificationModificationAdviceV02 : IOuterRecord
     /// </summary>
     [IsoId("_sY77BFkyEeGeoaLUQk__nA_-300669747")]
     [DisplayName("Assignment")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Assgnmt")]
-    #endif
     [IsoXmlTag("Assgnmt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IdentificationAssignment2 Assignment { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IdentificationAssignment2 Assignment { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IdentificationAssignment2 Assignment { get; init; } 
-    #else
-    public IdentificationAssignment2 Assignment { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides reference information on the original message.
     /// </summary>
     [IsoId("_sZFE8FkyEeGeoaLUQk__nA_-1297742100")]
     [DisplayName("Original Transaction Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlTxRef")]
-    #endif
     [IsoXmlTag("OrgnlTxRef")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OriginalTransactionReference18? OriginalTransactionReference { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalTransactionReference18? OriginalTransactionReference { get; init; } 
-    #else
-    public OriginalTransactionReference18? OriginalTransactionReference { get; set; } 
-    #endif
     
     /// <summary>
     /// Information concerning the identification data that is advised to be modified.
     /// </summary>
     [IsoId("_sZFE8VkyEeGeoaLUQk__nA_2000152843")]
     [DisplayName("Modification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Mod")]
-    #endif
     [IsoXmlTag("Mod")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IdentificationModification2 Modification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required IdentificationModification2 Modification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IdentificationModification2 Modification { get; init; } 
-    #else
-    public IdentificationModification2 Modification { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_sZO18FkyEeGeoaLUQk__nA_606246720")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

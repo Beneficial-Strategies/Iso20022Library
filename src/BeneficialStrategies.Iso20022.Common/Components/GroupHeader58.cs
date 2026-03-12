@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,27 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s-L9JFkyEeGeoaLUQk__nA_460842520")]
 [DisplayName("Group Header")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record GroupHeader58
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a GroupHeader58 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public GroupHeader58( System.String reqMessageIdentification,System.DateTime reqCreationDateTime )
-    {
-        MessageIdentification = reqMessageIdentification;
-        CreationDateTime = reqCreationDateTime;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -47,111 +23,53 @@ public partial record GroupHeader58
     /// </summary>
     [IsoId("_s-L9JVkyEeGeoaLUQk__nA_130898739")]
     [DisplayName("Message Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgId")]
-    #endif
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoMax35Text MessageIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MessageIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MessageIdentification { get; init; } 
-    #else
-    public System.String MessageIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
     [IsoId("_s-VuIFkyEeGeoaLUQk__nA_-445732463")]
     [DisplayName("Creation Date Time")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CreDtTm")]
-    #endif
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoISODateTime CreationDateTime { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.DateTime CreationDateTime { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.DateTime CreationDateTime { get; init; } 
-    #else
-    public System.DateTime CreationDateTime { get; set; } 
-    #endif
     
     /// <summary>
     /// Party authorised by the account owner to receive information about movements on the account.|Usage: MessageRecipient should only be identified when different from the account owner.
     /// </summary>
     [IsoId("_s-VuIVkyEeGeoaLUQk__nA_1676971455")]
     [DisplayName("Message Recipient")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgRcpt")]
-    #endif
     [IsoXmlTag("MsgRcpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public PartyIdentification43? MessageRecipient { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public PartyIdentification43? MessageRecipient { get; init; } 
-    #else
-    public PartyIdentification43? MessageRecipient { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the page number of the message.||Usage: The pagination of the message is only allowed when agreed between the parties.
     /// </summary>
     [IsoId("_s-VuIlkyEeGeoaLUQk__nA_-1500797128")]
     [DisplayName("Message Pagination")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MsgPgntn")]
-    #endif
     [IsoXmlTag("MsgPgntn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Pagination? MessagePagination { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Pagination? MessagePagination { get; init; } 
-    #else
-    public Pagination? MessagePagination { get; set; } 
-    #endif
     
     /// <summary>
     /// Unique identification, as assigned by the original requestor, to unambiguously identify the business query message.
     /// </summary>
     [IsoId("_s-VuI1kyEeGeoaLUQk__nA_-1782595332")]
     [DisplayName("Original Business Query")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OrgnlBizQry")]
-    #endif
     [IsoXmlTag("OrgnlBizQry")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public OriginalBusinessQuery1? OriginalBusinessQuery { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OriginalBusinessQuery1? OriginalBusinessQuery { get; init; } 
-    #else
-    public OriginalBusinessQuery1? OriginalBusinessQuery { get; set; } 
-    #endif
     
     /// <summary>
     /// Further details of the message.
     /// </summary>
     [IsoId("_s-e4EFkyEeGeoaLUQk__nA_-1429157449")]
     [DisplayName("Additional Information")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="AddtlInf")]
-    #endif
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
     [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoMax500Text? AdditionalInformation { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? AdditionalInformation { get; init; } 
-    #else
-    public System.String? AdditionalInformation { get; set; } 
-    #endif
     
     
     #nullable disable

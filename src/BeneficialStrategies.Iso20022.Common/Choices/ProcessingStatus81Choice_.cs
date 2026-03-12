@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -23,7 +18,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus81Choice.Proprietary))]
     [KnownType(typeof(ProcessingStatus81Choice.CancellationRequested))]
     [KnownType(typeof(ProcessingStatus81Choice.ModificationRequested))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(ProcessingStatus81Choice.AcknowledgedAccepted),nameof(ProcessingStatus81Choice.AcknowledgedAccepted))]
     [JsonDerivedType(typeof(ProcessingStatus81Choice.PendingProcessing),nameof(ProcessingStatus81Choice.PendingProcessing))]
     [JsonDerivedType(typeof(ProcessingStatus81Choice.Rejected),nameof(ProcessingStatus81Choice.Rejected))]
@@ -33,20 +27,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(ProcessingStatus81Choice.Proprietary),nameof(ProcessingStatus81Choice.Proprietary))]
     [JsonDerivedType(typeof(ProcessingStatus81Choice.CancellationRequested),nameof(ProcessingStatus81Choice.CancellationRequested))]
     [JsonDerivedType(typeof(ProcessingStatus81Choice.ModificationRequested),nameof(ProcessingStatus81Choice.ModificationRequested))]
-    #endif
     [IsoId("_qTGP6yAdEeuyDZ-ukt4YRg")]
     [DisplayName("Processing Status 81 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record ProcessingStatus81Choice_
-    #else
-    public abstract partial class ProcessingStatus81Choice_
-    #endif
     {
     }
 }

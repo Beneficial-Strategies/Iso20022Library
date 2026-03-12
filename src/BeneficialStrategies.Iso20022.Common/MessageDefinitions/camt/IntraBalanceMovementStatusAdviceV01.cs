@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.camt;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.camt;
 [Description(@"The IntraBalanceMovementStatusAdvice message is sent from a settlement infrastructure to an account owner/requestor to advise the status of an intra-balance movement instruction previously sent by the account owner/requestor.||Usage: |The message may be used to: |- re-send a message previously sent (the sub-function of the message is ""Duplicate"")|- provide a third party with a copy of a message for information (the sub-function of the message is ""Copy"")|- re-send to a third party a copy of a message for information (the sub-function of the message is ""CopyDuplicate"").")]
 [IsoId("_DLtLcTncEem7JZMuWtwtsg")]
 [DisplayName("Intra Balance Movement Status Advice V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record IntraBalanceMovementStatusAdviceV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record IntraBalanceMovementStatusAdviceV01 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a IntraBalanceMovementStatusAdviceV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public IntraBalanceMovementStatusAdviceV01( TransactionIdentifications24 reqTransactionIdentification,CashAccount38 reqCashAccount )
-    {
-        TransactionIdentification = reqTransactionIdentification;
-        CashAccount = reqCashAccount;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,157 +57,72 @@ public partial record IntraBalanceMovementStatusAdviceV01 : IOuterRecord
     /// </summary>
     [IsoId("_DLtLeTncEem7JZMuWtwtsg")]
     [DisplayName("Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Id")]
-    #endif
     [IsoXmlTag("Id")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public DocumentIdentification51? Identification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public DocumentIdentification51? Identification { get; init; } 
-    #else
-    public DocumentIdentification51? Identification { get; set; } 
-    #endif
     
     /// <summary>
     /// Unambiguous identification of a transaction as per the account owner (or the instructing party managing the account).
     /// </summary>
     [IsoId("_DLtLezncEem7JZMuWtwtsg")]
     [DisplayName("Transaction Identification")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="TxId")]
-    #endif
     [IsoXmlTag("TxId")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransactionIdentifications24 TransactionIdentification { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransactionIdentifications24 TransactionIdentification { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransactionIdentifications24 TransactionIdentification { get; init; } 
-    #else
-    public TransactionIdentifications24 TransactionIdentification { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides details on the processing status of the transaction.
     /// </summary>
     [IsoId("_DLtLfTncEem7JZMuWtwtsg")]
     [DisplayName("Processing Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="PrcgSts")]
-    #endif
     [IsoXmlTag("PrcgSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public ProcessingStatus67Choice_? ProcessingStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public ProcessingStatus67Choice_? ProcessingStatus { get; init; } 
-    #else
-    public ProcessingStatus67Choice_? ProcessingStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Provides the settlement status of a transaction.
     /// </summary>
     [IsoId("_DLtLfzncEem7JZMuWtwtsg")]
     [DisplayName("Settlement Status")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SttlmSts")]
-    #endif
     [IsoXmlTag("SttlmSts")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementStatus16Choice_? SettlementStatus { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementStatus16Choice_? SettlementStatus { get; init; } 
-    #else
-    public SettlementStatus16Choice_? SettlementStatus { get; set; } 
-    #endif
     
     /// <summary>
     /// Account to or from which an entry is made.
     /// </summary>
     [IsoId("_DLtLgTncEem7JZMuWtwtsg")]
     [DisplayName("Cash Account")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAcct")]
-    #endif
     [IsoXmlTag("CshAcct")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required CashAccount38 CashAccount { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required CashAccount38 CashAccount { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public CashAccount38 CashAccount { get; init; } 
-    #else
-    public CashAccount38 CashAccount { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that legally owns the cash account.
     /// </summary>
     [IsoId("_-M0_4jp7EemwKdP955WBJQ")]
     [DisplayName("Cash Account Owner")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAcctOwnr")]
-    #endif
     [IsoXmlTag("CshAcctOwnr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SystemPartyIdentification8? CashAccountOwner { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SystemPartyIdentification8? CashAccountOwner { get; init; } 
-    #else
-    public SystemPartyIdentification8? CashAccountOwner { get; set; } 
-    #endif
     
     /// <summary>
     /// Party that manages the cash account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
     /// </summary>
     [IsoId("_-M0_4zp7EemwKdP955WBJQ")]
     [DisplayName("Cash Account Servicer")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CshAcctSvcr")]
-    #endif
     [IsoXmlTag("CshAcctSvcr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public BranchAndFinancialInstitutionIdentification6? CashAccountServicer { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public BranchAndFinancialInstitutionIdentification6? CashAccountServicer { get; init; } 
-    #else
-    public BranchAndFinancialInstitutionIdentification6? CashAccountServicer { get; set; } 
-    #endif
     
     /// <summary>
     /// Intra-balance movement transaction details.
     /// </summary>
     [IsoId("_DLtLgzncEem7JZMuWtwtsg")]
     [DisplayName("Underlying Intra Balance")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="UndrlygIntraBal")]
-    #endif
     [IsoXmlTag("UndrlygIntraBal")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IntraBalance5? UnderlyingIntraBalance { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public IntraBalance5? UnderlyingIntraBalance { get; init; } 
-    #else
-    public IntraBalance5? UnderlyingIntraBalance { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_DLtLhTncEem7JZMuWtwtsg")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable

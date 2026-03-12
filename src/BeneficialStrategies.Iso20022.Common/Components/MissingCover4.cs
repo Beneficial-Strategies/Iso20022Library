@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,26 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_H5fNMW4-EeiU9cctagi5ow")]
 [DisplayName("Missing Cover")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record MissingCover4
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a MissingCover4 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public MissingCover4( System.String reqMissingCoverIndicator )
-    {
-        MissingCoverIndicator = reqMissingCoverIndicator;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -46,37 +23,17 @@ public partial record MissingCover4
     /// </summary>
     [IsoId("_ICuow24-EeiU9cctagi5ow")]
     [DisplayName("Missing Cover Indicator")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="MssngCoverInd")]
-    #endif
     [IsoXmlTag("MssngCoverInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required IsoYesNoIndicator MissingCoverIndicator { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required System.String MissingCoverIndicator { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String MissingCoverIndicator { get; init; } 
-    #else
-    public System.String MissingCoverIndicator { get; set; } 
-    #endif
     
     /// <summary>
     /// Set of elements provided to update incorrect settlement information for the cover related to the received payment instruction.
     /// </summary>
     [IsoId("_ICuoxW4-EeiU9cctagi5ow")]
     [DisplayName("Cover Correction")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CoverCrrctn")]
-    #endif
     [IsoXmlTag("CoverCrrctn")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SettlementInstruction6? CoverCorrection { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SettlementInstruction6? CoverCorrection { get; init; } 
-    #else
-    public SettlementInstruction6? CoverCorrection { get; set; } 
-    #endif
     
     
     #nullable disable

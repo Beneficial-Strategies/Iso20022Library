@@ -4,11 +4,6 @@ using System.Text.Json.Serialization;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
@@ -52,7 +47,6 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RecordMessage1Choice.SettlementReportingResponse))]
     [KnownType(typeof(RecordMessage1Choice.VerificationInitiation))]
     [KnownType(typeof(RecordMessage1Choice.VerificationResponse))]
-    #if NET7_0_OR_GREATER // C# 11 Records, required members
     [JsonDerivedType(typeof(RecordMessage1Choice.AddendumInitiation),nameof(RecordMessage1Choice.AddendumInitiation))]
     [JsonDerivedType(typeof(RecordMessage1Choice.AddendumResponse),nameof(RecordMessage1Choice.AddendumResponse))]
     [JsonDerivedType(typeof(RecordMessage1Choice.Amendment),nameof(RecordMessage1Choice.Amendment))]
@@ -91,20 +85,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     [JsonDerivedType(typeof(RecordMessage1Choice.SettlementReportingResponse),nameof(RecordMessage1Choice.SettlementReportingResponse))]
     [JsonDerivedType(typeof(RecordMessage1Choice.VerificationInitiation),nameof(RecordMessage1Choice.VerificationInitiation))]
     [JsonDerivedType(typeof(RecordMessage1Choice.VerificationResponse),nameof(RecordMessage1Choice.VerificationResponse))]
-    #endif
     [IsoId("_F2jDAFZVEeen1vB4iz5SyA")]
     [DisplayName("Record Message 1 Choice")]
-    #if DECLARE_SERIALIZABLE
-    [Serializable]
-    #endif
-    #if DECLARE_DATACONTRACT
-    [DataContract]
-    #endif
-    #if NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
     public abstract partial record RecordMessage1Choice_
-    #else
-    public abstract partial class RecordMessage1Choice_
-    #endif
     {
     }
 }

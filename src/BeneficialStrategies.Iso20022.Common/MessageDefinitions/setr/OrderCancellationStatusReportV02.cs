@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.setr;
@@ -35,12 +30,6 @@ namespace BeneficialStrategies.Iso20022.setr;
 [Description(@"Scope|The OrderCancellationStatusReport is sent by an executing party, eg, a transfer agent, to the instructing party, eg, an investment manager or its authorised representative. There may be one or more intermediary parties between the executing party and the instructing party. The intermediary party is, for example, an intermediary or a concentrator.|The message gives the status of an order cancellation instruction message that was previously sent by the instructing party.|Usage|The OrderCancellationStatusReport message is used to report the status of an order cancellation instruction message that was previously sent by the instructing party. The message can be used to report one of the following:|- the cancellation is accepted for further processing, or|- the cancellation is rejected, or|- the order has been cancelled.|When the cancellation is rejected, the reason for the rejection must be specified.")]
 [IsoId("_gilh-NE7Ed-BzquC8wXy7w_-1859459709")]
 [DisplayName("Order Cancellation Status Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record OrderCancellationStatusReportV02 : IOuterRecord
 {
     
@@ -69,18 +58,6 @@ public partial record OrderCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a OrderCancellationStatusReportV02 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public OrderCancellationStatusReportV02( OrderStatusAndReason4 reqCancellationStatusReport )
-    {
-        CancellationStatusReport = reqCancellationStatusReport;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -88,9 +65,6 @@ public partial record OrderCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_gilh-dE7Ed-BzquC8wXy7w_339506897")]
     [DisplayName("Related Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RltdRef")]
-    #endif
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
@@ -101,9 +75,6 @@ public partial record OrderCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_gilh-tE7Ed-BzquC8wXy7w_-1972675840")]
     [DisplayName("Other Reference")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="OthrRef")]
-    #endif
     [IsoXmlTag("OthrRef")]
     [MinLength(1)]
     [MaxLength(2)]
@@ -114,19 +85,8 @@ public partial record OrderCancellationStatusReportV02 : IOuterRecord
     /// </summary>
     [IsoId("_gilh-9E7Ed-BzquC8wXy7w_1147588729")]
     [DisplayName("Cancellation Status Report")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="CxlStsRpt")]
-    #endif
     [IsoXmlTag("CxlStsRpt")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required OrderStatusAndReason4 CancellationStatusReport { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required OrderStatusAndReason4 CancellationStatusReport { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public OrderStatusAndReason4 CancellationStatusReport { get; init; } 
-    #else
-    public OrderStatusAndReason4 CancellationStatusReport { get; set; } 
-    #endif
     
     
     #nullable disable

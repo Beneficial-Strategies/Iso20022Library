@@ -7,11 +7,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
@@ -19,19 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_59y2N5lZEeeE1Ya-LgRsuQ")]
 [DisplayName("Information Qualifier Type")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record InformationQualifierType1
 {
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    // No constructor needed for < NET8 because this type has no required members.
-    #endif
     #nullable enable
     
     /// <summary>
@@ -39,35 +23,17 @@ public partial record InformationQualifierType1
     /// </summary>
     [IsoId("_6FzisZlZEeeE1Ya-LgRsuQ")]
     [DisplayName("Is Formatted")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="IsFrmtd")]
-    #endif
     [IsoXmlTag("IsFrmtd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public IsoYesNoIndicator? IsFormatted { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public System.String? IsFormatted { get; init; } 
-    #else
-    public System.String? IsFormatted { get; set; } 
-    #endif
     
     /// <summary>
     /// Priority of the information.
     /// </summary>
     [IsoId("_6Fzis5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Priority")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="Prty")]
-    #endif
     [IsoXmlTag("Prty")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public Priority1Code? Priority { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public Priority1Code? Priority { get; init; } 
-    #else
-    public Priority1Code? Priority { get; set; } 
-    #endif
     
     
     #nullable disable

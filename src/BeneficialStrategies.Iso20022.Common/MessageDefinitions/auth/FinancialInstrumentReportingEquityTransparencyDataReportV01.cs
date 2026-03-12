@@ -10,11 +10,6 @@ using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
 
-#if NET6_0_OR_GREATER // C# 10 
-#else
-using System.DateOnly=System.DateTime; // So data types will degrade gracefully
-using System.TimeOnly=System.DateTime; // Same with this data type
-#endif
 
 
 namespace BeneficialStrategies.Iso20022.auth;
@@ -27,12 +22,6 @@ namespace BeneficialStrategies.Iso20022.auth;
 [Description(@"The FinancialInstrumentReportingEquityTransparencyDataReport message is sent by the trading venues to the national competent authority to report on the transparency data for equity financial instruments.")]
 [IsoId("_4LK8TURNEee7JdgA9zPESA")]
 [DisplayName("Financial Instrument Reporting Equity Transparency Data Report V")]
-#if DECLARE_SERIALIZABLE
-[Serializable]
-#endif
-#if DECLARE_DATACONTRACT
-[DataContract]
-#endif
 public partial record FinancialInstrumentReportingEquityTransparencyDataReportV01 : IOuterRecord
 {
     
@@ -61,19 +50,6 @@ public partial record FinancialInstrumentReportingEquityTransparencyDataReportV0
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
     
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
-    // No constructor needed for NET8 and above.
-    #else
-    /// <summary>
-    /// Constructs a FinancialInstrumentReportingEquityTransparencyDataReportV01 instance using the members the ISO20022 deems required.
-    /// It is higly recommended that you update to .NET 8 or above so you can use required initialization syntax instead
-    /// </summary>
-    public FinancialInstrumentReportingEquityTransparencyDataReportV01( SecuritiesMarketReportHeader1 reqReportHeader,TransparencyDataReport11 reqEquityTransparencyData )
-    {
-        ReportHeader = reqReportHeader;
-        EquityTransparencyData = reqEquityTransparencyData;
-    }
-    #endif
     #nullable enable
     
     /// <summary>
@@ -81,55 +57,24 @@ public partial record FinancialInstrumentReportingEquityTransparencyDataReportV0
     /// </summary>
     [IsoId("_4LK8T0RNEee7JdgA9zPESA")]
     [DisplayName("Report Header")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="RptHdr")]
-    #endif
     [IsoXmlTag("RptHdr")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SecuritiesMarketReportHeader1 ReportHeader { get; init; } 
-    #else
-    public SecuritiesMarketReportHeader1 ReportHeader { get; set; } 
-    #endif
     
     /// <summary>
     /// Details the equity transparency qualitative data reported by a trading venue.
     /// </summary>
     [IsoId("_4LK8UURNEee7JdgA9zPESA")]
     [DisplayName("Equity Transparency Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="EqtyTrnsprncyData")]
-    #endif
     [IsoXmlTag("EqtyTrnsprncyData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public required TransparencyDataReport11 EquityTransparencyData { get; init; } 
-    #elif NET7_0_OR_GREATER // C# 11 Records, required members
-    public required TransparencyDataReport11 EquityTransparencyData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public TransparencyDataReport11 EquityTransparencyData { get; init; } 
-    #else
-    public TransparencyDataReport11 EquityTransparencyData { get; set; } 
-    #endif
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_4LK8U0RNEee7JdgA9zPESA")]
     [DisplayName("Supplementary Data")]
-    #if DECLARE_DATACONTRACT
-    [DataMember(Name="SplmtryData")]
-    #endif
     [IsoXmlTag("SplmtryData")]
-    #if NET8_0_OR_GREATER // C# 12 Global type alias
     public SupplementaryData1? SupplementaryData { get; init; } 
-    #elif NET5_0_OR_GREATER // C# 9 Records, init-only setters, data annotations native
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    #else
-    public SupplementaryData1? SupplementaryData { get; set; } 
-    #endif
     
     
     #nullable disable
