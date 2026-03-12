@@ -11,7 +11,7 @@
   <PropertyGroup>
     <PackageId>BeneficialStrategies.Iso20022</PackageId>
     <PackageDescription>The entirety of the ISO20022 message domain model. 2,665 B2B financial messages structured as immutable records based on the ISO20022 standard.</PackageDescription>
-    <Version>0.2.6-alpha</Version>
+    <Version>0.3.0-alpha</Version>
     <Authors>Jeff Ward,Beneficial Strategies</Authors>
     <Company>BeneficialStrategies.com</Company>
     <RepositoryUrl>https://github.com/jefforyamos/Iso20022Library</RepositoryUrl>

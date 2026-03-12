@@ -26,3 +26,10 @@
 
 0.2.6-alpha
     Removed StringLengthAttribute from collections, causing JSON serialization problems.
+
+0.3.0-alpha
+    Reorganized all message definitions under MessageDefinitions/ subdirectory.
+    Fixed broken build: corrected invalid TargetFrameworks TFMs, added missing global namespace usings.
+    Library now targets net8.0 only; leverages C# 12 required members and global type aliases.
+    Stripped ~1.9M lines of dead preprocessor directives for obsolete .NET versions.
+    Added GitHub Actions workflow for automated NuGet publishing on version tags.
