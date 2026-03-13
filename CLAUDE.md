@@ -81,6 +81,31 @@ src/BeneficialStrategies.Iso20022.Common/
 - `IOuterDocument` - XML document wrapper
 - `IIsoXmlSerializable` - Serialization contract
 
+## Multi-Package Repository Strategy
+
+**Chosen approach: monorepo.**
+
+All NuGet packages produced by Beneficial Strategies that depend on each other live in this
+single repository. The planned packages include (at minimum):
+
+- `BeneficialStrategies.Iso20022` — this library (ISO 20022 message types)
+- `BeneficialStrategies.Iso20022.Sagas` — MassTransit Sagas strongly correlated to ISO 20022 messages
+
+**Reasons:**
+
+- **Atomic changes** — when a type changes in the ISO 20022 library that the Sagas library depends
+  on, both can be updated and validated in a single PR. No cross-repo version coordination.
+- **Single build/CI** — one pipeline validates the entire dependency graph together, catching
+  breaking changes before they ship to NuGet.
+- **No bootstrap problem** — dependent projects reference each other as `<ProjectReference>` during
+  development. No need to publish `-preview` packages just to test an in-progress change.
+- **Consistent versioning** — package versions are managed in one place and released together on
+  the same cadence (Sagas releases track the ISO 20022 library release schedule).
+- **Simpler developer experience** — one clone, one `dotnet build`, everything works.
+
+Each package retains its own `.csproj` with its own `<PackageId>` and `<Version>`. CI packs and
+publishes them in dependency order (ISO 20022 library first, then Sagas).
+
 ## Test Patterns
 
 ### Embedded XML Sample Files
