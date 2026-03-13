@@ -80,3 +80,38 @@ src/BeneficialStrategies.Iso20022.Common/
 - `IOuterRecord` - All top-level messages
 - `IOuterDocument` - XML document wrapper
 - `IIsoXmlSerializable` - Serialization contract
+
+## Test Patterns
+
+### Embedded XML Sample Files
+
+XML sample files live in `src/BeneficialStrategies.Iso20022.Common.Tests/TestData/` and are
+compiled as `EmbeddedResource`. Every file **must** be validated against the official ISO 20022
+XSD **before** it is committed.
+
+**Validation requirement (mandatory):**
+
+1. Obtain the XSD from `https://www.iso20022.org/sites/default/files/schemas/<message-id>.xsd`
+   (e.g. `camt.056.001.10.xsd`).
+2. Validate the XML file against the XSD using an external tool (e.g. `xmllint --schema`
+   or an online validator such as freeformatter.com/xml-validator.html).
+3. Record the result in the file's header comment:
+   ```xml
+   <!--
+     XSD VALIDATION STATUS: VALID
+     Validated : YYYY-MM-DD
+     Schema    : https://www.iso20022.org/sites/default/files/schemas/<message-id>.xsd
+   -->
+   ```
+4. If the file cannot be validated externally, set the status to `PENDING EXTERNAL VALIDATION`
+   and add a TODO comment explaining why (e.g. amounts excluded due to Ccy-attribute mismatch).
+
+**Amount elements** use the ISO XSD `simpleContent+Ccy-attribute` pattern:
+`<Amt Ccy="EUR">47250.00</Amt>` — NOT child elements. The library's `Iso20022XmlSerializer`
+handles this correctly for all types in the `BeneficialStrategies.Iso20022.Amounts` namespace.
+
+### Embedded resource naming
+
+The manifest resource name is built from the `<RootNamespace>` (not the assembly name):
+`{RootNamespace}.TestData.{filename}` where path separators become dots.
+For this project: `BeneficialStrategies.Iso20022.TestData.<filename>`

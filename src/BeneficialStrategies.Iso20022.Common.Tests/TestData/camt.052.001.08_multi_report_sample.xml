@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sample camt.052.001.08 — BankToCustomerAccountReport
+  Namespace : urn:iso:std:iso:20022:tech:xsd:camt.052.001.08
+
+  XSD VALIDATION STATUS: VALID
+  Validated : 2026-03-13
+  Schema    : https://www.iso20022.org/sites/default/files/schemas/camt.052.001.08.xsd
+
+  Scenario  : Deutsche Bank (DEUTDEFFXXX) sends an intraday account report to
+              Acme Manufacturing GmbH covering TWO accounts in a single message.
+
+              This sample exercises the collection-of-collections structure fixed in
+              GitHub Issue #1: BankToCustomerAccountReportV08.Report is a
+              ValueList<AccountReport25>, and each AccountReport25 carries its own
+              ValueList<CashBalance8> (Bal) and ValueList<ReportEntry10> (Ntry).
+
+  Report 1  : Operating account DE89370400440532013000 — EUR
+              Two balances : opening booked (EUR 500 000.00) +
+                             interim booked (EUR 547 250.00)
+              Two entries  : incoming SEPA CT EUR 32 750.00 (BOOK/CRDT)
+                             incoming SEPA CT EUR 14 500.00 (BOOK/CRDT)
+
+  Report 2  : Payroll account DE75512108001245126199 — EUR
+              One balance  : opening booked (EUR 125 000.00)
+              One entry    : payroll batch debit EUR 125 000.00 (BOOK/DBIT)
+
+  NOTE — amounts use the ISO XSD simpleContent+Ccy-attribute pattern:
+  <Amt Ccy="EUR">47250.00</Amt>
+  The C# library now serialises/deserialises this format correctly (fixed
+  alongside the XML serializer implementation).
+-->
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:camt.052.001.08">
+  <BkToCstmrAcctRpt>
+
+    <GrpHdr>
+      <MsgId>DEUTDEFF/240316/CAMT052/00001</MsgId>
+      <CreDtTm>2024-03-16T08:00:00</CreDtTm>
+    </GrpHdr>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         Report 1 — Operating account DE89370400440532013000
+         2 balances (OPBD, ITBD)  ·  2 entries (SEPA incoming credits)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <Rpt>
+      <Id>RPT-DEUTDEFF-20240316-001</Id>
+      <CreDtTm>2024-03-16T08:00:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE89370400440532013000</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Ownr>
+          <Nm>Acme Manufacturing GmbH</Nm>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BICFI>DEUTDEFFXXX</BICFI>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+
+      <!-- Balance 1 of 2 — Opening Booked (OPBD) -->
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>OPBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">500000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-16</Dt>
+        </Dt>
+      </Bal>
+
+      <!-- Balance 2 of 2 — Interim Booked (ITBD) -->
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>ITBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">547250.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-16</Dt>
+        </Dt>
+      </Bal>
+
+      <!-- Entry 1 of 2 — Incoming SEPA Credit Transfer EUR 32 750.00 -->
+      <Ntry>
+        <Amt Ccy="EUR">32750.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-16</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-16</Dt>
+        </ValDt>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+      </Ntry>
+
+      <!-- Entry 2 of 2 — Incoming SEPA Credit Transfer EUR 14 500.00 -->
+      <Ntry>
+        <Amt Ccy="EUR">14500.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-16</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-16</Dt>
+        </ValDt>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>RCDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+      </Ntry>
+    </Rpt>
+
+    <!-- ═══════════════════════════════════════════════════════════════════════
+         Report 2 — Payroll account DE75512108001245126199
+         1 balance  (OPBD)  ·  1 entry (payroll batch DBIT)
+         ═══════════════════════════════════════════════════════════════════════ -->
+    <Rpt>
+      <Id>RPT-DEUTDEFF-20240316-002</Id>
+      <CreDtTm>2024-03-16T08:00:00</CreDtTm>
+      <Acct>
+        <Id>
+          <IBAN>DE75512108001245126199</IBAN>
+        </Id>
+        <Ccy>EUR</Ccy>
+        <Ownr>
+          <Nm>Acme Manufacturing GmbH</Nm>
+        </Ownr>
+        <Svcr>
+          <FinInstnId>
+            <BICFI>DEUTDEFFXXX</BICFI>
+          </FinInstnId>
+        </Svcr>
+      </Acct>
+
+      <!-- Balance 1 of 1 — Opening Booked (OPBD) -->
+      <Bal>
+        <Tp>
+          <CdOrPrtry>
+            <Cd>OPBD</Cd>
+          </CdOrPrtry>
+        </Tp>
+        <Amt Ccy="EUR">125000.00</Amt>
+        <CdtDbtInd>CRDT</CdtDbtInd>
+        <Dt>
+          <Dt>2024-03-16</Dt>
+        </Dt>
+      </Bal>
+
+      <!-- Entry 1 of 1 — Payroll batch debit EUR 125 000.00 -->
+      <Ntry>
+        <Amt Ccy="EUR">125000.00</Amt>
+        <CdtDbtInd>DBIT</CdtDbtInd>
+        <Sts>
+          <Cd>BOOK</Cd>
+        </Sts>
+        <BookgDt>
+          <Dt>2024-03-16</Dt>
+        </BookgDt>
+        <ValDt>
+          <Dt>2024-03-16</Dt>
+        </ValDt>
+        <BkTxCd>
+          <Domn>
+            <Cd>PMNT</Cd>
+            <Fmly>
+              <Cd>ICDT</Cd>
+              <SubFmlyCd>ESCT</SubFmlyCd>
+            </Fmly>
+          </Domn>
+        </BkTxCd>
+      </Ntry>
+    </Rpt>
+
+  </BkToCstmrAcctRpt>
+</Document>
