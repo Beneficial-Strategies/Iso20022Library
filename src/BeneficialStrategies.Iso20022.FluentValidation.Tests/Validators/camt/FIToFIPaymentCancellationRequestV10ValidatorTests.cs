@@ -1,6 +1,8 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using Agent = BeneficialStrategies.Iso20022.Choices.Party40Choice.Agent;
+using CxlReasonCode = BeneficialStrategies.Iso20022.Codesets.ExternalCancellationReason1Code;
+using CxlReasonChoice = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice;
 
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
@@ -37,6 +39,11 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             OriginalEndToEndIdentification = "E2E-001",
             OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
         },
+    };
+
+    private static PaymentCancellationReason5 ValidCancellationReason() => new()
+    {
+        Reason = new CxlReasonChoice.Code { Value = CxlReasonCode.RequestedByCustomer },
     };
 
     private static FIToFIPaymentCancellationRequestV10 ValidMessage() => new()
@@ -80,6 +87,8 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void ValidMessage_GroupCancellation_NoValidationErrors()
     {
+        // GroupCancellationAndReasonRule: when GroupCancellation is true,
+        // CancellationReasonInformation/Reason must be present.
         var msg = new FIToFIPaymentCancellationRequestV10
         {
             Assignment = ValidAssignment(),
@@ -90,6 +99,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                     OriginalMessageIdentification = "ORIG-MSG-001",
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                     GroupCancellation = "true",
+                    CancellationReasonInformation = ValidCancellationReason(),
                 },
             },
         };
@@ -378,5 +388,221 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         _sut.TestValidate(msg)
             .ShouldHaveValidationErrorFor(
                 x => x.Underlying.OriginalGroupInformationAndCancellation!.OriginalMessageIdentification);
+    }
+
+    // ── UnderlyingTransaction28: GroupCancellationAndReasonRule ──────────────────
+
+    [Fact]
+    public void GroupCancellationTrue_NoReason_ViolatesGroupCancellationAndReasonRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "true",
+                    // CancellationReasonInformation intentionally absent
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.Contains(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndReasonRule"));
+    }
+
+    [Fact]
+    public void GroupCancellationTrue_WithReason_SatisfiesGroupCancellationAndReasonRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "true",
+                    CancellationReasonInformation = ValidCancellationReason(),
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.DoesNotContain(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndReasonRule"));
+    }
+
+    // ── UnderlyingTransaction28: GroupCancellationTrueAndTransactionInformationRule ─
+
+    [Fact]
+    public void GroupCancellationTrue_WithTransactionInfo_ViolatesRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "true",
+                    CancellationReasonInformation = ValidCancellationReason(),
+                },
+                TransactionInformation = new PaymentTransaction137
+                {
+                    OriginalEndToEndIdentification = "E2E-001",
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.Contains(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationTrueAndTransactionInformationRule"));
+    }
+
+    // ── UnderlyingTransaction28: GroupCancellationFalseAndTransactionInformationRule
+
+    [Fact]
+    public void GroupCancellationFalse_NoTransactionInfo_ViolatesRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "false",
+                    // TransactionInformation intentionally absent
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.Contains(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationFalseAndTransactionInformationRule"));
+    }
+
+    [Fact]
+    public void GroupCancellationFalse_WithTransactionInfo_SatisfiesRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "false",
+                },
+                TransactionInformation = new PaymentTransaction137
+                {
+                    OriginalEndToEndIdentification = "E2E-001",
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.DoesNotContain(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationFalseAndTransactionInformationRule"));
+    }
+
+    // ── UnderlyingTransaction28: GroupCancellationAndNumberOfTransactionsRule ────
+
+    [Fact]
+    public void GroupCancellationFalse_NumberOfTransactionsMismatch_ViolatesRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "false",
+                    NumberOfTransactions = "5", // claims 5, but only 1 present
+                },
+                TransactionInformation = new PaymentTransaction137
+                {
+                    OriginalEndToEndIdentification = "E2E-001",
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.Contains(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndNumberOfTransactionsRule"));
+    }
+
+    [Fact]
+    public void GroupCancellationFalse_NumberOfTransactionsMatches_SatisfiesRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    GroupCancellation = "false",
+                    NumberOfTransactions = "1",
+                },
+                TransactionInformation = new PaymentTransaction137
+                {
+                    OriginalEndToEndIdentification = "E2E-001",
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.DoesNotContain(result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndNumberOfTransactionsRule"));
+    }
+
+    // ── UnderlyingTransaction28: GroupOrTransactionCaseRule ──────────────────────
+
+    [Fact]
+    public void BothGroupAndTransactionHaveCase_ViolatesGroupOrTransactionCaseRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
+                {
+                    OriginalMessageIdentification = "ORIG-001",
+                    OriginalMessageNameIdentification = "pacs.008.001.11",
+                    Case = new Case5 { Identification = "CASE-GRP", Creator = MakeAgent("DEUTDEFFXXX") },
+                },
+                TransactionInformation = new PaymentTransaction137
+                {
+                    Case = new Case5 { Identification = "CASE-TXN", Creator = MakeAgent("DEUTDEFFXXX") },
+                    OriginalEndToEndIdentification = "E2E-001",
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.Contains(result.Errors,
+            e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
+    }
+
+    [Fact]
+    public void OnlyTransactionHasCase_SatisfiesGroupOrTransactionCaseRule()
+    {
+        var msg = ValidMessage() with
+        {
+            Underlying = new UnderlyingTransaction28
+            {
+                TransactionInformation = new PaymentTransaction137
+                {
+                    Case = new Case5 { Identification = "CASE-TXN", Creator = MakeAgent("DEUTDEFFXXX") },
+                    OriginalEndToEndIdentification = "E2E-001",
+                },
+            },
+        };
+        var result = _sut.Validate(msg);
+        Assert.DoesNotContain(result.Errors,
+            e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
     }
 }

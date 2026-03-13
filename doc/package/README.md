@@ -5,7 +5,7 @@ This project contains a .NET implementation of containers for 2,665 different ty
 ## Thank you
 
 You are about to download an implementation of the entire domain model for the [ISO20022](https://iso20022.org) standard.
-By design, serialization is **not included** in this library. Given the complexity and vastness of this library, that is alone is the appropriate scope.
+This includes basic serialization to/from XML and JSON according to the ISO20022 specifications.
 
 The purpose of this library, by itself, is to simply present a faithful rendering of the data in memory in a .NET application.
 There are follow-on projects that do the serialization, validation, etc.  However, this is the bedrock that must be laid first.
