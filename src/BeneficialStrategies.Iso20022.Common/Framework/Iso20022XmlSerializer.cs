@@ -215,6 +215,9 @@ public static class Iso20022XmlSerializer
             return wrapper;
         }
 
+        // Currency-and-amount types: <Tag Ccy="EUR">47250.00</Tag>
+        if (IsAmountType(runtimeType)) return SerializeAmount(value, ns, tag);
+
         // Concrete component: recurse
         return SerializeObject(value, ns, tag);
     }
@@ -262,6 +265,7 @@ public static class Iso20022XmlSerializer
         if (isLeaf || IsLeafType(core)) return ParseLeaf(core, el.Value);
         if (core.IsEnum) return ParseEnum(core, el.Value);
         if (core.IsAbstract) return DeserializeChoice(core, el, ns);
+        if (IsAmountType(core)) return DeserializeAmount(core, el);
         return DeserializeObject(core, el, ns);
     }
 
@@ -368,6 +372,38 @@ public static class Iso20022XmlSerializer
             return result!;
         throw new InvalidOperationException(
             $"Unknown value '{text}' for enum {enumType.Name}.");
+    }
+
+    // ── Currency-and-amount helpers ────────────────────────────────────────────
+
+    /// <summary>
+    /// ISO 20022 currency-and-amount types (all in the Amounts namespace) are serialized as
+    /// <c>&lt;Tag Ccy="EUR"&gt;47250.00&lt;/Tag&gt;</c> — an XML attribute for currency and
+    /// text content for the decimal amount — to match the ISO XSD simpleContent pattern.
+    /// </summary>
+    private static bool IsAmountType(Type t)
+        => t.Namespace == "BeneficialStrategies.Iso20022.Amounts";
+
+    private static XElement SerializeAmount(object obj, XNamespace ns, string tag)
+    {
+        var props = GetProps(obj.GetType());
+        var currency = props.First(p => p.XmlTag == "Currency").Property.GetValue(obj) as string ?? "";
+        var amount = (decimal)props.First(p => p.XmlTag == "Amount").Property.GetValue(obj)!;
+        return new XElement(ns + tag,
+            new XAttribute("Ccy", currency),
+            amount.ToString(CultureInfo.InvariantCulture));
+    }
+
+    private static object DeserializeAmount(Type type, XElement el)
+    {
+        var instance = Activator.CreateInstance(type)
+            ?? throw new InvalidOperationException($"Cannot create instance of {type.Name}.");
+        var props = GetProps(type);
+        var currencyProp = props.First(p => p.XmlTag == "Currency").Property;
+        var amountProp   = props.First(p => p.XmlTag == "Amount").Property;
+        currencyProp.SetValue(instance, el.Attribute("Ccy")?.Value ?? "");
+        amountProp.SetValue(instance, decimal.Parse(el.Value, CultureInfo.InvariantCulture));
+        return instance;
     }
 
     // ── Type helpers ───────────────────────────────────────────────────────────

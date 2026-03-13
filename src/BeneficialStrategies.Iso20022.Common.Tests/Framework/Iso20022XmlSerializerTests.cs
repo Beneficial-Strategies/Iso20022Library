@@ -1,5 +1,6 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
+using BeneficialStrategies.Iso20022.Amounts;
 using BeneficialStrategies.Iso20022.Codesets;
 using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
@@ -9,6 +10,7 @@ using EntryCode = BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice.Code;
 using EntryProprietary = BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice.Proprietary;
 using BeneficialStrategies.Iso20022.Choices.Party40Choice;
 using BeneficialStrategies.Iso20022.camt;
+using System.Linq;
 using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022;
@@ -248,6 +250,127 @@ public class Iso20022XmlSerializerTests
     public void JsonSerializerOptions_Default_IsReadOnly()
     {
         Assert.True(Iso20022JsonSerializerOptions.Default.IsReadOnly);
+    }
+
+    // ── Currency-and-amount (Ccy attribute + text content) ────────────────────
+
+    /// <summary>
+    /// The ISO XSD encodes monetary amounts as simpleContent with a <c>Ccy</c> XML attribute:
+    /// <c>&lt;Amt Ccy="EUR"&gt;905500.00&lt;/Amt&gt;</c>.
+    /// Verifies that the serializer emits the <c>Ccy</c> attribute (not a child element).
+    /// </summary>
+    [Fact]
+    public void Serialize_Amount_ProducesCcyAttribute()
+    {
+        var message = new BankToCustomerStatementV11
+        {
+            GroupHeader = Camt053ExamplesTests.CreateGroupHeader(),
+            Statement = new AccountStatement12
+            {
+                Identification = "STMT-AMT-01",
+                Account = Camt053ExamplesTests.CreateStatementAccount(),
+                Balance =
+                [
+                    Camt053ExamplesTests.CreateClosingBookedBalance(905_500.00m, CreditDebitCode.Credit),
+                ],
+            },
+        };
+
+        var doc = Iso20022XmlSerializer.Serialize(message);
+        var ns = XNamespace.Get(Camt053Ns);
+
+        var amtEl = doc.Descendants(ns + "Amt").First();
+        Assert.Equal("EUR", amtEl.Attribute("Ccy")?.Value);
+        Assert.Equal("905500.00", amtEl.Value);
+    }
+
+    /// <summary>
+    /// Verifies that the serializer does NOT produce a child <c>&lt;Currency&gt;</c> element
+    /// inside an amount element — that would be invalid per the ISO XSD.
+    /// </summary>
+    [Fact]
+    public void Serialize_Amount_DoesNotProduceCurrencyChildElement()
+    {
+        var message = new BankToCustomerStatementV11
+        {
+            GroupHeader = Camt053ExamplesTests.CreateGroupHeader(),
+            Statement = new AccountStatement12
+            {
+                Identification = "STMT-AMT-02",
+                Account = Camt053ExamplesTests.CreateStatementAccount(),
+                Balance =
+                [
+                    Camt053ExamplesTests.CreateClosingBookedBalance(100.00m, CreditDebitCode.Credit),
+                ],
+            },
+        };
+
+        var doc = Iso20022XmlSerializer.Serialize(message);
+        var ns = XNamespace.Get(Camt053Ns);
+
+        Assert.Empty(doc.Descendants(ns + "Currency"));
+    }
+
+    /// <summary>
+    /// Round-trip: a balance amount serialized with <c>Ccy</c> attribute deserializes
+    /// back to the correct <see cref="ActiveOrHistoricCurrencyAndAmount.Currency"/>
+    /// and <see cref="ActiveOrHistoricCurrencyAndAmount.Amount"/> values.
+    /// </summary>
+    [Fact]
+    public void RoundTrip_Amount_PreservesCurrencyAndValue()
+    {
+        var message = new BankToCustomerStatementV11
+        {
+            GroupHeader = Camt053ExamplesTests.CreateGroupHeader(),
+            Statement = new AccountStatement12
+            {
+                Identification = "STMT-AMT-03",
+                Account = Camt053ExamplesTests.CreateStatementAccount(),
+                Balance =
+                [
+                    Camt053ExamplesTests.CreateClosingBookedBalance(47_250.00m, CreditDebitCode.Credit),
+                ],
+            },
+        };
+
+        var xml = Iso20022XmlSerializer.SerializeToString(message);
+        var result = Iso20022XmlSerializer.Deserialize<BankToCustomerStatementV11>(xml);
+
+        var bal = result.Statement.Balance[0];
+        Assert.Equal("EUR", bal.Amount.Currency);
+        Assert.Equal(47_250.00m, bal.Amount.Amount);
+    }
+
+    /// <summary>
+    /// Round-trip for <see cref="PaymentTransaction137.OriginalInterbankSettlementAmount"/>
+    /// in camt.056: <c>&lt;OrgnlIntrBkSttlmAmt Ccy="EUR"&gt;47250.00&lt;/OrgnlIntrBkSttlmAmt&gt;</c>.
+    /// </summary>
+    [Fact]
+    public void RoundTrip_Camt056_WithSettlementAmount_PreservesCurrencyAndValue()
+    {
+        var message = new FIToFIPaymentCancellationRequestV10
+        {
+            Assignment = Camt056ExamplesTests.CreateCaseAssignment(),
+            Underlying = new UnderlyingTransaction28
+            {
+                TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation() with
+                {
+                    OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount
+                    {
+                        Currency = "EUR",
+                        Amount = 47_250.00m,
+                    },
+                },
+            },
+        };
+
+        var xml = Iso20022XmlSerializer.SerializeToString(message);
+        var result = Iso20022XmlSerializer.Deserialize<FIToFIPaymentCancellationRequestV10>(xml);
+
+        var amt = result.Underlying.TransactionInformation!.OriginalInterbankSettlementAmount;
+        Assert.NotNull(amt);
+        Assert.Equal("EUR", amt!.Currency);
+        Assert.Equal(47_250.00m, amt.Amount);
     }
 
     // ── Helpers ────────────────────────────────────────────────────────────────
