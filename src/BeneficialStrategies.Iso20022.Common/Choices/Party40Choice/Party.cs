@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party40Choice
     /// </summary>
     [IsoId("_8U6MM248EeiU9cctagi5ow")]
     [DisplayName("Party")]
+    [IsoXmlTag("Pty")]
     public partial record Party : Party40Choice_
     {
         #nullable enable
