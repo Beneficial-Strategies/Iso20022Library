@@ -42,7 +42,7 @@ public partial record SecuritiesProceeds1
     [IsoXmlTag("AcctDtls")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<SecuritiesAccount10> AccountDetails { get; init; } = new ValueList<SecuritiesAccount10>(){};
+    public ValueList<SecuritiesAccount10> AccountDetails { get; init; } = [];
     
     /// <summary>
     /// Provides reconciliation information.

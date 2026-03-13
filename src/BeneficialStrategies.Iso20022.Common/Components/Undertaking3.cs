@@ -74,7 +74,7 @@ public partial record Undertaking3
     [IsoId("_90ufMnltEeG7BsjMvd1mEw_1504245767")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
-    public ValueList<PartyIdentification43> Beneficiary { get; init; } = new ValueList<PartyIdentification43>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentification43> Beneficiary { get; init; } = [];
     // ID for the above is _90ufMnltEeG7BsjMvd1mEw_1504245767
     
     /// <summary>
@@ -181,7 +181,7 @@ public partial record Undertaking3
     [IsoId("_91BaJHltEeG7BsjMvd1mEw_1083323567")]
     [DisplayName("Undertaking Terms And Conditions")]
     [IsoXmlTag("UdrtkgTermsAndConds")]
-    public ValueList<Narrative1> UndertakingTermsAndConditions { get; init; } = new ValueList<Narrative1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Narrative1> UndertakingTermsAndConditions { get; init; } = [];
     // ID for the above is _91BaJHltEeG7BsjMvd1mEw_1083323567
     
     /// <summary>
@@ -260,7 +260,7 @@ public partial record Undertaking3
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
     
     /// <summary>
     /// Details of the local or ancillary undertaking requested to be issued by a local or other issuing institution.

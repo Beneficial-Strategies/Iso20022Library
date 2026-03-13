@@ -33,7 +33,7 @@ public partial record RecordTechnicalData5
     [IsoId("_X5iBA526Eeuwmdq0KtnICg")]
     [DisplayName("Exchange Reason")]
     [IsoXmlTag("XchgRsn")]
-    public SimpleValueList<ExternalAuthorityExchangeReason1Code> ExchangeReason { get; init; } = new SimpleValueList<ExternalAuthorityExchangeReason1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<ExternalAuthorityExchangeReason1Code> ExchangeReason { get; init; } = [];
     // ID for the above is _X5iBA526Eeuwmdq0KtnICg
     
     

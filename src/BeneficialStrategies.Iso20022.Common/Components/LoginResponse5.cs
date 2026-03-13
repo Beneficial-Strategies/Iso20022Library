@@ -33,7 +33,7 @@ public partial record LoginResponse5
     [IsoId("_BqSf03JHEe299ZbWCkdR_w")]
     [DisplayName("POI Software")]
     [IsoXmlTag("POISftwr")]
-    public ValueList<PointOfInteractionComponent14> POISoftware { get; init; } = new ValueList<PointOfInteractionComponent14>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PointOfInteractionComponent14> POISoftware { get; init; } = [];
     // ID for the above is _BqSf03JHEe299ZbWCkdR_w
     
     /// <summary>

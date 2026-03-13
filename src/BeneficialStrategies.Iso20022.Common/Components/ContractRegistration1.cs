@@ -50,7 +50,7 @@ public partial record ContractRegistration1
     [IsoId("_6lrRMNLIEeSdq5yU2aaSNw")]
     [DisplayName("Contract Registration Opening")]
     [IsoXmlTag("CtrctRegnOpng")]
-    public ValueList<ContractRegistration2> ContractRegistrationOpening { get; init; } = new ValueList<ContractRegistration2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ContractRegistration2> ContractRegistrationOpening { get; init; } = [];
     // ID for the above is _6lrRMNLIEeSdq5yU2aaSNw
     
     /// <summary>

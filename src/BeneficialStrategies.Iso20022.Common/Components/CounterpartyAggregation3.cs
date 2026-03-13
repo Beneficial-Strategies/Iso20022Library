@@ -56,7 +56,7 @@ public partial record CounterpartyAggregation3
     [IsoId("_SwlWzSs_EeySlt9bF77XfA")]
     [DisplayName("Valuation Amounts")]
     [IsoXmlTag("ValtnAmts")]
-    public ValueList<CollateralAmount16> ValuationAmounts { get; init; } = new ValueList<CollateralAmount16>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CollateralAmount16> ValuationAmounts { get; init; } = [];
     // ID for the above is _SwlWzSs_EeySlt9bF77XfA
     
     /// <summary>

@@ -51,7 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice
         [IsoXmlTag("AuthrsdPrxy")]
         [MinLength(0)]
         [MaxLength(10)]
-        public ValueList<Proxy9> AuthorisedProxy { get; init; } = new ValueList<Proxy9>(){};
+        public ValueList<Proxy9> AuthorisedProxy { get; init; } = [];
         
         
         #nullable disable

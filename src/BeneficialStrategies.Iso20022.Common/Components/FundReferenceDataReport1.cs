@@ -181,7 +181,7 @@ public partial record FundReferenceDataReport1
     [IsoXmlTag("CostsAndChrgs")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<CostsAndCharges1> CostsAndCharges { get; init; } = new ValueList<CostsAndCharges1>(){};
+    public ValueList<CostsAndCharges1> CostsAndCharges { get; init; } = [];
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

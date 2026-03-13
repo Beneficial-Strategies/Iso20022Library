@@ -44,7 +44,7 @@ public partial record EligiblePosition5
     [IsoXmlTag("HldgBal")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<HoldingBalance7> HoldingBalance { get; init; } = new ValueList<HoldingBalance7>(){};
+    public ValueList<HoldingBalance7> HoldingBalance { get; init; } = [];
     
     /// <summary>
     /// Identifies the owner of the voting rights.
@@ -54,7 +54,7 @@ public partial record EligiblePosition5
     [IsoXmlTag("RghtsHldr")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<PartyIdentification40Choice_> RightsHolder { get; init; } = new ValueList<PartyIdentification40Choice_>(){};
+    public ValueList<PartyIdentification40Choice_> RightsHolder { get; init; } = [];
     
     
     #nullable disable

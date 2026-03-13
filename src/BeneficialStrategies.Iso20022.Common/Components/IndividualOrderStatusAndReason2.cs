@@ -100,7 +100,7 @@ public partial record IndividualOrderStatusAndReason2
     [IsoXmlTag("Rjctd")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<RejectedStatus6> Rejected { get; init; } = new ValueList<RejectedStatus6>(){};
+    public ValueList<RejectedStatus6> Rejected { get; init; } = [];
     
     /// <summary>
     /// Status of the individual order is suspended.

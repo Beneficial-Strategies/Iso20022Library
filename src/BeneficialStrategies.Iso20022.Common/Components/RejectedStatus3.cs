@@ -26,7 +26,7 @@ public partial record RejectedStatus3
     [IsoXmlTag("Rsn")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<RejectedStatusReason6> Reason { get; init; } = new ValueList<RejectedStatusReason6>(){};
+    public ValueList<RejectedStatusReason6> Reason { get; init; } = [];
     
     /// <summary>
     /// Proprietary identification of a reason for a rejected status in the report.
@@ -36,7 +36,7 @@ public partial record RejectedStatus3
     [IsoXmlTag("DataSrcSchme")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<GenericIdentification1> DataSourceScheme { get; init; } = new ValueList<GenericIdentification1>(){};
+    public ValueList<GenericIdentification1> DataSourceScheme { get; init; } = [];
     
     
     #nullable disable

@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [IsoId("_EcwSUUyvEeGcV5yVhSZuNw")]
         [DisplayName("Authority Request Type")]
         [IsoXmlTag("AuthrtyReqTp")]
-        public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = new ValueList<AuthorityRequestType1>(){}; // Warning: Don't know multiplicity.
+        public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
         // ID for the above is _EcwSUUyvEeGcV5yVhSZuNw
         
         

@@ -32,7 +32,7 @@ public partial record SecuritiesNonTradingDayReport1
     [IsoId("_BieD0GxOEeWD9e8QDBgUOw")]
     [DisplayName("Non Working Day")]
     [IsoXmlTag("NonWorkgDay")]
-    public ValueList<SecuritiesNonTradingDay1> NonWorkingDay { get; init; } = new ValueList<SecuritiesNonTradingDay1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SecuritiesNonTradingDay1> NonWorkingDay { get; init; } = [];
     // ID for the above is _BieD0GxOEeWD9e8QDBgUOw
     
     

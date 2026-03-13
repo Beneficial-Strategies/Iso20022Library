@@ -42,7 +42,7 @@ public partial record ManagementPlanContent11
     [IsoId("_LC_71XJsEe299ZbWCkdR_w")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public ValueList<TMSAction11> Action { get; init; } = new ValueList<TMSAction11>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TMSAction11> Action { get; init; } = [];
     // ID for the above is _LC_71XJsEe299ZbWCkdR_w
     
     

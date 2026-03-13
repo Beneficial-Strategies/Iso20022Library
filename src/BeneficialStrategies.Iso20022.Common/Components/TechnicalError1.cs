@@ -41,7 +41,7 @@ public partial record TechnicalError1
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    public SimpleValueList<System.String> Description { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> Description { get; init; } = [];
     // ID for the above is _-CoNtA23EeWH49U6bkyMaA
     
     

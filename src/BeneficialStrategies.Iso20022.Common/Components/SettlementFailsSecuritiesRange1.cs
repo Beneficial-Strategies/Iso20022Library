@@ -24,7 +24,7 @@ public partial record SettlementFailsSecuritiesRange1
     [IsoId("_BnlYhY0bEemUAO64Q252gQ")]
     [DisplayName("Highest In Volume")]
     [IsoXmlTag("HghstInVol")]
-    public ValueList<SettlementFailsSecurities1> HighestInVolume { get; init; } = new ValueList<SettlementFailsSecurities1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SettlementFailsSecurities1> HighestInVolume { get; init; } = [];
     // ID for the above is _BnlYhY0bEemUAO64Q252gQ
     
     /// <summary>
@@ -33,7 +33,7 @@ public partial record SettlementFailsSecuritiesRange1
     [IsoId("_BnlYhI0bEemUAO64Q252gQ")]
     [DisplayName("Highest In Value")]
     [IsoXmlTag("HghstInVal")]
-    public ValueList<SettlementFailsSecurities1> HighestInValue { get; init; } = new ValueList<SettlementFailsSecurities1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SettlementFailsSecurities1> HighestInValue { get; init; } = [];
     // ID for the above is _BnlYhI0bEemUAO64Q252gQ
     
     

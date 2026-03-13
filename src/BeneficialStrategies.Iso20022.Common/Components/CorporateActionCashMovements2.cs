@@ -52,7 +52,7 @@ public partial record CorporateActionCashMovements2
     [IsoXmlTag("AcctDtls")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<CashAccount19> AccountDetails { get; init; } = new ValueList<CashAccount19>(){};
+    public ValueList<CashAccount19> AccountDetails { get; init; } = [];
     
     
     #nullable disable

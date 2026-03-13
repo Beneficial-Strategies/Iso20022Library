@@ -24,7 +24,7 @@ public partial record DistributionRejectionStatus1
     [IsoId("_RlXZU9p-Ed-ak6NoX_4Aeg_-1641361615")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<RejectionReason19FormatChoice_> Reason { get; init; } = new ValueList<RejectionReason19FormatChoice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RejectionReason19FormatChoice_> Reason { get; init; } = [];
     // ID for the above is _RlXZU9p-Ed-ak6NoX_4Aeg_-1641361615
     
     /// <summary>

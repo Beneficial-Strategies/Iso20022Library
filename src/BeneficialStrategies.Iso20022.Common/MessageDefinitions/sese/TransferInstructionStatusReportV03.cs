@@ -94,7 +94,7 @@ public partial record TransferInstructionStatusReportV03 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> RelatedReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Reference to a linked message sent in a proprietary way or the reference of a system.
@@ -104,7 +104,7 @@ public partial record TransferInstructionStatusReportV03 : IOuterRecord
     [IsoXmlTag("OthrRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> OtherReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> OtherReference { get; init; } = [];
     
     /// <summary>
     /// Status of the transfer instruction.

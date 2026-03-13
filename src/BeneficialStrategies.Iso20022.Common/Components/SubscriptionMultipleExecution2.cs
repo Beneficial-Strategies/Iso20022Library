@@ -65,7 +65,7 @@ public partial record SubscriptionMultipleExecution2
     [IsoId("_VVbKmNp-Ed-ak6NoX_4Aeg_125276199")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
-    public ValueList<SubscriptionExecution4> IndividualExecutionDetails { get; init; } = new ValueList<SubscriptionExecution4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SubscriptionExecution4> IndividualExecutionDetails { get; init; } = [];
     // ID for the above is _VVbKmNp-Ed-ak6NoX_4Aeg_125276199
     
     /// <summary>

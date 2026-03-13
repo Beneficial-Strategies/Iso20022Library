@@ -35,7 +35,7 @@ public partial record TransportBySea3
     [DisplayName("Port Of Discharge")]
     [IsoXmlTag("PortOfDschrge")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> PortOfDischarge { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> PortOfDischarge { get; init; } = [];
     // ID for the above is _SuiA0Np-Ed-ak6NoX_4Aeg_-719790520
     
     /// <summary>

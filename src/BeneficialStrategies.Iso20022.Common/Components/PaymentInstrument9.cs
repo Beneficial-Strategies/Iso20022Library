@@ -34,7 +34,7 @@ public partial record PaymentInstrument9
     [IsoXmlTag("CshAcctDtls")]
     [MinLength(1)]
     [MaxLength(3)]
-    public ValueList<CashAccount4> CashAccountDetails { get; init; } = new ValueList<CashAccount4>(){};
+    public ValueList<CashAccount4> CashAccountDetails { get; init; } = [];
     
     /// <summary>
     /// Settlement instructions for a payment by cheque.

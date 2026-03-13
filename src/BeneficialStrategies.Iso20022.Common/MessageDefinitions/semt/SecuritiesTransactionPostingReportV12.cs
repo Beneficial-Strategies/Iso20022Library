@@ -112,7 +112,7 @@ public partial record SecuritiesTransactionPostingReportV12 : IOuterRecord
     [IsoXmlTag("IntrmyInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary44> IntermediaryInformation { get; init; } = new ValueList<Intermediary44>(){};
+    public ValueList<Intermediary44> IntermediaryInformation { get; init; } = [];
     
     /// <summary>
     /// Reporting per financial instrument.

@@ -24,7 +24,7 @@ public partial record LocalMarketAnnex5
     [IsoId("_WHtlUdATEeuSBa1PsnseFg")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public SimpleValueList<string> Country { get; init; } = new SimpleValueList<string>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<string> Country { get; init; } = [];
     // ID for the above is _WHtlUdATEeuSBa1PsnseFg
     
     /// <summary>

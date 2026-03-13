@@ -82,7 +82,7 @@ public partial record MultilateralSettlementRequest2
     [IsoId("_I-zvvwcZEeyTDbUIoCmuCw")]
     [DisplayName("Movement Record")]
     [IsoXmlTag("MvmntRcrd")]
-    public ValueList<MovementRecord1> MovementRecord { get; init; } = new ValueList<MovementRecord1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<MovementRecord1> MovementRecord { get; init; } = [];
     // ID for the above is _I-zvvwcZEeyTDbUIoCmuCw
     
     

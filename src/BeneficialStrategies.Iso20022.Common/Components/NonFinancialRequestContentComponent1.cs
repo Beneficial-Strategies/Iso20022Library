@@ -24,7 +24,7 @@ public partial record NonFinancialRequestContentComponent1
     [IsoId("_yZV_UC_rEeugIJ3Gvoevmg")]
     [DisplayName("Non Financial Request Type")]
     [IsoXmlTag("NonFinReqTp")]
-    public SimpleValueList<NonFinancialRequestType1Code> NonFinancialRequestType { get; init; } = new SimpleValueList<NonFinancialRequestType1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<NonFinancialRequestType1Code> NonFinancialRequestType { get; init; } = [];
     // ID for the above is _yZV_UC_rEeugIJ3Gvoevmg
     
     /// <summary>

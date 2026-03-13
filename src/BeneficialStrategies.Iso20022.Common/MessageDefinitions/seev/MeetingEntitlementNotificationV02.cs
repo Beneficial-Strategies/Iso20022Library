@@ -97,7 +97,7 @@ public partial record MeetingEntitlementNotificationV02 : IOuterRecord
     [IsoXmlTag("Scty")]
     [MinLength(1)]
     [MaxLength(200)]
-    public ValueList<SecurityPosition5> Security { get; init; } = new ValueList<SecurityPosition5>(){};
+    public ValueList<SecurityPosition5> Security { get; init; } = [];
     
     /// <summary>
     /// Defines the dates determining eligibility.

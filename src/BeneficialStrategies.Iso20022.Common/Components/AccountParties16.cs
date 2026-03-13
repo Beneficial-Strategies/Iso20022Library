@@ -82,7 +82,7 @@ public partial record AccountParties16
     [IsoXmlTag("SucssrOnDth")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation15> SuccessorOnDeath { get; init; } = new ValueList<InvestmentAccountOwnershipInformation15>(){};
+    public ValueList<InvestmentAccountOwnershipInformation15> SuccessorOnDeath { get; init; } = [];
     
     /// <summary>
     /// Entity that has been appointed by a legal authority to act on behalf of a person or organisation that has gone bankrupt.
@@ -108,7 +108,7 @@ public partial record AccountParties16
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation15> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation15>(){};
+    public ValueList<InvestmentAccountOwnershipInformation15> Granter { get; init; } = [];
     
     /// <summary>
     /// Entity that creates a trust or contributes assets to the trust.
@@ -118,7 +118,7 @@ public partial record AccountParties16
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation15> Settlor { get; init; } = new ValueList<InvestmentAccountOwnershipInformation15>(){};
+    public ValueList<InvestmentAccountOwnershipInformation15> Settlor { get; init; } = [];
     
     /// <summary>
     /// Party that makes, or participates in the making of, decisions that affect the whole, or a substantial part, of the business of a customer of a reporting entity or that has the capacity to affect significantly the financial standing of a customer of a reporting entity. Typically, this is a controlling person of a corporate (ownership type CORP).

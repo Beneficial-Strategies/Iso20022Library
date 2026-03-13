@@ -132,7 +132,7 @@ public partial record PaymentInstructionInformation1
     [IsoId("_PhonB9p-Ed-ak6NoX_4Aeg_-259127416")]
     [DisplayName("Credit Transfer Transaction Information")]
     [IsoXmlTag("CdtTrfTxInf")]
-    public ValueList<CreditTransferTransactionInformation1> CreditTransferTransactionInformation { get; init; } = new ValueList<CreditTransferTransactionInformation1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CreditTransferTransactionInformation1> CreditTransferTransactionInformation { get; init; } = [];
     // ID for the above is _PhonB9p-Ed-ak6NoX_4Aeg_-259127416
     
     

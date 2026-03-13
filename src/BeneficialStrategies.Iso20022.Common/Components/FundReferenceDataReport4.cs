@@ -216,7 +216,7 @@ public partial record FundReferenceDataReport4
     [IsoXmlTag("CostsAndChrgs")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<CostsAndCharges2> CostsAndCharges { get; init; } = new ValueList<CostsAndCharges2>(){};
+    public ValueList<CostsAndCharges2> CostsAndCharges { get; init; } = [];
     
     /// <summary>
     /// Additional information required for distribution in the German market.

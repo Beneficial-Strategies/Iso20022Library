@@ -26,7 +26,7 @@ public partial record Transfer12
     [IsoXmlTag("HldgsPlanTp")]
     [MinLength(0)]
     [MaxLength(3)]
-    public SimpleValueList<HoldingsPlanType1Code> HoldingsPlanType { get; init; } = new SimpleValueList<HoldingsPlanType1Code>(){};
+    public SimpleValueList<HoldingsPlanType1Code> HoldingsPlanType { get; init; } = [];
     
     /// <summary>
     /// Information related to the financial instrument to be withdrawn.

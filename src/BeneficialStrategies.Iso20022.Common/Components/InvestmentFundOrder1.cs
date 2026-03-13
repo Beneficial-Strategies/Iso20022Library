@@ -34,7 +34,7 @@ public partial record InvestmentFundOrder1
     [IsoId("_TSu6Edp-Ed-ak6NoX_4Aeg_1448063042")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
-    public ValueList<InvestmentFundOrder5> OrderReferences { get; init; } = new ValueList<InvestmentFundOrder5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<InvestmentFundOrder5> OrderReferences { get; init; } = [];
     // ID for the above is _TSu6Edp-Ed-ak6NoX_4Aeg_1448063042
     
     

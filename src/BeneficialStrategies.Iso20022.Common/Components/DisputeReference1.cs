@@ -42,7 +42,7 @@ public partial record DisputeReference1
     [IsoId("_NvLt4OCnEee9RadpHmUgYw")]
     [DisplayName("Dispute Identification")]
     [IsoXmlTag("DsptId")]
-    public ValueList<DisputeIdentification1> DisputeIdentification { get; init; } = new ValueList<DisputeIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DisputeIdentification1> DisputeIdentification { get; init; } = [];
     // ID for the above is _NvLt4OCnEee9RadpHmUgYw
     
     

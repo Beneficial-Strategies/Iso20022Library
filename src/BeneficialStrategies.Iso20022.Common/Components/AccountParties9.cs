@@ -66,7 +66,7 @@ public partial record AccountParties9
     [IsoXmlTag("SucssrOnDth")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation9> SuccessorOnDeath { get; init; } = new ValueList<InvestmentAccountOwnershipInformation9>(){};
+    public ValueList<InvestmentAccountOwnershipInformation9> SuccessorOnDeath { get; init; } = [];
     
     /// <summary>
     /// Entity that has been appointed by a legal authorithy to act on behalf of a person or organisation that has gone bankrupt.
@@ -92,7 +92,7 @@ public partial record AccountParties9
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation9> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation9>(){};
+    public ValueList<InvestmentAccountOwnershipInformation9> Granter { get; init; } = [];
     
     /// <summary>
     /// Settler role in the hedge funds industry.
@@ -102,7 +102,7 @@ public partial record AccountParties9
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation9> Settler { get; init; } = new ValueList<InvestmentAccountOwnershipInformation9>(){};
+    public ValueList<InvestmentAccountOwnershipInformation9> Settler { get; init; } = [];
     
     
     #nullable disable

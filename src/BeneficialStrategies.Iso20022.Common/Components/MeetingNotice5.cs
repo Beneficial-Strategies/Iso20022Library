@@ -97,7 +97,7 @@ public partial record MeetingNotice5
     [IsoXmlTag("AddtlPrcdrDtls")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<AdditionalRights3> AdditionalProcedureDetails { get; init; } = new ValueList<AdditionalRights3>(){};
+    public ValueList<AdditionalRights3> AdditionalProcedureDetails { get; init; } = [];
     
     /// <summary>
     /// Number of securities admitted to the vote, expressed as an amount and a currency.
@@ -140,7 +140,7 @@ public partial record MeetingNotice5
     [IsoXmlTag("CtctPrsnDtls")]
     [MinLength(0)]
     [MaxLength(12)]
-    public ValueList<MeetingContactPerson3> ContactPersonDetails { get; init; } = new ValueList<MeetingContactPerson3>(){};
+    public ValueList<MeetingContactPerson3> ContactPersonDetails { get; init; } = [];
     
     /// <summary>
     /// Date on which the company publishes the results of its meeting.

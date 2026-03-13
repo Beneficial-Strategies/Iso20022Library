@@ -24,7 +24,7 @@ public partial record ErrorAction5
     [IsoId("_C1wlkVFOEeyApZmLzm74zA")]
     [DisplayName("Action Result")]
     [IsoXmlTag("ActnRslt")]
-    public SimpleValueList<TerminalManagementActionResult5Code> ActionResult { get; init; } = new SimpleValueList<TerminalManagementActionResult5Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<TerminalManagementActionResult5Code> ActionResult { get; init; } = [];
     // ID for the above is _C1wlkVFOEeyApZmLzm74zA
     
     /// <summary>

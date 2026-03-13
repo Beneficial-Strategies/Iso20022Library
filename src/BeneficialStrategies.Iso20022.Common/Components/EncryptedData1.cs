@@ -114,7 +114,7 @@ public partial record EncryptedData1
     [IsoId("_r673MD6VEeq_lLaSkIVjTQ")]
     [DisplayName("Encrypted Data Element")]
     [IsoXmlTag("NcrptdDataElmt")]
-    public ValueList<EncryptedDataElement1> EncryptedDataElement { get; init; } = new ValueList<EncryptedDataElement1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<EncryptedDataElement1> EncryptedDataElement { get; init; } = [];
     // ID for the above is _r673MD6VEeq_lLaSkIVjTQ
     
     

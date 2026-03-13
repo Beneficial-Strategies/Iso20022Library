@@ -24,7 +24,7 @@ public partial record BillingMethod4
     [IsoId("_6QGNpJqlEeGSON8vddiWzQ_-708502230")]
     [DisplayName("Service Detail")]
     [IsoXmlTag("SvcDtl")]
-    public ValueList<BillingServiceParameters2> ServiceDetail { get; init; } = new ValueList<BillingServiceParameters2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BillingServiceParameters2> ServiceDetail { get; init; } = [];
     // ID for the above is _6QGNpJqlEeGSON8vddiWzQ_-708502230
     
     /// <summary>

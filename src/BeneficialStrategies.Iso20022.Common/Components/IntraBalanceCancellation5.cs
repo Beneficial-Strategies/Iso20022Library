@@ -56,7 +56,7 @@ public partial record IntraBalanceCancellation5
     [IsoId("_qIqm7TnfEem7JZMuWtwtsg")]
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public ValueList<IntraBalanceCancellation6> Cancellation { get; init; } = new ValueList<IntraBalanceCancellation6>(){}; // Warning: Don't know multiplicity.
+    public ValueList<IntraBalanceCancellation6> Cancellation { get; init; } = [];
     // ID for the above is _qIqm7TnfEem7JZMuWtwtsg
     
     

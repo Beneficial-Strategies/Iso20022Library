@@ -33,7 +33,7 @@ public partial record Transaction101
     [IsoId("_lYOcEMczEeiYIbmhB2-RrQ")]
     [DisplayName("Error Detail")]
     [IsoXmlTag("ErrDtl")]
-    public ValueList<ErrorDetails1> ErrorDetail { get; init; } = new ValueList<ErrorDetails1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ErrorDetails1> ErrorDetail { get; init; } = [];
     // ID for the above is _lYOcEMczEeiYIbmhB2-RrQ
     
     /// <summary>

@@ -98,7 +98,7 @@ public partial record BusinessLetter1
     [IsoId("_OTgzMjE0-AOSNFX-8224491")]
     [DisplayName("Primary Recipient")]
     [IsoXmlTag("PmryRcpt")]
-    public ValueList<QualifiedPartyIdentification1> PrimaryRecipient { get; init; } = new ValueList<QualifiedPartyIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<QualifiedPartyIdentification1> PrimaryRecipient { get; init; } = [];
     // ID for the above is _OTgzMjE0-AOSNFX-8224491
     
     /// <summary>
@@ -115,7 +115,7 @@ public partial record BusinessLetter1
     [IsoId("_OTgzMjE2-AOSNFX-8224492")]
     [DisplayName("Authorisation User")]
     [IsoXmlTag("AuthstnUsr")]
-    public ValueList<QualifiedPartyIdentification1> AuthorisationUser { get; init; } = new ValueList<QualifiedPartyIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<QualifiedPartyIdentification1> AuthorisationUser { get; init; } = [];
     // ID for the above is _OTgzMjE2-AOSNFX-8224492
     
     /// <summary>

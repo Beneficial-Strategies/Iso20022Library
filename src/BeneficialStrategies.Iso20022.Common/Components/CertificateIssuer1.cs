@@ -24,7 +24,7 @@ public partial record CertificateIssuer1
     [IsoId("_SxIvsAEcEeCQm6a_G2yO_w_1329577257")]
     [DisplayName("Relative Distinguished Name")]
     [IsoXmlTag("RltvDstngshdNm")]
-    public ValueList<RelativeDistinguishedName1> RelativeDistinguishedName { get; init; } = new ValueList<RelativeDistinguishedName1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RelativeDistinguishedName1> RelativeDistinguishedName { get; init; } = [];
     // ID for the above is _SxIvsAEcEeCQm6a_G2yO_w_1329577257
     
     

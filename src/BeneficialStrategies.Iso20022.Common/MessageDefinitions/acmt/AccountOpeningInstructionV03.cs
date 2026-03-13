@@ -113,7 +113,7 @@ public partial record AccountOpeningInstructionV03 : IOuterRecord
     [IsoXmlTag("Intrmies")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary12> Intermediaries { get; init; } = new ValueList<Intermediary12>(){};
+    public ValueList<Intermediary12> Intermediaries { get; init; } = [];
     
     /// <summary>
     /// Placement agent for the hedge fund industry.
@@ -139,7 +139,7 @@ public partial record AccountOpeningInstructionV03 : IOuterRecord
     [IsoXmlTag("SvgsInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(50)]
-    public ValueList<InvestmentPlan6> SavingsInvestmentPlan { get; init; } = new ValueList<InvestmentPlan6>(){};
+    public ValueList<InvestmentPlan6> SavingsInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Plan through which an investment fund investor&apos;s holdings are depleted through regular withdrawals at specified intervals.
@@ -149,7 +149,7 @@ public partial record AccountOpeningInstructionV03 : IOuterRecord
     [IsoXmlTag("WdrwlInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<InvestmentPlan6> WithdrawalInvestmentPlan { get; init; } = new ValueList<InvestmentPlan6>(){};
+    public ValueList<InvestmentPlan6> WithdrawalInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction associated to the investment fund transaction.
@@ -159,7 +159,7 @@ public partial record AccountOpeningInstructionV03 : IOuterRecord
     [IsoXmlTag("CshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<InvestmentFundCashSettlementInformation5> CashSettlement { get; init; } = new ValueList<InvestmentFundCashSettlementInformation5>(){};
+    public ValueList<InvestmentFundCashSettlementInformation5> CashSettlement { get; init; } = [];
     
     /// <summary>
     /// Identifies documents to be provided for the account opening.
@@ -169,7 +169,7 @@ public partial record AccountOpeningInstructionV03 : IOuterRecord
     [IsoXmlTag("SvcLvlAgrmt")]
     [MinLength(0)]
     [MaxLength(30)]
-    public ValueList<DocumentToSend1> ServiceLevelAgreement { get; init; } = new ValueList<DocumentToSend1>(){};
+    public ValueList<DocumentToSend1> ServiceLevelAgreement { get; init; } = [];
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

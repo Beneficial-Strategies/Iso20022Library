@@ -49,7 +49,7 @@ public partial record CertificationRequest2
     [IsoId("_ECnAkI4UEeW6h7rGyYlyTg")]
     [DisplayName("Attribute")]
     [IsoXmlTag("Attr")]
-    public ValueList<RelativeDistinguishedName2> Attribute { get; init; } = new ValueList<RelativeDistinguishedName2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RelativeDistinguishedName2> Attribute { get; init; } = [];
     // ID for the above is _ECnAkI4UEeW6h7rGyYlyTg
     
     

@@ -73,7 +73,7 @@ public partial record AccountManagementStatusReportV02 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> RelatedReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Status report details of an account opening instruction or account modification instruction that was previously received.

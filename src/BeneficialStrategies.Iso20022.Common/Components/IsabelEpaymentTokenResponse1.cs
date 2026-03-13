@@ -35,7 +35,7 @@ public partial record IsabelEpaymentTokenResponse1
     [IsoXmlTag("PmtInf")]
     [MinLength(1)]
     [MaxLength(100)]
-    public ValueList<IsabelLRCIPaymentInformation1> PaymentInformation { get; init; } = new ValueList<IsabelLRCIPaymentInformation1>(){};
+    public ValueList<IsabelLRCIPaymentInformation1> PaymentInformation { get; init; } = [];
     
     /// <summary>
     /// Mathematical scheme for demonstrating the authenticity of the original server challenge exchanged by the LRCI protocol during the signature process.

@@ -78,7 +78,7 @@ public partial record CorporateActionInstructedBalanceOptionInstructionSD5
     [IsoXmlTag("TaxCtgy")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<TaxCategory2> TaxCategory { get; init; } = new ValueList<TaxCategory2>(){};
+    public ValueList<TaxCategory2> TaxCategory { get; init; } = [];
     
     
     #nullable disable

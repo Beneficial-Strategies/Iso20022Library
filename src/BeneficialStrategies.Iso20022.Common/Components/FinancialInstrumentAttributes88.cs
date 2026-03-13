@@ -34,7 +34,7 @@ public partial record FinancialInstrumentAttributes88
     [IsoXmlTag("Stdstn")]
     [MinLength(0)]
     [MaxLength(3)]
-    public SimpleValueList<Standardisation1Code> Standardisation { get; init; } = new SimpleValueList<Standardisation1Code>(){};
+    public SimpleValueList<Standardisation1Code> Standardisation { get; init; } = [];
     
     /// <summary>
     /// Schedule for leg payments.

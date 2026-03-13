@@ -71,7 +71,7 @@ public partial record ReorganisationInstructionSD6
     [IsoXmlTag("RjctnRsn")]
     [MinLength(0)]
     [MaxLength(6)]
-    public SimpleValueList<InstructionRejectionReason1Code> RejectionReason { get; init; } = new SimpleValueList<InstructionRejectionReason1Code>(){};
+    public SimpleValueList<InstructionRejectionReason1Code> RejectionReason { get; init; } = [];
     
     /// <summary>
     /// Provides information about securities quantity linked to a corporate action option.

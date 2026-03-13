@@ -56,7 +56,7 @@ public partial record RedemptionExecution5
     [IsoXmlTag("OrdrTp")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<FundOrderType3> OrderType { get; init; } = new ValueList<FundOrderType3>(){};
+    public ValueList<FundOrderType3> OrderType { get; init; } = [];
     
     /// <summary>
     /// Additional information about the investor.
@@ -164,7 +164,7 @@ public partial record RedemptionExecution5
     [IsoXmlTag("InftvPricDtls")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<UnitPrice10> InformativePriceDetails { get; init; } = new ValueList<UnitPrice10>(){};
+    public ValueList<UnitPrice10> InformativePriceDetails { get; init; } = [];
     
     /// <summary>
     /// Indicates whether the order has been partially executed, ie, the confirmed quantity does not match the ordered quantity for a given financial instrument.
@@ -248,7 +248,7 @@ public partial record RedemptionExecution5
     [IsoXmlTag("StffClntBrkdwn")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<InvestmentFundsOrderBreakdown1> StaffClientBreakdown { get; init; } = new ValueList<InvestmentFundsOrderBreakdown1>(){};
+    public ValueList<InvestmentFundsOrderBreakdown1> StaffClientBreakdown { get; init; } = [];
     
     /// <summary>
     /// Tax related to an investment fund order.
@@ -359,7 +359,7 @@ public partial record RedemptionExecution5
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = new ValueList<Intermediary9>(){};
+    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Part of an investor&apos;s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.

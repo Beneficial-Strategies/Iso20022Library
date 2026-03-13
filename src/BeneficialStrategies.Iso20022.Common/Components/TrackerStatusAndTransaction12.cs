@@ -32,7 +32,7 @@ public partial record TrackerStatusAndTransaction12
     [IsoId("_uwA3pVc8EeunQrLahSRvvA")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public ValueList<TrackerPaymentTransaction10> Transaction { get; init; } = new ValueList<TrackerPaymentTransaction10>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TrackerPaymentTransaction10> Transaction { get; init; } = [];
     // ID for the above is _uwA3pVc8EeunQrLahSRvvA
     
     

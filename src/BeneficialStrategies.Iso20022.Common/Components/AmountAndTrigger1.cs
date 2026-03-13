@@ -42,7 +42,7 @@ public partial record AmountAndTrigger1
     [IsoId("_-GdIYHltEeG7BsjMvd1mEw_-206552408")]
     [DisplayName("Trigger")]
     [IsoXmlTag("Trggr")]
-    public ValueList<Trigger1> Trigger { get; init; } = new ValueList<Trigger1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Trigger1> Trigger { get; init; } = [];
     // ID for the above is _-GdIYHltEeG7BsjMvd1mEw_-206552408
     
     

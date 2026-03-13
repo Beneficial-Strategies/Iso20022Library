@@ -210,7 +210,7 @@ public partial record MeetingNotice2
     [IsoXmlTag("CtctPrsnDtls")]
     [MinLength(0)]
     [MaxLength(12)]
-    public ValueList<MeetingContactPerson1> ContactPersonDetails { get; init; } = new ValueList<MeetingContactPerson1>(){};
+    public ValueList<MeetingContactPerson1> ContactPersonDetails { get; init; } = [];
     
     /// <summary>
     /// Date on which a company publishes the results of its meeting.

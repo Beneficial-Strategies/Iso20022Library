@@ -41,7 +41,7 @@ public partial record LineItem9
     [IsoId("_SrsvTtp-Ed-ak6NoX_4Aeg_-1149973794")]
     [DisplayName("Commercial Line Items")]
     [IsoXmlTag("ComrclLineItms")]
-    public ValueList<LineItemDetails9> CommercialLineItems { get; init; } = new ValueList<LineItemDetails9>(){}; // Warning: Don't know multiplicity.
+    public ValueList<LineItemDetails9> CommercialLineItems { get; init; } = [];
     // ID for the above is _SrsvTtp-Ed-ak6NoX_4Aeg_-1149973794
     
     /// <summary>

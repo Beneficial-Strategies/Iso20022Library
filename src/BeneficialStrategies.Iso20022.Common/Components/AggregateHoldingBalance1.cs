@@ -48,7 +48,7 @@ public partial record AggregateHoldingBalance1
     [IsoId("_-x81imZ5EeSPkYKcdPbJxw")]
     [DisplayName("Balance For Financial Instrument")]
     [IsoXmlTag("BalForFinInstrm")]
-    public ValueList<FinancialInstrumentAggregateBalance1> BalanceForFinancialInstrument { get; init; } = new ValueList<FinancialInstrumentAggregateBalance1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FinancialInstrumentAggregateBalance1> BalanceForFinancialInstrument { get; init; } = [];
     // ID for the above is _-x81imZ5EeSPkYKcdPbJxw
     
     /// <summary>

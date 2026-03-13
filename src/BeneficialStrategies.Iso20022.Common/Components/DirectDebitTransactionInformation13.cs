@@ -132,7 +132,7 @@ public partial record DirectDebitTransactionInformation13
     [IsoXmlTag("RgltryRptg")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = new ValueList<RegulatoryReporting3>(){};
+    public ValueList<RegulatoryReporting3> RegulatoryReporting { get; init; } = [];
     
     /// <summary>
     /// Provides details on the tax.
@@ -150,7 +150,7 @@ public partial record DirectDebitTransactionInformation13
     [IsoXmlTag("RltdRmtInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RemittanceLocation2> RelatedRemittanceInformation { get; init; } = new ValueList<RemittanceLocation2>(){};
+    public ValueList<RemittanceLocation2> RelatedRemittanceInformation { get; init; } = [];
     
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.

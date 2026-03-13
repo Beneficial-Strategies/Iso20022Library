@@ -33,7 +33,7 @@ public partial record OriginalReportStatistics3
     [IsoId("_4rGw89HEEeaokquJJ-K6uA")]
     [DisplayName("Number Of Records Per Status")]
     [IsoXmlTag("NbOfRcrdsPerSts")]
-    public ValueList<NumberOfRecordsPerStatus1> NumberOfRecordsPerStatus { get; init; } = new ValueList<NumberOfRecordsPerStatus1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NumberOfRecordsPerStatus1> NumberOfRecordsPerStatus { get; init; } = [];
     // ID for the above is _4rGw89HEEeaokquJJ-K6uA
     
     

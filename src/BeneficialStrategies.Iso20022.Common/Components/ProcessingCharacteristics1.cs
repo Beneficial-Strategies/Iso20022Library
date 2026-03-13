@@ -42,7 +42,7 @@ public partial record ProcessingCharacteristics1
     [IsoId("_UBrDttp-Ed-ak6NoX_4Aeg_1655381109")]
     [DisplayName("Dealing Currency Accepted")]
     [IsoXmlTag("DealgCcyAccptd")]
-    public SimpleValueList<string> DealingCurrencyAccepted { get; init; } = new SimpleValueList<string>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<string> DealingCurrencyAccepted { get; init; } = [];
     // ID for the above is _UBrDttp-Ed-ak6NoX_4Aeg_1655381109
     
     /// <summary>

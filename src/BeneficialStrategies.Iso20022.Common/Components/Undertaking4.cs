@@ -40,7 +40,7 @@ public partial record Undertaking4
     [IsoId("_9zOqYXltEeG7BsjMvd1mEw_-1559280949")]
     [DisplayName("Applicant")]
     [IsoXmlTag("Applcnt")]
-    public ValueList<PartyIdentification43> Applicant { get; init; } = new ValueList<PartyIdentification43>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentification43> Applicant { get; init; } = [];
     // ID for the above is _9zOqYXltEeG7BsjMvd1mEw_-1559280949
     
     /// <summary>
@@ -49,7 +49,7 @@ public partial record Undertaking4
     [IsoId("_9zOqYnltEeG7BsjMvd1mEw_1081181075")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
-    public ValueList<PartyIdentification43> Beneficiary { get; init; } = new ValueList<PartyIdentification43>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentification43> Beneficiary { get; init; } = [];
     // ID for the above is _9zOqYnltEeG7BsjMvd1mEw_1081181075
     
     /// <summary>
@@ -210,7 +210,7 @@ public partial record Undertaking4
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
     
     
     #nullable disable

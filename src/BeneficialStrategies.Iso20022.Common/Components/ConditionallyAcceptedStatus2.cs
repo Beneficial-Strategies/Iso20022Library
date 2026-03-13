@@ -34,7 +34,7 @@ public partial record ConditionallyAcceptedStatus2
     [IsoXmlTag("RsnDtls")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<ConditionallyAcceptedStatusReason2> ReasonDetails { get; init; } = new ValueList<ConditionallyAcceptedStatusReason2>(){};
+    public ValueList<ConditionallyAcceptedStatusReason2> ReasonDetails { get; init; } = [];
     
     
     #nullable disable

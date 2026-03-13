@@ -99,7 +99,7 @@ public partial record FinancingAgreementList1
     [IsoId("_OTgzMzU3-AOSNFX-8224501")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
-    public ValueList<FinancingAgreementItem1> Item { get; init; } = new ValueList<FinancingAgreementItem1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FinancingAgreementItem1> Item { get; init; } = [];
     // ID for the above is _OTgzMzU3-AOSNFX-8224501
     
     /// <summary>

@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal2Choice
         [IsoId("_RFpSFRgmEeK-_89we2b-bA")]
         [DisplayName("Transfer Details")]
         [IsoXmlTag("TrfDtls")]
-        public ValueList<Transfer25> TransferDetails { get; init; } = new ValueList<Transfer25>(){}; // Warning: Don't know multiplicity.
+        public ValueList<Transfer25> TransferDetails { get; init; } = [];
         // ID for the above is _RFpSFRgmEeK-_89we2b-bA
         
         /// <summary>

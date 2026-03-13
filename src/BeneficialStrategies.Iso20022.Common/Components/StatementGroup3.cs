@@ -44,7 +44,7 @@ public partial record StatementGroup3
     [IsoXmlTag("SndrIndvCtct")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Contact4> SenderIndividualContact { get; init; } = new ValueList<Contact4>(){};
+    public ValueList<Contact4> SenderIndividualContact { get; init; } = [];
     
     /// <summary>
     /// Financial institution customer receiving the statement.
@@ -62,7 +62,7 @@ public partial record StatementGroup3
     [IsoXmlTag("RcvrIndvCtct")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Contact4> ReceiverIndividualContact { get; init; } = new ValueList<Contact4>(){};
+    public ValueList<Contact4> ReceiverIndividualContact { get; init; } = [];
     
     /// <summary>
     /// Provides the bank services billing statement recounting of all service chargeable events that occurred during a reporting cycle, such as the end of the month reporting.
@@ -70,7 +70,7 @@ public partial record StatementGroup3
     [IsoId("_BVSV2249EeiU9cctagi5ow")]
     [DisplayName("Billing Statement")]
     [IsoXmlTag("BllgStmt")]
-    public ValueList<BillingStatement3> BillingStatement { get; init; } = new ValueList<BillingStatement3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BillingStatement3> BillingStatement { get; init; } = [];
     // ID for the above is _BVSV2249EeiU9cctagi5ow
     
     

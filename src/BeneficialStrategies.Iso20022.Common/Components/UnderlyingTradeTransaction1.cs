@@ -80,7 +80,7 @@ public partial record UnderlyingTradeTransaction1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
     
     
     #nullable disable

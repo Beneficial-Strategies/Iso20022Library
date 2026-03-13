@@ -24,7 +24,7 @@ public partial record ReportTransactionRequest1
     [IsoId("_4eXmMN6PEeiwsev40qZGEQ")]
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
-    public ValueList<SearchCriteria1> SearchCriteria { get; init; } = new ValueList<SearchCriteria1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SearchCriteria1> SearchCriteria { get; init; } = [];
     // ID for the above is _4eXmMN6PEeiwsev40qZGEQ
     
     /// <summary>

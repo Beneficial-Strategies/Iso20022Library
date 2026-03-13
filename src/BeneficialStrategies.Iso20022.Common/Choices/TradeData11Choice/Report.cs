@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData11Choice
         [IsoId("_R_kY3u3tEemV1LTEADuPBQ")]
         [DisplayName("Report Statistics")]
         [IsoXmlTag("RptSttstcs")]
-        public ValueList<DetailedReportStatistics5> ReportStatistics { get; init; } = new ValueList<DetailedReportStatistics5>(){}; // Warning: Don't know multiplicity.
+        public ValueList<DetailedReportStatistics5> ReportStatistics { get; init; } = [];
         // ID for the above is _R_kY3u3tEemV1LTEADuPBQ
         
         /// <summary>
@@ -32,7 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData11Choice
         [IsoId("_R_kY3-3tEemV1LTEADuPBQ")]
         [DisplayName("Transaction Statistics")]
         [IsoXmlTag("TxSttstcs")]
-        public ValueList<DetailedTransactionStatistics10> TransactionStatistics { get; init; } = new ValueList<DetailedTransactionStatistics10>(){}; // Warning: Don't know multiplicity.
+        public ValueList<DetailedTransactionStatistics10> TransactionStatistics { get; init; } = [];
         // ID for the above is _R_kY3-3tEemV1LTEADuPBQ
         
         /// <summary>

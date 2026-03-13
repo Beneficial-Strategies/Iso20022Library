@@ -32,7 +32,7 @@ public partial record TerminalPackageType3
     [IsoId("_3OFjY1FDEeyApZmLzm74zA")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
-    public ValueList<PackageType3> Package { get; init; } = new ValueList<PackageType3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PackageType3> Package { get; init; } = [];
     // ID for the above is _3OFjY1FDEeyApZmLzm74zA
     
     

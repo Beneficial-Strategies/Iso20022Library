@@ -24,7 +24,7 @@ public partial record LocalMarketAnnex2
     [IsoId("_Q5QhRtp-Ed-ak6NoX_4Aeg_-1288934537")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public SimpleValueList<string> Country { get; init; } = new SimpleValueList<string>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<string> Country { get; init; } = [];
     // ID for the above is _Q5QhRtp-Ed-ak6NoX_4Aeg_-1288934537
     
     /// <summary>
@@ -57,7 +57,7 @@ public partial record LocalMarketAnnex2
     [IsoId("_Q5ZrMdp-Ed-ak6NoX_4Aeg_-653648231")]
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
-    public ValueList<CashAccount22> SettlementDetails { get; init; } = new ValueList<CashAccount22>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CashAccount22> SettlementDetails { get; init; } = [];
     // ID for the above is _Q5ZrMdp-Ed-ak6NoX_4Aeg_-653648231
     
     

@@ -34,7 +34,7 @@ public partial record Derivative3
     [IsoXmlTag("DerivUndrlygLeg")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<DerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; init; } = new ValueList<DerivativeUnderlyingLeg1>(){};
+    public ValueList<DerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; init; } = [];
     
     /// <summary>
     /// Option specific attributes.

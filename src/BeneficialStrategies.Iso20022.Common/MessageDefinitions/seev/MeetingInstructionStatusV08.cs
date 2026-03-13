@@ -117,7 +117,7 @@ public partial record MeetingInstructionStatusV08 : IOuterRecord
     [IsoXmlTag("RghtsHldr")]
     [MinLength(0)]
     [MaxLength(250)]
-    public ValueList<PartyIdentification237Choice_> RightsHolder { get; init; } = new ValueList<PartyIdentification237Choice_>(){};
+    public ValueList<PartyIdentification237Choice_> RightsHolder { get; init; } = [];
     
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.

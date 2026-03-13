@@ -24,7 +24,7 @@ public partial record ValuationsDetails2
     [IsoId("_LuJTcfGMEei2UYJ62ws-Fw")]
     [DisplayName("Valuation Details Amount")]
     [IsoXmlTag("ValtnDtlsAmt")]
-    public ValueList<CollateralAmount9> ValuationDetailsAmount { get; init; } = new ValueList<CollateralAmount9>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CollateralAmount9> ValuationDetailsAmount { get; init; } = [];
     // ID for the above is _LuJTcfGMEei2UYJ62ws-Fw
     
     /// <summary>

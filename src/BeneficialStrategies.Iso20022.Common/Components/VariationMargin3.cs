@@ -32,7 +32,7 @@ public partial record VariationMargin3
     [IsoId("_-eWgAqMOEeCojJW5vEuTEQ_-166188930")]
     [DisplayName("Total Variation Margin")]
     [IsoXmlTag("TtlVartnMrgn")]
-    public ValueList<TotalVariationMargin1> TotalVariationMargin { get; init; } = new ValueList<TotalVariationMargin1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TotalVariationMargin1> TotalVariationMargin { get; init; } = [];
     // ID for the above is _-eWgAqMOEeCojJW5vEuTEQ_-166188930
     
     /// <summary>

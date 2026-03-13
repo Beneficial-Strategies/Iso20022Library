@@ -24,7 +24,7 @@ public partial record Transaction102
     [IsoId("_M6lmYVW5EeeiG_nL4vgKnQ")]
     [DisplayName("Amended Data")]
     [IsoXmlTag("AmddData")]
-    public ValueList<DetailedError1> AmendedData { get; init; } = new ValueList<DetailedError1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DetailedError1> AmendedData { get; init; } = [];
     // ID for the above is _M6lmYVW5EeeiG_nL4vgKnQ
     
     /// <summary>

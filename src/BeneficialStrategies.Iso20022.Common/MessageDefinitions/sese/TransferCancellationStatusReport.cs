@@ -67,7 +67,7 @@ public partial record TransferCancellationStatusReport : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference2> RelatedReference { get; init; } = new ValueList<AdditionalReference2>(){};
+    public ValueList<AdditionalReference2> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Reference to the linked message sent in a proprietary way or the reference of a system.

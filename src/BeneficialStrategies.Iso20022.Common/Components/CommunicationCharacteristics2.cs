@@ -32,7 +32,7 @@ public partial record CommunicationCharacteristics2
     [IsoId("_g_4G0y9MEeOlZIh7PImd0A")]
     [DisplayName("Remote Party")]
     [IsoXmlTag("RmotPty")]
-    public SimpleValueList<PartyType7Code> RemoteParty { get; init; } = new SimpleValueList<PartyType7Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<PartyType7Code> RemoteParty { get; init; } = [];
     // ID for the above is _g_4G0y9MEeOlZIh7PImd0A
     
     /// <summary>

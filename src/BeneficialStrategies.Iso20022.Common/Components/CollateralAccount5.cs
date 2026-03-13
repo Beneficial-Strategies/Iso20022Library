@@ -32,7 +32,7 @@ public partial record CollateralAccount5
     [IsoId("_EPbHcHYCEee_qcLXasnA4g")]
     [DisplayName("Related Margin Account")]
     [IsoXmlTag("RltdMrgnAcct")]
-    public ValueList<MarginAccount1> RelatedMarginAccount { get; init; } = new ValueList<MarginAccount1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<MarginAccount1> RelatedMarginAccount { get; init; } = [];
     // ID for the above is _EPbHcHYCEee_qcLXasnA4g
     
     /// <summary>

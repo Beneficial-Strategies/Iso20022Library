@@ -24,7 +24,7 @@ public partial record SearchOutputOrder1
     [IsoId("_0aWhsN6QEeiwsev40qZGEQ")]
     [DisplayName("Criteria Order")]
     [IsoXmlTag("CritOrdr")]
-    public ValueList<CriteriaOrder1> CriteriaOrder { get; init; } = new ValueList<CriteriaOrder1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CriteriaOrder1> CriteriaOrder { get; init; } = [];
     // ID for the above is _0aWhsN6QEeiwsev40qZGEQ
     
     

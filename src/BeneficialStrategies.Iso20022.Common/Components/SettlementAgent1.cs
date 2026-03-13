@@ -33,7 +33,7 @@ public partial record SettlementAgent1
     [IsoId("_cMw3ULIjEeaYqc4G3TTwhA")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public ValueList<PaymentAccount1> Account { get; init; } = new ValueList<PaymentAccount1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PaymentAccount1> Account { get; init; } = [];
     // ID for the above is _cMw3ULIjEeaYqc4G3TTwhA
     
     

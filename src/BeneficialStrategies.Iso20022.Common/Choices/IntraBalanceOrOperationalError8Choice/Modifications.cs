@@ -55,7 +55,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError8C
         [IsoId("_aD2U7TneEem7JZMuWtwtsg")]
         [DisplayName("Modification")]
         [IsoXmlTag("Mod")]
-        public ValueList<IntraBalanceModification6> Modification { get; init; } = new ValueList<IntraBalanceModification6>(){}; // Warning: Don't know multiplicity.
+        public ValueList<IntraBalanceModification6> Modification { get; init; } = [];
         // ID for the above is _aD2U7TneEem7JZMuWtwtsg
         
         

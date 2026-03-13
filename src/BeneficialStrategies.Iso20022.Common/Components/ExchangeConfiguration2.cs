@@ -24,7 +24,7 @@ public partial record ExchangeConfiguration2
     [IsoId("_e1lnQR3hEeKWfegf-2AeBQ")]
     [DisplayName("Exchange Policy")]
     [IsoXmlTag("XchgPlcy")]
-    public SimpleValueList<ExchangePolicy1Code> ExchangePolicy { get; init; } = new SimpleValueList<ExchangePolicy1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<ExchangePolicy1Code> ExchangePolicy { get; init; } = [];
     // ID for the above is _e1lnQR3hEeKWfegf-2AeBQ
     
     /// <summary>

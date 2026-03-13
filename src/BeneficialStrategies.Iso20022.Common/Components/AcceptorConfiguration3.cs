@@ -40,7 +40,7 @@ public partial record AcceptorConfiguration3
     [IsoId("_6Bn3ZTZ7EeOP_KvUKe29ng")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public ValueList<TerminalManagementDataSet11> DataSet { get; init; } = new ValueList<TerminalManagementDataSet11>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TerminalManagementDataSet11> DataSet { get; init; } = [];
     // ID for the above is _6Bn3ZTZ7EeOP_KvUKe29ng
     
     

@@ -102,7 +102,7 @@ public partial record InvestmentPlan17
     [IsoXmlTag("SctyDtls")]
     [MinLength(1)]
     [MaxLength(50)]
-    public ValueList<Repartition6> SecurityDetails { get; init; } = new ValueList<Repartition6>(){};
+    public ValueList<Repartition6> SecurityDetails { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction associated to the investment plan.
@@ -112,7 +112,7 @@ public partial record InvestmentPlan17
     [IsoXmlTag("CshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<CashSettlement3> CashSettlement { get; init; } = new ValueList<CashSettlement3>(){};
+    public ValueList<CashSettlement3> CashSettlement { get; init; } = [];
     
     /// <summary>
     /// Reference of the underlying investment contract. In some markets, such as Italy, this might be required to segregate holdings between the same investment account.

@@ -35,7 +35,7 @@ public partial record TransportByRoad5
     [DisplayName("Place Of Delivery")]
     [IsoXmlTag("PlcOfDlvry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    public SimpleValueList<System.String> PlaceOfDelivery { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> PlaceOfDelivery { get; init; } = [];
     // ID for the above is _lBJoU4j7EeO0H4aqD2Yw9Q
     
     /// <summary>

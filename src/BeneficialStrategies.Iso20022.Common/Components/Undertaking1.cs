@@ -84,7 +84,7 @@ public partial record Undertaking1
     [IsoId("_9zrWU3ltEeG7BsjMvd1mEw_-33006693")]
     [DisplayName("Beneficiary")]
     [IsoXmlTag("Bnfcry")]
-    public ValueList<PartyIdentification43> Beneficiary { get; init; } = new ValueList<PartyIdentification43>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentification43> Beneficiary { get; init; } = [];
     // ID for the above is _9zrWU3ltEeG7BsjMvd1mEw_-33006693
     
     /// <summary>
@@ -293,7 +293,7 @@ public partial record Undertaking1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalApplicationInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AdditionalApplicationInformation { get; init; } = [];
     
     
     #nullable disable

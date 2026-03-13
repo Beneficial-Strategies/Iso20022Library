@@ -77,7 +77,7 @@ public partial record ValuationDealingProcessingCharacteristics2
     [IsoId("_UBYIxNp-Ed-ak6NoX_4Aeg_689276743")]
     [DisplayName("Price Currency")]
     [IsoXmlTag("PricCcy")]
-    public SimpleValueList<string> PriceCurrency { get; init; } = new SimpleValueList<string>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<string> PriceCurrency { get; init; } = [];
     // ID for the above is _UBYIxNp-Ed-ak6NoX_4Aeg_689276743
     
     

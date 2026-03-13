@@ -36,7 +36,7 @@ public partial record PartyIdentification44
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(10)]
-    public SimpleValueList<System.String> AlternativeIdentifier { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AlternativeIdentifier { get; init; } = [];
     
     
     #nullable disable

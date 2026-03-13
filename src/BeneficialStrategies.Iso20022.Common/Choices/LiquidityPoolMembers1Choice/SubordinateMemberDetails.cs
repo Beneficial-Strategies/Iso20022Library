@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LiquidityPoolMembers1Choice
         [IsoId("_qhLMECDvEeav65mEytrgaA")]
         [DisplayName("List")]
         [IsoXmlTag("List")]
-        public ValueList<AccountOwnerAndIdentification1> List { get; init; } = new ValueList<AccountOwnerAndIdentification1>(){}; // Warning: Don't know multiplicity.
+        public ValueList<AccountOwnerAndIdentification1> List { get; init; } = [];
         // ID for the above is _qhLMECDvEeav65mEytrgaA
         
         

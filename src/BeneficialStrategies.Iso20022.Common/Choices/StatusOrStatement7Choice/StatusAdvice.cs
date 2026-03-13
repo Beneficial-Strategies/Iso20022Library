@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement7Choice
         [IsoId("_QK8AXTs-EeWRTLSN0i0tng")]
         [DisplayName("References")]
         [IsoXmlTag("Refs")]
-        public ValueList<Identification15> References { get; init; } = new ValueList<Identification15>(){}; // Warning: Don't know multiplicity.
+        public ValueList<Identification15> References { get; init; } = [];
         // ID for the above is _QK8AXTs-EeWRTLSN0i0tng
         
         

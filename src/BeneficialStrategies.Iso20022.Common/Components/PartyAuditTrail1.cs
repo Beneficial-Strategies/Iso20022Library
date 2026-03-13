@@ -24,7 +24,7 @@ public partial record PartyAuditTrail1
     [IsoId("_GLdVoWjOEeiRg5NzP0jkQg")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
-    public ValueList<UpdateLogPartyRecord1Choice_> Record { get; init; } = new ValueList<UpdateLogPartyRecord1Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<UpdateLogPartyRecord1Choice_> Record { get; init; } = [];
     // ID for the above is _GLdVoWjOEeiRg5NzP0jkQg
     
     /// <summary>

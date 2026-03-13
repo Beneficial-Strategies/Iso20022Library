@@ -32,7 +32,7 @@ public partial record StoredValueRequest5
     [IsoId("_U5bv0U4AEey_VecAUE-C9Q")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public ValueList<StoredValueData5> Data { get; init; } = new ValueList<StoredValueData5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<StoredValueData5> Data { get; init; } = [];
     // ID for the above is _U5bv0U4AEey_VecAUE-C9Q
     
     

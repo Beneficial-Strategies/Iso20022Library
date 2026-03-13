@@ -32,7 +32,7 @@ public partial record ModificationScope30
     [IsoId("_xKBm8SFoEeW9XJWqfgXIIA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<AccountRestrictions1> AdditionalInformation { get; init; } = new ValueList<AccountRestrictions1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AccountRestrictions1> AdditionalInformation { get; init; } = [];
     // ID for the above is _xKBm8SFoEeW9XJWqfgXIIA
     
     

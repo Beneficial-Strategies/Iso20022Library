@@ -27,7 +27,7 @@ public partial record PostalAddress13
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> AddressLine { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AddressLine { get; init; } = [];
     
     /// <summary>
     /// Name of a street or thoroughfare.

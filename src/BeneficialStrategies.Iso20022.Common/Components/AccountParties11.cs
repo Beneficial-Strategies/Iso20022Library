@@ -98,7 +98,7 @@ public partial record AccountParties11
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation11> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation11>(){};
+    public ValueList<InvestmentAccountOwnershipInformation11> Granter { get; init; } = [];
     
     /// <summary>
     /// Entity that creates a trust or contributes assets to the trust.
@@ -108,7 +108,7 @@ public partial record AccountParties11
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation11> Settlor { get; init; } = new ValueList<InvestmentAccountOwnershipInformation11>(){};
+    public ValueList<InvestmentAccountOwnershipInformation11> Settlor { get; init; } = [];
     
     
     #nullable disable

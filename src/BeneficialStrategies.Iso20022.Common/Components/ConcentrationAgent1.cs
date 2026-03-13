@@ -33,7 +33,7 @@ public partial record ConcentrationAgent1
     [IsoId("_2W_MUBXrEeejf-cbr8l5qw")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public ValueList<ConcentrationAccount1> Account { get; init; } = new ValueList<ConcentrationAccount1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ConcentrationAccount1> Account { get; init; } = [];
     // ID for the above is _2W_MUBXrEeejf-cbr8l5qw
     
     

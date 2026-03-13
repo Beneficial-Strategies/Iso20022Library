@@ -41,7 +41,7 @@ public partial record CoverPaymentEvent1
     [IsoId("_8jCDcT73EeiJbZ2wCAV0-w")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public ValueList<PaymentEvent2> Agent { get; init; } = new ValueList<PaymentEvent2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PaymentEvent2> Agent { get; init; } = [];
     // ID for the above is _8jCDcT73EeiJbZ2wCAV0-w
     
     /// <summary>

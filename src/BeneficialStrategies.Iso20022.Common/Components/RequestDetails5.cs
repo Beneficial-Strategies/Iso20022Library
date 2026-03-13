@@ -44,7 +44,7 @@ public partial record RequestDetails5
     [IsoId("_SuwKEgEcEeCQm6a_G2yO_w_1731831000")]
     [DisplayName("Report Key")]
     [IsoXmlTag("RptKey")]
-    public ValueList<RequestDetails4> ReportKey { get; init; } = new ValueList<RequestDetails4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RequestDetails4> ReportKey { get; init; } = [];
     // ID for the above is _SuwKEgEcEeCQm6a_G2yO_w_1731831000
     
     

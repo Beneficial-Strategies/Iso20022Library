@@ -53,7 +53,7 @@ public partial record MessageStatusRequestData2
     [IsoXmlTag("DocQlfr")]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<DocumentType7Code> DocumentQualifier { get; init; } = new SimpleValueList<DocumentType7Code>(){};
+    public SimpleValueList<DocumentType7Code> DocumentQualifier { get; init; } = [];
     
     
     #nullable disable

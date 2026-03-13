@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
         [IsoId("_IB7705lZEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public ValueList<CurrencyExchangeSearchCriteria1> SearchCriteria { get; init; } = new ValueList<CurrencyExchangeSearchCriteria1>(){}; // Warning: Don't know multiplicity.
+        public ValueList<CurrencyExchangeSearchCriteria1> SearchCriteria { get; init; } = [];
         // ID for the above is _IB7705lZEeeE1Ya-LgRsuQ
         
         

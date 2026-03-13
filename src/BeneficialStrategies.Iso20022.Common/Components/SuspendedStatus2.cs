@@ -34,7 +34,7 @@ public partial record SuspendedStatus2
     [IsoXmlTag("RsnDtls")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<SuspendedStatusReason2> ReasonDetails { get; init; } = new ValueList<SuspendedStatusReason2>(){};
+    public ValueList<SuspendedStatusReason2> ReasonDetails { get; init; } = [];
     
     
     #nullable disable

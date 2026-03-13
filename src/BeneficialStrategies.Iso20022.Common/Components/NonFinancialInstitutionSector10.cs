@@ -24,7 +24,7 @@ public partial record NonFinancialInstitutionSector10
     [IsoId("_ygiOwQz2Ee2YoLD-1vFj0g")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
-    public ValueList<GenericIdentification175> Sector { get; init; } = new ValueList<GenericIdentification175>(){}; // Warning: Don't know multiplicity.
+    public ValueList<GenericIdentification175> Sector { get; init; } = [];
     // ID for the above is _ygiOwQz2Ee2YoLD-1vFj0g
     
     /// <summary>

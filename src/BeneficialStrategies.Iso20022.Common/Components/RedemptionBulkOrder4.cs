@@ -94,7 +94,7 @@ public partial record RedemptionBulkOrder4
     [IsoId("_SE84W9p-Ed-ak6NoX_4Aeg_-1277150269")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
-    public ValueList<RedemptionOrder7> IndividualOrderDetails { get; init; } = new ValueList<RedemptionOrder7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RedemptionOrder7> IndividualOrderDetails { get; init; } = [];
     // ID for the above is _SE84W9p-Ed-ak6NoX_4Aeg_-1277150269
     
     /// <summary>

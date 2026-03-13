@@ -76,7 +76,7 @@ public partial record PaymentTransaction100
     [IsoId("__su_cUJREeinU6Cqu8f2Ow")]
     [DisplayName("Payment Event")]
     [IsoXmlTag("PmtEvt")]
-    public ValueList<PaymentEvent6> PaymentEvent { get; init; } = new ValueList<PaymentEvent6>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PaymentEvent6> PaymentEvent { get; init; } = [];
     // ID for the above is __su_cUJREeinU6Cqu8f2Ow
     
     

@@ -42,7 +42,7 @@ public partial record AccountSubLevel20
     [IsoId("_kwbvEDttEemIf7eyjCwinw")]
     [DisplayName("Shareholding Balance")]
     [IsoXmlTag("ShrhldgBal")]
-    public ValueList<ShareholdingBalance1> ShareholdingBalance { get; init; } = new ValueList<ShareholdingBalance1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ShareholdingBalance1> ShareholdingBalance { get; init; } = [];
     // ID for the above is _kwbvEDttEemIf7eyjCwinw
     
     

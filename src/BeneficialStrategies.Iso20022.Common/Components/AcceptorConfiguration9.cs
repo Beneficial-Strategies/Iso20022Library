@@ -32,7 +32,7 @@ public partial record AcceptorConfiguration9
     [IsoId("_dJccYwueEeqw5uEXxQ9H4g")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public ValueList<AcceptorConfigurationDataSet1> DataSet { get; init; } = new ValueList<AcceptorConfigurationDataSet1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AcceptorConfigurationDataSet1> DataSet { get; init; } = [];
     // ID for the above is _dJccYwueEeqw5uEXxQ9H4g
     
     

@@ -106,7 +106,7 @@ public partial record EstimatedFundCashForecast2
     [IsoId("_VCfnhtp-Ed-ak6NoX_4Aeg_-373893431")]
     [DisplayName("Sorting Criteria Details")]
     [IsoXmlTag("SrtgCritDtls")]
-    public ValueList<CashSortingCriterion1> SortingCriteriaDetails { get; init; } = new ValueList<CashSortingCriterion1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CashSortingCriterion1> SortingCriteriaDetails { get; init; } = [];
     // ID for the above is _VCfnhtp-Ed-ak6NoX_4Aeg_-373893431
     
     /// <summary>

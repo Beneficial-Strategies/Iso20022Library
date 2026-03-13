@@ -72,7 +72,7 @@ public partial record AccountManagementStatusReportV07 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference13> RelatedReference { get; init; } = new ValueList<AdditionalReference13>(){};
+    public ValueList<AdditionalReference13> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Status details of the account management instruction for which the status is provided.

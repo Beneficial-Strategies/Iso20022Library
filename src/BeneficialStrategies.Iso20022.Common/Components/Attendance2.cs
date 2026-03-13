@@ -26,7 +26,7 @@ public partial record Attendance2
     [IsoXmlTag("AdmssnConds")]
     [MinLength(0)]
     [MaxLength(7)]
-    public ValueList<AttendanceAdmissionConditions2> AdmissionConditions { get; init; } = new ValueList<AttendanceAdmissionConditions2>(){};
+    public ValueList<AttendanceAdmissionConditions2> AdmissionConditions { get; init; } = [];
     
     /// <summary>
     /// Specifies how to order the attendance card or to give notice of attendance.

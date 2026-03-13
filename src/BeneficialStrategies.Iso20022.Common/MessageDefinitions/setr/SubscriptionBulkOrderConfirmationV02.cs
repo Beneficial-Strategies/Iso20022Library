@@ -107,7 +107,7 @@ public partial record SubscriptionBulkOrderConfirmationV02 : IOuterRecord
     [IsoXmlTag("IntrmyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary4> IntermediaryDetails { get; init; } = new ValueList<Intermediary4>(){};
+    public ValueList<Intermediary4> IntermediaryDetails { get; init; } = [];
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.

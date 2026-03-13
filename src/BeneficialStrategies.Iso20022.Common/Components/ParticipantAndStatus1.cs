@@ -40,7 +40,7 @@ public partial record ParticipantAndStatus1
     [IsoId("_Odl2CdNSEeWCqoSJYcWUsg")]
     [DisplayName("Service Availability")]
     [IsoXmlTag("SvcAvlbty")]
-    public ValueList<ServiceAvailability1> ServiceAvailability { get; init; } = new ValueList<ServiceAvailability1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ServiceAvailability1> ServiceAvailability { get; init; } = [];
     // ID for the above is _Odl2CdNSEeWCqoSJYcWUsg
     
     

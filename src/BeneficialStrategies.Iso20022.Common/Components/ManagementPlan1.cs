@@ -40,7 +40,7 @@ public partial record ManagementPlan1
     [IsoId("_LYnu131DEeCF8NjrBemJWQ_-223303412")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public ValueList<TerminalManagementDataSet2> DataSet { get; init; } = new ValueList<TerminalManagementDataSet2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TerminalManagementDataSet2> DataSet { get; init; } = [];
     // ID for the above is _LYnu131DEeCF8NjrBemJWQ_-223303412
     
     

@@ -33,7 +33,7 @@ public partial record CostsAndCharges2
     [IsoId("_p37YLZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Individual Cost Or Charge")]
     [IsoXmlTag("IndvCostOrChrg")]
-    public ValueList<IndividualCostOrCharge2> IndividualCostOrCharge { get; init; } = new ValueList<IndividualCostOrCharge2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<IndividualCostOrCharge2> IndividualCostOrCharge { get; init; } = [];
     // ID for the above is _p37YLZ9BEeqxTNfi5y7ywQ
     
     /// <summary>

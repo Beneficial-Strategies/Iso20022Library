@@ -43,7 +43,7 @@ public partial record SubscriptionBulkOrderConfirmation1
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = new ValueList<Intermediary9>(){};
+    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

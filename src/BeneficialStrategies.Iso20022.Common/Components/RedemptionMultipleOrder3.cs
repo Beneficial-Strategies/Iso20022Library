@@ -102,7 +102,7 @@ public partial record RedemptionMultipleOrder3
     [IsoId("_SEzuYdp-Ed-ak6NoX_4Aeg_19173398")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
-    public ValueList<RedemptionOrder6> IndividualOrderDetails { get; init; } = new ValueList<RedemptionOrder6>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RedemptionOrder6> IndividualOrderDetails { get; init; } = [];
     // ID for the above is _SEzuYdp-Ed-ak6NoX_4Aeg_19173398
     
     /// <summary>

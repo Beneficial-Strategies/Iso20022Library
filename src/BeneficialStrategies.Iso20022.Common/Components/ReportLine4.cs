@@ -48,7 +48,7 @@ public partial record ReportLine4
     [IsoId("_ToDCw9p-Ed-ak6NoX_4Aeg_202348166")]
     [DisplayName("Breakdown By Purchase Order")]
     [IsoXmlTag("BrkdwnByPurchsOrdr")]
-    public ValueList<ReportLine2> BreakdownByPurchaseOrder { get; init; } = new ValueList<ReportLine2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ReportLine2> BreakdownByPurchaseOrder { get; init; } = [];
     // ID for the above is _ToDCw9p-Ed-ak6NoX_4Aeg_202348166
     
     

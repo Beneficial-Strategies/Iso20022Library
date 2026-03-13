@@ -92,7 +92,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty17Choic
         [IsoId("_x9xMwVyGEe24CqbZJK5XxA")]
         [DisplayName("Rejection Statistics")]
         [IsoXmlTag("RjctnSttstcs")]
-        public ValueList<RejectionStatistics8> RejectionStatistics { get; init; } = new ValueList<RejectionStatistics8>(){}; // Warning: Don't know multiplicity.
+        public ValueList<RejectionStatistics8> RejectionStatistics { get; init; } = [];
         // ID for the above is _x9xMwVyGEe24CqbZJK5XxA
         
         

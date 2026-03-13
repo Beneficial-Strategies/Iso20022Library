@@ -41,7 +41,7 @@ public partial record EnvelopedData8
     [IsoId("_3Ns0VS8pEeu125Ip9zFcsQ")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
-    public ValueList<Recipient10Choice_> Recipient { get; init; } = new ValueList<Recipient10Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Recipient10Choice_> Recipient { get; init; } = [];
     // ID for the above is _3Ns0VS8pEeu125Ip9zFcsQ
     
     /// <summary>

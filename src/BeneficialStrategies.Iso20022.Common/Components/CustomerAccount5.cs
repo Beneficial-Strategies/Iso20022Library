@@ -24,7 +24,7 @@ public partial record CustomerAccount5
     [IsoId("_NtycwQ1iEeKGXqvMN6jpiw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public ValueList<AccountIdentification4Choice_> Identification { get; init; } = new ValueList<AccountIdentification4Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AccountIdentification4Choice_> Identification { get; init; } = [];
     // ID for the above is _NtycwQ1iEeKGXqvMN6jpiw
     
     /// <summary>

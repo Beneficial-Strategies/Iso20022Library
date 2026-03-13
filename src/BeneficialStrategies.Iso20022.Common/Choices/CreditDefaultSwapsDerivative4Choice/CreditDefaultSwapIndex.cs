@@ -63,7 +63,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative4Cho
         [IsoSimpleType(IsoSimpleType.RestrictedMonthExact2Number)]
         [MinLength(0)]
         [MaxLength(12)]
-        public SimpleValueList<System.UInt64> RollMonth { get; init; } = new SimpleValueList<System.UInt64>(){};
+        public SimpleValueList<System.UInt64> RollMonth { get; init; } = [];
         
         /// <summary>
         /// To be populated in the case of a CDS Index or a derivative CDS Index with the next roll date of the index as established by the index provider.

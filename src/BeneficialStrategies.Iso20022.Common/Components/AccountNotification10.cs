@@ -107,7 +107,7 @@ public partial record AccountNotification10
     [IsoId("_a-naoR77EeSxevWRRWxNAg")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
-    public ValueList<NotificationItem5> Item { get; init; } = new ValueList<NotificationItem5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NotificationItem5> Item { get; init; } = [];
     // ID for the above is _a-naoR77EeSxevWRRWxNAg
     
     

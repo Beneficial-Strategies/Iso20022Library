@@ -42,7 +42,7 @@ public partial record Group3
     [IsoId("_D_AxJW49EeiU9cctagi5ow")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public ValueList<PartyAndCertificate5> Party { get; init; } = new ValueList<PartyAndCertificate5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyAndCertificate5> Party { get; init; } = [];
     // ID for the above is _D_AxJW49EeiU9cctagi5ow
     
     

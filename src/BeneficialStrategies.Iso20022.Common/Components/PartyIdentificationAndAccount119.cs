@@ -24,7 +24,7 @@ public partial record PartyIdentificationAndAccount119
     [IsoId("_Bl2FIEUrEeSGWeX3z5zSZQ")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public ValueList<PartyIdentification90> PartyIdentification { get; init; } = new ValueList<PartyIdentification90>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentification90> PartyIdentification { get; init; } = [];
     // ID for the above is _Bl2FIEUrEeSGWeX3z5zSZQ
     
     /// <summary>
@@ -33,7 +33,7 @@ public partial record PartyIdentificationAndAccount119
     [IsoId("_kNHDAEVKEeSGWeX3z5zSZQ")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public ValueList<AccountIdentification30> AccountIdentification { get; init; } = new ValueList<AccountIdentification30>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AccountIdentification30> AccountIdentification { get; init; } = [];
     // ID for the above is _kNHDAEVKEeSGWeX3z5zSZQ
     
     

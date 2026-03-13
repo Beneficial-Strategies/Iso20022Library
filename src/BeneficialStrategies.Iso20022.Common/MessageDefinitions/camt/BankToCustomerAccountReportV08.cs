@@ -75,7 +75,7 @@ public partial record BankToCustomerAccountReportV08 : IOuterRecord
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
     [MinLength(1)]
-    public ValueList<AccountReport25> Report { get; init; } = new ValueList<AccountReport25>(){};
+    public ValueList<AccountReport25> Report { get; init; } = [];
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
@@ -83,7 +83,7 @@ public partial record BankToCustomerAccountReportV08 : IOuterRecord
     [IsoId("_eYI_U22PEei3KuUgpx7Xcw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = new ValueList<SupplementaryData1>(){};
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
     
     
     #nullable disable

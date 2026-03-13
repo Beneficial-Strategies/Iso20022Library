@@ -32,7 +32,7 @@ public partial record CashSortingCriterion1
     [IsoId("_Uw6IRNp-Ed-ak6NoX_4Aeg_1294908661")]
     [DisplayName("Forecast Breakdown Details")]
     [IsoXmlTag("FcstBrkdwnDtls")]
-    public ValueList<ForecastParameter1> ForecastBreakdownDetails { get; init; } = new ValueList<ForecastParameter1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ForecastParameter1> ForecastBreakdownDetails { get; init; } = [];
     // ID for the above is _Uw6IRNp-Ed-ak6NoX_4Aeg_1294908661
     
     

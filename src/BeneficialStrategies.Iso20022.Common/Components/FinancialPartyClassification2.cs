@@ -25,7 +25,7 @@ public partial record FinancialPartyClassification2
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]
     [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
-    public SimpleValueList<System.String> Classification { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> Classification { get; init; } = [];
     // ID for the above is _0uXHsbHXEemRPNDOvJwndA
     
     /// <summary>

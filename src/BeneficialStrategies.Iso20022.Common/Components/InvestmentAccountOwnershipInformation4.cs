@@ -97,7 +97,7 @@ public partial record InvestmentAccountOwnershipInformation4
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<ModificationScope11> ModifiedInvestorProfileValidation { get; init; } = new ValueList<ModificationScope11>(){};
+    public ValueList<ModificationScope11> ModifiedInvestorProfileValidation { get; init; } = [];
     
     
     #nullable disable

@@ -202,7 +202,7 @@ public partial record UnsecuredMarketTransaction4
     [IsoXmlTag("CallPutOptn")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Option12> CallPutOption { get; init; } = new ValueList<Option12>(){};
+    public ValueList<Option12> CallPutOption { get; init; } = [];
     
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.

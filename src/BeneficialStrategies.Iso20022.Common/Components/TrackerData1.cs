@@ -42,7 +42,7 @@ public partial record TrackerData1
     [IsoId("_x5xmwIW5EeiDBOVr6AJAFA")]
     [DisplayName("Tracker Record")]
     [IsoXmlTag("TrckrRcrd")]
-    public ValueList<TrackerRecord1> TrackerRecord { get; init; } = new ValueList<TrackerRecord1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TrackerRecord1> TrackerRecord { get; init; } = [];
     // ID for the above is _x5xmwIW5EeiDBOVr6AJAFA
     
     

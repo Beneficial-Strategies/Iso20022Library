@@ -41,7 +41,7 @@ public partial record AggregateBalanceInformation2
     [IsoId("_VLSXK9p-Ed-ak6NoX_4Aeg_-1281858379")]
     [DisplayName("Holding Value")]
     [IsoXmlTag("HldgVal")]
-    public ValueList<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; init; } = new ValueList<ActiveOrHistoricCurrencyAndAmount>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> HoldingValue { get; init; } = [];
     // ID for the above is _VLSXK9p-Ed-ak6NoX_4Aeg_-1281858379
     
     /// <summary>
@@ -82,7 +82,7 @@ public partial record AggregateBalanceInformation2
     [IsoId("_VLcIItp-Ed-ak6NoX_4Aeg_233320292")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public ValueList<PriceInformation1> PriceDetails { get; init; } = new ValueList<PriceInformation1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PriceInformation1> PriceDetails { get; init; } = [];
     // ID for the above is _VLcIItp-Ed-ak6NoX_4Aeg_233320292
     
     /// <summary>

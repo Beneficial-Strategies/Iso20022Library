@@ -93,7 +93,7 @@ public partial record SwitchExecution3
     [IsoId("_VVuFgdp-Ed-ak6NoX_4Aeg_-1431911410")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
-    public ValueList<SwitchRedemptionLegExecution2> RedemptionLegDetails { get; init; } = new ValueList<SwitchRedemptionLegExecution2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchRedemptionLegExecution2> RedemptionLegDetails { get; init; } = [];
     // ID for the above is _VVuFgdp-Ed-ak6NoX_4Aeg_-1431911410
     
     /// <summary>
@@ -102,7 +102,7 @@ public partial record SwitchExecution3
     [IsoId("_VVuFgtp-Ed-ak6NoX_4Aeg_-1431911480")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
-    public ValueList<SwitchSubscriptionLegExecution2> SubscriptionLegDetails { get; init; } = new ValueList<SwitchSubscriptionLegExecution2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchSubscriptionLegExecution2> SubscriptionLegDetails { get; init; } = [];
     // ID for the above is _VVuFgtp-Ed-ak6NoX_4Aeg_-1431911480
     
     /// <summary>

@@ -24,7 +24,7 @@ public partial record DefaultFundReport1
     [IsoId("_-ddILqMOEeCojJW5vEuTEQ_1576502363")]
     [DisplayName("Default Fund Calculation")]
     [IsoXmlTag("DfltFndClctn")]
-    public ValueList<DefaultFund1> DefaultFundCalculation { get; init; } = new ValueList<DefaultFund1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DefaultFund1> DefaultFundCalculation { get; init; } = [];
     // ID for the above is _-ddILqMOEeCojJW5vEuTEQ_1576502363
     
     /// <summary>
@@ -33,7 +33,7 @@ public partial record DefaultFundReport1
     [IsoId("_-ddIL6MOEeCojJW5vEuTEQ_-1115881016")]
     [DisplayName("Collateral Description")]
     [IsoXmlTag("CollDesc")]
-    public ValueList<Collateral3> CollateralDescription { get; init; } = new ValueList<Collateral3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Collateral3> CollateralDescription { get; init; } = [];
     // ID for the above is _-ddIL6MOEeCojJW5vEuTEQ_-1115881016
     
     /// <summary>

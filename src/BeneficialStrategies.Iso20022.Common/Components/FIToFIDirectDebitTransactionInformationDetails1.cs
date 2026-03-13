@@ -32,7 +32,7 @@ public partial record FIToFIDirectDebitTransactionInformationDetails1
     [IsoId("_iCkJgAbvEearf7_vc3OyqQ")]
     [DisplayName("Credit Instruction")]
     [IsoXmlTag("CdtInstr")]
-    public ValueList<CreditTransferTransaction9> CreditInstruction { get; init; } = new ValueList<CreditTransferTransaction9>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CreditTransferTransaction9> CreditInstruction { get; init; } = [];
     // ID for the above is _iCkJgAbvEearf7_vc3OyqQ
     
     /// <summary>

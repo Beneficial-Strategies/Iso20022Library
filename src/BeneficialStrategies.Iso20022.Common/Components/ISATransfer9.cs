@@ -104,7 +104,7 @@ public partial record ISATransfer9
     [IsoId("_eJJ9ARgHEeKqWJINzXcn5g")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public ValueList<ISATransfer8> ProductTransfer { get; init; } = new ValueList<ISATransfer8>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ISATransfer8> ProductTransfer { get; init; } = [];
     // ID for the above is _eJJ9ARgHEeKqWJINzXcn5g
     
     /// <summary>

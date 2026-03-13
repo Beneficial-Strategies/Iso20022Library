@@ -60,7 +60,7 @@ public partial record OrderStatusAndReason7
     [IsoXmlTag("Rjctd")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<RejectedStatus6> Rejected { get; init; } = new ValueList<RejectedStatus6>(){};
+    public ValueList<RejectedStatus6> Rejected { get; init; } = [];
     
     /// <summary>
     /// Status of all the orders in the order message is suspended.

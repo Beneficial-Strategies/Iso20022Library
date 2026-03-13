@@ -34,7 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
         [IsoXmlTag("MssngInf")]
         [MinLength(0)]
         [MaxLength(10)]
-        public SimpleValueList<UnableToApplyMissingInformation2Code> MissingInformation { get; init; } = new SimpleValueList<UnableToApplyMissingInformation2Code>(){};
+        public SimpleValueList<UnableToApplyMissingInformation2Code> MissingInformation { get; init; } = [];
         
         /// <summary>
         /// Indicates, in a coded form, the incorrect information.
@@ -44,7 +44,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
         [IsoXmlTag("IncrrctInf")]
         [MinLength(0)]
         [MaxLength(10)]
-        public SimpleValueList<UnableToApplyIncorrectInformation3Code> IncorrectInformation { get; init; } = new SimpleValueList<UnableToApplyIncorrectInformation3Code>(){};
+        public SimpleValueList<UnableToApplyIncorrectInformation3Code> IncorrectInformation { get; init; } = [];
         
         
         #nullable disable

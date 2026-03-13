@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
         [IsoId("_x5wPZVyGEe24CqbZJK5XxA")]
         [DisplayName("Warnings")]
         [IsoXmlTag("Wrnngs")]
-        public ValueList<AbnormalValuesData4> Warnings { get; init; } = new ValueList<AbnormalValuesData4>(){}; // Warning: Don't know multiplicity.
+        public ValueList<AbnormalValuesData4> Warnings { get; init; } = [];
         // ID for the above is _x5wPZVyGEe24CqbZJK5XxA
         
         

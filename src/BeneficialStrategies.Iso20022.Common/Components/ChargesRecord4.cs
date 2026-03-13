@@ -35,7 +35,7 @@ public partial record ChargesRecord4
     [IsoId("_IQFdISkdEeuBrrgCSpsocg")]
     [DisplayName("Underlying Transaction")]
     [IsoXmlTag("UndrlygTx")]
-    public ValueList<TransactionReferences7> UnderlyingTransaction { get; init; } = new ValueList<TransactionReferences7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionReferences7> UnderlyingTransaction { get; init; } = [];
     // ID for the above is _IQFdISkdEeuBrrgCSpsocg
     
     /// <summary>

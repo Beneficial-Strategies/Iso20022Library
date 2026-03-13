@@ -196,7 +196,7 @@ public partial record CreditTransferTransactionInformation1
     [IsoXmlTag("RgltryRptg")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RegulatoryReporting2> RegulatoryReporting { get; init; } = new ValueList<RegulatoryReporting2>(){};
+    public ValueList<RegulatoryReporting2> RegulatoryReporting { get; init; } = [];
     
     /// <summary>
     /// Amount of money due to the government or tax authority, according to various pre-defined parameters such as thresholds or income.
@@ -214,7 +214,7 @@ public partial record CreditTransferTransactionInformation1
     [IsoXmlTag("RltdRmtInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RemittanceLocation1> RelatedRemittanceInformation { get; init; } = new ValueList<RemittanceLocation1>(){};
+    public ValueList<RemittanceLocation1> RelatedRemittanceInformation { get; init; } = [];
     
     /// <summary>
     /// Information that enables the matching, ie, reconciliation, of a payment with the items that the payment is intended to settle, eg, commercial invoices in an account receivable system.

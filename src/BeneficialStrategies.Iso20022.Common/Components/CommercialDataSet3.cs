@@ -64,7 +64,7 @@ public partial record CommercialDataSet3
     [IsoId("_Spw1mdp-Ed-ak6NoX_4Aeg_720183528")]
     [DisplayName("Goods")]
     [IsoXmlTag("Goods")]
-    public ValueList<LineItem9> Goods { get; init; } = new ValueList<LineItem9>(){}; // Warning: Don't know multiplicity.
+    public ValueList<LineItem9> Goods { get; init; } = [];
     // ID for the above is _Spw1mdp-Ed-ak6NoX_4Aeg_720183528
     
     /// <summary>
@@ -73,7 +73,7 @@ public partial record CommercialDataSet3
     [IsoId("_Sp5_gNp-Ed-ak6NoX_4Aeg_720184134")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
-    public ValueList<PaymentTerms1> PaymentTerms { get; init; } = new ValueList<PaymentTerms1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PaymentTerms1> PaymentTerms { get; init; } = [];
     // ID for the above is _Sp5_gNp-Ed-ak6NoX_4Aeg_720184134
     
     /// <summary>

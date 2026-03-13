@@ -44,7 +44,7 @@ public partial record LiquidityStressTestResult1
     [IsoXmlTag("LqdtyReqrdAndAvlbl")]
     [MinLength(6)]
     [MaxLength(6)]
-    public ValueList<LiquidityRequiredAndAvailable1> LiquidityRequiredAndAvailable { get; init; } = new ValueList<LiquidityRequiredAndAvailable1>(){};
+    public ValueList<LiquidityRequiredAndAvailable1> LiquidityRequiredAndAvailable { get; init; } = [];
     
     
     #nullable disable

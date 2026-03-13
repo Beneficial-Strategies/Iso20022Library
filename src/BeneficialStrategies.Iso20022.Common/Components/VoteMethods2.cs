@@ -27,7 +27,7 @@ public partial record VoteMethods2
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = [];
     
     /// <summary>
     /// Specifies the address where voting ballot can be sent.
@@ -37,7 +37,7 @@ public partial record VoteMethods2
     [IsoXmlTag("VoteByMail")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<PostalAddress1> VoteByMail { get; init; } = new ValueList<PostalAddress1>(){};
+    public ValueList<PostalAddress1> VoteByMail { get; init; } = [];
     
     /// <summary>
     /// Electronic address, e-mail or website, where a security holder can vote.
@@ -47,7 +47,7 @@ public partial record VoteMethods2
     [IsoXmlTag("ElctrncVote")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<CommunicationAddress4> ElectronicVote { get; init; } = new ValueList<CommunicationAddress4>(){};
+    public ValueList<CommunicationAddress4> ElectronicVote { get; init; } = [];
     
     /// <summary>
     /// Telephone number providing access to an automated voting system.
@@ -58,7 +58,7 @@ public partial record VoteMethods2
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteByTelephone { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> VoteByTelephone { get; init; } = [];
     
     
     #nullable disable

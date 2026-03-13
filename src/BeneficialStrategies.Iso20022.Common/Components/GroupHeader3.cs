@@ -46,7 +46,7 @@ public partial record GroupHeader3
     [IsoSimpleType(IsoSimpleType.Max128Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> Authorisation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> Authorisation { get; init; } = [];
     
     /// <summary>
     /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions in the message is requested.

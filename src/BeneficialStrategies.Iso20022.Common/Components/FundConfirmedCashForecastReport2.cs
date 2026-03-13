@@ -24,7 +24,7 @@ public partial record FundConfirmedCashForecastReport2
     [IsoId("_RPwVstp-Ed-ak6NoX_4Aeg_148169138")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
-    public ValueList<FundCashForecast3> FundCashForecastDetails { get; init; } = new ValueList<FundCashForecast3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FundCashForecast3> FundCashForecastDetails { get; init; } = [];
     // ID for the above is _RPwVstp-Ed-ak6NoX_4Aeg_148169138
     
     /// <summary>

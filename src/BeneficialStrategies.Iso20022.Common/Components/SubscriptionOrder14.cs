@@ -46,7 +46,7 @@ public partial record SubscriptionOrder14
     [IsoXmlTag("OrdrTp")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = new ValueList<FundOrderType4Choice_>(){};
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
     
     /// <summary>
     /// Investment fund class related to the order.
@@ -225,7 +225,7 @@ public partial record SubscriptionOrder14
     [IsoXmlTag("StffClntBrkdwn")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = new ValueList<InvestmentFundsOrderBreakdown2>(){};
+    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = [];
     
     /// <summary>
     /// Specifies if advice has been received from an independent financial advisor.
@@ -251,7 +251,7 @@ public partial record SubscriptionOrder14
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary40> RelatedPartyDetails { get; init; } = new ValueList<Intermediary40>(){};
+    public ValueList<Intermediary40> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Part of an investor&apos;s subscription amount that is held by the fund in order to pay incentive/performance fees at the end of the fiscal year.

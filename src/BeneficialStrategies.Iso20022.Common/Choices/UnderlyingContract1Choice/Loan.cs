@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice
         [IsoId("_PSp2I9NDEeSDLevdaFPXHw")]
         [DisplayName("Buyer")]
         [IsoXmlTag("Buyr")]
-        public ValueList<TradeParty2> Buyer { get; init; } = new ValueList<TradeParty2>(){}; // Warning: Don't know multiplicity.
+        public ValueList<TradeParty2> Buyer { get; init; } = [];
         // ID for the above is _PSp2I9NDEeSDLevdaFPXHw
         
         /// <summary>
@@ -40,7 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice
         [IsoId("_PSp2JNNDEeSDLevdaFPXHw")]
         [DisplayName("Seller")]
         [IsoXmlTag("Sellr")]
-        public ValueList<TradeParty2> Seller { get; init; } = new ValueList<TradeParty2>(){}; // Warning: Don't know multiplicity.
+        public ValueList<TradeParty2> Seller { get; init; } = [];
         // ID for the above is _PSp2JNNDEeSDLevdaFPXHw
         
         /// <summary>

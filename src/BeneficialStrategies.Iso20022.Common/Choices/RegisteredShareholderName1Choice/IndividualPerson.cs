@@ -63,7 +63,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
         [IsoXmlTag("PstlAdr")]
         [MinLength(1)]
         [MaxLength(5)]
-        public ValueList<PostalAddress21> PostalAddress { get; init; } = new ValueList<PostalAddress21>(){};
+        public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
         
         
         #nullable disable

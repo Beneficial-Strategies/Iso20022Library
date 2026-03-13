@@ -24,7 +24,7 @@ public partial record TradeData29
     [IsoId("_hTXSAcK4EeuFNp8LZAnorg")]
     [DisplayName("Report Statistics")]
     [IsoXmlTag("RptSttstcs")]
-    public ValueList<DetailedReportStatistics5> ReportStatistics { get; init; } = new ValueList<DetailedReportStatistics5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DetailedReportStatistics5> ReportStatistics { get; init; } = [];
     // ID for the above is _hTXSAcK4EeuFNp8LZAnorg
     
     /// <summary>
@@ -33,7 +33,7 @@ public partial record TradeData29
     [IsoId("_hTXSA8K4EeuFNp8LZAnorg")]
     [DisplayName("Transaction Statistics")]
     [IsoXmlTag("TxSttstcs")]
-    public ValueList<DetailedTransactionStatistics2Choice_> TransactionStatistics { get; init; } = new ValueList<DetailedTransactionStatistics2Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DetailedTransactionStatistics2Choice_> TransactionStatistics { get; init; } = [];
     // ID for the above is _hTXSA8K4EeuFNp8LZAnorg
     
     /// <summary>

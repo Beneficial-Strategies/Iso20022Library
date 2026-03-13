@@ -24,7 +24,7 @@ public partial record LiquidResources1
     [IsoId("_yq6uYESsEemM8-DVOYzdVQ")]
     [DisplayName("Cash Due")]
     [IsoXmlTag("CshDue")]
-    public ValueList<LiquidResourceInformation1> CashDue { get; init; } = new ValueList<LiquidResourceInformation1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<LiquidResourceInformation1> CashDue { get; init; } = [];
     // ID for the above is _yq6uYESsEemM8-DVOYzdVQ
     
     /// <summary>

@@ -128,7 +128,7 @@ public partial record Baseline3
     [IsoId("_SrQDUNp-Ed-ak6NoX_4Aeg_-88106377")]
     [DisplayName("Payment Terms")]
     [IsoXmlTag("PmtTerms")]
-    public ValueList<PaymentTerms1> PaymentTerms { get; init; } = new ValueList<PaymentTerms1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PaymentTerms1> PaymentTerms { get; init; } = [];
     // ID for the above is _SrQDUNp-Ed-ak6NoX_4Aeg_-88106377
     
     /// <summary>

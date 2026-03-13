@@ -84,7 +84,7 @@ public partial record SupportingDocument2
     [IsoId("_6oIhX248EeiU9cctagi5ow")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ValueList<SupportingDocumentEntry1> Entry { get; init; } = new ValueList<SupportingDocumentEntry1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SupportingDocumentEntry1> Entry { get; init; } = [];
     // ID for the above is _6oIhX248EeiU9cctagi5ow
     
     /// <summary>

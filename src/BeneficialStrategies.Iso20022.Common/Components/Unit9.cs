@@ -35,7 +35,7 @@ public partial record Unit9
     [IsoXmlTag("UnitDtls")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Unit10> UnitDetails { get; init; } = new ValueList<Unit10>(){};
+    public ValueList<Unit10> UnitDetails { get; init; } = [];
     
     
     #nullable disable

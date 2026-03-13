@@ -48,7 +48,7 @@ public partial record CardPaymentDataSet13
     [IsoId("_o988h43IEeWjkqXgn_0Imw")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public ValueList<TransactionTotals7> TransactionTotals { get; init; } = new ValueList<TransactionTotals7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionTotals7> TransactionTotals { get; init; } = [];
     // ID for the above is _o988h43IEeWjkqXgn_0Imw
     
     /// <summary>
@@ -65,7 +65,7 @@ public partial record CardPaymentDataSet13
     [IsoId("_o988i43IEeWjkqXgn_0Imw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public ValueList<CardPaymentDataSetTransaction4Choice_> Transaction { get; init; } = new ValueList<CardPaymentDataSetTransaction4Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CardPaymentDataSetTransaction4Choice_> Transaction { get; init; } = [];
     // ID for the above is _o988i43IEeWjkqXgn_0Imw
     
     

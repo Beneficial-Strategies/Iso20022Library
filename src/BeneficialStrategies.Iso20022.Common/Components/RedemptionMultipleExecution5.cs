@@ -102,7 +102,7 @@ public partial record RedemptionMultipleExecution5
     [IsoId("_GjGB_TbtEead9bDRE_1DAQ")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
-    public ValueList<RedemptionExecution15> IndividualExecutionDetails { get; init; } = new ValueList<RedemptionExecution15>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RedemptionExecution15> IndividualExecutionDetails { get; init; } = [];
     // ID for the above is _GjGB_TbtEead9bDRE_1DAQ
     
     /// <summary>

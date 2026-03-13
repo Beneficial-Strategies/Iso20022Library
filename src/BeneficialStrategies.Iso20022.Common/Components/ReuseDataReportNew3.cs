@@ -51,7 +51,7 @@ public partial record ReuseDataReportNew3
     [IsoId("_0qscF64bEemB_csI4yyKLA")]
     [DisplayName("Collateral Component")]
     [IsoXmlTag("CollCmpnt")]
-    public ValueList<CollateralType12> CollateralComponent { get; init; } = new ValueList<CollateralType12>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CollateralType12> CollateralComponent { get; init; } = [];
     // ID for the above is _0qscF64bEemB_csI4yyKLA
     
     /// <summary>

@@ -32,7 +32,7 @@ public partial record TotalCharges2
     [IsoId("_VI5xitp-Ed-ak6NoX_4Aeg_-463850083")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public ValueList<Charge10> ChargeDetails { get; init; } = new ValueList<Charge10>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Charge10> ChargeDetails { get; init; } = [];
     // ID for the above is _VI5xitp-Ed-ak6NoX_4Aeg_-463850083
     
     

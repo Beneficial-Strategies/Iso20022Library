@@ -54,7 +54,7 @@ public partial record SafekeepingAccount10
     [IsoXmlTag("InstdBal")]
     [MinLength(1)]
     [MaxLength(15)]
-    public ValueList<HoldingBalance10> InstructedBalance { get; init; } = new ValueList<HoldingBalance10>(){};
+    public ValueList<HoldingBalance10> InstructedBalance { get; init; } = [];
     
     /// <summary>
     /// Owner of the voting rights.
@@ -64,7 +64,7 @@ public partial record SafekeepingAccount10
     [IsoXmlTag("RghtsHldr")]
     [MinLength(0)]
     [MaxLength(250)]
-    public ValueList<PartyIdentification233Choice_> RightsHolder { get; init; } = new ValueList<PartyIdentification233Choice_>(){};
+    public ValueList<PartyIdentification233Choice_> RightsHolder { get; init; } = [];
     
     
     #nullable disable

@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
         [IsoXmlTag("DerivUndrlygLeg")]
         [MinLength(1)]
         [MaxLength(2)]
-        public ValueList<DerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; init; } = new ValueList<DerivativeUnderlyingLeg1>(){};
+        public ValueList<DerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; init; } = [];
         
         /// <summary>
         /// Option specific attributes.

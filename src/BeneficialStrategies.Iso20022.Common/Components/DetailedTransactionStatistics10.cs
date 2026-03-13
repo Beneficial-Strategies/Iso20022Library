@@ -51,7 +51,7 @@ public partial record DetailedTransactionStatistics10
     [IsoId("_j8wpt64cEemB_csI4yyKLA")]
     [DisplayName("Number Of Transactions Rejected")]
     [IsoXmlTag("NbOfTxsRjctd")]
-    public ValueList<RejectionReason47> NumberOfTransactionsRejected { get; init; } = new ValueList<RejectionReason47>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RejectionReason47> NumberOfTransactionsRejected { get; init; } = [];
     // ID for the above is _j8wpt64cEemB_csI4yyKLA
     
     

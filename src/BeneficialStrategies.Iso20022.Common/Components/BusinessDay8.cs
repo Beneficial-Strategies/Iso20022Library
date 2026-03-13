@@ -24,7 +24,7 @@ public partial record BusinessDay8
     [IsoId("_ONBJs3XyEei3jO6riKEVXg")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
-    public ValueList<SystemIdentification2Choice_> SystemIdentification { get; init; } = new ValueList<SystemIdentification2Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SystemIdentification2Choice_> SystemIdentification { get; init; } = [];
     // ID for the above is _ONBJs3XyEei3jO6riKEVXg
     
     /// <summary>

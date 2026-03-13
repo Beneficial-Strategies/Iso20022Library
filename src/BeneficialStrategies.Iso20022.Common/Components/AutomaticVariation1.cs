@@ -42,7 +42,7 @@ public partial record AutomaticVariation1
     [IsoId("_9y7vcHltEeG7BsjMvd1mEw_-1036746610")]
     [DisplayName("Amount And Trigger")]
     [IsoXmlTag("AmtAndTrggr")]
-    public ValueList<AmountAndTrigger1> AmountAndTrigger { get; init; } = new ValueList<AmountAndTrigger1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AmountAndTrigger1> AmountAndTrigger { get; init; } = [];
     // ID for the above is _9y7vcHltEeG7BsjMvd1mEw_-1036746610
     
     /// <summary>
@@ -54,7 +54,7 @@ public partial record AutomaticVariation1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
     
     
     #nullable disable

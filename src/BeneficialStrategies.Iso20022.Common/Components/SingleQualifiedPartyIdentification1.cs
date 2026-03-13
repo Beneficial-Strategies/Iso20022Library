@@ -38,7 +38,7 @@ public partial record SingleQualifiedPartyIdentification1
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> RelativeIdentifier { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> RelativeIdentifier { get; init; } = [];
     
     
     #nullable disable

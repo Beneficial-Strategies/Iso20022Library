@@ -26,7 +26,7 @@ public partial record Option14
     [IsoXmlTag("XprtnStyle")]
     [MinLength(1)]
     [MaxLength(4)]
-    public SimpleValueList<OptionStyle5Code> ExpirationStyle { get; init; } = new SimpleValueList<OptionStyle5Code>(){};
+    public SimpleValueList<OptionStyle5Code> ExpirationStyle { get; init; } = [];
     
     /// <summary>
     /// Specifies how the option can be exercised.

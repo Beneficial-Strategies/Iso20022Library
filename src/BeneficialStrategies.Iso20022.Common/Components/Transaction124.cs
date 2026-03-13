@@ -174,7 +174,7 @@ public partial record Transaction124
     [IsoXmlTag("TxSts")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<TransactionStatus6> TransactionStatus { get; init; } = new ValueList<TransactionStatus6>(){};
+    public ValueList<TransactionStatus6> TransactionStatus { get; init; } = [];
     
     /// <summary>
     /// Quantity of securities assigned as collateral position.

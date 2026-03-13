@@ -147,7 +147,7 @@ public partial record SwitchOrder4
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary8> RelatedPartyDetails { get; init; } = new ValueList<Intermediary8>(){};
+    public ValueList<Intermediary8> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Cancellation right of an investor with respect to an investment fund order.
@@ -173,7 +173,7 @@ public partial record SwitchOrder4
     [IsoId("_SMtGJNp-Ed-ak6NoX_4Aeg_81413337")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
-    public ValueList<SwitchRedemptionLegOrder3> RedemptionLegDetails { get; init; } = new ValueList<SwitchRedemptionLegOrder3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchRedemptionLegOrder3> RedemptionLegDetails { get; init; } = [];
     // ID for the above is _SMtGJNp-Ed-ak6NoX_4Aeg_81413337
     
     /// <summary>
@@ -182,7 +182,7 @@ public partial record SwitchOrder4
     [IsoId("_SMtGJdp-Ed-ak6NoX_4Aeg_81413259")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
-    public ValueList<SwitchSubscriptionLegOrder3> SubscriptionLegDetails { get; init; } = new ValueList<SwitchSubscriptionLegOrder3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchSubscriptionLegOrder3> SubscriptionLegDetails { get; init; } = [];
     // ID for the above is _SMtGJdp-Ed-ak6NoX_4Aeg_81413259
     
     /// <summary>

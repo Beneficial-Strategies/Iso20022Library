@@ -318,7 +318,7 @@ public partial record CreditTransferTransactionInformation2
     [IsoXmlTag("RgltryRptg")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RegulatoryReporting2> RegulatoryReporting { get; init; } = new ValueList<RegulatoryReporting2>(){};
+    public ValueList<RegulatoryReporting2> RegulatoryReporting { get; init; } = [];
     
     /// <summary>
     /// Information related to the handling of the remittance information by any of the agents in the transaction processing chain.
@@ -328,7 +328,7 @@ public partial record CreditTransferTransactionInformation2
     [IsoXmlTag("RltdRmtInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RemittanceLocation1> RelatedRemittanceInformation { get; init; } = new ValueList<RemittanceLocation1>(){};
+    public ValueList<RemittanceLocation1> RelatedRemittanceInformation { get; init; } = [];
     
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.

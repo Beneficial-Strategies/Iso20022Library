@@ -24,7 +24,7 @@ public partial record InitialMarginRequirement1
     [IsoId("_iLGYQKpzEeamNLogr5TkIQ")]
     [DisplayName("Initial Margin Exposure")]
     [IsoXmlTag("InitlMrgnXpsr")]
-    public ValueList<InitialMarginExposure1> InitialMarginExposure { get; init; } = new ValueList<InitialMarginExposure1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<InitialMarginExposure1> InitialMarginExposure { get; init; } = [];
     // ID for the above is _iLGYQKpzEeamNLogr5TkIQ
     
     /// <summary>

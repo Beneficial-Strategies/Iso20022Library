@@ -50,7 +50,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [IsoId("_x2DbJlyGEe24CqbZJK5XxA")]
         [DisplayName("Warnings")]
         [IsoXmlTag("Wrnngs")]
-        public ValueList<MissingValuationsData2> Warnings { get; init; } = new ValueList<MissingValuationsData2>(){}; // Warning: Don't know multiplicity.
+        public ValueList<MissingValuationsData2> Warnings { get; init; } = [];
         // ID for the above is _x2DbJlyGEe24CqbZJK5XxA
         
         

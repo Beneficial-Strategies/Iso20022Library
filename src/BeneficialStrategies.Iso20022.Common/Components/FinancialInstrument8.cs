@@ -26,7 +26,7 @@ public partial record FinancialInstrument8
     [IsoXmlTag("Id")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<SecurityIdentification3Choice_> Identification { get; init; } = new ValueList<SecurityIdentification3Choice_>(){};
+    public ValueList<SecurityIdentification3Choice_> Identification { get; init; } = [];
     
     /// <summary>
     /// Name of the financial instrument in free format text.

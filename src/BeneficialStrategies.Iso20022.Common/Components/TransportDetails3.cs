@@ -24,7 +24,7 @@ public partial record TransportDetails3
     [IsoId("_E3H7M9QtEeK0PPbKncCqzA")]
     [DisplayName("Transport Document Reference")]
     [IsoXmlTag("TrnsprtDocRef")]
-    public ValueList<DocumentIdentification7> TransportDocumentReference { get; init; } = new ValueList<DocumentIdentification7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DocumentIdentification7> TransportDocumentReference { get; init; } = [];
     // ID for the above is _E3H7M9QtEeK0PPbKncCqzA
     
     /// <summary>
@@ -33,7 +33,7 @@ public partial record TransportDetails3
     [IsoId("_E3H7NdQtEeK0PPbKncCqzA")]
     [DisplayName("Transported Goods")]
     [IsoXmlTag("TrnsprtdGoods")]
-    public ValueList<TransportedGoods1> TransportedGoods { get; init; } = new ValueList<TransportedGoods1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransportedGoods1> TransportedGoods { get; init; } = [];
     // ID for the above is _E3H7NdQtEeK0PPbKncCqzA
     
     /// <summary>

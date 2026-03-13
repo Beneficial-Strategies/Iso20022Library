@@ -42,7 +42,7 @@ public partial record FeeCollectionReference1
     [IsoId("_04o28yxMEeyg-aG5nXcnfg")]
     [DisplayName("Fee Collection Identification")]
     [IsoXmlTag("FeeColltnId")]
-    public ValueList<FeeCollectionIdentification1> FeeCollectionIdentification { get; init; } = new ValueList<FeeCollectionIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FeeCollectionIdentification1> FeeCollectionIdentification { get; init; } = [];
     // ID for the above is _04o28yxMEeyg-aG5nXcnfg
     
     

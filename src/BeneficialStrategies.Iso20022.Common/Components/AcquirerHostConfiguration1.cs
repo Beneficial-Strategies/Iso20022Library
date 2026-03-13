@@ -34,7 +34,7 @@ public partial record AcquirerHostConfiguration1
     [IsoId("_K8nIQX1DEeCF8NjrBemJWQ_-2022756489")]
     [DisplayName("Message To Send")]
     [IsoXmlTag("MsgToSnd")]
-    public SimpleValueList<MessageFunction3Code> MessageToSend { get; init; } = new SimpleValueList<MessageFunction3Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<MessageFunction3Code> MessageToSend { get; init; } = [];
     // ID for the above is _K8nIQX1DEeCF8NjrBemJWQ_-2022756489
     
     

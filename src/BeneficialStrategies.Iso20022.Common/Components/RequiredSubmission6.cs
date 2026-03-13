@@ -24,7 +24,7 @@ public partial record RequiredSubmission6
     [IsoId("_77-b8QgIEeSeS5xdjFfOTw")]
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
-    public ValueList<BICIdentification1> Submitter { get; init; } = new ValueList<BICIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BICIdentification1> Submitter { get; init; } = [];
     // ID for the above is _77-b8QgIEeSeS5xdjFfOTw
     
     /// <summary>

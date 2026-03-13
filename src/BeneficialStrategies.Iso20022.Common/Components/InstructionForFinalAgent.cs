@@ -26,7 +26,7 @@ public partial record InstructionForFinalAgent
     [IsoXmlTag("Cd")]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<Instruction3Code> Code { get; init; } = new SimpleValueList<Instruction3Code>(){};
+    public SimpleValueList<Instruction3Code> Code { get; init; } = [];
     
     /// <summary>
     /// Instruction to the final agent that is specific to a user community and is required for use within that user community.||Usage: The proprietary element should only be used when the coded element does not provide sufficient codes or when the selected code in the coded element needs to be supplemented by additional information such as a passport number or telephone number.

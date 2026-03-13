@@ -49,7 +49,7 @@ public partial record CardTransactionDetail5
     [IsoId("_ML31VXu1EeS2Z_kGi7H1VQ")]
     [DisplayName("Message Reason")]
     [IsoXmlTag("MsgRsn")]
-    public SimpleValueList<MessageReason1Code> MessageReason { get; init; } = new SimpleValueList<MessageReason1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<MessageReason1Code> MessageReason { get; init; } = [];
     // ID for the above is _ML31VXu1EeS2Z_kGi7H1VQ
     
     /// <summary>

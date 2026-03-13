@@ -109,7 +109,7 @@ public partial record MeetingResultDisseminationV08 : IOuterRecord
     [IsoXmlTag("Scty")]
     [MinLength(1)]
     [MaxLength(200)]
-    public ValueList<SecurityPosition19> Security { get; init; } = new ValueList<SecurityPosition19>(){};
+    public ValueList<SecurityPosition19> Security { get; init; } = [];
     
     /// <summary>
     /// Results per resolution.
@@ -119,7 +119,7 @@ public partial record MeetingResultDisseminationV08 : IOuterRecord
     [IsoXmlTag("VoteRslt")]
     [MinLength(1)]
     [MaxLength(1000)]
-    public ValueList<Vote18> VoteResult { get; init; } = new ValueList<Vote18>(){};
+    public ValueList<Vote18> VoteResult { get; init; } = [];
     
     /// <summary>
     /// Information about the participation to the voting process.

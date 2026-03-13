@@ -87,7 +87,7 @@ public partial record OrderConfirmationStatusReportV01 : IOuterRecord
     [IsoXmlTag("OthrRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> OtherReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> OtherReference { get; init; } = [];
     
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -97,7 +97,7 @@ public partial record OrderConfirmationStatusReportV01 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> RelatedReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Status report details of an individual order confirmation.

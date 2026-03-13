@@ -24,7 +24,7 @@ public partial record PartyIdentification79
     [IsoId("_O_0QQFCjEeWdp9NcseTlOw")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public ValueList<PartyIdentification76> AccountOwner { get; init; } = new ValueList<PartyIdentification76>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentification76> AccountOwner { get; init; } = [];
     // ID for the above is _O_0QQFCjEeWdp9NcseTlOw
     
     /// <summary>

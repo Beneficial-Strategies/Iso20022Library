@@ -34,7 +34,7 @@ public partial record OperationMandate4
     [IsoId("_CtgF8249EeiU9cctagi5ow")]
     [DisplayName("Applicable Channel")]
     [IsoXmlTag("AplblChanl")]
-    public ValueList<Channel2Choice_> ApplicableChannel { get; init; } = new ValueList<Channel2Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Channel2Choice_> ApplicableChannel { get; init; } = [];
     // ID for the above is _CtgF8249EeiU9cctagi5ow
     
     /// <summary>
@@ -69,7 +69,7 @@ public partial record OperationMandate4
     [IsoId("_CtgF-249EeiU9cctagi5ow")]
     [DisplayName("Bank Operation")]
     [IsoXmlTag("BkOpr")]
-    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = new ValueList<BankTransactionCodeStructure4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = [];
     // ID for the above is _CtgF-249EeiU9cctagi5ow
     
     /// <summary>

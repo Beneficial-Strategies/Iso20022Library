@@ -32,7 +32,7 @@ public partial record TradeData21
     [IsoId("_CtHU0__oEemm3skPVSMJQg")]
     [DisplayName("Reconciliation Report")]
     [IsoXmlTag("RcncltnRpt")]
-    public ValueList<ReconciliationReport5> ReconciliationReport { get; init; } = new ValueList<ReconciliationReport5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ReconciliationReport5> ReconciliationReport { get; init; } = [];
     // ID for the above is _CtHU0__oEemm3skPVSMJQg
     
     /// <summary>

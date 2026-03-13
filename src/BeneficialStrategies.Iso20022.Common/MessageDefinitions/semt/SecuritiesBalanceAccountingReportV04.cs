@@ -114,7 +114,7 @@ public partial record SecuritiesBalanceAccountingReportV04 : IOuterRecord
     [IsoXmlTag("IntrmyInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary21> IntermediaryInformation { get; init; } = new ValueList<Intermediary21>(){};
+    public ValueList<Intermediary21> IntermediaryInformation { get; init; } = [];
     
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.

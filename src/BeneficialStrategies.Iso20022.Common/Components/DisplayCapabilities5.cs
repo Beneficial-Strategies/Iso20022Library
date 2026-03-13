@@ -24,7 +24,7 @@ public partial record DisplayCapabilities5
     [IsoId("_zof8Aa13EeWMg5rOByfExw")]
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public SimpleValueList<UserInterface5Code> Destination { get; init; } = new SimpleValueList<UserInterface5Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<UserInterface5Code> Destination { get; init; } = [];
     // ID for the above is _zof8Aa13EeWMg5rOByfExw
     
     /// <summary>

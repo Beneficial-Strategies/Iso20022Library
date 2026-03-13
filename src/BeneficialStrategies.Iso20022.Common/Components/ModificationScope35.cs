@@ -32,7 +32,7 @@ public partial record ModificationScope35
     [IsoId("_ODRsQ0zaEea8fovz_9xSTQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public ValueList<AdditiononalInformation12> AdditionalInformation { get; init; } = new ValueList<AdditiononalInformation12>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AdditiononalInformation12> AdditionalInformation { get; init; } = [];
     // ID for the above is _ODRsQ0zaEea8fovz_9xSTQ
     
     

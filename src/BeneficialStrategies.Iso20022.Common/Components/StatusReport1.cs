@@ -40,7 +40,7 @@ public partial record StatusReport1
     [IsoId("_LYxf0n1DEeCF8NjrBemJWQ_1866758529")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public ValueList<TerminalManagementDataSet1> DataSet { get; init; } = new ValueList<TerminalManagementDataSet1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TerminalManagementDataSet1> DataSet { get; init; } = [];
     // ID for the above is _LYxf0n1DEeCF8NjrBemJWQ_1866758529
     
     

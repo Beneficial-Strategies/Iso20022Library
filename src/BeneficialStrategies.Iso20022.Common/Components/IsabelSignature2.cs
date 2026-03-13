@@ -34,7 +34,7 @@ public partial record IsabelSignature2
     [IsoXmlTag("Rcrd")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<IsabelSignatureRecord1> Record { get; init; } = new ValueList<IsabelSignatureRecord1>(){};
+    public ValueList<IsabelSignatureRecord1> Record { get; init; } = [];
     
     /// <summary>
     /// Random data related to the signature.

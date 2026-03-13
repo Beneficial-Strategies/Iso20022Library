@@ -35,7 +35,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LocationFormat1Choice
         [MinLength(0)]
         [MaxLength(5)]
         [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public SimpleValueList<System.String> AddressLine { get; init; } = new SimpleValueList<System.String>(){};
+        public SimpleValueList<System.String> AddressLine { get; init; } = [];
         
         /// <summary>
         /// Name of a street or thoroughfare.

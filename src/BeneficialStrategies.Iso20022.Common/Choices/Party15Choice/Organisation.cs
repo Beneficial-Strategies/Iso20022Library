@@ -98,7 +98,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("ModfdPstlAdr")]
         [MinLength(0)]
         [MaxLength(5)]
-        public ValueList<ModificationScope1> ModifiedPostalAddress { get; init; } = new ValueList<ModificationScope1>(){};
+        public ValueList<ModificationScope1> ModifiedPostalAddress { get; init; } = [];
         
         /// <summary>
         /// Communication device number or electronic address used for communication.

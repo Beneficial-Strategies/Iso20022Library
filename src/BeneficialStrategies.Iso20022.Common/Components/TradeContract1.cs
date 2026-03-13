@@ -40,7 +40,7 @@ public partial record TradeContract1
     [IsoId("_RZltc9NDEeSDLevdaFPXHw")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
-    public ValueList<TradeParty2> Buyer { get; init; } = new ValueList<TradeParty2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TradeParty2> Buyer { get; init; } = [];
     // ID for the above is _RZltc9NDEeSDLevdaFPXHw
     
     /// <summary>
@@ -49,7 +49,7 @@ public partial record TradeContract1
     [IsoId("_RZltdNNDEeSDLevdaFPXHw")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
-    public ValueList<TradeParty2> Seller { get; init; } = new ValueList<TradeParty2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TradeParty2> Seller { get; init; } = [];
     // ID for the above is _RZltdNNDEeSDLevdaFPXHw
     
     /// <summary>

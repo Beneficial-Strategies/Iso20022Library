@@ -57,7 +57,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice
         [IsoId("_IffBgPH3Eeaz_YGUGLjP6A")]
         [DisplayName("Status")]
         [IsoXmlTag("Sts")]
-        public ValueList<StatusDetail1> Status { get; init; } = new ValueList<StatusDetail1>(){}; // Warning: Don't know multiplicity.
+        public ValueList<StatusDetail1> Status { get; init; } = [];
         // ID for the above is _IffBgPH3Eeaz_YGUGLjP6A
         
         /// <summary>

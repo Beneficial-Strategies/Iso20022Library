@@ -128,7 +128,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [IsoXmlTag("ModfdPstlAdr")]
         [MinLength(0)]
         [MaxLength(5)]
-        public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = new ValueList<ModificationScope34>(){};
+        public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
         
         /// <summary>
         /// Citizenship information to be inserted or deleted.
@@ -138,7 +138,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party30Choice
         [IsoXmlTag("ModfdCtznsh")]
         [MinLength(0)]
         [MaxLength(3)]
-        public ValueList<ModificationScope3> ModifiedCitizenship { get; init; } = new ValueList<ModificationScope3>(){};
+        public ValueList<ModificationScope3> ModifiedCitizenship { get; init; } = [];
         
         /// <summary>
         /// Organisation represented by a person, or for which a person works.

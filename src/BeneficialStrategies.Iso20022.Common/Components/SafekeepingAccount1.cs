@@ -63,7 +63,7 @@ public partial record SafekeepingAccount1
     [IsoXmlTag("IntrmyInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary1> IntermediaryInformation { get; init; } = new ValueList<Intermediary1>(){};
+    public ValueList<Intermediary1> IntermediaryInformation { get; init; } = [];
     
     /// <summary>
     /// Party that legally owns the account.

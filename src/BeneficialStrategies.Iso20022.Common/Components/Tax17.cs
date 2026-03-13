@@ -44,7 +44,7 @@ public partial record Tax17
     [IsoXmlTag("Amt")]
     [MinLength(0)]
     [MaxLength(7)]
-    public ValueList<ActiveOrHistoricCurrencyAnd13DecimalAmount> Amount { get; init; } = new ValueList<ActiveOrHistoricCurrencyAnd13DecimalAmount>(){};
+    public ValueList<ActiveOrHistoricCurrencyAnd13DecimalAmount> Amount { get; init; } = [];
     
     /// <summary>
     /// Rate used to calculate the tax.

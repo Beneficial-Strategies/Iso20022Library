@@ -126,7 +126,7 @@ public partial record AccountStatement11
     [IsoId("_z9z6eStwEeysar7zFstVmw")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public ValueList<CashBalance8> Balance { get; init; } = new ValueList<CashBalance8>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CashBalance8> Balance { get; init; } = [];
     // ID for the above is _z9z6eStwEeysar7zFstVmw
     
     /// <summary>

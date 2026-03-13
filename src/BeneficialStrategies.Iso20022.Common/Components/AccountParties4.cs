@@ -42,7 +42,7 @@ public partial record AccountParties4
     [IsoXmlTag("Trstee")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation4> Trustee { get; init; } = new ValueList<InvestmentAccountOwnershipInformation4>(){};
+    public ValueList<InvestmentAccountOwnershipInformation4> Trustee { get; init; } = [];
     
     /// <summary>
     /// Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.
@@ -68,7 +68,7 @@ public partial record AccountParties4
     [IsoXmlTag("JntOwnr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation4> JointOwner { get; init; } = new ValueList<InvestmentAccountOwnershipInformation4>(){};
+    public ValueList<InvestmentAccountOwnershipInformation4> JointOwner { get; init; } = [];
     
     /// <summary>
     /// Entity that is not the primary owner when the ownership of the investment account is split among several owners.
@@ -126,7 +126,7 @@ public partial record AccountParties4
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation4> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation4>(){};
+    public ValueList<InvestmentAccountOwnershipInformation4> Granter { get; init; } = [];
     
     /// <summary>
     /// Settler role in the hedge funds industry.
@@ -136,7 +136,7 @@ public partial record AccountParties4
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation4> Settler { get; init; } = new ValueList<InvestmentAccountOwnershipInformation4>(){};
+    public ValueList<InvestmentAccountOwnershipInformation4> Settler { get; init; } = [];
     
     /// <summary>
     /// An other type of party.
@@ -146,7 +146,7 @@ public partial record AccountParties4
     [IsoXmlTag("OthrPty")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<ExtendedParty1> OtherParty { get; init; } = new ValueList<ExtendedParty1>(){};
+    public ValueList<ExtendedParty1> OtherParty { get; init; } = [];
     
     
     #nullable disable

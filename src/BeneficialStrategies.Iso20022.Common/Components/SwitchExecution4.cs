@@ -99,7 +99,7 @@ public partial record SwitchExecution4
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = new ValueList<Intermediary9>(){};
+    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Future date at which the investor requests the order to be executed.|The specification of a requested future trade date is not allowed in some markets. The date must be a date in the future.
@@ -165,7 +165,7 @@ public partial record SwitchExecution4
     [IsoId("_SMGpMdp-Ed-ak6NoX_4Aeg_1493112217")]
     [DisplayName("Redemption Leg Details")]
     [IsoXmlTag("RedLegDtls")]
-    public ValueList<SwitchRedemptionLegExecution3> RedemptionLegDetails { get; init; } = new ValueList<SwitchRedemptionLegExecution3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchRedemptionLegExecution3> RedemptionLegDetails { get; init; } = [];
     // ID for the above is _SMGpMdp-Ed-ak6NoX_4Aeg_1493112217
     
     /// <summary>
@@ -174,7 +174,7 @@ public partial record SwitchExecution4
     [IsoId("_SMGpMtp-Ed-ak6NoX_4Aeg_1493111880")]
     [DisplayName("Subscription Leg Details")]
     [IsoXmlTag("SbcptLegDtls")]
-    public ValueList<SwitchSubscriptionLegExecution3> SubscriptionLegDetails { get; init; } = new ValueList<SwitchSubscriptionLegExecution3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchSubscriptionLegExecution3> SubscriptionLegDetails { get; init; } = [];
     // ID for the above is _SMGpMtp-Ed-ak6NoX_4Aeg_1493111880
     
     /// <summary>

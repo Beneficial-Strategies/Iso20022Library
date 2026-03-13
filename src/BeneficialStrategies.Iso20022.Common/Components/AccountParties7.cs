@@ -90,7 +90,7 @@ public partial record AccountParties7
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation7> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation7>(){};
+    public ValueList<InvestmentAccountOwnershipInformation7> Granter { get; init; } = [];
     
     /// <summary>
     /// Settler role in the hedge funds industry.
@@ -100,7 +100,7 @@ public partial record AccountParties7
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation7> Settler { get; init; } = new ValueList<InvestmentAccountOwnershipInformation7>(){};
+    public ValueList<InvestmentAccountOwnershipInformation7> Settler { get; init; } = [];
     
     /// <summary>
     /// An other type of party.
@@ -110,7 +110,7 @@ public partial record AccountParties7
     [IsoXmlTag("OthrPty")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<ExtendedParty4> OtherParty { get; init; } = new ValueList<ExtendedParty4>(){};
+    public ValueList<ExtendedParty4> OtherParty { get; init; } = [];
     
     
     #nullable disable

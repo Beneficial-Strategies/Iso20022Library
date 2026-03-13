@@ -34,7 +34,7 @@ public partial record AccountParties5
     [IsoXmlTag("Trstee")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> Trustee { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> Trustee { get; init; } = [];
     
     /// <summary>
     /// Entity that holds shares/units on behalf of a legal minor. Although the account is registered under the name of the minor, the custodian retains control of the account.
@@ -60,7 +60,7 @@ public partial record AccountParties5
     [IsoXmlTag("JntOwnr")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> JointOwner { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> JointOwner { get; init; } = [];
     
     /// <summary>
     /// Entity that is not the primary owner when the ownership of the investment account is split among several owners.
@@ -70,7 +70,7 @@ public partial record AccountParties5
     [IsoXmlTag("ScndryOwnr")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<InvestmentAccountOwnershipInformation5> SecondaryOwner { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> SecondaryOwner { get; init; } = [];
     
     /// <summary>
     /// Ultimate party that is entitled to either receive the benefits of the ownership of a financial instrument, or to be paid/credited as a result of a transfer.
@@ -80,7 +80,7 @@ public partial record AccountParties5
     [IsoXmlTag("Bnfcry")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<InvestmentAccountOwnershipInformation5> Beneficiary { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> Beneficiary { get; init; } = [];
     
     /// <summary>
     /// Entity that was given the authority by another entity to act on its behalf.
@@ -90,7 +90,7 @@ public partial record AccountParties5
     [IsoXmlTag("PwrOfAttny")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> PowerOfAttorney { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> PowerOfAttorney { get; init; } = [];
     
     /// <summary>
     /// Entity that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.
@@ -100,7 +100,7 @@ public partial record AccountParties5
     [IsoXmlTag("LglGuardn")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> LegalGuardian { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> LegalGuardian { get; init; } = [];
     
     /// <summary>
     /// Deceased&apos;s estate, or successor, to whom the respective percentage of ownership will be transferred upon the death of one of the owners.
@@ -110,7 +110,7 @@ public partial record AccountParties5
     [IsoXmlTag("SucssrOnDth")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> SuccessorOnDeath { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> SuccessorOnDeath { get; init; } = [];
     
     /// <summary>
     /// Entity that has been appointed by a legal authorithy to act on behalf of a person or organisation that has gone bankrupt.
@@ -128,7 +128,7 @@ public partial record AccountParties5
     [IsoXmlTag("OthrPty")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<ExtendedParty2> OtherParty { get; init; } = new ValueList<ExtendedParty2>(){};
+    public ValueList<ExtendedParty2> OtherParty { get; init; } = [];
     
     /// <summary>
     /// Granter role in the hedge funds industry.
@@ -138,7 +138,7 @@ public partial record AccountParties5
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> Granter { get; init; } = [];
     
     /// <summary>
     /// Settler role in the hedge funds industry.
@@ -148,7 +148,7 @@ public partial record AccountParties5
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation5> Settler { get; init; } = new ValueList<InvestmentAccountOwnershipInformation5>(){};
+    public ValueList<InvestmentAccountOwnershipInformation5> Settler { get; init; } = [];
     
     
     #nullable disable

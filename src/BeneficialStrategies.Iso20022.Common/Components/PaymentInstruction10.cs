@@ -158,7 +158,7 @@ public partial record PaymentInstruction10
     [IsoId("_7aKxcSHREeKGep4bhmamiA")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
-    public ValueList<DirectDebitTransactionInformation13> DirectDebitTransactionInformation { get; init; } = new ValueList<DirectDebitTransactionInformation13>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DirectDebitTransactionInformation13> DirectDebitTransactionInformation { get; init; } = [];
     // ID for the above is _7aKxcSHREeKGep4bhmamiA
     
     

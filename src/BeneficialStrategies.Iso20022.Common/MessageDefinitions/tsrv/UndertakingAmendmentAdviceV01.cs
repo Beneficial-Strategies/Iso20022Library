@@ -95,7 +95,7 @@ public partial record UndertakingAmendmentAdviceV01 : IOuterRecord
     [MinLength(0)]
     [MaxLength(5)]
     [StringLength(maximumLength: 2000 ,MinimumLength = 1)]
-    public SimpleValueList<System.String> BankToBankInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> BankToBankInformation { get; init; } = [];
     
     /// <summary>
     /// Digital signature of the proposed amendment advice.

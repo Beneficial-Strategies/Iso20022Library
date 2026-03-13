@@ -26,7 +26,7 @@ public partial record TradePositionComponent5
     [IsoXmlTag("CtrPtySpcfcData")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<CounterpartySpecificData24> CounterpartySpecificData { get; init; } = new ValueList<CounterpartySpecificData24>(){};
+    public ValueList<CounterpartySpecificData24> CounterpartySpecificData { get; init; } = [];
     
     /// <summary>
     /// Contract and transaction trade data details.

@@ -97,7 +97,7 @@ public partial record OriginalNotificationReference7
     [IsoId("_0-dpjzq4EeWZFYSPlduMhw")]
     [DisplayName("Original Item And Status")]
     [IsoXmlTag("OrgnlItmAndSts")]
-    public ValueList<OriginalItemAndStatus5> OriginalItemAndStatus { get; init; } = new ValueList<OriginalItemAndStatus5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<OriginalItemAndStatus5> OriginalItemAndStatus { get; init; } = [];
     // ID for the above is _0-dpjzq4EeWZFYSPlduMhw
     
     

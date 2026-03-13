@@ -26,7 +26,7 @@ public partial record DistributionInstructionSD1
     [IsoXmlTag("TaxCtgy")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<TaxCategory2> TaxCategory { get; init; } = new ValueList<TaxCategory2>(){};
+    public ValueList<TaxCategory2> TaxCategory { get; init; } = [];
     
     
     #nullable disable

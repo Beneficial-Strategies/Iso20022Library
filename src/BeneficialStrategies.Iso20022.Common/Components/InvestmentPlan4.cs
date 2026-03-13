@@ -113,7 +113,7 @@ public partial record InvestmentPlan4
     [IsoXmlTag("SctyDtls")]
     [MinLength(1)]
     [MaxLength(50)]
-    public ValueList<Repartition1> SecurityDetails { get; init; } = new ValueList<Repartition1>(){};
+    public ValueList<Repartition1> SecurityDetails { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction associated to the investment plan.

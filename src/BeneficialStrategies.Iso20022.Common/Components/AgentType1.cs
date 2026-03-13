@@ -25,7 +25,7 @@ public partial record AgentType1
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public SimpleValueList<System.String> AnyBIC { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> AnyBIC { get; init; } = [];
     // ID for the above is _Wf_bUaHIEeagRbKvRt3LnA
     
     /// <summary>

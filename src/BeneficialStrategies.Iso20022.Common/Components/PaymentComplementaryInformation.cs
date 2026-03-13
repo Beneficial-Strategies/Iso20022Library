@@ -123,7 +123,7 @@ public partial record PaymentComplementaryInformation
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(6)]
-    public SimpleValueList<System.String> SenderToReceiverInformation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> SenderToReceiverInformation { get; init; } = [];
     
     
     #nullable disable

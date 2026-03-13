@@ -35,7 +35,7 @@ public partial record BillingMethod3
     [IsoXmlTag("TaxId")]
     [MinLength(1)]
     [MaxLength(3)]
-    public ValueList<BillingServicesTax2> TaxIdentification { get; init; } = new ValueList<BillingServicesTax2>(){};
+    public ValueList<BillingServicesTax2> TaxIdentification { get; init; } = [];
     
     
     #nullable disable

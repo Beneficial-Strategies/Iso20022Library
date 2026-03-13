@@ -33,7 +33,7 @@ public partial record LoginRequest3
     [IsoId("_ofV2Yy8REeu125Ip9zFcsQ")]
     [DisplayName("Sale Software")]
     [IsoXmlTag("SaleSftwr")]
-    public ValueList<PointOfInteractionComponent11> SaleSoftware { get; init; } = new ValueList<PointOfInteractionComponent11>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PointOfInteractionComponent11> SaleSoftware { get; init; } = [];
     // ID for the above is _ofV2Yy8REeu125Ip9zFcsQ
     
     /// <summary>

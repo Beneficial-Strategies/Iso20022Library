@@ -43,7 +43,7 @@ public partial record CBRFReportEntry1
     [IsoId("_99e7YBj6EeapYKOltfjd7A")]
     [DisplayName("Message Details")]
     [IsoXmlTag("MsgDtls")]
-    public ValueList<ElectronicMessageDetails1> MessageDetails { get; init; } = new ValueList<ElectronicMessageDetails1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ElectronicMessageDetails1> MessageDetails { get; init; } = [];
     // ID for the above is _99e7YBj6EeapYKOltfjd7A
     
     

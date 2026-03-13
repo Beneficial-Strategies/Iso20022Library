@@ -51,7 +51,7 @@ public partial record DetailedTransactionStatistics26
     [IsoId("_rtPOh1owEe23K4GXSpBSeg")]
     [DisplayName("Warnings")]
     [IsoXmlTag("Wrnngs")]
-    public ValueList<MissingMarginData2> Warnings { get; init; } = new ValueList<MissingMarginData2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<MissingMarginData2> Warnings { get; init; } = [];
     // ID for the above is _rtPOh1owEe23K4GXSpBSeg
     
     

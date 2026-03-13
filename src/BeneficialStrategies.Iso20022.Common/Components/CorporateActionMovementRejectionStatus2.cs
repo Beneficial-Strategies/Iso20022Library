@@ -24,7 +24,7 @@ public partial record CorporateActionMovementRejectionStatus2
     [IsoId("_RlNoVtp-Ed-ak6NoX_4Aeg_1616278160")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<RejectionReason14FormatChoice_> Reason { get; init; } = new ValueList<RejectionReason14FormatChoice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RejectionReason14FormatChoice_> Reason { get; init; } = [];
     // ID for the above is _RlNoVtp-Ed-ak6NoX_4Aeg_1616278160
     
     /// <summary>

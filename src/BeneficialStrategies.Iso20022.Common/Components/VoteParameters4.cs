@@ -134,7 +134,7 @@ public partial record VoteParameters4
     [IsoXmlTag("VoteInstrTp")]
     [MinLength(0)]
     [MaxLength(8)]
-    public SimpleValueList<VoteInstruction2Code> VoteInstructionType { get; init; } = new SimpleValueList<VoteInstruction2Code>(){};
+    public SimpleValueList<VoteInstruction2Code> VoteInstructionType { get; init; } = [];
     
     /// <summary>
     /// Cash premium paid to the security holder when voting earlier (before the early vote with premium deadline).

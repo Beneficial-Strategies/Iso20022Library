@@ -132,7 +132,7 @@ public partial record Vote13
     [IsoXmlTag("Prtry")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<ProprietaryVote2> Proprietary { get; init; } = new ValueList<ProprietaryVote2>(){};
+    public ValueList<ProprietaryVote2> Proprietary { get; init; } = [];
     
     /// <summary>
     /// Indicates the resolution was withdrawn at the meeting.

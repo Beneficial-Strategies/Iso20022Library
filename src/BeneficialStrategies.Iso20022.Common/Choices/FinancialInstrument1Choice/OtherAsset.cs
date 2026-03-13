@@ -55,7 +55,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
         [MinLength(0)]
         [MaxLength(5)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public SimpleValueList<System.String> OtherIdentification { get; init; } = new SimpleValueList<System.String>(){};
+        public SimpleValueList<System.String> OtherIdentification { get; init; } = [];
         
         /// <summary>
         /// Additional information about the other asset.

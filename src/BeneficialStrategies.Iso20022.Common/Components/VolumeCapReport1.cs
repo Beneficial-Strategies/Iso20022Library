@@ -41,7 +41,7 @@ public partial record VolumeCapReport1
     [IsoId("_Jl8K8OJCEeWWKb0jFHxViQ")]
     [DisplayName("Instrument Report")]
     [IsoXmlTag("InstrmRpt")]
-    public ValueList<VolumeCapReport2> InstrumentReport { get; init; } = new ValueList<VolumeCapReport2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<VolumeCapReport2> InstrumentReport { get; init; } = [];
     // ID for the above is _Jl8K8OJCEeWWKb0jFHxViQ
     
     

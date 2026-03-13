@@ -32,7 +32,7 @@ public partial record TotalCommissions2
     [IsoId("_VPm2eNp-Ed-ak6NoX_4Aeg_-1105185977")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public ValueList<Commission6> CommissionDetails { get; init; } = new ValueList<Commission6>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Commission6> CommissionDetails { get; init; } = [];
     // ID for the above is _VPm2eNp-Ed-ak6NoX_4Aeg_-1105185977
     
     

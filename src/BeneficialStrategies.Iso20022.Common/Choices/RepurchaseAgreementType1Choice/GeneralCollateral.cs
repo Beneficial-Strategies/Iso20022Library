@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseAgreementType1Choice
         [IsoXmlTag("ElgblFinInstrmId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public SimpleValueList<System.String> EligibleFinancialInstrumentIdentification { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+        public SimpleValueList<System.String> EligibleFinancialInstrumentIdentification { get; init; } = [];
         // ID for the above is _OFpSY8huEeadgvwNGwK05w
         
         

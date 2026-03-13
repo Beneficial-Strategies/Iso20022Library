@@ -42,7 +42,7 @@ public partial record LoanContract3
     [IsoId("_2o1kI7GIEeuSTr8k0UEM8A")]
     [DisplayName("Buyer")]
     [IsoXmlTag("Buyr")]
-    public ValueList<TradeParty5> Buyer { get; init; } = new ValueList<TradeParty5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TradeParty5> Buyer { get; init; } = [];
     // ID for the above is _2o1kI7GIEeuSTr8k0UEM8A
     
     /// <summary>
@@ -51,7 +51,7 @@ public partial record LoanContract3
     [IsoId("_2o1kJbGIEeuSTr8k0UEM8A")]
     [DisplayName("Seller")]
     [IsoXmlTag("Sellr")]
-    public ValueList<TradeParty5> Seller { get; init; } = new ValueList<TradeParty5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TradeParty5> Seller { get; init; } = [];
     // ID for the above is _2o1kJbGIEeuSTr8k0UEM8A
     
     /// <summary>

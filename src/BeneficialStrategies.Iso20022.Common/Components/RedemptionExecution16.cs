@@ -56,7 +56,7 @@ public partial record RedemptionExecution16
     [IsoXmlTag("OrdrTp")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = new ValueList<FundOrderType4Choice_>(){};
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
     
     /// <summary>
     /// Additional information about the investor.
@@ -167,7 +167,7 @@ public partial record RedemptionExecution16
     [IsoXmlTag("InftvPricDtls")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = new ValueList<UnitPrice22>(){};
+    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = [];
     
     /// <summary>
     /// Indicates whether the order has been partially executed, that is, the confirmed quantity does not match the ordered quantity for a given financial instrument.
@@ -260,7 +260,7 @@ public partial record RedemptionExecution16
     [IsoXmlTag("StffClntBrkdwn")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = new ValueList<InvestmentFundsOrderBreakdown2>(){};
+    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = [];
     
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.
@@ -363,7 +363,7 @@ public partial record RedemptionExecution16
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary39> RelatedPartyDetails { get; init; } = new ValueList<Intermediary39>(){};
+    public ValueList<Intermediary39> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Part of an investor&apos;s subscription amount that was held by the fund in order to pay incentive/performance fees at the end of the fiscal year, and is returned due to the redemption.

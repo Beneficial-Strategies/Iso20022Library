@@ -42,7 +42,7 @@ public partial record TransferOut15
     [IsoId("_hl8wqT8BEeSIqOPJHpnleA")]
     [DisplayName("Transfer And References")]
     [IsoXmlTag("TrfAndRefs")]
-    public ValueList<TransferOut13> TransferAndReferences { get; init; } = new ValueList<TransferOut13>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransferOut13> TransferAndReferences { get; init; } = [];
     // ID for the above is _hl8wqT8BEeSIqOPJHpnleA
     
     /// <summary>

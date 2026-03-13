@@ -24,7 +24,7 @@ public partial record NonFinancialRequestContentComponent3
     [IsoId("_pdAUEXJUEe299ZbWCkdR_w")]
     [DisplayName("Non Financial Request Type")]
     [IsoXmlTag("NonFinReqTp")]
-    public SimpleValueList<NonFinancialRequestType2Code> NonFinancialRequestType { get; init; } = new SimpleValueList<NonFinancialRequestType2Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<NonFinancialRequestType2Code> NonFinancialRequestType { get; init; } = [];
     // ID for the above is _pdAUEXJUEe299ZbWCkdR_w
     
     /// <summary>
@@ -43,7 +43,7 @@ public partial record NonFinancialRequestContentComponent3
     [IsoXmlTag("AddtlReq")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<ExternallyDefinedData4> AdditionalRequest { get; init; } = new ValueList<ExternallyDefinedData4>(){};
+    public ValueList<ExternallyDefinedData4> AdditionalRequest { get; init; } = [];
     
     
     #nullable disable

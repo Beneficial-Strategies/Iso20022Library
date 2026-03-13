@@ -94,7 +94,7 @@ public partial record SubscriptionBulkExecution4
     [IsoId("_V8F6Kzk7EeapUO0vUIo9Xw")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
-    public ValueList<SubscriptionExecution12> IndividualExecutionDetails { get; init; } = new ValueList<SubscriptionExecution12>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SubscriptionExecution12> IndividualExecutionDetails { get; init; } = [];
     // ID for the above is _V8F6Kzk7EeapUO0vUIo9Xw
     
     /// <summary>

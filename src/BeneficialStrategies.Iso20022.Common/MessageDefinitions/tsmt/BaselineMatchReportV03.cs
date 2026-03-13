@@ -98,7 +98,7 @@ public partial record BaselineMatchReportV03 : IOuterRecord
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Party that buys goods or services, or a financial instrument.
@@ -148,7 +148,7 @@ public partial record BaselineMatchReportV03 : IOuterRecord
     [IsoXmlTag("CmpardDocRef")]
     [MinLength(2)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification4> ComparedDocumentReference { get; init; } = new ValueList<DocumentIdentification4>(){};
+    public ValueList<DocumentIdentification4> ComparedDocumentReference { get; init; } = [];
     
     /// <summary>
     /// Description of the differences between the two proposed baselines.

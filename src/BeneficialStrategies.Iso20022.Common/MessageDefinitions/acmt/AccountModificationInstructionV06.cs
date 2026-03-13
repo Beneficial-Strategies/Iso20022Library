@@ -110,7 +110,7 @@ public partial record AccountModificationInstructionV06 : IOuterRecord
     [IsoXmlTag("ModfdAcctPties")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<AccountParties14> ModifiedAccountParties { get; init; } = new ValueList<AccountParties14>(){};
+    public ValueList<AccountParties14> ModifiedAccountParties { get; init; } = [];
     
     /// <summary>
     /// Information related to intermediaries to be inserted, updated or deleted.
@@ -120,7 +120,7 @@ public partial record AccountModificationInstructionV06 : IOuterRecord
     [IsoXmlTag("ModfdIntrmies")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<ModificationScope26> ModifiedIntermediaries { get; init; } = new ValueList<ModificationScope26>(){};
+    public ValueList<ModificationScope26> ModifiedIntermediaries { get; init; } = [];
     
     /// <summary>
     /// Information related to referral information to be inserted, updated or deleted.
@@ -146,7 +146,7 @@ public partial record AccountModificationInstructionV06 : IOuterRecord
     [IsoXmlTag("ModfdSvgsInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(50)]
-    public ValueList<ModificationScope28> ModifiedSavingsInvestmentPlan { get; init; } = new ValueList<ModificationScope28>(){};
+    public ValueList<ModificationScope28> ModifiedSavingsInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Information related to a withdrawal plan to be either inserted, updated or deleted.
@@ -156,7 +156,7 @@ public partial record AccountModificationInstructionV06 : IOuterRecord
     [IsoXmlTag("ModfdWdrwlInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<ModificationScope28> ModifiedWithdrawalInvestmentPlan { get; init; } = new ValueList<ModificationScope28>(){};
+    public ValueList<ModificationScope28> ModifiedWithdrawalInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction to be either inserted or deleted.
@@ -166,7 +166,7 @@ public partial record AccountModificationInstructionV06 : IOuterRecord
     [IsoXmlTag("ModfdCshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<CashSettlement2> ModifiedCashSettlement { get; init; } = new ValueList<CashSettlement2>(){};
+    public ValueList<CashSettlement2> ModifiedCashSettlement { get; init; } = [];
     
     /// <summary>
     /// Information related to documents to be added, deleted or updated.|.
@@ -176,7 +176,7 @@ public partial record AccountModificationInstructionV06 : IOuterRecord
     [IsoXmlTag("ModfdSvcLvlAgrmt")]
     [MinLength(0)]
     [MaxLength(30)]
-    public ValueList<ModificationScope31> ModifiedServiceLevelAgreement { get; init; } = new ValueList<ModificationScope31>(){};
+    public ValueList<ModificationScope31> ModifiedServiceLevelAgreement { get; init; } = [];
     
     /// <summary>
     /// Additional information concerning limitations and restrictions on the account to be inserted, updated or deleted.

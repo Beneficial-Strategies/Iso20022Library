@@ -99,7 +99,7 @@ public partial record QualifiedDocumentInformation1
     [IsoXmlTag("Dgst")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AlgorithmAndDigest1> Digest { get; init; } = new ValueList<AlgorithmAndDigest1>(){};
+    public ValueList<AlgorithmAndDigest1> Digest { get; init; } = [];
     
     /// <summary>
     /// Specifies the type of the document, for example commercial invoice.

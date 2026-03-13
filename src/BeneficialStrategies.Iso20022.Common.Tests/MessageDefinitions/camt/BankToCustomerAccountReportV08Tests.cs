@@ -63,16 +63,17 @@ public class BankToCustomerAccountReportV08Tests
     [Fact]
     public void Report_CanHoldMultipleItems_Issue1Fixed()
     {
-        // Arrange
+        // Arrange + Act — Report is a collection that can hold multiple items
         var message = new BankToCustomerAccountReportV08
         {
-            GroupHeader = CreateGroupHeader()
+            GroupHeader = CreateGroupHeader(),
+            Report =
+            [
+                CreateAccountReport("RPT-001"),
+                CreateAccountReport("RPT-002"),
+                CreateAccountReport("RPT-003"),
+            ],
         };
-
-        // Act - Add multiple reports (this would fail if Report was a single value)
-        message.Report.Add(CreateAccountReport("RPT-001"));
-        message.Report.Add(CreateAccountReport("RPT-002"));
-        message.Report.Add(CreateAccountReport("RPT-003"));
 
         // Assert
         Assert.Equal(3, message.Report.Count);

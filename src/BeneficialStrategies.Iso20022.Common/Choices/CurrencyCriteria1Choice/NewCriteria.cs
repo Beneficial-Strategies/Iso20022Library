@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteria1Choice
         [IsoId("_71C2QqMgEeCJ6YNENx4h-w_-294471871")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public ValueList<CurrencySourceTarget1> SearchCriteria { get; init; } = new ValueList<CurrencySourceTarget1>(){}; // Warning: Don't know multiplicity.
+        public ValueList<CurrencySourceTarget1> SearchCriteria { get; init; } = [];
         // ID for the above is _71C2QqMgEeCJ6YNENx4h-w_-294471871
         
         

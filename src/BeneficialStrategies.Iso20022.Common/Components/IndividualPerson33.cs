@@ -137,7 +137,7 @@ public partial record IndividualPerson33
     [IsoXmlTag("ModfdCtznsh")]
     [MinLength(0)]
     [MaxLength(3)]
-    public ValueList<ModificationScope39> ModifiedCitizenship { get; init; } = new ValueList<ModificationScope39>(){};
+    public ValueList<ModificationScope39> ModifiedCitizenship { get; init; } = [];
     
     /// <summary>
     /// Organisation represented by a person, or for which a person works.

@@ -24,7 +24,7 @@ public partial record NonClearingReason2
     [IsoId("_AmE_sZPuEey0rJ3Gl6WZVA")]
     [DisplayName("Clearing Exemption Exception")]
     [IsoXmlTag("ClrXmptnXcptn")]
-    public SimpleValueList<ClearingExemptionException1Code> ClearingExemptionException { get; init; } = new SimpleValueList<ClearingExemptionException1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<ClearingExemptionException1Code> ClearingExemptionException { get; init; } = [];
     // ID for the above is _AmE_sZPuEey0rJ3Gl6WZVA
     
     /// <summary>

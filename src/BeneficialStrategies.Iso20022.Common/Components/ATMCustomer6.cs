@@ -40,7 +40,7 @@ public partial record ATMCustomer6
     [IsoId("_YW9Tpa4KEeWZgJQOa6iKCQ")]
     [DisplayName("Authentication Result")]
     [IsoXmlTag("AuthntcnRslt")]
-    public ValueList<TransactionVerificationResult5> AuthenticationResult { get; init; } = new ValueList<TransactionVerificationResult5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionVerificationResult5> AuthenticationResult { get; init; } = [];
     // ID for the above is _YW9Tpa4KEeWZgJQOa6iKCQ
     
     

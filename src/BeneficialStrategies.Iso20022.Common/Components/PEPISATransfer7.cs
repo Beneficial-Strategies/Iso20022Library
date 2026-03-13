@@ -104,7 +104,7 @@ public partial record PEPISATransfer7
     [IsoId("_RRGZgtp-Ed-ak6NoX_4Aeg_1190462500")]
     [DisplayName("Product Transfer")]
     [IsoXmlTag("PdctTrf")]
-    public ValueList<PEPISATransfer8> ProductTransfer { get; init; } = new ValueList<PEPISATransfer8>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PEPISATransfer8> ProductTransfer { get; init; } = [];
     // ID for the above is _RRGZgtp-Ed-ak6NoX_4Aeg_1190462500
     
     /// <summary>

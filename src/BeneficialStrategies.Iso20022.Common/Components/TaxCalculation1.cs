@@ -32,7 +32,7 @@ public partial record TaxCalculation1
     [IsoId("_6R49bJqlEeGSON8vddiWzQ_1186516095")]
     [DisplayName("Taxable Service Charge Conversion")]
     [IsoXmlTag("TaxblSvcChrgConvs")]
-    public ValueList<BillingServicesAmount3> TaxableServiceChargeConversion { get; init; } = new ValueList<BillingServicesAmount3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BillingServicesAmount3> TaxableServiceChargeConversion { get; init; } = [];
     // ID for the above is _6R49bJqlEeGSON8vddiWzQ_1186516095
     
     /// <summary>
@@ -51,7 +51,7 @@ public partial record TaxCalculation1
     [IsoXmlTag("TaxId")]
     [MinLength(1)]
     [MaxLength(3)]
-    public ValueList<BillingServicesTax3> TaxIdentification { get; init; } = new ValueList<BillingServicesTax3>(){};
+    public ValueList<BillingServicesTax3> TaxIdentification { get; init; } = [];
     
     /// <summary>
     /// Total amount of all taxes for a specific customer within the tax region. This is a sum of all individual total tax amounts for tax identification ’s expressed in the tax region’s host currency.

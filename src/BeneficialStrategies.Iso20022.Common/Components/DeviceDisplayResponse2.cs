@@ -24,7 +24,7 @@ public partial record DeviceDisplayResponse2
     [IsoId("__2WgcS8OEeu125Ip9zFcsQ")]
     [DisplayName("Output Result")]
     [IsoXmlTag("OutptRslt")]
-    public ValueList<OutputResult2> OutputResult { get; init; } = new ValueList<OutputResult2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<OutputResult2> OutputResult { get; init; } = [];
     // ID for the above is __2WgcS8OEeu125Ip9zFcsQ
     
     

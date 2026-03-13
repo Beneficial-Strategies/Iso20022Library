@@ -67,7 +67,7 @@ public partial record TradeCounterpartyReport14
     [IsoXmlTag("Bnfcry")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<PartyIdentification235Choice_> Beneficiary { get; init; } = new ValueList<PartyIdentification235Choice_>(){};
+    public ValueList<PartyIdentification235Choice_> Beneficiary { get; init; } = [];
     
     
     #nullable disable

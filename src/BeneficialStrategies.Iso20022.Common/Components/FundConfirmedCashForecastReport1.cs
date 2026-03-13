@@ -24,7 +24,7 @@ public partial record FundConfirmedCashForecastReport1
     [IsoId("_UuhipNp-Ed-ak6NoX_4Aeg_-861874046")]
     [DisplayName("Fund Cash Forecast Details")]
     [IsoXmlTag("FndCshFcstDtls")]
-    public ValueList<FundCashForecast1> FundCashForecastDetails { get; init; } = new ValueList<FundCashForecast1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FundCashForecast1> FundCashForecastDetails { get; init; } = [];
     // ID for the above is _UuhipNp-Ed-ak6NoX_4Aeg_-861874046
     
     /// <summary>

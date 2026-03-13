@@ -83,7 +83,7 @@ public partial record TradeTransaction37
     [IsoXmlTag("NtnlAmt")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<NotionalAmount1> NotionalAmount { get; init; } = new ValueList<NotionalAmount1>(){};
+    public ValueList<NotionalAmount1> NotionalAmount { get; init; } = [];
     
     /// <summary>
     /// Indicates for each leg of the transaction the total notional quantity of the underlying asset for the term of the transaction.|
@@ -93,7 +93,7 @@ public partial record TradeTransaction37
     [IsoXmlTag("NtnlQty")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<NotionalQuantity1> NotionalQuantity { get; init; } = new ValueList<NotionalQuantity1>(){};
+    public ValueList<NotionalQuantity1> NotionalQuantity { get; init; } = [];
     
     /// <summary>
     /// Specifies the ratio of the absolute change in price of a derivative transaction to the change in price of the underlier, at the time a new transaction is reported or when a change in the notional amount is reported.

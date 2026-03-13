@@ -98,7 +98,7 @@ public partial record FundProcessingPassport1
     [IsoId("_Q5jcMtp-Ed-ak6NoX_4Aeg_-1685996653")]
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
-    public ValueList<CashAccount22> SettlementDetails { get; init; } = new ValueList<CashAccount22>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CashAccount22> SettlementDetails { get; init; } = [];
     // ID for the above is _Q5jcMtp-Ed-ak6NoX_4Aeg_-1685996653
     
     /// <summary>

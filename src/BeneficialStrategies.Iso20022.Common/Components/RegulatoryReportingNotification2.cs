@@ -50,7 +50,7 @@ public partial record RegulatoryReportingNotification2
     [IsoId("_Nl1hd249EeiU9cctagi5ow")]
     [DisplayName("Transaction Certificate")]
     [IsoXmlTag("TxCert")]
-    public ValueList<TransactionCertificate3> TransactionCertificate { get; init; } = new ValueList<TransactionCertificate3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionCertificate3> TransactionCertificate { get; init; } = [];
     // ID for the above is _Nl1hd249EeiU9cctagi5ow
     
     

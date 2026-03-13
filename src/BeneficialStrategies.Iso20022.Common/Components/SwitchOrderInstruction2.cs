@@ -24,7 +24,7 @@ public partial record SwitchOrderInstruction2
     [IsoId("_RNhhF9p-Ed-ak6NoX_4Aeg_-925023776")]
     [DisplayName("Switch Order Details")]
     [IsoXmlTag("SwtchOrdrDtls")]
-    public ValueList<SwitchOrder3> SwitchOrderDetails { get; init; } = new ValueList<SwitchOrder3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchOrder3> SwitchOrderDetails { get; init; } = [];
     // ID for the above is _RNhhF9p-Ed-ak6NoX_4Aeg_-925023776
     
     /// <summary>

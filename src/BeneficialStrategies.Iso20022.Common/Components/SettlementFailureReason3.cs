@@ -35,7 +35,7 @@ public partial record SettlementFailureReason3
     [IsoId("_nXq4AyGkEeqlG_HhjTmcZg")]
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
-    public ValueList<SettlementFailureReason2> Description { get; init; } = new ValueList<SettlementFailureReason2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SettlementFailureReason2> Description { get; init; } = [];
     // ID for the above is _nXq4AyGkEeqlG_HhjTmcZg
     
     

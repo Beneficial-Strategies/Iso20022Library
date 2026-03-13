@@ -99,7 +99,7 @@ public partial record FullPushThroughReportV04 : IOuterRecord
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Specifies the type of report.

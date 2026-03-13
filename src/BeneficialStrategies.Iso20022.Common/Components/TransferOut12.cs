@@ -34,7 +34,7 @@ public partial record TransferOut12
     [IsoId("_GRF3RxX2EeOBE-jZfcm4KQ")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
-    public ValueList<Transfer28> TransferDetails { get; init; } = new ValueList<Transfer28>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Transfer28> TransferDetails { get; init; } = [];
     // ID for the above is _GRF3RxX2EeOBE-jZfcm4KQ
     
     /// <summary>

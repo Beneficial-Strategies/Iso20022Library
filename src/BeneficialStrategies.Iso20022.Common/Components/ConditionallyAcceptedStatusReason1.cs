@@ -26,7 +26,7 @@ public partial record ConditionallyAcceptedStatusReason1
     [IsoXmlTag("Strd")]
     [MinLength(1)]
     [MaxLength(4)]
-    public SimpleValueList<ConditionallyAcceptedStatusReason1Code> Structured { get; init; } = new SimpleValueList<ConditionallyAcceptedStatusReason1Code>(){};
+    public SimpleValueList<ConditionallyAcceptedStatusReason1Code> Structured { get; init; } = [];
     
     /// <summary>
     /// Reason for a conditionally accepted status in free format text.

@@ -24,7 +24,7 @@ public partial record DocumentLineInformation1
     [IsoId("_ULe6IKJpEeKmspP9k_hIRQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public ValueList<DocumentLineIdentification1> Identification { get; init; } = new ValueList<DocumentLineIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DocumentLineIdentification1> Identification { get; init; } = [];
     // ID for the above is _ULe6IKJpEeKmspP9k_hIRQ
     
     /// <summary>

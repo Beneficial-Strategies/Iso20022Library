@@ -102,7 +102,7 @@ public partial record DataSetMatchReportV03 : IOuterRecord
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Party that buys goods or services, or a financial instrument.
@@ -142,7 +142,7 @@ public partial record DataSetMatchReportV03 : IOuterRecord
     [IsoId("_m1spUdE8Ed-BzquC8wXy7w_-439674053")]
     [DisplayName("Compared Document Reference")]
     [IsoXmlTag("CmpardDocRef")]
-    public ValueList<DocumentIdentification10> ComparedDocumentReference { get; init; } = new ValueList<DocumentIdentification10>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DocumentIdentification10> ComparedDocumentReference { get; init; } = [];
     // ID for the above is _m1spUdE8Ed-BzquC8wXy7w_-439674053
     
     /// <summary>

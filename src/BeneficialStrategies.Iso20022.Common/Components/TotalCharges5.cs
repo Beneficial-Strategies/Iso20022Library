@@ -26,7 +26,7 @@ public partial record TotalCharges5
     [IsoXmlTag("ChrgDtls")]
     [MinLength(1)]
     [MaxLength(4)]
-    public ValueList<Charge23> ChargeDetails { get; init; } = new ValueList<Charge23>(){};
+    public ValueList<Charge23> ChargeDetails { get; init; } = [];
     
     
     #nullable disable

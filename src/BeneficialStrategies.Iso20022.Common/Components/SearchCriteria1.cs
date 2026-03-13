@@ -24,7 +24,7 @@ public partial record SearchCriteria1
     [IsoId("_APMeMN6QEeiwsev40qZGEQ")]
     [DisplayName("Search Or")]
     [IsoXmlTag("SchOr")]
-    public ValueList<SearchOr1> SearchOr { get; init; } = new ValueList<SearchOr1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SearchOr1> SearchOr { get; init; } = [];
     // ID for the above is _APMeMN6QEeiwsev40qZGEQ
     
     

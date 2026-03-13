@@ -32,7 +32,7 @@ public partial record MarginAccount1
     [IsoId("_5-_HgHYDEee_qcLXasnA4g")]
     [DisplayName("Position Account")]
     [IsoXmlTag("PosAcct")]
-    public ValueList<PositionAccount1> PositionAccount { get; init; } = new ValueList<PositionAccount1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PositionAccount1> PositionAccount { get; init; } = [];
     // ID for the above is _5-_HgHYDEee_qcLXasnA4g
     
     

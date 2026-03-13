@@ -78,7 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties2Choice
         [IsoXmlTag("ModfdInvstrPrflVldtn")]
         [MinLength(0)]
         [MaxLength(10)]
-        public ValueList<ModificationScope14> ModifiedInvestorProfileValidation { get; init; } = new ValueList<ModificationScope14>(){};
+        public ValueList<ModificationScope14> ModifiedInvestorProfileValidation { get; init; } = [];
         
         /// <summary>
         /// Details about the MiFID classification of the account owner.

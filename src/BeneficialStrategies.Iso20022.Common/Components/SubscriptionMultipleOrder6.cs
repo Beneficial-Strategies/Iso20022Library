@@ -92,7 +92,7 @@ public partial record SubscriptionMultipleOrder6
     [IsoId("_Cnz4LzbtEead9bDRE_1DAQ")]
     [DisplayName("Individual Order Details")]
     [IsoXmlTag("IndvOrdrDtls")]
-    public ValueList<SubscriptionOrder14> IndividualOrderDetails { get; init; } = new ValueList<SubscriptionOrder14>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SubscriptionOrder14> IndividualOrderDetails { get; init; } = [];
     // ID for the above is _Cnz4LzbtEead9bDRE_1DAQ
     
     /// <summary>

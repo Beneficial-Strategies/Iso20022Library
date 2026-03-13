@@ -24,7 +24,7 @@ public partial record NetworkParameters5
     [IsoId("_p5GVMY0PEeWRYffwL7E13A")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public ValueList<NetworkParameters4> Address { get; init; } = new ValueList<NetworkParameters4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NetworkParameters4> Address { get; init; } = [];
     // ID for the above is _p5GVMY0PEeWRYffwL7E13A
     
     /// <summary>

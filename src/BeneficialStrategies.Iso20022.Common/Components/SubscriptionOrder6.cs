@@ -256,7 +256,7 @@ public partial record SubscriptionOrder6
     [IsoXmlTag("StffClntBrkdwn")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<InvestmentFundsOrderBreakdown1> StaffClientBreakdown { get; init; } = new ValueList<InvestmentFundsOrderBreakdown1>(){};
+    public ValueList<InvestmentFundsOrderBreakdown1> StaffClientBreakdown { get; init; } = [];
     
     /// <summary>
     /// Specifies if advice has been received from an independent financial advisor.
@@ -282,7 +282,7 @@ public partial record SubscriptionOrder6
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary8> RelatedPartyDetails { get; init; } = new ValueList<Intermediary8>(){};
+    public ValueList<Intermediary8> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Part of an investor&apos;s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.

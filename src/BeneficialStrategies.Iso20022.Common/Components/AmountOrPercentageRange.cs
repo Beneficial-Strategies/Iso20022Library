@@ -34,7 +34,7 @@ public partial record AmountOrPercentageRange
     [IsoXmlTag("Term")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Term1> Term { get; init; } = new ValueList<Term1>(){};
+    public ValueList<Term1> Term { get; init; } = [];
     
     
     #nullable disable

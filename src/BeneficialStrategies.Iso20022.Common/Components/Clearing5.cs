@@ -24,7 +24,7 @@ public partial record Clearing5
     [IsoId("_kEl-gZBeEeakHoV5BVecAQ")]
     [DisplayName("Clearing Member")]
     [IsoXmlTag("ClrMmb")]
-    public ValueList<PartyIdentificationAndAccount149> ClearingMember { get; init; } = new ValueList<PartyIdentificationAndAccount149>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PartyIdentificationAndAccount149> ClearingMember { get; init; } = [];
     // ID for the above is _kEl-gZBeEeakHoV5BVecAQ
     
     /// <summary>

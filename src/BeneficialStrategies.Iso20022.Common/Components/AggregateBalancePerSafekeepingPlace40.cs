@@ -56,7 +56,7 @@ public partial record AggregateBalancePerSafekeepingPlace40
     [IsoId("_ciB27zi8Eeydid5dcNPKvg")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public ValueList<PriceInformation22> PriceDetails { get; init; } = new ValueList<PriceInformation22>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PriceInformation22> PriceDetails { get; init; } = [];
     // ID for the above is _ciB27zi8Eeydid5dcNPKvg
     
     /// <summary>

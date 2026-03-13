@@ -80,7 +80,7 @@ public partial record AggregateBalanceInformation37
     [IsoId("_sx-1K9LFEeiN28wlpBQScw")]
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public ValueList<PriceInformation20> PriceDetails { get; init; } = new ValueList<PriceInformation20>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PriceInformation20> PriceDetails { get; init; } = [];
     // ID for the above is _sx-1K9LFEeiN28wlpBQScw
     
     /// <summary>

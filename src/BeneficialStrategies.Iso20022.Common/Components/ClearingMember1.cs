@@ -83,7 +83,7 @@ public partial record ClearingMember1
     [IsoId("__bi88KclEeaGcf8_qtd8Yw")]
     [DisplayName("Clearing Account Owner")]
     [IsoXmlTag("ClrAcctOwnr")]
-    public ValueList<ClearingAccount1> ClearingAccountOwner { get; init; } = new ValueList<ClearingAccount1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ClearingAccount1> ClearingAccountOwner { get; init; } = [];
     // ID for the above is __bi88KclEeaGcf8_qtd8Yw
     
     

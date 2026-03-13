@@ -32,7 +32,7 @@ public partial record CustomerIdentification1
     [IsoId("_jP3PoUyuEeGcV5yVhSZuNw")]
     [DisplayName("Authority Request")]
     [IsoXmlTag("AuthrtyReq")]
-    public ValueList<AuthorityInvestigation2> AuthorityRequest { get; init; } = new ValueList<AuthorityInvestigation2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AuthorityInvestigation2> AuthorityRequest { get; init; } = [];
     // ID for the above is _jP3PoUyuEeGcV5yVhSZuNw
     
     

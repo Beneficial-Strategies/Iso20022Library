@@ -53,7 +53,7 @@ public partial record SecuritiesReferenceDataReport5
     [IsoId("_G_iQm35aEea2k7EBUopqxw")]
     [DisplayName("Trading Venue Related Attributes")]
     [IsoXmlTag("TradgVnRltdAttrbts")]
-    public ValueList<TradingVenueAttributes1> TradingVenueRelatedAttributes { get; init; } = new ValueList<TradingVenueAttributes1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TradingVenueAttributes1> TradingVenueRelatedAttributes { get; init; } = [];
     // ID for the above is _G_iQm35aEea2k7EBUopqxw
     
     /// <summary>

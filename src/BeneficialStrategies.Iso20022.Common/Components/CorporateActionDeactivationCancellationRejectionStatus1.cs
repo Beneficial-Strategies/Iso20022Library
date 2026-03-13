@@ -24,7 +24,7 @@ public partial record CorporateActionDeactivationCancellationRejectionStatus1
     [IsoId("_RkeBcdp-Ed-ak6NoX_4Aeg_1510068594")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<RejectionReason7FormatChoice_> Reason { get; init; } = new ValueList<RejectionReason7FormatChoice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RejectionReason7FormatChoice_> Reason { get; init; } = [];
     // ID for the above is _RkeBcdp-Ed-ak6NoX_4Aeg_1510068594
     
     /// <summary>

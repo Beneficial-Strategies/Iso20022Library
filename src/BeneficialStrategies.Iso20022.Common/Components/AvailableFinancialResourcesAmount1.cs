@@ -40,7 +40,7 @@ public partial record AvailableFinancialResourcesAmount1
     [IsoId("_WGvdAK_uEeaE9YROwd69hA")]
     [DisplayName("CCP Skin In The Game")]
     [IsoXmlTag("CCPSkinInTheGame")]
-    public ValueList<ReportingAssetBreakdown1> CCPSkinInTheGame { get; init; } = new ValueList<ReportingAssetBreakdown1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ReportingAssetBreakdown1> CCPSkinInTheGame { get; init; } = [];
     // ID for the above is _WGvdAK_uEeaE9YROwd69hA
     
     /// <summary>

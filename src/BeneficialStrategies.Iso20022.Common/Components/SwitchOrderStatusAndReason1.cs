@@ -100,7 +100,7 @@ public partial record SwitchOrderStatusAndReason1
     [IsoXmlTag("Rjctd")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<RejectedStatus6> Rejected { get; init; } = new ValueList<RejectedStatus6>(){};
+    public ValueList<RejectedStatus6> Rejected { get; init; } = [];
     
     /// <summary>
     /// Status of the switch order is suspended.

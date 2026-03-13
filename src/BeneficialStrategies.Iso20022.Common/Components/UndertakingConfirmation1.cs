@@ -53,7 +53,7 @@ public partial record UndertakingConfirmation1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> Confirmation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> Confirmation { get; init; } = [];
     
     
     #nullable disable

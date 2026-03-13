@@ -56,7 +56,7 @@ public partial record SubscriptionExecution12
     [IsoXmlTag("OrdrTp")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = new ValueList<FundOrderType4Choice_>(){};
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
     
     /// <summary>
     /// Account impacted by the investment fund order execution.
@@ -133,7 +133,7 @@ public partial record SubscriptionExecution12
     [IsoXmlTag("InftvPricDtls")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = new ValueList<UnitPrice22>(){};
+    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = [];
     
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
@@ -288,7 +288,7 @@ public partial record SubscriptionExecution12
     [IsoXmlTag("StffClntBrkdwn")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = new ValueList<InvestmentFundsOrderBreakdown2>(){};
+    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = [];
     
     /// <summary>
     /// Return of cash that has been overpaid for a subscription.
@@ -374,7 +374,7 @@ public partial record SubscriptionExecution12
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary39> RelatedPartyDetails { get; init; } = new ValueList<Intermediary39>(){};
+    public ValueList<Intermediary39> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Part of an investor&apos;s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.

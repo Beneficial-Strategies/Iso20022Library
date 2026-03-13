@@ -60,7 +60,7 @@ public partial record LineItem11
     [IsoId("_oNFooefIEeKNfc-Rw_dPYg")]
     [DisplayName("Line Item Details")]
     [IsoXmlTag("LineItmDtls")]
-    public ValueList<LineItemDetails10> LineItemDetails { get; init; } = new ValueList<LineItemDetails10>(){}; // Warning: Don't know multiplicity.
+    public ValueList<LineItemDetails10> LineItemDetails { get; init; } = [];
     // ID for the above is _oNFooefIEeKNfc-Rw_dPYg
     
     /// <summary>

@@ -57,7 +57,7 @@ public partial record EntitlementAdvice1
     [IsoId("_UJRggdp-Ed-ak6NoX_4Aeg_-1335835024")]
     [DisplayName("Account And Distribution Details")]
     [IsoXmlTag("AcctAndDstrbtnDtls")]
-    public ValueList<Entitlement1> AccountAndDistributionDetails { get; init; } = new ValueList<Entitlement1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Entitlement1> AccountAndDistributionDetails { get; init; } = [];
     // ID for the above is _UJRggdp-Ed-ak6NoX_4Aeg_-1335835024
     
     

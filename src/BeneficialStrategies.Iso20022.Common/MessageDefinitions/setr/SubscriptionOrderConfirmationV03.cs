@@ -108,7 +108,7 @@ public partial record SubscriptionOrderConfirmationV03 : IOuterRecord
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = new ValueList<Intermediary9>(){};
+    public ValueList<Intermediary9> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.

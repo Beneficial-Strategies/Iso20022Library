@@ -25,7 +25,7 @@ public partial record ClearedProduct1
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public SimpleValueList<System.String> TradingVenue { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> TradingVenue { get; init; } = [];
     // ID for the above is __o5ZsLVNEeadLcJesEbkTQ
     
     /// <summary>

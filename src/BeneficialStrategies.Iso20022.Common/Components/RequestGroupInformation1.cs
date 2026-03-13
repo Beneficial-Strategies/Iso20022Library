@@ -46,7 +46,7 @@ public partial record RequestGroupInformation1
     [IsoSimpleType(IsoSimpleType.Max128Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> Authorisation { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> Authorisation { get; init; } = [];
     
     /// <summary>
     /// Specifies the number of single invoice financing requests included in the bulk request message.

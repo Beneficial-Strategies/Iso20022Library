@@ -45,7 +45,7 @@ public partial record GroupHeader83
     [IsoXmlTag("Authstn")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = new ValueList<Authorisation1Choice_>(){};
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
     
     /// <summary>
     /// Number of individual transactions contained in the message.

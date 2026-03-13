@@ -66,7 +66,7 @@ public partial record TransactionCertificate4
     [IsoId("_bLb-a7GJEeuSTr8k0UEM8A")]
     [DisplayName("Certificate Record")]
     [IsoXmlTag("CertRcrd")]
-    public ValueList<TransactionCertificateRecord2> CertificateRecord { get; init; } = new ValueList<TransactionCertificateRecord2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionCertificateRecord2> CertificateRecord { get; init; } = [];
     // ID for the above is _bLb-a7GJEeuSTr8k0UEM8A
     
     /// <summary>

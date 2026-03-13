@@ -32,7 +32,7 @@ public partial record MaintenanceDelegation3
     [IsoId("_AahvUY4DEeWrZqsymMFdfg")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
-    public SimpleValueList<DataSetCategory11Code> MaintenanceService { get; init; } = new SimpleValueList<DataSetCategory11Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<DataSetCategory11Code> MaintenanceService { get; init; } = [];
     // ID for the above is _AahvUY4DEeWrZqsymMFdfg
     
     /// <summary>

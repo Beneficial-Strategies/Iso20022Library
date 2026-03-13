@@ -32,7 +32,7 @@ public partial record Value
     [IsoId("_SVDJ09p-Ed-ak6NoX_4Aeg_249291013")]
     [DisplayName("Alternate Currency Item")]
     [IsoXmlTag("AltrnCcyItm")]
-    public ValueList<ActiveOrHistoricCurrencyAndAmount> AlternateCurrencyItem { get; init; } = new ValueList<ActiveOrHistoricCurrencyAndAmount>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ActiveOrHistoricCurrencyAndAmount> AlternateCurrencyItem { get; init; } = [];
     // ID for the above is _SVDJ09p-Ed-ak6NoX_4Aeg_249291013
     
     

@@ -43,7 +43,7 @@ public partial record TotalTaxes5
     [IsoXmlTag("TaxDtls")]
     [MinLength(0)]
     [MaxLength(7)]
-    public ValueList<Tax20> TaxDetails { get; init; } = new ValueList<Tax20>(){};
+    public ValueList<Tax20> TaxDetails { get; init; } = [];
     
     
     #nullable disable

@@ -96,7 +96,7 @@ public partial record Cheque6
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> MemoField { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> MemoField { get; init; } = [];
     
     /// <summary>
     /// Regional area in which the cheque can be cleared, when a country has no nation-wide cheque clearing organisation.

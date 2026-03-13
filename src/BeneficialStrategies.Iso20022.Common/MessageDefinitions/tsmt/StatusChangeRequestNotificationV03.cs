@@ -96,7 +96,7 @@ public partial record StatusChangeRequestNotificationV03 : IOuterRecord
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Specifies the status that is proposed by the other party.

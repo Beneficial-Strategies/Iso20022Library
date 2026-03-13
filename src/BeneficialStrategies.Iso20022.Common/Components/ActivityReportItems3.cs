@@ -36,7 +36,7 @@ public partial record ActivityReportItems3
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Entity for which the activity is reported.
@@ -44,7 +44,7 @@ public partial record ActivityReportItems3
     [IsoId("_jT0edefGEeKNfc-Rw_dPYg")]
     [DisplayName("Reported Entity")]
     [IsoXmlTag("RptdNtty")]
-    public ValueList<BICIdentification1> ReportedEntity { get; init; } = new ValueList<BICIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BICIdentification1> ReportedEntity { get; init; } = [];
     // ID for the above is _jT0edefGEeKNfc-Rw_dPYg
     
     /// <summary>
@@ -53,7 +53,7 @@ public partial record ActivityReportItems3
     [IsoId("_jT1FgefGEeKNfc-Rw_dPYg")]
     [DisplayName("Reported Item")]
     [IsoXmlTag("RptdItm")]
-    public ValueList<ActivityDetails1> ReportedItem { get; init; } = new ValueList<ActivityDetails1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ActivityDetails1> ReportedItem { get; init; } = [];
     // ID for the above is _jT1FgefGEeKNfc-Rw_dPYg
     
     /// <summary>

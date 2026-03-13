@@ -90,7 +90,7 @@ public partial record Organisation24
     [IsoXmlTag("PstlAdr")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<PostalAddress21> PostalAddress { get; init; } = new ValueList<PostalAddress21>(){};
+    public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
     
     /// <summary>
     /// Type of organisation.

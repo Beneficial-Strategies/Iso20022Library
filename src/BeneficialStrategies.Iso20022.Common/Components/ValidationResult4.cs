@@ -53,7 +53,7 @@ public partial record ValidationResult4
     [IsoId("_UsvZ9dp-Ed-ak6NoX_4Aeg_-1609439383")]
     [DisplayName("Mis Matched Element")]
     [IsoXmlTag("MisMtchdElmt")]
-    public ValueList<ElementIdentification1> MisMatchedElement { get; init; } = new ValueList<ElementIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ElementIdentification1> MisMatchedElement { get; init; } = [];
     // ID for the above is _UsvZ9dp-Ed-ak6NoX_4Aeg_-1609439383
     
     

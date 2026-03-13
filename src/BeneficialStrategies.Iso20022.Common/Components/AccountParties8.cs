@@ -98,7 +98,7 @@ public partial record AccountParties8
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation8> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation8>(){};
+    public ValueList<InvestmentAccountOwnershipInformation8> Granter { get; init; } = [];
     
     /// <summary>
     /// Settler role in the hedge funds industry.
@@ -108,7 +108,7 @@ public partial record AccountParties8
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation8> Settler { get; init; } = new ValueList<InvestmentAccountOwnershipInformation8>(){};
+    public ValueList<InvestmentAccountOwnershipInformation8> Settler { get; init; } = [];
     
     
     #nullable disable

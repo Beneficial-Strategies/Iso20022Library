@@ -24,7 +24,7 @@ public partial record NetworkParameters3
     [IsoId("_hbhpkGpUEeSR-ZWLvO-1dg")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public ValueList<NetworkParameters4> Address { get; init; } = new ValueList<NetworkParameters4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NetworkParameters4> Address { get; init; } = [];
     // ID for the above is _hbhpkGpUEeSR-ZWLvO-1dg
     
     /// <summary>

@@ -24,7 +24,7 @@ public partial record PriceReport2
     [IsoId("_RLuxU9p-Ed-ak6NoX_4Aeg_167787161")]
     [DisplayName("Price Valuation Details")]
     [IsoXmlTag("PricValtnDtls")]
-    public ValueList<PriceValuation3> PriceValuationDetails { get; init; } = new ValueList<PriceValuation3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PriceValuation3> PriceValuationDetails { get; init; } = [];
     // ID for the above is _RLuxU9p-Ed-ak6NoX_4Aeg_167787161
     
     /// <summary>

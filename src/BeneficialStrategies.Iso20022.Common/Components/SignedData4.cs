@@ -33,7 +33,7 @@ public partial record SignedData4
     [IsoId("_dL4O02mPEeS7iYydEtv3Ug")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public ValueList<AlgorithmIdentification16> DigestAlgorithm { get; init; } = new ValueList<AlgorithmIdentification16>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AlgorithmIdentification16> DigestAlgorithm { get; init; } = [];
     // ID for the above is _dL4O02mPEeS7iYydEtv3Ug
     
     /// <summary>
@@ -59,7 +59,7 @@ public partial record SignedData4
     [IsoId("_dL4O2WmPEeS7iYydEtv3Ug")]
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
-    public ValueList<Signer3> Signer { get; init; } = new ValueList<Signer3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Signer3> Signer { get; init; } = [];
     // ID for the above is _dL4O2WmPEeS7iYydEtv3Ug
     
     

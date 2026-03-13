@@ -32,7 +32,7 @@ public partial record DisplayCapabilities3
     [IsoId("_F69h4Hr6EeSZrs_hiwNOWA")]
     [DisplayName("Available Format")]
     [IsoXmlTag("AvlblFrmt")]
-    public SimpleValueList<OutputFormat1Code> AvailableFormat { get; init; } = new SimpleValueList<OutputFormat1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<OutputFormat1Code> AvailableFormat { get; init; } = [];
     // ID for the above is _F69h4Hr6EeSZrs_hiwNOWA
     
     /// <summary>

@@ -39,7 +39,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError5Choice
         [IsoId("_dhhOC9cZEeqRFcf2R4bPBw")]
         [DisplayName("Transaction Report")]
         [IsoXmlTag("TxRpt")]
-        public ValueList<TransactionReport6> TransactionReport { get; init; } = new ValueList<TransactionReport6>(){}; // Warning: Don't know multiplicity.
+        public ValueList<TransactionReport6> TransactionReport { get; init; } = [];
         // ID for the above is _dhhOC9cZEeqRFcf2R4bPBw
         
         

@@ -46,7 +46,7 @@ public partial record ReorganisationInstructionSD9
     [IsoXmlTag("TxSeq")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<InstructionsTransactionsSequence1> TransactionSequence { get; init; } = new ValueList<InstructionsTransactionsSequence1>(){};
+    public ValueList<InstructionsTransactionsSequence1> TransactionSequence { get; init; } = [];
     
     /// <summary>
     /// Status of the instruction.
@@ -72,7 +72,7 @@ public partial record ReorganisationInstructionSD9
     [IsoXmlTag("RjctnRsn")]
     [MinLength(0)]
     [MaxLength(6)]
-    public SimpleValueList<InstructionRejectionReason2Code> RejectionReason { get; init; } = new SimpleValueList<InstructionRejectionReason2Code>(){};
+    public SimpleValueList<InstructionRejectionReason2Code> RejectionReason { get; init; } = [];
     
     /// <summary>
     /// Provides information about securities quantity linked to a corporate action option.

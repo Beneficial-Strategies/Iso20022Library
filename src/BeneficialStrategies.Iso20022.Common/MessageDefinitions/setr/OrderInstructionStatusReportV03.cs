@@ -99,7 +99,7 @@ public partial record OrderInstructionStatusReportV03 : IOuterRecord
     [IsoXmlTag("OthrRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> OtherReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> OtherReference { get; init; } = [];
     
     /// <summary>
     /// Reference to a linked message that was previously received.
@@ -109,7 +109,7 @@ public partial record OrderInstructionStatusReportV03 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> RelatedReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Status report details of all the individual orders conveyed in a bulk or multiple order message. Can be used if all the individual orders conveyed in a bulk or multiple order message have the same status.

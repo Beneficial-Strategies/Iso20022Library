@@ -24,7 +24,7 @@ public partial record AggregateHoldingBalance3
     [IsoId("_g8YpUlV3Eea1MPROA61PoQ")]
     [DisplayName("Balance For Account")]
     [IsoXmlTag("BalForAcct")]
-    public ValueList<AggregateHoldingBalance1> BalanceForAccount { get; init; } = new ValueList<AggregateHoldingBalance1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AggregateHoldingBalance1> BalanceForAccount { get; init; } = [];
     // ID for the above is _g8YpUlV3Eea1MPROA61PoQ
     
     /// <summary>

@@ -35,7 +35,7 @@ public partial record MissingOrIncorrectData1
     [IsoXmlTag("MssngInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<UnableToApplyMissing2> MissingInformation { get; init; } = new ValueList<UnableToApplyMissing2>(){};
+    public ValueList<UnableToApplyMissing2> MissingInformation { get; init; } = [];
     
     /// <summary>
     /// Indicates, in a coded form, the incorrect information.
@@ -45,7 +45,7 @@ public partial record MissingOrIncorrectData1
     [IsoXmlTag("IncrrctInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<UnableToApplyIncorrect2> IncorrectInformation { get; init; } = new ValueList<UnableToApplyIncorrect2>(){};
+    public ValueList<UnableToApplyIncorrect2> IncorrectInformation { get; init; } = [];
     
     
     #nullable disable

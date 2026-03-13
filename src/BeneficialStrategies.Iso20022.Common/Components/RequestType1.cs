@@ -34,7 +34,7 @@ public partial record RequestType1
     [IsoId("_wc1usWHgEeGrBqfAqyy96Q")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public SimpleValueList<TransactionRequestType1Code> Type { get; init; } = new SimpleValueList<TransactionRequestType1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<TransactionRequestType1Code> Type { get; init; } = [];
     // ID for the above is _wc1usWHgEeGrBqfAqyy96Q
     
     /// <summary>

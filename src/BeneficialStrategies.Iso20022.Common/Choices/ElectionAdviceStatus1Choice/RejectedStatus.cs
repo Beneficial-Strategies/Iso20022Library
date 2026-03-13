@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAdviceStatus1Choice
         [IsoId("_Rkw8Ytp-Ed-ak6NoX_4Aeg_-147105631")]
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
-        public ValueList<RejectionReason18FormatChoice_> Reason { get; init; } = new ValueList<RejectionReason18FormatChoice_>(){}; // Warning: Don't know multiplicity.
+        public ValueList<RejectionReason18FormatChoice_> Reason { get; init; } = [];
         // ID for the above is _Rkw8Ytp-Ed-ak6NoX_4Aeg_-147105631
         
         /// <summary>

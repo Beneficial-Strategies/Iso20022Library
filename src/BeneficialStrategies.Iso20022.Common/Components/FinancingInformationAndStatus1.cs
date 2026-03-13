@@ -32,7 +32,7 @@ public partial record FinancingInformationAndStatus1
     [IsoId("_RYGZZNp-Ed-ak6NoX_4Aeg_1262872441")]
     [DisplayName("Invoice Financing Details")]
     [IsoXmlTag("InvcFincgDtls")]
-    public ValueList<InvoiceFinancingDetails1> InvoiceFinancingDetails { get; init; } = new ValueList<InvoiceFinancingDetails1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<InvoiceFinancingDetails1> InvoiceFinancingDetails { get; init; } = [];
     // ID for the above is _RYGZZNp-Ed-ak6NoX_4Aeg_1262872441
     
     

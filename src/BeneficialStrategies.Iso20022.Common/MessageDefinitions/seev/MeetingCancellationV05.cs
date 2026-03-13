@@ -74,7 +74,7 @@ public partial record MeetingCancellationV05 : IOuterRecord
     [IsoXmlTag("Scty")]
     [MinLength(0)]
     [MaxLength(200)]
-    public ValueList<SecurityPosition8> Security { get; init; } = new ValueList<SecurityPosition8>(){};
+    public ValueList<SecurityPosition8> Security { get; init; } = [];
     
     /// <summary>
     /// Defines the justification for the cancellation.

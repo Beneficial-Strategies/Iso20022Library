@@ -26,7 +26,7 @@ public partial record PowerOfAttorneyRequirements3
     [IsoXmlTag("LglRqrmnt")]
     [MinLength(0)]
     [MaxLength(4)]
-    public SimpleValueList<PowerOfAttorneyLegalisation1Code> LegalRequirement { get; init; } = new SimpleValueList<PowerOfAttorneyLegalisation1Code>(){};
+    public SimpleValueList<PowerOfAttorneyLegalisation1Code> LegalRequirement { get; init; } = [];
     
     /// <summary>
     /// Specifies the documents needed to obtain a valid power of attorney.

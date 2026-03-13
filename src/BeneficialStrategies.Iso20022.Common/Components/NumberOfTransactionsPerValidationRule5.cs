@@ -33,7 +33,7 @@ public partial record NumberOfTransactionsPerValidationRule5
     [IsoId("_Tr7yQ8rdEeii_5g6VX90qQ")]
     [DisplayName("Report Status")]
     [IsoXmlTag("RptSts")]
-    public ValueList<RejectionReason45> ReportStatus { get; init; } = new ValueList<RejectionReason45>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RejectionReason45> ReportStatus { get; init; } = [];
     // ID for the above is _Tr7yQ8rdEeii_5g6VX90qQ
     
     

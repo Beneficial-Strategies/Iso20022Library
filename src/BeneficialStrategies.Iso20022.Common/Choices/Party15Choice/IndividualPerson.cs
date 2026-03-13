@@ -172,7 +172,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("ModfdPstlAdr")]
         [MinLength(0)]
         [MaxLength(5)]
-        public ValueList<ModificationScope1> ModifiedPostalAddress { get; init; } = new ValueList<ModificationScope1>(){};
+        public ValueList<ModificationScope1> ModifiedPostalAddress { get; init; } = [];
         
         /// <summary>
         /// Citizenship information to be inserted or deleted.
@@ -182,7 +182,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("ModfdCtznsh")]
         [MinLength(0)]
         [MaxLength(3)]
-        public ValueList<ModificationScope3> ModifiedCitizenship { get; init; } = new ValueList<ModificationScope3>(){};
+        public ValueList<ModificationScope3> ModifiedCitizenship { get; init; } = [];
         
         /// <summary>
         /// Communication device number or electronic address used for communication.
@@ -208,7 +208,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party15Choice
         [IsoXmlTag("ModfdOthrId")]
         [MinLength(0)]
         [MaxLength(10)]
-        public ValueList<ModificationScope17> ModifiedOtherIdentification { get; init; } = new ValueList<ModificationScope17>(){};
+        public ValueList<ModificationScope17> ModifiedOtherIdentification { get; init; } = [];
         
         /// <summary>
         /// Additional regulatory information about the investor that is required in some markets to support anti-money laundering laws.

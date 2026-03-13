@@ -40,7 +40,7 @@ public partial record ATMDepositedMedia3
     [IsoId("_sB7at64QEeWZgJQOa6iKCQ")]
     [DisplayName("Media Items")]
     [IsoXmlTag("MdiaItms")]
-    public ValueList<ATMDepositedMedia2> MediaItems { get; init; } = new ValueList<ATMDepositedMedia2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ATMDepositedMedia2> MediaItems { get; init; } = [];
     // ID for the above is _sB7at64QEeWZgJQOa6iKCQ
     
     

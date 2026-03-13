@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal4Choice
         [IsoId("_VIUUxxX3EeOBE-jZfcm4KQ")]
         [DisplayName("Transfer Details")]
         [IsoXmlTag("TrfDtls")]
-        public ValueList<Transfer29> TransferDetails { get; init; } = new ValueList<Transfer29>(){}; // Warning: Don't know multiplicity.
+        public ValueList<Transfer29> TransferDetails { get; init; } = [];
         // ID for the above is _VIUUxxX3EeOBE-jZfcm4KQ
         
         /// <summary>

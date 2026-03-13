@@ -55,7 +55,7 @@ public partial record PostalAddress22
     [IsoSimpleType(IsoSimpleType.Max70Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> AddressLine { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> AddressLine { get; init; } = [];
     
     /// <summary>
     /// Name of a street or thoroughfare.
@@ -106,7 +106,7 @@ public partial record PostalAddress22
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(2)]
-    public SimpleValueList<System.String> CountrySubDivision { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> CountrySubDivision { get; init; } = [];
     
     /// <summary>
     /// Nation with its own government.

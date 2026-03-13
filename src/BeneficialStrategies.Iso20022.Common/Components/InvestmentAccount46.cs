@@ -195,7 +195,7 @@ public partial record InvestmentAccount46
     [IsoXmlTag("CshAcct")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<CashAccount12> CashAccount { get; init; } = new ValueList<CashAccount12>(){};
+    public ValueList<CashAccount12> CashAccount { get; init; } = [];
     
     /// <summary>
     /// Part of the investment account to or from which securities entries are made.
@@ -205,7 +205,7 @@ public partial record InvestmentAccount46
     [IsoXmlTag("SctiesAcct")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<SecuritiesAccount4> SecuritiesAccount { get; init; } = new ValueList<SecuritiesAccount4>(){};
+    public ValueList<SecuritiesAccount4> SecuritiesAccount { get; init; } = [];
     
     /// <summary>
     /// Specifies information about blocked accounts.

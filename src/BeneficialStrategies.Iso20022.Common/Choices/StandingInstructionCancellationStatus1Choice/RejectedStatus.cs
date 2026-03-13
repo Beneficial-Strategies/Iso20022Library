@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
         [IsoId("_Rk6tZdp-Ed-ak6NoX_4Aeg_1289872620")]
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
-        public ValueList<RejectionReason10FormatChoice_> Reason { get; init; } = new ValueList<RejectionReason10FormatChoice_>(){}; // Warning: Don't know multiplicity.
+        public ValueList<RejectionReason10FormatChoice_> Reason { get; init; } = [];
         // ID for the above is _Rk6tZdp-Ed-ak6NoX_4Aeg_1289872620
         
         /// <summary>

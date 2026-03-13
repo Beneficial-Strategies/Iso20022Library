@@ -46,7 +46,7 @@ public partial record Organisation23
     [IsoXmlTag("PstlAdr")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<PostalAddress21> PostalAddress { get; init; } = new ValueList<PostalAddress21>(){};
+    public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
     
     
     #nullable disable

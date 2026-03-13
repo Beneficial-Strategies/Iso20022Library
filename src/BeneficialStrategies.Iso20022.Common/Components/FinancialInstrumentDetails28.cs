@@ -64,7 +64,7 @@ public partial record FinancialInstrumentDetails28
     [IsoId("_wNROZaOAEeeDTpy0mhI4TQ")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public ValueList<Transaction62> Transaction { get; init; } = new ValueList<Transaction62>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Transaction62> Transaction { get; init; } = [];
     // ID for the above is _wNROZaOAEeeDTpy0mhI4TQ
     
     

@@ -32,7 +32,7 @@ public partial record PayInFactors1
     [IsoId("_S3PXsgEcEeCQm6a_G2yO_w_1288597221")]
     [DisplayName("Currency Factors")]
     [IsoXmlTag("CcyFctrs")]
-    public ValueList<CurrencyFactors1> CurrencyFactors { get; init; } = new ValueList<CurrencyFactors1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CurrencyFactors1> CurrencyFactors { get; init; } = [];
     // ID for the above is _S3PXsgEcEeCQm6a_G2yO_w_1288597221
     
     

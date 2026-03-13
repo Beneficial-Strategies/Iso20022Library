@@ -43,7 +43,7 @@ public partial record InvestmentFundOrderExecution1
     [IsoId("_R60r_Np-Ed-ak6NoX_4Aeg_-424772693")]
     [DisplayName("Order References")]
     [IsoXmlTag("OrdrRefs")]
-    public ValueList<InvestmentFundOrderExecution2> OrderReferences { get; init; } = new ValueList<InvestmentFundOrderExecution2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<InvestmentFundOrderExecution2> OrderReferences { get; init; } = [];
     // ID for the above is _R60r_Np-Ed-ak6NoX_4Aeg_-424772693
     
     

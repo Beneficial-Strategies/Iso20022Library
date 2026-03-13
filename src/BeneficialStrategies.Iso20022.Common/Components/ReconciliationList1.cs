@@ -106,7 +106,7 @@ public partial record ReconciliationList1
     [IsoId("_OTgzNDI5-AOSNFX-8224504")]
     [DisplayName("Item")]
     [IsoXmlTag("Itm")]
-    public ValueList<FinancialItem1> Item { get; init; } = new ValueList<FinancialItem1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FinancialItem1> Item { get; init; } = [];
     // ID for the above is _OTgzNDI5-AOSNFX-8224504
     
     /// <summary>

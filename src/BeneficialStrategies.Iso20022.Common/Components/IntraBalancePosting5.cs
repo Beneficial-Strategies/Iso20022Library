@@ -32,7 +32,7 @@ public partial record IntraBalancePosting5
     [IsoId("_ZXSw6TneEem7JZMuWtwtsg")]
     [DisplayName("Movement")]
     [IsoXmlTag("Mvmnt")]
-    public ValueList<IntraBalancePosting6> Movement { get; init; } = new ValueList<IntraBalancePosting6>(){}; // Warning: Don't know multiplicity.
+    public ValueList<IntraBalancePosting6> Movement { get; init; } = [];
     // ID for the above is _ZXSw6TneEem7JZMuWtwtsg
     
     

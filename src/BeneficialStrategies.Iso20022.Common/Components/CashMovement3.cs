@@ -51,7 +51,7 @@ public partial record CashMovement3
     [IsoXmlTag("AcctDtls")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<CashAccount18> AccountDetails { get; init; } = new ValueList<CashAccount18>(){};
+    public ValueList<CashAccount18> AccountDetails { get; init; } = [];
     
     
     #nullable disable

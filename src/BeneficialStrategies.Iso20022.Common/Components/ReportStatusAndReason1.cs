@@ -44,7 +44,7 @@ public partial record ReportStatusAndReason1
     [IsoXmlTag("Rjctd")]
     [MinLength(1)]
     [MaxLength(100)]
-    public ValueList<RejectedStatusReason9Choice_> Rejected { get; init; } = new ValueList<RejectedStatusReason9Choice_>(){};
+    public ValueList<RejectedStatusReason9Choice_> Rejected { get; init; } = [];
     
     
     #nullable disable

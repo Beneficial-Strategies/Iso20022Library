@@ -79,7 +79,7 @@ public partial record TransactionDetails3
     [IsoXmlTag("TxRptMrkr")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<PartyIdentification24Choice_> TransactionReportMarker { get; init; } = new ValueList<PartyIdentification24Choice_>(){};
+    public ValueList<PartyIdentification24Choice_> TransactionReportMarker { get; init; } = [];
     
     /// <summary>
     /// Provides details of the counterparty.

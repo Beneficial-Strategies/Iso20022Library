@@ -45,7 +45,7 @@ public partial record GroupHeader47
     [IsoXmlTag("Authstn")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = new ValueList<Authorisation1Choice_>(){};
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
     
     /// <summary>
     /// Party that initiates the mandate message.

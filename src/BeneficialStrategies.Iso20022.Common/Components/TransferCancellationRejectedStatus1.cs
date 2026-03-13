@@ -44,7 +44,7 @@ public partial record TransferCancellationRejectedStatus1
     [IsoXmlTag("DataSrcSchme")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<GenericIdentification1> DataSourceScheme { get; init; } = new ValueList<GenericIdentification1>(){};
+    public ValueList<GenericIdentification1> DataSourceScheme { get; init; } = [];
     
     
     #nullable disable

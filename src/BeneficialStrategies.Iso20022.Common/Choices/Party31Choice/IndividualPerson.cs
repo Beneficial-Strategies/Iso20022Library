@@ -128,7 +128,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party31Choice
         [IsoXmlTag("PstlAdr")]
         [MinLength(1)]
         [MaxLength(10)]
-        public ValueList<PostalAddress21> PostalAddress { get; init; } = new ValueList<PostalAddress21>(){};
+        public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
         
         /// <summary>
         /// Nationality and legal status (minor or major) or rights that an individual may possess.
@@ -138,7 +138,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party31Choice
         [IsoXmlTag("Ctznsh")]
         [MinLength(0)]
         [MaxLength(3)]
-        public ValueList<CitizenshipInformation> Citizenship { get; init; } = new ValueList<CitizenshipInformation>(){};
+        public ValueList<CitizenshipInformation> Citizenship { get; init; } = [];
         
         /// <summary>
         /// Organisation represented by a person, or for which a person works.

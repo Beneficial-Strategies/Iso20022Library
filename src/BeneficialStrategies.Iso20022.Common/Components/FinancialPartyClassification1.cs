@@ -24,7 +24,7 @@ public partial record FinancialPartyClassification1
     [IsoId("_1VoPYan9EemdLtwzt4CWxg")]
     [DisplayName("Classification")]
     [IsoXmlTag("Clssfctn")]
-    public SimpleValueList<FinancialPartySectorType2Code> Classification { get; init; } = new SimpleValueList<FinancialPartySectorType2Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<FinancialPartySectorType2Code> Classification { get; init; } = [];
     // ID for the above is _1VoPYan9EemdLtwzt4CWxg
     
     /// <summary>

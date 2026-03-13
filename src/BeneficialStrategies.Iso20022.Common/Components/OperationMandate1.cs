@@ -60,7 +60,7 @@ public partial record OperationMandate1
     [IsoId("_PU0TDdp-Ed-ak6NoX_4Aeg_-375361255")]
     [DisplayName("Bank Operation")]
     [IsoXmlTag("BkOpr")]
-    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = new ValueList<BankTransactionCodeStructure4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BankTransactionCodeStructure4> BankOperation { get; init; } = [];
     // ID for the above is _PU0TDdp-Ed-ak6NoX_4Aeg_-375361255
     
     /// <summary>

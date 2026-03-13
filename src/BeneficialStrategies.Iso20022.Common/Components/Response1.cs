@@ -24,7 +24,7 @@ public partial record Response1
     [IsoId("_QnYHEtp-Ed-ak6NoX_4Aeg_-119884462")]
     [DisplayName("Response Type Details")]
     [IsoXmlTag("RspnTpDtls")]
-    public ValueList<ResponseType1Choice_> ResponseTypeDetails { get; init; } = new ValueList<ResponseType1Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ResponseType1Choice_> ResponseTypeDetails { get; init; } = [];
     // ID for the above is _QnYHEtp-Ed-ak6NoX_4Aeg_-119884462
     
     /// <summary>

@@ -57,7 +57,7 @@ public partial record RedemptionBulkExecution2
     [IsoId("_VWndY9p-Ed-ak6NoX_4Aeg_676424313")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
-    public ValueList<RedemptionExecution3> IndividualExecutionDetails { get; init; } = new ValueList<RedemptionExecution3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RedemptionExecution3> IndividualExecutionDetails { get; init; } = [];
     // ID for the above is _VWndY9p-Ed-ak6NoX_4Aeg_676424313
     
     /// <summary>

@@ -140,7 +140,7 @@ public partial record Vote16
     [IsoXmlTag("Prtry")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<ProprietaryVote2> Proprietary { get; init; } = new ValueList<ProprietaryVote2>(){};
+    public ValueList<ProprietaryVote2> Proprietary { get; init; } = [];
     
     
     #nullable disable

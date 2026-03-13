@@ -49,7 +49,7 @@ public partial record TradeLegStatement3
     [IsoId("_dXY85y6XEeSQQqw1BT_aMg")]
     [DisplayName("Trade Legs Details")]
     [IsoXmlTag("TradLegsDtls")]
-    public ValueList<TradeLeg9> TradeLegsDetails { get; init; } = new ValueList<TradeLeg9>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TradeLeg9> TradeLegsDetails { get; init; } = [];
     // ID for the above is _dXY85y6XEeSQQqw1BT_aMg
     
     

@@ -29,7 +29,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice
         /// Provides the business error.
         /// </summary>
         [IsoXmlTag("BizErr")]
-        public ValueList<ErrorHandling5> Value { get; init; } = new ValueList<ErrorHandling5>(){}; // Warning: Don't know multiplicity.
+        public ValueList<ErrorHandling5> Value { get; init; } = [];
         
         
         #nullable disable

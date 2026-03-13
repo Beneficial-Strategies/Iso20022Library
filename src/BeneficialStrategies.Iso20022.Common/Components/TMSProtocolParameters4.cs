@@ -50,7 +50,7 @@ public partial record TMSProtocolParameters4
     [IsoId("__5HFhdX0Eeia9rtBTv_9KA")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
-    public SimpleValueList<DataSetCategory10Code> MaintenanceService { get; init; } = new SimpleValueList<DataSetCategory10Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<DataSetCategory10Code> MaintenanceService { get; init; } = [];
     // ID for the above is __5HFhdX0Eeia9rtBTv_9KA
     
     /// <summary>

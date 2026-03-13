@@ -57,7 +57,7 @@ public partial record CardPaymentDataSet12
     [IsoId("_FbHuaWmaEeSQ1udc47rf0A")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public ValueList<TransactionTotals3> TransactionTotals { get; init; } = new ValueList<TransactionTotals3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionTotals3> TransactionTotals { get; init; } = [];
     // ID for the above is _FbHuaWmaEeSQ1udc47rf0A
     
     /// <summary>

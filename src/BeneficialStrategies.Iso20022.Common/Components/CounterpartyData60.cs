@@ -43,7 +43,7 @@ public partial record CounterpartyData60
     [IsoXmlTag("CtrPtyData")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<CounterpartyData61> CounterpartyData { get; init; } = new ValueList<CounterpartyData61>(){};
+    public ValueList<CounterpartyData61> CounterpartyData { get; init; } = [];
     
     
     #nullable disable

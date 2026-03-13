@@ -26,7 +26,7 @@ public partial record SuspendedStatusReason1
     [IsoXmlTag("Strd")]
     [MinLength(1)]
     [MaxLength(3)]
-    public SimpleValueList<SuspendedStatusReason2Code> Structured { get; init; } = new SimpleValueList<SuspendedStatusReason2Code>(){};
+    public SimpleValueList<SuspendedStatusReason2Code> Structured { get; init; } = [];
     
     /// <summary>
     /// Reason for a suspended status in free format text.

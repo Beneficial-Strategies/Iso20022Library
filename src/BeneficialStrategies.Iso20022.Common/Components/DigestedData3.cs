@@ -33,7 +33,7 @@ public partial record DigestedData3
     [IsoId("_LnfXw1W-EeOlEMHvp-ipJg")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public ValueList<AlgorithmIdentification5> DigestAlgorithm { get; init; } = new ValueList<AlgorithmIdentification5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AlgorithmIdentification5> DigestAlgorithm { get; init; } = [];
     // ID for the above is _LnfXw1W-EeOlEMHvp-ipJg
     
     /// <summary>

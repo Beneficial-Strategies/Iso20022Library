@@ -34,7 +34,7 @@ public partial record PreviousYear1
     [DisplayName("Specific Previous Years")]
     [IsoXmlTag("SpcfcPrvsYrs")]
     [IsoSimpleType(IsoSimpleType.ISOYear)]
-    public SimpleValueList<System.UInt16> SpecificPreviousYears { get; init; } = new SimpleValueList<System.UInt16>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.UInt16> SpecificPreviousYears { get; init; } = [];
     // ID for the above is _Svkiqtp-Ed-ak6NoX_4Aeg_-248328915
     
     /// <summary>

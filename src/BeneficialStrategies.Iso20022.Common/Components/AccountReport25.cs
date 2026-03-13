@@ -118,7 +118,7 @@ public partial record AccountReport25
     [IsoId("_WekcyW49EeiU9cctagi5ow")]
     [DisplayName("Interest")]
     [IsoXmlTag("Intrst")]
-    public ValueList<AccountInterest4> Interest { get; init; } = new ValueList<AccountInterest4>(){};
+    public ValueList<AccountInterest4> Interest { get; init; } = [];
     
     /// <summary>
     /// Set of elements used to define the balance as a numerical representation of the net increases and decreases in an account at a specific point in time.
@@ -126,7 +126,7 @@ public partial record AccountReport25
     [IsoId("_Wekcy249EeiU9cctagi5ow")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public ValueList<CashBalance8> Balance { get; init; } = new ValueList<CashBalance8>(){};
+    public ValueList<CashBalance8> Balance { get; init; } = [];
     
     /// <summary>
     /// Provides summary information on entries.
@@ -146,7 +146,7 @@ public partial record AccountReport25
     [IsoId("_Wekcz249EeiU9cctagi5ow")]
     [DisplayName("Entry")]
     [IsoXmlTag("Ntry")]
-    public ValueList<ReportEntry10> Entry { get; init; } = new ValueList<ReportEntry10>(){};
+    public ValueList<ReportEntry10> Entry { get; init; } = [];
     
     /// <summary>
     /// Further details of the account report.

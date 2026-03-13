@@ -189,7 +189,7 @@ public partial record CreditTransferTransaction38
     [IsoId("_4ZCaUXL-EeidQ_AAdEzxQA")]
     [DisplayName("Direct Debit Transaction Information")]
     [IsoXmlTag("DrctDbtTxInf")]
-    public ValueList<DirectDebitTransactionInformation25> DirectDebitTransactionInformation { get; init; } = new ValueList<DirectDebitTransactionInformation25>(){}; // Warning: Don't know multiplicity.
+    public ValueList<DirectDebitTransactionInformation25> DirectDebitTransactionInformation { get; init; } = [];
     // ID for the above is _4ZCaUXL-EeidQ_AAdEzxQA
     
     /// <summary>

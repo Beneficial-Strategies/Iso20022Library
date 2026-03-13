@@ -52,7 +52,7 @@ public partial record CorporateActionMovementFailedStatus1
     [IsoId("_Rjbfqtp-Ed-ak6NoX_4Aeg_-1713973917")]
     [DisplayName("Resource Details")]
     [IsoXmlTag("RsrcDtls")]
-    public ValueList<FailedMovement1> ResourceDetails { get; init; } = new ValueList<FailedMovement1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FailedMovement1> ResourceDetails { get; init; } = [];
     // ID for the above is _Rjbfqtp-Ed-ak6NoX_4Aeg_-1713973917
     
     

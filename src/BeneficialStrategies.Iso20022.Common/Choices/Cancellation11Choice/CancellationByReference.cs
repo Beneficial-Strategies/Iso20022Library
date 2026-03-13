@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation11Choice
         [IsoId("_HzyxIy8FEeO59oUFO5eLvw")]
         [DisplayName("Transfer References")]
         [IsoXmlTag("TrfRefs")]
-        public ValueList<TransferReference8> TransferReferences { get; init; } = new ValueList<TransferReference8>(){}; // Warning: Don't know multiplicity.
+        public ValueList<TransferReference8> TransferReferences { get; init; } = [];
         // ID for the above is _HzyxIy8FEeO59oUFO5eLvw
         
         

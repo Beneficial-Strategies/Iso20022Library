@@ -98,7 +98,7 @@ public partial record RedemptionBulkOrderV03 : IOuterRecord
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary8> RelatedPartyDetails { get; init; } = new ValueList<Intermediary8>(){};
+    public ValueList<Intermediary8> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Information provided when the message is a copy of a previous message.

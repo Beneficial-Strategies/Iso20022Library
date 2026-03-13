@@ -25,7 +25,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
         [IsoXmlTag("CtrPtySpcfcData")]
         [MinLength(1)]
         [MaxLength(2)]
-        public ValueList<CounterpartySpecificData23> CounterpartySpecificData { get; init; } = new ValueList<CounterpartySpecificData23>(){};
+        public ValueList<CounterpartySpecificData23> CounterpartySpecificData { get; init; } = [];
         
         /// <summary>
         /// Data specifically related to transaction.

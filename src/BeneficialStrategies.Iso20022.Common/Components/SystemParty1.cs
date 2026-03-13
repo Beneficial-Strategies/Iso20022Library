@@ -68,7 +68,7 @@ public partial record SystemParty1
     [IsoId("_kl5JI-5NEeCisYr99QEiWA_-49843880")]
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
-    public ValueList<TechnicalIdentification1Choice_> TechnicalAddress { get; init; } = new ValueList<TechnicalIdentification1Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TechnicalIdentification1Choice_> TechnicalAddress { get; init; } = [];
     // ID for the above is _kl5JI-5NEeCisYr99QEiWA_-49843880
     
     /// <summary>

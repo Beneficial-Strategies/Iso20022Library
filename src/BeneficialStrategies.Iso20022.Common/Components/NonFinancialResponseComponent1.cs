@@ -32,7 +32,7 @@ public partial record NonFinancialResponseComponent1
     [IsoId("_3hVvti_yEeugIJ3Gvoevmg")]
     [DisplayName("Response Content")]
     [IsoXmlTag("RspnCntt")]
-    public ValueList<NonFinancialResponseContentComponent1> ResponseContent { get; init; } = new ValueList<NonFinancialResponseContentComponent1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NonFinancialResponseContentComponent1> ResponseContent { get; init; } = [];
     // ID for the above is _3hVvti_yEeugIJ3Gvoevmg
     
     /// <summary>

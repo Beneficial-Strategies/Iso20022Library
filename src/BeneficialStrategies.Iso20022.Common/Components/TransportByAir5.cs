@@ -32,7 +32,7 @@ public partial record TransportByAir5
     [IsoId("_E-k68xriEeOVR9VN6fAMUg")]
     [DisplayName("Destination Airport")]
     [IsoXmlTag("DstnAirprt")]
-    public ValueList<AirportName1Choice_> DestinationAirport { get; init; } = new ValueList<AirportName1Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AirportName1Choice_> DestinationAirport { get; init; } = [];
     // ID for the above is _E-k68xriEeOVR9VN6fAMUg
     
     /// <summary>

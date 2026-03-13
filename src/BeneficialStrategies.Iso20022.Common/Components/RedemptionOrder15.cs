@@ -54,7 +54,7 @@ public partial record RedemptionOrder15
     [IsoXmlTag("OrdrTp")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = new ValueList<FundOrderType4Choice_>(){};
+    public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
     
     /// <summary>
     /// Additional information about the investor.
@@ -197,7 +197,7 @@ public partial record RedemptionOrder15
     [IsoXmlTag("StffClntBrkdwn")]
     [MinLength(0)]
     [MaxLength(4)]
-    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = new ValueList<InvestmentFundsOrderBreakdown2>(){};
+    public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = [];
     
     /// <summary>
     /// Specifies if advice has been received from an independent financial advisor.
@@ -223,7 +223,7 @@ public partial record RedemptionOrder15
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary40> RelatedPartyDetails { get; init; } = new ValueList<Intermediary40>(){};
+    public ValueList<Intermediary40> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Part of an investor&apos;s retained subscription amount that is returned by the fund in order to reimburse preliminary incentive/performance fees.

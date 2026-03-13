@@ -35,7 +35,7 @@ public partial record Narrative1
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
     [MinLength(1)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> Text { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> Text { get; init; } = [];
     
     
     #nullable disable

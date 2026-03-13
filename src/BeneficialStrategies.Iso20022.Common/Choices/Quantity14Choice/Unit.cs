@@ -33,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity14Choice
         [IsoXmlTag("UnitDtls")]
         [MinLength(0)]
         [MaxLength(2)]
-        public ValueList<Unit5> UnitDetails { get; init; } = new ValueList<Unit5>(){};
+        public ValueList<Unit5> UnitDetails { get; init; } = [];
         
         
         #nullable disable

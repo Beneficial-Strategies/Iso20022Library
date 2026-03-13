@@ -113,7 +113,7 @@ public partial record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoXmlTag("Intrmies")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary36> Intermediaries { get; init; } = new ValueList<Intermediary36>(){};
+    public ValueList<Intermediary36> Intermediaries { get; init; } = [];
     
     /// <summary>
     /// Confirmation of referral information.
@@ -139,7 +139,7 @@ public partial record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoXmlTag("SvgsInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(50)]
-    public ValueList<InvestmentPlan12> SavingsInvestmentPlan { get; init; } = new ValueList<InvestmentPlan12>(){};
+    public ValueList<InvestmentPlan12> SavingsInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Confirmation of the information related to a withdrawal plan that is related to the account.
@@ -149,7 +149,7 @@ public partial record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoXmlTag("WdrwlInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<InvestmentPlan12> WithdrawalInvestmentPlan { get; init; } = new ValueList<InvestmentPlan12>(){};
+    public ValueList<InvestmentPlan12> WithdrawalInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Confirmation of a cash settlement standing instruction associated to transactions on the account.
@@ -159,7 +159,7 @@ public partial record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoXmlTag("CshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<CashSettlement1> CashSettlement { get; init; } = new ValueList<CashSettlement1>(){};
+    public ValueList<CashSettlement1> CashSettlement { get; init; } = [];
     
     /// <summary>
     /// Identifies documents to be provided for the account opening.
@@ -169,7 +169,7 @@ public partial record AccountDetailsConfirmationV06 : IOuterRecord
     [IsoXmlTag("SvcLvlAgrmt")]
     [MinLength(0)]
     [MaxLength(30)]
-    public ValueList<DocumentToSend3> ServiceLevelAgreement { get; init; } = new ValueList<DocumentToSend3>(){};
+    public ValueList<DocumentToSend3> ServiceLevelAgreement { get; init; } = [];
     
     /// <summary>
     /// Additional information concerning limitations and restrictions on the account.

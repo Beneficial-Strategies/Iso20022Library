@@ -45,7 +45,7 @@ public partial record GroupHeader72
     [IsoXmlTag("Authstn")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = new ValueList<Authorisation1Choice_>(){};
+    public ValueList<Authorisation1Choice_> Authorisation { get; init; } = [];
     
     /// <summary>
     /// Identifies whether a single entry per individual transaction or a batch entry for the sum of the amounts of all transactions within the group of a message is requested.|Usage: Batch booking is used to request and not order a possible batch booking.

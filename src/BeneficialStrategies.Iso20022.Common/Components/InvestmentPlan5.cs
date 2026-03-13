@@ -113,7 +113,7 @@ public partial record InvestmentPlan5
     [IsoXmlTag("SctyDtls")]
     [MinLength(1)]
     [MaxLength(50)]
-    public ValueList<Repartition1> SecurityDetails { get; init; } = new ValueList<Repartition1>(){};
+    public ValueList<Repartition1> SecurityDetails { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction associated to the investment plan and to be either inserted or deleted.
@@ -123,7 +123,7 @@ public partial record InvestmentPlan5
     [IsoXmlTag("ModfdCshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<InvestmentFundCashSettlementInformation4> ModifiedCashSettlement { get; init; } = new ValueList<InvestmentFundCashSettlementInformation4>(){};
+    public ValueList<InvestmentFundCashSettlementInformation4> ModifiedCashSettlement { get; init; } = [];
     
     
     #nullable disable

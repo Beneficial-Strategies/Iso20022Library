@@ -52,7 +52,7 @@ public partial record ProxyAppointmentInformation4
     [IsoXmlTag("AuthrsdPrxy")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Proxy8> AuthorisedProxy { get; init; } = new ValueList<Proxy8>(){};
+    public ValueList<Proxy8> AuthorisedProxy { get; init; } = [];
     
     
     #nullable disable

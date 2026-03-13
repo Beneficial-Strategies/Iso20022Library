@@ -173,7 +173,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [MinLength(0)]
         [MaxLength(7)]
         [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public SimpleValueList<System.String> AddressLine { get; init; } = new SimpleValueList<System.String>(){};
+        public SimpleValueList<System.String> AddressLine { get; init; } = [];
         
         /// <summary>
         /// Specifies the date from which the address is valid.

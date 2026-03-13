@@ -40,7 +40,7 @@ public partial record ATMCustomer4
     [IsoId("_JDfd9a14EeWMg5rOByfExw")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public ValueList<CardholderAuthentication8> Authentication { get; init; } = new ValueList<CardholderAuthentication8>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CardholderAuthentication8> Authentication { get; init; } = [];
     // ID for the above is _JDfd9a14EeWMg5rOByfExw
     
     /// <summary>

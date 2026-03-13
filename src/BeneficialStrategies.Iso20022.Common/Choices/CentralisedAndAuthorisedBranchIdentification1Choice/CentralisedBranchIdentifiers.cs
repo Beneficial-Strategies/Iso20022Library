@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CentralisedAndAuthorisedBranchId
         [IsoId("_Bwxs8CD1Eeav65mEytrgaA")]
         [DisplayName("List")]
         [IsoXmlTag("List")]
-        public ValueList<FinancialInstitutionIdentification9> List { get; init; } = new ValueList<FinancialInstitutionIdentification9>(){}; // Warning: Don't know multiplicity.
+        public ValueList<FinancialInstitutionIdentification9> List { get; init; } = [];
         // ID for the above is _Bwxs8CD1Eeav65mEytrgaA
         
         

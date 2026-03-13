@@ -32,7 +32,7 @@ public partial record DocumentNumber19
     [IsoId("_gBH0JTi8Eeydid5dcNPKvg")]
     [DisplayName("References")]
     [IsoXmlTag("Refs")]
-    public ValueList<Identification29> References { get; init; } = new ValueList<Identification29>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Identification29> References { get; init; } = [];
     // ID for the above is _gBH0JTi8Eeydid5dcNPKvg
     
     

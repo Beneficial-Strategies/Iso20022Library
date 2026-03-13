@@ -33,7 +33,7 @@ public partial record ExternalPaymentSystemDetails1
     [IsoId("_80z6oB9yEeapDZRA0Hb6ow")]
     [DisplayName("Clearing Circuits")]
     [IsoXmlTag("ClrCrcts")]
-    public ValueList<ClearingCircuits1> ClearingCircuits { get; init; } = new ValueList<ClearingCircuits1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ClearingCircuits1> ClearingCircuits { get; init; } = [];
     // ID for the above is _80z6oB9yEeapDZRA0Hb6ow
     
     

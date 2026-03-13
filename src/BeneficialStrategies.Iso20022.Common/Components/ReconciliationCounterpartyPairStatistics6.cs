@@ -41,7 +41,7 @@ public partial record ReconciliationCounterpartyPairStatistics6
     [IsoId("_cIzsxVovEe23K4GXSpBSeg")]
     [DisplayName("Reconciliation Report")]
     [IsoXmlTag("RcncltnRpt")]
-    public ValueList<ReconciliationReport14> ReconciliationReport { get; init; } = new ValueList<ReconciliationReport14>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ReconciliationReport14> ReconciliationReport { get; init; } = [];
     // ID for the above is _cIzsxVovEe23K4GXSpBSeg
     
     

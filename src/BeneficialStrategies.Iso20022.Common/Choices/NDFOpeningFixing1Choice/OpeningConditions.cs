@@ -42,7 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NDFOpeningFixing1Choice
         [IsoXmlTag("SttlmRateSrc")]
         [MinLength(1)]
         [MaxLength(2)]
-        public ValueList<SettlementRateSource1> SettlementRateSource { get; init; } = new ValueList<SettlementRateSource1>(){};
+        public ValueList<SettlementRateSource1> SettlementRateSource { get; init; } = [];
         
         
         #nullable disable

@@ -113,7 +113,7 @@ public partial record AccountOpeningInstructionV05 : IOuterRecord
     [IsoXmlTag("Intrmies")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary24> Intermediaries { get; init; } = new ValueList<Intermediary24>(){};
+    public ValueList<Intermediary24> Intermediaries { get; init; } = [];
     
     /// <summary>
     /// Placement agent for the hedge fund industry.
@@ -139,7 +139,7 @@ public partial record AccountOpeningInstructionV05 : IOuterRecord
     [IsoXmlTag("SvgsInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(50)]
-    public ValueList<InvestmentPlan10> SavingsInvestmentPlan { get; init; } = new ValueList<InvestmentPlan10>(){};
+    public ValueList<InvestmentPlan10> SavingsInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Plan through which an investment fund investor&apos;s holdings are depleted through regular withdrawals at specified intervals.
@@ -149,7 +149,7 @@ public partial record AccountOpeningInstructionV05 : IOuterRecord
     [IsoXmlTag("WdrwlInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<InvestmentPlan10> WithdrawalInvestmentPlan { get; init; } = new ValueList<InvestmentPlan10>(){};
+    public ValueList<InvestmentPlan10> WithdrawalInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction associated to the investment fund transaction.
@@ -159,7 +159,7 @@ public partial record AccountOpeningInstructionV05 : IOuterRecord
     [IsoXmlTag("CshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<InvestmentFundCashSettlementInformation7> CashSettlement { get; init; } = new ValueList<InvestmentFundCashSettlementInformation7>(){};
+    public ValueList<InvestmentFundCashSettlementInformation7> CashSettlement { get; init; } = [];
     
     /// <summary>
     /// Identifies documents to be provided for the account opening.
@@ -169,7 +169,7 @@ public partial record AccountOpeningInstructionV05 : IOuterRecord
     [IsoXmlTag("SvcLvlAgrmt")]
     [MinLength(0)]
     [MaxLength(30)]
-    public ValueList<DocumentToSend2> ServiceLevelAgreement { get; init; } = new ValueList<DocumentToSend2>(){};
+    public ValueList<DocumentToSend2> ServiceLevelAgreement { get; init; } = [];
     
     /// <summary>
     /// Identifies the market practice to which the message conforms.

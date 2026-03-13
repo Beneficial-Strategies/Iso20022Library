@@ -24,7 +24,7 @@ public partial record SearchOr1
     [IsoId("_InLc0N6QEeiwsev40qZGEQ")]
     [DisplayName("Search And")]
     [IsoXmlTag("SchAnd")]
-    public ValueList<SearchAnd1> SearchAnd { get; init; } = new ValueList<SearchAnd1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SearchAnd1> SearchAnd { get; init; } = [];
     // ID for the above is _InLc0N6QEeiwsev40qZGEQ
     
     

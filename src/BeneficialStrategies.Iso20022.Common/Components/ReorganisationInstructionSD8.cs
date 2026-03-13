@@ -79,7 +79,7 @@ public partial record ReorganisationInstructionSD8
     [IsoXmlTag("RjctnRsn")]
     [MinLength(0)]
     [MaxLength(6)]
-    public SimpleValueList<InstructionRejectionReason1Code> RejectionReason { get; init; } = new SimpleValueList<InstructionRejectionReason1Code>(){};
+    public SimpleValueList<InstructionRejectionReason1Code> RejectionReason { get; init; } = [];
     
     /// <summary>
     /// Customer identification entered by client upon instruction submission.

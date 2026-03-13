@@ -90,7 +90,7 @@ public partial record CryptographicKey11
     [IsoId("_Dozvf7TkEeeQy4o2AayYHg")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
-    public SimpleValueList<KeyUsage1Code> Function { get; init; } = new SimpleValueList<KeyUsage1Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<KeyUsage1Code> Function { get; init; } = [];
     // ID for the above is _Dozvf7TkEeeQy4o2AayYHg
     
     /// <summary>

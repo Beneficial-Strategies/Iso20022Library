@@ -32,7 +32,7 @@ public partial record ClearingAccount1
     [IsoId("_fXQ-0HX_Eee_qcLXasnA4g")]
     [DisplayName("Collateral Account Owner")]
     [IsoXmlTag("CollAcctOwnr")]
-    public ValueList<CollateralAccount5> CollateralAccountOwner { get; init; } = new ValueList<CollateralAccount5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CollateralAccount5> CollateralAccountOwner { get; init; } = [];
     // ID for the above is _fXQ-0HX_Eee_qcLXasnA4g
     
     

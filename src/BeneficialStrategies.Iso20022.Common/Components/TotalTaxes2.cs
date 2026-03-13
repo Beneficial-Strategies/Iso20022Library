@@ -32,7 +32,7 @@ public partial record TotalTaxes2
     [IsoId("_U5QL99p-Ed-ak6NoX_4Aeg_1827325403")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public ValueList<Tax7> TaxDetails { get; init; } = new ValueList<Tax7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Tax7> TaxDetails { get; init; } = [];
     // ID for the above is _U5QL99p-Ed-ak6NoX_4Aeg_1827325403
     
     

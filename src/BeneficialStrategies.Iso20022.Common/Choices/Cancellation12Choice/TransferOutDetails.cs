@@ -41,7 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation12Choice
         [IsoId("_A3mRGSPwEeWQjryFgN2ITg")]
         [DisplayName("Transfer And References")]
         [IsoXmlTag("TrfAndRefs")]
-        public ValueList<TransferOut18> TransferAndReferences { get; init; } = new ValueList<TransferOut18>(){}; // Warning: Don't know multiplicity.
+        public ValueList<TransferOut18> TransferAndReferences { get; init; } = [];
         // ID for the above is _A3mRGSPwEeWQjryFgN2ITg
         
         /// <summary>

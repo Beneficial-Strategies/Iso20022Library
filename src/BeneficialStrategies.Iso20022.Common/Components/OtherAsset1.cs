@@ -55,7 +55,7 @@ public partial record OtherAsset1
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> OtherIdentification { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> OtherIdentification { get; init; } = [];
     
     /// <summary>
     /// Additional information about the other asset.

@@ -68,7 +68,7 @@ public partial record OrderCancellationStatusReportV02 : IOuterRecord
     [IsoXmlTag("RltdRef")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> RelatedReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Reference to a linked message sent in a proprietary way or reference of a system.
@@ -78,7 +78,7 @@ public partial record OrderCancellationStatusReportV02 : IOuterRecord
     [IsoXmlTag("OthrRef")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference3> OtherReference { get; init; } = new ValueList<AdditionalReference3>(){};
+    public ValueList<AdditionalReference3> OtherReference { get; init; } = [];
     
     /// <summary>
     /// Status report details of a bulk or multiple or switch order cancellation instruction that was previously received.

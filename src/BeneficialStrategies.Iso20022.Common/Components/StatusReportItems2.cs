@@ -36,7 +36,7 @@ public partial record StatusReportItems2
     [IsoXmlTag("RptdNtty")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<BICIdentification1> ReportedEntity { get; init; } = new ValueList<BICIdentification1>(){};
+    public ValueList<BICIdentification1> ReportedEntity { get; init; } = [];
     
     /// <summary>
     /// Identifies the status of the transaction by means of a code.

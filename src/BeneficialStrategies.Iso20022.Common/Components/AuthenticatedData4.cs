@@ -33,7 +33,7 @@ public partial record AuthenticatedData4
     [IsoId("_lty442kIEeS7zPBpvm732w")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
-    public ValueList<Recipient4Choice_> Recipient { get; init; } = new ValueList<Recipient4Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Recipient4Choice_> Recipient { get; init; } = [];
     // ID for the above is _lty442kIEeS7zPBpvm732w
     
     /// <summary>

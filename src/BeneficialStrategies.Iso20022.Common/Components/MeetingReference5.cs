@@ -71,7 +71,7 @@ public partial record MeetingReference5
     [IsoXmlTag("Lctn")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<PostalAddress1> Location { get; init; } = new ValueList<PostalAddress1>(){};
+    public ValueList<PostalAddress1> Location { get; init; } = [];
     
     
     #nullable disable

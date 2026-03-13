@@ -66,7 +66,7 @@ public partial record IndividualOrderConfirmationStatusAndReason1
     [IsoXmlTag("ConfRjctd")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<ConfirmationRejectedStatus1> ConfirmationRejected { get; init; } = new ValueList<ConfirmationRejectedStatus1>(){};
+    public ValueList<ConfirmationRejectedStatus1> ConfirmationRejected { get; init; } = [];
     
     /// <summary>
     /// Status of the order confirmation amendment is rejected.
@@ -76,7 +76,7 @@ public partial record IndividualOrderConfirmationStatusAndReason1
     [IsoXmlTag("AmdmntRjctd")]
     [MinLength(1)]
     [MaxLength(10)]
-    public ValueList<ConfirmationRejectedStatus1> AmendmentRejected { get; init; } = new ValueList<ConfirmationRejectedStatus1>(){};
+    public ValueList<ConfirmationRejectedStatus1> AmendmentRejected { get; init; } = [];
     
     /// <summary>
     /// Status of the order confirmation is accepted or received or sent to next party or there is a communication problem with next party. There is no reason attached.

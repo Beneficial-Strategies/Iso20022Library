@@ -27,7 +27,7 @@ public partial record VoteMethods4
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = [];
     
     /// <summary>
     /// Address where the voting ballot can be sent.
@@ -45,7 +45,7 @@ public partial record VoteMethods4
     [IsoXmlTag("ElctrncVote")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<CommunicationAddress12> ElectronicVote { get; init; } = new ValueList<CommunicationAddress12>(){};
+    public ValueList<CommunicationAddress12> ElectronicVote { get; init; } = [];
     
     /// <summary>
     /// Telephone number providing access to an automated voting system.
@@ -56,7 +56,7 @@ public partial record VoteMethods4
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> VoteByTelephone { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> VoteByTelephone { get; init; } = [];
     
     
     #nullable disable

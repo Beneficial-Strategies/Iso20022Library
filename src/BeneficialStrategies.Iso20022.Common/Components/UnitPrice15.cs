@@ -50,7 +50,7 @@ public partial record UnitPrice15
     [IsoId("_QeuhYdp-Ed-ak6NoX_4Aeg_116968420")]
     [DisplayName("Value In Investment Currency")]
     [IsoXmlTag("ValInInvstmtCcy")]
-    public ValueList<PriceValue1> ValueInInvestmentCurrency { get; init; } = new ValueList<PriceValue1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PriceValue1> ValueInInvestmentCurrency { get; init; } = [];
     // ID for the above is _QeuhYdp-Ed-ak6NoX_4Aeg_116968420
     
     /// <summary>

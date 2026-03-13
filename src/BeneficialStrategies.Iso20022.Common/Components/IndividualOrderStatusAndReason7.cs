@@ -84,7 +84,7 @@ public partial record IndividualOrderStatusAndReason7
     [IsoXmlTag("RprdFee")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Fee3> RepairedFee { get; init; } = new ValueList<Fee3>(){};
+    public ValueList<Fee3> RepairedFee { get; init; } = [];
     
     /// <summary>
     /// Party that initiates the status of the order.

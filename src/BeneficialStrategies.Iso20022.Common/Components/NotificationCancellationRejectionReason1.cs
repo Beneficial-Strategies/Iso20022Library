@@ -24,7 +24,7 @@ public partial record NotificationCancellationRejectionReason1
     [IsoId("_RkLGhNp-Ed-ak6NoX_4Aeg_1166618034")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ValueList<RejectionReason11FormatChoice_> Reason { get; init; } = new ValueList<RejectionReason11FormatChoice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RejectionReason11FormatChoice_> Reason { get; init; } = [];
     // ID for the above is _RkLGhNp-Ed-ak6NoX_4Aeg_1166618034
     
     /// <summary>

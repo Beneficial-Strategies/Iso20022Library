@@ -88,7 +88,7 @@ public partial record ReorganisationInstructionDetailsSD2
     [IsoXmlTag("RjctnRsn")]
     [MinLength(0)]
     [MaxLength(6)]
-    public SimpleValueList<InstructionRejectionReason1Code> RejectionReason { get; init; } = new SimpleValueList<InstructionRejectionReason1Code>(){};
+    public SimpleValueList<InstructionRejectionReason1Code> RejectionReason { get; init; } = [];
     
     /// <summary>
     /// Identifies the protect itself or of that is being covered. It is required for the function types cover protect (COVR), cover protect directly to agent (COVA) and cover on behalf of another participant (COVP).

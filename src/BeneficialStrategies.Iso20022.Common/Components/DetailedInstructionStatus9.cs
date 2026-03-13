@@ -64,7 +64,7 @@ public partial record DetailedInstructionStatus9
     [IsoXmlTag("RghtsHldr")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<PartyIdentification9Choice_> RightsHolder { get; init; } = new ValueList<PartyIdentification9Choice_>(){};
+    public ValueList<PartyIdentification9Choice_> RightsHolder { get; init; } = [];
     
     /// <summary>
     /// Indicates whether standing instructions have been applied or not.
@@ -83,7 +83,7 @@ public partial record DetailedInstructionStatus9
     [IsoXmlTag("VotePerRsltn")]
     [MinLength(1)]
     [MaxLength(1000)]
-    public ValueList<Vote4> VotePerResolution { get; init; } = new ValueList<Vote4>(){};
+    public ValueList<Vote4> VotePerResolution { get; init; } = [];
     
     
     #nullable disable

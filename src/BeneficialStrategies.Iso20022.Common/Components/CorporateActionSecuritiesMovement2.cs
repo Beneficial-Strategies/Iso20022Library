@@ -60,7 +60,7 @@ public partial record CorporateActionSecuritiesMovement2
     [IsoXmlTag("AcctDtls")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<SecuritiesAccount9> AccountDetails { get; init; } = new ValueList<SecuritiesAccount9>(){};
+    public ValueList<SecuritiesAccount9> AccountDetails { get; init; } = [];
     
     
     #nullable disable

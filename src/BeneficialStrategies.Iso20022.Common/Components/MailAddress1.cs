@@ -26,7 +26,7 @@ public partial record MailAddress1
     [IsoXmlTag("Crspdc")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<PostalAddress1> Correspondence { get; init; } = new ValueList<PostalAddress1>(){};
+    public ValueList<PostalAddress1> Correspondence { get; init; } = [];
     
     /// <summary>
     /// Address for electronic mail (e-mail).
@@ -37,7 +37,7 @@ public partial record MailAddress1
     [IsoSimpleType(IsoSimpleType.Max256Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> EmailAddress { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> EmailAddress { get; init; } = [];
     
     
     #nullable disable

@@ -34,7 +34,7 @@ public partial record SecurityPosition17
     [IsoXmlTag("Pos")]
     [MinLength(0)]
     [MaxLength(1000)]
-    public ValueList<EligiblePosition14> Position { get; init; } = new ValueList<EligiblePosition14>(){};
+    public ValueList<EligiblePosition14> Position { get; init; } = [];
     
     
     #nullable disable

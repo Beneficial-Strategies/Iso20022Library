@@ -32,7 +32,7 @@ public partial record ScenarioStressTestResult1
     [IsoId("_ZLzBQKs_Eeayv9XxdmMwKQ")]
     [DisplayName("Portfolio Stress Test Result")]
     [IsoXmlTag("PrtflStrssTstRslt")]
-    public ValueList<PortfolioStressTestResult1> PortfolioStressTestResult { get; init; } = new ValueList<PortfolioStressTestResult1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<PortfolioStressTestResult1> PortfolioStressTestResult { get; init; } = [];
     // ID for the above is _ZLzBQKs_Eeayv9XxdmMwKQ
     
     

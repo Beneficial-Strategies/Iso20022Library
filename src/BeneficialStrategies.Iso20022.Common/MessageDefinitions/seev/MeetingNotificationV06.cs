@@ -96,7 +96,7 @@ public partial record MeetingNotificationV06 : IOuterRecord
     [IsoXmlTag("MtgDtls")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<Meeting5> MeetingDetails { get; init; } = new ValueList<Meeting5>(){};
+    public ValueList<Meeting5> MeetingDetails { get; init; } = [];
     
     /// <summary>
     /// Institution that is the issuer of the security to which the meeting applies.
@@ -114,7 +114,7 @@ public partial record MeetingNotificationV06 : IOuterRecord
     [IsoXmlTag("IssrAgt")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<IssuerAgent3> IssuerAgent { get; init; } = new ValueList<IssuerAgent3>(){};
+    public ValueList<IssuerAgent3> IssuerAgent { get; init; } = [];
     
     /// <summary>
     /// Financial instrument identification and net position of a segregated holding, in a single security, within the overall position held in a securities account.
@@ -124,7 +124,7 @@ public partial record MeetingNotificationV06 : IOuterRecord
     [IsoXmlTag("Scty")]
     [MinLength(1)]
     [MaxLength(200)]
-    public ValueList<SecurityPosition10> Security { get; init; } = new ValueList<SecurityPosition10>(){};
+    public ValueList<SecurityPosition10> Security { get; init; } = [];
     
     /// <summary>
     /// Detailed information of a resolution proposed to the vote.
@@ -134,7 +134,7 @@ public partial record MeetingNotificationV06 : IOuterRecord
     [IsoXmlTag("Rsltn")]
     [MinLength(0)]
     [MaxLength(1000)]
-    public ValueList<Resolution4> Resolution { get; init; } = new ValueList<Resolution4>(){};
+    public ValueList<Resolution4> Resolution { get; init; } = [];
     
     /// <summary>
     /// Conditions to be allowed to vote, the different voting methods and options, the voting deadlines and the parameters of the incentive premium.

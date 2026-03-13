@@ -32,7 +32,7 @@ public partial record Report5
     [IsoId("_71U0Ay9dEeS94oXWDaBauA")]
     [DisplayName("Settlement Obligation Details")]
     [IsoXmlTag("SttlmOblgtnDtls")]
-    public ValueList<SettlementObligation8> SettlementObligationDetails { get; init; } = new ValueList<SettlementObligation8>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SettlementObligation8> SettlementObligationDetails { get; init; } = [];
     // ID for the above is _71U0Ay9dEeS94oXWDaBauA
     
     

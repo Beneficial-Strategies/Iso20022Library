@@ -33,7 +33,7 @@ public partial record SwitchOrderConfirmation1
     [IsoId("_RNqrCNp-Ed-ak6NoX_4Aeg_1791463151")]
     [DisplayName("Switch Execution Details")]
     [IsoXmlTag("SwtchExctnDtls")]
-    public ValueList<SwitchExecution4> SwitchExecutionDetails { get; init; } = new ValueList<SwitchExecution4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SwitchExecution4> SwitchExecutionDetails { get; init; } = [];
     // ID for the above is _RNqrCNp-Ed-ak6NoX_4Aeg_1791463151
     
     /// <summary>

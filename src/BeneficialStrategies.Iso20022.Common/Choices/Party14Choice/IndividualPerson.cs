@@ -152,7 +152,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party14Choice
         [IsoXmlTag("PstlAdr")]
         [MinLength(1)]
         [MaxLength(5)]
-        public ValueList<PostalAddress3> PostalAddress { get; init; } = new ValueList<PostalAddress3>(){};
+        public ValueList<PostalAddress3> PostalAddress { get; init; } = [];
         
         /// <summary>
         /// Nationality and legal status (minor or major) or rights that an individual may possess.
@@ -162,7 +162,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party14Choice
         [IsoXmlTag("Ctznsh")]
         [MinLength(1)]
         [MaxLength(3)]
-        public ValueList<CitizenshipInformation> Citizenship { get; init; } = new ValueList<CitizenshipInformation>(){};
+        public ValueList<CitizenshipInformation> Citizenship { get; init; } = [];
         
         /// <summary>
         /// Organisation represented by a person, or for which a person works.
@@ -208,7 +208,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party14Choice
         [IsoXmlTag("OthrId")]
         [MinLength(0)]
         [MaxLength(10)]
-        public ValueList<GenericIdentification44> OtherIdentification { get; init; } = new ValueList<GenericIdentification44>(){};
+        public ValueList<GenericIdentification44> OtherIdentification { get; init; } = [];
         
         /// <summary>
         /// Additional regulatory information about the investor that is required in some markets to support anti-money laundering laws.

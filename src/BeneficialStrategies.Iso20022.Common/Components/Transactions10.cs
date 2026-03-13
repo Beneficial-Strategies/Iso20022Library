@@ -40,7 +40,7 @@ public partial record Transactions10
     [IsoId("_8Wpc6wKxEe2rHs6fbn9-0A")]
     [DisplayName("Transaction Report")]
     [IsoXmlTag("TxRpt")]
-    public ValueList<TransactionReport7> TransactionReport { get; init; } = new ValueList<TransactionReport7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionReport7> TransactionReport { get; init; } = [];
     // ID for the above is _8Wpc6wKxEe2rHs6fbn9-0A
     
     

@@ -24,7 +24,7 @@ public partial record Blocked2
     [IsoId("_EjSuoSGeEeWKAaDJcYGKLw")]
     [DisplayName("Order Type")]
     [IsoXmlTag("OrdrTp")]
-    public ValueList<OrderType2Choice_> OrderType { get; init; } = new ValueList<OrderType2Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<OrderType2Choice_> OrderType { get; init; } = [];
     // ID for the above is _EjSuoSGeEeWKAaDJcYGKLw
     
     /// <summary>

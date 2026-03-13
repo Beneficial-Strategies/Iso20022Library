@@ -33,7 +33,7 @@ public partial record ScheduleChangeDetails1
     [IsoId("_ZLwAgBkcEeapYKOltfjd7A")]
     [DisplayName("Schedule Entry")]
     [IsoXmlTag("SchdlNtry")]
-    public ValueList<ScheduleChangeEntry1> ScheduleEntry { get; init; } = new ValueList<ScheduleChangeEntry1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ScheduleChangeEntry1> ScheduleEntry { get; init; } = [];
     // ID for the above is _ZLwAgBkcEeapYKOltfjd7A
     
     

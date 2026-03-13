@@ -120,8 +120,8 @@ public class Camt053ExamplesTests
             {
                 Identification = "DEUTDEFF-ACME-STMT-20240315-001",
                 Account = CreateStatementAccount(),
-                Balance = new ValueList<CashBalance8>
-                {
+                Balance =
+                [
                     new()
                     {
                         Type = new BalanceType13
@@ -140,7 +140,7 @@ public class Camt053ExamplesTests
                         Date = new Date { Value = Iso20022TestData.SettlementDate.AddDays(-1) },
                     },
                     CreateClosingBookedBalance(),
-                },
+                ],
             },
         };
 
@@ -171,7 +171,7 @@ public class Camt053ExamplesTests
                     Owner = Iso20022TestData.Creditor,
                     Servicer = Iso20022TestData.CreditorAgent,
                 },
-                Balance = new ValueList<CashBalance8> { CreateClosingBookedBalance() },
+                Balance = [ CreateClosingBookedBalance() ],
                 Entry = CreateCreditEntry(),
             },
         };
@@ -273,7 +273,7 @@ public class Camt053ExamplesTests
             {
                 Identification = "DEUTDEFF-ACME-STMT-20240315-DEBIT",
                 Account = CreateStatementAccount(),
-                Balance = new ValueList<CashBalance8> { CreateClosingBookedBalance() },
+                Balance = [ CreateClosingBookedBalance() ],
                 Entry = debitEntry,
             },
         };

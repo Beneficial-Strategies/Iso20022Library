@@ -52,7 +52,7 @@ public partial record UpdatedAdditionalInformation11
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    public SimpleValueList<System.String> AdditionalInformation { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
     // ID for the above is _fAlDVe6OEeqc-LCjwLsUVg
     
     

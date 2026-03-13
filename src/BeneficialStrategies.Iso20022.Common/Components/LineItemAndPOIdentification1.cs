@@ -25,7 +25,7 @@ public partial record LineItemAndPOIdentification1
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    public SimpleValueList<System.String> LineItemIdentification { get; init; } = new SimpleValueList<System.String>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<System.String> LineItemIdentification { get; init; } = [];
     // ID for the above is _RaVOBtp-Ed-ak6NoX_4Aeg_-1638617880
     
     /// <summary>

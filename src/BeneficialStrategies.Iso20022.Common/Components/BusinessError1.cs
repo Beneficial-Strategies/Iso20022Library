@@ -32,7 +32,7 @@ public partial record BusinessError1
     [IsoId("_hW9wWWliEeGaMcKyqKNRfQ_-1167546325")]
     [DisplayName("Business Error")]
     [IsoXmlTag("BizErr")]
-    public ValueList<ErrorHandling3> BusinessError { get; init; } = new ValueList<ErrorHandling3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ErrorHandling3> BusinessError { get; init; } = [];
     // ID for the above is _hW9wWWliEeGaMcKyqKNRfQ_-1167546325
     
     

@@ -84,7 +84,7 @@ public partial record DTCCCAINSD1V04 : IOuterRecord
     [IsoXmlTag("ReorgInstrDtls")]
     [MinLength(0)]
     [MaxLength(12)]
-    public ValueList<ReorganisationInstructionDetailsSD1> ReorganisationInstructionDetails { get; init; } = new ValueList<ReorganisationInstructionDetailsSD1>(){};
+    public ValueList<ReorganisationInstructionDetailsSD1> ReorganisationInstructionDetails { get; init; } = [];
     
     
     #nullable disable

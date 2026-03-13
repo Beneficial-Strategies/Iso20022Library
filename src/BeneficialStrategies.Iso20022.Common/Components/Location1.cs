@@ -43,7 +43,7 @@ public partial record Location1
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> Text { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> Text { get; init; } = [];
     
     
     #nullable disable

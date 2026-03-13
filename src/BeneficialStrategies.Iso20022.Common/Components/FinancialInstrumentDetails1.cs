@@ -40,7 +40,7 @@ public partial record FinancialInstrumentDetails1
     [IsoId("_TwGLi9p-Ed-ak6NoX_4Aeg_1052099294")]
     [DisplayName("Sub Balance")]
     [IsoXmlTag("SubBal")]
-    public ValueList<IntraPositionDetails3> SubBalance { get; init; } = new ValueList<IntraPositionDetails3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<IntraPositionDetails3> SubBalance { get; init; } = [];
     // ID for the above is _TwGLi9p-Ed-ak6NoX_4Aeg_1052099294
     
     

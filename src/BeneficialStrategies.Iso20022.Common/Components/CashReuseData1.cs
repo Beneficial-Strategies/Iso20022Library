@@ -24,7 +24,7 @@ public partial record CashReuseData1
     [IsoId("_P73YgJLiEeelrYORFsXWZg")]
     [DisplayName("Reinvested Cash")]
     [IsoXmlTag("RinvstdCsh")]
-    public ValueList<ReinvestedCashTypeAndAmount1> ReinvestedCash { get; init; } = new ValueList<ReinvestedCashTypeAndAmount1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ReinvestedCashTypeAndAmount1> ReinvestedCash { get; init; } = [];
     // ID for the above is _P73YgJLiEeelrYORFsXWZg
     
     /// <summary>

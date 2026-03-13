@@ -96,7 +96,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party23Choice
         [IsoXmlTag("PstlAdr")]
         [MinLength(1)]
         [MaxLength(5)]
-        public ValueList<PostalAddress3> PostalAddress { get; init; } = new ValueList<PostalAddress3>(){};
+        public ValueList<PostalAddress3> PostalAddress { get; init; } = [];
         
         /// <summary>
         /// Communication device number or electronic address used for communication.

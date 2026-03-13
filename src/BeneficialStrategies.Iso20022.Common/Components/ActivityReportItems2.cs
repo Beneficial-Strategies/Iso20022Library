@@ -36,7 +36,7 @@ public partial record ActivityReportItems2
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Entity for which the activity is reported.
@@ -52,7 +52,7 @@ public partial record ActivityReportItems2
     [IsoId("_RaCTEdp-Ed-ak6NoX_4Aeg_-990880169")]
     [DisplayName("Reported Item")]
     [IsoXmlTag("RptdItm")]
-    public ValueList<ActivityDetails1> ReportedItem { get; init; } = new ValueList<ActivityDetails1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<ActivityDetails1> ReportedItem { get; init; } = [];
     // ID for the above is _RaCTEdp-Ed-ak6NoX_4Aeg_-990880169
     
     /// <summary>

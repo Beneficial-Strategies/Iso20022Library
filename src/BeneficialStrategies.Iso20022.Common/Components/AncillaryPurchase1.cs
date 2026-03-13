@@ -110,7 +110,7 @@ public partial record AncillaryPurchase1
     [IsoId("_WnfAMPQYEeihCvvpsmGI2w")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public ValueList<Tax33> Tax { get; init; } = new ValueList<Tax33>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Tax33> Tax { get; init; } = [];
     // ID for the above is _WnfAMPQYEeihCvvpsmGI2w
     
     /// <summary>

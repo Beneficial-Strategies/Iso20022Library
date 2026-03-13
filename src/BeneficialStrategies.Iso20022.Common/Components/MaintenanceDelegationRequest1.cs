@@ -40,7 +40,7 @@ public partial record MaintenanceDelegationRequest1
     [IsoId("_Hj6ykGp5EeSojYXQbRlLzA")]
     [DisplayName("Requested Delegation")]
     [IsoXmlTag("ReqdDlgtn")]
-    public ValueList<MaintenanceDelegation1> RequestedDelegation { get; init; } = new ValueList<MaintenanceDelegation1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<MaintenanceDelegation1> RequestedDelegation { get; init; } = [];
     // ID for the above is _Hj6ykGp5EeSojYXQbRlLzA
     
     

@@ -54,7 +54,7 @@ public partial record InvestmentAccount12
     [IsoXmlTag("IntrmyInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary1> IntermediaryInformation { get; init; } = new ValueList<Intermediary1>(){};
+    public ValueList<Intermediary1> IntermediaryInformation { get; init; } = [];
     
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.

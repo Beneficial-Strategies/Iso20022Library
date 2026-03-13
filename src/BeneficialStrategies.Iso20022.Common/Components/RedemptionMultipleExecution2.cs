@@ -65,7 +65,7 @@ public partial record RedemptionMultipleExecution2
     [IsoId("_VXp_M9p-Ed-ak6NoX_4Aeg_1399797354")]
     [DisplayName("Individual Execution Details")]
     [IsoXmlTag("IndvExctnDtls")]
-    public ValueList<RedemptionExecution4> IndividualExecutionDetails { get; init; } = new ValueList<RedemptionExecution4>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RedemptionExecution4> IndividualExecutionDetails { get; init; } = [];
     // ID for the above is _VXp_M9p-Ed-ak6NoX_4Aeg_1399797354
     
     /// <summary>

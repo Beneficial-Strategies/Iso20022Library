@@ -23,7 +23,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError7Choice
         [IsoId("_wy9-A5lcEeeE1Ya-LgRsuQ")]
         [DisplayName("System Identification")]
         [IsoXmlTag("SysId")]
-        public ValueList<SystemIdentification2Choice_> SystemIdentification { get; init; } = new ValueList<SystemIdentification2Choice_>(){}; // Warning: Don't know multiplicity.
+        public ValueList<SystemIdentification2Choice_> SystemIdentification { get; init; } = [];
         // ID for the above is _wy9-A5lcEeeE1Ya-LgRsuQ
         
         /// <summary>

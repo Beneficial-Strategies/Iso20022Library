@@ -52,7 +52,7 @@ public partial record TradingParameters1
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
     [MinLength(0)]
     [MaxLength(5)]
-    public SimpleValueList<System.String> SecondaryPlaceOfListing { get; init; } = new SimpleValueList<System.String>(){};
+    public SimpleValueList<System.String> SecondaryPlaceOfListing { get; init; } = [];
     
     /// <summary>
     /// Minimum number of securities that can be traded.

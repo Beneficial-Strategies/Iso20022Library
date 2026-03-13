@@ -26,7 +26,7 @@ public partial record RepairedConditions3
     [IsoXmlTag("RprdChrg")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Charge19> RepairedCharge { get; init; } = new ValueList<Charge19>(){};
+    public ValueList<Charge19> RepairedCharge { get; init; } = [];
     
     /// <summary>
     /// Modified value of the commission applied on the order (the commission in the original individual order that has been repaired so that the order can be accepted).
@@ -36,7 +36,7 @@ public partial record RepairedConditions3
     [IsoXmlTag("RprdComssn")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Commission11> RepairedCommission { get; init; } = new ValueList<Commission11>(){};
+    public ValueList<Commission11> RepairedCommission { get; init; } = [];
     
     
     #nullable disable

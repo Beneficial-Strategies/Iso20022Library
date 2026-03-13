@@ -32,7 +32,7 @@ public partial record PartyReferenceDataChange2
     [IsoId("_E_5woIp8EeiEt5E1WBt_2Q")]
     [DisplayName("Record")]
     [IsoXmlTag("Rcrd")]
-    public ValueList<UpdateLogPartyRecord1Choice_> Record { get; init; } = new ValueList<UpdateLogPartyRecord1Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<UpdateLogPartyRecord1Choice_> Record { get; init; } = [];
     // ID for the above is _E_5woIp8EeiEt5E1WBt_2Q
     
     /// <summary>

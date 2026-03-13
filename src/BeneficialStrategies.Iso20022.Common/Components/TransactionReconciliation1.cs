@@ -51,7 +51,7 @@ public partial record TransactionReconciliation1
     [IsoId("_TGcRWgEcEeCQm6a_G2yO_w_1177771040")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public ValueList<TransactionTotals1> TransactionTotals { get; init; } = new ValueList<TransactionTotals1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionTotals1> TransactionTotals { get; init; } = [];
     // ID for the above is _TGcRWgEcEeCQm6a_G2yO_w_1177771040
     
     /// <summary>

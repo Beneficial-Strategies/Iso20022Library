@@ -100,7 +100,7 @@ public partial record PaymentInstruction11
     [IsoId("_GhgaZTimEeKpHbBQ3XWFBw")]
     [DisplayName("Credit Transfer Transaction")]
     [IsoXmlTag("CdtTrfTx")]
-    public ValueList<CreditTransferTransaction10> CreditTransferTransaction { get; init; } = new ValueList<CreditTransferTransaction10>(){}; // Warning: Don't know multiplicity.
+    public ValueList<CreditTransferTransaction10> CreditTransferTransaction { get; init; } = [];
     // ID for the above is _GhgaZTimEeKpHbBQ3XWFBw
     
     

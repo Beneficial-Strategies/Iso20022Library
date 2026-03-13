@@ -90,7 +90,7 @@ public partial record Resolution2
     [IsoXmlTag("VoteInstrTp")]
     [MinLength(0)]
     [MaxLength(8)]
-    public SimpleValueList<VoteInstruction2Code> VoteInstructionType { get; init; } = new SimpleValueList<VoteInstruction2Code>(){};
+    public SimpleValueList<VoteInstruction2Code> VoteInstructionType { get; init; } = [];
     
     /// <summary>
     /// Indicates how the management of the issuing company wishes the security holders to vote.

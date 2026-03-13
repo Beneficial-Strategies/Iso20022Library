@@ -116,7 +116,7 @@ public partial record CorporateActionOptionSD12
     [IsoXmlTag("TaxCtgy")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<TaxCategory1> TaxCategory { get; init; } = new ValueList<TaxCategory1>(){};
+    public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
     
     
     #nullable disable

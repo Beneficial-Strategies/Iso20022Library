@@ -40,7 +40,7 @@ public partial record IntraPositionDetails32
     [IsoId("_6zC6NznTEeWV5sr121Fc8A")]
     [DisplayName("Intra Position Movement")]
     [IsoXmlTag("IntraPosMvmnt")]
-    public ValueList<IntraPositionMovementDetails11> IntraPositionMovement { get; init; } = new ValueList<IntraPositionMovementDetails11>(){}; // Warning: Don't know multiplicity.
+    public ValueList<IntraPositionMovementDetails11> IntraPositionMovement { get; init; } = [];
     // ID for the above is _6zC6NznTEeWV5sr121Fc8A
     
     

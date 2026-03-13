@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement1Choice
         [IsoId("_Tg5R4dp-Ed-ak6NoX_4Aeg_-266260922")]
         [DisplayName("References")]
         [IsoXmlTag("Refs")]
-        public ValueList<Identification2> References { get; init; } = new ValueList<Identification2>(){}; // Warning: Don't know multiplicity.
+        public ValueList<Identification2> References { get; init; } = [];
         // ID for the above is _Tg5R4dp-Ed-ak6NoX_4Aeg_-266260922
         
         

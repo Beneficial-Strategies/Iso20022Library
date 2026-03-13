@@ -67,7 +67,7 @@ public partial record TradeCounterpartyReport20
     [IsoXmlTag("Bnfcry")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<PartyIdentification248Choice_> Beneficiary { get; init; } = new ValueList<PartyIdentification248Choice_>(){};
+    public ValueList<PartyIdentification248Choice_> Beneficiary { get; init; } = [];
     
     /// <summary>
     /// According to jurisdictional requirements, identification of the entity with the legal obligation or responsibility to report.
@@ -86,7 +86,7 @@ public partial record TradeCounterpartyReport20
     [IsoXmlTag("ExctnAgt")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<OrganisationIdentification15Choice_> ExecutionAgent { get; init; } = new ValueList<OrganisationIdentification15Choice_>(){};
+    public ValueList<OrganisationIdentification15Choice_> ExecutionAgent { get; init; } = [];
     
     /// <summary>
     /// Specifies the relationship record between two parties part of the transaction.

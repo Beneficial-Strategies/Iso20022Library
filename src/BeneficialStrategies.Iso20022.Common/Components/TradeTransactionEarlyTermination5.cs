@@ -26,7 +26,7 @@ public partial record TradeTransactionEarlyTermination5
     [IsoXmlTag("CtrPtySpcfcData")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<CounterpartySpecificData22> CounterpartySpecificData { get; init; } = new ValueList<CounterpartySpecificData22>(){};
+    public ValueList<CounterpartySpecificData22> CounterpartySpecificData { get; init; } = [];
     
     /// <summary>
     /// Trade transaction data details.

@@ -26,7 +26,7 @@ public partial record Proxy5
     [IsoXmlTag("PrxyTp")]
     [MinLength(1)]
     [MaxLength(2)]
-    public SimpleValueList<ProxyType2Code> ProxyType { get; init; } = new SimpleValueList<ProxyType2Code>(){};
+    public SimpleValueList<ProxyType2Code> ProxyType { get; init; } = [];
     
     /// <summary>
     /// Identifies an authorized proxy that has been assigned by the issuer of the meeting.

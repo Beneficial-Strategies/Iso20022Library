@@ -43,7 +43,7 @@ public partial record CustomBasket1
     [IsoId("_HI1KgQFOEeqUa4noT3P56A")]
     [DisplayName("Constituents")]
     [IsoXmlTag("Cnsttnts")]
-    public ValueList<BasketConstituents1> Constituents { get; init; } = new ValueList<BasketConstituents1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BasketConstituents1> Constituents { get; init; } = [];
     // ID for the above is _HI1KgQFOEeqUa4noT3P56A
     
     

@@ -78,7 +78,7 @@ public partial record InvestmentFundTransactionsByFund2
     [IsoId("_Scpmptp-Ed-ak6NoX_4Aeg_-1907610094")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public ValueList<InvestmentFundTransaction3> TransactionDetails { get; init; } = new ValueList<InvestmentFundTransaction3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<InvestmentFundTransaction3> TransactionDetails { get; init; } = [];
     // ID for the above is _Scpmptp-Ed-ak6NoX_4Aeg_-1907610094
     
     /// <summary>

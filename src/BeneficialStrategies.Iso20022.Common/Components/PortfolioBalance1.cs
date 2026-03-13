@@ -24,7 +24,7 @@ public partial record PortfolioBalance1
     [IsoId("_m9_jwfNBEeCuA5Tr22BnwA_1134139495")]
     [DisplayName("Summary Balance")]
     [IsoXmlTag("SummryBal")]
-    public ValueList<BalanceDetails5> SummaryBalance { get; init; } = new ValueList<BalanceDetails5>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BalanceDetails5> SummaryBalance { get; init; } = [];
     // ID for the above is _m9_jwfNBEeCuA5Tr22BnwA_1134139495
     
     /// <summary>
@@ -33,7 +33,7 @@ public partial record PortfolioBalance1
     [IsoId("_m9_jwvNBEeCuA5Tr22BnwA_432347507")]
     [DisplayName("Detailed Balance")]
     [IsoXmlTag("DtldBal")]
-    public ValueList<BalanceDetails6> DetailedBalance { get; init; } = new ValueList<BalanceDetails6>(){}; // Warning: Don't know multiplicity.
+    public ValueList<BalanceDetails6> DetailedBalance { get; init; } = [];
     // ID for the above is _m9_jwvNBEeCuA5Tr22BnwA_432347507
     
     

@@ -137,7 +137,7 @@ public partial record AccountOpeningInstructionV08 : IOuterRecord
     [IsoXmlTag("SvgsInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(50)]
-    public ValueList<InvestmentPlan17> SavingsInvestmentPlan { get; init; } = new ValueList<InvestmentPlan17>(){};
+    public ValueList<InvestmentPlan17> SavingsInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Plan through which holdings are depleted through regular withdrawals at specified intervals.
@@ -147,7 +147,7 @@ public partial record AccountOpeningInstructionV08 : IOuterRecord
     [IsoXmlTag("WdrwlInvstmtPlan")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<InvestmentPlan17> WithdrawalInvestmentPlan { get; init; } = new ValueList<InvestmentPlan17>(){};
+    public ValueList<InvestmentPlan17> WithdrawalInvestmentPlan { get; init; } = [];
     
     /// <summary>
     /// Cash settlement standing instruction associated to transactions on the account.
@@ -157,7 +157,7 @@ public partial record AccountOpeningInstructionV08 : IOuterRecord
     [IsoXmlTag("CshSttlm")]
     [MinLength(0)]
     [MaxLength(8)]
-    public ValueList<CashSettlement3> CashSettlement { get; init; } = new ValueList<CashSettlement3>(){};
+    public ValueList<CashSettlement3> CashSettlement { get; init; } = [];
     
     /// <summary>
     /// Identifies documents to be provided for the account opening.
@@ -167,7 +167,7 @@ public partial record AccountOpeningInstructionV08 : IOuterRecord
     [IsoXmlTag("SvcLvlAgrmt")]
     [MinLength(0)]
     [MaxLength(30)]
-    public ValueList<DocumentToSend4> ServiceLevelAgreement { get; init; } = new ValueList<DocumentToSend4>(){};
+    public ValueList<DocumentToSend4> ServiceLevelAgreement { get; init; } = [];
     
     /// <summary>
     /// Additional information such as remarks or notes that must be conveyed about the account management activity and or any limitations and restrictions.

@@ -79,7 +79,7 @@ public partial record SecuritiesSettlementTransactionModificationRequestV01 : IO
     [IsoXmlTag("UpdTp")]
     [MinLength(1)]
     [MaxLength(3)]
-    public ValueList<UpdateType5Choice_> UpdateType { get; init; } = new ValueList<UpdateType5Choice_>(){};
+    public ValueList<UpdateType5Choice_> UpdateType { get; init; } = [];
     
     
     #nullable disable

@@ -58,7 +58,7 @@ public partial record Amendment2
     [IsoXmlTag("DgtlSgntr")]
     [MinLength(0)]
     [MaxLength(3)]
-    public ValueList<PartyAndSignature2> DigitalSignature { get; init; } = new ValueList<PartyAndSignature2>(){};
+    public ValueList<PartyAndSignature2> DigitalSignature { get; init; } = [];
     
     
     #nullable disable

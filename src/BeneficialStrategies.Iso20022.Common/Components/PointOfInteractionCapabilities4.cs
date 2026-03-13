@@ -25,7 +25,7 @@ public partial record PointOfInteractionCapabilities4
     [IsoId("_Ye6w0XrwEeSz_of_1TY14A")]
     [DisplayName("Card Reading Capabilities")]
     [IsoXmlTag("CardRdngCpblties")]
-    public SimpleValueList<CardDataReading2Code> CardReadingCapabilities { get; init; } = new SimpleValueList<CardDataReading2Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<CardDataReading2Code> CardReadingCapabilities { get; init; } = [];
     // ID for the above is _Ye6w0XrwEeSz_of_1TY14A
     
     /// <summary>

@@ -74,7 +74,7 @@ public partial record AccountParties13
     [IsoXmlTag("SucssrOnDth")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation12> SuccessorOnDeath { get; init; } = new ValueList<InvestmentAccountOwnershipInformation12>(){};
+    public ValueList<InvestmentAccountOwnershipInformation12> SuccessorOnDeath { get; init; } = [];
     
     /// <summary>
     /// Entity that has been appointed by a legal authority to act on behalf of a person or organisation that has gone bankrupt.
@@ -100,7 +100,7 @@ public partial record AccountParties13
     [IsoXmlTag("Grntr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation12> Granter { get; init; } = new ValueList<InvestmentAccountOwnershipInformation12>(){};
+    public ValueList<InvestmentAccountOwnershipInformation12> Granter { get; init; } = [];
     
     /// <summary>
     /// Entity that creates a trust or contributes assets to the trust.
@@ -110,7 +110,7 @@ public partial record AccountParties13
     [IsoXmlTag("Sttlr")]
     [MinLength(0)]
     [MaxLength(5)]
-    public ValueList<InvestmentAccountOwnershipInformation12> Settlor { get; init; } = new ValueList<InvestmentAccountOwnershipInformation12>(){};
+    public ValueList<InvestmentAccountOwnershipInformation12> Settlor { get; init; } = [];
     
     /// <summary>
     /// Party that registers its name with the issuer and the name used for the registration.

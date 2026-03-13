@@ -32,7 +32,7 @@ public partial record CollateralAccount4
     [IsoId("_BBT9la_9EeaE9YROwd69hA")]
     [DisplayName("Asset Holding")]
     [IsoXmlTag("AsstHldg")]
-    public ValueList<AssetHolding1> AssetHolding { get; init; } = new ValueList<AssetHolding1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AssetHolding1> AssetHolding { get; init; } = [];
     // ID for the above is _BBT9la_9EeaE9YROwd69hA
     
     

@@ -34,7 +34,7 @@ public partial record NonEquitySubClass1
     [IsoId("_POi7NKaTEeqZmriXpMtonA")]
     [DisplayName("Segmentation Criteria")]
     [IsoXmlTag("SgmttnCrit")]
-    public ValueList<NonEquitySubClassSegmentationCriterion1> SegmentationCriteria { get; init; } = new ValueList<NonEquitySubClassSegmentationCriterion1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NonEquitySubClassSegmentationCriterion1> SegmentationCriteria { get; init; } = [];
     // ID for the above is _POi7NKaTEeqZmriXpMtonA
     
     

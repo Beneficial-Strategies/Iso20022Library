@@ -50,7 +50,7 @@ public partial record ScenarioDefinition1
     [IsoXmlTag("StrssItm")]
     [MinLength(1)]
     [MaxLength(2)]
-    public ValueList<StressItem1> StressItem { get; init; } = new ValueList<StressItem1>(){};
+    public ValueList<StressItem1> StressItem { get; init; } = [];
     
     /// <summary>
     /// Long description of the scenario.

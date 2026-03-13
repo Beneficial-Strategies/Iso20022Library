@@ -64,7 +64,7 @@ public partial record DetailedInstructionStatus15
     [IsoXmlTag("RghtsHldr")]
     [MinLength(0)]
     [MaxLength(250)]
-    public ValueList<PartyIdentification233Choice_> RightsHolder { get; init; } = new ValueList<PartyIdentification233Choice_>(){};
+    public ValueList<PartyIdentification233Choice_> RightsHolder { get; init; } = [];
     
     /// <summary>
     /// Identification of the person appointed by the security holder as the proxy.
@@ -107,7 +107,7 @@ public partial record DetailedInstructionStatus15
     [IsoXmlTag("VotePerRsltn")]
     [MinLength(0)]
     [MaxLength(1000)]
-    public ValueList<Vote13> VotePerResolution { get; init; } = new ValueList<Vote13>(){};
+    public ValueList<Vote13> VotePerResolution { get; init; } = [];
     
     
     #nullable disable

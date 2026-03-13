@@ -50,7 +50,7 @@ public partial record RegisteredContract13
     [IsoId("_Ny7FJ7GJEeuSTr8k0UEM8A")]
     [DisplayName("Registered Contract Amendment")]
     [IsoXmlTag("RegdCtrctAmdmnt")]
-    public ValueList<RegisteredContract14> RegisteredContractAmendment { get; init; } = new ValueList<RegisteredContract14>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RegisteredContract14> RegisteredContractAmendment { get; init; } = [];
     // ID for the above is _Ny7FJ7GJEeuSTr8k0UEM8A
     
     /// <summary>

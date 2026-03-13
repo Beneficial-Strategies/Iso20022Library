@@ -32,7 +32,7 @@ public partial record NewAccount1
     [IsoId("_UbCz0A2kEeSNWNtJlXOAhg")]
     [DisplayName("Account Party")]
     [IsoXmlTag("AcctPty")]
-    public ValueList<IndividualPerson19> AccountParty { get; init; } = new ValueList<IndividualPerson19>(){}; // Warning: Don't know multiplicity.
+    public ValueList<IndividualPerson19> AccountParty { get; init; } = [];
     // ID for the above is _UbCz0A2kEeSNWNtJlXOAhg
     
     /// <summary>

@@ -52,7 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
         [IsoId("_EO4YO0mXEeqmSrLQiFB8FA")]
         [DisplayName("Trading Venue Related Attributes")]
         [IsoXmlTag("TradgVnRltdAttrbts")]
-        public ValueList<TradingVenueAttributes2> TradingVenueRelatedAttributes { get; init; } = new ValueList<TradingVenueAttributes2>(){}; // Warning: Don't know multiplicity.
+        public ValueList<TradingVenueAttributes2> TradingVenueRelatedAttributes { get; init; } = [];
         // ID for the above is _EO4YO0mXEeqmSrLQiFB8FA
         
         /// <summary>

@@ -32,7 +32,7 @@ public partial record CutOffData2
     [IsoId("_B-238wN1Ee2-vqzwMUAewg")]
     [DisplayName("Netting Cut Off Details")]
     [IsoXmlTag("NetgCutOffDtls")]
-    public ValueList<NettingCutOff2> NettingCutOffDetails { get; init; } = new ValueList<NettingCutOff2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<NettingCutOff2> NettingCutOffDetails { get; init; } = [];
     // ID for the above is _B-238wN1Ee2-vqzwMUAewg
     
     

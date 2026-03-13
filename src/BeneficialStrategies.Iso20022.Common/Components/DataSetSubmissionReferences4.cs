@@ -44,7 +44,7 @@ public partial record DataSetSubmissionReferences4
     [IsoXmlTag("UsrTxRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = new ValueList<DocumentIdentification5>(){};
+    public ValueList<DocumentIdentification5> UserTransactionReference { get; init; } = [];
     
     /// <summary>
     /// Specifies that this message should force the matching application to match all data sets it has received so far for the transaction identified by the transaction identification.

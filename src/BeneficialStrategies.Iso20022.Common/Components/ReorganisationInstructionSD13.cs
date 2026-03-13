@@ -44,7 +44,7 @@ public partial record ReorganisationInstructionSD13
     [IsoXmlTag("TxSeq")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<InstructionsTransactionsSequence2> TransactionSequence { get; init; } = new ValueList<InstructionsTransactionsSequence2>(){};
+    public ValueList<InstructionsTransactionsSequence2> TransactionSequence { get; init; } = [];
     
     /// <summary>
     /// Total oversubscription quantity of all transaction sequence instructions.

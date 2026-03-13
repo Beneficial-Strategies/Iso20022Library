@@ -34,7 +34,7 @@ public partial record RemittanceLocation3
     [IsoId("_mM_w0KMDEeKl_NvHIICqIw")]
     [DisplayName("Remittance Location Details")]
     [IsoXmlTag("RmtLctnDtls")]
-    public ValueList<RemittanceLocationDetails1> RemittanceLocationDetails { get; init; } = new ValueList<RemittanceLocationDetails1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<RemittanceLocationDetails1> RemittanceLocationDetails { get; init; } = [];
     // ID for the above is _mM_w0KMDEeKl_NvHIICqIw
     
     /// <summary>

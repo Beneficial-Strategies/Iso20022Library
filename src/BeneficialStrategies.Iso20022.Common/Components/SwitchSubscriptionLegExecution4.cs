@@ -105,7 +105,7 @@ public partial record SwitchSubscriptionLegExecution4
     [IsoXmlTag("InftvPricDtls")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = new ValueList<UnitPrice22>(){};
+    public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = [];
     
     /// <summary>
     /// Indicates whether the dividend is included, that is, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.

@@ -54,7 +54,7 @@ public partial record EligiblePosition17
     [IsoXmlTag("HldgBal")]
     [MinLength(1)]
     [MaxLength(3)]
-    public ValueList<HoldingBalance13> HoldingBalance { get; init; } = new ValueList<HoldingBalance13>(){};
+    public ValueList<HoldingBalance13> HoldingBalance { get; init; } = [];
     
     
     #nullable disable

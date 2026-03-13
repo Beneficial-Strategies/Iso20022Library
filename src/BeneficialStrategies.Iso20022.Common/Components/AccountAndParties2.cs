@@ -32,7 +32,7 @@ public partial record AccountAndParties2
     [IsoId("_clKesC__EeOKib24wnHaFg")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
-    public ValueList<AccountRole1> Role { get; init; } = new ValueList<AccountRole1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AccountRole1> Role { get; init; } = [];
     // ID for the above is _clKesC__EeOKib24wnHaFg
     
     /// <summary>

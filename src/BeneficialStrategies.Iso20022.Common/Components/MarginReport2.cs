@@ -65,7 +65,7 @@ public partial record MarginReport2
     [IsoId("_-eMvA6MOEeCojJW5vEuTEQ_538722488")]
     [DisplayName("Margin Calculation")]
     [IsoXmlTag("MrgnClctn")]
-    public ValueList<MarginCalculation2> MarginCalculation { get; init; } = new ValueList<MarginCalculation2>(){}; // Warning: Don't know multiplicity.
+    public ValueList<MarginCalculation2> MarginCalculation { get; init; } = [];
     // ID for the above is _-eMvA6MOEeCojJW5vEuTEQ_538722488
     
     

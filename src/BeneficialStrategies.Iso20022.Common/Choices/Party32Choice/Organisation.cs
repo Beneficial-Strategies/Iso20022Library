@@ -89,7 +89,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party32Choice
         [IsoXmlTag("PstlAdr")]
         [MinLength(0)]
         [MaxLength(10)]
-        public ValueList<PostalAddress21> PostalAddress { get; init; } = new ValueList<PostalAddress21>(){};
+        public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
         
         /// <summary>
         /// Type of organisation.

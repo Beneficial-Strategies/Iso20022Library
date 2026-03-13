@@ -24,7 +24,7 @@ public partial record MaintenanceDelegation16
     [IsoId("_4PP9AXIrEe299ZbWCkdR_w")]
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
-    public SimpleValueList<DataSetCategory16Code> MaintenanceService { get; init; } = new SimpleValueList<DataSetCategory16Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<DataSetCategory16Code> MaintenanceService { get; init; } = [];
     // ID for the above is _4PP9AXIrEe299ZbWCkdR_w
     
     /// <summary>

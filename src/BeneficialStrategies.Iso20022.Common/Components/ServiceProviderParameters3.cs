@@ -32,7 +32,7 @@ public partial record ServiceProviderParameters3
     [IsoId("_NPs203ISEe2OqYulmHWukQ")]
     [DisplayName("Service Provider Identification")]
     [IsoXmlTag("SvcPrvdrId")]
-    public ValueList<GenericIdentification176> ServiceProviderIdentification { get; init; } = new ValueList<GenericIdentification176>(){}; // Warning: Don't know multiplicity.
+    public ValueList<GenericIdentification176> ServiceProviderIdentification { get; init; } = [];
     // ID for the above is _NPs203ISEe2OqYulmHWukQ
     
     /// <summary>

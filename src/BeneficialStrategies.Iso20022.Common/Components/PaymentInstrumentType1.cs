@@ -33,7 +33,7 @@ public partial record PaymentInstrumentType1
     [IsoId("_PgYUYU1KEeGAs6v-iSb2RQ")]
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
-    public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = new ValueList<AuthorityRequestType1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
     // ID for the above is _PgYUYU1KEeGAs6v-iSb2RQ
     
     /// <summary>

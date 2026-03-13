@@ -114,7 +114,7 @@ public partial record EntryTransaction3
     [IsoXmlTag("RltdRmtInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<RemittanceLocation2> RelatedRemittanceInformation { get; init; } = new ValueList<RemittanceLocation2>(){};
+    public ValueList<RemittanceLocation2> RelatedRemittanceInformation { get; init; } = [];
     
     /// <summary>
     /// Structured information that enables the matching, that is reconciliation, of a payment with the items that the payment is intended to settle, such as commercial invoices in an account receivable system.

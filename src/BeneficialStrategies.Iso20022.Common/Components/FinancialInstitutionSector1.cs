@@ -24,7 +24,7 @@ public partial record FinancialInstitutionSector1
     [IsoId("_UgEEwAz2Ee2YoLD-1vFj0g")]
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
-    public ValueList<FinancialPartyClassification2Choice_> Sector { get; init; } = new ValueList<FinancialPartyClassification2Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<FinancialPartyClassification2Choice_> Sector { get; init; } = [];
     // ID for the above is _UgEEwAz2Ee2YoLD-1vFj0g
     
     /// <summary>

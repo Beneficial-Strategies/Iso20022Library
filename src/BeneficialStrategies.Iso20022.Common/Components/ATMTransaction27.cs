@@ -42,7 +42,7 @@ public partial record ATMTransaction27
     [IsoId("_fA9EoK5FEeWCgYcWSNgX5g")]
     [DisplayName("Exception")]
     [IsoXmlTag("Xcptn")]
-    public SimpleValueList<FailureReason8Code> Exception { get; init; } = new SimpleValueList<FailureReason8Code>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<FailureReason8Code> Exception { get; init; } = [];
     // ID for the above is _fA9EoK5FEeWCgYcWSNgX5g
     
     /// <summary>

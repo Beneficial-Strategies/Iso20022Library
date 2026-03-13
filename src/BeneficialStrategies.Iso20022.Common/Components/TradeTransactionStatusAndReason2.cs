@@ -54,7 +54,7 @@ public partial record TradeTransactionStatusAndReason2
     [IsoXmlTag("Rjctd")]
     [MinLength(1)]
     [MaxLength(100)]
-    public ValueList<RejectedCancellationStatusReason1Choice_> Rejected { get; init; } = new ValueList<RejectedCancellationStatusReason1Choice_>(){};
+    public ValueList<RejectedCancellationStatusReason1Choice_> Rejected { get; init; } = [];
     
     
     #nullable disable

@@ -79,7 +79,7 @@ public partial record InvestmentAccountOwnershipInformation8
     [IsoXmlTag("ModfdInvstrPrflVldtn")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<ModificationScope19> ModifiedInvestorProfileValidation { get; init; } = new ValueList<ModificationScope19>(){};
+    public ValueList<ModificationScope19> ModifiedInvestorProfileValidation { get; init; } = [];
     
     /// <summary>
     /// Details about the MiFID classification of the account owner.

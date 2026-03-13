@@ -57,7 +57,7 @@ public partial record CardPaymentDataSet24
     [IsoId("_1-gPaQx4Eeqdx6buGpCCQw")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public ValueList<TransactionTotals7> TransactionTotals { get; init; } = new ValueList<TransactionTotals7>(){}; // Warning: Don't know multiplicity.
+    public ValueList<TransactionTotals7> TransactionTotals { get; init; } = [];
     // ID for the above is _1-gPaQx4Eeqdx6buGpCCQw
     
     /// <summary>

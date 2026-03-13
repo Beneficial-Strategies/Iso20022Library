@@ -105,7 +105,7 @@ public partial record SecuritiesBalanceTransparencyReportStatusAdviceV01 : IOute
     [IsoXmlTag("NbOfItmsPerSts")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<NumberOfItemsPerStatus1> NumberOfItemsPerStatus { get; init; } = new ValueList<NumberOfItemsPerStatus1>(){};
+    public ValueList<NumberOfItemsPerStatus1> NumberOfItemsPerStatus { get; init; } = [];
     
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.

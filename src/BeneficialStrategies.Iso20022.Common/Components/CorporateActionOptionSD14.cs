@@ -143,7 +143,7 @@ public partial record CorporateActionOptionSD14
     [IsoXmlTag("TaxCtgy")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<TaxCategory1> TaxCategory { get; init; } = new ValueList<TaxCategory1>(){};
+    public ValueList<TaxCategory1> TaxCategory { get; init; } = [];
     
     /// <summary>
     /// Indicates how fractional positions will be handled for events with prorated options.
@@ -170,7 +170,7 @@ public partial record CorporateActionOptionSD14
     [IsoXmlTag("OptnConds")]
     [MinLength(0)]
     [MaxLength(6)]
-    public ValueList<OptionConditions1> OptionConditions { get; init; } = new ValueList<OptionConditions1>(){};
+    public ValueList<OptionConditions1> OptionConditions { get; init; } = [];
     
     
     #nullable disable

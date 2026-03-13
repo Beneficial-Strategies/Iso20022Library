@@ -24,7 +24,7 @@ public partial record StoredValueRequest3
     [IsoId("_74xWwQxqEeqdx6buGpCCQw")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public ValueList<StoredValueData3> Data { get; init; } = new ValueList<StoredValueData3>(){}; // Warning: Don't know multiplicity.
+    public ValueList<StoredValueData3> Data { get; init; } = [];
     // ID for the above is _74xWwQxqEeqdx6buGpCCQw
     
     

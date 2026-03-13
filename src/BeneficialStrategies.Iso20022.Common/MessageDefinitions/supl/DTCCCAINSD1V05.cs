@@ -76,7 +76,7 @@ public partial record DTCCCAINSD1V05 : IOuterRecord
     [IsoXmlTag("TaxCtgy")]
     [MinLength(0)]
     [MaxLength(99)]
-    public ValueList<TaxCategory2> TaxCategory { get; init; } = new ValueList<TaxCategory2>(){};
+    public ValueList<TaxCategory2> TaxCategory { get; init; } = [];
     
     /// <summary>
     /// DTC (The Depository Trust Corporation) foreign currency payment service wire payment instruction.

@@ -47,7 +47,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice
         [IsoId("_Ti7gxxrYEeOVR9VN6fAMUg")]
         [DisplayName("Breakdown By Purchase Order")]
         [IsoXmlTag("BrkdwnByPurchsOrdr")]
-        public ValueList<ReportLine7> BreakdownByPurchaseOrder { get; init; } = new ValueList<ReportLine7>(){}; // Warning: Don't know multiplicity.
+        public ValueList<ReportLine7> BreakdownByPurchaseOrder { get; init; } = [];
         // ID for the above is _Ti7gxxrYEeOVR9VN6fAMUg
         
         

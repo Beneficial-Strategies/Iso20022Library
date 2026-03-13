@@ -83,7 +83,7 @@ public partial record AlternativeFundsAccountingStatementOfHoldingsV01 : IOuterR
     [IsoXmlTag("RltdRef")]
     [MinLength(0)]
     [MaxLength(2)]
-    public ValueList<AdditionalReference4> RelatedReference { get; init; } = new ValueList<AdditionalReference4>(){};
+    public ValueList<AdditionalReference4> RelatedReference { get; init; } = [];
     
     /// <summary>
     /// Pagination of the message.
@@ -117,7 +117,7 @@ public partial record AlternativeFundsAccountingStatementOfHoldingsV01 : IOuterR
     [IsoXmlTag("RltdPtyDtls")]
     [MinLength(0)]
     [MaxLength(10)]
-    public ValueList<Intermediary17> RelatedPartyDetails { get; init; } = new ValueList<Intermediary17>(){};
+    public ValueList<Intermediary17> RelatedPartyDetails { get; init; } = [];
     
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities account.

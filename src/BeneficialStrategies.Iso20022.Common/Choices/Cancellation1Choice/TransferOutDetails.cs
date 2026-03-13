@@ -31,7 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation1Choice
         [IsoId("_flsfWRgfEeK-_89we2b-bA")]
         [DisplayName("Transfer Details")]
         [IsoXmlTag("TrfDtls")]
-        public ValueList<Transfer20> TransferDetails { get; init; } = new ValueList<Transfer20>(){}; // Warning: Don't know multiplicity.
+        public ValueList<Transfer20> TransferDetails { get; init; } = [];
         // ID for the above is _flsfWRgfEeK-_89we2b-bA
         
         /// <summary>

@@ -33,7 +33,7 @@ public partial record EnvelopedData3
     [IsoId("_sz83My9fEeOlZIh7PImd0A")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
-    public ValueList<Recipient3Choice_> Recipient { get; init; } = new ValueList<Recipient3Choice_>(){}; // Warning: Don't know multiplicity.
+    public ValueList<Recipient3Choice_> Recipient { get; init; } = [];
     // ID for the above is _sz83My9fEeOlZIh7PImd0A
     
     /// <summary>

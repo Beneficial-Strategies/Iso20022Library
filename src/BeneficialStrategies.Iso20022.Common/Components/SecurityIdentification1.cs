@@ -78,7 +78,7 @@ public partial record SecurityIdentification1
     [IsoId("_Scf1p9p-Ed-ak6NoX_4Aeg_159174373")]
     [DisplayName("Registered Distribution Country")]
     [IsoXmlTag("RegdDstrbtnCtry")]
-    public SimpleValueList<string> RegisteredDistributionCountry { get; init; } = new SimpleValueList<string>(){}; // Warning: Don't know multiplicity.
+    public SimpleValueList<string> RegisteredDistributionCountry { get; init; } = [];
     // ID for the above is _Scf1p9p-Ed-ak6NoX_4Aeg_159174373
     
     

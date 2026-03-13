@@ -51,7 +51,7 @@ public partial record Meeting6
     [IsoXmlTag("Lctn")]
     [MinLength(1)]
     [MaxLength(5)]
-    public ValueList<LocationFormat1Choice_> Location { get; init; } = new ValueList<LocationFormat1Choice_>(){};
+    public ValueList<LocationFormat1Choice_> Location { get; init; } = [];
     
     /// <summary>
     /// Minimum quantity of securities required to hold a meeting.

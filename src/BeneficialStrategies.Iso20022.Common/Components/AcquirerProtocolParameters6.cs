@@ -24,7 +24,7 @@ public partial record AcquirerProtocolParameters6
     [IsoId("_kzSYwTZ4EeOP_KvUKe29ng")]
     [DisplayName("Acquirer Identification")]
     [IsoXmlTag("AcqrrId")]
-    public ValueList<GenericIdentification32> AcquirerIdentification { get; init; } = new ValueList<GenericIdentification32>(){}; // Warning: Don't know multiplicity.
+    public ValueList<GenericIdentification32> AcquirerIdentification { get; init; } = [];
     // ID for the above is _kzSYwTZ4EeOP_KvUKe29ng
     
     /// <summary>

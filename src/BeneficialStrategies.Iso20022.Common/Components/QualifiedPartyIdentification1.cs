@@ -36,7 +36,7 @@ public partial record QualifiedPartyIdentification1
     [IsoId("_OTgzMjU1-AOSNFX-8224494")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public ValueList<SingleQualifiedPartyIdentification1> Party { get; init; } = new ValueList<SingleQualifiedPartyIdentification1>(){}; // Warning: Don't know multiplicity.
+    public ValueList<SingleQualifiedPartyIdentification1> Party { get; init; } = [];
     // ID for the above is _OTgzMjU1-AOSNFX-8224494
     
     /// <summary>

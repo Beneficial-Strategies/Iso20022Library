@@ -40,7 +40,7 @@ public partial record MaintenanceDelegationResponse4
     [IsoId("_CJrFVQ01EeqUVL7sB4m7NA")]
     [DisplayName("Delegation Response")]
     [IsoXmlTag("DlgtnRspn")]
-    public ValueList<MaintenanceDelegation9> DelegationResponse { get; init; } = new ValueList<MaintenanceDelegation9>(){}; // Warning: Don't know multiplicity.
+    public ValueList<MaintenanceDelegation9> DelegationResponse { get; init; } = [];
     // ID for the above is _CJrFVQ01EeqUVL7sB4m7NA
     
     
