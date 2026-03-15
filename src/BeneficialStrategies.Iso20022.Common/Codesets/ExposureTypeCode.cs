@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_alvNodp-Ed-ak6NoX_4Aeg_1976296742")]
 [Description(@"Short sale exposure.")]
 [Derivations(typeof(ExposureType4Code),typeof(ExposureType1Code),typeof(ExposureType6Code),typeof(ExposureType5Code),typeof(ExposureType8Code),typeof(ExposureType2Code))]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum ExposureTypeCode
 {
     /// <summary>

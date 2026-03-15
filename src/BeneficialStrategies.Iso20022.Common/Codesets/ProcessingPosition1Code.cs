@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aKxI5tp-Ed-ak6NoX_4Aeg_1002961302")]
 [Description(@"Indicates when an instruction is to be executed relative to a linked instruction.")]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum ProcessingPosition1Code
 {
     /// <summary>

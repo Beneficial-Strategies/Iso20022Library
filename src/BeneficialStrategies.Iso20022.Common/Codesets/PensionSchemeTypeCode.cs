@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_OIg3gE4OEeiQHa-q1Uephw")]
 [Description(@"Specifies a type of pension scheme.")]
 [Derivations(typeof(PensionSchemeType1Code))]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum PensionSchemeTypeCode
 {
     /// <summary>

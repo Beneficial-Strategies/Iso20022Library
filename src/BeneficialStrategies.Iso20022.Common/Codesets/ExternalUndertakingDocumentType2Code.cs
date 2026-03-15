@@ -14,7 +14,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_-MrKAm7iEeKo25nLKvGr8w_-463638576")]
 [Description(@"Specifies the external undertaking document type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
 [DerivedFrom(typeof(ExternalUndertakingDocumentTypeCode_Obsolete))]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum ExternalUndertakingDocumentType2Code
 {
     /// <summary>

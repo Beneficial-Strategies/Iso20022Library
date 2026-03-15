@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aLgvwtp-Ed-ak6NoX_4Aeg_-1244080292")]
 [Description(@"Specifies the type of security holders meeting.")]
-[Derivations(typeof(MeetingType1Code),typeof(MeetingType2Code),typeof(MeetingType3Code))]
+[Derivations(typeof(MeetingType2Code),typeof(MeetingType3Code))]
 public enum MeetingTypeCode
 {
     /// <summary>

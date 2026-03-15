@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Amount of money for which goods or services are offered, sold, or bought.
 /// </summary>
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_Qfn5Qtp-Ed-ak6NoX_4Aeg_-214178771")]
 [DisplayName("Unit Price")]
 public partial record UnitPrice9

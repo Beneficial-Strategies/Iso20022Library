@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aVM3RNp-Ed-ak6NoX_4Aeg_-1321527474")]
 [Description(@"Specifies the reason for cancelling a meeting.")]
-[Derivations(typeof(MeetingCancellationReason1Code),typeof(MeetingCancellationReason2Code))]
+[Derivations(typeof(MeetingCancellationReason2Code))]
 public enum MeetingCancellationReasonCode
 {
     /// <summary>

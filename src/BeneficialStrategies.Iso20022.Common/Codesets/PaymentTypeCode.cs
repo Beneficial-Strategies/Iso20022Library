@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Z8T2KNp-Ed-ak6NoX_4Aeg_1153774680")]
 [Description(@"Specifies the type, or nature, of the payment.")]
-[Derivations(typeof(PaymentType3Code),typeof(PaymentType1Code),typeof(PaymentType4Code))]
+[Derivations(typeof(PaymentType3Code),typeof(PaymentType4Code))]
 public enum PaymentTypeCode
 {
     /// <summary>

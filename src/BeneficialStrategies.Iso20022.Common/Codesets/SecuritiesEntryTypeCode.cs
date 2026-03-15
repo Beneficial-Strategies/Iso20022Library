@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZFLZ2Np-Ed-ak6NoX_4Aeg_1201325476")]
 [Description(@"Specifies the type of securities entry on an account.")]
-[Derivations(typeof(SecuritiesEntryType1Code),typeof(SecuritiesEntryType2Code),typeof(SecuritiesEntryType3Code))]
+[Derivations(typeof(SecuritiesEntryType2Code),typeof(SecuritiesEntryType3Code))]
 public enum SecuritiesEntryTypeCode
 {
     /// <summary>

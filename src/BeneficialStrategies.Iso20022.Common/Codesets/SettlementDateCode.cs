@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_ZLby19p-Ed-ak6NoX_4Aeg_336259131")]
 [Description(@"Specifies the date of settlement, in coded form.")]
 [Derivations(typeof(SettlementDate5Code),typeof(SettlementDate6Code),typeof(SettlementDate4Code),typeof(SettlementDate1Code),typeof(SettlementDate2Code),typeof(SettlementDate3Code))]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum SettlementDateCode
 {
     /// <summary>

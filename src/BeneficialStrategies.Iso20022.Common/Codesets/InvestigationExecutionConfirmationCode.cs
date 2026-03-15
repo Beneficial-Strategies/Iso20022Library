@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_abdQQtp-Ed-ak6NoX_4Aeg_-1445551000")]
 [Description(@"Indicates the result of an investigation.")]
-[Derivations(typeof(InvestigationExecutionConfirmation4Code),typeof(InvestigationExecutionConfirmation1Code),typeof(InvestigationExecutionConfirmation5Code),typeof(InvestigationExecutionConfirmation2Code),typeof(InvestigationExecutionConfirmation3Code))]
+[Derivations(typeof(InvestigationExecutionConfirmation4Code),typeof(InvestigationExecutionConfirmation1Code),typeof(InvestigationExecutionConfirmation2Code),typeof(InvestigationExecutionConfirmation3Code))]
 public enum InvestigationExecutionConfirmationCode
 {
     /// <summary>

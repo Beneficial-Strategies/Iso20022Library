@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_azANldp-Ed-ak6NoX_4Aeg_-684562382")]
 [Description(@"Specifies the place of delivery.")]
 [Derivations(typeof(DeliveryPlace1Code))]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum DeliveryPlaceCode
 {
     /// <summary>

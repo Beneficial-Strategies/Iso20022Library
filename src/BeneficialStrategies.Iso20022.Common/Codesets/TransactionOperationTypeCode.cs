@@ -13,7 +13,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_0tTA3JfpEeSfnc-VXAEapg")]
 [Description(@"Specifies the type of process related to a specific transaction.")]
 [Derivations(typeof(TransactionOperationType3Code),typeof(TransactionOperationType7Code),typeof(TransactionOperationType6Code),typeof(TransactionOperationType4Code),typeof(TransactionOperationType5Code),typeof(TransactionOperationType1Code))]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum TransactionOperationTypeCode
 {
     /// <summary>

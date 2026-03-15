@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Indicates the reason for the UnableToApply. It can be missing and/or incorrect information.
 /// </summary>
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_T-ZtStp-Ed-ak6NoX_4Aeg_-1840697394")]
 [DisplayName("Missing Or Incorrect Information")]
 public partial record MissingOrIncorrectInformation1

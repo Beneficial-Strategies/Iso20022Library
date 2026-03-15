@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Specifies the quantity of a product in a trade transaction.
 /// </summary>
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_SqpmZdp-Ed-ak6NoX_4Aeg_-972518664")]
 [DisplayName("Quantity")]
 public partial record Quantity4

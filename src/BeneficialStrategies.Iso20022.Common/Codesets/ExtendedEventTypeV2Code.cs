@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_eJLcqHnhEeO2o_OAyvnbZw")]
 [Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.")]
-[Derivations(typeof(ExtendedEventType2Code),typeof(ExtendedEventType3Code),typeof(ExtendedEventType4Code),typeof(ExtendedEventType6Code),typeof(ExtendedEventType7Code))]
+[Derivations(typeof(ExtendedEventType2Code),typeof(ExtendedEventType3Code),typeof(ExtendedEventType6Code),typeof(ExtendedEventType7Code))]
 public enum ExtendedEventTypeV2Code
 {
     /// <summary>

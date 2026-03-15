@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Party that provides services to investors relating to financial products.
 /// </summary>
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_QN5QFtp-Ed-ak6NoX_4Aeg_-1242436209")]
 [DisplayName("Intermediary")]
 public partial record Intermediary9

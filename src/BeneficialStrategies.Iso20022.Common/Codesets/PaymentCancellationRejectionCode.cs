@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Zy7Qqdp-Ed-ak6NoX_4Aeg_1329401919")]
 [Description(@"Returned when a request for cancellation cannot be executed.")]
-[Derivations(typeof(PaymentCancellationRejection1Code),typeof(PaymentCancellationRejection2Code),typeof(PaymentCancellationRejection3Code))]
+[Derivations(typeof(PaymentCancellationRejection1Code),typeof(PaymentCancellationRejection2Code))]
 public enum PaymentCancellationRejectionCode
 {
     /// <summary>

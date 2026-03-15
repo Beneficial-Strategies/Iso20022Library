@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_brLLsNp-Ed-ak6NoX_4Aeg_1487774282")]
 [Description(@"Specifies the type of account ownership.")]
-[Derivations(typeof(AccountOwnershipType5Code),typeof(AccountOwnershipType3Code),typeof(AccountOwnershipType6Code),typeof(AccountOwnershipType4Code),typeof(AccountOwnershipType2Code))]
+[Derivations(typeof(AccountOwnershipType5Code),typeof(AccountOwnershipType3Code),typeof(AccountOwnershipType6Code),typeof(AccountOwnershipType4Code))]
 public enum AccountOwnershipTypeCode
 {
     /// <summary>

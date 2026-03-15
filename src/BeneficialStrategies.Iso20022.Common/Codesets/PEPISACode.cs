@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aGcpkdp-Ed-ak6NoX_4Aeg_1893653072")]
 [Description(@"Specifies the type of Transfer, PEP or ISA.")]
-[Derivations(typeof(PEPISA1Code))]
+[Derivations()]
 public enum PEPISACode
 {
     /// <summary>

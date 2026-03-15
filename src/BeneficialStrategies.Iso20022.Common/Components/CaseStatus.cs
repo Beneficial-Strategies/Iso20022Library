@@ -12,6 +12,7 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// <summary>
 /// Defines the status of an investigation case.
 /// </summary>
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_VJDih9p-Ed-ak6NoX_4Aeg_964129193")]
 [DisplayName("Case Status")]
 public partial record CaseStatus

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_TVWQDwEcEeCQm6a_G2yO_w_-259543426")]
 [Description(@"Identification or qualification of the type of amount.")]
-[Derivations(typeof(TypeOfAmount11Code),typeof(TypeOfAmount7Code),typeof(TypeOfAmount19Code),typeof(TypeOfAmount6Code),typeof(TypeOfAmount10Code),typeof(TypeOfAmount3Code),typeof(TypeOfAmount4Code),typeof(TypeOfAmount5Code),typeof(TypeOfAmount20Code),typeof(TypeOfAmount18Code),typeof(TypeOfAmount1Code),typeof(TypeOfAmount21Code),typeof(TypeOfAmount22Code),typeof(TypeOfAmount17Code),typeof(TypeOfAmount8Code),typeof(TypeOfAmount9Code),typeof(TypeOfAmount2Code),typeof(TypeOfAmount12Code))]
+[Derivations(typeof(TypeOfAmount11Code),typeof(TypeOfAmount7Code),typeof(TypeOfAmount19Code),typeof(TypeOfAmount6Code),typeof(TypeOfAmount10Code),typeof(TypeOfAmount3Code),typeof(TypeOfAmount4Code),typeof(TypeOfAmount5Code),typeof(TypeOfAmount20Code),typeof(TypeOfAmount18Code),typeof(TypeOfAmount1Code),typeof(TypeOfAmount21Code),typeof(TypeOfAmount22Code),typeof(TypeOfAmount17Code),typeof(TypeOfAmount8Code),typeof(TypeOfAmount2Code),typeof(TypeOfAmount12Code))]
 public enum TypeOfAmountCode
 {
     /// <summary>

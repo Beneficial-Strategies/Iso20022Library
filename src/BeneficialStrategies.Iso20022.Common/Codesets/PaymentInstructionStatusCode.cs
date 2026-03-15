@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Zzq3h9p-Ed-ak6NoX_4Aeg_676865279")]
 [Description(@"Specifies the state of a payment.")]
-[Derivations(typeof(PendingStatus4Code),typeof(FinalStatus1Code),typeof(PendingStatus3Code),typeof(FinalStatusCode),typeof(PaymentInstructionStatus1Code),typeof(PendingStatus1Code))]
+[Derivations(typeof(PendingStatus4Code),typeof(FinalStatus1Code),typeof(FinalStatusCode))]
 public enum PaymentInstructionStatusCode
 {
     /// <summary>

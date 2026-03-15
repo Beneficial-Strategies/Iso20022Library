@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Z0uAZ9p-Ed-ak6NoX_4Aeg_-1179991966")]
 [Description(@"Indicates the reason for rejecting a modification.")]
-[Obsolete("Formally obsoleted in the ISO 20022 specification. No removal date recorded.")]
+[Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum PaymentModificationRejection1Code
 {
     /// <summary>

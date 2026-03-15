@@ -1,6 +1,5 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using System.Reflection;
 using System.Runtime.Serialization;
 
 namespace BeneficialStrategies.Iso20022.Codesets;
@@ -12,7 +11,6 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_mDriYI9GEeqMo4JxiuZGSw")]
 [Description(@"Specifies the tenor of the interest rate index (when the interest rate is paid out).")]
-[DerivedFrom(typeof(InterestRateIndexTenorCode_TO_MERGE))]
 public enum InterestRateIndexTenor2Code
 {
     /// <summary>
@@ -22,8 +20,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "INDA")]
     [IsoId("_fwbwwo9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is IntraDay.")]
-    IntraDay = InterestRateIndexTenorCode_TO_MERGE.IntraDay, // same ordinal as derivation source for type conversions
-    
+    IntraDay = 0,
+
     /// <summary>
     /// Tenor is 1 month.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -31,8 +29,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "MNTH")]
     [IsoId("_f5keoo9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 1 month.")]
-    Month1 = InterestRateIndexTenorCode_TO_MERGE.Month1, // same ordinal as derivation source for type conversions
-    
+    Month1 = 1,
+
     /// <summary>
     /// Tenor is 12 months.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -40,8 +38,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "YEAR")]
     [IsoId("_gA0WIo9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 12 months.")]
-    Month12 = InterestRateIndexTenorCode_TO_MERGE.Month12, // same ordinal as derivation source for type conversions
-    
+    Month12 = 2,
+
     /// <summary>
     /// Tenor is 2 months.
     /// Encoded/decoded by serializers as &quot;TOMN&quot;.
@@ -49,8 +47,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "TOMN")]
     [IsoId("_gGHs4o9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 2 months.")]
-    Month2 = InterestRateIndexTenorCode_TO_MERGE.Month2, // same ordinal as derivation source for type conversions
-    
+    Month2 = 3,
+
     /// <summary>
     /// Tenor is 3 months.
     /// Encoded/decoded by serializers as &quot;QUTR&quot;.
@@ -58,8 +56,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "QUTR")]
     [IsoId("_gMgowo9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 3 months.")]
-    Month3 = InterestRateIndexTenorCode_TO_MERGE.Month3, // same ordinal as derivation source for type conversions
-    
+    Month3 = 4,
+
     /// <summary>
     /// Tenor is 4 months.
     /// Encoded/decoded by serializers as &quot;FOMN&quot;.
@@ -67,8 +65,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "FOMN")]
     [IsoId("_gSt-cI9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 4 months.")]
-    Month4 = InterestRateIndexTenorCode_TO_MERGE.Month4, // same ordinal as derivation source for type conversions
-    
+    Month4 = 5,
+
     /// <summary>
     /// Tenor is 6 months.
     /// Encoded/decoded by serializers as &quot;SEMI&quot;.
@@ -76,8 +74,8 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "SEMI")]
     [IsoId("_ga2mwo9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 6 months.")]
-    Month6 = InterestRateIndexTenorCode_TO_MERGE.Month6, // same ordinal as derivation source for type conversions
-    
+    Month6 = 6,
+
     /// <summary>
     /// Tenor is overnght.
     /// Encoded/decoded by serializers as &quot;OVNG&quot;.
@@ -85,17 +83,17 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "OVNG")]
     [IsoId("_grH3Yo9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is overnght.")]
-    Overnight = InterestRateIndexTenorCode_TO_MERGE.Overnight, // same ordinal as derivation source for type conversions
-    
+    Overnight = 7,
+
     /// <summary>
-    /// Tenor is 1 week.	
+    /// Tenor is 1 week.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
     /// </summary>
     [EnumMember(Value = "WEEK")]
     [IsoId("_gzVYMY9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 1 week.	")]
-    Week1 = InterestRateIndexTenorCode_TO_MERGE.Week1, // same ordinal as derivation source for type conversions
-    
+    Week1 = 8,
+
     /// <summary>
     /// Tenor is 2 weeks.
     /// Encoded/decoded by serializers as &quot;TOWK&quot;.
@@ -103,6 +101,6 @@ public enum InterestRateIndexTenor2Code
     [EnumMember(Value = "TOWK")]
     [IsoId("_g5Ok0Y9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 2 weeks.")]
-    Week2 = InterestRateIndexTenorCode_TO_MERGE.Week2, // same ordinal as derivation source for type conversions
-    
+    Week2 = 9,
+
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aN5VZdp-Ed-ak6NoX_4Aeg_-927913400")]
 [Description(@"Specifies if the occurrence of the event contained in the notification is confirmed or unconfirmed. Details of the event can be complete or incomplete.")]
-[Derivations(typeof(NotificationStatus1Code),typeof(NotificationStatus2Code))]
+[Derivations(typeof(NotificationStatus2Code))]
 public enum NotificationStatusCode
 {
     /// <summary>
