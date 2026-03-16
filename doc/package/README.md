@@ -106,7 +106,7 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
                     InstructionIdentification = "ABC/120928/CCT001/1",
                     EndToEndIdentification = "ABC/4562/2012-09-08",
                 },
-                Amount = new Beneficial.Choices.AmountType4Choice.InstructedAmount { Value = 10_000_000m },
+                Amount = new Beneficial.Choices.AmountType4Choice.InstructedAmount { Currency = "USD", Amount = 10_000_000m },
                 ChargeBearer = ChargeBearerType1Code.Shared,
                 CreditorAgent = new()
                 {
@@ -125,7 +125,7 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
                         AddressLine = [
                             "Corn Exchange 5th Floor",
                             "Mark Lane 55",
-                            "EC#R7NE London",
+                            "EC3R 7NE London",
                             "GB"
                             ]
                     },
@@ -145,26 +145,30 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
                 },
                 RemittanceInformation = new()
                 {
-                    Structured = 
-                        new()
-                        {
-                            ReferredDocumentInformation =
-                                new()
-                                {
-                                    Type = new()
-                                    {
-                                        CodeOrProprietary = new Beneficial.Choices.ReferredDocumentType3Choice.Code
+                    Structured =
+                        [
+                            new()
+                            {
+                                ReferredDocumentInformation =
+                                    [
+                                        new()
                                         {
-                                            Value = DocumentType6Code.CommercialInvoice,
-                                        },
-                                    },
-                                    Number = "4562",
-                                    RelatedDate = new DateOnly(2012,09,08),
-                                    // Optionally add line details here
-                                }
-                            ,
-                            // Add more types of remittances here, use shift-spacebar for pop-up help
-                        }
+                                            Type = new()
+                                            {
+                                                CodeOrProprietary = new Beneficial.Choices.ReferredDocumentType3Choice.Code
+                                                {
+                                                    Value = DocumentType6Code.CommercialInvoice,
+                                                },
+                                            },
+                                            Number = "4562",
+                                            RelatedDate = new DateOnly(2012,09,08),
+                                            // Optionally add line details here
+                                        }
+                                    ]
+                                ,
+                                // Add more types of remittances here, use shift-spacebar for pop-up help
+                            }
+                        ]
                     ,
                     // Optionally add Unstructured information here
                 },
@@ -178,6 +182,135 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
 
 // Now you have data structured in a way you can send to a trading partner or financial institution.
 
+```
+
+## Serializing to XML
+
+Add the serializer namespace to your usings:
+
+```C#
+using BeneficialStrategies.Iso20022; // for Iso20022XmlSerializer
+```
+
+Then serialize:
+
+```C#
+string xml = Iso20022XmlSerializer.SerializeToString(myMessage);
+```
+
+The resulting XML looks like this:
+
+```xml
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.11">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>ABC/120928/CCT001</MsgId>
+      <CreDtTm>2012-09-28T14:07:00</CreDtTm>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>11500000</CtrlSum>
+      <InitgPty>
+        <Nm>ABC Corporation</Nm>
+        <PstlAdr>
+          <StrtNm>Times Square</StrtNm>
+          <BldgNb>7</BldgNb>
+          <PstCd>NY 10036</PstCd>
+          <TwnNm>New York</TwnNm>
+          <Ctry>US</Ctry>
+        </PstlAdr>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>ABC/086</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <BtchBookg>FALSE</BtchBookg>
+      <ReqdExctnDt>
+        <Dt>2012-09-29</Dt>
+      </ReqdExctnDt>
+      <Dbtr>
+        <Nm>ABC Corporation</Nm>
+        <PstlAdr>
+          <StrtNm>Times Square</StrtNm>
+          <BldgNb>7</BldgNb>
+          <PstCd>NY 10036</PstCd>
+          <TwnNm>New York</TwnNm>
+          <Ctry>US</Ctry>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <Othr>
+            <Id>00125574999</Id>
+          </Othr>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BICFI>BBBBUS33</BICFI>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>ABC/120928/CCT001/1</InstrId>
+          <EndToEndId>ABC/4562/2012-09-08</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="USD">10000000</InstdAmt>
+        </Amt>
+        <ChrgBr>SHAR</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BICFI>AAAAGB2L</BICFI>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>DEF Electronics</Nm>
+          <PstlAdr>
+            <AdrLine>Corn Exchange 5th Floor</AdrLine>
+            <AdrLine>Mark Lane 55</AdrLine>
+            <AdrLine>EC3R 7NE London</AdrLine>
+            <AdrLine>GB</AdrLine>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>23683707994215</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <Purp>
+          <Cd>IPDO</Cd>
+        </Purp>
+        <RmtInf>
+          <Strd>
+            <RfrdDocInf>
+              <Tp>
+                <CdOrPrtry>
+                  <Cd>CINV</Cd>
+                </CdOrPrtry>
+              </Tp>
+              <Nb>4562</Nb>
+              <RltdDt>2012-09-08</RltdDt>
+            </RfrdDocInf>
+          </Strd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+```
+
+## Deserializing from XML
+
+Given the XML string above (or received from a counterparty), deserialize it back to a strongly-typed record:
+
+```C#
+var received = Iso20022XmlSerializer.Deserialize<Beneficial.pain.CustomerCreditTransferInitiationV11>(xml);
+
+// All fields are strongly typed and ready to use:
+string msgId      = received.GroupHeader.MessageIdentification;  // "ABC/120928/CCT001"
+string debtorName = received.PaymentInformation.Debtor.Name!;   // "ABC Corporation"
+int    txCount    = received.PaymentInformation.CreditTransferTransactionInformation.Count; // 1
 ```
 
 

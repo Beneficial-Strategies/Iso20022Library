@@ -140,78 +140,84 @@ var myMessage = new Beneficial.pain.CustomerCreditTransferInitiationV11
             },
         },
         CreditTransferTransactionInformation =
-            new()
-            {
-                PaymentIdentification = new ()
+            [
+                new()
                 {
-                    InstructionIdentification = "ABC/120928/CCT001/1",
-                    EndToEndIdentification = "ABC/4562/2012-09-08",
-                },
-                Amount = new Beneficial.Choices.AmountType4Choice.InstructedAmount { Value = 10_000_000m },
-                ChargeBearer = ChargeBearerType1Code.Shared,
-                CreditorAgent = new()
-                {
-                    FinancialInstitutionIdentification = new()
+                    PaymentIdentification = new ()
                     {
-                        BICFI = "AAAAGB2L",
-                        // Tons of more identifying information you can optionally add here
+                        InstructionIdentification = "ABC/120928/CCT001/1",
+                        EndToEndIdentification = "ABC/4562/2012-09-08",
                     },
-                    // Optionally add branch information here
-                },
-                Creditor = new()
-                {
-                    Name = "DEF Electronics",
-                    PostalAddress = new()
+                    Amount = new Beneficial.Choices.AmountType4Choice.InstructedAmount { Currency = "USD", Amount = 10_000_000m },
+                    ChargeBearer = ChargeBearerType1Code.Shared,
+                    CreditorAgent = new()
                     {
-                        AddressLine = [
-                            "Corn Exchange 5th Floor",
-                            "Mark Lane 55",
-                            "EC#R7NE London",
-                            "GB"
-                            ]
-                    },
-                    // Optionally add ContactDetails, CountryOfResidence, Identification here
-                },
-                CreditorAccount = new()
-                {
-                    Identification = new Beneficial.Choices.AccountIdentification4Choice.Other
-                    {
-                        Identification = "23683707994215",
-                        // Optionally add issuer, schema name here 
-                    },
-                },
-                Purpose = new Beneficial.Choices.Purpose2Choice.Code
-                {
-                    Value = ExternalPurpose1Code.InstantPaymentsForDonations, 
-                },
-                RemittanceInformation = new()
-                {
-                    Structured = 
-                        new()
+                        FinancialInstitutionIdentification = new()
                         {
-                            ReferredDocumentInformation =
+                            BICFI = "AAAAGB2L",
+                            // Tons of more identifying information you can optionally add here
+                        },
+                        // Optionally add branch information here
+                    },
+                    Creditor = new()
+                    {
+                        Name = "DEF Electronics",
+                        PostalAddress = new()
+                        {
+                            AddressLine = [
+                                "Corn Exchange 5th Floor",
+                                "Mark Lane 55",
+                                "EC3R 7NE London",
+                                "GB"
+                                ]
+                        },
+                        // Optionally add ContactDetails, CountryOfResidence, Identification here
+                    },
+                    CreditorAccount = new()
+                    {
+                        Identification = new Beneficial.Choices.AccountIdentification4Choice.Other
+                        {
+                            Identification = "23683707994215",
+                            // Optionally add issuer, schema name here
+                        },
+                    },
+                    Purpose = new Beneficial.Choices.Purpose2Choice.Code
+                    {
+                        Value = ExternalPurpose1Code.InstantPaymentsForDonations,
+                    },
+                    RemittanceInformation = new()
+                    {
+                        Structured =
+                            [
                                 new()
                                 {
-                                    Type = new()
-                                    {
-                                        CodeOrProprietary = new Beneficial.Choices.ReferredDocumentType3Choice.Code
-                                        {
-                                            Value = DocumentType6Code.CommercialInvoice,
-                                        },
-                                    },
-                                    Number = "4562",
-                                    RelatedDate = new DateOnly(2012,09,08),
-                                    // Optionally add line details here
+                                    ReferredDocumentInformation =
+                                        [
+                                            new()
+                                            {
+                                                Type = new()
+                                                {
+                                                    CodeOrProprietary = new Beneficial.Choices.ReferredDocumentType3Choice.Code
+                                                    {
+                                                        Value = DocumentType6Code.CommercialInvoice,
+                                                    },
+                                                },
+                                                Number = "4562",
+                                                RelatedDate = new DateOnly(2012,09,08),
+                                                // Optionally add line details here
+                                            }
+                                        ]
+                                    ,
+                                    // Add more types of remittances here, use shift-spacebar for pop-up help
                                 }
-                            ,
-                            // Add more types of remittances here, use shift-spacebar for pop-up help
-                        }
-                    ,
-                    // Optionally add Unstructured information here
+                            ]
+                        ,
+                        // Optionally add Unstructured information here
+                    },
+                    // LOTS more stuff you can add at this level
                 },
-                // LOTS more stuff you can add at this level
-            },
-            // LOTS more you can add at this level
+                // Add additional transactions here
+            ]
     },
     // Optionally add Supplementary data at this level
 };
@@ -222,7 +228,136 @@ Things to notice:
 
 - The compiler helps you do the right thing. Since it's all strongly-typed, you won't have a problem putting one System.Object instance where a different System.Object is expected.
 - Notice intellisense gives you context about the transaction.
-- Notice that date/time values are strongly typed. No worries about whether some string value is "yyyyMMdd" or "MMddYYY" or whatever. 
-- Shift-Spacebar is your friend in finding other types of message content to add at various levels. 
+- Notice that date/time values are strongly typed. No worries about whether some string value is "yyyyMMdd" or "MMddYYY" or whatever.
+- Shift-Spacebar is your friend in finding other types of message content to add at various levels.
 - Notice if you get bored with this message, there's over 2600 that are just as good, maybe better!
+
+## Serializing to XML
+
+Add one more using at the top of your file:
+
+```C#
+using BeneficialStrategies.Iso20022; // for Iso20022XmlSerializer
+```
+
+Then serialize the message to an XML string:
+
+```C#
+string xml = Iso20022XmlSerializer.SerializeToString(myMessage);
+```
+
+The result is a standards-compliant ISO 20022 XML document:
+
+```xml
+<Document xmlns="urn:iso:std:iso:20022:tech:xsd:pain.001.001.11">
+  <CstmrCdtTrfInitn>
+    <GrpHdr>
+      <MsgId>ABC/120928/CCT001</MsgId>
+      <CreDtTm>2012-09-28T14:07:00</CreDtTm>
+      <NbOfTxs>3</NbOfTxs>
+      <CtrlSum>11500000</CtrlSum>
+      <InitgPty>
+        <Nm>ABC Corporation</Nm>
+        <PstlAdr>
+          <StrtNm>Times Square</StrtNm>
+          <BldgNb>7</BldgNb>
+          <PstCd>NY 10036</PstCd>
+          <TwnNm>New York</TwnNm>
+          <Ctry>US</Ctry>
+        </PstlAdr>
+      </InitgPty>
+    </GrpHdr>
+    <PmtInf>
+      <PmtInfId>ABC/086</PmtInfId>
+      <PmtMtd>TRF</PmtMtd>
+      <BtchBookg>FALSE</BtchBookg>
+      <ReqdExctnDt>
+        <Dt>2012-09-29</Dt>
+      </ReqdExctnDt>
+      <Dbtr>
+        <Nm>ABC Corporation</Nm>
+        <PstlAdr>
+          <StrtNm>Times Square</StrtNm>
+          <BldgNb>7</BldgNb>
+          <PstCd>NY 10036</PstCd>
+          <TwnNm>New York</TwnNm>
+          <Ctry>US</Ctry>
+        </PstlAdr>
+      </Dbtr>
+      <DbtrAcct>
+        <Id>
+          <Othr>
+            <Id>00125574999</Id>
+          </Othr>
+        </Id>
+      </DbtrAcct>
+      <DbtrAgt>
+        <FinInstnId>
+          <BICFI>BBBBUS33</BICFI>
+        </FinInstnId>
+      </DbtrAgt>
+      <CdtTrfTxInf>
+        <PmtId>
+          <InstrId>ABC/120928/CCT001/1</InstrId>
+          <EndToEndId>ABC/4562/2012-09-08</EndToEndId>
+        </PmtId>
+        <Amt>
+          <InstdAmt Ccy="USD">10000000</InstdAmt>
+        </Amt>
+        <ChrgBr>SHAR</ChrgBr>
+        <CdtrAgt>
+          <FinInstnId>
+            <BICFI>AAAAGB2L</BICFI>
+          </FinInstnId>
+        </CdtrAgt>
+        <Cdtr>
+          <Nm>DEF Electronics</Nm>
+          <PstlAdr>
+            <AdrLine>Corn Exchange 5th Floor</AdrLine>
+            <AdrLine>Mark Lane 55</AdrLine>
+            <AdrLine>EC3R 7NE London</AdrLine>
+            <AdrLine>GB</AdrLine>
+          </PstlAdr>
+        </Cdtr>
+        <CdtrAcct>
+          <Id>
+            <Othr>
+              <Id>23683707994215</Id>
+            </Othr>
+          </Id>
+        </CdtrAcct>
+        <Purp>
+          <Cd>IPDO</Cd>
+        </Purp>
+        <RmtInf>
+          <Strd>
+            <RfrdDocInf>
+              <Tp>
+                <CdOrPrtry>
+                  <Cd>CINV</Cd>
+                </CdOrPrtry>
+              </Tp>
+              <Nb>4562</Nb>
+              <RltdDt>2012-09-08</RltdDt>
+            </RfrdDocInf>
+          </Strd>
+        </RmtInf>
+      </CdtTrfTxInf>
+    </PmtInf>
+  </CstmrCdtTrfInitn>
+</Document>
+```
+
+## Deserializing from XML
+
+Given that XML string (or one received from a counterparty), deserialize it back to a strongly-typed record:
+
+```C#
+var received = Iso20022XmlSerializer.Deserialize<Beneficial.pain.CustomerCreditTransferInitiationV11>(xml);
+
+// All fields are strongly typed and ready to use:
+string msgId      = received.GroupHeader.MessageIdentification;  // "ABC/120928/CCT001"
+string debtorName = received.PaymentInformation.Debtor.Name!;   // "ABC Corporation"
+int    txCount    = received.PaymentInformation.CreditTransferTransactionInformation.Count; // 1
+```
 
