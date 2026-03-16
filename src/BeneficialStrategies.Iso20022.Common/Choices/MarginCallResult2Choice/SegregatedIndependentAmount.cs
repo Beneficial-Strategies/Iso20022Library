@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice
     /// </summary>
     [IsoId("_9boCQqMPEeCojJW5vEuTEQ_-1606532938")]
     [DisplayName("Segregated Independent Amount")]
+    [IsoXmlTag("SgrtdIndpdntAmt")]
     public record SegregatedIndependentAmount : MarginCallResult2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate21Choice
     /// </summary>
     [IsoId("_GPqvsQ1IEeqV4s5SpzR1dQ")]
     [DisplayName("Fixed")]
+    [IsoXmlTag("Fxd")]
     public record Fixed : InterestRate21Choice_
     {
         /// <summary>

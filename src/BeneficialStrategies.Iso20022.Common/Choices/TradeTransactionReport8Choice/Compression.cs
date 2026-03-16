@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionReport8Choice
     /// </summary>
     [IsoId("_bRuGnRLBEeqctpBfTmLJnw")]
     [DisplayName("Compression")]
+    [IsoXmlTag("Cmprssn")]
     public record Compression : TradeTransactionReport8Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfileType1Choice
     /// </summary>
     [IsoId("_xfwCwCDNEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ProfileType1Choice_
     {
         /// <summary>

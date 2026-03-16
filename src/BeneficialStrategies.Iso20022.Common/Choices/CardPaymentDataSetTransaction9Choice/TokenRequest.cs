@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction9Ch
     /// </summary>
     [IsoId("_Qd_6MC_2EeugIJ3Gvoevmg")]
     [DisplayName("Token Request")]
+    [IsoXmlTag("TknReq")]
     public record TokenRequest : CardPaymentDataSetTransaction9Choice_
     {
         /// <summary>

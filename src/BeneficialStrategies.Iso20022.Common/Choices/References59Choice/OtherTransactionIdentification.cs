@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References59Choice
     /// </summary>
     [IsoId("_8ScaEZNLEeWGlc8L7oPDIg")]
     [DisplayName("Other Transaction Identification")]
+    [IsoXmlTag("OthrTxId")]
     public record OtherTransactionIdentification : References59Choice_
     {
         /// <summary>

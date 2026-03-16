@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties4Choice
     /// </summary>
     [IsoId("_tHD44xRiEeOKWo1NF21OVw")]
     [DisplayName("Trustee")]
+    [IsoXmlTag("Trstee")]
     public record Trustee : AccountParties4Choice_
     {
         /// <summary>

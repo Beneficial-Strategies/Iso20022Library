@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice
     /// </summary>
     [IsoId("_77TPQqMgEeCJ6YNENx4h-w_-1891153667")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : ExchangeRateReportOrError2Choice_
     {
         /// <summary>

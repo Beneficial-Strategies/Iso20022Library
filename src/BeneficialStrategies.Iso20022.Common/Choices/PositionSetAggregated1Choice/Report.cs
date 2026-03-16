@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PositionSetAggregated1Choice
     /// </summary>
     [IsoId("_CHENxEwhEeqwfMIOLcNxbw")]
     [DisplayName("Report")]
+    [IsoXmlTag("Rpt")]
     public record Report : PositionSetAggregated1Choice_
     {
         /// <summary>

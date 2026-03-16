@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract1Choice
     /// </summary>
     [IsoId("_x2Ue89LJEeSdq5yU2aaSNw")]
     [DisplayName("Trade")]
+    [IsoXmlTag("Trad")]
     public record Trade : UnderlyingContract1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient11Choice
     /// </summary>
     [IsoId("_6trNhVE0EeyApZmLzm74zA")]
     [DisplayName("Key Identifier")]
+    [IsoXmlTag("KeyIdr")]
     public record KeyIdentifier : Recipient11Choice_
     {
         /// <summary>

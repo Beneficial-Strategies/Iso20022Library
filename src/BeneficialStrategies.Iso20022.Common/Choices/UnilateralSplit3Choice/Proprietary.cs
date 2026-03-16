@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnilateralSplit3Choice
     /// </summary>
     [IsoId("_e2Y7yTt4EeW638lNyHKv7A")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UnilateralSplit3Choice_
     {
         /// <summary>

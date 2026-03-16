@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity53Choice
     /// </summary>
     [IsoId("_peY02Ti7Eeydid5dcNPKvg")]
     [DisplayName("Proprietary Quantity")]
+    [IsoXmlTag("PrtryQty")]
     public record ProprietaryQuantity : Quantity53Choice_
     {
         /// <summary>

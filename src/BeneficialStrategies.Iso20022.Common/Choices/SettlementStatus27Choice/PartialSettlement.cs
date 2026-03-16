@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice
     /// </summary>
     [IsoId("_k04SAOCbEei2UYJ62ws-Fw")]
     [DisplayName("Partial Settlement")]
+    [IsoXmlTag("PrtlSttlm")]
     public record PartialSettlement : SettlementStatus27Choice_
     {
         /// <summary>

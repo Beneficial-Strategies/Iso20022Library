@@ -17,6 +17,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VerificationValue1Choice
     /// </summary>
     [IsoId("_4EhKppaNEemfCcEf5rVTyg")]
     [DisplayName("PIN Data")]
+    [IsoXmlTag("PINData")]
     public record PINData : VerificationValue1Choice_
     {
         /// <summary>

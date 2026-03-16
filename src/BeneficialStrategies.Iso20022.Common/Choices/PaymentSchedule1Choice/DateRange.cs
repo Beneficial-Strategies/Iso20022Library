@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
     /// </summary>
     [IsoId("_BhnbcdOAEeSQ_-lmj1tzfw")]
     [DisplayName("Date Range")]
+    [IsoXmlTag("DtRg")]
     public record DateRange : PaymentSchedule1Choice_
     {
         /// <summary>

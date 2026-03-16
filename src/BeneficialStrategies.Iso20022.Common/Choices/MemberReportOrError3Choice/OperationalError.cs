@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError3Choice
     /// </summary>
     [IsoId("_i0a-U5lCEee-Zps0fZQaFQ")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : MemberReportOrError3Choice_
     {
         /// <summary>

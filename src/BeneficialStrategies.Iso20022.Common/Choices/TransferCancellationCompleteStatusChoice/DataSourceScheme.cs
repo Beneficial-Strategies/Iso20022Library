@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationCompleteStat
     /// </summary>
     [IsoId("_U0C709p-Ed-ak6NoX_4Aeg_-1205755663")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : TransferCancellationCompleteStatusChoice_
     {
         /// <summary>

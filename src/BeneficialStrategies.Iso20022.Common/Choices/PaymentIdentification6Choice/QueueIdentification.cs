@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice
     /// </summary>
     [IsoId("_Aghbk24-EeiU9cctagi5ow")]
     [DisplayName("Queue Identification")]
+    [IsoXmlTag("QId")]
     public record QueueIdentification : PaymentIdentification6Choice_
     {
         /// <summary>

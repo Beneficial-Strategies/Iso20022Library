@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus50Choice
     /// </summary>
     [IsoId("_i1LiMznvEeWfSKvvZlhRKg")]
     [DisplayName("Completed")]
+    [IsoXmlTag("Cmpltd")]
     public record Completed : ProcessingStatus50Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityOtherC102Choi
     /// </summary>
     [IsoId("_lcXQUXvyEeanCNPcMT7sSg")]
     [DisplayName("Deliverable")]
+    [IsoXmlTag("Dlvrbl")]
     public record Deliverable : AssetClassCommodityOtherC102Choice_
     {
         /// <summary>

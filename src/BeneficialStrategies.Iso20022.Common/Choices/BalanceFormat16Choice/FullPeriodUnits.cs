@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat16Choice
     /// </summary>
     [IsoId("_plN2PTi7Eeydid5dcNPKvg")]
     [DisplayName("Full Period Units")]
+    [IsoXmlTag("FullPrdUnits")]
     public record FullPeriodUnits : BalanceFormat16Choice_
     {
         /// <summary>

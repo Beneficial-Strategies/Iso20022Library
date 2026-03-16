@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     /// </summary>
     [IsoId("_8csFMLJUEeaYqc4G3TTwhA")]
     [DisplayName("Unsecured Cash Deposit")]
+    [IsoXmlTag("UscrdCshDpst")]
     public record UnsecuredCashDeposit : Investment1Choice_
     {
         /// <summary>

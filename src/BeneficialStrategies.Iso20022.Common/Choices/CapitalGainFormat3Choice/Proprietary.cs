@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CapitalGainFormat3Choice
     /// </summary>
     [IsoId("_MkciSUEGEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CapitalGainFormat3Choice_
     {
         /// <summary>

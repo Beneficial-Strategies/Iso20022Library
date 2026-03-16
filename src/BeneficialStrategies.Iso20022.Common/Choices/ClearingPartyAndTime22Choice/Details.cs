@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingPartyAndTime22Choice
     /// </summary>
     [IsoId("_mlkJoxZOEe2QNcZTDeoKnQ")]
     [DisplayName("Details")]
+    [IsoXmlTag("Dtls")]
     public record Details : ClearingPartyAndTime22Choice_
     {
         /// <summary>

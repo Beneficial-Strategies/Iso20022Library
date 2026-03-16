@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     /// </summary>
     [IsoId("_FX0FVUDHEeGUr-Tp_ntVFg")]
     [DisplayName("Customer Identification")]
+    [IsoXmlTag("CstmrId")]
     public record CustomerIdentification : SearchCriteria1Choice_
     {
         /// <summary>

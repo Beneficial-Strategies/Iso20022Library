@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError4Choice
     /// </summary>
     [IsoId("_XFBYtW49EeiU9cctagi5ow")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : TransactionOrError4Choice_
     {
         /// <summary>

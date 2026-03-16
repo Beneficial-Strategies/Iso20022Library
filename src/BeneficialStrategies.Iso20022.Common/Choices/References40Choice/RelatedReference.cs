@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References40Choice
     /// </summary>
     [IsoId("_SqCIISGiEeONGJioFgcMDw")]
     [DisplayName("Related Reference")]
+    [IsoXmlTag("RltdRef")]
     public record RelatedReference : References40Choice_
     {
         /// <summary>

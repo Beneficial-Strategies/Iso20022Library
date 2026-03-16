@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     /// </summary>
     [IsoId("_o1CqrhwkEeOIveEnnb_1-A")]
     [DisplayName("Cancelled")]
+    [IsoXmlTag("Canc")]
     public record Cancelled : TransferStatus1Choice_
     {
         /// <summary>

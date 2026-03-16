@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_rJ9Q0OCzEei2UYJ62ws-Fw")]
     [DisplayName("Wait")]
+    [IsoXmlTag("Wait")]
     public record Wait : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDateCode7Choice
     /// </summary>
     [IsoId("_cU5zKTqLEeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementDateCode7Choice_
     {
         /// <summary>

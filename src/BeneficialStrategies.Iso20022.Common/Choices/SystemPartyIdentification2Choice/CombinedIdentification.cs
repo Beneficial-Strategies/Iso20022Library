@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
     /// </summary>
     [IsoId("_w8OZg2c-EemvNLufWGIVOQ")]
     [DisplayName("Combined Identification")]
+    [IsoXmlTag("CmbndId")]
     public record CombinedIdentification : SystemPartyIdentification2Choice_
     {
         /// <summary>

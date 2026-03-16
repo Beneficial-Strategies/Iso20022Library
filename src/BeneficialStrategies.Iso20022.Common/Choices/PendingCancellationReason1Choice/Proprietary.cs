@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationReason1Choice
     /// </summary>
     [IsoId("_Qx8_Y9p-Ed-ak6NoX_4Aeg_21307735")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PendingCancellationReason1Choice_
     {
         /// <summary>

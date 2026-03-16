@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat42Choice
     /// </summary>
     [IsoId("_9Mrp5UEMEeWVgfuHGaKtRQ")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : RateAndAmountFormat42Choice_
     {
         /// <summary>

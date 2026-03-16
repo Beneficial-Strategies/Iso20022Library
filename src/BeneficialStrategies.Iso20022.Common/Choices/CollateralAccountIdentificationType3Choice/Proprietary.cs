@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralAccountIdentificationT
     /// </summary>
     [IsoId("_1RhVc6_XEeaiqo1qOdNaWg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CollateralAccountIdentificationType3Choice_
     {
         /// <summary>

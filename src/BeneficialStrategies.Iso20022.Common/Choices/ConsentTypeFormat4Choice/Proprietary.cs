@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentTypeFormat4Choice
     /// </summary>
     [IsoId("_d-eJI0EGEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ConsentTypeFormat4Choice_
     {
         /// <summary>

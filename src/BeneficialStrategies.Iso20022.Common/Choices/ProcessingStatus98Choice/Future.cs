@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDjQarEe2phaVG0lYKTw")]
     [DisplayName("Future")]
+    [IsoXmlTag("Futr")]
     public record Future : ProcessingStatus98Choice_
     {
         /// <summary>

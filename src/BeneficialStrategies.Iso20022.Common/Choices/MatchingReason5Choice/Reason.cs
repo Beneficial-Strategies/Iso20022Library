@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason5Choice
     /// </summary>
     [IsoId("_2-L0Iwd3Ee2fOITqoTnSLQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : MatchingReason5Choice_
     {
         /// <summary>

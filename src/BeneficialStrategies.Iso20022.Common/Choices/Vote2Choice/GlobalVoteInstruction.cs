@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote2Choice
     /// </summary>
     [IsoId("_RDPju9p-Ed-ak6NoX_4Aeg_116941435")]
     [DisplayName("Global Vote Instruction")]
+    [IsoXmlTag("GblVoteInstr")]
     public record GlobalVoteInstruction : Vote2Choice_
     {
         /// <summary>

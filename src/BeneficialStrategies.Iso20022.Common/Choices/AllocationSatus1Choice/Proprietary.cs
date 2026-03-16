@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationSatus1Choice
     /// </summary>
     [IsoId("_UX39Mdp-Ed-ak6NoX_4Aeg_-2141684721")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AllocationSatus1Choice_
     {
         /// <summary>

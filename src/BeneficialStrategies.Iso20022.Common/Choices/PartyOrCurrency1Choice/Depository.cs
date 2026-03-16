@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrCurrency1Choice
     /// </summary>
     [IsoId("_o-ev0lhDEeOMYfRGLS0NbA")]
     [DisplayName("Depository")]
+    [IsoXmlTag("Dpstry")]
     public record Depository : PartyOrCurrency1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Incoterms4Choice
     /// </summary>
     [IsoId("_S5ezYgEcEeCQm6a_G2yO_w_-1549598450")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Incoterms4Choice_
     {
         /// <summary>

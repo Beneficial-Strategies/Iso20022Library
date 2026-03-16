@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstructionRe
     /// </summary>
     [IsoId("_NHQjM3i8EeaRm5xIK6nGuQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : AccountStatusUpdateInstructionReason1Choice_
     {
         /// <summary>

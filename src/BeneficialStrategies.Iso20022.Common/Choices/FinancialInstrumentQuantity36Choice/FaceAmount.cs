@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity36Cho
     /// </summary>
     [IsoId("_peY06Ti7Eeydid5dcNPKvg")]
     [DisplayName("Face Amount")]
+    [IsoXmlTag("FaceAmt")]
     public record FaceAmount : FinancialInstrumentQuantity36Choice_
     {
         /// <summary>

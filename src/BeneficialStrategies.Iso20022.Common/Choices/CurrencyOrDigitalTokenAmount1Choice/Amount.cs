@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
     /// </summary>
     [IsoId("_8le6IANhEe2-vqzwMUAewg")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : CurrencyOrDigitalTokenAmount1Choice_
     {
         /// <summary>

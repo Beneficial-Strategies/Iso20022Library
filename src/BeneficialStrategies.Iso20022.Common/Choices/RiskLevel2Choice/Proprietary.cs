@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RiskLevel2Choice
     /// </summary>
     [IsoId("_BtuioyGREeWO8_xZKx-MFg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RiskLevel2Choice_
     {
         /// <summary>

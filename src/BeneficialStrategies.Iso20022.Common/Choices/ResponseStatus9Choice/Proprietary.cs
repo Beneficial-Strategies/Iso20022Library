@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus9Choice
     /// </summary>
     [IsoId("_S5aEsLzdEeivTd4NUfCi2g")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ResponseStatus9Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionPolicy2Choice
     /// </summary>
     [IsoId("_HzKCo-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DistributionPolicy2Choice_
     {
         /// <summary>

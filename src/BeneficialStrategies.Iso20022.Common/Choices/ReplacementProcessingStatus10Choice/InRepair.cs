@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     /// </summary>
     [IsoId("_Rhhu9weDEe2fOITqoTnSLQ")]
     [DisplayName("In Repair")]
+    [IsoXmlTag("InRpr")]
     public record InRepair : ReplacementProcessingStatus10Choice_
     {
         /// <summary>

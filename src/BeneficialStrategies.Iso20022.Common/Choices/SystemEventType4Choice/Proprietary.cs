@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemEventType4Choice
     /// </summary>
     [IsoId("_eFPKJXhkEeidzqjNEfehPg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SystemEventType4Choice_
     {
         /// <summary>

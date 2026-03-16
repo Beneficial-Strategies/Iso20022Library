@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXCancellation4Choice
     /// </summary>
     [IsoId("_8T_Sy5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FXCancellation4Choice_
     {
         /// <summary>

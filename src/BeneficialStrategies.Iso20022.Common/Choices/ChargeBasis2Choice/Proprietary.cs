@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeBasis2Choice
     /// </summary>
     [IsoId("_9tIUYzh5EeaH-93K5JKmzw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ChargeBasis2Choice_
     {
         /// <summary>

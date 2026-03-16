@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice
     /// </summary>
     [IsoId("_2goZwBrYEeOVR9VN6fAMUg")]
     [DisplayName("By Purchase Order")]
+    [IsoXmlTag("ByPurchsOrdr")]
     public record ByPurchaseOrder : BreakDown1Choice_
     {
         /// <summary>

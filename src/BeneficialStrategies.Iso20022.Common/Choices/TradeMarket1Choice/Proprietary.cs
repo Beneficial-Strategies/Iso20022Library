@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeMarket1Choice
     /// </summary>
     [IsoId("_NzE0NzQ5-AOSNFX-5096945")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradeMarket1Choice_
     {
         /// <summary>

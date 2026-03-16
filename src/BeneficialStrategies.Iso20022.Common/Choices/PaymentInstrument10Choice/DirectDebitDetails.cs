@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument10Choice
     /// </summary>
     [IsoId("_VKY_Sdp-Ed-ak6NoX_4Aeg_734057953")]
     [DisplayName("Direct Debit Details")]
+    [IsoXmlTag("DrctDbtDtls")]
     public record DirectDebitDetails : PaymentInstrument10Choice_
     {
         /// <summary>

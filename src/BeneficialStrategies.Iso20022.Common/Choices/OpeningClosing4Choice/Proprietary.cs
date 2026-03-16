@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningClosing4Choice
     /// </summary>
     [IsoId("_6SXYu5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OpeningClosing4Choice_
     {
         /// <summary>

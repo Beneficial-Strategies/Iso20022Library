@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionCancellationRequestSt
     /// </summary>
     [IsoId("_86aSv5wtEeazcsnODTksnQ")]
     [DisplayName("Proprietary Status")]
+    [IsoXmlTag("PrtrySts")]
     public record ProprietaryStatus : InstructionCancellationRequestStatus12Choice_
     {
         /// <summary>

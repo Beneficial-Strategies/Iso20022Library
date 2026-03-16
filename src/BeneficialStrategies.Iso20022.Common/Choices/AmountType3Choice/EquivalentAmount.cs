@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType3Choice
     /// </summary>
     [IsoId("_P57LMtp-Ed-ak6NoX_4Aeg_326235198")]
     [DisplayName("Equivalent Amount")]
+    [IsoXmlTag("EqvtAmt")]
     public record EquivalentAmount : AmountType3Choice_
     {
         /// <summary>

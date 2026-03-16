@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementSource1Choice
     /// </summary>
     [IsoId("_m_xsdPNBEeCuA5Tr22BnwA_261285947")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : StatementSource1Choice_
     {
         /// <summary>

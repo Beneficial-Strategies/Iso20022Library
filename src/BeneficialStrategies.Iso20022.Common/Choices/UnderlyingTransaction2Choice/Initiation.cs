@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction2Choice
     /// </summary>
     [IsoId("_P3XHQJ9XEeGBX4a4yy-WHg_-840378035")]
     [DisplayName("Initiation")]
+    [IsoXmlTag("Initn")]
     public record Initiation : UnderlyingTransaction2Choice_
     {
         /// <summary>

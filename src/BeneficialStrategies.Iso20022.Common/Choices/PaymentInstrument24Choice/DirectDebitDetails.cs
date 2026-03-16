@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument24Choice
     /// </summary>
     [IsoId("_Jmv4w5TBEemqYPWMBuVawg")]
     [DisplayName("Direct Debit Details")]
+    [IsoXmlTag("DrctDbtDtls")]
     public record DirectDebitDetails : PaymentInstrument24Choice_
     {
         /// <summary>

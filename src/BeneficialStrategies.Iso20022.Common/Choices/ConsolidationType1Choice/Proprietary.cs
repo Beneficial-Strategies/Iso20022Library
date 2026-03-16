@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsolidationType1Choice
     /// </summary>
     [IsoId("_R2DXgCDVEeWCLu74WLgP4w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ConsolidationType1Choice_
     {
         /// <summary>

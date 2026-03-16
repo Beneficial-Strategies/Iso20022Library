@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     /// </summary>
     [IsoId("_o1CqqRwkEeOIveEnnb_1-A")]
     [DisplayName("Pending Settlement")]
+    [IsoXmlTag("PdgSttlm")]
     public record PendingSettlement : TransferStatus1Choice_
     {
         /// <summary>

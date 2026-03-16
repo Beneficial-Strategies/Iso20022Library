@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferType2Choice
     /// </summary>
     [IsoId("_3m40RaxWEemRcYBAkJyjkg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TransferType2Choice_
     {
         /// <summary>

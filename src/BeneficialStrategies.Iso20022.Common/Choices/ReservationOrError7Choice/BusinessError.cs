@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError7Choice
     /// </summary>
     [IsoId("_T9Cs05liEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : ReservationOrError7Choice_
     {
         /// <summary>

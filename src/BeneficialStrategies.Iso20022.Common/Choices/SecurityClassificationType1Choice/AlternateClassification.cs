@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType1Choic
     /// </summary>
     [IsoId("_Q7pG49p-Ed-ak6NoX_4Aeg_-1089755250")]
     [DisplayName("Alternate Classification")]
+    [IsoXmlTag("AltrnClssfctn")]
     public record AlternateClassification : SecurityClassificationType1Choice_
     {
         /// <summary>

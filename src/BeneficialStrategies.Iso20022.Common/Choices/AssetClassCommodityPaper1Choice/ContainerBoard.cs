@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper1Choice
     /// </summary>
     [IsoId("_D_tvsFryEeWN79Bl6BUd3g")]
     [DisplayName("Container Board")]
+    [IsoXmlTag("CntnrBrd")]
     public record ContainerBoard : AssetClassCommodityPaper1Choice_
     {
         /// <summary>

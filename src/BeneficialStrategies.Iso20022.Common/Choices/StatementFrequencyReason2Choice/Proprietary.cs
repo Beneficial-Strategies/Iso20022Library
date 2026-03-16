@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementFrequencyReason2Choice
     /// </summary>
     [IsoId("_sGXPIyDAEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : StatementFrequencyReason2Choice_
     {
         /// <summary>

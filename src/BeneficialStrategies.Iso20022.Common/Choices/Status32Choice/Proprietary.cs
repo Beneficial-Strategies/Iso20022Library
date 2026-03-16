@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status32Choice
     /// </summary>
     [IsoId("_BH0PhQpIEeup4r-PFG2T5Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Status32Choice_
     {
         /// <summary>

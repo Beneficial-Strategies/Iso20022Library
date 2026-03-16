@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy3Choice
     /// </summary>
     [IsoId("_kQJ7Ia09EemDtrWpq90Ckg")]
     [DisplayName("Proxy")]
+    [IsoXmlTag("Prxy")]
     public record Proxy : Proxy3Choice_
     {
         /// <summary>

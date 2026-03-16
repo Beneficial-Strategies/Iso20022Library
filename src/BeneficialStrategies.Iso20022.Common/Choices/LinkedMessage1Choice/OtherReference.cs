@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage1Choice
     /// </summary>
     [IsoId("_GnNaIQgKEeSFYfyUKDXKaw")]
     [DisplayName("Other Reference")]
+    [IsoXmlTag("OthrRef")]
     public record OtherReference : LinkedMessage1Choice_
     {
         /// <summary>

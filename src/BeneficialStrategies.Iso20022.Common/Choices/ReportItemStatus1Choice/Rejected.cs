@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
     /// </summary>
     [IsoId("_08aRa73QEeO2FLWuu_JIqg")]
     [DisplayName("Rejected")]
+    [IsoXmlTag("Rjctd")]
     public record Rejected : ReportItemStatus1Choice_
     {
         /// <summary>

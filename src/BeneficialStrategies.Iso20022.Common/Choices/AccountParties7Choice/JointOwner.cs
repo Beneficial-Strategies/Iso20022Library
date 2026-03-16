@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties7Choice
     /// </summary>
     [IsoId("_J0DZuwhDEeSUPbC7DbLJpQ")]
     [DisplayName("Joint Owner")]
+    [IsoXmlTag("JntOwnr")]
     public record JointOwner : AccountParties7Choice_
     {
         /// <summary>

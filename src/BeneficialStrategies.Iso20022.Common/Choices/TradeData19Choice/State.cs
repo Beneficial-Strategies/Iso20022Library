@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData19Choice
     /// </summary>
     [IsoId("_nBfoFXg-Eeu3kecHd7QKUQ")]
     [DisplayName("State")]
+    [IsoXmlTag("Stat")]
     public record State : TradeData19Choice_
     {
         /// <summary>

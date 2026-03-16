@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References48Choice
     /// </summary>
     [IsoId("_eJY_sSYrEeW_ZNn8gbfY7Q")]
     [DisplayName("Previous Reference")]
+    [IsoXmlTag("PrvsRef")]
     public record PreviousReference : References48Choice_
     {
         /// <summary>

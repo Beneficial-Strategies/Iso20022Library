@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer1Ch
     /// </summary>
     [IsoId("_xb6EAFr2EeWN79Bl6BUd3g")]
     [DisplayName("Urea And Ammonium Nitrate")]
+    [IsoXmlTag("UreaAndAmmnmNtrt")]
     public record UreaAndAmmoniumNitrate : AssetClassCommodityFertilizer1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     /// </summary>
     [IsoId("_yMukYK_7EeaE9YROwd69hA")]
     [DisplayName("Guarantee")]
+    [IsoXmlTag("Grnt")]
     public record Guarantee : AssetHolding1Choice_
     {
         /// <summary>

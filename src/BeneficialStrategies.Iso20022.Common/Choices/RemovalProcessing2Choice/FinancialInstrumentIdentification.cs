@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice
     /// </summary>
     [IsoId("__ioAQRIoEeyZaPkaPAzTvQ")]
     [DisplayName("Financial Instrument Identification")]
+    [IsoXmlTag("FinInstrmId")]
     public record FinancialInstrumentIdentification : RemovalProcessing2Choice_
     {
         /// <summary>

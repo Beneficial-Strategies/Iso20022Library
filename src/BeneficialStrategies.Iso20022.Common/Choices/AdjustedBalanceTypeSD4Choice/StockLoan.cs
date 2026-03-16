@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdjustedBalanceTypeSD4Choice
     /// </summary>
     [IsoId("_RnUrUcSTEeeRJJtE9TSlkw")]
     [DisplayName("Stock Loan")]
+    [IsoXmlTag("StockLn")]
     public record StockLoan : AdjustedBalanceTypeSD4Choice_
     {
         /// <summary>

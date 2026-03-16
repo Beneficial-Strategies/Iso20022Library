@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisabledStatusReason1Choice
     /// </summary>
     [IsoId("_R5FfA0zAEeafiMTDrtSnyw")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : DisabledStatusReason1Choice_
     {
         /// <summary>

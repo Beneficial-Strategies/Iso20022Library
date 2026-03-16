@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus27Choice
     /// </summary>
     [IsoId("_Y5m_6TqqEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MatchingStatus27Choice_
     {
         /// <summary>

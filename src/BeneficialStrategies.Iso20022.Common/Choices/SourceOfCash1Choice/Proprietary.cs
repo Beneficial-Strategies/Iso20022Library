@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SourceOfCash1Choice
     /// </summary>
     [IsoId("_p_XsEDlEEealR6-8aQ15BA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SourceOfCash1Choice_
     {
         /// <summary>

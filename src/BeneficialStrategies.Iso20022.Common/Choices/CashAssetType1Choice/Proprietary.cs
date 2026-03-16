@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAssetType1Choice
     /// </summary>
     [IsoId("__5TfkEyIEeir2sRRVd9XhA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CashAssetType1Choice_
     {
         /// <summary>

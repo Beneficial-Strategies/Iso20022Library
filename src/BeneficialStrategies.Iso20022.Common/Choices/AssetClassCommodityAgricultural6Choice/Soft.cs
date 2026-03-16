@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
     /// </summary>
     [IsoId("_xG_Lo08SEe2PGo0mhYCh1g")]
     [DisplayName("Soft")]
+    [IsoXmlTag("Soft")]
     public record Soft : AssetClassCommodityAgricultural6Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DividendTypeFormat10Choice
     /// </summary>
     [IsoId("_c5VTW5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DividendTypeFormat10Choice_
     {
         /// <summary>

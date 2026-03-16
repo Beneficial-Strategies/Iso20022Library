@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalculationType3Choice
     /// </summary>
     [IsoId("_M0gco-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CalculationType3Choice_
     {
         /// <summary>

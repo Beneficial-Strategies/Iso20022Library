@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityMetal2Choice
     /// </summary>
     [IsoId("_Dn_6o08REe2PGo0mhYCh1g")]
     [DisplayName("Precious")]
+    [IsoXmlTag("Prcs")]
     public record Precious : AssetClassCommodityMetal2Choice_
     {
         /// <summary>

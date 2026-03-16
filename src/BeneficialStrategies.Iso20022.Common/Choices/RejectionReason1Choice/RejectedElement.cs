@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
     /// </summary>
     [IsoId("_RJ8ootp-Ed-ak6NoX_4Aeg_1044987769")]
     [DisplayName("Rejected Element")]
+    [IsoXmlTag("RjctdElmt")]
     public record RejectedElement : RejectionReason1Choice_
     {
         /// <summary>

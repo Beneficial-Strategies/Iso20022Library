@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFailsDailyTransactionT
     /// </summary>
     [IsoId("_9tfhFTOYEeqBfed1bmSPqg")]
     [DisplayName("Data")]
+    [IsoXmlTag("Data")]
     public record Data : SettlementFailsDailyTransactionType1Choice_
     {
         /// <summary>

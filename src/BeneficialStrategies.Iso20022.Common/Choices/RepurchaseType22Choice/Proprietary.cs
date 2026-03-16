@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepurchaseType22Choice
     /// </summary>
     [IsoId("_xJQd2Y-REeaVK-2bgpxeYw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RepurchaseType22Choice_
     {
         /// <summary>

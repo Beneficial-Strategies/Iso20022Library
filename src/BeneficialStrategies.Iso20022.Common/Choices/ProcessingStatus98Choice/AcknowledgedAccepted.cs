@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDgQarEe2phaVG0lYKTw")]
     [DisplayName("Acknowledged Accepted")]
+    [IsoXmlTag("AckdAccptd")]
     public record AcknowledgedAccepted : ProcessingStatus98Choice_
     {
         /// <summary>

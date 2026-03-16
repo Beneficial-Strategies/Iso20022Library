@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     /// </summary>
     [IsoId("_Rhhu8QeDEe2fOITqoTnSLQ")]
     [DisplayName("Accepted")]
+    [IsoXmlTag("Accptd")]
     public record Accepted : ReplacementProcessingStatus10Choice_
     {
         /// <summary>

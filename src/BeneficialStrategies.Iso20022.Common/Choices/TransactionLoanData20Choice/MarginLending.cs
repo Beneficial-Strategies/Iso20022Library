@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData20Choice
     /// </summary>
     [IsoId("_lksD17ONEemDE9K-I5TT8Q")]
     [DisplayName("Margin Lending")]
+    [IsoXmlTag("MrgnLndg")]
     public record MarginLending : TransactionLoanData20Choice_
     {
         /// <summary>

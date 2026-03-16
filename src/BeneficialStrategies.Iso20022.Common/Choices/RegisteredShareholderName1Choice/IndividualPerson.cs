@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
     /// </summary>
     [IsoId("_w5-30FxYEeWvPv3PXpS3fw")]
     [DisplayName("Individual Person")]
+    [IsoXmlTag("IndvPrsn")]
     public record IndividualPerson : RegisteredShareholderName1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number21Choice
     /// </summary>
     [IsoId("_AeehNdokEeC60axPepSq7g_-747606838")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Number21Choice_
     {
         /// <summary>

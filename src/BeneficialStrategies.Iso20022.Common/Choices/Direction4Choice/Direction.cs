@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Direction4Choice
     /// </summary>
     [IsoId("_HmpucC0YEe2ZUuvBHegNNg")]
     [DisplayName("Direction")]
+    [IsoXmlTag("Drctn")]
     public record Direction : Direction4Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCASource1Choice
     /// </summary>
     [IsoId("_vvA2IAjUEeS5F6qHcKOrew")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FATCASource1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedTransactionStatistics6Ch
     /// </summary>
     [IsoId("_x_mYs1yGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Statistics")]
+    [IsoXmlTag("DtldSttstcs")]
     public record DetailedStatistics : DetailedTransactionStatistics6Choice_
     {
         /// <summary>

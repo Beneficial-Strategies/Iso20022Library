@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationReason4Choice
     /// </summary>
     [IsoId("_D8v4gzq3EeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ModificationReason4Choice_
     {
         /// <summary>

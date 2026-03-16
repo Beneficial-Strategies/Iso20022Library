@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice
     /// </summary>
     [IsoId("_Ny9Dy5lPEee-Zps0fZQaFQ")]
     [DisplayName("Proprietary Rejection")]
+    [IsoXmlTag("PrtryRjctn")]
     public record ProprietaryRejection : PaymentStatusReasonCode7Choice_
     {
         /// <summary>

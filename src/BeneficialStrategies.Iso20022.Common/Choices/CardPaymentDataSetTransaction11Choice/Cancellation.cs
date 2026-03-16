@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction11C
     /// </summary>
     [IsoId("_1ylO03JCEe299ZbWCkdR_w")]
     [DisplayName("Cancellation")]
+    [IsoXmlTag("Cxl")]
     public record Cancellation : CardPaymentDataSetTransaction11Choice_
     {
         /// <summary>

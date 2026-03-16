@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedStatus6Choice
     /// </summary>
     [IsoId("_EhheFf7ZEeCtrO5qCU90cA")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : UnmatchedStatus6Choice_
     {
         /// <summary>

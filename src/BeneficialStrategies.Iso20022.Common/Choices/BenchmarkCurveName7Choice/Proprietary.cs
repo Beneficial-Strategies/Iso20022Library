@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkCurveName7Choice
     /// </summary>
     [IsoId("_HjJ1w-LwEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BenchmarkCurveName7Choice_
     {
         /// <summary>

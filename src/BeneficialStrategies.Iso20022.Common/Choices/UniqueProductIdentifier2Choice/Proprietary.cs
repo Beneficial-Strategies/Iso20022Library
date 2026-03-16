@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueProductIdentifier2Choice
     /// </summary>
     [IsoId("__0j-A2ETEe2P-L9DBerEgA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UniqueProductIdentifier2Choice_
     {
         /// <summary>

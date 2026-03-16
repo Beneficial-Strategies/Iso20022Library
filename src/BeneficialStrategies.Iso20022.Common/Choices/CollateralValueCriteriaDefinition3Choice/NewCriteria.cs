@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
     /// </summary>
     [IsoId("__xM6gzpsEemk2e6qGBk8IQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : CollateralValueCriteriaDefinition3Choice_
     {
         /// <summary>

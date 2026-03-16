@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice
     /// </summary>
     [IsoId("_Rb1C0tp-Ed-ak6NoX_4Aeg_-1291805037")]
     [DisplayName("Other Product Identifier")]
+    [IsoXmlTag("OthrPdctIdr")]
     public record OtherProductIdentifier : ProductIdentifier2Choice_
     {
         /// <summary>

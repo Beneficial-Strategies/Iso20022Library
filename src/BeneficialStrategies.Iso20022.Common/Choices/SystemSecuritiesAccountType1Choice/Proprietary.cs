@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemSecuritiesAccountType1Choi
     /// </summary>
     [IsoId("_mrKwkDp0Eemk2e6qGBk8IQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SystemSecuritiesAccountType1Choice_
     {
         /// <summary>

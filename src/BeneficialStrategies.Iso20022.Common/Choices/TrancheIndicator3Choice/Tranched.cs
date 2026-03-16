@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
     /// </summary>
     [IsoId("_nCVaUQ06EeuJ1fOEB4bQXA")]
     [DisplayName("Tranched")]
+    [IsoXmlTag("Trnchd")]
     public record Tranched : TrancheIndicator3Choice_
     {
         /// <summary>

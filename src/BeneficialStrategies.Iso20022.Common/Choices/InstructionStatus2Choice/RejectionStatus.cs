@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus2Choice
     /// </summary>
     [IsoId("_RWwVkdp-Ed-ak6NoX_4Aeg_-1258577092")]
     [DisplayName("Rejection Status")]
+    [IsoXmlTag("RjctnSts")]
     public record RejectionStatus : InstructionStatus2Choice_
     {
         /// <summary>

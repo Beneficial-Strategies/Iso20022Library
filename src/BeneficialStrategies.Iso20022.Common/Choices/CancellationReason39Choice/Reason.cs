@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason39Choice
     /// </summary>
     [IsoId("_mGgP6wd4Ee2fOITqoTnSLQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : CancellationReason39Choice_
     {
         /// <summary>

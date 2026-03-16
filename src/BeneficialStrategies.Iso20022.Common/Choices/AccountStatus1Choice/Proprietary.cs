@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatus1Choice
     /// </summary>
     [IsoId("_HgVEICF1EeW9XJWqfgXIIA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AccountStatus1Choice_
     {
         /// <summary>

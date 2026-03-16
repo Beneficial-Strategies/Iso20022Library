@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting8Choice
     /// </summary>
     [IsoId("_5TJXLZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Reporting8Choice_
     {
         /// <summary>

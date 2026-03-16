@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument61Choice
     /// </summary>
     [IsoId("_mW7mFZNBEemQB_8XA98K0Q")]
     [DisplayName("Other Asset")]
+    [IsoXmlTag("OthrAsst")]
     public record OtherAsset : FinancialInstrument61Choice_
     {
         /// <summary>

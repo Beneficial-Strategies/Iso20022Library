@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DefinedAttributes1Choice
     /// </summary>
     [IsoId("__F7tMOPJEea7_eMQH225xA")]
     [DisplayName("Quantity Defined Attributes")]
+    [IsoXmlTag("QtyDfndAttrbts")]
     public record QuantityDefinedAttributes : DefinedAttributes1Choice_
     {
         /// <summary>

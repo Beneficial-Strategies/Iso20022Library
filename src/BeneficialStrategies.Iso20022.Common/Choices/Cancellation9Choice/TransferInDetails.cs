@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation9Choice
     /// </summary>
     [IsoId("_iAR8Mz8BEeSIqOPJHpnleA")]
     [DisplayName("Transfer In Details")]
+    [IsoXmlTag("TrfInDtls")]
     public record TransferInDetails : Cancellation9Choice_
     {
         /// <summary>

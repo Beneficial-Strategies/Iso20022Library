@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationStatus5Choice
     /// </summary>
     [IsoId("_6QDrXZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : ModificationStatus5Choice_
     {
         /// <summary>

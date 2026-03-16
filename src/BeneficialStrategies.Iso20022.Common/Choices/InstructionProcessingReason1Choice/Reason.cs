@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason1Choi
     /// </summary>
     [IsoId("_Azyp5NokEeC60axPepSq7g_-331834835")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : InstructionProcessingReason1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation10Choice
     /// </summary>
     [IsoId("_5ImlESPvEeWQjryFgN2ITg")]
     [DisplayName("References")]
+    [IsoXmlTag("Refs")]
     public record References : Cancellation10Choice_
     {
         /// <summary>

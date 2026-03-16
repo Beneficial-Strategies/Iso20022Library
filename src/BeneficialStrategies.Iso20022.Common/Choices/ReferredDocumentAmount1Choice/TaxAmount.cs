@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
     /// </summary>
     [IsoId("_QGJCR9p-Ed-ak6NoX_4Aeg_-888106455")]
     [DisplayName("Tax Amount")]
+    [IsoXmlTag("TaxAmt")]
     public record TaxAmount : ReferredDocumentAmount1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestComputationMethodFormat1
     /// </summary>
     [IsoId("_Q4XJYNp-Ed-ak6NoX_4Aeg_893786962")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InterestComputationMethodFormat1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ApplicableRules1Choice
     /// </summary>
     [IsoId("_3OvD8FNeEeijdq8ilaxyOA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ApplicableRules1Choice_
     {
         /// <summary>

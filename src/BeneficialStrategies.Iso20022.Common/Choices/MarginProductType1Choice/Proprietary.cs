@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginProductType1Choice
     /// </summary>
     [IsoId("_Qk_hdtp-Ed-ak6NoX_4Aeg_1372873102")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MarginProductType1Choice_
     {
         /// <summary>

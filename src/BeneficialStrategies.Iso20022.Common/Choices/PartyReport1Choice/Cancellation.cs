@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice
     /// </summary>
     [IsoId("_HizTYDbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Cancellation")]
+    [IsoXmlTag("Cxl")]
     public record Cancellation : PartyReport1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedStatus5Choice
     /// </summary>
     [IsoId("_g8PF3_7rEeCvPoRGOxRobQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : DeniedStatus5Choice_
     {
         /// <summary>

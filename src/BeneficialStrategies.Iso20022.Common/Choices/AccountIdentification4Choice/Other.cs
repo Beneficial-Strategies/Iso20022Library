@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice
     /// </summary>
     [IsoId("_Pdwzo9p-Ed-ak6NoX_4Aeg_-1833657786")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : AccountIdentification4Choice_
     {
         /// <summary>

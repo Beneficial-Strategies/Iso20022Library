@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
     /// </summary>
     [IsoId("_fDHA9VhFEeOMYfRGLS0NbA")]
     [DisplayName("Rejected")]
+    [IsoXmlTag("Rjctd")]
     public record Rejected : ProcessingStatus43Choice_
     {
         /// <summary>

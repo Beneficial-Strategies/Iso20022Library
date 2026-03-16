@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     /// </summary>
     [IsoId("_PWk1NmHcEeGrBqfAqyy96Q")]
     [DisplayName("Original Transaction Number")]
+    [IsoXmlTag("OrgnlTxNb")]
     public record OriginalTransactionNumber : SearchCriteria1Choice_
     {
         /// <summary>

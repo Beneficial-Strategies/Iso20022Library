@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionDeactivationCance
     /// </summary>
     [IsoId("_RiYWwdp-Ed-ak6NoX_4Aeg_-416590020")]
     [DisplayName("Processed Status")]
+    [IsoXmlTag("PrcdSts")]
     public record ProcessedStatus : CorporateActionDeactivationCancellationStatus1Choice_
     {
         /// <summary>

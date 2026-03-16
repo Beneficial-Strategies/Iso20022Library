@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason18Choice
     /// </summary>
     [IsoId("_zRXpgeLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : Reason18Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice
     /// </summary>
     [IsoId("_wnwasTICEe2fXedS_ucFOA")]
     [DisplayName("Portfolio")]
+    [IsoXmlTag("Prtfl")]
     public record Portfolio : PortfolioCode5Choice_
     {
         /// <summary>

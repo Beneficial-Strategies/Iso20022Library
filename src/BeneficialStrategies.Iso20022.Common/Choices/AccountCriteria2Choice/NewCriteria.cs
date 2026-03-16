@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountCriteria2Choice
     /// </summary>
     [IsoId("_4GLX1ZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : AccountCriteria2Choice_
     {
         /// <summary>

@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity28Cho
     /// </summary>
     [IsoId("_ZipfAzhUEeaRwdGFv45qTQ")]
     [DisplayName("Gross Amount")]
+    [IsoXmlTag("GrssAmt")]
     public record GrossAmount : FinancialInstrumentQuantity28Choice_
     {
         /// <summary>

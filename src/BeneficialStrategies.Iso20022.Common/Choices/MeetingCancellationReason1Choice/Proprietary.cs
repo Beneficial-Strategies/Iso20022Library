@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingCancellationReason1Choice
     /// </summary>
     [IsoId("_RCWL09p-Ed-ak6NoX_4Aeg_-1788860739")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MeetingCancellationReason1Choice_
     {
         /// <summary>

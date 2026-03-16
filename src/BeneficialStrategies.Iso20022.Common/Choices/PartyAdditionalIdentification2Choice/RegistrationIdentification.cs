@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
     /// </summary>
     [IsoId("_Qo3U09p-Ed-ak6NoX_4Aeg_136820808")]
     [DisplayName("Registration Identification")]
+    [IsoXmlTag("RegnId")]
     public record RegistrationIdentification : PartyAdditionalIdentification2Choice_
     {
         /// <summary>

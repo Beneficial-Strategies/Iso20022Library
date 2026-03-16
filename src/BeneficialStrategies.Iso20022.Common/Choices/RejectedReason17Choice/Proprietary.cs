@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedReason17Choice
     /// </summary>
     [IsoId("_-hqnMyYuEeW_ZNn8gbfY7Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RejectedReason17Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AddressOrParty1Choice
     /// </summary>
     [IsoId("_-Eq_sHltEeG7BsjMvd1mEw_907954656")]
     [DisplayName("New Address")]
+    [IsoXmlTag("NewAdr")]
     public record NewAddress : AddressOrParty1Choice_
     {
         /// <summary>

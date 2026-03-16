@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrError6Choice
     /// </summary>
     [IsoId("_CtV4c24-EeiU9cctagi5ow")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : StandingOrderOrError6Choice_
     {
         /// <summary>

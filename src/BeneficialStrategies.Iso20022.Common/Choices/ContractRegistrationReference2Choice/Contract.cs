@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference2Ch
     /// </summary>
     [IsoId("_KVgWabMmEeueudaIbClZbQ")]
     [DisplayName("Contract")]
+    [IsoXmlTag("Ctrct")]
     public record Contract : ContractRegistrationReference2Choice_
     {
         /// <summary>

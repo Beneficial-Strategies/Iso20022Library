@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModificationCancellationAllowed3
     /// </summary>
     [IsoId("_AY9vENokEeC60axPepSq7g_-6475040")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ModificationCancellationAllowed3Choice_
     {
         /// <summary>

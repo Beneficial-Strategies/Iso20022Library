@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
     /// </summary>
     [IsoId("_RCDQ5dp-Ed-ak6NoX_4Aeg_1149070716")]
     [DisplayName("Non Local Market Place")]
+    [IsoXmlTag("NonLclMktPlc")]
     public record NonLocalMarketPlace : PriceSourceFormatChoice_
     {
         /// <summary>

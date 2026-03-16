@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
     /// </summary>
     [IsoId("_o1S5gaWvEeqZmriXpMtonA")]
     [DisplayName("Modified Record")]
+    [IsoXmlTag("ModfdRcrd")]
     public record ModifiedRecord : SecuritiesReferenceDeltaStatusReport5Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason2Choice
     /// </summary>
     [IsoId("_MfWS00zDEeafiMTDrtSnyw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ProformaStatusReason2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
     /// </summary>
     [IsoId("_x1GY41yGEe24CqbZJK5XxA")]
     [DisplayName("Report")]
+    [IsoXmlTag("Rpt")]
     public record Report : DetailedMissingValuationsStatistics4Choice_
     {
         /// <summary>

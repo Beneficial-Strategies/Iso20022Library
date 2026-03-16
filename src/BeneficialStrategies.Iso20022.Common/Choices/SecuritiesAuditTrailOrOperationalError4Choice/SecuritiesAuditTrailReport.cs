@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
     /// </summary>
     [IsoId("_Ptf-MZJKEeuAlLVx8pyt3w")]
     [DisplayName("Securities Audit Trail Report")]
+    [IsoXmlTag("SctiesAudtTrlRpt")]
     public record SecuritiesAuditTrailReport : SecuritiesAuditTrailOrOperationalError4Choice_
     {
         /// <summary>

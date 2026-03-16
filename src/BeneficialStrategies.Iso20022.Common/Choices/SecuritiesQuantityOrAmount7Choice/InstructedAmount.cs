@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesQuantityOrAmount7Choic
     /// </summary>
     [IsoId("_pizbYzi7Eeydid5dcNPKvg")]
     [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
     public record InstructedAmount : SecuritiesQuantityOrAmount7Choice_
     {
         /// <summary>

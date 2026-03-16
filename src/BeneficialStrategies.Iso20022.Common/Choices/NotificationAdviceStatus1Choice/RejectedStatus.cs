@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationAdviceStatus1Choice
     /// </summary>
     [IsoId("_Ri1Ct9p-Ed-ak6NoX_4Aeg_348378582")]
     [DisplayName("Rejected Status")]
+    [IsoXmlTag("RjctdSts")]
     public record RejectedStatus : NotificationAdviceStatus1Choice_
     {
         /// <summary>

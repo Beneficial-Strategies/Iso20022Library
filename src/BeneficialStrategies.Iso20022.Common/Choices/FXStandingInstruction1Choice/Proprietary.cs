@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FXStandingInstruction1Choice
     /// </summary>
     [IsoId("_QuFMB9p-Ed-ak6NoX_4Aeg_-1213284611")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FXStandingInstruction1Choice_
     {
         /// <summary>

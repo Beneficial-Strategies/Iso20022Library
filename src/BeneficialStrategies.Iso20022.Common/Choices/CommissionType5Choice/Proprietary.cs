@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommissionType5Choice
     /// </summary>
     [IsoId("_ssJ7lWW6EeSHcOWXSsMhqw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CommissionType5Choice_
     {
         /// <summary>

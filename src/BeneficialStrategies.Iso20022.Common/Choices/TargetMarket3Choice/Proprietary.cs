@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TargetMarket3Choice
     /// </summary>
     [IsoId("_krTtsDcSEeiIxKQErQxblg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TargetMarket3Choice_
     {
         /// <summary>

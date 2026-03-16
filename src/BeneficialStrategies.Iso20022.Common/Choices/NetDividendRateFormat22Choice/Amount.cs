@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat22Choice
     /// </summary>
     [IsoId("_PA8Q42OXEeWYYI9c62RCjw")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : NetDividendRateFormat22Choice_
     {
         /// <summary>

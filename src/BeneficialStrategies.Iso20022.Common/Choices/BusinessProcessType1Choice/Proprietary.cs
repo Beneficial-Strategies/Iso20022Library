@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessProcessType1Choice
     /// </summary>
     [IsoId("_AcY2htokEeC60axPepSq7g_-1746463054")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BusinessProcessType1Choice_
     {
         /// <summary>

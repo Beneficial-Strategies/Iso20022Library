@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MaturityRedemptionType3Choice
     /// </summary>
     [IsoId("_eFqj8-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MaturityRedemptionType3Choice_
     {
         /// <summary>

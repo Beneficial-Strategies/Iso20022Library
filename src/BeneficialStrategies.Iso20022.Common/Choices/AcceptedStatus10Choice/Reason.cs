@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedStatus10Choice
     /// </summary>
     [IsoId("_6HWbkZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : AcceptedStatus10Choice_
     {
         /// <summary>

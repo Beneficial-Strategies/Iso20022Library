@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentAttributes5Ch
     /// </summary>
     [IsoId("_-6AlEJicEe2f7NHvXATP5g")]
     [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
     public record AlternateIdentification : FinancialInstrumentAttributes5Choice_
     {
         /// <summary>

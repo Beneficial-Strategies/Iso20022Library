@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Counterparty10Choice
     /// </summary>
     [IsoId("_5myFCpNLEeWGlc8L7oPDIg")]
     [DisplayName("Buyer")]
+    [IsoXmlTag("Buyr")]
     public record Buyer : Counterparty10Choice_
     {
         /// <summary>

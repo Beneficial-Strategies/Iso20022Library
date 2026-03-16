@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticallyExposedPersonStatus1C
     /// </summary>
     [IsoId("_fsaRQJUiEemC09f0MxYkRg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PoliticallyExposedPersonStatus1Choice_
     {
         /// <summary>

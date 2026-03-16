@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LendingTransactionMethod2Choice
     /// </summary>
     [IsoId("_2cgUc5EjEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LendingTransactionMethod2Choice_
     {
         /// <summary>

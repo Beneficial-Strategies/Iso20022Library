@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_aHcyEOCzEei2UYJ62ws-Fw")]
     [DisplayName("Excluded")]
+    [IsoXmlTag("Excld")]
     public record Excluded : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

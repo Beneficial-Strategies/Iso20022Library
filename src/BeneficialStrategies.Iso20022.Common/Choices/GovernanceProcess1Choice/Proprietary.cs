@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GovernanceProcess1Choice
     /// </summary>
     [IsoId("_rod9wID4Eeiw-daIkkmMqQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : GovernanceProcess1Choice_
     {
         /// <summary>

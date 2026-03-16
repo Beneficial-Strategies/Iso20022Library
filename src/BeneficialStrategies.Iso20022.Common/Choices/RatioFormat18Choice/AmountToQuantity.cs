@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat18Choice
     /// </summary>
     [IsoId("_7mLRH0EKEeWVgfuHGaKtRQ")]
     [DisplayName("Amount To Quantity")]
+    [IsoXmlTag("AmtToQty")]
     public record AmountToQuantity : RatioFormat18Choice_
     {
         /// <summary>

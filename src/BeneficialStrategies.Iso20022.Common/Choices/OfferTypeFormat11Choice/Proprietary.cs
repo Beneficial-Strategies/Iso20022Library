@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OfferTypeFormat11Choice
     /// </summary>
     [IsoId("_cta955KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OfferTypeFormat11Choice_
     {
         /// <summary>

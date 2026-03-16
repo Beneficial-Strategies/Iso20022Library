@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherIdentification2Choice
     /// </summary>
     [IsoId("_4M2dAwhDEeSUPbC7DbLJpQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OtherIdentification2Choice_
     {
         /// <summary>

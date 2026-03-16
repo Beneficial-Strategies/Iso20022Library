@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialPhysicalForm4Choice
     /// </summary>
     [IsoId("_Usd_8-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InitialPhysicalForm4Choice_
     {
         /// <summary>

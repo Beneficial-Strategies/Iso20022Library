@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InitialAmount1Choice
     /// </summary>
     [IsoId("_bXzBQCDaEeWCLu74WLgP4w")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : InitialAmount1Choice_
     {
         /// <summary>

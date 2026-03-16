@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesUpdateReason1Choice
     /// </summary>
     [IsoId("_EjynM5I8EeuAlLVx8pyt3w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesUpdateReason1Choice_
     {
         /// <summary>

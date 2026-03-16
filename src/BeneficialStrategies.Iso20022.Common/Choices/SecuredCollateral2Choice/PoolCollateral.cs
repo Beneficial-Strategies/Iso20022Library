@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
     /// </summary>
     [IsoId("_iZO6BaidEeWHO_l3hf2rlA")]
     [DisplayName("Pool Collateral")]
+    [IsoXmlTag("PoolColl")]
     public record PoolCollateral : SecuredCollateral2Choice_
     {
         /// <summary>

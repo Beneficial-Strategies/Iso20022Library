@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationReason24Choice
     /// </summary>
     [IsoId("_5SFnZ5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CancellationReason24Choice_
     {
         /// <summary>

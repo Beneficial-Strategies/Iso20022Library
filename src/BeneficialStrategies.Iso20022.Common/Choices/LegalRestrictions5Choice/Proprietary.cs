@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalRestrictions5Choice
     /// </summary>
     [IsoId("_cp37Y-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LegalRestrictions5Choice_
     {
         /// <summary>

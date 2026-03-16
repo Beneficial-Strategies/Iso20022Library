@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentOrSubClassIdentificati
     /// </summary>
     [IsoId("_BSnWY6aUEeqZmriXpMtonA")]
     [DisplayName("Asset Class And Sub Class")]
+    [IsoXmlTag("AsstClssAndSubClss")]
     public record AssetClassAndSubClass : InstrumentOrSubClassIdentification2Choice_
     {
         /// <summary>

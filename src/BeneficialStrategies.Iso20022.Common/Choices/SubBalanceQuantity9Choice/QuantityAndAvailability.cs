@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity9Choice
     /// </summary>
     [IsoId("_ciAo7zi8Eeydid5dcNPKvg")]
     [DisplayName("Quantity And Availability")]
+    [IsoXmlTag("QtyAndAvlbty")]
     public record QuantityAndAvailability : SubBalanceQuantity9Choice_
     {
         /// <summary>

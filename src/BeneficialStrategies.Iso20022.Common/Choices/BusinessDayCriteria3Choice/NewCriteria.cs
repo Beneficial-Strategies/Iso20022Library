@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayCriteria3Choice
     /// </summary>
     [IsoId("_yFXaBZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : BusinessDayCriteria3Choice_
     {
         /// <summary>

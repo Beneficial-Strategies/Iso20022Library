@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus1
     /// </summary>
     [IsoId("_Q1O85dp-Ed-ak6NoX_4Aeg_109671588")]
     [DisplayName("Event Status")]
+    [IsoXmlTag("EvtSts")]
     public record EventStatus : CorporateActionProcessingStatus1Choice_
     {
         /// <summary>

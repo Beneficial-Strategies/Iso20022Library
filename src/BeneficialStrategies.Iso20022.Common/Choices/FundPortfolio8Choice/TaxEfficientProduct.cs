@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice
     /// </summary>
     [IsoId("_YVtxQelqEeuvhrZwLF0fDg")]
     [DisplayName("Tax Efficient Product")]
+    [IsoXmlTag("TaxEffcntPdct")]
     public record TaxEfficientProduct : FundPortfolio8Choice_
     {
         /// <summary>

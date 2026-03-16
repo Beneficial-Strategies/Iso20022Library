@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice
     /// </summary>
     [IsoId("_dtxoxWOTEeq5Ar_w98FvsA")]
     [DisplayName("Private Identification")]
+    [IsoXmlTag("PrvtId")]
     public record PrivateIdentification : TrackerParty2Choice_
     {
         /// <summary>

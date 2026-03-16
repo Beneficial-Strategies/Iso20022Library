@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeResolutionType2Choice
     /// </summary>
     [IsoId("_Un0dsNp-Ed-ak6NoX_4Aeg_-230305339")]
     [DisplayName("Proprietary Identification")]
+    [IsoXmlTag("PrtryId")]
     public record ProprietaryIdentification : DisputeResolutionType2Choice_
     {
         /// <summary>

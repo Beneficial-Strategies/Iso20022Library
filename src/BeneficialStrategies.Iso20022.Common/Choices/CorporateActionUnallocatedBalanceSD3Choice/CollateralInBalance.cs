@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     /// </summary>
     [IsoId("_ujGePcSTEeeRJJtE9TSlkw")]
     [DisplayName("Collateral In Balance")]
+    [IsoXmlTag("CollInBal")]
     public record CollateralInBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>

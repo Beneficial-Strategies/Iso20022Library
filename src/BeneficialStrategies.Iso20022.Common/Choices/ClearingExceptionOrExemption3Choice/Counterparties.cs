@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingExceptionOrExemption3Cho
     /// </summary>
     [IsoId("_AjSxc5PuEey0rJ3Gl6WZVA")]
     [DisplayName("Counterparties")]
+    [IsoXmlTag("CtrPties")]
     public record Counterparties : ClearingExceptionOrExemption3Choice_
     {
         /// <summary>

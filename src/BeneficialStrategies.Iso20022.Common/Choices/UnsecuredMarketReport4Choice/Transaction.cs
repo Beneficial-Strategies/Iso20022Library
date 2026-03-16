@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnsecuredMarketReport4Choice
     /// </summary>
     [IsoId("_HHn748EREea7jLfvGi1PDw")]
     [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
     public record Transaction : UnsecuredMarketReport4Choice_
     {
         /// <summary>

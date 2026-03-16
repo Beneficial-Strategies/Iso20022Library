@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     /// </summary>
     [IsoId("__fyLc2EUEe2P-L9DBerEgA")]
     [DisplayName("Revive")]
+    [IsoXmlTag("Rvv")]
     public record Revive : TradeReport32Choice_
     {
         /// <summary>

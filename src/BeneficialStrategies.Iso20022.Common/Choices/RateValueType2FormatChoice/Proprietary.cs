@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateValueType2FormatChoice
     /// </summary>
     [IsoId("_Rn5I5tp-Ed-ak6NoX_4Aeg_-895977984")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RateValueType2FormatChoice_
     {
         /// <summary>

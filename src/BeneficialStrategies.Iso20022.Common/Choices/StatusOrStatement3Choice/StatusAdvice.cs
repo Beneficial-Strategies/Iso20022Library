@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatusOrStatement3Choice
     /// </summary>
     [IsoId("_CEn-0fJlEd-DocZblYEqZw")]
     [DisplayName("Status Advice")]
+    [IsoXmlTag("StsAdvc")]
     public record StatusAdvice : StatusOrStatement3Choice_
     {
         /// <summary>

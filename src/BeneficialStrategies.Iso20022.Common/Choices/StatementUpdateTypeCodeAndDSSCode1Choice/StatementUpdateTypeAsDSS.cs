@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
     /// </summary>
     [IsoId("_sXPbwwaUEe2-DuDrUXkg2w")]
     [DisplayName("Statement Update Type As DSS")]
+    [IsoXmlTag("StmtUpdTpAsDSS")]
     public record StatementUpdateTypeAsDSS : StatementUpdateTypeCodeAndDSSCode1Choice_
     {
         /// <summary>

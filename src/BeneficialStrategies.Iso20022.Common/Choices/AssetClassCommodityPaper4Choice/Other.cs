@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper4Choice
     /// </summary>
     [IsoId("_FsdvORZaEe2QNcZTDeoKnQ")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : AssetClassCommodityPaper4Choice_
     {
         /// <summary>

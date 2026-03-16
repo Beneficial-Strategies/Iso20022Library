@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap3Choice
     /// </summary>
     [IsoId("_FAmvk8ESEea7jLfvGi1PDw")]
     [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
     public record Transaction : ForeignExchangeSwap3Choice_
     {
         /// <summary>

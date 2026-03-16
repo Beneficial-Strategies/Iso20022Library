@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SolicitationFeeRateFormat5Choice
     /// </summary>
     [IsoId("_apaPUBLsEeKJ5uSjVyVvug")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : SolicitationFeeRateFormat5Choice_
     {
         /// <summary>

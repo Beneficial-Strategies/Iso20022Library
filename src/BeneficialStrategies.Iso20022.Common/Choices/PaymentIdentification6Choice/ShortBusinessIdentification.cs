@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification6Choice
     /// </summary>
     [IsoId("_Aghbl24-EeiU9cctagi5ow")]
     [DisplayName("Short Business Identification")]
+    [IsoXmlTag("ShrtBizId")]
     public record ShortBusinessIdentification : PaymentIdentification6Choice_
     {
         /// <summary>

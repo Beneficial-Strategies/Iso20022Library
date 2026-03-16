@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
     /// </summary>
     [IsoId("_x4ww41yGEe24CqbZJK5XxA")]
     [DisplayName("Report")]
+    [IsoXmlTag("Rpt")]
     public record Report : DetailedAbnormalValuesStatistics4Choice_
     {
         /// <summary>

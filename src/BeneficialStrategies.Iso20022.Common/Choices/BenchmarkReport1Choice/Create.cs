@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
     /// </summary>
     [IsoId("_v7YEYdOtEeilDKNlC_3bSg")]
     [DisplayName("Create")]
+    [IsoXmlTag("Cret")]
     public record Create : BenchmarkReport1Choice_
     {
         /// <summary>

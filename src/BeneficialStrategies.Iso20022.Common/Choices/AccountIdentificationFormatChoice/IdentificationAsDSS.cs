@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
     /// </summary>
     [IsoId("_RB5f4dp-Ed-ak6NoX_4Aeg_1770326434")]
     [DisplayName("Identification As DSS")]
+    [IsoXmlTag("IdAsDSS")]
     public record IdentificationAsDSS : AccountIdentificationFormatChoice_
     {
         /// <summary>

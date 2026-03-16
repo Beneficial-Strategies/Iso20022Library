@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountPrice1Choice
     /// </summary>
     [IsoId("_VMB-Ctp-Ed-ak6NoX_4Aeg_1790266847")]
     [DisplayName("Unit Price")]
+    [IsoXmlTag("UnitPric")]
     public record UnitPrice : AmountPrice1Choice_
     {
         /// <summary>

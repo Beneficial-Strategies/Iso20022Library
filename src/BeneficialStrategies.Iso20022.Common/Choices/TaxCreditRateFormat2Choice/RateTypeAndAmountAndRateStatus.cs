@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat2Choice
     /// </summary>
     [IsoId("_UM2Y8tp-Ed-ak6NoX_4Aeg_1403274332")]
     [DisplayName("Rate Type And Amount And Rate Status")]
+    [IsoXmlTag("RateTpAndAmtAndRateSts")]
     public record RateTypeAndAmountAndRateStatus : TaxCreditRateFormat2Choice_
     {
         /// <summary>

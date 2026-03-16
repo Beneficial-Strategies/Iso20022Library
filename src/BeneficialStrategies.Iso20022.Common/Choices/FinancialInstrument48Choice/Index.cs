@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument48Choice
     /// </summary>
     [IsoId("_HYrJVX5aEea2k7EBUopqxw")]
     [DisplayName("Index")]
+    [IsoXmlTag("Indx")]
     public record Index : FinancialInstrument48Choice_
     {
         /// <summary>

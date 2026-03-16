@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus6
     /// </summary>
     [IsoId("_XOanAZmtEeWLs7cvLxlyAg")]
     [DisplayName("Code")]
+    [IsoXmlTag("Cd")]
     public record Code : CorporateActionProcessingStatus6Choice_
     {
         /// <summary>

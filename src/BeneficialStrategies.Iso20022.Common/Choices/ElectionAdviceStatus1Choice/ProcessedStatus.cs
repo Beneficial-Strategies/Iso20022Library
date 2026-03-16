@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionAdviceStatus1Choice
     /// </summary>
     [IsoId("_RiiHwNp-Ed-ak6NoX_4Aeg_-202517044")]
     [DisplayName("Processed Status")]
+    [IsoXmlTag("PrcdSts")]
     public record ProcessedStatus : ElectionAdviceStatus1Choice_
     {
         /// <summary>

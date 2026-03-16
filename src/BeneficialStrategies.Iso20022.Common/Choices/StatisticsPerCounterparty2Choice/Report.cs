@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty2Choice
     /// </summary>
     [IsoId("_85s8lEwWEeqwfMIOLcNxbw")]
     [DisplayName("Report")]
+    [IsoXmlTag("Rpt")]
     public record Report : StatisticsPerCounterparty2Choice_
     {
         /// <summary>

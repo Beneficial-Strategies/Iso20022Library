@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError1Choice
     /// </summary>
     [IsoId("_QqH6IZ9uEee7Qpz45yWJJw")]
     [DisplayName("Party Audit Trail Report")]
+    [IsoXmlTag("PtyAudtTrlRpt")]
     public record PartyAuditTrailReport : PartyAuditTrailOrError1Choice_
     {
         /// <summary>

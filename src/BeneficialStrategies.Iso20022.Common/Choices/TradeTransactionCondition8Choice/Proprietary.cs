@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition8Choice
     /// </summary>
     [IsoId("_P2iDm0c9EeaBWtcfqEyXyw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradeTransactionCondition8Choice_
     {
         /// <summary>

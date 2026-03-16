@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WaivingInstruction2Choice
     /// </summary>
     [IsoId("_PL1e81iPEeaMNZxYNthMeA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : WaivingInstruction2Choice_
     {
         /// <summary>

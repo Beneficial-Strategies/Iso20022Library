@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status38Choice
     /// </summary>
     [IsoId("_coFnpSW-EeygjNFjAlVoPA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Status38Choice_
     {
         /// <summary>

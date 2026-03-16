@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionAvailabilityStatus4Choice
     /// </summary>
     [IsoId("_cta-L5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OptionAvailabilityStatus4Choice_
     {
         /// <summary>

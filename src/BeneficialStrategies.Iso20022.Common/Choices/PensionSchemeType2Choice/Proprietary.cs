@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType2Choice
     /// </summary>
     [IsoId("_CZ5YEzOUEeqLMcD_sEa8Xw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PensionSchemeType2Choice_
     {
         /// <summary>

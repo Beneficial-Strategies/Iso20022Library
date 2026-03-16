@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     /// </summary>
     [IsoId("_x4yAf7vsEeiLRYqS-r-R-A")]
     [DisplayName("Distillates")]
+    [IsoXmlTag("Dstllts")]
     public record Distillates : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>

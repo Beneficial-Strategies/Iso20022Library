@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     /// </summary>
     [IsoId("_xPt7gmjNEeiRg5NzP0jkQg")]
     [DisplayName("Restriction")]
+    [IsoXmlTag("Rstrctn")]
     public record Restriction : UpdateLogPartyRecord1Choice_
     {
         /// <summary>

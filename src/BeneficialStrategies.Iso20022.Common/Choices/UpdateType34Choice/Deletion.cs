@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType34Choice
     /// </summary>
     [IsoId("_a76DiyAdEeuyDZ-ukt4YRg")]
     [DisplayName("Deletion")]
+    [IsoXmlTag("Deltn")]
     public record Deletion : UpdateType34Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     /// </summary>
     [IsoId("_xPt7iWjNEeiRg5NzP0jkQg")]
     [DisplayName("Lock Status")]
+    [IsoXmlTag("LckSts")]
     public record LockStatus : UpdateLogPartyRecord1Choice_
     {
         /// <summary>

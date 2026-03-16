@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient5Choice
     /// </summary>
     [IsoId("_HdnNoGi1EeS87LmvcA55sg")]
     [DisplayName("Issuer And Serial Number")]
+    [IsoXmlTag("IssrAndSrlNb")]
     public record IssuerAndSerialNumber : Recipient5Choice_
     {
         /// <summary>

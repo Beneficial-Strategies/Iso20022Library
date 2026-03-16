@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalEnrolment2Choice
     /// </summary>
     [IsoId("_UZbOI-H7Eeqbls7Gk4-ckA")]
     [DisplayName("Original Enrolment Data")]
+    [IsoXmlTag("OrgnlEnrlmntData")]
     public record OriginalEnrolmentData : OriginalEnrolment2Choice_
     {
         /// <summary>

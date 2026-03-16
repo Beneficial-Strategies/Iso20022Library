@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
     /// </summary>
     [IsoId("_NxHXHbveEeiLRYqS-r-R-A")]
     [DisplayName("Seafood")]
+    [IsoXmlTag("Sfd")]
     public record Seafood : AssetClassCommodityAgricultural5Choice_
     {
         /// <summary>

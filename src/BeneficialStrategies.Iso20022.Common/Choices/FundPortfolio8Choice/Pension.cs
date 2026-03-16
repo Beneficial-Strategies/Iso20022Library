@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio8Choice
     /// </summary>
     [IsoId("_YVtxRelqEeuvhrZwLF0fDg")]
     [DisplayName("Pension")]
+    [IsoXmlTag("Pnsn")]
     public record Pension : FundPortfolio8Choice_
     {
         /// <summary>

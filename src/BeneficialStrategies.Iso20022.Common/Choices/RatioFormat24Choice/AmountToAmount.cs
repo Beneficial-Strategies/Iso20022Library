@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat24Choice
     /// </summary>
     [IsoId("_cti6jJKQEeWHWpTQn1FFVg")]
     [DisplayName("Amount To Amount")]
+    [IsoXmlTag("AmtToAmt")]
     public record AmountToAmount : RatioFormat24Choice_
     {
         /// <summary>

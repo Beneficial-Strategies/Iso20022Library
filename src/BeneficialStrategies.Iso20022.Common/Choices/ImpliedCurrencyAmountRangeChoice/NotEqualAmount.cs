@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRangeChoice
     /// </summary>
     [IsoId("_PVH1Atp-Ed-ak6NoX_4Aeg_-1093710164")]
     [DisplayName("Not Equal Amount")]
+    [IsoXmlTag("NEQAmt")]
     public record NotEqualAmount : ImpliedCurrencyAmountRangeChoice_
     {
         /// <summary>

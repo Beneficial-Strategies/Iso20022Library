@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification8Choice
     /// </summary>
     [IsoId("_Q7pG4Np-Ed-ak6NoX_4Aeg_1657637865")]
     [DisplayName("BIC Or BEI")]
+    [IsoXmlTag("BICOrBEI")]
     public record BICOrBEI : PartyIdentification8Choice_
     {
         /// <summary>

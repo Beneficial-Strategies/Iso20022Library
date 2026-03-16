@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegementReason2Choice
     /// </summary>
     [IsoId("_3m3kwwd3Ee2fOITqoTnSLQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AllegementReason2Choice_
     {
         /// <summary>

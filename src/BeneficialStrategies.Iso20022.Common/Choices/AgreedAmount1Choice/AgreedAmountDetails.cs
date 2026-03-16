@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
     /// </summary>
     [IsoId("_Qm7bJtp-Ed-ak6NoX_4Aeg_-1292111974")]
     [DisplayName("Agreed Amount Details")]
+    [IsoXmlTag("AgrdAmtDtls")]
     public record AgreedAmountDetails : AgreedAmount1Choice_
     {
         /// <summary>

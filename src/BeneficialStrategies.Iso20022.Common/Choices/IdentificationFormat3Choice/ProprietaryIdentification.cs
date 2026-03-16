@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat3Choice
     /// </summary>
     [IsoId("_qmP-gUEFEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary Identification")]
+    [IsoXmlTag("PrtryId")]
     public record ProprietaryIdentification : IdentificationFormat3Choice_
     {
         /// <summary>

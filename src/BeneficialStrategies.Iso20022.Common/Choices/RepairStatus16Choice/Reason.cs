@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairStatus16Choice
     /// </summary>
     [IsoId("_6P_Z7ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : RepairStatus16Choice_
     {
         /// <summary>

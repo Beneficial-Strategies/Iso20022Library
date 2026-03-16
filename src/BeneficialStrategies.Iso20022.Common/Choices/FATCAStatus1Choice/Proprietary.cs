@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCAStatus1Choice
     /// </summary>
     [IsoId("_AkYYIAjSEeS5F6qHcKOrew")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FATCAStatus1Choice_
     {
         /// <summary>

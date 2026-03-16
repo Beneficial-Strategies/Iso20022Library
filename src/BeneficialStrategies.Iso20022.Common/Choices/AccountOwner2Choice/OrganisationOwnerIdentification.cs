@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOwner2Choice
     /// </summary>
     [IsoId("_-VSBM4oVEeahcZ3Nzs1Qag")]
     [DisplayName("Organisation Owner Identification")]
+    [IsoXmlTag("OrgOwnrId")]
     public record OrganisationOwnerIdentification : AccountOwner2Choice_
     {
         /// <summary>

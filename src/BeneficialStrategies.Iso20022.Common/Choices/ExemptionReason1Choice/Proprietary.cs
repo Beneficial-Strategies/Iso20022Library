@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExemptionReason1Choice
     /// </summary>
     [IsoId("_tuUKIBuJEeOqSdXzJ0oydA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ExemptionReason1Choice_
     {
         /// <summary>

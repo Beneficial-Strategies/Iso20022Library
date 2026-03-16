@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError3Choice
     /// </summary>
     [IsoId("_Rf2uIZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Limit")]
+    [IsoXmlTag("Lmt")]
     public record Limit : LimitOrError3Choice_
     {
         /// <summary>

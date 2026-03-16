@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat51Choice
     /// </summary>
     [IsoId("_fNdjQJSjEeeh5JjedkaA_g")]
     [DisplayName("Rate Type And Amount And Rate Status")]
+    [IsoXmlTag("RateTpAndAmtAndRateSts")]
     public record RateTypeAndAmountAndRateStatus : RateAndAmountFormat51Choice_
     {
         /// <summary>

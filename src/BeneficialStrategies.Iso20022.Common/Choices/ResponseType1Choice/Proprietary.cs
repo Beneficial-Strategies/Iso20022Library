@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseType1Choice
     /// </summary>
     [IsoId("_QnYHENp-Ed-ak6NoX_4Aeg_-1324860761")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ResponseType1Choice_
     {
         /// <summary>

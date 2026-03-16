@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice
     /// </summary>
     [IsoId("_vIDnZ0H7EeaV3ab_pHzFIQ")]
     [DisplayName("Rejected")]
+    [IsoXmlTag("Rjctd")]
     public record Rejected : OrderStatus3Choice_
     {
         /// <summary>

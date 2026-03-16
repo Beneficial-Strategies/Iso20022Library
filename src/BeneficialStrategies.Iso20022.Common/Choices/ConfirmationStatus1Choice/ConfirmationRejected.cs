@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConfirmationStatus1Choice
     /// </summary>
     [IsoId("_1BFlE0hCEea8pJjypp-yMQ")]
     [DisplayName("Confirmation Rejected")]
+    [IsoXmlTag("ConfRjctd")]
     public record ConfirmationRejected : ConfirmationStatus1Choice_
     {
         /// <summary>

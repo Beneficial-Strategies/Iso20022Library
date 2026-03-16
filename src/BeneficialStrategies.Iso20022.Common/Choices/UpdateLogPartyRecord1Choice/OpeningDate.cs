@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     /// </summary>
     [IsoId("_xPt7hGjNEeiRg5NzP0jkQg")]
     [DisplayName("Opening Date")]
+    [IsoXmlTag("OpngDt")]
     public record OpeningDate : UpdateLogPartyRecord1Choice_
     {
         /// <summary>

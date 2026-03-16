@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus3Choice
     /// </summary>
     [IsoId("_vIDnbUH7EeaV3ab_pHzFIQ")]
     [DisplayName("Partially Settled")]
+    [IsoXmlTag("PrtlySttld")]
     public record PartiallySettled : OrderStatus3Choice_
     {
         /// <summary>

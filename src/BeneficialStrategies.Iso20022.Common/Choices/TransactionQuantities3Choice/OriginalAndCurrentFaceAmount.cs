@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities3Choice
     /// </summary>
     [IsoId("_dNjxpXkcEei6JsZKrqN0hQ")]
     [DisplayName("Original And Current Face Amount")]
+    [IsoXmlTag("OrgnlAndCurFaceAmt")]
     public record OriginalAndCurrentFaceAmount : TransactionQuantities3Choice_
     {
         /// <summary>

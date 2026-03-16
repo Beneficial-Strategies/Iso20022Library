@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RenounceableEntitlementStatusTyp
     /// </summary>
     [IsoId("_Q3nigdp-Ed-ak6NoX_4Aeg_1417014663")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RenounceableEntitlementStatusTypeFormat1Choice_
     {
         /// <summary>

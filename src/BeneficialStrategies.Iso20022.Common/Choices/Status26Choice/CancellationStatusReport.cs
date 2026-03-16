@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status26Choice
     /// </summary>
     [IsoId("_n7iikkgrEeaD2L_hzZaE0w")]
     [DisplayName("Cancellation Status Report")]
+    [IsoXmlTag("CxlStsRpt")]
     public record CancellationStatusReport : Status26Choice_
     {
         /// <summary>

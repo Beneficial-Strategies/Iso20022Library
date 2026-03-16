@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateType44Choice
     /// </summary>
     [IsoId("_cj9gQZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RateType44Choice_
     {
         /// <summary>

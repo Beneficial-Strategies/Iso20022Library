@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentIdentification5Choice
     /// </summary>
     [IsoId("_UpdMFZlQEee-Zps0fZQaFQ")]
     [DisplayName("Long Business Identification")]
+    [IsoXmlTag("LngBizId")]
     public record LongBusinessIdentification : PaymentIdentification5Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DrawdownEventType1Choice
     /// </summary>
     [IsoId("_IjZiUFNiEeijdq8ilaxyOA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DrawdownEventType1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationDistribution1Choice
     /// </summary>
     [IsoId("_IAzkwCCVEeWJd9HF2tO7BA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InformationDistribution1Choice_
     {
         /// <summary>

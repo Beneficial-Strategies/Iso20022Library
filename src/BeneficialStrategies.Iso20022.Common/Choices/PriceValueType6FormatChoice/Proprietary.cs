@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceValueType6FormatChoice
     /// </summary>
     [IsoId("_RnJiAtp-Ed-ak6NoX_4Aeg_124226634")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PriceValueType6FormatChoice_
     {
         /// <summary>

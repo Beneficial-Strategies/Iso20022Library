@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
     /// </summary>
     [IsoId("_CXmpZlRtEe23M4WgERMsYw")]
     [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
     public record Account : UnderlyingData1Choice_
     {
         /// <summary>

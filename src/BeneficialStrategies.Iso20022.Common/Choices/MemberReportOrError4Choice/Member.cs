@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError4Choice
     /// </summary>
     [IsoId("_jEyVkZlCEee-Zps0fZQaFQ")]
     [DisplayName("Member")]
+    [IsoXmlTag("Mmb")]
     public record Member : MemberReportOrError4Choice_
     {
         /// <summary>

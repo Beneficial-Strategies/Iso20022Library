@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityCommodity7Choice
     /// </summary>
     [IsoId("_Ul6y8cgyEeuGrNSsxk3B0A")]
     [DisplayName("Security")]
+    [IsoXmlTag("Scty")]
     public record Security : SecurityCommodity7Choice_
     {
         /// <summary>

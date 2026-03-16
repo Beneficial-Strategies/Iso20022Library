@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ActiveAmountRange3Choice
     /// </summary>
     [IsoId("_OvM9s5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Implied Currency And Amount Range")]
+    [IsoXmlTag("ImpldCcyAndAmtRg")]
     public record ImpliedCurrencyAndAmountRange : ActiveAmountRange3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarReportOrError1Choice
     /// </summary>
     [IsoId("_dVcQ44m7Eeipw6hHPgB4Sw")]
     [DisplayName("Calendar Report")]
+    [IsoXmlTag("CalRpt")]
     public record CalendarReport : CalendarReportOrError1Choice_
     {
         /// <summary>

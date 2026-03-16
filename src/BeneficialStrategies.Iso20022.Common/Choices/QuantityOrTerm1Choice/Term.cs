@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
     /// </summary>
     [IsoId("_glq30SJDEe2zWP9pqvmqdw")]
     [DisplayName("Term")]
+    [IsoXmlTag("Term")]
     public record Term : QuantityOrTerm1Choice_
     {
         /// <summary>

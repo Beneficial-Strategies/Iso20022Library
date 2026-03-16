@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer1Ch
     /// </summary>
     [IsoId("_tUmQYFr2EeWN79Bl6BUd3g")]
     [DisplayName("Sulphur")]
+    [IsoXmlTag("Slphr")]
     public record Sulphur : AssetClassCommodityFertilizer1Choice_
     {
         /// <summary>

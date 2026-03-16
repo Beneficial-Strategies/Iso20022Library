@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_TFnrIdp-Ed-ak6NoX_4Aeg_1988349475")]
     [DisplayName("Proprietary Identification")]
+    [IsoXmlTag("PrtryId")]
     public record ProprietaryIdentification : FinancialInstitutionIdentification5Choice_
     {
         /// <summary>

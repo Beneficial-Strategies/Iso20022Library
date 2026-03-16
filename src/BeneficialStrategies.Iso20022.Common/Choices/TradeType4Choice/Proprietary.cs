@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeType4Choice
     /// </summary>
     [IsoId("_6v61A5BgEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradeType4Choice_
     {
         /// <summary>

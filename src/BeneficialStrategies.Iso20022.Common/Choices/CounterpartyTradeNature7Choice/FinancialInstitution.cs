@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature7Choice
     /// </summary>
     [IsoId("_-UtqQan9EemdLtwzt4CWxg")]
     [DisplayName("Financial Institution")]
+    [IsoXmlTag("FI")]
     public record FinancialInstitution : CounterpartyTradeNature7Choice_
     {
         /// <summary>

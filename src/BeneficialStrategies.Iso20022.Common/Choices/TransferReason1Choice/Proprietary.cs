@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferReason1Choice
     /// </summary>
     [IsoId("_hvAgY651EeeMy7TnJ3e__g")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TransferReason1Choice_
     {
         /// <summary>

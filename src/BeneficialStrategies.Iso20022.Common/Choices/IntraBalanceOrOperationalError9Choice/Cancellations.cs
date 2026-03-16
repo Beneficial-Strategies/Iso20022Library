@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError9C
     /// </summary>
     [IsoId("_p-rkcTnfEem7JZMuWtwtsg")]
     [DisplayName("Cancellations")]
+    [IsoXmlTag("Cxls")]
     public record Cancellations : IntraBalanceOrOperationalError9Choice_
     {
         /// <summary>

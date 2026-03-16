@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventProcessingStatus1Choice
     /// </summary>
     [IsoId("_Qx8_YNp-Ed-ak6NoX_4Aeg_1493935136")]
     [DisplayName("Proprietary Status")]
+    [IsoXmlTag("PrtrySts")]
     public record ProprietaryStatus : EventProcessingStatus1Choice_
     {
         /// <summary>

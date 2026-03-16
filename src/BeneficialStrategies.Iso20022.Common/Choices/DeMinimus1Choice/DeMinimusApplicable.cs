@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
     /// </summary>
     [IsoId("_CgNiAggqEeSUG-8hqXsVMQ")]
     [DisplayName("De Minimus Applicable")]
+    [IsoXmlTag("DeMnmsAplbl")]
     public record DeMinimusApplicable : DeMinimus1Choice_
     {
         /// <summary>

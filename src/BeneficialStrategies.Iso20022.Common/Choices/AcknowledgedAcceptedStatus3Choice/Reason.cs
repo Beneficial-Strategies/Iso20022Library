@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgedAcceptedStatus3Choic
     /// </summary>
     [IsoId("_UZOBBtp-Ed-ak6NoX_4Aeg_-779516953")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : AcknowledgedAcceptedStatus3Choice_
     {
         /// <summary>

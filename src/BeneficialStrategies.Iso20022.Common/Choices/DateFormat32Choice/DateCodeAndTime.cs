@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat32Choice
     /// </summary>
     [IsoId("_MMyiK0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Date Code And Time")]
+    [IsoXmlTag("DtCdAndTm")]
     public record DateCodeAndTime : DateFormat32Choice_
     {
         /// <summary>

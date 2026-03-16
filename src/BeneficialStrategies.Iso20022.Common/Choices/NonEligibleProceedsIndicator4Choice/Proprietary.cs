@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NonEligibleProceedsIndicator4Cho
     /// </summary>
     [IsoId("_cthE95KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : NonEligibleProceedsIndicator4Choice_
     {
         /// <summary>

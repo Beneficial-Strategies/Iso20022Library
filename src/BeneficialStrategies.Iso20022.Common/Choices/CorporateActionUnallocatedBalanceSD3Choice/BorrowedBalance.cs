@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionUnallocatedBalanc
     /// </summary>
     [IsoId("_ujGeL8STEeeRJJtE9TSlkw")]
     [DisplayName("Borrowed Balance")]
+    [IsoXmlTag("BrrwdBal")]
     public record BorrowedBalance : CorporateActionUnallocatedBalanceSD3Choice_
     {
         /// <summary>

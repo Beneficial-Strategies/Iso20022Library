@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status20Choice
     /// </summary>
     [IsoId("_qrDFoyGaEeWKAaDJcYGKLw")]
     [DisplayName("Rejected")]
+    [IsoXmlTag("Rjctd")]
     public record Rejected : Status20Choice_
     {
         /// <summary>

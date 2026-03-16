@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification36Choice
     /// </summary>
     [IsoId("_POTEp4rpEeq91phomTRDDA")]
     [DisplayName("Basket")]
+    [IsoXmlTag("Bskt")]
     public record Basket : SecurityIdentification36Choice_
     {
         /// <summary>

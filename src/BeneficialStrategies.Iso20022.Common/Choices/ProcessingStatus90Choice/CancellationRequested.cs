@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus90Choice
     /// </summary>
     [IsoId("_ddAReDi8Eeydid5dcNPKvg")]
     [DisplayName("Cancellation Requested")]
+    [IsoXmlTag("CxlReqd")]
     public record CancellationRequested : ProcessingStatus90Choice_
     {
         /// <summary>

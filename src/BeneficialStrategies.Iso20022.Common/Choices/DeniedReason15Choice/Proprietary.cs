@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason15Choice
     /// </summary>
     [IsoId("_AKMpaTq2EeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DeniedReason15Choice_
     {
         /// <summary>

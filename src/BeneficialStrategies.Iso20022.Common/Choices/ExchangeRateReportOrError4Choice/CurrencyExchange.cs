@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError4Choice
     /// </summary>
     [IsoId("_MqM5Q9fiEeqoweZZxm4TPQ")]
     [DisplayName("Currency Exchange")]
+    [IsoXmlTag("CcyXchg")]
     public record CurrencyExchange : ExchangeRateReportOrError4Choice_
     {
         /// <summary>

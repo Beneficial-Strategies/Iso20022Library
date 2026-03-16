@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_fj4lkOCzEei2UYJ62ws-Fw")]
     [DisplayName("Pending")]
+    [IsoXmlTag("Pdg")]
     public record Pending : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BusinessDayReportOrError10Choice
     /// </summary>
     [IsoId("_OYVo4XXyEei3jO6riKEVXg")]
     [DisplayName("Business Day Information")]
+    [IsoXmlTag("BizDayInf")]
     public record BusinessDayInformation : BusinessDayReportOrError10Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IssuerOfferorTaxabilityIndicator
     /// </summary>
     [IsoId("_hlkcEIlzEeavwKddCbm3hg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : IssuerOfferorTaxabilityIndicator1Choice_
     {
         /// <summary>

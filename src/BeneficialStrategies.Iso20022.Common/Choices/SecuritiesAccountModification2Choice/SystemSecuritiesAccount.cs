@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
     /// </summary>
     [IsoId("_8IwTgTp0Eemk2e6qGBk8IQ")]
     [DisplayName("System Securities Account")]
+    [IsoXmlTag("SysSctiesAcct")]
     public record SystemSecuritiesAccount : SecuritiesAccountModification2Choice_
     {
         /// <summary>

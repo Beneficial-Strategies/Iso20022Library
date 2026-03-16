@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketType18Choice
     /// </summary>
     [IsoId("_AqZPa5BhEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MarketType18Choice_
     {
         /// <summary>

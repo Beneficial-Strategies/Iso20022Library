@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginResult1Choice
     /// </summary>
     [IsoId("_Qk1wdtp-Ed-ak6NoX_4Aeg_253315492")]
     [DisplayName("Excess Amount")]
+    [IsoXmlTag("XcssAmt")]
     public record ExcessAmount : MarginResult1Choice_
     {
         /// <summary>

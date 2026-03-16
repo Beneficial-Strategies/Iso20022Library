@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionCalculationMethod
     /// </summary>
     [IsoId("_Rl9PNdp-Ed-ak6NoX_4Aeg_-550005883")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionCalculationMethod1FormatChoice_
     {
         /// <summary>

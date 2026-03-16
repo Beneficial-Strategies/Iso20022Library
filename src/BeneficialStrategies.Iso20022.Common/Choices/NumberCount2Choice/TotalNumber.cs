@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NumberCount2Choice
     /// </summary>
     [IsoId("_JaoZeygdEey2k_sfZmJz4g")]
     [DisplayName("Total Number")]
+    [IsoXmlTag("TtlNb")]
     public record TotalNumber : NumberCount2Choice_
     {
         /// <summary>

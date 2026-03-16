@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     /// </summary>
     [IsoId("_xPt7h2jNEeiRg5NzP0jkQg")]
     [DisplayName("Technical Address")]
+    [IsoXmlTag("TechAdr")]
     public record TechnicalAddress : UpdateLogPartyRecord1Choice_
     {
         /// <summary>

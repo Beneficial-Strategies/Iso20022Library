@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IndividualPersonIdentificationCh
     /// </summary>
     [IsoId("_REuxfdp-Ed-ak6NoX_4Aeg_-1639846397")]
     [DisplayName("Identification Number")]
+    [IsoXmlTag("IdNb")]
     public record IdentificationNumber : IndividualPersonIdentificationChoice_
     {
         /// <summary>

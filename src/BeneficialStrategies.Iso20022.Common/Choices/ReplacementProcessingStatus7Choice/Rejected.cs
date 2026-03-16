@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
     /// </summary>
     [IsoId("_A5cl89okEeC60axPepSq7g_-1831473085")]
     [DisplayName("Rejected")]
+    [IsoXmlTag("Rjctd")]
     public record Rejected : ReplacementProcessingStatus7Choice_
     {
         /// <summary>

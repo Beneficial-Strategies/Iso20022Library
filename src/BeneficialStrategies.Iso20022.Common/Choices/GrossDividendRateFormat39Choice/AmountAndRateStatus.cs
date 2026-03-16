@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat39Choice
     /// </summary>
     [IsoId("_-lkhjgVSEeqjd8n6wD9JVw")]
     [DisplayName("Amount And Rate Status")]
+    [IsoXmlTag("AmtAndRateSts")]
     public record AmountAndRateStatus : GrossDividendRateFormat39Choice_
     {
         /// <summary>

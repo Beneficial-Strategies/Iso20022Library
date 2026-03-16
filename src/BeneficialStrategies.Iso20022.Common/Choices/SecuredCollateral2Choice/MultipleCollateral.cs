@@ -15,6 +15,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
     /// </summary>
     [IsoId("_iZO6A6idEeWHO_l3hf2rlA")]
     [DisplayName("Multiple Collateral")]
+    [IsoXmlTag("MltplColl")]
     public record MultipleCollateral : SecuredCollateral2Choice_
     {
         /// <summary>

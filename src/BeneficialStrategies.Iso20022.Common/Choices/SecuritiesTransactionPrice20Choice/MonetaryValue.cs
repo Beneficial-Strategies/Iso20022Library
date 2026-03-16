@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice20Choi
     /// </summary>
     [IsoId("_IaZdgU2vEe2Ci6HlmBLbDw")]
     [DisplayName("Monetary Value")]
+    [IsoXmlTag("MntryVal")]
     public record MonetaryValue : SecuritiesTransactionPrice20Choice_
     {
         /// <summary>

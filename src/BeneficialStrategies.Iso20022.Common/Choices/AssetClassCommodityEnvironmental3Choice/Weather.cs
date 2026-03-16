@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
     /// </summary>
     [IsoId("_9cj2o08REe2PGo0mhYCh1g")]
     [DisplayName("Weather")]
+    [IsoXmlTag("Wthr")]
     public record Weather : AssetClassCommodityEnvironmental3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionTypeFormat1Choice
     /// </summary>
     [IsoId("_Q3K2lNp-Ed-ak6NoX_4Aeg_1718215984")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ElectionTypeFormat1Choice_
     {
         /// <summary>

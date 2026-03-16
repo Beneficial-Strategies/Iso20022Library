@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceRateOrAmountOrUnknown3Choic
     /// </summary>
     [IsoId("_gdOxm833Eee5nJBZsW8MFQ")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : PriceRateOrAmountOrUnknown3Choice_
     {
         /// <summary>

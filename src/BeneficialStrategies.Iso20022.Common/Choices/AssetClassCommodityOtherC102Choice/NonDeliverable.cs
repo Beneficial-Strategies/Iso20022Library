@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityOtherC102Choi
     /// </summary>
     [IsoId("_lcXQU3vyEeanCNPcMT7sSg")]
     [DisplayName("Non Deliverable")]
+    [IsoXmlTag("NonDlvrbl")]
     public record NonDeliverable : AssetClassCommodityOtherC102Choice_
     {
         /// <summary>

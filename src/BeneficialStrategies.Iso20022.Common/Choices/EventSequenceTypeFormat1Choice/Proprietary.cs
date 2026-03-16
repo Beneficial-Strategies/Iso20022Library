@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventSequenceTypeFormat1Choice
     /// </summary>
     [IsoId("_jkicEbXIEeiTob_PrFFUxA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : EventSequenceTypeFormat1Choice_
     {
         /// <summary>

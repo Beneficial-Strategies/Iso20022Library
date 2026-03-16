@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat3
     /// </summary>
     [IsoId("_Q10yxdp-Ed-ak6NoX_4Aeg_861159229")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AdditionalBusinessProcessFormat3Choice_
     {
         /// <summary>

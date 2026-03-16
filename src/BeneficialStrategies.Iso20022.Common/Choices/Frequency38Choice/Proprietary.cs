@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency38Choice
     /// </summary>
     [IsoId("_zRGl6jrwEeuD7rm9md9zvg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Frequency38Choice_
     {
         /// <summary>

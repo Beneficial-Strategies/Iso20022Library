@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity14Choice
     /// </summary>
     [IsoId("_QYSGhRgKEeKqWJINzXcn5g")]
     [DisplayName("Unit")]
+    [IsoXmlTag("Unit")]
     public record Unit : Quantity14Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification22Choice
     /// </summary>
     [IsoId("_B03cA1hxEeWDI58xzGOTTQ")]
     [DisplayName("Alternate Identification")]
+    [IsoXmlTag("AltrnId")]
     public record AlternateIdentification : SecurityIdentification22Choice_
     {
         /// <summary>

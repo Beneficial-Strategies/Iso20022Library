@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason22Choice
     /// </summary>
     [IsoId("_TEt8WSdxEeOXAt_43VmZGw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PendingReason22Choice_
     {
         /// <summary>

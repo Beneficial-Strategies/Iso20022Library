@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosedStatusReason1Choice
     /// </summary>
     [IsoId("_U2WaA0zDEeafiMTDrtSnyw")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : ClosedStatusReason1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AutomaticBorrowing11Choice
     /// </summary>
     [IsoId("_6GVvVZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AutomaticBorrowing11Choice_
     {
         /// <summary>

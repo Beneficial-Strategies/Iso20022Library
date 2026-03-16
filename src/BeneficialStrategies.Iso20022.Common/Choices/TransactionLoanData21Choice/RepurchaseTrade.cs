@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData21Choice
     /// </summary>
     [IsoId("_4Eg3Ef_qEemm3skPVSMJQg")]
     [DisplayName("Repurchase Trade")]
+    [IsoXmlTag("RpTrad")]
     public record RepurchaseTrade : TransactionLoanData21Choice_
     {
         /// <summary>

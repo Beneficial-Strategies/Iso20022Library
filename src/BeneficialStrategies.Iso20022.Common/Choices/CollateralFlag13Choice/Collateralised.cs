@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralFlag13Choice
     /// </summary>
     [IsoId("_J_aqIcg5Eeu4ecZgAYuz5w")]
     [DisplayName("Collateralised")]
+    [IsoXmlTag("Collsd")]
     public record Collateralised : CollateralFlag13Choice_
     {
         /// <summary>

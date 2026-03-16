@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedOrRecurrentDate1Choice
     /// </summary>
     [IsoId("_98U8AXltEeG7BsjMvd1mEw_-1677013285")]
     [DisplayName("Recurrent Date")]
+    [IsoXmlTag("RcrntDt")]
     public record RecurrentDate : FixedOrRecurrentDate1Choice_
     {
         /// <summary>

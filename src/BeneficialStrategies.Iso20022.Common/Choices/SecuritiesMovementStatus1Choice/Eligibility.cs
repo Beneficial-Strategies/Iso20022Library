@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_mZ3l8OCzEei2UYJ62ws-Fw")]
     [DisplayName("Eligibility")]
+    [IsoXmlTag("Elgblty")]
     public record Eligibility : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

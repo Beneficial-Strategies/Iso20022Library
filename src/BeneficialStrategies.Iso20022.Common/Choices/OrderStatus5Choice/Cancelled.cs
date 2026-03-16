@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderStatus5Choice
     /// </summary>
     [IsoId("_3MEL0UHUEeasdbKMiqizqA")]
     [DisplayName("Cancelled")]
+    [IsoXmlTag("Canc")]
     public record Cancelled : OrderStatus5Choice_
     {
         /// <summary>

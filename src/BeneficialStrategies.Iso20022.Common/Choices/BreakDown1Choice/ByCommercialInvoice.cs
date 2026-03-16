@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BreakDown1Choice
     /// </summary>
     [IsoId("_6n8NYBrYEeOVR9VN6fAMUg")]
     [DisplayName("By Commercial Invoice")]
+    [IsoXmlTag("ByComrclInvc")]
     public record ByCommercialInvoice : BreakDown1Choice_
     {
         /// <summary>

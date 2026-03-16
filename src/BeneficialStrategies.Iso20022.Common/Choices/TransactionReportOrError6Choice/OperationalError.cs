@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError6Choice
     /// </summary>
     [IsoId("_7tkDowKxEe2rHs6fbn9-0A")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : TransactionReportOrError6Choice_
     {
         /// <summary>

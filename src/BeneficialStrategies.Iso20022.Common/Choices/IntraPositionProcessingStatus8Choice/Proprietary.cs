@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraPositionProcessingStatus8Ch
     /// </summary>
     [IsoId("_65NaQffUEeiNZp_PtLohLw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : IntraPositionProcessingStatus8Choice_
     {
         /// <summary>

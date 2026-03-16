@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party31Choice
     /// </summary>
     [IsoId("_Hr4NsSCBEeWhHbfCMWc1cw")]
     [DisplayName("Organisation")]
+    [IsoXmlTag("Org")]
     public record Organisation : Party31Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionFrequencyType1For
     /// </summary>
     [IsoId("_RmZ7Idp-Ed-ak6NoX_4Aeg_1510389852")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionFrequencyType1FormatChoice_
     {
         /// <summary>

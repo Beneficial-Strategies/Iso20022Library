@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllegementStatus4Choice
     /// </summary>
     [IsoId("_6MjsN5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AllegementStatus4Choice_
     {
         /// <summary>

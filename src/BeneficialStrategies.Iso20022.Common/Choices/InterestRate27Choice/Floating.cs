@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate27Choice
     /// </summary>
     [IsoId("_Z-T6U8g6Eeu4ecZgAYuz5w")]
     [DisplayName("Floating")]
+    [IsoXmlTag("Fltg")]
     public record Floating : InterestRate27Choice_
     {
         /// <summary>

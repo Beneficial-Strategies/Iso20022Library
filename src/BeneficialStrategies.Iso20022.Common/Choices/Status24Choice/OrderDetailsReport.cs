@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status24Choice
     /// </summary>
     [IsoId("_bpQwY0HPEeazV4RAqPV71g")]
     [DisplayName("Order Details Report")]
+    [IsoXmlTag("OrdrDtlsRpt")]
     public record OrderDetailsReport : Status24Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice1Choice
     /// </summary>
     [IsoId("_RUrR9dp-Ed-ak6NoX_4Aeg_1070624770")]
     [DisplayName("Deal Price")]
+    [IsoXmlTag("DealPric")]
     public record DealPrice : TransactionPrice1Choice_
     {
         /// <summary>

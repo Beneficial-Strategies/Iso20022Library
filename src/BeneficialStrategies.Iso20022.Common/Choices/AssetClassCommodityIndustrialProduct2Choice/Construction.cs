@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityIndustrialPro
     /// </summary>
     [IsoId("_OTrSERZZEe2QNcZTDeoKnQ")]
     [DisplayName("Construction")]
+    [IsoXmlTag("Cnstrctn")]
     public record Construction : AssetClassCommodityIndustrialProduct2Choice_
     {
         /// <summary>

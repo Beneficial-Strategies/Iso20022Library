@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError5Choice
     /// </summary>
     [IsoId("_dnujsdcZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
     public record Transaction : TransactionOrError5Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
     /// </summary>
     [IsoId("_idnj9U8REe2PGo0mhYCh1g")]
     [DisplayName("Potash")]
+    [IsoXmlTag("Ptsh")]
     public record Potash : AssetClassCommodityFertilizer4Choice_
     {
         /// <summary>

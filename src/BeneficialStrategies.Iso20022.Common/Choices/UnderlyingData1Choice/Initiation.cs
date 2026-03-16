@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
     /// </summary>
     [IsoId("_CXmpZ1RtEe23M4WgERMsYw")]
     [DisplayName("Initiation")]
+    [IsoXmlTag("Initn")]
     public record Initiation : UnderlyingData1Choice_
     {
         /// <summary>

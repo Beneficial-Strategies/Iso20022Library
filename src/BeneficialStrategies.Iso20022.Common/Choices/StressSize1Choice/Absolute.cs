@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressSize1Choice
     /// </summary>
     [IsoId("_rwZwcKs1Eeayv9XxdmMwKQ")]
     [DisplayName("Absolute")]
+    [IsoXmlTag("Abs")]
     public record Absolute : StressSize1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginType1Choice
     /// </summary>
     [IsoId("_-axnkqMOEeCojJW5vEuTEQ_1864502353")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MarginType1Choice_
     {
         /// <summary>

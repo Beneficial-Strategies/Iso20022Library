@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType1Choice
     /// </summary>
     [IsoId("_RdnLh9p-Ed-ak6NoX_4Aeg_-352751449")]
     [DisplayName("Indicative")]
+    [IsoXmlTag("Indctv")]
     public record Indicative : PriceType1Choice_
     {
         /// <summary>

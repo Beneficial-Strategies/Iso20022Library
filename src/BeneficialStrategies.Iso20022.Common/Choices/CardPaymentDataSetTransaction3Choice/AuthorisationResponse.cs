@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction3Ch
     /// </summary>
     [IsoId("_EzeIR2mJEeS7iYydEtv3Ug")]
     [DisplayName("Authorisation Response")]
+    [IsoXmlTag("AuthstnRspn")]
     public record AuthorisationResponse : CardPaymentDataSetTransaction3Choice_
     {
         /// <summary>

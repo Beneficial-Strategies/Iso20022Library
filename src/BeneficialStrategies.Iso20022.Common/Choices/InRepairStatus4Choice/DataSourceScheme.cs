@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus4Choice
     /// </summary>
     [IsoId("_yOuqZSY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : InRepairStatus4Choice_
     {
         /// <summary>

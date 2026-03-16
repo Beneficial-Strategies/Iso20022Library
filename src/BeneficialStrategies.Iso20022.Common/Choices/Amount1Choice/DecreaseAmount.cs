@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount1Choice
     /// </summary>
     [IsoId("_l8K8WpKgEeGy0b9YqEEfSQ")]
     [DisplayName("Decrease Amount")]
+    [IsoXmlTag("DcrAmt")]
     public record DecreaseAmount : Amount1Choice_
     {
         /// <summary>

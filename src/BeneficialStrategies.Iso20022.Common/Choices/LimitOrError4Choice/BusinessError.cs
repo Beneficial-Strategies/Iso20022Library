@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitOrError4Choice
     /// </summary>
     [IsoId("_RixMQ3hdEeidzqjNEfehPg")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : LimitOrError4Choice_
     {
         /// <summary>

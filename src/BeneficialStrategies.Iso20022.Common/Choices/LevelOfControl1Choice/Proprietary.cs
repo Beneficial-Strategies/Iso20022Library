@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LevelOfControl1Choice
     /// </summary>
     [IsoId("_SlfVkCDDEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LevelOfControl1Choice_
     {
         /// <summary>

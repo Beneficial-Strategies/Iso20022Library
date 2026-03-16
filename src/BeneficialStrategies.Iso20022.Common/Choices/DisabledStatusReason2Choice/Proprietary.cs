@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisabledStatusReason2Choice
     /// </summary>
     [IsoId("_hnIFM0zAEeafiMTDrtSnyw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DisabledStatusReason2Choice_
     {
         /// <summary>

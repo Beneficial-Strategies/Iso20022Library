@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus4
     /// </summary>
     [IsoId("_tNku8yXZEeOFIcNWlDEvdQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionProcessingStatus4Choice_
     {
         /// <summary>

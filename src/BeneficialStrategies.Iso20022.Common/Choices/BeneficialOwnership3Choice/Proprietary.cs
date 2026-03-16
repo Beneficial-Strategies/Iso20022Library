@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficialOwnership3Choice
     /// </summary>
     [IsoId("_AbDZw9okEeC60axPepSq7g_819003007")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BeneficialOwnership3Choice_
     {
         /// <summary>

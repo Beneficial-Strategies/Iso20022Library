@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity26Cho
     /// </summary>
     [IsoId("_Aw-nJ0_4Eea1ZIrmU5dI3w")]
     [DisplayName("Net Amount")]
+    [IsoXmlTag("NetAmt")]
     public record NetAmount : FinancialInstrumentQuantity26Choice_
     {
         /// <summary>

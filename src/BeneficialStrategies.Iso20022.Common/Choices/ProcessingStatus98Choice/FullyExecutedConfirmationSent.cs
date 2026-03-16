@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDiwarEe2phaVG0lYKTw")]
     [DisplayName("Fully Executed Confirmation Sent")]
+    [IsoXmlTag("FullyExctdConfSnt")]
     public record FullyExecutedConfirmationSent : ProcessingStatus98Choice_
     {
         /// <summary>

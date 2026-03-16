@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StampDutyType1FormatChoice
     /// </summary>
     [IsoId("_RpFbsNp-Ed-ak6NoX_4Aeg_-874099114")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : StampDutyType1FormatChoice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period6Choice
     /// </summary>
     [IsoId("_joeDs7QYEeeKRKrD60ELBQ")]
     [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
     public record Period : Period6Choice_
     {
         /// <summary>

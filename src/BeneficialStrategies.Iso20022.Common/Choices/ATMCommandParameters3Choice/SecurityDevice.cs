@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice
     /// </summary>
     [IsoId("_htqcOV2aEeekzJIz1JxYSQ")]
     [DisplayName("Security Device")]
+    [IsoXmlTag("SctyDvc")]
     public record SecurityDevice : ATMCommandParameters3Choice_
     {
         /// <summary>

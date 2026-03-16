@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAmountType1Choice
     /// </summary>
     [IsoId("_i3ZxsI2NEeeNN9vGwZc5aA")]
     [DisplayName("Proprietary Code")]
+    [IsoXmlTag("PrtryCd")]
     public record ProprietaryCode : OtherAmountType1Choice_
     {
         /// <summary>

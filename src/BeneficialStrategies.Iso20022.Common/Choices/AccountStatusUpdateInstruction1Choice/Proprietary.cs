@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountStatusUpdateInstruction1C
     /// </summary>
     [IsoId("_1krUkHi5EeaRm5xIK6nGuQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AccountStatusUpdateInstruction1Choice_
     {
         /// <summary>

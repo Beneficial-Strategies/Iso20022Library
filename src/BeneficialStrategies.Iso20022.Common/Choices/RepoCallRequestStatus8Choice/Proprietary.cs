@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepoCallRequestStatus8Choice
     /// </summary>
     [IsoId("_IRR7uTqqEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RepoCallRequestStatus8Choice_
     {
         /// <summary>

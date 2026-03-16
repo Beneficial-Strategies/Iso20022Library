@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationRequestS
     /// </summary>
     [IsoId("_RiYWxNp-Ed-ak6NoX_4Aeg_878482485")]
     [DisplayName("Processed Status")]
+    [IsoXmlTag("PrcdSts")]
     public record ProcessedStatus : NotificationCancellationRequestStatus1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentFormat2Choice
     /// </summary>
     [IsoId("_Eluss-atEeqCKaUycnDWEg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DocumentFormat2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityStatus3Choice
     /// </summary>
     [IsoId("_GHDbQ-LcEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecurityStatus3Choice_
     {
         /// <summary>

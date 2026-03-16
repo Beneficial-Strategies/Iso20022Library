@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionAndRepairReason4Choice
     /// </summary>
     [IsoId("_UW1bYdp-Ed-ak6NoX_4Aeg_-1811453946")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RejectionAndRepairReason4Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OriginalMandate2Choice
     /// </summary>
     [IsoId("_tpGiYFkyEeGeoaLUQk__nA_-668633660")]
     [DisplayName("Original Mandate")]
+    [IsoXmlTag("OrgnlMndt")]
     public record OriginalMandate : OriginalMandate2Choice_
     {
         /// <summary>

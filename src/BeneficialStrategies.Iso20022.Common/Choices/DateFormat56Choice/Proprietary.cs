@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat56Choice
     /// </summary>
     [IsoId("_7oUppeWdEeevU7McUP3D1w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DateFormat56Choice_
     {
         /// <summary>

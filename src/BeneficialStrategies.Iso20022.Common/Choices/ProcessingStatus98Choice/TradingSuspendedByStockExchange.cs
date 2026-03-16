@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDoQarEe2phaVG0lYKTw")]
     [DisplayName("Trading Suspended By Stock Exchange")]
+    [IsoXmlTag("TradgSspdByStockXchg")]
     public record TradingSuspendedByStockExchange : ProcessingStatus98Choice_
     {
         /// <summary>

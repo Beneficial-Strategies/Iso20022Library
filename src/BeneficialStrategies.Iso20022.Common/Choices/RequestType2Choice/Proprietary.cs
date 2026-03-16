@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RequestType2Choice
     /// </summary>
     [IsoId("_76G8daMgEeCJ6YNENx4h-w_943558681")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RequestType2Choice_
     {
         /// <summary>

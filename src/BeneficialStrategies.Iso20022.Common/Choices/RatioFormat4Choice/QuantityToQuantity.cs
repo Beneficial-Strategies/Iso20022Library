@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat4Choice
     /// </summary>
     [IsoId("_Q1h31tp-Ed-ak6NoX_4Aeg_1578086009")]
     [DisplayName("Quantity To Quantity")]
+    [IsoXmlTag("QtyToQty")]
     public record QuantityToQuantity : RatioFormat4Choice_
     {
         /// <summary>

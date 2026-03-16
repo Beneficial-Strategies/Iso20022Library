@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType15Choice
     /// </summary>
     [IsoId("_Xt8p1TeQEeWm5uvLSn0jEw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UpdateType15Choice_
     {
         /// <summary>

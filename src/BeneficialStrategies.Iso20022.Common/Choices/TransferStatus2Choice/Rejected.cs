@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice
     /// </summary>
     [IsoId("_aQ-GOSY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Rejected")]
+    [IsoXmlTag("Rjctd")]
     public record Rejected : TransferStatus2Choice_
     {
         /// <summary>

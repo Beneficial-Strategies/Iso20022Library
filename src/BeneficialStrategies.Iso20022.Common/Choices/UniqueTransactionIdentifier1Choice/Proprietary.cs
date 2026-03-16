@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UniqueTransactionIdentifier1Choi
     /// </summary>
     [IsoId("_yq1bcQxeEeuoAcnnpX2x_w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UniqueTransactionIdentifier1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMandatoryVoluntar
     /// </summary>
     [IsoId("_Q4g6Ydp-Ed-ak6NoX_4Aeg_832092077")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionMandatoryVoluntary1Choice_
     {
         /// <summary>

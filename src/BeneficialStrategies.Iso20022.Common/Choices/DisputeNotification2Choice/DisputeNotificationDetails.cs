@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DisputeNotification2Choice
     /// </summary>
     [IsoId("_KkjLoStOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Notification Details")]
+    [IsoXmlTag("DsptNtfctnDtls")]
     public record DisputeNotificationDetails : DisputeNotification2Choice_
     {
         /// <summary>

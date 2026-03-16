@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingRequirement2Choice
     /// </summary>
     [IsoId("_IVUQMV55Ee2a_-MvhEjKmA")]
     [DisplayName("Reporting Requirement")]
+    [IsoXmlTag("RptgRqrmnt")]
     public record ReportingRequirement : ReportingRequirement2Choice_
     {
         /// <summary>

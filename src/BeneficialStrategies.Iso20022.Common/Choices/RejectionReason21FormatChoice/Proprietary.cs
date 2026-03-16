@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason21FormatChoice
     /// </summary>
     [IsoId("_Qki1g9p-Ed-ak6NoX_4Aeg_-446283214")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RejectionReason21FormatChoice_
     {
         /// <summary>

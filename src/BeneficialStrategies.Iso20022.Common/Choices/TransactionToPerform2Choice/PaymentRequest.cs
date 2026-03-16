@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform2Choice
     /// </summary>
     [IsoId("_ro9DwQxrEeqdx6buGpCCQw")]
     [DisplayName("Payment Request")]
+    [IsoXmlTag("PmtReq")]
     public record PaymentRequest : TransactionToPerform2Choice_
     {
         /// <summary>

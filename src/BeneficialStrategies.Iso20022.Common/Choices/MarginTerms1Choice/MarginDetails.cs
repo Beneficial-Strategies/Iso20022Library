@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginTerms1Choice
     /// </summary>
     [IsoId("_QmogM9p-Ed-ak6NoX_4Aeg_-353462081")]
     [DisplayName("Margin Details")]
+    [IsoXmlTag("MrgnDtls")]
     public record MarginDetails : MarginTerms1Choice_
     {
         /// <summary>

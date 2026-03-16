@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FATCAForm1Choice
     /// </summary>
     [IsoId("_m_vvAAjLEeS5F6qHcKOrew")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FATCAForm1Choice_
     {
         /// <summary>

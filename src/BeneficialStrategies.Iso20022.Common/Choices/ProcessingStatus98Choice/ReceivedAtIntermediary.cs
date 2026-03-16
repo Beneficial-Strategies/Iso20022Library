@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDmQarEe2phaVG0lYKTw")]
     [DisplayName("Received At Intermediary")]
+    [IsoXmlTag("RcvdAtIntrmy")]
     public record ReceivedAtIntermediary : ProcessingStatus98Choice_
     {
         /// <summary>

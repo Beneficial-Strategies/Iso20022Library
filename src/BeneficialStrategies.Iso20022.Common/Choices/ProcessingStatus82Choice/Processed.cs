@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus82Choice
     /// </summary>
     [IsoId("_FjyNQRIwEeydmIVkS03esw")]
     [DisplayName("Processed")]
+    [IsoXmlTag("Prcd")]
     public record Processed : ProcessingStatus82Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     /// </summary>
     [IsoId("_A5JrAtokEeC60axPepSq7g_1330425296")]
     [DisplayName("Settlement Instruction Sent")]
+    [IsoXmlTag("SttlmInstrSnt")]
     public record SettlementInstructionSent : ProcessingStatus17Choice_
     {
         /// <summary>

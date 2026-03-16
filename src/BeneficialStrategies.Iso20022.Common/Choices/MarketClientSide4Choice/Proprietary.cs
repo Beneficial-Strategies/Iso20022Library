@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClientSide4Choice
     /// </summary>
     [IsoId("_sLxiCTqHEeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MarketClientSide4Choice_
     {
         /// <summary>

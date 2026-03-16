@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     /// </summary>
     [IsoId("_3DBVOTANEeOKib24wnHaFg")]
     [DisplayName("Quantity")]
+    [IsoXmlTag("Qty")]
     public record Quantity : CertifiedCharacteristics2Choice_
     {
         /// <summary>

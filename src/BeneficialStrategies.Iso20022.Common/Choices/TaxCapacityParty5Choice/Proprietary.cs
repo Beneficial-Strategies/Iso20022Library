@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCapacityParty5Choice
     /// </summary>
     [IsoId("_5TKlcZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TaxCapacityParty5Choice_
     {
         /// <summary>

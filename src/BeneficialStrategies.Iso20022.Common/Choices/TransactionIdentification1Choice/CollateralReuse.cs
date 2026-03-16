@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
     /// </summary>
     [IsoId("_q0jNYK7LEemZxoEFHjN-AQ")]
     [DisplayName("Collateral Reuse")]
+    [IsoXmlTag("CollReuse")]
     public record CollateralReuse : TransactionIdentification1Choice_
     {
         /// <summary>

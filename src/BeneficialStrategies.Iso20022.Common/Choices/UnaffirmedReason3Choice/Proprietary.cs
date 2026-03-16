@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnaffirmedReason3Choice
     /// </summary>
     [IsoId("_XiELgwd3Ee2fOITqoTnSLQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UnaffirmedReason3Choice_
     {
         /// <summary>

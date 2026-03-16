@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxableIncomePerShareCalculatedF
     /// </summary>
     [IsoId("_Q3K2l9p-Ed-ak6NoX_4Aeg_-1453152711")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TaxableIncomePerShareCalculatedFormat1Choice_
     {
         /// <summary>

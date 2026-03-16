@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingPosition2FormatChoice
     /// </summary>
     [IsoId("_Rnv-8tp-Ed-ak6NoX_4Aeg_-520028992")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ProcessingPosition2FormatChoice_
     {
         /// <summary>

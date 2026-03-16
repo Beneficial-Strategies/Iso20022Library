@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CalendarOrBusinessError1Choice
     /// </summary>
     [IsoId("_dVcQ2om7Eeipw6hHPgB4Sw")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : CalendarOrBusinessError1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CountrySubdivision1Choice
     /// </summary>
     [IsoId("_93s6sHltEeG7BsjMvd1mEw_-1636816713")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CountrySubdivision1Choice_
     {
         /// <summary>

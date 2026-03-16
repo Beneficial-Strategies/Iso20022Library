@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod1Choice
     /// </summary>
     [IsoId("_mxmv4A2uEeSNWNtJlXOAhg")]
     [DisplayName("Debit")]
+    [IsoXmlTag("Dbt")]
     public record Debit : SettlementMethod1Choice_
     {
         /// <summary>

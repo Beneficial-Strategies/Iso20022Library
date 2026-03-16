@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentType1Choice
     /// </summary>
     [IsoId("_iYH70XiJEeidzqjNEfehPg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DocumentType1Choice_
     {
         /// <summary>

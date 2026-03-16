@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CodeOrProprietary1Choice
     /// </summary>
     [IsoId("_Qotj2Np-Ed-ak6NoX_4Aeg_1373438204")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CodeOrProprietary1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SequenceRange1Choice
     /// </summary>
     [IsoId("_64OLoIy3EeeGkvZr3jtnCQ")]
     [DisplayName("From To Sequence")]
+    [IsoXmlTag("FrToSeq")]
     public record FromToSequence : SequenceRange1Choice_
     {
         /// <summary>

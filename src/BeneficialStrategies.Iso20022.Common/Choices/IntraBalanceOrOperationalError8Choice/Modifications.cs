@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntraBalanceOrOperationalError8C
     /// </summary>
     [IsoId("_Z496kTneEem7JZMuWtwtsg")]
     [DisplayName("Modifications")]
+    [IsoXmlTag("Mods")]
     public record Modifications : IntraBalanceOrOperationalError8Choice_
     {
         /// <summary>

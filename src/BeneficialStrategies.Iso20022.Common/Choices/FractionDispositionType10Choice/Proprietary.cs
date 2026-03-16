@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType10Choice
     /// </summary>
     [IsoId("_XZY5VeHEEd-1Ktb5rVaajw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FractionDispositionType10Choice_
     {
         /// <summary>

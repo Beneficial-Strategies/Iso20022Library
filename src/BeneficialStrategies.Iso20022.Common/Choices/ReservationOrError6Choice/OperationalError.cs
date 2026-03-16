@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError6Choice
     /// </summary>
     [IsoId("_TjY2s5liEeeE1Ya-LgRsuQ")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : ReservationOrError6Choice_
     {
         /// <summary>

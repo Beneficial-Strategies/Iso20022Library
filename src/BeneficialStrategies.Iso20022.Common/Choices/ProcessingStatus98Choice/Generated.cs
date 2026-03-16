@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDjwarEe2phaVG0lYKTw")]
     [DisplayName("Generated")]
+    [IsoXmlTag("Gnrtd")]
     public record Generated : ProcessingStatus98Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationRejectionStatus1Choi
     /// </summary>
     [IsoId("_RCpGwdp-Ed-ak6NoX_4Aeg_1852257322")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CancellationRejectionStatus1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesOrCash1Choice
     /// </summary>
     [IsoId("_yNcsADchEeOA3chqL9a4Rw")]
     [DisplayName("Cash Parties Details")]
+    [IsoXmlTag("CshPtiesDtls")]
     public record CashPartiesDetails : SecuritiesOrCash1Choice_
     {
         /// <summary>

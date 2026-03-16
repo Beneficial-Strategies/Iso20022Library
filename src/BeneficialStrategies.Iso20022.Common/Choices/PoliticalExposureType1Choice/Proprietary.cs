@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType1Choice
     /// </summary>
     [IsoId("_ybFrYBRvEeOKWo1NF21OVw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PoliticalExposureType1Choice_
     {
         /// <summary>

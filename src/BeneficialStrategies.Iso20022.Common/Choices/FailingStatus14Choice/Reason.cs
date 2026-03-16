@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus14Choice
     /// </summary>
     [IsoId("_f99yDTi8Eeydid5dcNPKvg")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : FailingStatus14Choice_
     {
         /// <summary>

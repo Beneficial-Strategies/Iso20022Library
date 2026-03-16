@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
     /// </summary>
     [IsoId("_QGJCQ9p-Ed-ak6NoX_4Aeg_-888106466")]
     [DisplayName("Due Payable Amount")]
+    [IsoXmlTag("DuePyblAmt")]
     public record DuePayableAmount : ReferredDocumentAmount1Choice_
     {
         /// <summary>

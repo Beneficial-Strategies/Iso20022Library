@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
     /// </summary>
     [IsoId("_tbdG8PbfEeyInphUKJZxtQ")]
     [DisplayName("Post Trade Risk Reduction Identifier")]
+    [IsoXmlTag("PstTradRskRdctnIdr")]
     public record PostTradeRiskReductionIdentifier : EventIdentifier1Choice_
     {
         /// <summary>

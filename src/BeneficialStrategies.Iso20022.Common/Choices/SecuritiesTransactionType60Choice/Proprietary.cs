@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType60Choic
     /// </summary>
     [IsoId("_a7-VgyAdEeuyDZ-ukt4YRg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesTransactionType60Choice_
     {
         /// <summary>

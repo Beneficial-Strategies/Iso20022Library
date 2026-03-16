@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
     /// </summary>
     [IsoId("_su3YKslxEem0vqvvoqYsqQ")]
     [DisplayName("Direct Debit Mandate")]
+    [IsoXmlTag("DrctDbtMndt")]
     public record DirectDebitMandate : MandateRelatedData1Choice_
     {
         /// <summary>

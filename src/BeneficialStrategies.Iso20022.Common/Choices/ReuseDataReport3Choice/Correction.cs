@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice
     /// </summary>
     [IsoId("_0mq3ta4bEemB_csI4yyKLA")]
     [DisplayName("Correction")]
+    [IsoXmlTag("Crrctn")]
     public record Correction : ReuseDataReport3Choice_
     {
         /// <summary>

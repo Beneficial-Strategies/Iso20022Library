@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType4Choice
     /// </summary>
     [IsoId("_m_7ddPNBEeCuA5Tr22BnwA_778307461")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UpdateType4Choice_
     {
         /// <summary>

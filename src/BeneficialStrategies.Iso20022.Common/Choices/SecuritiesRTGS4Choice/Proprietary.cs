@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesRTGS4Choice
     /// </summary>
     [IsoId("_-T2CCTqEEeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesRTGS4Choice_
     {
         /// <summary>

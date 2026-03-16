@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType3FormatChoice
     /// </summary>
     [IsoId("_RpFbs9p-Ed-ak6NoX_4Aeg_1866583819")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TaxType3FormatChoice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DividendTypeFormat5Choice
     /// </summary>
     [IsoId("_debt1SXfEeO4bIO_HtGo9Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DividendTypeFormat5Choice_
     {
         /// <summary>

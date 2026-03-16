@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
     /// </summary>
     [IsoId("_H5cuM5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : CurrencyCriteriaDefinition1Choice_
     {
         /// <summary>

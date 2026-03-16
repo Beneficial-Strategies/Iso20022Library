@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction7Choice
     /// </summary>
     [IsoId("_ehZ9s9cZEeqRFcf2R4bPBw")]
     [DisplayName("Interbank")]
+    [IsoXmlTag("IntrBk")]
     public record Interbank : UnderlyingTransaction7Choice_
     {
         /// <summary>

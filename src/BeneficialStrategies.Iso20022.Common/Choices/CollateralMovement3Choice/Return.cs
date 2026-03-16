@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement3Choice
     /// </summary>
     [IsoId("_QtN1s19-EeSMgPeFpRHeJw")]
     [DisplayName("Return")]
+    [IsoXmlTag("Rtr")]
     public record Return : CollateralMovement3Choice_
     {
         /// <summary>

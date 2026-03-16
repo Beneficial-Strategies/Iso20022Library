@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
     /// </summary>
     [IsoId("_n0rhBa4dEemG7MmivSuE5g")]
     [DisplayName("Shareholder")]
+    [IsoXmlTag("Shrhldr")]
     public record Shareholder : VoteInstructionForMeetingResolution3Choice_
     {
         /// <summary>

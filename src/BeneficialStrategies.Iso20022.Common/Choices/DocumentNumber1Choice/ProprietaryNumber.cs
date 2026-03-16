@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber1Choice
     /// </summary>
     [IsoId("_QzcNKdp-Ed-ak6NoX_4Aeg_857661715")]
     [DisplayName("Proprietary Number")]
+    [IsoXmlTag("PrtryNb")]
     public record ProprietaryNumber : DocumentNumber1Choice_
     {
         /// <summary>

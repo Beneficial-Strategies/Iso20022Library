@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CRSForm1Choice
     /// </summary>
     [IsoId("_gFvEI0NuEeaS-NnwLNvMPg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CRSForm1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPaymentType1Choice
     /// </summary>
     [IsoId("_DCXWkF8yEeicg40_9gK9vQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FundPaymentType1Choice_
     {
         /// <summary>

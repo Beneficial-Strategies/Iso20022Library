@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasis8Choice
     /// </summary>
     [IsoId("_bZQ9OTp-EeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : StatementBasis8Choice_
     {
         /// <summary>

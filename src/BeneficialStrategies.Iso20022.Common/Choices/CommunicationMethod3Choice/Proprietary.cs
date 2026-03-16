@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommunicationMethod3Choice
     /// </summary>
     [IsoId("_a0TYAwgqEeSUG-8hqXsVMQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CommunicationMethod3Choice_
     {
         /// <summary>

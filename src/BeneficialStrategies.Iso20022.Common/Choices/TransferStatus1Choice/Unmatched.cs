@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     /// </summary>
     [IsoId("_o1CqqhwkEeOIveEnnb_1-A")]
     [DisplayName("Unmatched")]
+    [IsoXmlTag("Umtchd")]
     public record Unmatched : TransferStatus1Choice_
     {
         /// <summary>

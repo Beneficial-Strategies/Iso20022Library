@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
     /// </summary>
     [IsoId("_u_O2MKswEeayv9XxdmMwKQ")]
     [DisplayName("Strategy")]
+    [IsoXmlTag("Strtgy")]
     public record Strategy : StressItem1Choice_
     {
         /// <summary>

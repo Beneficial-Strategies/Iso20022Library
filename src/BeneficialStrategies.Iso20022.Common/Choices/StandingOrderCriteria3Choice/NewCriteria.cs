@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderCriteria3Choice
     /// </summary>
     [IsoId("_GMtiU24-EeiU9cctagi5ow")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : StandingOrderCriteria3Choice_
     {
         /// <summary>

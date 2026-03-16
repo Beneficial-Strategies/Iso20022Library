@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError1Choice
     /// </summary>
     [IsoId("_77JeRaMgEeCJ6YNENx4h-w_776499618")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : ExchangeRateReportOrError1Choice_
     {
         /// <summary>

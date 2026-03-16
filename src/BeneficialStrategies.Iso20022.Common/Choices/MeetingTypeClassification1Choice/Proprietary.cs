@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MeetingTypeClassification1Choice
     /// </summary>
     [IsoId("_RDroktp-Ed-ak6NoX_4Aeg_1611152093")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MeetingTypeClassification1Choice_
     {
         /// <summary>

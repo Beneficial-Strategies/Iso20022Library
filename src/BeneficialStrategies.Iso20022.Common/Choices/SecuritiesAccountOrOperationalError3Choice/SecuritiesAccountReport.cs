@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountOrOperationalEr
     /// </summary>
     [IsoId("_x4sjgTp1Eemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Report")]
+    [IsoXmlTag("SctiesAcctRpt")]
     public record SecuritiesAccountReport : SecuritiesAccountOrOperationalError3Choice_
     {
         /// <summary>

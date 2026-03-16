@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSq4v-Eei289CGNqs21g")]
     [DisplayName("System Restriction")]
+    [IsoXmlTag("SysRstrctn")]
     public record SystemRestriction : SystemPartyModification2Choice_
     {
         /// <summary>

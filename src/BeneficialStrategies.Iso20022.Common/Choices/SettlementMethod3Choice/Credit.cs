@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementMethod3Choice
     /// </summary>
     [IsoId("_P06-QcQAEemsic1bQcEtLA")]
     [DisplayName("Credit")]
+    [IsoXmlTag("Cdt")]
     public record Credit : SettlementMethod3Choice_
     {
         /// <summary>

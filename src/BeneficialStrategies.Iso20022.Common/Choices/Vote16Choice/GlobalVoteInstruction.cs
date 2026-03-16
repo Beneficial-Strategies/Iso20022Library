@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Vote16Choice
     /// </summary>
     [IsoId("_XbSml_NoEeqRfth943bvEA")]
     [DisplayName("Global Vote Instruction")]
+    [IsoXmlTag("GblVoteInstr")]
     public record GlobalVoteInstruction : Vote16Choice_
     {
         /// <summary>

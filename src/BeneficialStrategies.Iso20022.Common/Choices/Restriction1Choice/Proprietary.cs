@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Restriction1Choice
     /// </summary>
     [IsoId("_QvuKwdp-Ed-ak6NoX_4Aeg_2135137258")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Restriction1Choice_
     {
         /// <summary>

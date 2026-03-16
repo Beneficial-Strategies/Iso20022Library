@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice4Choic
     /// </summary>
     [IsoId("_8RdkgOI-EeWWKb0jFHxViQ")]
     [DisplayName("No Price")]
+    [IsoXmlTag("NoPric")]
     public record NoPrice : SecuritiesTransactionPrice4Choice_
     {
         /// <summary>

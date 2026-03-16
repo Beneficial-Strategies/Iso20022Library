@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus44Choice
     /// </summary>
     [IsoId("_S2N7WStYEeyhipY4f42fZQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : RejectionOrRepairStatus44Choice_
     {
         /// <summary>

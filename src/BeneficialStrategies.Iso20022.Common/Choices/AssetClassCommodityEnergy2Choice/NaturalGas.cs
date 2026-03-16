@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     /// </summary>
     [IsoId("_x4yAc7vsEeiLRYqS-r-R-A")]
     [DisplayName("Natural Gas")]
+    [IsoXmlTag("NtrlGas")]
     public record NaturalGas : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>

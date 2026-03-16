@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport6Choice
     /// </summary>
     [IsoId("_MzHkR8K8EeuMhqg3CsEu6Q")]
     [DisplayName("Collateral Reuse Update")]
+    [IsoXmlTag("CollReuseUpd")]
     public record CollateralReuseUpdate : ReuseDataReport6Choice_
     {
         /// <summary>

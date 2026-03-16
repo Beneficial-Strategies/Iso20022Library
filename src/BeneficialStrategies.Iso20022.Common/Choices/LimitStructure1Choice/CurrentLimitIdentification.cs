@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitStructure1Choice
     /// </summary>
     [IsoId("_72iECaMgEeCJ6YNENx4h-w_912956008")]
     [DisplayName("Current Limit Identification")]
+    [IsoXmlTag("CurLmtId")]
     public record CurrentLimitIdentification : LimitStructure1Choice_
     {
         /// <summary>

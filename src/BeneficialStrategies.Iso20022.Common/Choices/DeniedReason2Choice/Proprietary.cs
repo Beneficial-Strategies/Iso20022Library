@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeniedReason2Choice
     /// </summary>
     [IsoId("_UXIWUdp-Ed-ak6NoX_4Aeg_1175171312")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DeniedReason2Choice_
     {
         /// <summary>

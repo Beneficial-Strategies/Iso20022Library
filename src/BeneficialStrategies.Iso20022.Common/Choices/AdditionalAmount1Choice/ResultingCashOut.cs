@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalAmount1Choice
     /// </summary>
     [IsoId("_wupB8UG_EeaNEqIb_fgRZg")]
     [DisplayName("Resulting Cash Out")]
+    [IsoXmlTag("RsltgCshOut")]
     public record ResultingCashOut : AdditionalAmount1Choice_
     {
         /// <summary>

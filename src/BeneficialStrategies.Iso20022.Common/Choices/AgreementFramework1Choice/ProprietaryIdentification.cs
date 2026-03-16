@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreementFramework1Choice
     /// </summary>
     [IsoId("_UkjHQdp-Ed-ak6NoX_4Aeg_-108105307")]
     [DisplayName("Proprietary Identification")]
+    [IsoXmlTag("PrtryId")]
     public record ProprietaryIdentification : AgreementFramework1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError7Choice
     /// </summary>
     [IsoId("_QdJoAXhdEeidzqjNEfehPg")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : GeneralBusinessOrError7Choice_
     {
         /// <summary>

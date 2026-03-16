@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorCapacity1Choice
     /// </summary>
     [IsoId("_Qs45Mdp-Ed-ak6NoX_4Aeg_-1152132898")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InvestorCapacity1Choice_
     {
         /// <summary>

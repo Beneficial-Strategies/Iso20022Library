@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
     /// </summary>
     [IsoId("_27lowKswEeayv9XxdmMwKQ")]
     [DisplayName("Risk Factor")]
+    [IsoXmlTag("RskFctr")]
     public record RiskFactor : StressItem1Choice_
     {
         /// <summary>

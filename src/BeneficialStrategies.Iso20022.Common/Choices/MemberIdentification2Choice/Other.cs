@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice
     /// </summary>
     [IsoId("_8Hq3WaMgEeCJ6YNENx4h-w_-1497387865")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : MemberIdentification2Choice_
     {
         /// <summary>

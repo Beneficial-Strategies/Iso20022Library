@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProfitAndLoss1Choice
     /// </summary>
     [IsoId("_Q65gCtp-Ed-ak6NoX_4Aeg_-802663966")]
     [DisplayName("Loss")]
+    [IsoXmlTag("Loss")]
     public record Loss : ProfitAndLoss1Choice_
     {
         /// <summary>

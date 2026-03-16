@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TemporaryFinancialInstrumentIndi
     /// </summary>
     [IsoId("_cj_8RZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TemporaryFinancialInstrumentIndicator4Choice_
     {
         /// <summary>

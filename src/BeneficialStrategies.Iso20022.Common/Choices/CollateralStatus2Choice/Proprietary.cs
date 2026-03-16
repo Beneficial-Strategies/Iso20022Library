@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus2Choice
     /// </summary>
     [IsoId("_V_TqcMX4EeiSF9q-coWegA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CollateralStatus2Choice_
     {
         /// <summary>

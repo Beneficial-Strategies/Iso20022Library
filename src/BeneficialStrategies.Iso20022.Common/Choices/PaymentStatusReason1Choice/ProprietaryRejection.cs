@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReason1Choice
     /// </summary>
     [IsoId("_QWOzu9EdEei798TPbKJMuw")]
     [DisplayName("Proprietary Rejection")]
+    [IsoXmlTag("PrtryRjctn")]
     public record ProprietaryRejection : PaymentStatusReason1Choice_
     {
         /// <summary>

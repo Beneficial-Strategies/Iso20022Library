@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction8Ch
     /// </summary>
     [IsoId("_ng9V0Qx6Eeqdx6buGpCCQw")]
     [DisplayName("Completion")]
+    [IsoXmlTag("Cmpltn")]
     public record Completion : CardPaymentDataSetTransaction8Choice_
     {
         /// <summary>

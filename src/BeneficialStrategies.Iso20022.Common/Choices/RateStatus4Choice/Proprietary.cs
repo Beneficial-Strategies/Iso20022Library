@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateStatus4Choice
     /// </summary>
     [IsoId("_cj9gBZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RateStatus4Choice_
     {
         /// <summary>

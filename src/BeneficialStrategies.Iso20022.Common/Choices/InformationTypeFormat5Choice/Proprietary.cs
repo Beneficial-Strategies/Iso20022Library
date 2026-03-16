@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InformationTypeFormat5Choice
     /// </summary>
     [IsoId("_c5Whm5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InformationTypeFormat5Choice_
     {
         /// <summary>

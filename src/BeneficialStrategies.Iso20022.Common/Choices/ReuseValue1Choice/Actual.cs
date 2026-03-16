@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice
     /// </summary>
     [IsoId("_RhtAUIxnEeap1-whlAlpOw")]
     [DisplayName("Actual")]
+    [IsoXmlTag("Actl")]
     public record Actual : ReuseValue1Choice_
     {
         /// <summary>

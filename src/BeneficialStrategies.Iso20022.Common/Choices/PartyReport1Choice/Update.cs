@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyReport1Choice
     /// </summary>
     [IsoId("_GejBEDbuEeeYhaZ6bvG1Xg")]
     [DisplayName("Update")]
+    [IsoXmlTag("Upd")]
     public record Update : PartyReport1Choice_
     {
         /// <summary>

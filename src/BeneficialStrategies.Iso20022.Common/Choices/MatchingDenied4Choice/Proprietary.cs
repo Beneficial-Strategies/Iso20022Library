@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingDenied4Choice
     /// </summary>
     [IsoId("_6GWWF5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MatchingDenied4Choice_
     {
         /// <summary>

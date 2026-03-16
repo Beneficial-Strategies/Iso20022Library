@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductStructure1Choice
     /// </summary>
     [IsoId("_V1DckKDqEequlaOyi6MUhw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ProductStructure1Choice_
     {
         /// <summary>

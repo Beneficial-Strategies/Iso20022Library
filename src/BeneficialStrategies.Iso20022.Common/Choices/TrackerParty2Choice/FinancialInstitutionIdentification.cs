@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice
     /// </summary>
     [IsoId("_5THNEWOTEeq5Ar_w98FvsA")]
     [DisplayName("Financial Institution Identification")]
+    [IsoXmlTag("FIId")]
     public record FinancialInstitutionIdentification : TrackerParty2Choice_
     {
         /// <summary>

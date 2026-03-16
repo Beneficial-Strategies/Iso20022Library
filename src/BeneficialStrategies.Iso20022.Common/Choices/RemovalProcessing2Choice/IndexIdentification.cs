@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemovalProcessing2Choice
     /// </summary>
     [IsoId("__ioAQxIoEeyZaPkaPAzTvQ")]
     [DisplayName("Index Identification")]
+    [IsoXmlTag("IndxId")]
     public record IndexIdentification : RemovalProcessing2Choice_
     {
         /// <summary>

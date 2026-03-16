@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSpYv-Eei289CGNqs21g")]
     [DisplayName("Party Name")]
+    [IsoXmlTag("PtyNm")]
     public record PartyName : SystemPartyModification2Choice_
     {
         /// <summary>

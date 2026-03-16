@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Removal1Choice
     /// </summary>
     [IsoId("_39lx0PkREeicy5Zn42b9bg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Removal1Choice_
     {
         /// <summary>

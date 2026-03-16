@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     /// </summary>
     [IsoId("_FACTBkJ-EeGuetKibuqsKw")]
     [DisplayName("Payment Instrument")]
+    [IsoXmlTag("PmtInstrm")]
     public record PaymentInstrument : SearchCriteria1Choice_
     {
         /// <summary>

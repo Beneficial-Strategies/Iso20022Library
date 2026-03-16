@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentSubStructureType2Choic
     /// </summary>
     [IsoId("_QkVkY-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InstrumentSubStructureType2Choice_
     {
         /// <summary>

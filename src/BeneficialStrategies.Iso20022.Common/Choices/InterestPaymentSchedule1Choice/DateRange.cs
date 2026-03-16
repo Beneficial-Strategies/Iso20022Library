@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
     /// </summary>
     [IsoId("_u7i5ROFWEeSvv6t4Ka7B7A")]
     [DisplayName("Date Range")]
+    [IsoXmlTag("DtRg")]
     public record DateRange : InterestPaymentSchedule1Choice_
     {
         /// <summary>

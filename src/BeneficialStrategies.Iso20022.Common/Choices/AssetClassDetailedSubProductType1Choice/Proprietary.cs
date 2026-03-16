@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassDetailedSubProductType
     /// </summary>
     [IsoId("_b5b0oI16Eeet3cKIYK84nw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AssetClassDetailedSubProductType1Choice_
     {
         /// <summary>

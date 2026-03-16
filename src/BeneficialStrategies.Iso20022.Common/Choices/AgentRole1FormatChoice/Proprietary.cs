@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgentRole1FormatChoice
     /// </summary>
     [IsoId("_RlqUQNp-Ed-ak6NoX_4Aeg_338165020")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AgentRole1FormatChoice_
     {
         /// <summary>

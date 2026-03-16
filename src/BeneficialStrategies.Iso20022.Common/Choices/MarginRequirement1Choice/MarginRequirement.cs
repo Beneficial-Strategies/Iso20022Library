@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginRequirement1Choice
     /// </summary>
     [IsoId("_QmogMNp-Ed-ak6NoX_4Aeg_202428352")]
     [DisplayName("Margin Requirement")]
+    [IsoXmlTag("MrgnRqrmnt")]
     public record MarginRequirement : MarginRequirement1Choice_
     {
         /// <summary>

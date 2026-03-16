@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionType2Choice
     /// </summary>
     [IsoId("_YC3j8_NoEeqRfth943bvEA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : VoteInstructionType2Choice_
     {
         /// <summary>

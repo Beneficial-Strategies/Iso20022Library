@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice
     /// </summary>
     [IsoId("_seR6M2k2Eeanu6HLe77Rkg")]
     [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
     public record Period : Frequency36Choice_
     {
         /// <summary>

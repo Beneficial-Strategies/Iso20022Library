@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References61Choice
     /// </summary>
     [IsoId("_kuQbc0HOEeazV4RAqPV71g")]
     [DisplayName("Other Reference")]
+    [IsoXmlTag("OthrRef")]
     public record OtherReference : References61Choice_
     {
         /// <summary>

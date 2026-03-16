@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType7Choice
     /// </summary>
     [IsoId("_nAhTWfNBEeCuA5Tr22BnwA_1632998448")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BalanceType7Choice_
     {
         /// <summary>

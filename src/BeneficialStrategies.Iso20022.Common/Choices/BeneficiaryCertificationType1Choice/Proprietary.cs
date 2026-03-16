@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BeneficiaryCertificationType1Cho
     /// </summary>
     [IsoId("_Q0CqF9p-Ed-ak6NoX_4Aeg_274210631")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BeneficiaryCertificationType1Choice_
     {
         /// <summary>

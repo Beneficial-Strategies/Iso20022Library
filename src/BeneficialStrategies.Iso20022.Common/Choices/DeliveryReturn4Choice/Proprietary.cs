@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeliveryReturn4Choice
     /// </summary>
     [IsoId("_6dqqP5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DeliveryReturn4Choice_
     {
         /// <summary>

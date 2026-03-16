@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice
     /// </summary>
     [IsoId("_RbrR19p-Ed-ak6NoX_4Aeg_1854520026")]
     [DisplayName("Structured Product Category")]
+    [IsoXmlTag("StrdPdctCtgy")]
     public record StructuredProductCategory : ProductCategory1Choice_
     {
         /// <summary>

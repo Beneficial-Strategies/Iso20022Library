@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MandateRelatedData1Choice
     /// </summary>
     [IsoId("_2_Hf4clxEem0vqvvoqYsqQ")]
     [DisplayName("Credit Transfer Mandate")]
+    [IsoXmlTag("CdtTrfMndt")]
     public record CreditTransferMandate : MandateRelatedData1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitCriteria5Choice
     /// </summary>
     [IsoId("_PoO3dZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : LimitCriteria5Choice_
     {
         /// <summary>

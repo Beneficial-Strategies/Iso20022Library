@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError3Choice
     /// </summary>
     [IsoId("_Q1IWI5lhEeeE1Ya-LgRsuQ")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : LimitReportOrError3Choice_
     {
         /// <summary>

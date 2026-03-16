@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProprietaryReason1Choice
     /// </summary>
     [IsoId("_u38ys1hFEeOMYfRGLS0NbA")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : ProprietaryReason1Choice_
     {
         /// <summary>

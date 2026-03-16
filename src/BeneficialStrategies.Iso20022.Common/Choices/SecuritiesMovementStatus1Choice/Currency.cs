@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_Xrr6QOCzEei2UYJ62ws-Fw")]
     [DisplayName("Currency")]
+    [IsoXmlTag("Ccy")]
     public record Currency : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus1Choice
     /// </summary>
     [IsoId("_o1CqrRwkEeOIveEnnb_1-A")]
     [DisplayName("Failed Settlement")]
+    [IsoXmlTag("FaildSttlm")]
     public record FailedSettlement : TransferStatus1Choice_
     {
         /// <summary>

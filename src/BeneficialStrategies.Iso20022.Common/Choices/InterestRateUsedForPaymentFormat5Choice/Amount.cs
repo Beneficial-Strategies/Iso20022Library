@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
     /// </summary>
     [IsoId("_iS_3heEREd-1Ktb5rVaajw")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : InterestRateUsedForPaymentFormat5Choice_
     {
         /// <summary>

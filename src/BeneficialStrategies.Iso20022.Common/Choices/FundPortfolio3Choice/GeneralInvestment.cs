@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio3Choice
     /// </summary>
     [IsoId("_U5MVg07cEeifNrXGwadPmg")]
     [DisplayName("General Investment")]
+    [IsoXmlTag("GnlInvstmt")]
     public record GeneralInvestment : FundPortfolio3Choice_
     {
         /// <summary>

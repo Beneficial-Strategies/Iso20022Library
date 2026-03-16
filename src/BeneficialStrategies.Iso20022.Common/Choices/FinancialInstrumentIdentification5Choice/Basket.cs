@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
     /// </summary>
     [IsoId("_HQWTw35aEea2k7EBUopqxw")]
     [DisplayName("Basket")]
+    [IsoXmlTag("Bskt")]
     public record Basket : FinancialInstrumentIdentification5Choice_
     {
         /// <summary>

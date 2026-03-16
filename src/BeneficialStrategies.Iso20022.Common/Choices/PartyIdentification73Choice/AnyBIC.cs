@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
     /// </summary>
     [IsoId("_JVFG_SjIEeKnA5P_jl2DUw")]
     [DisplayName("Any BIC")]
+    [IsoXmlTag("AnyBIC")]
     public record AnyBIC : PartyIdentification73Choice_
     {
         /// <summary>

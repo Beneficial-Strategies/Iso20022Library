@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionPrice2Choice
     /// </summary>
     [IsoId("_Rp-zkNp-Ed-ak6NoX_4Aeg_997208419")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TransactionPrice2Choice_
     {
         /// <summary>

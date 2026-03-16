@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateBasis1Choice
     /// </summary>
     [IsoId("_PV2OYLpqEea_jI1vMH_RbA")]
     [DisplayName("Currency Pair")]
+    [IsoXmlTag("CcyPair")]
     public record CurrencyPair : ExchangeRateBasis1Choice_
     {
         /// <summary>

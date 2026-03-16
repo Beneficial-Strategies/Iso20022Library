@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDiQarEe2phaVG0lYKTw")]
     [DisplayName("Forced Rejection")]
+    [IsoXmlTag("ForcdRjctn")]
     public record ForcedRejection : ProcessingStatus98Choice_
     {
         /// <summary>

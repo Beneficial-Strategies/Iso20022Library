@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
     /// </summary>
     [IsoId("_lod1JczsEeux2uvSBFU54Q")]
     [DisplayName("Securities Lending")]
+    [IsoXmlTag("SctiesLndg")]
     public record SecuritiesLending : TransactionLoanData31Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Number2Choice
     /// </summary>
     [IsoId("_Qu0y5tp-Ed-ak6NoX_4Aeg_-1015124640")]
     [DisplayName("Long")]
+    [IsoXmlTag("Lng")]
     public record Long : Number2Choice_
     {
         /// <summary>

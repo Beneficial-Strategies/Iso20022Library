@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AirportName1Choice
     /// </summary>
     [IsoId("_SsSlJdp-Ed-ak6NoX_4Aeg_-564217545")]
     [DisplayName("Other Airport Description")]
+    [IsoXmlTag("OthrAirprtDesc")]
     public record OtherAirportDescription : AirportName1Choice_
     {
         /// <summary>

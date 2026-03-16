@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction5Choice
     /// </summary>
     [IsoId("_tP3Q49izEeq5MfBBxQig1Q")]
     [DisplayName("Interbank")]
+    [IsoXmlTag("IntrBk")]
     public record Interbank : CorrectiveTransaction5Choice_
     {
         /// <summary>

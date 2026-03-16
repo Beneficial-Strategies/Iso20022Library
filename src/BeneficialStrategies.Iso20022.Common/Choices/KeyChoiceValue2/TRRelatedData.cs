@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2
     /// </summary>
     [IsoId("_FjgS07TqEeeQy4o2AayYHg")]
     [DisplayName("TR Related Data")]
+    [IsoXmlTag("TRRltdData")]
     public record TRRelatedData : KeyChoiceValue2_
     {
         /// <summary>

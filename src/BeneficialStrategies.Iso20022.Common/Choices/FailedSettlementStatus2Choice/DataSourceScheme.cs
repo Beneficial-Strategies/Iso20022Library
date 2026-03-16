@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementStatus2Choice
     /// </summary>
     [IsoId("_DqHjNSY5EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : FailedSettlementStatus2Choice_
     {
         /// <summary>

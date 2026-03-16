@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency3Choice
     /// </summary>
     [IsoId("_7KQYoVfREeqqKf65rDYWYw")]
     [DisplayName("Term")]
+    [IsoXmlTag("Term")]
     public record Term : InterestRateFrequency3Choice_
     {
         /// <summary>

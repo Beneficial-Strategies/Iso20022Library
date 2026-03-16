@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GDPRDataConsent1Choice
     /// </summary>
     [IsoId("_OVaiIJTTEemC09f0MxYkRg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : GDPRDataConsent1Choice_
     {
         /// <summary>

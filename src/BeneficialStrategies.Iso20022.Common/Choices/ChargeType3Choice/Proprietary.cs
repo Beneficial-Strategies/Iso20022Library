@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
     /// </summary>
     [IsoId("_tjJEU1kyEeGeoaLUQk__nA_-265813283")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ChargeType3Choice_
     {
         /// <summary>

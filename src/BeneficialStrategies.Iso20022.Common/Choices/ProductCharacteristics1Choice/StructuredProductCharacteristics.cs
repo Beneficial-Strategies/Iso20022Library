@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCharacteristics1Choice
     /// </summary>
     [IsoId("_RbrR1Np-Ed-ak6NoX_4Aeg_1622931729")]
     [DisplayName("Structured Product Characteristics")]
+    [IsoXmlTag("StrdPdctChrtcs")]
     public record StructuredProductCharacteristics : ProductCharacteristics1Choice_
     {
         /// <summary>

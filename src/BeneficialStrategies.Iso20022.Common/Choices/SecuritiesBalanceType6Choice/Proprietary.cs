@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType6Choice
     /// </summary>
     [IsoId("_q5Z-qTnsEeWfSKvvZlhRKg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesBalanceType6Choice_
     {
         /// <summary>

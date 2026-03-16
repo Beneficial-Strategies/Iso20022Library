@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy3Choice
     /// </summary>
     [IsoId("_O67yC08SEe2PGo0mhYCh1g")]
     [DisplayName("Renewable Energy")]
+    [IsoXmlTag("RnwblNrgy")]
     public record RenewableEnergy : AssetClassCommodityEnergy3Choice_
     {
         /// <summary>

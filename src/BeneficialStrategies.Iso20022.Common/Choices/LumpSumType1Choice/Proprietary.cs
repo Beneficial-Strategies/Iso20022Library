@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LumpSumType1Choice
     /// </summary>
     [IsoId("_HK6IkLKdEeiXL6Ccd-oU8g")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LumpSumType1Choice_
     {
         /// <summary>

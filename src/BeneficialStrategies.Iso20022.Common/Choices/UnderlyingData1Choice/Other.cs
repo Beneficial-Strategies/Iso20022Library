@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingData1Choice
     /// </summary>
     [IsoId("_CXmpalRtEe23M4WgERMsYw")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : UnderlyingData1Choice_
     {
         /// <summary>

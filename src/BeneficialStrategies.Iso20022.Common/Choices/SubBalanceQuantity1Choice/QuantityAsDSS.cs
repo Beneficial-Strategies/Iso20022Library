@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice
     /// </summary>
     [IsoId("_QYn5atp-Ed-ak6NoX_4Aeg_-1819529328")]
     [DisplayName("Quantity As DSS")]
+    [IsoXmlTag("QtyAsDSS")]
     public record QuantityAsDSS : SubBalanceQuantity1Choice_
     {
         /// <summary>

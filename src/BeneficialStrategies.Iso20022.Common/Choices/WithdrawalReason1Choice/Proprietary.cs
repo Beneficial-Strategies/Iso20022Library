@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WithdrawalReason1Choice
     /// </summary>
     [IsoId("_VsksgE7XEeifNrXGwadPmg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : WithdrawalReason1Choice_
     {
         /// <summary>

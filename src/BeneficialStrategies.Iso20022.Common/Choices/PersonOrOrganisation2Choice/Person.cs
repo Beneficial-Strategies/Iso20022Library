@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
     /// </summary>
     [IsoId("_-GX-RQkiEeWGouz230Xp5Q")]
     [DisplayName("Person")]
+    [IsoXmlTag("Prsn")]
     public record Person : PersonOrOrganisation2Choice_
     {
         /// <summary>

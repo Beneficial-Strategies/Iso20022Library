@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
     /// </summary>
     [IsoId("_PjgBpSdoEei12pGEsJIAeQ")]
     [DisplayName("Terminated Record")]
+    [IsoXmlTag("TermntdRcrd")]
     public record TerminatedRecord : SecuritiesReferenceDeltaStatusReport3Choice_
     {
         /// <summary>

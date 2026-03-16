@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     /// </summary>
     [IsoId("_UYA14LJVEeaYqc4G3TTwhA")]
     [DisplayName("Central Bank Deposit")]
+    [IsoXmlTag("CntrlBkDpst")]
     public record CentralBankDeposit : Investment1Choice_
     {
         /// <summary>

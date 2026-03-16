@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuotationType1Choice
     /// </summary>
     [IsoId("_aZwzYNK4EeihtcVwfFPNlg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : QuotationType1Choice_
     {
         /// <summary>

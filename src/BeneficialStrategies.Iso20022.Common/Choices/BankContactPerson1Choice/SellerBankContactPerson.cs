@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
     /// </summary>
     [IsoId("_pb7W8DAZEeOKib24wnHaFg")]
     [DisplayName("Seller Bank Contact Person")]
+    [IsoXmlTag("SellrBkCtctPrsn")]
     public record SellerBankContactPerson : BankContactPerson1Choice_
     {
         /// <summary>

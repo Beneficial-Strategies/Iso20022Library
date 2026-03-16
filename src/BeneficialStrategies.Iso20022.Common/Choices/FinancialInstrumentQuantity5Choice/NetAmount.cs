@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity5Choi
     /// </summary>
     [IsoId("_SoaxxNp-Ed-ak6NoX_4Aeg_1036646757")]
     [DisplayName("Net Amount")]
+    [IsoXmlTag("NetAmt")]
     public record NetAmount : FinancialInstrumentQuantity5Choice_
     {
         /// <summary>

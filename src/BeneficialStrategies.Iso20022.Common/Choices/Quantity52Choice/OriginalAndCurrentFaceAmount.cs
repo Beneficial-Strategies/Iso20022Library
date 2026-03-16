@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity52Choice
     /// </summary>
     [IsoId("_OovFmRuyEeyhRdHRjakS2w")]
     [DisplayName("Original And Current Face Amount")]
+    [IsoXmlTag("OrgnlAndCurFaceAmt")]
     public record OriginalAndCurrentFaceAmount : Quantity52Choice_
     {
         /// <summary>

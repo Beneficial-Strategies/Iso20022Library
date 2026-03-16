@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnmatchedReason15Choice
     /// </summary>
     [IsoId("_65JxCSwiEeOEV5XHD-BKpw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UnmatchedReason15Choice_
     {
         /// <summary>

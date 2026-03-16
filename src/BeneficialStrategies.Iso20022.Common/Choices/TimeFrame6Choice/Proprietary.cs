@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeFrame6Choice
     /// </summary>
     [IsoId("__pI3ADcbEeidBoT_PugKiA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TimeFrame6Choice_
     {
         /// <summary>

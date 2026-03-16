@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnvironmental
     /// </summary>
     [IsoId("_9cj2oU8REe2PGo0mhYCh1g")]
     [DisplayName("Emissions")]
+    [IsoXmlTag("Emssns")]
     public record Emissions : AssetClassCommodityEnvironmental3Choice_
     {
         /// <summary>

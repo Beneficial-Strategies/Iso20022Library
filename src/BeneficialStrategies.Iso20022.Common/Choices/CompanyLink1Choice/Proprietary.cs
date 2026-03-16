@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CompanyLink1Choice
     /// </summary>
     [IsoId("_8_uDoCCZEeWJd9HF2tO7BA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CompanyLink1Choice_
     {
         /// <summary>

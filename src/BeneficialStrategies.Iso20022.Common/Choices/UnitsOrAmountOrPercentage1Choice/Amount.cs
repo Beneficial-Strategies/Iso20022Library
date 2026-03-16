@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitsOrAmountOrPercentage1Choice
     /// </summary>
     [IsoId("_TcJuYgjdEeS5F6qHcKOrew")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : UnitsOrAmountOrPercentage1Choice_
     {
         /// <summary>

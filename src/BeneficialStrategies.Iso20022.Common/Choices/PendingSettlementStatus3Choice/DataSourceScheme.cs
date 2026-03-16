@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingSettlementStatus3Choice
     /// </summary>
     [IsoId("_LrsCZyY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : PendingSettlementStatus3Choice_
     {
         /// <summary>

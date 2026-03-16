@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountingStatus1Choice
     /// </summary>
     [IsoId("_DqxNQCDEEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AccountingStatus1Choice_
     {
         /// <summary>

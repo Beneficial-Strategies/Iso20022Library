@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Frequency36Choice
     /// </summary>
     [IsoId("_6IxUQWk2Eeanu6HLe77Rkg")]
     [DisplayName("Point In Time")]
+    [IsoXmlTag("PtInTm")]
     public record PointInTime : Frequency36Choice_
     {
         /// <summary>

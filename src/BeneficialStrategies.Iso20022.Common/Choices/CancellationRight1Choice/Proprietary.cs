@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationRight1Choice
     /// </summary>
     [IsoId("_MarVcThPEeaTjZWmPo-9OA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CancellationRight1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RemittanceInformation3Choice
     /// </summary>
     [IsoId("_Rb-MwNp-Ed-ak6NoX_4Aeg_506340239")]
     [DisplayName("Structured")]
+    [IsoXmlTag("Strd")]
     public record Structured : RemittanceInformation3Choice_
     {
         /// <summary>

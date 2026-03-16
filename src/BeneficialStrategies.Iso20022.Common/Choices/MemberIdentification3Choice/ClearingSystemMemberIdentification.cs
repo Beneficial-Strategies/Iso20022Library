@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification3Choice
     /// </summary>
     [IsoId("_iR9BhXSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Clearing System Member Identification")]
+    [IsoXmlTag("ClrSysMmbId")]
     public record ClearingSystemMemberIdentification : MemberIdentification3Choice_
     {
         /// <summary>

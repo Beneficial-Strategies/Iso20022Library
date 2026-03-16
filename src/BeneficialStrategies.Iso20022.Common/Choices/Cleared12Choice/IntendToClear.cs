@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared12Choice
     /// </summary>
     [IsoId("_Bemz8-xYEemioJdkOVFBdw")]
     [DisplayName("Intend To Clear")]
+    [IsoXmlTag("IntndToClear")]
     public record IntendToClear : Cleared12Choice_
     {
         /// <summary>

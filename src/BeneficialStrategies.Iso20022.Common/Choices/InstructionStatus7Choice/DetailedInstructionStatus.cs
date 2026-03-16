@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus7Choice
     /// </summary>
     [IsoId("_8bzrBa-nEemJ1NnLPsTFaw")]
     [DisplayName("Detailed Instruction Status")]
+    [IsoXmlTag("DtldInstrSts")]
     public record DetailedInstructionStatus : InstructionStatus7Choice_
     {
         /// <summary>

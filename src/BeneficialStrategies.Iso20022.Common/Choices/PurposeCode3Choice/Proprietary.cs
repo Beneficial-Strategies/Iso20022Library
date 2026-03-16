@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PurposeCode3Choice
     /// </summary>
     [IsoId("_XN-Ak9p-Ed-ak6NoX_4Aeg_-821611512")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PurposeCode3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     /// </summary>
     [IsoId("__fyLb2EUEe2P-L9DBerEgA")]
     [DisplayName("Error")]
+    [IsoXmlTag("Err")]
     public record Error : TradeReport32Choice_
     {
         /// <summary>

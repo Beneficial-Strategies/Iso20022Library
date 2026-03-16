@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkageType1Choice
     /// </summary>
     [IsoId("_QtyRE9p-Ed-ak6NoX_4Aeg_-1801569952")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LinkageType1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
     /// </summary>
     [IsoId("_lv0vQK7LEemZxoEFHjN-AQ")]
     [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
     public record Transaction : TransactionIdentification1Choice_
     {
         /// <summary>

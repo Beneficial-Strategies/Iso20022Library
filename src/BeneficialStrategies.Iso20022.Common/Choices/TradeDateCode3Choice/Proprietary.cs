@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeDateCode3Choice
     /// </summary>
     [IsoId("_Hx_vyTqLEeWVrPy0StzzSg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradeDateCode3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LocationFormat1Choice
     /// </summary>
     [IsoId("_RXD3mNp-Ed-ak6NoX_4Aeg_-217471735")]
     [DisplayName("Address")]
+    [IsoXmlTag("Adr")]
     public record Address : LocationFormat1Choice_
     {
         /// <summary>

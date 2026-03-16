@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingStatus9Choice
     /// </summary>
     [IsoId("_2a7mCTp5EeWVrPy0StzzSg")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : FailingStatus9Choice_
     {
         /// <summary>

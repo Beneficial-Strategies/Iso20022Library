@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateAndPeriod2Choice
     /// </summary>
     [IsoId("_76Z3Z6MgEeCJ6YNENx4h-w_-1822732589")]
     [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
     public record Period : DateAndPeriod2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction1Choice
     /// </summary>
     [IsoId("_t6ZGtFkyEeGeoaLUQk__nA_97770603")]
     [DisplayName("Individual")]
+    [IsoXmlTag("Indv")]
     public record Individual : CardTransaction1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
     /// </summary>
     [IsoId("_38nfW__qEemm3skPVSMJQg")]
     [DisplayName("Collateral Update")]
+    [IsoXmlTag("CollUpd")]
     public record CollateralUpdate : TradeReport10Choice_
     {
         /// <summary>

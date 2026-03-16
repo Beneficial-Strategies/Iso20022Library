@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateType1FormatChoice
     /// </summary>
     [IsoId("_Rm2nEdp-Ed-ak6NoX_4Aeg_342462729")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : NetDividendRateType1FormatChoice_
     {
         /// <summary>

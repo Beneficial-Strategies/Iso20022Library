@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport10Choice
     /// </summary>
     [IsoId("_38nfUf_qEemm3skPVSMJQg")]
     [DisplayName("New")]
+    [IsoXmlTag("New")]
     public record New : TradeReport10Choice_
     {
         /// <summary>

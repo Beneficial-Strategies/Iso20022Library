@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Amount3Choice
     /// </summary>
     [IsoId("_750Bh6MgEeCJ6YNENx4h-w_-1970472994")]
     [DisplayName("Amount Without Currency")]
+    [IsoXmlTag("AmtWthtCcy")]
     public record AmountWithoutCurrency : Amount3Choice_
     {
         /// <summary>

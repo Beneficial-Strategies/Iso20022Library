@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimCancellationRequestSt
     /// </summary>
     [IsoId("_1Tcqatx4EeqESbVR5AloZQ")]
     [DisplayName("Proprietary Status")]
+    [IsoXmlTag("PrtrySts")]
     public record ProprietaryStatus : MarketClaimCancellationRequestStatus1Choice_
     {
         /// <summary>

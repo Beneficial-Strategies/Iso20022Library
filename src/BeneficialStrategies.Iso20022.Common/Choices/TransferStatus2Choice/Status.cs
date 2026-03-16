@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice
     /// </summary>
     [IsoId("_aQ-GMSY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Status")]
+    [IsoXmlTag("Sts")]
     public record Status : TransferStatus2Choice_
     {
         /// <summary>

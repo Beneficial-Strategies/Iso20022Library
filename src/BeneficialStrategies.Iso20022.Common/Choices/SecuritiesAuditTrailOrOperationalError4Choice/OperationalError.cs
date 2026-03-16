@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAuditTrailOrOperationa
     /// </summary>
     [IsoId("_Ptf-M5JKEeuAlLVx8pyt3w")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : SecuritiesAuditTrailOrOperationalError4Choice_
     {
         /// <summary>

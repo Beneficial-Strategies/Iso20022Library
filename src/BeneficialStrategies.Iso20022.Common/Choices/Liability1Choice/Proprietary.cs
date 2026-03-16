@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Liability1Choice
     /// </summary>
     [IsoId("_hdANUCDMEeWPMvNwVtiMsA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Liability1Choice_
     {
         /// <summary>

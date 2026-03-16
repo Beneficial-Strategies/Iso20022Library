@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_TFnrINp-Ed-ak6NoX_4Aeg_426657982")]
     [DisplayName("Name And Address")]
+    [IsoXmlTag("NmAndAdr")]
     public record NameAndAddress : FinancialInstitutionIdentification5Choice_
     {
         /// <summary>

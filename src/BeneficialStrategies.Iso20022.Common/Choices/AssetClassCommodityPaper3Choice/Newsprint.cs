@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityPaper3Choice
     /// </summary>
     [IsoId("__n-Wg7v7EeiLRYqS-r-R-A")]
     [DisplayName("Newsprint")]
+    [IsoXmlTag("Nwsprnt")]
     public record Newsprint : AssetClassCommodityPaper3Choice_
     {
         /// <summary>

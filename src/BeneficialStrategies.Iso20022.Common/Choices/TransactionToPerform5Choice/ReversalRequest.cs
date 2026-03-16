@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform5Choice
     /// </summary>
     [IsoId("_Xt0vFXGwEe2TbaNWBpRZpQ")]
     [DisplayName("Reversal Request")]
+    [IsoXmlTag("RvslReq")]
     public record ReversalRequest : TransactionToPerform5Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
     /// </summary>
     [IsoId("_YxDO0zIDEe2fXedS_ucFOA")]
     [DisplayName("Margin Portfolio Code")]
+    [IsoXmlTag("MrgnPrtflCd")]
     public record MarginPortfolioCode : CollateralPortfolioCode5Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.WarrantStyle3Choice
     /// </summary>
     [IsoId("_q6-rg-LbEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : WarrantStyle3Choice_
     {
         /// <summary>

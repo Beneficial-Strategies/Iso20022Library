@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError3Choice
     /// </summary>
     [IsoId("_fowVcZ-WEee28J7y9KlTWg")]
     [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
     public record Account : AccountOrBusinessError3Choice_
     {
         /// <summary>

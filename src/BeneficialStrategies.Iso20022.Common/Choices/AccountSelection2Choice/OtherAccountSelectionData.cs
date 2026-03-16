@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountSelection2Choice
     /// </summary>
     [IsoId("_DGUog0_lEeaB8-OWTiMVrQ")]
     [DisplayName("Other Account Selection Data")]
+    [IsoXmlTag("OthrAcctSelctnData")]
     public record OtherAccountSelectionData : AccountSelection2Choice_
     {
         /// <summary>

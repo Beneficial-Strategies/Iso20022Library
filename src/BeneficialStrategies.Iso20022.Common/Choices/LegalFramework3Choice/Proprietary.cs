@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LegalFramework3Choice
     /// </summary>
     [IsoId("__YvnCTqkEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LegalFramework3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferenceValue1Choice
     /// </summary>
     [IsoId("_rIqsMMeQEeysUoBKYz1Ytw")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : ReferenceValue1Choice_
     {
         /// <summary>

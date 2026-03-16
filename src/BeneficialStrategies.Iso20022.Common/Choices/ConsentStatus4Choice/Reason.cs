@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentStatus4Choice
     /// </summary>
     [IsoId("_oftdyTzpEeWeNtT0s2RbkQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : ConsentStatus4Choice_
     {
         /// <summary>

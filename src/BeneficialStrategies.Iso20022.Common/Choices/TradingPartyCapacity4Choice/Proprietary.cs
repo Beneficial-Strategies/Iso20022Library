@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingPartyCapacity4Choice
     /// </summary>
     [IsoId("_HrWeyZBjEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradingPartyCapacity4Choice_
     {
         /// <summary>

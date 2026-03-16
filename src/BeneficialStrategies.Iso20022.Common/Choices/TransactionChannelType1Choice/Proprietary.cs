@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionChannelType1Choice
     /// </summary>
     [IsoId("_hrW7UBRGEeOKWo1NF21OVw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TransactionChannelType1Choice_
     {
         /// <summary>

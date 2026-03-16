@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementParties5Choice
     /// </summary>
     [IsoId("_uqpj8YFvEeWtPe6Crjmeug")]
     [DisplayName("Delivering Settlement Parties")]
+    [IsoXmlTag("DlvrgSttlmPties")]
     public record DeliveringSettlementParties : SettlementParties5Choice_
     {
         /// <summary>

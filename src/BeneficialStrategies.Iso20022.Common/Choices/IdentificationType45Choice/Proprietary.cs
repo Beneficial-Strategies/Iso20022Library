@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType45Choice
     /// </summary>
     [IsoId("_ql4v0Yd6EemJ1cSJJmVYRQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : IdentificationType45Choice_
     {
         /// <summary>

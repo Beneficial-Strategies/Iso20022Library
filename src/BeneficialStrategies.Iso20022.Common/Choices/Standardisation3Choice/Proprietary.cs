@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Standardisation3Choice
     /// </summary>
     [IsoId("_Pnpgw2p7EemmaZLSPtWX5A")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Standardisation3Choice_
     {
         /// <summary>

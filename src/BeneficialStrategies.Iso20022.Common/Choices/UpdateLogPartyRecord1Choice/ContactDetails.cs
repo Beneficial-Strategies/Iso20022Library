@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateLogPartyRecord1Choice
     /// </summary>
     [IsoId("_xPt7gWjNEeiRg5NzP0jkQg")]
     [DisplayName("Contact Details")]
+    [IsoXmlTag("CtctDtls")]
     public record ContactDetails : UpdateLogPartyRecord1Choice_
     {
         /// <summary>

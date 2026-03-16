@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionReversalReason7Ch
     /// </summary>
     [IsoId("_WfigUl99Ee262vCSVgjImg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionReversalReason7Choice_
     {
         /// <summary>

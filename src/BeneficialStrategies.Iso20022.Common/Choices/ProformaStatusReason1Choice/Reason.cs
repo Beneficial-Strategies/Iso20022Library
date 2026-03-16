@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProformaStatusReason1Choice
     /// </summary>
     [IsoId("_5BVa80zCEeafiMTDrtSnyw")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : ProformaStatusReason1Choice_
     {
         /// <summary>

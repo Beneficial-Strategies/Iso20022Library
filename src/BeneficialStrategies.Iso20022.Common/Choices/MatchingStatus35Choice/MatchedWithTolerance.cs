@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus35Choice
     /// </summary>
     [IsoId("_2sTZ8wd3Ee2fOITqoTnSLQ")]
     [DisplayName("Matched With Tolerance")]
+    [IsoXmlTag("MtchdWthTlrnce")]
     public record MatchedWithTolerance : MatchingStatus35Choice_
     {
         /// <summary>

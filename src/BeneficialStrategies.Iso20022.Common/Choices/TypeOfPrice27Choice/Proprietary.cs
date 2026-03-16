@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice27Choice
     /// </summary>
     [IsoId("_nAFOdfNBEeCuA5Tr22BnwA_324932584")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TypeOfPrice27Choice_
     {
         /// <summary>

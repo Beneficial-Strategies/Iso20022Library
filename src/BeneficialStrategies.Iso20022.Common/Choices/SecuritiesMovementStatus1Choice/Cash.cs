@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_VW6bQOCzEei2UYJ62ws-Fw")]
     [DisplayName("Cash")]
+    [IsoXmlTag("Csh")]
     public record Cash : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

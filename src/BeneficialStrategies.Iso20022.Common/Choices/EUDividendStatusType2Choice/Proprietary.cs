@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUDividendStatusType2Choice
     /// </summary>
     [IsoId("_P4Aegzh8EeaH-93K5JKmzw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : EUDividendStatusType2Choice_
     {
         /// <summary>

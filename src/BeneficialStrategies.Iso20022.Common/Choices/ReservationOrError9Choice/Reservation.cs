@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationOrError9Choice
     /// </summary>
     [IsoId("_RYRzgXhdEeidzqjNEfehPg")]
     [DisplayName("Reservation")]
+    [IsoXmlTag("Rsvatn")]
     public record Reservation : ReservationOrError9Choice_
     {
         /// <summary>

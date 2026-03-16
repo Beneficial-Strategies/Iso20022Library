@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient10Choice
     /// </summary>
     [IsoId("_Wyk0gS8jEeu125Ip9zFcsQ")]
     [DisplayName("Key Transport")]
+    [IsoXmlTag("KeyTrnsprt")]
     public record KeyTransport : Recipient10Choice_
     {
         /// <summary>

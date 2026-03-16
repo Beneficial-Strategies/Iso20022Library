@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberCriteriaDefinition1Choice
     /// </summary>
     [IsoId("_tToNg5lVEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : MemberCriteriaDefinition1Choice_
     {
         /// <summary>

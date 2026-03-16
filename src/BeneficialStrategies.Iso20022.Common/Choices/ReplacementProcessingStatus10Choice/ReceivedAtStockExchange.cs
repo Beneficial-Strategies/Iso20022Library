@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus10Cho
     /// </summary>
     [IsoId("_Rhhu_weDEe2fOITqoTnSLQ")]
     [DisplayName("Received At Stock Exchange")]
+    [IsoXmlTag("RcvdAtStockXchg")]
     public record ReceivedAtStockExchange : ReplacementProcessingStatus10Choice_
     {
         /// <summary>

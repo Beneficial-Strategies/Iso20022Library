@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus11Choice
     /// </summary>
     [IsoId("_85EWq0GWEeWqy4niLuXETA")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : CancelledStatus11Choice_
     {
         /// <summary>

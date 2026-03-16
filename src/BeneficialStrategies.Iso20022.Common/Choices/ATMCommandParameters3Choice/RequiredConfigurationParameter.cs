@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters3Choice
     /// </summary>
     [IsoId("_htqcNV2aEeekzJIz1JxYSQ")]
     [DisplayName("Required Configuration Parameter")]
+    [IsoXmlTag("ReqrdCfgtnParam")]
     public record RequiredConfigurationParameter : ATMCommandParameters3Choice_
     {
         /// <summary>

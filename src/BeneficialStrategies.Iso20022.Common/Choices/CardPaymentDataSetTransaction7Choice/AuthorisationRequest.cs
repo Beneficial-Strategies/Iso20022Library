@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction7Ch
     /// </summary>
     [IsoId("_438TddeiEeiJyp_aycJaTw")]
     [DisplayName("Authorisation Request")]
+    [IsoXmlTag("AuthstnReq")]
     public record AuthorisationRequest : CardPaymentDataSetTransaction7Choice_
     {
         /// <summary>

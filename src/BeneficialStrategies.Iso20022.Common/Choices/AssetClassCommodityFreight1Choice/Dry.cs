@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFreight1Choic
     /// </summary>
     [IsoId("_7rpNQFrcEeWN79Bl6BUd3g")]
     [DisplayName("Dry")]
+    [IsoXmlTag("Dry")]
     public record Dry : AssetClassCommodityFreight1Choice_
     {
         /// <summary>

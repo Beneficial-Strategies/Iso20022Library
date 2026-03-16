@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeographicLocation1Choice
     /// </summary>
     [IsoId("_hutYMIn5EeShMpas3885ww")]
     [DisplayName("Geographic Coordinates")]
+    [IsoXmlTag("GeogcCordints")]
     public record GeographicCoordinates : GeographicLocation1Choice_
     {
         /// <summary>

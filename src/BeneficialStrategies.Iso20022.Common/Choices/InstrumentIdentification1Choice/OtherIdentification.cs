@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstrumentIdentification1Choice
     /// </summary>
     [IsoId("_AmCO0QbTEeqrW7Meu5r3kQ")]
     [DisplayName("Other Identification")]
+    [IsoXmlTag("OthrId")]
     public record OtherIdentification : InstrumentIdentification1Choice_
     {
         /// <summary>

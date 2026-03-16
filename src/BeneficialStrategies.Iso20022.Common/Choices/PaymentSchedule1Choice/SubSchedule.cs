@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentSchedule1Choice
     /// </summary>
     [IsoId("_Bhnbc9OAEeSQ_-lmj1tzfw")]
     [DisplayName("Sub Schedule")]
+    [IsoXmlTag("SubSchdl")]
     public record SubSchedule : PaymentSchedule1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingStatus24Choice
     /// </summary>
     [IsoId("_zV8AcTp4EeWVrPy0StzzSg")]
     [DisplayName("Matched")]
+    [IsoXmlTag("Mtchd")]
     public record Matched : MatchingStatus24Choice_
     {
         /// <summary>

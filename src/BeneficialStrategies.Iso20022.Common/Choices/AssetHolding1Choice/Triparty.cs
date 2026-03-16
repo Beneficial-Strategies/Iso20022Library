@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     /// </summary>
     [IsoId("_0kAaQK_6EeaE9YROwd69hA")]
     [DisplayName("Triparty")]
+    [IsoXmlTag("Trpty")]
     public record Triparty : AssetHolding1Choice_
     {
         /// <summary>

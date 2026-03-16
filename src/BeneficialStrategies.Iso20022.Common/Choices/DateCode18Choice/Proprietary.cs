@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateCode18Choice
     /// </summary>
     [IsoId("_aM8eyTqkEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DateCode18Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType14Choice
     /// </summary>
     [IsoId("_MQLQ9R5gEeWE3PufGMdJ3w")]
     [DisplayName("Modification")]
+    [IsoXmlTag("Mod")]
     public record Modification : UpdateType14Choice_
     {
         /// <summary>

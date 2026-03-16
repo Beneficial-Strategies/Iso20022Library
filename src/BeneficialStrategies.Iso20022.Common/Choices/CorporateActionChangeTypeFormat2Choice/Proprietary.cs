@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionChangeTypeFormat2
     /// </summary>
     [IsoId("_Qzl-JNp-Ed-ak6NoX_4Aeg_-809852625")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionChangeTypeFormat2Choice_
     {
         /// <summary>

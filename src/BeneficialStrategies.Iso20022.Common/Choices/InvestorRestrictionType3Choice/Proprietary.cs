@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestorRestrictionType3Choice
     /// </summary>
     [IsoId("_dPETI-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InvestorRestrictionType3Choice_
     {
         /// <summary>

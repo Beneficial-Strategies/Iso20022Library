@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat33Choice
     /// </summary>
     [IsoId("_sNHAfyXtEeO4bIO_HtGo9Q")]
     [DisplayName("Amount Price Per Financial Instrument Quantity")]
+    [IsoXmlTag("AmtPricPerFinInstrmQty")]
     public record AmountPricePerFinancialInstrumentQuantity : PriceFormat33Choice_
     {
         /// <summary>

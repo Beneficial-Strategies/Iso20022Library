@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties5Choice
     /// </summary>
     [IsoId("_F9YDEwhDEeSUPbC7DbLJpQ")]
     [DisplayName("Primary Owner")]
+    [IsoXmlTag("PmryOwnr")]
     public record PrimaryOwner : AccountParties5Choice_
     {
         /// <summary>

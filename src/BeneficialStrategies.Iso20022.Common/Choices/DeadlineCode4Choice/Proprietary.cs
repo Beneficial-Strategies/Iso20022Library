@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode4Choice
     /// </summary>
     [IsoId("_cfssl5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DeadlineCode4Choice_
     {
         /// <summary>

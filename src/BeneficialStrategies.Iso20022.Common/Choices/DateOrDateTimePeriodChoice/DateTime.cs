@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrDateTimePeriodChoice
     /// </summary>
     [IsoId("_T6Em7tp-Ed-ak6NoX_4Aeg_-1583487690")]
     [DisplayName("Date Time")]
+    [IsoXmlTag("DtTm")]
     public record DateTime : DateOrDateTimePeriodChoice_
     {
         /// <summary>

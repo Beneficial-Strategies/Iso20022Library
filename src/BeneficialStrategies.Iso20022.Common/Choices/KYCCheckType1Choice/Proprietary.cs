@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KYCCheckType1Choice
     /// </summary>
     [IsoId("_GvML0BRyEeOKWo1NF21OVw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : KYCCheckType1Choice_
     {
         /// <summary>

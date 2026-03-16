@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure8Choice
     /// </summary>
     [IsoId("_7nKuQDNlEe2UWZuK9pqFtg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UnitOfMeasure8Choice_
     {
         /// <summary>

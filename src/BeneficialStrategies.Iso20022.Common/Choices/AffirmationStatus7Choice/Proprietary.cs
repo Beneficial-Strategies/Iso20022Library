@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus7Choice
     /// </summary>
     [IsoId("_A6DC4tokEeC60axPepSq7g_-399658680")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AffirmationStatus7Choice_
     {
         /// <summary>

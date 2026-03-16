@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus30Choice
     /// </summary>
     [IsoId("_T_qoCRIwEeydmIVkS03esw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CancellationStatus30Choice_
     {
         /// <summary>

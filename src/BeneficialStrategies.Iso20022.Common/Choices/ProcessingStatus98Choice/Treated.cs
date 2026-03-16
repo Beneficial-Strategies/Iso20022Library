@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDowarEe2phaVG0lYKTw")]
     [DisplayName("Treated")]
+    [IsoXmlTag("Trtd")]
     public record Treated : ProcessingStatus98Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification1Choice
     /// </summary>
     [IsoId("_73kl0qMgEeCJ6YNENx4h-w_1435254902")]
     [DisplayName("All Current")]
+    [IsoXmlTag("AllCur")]
     public record AllCurrent : LimitIdentification1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BorrowingReason2Choice
     /// </summary>
     [IsoId("_7dQRiZEjEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BorrowingReason2Choice_
     {
         /// <summary>

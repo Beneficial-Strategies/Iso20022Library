@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus3Choice
     /// </summary>
     [IsoId("_U3BXUNp-Ed-ak6NoX_4Aeg_456007921")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : RejectedStatus3Choice_
     {
         /// <summary>

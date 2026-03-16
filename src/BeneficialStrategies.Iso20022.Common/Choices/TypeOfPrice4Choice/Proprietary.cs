@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfPrice4Choice
     /// </summary>
     [IsoId("_Qwm7ktp-Ed-ak6NoX_4Aeg_-1494870119")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TypeOfPrice4Choice_
     {
         /// <summary>

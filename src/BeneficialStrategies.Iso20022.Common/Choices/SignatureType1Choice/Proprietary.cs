@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SignatureType1Choice
     /// </summary>
     [IsoId("_wZVUMDoHEeabspMEjqY5TQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SignatureType1Choice_
     {
         /// <summary>

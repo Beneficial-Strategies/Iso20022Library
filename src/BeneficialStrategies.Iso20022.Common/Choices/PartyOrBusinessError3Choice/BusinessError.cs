@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice
     /// </summary>
     [IsoId("_0NEVYYwXEei289CGNqs21g")]
     [DisplayName("Business Error")]
+    [IsoXmlTag("BizErr")]
     public record BusinessError : PartyOrBusinessError3Choice_
     {
         /// <summary>

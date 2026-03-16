@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Disclosure1Choice
     /// </summary>
     [IsoId("_WtmescANEembi_x1QDJfxw")]
     [DisplayName("Safekeeping Account And Holdings")]
+    [IsoXmlTag("SfkpgAcctAndHldgs")]
     public record SafekeepingAccountAndHoldings : Disclosure1Choice_
     {
         /// <summary>

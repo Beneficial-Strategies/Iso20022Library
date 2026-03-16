@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError3Choice
     /// </summary>
     [IsoId("_7fpegVhLEeih3fUfzR38Ig")]
     [DisplayName("Party Report")]
+    [IsoXmlTag("PtyRpt")]
     public record PartyReport : PartyOrOperationalError3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseValue1Choice
     /// </summary>
     [IsoId("_TXut0IxnEeap1-whlAlpOw")]
     [DisplayName("Estimated")]
+    [IsoXmlTag("Estmtd")]
     public record Estimated : ReuseValue1Choice_
     {
         /// <summary>

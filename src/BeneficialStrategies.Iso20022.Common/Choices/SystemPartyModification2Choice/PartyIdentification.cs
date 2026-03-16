@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSo4v-Eei289CGNqs21g")]
     [DisplayName("Party Identification")]
+    [IsoXmlTag("PtyId")]
     public record PartyIdentification : SystemPartyModification2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeemedRateType2Choice
     /// </summary>
     [IsoId("_sH2RM9BbEee0mNiKMkpGNQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DeemedRateType2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargePaymentMethod1Choice
     /// </summary>
     [IsoId("_Ca0GEBXyEeOBE-jZfcm4KQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ChargePaymentMethod1Choice_
     {
         /// <summary>

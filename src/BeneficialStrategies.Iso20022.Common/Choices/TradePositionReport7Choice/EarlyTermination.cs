@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradePositionReport7Choice
     /// </summary>
     [IsoId("_bWl_hxLBEeqctpBfTmLJnw")]
     [DisplayName("Early Termination")]
+    [IsoXmlTag("EarlyTermntn")]
     public record EarlyTermination : TradePositionReport7Choice_
     {
         /// <summary>

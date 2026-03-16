@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice
     /// </summary>
     [IsoId("_0ZWmkefHEeKNfc-Rw_dPYg")]
     [DisplayName("Shipment Date Range")]
+    [IsoXmlTag("ShipmntDtRg")]
     public record ShipmentDateRange : ShipmentSchedule2Choice_
     {
         /// <summary>

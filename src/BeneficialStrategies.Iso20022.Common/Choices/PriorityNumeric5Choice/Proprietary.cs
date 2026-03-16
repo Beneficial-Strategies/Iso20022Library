@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriorityNumeric5Choice
     /// </summary>
     [IsoId("_5Pg0YpNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PriorityNumeric5Choice_
     {
         /// <summary>

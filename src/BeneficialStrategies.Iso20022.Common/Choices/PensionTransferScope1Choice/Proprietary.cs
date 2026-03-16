@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionTransferScope1Choice
     /// </summary>
     [IsoId("_YpUYQE4YEeiQHa-q1Uephw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PensionTransferScope1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity32Cho
     /// </summary>
     [IsoId("_Y7YBdZjgEeqkLZLH6DK3UQ")]
     [DisplayName("Nominal Value")]
+    [IsoXmlTag("NmnlVal")]
     public record NominalValue : FinancialInstrumentQuantity32Choice_
     {
         /// <summary>

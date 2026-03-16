@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeadlineCode3Choice
     /// </summary>
     [IsoId("_XGLR00GZEeWqy4niLuXETA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DeadlineCode3Choice_
     {
         /// <summary>

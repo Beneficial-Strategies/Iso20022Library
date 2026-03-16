@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     /// </summary>
     [IsoId("_3DBVNzANEeOKib24wnHaFg")]
     [DisplayName("Weight")]
+    [IsoXmlTag("Wght")]
     public record Weight : CertifiedCharacteristics2Choice_
     {
         /// <summary>

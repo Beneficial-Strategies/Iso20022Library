@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient6Choice
     /// </summary>
     [IsoId("__raos9s2Eee9e6xduATmQg")]
     [DisplayName("KEK")]
+    [IsoXmlTag("KEK")]
     public record KEK : Recipient6Choice_
     {
         /// <summary>

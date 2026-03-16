@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     /// </summary>
     [IsoId("_SUOCgBYIEeejf-cbr8l5qw")]
     [DisplayName("Commodity")]
+    [IsoXmlTag("Cmmdty")]
     public record Commodity : AssetHolding1Choice_
     {
         /// <summary>

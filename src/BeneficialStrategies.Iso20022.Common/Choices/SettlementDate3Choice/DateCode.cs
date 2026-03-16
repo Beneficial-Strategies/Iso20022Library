@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementDate3Choice
     /// </summary>
     [IsoId("_QsvIMNp-Ed-ak6NoX_4Aeg_-882102558")]
     [DisplayName("Date Code")]
+    [IsoXmlTag("DtCd")]
     public record DateCode : SettlementDate3Choice_
     {
         /// <summary>

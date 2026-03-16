@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification50Choice
     /// </summary>
     [IsoId("_pdA8Kzi7Eeydid5dcNPKvg")]
     [DisplayName("Accounts List")]
+    [IsoXmlTag("AcctsList")]
     public record AccountsList : AccountIdentification50Choice_
     {
         /// <summary>

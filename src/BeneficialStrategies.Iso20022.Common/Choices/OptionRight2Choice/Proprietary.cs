@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionRight2Choice
     /// </summary>
     [IsoId("_P_xv05EjEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OptionRight2Choice_
     {
         /// <summary>

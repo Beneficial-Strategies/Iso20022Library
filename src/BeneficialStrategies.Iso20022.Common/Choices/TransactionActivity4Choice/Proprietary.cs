@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionActivity4Choice
     /// </summary>
     [IsoId("_8VKXU5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TransactionActivity4Choice_
     {
         /// <summary>

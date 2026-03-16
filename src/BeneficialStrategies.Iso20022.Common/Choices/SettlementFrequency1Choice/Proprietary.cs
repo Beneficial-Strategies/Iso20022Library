@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementFrequency1Choice
     /// </summary>
     [IsoId("_pqiV0CDUEeWCLu74WLgP4w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementFrequency1Choice_
     {
         /// <summary>

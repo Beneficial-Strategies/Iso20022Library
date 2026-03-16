@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentDirection2Choice
     /// </summary>
     [IsoId("_Qu-j6Np-Ed-ak6NoX_4Aeg_-655797270")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PaymentDirection2Choice_
     {
         /// <summary>

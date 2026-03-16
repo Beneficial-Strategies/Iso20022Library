@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
     /// </summary>
     [IsoId("_P2VfdDrWEeedCZZ8dIPp6g")]
     [DisplayName("Cancellation")]
+    [IsoXmlTag("Cxl")]
     public record Cancellation : BenchmarkReport1Choice_
     {
         /// <summary>

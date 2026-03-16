@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice
     /// </summary>
     [IsoId("_nbwAl4mxEeeKR__nUfxjwA")]
     [DisplayName("Duplicate Of")]
+    [IsoXmlTag("DplctOf")]
     public record DuplicateOf : InvestigationStatus4Choice_
     {
         /// <summary>

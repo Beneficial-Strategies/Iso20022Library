@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_J8b4wYwAEei289CGNqs21g")]
     [DisplayName("Contact Details")]
+    [IsoXmlTag("CtctDtls")]
     public record ContactDetails : SystemPartyModification2Choice_
     {
         /// <summary>

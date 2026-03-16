@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRateFormat36Choice
     /// </summary>
     [IsoId("_k9xM2c3xEee5nJBZsW8MFQ")]
     [DisplayName("Amount And Rate Status")]
+    [IsoXmlTag("AmtAndRateSts")]
     public record AmountAndRateStatus : NetDividendRateFormat36Choice_
     {
         /// <summary>

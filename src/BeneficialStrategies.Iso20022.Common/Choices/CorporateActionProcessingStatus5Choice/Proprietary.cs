@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionProcessingStatus5
     /// </summary>
     [IsoId("_JoF7gznXEeWLJsP1cO-amg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionProcessingStatus5Choice_
     {
         /// <summary>

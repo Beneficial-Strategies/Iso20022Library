@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertificationTypeFormat4Choice
     /// </summary>
     [IsoId("_c5WhZZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CertificationTypeFormat4Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus3Choice
     /// </summary>
     [IsoId("_U3BXUdp-Ed-ak6NoX_4Aeg_-43614249")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : RejectedStatus3Choice_
     {
         /// <summary>

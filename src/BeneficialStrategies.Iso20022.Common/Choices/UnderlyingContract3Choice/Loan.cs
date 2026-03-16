@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingContract3Choice
     /// </summary>
     [IsoId("_0ORmMbGIEeuSTr8k0UEM8A")]
     [DisplayName("Loan")]
+    [IsoXmlTag("Ln")]
     public record Loan : UnderlyingContract3Choice_
     {
         /// <summary>

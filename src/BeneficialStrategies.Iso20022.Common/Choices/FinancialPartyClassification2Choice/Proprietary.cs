@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialPartyClassification2Cho
     /// </summary>
     [IsoId("_IJIRcyI4Ee2zWP9pqvmqdw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FinancialPartyClassification2Choice_
     {
         /// <summary>

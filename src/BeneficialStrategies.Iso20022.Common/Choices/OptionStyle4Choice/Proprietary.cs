@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle4Choice
     /// </summary>
     [IsoId("_Q4NYZNp-Ed-ak6NoX_4Aeg_-1346191739")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OptionStyle4Choice_
     {
         /// <summary>

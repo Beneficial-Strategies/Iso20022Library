@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposalResponse3Choic
     /// </summary>
     [IsoId("_sc8-0YpDEeaNTaanBSMWmg")]
     [DisplayName("Collateral Proposal")]
+    [IsoXmlTag("CollPrpsl")]
     public record CollateralProposal : CollateralProposalResponse3Choice_
     {
         /// <summary>

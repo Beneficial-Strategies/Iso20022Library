@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountOrPercentage1Choice
     /// </summary>
     [IsoId("_986x6HltEeG7BsjMvd1mEw_-131852339")]
     [DisplayName("Percentage Amount")]
+    [IsoXmlTag("PctgAmt")]
     public record PercentageAmount : AmountOrPercentage1Choice_
     {
         /// <summary>

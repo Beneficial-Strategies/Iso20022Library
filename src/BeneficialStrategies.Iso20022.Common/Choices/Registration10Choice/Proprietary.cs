@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Registration10Choice
     /// </summary>
     [IsoId("_z2Jf0zqfEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Registration10Choice_
     {
         /// <summary>

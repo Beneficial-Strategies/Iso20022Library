@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle8Choice
     /// </summary>
     [IsoId("_hDvSSTq2EeWQ1Y7f8kds2A")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OptionStyle8Choice_
     {
         /// <summary>

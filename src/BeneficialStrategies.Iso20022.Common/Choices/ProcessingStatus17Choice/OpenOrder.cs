@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     /// </summary>
     [IsoId("_A4_6BdokEeC60axPepSq7g_-2075229028")]
     [DisplayName("Open Order")]
+    [IsoXmlTag("OpnOrdr")]
     public record OpenOrder : ProcessingStatus17Choice_
     {
         /// <summary>

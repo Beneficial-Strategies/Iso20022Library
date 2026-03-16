@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LetterOfGuarantee1Choice
     /// </summary>
     [IsoId("_Qvaoxtp-Ed-ak6NoX_4Aeg_3419780")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LetterOfGuarantee1Choice_
     {
         /// <summary>

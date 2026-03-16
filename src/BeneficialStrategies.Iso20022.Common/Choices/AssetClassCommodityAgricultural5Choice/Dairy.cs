@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
     /// </summary>
     [IsoId("_NxHXGbveEeiLRYqS-r-R-A")]
     [DisplayName("Dairy")]
+    [IsoXmlTag("Dairy")]
     public record Dairy : AssetClassCommodityAgricultural5Choice_
     {
         /// <summary>

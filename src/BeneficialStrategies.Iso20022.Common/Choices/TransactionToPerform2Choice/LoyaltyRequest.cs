@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionToPerform2Choice
     /// </summary>
     [IsoId("_ro9DwwxrEeqdx6buGpCCQw")]
     [DisplayName("Loyalty Request")]
+    [IsoXmlTag("LltyReq")]
     public record LoyaltyRequest : TransactionToPerform2Choice_
     {
         /// <summary>

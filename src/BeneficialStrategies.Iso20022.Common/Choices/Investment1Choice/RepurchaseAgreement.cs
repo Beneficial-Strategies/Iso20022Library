@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     /// </summary>
     [IsoId("_AIsK8LJXEeaYqc4G3TTwhA")]
     [DisplayName("Repurchase Agreement")]
+    [IsoXmlTag("RpAgrmt")]
     public record RepurchaseAgreement : Investment1Choice_
     {
         /// <summary>

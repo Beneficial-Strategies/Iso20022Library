@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choic
     /// </summary>
     [IsoId("_SimIQ_35EeimOuZbLgw0bg")]
     [DisplayName("Alternate Classification")]
+    [IsoXmlTag("AltrnClssfctn")]
     public record AlternateClassification : SecurityClassificationType3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationProcessingStatus7Cho
     /// </summary>
     [IsoId("_3bJPmTqqEeWyoP0PbocV1Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CancellationProcessingStatus7Choice_
     {
         /// <summary>

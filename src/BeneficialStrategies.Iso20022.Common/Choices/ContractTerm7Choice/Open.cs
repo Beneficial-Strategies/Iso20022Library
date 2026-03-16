@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm7Choice
     /// </summary>
     [IsoId("_xsKXYa5qEeuo-IflVgGqiA")]
     [DisplayName("Open")]
+    [IsoXmlTag("Opn")]
     public record Open : ContractTerm7Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity44Choice
     /// </summary>
     [IsoId("_ZMtfME3WEeidB49bWZiS0g")]
     [DisplayName("Cash Amount")]
+    [IsoXmlTag("CshAmt")]
     public record CashAmount : Quantity44Choice_
     {
         /// <summary>

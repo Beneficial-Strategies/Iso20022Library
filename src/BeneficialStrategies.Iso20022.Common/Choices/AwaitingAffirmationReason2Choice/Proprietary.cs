@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AwaitingAffirmationReason2Choice
     /// </summary>
     [IsoId("_m6cDswd3Ee2fOITqoTnSLQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AwaitingAffirmationReason2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesPaymentStatus5Choice
     /// </summary>
     [IsoId("_cgvT-znAEeWV5sr121Fc8A")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesPaymentStatus5Choice_
     {
         /// <summary>

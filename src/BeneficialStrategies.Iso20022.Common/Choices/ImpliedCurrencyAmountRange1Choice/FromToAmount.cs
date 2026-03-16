@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ImpliedCurrencyAmountRange1Choic
     /// </summary>
     [IsoId("_O_mxNZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("From To Amount")]
+    [IsoXmlTag("FrToAmt")]
     public record FromToAmount : ImpliedCurrencyAmountRange1Choice_
     {
         /// <summary>

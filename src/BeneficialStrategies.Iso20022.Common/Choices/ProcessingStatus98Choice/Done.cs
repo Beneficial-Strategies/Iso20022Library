@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDhwarEe2phaVG0lYKTw")]
     [DisplayName("Done")]
+    [IsoXmlTag("Done")]
     public record Done : ProcessingStatus98Choice_
     {
         /// <summary>

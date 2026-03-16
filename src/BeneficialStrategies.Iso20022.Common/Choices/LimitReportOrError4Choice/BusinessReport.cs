@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitReportOrError4Choice
     /// </summary>
     [IsoId("_C3LJ4W4-EeiU9cctagi5ow")]
     [DisplayName("Business Report")]
+    [IsoXmlTag("BizRpt")]
     public record BusinessReport : LimitReportOrError4Choice_
     {
         /// <summary>

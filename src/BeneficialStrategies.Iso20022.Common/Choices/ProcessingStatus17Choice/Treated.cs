@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     /// </summary>
     [IsoId("_A5JrBdokEeC60axPepSq7g_1442316662")]
     [DisplayName("Treated")]
+    [IsoXmlTag("Trtd")]
     public record Treated : ProcessingStatus17Choice_
     {
         /// <summary>

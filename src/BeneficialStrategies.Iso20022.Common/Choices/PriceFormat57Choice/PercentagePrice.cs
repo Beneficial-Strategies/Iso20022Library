@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat57Choice
     /// </summary>
     [IsoId("_ctfPiZKQEeWHWpTQn1FFVg")]
     [DisplayName("Percentage Price")]
+    [IsoXmlTag("PctgPric")]
     public record PercentagePrice : PriceFormat57Choice_
     {
         /// <summary>

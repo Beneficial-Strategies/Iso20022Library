@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyIdentification3Choic
     /// </summary>
     [IsoId("_mcwKscEcEea7jLfvGi1PDw")]
     [DisplayName("Name And Location")]
+    [IsoXmlTag("NmAndLctn")]
     public record NameAndLocation : CounterpartyIdentification3Choice_
     {
         /// <summary>

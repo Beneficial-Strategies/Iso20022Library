@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentOrDefaultReservation1Choi
     /// </summary>
     [IsoId("_8IjoJqMgEeCJ6YNENx4h-w_-508539744")]
     [DisplayName("Default")]
+    [IsoXmlTag("Dflt")]
     public record Default : CurrentOrDefaultReservation1Choice_
     {
         /// <summary>

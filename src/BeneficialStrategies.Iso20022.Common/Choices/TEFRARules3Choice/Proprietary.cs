@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TEFRARules3Choice
     /// </summary>
     [IsoId("_irPNc-LcEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TEFRARules3Choice_
     {
         /// <summary>

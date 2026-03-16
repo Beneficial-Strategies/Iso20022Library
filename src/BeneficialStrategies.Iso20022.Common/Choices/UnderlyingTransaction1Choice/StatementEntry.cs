@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction1Choice
     /// </summary>
     [IsoId("_P9NIsNp-Ed-ak6NoX_4Aeg_-1542940351")]
     [DisplayName("Statement Entry")]
+    [IsoXmlTag("StmtNtry")]
     public record StatementEntry : UnderlyingTransaction1Choice_
     {
         /// <summary>

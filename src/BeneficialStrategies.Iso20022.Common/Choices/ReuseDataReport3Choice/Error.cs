@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReuseDataReport3Choice
     /// </summary>
     [IsoId("_0mq3s64bEemB_csI4yyKLA")]
     [DisplayName("Error")]
+    [IsoXmlTag("Err")]
     public record Error : ReuseDataReport3Choice_
     {
         /// <summary>

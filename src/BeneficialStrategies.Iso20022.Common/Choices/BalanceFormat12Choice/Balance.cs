@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat12Choice
     /// </summary>
     [IsoId("_KUd0ARuyEeyhRdHRjakS2w")]
     [DisplayName("Balance")]
+    [IsoXmlTag("Bal")]
     public record Balance : BalanceFormat12Choice_
     {
         /// <summary>

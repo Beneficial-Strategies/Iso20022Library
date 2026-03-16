@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrBusinessError3Choice
     /// </summary>
     [IsoId("_0NEVY4wXEei289CGNqs21g")]
     [DisplayName("System Party")]
+    [IsoXmlTag("SysPty")]
     public record SystemParty : PartyOrBusinessError3Choice_
     {
         /// <summary>

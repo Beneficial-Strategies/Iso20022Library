@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
     /// </summary>
     [IsoId("_A5TcBdokEeC60axPepSq7g_1826638997")]
     [DisplayName("Partial Replacement Accepted")]
+    [IsoXmlTag("PrtlRplcmntAccptd")]
     public record PartialReplacementAccepted : ReplacementProcessingStatus7Choice_
     {
         /// <summary>

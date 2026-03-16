@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginTerms1Choice
     /// </summary>
     [IsoId("_QmogNNp-Ed-ak6NoX_4Aeg_1633105891")]
     [DisplayName("Segregated Independent Amount Margin")]
+    [IsoXmlTag("SgrtdIndpdntAmtMrgn")]
     public record SegregatedIndependentAmountMargin : MarginTerms1Choice_
     {
         /// <summary>

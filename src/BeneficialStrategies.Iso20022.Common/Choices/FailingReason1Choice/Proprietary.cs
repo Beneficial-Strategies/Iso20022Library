@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailingReason1Choice
     /// </summary>
     [IsoId("_UZqs8tp-Ed-ak6NoX_4Aeg_255245774")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FailingReason1Choice_
     {
         /// <summary>

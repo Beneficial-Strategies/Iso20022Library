@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentFundRole2Choice
     /// </summary>
     [IsoId("_iug4AzhcEeaRwdGFv45qTQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InvestmentFundRole2Choice_
     {
         /// <summary>

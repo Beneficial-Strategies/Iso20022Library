@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginRequirement1Choice
     /// </summary>
     [IsoId("_QmogMdp-Ed-ak6NoX_4Aeg_-911647050")]
     [DisplayName("Segregated Independent Amount Requirement")]
+    [IsoXmlTag("SgrtdIndpdntAmtRqrmnt")]
     public record SegregatedIndependentAmountRequirement : MarginRequirement1Choice_
     {
         /// <summary>

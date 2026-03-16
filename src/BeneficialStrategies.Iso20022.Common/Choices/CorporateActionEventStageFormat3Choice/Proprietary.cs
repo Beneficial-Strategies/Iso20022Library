@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStageFormat3
     /// </summary>
     [IsoId("_Dw-HReHPEd-1Ktb5rVaajw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionEventStageFormat3Choice_
     {
         /// <summary>

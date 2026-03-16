@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FailedSettlementReason1FormatCho
     /// </summary>
     [IsoId("_RmjsJNp-Ed-ak6NoX_4Aeg_1874576299")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FailedSettlementReason1FormatChoice_
     {
         /// <summary>

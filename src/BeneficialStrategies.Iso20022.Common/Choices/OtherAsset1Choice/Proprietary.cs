@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OtherAsset1Choice
     /// </summary>
     [IsoId("_Ng-PIEyJEeir2sRRVd9XhA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OtherAsset1Choice_
     {
         /// <summary>

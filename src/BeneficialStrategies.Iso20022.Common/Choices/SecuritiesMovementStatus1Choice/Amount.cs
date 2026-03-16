@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_TAzfgOCzEei2UYJ62ws-Fw")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

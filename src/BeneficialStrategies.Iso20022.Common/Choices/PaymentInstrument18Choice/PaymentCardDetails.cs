@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument18Choice
     /// </summary>
     [IsoId("_fprtAyC1EeWJd9HF2tO7BA")]
     [DisplayName("Payment Card Details")]
+    [IsoXmlTag("PmtCardDtls")]
     public record PaymentCardDetails : PaymentInstrument18Choice_
     {
         /// <summary>

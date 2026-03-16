@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingDenied1Choice
     /// </summary>
     [IsoId("_UakE1tp-Ed-ak6NoX_4Aeg_-1792146323")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MatchingDenied1Choice_
     {
         /// <summary>

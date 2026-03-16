@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOrFaceAmountOrCode1Choice
     /// </summary>
     [IsoId("_SoH22Np-Ed-ak6NoX_4Aeg_361302819")]
     [DisplayName("Face Amount")]
+    [IsoXmlTag("FaceAmt")]
     public record FaceAmount : UnitOrFaceAmountOrCode1Choice_
     {
         /// <summary>

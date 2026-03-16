@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
     /// </summary>
     [IsoId("_L8Gl0LVQEeadLcJesEbkTQ")]
     [DisplayName("Securities Financing Transaction")]
+    [IsoXmlTag("SctiesFincgTx")]
     public record SecuritiesFinancingTransaction : Product1Choice_
     {
         /// <summary>

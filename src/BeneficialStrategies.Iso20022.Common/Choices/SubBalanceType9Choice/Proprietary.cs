@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceType9Choice
     /// </summary>
     [IsoId("_YekH_IjvEeONZKAAW4pOaQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SubBalanceType9Choice_
     {
         /// <summary>

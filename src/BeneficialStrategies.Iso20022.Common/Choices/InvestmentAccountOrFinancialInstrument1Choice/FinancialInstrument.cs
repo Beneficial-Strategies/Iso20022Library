@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentAccountOrFinancialInst
     /// </summary>
     [IsoId("_UuOntdp-Ed-ak6NoX_4Aeg_-1126591079")]
     [DisplayName("Financial Instrument")]
+    [IsoXmlTag("FinInstrm")]
     public record FinancialInstrument : InvestmentAccountOrFinancialInstrument1Choice_
     {
         /// <summary>

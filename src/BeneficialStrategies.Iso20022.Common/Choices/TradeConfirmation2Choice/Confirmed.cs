@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeConfirmation2Choice
     /// </summary>
     [IsoId("_qo0sYQFXEeaDfK-zDSyB6A")]
     [DisplayName("Confirmed")]
+    [IsoXmlTag("Confd")]
     public record Confirmed : TradeConfirmation2Choice_
     {
         /// <summary>

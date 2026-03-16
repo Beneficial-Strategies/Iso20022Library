@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Party13Choice
     /// </summary>
     [IsoId("_6Q10hZqlEeGSON8vddiWzQ_1922530449")]
     [DisplayName("Financial Institution Identification")]
+    [IsoXmlTag("FIId")]
     public record FinancialInstitutionIdentification : Party13Choice_
     {
         /// <summary>

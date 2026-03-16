@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus21Choice
     /// </summary>
     [IsoId("_yyd8l_5WEeCtrO5qCU90cA")]
     [DisplayName("Modification Requested")]
+    [IsoXmlTag("ModReqd")]
     public record ModificationRequested : ProcessingStatus21Choice_
     {
         /// <summary>

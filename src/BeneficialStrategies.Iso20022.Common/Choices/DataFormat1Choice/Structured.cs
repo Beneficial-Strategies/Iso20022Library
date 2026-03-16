@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DataFormat1Choice
     /// </summary>
     [IsoId("_Uys4Btp-Ed-ak6NoX_4Aeg_1723007680")]
     [DisplayName("Structured")]
+    [IsoXmlTag("Strd")]
     public record Structured : DataFormat1Choice_
     {
         /// <summary>

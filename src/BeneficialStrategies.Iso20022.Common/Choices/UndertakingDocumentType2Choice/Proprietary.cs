@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UndertakingDocumentType2Choice
     /// </summary>
     [IsoId("_we6lgzPGEeKaav-uUgD4RA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UndertakingDocumentType2Choice_
     {
         /// <summary>

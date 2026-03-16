@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
     /// </summary>
     [IsoId("_6gAQYSqREeyR9JrVGfaMKw")]
     [DisplayName("Collateral Movement Direction")]
+    [IsoXmlTag("CollMvmntDrctn")]
     public record CollateralMovementDirection : CollateralMovement6Choice_
     {
         /// <summary>

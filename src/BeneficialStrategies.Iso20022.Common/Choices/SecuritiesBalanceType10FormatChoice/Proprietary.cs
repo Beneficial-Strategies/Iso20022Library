@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesBalanceType10FormatCho
     /// </summary>
     [IsoId("_Roygxdp-Ed-ak6NoX_4Aeg_-1171470418")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesBalanceType10FormatChoice_
     {
         /// <summary>

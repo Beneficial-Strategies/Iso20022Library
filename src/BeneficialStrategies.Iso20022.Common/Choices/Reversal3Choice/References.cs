@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal3Choice
     /// </summary>
     [IsoId("_QcQDsRX2EeOBE-jZfcm4KQ")]
     [DisplayName("References")]
+    [IsoXmlTag("Refs")]
     public record References : Reversal3Choice_
     {
         /// <summary>

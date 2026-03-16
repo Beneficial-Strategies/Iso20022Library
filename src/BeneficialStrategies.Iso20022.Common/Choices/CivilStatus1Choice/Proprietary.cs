@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CivilStatus1Choice
     /// </summary>
     [IsoId("_AvbycCChEeWJd9HF2tO7BA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CivilStatus1Choice_
     {
         /// <summary>

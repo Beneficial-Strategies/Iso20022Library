@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NarrativeType1Choice
     /// </summary>
     [IsoId("_93HE1HltEeG7BsjMvd1mEw_-1195510865")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : NarrativeType1Choice_
     {
         /// <summary>

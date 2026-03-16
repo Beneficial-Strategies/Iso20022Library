@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TrackerParty2Choice
     /// </summary>
     [IsoId("_dtxow2OTEeq5Ar_w98FvsA")]
     [DisplayName("Organisation Identification")]
+    [IsoXmlTag("OrgId")]
     public record OrganisationIdentification : TrackerParty2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument6Choice
     /// </summary>
     [IsoId("_VKiwRdp-Ed-ak6NoX_4Aeg_1224511124")]
     [DisplayName("Account Details")]
+    [IsoXmlTag("AcctDtls")]
     public record AccountDetails : PaymentInstrument6Choice_
     {
         /// <summary>

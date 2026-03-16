@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotionalOrUnitBased1Choice
     /// </summary>
     [IsoId("_Fop9AJ9WEeqxTNfi5y7ywQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : NotionalOrUnitBased1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat3Choice
     /// </summary>
     [IsoId("_UPO-ktp-Ed-ak6NoX_4Aeg_282901498")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : RateAndAmountFormat3Choice_
     {
         /// <summary>

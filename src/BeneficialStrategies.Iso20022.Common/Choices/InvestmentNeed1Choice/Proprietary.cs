@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestmentNeed1Choice
     /// </summary>
     [IsoId("_cMcC8DcdEeidBoT_PugKiA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : InvestmentNeed1Choice_
     {
         /// <summary>

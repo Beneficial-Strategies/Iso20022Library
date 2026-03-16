@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralCancellationType1Choic
     /// </summary>
     [IsoId("_QmxqIdp-Ed-ak6NoX_4Aeg_-418587863")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CollateralCancellationType1Choice_
     {
         /// <summary>

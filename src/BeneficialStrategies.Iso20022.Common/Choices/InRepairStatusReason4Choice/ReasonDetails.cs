@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatusReason4Choice
     /// </summary>
     [IsoId("_Bptp5UHqEea8I67lh6qdSQ")]
     [DisplayName("Reason Details")]
+    [IsoXmlTag("RsnDtls")]
     public record ReasonDetails : InRepairStatusReason4Choice_
     {
         /// <summary>

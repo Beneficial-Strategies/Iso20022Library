@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportContent1Choice
     /// </summary>
     [IsoId("_f3ucsMlWEeuJ35KoBRZFOg")]
     [DisplayName("Protected Data")]
+    [IsoXmlTag("PrtctdData")]
     public record ProtectedData : ReportContent1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundParameters3Choice
     /// </summary>
     [IsoId("_Q6l-Atp-Ed-ak6NoX_4Aeg_-886438823")]
     [DisplayName("Parameters")]
+    [IsoXmlTag("Params")]
     public record Parameters : FundParameters3Choice_
     {
         /// <summary>

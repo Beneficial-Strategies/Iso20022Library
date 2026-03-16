@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTotalData1Choice
     /// </summary>
     [IsoId("_hwwPwB2nEeqF2P5v-Rtejg")]
     [DisplayName("Data")]
+    [IsoXmlTag("Data")]
     public record Data : SettlementTotalData1Choice_
     {
         /// <summary>

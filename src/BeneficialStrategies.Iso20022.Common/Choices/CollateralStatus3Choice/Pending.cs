@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralStatus3Choice
     /// </summary>
     [IsoId("_g1stYOCgEei2UYJ62ws-Fw")]
     [DisplayName("Pending")]
+    [IsoXmlTag("Pdg")]
     public record Pending : CollateralStatus3Choice_
     {
         /// <summary>

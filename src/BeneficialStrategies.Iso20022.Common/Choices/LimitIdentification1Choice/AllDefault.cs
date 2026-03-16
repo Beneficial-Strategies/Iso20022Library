@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LimitIdentification1Choice
     /// </summary>
     [IsoId("_73kl06MgEeCJ6YNENx4h-w_513549223")]
     [DisplayName("All Default")]
+    [IsoXmlTag("AllDflt")]
     public record AllDefault : LimitIdentification1Choice_
     {
         /// <summary>

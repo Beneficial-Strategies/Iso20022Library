@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderType1Choice
     /// </summary>
     [IsoId("_73bb4qMgEeCJ6YNENx4h-w_-591387142")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : StandingOrderType1Choice_
     {
         /// <summary>

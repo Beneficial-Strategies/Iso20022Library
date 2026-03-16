@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityOrBusinessError4Choice
     /// </summary>
     [IsoId("_P7y44ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Security Report")]
+    [IsoXmlTag("SctyRpt")]
     public record SecurityReport : SecurityOrBusinessError4Choice_
     {
         /// <summary>

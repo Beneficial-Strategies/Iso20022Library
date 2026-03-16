@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TypeOfAmount1Choice
     /// </summary>
     [IsoId("_MuAXwF25EeiFXdiLi_Nf4A")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TypeOfAmount1Choice_
     {
         /// <summary>

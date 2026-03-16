@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason9Choice
     /// </summary>
     [IsoId("_0jOiAglIEeGATtfOBToyew_347124013")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AcknowledgementReason9Choice_
     {
         /// <summary>

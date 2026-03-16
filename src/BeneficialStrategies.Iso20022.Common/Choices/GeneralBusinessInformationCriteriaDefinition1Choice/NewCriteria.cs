@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessInformationCriter
     /// </summary>
     [IsoId("_1dxAk5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : GeneralBusinessInformationCriteriaDefinition1Choice_
     {
         /// <summary>

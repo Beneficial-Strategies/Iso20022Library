@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt2Choice
     /// </summary>
     [IsoId("_EhbFMW4-EeiU9cctagi5ow")]
     [DisplayName("Accepted")]
+    [IsoXmlTag("Accptd")]
     public record Accepted : ClaimNonReceipt2Choice_
     {
         /// <summary>

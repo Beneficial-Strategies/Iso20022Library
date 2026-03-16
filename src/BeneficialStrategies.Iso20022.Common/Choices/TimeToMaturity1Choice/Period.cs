@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity1Choice
     /// </summary>
     [IsoId("__m-r4MVaEeiYpLQka876sg")]
     [DisplayName("Period")]
+    [IsoXmlTag("Prd")]
     public record Period : TimeToMaturity1Choice_
     {
         /// <summary>

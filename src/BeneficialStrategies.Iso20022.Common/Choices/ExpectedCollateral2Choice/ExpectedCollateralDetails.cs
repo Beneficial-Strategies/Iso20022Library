@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExpectedCollateral2Choice
     /// </summary>
     [IsoId("_-sdWMYLZEeWrrO9HojbPQA")]
     [DisplayName("Expected Collateral Details")]
+    [IsoXmlTag("XpctdCollDtls")]
     public record ExpectedCollateralDetails : ExpectedCollateral2Choice_
     {
         /// <summary>

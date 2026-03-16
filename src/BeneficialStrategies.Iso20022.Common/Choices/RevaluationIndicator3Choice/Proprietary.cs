@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RevaluationIndicator3Choice
     /// </summary>
     [IsoId("_CQyt6Tw0EeW3QqUkIQtIUA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RevaluationIndicator3Choice_
     {
         /// <summary>

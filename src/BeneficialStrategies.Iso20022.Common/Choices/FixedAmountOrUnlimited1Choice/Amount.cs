@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FixedAmountOrUnlimited1Choice
     /// </summary>
     [IsoId("_HfJHMEqBEeKw5sECfP82rg")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : FixedAmountOrUnlimited1Choice_
     {
         /// <summary>

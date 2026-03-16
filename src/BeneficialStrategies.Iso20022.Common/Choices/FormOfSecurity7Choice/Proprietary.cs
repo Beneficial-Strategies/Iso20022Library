@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FormOfSecurity7Choice
     /// </summary>
     [IsoId("_5NZU2JNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FormOfSecurity7Choice_
     {
         /// <summary>

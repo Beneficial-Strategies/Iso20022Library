@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxExemptionReason1Choice
     /// </summary>
     [IsoId("_-IsN0Bc-EeK5g-3oYI0_9Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TaxExemptionReason1Choice_
     {
         /// <summary>

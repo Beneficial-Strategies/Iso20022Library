@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
     /// </summary>
     [IsoId("_8IwTgzp0Eemk2e6qGBk8IQ")]
     [DisplayName("System Restriction")]
+    [IsoXmlTag("SysRstrctn")]
     public record SystemRestriction : SecuritiesAccountModification2Choice_
     {
         /// <summary>

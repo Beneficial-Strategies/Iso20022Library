@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedReason2Choice
     /// </summary>
     [IsoId("_P2OO01r3Eea4y99eritluQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BlockedReason2Choice_
     {
         /// <summary>

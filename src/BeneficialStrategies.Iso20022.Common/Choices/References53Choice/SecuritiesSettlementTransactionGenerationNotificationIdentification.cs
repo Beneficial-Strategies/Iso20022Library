@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References53Choice
     /// </summary>
     [IsoId("_6EvMSZNLEeWGlc8L7oPDIg")]
     [DisplayName("Securities Settlement Transaction Generation Notification Identification")]
+    [IsoXmlTag("SctiesSttlmTxGnrtnNtfctnId")]
     public record SecuritiesSettlementTransactionGenerationNotificationIdentification
         : References53Choice_
     {

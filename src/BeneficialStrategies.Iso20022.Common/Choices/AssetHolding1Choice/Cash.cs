@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetHolding1Choice
     /// </summary>
     [IsoId("_9LXRoK_6EeaE9YROwd69hA")]
     [DisplayName("Cash")]
+    [IsoXmlTag("Csh")]
     public record Cash : AssetHolding1Choice_
     {
         /// <summary>

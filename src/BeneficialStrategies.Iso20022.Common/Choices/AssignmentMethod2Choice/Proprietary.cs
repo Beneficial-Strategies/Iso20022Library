@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssignmentMethod2Choice
     /// </summary>
     [IsoId("_hT0Zc-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AssignmentMethod2Choice_
     {
         /// <summary>

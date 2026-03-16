@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionIdentification1Choice
     /// </summary>
     [IsoId("_pq7S4K7LEemZxoEFHjN-AQ")]
     [DisplayName("Margin Reporting")]
+    [IsoXmlTag("MrgnRptg")]
     public record MarginReporting : TransactionIdentification1Choice_
     {
         /// <summary>

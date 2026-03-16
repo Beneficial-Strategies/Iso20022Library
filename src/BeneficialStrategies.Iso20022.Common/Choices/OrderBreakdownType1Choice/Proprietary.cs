@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderBreakdownType1Choice
     /// </summary>
     [IsoId("_4Ff_gzhjEeamLZQeccJa7w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OrderBreakdownType1Choice_
     {
         /// <summary>

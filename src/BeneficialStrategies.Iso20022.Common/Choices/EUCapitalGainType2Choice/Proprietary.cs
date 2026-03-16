@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EUCapitalGainType2Choice
     /// </summary>
     [IsoId("_f57zwtoqEeCWg-hsBVGrDA_2126638435")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : EUCapitalGainType2Choice_
     {
         /// <summary>

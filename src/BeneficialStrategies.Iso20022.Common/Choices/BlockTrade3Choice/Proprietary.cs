@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockTrade3Choice
     /// </summary>
     [IsoId("_AbDZwNokEeC60axPepSq7g_-1763844730")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BlockTrade3Choice_
     {
         /// <summary>

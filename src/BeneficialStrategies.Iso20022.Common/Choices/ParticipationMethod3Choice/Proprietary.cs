@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ParticipationMethod3Choice
     /// </summary>
     [IsoId("_XuYKkxrlEeyhRdHRjakS2w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ParticipationMethod3Choice_
     {
         /// <summary>

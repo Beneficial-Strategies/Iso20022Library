@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosedStatusReason2Choice
     /// </summary>
     [IsoId("_lSNvg0zDEeafiMTDrtSnyw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ClosedStatusReason2Choice_
     {
         /// <summary>

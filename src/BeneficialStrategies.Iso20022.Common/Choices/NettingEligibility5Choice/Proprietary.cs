@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NettingEligibility5Choice
     /// </summary>
     [IsoId("_5m6oG5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : NettingEligibility5Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartiallySettled21Choice
     /// </summary>
     [IsoId("_SSiV-UHtEeaNSo9he0Belg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PartiallySettled21Choice_
     {
         /// <summary>

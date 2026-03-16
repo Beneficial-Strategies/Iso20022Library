@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedReasons6Choice
     /// </summary>
     [IsoId("_6d7vW5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : GeneratedReasons6Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     /// </summary>
     [IsoId("__fyLcWEUEe2P-L9DBerEgA")]
     [DisplayName("Port Out")]
+    [IsoXmlTag("PortOut")]
     public record PortOut : TradeReport32Choice_
     {
         /// <summary>

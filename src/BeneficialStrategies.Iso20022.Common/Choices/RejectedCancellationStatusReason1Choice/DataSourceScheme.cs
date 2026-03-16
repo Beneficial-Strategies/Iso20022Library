@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedCancellationStatusReason
     /// </summary>
     [IsoId("_RXptd9p-Ed-ak6NoX_4Aeg_890850597")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : RejectedCancellationStatusReason1Choice_
     {
         /// <summary>

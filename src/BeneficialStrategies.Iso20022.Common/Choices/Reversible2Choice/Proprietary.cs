@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversible2Choice
     /// </summary>
     [IsoId("_PUFSBZEkEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Reversible2Choice_
     {
         /// <summary>

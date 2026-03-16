@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
     /// </summary>
     [IsoId("_RcH9wdp-Ed-ak6NoX_4Aeg_-444169830")]
     [DisplayName("Shipment Sub Schedule")]
+    [IsoXmlTag("ShipmntSubSchdl")]
     public record ShipmentSubSchedule : ShipmentSchedule1Choice_
     {
         /// <summary>

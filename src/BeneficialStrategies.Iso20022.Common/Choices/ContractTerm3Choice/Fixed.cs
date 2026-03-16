@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice
     /// </summary>
     [IsoId("_tKrKc69_EemF0ZVFnxVu4g")]
     [DisplayName("Fixed")]
+    [IsoXmlTag("Fxd")]
     public record Fixed : ContractTerm3Choice_
     {
         /// <summary>

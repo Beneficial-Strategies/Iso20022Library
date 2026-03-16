@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_pNlqwOCzEei2UYJ62ws-Fw")]
     [DisplayName("Tax")]
+    [IsoXmlTag("Tax")]
     public record Tax : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     /// </summary>
     [IsoId("_Bv9MQ2kwEeaLAKoEUNsD9g")]
     [DisplayName("Interest Rate")]
+    [IsoXmlTag("IntrstRate")]
     public record InterestRate : Derivative2Choice_
     {
         /// <summary>

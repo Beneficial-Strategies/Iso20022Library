@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonIdentificationType1Choice
     /// </summary>
     [IsoId("_QEW5mdp-Ed-ak6NoX_4Aeg_-315280529")]
     [DisplayName("Other Identification")]
+    [IsoXmlTag("OthrId")]
     public record OtherIdentification : PersonIdentificationType1Choice_
     {
         /// <summary>

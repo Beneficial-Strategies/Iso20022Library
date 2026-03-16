@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradingVenueIdentification1Choic
     /// </summary>
     [IsoId("_IkBp4Dd7EeWebbGLlGzH3g")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : TradingVenueIdentification1Choice_
     {
         /// <summary>

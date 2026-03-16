@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType28Choice
     /// </summary>
     [IsoId("_VLd_6832Eee5nJBZsW8MFQ")]
     [DisplayName("Addition")]
+    [IsoXmlTag("Addtn")]
     public record Addition : UpdateType28Choice_
     {
         /// <summary>

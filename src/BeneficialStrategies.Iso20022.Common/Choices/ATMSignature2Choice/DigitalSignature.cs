@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice
     /// </summary>
     [IsoId("_iFHDYbTwEeeQy4o2AayYHg")]
     [DisplayName("Digital Signature")]
+    [IsoXmlTag("DgtlSgntr")]
     public record DigitalSignature : ATMSignature2Choice_
     {
         /// <summary>

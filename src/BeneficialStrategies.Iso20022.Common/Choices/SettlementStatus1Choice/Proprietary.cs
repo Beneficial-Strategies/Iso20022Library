@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus1Choice
     /// </summary>
     [IsoId("_UYeaIdp-Ed-ak6NoX_4Aeg_-484320845")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementStatus1Choice_
     {
         /// <summary>

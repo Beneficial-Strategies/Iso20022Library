@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument12Choice
     /// </summary>
     [IsoId("_SBhw4tp-Ed-ak6NoX_4Aeg_-938859562")]
     [DisplayName("Cash Account Details")]
+    [IsoXmlTag("CshAcctDtls")]
     public record CashAccountDetails : PaymentInstrument12Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CashSettlementSystem3Choice
     /// </summary>
     [IsoId("_Aa5owNokEeC60axPepSq7g_628283045")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CashSettlementSystem3Choice_
     {
         /// <summary>

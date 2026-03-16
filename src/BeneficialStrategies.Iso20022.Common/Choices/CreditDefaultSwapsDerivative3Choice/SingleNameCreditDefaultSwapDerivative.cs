@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
     /// </summary>
     [IsoId("_xfbL1X5eEea2k7EBUopqxw")]
     [DisplayName("Single Name Credit Default Swap Derivative")]
+    [IsoXmlTag("SnglNmCdtDfltSwpDeriv")]
     public record SingleNameCreditDefaultSwapDerivative : CreditDefaultSwapsDerivative3Choice_
     {
         /// <summary>

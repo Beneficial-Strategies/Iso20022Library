@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationType40Choice
     /// </summary>
     [IsoId("_AeoSNNokEeC60axPepSq7g_1118922023")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : IdentificationType40Choice_
     {
         /// <summary>

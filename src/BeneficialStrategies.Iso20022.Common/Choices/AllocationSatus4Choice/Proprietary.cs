@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationSatus4Choice
     /// </summary>
     [IsoId("_8Qbob5NLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AllocationSatus4Choice_
     {
         /// <summary>

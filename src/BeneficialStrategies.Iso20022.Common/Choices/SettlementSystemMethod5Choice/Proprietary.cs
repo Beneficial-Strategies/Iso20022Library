@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementSystemMethod5Choice
     /// </summary>
     [IsoId("_5TKlTZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementSystemMethod5Choice_
     {
         /// <summary>

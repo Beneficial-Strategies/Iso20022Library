@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties3Choice
     /// </summary>
     [IsoId("_4R171xRNEeOKWo1NF21OVw")]
     [DisplayName("Nominee")]
+    [IsoXmlTag("Nmnee")]
     public record Nominee : AccountParties3Choice_
     {
         /// <summary>

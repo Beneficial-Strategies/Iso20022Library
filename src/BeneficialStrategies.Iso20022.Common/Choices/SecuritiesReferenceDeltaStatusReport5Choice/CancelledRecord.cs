@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesReferenceDeltaStatusRe
     /// </summary>
     [IsoId("_o1S5h6WvEeqZmriXpMtonA")]
     [DisplayName("Cancelled Record")]
+    [IsoXmlTag("CancRcrd")]
     public record CancelledRecord : SecuritiesReferenceDeltaStatusReport5Choice_
     {
         /// <summary>

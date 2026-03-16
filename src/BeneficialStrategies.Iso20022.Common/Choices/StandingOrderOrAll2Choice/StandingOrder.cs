@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingOrderOrAll2Choice
     /// </summary>
     [IsoId("_Hv82sW4-EeiU9cctagi5ow")]
     [DisplayName("Standing Order")]
+    [IsoXmlTag("StgOrdr")]
     public record StandingOrder : StandingOrderOrAll2Choice_
     {
         /// <summary>

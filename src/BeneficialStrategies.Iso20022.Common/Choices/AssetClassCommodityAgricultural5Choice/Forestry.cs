@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural5
     /// </summary>
     [IsoId("_NxHXG7veEeiLRYqS-r-R-A")]
     [DisplayName("Forestry")]
+    [IsoXmlTag("Frstry")]
     public record Forestry : AssetClassCommodityAgricultural5Choice_
     {
         /// <summary>

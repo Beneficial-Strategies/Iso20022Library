@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ModalityOfCounting1Choice
     /// </summary>
     [IsoId("_iCsvoK-vEemJ1NnLPsTFaw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ModalityOfCounting1Choice_
     {
         /// <summary>

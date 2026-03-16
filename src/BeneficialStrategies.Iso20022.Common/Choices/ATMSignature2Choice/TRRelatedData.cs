@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMSignature2Choice
     /// </summary>
     [IsoId("_iFHDY7TwEeeQy4o2AayYHg")]
     [DisplayName("TR Related Data")]
+    [IsoXmlTag("TRRltdData")]
     public record TRRelatedData : ATMSignature2Choice_
     {
         /// <summary>

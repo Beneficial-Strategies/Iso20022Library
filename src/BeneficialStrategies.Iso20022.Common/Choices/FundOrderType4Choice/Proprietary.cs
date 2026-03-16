@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FundOrderType4Choice
     /// </summary>
     [IsoId("_EyIk1ThREeaRwdGFv45qTQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : FundOrderType4Choice_
     {
         /// <summary>

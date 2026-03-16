@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_cwwWoOCzEei2UYJ62ws-Fw")]
     [DisplayName("Future")]
+    [IsoXmlTag("Futr")]
     public record Future : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

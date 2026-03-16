@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatusChoice
     /// </summary>
     [IsoId("_UuYYtdp-Ed-ak6NoX_4Aeg_1934789984")]
     [DisplayName("Rejected Cancellation")]
+    [IsoXmlTag("RjctdCxl")]
     public record RejectedCancellation : InvestigationStatusChoice_
     {
         /// <summary>

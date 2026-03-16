@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat4Choice
     /// </summary>
     [IsoId("_RlgjRtp-Ed-ak6NoX_4Aeg_-1422001384")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DateFormat4Choice_
     {
         /// <summary>

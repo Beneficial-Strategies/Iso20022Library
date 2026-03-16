@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
     /// </summary>
     [IsoId("_-DiXczpvEemk2e6qGBk8IQ")]
     [DisplayName("Operational Error")]
+    [IsoXmlTag("OprlErr")]
     public record OperationalError : CollateralValueReportOrError5Choice_
     {
         /// <summary>

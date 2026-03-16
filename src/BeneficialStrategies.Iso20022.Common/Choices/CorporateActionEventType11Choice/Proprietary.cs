@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventType11Choice
     /// </summary>
     [IsoId("_SzWnYw4xEeKVsZQr6J31Tg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CorporateActionEventType11Choice_
     {
         /// <summary>

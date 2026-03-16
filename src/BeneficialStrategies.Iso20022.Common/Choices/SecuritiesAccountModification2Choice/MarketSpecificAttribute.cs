@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesAccountModification2Ch
     /// </summary>
     [IsoId("_8IwThTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Market Specific Attribute")]
+    [IsoXmlTag("MktSpcfcAttr")]
     public record MarketSpecificAttribute : SecuritiesAccountModification2Choice_
     {
         /// <summary>

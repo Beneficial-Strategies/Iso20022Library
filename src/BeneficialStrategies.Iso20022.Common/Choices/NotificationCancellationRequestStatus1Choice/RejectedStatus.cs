@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NotificationCancellationRequestS
     /// </summary>
     [IsoId("_RiYWxdp-Ed-ak6NoX_4Aeg_891409846")]
     [DisplayName("Rejected Status")]
+    [IsoXmlTag("RjctdSts")]
     public record RejectedStatus : NotificationCancellationRequestStatus1Choice_
     {
         /// <summary>

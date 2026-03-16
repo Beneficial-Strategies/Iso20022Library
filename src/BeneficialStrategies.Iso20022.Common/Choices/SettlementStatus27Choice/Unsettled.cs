@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementStatus27Choice
     /// </summary>
     [IsoId("_5g9fgOCbEei2UYJ62ws-Fw")]
     [DisplayName("Unsettled")]
+    [IsoXmlTag("Usttld")]
     public record Unsettled : SettlementStatus27Choice_
     {
         /// <summary>

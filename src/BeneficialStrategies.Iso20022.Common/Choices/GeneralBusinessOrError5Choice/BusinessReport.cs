@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError5Choice
     /// </summary>
     [IsoId("_MP5s45lgEeeE1Ya-LgRsuQ")]
     [DisplayName("Business Report")]
+    [IsoXmlTag("BizRpt")]
     public record BusinessReport : GeneralBusinessOrError5Choice_
     {
         /// <summary>

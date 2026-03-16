@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DateOrBlankQuery2Choice
     /// </summary>
     [IsoId("_cmD8MdGgEeaQk737TH1Fzw")]
     [DisplayName("Range")]
+    [IsoXmlTag("Rg")]
     public record Range : DateOrBlankQuery2Choice_
     {
         /// <summary>

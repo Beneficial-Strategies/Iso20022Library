@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Cleared10Choice
     /// </summary>
     [IsoId("_HQfLobQ0EemI67HK7aviyg")]
     [DisplayName("Cleared")]
+    [IsoXmlTag("Clrd")]
     public record Cleared : Cleared10Choice_
     {
         /// <summary>

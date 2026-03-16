@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage3Choice
     /// </summary>
     [IsoId("_eJ8MwSFeEeW9XJWqfgXIIA")]
     [DisplayName("Previous Reference")]
+    [IsoXmlTag("PrvsRef")]
     public record PreviousReference : LinkedMessage3Choice_
     {
         /// <summary>

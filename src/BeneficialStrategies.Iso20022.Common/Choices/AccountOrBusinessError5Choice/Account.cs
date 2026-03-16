@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrBusinessError5Choice
     /// </summary>
     [IsoId("_fFDdUdcZEeqRFcf2R4bPBw")]
     [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
     public record Account : AccountOrBusinessError5Choice_
     {
         /// <summary>

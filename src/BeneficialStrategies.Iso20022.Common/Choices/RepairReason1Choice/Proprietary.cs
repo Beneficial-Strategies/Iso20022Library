@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RepairReason1Choice
     /// </summary>
     [IsoId("_UYoLJ9p-Ed-ak6NoX_4Aeg_1120240260")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : RepairReason1Choice_
     {
         /// <summary>

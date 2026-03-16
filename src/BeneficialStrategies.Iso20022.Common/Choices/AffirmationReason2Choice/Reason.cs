@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationReason2Choice
     /// </summary>
     [IsoId("_YFYT8wd3Ee2fOITqoTnSLQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : AffirmationReason2Choice_
     {
         /// <summary>

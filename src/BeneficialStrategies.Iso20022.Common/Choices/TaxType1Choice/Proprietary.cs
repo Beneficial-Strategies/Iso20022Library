@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxType1Choice
     /// </summary>
     [IsoId("_-oW7UBuHEeOqSdXzJ0oydA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TaxType1Choice_
     {
         /// <summary>

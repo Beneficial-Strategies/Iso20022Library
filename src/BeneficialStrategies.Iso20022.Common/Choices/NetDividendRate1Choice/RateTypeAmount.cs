@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.NetDividendRate1Choice
     /// </summary>
     [IsoId("_UPh5gtp-Ed-ak6NoX_4Aeg_-398759257")]
     [DisplayName("Rate Type Amount")]
+    [IsoXmlTag("RateTpAmt")]
     public record RateTypeAmount : NetDividendRate1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus12Choice
     /// </summary>
     [IsoId("_mz-NK_41EeClUvPNHKL9Zw")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : PendingStatus12Choice_
     {
         /// <summary>

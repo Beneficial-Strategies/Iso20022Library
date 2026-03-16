@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport31Choice
     /// </summary>
     [IsoId("_o0KFZ1osEe23K4GXSpBSeg")]
     [DisplayName("Correction")]
+    [IsoXmlTag("Crrctn")]
     public record Correction : TradeReport31Choice_
     {
         /// <summary>

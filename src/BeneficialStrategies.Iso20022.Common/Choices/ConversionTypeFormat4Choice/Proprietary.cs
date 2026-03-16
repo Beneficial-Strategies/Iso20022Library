@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConversionTypeFormat4Choice
     /// </summary>
     [IsoId("_c5VTeZKQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ConversionTypeFormat4Choice_
     {
         /// <summary>

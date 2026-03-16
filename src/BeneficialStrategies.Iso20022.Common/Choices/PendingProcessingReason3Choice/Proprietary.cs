@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingProcessingReason3Choice
     /// </summary>
     [IsoId("_sJQsWf8dEeCrw_OT0uBMXQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PendingProcessingReason3Choice_
     {
         /// <summary>

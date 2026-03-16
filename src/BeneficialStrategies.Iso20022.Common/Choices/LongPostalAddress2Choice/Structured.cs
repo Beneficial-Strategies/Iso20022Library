@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LongPostalAddress2Choice
     /// </summary>
     [IsoId("_RVRH2dp-Ed-ak6NoX_4Aeg_-1296060083")]
     [DisplayName("Structured")]
+    [IsoXmlTag("Strd")]
     public record Structured : LongPostalAddress2Choice_
     {
         /// <summary>

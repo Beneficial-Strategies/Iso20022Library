@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSoYv-Eei289CGNqs21g")]
     [DisplayName("System Party Date")]
+    [IsoXmlTag("SysPtyDt")]
     public record SystemPartyDate : SystemPartyModification2Choice_
     {
         /// <summary>

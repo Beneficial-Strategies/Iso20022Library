@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportItemStatus1Choice
     /// </summary>
     [IsoId("_TKSsQkitEeSlHoYg_EudVQ")]
     [DisplayName("Accepted With Exception")]
+    [IsoXmlTag("AccptdWthExcptn")]
     public record AcceptedWithException : ReportItemStatus1Choice_
     {
         /// <summary>

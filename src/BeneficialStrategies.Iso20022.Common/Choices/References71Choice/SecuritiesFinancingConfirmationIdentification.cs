@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References71Choice
     /// </summary>
     [IsoId("_KDxvvyAaEeu4a6pNulzZ4Q")]
     [DisplayName("Securities Financing Confirmation Identification")]
+    [IsoXmlTag("SctiesFincgConfId")]
     public record SecuritiesFinancingConfirmationIdentification : References71Choice_
     {
         /// <summary>

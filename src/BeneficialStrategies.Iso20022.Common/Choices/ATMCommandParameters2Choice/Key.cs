@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ATMCommandParameters2Choice
     /// </summary>
     [IsoId("_rAZ80ItIEeSxlKlAGYErFg")]
     [DisplayName("Key")]
+    [IsoXmlTag("Key")]
     public record Key : ATMCommandParameters2Choice_
     {
         /// <summary>

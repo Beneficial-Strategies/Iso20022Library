@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat5Choice
     /// </summary>
     [IsoId("_YxN_4dLGEeiN28wlpBQScw")]
     [DisplayName("Type And Identification")]
+    [IsoXmlTag("TpAndId")]
     public record TypeAndIdentification : PledgeeFormat5Choice_
     {
         /// <summary>

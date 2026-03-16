@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingMarginInformation
     /// </summary>
     [IsoId("_rsDiw1owEe23K4GXSpBSeg")]
     [DisplayName("Report")]
+    [IsoXmlTag("Rpt")]
     public record Report : DetailedMissingMarginInformationStatistics4Choice_
     {
         /// <summary>

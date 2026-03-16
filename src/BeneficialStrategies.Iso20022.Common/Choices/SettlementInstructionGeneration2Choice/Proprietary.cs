@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionGeneration2
     /// </summary>
     [IsoId("_gquKw5CBEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementInstructionGeneration2Choice_
     {
         /// <summary>

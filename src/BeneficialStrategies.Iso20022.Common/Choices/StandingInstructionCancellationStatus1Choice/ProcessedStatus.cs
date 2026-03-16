@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionCancellationS
     /// </summary>
     [IsoId("_RirRs9p-Ed-ak6NoX_4Aeg_1145802950")]
     [DisplayName("Processed Status")]
+    [IsoXmlTag("PrcdSts")]
     public record ProcessedStatus : StandingInstructionCancellationStatus1Choice_
     {
         /// <summary>

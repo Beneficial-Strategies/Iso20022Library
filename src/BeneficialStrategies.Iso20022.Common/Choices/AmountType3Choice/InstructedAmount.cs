@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AmountType3Choice
     /// </summary>
     [IsoId("_P57LMdp-Ed-ak6NoX_4Aeg_326234880")]
     [DisplayName("Instructed Amount")]
+    [IsoXmlTag("InstdAmt")]
     public record InstructedAmount : AmountType3Choice_
     {
         /// <summary>

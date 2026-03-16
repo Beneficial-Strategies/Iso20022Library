@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
     /// </summary>
     [IsoId("_RB5f4Np-Ed-ak6NoX_4Aeg_842152344")]
     [DisplayName("Identification And Purpose")]
+    [IsoXmlTag("IdAndPurp")]
     public record IdentificationAndPurpose : AccountIdentificationFormatChoice_
     {
         /// <summary>

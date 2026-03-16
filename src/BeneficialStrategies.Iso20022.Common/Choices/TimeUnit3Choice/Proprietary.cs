@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeUnit3Choice
     /// </summary>
     [IsoId("_oTL_U-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TimeUnit3Choice_
     {
         /// <summary>

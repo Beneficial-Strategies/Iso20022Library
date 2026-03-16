@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     /// </summary>
     [IsoId("_MRa04LLnEeavNMum-T1eEA")]
     [DisplayName("Other Investments")]
+    [IsoXmlTag("OthrInvstmts")]
     public record OtherInvestments : Investment1Choice_
     {
         /// <summary>

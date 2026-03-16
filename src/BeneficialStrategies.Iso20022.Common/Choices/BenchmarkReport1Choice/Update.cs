@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BenchmarkReport1Choice
     /// </summary>
     [IsoId("_DzGLgjrgEeedCZZ8dIPp6g")]
     [DisplayName("Update")]
+    [IsoXmlTag("Upd")]
     public record Update : BenchmarkReport1Choice_
     {
         /// <summary>

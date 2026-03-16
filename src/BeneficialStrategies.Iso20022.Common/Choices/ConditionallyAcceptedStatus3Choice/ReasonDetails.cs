@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConditionallyAcceptedStatus3Choi
     /// </summary>
     [IsoId("_s1kxx0HXEeamVPoS58KxXA")]
     [DisplayName("Reason Details")]
+    [IsoXmlTag("RsnDtls")]
     public record ReasonDetails : ConditionallyAcceptedStatus3Choice_
     {
         /// <summary>

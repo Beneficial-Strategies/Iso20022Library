@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancelledStatus13Choice
     /// </summary>
     [IsoId("_P3gGGSY5EeW_ZNn8gbfY7Q")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : CancelledStatus13Choice_
     {
         /// <summary>

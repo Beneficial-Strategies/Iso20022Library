@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesPaymentStatus6Choice
     /// </summary>
     [IsoId("_5NZ7sZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SecuritiesPaymentStatus6Choice_
     {
         /// <summary>

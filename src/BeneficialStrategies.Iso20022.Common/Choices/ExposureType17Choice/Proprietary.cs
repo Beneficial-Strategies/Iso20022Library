@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExposureType17Choice
     /// </summary>
     [IsoId("_yavB5Zj-EeWn2ur3BXxtdg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ExposureType17Choice_
     {
         /// <summary>

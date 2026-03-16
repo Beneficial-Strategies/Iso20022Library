@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery10Choice
     /// </summary>
     [IsoId("_esoLY91dEeqxpKDfBZC1vg")]
     [DisplayName("Recurrent Query")]
+    [IsoXmlTag("RcrntQry")]
     public record RecurrentQuery : TradeReportQuery10Choice_
     {
         /// <summary>

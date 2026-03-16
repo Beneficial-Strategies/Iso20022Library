@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentCodeOrOther1Choice
     /// </summary>
     [IsoId("_uoAOcNP8EeK0PPbKncCqzA")]
     [DisplayName("Payment Code")]
+    [IsoXmlTag("PmtCd")]
     public record PaymentCode : PaymentCodeOrOther1Choice_
     {
         /// <summary>

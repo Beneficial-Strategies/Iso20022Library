@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio1Choice
     /// </summary>
     [IsoId("_Ku_xm_pfEeCLMa5EIHtDrg")]
     [DisplayName("ISA")]
+    [IsoXmlTag("ISA")]
     public record ISA : ISAPortfolio1Choice_
     {
         /// <summary>

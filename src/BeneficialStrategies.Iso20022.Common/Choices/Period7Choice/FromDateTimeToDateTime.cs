@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Period7Choice
     /// </summary>
     [IsoId("_VQk9UTwGEemGDJYTly2NCA")]
     [DisplayName("From Date Time To Date Time")]
+    [IsoXmlTag("FrDtTmToDtTm")]
     public record FromDateTimeToDateTime : Period7Choice_
     {
         /// <summary>

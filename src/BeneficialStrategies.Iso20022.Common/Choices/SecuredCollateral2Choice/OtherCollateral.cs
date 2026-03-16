@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
     /// </summary>
     [IsoId("_iZO6B6idEeWHO_l3hf2rlA")]
     [DisplayName("Other Collateral")]
+    [IsoXmlTag("OthrColl")]
     public record OtherCollateral : SecuredCollateral2Choice_
     {
         /// <summary>

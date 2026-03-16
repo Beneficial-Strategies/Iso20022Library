@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Channel1Choice
     /// </summary>
     [IsoId("_93Z_wnltEeG7BsjMvd1mEw_1642923134")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Channel1Choice_
     {
         /// <summary>

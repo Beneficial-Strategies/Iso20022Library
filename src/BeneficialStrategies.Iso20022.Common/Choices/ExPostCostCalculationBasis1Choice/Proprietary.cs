@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ExPostCostCalculationBasis1Choic
     /// </summary>
     [IsoId("_enlDQJ9XEeqxTNfi5y7ywQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ExPostCostCalculationBasis1Choice_
     {
         /// <summary>

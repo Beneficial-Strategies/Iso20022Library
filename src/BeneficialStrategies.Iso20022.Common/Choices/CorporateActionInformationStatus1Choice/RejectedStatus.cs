@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionInformationStatus
     /// </summary>
     [IsoId("_RiPM1Np-Ed-ak6NoX_4Aeg_-878703757")]
     [DisplayName("Rejected Status")]
+    [IsoXmlTag("RjctdSts")]
     public record RejectedStatus : CorporateActionInformationStatus1Choice_
     {
         /// <summary>

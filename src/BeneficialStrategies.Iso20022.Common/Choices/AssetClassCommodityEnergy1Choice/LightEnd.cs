@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy1Choice
     /// </summary>
     [IsoId("_GHehsFrXEeWN79Bl6BUd3g")]
     [DisplayName("Light End")]
+    [IsoXmlTag("LghtEnd")]
     public record LightEnd : AssetClassCommodityEnergy1Choice_
     {
         /// <summary>

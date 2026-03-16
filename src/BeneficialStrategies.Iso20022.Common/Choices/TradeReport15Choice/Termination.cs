@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport15Choice
     /// </summary>
     [IsoId("_oZRTV3g-Eeu3kecHd7QKUQ")]
     [DisplayName("Termination")]
+    [IsoXmlTag("Termntn")]
     public record Termination : TradeReport15Choice_
     {
         /// <summary>

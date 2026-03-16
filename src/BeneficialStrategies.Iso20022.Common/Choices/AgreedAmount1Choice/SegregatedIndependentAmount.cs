@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
     /// </summary>
     [IsoId("_Qm7bJ9p-Ed-ak6NoX_4Aeg_-1857537663")]
     [DisplayName("Segregated Independent Amount")]
+    [IsoXmlTag("SgrtdIndpdntAmt")]
     public record SegregatedIndependentAmount : AgreedAmount1Choice_
     {
         /// <summary>

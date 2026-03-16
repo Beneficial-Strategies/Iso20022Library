@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionStyle10Choice
     /// </summary>
     [IsoId("_z63zW5BhEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OptionStyle10Choice_
     {
         /// <summary>

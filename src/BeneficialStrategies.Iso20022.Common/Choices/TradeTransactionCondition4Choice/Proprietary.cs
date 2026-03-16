@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeTransactionCondition4Choice
     /// </summary>
     [IsoId("_AcingdokEeC60axPepSq7g_2039576794")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradeTransactionCondition4Choice_
     {
         /// <summary>

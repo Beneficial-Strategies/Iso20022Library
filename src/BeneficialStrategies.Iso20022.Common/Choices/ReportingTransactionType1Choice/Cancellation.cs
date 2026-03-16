@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType1Choice
     /// </summary>
     [IsoId("_J-kCE4G-EeaalK9UbuVGFw")]
     [DisplayName("Cancellation")]
+    [IsoXmlTag("Cxl")]
     public record Cancellation : ReportingTransactionType1Choice_
     {
         /// <summary>

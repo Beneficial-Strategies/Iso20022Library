@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus81Choice
     /// </summary>
     [IsoId("_qTGQBSAdEeuyDZ-ukt4YRg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ProcessingStatus81Choice_
     {
         /// <summary>

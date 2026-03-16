@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification6Choice
     /// </summary>
     [IsoId("_TBKB8tp-Ed-ak6NoX_4Aeg_-1421894924")]
     [DisplayName("Instrument Description")]
+    [IsoXmlTag("InstrmDesc")]
     public record InstrumentDescription : SecurityIdentification6Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitPriceType2Choice
     /// </summary>
     [IsoId("_ORWfkwc_EeSyIPzOZ6VzBQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UnitPriceType2Choice_
     {
         /// <summary>

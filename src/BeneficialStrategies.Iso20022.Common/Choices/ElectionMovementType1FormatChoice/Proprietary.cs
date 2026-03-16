@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ElectionMovementType1FormatChoic
     /// </summary>
     [IsoId("_RmjsIdp-Ed-ak6NoX_4Aeg_2024835178")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ElectionMovementType1FormatChoice_
     {
         /// <summary>

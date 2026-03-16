@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
     /// </summary>
     [IsoId("_AYOINtokEeC60axPepSq7g_921777527")]
     [DisplayName("Future Or Option Details")]
+    [IsoXmlTag("FutrOrOptnDtls")]
     public record FutureOrOptionDetails : TwoLegTransactionType1Choice_
     {
         /// <summary>

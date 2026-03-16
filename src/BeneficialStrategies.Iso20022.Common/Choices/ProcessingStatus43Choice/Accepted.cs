@@ -14,6 +14,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus43Choice
     /// </summary>
     [IsoId("_fDHA8VhFEeOMYfRGLS0NbA")]
     [DisplayName("Accepted")]
+    [IsoXmlTag("Accptd")]
     public record Accepted : ProcessingStatus43Choice_
     {
         /// <summary>

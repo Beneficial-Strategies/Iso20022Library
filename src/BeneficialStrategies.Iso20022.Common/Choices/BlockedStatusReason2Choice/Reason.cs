@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BlockedStatusReason2Choice
     /// </summary>
     [IsoId("_8t7ZA11LEeagR5I1rq5oaw")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : BlockedStatusReason2Choice_
     {
         /// <summary>

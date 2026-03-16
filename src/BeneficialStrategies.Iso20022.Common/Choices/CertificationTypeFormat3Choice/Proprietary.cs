@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CertificationTypeFormat3Choice
     /// </summary>
     [IsoId("_bmuOqUEGEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CertificationTypeFormat3Choice_
     {
         /// <summary>

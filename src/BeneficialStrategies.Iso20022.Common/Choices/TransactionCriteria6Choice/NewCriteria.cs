@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria6Choice
     /// </summary>
     [IsoId("_gUfE49cZEeqRFcf2R4bPBw")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : TransactionCriteria6Choice_
     {
         /// <summary>

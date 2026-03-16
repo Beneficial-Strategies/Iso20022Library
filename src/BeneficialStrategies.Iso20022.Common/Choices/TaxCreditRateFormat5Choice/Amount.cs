@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxCreditRateFormat5Choice
     /// </summary>
     [IsoId("_DeFVIuwPEd-sn-FiNtktcA")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : TaxCreditRateFormat5Choice_
     {
         /// <summary>

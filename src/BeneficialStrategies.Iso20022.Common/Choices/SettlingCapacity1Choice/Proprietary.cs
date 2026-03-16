@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlingCapacity1Choice
     /// </summary>
     [IsoId("_QwK2tNp-Ed-ak6NoX_4Aeg_402233736")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlingCapacity1Choice_
     {
         /// <summary>

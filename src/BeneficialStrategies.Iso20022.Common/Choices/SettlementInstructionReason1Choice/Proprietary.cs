@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementInstructionReason1Choi
     /// </summary>
     [IsoId("_fF7OwCCsEeWJd9HF2tO7BA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementInstructionReason1Choice_
     {
         /// <summary>

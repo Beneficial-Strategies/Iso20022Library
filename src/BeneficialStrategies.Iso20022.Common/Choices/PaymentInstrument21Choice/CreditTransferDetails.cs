@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument21Choice
     /// </summary>
     [IsoId("_4MizEzbsEead9bDRE_1DAQ")]
     [DisplayName("Credit Transfer Details")]
+    [IsoXmlTag("CdtTrfDtls")]
     public record CreditTransferDetails : PaymentInstrument21Choice_
     {
         /// <summary>

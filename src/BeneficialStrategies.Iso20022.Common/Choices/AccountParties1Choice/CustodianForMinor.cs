@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountParties1Choice
     /// </summary>
     [IsoId("_5n7tmxdAEeK5g-3oYI0_9Q")]
     [DisplayName("Custodian For Minor")]
+    [IsoXmlTag("CtdnForMnr")]
     public record CustodianForMinor : AccountParties1Choice_
     {
         /// <summary>

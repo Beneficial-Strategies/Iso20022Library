@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityRestrictionType2Choice
     /// </summary>
     [IsoId("_dF_PoeLxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary Restriction")]
+    [IsoXmlTag("PrtryRstrctn")]
     public record ProprietaryRestriction : SecurityRestrictionType2Choice_
     {
         /// <summary>

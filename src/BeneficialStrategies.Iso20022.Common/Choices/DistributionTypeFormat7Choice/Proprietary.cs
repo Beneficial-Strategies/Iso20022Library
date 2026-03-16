@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DistributionTypeFormat7Choice
     /// </summary>
     [IsoId("_4xLzI0EFEeWVgfuHGaKtRQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : DistributionTypeFormat7Choice_
     {
         /// <summary>

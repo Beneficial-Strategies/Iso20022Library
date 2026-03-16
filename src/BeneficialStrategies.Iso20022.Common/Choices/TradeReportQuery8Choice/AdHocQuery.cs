@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReportQuery8Choice
     /// </summary>
     [IsoId("_4ae5Uf_lEemm3skPVSMJQg")]
     [DisplayName("Ad Hoc Query")]
+    [IsoXmlTag("AdHocQry")]
     public record AdHocQuery : TradeReportQuery8Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData32Choice
     /// </summary>
     [IsoId("_KA3wk8z4EeufhKfUxzsnrQ")]
     [DisplayName("Buy Sell Back")]
+    [IsoXmlTag("BuySellBck")]
     public record BuySellBack : TransactionLoanData32Choice_
     {
         /// <summary>

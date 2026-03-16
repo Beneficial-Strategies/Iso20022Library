@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CentralCounterPartyEligibility5C
     /// </summary>
     [IsoId("_5m6oPZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CentralCounterPartyEligibility5Choice_
     {
         /// <summary>

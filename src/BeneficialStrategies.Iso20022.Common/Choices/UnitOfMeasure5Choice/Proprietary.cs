@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnitOfMeasure5Choice
     /// </summary>
     [IsoId("_0QQXUPp2EeaQh_7a05rSJQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : UnitOfMeasure5Choice_
     {
         /// <summary>

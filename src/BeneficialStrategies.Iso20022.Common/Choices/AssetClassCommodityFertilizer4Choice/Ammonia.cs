@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
     /// </summary>
     [IsoId("_idnj8U8REe2PGo0mhYCh1g")]
     [DisplayName("Ammonia")]
+    [IsoXmlTag("Ammn")]
     public record Ammonia : AssetClassCommodityFertilizer4Choice_
     {
         /// <summary>

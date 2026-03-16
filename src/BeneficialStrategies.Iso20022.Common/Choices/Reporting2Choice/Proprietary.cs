@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reporting2Choice
     /// </summary>
     [IsoId("_Qs45NNp-Ed-ak6NoX_4Aeg_12035565")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Reporting2Choice_
     {
         /// <summary>

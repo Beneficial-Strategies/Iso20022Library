@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reversal2Choice
     /// </summary>
     [IsoId("_QDM4fBg4EeK-_89we2b-bA")]
     [DisplayName("Transfer In Confirmation Details")]
+    [IsoXmlTag("TrfInConfDtls")]
     public record TransferInConfirmationDetails : Reversal2Choice_
     {
         /// <summary>

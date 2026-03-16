@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BillingMethod1Choice
     /// </summary>
     [IsoId("_6P9DspqlEeGSON8vddiWzQ_1371622889")]
     [DisplayName("Method A")]
+    [IsoXmlTag("MtdA")]
     public record MethodA : BillingMethod1Choice_
     {
         /// <summary>

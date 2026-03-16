@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData14Choic
     /// </summary>
     [IsoId("_kyCmMf_9Eemefbt-QjTNnA")]
     [DisplayName("Repurchase Trade")]
+    [IsoXmlTag("RpTrad")]
     public record RepurchaseTrade : TransactionCollateralData14Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CustomerConductClassification1Ch
     /// </summary>
     [IsoId("_gifSQBdwEeKYM7Bc71nDlA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CustomerConductClassification1Choice_
     {
         /// <summary>

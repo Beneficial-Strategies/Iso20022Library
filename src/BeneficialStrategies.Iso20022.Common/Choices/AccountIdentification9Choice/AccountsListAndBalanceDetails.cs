@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification9Choice
     /// </summary>
     [IsoId("_QSXgYdp-Ed-ak6NoX_4Aeg_1685362038")]
     [DisplayName("Accounts List And Balance Details")]
+    [IsoXmlTag("AcctsListAndBalDtls")]
     public record AccountsListAndBalanceDetails : AccountIdentification9Choice_
     {
         /// <summary>

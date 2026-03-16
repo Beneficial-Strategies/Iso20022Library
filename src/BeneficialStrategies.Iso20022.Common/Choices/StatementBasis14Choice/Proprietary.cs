@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasis14Choice
     /// </summary>
     [IsoId("_jCqhQMRyEeij-rSPpvD-Tw")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : StatementBasis14Choice_
     {
         /// <summary>

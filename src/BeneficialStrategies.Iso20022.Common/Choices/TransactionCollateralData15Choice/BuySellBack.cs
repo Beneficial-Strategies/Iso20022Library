@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
     /// </summary>
     [IsoId("_fMZ5wwAFEeqefbt-QjTNnA")]
     [DisplayName("Buy Sell Back")]
+    [IsoXmlTag("BuySellBck")]
     public record BuySellBack : TransactionCollateralData15Choice_
     {
         /// <summary>

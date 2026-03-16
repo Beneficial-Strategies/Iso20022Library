@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AffirmationStatus11Choice
     /// </summary>
     [IsoId("_XzM-0Qd3Ee2fOITqoTnSLQ")]
     [DisplayName("Affirmed")]
+    [IsoXmlTag("Affrmd")]
     public record Affirmed : AffirmationStatus11Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport32Choice
     /// </summary>
     [IsoId("__fyLaWEUEe2P-L9DBerEgA")]
     [DisplayName("Position Component")]
+    [IsoXmlTag("PosCmpnt")]
     public record PositionComponent : TradeReport32Choice_
     {
         /// <summary>

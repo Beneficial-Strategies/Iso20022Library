@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralProposalResponse2Choic
     /// </summary>
     [IsoId("_vslfM2TUEeSSTJlMfOKFsA")]
     [DisplayName("Segregated Independent Amount")]
+    [IsoXmlTag("SgrtdIndpdntAmt")]
     public record SegregatedIndependentAmount : CollateralProposalResponse2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AuditTrailOrBusinessError6Choice
     /// </summary>
     [IsoId("_bcWXkWc-EemvNLufWGIVOQ")]
     [DisplayName("Audit Trail")]
+    [IsoXmlTag("AudtTrl")]
     public record AuditTrail : AuditTrailOrBusinessError6Choice_
     {
         /// <summary>

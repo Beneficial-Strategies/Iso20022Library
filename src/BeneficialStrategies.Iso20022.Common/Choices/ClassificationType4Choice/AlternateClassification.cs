@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
     /// </summary>
     [IsoId("_XQgXNNp-Ed-ak6NoX_4Aeg_-641393136")]
     [DisplayName("Alternate Classification")]
+    [IsoXmlTag("AltrnClssfctn")]
     public record AlternateClassification : ClassificationType4Choice_
     {
         /// <summary>

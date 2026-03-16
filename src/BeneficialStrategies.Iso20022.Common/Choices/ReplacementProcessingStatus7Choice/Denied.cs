@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
     /// </summary>
     [IsoId("_A5TcA9okEeC60axPepSq7g_-1351089211")]
     [DisplayName("Denied")]
+    [IsoXmlTag("Dnd")]
     public record Denied : ReplacementProcessingStatus7Choice_
     {
         /// <summary>

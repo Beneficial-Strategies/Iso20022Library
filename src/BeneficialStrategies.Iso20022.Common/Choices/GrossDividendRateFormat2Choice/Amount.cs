@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat2Choice
     /// </summary>
     [IsoId("_UNAJ99p-Ed-ak6NoX_4Aeg_1829064661")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : GrossDividendRateFormat2Choice_
     {
         /// <summary>

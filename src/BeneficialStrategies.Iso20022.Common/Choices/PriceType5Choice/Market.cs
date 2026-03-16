@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType5Choice
     /// </summary>
     [IsoId("_SKL8Dc3yEee5nJBZsW8MFQ")]
     [DisplayName("Market")]
+    [IsoXmlTag("Mkt")]
     public record Market : PriceType5Choice_
     {
         /// <summary>

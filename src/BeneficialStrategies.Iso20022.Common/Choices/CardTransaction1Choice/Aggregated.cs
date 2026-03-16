@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CardTransaction1Choice
     /// </summary>
     [IsoId("_t6ZGs1kyEeGeoaLUQk__nA_-974180878")]
     [DisplayName("Aggregated")]
+    [IsoXmlTag("Aggtd")]
     public record Aggregated : CardTransaction1Choice_
     {
         /// <summary>

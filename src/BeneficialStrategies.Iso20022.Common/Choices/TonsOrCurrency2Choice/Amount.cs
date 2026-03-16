@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TonsOrCurrency2Choice
     /// </summary>
     [IsoId("_aCdOY2lSEeaLAKoEUNsD9g")]
     [DisplayName("Amount")]
+    [IsoXmlTag("Amt")]
     public record Amount : TonsOrCurrency2Choice_
     {
         /// <summary>

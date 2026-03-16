@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReplacementProcessingStatus7Choi
     /// </summary>
     [IsoId("_A5cl8NokEeC60axPepSq7g_-1284046964")]
     [DisplayName("Pending")]
+    [IsoXmlTag("Pdg")]
     public record Pending : ReplacementProcessingStatus7Choice_
     {
         /// <summary>

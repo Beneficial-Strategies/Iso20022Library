@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
     /// </summary>
     [IsoId("_idD06Vo2Ee23K4GXSpBSeg")]
     [DisplayName("Index")]
+    [IsoXmlTag("Indx")]
     public record Index : SecurityIdentification41Choice_
     {
         /// <summary>

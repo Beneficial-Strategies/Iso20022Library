@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeReport22Choice
     /// </summary>
     [IsoId("_zvSsf8g3EeuGrNSsxk3B0A")]
     [DisplayName("Valuation Update")]
+    [IsoXmlTag("ValtnUpd")]
     public record ValuationUpdate : TradeReport22Choice_
     {
         /// <summary>

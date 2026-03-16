@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeOriginator4Choice
     /// </summary>
     [IsoId("_5mtMkZNLEeWGlc8L7oPDIg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TradeOriginator4Choice_
     {
         /// <summary>

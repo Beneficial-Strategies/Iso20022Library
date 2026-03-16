@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CancellationStatus26Choice
     /// </summary>
     [IsoId("_iKIaprKfEemux5trsZcCpw")]
     [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
     public record ProcessingStatus : CancellationStatus26Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketClaimProcessingStatus1Choi
     /// </summary>
     [IsoId("_YGaIhtx4EeqESbVR5AloZQ")]
     [DisplayName("Proprietary Status")]
+    [IsoXmlTag("PrtrySts")]
     public record ProprietaryStatus : MarketClaimProcessingStatus1Choice_
     {
         /// <summary>

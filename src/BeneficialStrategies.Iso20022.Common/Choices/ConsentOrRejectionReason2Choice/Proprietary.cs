@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ConsentOrRejectionReason2Choice
     /// </summary>
     [IsoId("_0fzakQlIEeGATtfOBToyew_-406067479")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ConsentOrRejectionReason2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
     /// </summary>
     [IsoId("_IojKYLVQEeadLcJesEbkTQ")]
     [DisplayName("Derivative")]
+    [IsoXmlTag("Deriv")]
     public record Derivative : Product1Choice_
     {
         /// <summary>

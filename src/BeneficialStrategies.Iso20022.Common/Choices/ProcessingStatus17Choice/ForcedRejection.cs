@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus17Choice
     /// </summary>
     [IsoId("_A42wF9okEeC60axPepSq7g_-1242875186")]
     [DisplayName("Forced Rejection")]
+    [IsoXmlTag("ForcdRjctn")]
     public record ForcedRejection : ProcessingStatus17Choice_
     {
         /// <summary>

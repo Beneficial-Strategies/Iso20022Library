@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument25Choice
     /// </summary>
     [IsoId("_M8JPU_8REemYYvJytExgzA")]
     [DisplayName("Cheque Details")]
+    [IsoXmlTag("ChqDtls")]
     public record ChequeDetails : PaymentInstrument25Choice_
     {
         /// <summary>

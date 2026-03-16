@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.KeyChoiceValue2
     /// </summary>
     [IsoId("_FjgS0bTqEeeQy4o2AayYHg")]
     [DisplayName("Encrypted Key Value")]
+    [IsoXmlTag("NcrptdKeyVal")]
     public record EncryptedKeyValue : KeyChoiceValue2_
     {
         /// <summary>

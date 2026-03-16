@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPurpose1Choice
     /// </summary>
     [IsoId("_Qkr_ddp-Ed-ak6NoX_4Aeg_-438505533")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : CollateralPurpose1Choice_
     {
         /// <summary>

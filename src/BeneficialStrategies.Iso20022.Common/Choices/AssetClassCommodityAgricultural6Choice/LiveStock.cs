@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
     /// </summary>
     [IsoId("_xG_Lr08SEe2PGo0mhYCh1g")]
     [DisplayName("Live Stock")]
+    [IsoXmlTag("LiveStock")]
     public record LiveStock : AssetClassCommodityAgricultural6Choice_
     {
         /// <summary>

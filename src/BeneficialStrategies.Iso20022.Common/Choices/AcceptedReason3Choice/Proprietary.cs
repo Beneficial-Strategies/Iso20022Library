@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AcceptedReason3Choice
     /// </summary>
     [IsoId("_PTW_ySqAEeO3oOoGGWHH4A")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : AcceptedReason3Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OvernightIndexSwap3Choice
     /// </summary>
     [IsoId("_zLz706icEeWHO_l3hf2rlA")]
     [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
     public record Transaction : OvernightIndexSwap3Choice_
     {
         /// <summary>

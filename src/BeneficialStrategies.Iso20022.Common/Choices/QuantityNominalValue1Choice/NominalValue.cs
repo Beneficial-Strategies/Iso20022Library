@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityNominalValue1Choice
     /// </summary>
     [IsoId("_xcCRUHaiEeavseMKyTsJEA")]
     [DisplayName("Nominal Value")]
+    [IsoXmlTag("NmnlVal")]
     public record NominalValue : QuantityNominalValue1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PreferenceToIncome2Choice
     /// </summary>
     [IsoId("_Qu-j5dp-Ed-ak6NoX_4Aeg_1951703204")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PreferenceToIncome2Choice_
     {
         /// <summary>

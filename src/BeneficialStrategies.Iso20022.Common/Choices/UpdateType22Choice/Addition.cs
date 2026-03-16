@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType22Choice
     /// </summary>
     [IsoId("_61RRN5NLEeWGlc8L7oPDIg")]
     [DisplayName("Addition")]
+    [IsoXmlTag("Addtn")]
     public record Addition : UpdateType22Choice_
     {
         /// <summary>

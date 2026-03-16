@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
     /// </summary>
     [IsoId("_gSTIjZjcEeqkLZLH6DK3UQ")]
     [DisplayName("Other")]
+    [IsoXmlTag("Othr")]
     public record Other : SecuritiesTransactionPrice17Choice_
     {
         /// <summary>

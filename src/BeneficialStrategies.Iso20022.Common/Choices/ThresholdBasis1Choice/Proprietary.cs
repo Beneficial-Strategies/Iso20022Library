@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ThresholdBasis1Choice
     /// </summary>
     [IsoId("_925f4BuMEeyhRdHRjakS2w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : ThresholdBasis1Choice_
     {
         /// <summary>

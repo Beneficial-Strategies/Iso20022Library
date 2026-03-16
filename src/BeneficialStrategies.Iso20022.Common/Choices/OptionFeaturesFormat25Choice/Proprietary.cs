@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionFeaturesFormat25Choice
     /// </summary>
     [IsoId("_r_ZgwbaSEeiN--kDwanlkA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OptionFeaturesFormat25Choice_
     {
         /// <summary>

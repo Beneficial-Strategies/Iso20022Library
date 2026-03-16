@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
     /// </summary>
     [IsoId("_Q-xTadp-Ed-ak6NoX_4Aeg_-1848289996")]
     [DisplayName("Rate")]
+    [IsoXmlTag("Rate")]
     public record Rate : RateOrName1Choice_
     {
         /// <summary>

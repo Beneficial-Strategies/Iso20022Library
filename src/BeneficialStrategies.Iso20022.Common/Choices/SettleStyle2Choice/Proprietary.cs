@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettleStyle2Choice
     /// </summary>
     [IsoId("_ra2T0-LaEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettleStyle2Choice_
     {
         /// <summary>

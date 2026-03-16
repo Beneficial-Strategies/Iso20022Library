@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     /// </summary>
     [IsoId("_Bv9MR2kwEeaLAKoEUNsD9g")]
     [DisplayName("Equity")]
+    [IsoXmlTag("Eqty")]
     public record Equity : Derivative2Choice_
     {
         /// <summary>

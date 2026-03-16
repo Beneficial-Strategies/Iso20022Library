@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
     /// </summary>
     [IsoId("_upvuMEyGEeir2sRRVd9XhA")]
     [DisplayName("Security")]
+    [IsoXmlTag("Scty")]
     public record Security : FinancialInstrument1Choice_
     {
         /// <summary>

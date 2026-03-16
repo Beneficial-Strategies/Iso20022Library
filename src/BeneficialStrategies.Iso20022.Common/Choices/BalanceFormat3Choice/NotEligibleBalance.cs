@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceFormat3Choice
     /// </summary>
     [IsoId("_2-A6JBFPEeKp2ZN13DI_pA")]
     [DisplayName("Not Eligible Balance")]
+    [IsoXmlTag("NotElgblBal")]
     public record NotEligibleBalance : BalanceFormat3Choice_
     {
         /// <summary>

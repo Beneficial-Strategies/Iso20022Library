@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrType1Choice
     /// </summary>
     [IsoId("_XAtnpcIiEeuexrfMa3dl_Q")]
     [DisplayName("Type")]
+    [IsoXmlTag("Tp")]
     public record Type : RateOrType1Choice_
     {
         /// <summary>

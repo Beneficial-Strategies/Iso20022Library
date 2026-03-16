@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberReportOrError3Choice
     /// </summary>
     [IsoId("_i0a-UZlCEee-Zps0fZQaFQ")]
     [DisplayName("Report")]
+    [IsoXmlTag("Rpt")]
     public record Report : MemberReportOrError3Choice_
     {
         /// <summary>

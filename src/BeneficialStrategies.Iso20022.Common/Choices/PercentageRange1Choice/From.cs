@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
     /// </summary>
     [IsoId("_7_BRqaMgEeCJ6YNENx4h-w_-1383081859")]
     [DisplayName("From")]
+    [IsoXmlTag("Fr")]
     public record From : PercentageRange1Choice_
     {
         /// <summary>

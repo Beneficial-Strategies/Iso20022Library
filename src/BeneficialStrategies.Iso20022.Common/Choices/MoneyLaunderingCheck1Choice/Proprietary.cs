@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MoneyLaunderingCheck1Choice
     /// </summary>
     [IsoId("_PZS2LRdDEeK5g-3oYI0_9Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : MoneyLaunderingCheck1Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
     /// </summary>
     [IsoId("_fbqi0SJDEe2zWP9pqvmqdw")]
     [DisplayName("Schedule Period")]
+    [IsoXmlTag("SchdlPrd")]
     public record SchedulePeriod : QuantityOrTerm1Choice_
     {
         /// <summary>

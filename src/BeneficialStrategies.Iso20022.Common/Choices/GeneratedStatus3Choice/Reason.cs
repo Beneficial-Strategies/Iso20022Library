@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneratedStatus3Choice
     /// </summary>
     [IsoId("_1ItJwf7sEeCvPoRGOxRobQ")]
     [DisplayName("Reason")]
+    [IsoXmlTag("Rsn")]
     public record Reason : GeneratedStatus3Choice_
     {
         /// <summary>

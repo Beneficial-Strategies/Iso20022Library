@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
     /// </summary>
     [IsoId("_7MMKY9jKEeq5MfBBxQig1Q")]
     [DisplayName("Missing Or Incorrect Information")]
+    [IsoXmlTag("MssngOrIncrrctInf")]
     public record MissingOrIncorrectInformation : UnableToApplyJustification4Choice_
     {
         /// <summary>

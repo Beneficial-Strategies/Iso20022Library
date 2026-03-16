@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BidRangeType1Choice
     /// </summary>
     [IsoId("_dYWZ8O3NEeqc-LCjwLsUVg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : BidRangeType1Choice_
     {
         /// <summary>

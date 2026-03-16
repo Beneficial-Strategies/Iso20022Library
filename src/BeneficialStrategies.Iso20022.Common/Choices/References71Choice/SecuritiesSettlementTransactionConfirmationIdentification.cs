@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.References71Choice
     /// </summary>
     [IsoId("_KDxvtSAaEeu4a6pNulzZ4Q")]
     [DisplayName("Securities Settlement Transaction Confirmation Identification")]
+    [IsoXmlTag("SctiesSttlmTxConfId")]
     public record SecuritiesSettlementTransactionConfirmationIdentification : References71Choice_
     {
         /// <summary>

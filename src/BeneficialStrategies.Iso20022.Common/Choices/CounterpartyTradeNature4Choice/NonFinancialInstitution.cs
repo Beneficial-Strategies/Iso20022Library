@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature4Choice
     /// </summary>
     [IsoId("_6j9NM7sAEea-m5tPqiasmQ")]
     [DisplayName("Non Financial Institution")]
+    [IsoXmlTag("NFI")]
     public record NonFinancialInstitution : CounterpartyTradeNature4Choice_
     {
         /// <summary>

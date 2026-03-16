@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferUnmatchedStatus4Choice
     /// </summary>
     [IsoId("_k75sJ5M5EemKz5EOjv82iQ")]
     [DisplayName("Data Source Scheme")]
+    [IsoXmlTag("DataSrcSchme")]
     public record DataSourceScheme : TransferUnmatchedStatus4Choice_
     {
         /// <summary>

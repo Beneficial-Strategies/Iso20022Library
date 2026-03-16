@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria4Choice
     /// </summary>
     [IsoId("_gt_xE9cZEeqRFcf2R4bPBw")]
     [DisplayName("New Criteria")]
+    [IsoXmlTag("NewCrit")]
     public record NewCriteria : ReservationCriteria4Choice_
     {
         /// <summary>

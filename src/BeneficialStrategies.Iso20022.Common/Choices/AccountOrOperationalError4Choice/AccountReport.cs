@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountOrOperationalError4Choice
     /// </summary>
     [IsoId("_MiVdEW49EeiU9cctagi5ow")]
     [DisplayName("Account Report")]
+    [IsoXmlTag("AcctRpt")]
     public record AccountReport : AccountOrOperationalError4Choice_
     {
         /// <summary>

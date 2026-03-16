@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityAgricultural6
     /// </summary>
     [IsoId("_xG_LsU8SEe2PGo0mhYCh1g")]
     [DisplayName("Grain")]
+    [IsoXmlTag("Grn")]
     public record Grain : AssetClassCommodityAgricultural6Choice_
     {
         /// <summary>

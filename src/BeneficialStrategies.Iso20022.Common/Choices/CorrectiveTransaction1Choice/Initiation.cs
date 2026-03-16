@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorrectiveTransaction1Choice
     /// </summary>
     [IsoId("_P7RPCNp-Ed-ak6NoX_4Aeg_445154563")]
     [DisplayName("Initiation")]
+    [IsoXmlTag("Initn")]
     public record Initiation : CorrectiveTransaction1Choice_
     {
         /// <summary>

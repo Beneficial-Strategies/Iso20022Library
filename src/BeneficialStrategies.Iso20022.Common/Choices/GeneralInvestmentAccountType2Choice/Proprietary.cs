@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralInvestmentAccountType2Cho
     /// </summary>
     [IsoId("_4Xg9M5NuEembCsVG-3f_AA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : GeneralInvestmentAccountType2Choice_
     {
         /// <summary>

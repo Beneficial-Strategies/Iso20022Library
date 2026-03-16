@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PutType3Choice
     /// </summary>
     [IsoId("_buZ-M-LcEeWFtOV72FbX9w")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : PutType3Choice_
     {
         /// <summary>

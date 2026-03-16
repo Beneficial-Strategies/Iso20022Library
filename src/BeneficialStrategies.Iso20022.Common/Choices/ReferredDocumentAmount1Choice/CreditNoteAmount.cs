@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReferredDocumentAmount1Choice
     /// </summary>
     [IsoId("_QGJCRtp-Ed-ak6NoX_4Aeg_-888106456")]
     [DisplayName("Credit Note Amount")]
+    [IsoXmlTag("CdtNoteAmt")]
     public record CreditNoteAmount : ReferredDocumentAmount1Choice_
     {
         /// <summary>

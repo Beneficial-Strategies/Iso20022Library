@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceType7Choice
     /// </summary>
     [IsoId("_nArEUPNBEeCuA5Tr22BnwA_-379442712")]
     [DisplayName("Account")]
+    [IsoXmlTag("Acct")]
     public record Account : BalanceType7Choice_
     {
         /// <summary>

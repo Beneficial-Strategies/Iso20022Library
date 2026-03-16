@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat7Choice
     /// </summary>
     [IsoId("_XEoW6S7CEeSQQqw1BT_aMg")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SafekeepingPlaceFormat7Choice_
     {
         /// <summary>

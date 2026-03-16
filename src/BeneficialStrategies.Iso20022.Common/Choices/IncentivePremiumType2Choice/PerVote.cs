@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IncentivePremiumType2Choice
     /// </summary>
     [IsoId("_vMYu8_NBEeqRfth943bvEA")]
     [DisplayName("Per Vote")]
+    [IsoXmlTag("PerVote")]
     public record PerVote : IncentivePremiumType2Choice_
     {
         /// <summary>

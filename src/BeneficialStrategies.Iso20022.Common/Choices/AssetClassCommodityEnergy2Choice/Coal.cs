@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityEnergy2Choice
     /// </summary>
     [IsoId("_x4yAd7vsEeiLRYqS-r-R-A")]
     [DisplayName("Coal")]
+    [IsoXmlTag("Coal")]
     public record Coal : AssetClassCommodityEnergy2Choice_
     {
         /// <summary>

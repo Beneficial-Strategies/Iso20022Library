@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType1Choice
     /// </summary>
     [IsoId("_J-kCFYG-EeaalK9UbuVGFw")]
     [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
     public record SupplementaryData : ReportingTransactionType1Choice_
     {
         /// <summary>

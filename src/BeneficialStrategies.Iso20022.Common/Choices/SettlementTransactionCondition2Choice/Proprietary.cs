@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementTransactionCondition2C
     /// </summary>
     [IsoId("_QuYG9dp-Ed-ak6NoX_4Aeg_-450512440")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementTransactionCondition2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
     /// </summary>
     [IsoId("_RB5f5tp-Ed-ak6NoX_4Aeg_-292430851")]
     [DisplayName("Identification As DSS")]
+    [IsoXmlTag("IdAsDSS")]
     public record IdentificationAsDSS : SafekeepingPlaceFormatChoice_
     {
         /// <summary>

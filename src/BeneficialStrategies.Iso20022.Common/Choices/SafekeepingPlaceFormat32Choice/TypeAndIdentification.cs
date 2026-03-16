@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat32Choice
     /// </summary>
     [IsoId("__2YuIffDEeiNZp_PtLohLw")]
     [DisplayName("Type And Identification")]
+    [IsoXmlTag("TpAndId")]
     public record TypeAndIdentification : SafekeepingPlaceFormat32Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.GeneralBusinessOrError6Choice
     /// </summary>
     [IsoId("_Mg4II5lgEeeE1Ya-LgRsuQ")]
     [DisplayName("General Business")]
+    [IsoXmlTag("GnlBiz")]
     public record GeneralBusiness : GeneralBusinessOrError6Choice_
     {
         /// <summary>

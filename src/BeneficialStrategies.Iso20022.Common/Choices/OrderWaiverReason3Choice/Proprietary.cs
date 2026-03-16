@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrderWaiverReason3Choice
     /// </summary>
     [IsoId("_PibkEzoREeabspMEjqY5TQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : OrderWaiverReason3Choice_
     {
         /// <summary>

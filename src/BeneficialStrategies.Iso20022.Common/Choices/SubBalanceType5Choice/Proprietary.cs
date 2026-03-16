@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceType5Choice
     /// </summary>
     [IsoId("_QYU-dtp-Ed-ak6NoX_4Aeg_-1583252155")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SubBalanceType5Choice_
     {
         /// <summary>

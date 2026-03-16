@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CommodityDerivate2Choice
     /// </summary>
     [IsoId("_zwLKwWlHEeaLAKoEUNsD9g")]
     [DisplayName("Freight")]
+    [IsoXmlTag("Frght")]
     public record Freight : CommodityDerivate2Choice_
     {
         /// <summary>

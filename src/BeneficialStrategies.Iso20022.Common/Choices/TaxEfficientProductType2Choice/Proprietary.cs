@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TaxEfficientProductType2Choice
     /// </summary>
     [IsoId("_U2DS05NNEemQB_8XA98K0Q")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : TaxEfficientProductType2Choice_
     {
         /// <summary>

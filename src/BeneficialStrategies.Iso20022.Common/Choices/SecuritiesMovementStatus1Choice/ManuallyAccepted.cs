@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesMovementStatus1Choice
     /// </summary>
     [IsoId("_jqUPcOCzEei2UYJ62ws-Fw")]
     [DisplayName("Manually Accepted")]
+    [IsoXmlTag("MnlyAccptd")]
     public record ManuallyAccepted : SecuritiesMovementStatus1Choice_
     {
         /// <summary>

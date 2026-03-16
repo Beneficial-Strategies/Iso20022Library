@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueReportOrError5Cho
     /// </summary>
     [IsoId("_-DiXcTpvEemk2e6qGBk8IQ")]
     [DisplayName("Business Report")]
+    [IsoXmlTag("BizRpt")]
     public record BusinessReport : CollateralValueReportOrError5Choice_
     {
         /// <summary>

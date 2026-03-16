@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus98Choice
     /// </summary>
     [IsoId("_x4XDgwarEe2phaVG0lYKTw")]
     [DisplayName("Already Matched And Affirmed")]
+    [IsoXmlTag("AlrdyMtchdAndAffrmd")]
     public record AlreadyMatchedAndAffirmed : ProcessingStatus98Choice_
     {
         /// <summary>

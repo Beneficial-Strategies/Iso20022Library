@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionMovementStatus1Ch
     /// </summary>
     [IsoId("_RiPM19p-Ed-ak6NoX_4Aeg_-1878187408")]
     [DisplayName("Failed Status")]
+    [IsoXmlTag("FaildSts")]
     public record FailedStatus : CorporateActionMovementStatus1Choice_
     {
         /// <summary>

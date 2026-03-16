@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.IntermediateSecurityDistribution
     /// </summary>
     [IsoId("_Rms2FNp-Ed-ak6NoX_4Aeg_1911197103")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : IntermediateSecurityDistributionType1FormatChoice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat34Choice
     /// </summary>
     [IsoId("_msc3fSXxEeO4bIO_HtGo9Q")]
     [DisplayName("Amount Price Per Amount")]
+    [IsoXmlTag("AmtPricPerAmt")]
     public record AmountPricePerAmount : PriceFormat34Choice_
     {
         /// <summary>

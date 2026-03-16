@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MarginCallResult2Choice
     /// </summary>
     [IsoId("_9boCQaMPEeCojJW5vEuTEQ_377211286")]
     [DisplayName("Margin Call Amount")]
+    [IsoXmlTag("MrgnCallAmt")]
     public record MarginCallAmount : MarginCallResult2Choice_
     {
         /// <summary>

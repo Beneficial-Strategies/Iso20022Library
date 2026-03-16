@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SettlementUnitType3Choice
     /// </summary>
     [IsoId("_d8mHg-LxEeWOD7aAy2fAcA")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : SettlementUnitType3Choice_
     {
         /// <summary>

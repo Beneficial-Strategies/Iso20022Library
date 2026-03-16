@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Date3Choice
     /// </summary>
     [IsoId("_U01FI5EhEeakHoV5BVecAQ")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Date3Choice_
     {
         /// <summary>

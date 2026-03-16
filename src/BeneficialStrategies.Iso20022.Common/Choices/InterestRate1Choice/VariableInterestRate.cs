@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRate1Choice
     /// </summary>
     [IsoId("_Qk1wdNp-Ed-ak6NoX_4Aeg_1389639465")]
     [DisplayName("Variable Interest Rate")]
+    [IsoXmlTag("VarblIntrstRate")]
     public record VariableInterestRate : InterestRate1Choice_
     {
         /// <summary>

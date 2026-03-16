@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AllocationStatus1Choice
     /// </summary>
     [IsoId("_cFIB8N_-EeiVRbNQx5-Vhg")]
     [DisplayName("Fully Allocated")]
+    [IsoXmlTag("FullyAllctd")]
     public record FullyAllocated : AllocationStatus1Choice_
     {
         /// <summary>

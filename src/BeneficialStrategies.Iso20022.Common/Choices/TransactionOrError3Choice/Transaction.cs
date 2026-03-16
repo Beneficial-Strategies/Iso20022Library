@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionOrError3Choice
     /// </summary>
     [IsoId("_NRCCc5lPEee-Zps0fZQaFQ")]
     [DisplayName("Transaction")]
+    [IsoXmlTag("Tx")]
     public record Transaction : TransactionOrError3Choice_
     {
         /// <summary>

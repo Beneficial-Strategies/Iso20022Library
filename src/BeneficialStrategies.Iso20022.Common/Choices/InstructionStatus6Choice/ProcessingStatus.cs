@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionStatus6Choice
     /// </summary>
     [IsoId("_sSu2s16uEeSyc4g_pm5hbw")]
     [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
     public record ProcessingStatus : InstructionStatus6Choice_
     {
         /// <summary>

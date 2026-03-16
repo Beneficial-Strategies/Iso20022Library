@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Tracking1Choice
     /// </summary>
     [IsoId("_QuFMAdp-Ed-ak6NoX_4Aeg_-1171599030")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : Tracking1Choice_
     {
         /// <summary>

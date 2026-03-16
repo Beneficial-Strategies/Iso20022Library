@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification245Choice
     /// </summary>
     [IsoId("_Zw-sdwauEe2phaVG0lYKTw")]
     [DisplayName("Name And Address")]
+    [IsoXmlTag("NmAndAdr")]
     public record NameAndAddress : PartyIdentification245Choice_
     {
         /// <summary>

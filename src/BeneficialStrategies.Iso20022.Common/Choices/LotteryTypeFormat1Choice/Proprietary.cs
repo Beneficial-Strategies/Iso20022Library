@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LotteryTypeFormat1Choice
     /// </summary>
     [IsoId("_Q3K2kdp-Ed-ak6NoX_4Aeg_33779779")]
     [DisplayName("Proprietary")]
+    [IsoXmlTag("Prtry")]
     public record Proprietary : LotteryTypeFormat1Choice_
     {
         /// <summary>

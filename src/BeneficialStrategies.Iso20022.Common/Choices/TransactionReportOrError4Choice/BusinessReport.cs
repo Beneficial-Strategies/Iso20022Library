@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError4Choice
     /// </summary>
     [IsoId("_WnqHQW49EeiU9cctagi5ow")]
     [DisplayName("Business Report")]
+    [IsoXmlTag("BizRpt")]
     public record BusinessReport : TransactionReportOrError4Choice_
     {
         /// <summary>

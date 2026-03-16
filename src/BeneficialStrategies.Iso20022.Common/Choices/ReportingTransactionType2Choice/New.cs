@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ReportingTransactionType2Choice
     /// </summary>
     [IsoId("_XM1TEZ26Eeuwmdq0KtnICg")]
     [DisplayName("New")]
+    [IsoXmlTag("New")]
     public record New : ReportingTransactionType2Choice_
     {
         /// <summary>

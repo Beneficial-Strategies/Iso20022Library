@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer4Ch
     /// </summary>
     [IsoId("_idnj808REe2PGo0mhYCh1g")]
     [DisplayName("Diammonium Phosphate")]
+    [IsoXmlTag("DmmnmPhspht")]
     public record DiammoniumPhosphate : AssetClassCommodityFertilizer4Choice_
     {
         /// <summary>

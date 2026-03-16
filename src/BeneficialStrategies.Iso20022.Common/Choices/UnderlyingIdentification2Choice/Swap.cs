@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingIdentification2Choice
     /// </summary>
     [IsoId("_Ky7eQYG-EeaalK9UbuVGFw")]
     [DisplayName("Swap")]
+    [IsoXmlTag("Swp")]
     public record Swap : UnderlyingIdentification2Choice_
     {
         /// <summary>

@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification123Choice
     /// </summary>
     [IsoId("_OP_-Q2pXEeipaMTLlhaKMQ")]
     [DisplayName("Proprietary Identification")]
+    [IsoXmlTag("PrtryId")]
     public record ProprietaryIdentification : PartyIdentification123Choice_
     {
         /// <summary>

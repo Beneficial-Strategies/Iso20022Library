@@ -13,6 +13,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity23Choice
     /// </summary>
     [IsoId("_cfsEYZKQEeWHWpTQn1FFVg")]
     [DisplayName("Signed Quantity")]
+    [IsoXmlTag("SgndQty")]
     public record SignedQuantity : Quantity23Choice_
     {
         /// <summary>
