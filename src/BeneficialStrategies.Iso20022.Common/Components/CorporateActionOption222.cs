@@ -1,0 +1,108 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+
+namespace BeneficialStrategies.Iso20022.Components;
+
+/// <summary>
+/// Corporate Action Option222.
+/// </summary>
+[IsoId("_gPjzkWKHEe6iKbrXdnOlfA")]
+[DisplayName("Corporate Action Option222")]
+public partial record CorporateActionOption222
+{
+    #nullable enable
+
+    /// <summary>
+    /// Cash Movement Details.
+    /// </summary>
+    [DisplayName("Cash Movement Details")]
+    [IsoXmlTag("CshMvmntDtls")]
+    public ValueList<CashOption95> CashMovementDetails { get; init; } = [];
+
+    /// <summary>
+    /// Currency Option.
+    /// </summary>
+    [DisplayName("Currency Option")]
+    [IsoXmlTag("CcyOptn")]
+    public ActiveCurrencyCode? CurrencyOption { get; init; } 
+
+    /// <summary>
+    /// Date Details.
+    /// </summary>
+    [DisplayName("Date Details")]
+    [IsoXmlTag("DtDtls")]
+    public CorporateActionDate88? DateDetails { get; init; } 
+
+    /// <summary>
+    /// Fraction Disposition.
+    /// </summary>
+    [DisplayName("Fraction Disposition")]
+    [IsoXmlTag("FrctnDspstn")]
+    public FractionDispositionType27Choice_? FractionDisposition { get; init; } 
+
+    /// <summary>
+    /// Option Features.
+    /// </summary>
+    [DisplayName("Option Features")]
+    [IsoXmlTag("OptnFeatrs")]
+    public ValueList<OptionFeaturesFormat29Choice_> OptionFeatures { get; init; } = [];
+
+    /// <summary>
+    /// Option Number.
+    /// </summary>
+    [DisplayName("Option Number")]
+    [IsoXmlTag("OptnNb")]
+    public required OptionNumber1Choice_ OptionNumber { get; init; } 
+
+    /// <summary>
+    /// Option Type.
+    /// </summary>
+    [DisplayName("Option Type")]
+    [IsoXmlTag("OptnTp")]
+    public required CorporateActionOption33Choice_ OptionType { get; init; } 
+
+    /// <summary>
+    /// Period Details.
+    /// </summary>
+    [DisplayName("Period Details")]
+    [IsoXmlTag("PrdDtls")]
+    public CorporateActionPeriod13? PeriodDetails { get; init; } 
+
+    /// <summary>
+    /// Place Of Trade.
+    /// </summary>
+    [DisplayName("Place Of Trade")]
+    [IsoXmlTag("PlcOfTrad")]
+    public MarketIdentification84? PlaceOfTrade { get; init; } 
+
+    /// <summary>
+    /// Price Details.
+    /// </summary>
+    [DisplayName("Price Details")]
+    [IsoXmlTag("PricDtls")]
+    public CorporateActionPrice61? PriceDetails { get; init; } 
+
+    /// <summary>
+    /// Rate And Amount Details.
+    /// </summary>
+    [DisplayName("Rate And Amount Details")]
+    [IsoXmlTag("RateAndAmtDtls")]
+    public CorporateActionRate107? RateAndAmountDetails { get; init; } 
+
+    /// <summary>
+    /// Securities Movement Details.
+    /// </summary>
+    [DisplayName("Securities Movement Details")]
+    [IsoXmlTag("SctiesMvmntDtls")]
+    public ValueList<SecuritiesOption103> SecuritiesMovementDetails { get; init; } = [];
+
+    
+    #nullable disable
+    
+}

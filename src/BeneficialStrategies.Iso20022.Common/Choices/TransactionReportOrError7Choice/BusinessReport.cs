@@ -1,0 +1,29 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.Xml;
+using System.Xml.Linq;
+
+using System.ComponentModel.DataAnnotations;
+namespace BeneficialStrategies.Iso20022.Choices.TransactionReportOrError7Choice
+{
+    /// <summary>
+    /// Business Report.
+    /// </summary>
+    [DisplayName("Business Report")]
+    public partial record BusinessReport : TransactionReportOrError7Choice_
+    {
+        #nullable enable
+        
+        /// <summary>
+        /// Contains the main value for the container.
+        /// </summary>
+        [IsoXmlTag("BizRpt")]
+        public required Transactions11 Value { get; init; } 
+        
+        
+        #nullable disable
+        
+    }
+}

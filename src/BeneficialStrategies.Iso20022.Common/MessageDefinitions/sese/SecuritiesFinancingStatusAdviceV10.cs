@@ -1,0 +1,118 @@
+// Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
+
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
+using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.ComponentModel.DataAnnotations;
+using System.Xml;
+using System.Xml.Linq;
+
+
+
+namespace BeneficialStrategies.Iso20022.sese;
+
+/// <summary>
+/// This record is an implementation of the sese.034.001.10 ISO standard message type.
+/// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
+/// </summary>
+[IsoId("_Lz5Q8YVsEe-Pv9KR9bv9IA")]
+[DisplayName("Securities Financing Status Advice V10")]
+public partial record SecuritiesFinancingStatusAdviceV10 : IOuterRecord
+{
+    
+    /// <summary>
+    /// The official ISO 20022 designation for this version of this message.
+    /// </summary>
+    public const string IsoIdentifier = "sese.034.001.10";
+    
+    /// <summary>
+    /// The ISO specified XML tag that should be used for standardized serialization of this message.
+    /// </summary>
+    public const string XmlTag = "SctiesFincgStsAdvc";
+    
+    /// <summary>
+    /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
+    /// </summary>
+    public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:sese.034.001.10";
+    
+    /// <summary>
+    /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
+    /// </summary>
+    public const string DocumentElementName = "Document";
+    
+    /// <summary>
+    /// The XML namespace in which this message is delivered.
+    /// </summary>
+    public static string IsoXmlNamspace => DocumentNamespace;
+    
+    #nullable enable
+    
+    /// <summary>
+    /// Inferred Matching Status.
+    /// </summary>
+    [DisplayName("Inferred Matching Status")]
+    [IsoXmlTag("IfrrdMtchgSts")]
+    public MatchingStatus26Choice_? InferredMatchingStatus { get; init; } 
+    
+    /// <summary>
+    /// Matching Status.
+    /// </summary>
+    [DisplayName("Matching Status")]
+    [IsoXmlTag("MtchgSts")]
+    public MatchingStatus26Choice_? MatchingStatus { get; init; } 
+    
+    /// <summary>
+    /// Processing Status.
+    /// </summary>
+    [DisplayName("Processing Status")]
+    [IsoXmlTag("PrcgSts")]
+    public ProcessingStatus83Choice_? ProcessingStatus { get; init; } 
+    
+    /// <summary>
+    /// Repo Call Request Status.
+    /// </summary>
+    [DisplayName("Repo Call Request Status")]
+    [IsoXmlTag("RepoCallReqSts")]
+    public RepoCallRequestStatus7Choice_? RepoCallRequestStatus { get; init; } 
+    
+    /// <summary>
+    /// Settlement Status.
+    /// </summary>
+    [DisplayName("Settlement Status")]
+    [IsoXmlTag("SttlmSts")]
+    public SettlementStatus18Choice_? SettlementStatus { get; init; } 
+    
+    /// <summary>
+    /// Supplementary Data.
+    /// </summary>
+    [DisplayName("Supplementary Data")]
+    [IsoXmlTag("SplmtryData")]
+    public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
+    
+    /// <summary>
+    /// Transaction Details.
+    /// </summary>
+    [DisplayName("Transaction Details")]
+    [IsoXmlTag("TxDtls")]
+    public SecuritiesFinancingTransactionDetails57? TransactionDetails { get; init; } 
+    
+    /// <summary>
+    /// Transaction Identification.
+    /// </summary>
+    [DisplayName("Transaction Identification")]
+    [IsoXmlTag("TxId")]
+    public required TransactionIdentifications53 TransactionIdentification { get; init; } 
+    
+    
+    #nullable disable
+    
+}
+
+
+// Since SecuritiesFinancingStatusAdviceV10Document is not really part of the logical business domain model, 
+// and only existed to facilitate implementation details of serialization, it has been appropriately removed.
+// Some of the constants previously declared there have been relocated to SecuritiesFinancingStatusAdviceV10.
+
