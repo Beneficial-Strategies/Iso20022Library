@@ -23,7 +23,7 @@ public enum FleetPurchaseTypeCode
     [IsoId("_I2eB1PjCEeiJaN6-Lf-c_w")]
     [Description(@"Fuel")]
     Fuel,
-    
+
     /// <summary>
     /// Non fuel
     /// Encoded/decoded by serializers as &quot;NONF&quot;.
@@ -32,7 +32,7 @@ public enum FleetPurchaseTypeCode
     [IsoId("_I2eB1fjCEeiJaN6-Lf-c_w")]
     [Description(@"Non fuel")]
     NonFuel,
-    
+
     /// <summary>
     /// Fuel and non fuel
     /// Encoded/decoded by serializers as &quot;FANF&quot;.
@@ -41,5 +41,4 @@ public enum FleetPurchaseTypeCode
     [IsoId("_eghTcPjCEeiJaN6-Lf-c_w")]
     [Description(@"Fuel and non fuel")]
     FuelAndNonFuel,
-    
 }

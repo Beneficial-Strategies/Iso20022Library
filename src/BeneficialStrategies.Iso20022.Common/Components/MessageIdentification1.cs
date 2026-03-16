@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7pG5Np-Ed-ak6NoX_4Aeg_-967008570")]
 [DisplayName("Message Identification")]
-public partial record MessageIdentification1
+public record MessageIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the message.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MessageIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Date of creation of the message.
     /// </summary>
@@ -35,9 +33,5 @@ public partial record MessageIdentification1
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
 }

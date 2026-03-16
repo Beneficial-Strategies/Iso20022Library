@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CollateralStatus3Choice.Pending))]
     [KnownType(typeof(CollateralStatus3Choice.Proprietary))]
-    [JsonDerivedType(typeof(CollateralStatus3Choice.Pending),nameof(CollateralStatus3Choice.Pending))]
-    [JsonDerivedType(typeof(CollateralStatus3Choice.Proprietary),nameof(CollateralStatus3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CollateralStatus3Choice.Pending),
+        nameof(CollateralStatus3Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralStatus3Choice.Proprietary),
+        nameof(CollateralStatus3Choice.Proprietary)
+    )]
     [IsoId("_K3a_kOCdEei2UYJ62ws-Fw")]
     [DisplayName("Collateral Status 3 Choice")]
-    public abstract partial record CollateralStatus3Choice_
-    {
-    }
+    public abstract record CollateralStatus3Choice_ { }
 }

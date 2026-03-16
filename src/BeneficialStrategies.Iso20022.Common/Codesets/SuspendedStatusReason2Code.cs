@@ -21,9 +21,11 @@ public enum SuspendedStatusReason2Code
     /// </summary>
     [EnumMember(Value = "PRIC")]
     [IsoId("_VlEJENp-Ed-ak6NoX_4Aeg_453368006")]
-    [Description(@"There is a suspension of pricing. The order will stay on the books until the next pricing.")]
+    [Description(
+        @"There is a suspension of pricing. The order will stay on the books until the next pricing."
+    )]
     PriceSuspension = SuspendedStatusReasonCode.PriceSuspension, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// There is a fund overflow.
     /// Encoded/decoded by serializers as &quot;FLOW&quot;.
@@ -32,7 +34,7 @@ public enum SuspendedStatusReason2Code
     [IsoId("_VlEJEdp-Ed-ak6NoX_4Aeg_469993316")]
     [Description(@"There is a fund overflow.")]
     Overflow = SuspendedStatusReasonCode.Overflow, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Another reason for the status suspended.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +43,4 @@ public enum SuspendedStatusReason2Code
     [IsoId("_VlEJEtp-Ed-ak6NoX_4Aeg_100672757")]
     [Description(@"Another reason for the status suspended.")]
     Other = SuspendedStatusReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

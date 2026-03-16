@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TargetMarket4Choice.Type))]
     [KnownType(typeof(TargetMarket4Choice.Other))]
-    [JsonDerivedType(typeof(TargetMarket4Choice.Type),nameof(TargetMarket4Choice.Type))]
-    [JsonDerivedType(typeof(TargetMarket4Choice.Other),nameof(TargetMarket4Choice.Other))]
+    [JsonDerivedType(typeof(TargetMarket4Choice.Type), nameof(TargetMarket4Choice.Type))]
+    [JsonDerivedType(typeof(TargetMarket4Choice.Other), nameof(TargetMarket4Choice.Other))]
     [IsoId("_eEqHsNdhEeibyvRfU9vJ7w")]
     [DisplayName("Target Market 4 Choice")]
-    public abstract partial record TargetMarket4Choice_
-    {
-    }
+    public abstract record TargetMarket4Choice_ { }
 }

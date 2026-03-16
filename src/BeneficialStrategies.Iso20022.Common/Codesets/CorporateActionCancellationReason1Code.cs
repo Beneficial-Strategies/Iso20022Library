@@ -23,7 +23,7 @@ public enum CorporateActionCancellationReason1Code
     [IsoId("_bCpMFNp-Ed-ak6NoX_4Aeg_-232047422")]
     [Description(@"Cancellation due to the corporate action event being cancelled by the issuer.")]
     Withrawal = CorporateActionCancellationReasonCode.Withrawal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation due to a processing error.
     /// Encoded/decoded by serializers as &quot;PROC&quot;.
@@ -32,5 +32,4 @@ public enum CorporateActionCancellationReason1Code
     [IsoId("_bCpMFdp-Ed-ak6NoX_4Aeg_167838210")]
     [Description(@"Cancellation due to a processing error.")]
     Processing = CorporateActionCancellationReasonCode.Processing, // same ordinal as derivation source for type conversions
-    
 }

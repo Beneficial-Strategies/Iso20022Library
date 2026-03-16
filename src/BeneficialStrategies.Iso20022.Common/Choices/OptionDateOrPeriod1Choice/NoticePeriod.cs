@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.OptionDateOrPeriod1Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.OptionDateOrPeriod1Choice
     /// </summary>
     [IsoId("_FBT62TU7EeWITbq5W8H-2w")]
     [DisplayName("Notice Period")]
-    public partial record NoticePeriod : OptionDateOrPeriod1Choice_
+    public record NoticePeriod : OptionDateOrPeriod1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Number of objects represented as an integer.
         /// </summary>
         [IsoXmlTag("NtcePrd")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoNumber Value { get; init; }
     }
 }

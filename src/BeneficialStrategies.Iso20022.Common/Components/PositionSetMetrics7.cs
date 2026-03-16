@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,19 +14,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dpo_4a5MEeuo-IflVgGqiA")]
 [DisplayName("Position Set Metrics")]
-public partial record PositionSetMetrics7
+public record PositionSetMetrics7
 {
-    #nullable enable
-    
     /// <summary>
     /// Numeric variables calculated on the number of transactions or on market exposures.
     /// </summary>
     [IsoId("_d5k5Ua5MEeuo-IflVgGqiA")]
     [DisplayName("Volume Metrics")]
     [IsoXmlTag("VolMtrcs")]
-    public required VolumeMetrics5 VolumeMetrics { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required VolumeMetrics5 VolumeMetrics { get; init; }
 }

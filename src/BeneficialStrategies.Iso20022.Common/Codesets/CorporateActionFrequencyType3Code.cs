@@ -23,7 +23,7 @@ public enum CorporateActionFrequencyType3Code
     [IsoId("_FXLZ8SXfEeO4bIO_HtGo9Q")]
     [Description(@"Payment of a dividend, less amounts already paid through interim dividends.")]
     Final = CorporateActionFrequencyTypeV2Code.Final, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend declared and paid before annual earnings have been determined.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,7 +32,7 @@ public enum CorporateActionFrequencyType3Code
     [IsoId("_FeT8sSXfEeO4bIO_HtGo9Q")]
     [Description(@"Dividend declared and paid before annual earnings have been determined.")]
     Interim = CorporateActionFrequencyTypeV2Code.Interim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reinvestment of cash distributed.
     /// Encoded/decoded by serializers as &quot;REIN&quot;.
@@ -41,7 +41,7 @@ public enum CorporateActionFrequencyType3Code
     [IsoId("_FmDjcSXfEeO4bIO_HtGo9Q")]
     [Description(@"Reinvestment of cash distributed.")]
     Reinvestment = CorporateActionFrequencyTypeV2Code.Reinvestment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend paid at regular interval, for example, quarterly.
     /// Encoded/decoded by serializers as &quot;REGR&quot;.
@@ -50,7 +50,7 @@ public enum CorporateActionFrequencyType3Code
     [IsoId("_Fu-18SXfEeO4bIO_HtGo9Q")]
     [Description(@"Dividend paid at regular interval, for example, quarterly.")]
     Regular = CorporateActionFrequencyTypeV2Code.Regular, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend in addition to the regular dividend being paid by the company.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
@@ -59,5 +59,4 @@ public enum CorporateActionFrequencyType3Code
     [IsoId("_F2t1oSXfEeO4bIO_HtGo9Q")]
     [Description(@"Dividend in addition to the regular dividend being paid by the company.")]
     Special = CorporateActionFrequencyTypeV2Code.Special, // same ordinal as derivation source for type conversions
-    
 }

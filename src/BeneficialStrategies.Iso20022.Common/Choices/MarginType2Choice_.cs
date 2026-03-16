@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MarginType2Choice.Code))]
     [KnownType(typeof(MarginType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(MarginType2Choice.Code),nameof(MarginType2Choice.Code))]
-    [JsonDerivedType(typeof(MarginType2Choice.Proprietary),nameof(MarginType2Choice.Proprietary))]
+    [JsonDerivedType(typeof(MarginType2Choice.Code), nameof(MarginType2Choice.Code))]
+    [JsonDerivedType(typeof(MarginType2Choice.Proprietary), nameof(MarginType2Choice.Proprietary))]
     [IsoId("_JT728I1rEeet3cKIYK84nw")]
     [DisplayName("Margin Type 2 Choice")]
-    public abstract partial record MarginType2Choice_
-    {
-    }
+    public abstract record MarginType2Choice_ { }
 }

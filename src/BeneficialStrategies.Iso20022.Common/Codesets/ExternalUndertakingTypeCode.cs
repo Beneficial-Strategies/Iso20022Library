@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-M07AG7iEeKo25nLKvGr8w_-1585779072")]
-[Description(@"Specifies the external undertaking type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external undertaking type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalUndertakingType1Code))]
 public enum ExternalUndertakingTypeCode
 {
@@ -24,7 +26,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uR0LyfRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of an advance payment obligation.")]
     AdvancePayment,
-    
+
     /// <summary>
     /// Undertaking in support of a commercial obligation.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -33,7 +35,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uR98wPRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a commercial obligation.")]
     Commercial,
-    
+
     /// <summary>
     /// Undertaking in support of a customs duty obligation.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -42,7 +44,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uR98w_RYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a customs duty obligation.")]
     Customs,
-    
+
     /// <summary>
     /// Undertaking representing the primary means of payment.
     /// Encoded/decoded by serializers as &quot;DPAY&quot;.
@@ -51,7 +53,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uR98xvRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking representing the primary means of payment.")]
     DirectPay,
-    
+
     /// <summary>
     /// Undertaking in support of a financial obligation.
     /// Encoded/decoded by serializers as &quot;FINC&quot;.
@@ -60,7 +62,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uR98yfRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a financial obligation.")]
     Financial,
-    
+
     /// <summary>
     /// Undertaking in support of a insurance obligation.
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
@@ -69,7 +71,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uR98zPRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a insurance obligation.")]
     Insurance,
-    
+
     /// <summary>
     /// Undertaking in support of an Industrial Revenue Board (IRB) obligation.
     /// Encoded/decoded by serializers as &quot;IRBO&quot;.
@@ -78,7 +80,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSHtwPRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of an Industrial Revenue Board (IRB) obligation.")]
     IndustrialRevenueBoard,
-    
+
     /// <summary>
     /// Undertaking in support of a maintenance obligation.
     /// Encoded/decoded by serializers as &quot;MAIN&quot;.
@@ -87,7 +89,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSHtw_RYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a maintenance obligation.")]
     Maintenance,
-    
+
     /// <summary>
     /// Undertaking in support of a payment obligation.
     /// Encoded/decoded by serializers as &quot;PAYM&quot;.
@@ -96,7 +98,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSHtxvRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a payment obligation.")]
     Payment,
-    
+
     /// <summary>
     /// Undertaking in support of a performance obligation.
     /// Encoded/decoded by serializers as &quot;PERF&quot;.
@@ -105,7 +107,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSHtyfRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a performance obligation.")]
     Performance,
-    
+
     /// <summary>
     /// Undertaking in support of a monetary retention obligation.
     /// Encoded/decoded by serializers as &quot;RETN&quot;.
@@ -114,7 +116,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSQ3sPRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a monetary retention obligation.")]
     Retention,
-    
+
     /// <summary>
     /// Undertaking in support of a sea transportation obligation.
     /// Encoded/decoded by serializers as &quot;SHIP&quot;.
@@ -123,7 +125,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSQ3s_RYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a sea transportation obligation.")]
     Shipping,
-    
+
     /// <summary>
     /// Undertaking in support of a tender or bid obligation.
     /// Encoded/decoded by serializers as &quot;TEND&quot;.
@@ -132,7 +134,7 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSQ3tvRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a tender or bid obligation.")]
     TenderOrBid,
-    
+
     /// <summary>
     /// Undertaking in support of a warranty obligation.
     /// Encoded/decoded by serializers as &quot;WARR&quot;.
@@ -141,5 +143,4 @@ public enum ExternalUndertakingTypeCode
     [IsoId("_uSQ3ufRYEeuLhpyIdtJzwg")]
     [Description(@"Undertaking in support of a warranty obligation.")]
     Warranty,
-    
 }

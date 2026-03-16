@@ -23,5 +23,4 @@ public enum AssetClassProductType7Code
     [IsoId("_n9PtcQnyEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type metal.")]
     Metal = AssetClassProductTypeCode.Metal, // same ordinal as derivation source for type conversions
-    
 }

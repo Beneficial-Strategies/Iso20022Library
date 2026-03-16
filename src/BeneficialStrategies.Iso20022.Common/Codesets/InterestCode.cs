@@ -23,14 +23,15 @@ public enum InterestCode
     [IsoId("_aZ-Chdp-Ed-ak6NoX_4Aeg_-376656461")]
     [Description(@"During or within a business day.")]
     IntraDay,
-    
+
     /// <summary>
     /// Period of time between the end of a business day and the start of the next business day (usually the day after).
     /// Encoded/decoded by serializers as &quot;OVRN&quot;.
     /// </summary>
     [EnumMember(Value = "OVRN")]
     [IsoId("_aZ-Chtp-Ed-ak6NoX_4Aeg_-358184956")]
-    [Description(@"Period of time between the end of a business day and the start of the next business day (usually the day after).")]
+    [Description(
+        @"Period of time between the end of a business day and the start of the next business day (usually the day after)."
+    )]
     OverNight,
-    
 }

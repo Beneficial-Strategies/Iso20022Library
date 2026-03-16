@@ -28,33 +28,51 @@ public sealed class OriginalGroupHeader15Validator : AbstractValidator<OriginalG
     {
         RuleFor(x => x.OriginalMessageIdentification)
             .NotEmpty()
-                .WithMessage("OriginalGroupHeader15.OriginalMessageIdentification is required (Max35Text, 1..1).")
+            .WithMessage(
+                "OriginalGroupHeader15.OriginalMessageIdentification is required (Max35Text, 1..1)."
+            )
             .MinimumLength(1)
             .MaximumLength(35)
-                .WithMessage("OriginalGroupHeader15.OriginalMessageIdentification must not exceed 35 characters (Max35Text).");
+            .WithMessage(
+                "OriginalGroupHeader15.OriginalMessageIdentification must not exceed 35 characters (Max35Text)."
+            );
 
         RuleFor(x => x.OriginalMessageNameIdentification)
             .NotEmpty()
-                .WithMessage("OriginalGroupHeader15.OriginalMessageNameIdentification is required (Max35Text, 1..1).")
+            .WithMessage(
+                "OriginalGroupHeader15.OriginalMessageNameIdentification is required (Max35Text, 1..1)."
+            )
             .MinimumLength(1)
             .MaximumLength(35)
-                .WithMessage("OriginalGroupHeader15.OriginalMessageNameIdentification must not exceed 35 characters (Max35Text).");
+            .WithMessage(
+                "OriginalGroupHeader15.OriginalMessageNameIdentification must not exceed 35 characters (Max35Text)."
+            );
 
         RuleFor(x => x.GroupCancellationIdentification)
             .MinimumLength(1)
             .MaximumLength(35)
-                .WithMessage("OriginalGroupHeader15.GroupCancellationIdentification must not exceed 35 characters (Max35Text).")
+            .WithMessage(
+                "OriginalGroupHeader15.GroupCancellationIdentification must not exceed 35 characters (Max35Text)."
+            )
             .When(x => x.GroupCancellationIdentification is not null);
 
         RuleFor(x => x.NumberOfTransactions)
             .Matches(@"^[0-9]{1,15}$")
-                .WithMessage("OriginalGroupHeader15.NumberOfTransactions must be a numeric string of 1–15 digits (Max15NumericText).")
+            .WithMessage(
+                "OriginalGroupHeader15.NumberOfTransactions must be a numeric string of 1–15 digits (Max15NumericText)."
+            )
             .When(x => x.NumberOfTransactions is not null);
 
-        When(x => x.Case is not null, () =>
-            RuleFor(x => x.Case).SetValidator(new Case5Validator()!));
+        When(
+            x => x.Case is not null,
+            () => RuleFor(x => x.Case).SetValidator(new Case5Validator()!)
+        );
 
-        When(x => x.CancellationReasonInformation is not null, () =>
-            RuleFor(x => x.CancellationReasonInformation).SetValidator(new PaymentCancellationReason5Validator()!));
+        When(
+            x => x.CancellationReasonInformation is not null,
+            () =>
+                RuleFor(x => x.CancellationReasonInformation)
+                    .SetValidator(new PaymentCancellationReason5Validator()!)
+        );
     }
 }

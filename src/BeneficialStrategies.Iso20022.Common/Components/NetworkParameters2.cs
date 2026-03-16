@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xeuz0UeTEeODR7vDcYOqmg")]
 [DisplayName("Network Parameters")]
-public partial record NetworkParameters2
+public record NetworkParameters2
 {
-    #nullable enable
-    
     /// <summary>
     /// IP address or hostname.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record NetworkParameters2
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Address { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Address { get; init; }
+
     /// <summary>
     /// Port number of the server, if the default port number is not used.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record NetworkParameters2
     [DisplayName("Port Number")]
     [IsoXmlTag("PortNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PortNumber { get; init; } 
-    
+    public IsoNumber? PortNumber { get; init; }
+
     /// <summary>
     /// Delay between two contacts of the server.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record NetworkParameters2
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Delay { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISOTime? Delay { get; init; }
 }

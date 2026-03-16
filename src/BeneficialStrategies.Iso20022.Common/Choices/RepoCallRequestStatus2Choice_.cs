@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RepoCallRequestStatus2Choice.AcknowledgedAccepted))]
     [KnownType(typeof(RepoCallRequestStatus2Choice.Denied))]
     [KnownType(typeof(RepoCallRequestStatus2Choice.Proprietary))]
-    [JsonDerivedType(typeof(RepoCallRequestStatus2Choice.AcknowledgedAccepted),nameof(RepoCallRequestStatus2Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(RepoCallRequestStatus2Choice.Denied),nameof(RepoCallRequestStatus2Choice.Denied))]
-    [JsonDerivedType(typeof(RepoCallRequestStatus2Choice.Proprietary),nameof(RepoCallRequestStatus2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RepoCallRequestStatus2Choice.AcknowledgedAccepted),
+        nameof(RepoCallRequestStatus2Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(RepoCallRequestStatus2Choice.Denied),
+        nameof(RepoCallRequestStatus2Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(RepoCallRequestStatus2Choice.Proprietary),
+        nameof(RepoCallRequestStatus2Choice.Proprietary)
+    )]
     [IsoId("_UWYvc9p-Ed-ak6NoX_4Aeg_-1943927387")]
     [DisplayName("Repo Call Request Status 2 Choice")]
-    public abstract partial record RepoCallRequestStatus2Choice_
-    {
-    }
+    public abstract record RepoCallRequestStatus2Choice_ { }
 }

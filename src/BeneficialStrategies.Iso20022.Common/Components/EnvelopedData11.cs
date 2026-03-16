@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6GT5AY-TEe6oobnCtR50kw")]
 [DisplayName("Enveloped Data11")]
-public partial record EnvelopedData11
+public record EnvelopedData11
 {
-    #nullable enable
-
     /// <summary>
     /// Encrypted Content.
     /// </summary>
     [DisplayName("Encrypted Content")]
     [IsoXmlTag("NcrptdCntt")]
-    public EncryptedContent7? EncryptedContent { get; init; } 
+    public EncryptedContent7? EncryptedContent { get; init; }
 
     /// <summary>
     /// Originator Information.
     /// </summary>
     [DisplayName("Originator Information")]
     [IsoXmlTag("OrgtrInf")]
-    public OriginatorInformation1? OriginatorInformation { get; init; } 
+    public OriginatorInformation1? OriginatorInformation { get; init; }
 
     /// <summary>
     /// Recipient.
@@ -44,9 +42,5 @@ public partial record EnvelopedData11
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoNumber? Version { get; init; }
 }

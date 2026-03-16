@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qtE6YQjhEeSI9qETkJHgqw")]
 [DisplayName("Investment Account Modification")]
-public partial record InvestmentAccountModification1
+public record InvestmentAccountModification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reason for the modification brought to the investment account information.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record InvestmentAccountModification1
     [DisplayName("Modification Reason")]
     [IsoXmlTag("ModRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? ModificationReason { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? ModificationReason { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier of the account modification request.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record InvestmentAccountModification1
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountApplicationIdentification { get; init; }
+
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of a transfer.
     /// </summary>
@@ -45,18 +43,14 @@ public partial record InvestmentAccountModification1
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ClientReference { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the transfer as allocated by the counterparty.
     /// </summary>
     [IsoId("_bOgTkwjhEeSI9qETkJHgqw")]
     [DisplayName("Counterparty Reference")]
     [IsoXmlTag("CtrPtyRef")]
-    public AdditionalReference2? CounterpartyReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalReference2? CounterpartyReference { get; init; }
 }

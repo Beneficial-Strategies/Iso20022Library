@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TargetMarket3Choice.Type))]
     [KnownType(typeof(TargetMarket3Choice.Other))]
     [KnownType(typeof(TargetMarket3Choice.Proprietary))]
-    [JsonDerivedType(typeof(TargetMarket3Choice.Type),nameof(TargetMarket3Choice.Type))]
-    [JsonDerivedType(typeof(TargetMarket3Choice.Other),nameof(TargetMarket3Choice.Other))]
-    [JsonDerivedType(typeof(TargetMarket3Choice.Proprietary),nameof(TargetMarket3Choice.Proprietary))]
+    [JsonDerivedType(typeof(TargetMarket3Choice.Type), nameof(TargetMarket3Choice.Type))]
+    [JsonDerivedType(typeof(TargetMarket3Choice.Other), nameof(TargetMarket3Choice.Other))]
+    [JsonDerivedType(
+        typeof(TargetMarket3Choice.Proprietary),
+        nameof(TargetMarket3Choice.Proprietary)
+    )]
     [IsoId("_JK13wDcREeiIxKQErQxblg")]
     [DisplayName("Target Market 3 Choice")]
-    public abstract partial record TargetMarket3Choice_
-    {
-    }
+    public abstract record TargetMarket3Choice_ { }
 }

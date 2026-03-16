@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IHGxISCBEeWhHbfCMWc1cw")]
 [DisplayName("Communication Address")]
-public partial record CommunicationAddress6
+public record CommunicationAddress6
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of communication address.
     /// </summary>
     [IsoId("_Uk0qgSCLEeWJd9HF2tO7BA")]
     [DisplayName("Address Type")]
     [IsoXmlTag("AdrTp")]
-    public AddressType1Choice_? AddressType { get; init; } 
-    
+    public AddressType1Choice_? AddressType { get; init; }
+
     /// <summary>
     /// Address for electronic mail (e-mail).
     /// </summary>
@@ -33,9 +31,9 @@ public partial record CommunicationAddress6
     [DisplayName("Email")]
     [IsoXmlTag("Email")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? Email { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? Email { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record CommunicationAddress6
     [DisplayName("Phone")]
     [IsoXmlTag("Phne")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? Phone { get; init; } 
-    
+    public IsoPhoneNumber? Phone { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a mobile phone number, as defined by telecom services.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record CommunicationAddress6
     [DisplayName("Mobile")]
     [IsoXmlTag("Mob")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? Mobile { get; init; } 
-    
+    public IsoPhoneNumber? Mobile { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record CommunicationAddress6
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; } 
-    
+    public IsoPhoneNumber? FaxNumber { get; init; }
+
     /// <summary>
     /// Address for a telex machine.
     /// </summary>
@@ -70,9 +68,9 @@ public partial record CommunicationAddress6
     [DisplayName("Telex Address")]
     [IsoXmlTag("TlxAdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TelexAddress { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TelexAddress { get; init; }
+
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
     /// </summary>
@@ -80,10 +78,6 @@ public partial record CommunicationAddress6
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? URLAddress { get; init; }
 }

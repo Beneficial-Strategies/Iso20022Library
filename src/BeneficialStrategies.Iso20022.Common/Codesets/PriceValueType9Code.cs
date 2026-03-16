@@ -23,7 +23,7 @@ public enum PriceValueType9Code
     [IsoId("_q5bEM2tdEeCY4-KZ9JEyUQ_-401797513")]
     [Description(@"Price to be specified by account owner.")]
     ToBeSpecified = PriceValueTypeCode.ToBeSpecified, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is not required to be specified by account owner.
     /// Encoded/decoded by serializers as &quot;UNSP&quot;.
@@ -32,7 +32,7 @@ public enum PriceValueType9Code
     [IsoId("_q5bENGtdEeCY4-KZ9JEyUQ_-519195689")]
     [Description(@"Price is not required to be specified by account owner.")]
     Unspecified = PriceValueTypeCode.Unspecified, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is unknown by the sender or has not been established.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -41,5 +41,4 @@ public enum PriceValueType9Code
     [IsoId("_q5bENWtdEeCY4-KZ9JEyUQ_-1516268042")]
     [Description(@"Price is unknown by the sender or has not been established.")]
     Unknown = PriceValueTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

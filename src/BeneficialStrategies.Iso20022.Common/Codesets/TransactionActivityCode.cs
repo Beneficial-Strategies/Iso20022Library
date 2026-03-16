@@ -23,7 +23,7 @@ public enum TransactionActivityCode
     [IsoId("_YrP259p-Ed-ak6NoX_4Aeg_-330582251")]
     [Description(@"Transaction relates to lending/borrowing.")]
     BorrowingLendingActivity,
-    
+
     /// <summary>
     /// Transaction relates to a market claim following a corporate action.
     /// Encoded/decoded by serializers as &quot;CLAI&quot;.
@@ -32,7 +32,7 @@ public enum TransactionActivityCode
     [IsoId("_YrP26Np-Ed-ak6NoX_4Aeg_-328734377")]
     [Description(@"Transaction relates to a market claim following a corporate action.")]
     MarketClaim,
-    
+
     /// <summary>
     /// Transaction relates to collateral.
     /// Encoded/decoded by serializers as &quot;COLL&quot;.
@@ -41,7 +41,7 @@ public enum TransactionActivityCode
     [IsoId("_YrZn4Np-Ed-ak6NoX_4Aeg_-327810772")]
     [Description(@"Transaction relates to collateral.")]
     CollateralActivity,
-    
+
     /// <summary>
     /// Transaction relates to corporate action.
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
@@ -50,7 +50,7 @@ public enum TransactionActivityCode
     [IsoId("_YrZn4dp-Ed-ak6NoX_4Aeg_-320422749")]
     [Description(@"Transaction relates to corporate action.")]
     CorporateActionActivity,
-    
+
     /// <summary>
     /// Transaction relates to settlement and clearing.
     /// Encoded/decoded by serializers as &quot;SETT&quot;.
@@ -59,5 +59,4 @@ public enum TransactionActivityCode
     [IsoId("_YrZn4tp-Ed-ak6NoX_4Aeg_-319499022")]
     [Description(@"Transaction relates to settlement and clearing.")]
     SettlementandClearingActivity,
-    
 }

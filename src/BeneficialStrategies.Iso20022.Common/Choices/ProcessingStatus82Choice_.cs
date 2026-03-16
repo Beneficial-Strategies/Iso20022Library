@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus82Choice.PendingCancellation))]
     [KnownType(typeof(ProcessingStatus82Choice.CancellationRequest))]
     [KnownType(typeof(ProcessingStatus82Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.Processed),nameof(ProcessingStatus82Choice.Processed))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.Future),nameof(ProcessingStatus82Choice.Future))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.Rejected),nameof(ProcessingStatus82Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.Cancelled),nameof(ProcessingStatus82Choice.Cancelled))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.PendingCancellation),nameof(ProcessingStatus82Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.CancellationRequest),nameof(ProcessingStatus82Choice.CancellationRequest))]
-    [JsonDerivedType(typeof(ProcessingStatus82Choice.Proprietary),nameof(ProcessingStatus82Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.Processed),
+        nameof(ProcessingStatus82Choice.Processed)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.Future),
+        nameof(ProcessingStatus82Choice.Future)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.Rejected),
+        nameof(ProcessingStatus82Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.Cancelled),
+        nameof(ProcessingStatus82Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.PendingCancellation),
+        nameof(ProcessingStatus82Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.CancellationRequest),
+        nameof(ProcessingStatus82Choice.CancellationRequest)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus82Choice.Proprietary),
+        nameof(ProcessingStatus82Choice.Proprietary)
+    )]
     [IsoId("_FNlTwRIwEeydmIVkS03esw")]
     [DisplayName("Processing Status 82 Choice")]
-    public abstract partial record ProcessingStatus82Choice_
-    {
-    }
+    public abstract record ProcessingStatus82Choice_ { }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Aeu_oJGDEeeBGrZP1w0opg")]
-[Description(@"Specifies the document purpose as published in an external document purpose code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the document purpose as published in an external document purpose code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalDocumentPurpose1Code))]
 public enum ExternalDocumentPurposeCode
 {
@@ -22,16 +24,17 @@ public enum ExternalDocumentPurposeCode
     /// </summary>
     [EnumMember(Value = "CONF")]
     [IsoId("_uHFidvRYEeuLhpyIdtJzwg")]
-    [Description(@"The document represents a document that has been confirmed, for example an invoice that has been confirmed by the buyer for payment.|")]
+    [Description(
+        @"The document represents a document that has been confirmed, for example an invoice that has been confirmed by the buyer for payment.|"
+    )]
     Confirmed,
-    
+
     /// <summary>
-    /// The document represents an invoice submitted under a factoring arrangment. 
+    /// The document represents an invoice submitted under a factoring arrangment.
     /// Encoded/decoded by serializers as &quot;FINV&quot;.
     /// </summary>
     [EnumMember(Value = "FINV")]
     [IsoId("_uHPTcPRYEeuLhpyIdtJzwg")]
     [Description(@"The document represents an invoice submitted under a factoring arrangment. ")]
     Factoredinvoice,
-    
 }

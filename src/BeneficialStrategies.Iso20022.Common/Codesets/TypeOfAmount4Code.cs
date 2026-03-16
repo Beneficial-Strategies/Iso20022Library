@@ -23,7 +23,7 @@ public enum TypeOfAmount4Code
     [IsoId("_6oNx0VfvEeOuDtoQo1qilA")]
     [Description(@"Actual amount.")]
     Actual = TypeOfAmountCode.Actual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Estimated amount (the final amount could be above or below).
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -32,5 +32,4 @@ public enum TypeOfAmount4Code
     [IsoId("_6y7NAVfvEeOuDtoQo1qilA")]
     [Description(@"Estimated amount (the final amount could be above or below).")]
     Estimated = TypeOfAmountCode.Estimated, // same ordinal as derivation source for type conversions
-    
 }

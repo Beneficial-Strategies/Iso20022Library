@@ -23,5 +23,4 @@ public enum PortfolioWithdrawalReasonCode
     [IsoId("_aXNDQF23EeiFXdiLi_Nf4A")]
     [Description(@"Withdrawal is for a first time residential property.||")]
     FirstTimeResidentialProperty,
-    
 }

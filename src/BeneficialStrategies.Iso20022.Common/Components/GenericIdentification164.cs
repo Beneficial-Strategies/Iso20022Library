@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BXLWUThQEeaTjZWmPo-9OA")]
 [DisplayName("Generic Identification")]
-public partial record GenericIdentification164
+public record GenericIdentification164
 {
-    #nullable enable
-    
     /// <summary>
     /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record GenericIdentification164
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Specifies the nature of the identifier.
     /// </summary>
     [IsoId("_BvkoNzhQEeaTjZWmPo-9OA")]
     [DisplayName("Identification Type")]
     [IsoXmlTag("IdTp")]
-    public required OtherIdentification3Choice_ IdentificationType { get; init; } 
-    
+    public required OtherIdentification3Choice_ IdentificationType { get; init; }
+
     /// <summary>
     /// Entity that assigns the identifier.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record GenericIdentification164
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Issuer { get; init; }
 }

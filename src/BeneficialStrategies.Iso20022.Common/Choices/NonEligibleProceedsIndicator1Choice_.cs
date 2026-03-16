@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NonEligibleProceedsIndicator1Choice.Code))]
     [KnownType(typeof(NonEligibleProceedsIndicator1Choice.Proprietary))]
-    [JsonDerivedType(typeof(NonEligibleProceedsIndicator1Choice.Code),nameof(NonEligibleProceedsIndicator1Choice.Code))]
-    [JsonDerivedType(typeof(NonEligibleProceedsIndicator1Choice.Proprietary),nameof(NonEligibleProceedsIndicator1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(NonEligibleProceedsIndicator1Choice.Code),
+        nameof(NonEligibleProceedsIndicator1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(NonEligibleProceedsIndicator1Choice.Proprietary),
+        nameof(NonEligibleProceedsIndicator1Choice.Proprietary)
+    )]
     [IsoId("_Q5GwR9p-Ed-ak6NoX_4Aeg_-1230859873")]
     [DisplayName("Non Eligible Proceeds Indicator 1 Choice")]
-    public abstract partial record NonEligibleProceedsIndicator1Choice_
-    {
-    }
+    public abstract record NonEligibleProceedsIndicator1Choice_ { }
 }

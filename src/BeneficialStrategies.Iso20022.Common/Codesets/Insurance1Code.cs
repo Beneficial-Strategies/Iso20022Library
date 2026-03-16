@@ -23,7 +23,7 @@ public enum Insurance1Code
     [IsoId("_OdMHYRQbEeKebsB9eKJSkA")]
     [Description(@"Life insurance.")]
     LifeInsurance = InsuranceCode.LifeInsurance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Permanent disability insurance.
     /// Encoded/decoded by serializers as &quot;PDIS&quot;.
@@ -32,5 +32,4 @@ public enum Insurance1Code
     [IsoId("_Ombi8RQbEeKebsB9eKJSkA")]
     [Description(@"Permanent disability insurance.")]
     PermanentDisabilityInsurance = InsuranceCode.PermanentDisabilityInsurance, // same ordinal as derivation source for type conversions
-    
 }

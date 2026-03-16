@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LegIdentification1Choice.RedemptionLegIdentification))]
     [KnownType(typeof(LegIdentification1Choice.SubscriptionLegIdentification))]
-    [JsonDerivedType(typeof(LegIdentification1Choice.RedemptionLegIdentification),nameof(LegIdentification1Choice.RedemptionLegIdentification))]
-    [JsonDerivedType(typeof(LegIdentification1Choice.SubscriptionLegIdentification),nameof(LegIdentification1Choice.SubscriptionLegIdentification))]
+    [JsonDerivedType(
+        typeof(LegIdentification1Choice.RedemptionLegIdentification),
+        nameof(LegIdentification1Choice.RedemptionLegIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(LegIdentification1Choice.SubscriptionLegIdentification),
+        nameof(LegIdentification1Choice.SubscriptionLegIdentification)
+    )]
     [IsoId("_r7QIIEglEea9YuSvQGoi-w")]
     [DisplayName("Leg Identification 1 Choice")]
-    public abstract partial record LegIdentification1Choice_
-    {
-    }
+    public abstract record LegIdentification1Choice_ { }
 }

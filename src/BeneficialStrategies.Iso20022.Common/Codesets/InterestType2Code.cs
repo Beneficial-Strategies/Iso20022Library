@@ -23,7 +23,7 @@ public enum InterestType2Code
     [IsoId("__215cdojEeC60axPepSq7g_717130324")]
     [Description(@"Indicates deal price including accrued interest.")]
     CumInterest = InterestTypeCode.CumInterest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates deal price excluding accrued interest.
     /// Encoded/decoded by serializers as &quot;XINT&quot;.
@@ -32,5 +32,4 @@ public enum InterestType2Code
     [IsoId("__215ctojEeC60axPepSq7g_1303077350")]
     [Description(@"Indicates deal price excluding accrued interest.")]
     ExInterest = InterestTypeCode.ExInterest, // same ordinal as derivation source for type conversions
-    
 }

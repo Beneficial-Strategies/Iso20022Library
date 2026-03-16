@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason2Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.EnabledStatusReason2Choice
     /// </summary>
     [IsoId("_ScfY8Ey-EeafiMTDrtSnyw")]
     [DisplayName("Code")]
-    public partial record Code : EnabledStatusReason2Choice_
+    public record Code : EnabledStatusReason2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the reason for an enabled status.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required EnabledStatusReason1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required EnabledStatusReason1Code Value { get; init; }
     }
 }

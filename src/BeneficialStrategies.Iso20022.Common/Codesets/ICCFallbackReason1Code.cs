@@ -23,7 +23,7 @@ public enum ICCFallbackReason1Code
     [IsoId("_P4yAATxSEeyuG4d2lhAp-w")]
     [Description(@"Choosing incorrect IC application.")]
     ChoosingIncorrectICApplication = ICCFallbackReasonCode.ChoosingIncorrectICApplication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Error during IC app processing.
     /// Encoded/decoded by serializers as &quot;EDIP&quot;.
@@ -32,7 +32,7 @@ public enum ICCFallbackReason1Code
     [IsoId("_P96-sTxSEeyuG4d2lhAp-w")]
     [Description(@"Error during IC app processing.|")]
     ErrorDuringICAppProcessing = ICCFallbackReasonCode.ErrorDuringICAppProcessing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other ICC fallback reason defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum ICCFallbackReason1Code
     [IsoId("_QCJXYTxSEeyuG4d2lhAp-w")]
     [Description(@"Other ICC fallback reason defined at national level.")]
     OtherNational = ICCFallbackReasonCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other ICC fallback reason defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,7 +50,7 @@ public enum ICCFallbackReason1Code
     [IsoId("_QJDQoTxSEeyuG4d2lhAp-w")]
     [Description(@"Other ICC fallback reason defined at private level.")]
     OtherPrivate = ICCFallbackReasonCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal error reading IC data.
     /// Encoded/decoded by serializers as &quot;TERI&quot;.
@@ -59,5 +59,4 @@ public enum ICCFallbackReason1Code
     [IsoId("_QPGOQTxSEeyuG4d2lhAp-w")]
     [Description(@"Terminal error reading IC data.|")]
     TerminalErrorReadingICData = ICCFallbackReasonCode.TerminalErrorReadingICData, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CorporateActionProcessingStatus6Choice.Code))]
     [KnownType(typeof(CorporateActionProcessingStatus6Choice.Proprietary))]
-    [JsonDerivedType(typeof(CorporateActionProcessingStatus6Choice.Code),nameof(CorporateActionProcessingStatus6Choice.Code))]
-    [JsonDerivedType(typeof(CorporateActionProcessingStatus6Choice.Proprietary),nameof(CorporateActionProcessingStatus6Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CorporateActionProcessingStatus6Choice.Code),
+        nameof(CorporateActionProcessingStatus6Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CorporateActionProcessingStatus6Choice.Proprietary),
+        nameof(CorporateActionProcessingStatus6Choice.Proprietary)
+    )]
     [IsoId("_W9mj5ZmtEeWLs7cvLxlyAg")]
     [DisplayName("Corporate Action Processing Status 6 Choice")]
-    public abstract partial record CorporateActionProcessingStatus6Choice_
-    {
-    }
+    public abstract record CorporateActionProcessingStatus6Choice_ { }
 }

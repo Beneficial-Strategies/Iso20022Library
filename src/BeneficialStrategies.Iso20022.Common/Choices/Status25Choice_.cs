@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Status25Choice.Status))]
     [KnownType(typeof(Status25Choice.Rejected))]
-    [JsonDerivedType(typeof(Status25Choice.Status),nameof(Status25Choice.Status))]
-    [JsonDerivedType(typeof(Status25Choice.Rejected),nameof(Status25Choice.Rejected))]
+    [JsonDerivedType(typeof(Status25Choice.Status), nameof(Status25Choice.Status))]
+    [JsonDerivedType(typeof(Status25Choice.Rejected), nameof(Status25Choice.Rejected))]
     [IsoId("_EcQ-wUQTEealVdmlTDXWkw")]
     [DisplayName("Status 25 Choice")]
-    public abstract partial record Status25Choice_
-    {
-    }
+    public abstract record Status25Choice_ { }
 }

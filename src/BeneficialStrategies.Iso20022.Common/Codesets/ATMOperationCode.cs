@@ -23,7 +23,7 @@ public enum ATMOperationCode
     [IsoId("_csAXYOhAEeSbwP3G-MV9YA")]
     [Description(@"Adjust logical counters of the cassette.")]
     Adjust,
-    
+
     /// <summary>
     /// Add physically media to cassette.
     /// Encoded/decoded by serializers as &quot;INSR&quot;.
@@ -32,7 +32,7 @@ public enum ATMOperationCode
     [IsoId("_jo54EOhAEeSbwP3G-MV9YA")]
     [Description(@"Add physically media to cassette.")]
     InsertMedia,
-    
+
     /// <summary>
     /// Loading cassette.
     /// Encoded/decoded by serializers as &quot;LOAD&quot;.
@@ -41,7 +41,7 @@ public enum ATMOperationCode
     [IsoId("_nZwTgOhAEeSbwP3G-MV9YA")]
     [Description(@"Loading cassette.")]
     Loading,
-    
+
     /// <summary>
     /// Substract physically media from cassette.
     /// Encoded/decoded by serializers as &quot;REMV&quot;.
@@ -50,7 +50,7 @@ public enum ATMOperationCode
     [IsoId("_q0sJUOhAEeSbwP3G-MV9YA")]
     [Description(@"Substract physically media from cassette.")]
     RemoveMedia,
-    
+
     /// <summary>
     /// Unloading cassette.
     /// Encoded/decoded by serializers as &quot;UNLD&quot;.
@@ -59,5 +59,4 @@ public enum ATMOperationCode
     [IsoId("_xL_CkOhAEeSbwP3G-MV9YA")]
     [Description(@"Unloading cassette.")]
     Unloading,
-    
 }

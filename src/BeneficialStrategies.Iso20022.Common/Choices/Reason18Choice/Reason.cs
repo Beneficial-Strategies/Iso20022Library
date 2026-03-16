@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Reason18Choice
 {
     /// <summary>
@@ -13,16 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason18Choice
     /// </summary>
     [IsoId("_zRXpgeLtEeWOD7aAy2fAcA")]
     [DisplayName("Reason")]
-    public partial record Reason : Reason18Choice_
+    public record Reason : Reason18Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Proprietary identification of the reason related to a status.
         /// </summary>
         [IsoXmlTag("Rsn")]
-        public GenericIdentification30? Value { get; init; } 
-        
+        public GenericIdentification30? Value { get; init; }
+
         /// <summary>
         /// Provides additional information about the processed instruction.
         /// </summary>
@@ -30,11 +28,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason18Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

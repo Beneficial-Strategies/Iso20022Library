@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UQSHctp-Ed-ak6NoX_4Aeg_2034124941")]
 [DisplayName("Tax Period")]
-public partial record TaxPeriod1
+public record TaxPeriod1
 {
-    #nullable enable
-    
     /// <summary>
     /// Year related to the tax payment.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record TaxPeriod1
     [DisplayName("Year")]
     [IsoXmlTag("Yr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Year { get; init; } 
-    
+    public IsoISODate? Year { get; init; }
+
     /// <summary>
     /// Identification of the period related to the tax payment.
     /// </summary>
     [IsoId("_UQSHdNp-Ed-ak6NoX_4Aeg_-1889586018")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public TaxRecordPeriod1Code? Type { get; init; } 
-    
+    public TaxRecordPeriod1Code? Type { get; init; }
+
     /// <summary>
     /// Range of time between a start date and an end date for which the tax report is provided.
     /// </summary>
     [IsoId("_UQSHddp-Ed-ak6NoX_4Aeg_-1889585995")]
     [DisplayName("From To Date")]
     [IsoXmlTag("FrToDt")]
-    public DatePeriodDetails? FromToDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DatePeriodDetails? FromToDate { get; init; }
 }

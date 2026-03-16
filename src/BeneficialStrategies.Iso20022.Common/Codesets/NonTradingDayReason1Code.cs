@@ -23,16 +23,18 @@ public enum NonTradingDayReason1Code
     [IsoId("_izC5MWw5EeWD9e8QDBgUOw")]
     [Description(@"The date is a full day trading holiday with no trades performed.")]
     TradingHoliday = NonTradingDayReasonCode.TradingHoliday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
     /// </summary>
     [EnumMember(Value = "OTHR")]
     [IsoId("_i4INgWw5EeWD9e8QDBgUOw")]
-    [Description(@"Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance.")]
+    [Description(
+        @"Other reasons a day is a non-trading day e.g. technical fault, company specific non-trading day not known in advance."
+    )]
     Other = NonTradingDayReasonCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trading venue was open for an amount of time, up to half the day.
     /// Encoded/decoded by serializers as &quot;HALF&quot;.
@@ -41,7 +43,7 @@ public enum NonTradingDayReason1Code
     [IsoId("_i9bkQWw5EeWD9e8QDBgUOw")]
     [Description(@"Trading venue was open for an amount of time, up to half the day.")]
     HalfDay = NonTradingDayReasonCode.HalfDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Date is a public holiday.
     /// Encoded/decoded by serializers as &quot;PHOL&quot;.
@@ -50,7 +52,7 @@ public enum NonTradingDayReason1Code
     [IsoId("_SD17gWw6EeWD9e8QDBgUOw")]
     [Description(@"Date is a public holiday.")]
     PublicHoliday = NonTradingDayReasonCode.PublicHoliday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Date is a bank holiday.
     /// Encoded/decoded by serializers as &quot;BHOL&quot;.
@@ -59,7 +61,7 @@ public enum NonTradingDayReason1Code
     [IsoId("_SJIrMWw6EeWD9e8QDBgUOw")]
     [Description(@"Date is a bank holiday.")]
     BankHoliday = NonTradingDayReasonCode.BankHoliday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Date being reported falls during the weekend.
     /// Encoded/decoded by serializers as &quot;WKND&quot;.
@@ -68,5 +70,4 @@ public enum NonTradingDayReason1Code
     [IsoId("_SPS9kWw6EeWD9e8QDBgUOw")]
     [Description(@"Date being reported falls during the weekend.")]
     Weekend = NonTradingDayReasonCode.Weekend, // same ordinal as derivation source for type conversions
-    
 }

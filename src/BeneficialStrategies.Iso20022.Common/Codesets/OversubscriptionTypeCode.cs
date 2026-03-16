@@ -23,7 +23,7 @@ public enum OversubscriptionTypeCode
     [IsoId("_1puekDL3EeKU9IrkkToqcw_2035989338")]
     [Description(@"Unlimited oversubscription.")]
     Unlimited,
-    
+
     /// <summary>
     /// The subscription is limited by quantity or percentage.
     /// Encoded/decoded by serializers as &quot;LTDB&quot;.
@@ -32,7 +32,7 @@ public enum OversubscriptionTypeCode
     [IsoId("_1puekTL3EeKU9IrkkToqcw_684397253")]
     [Description(@"The subscription is limited by quantity or percentage.")]
     LimitedByQuantityOrPercentage,
-    
+
     /// <summary>
     /// No oversubscription is allowed.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,5 +41,4 @@ public enum OversubscriptionTypeCode
     [IsoId("_1puekjL3EeKU9IrkkToqcw_613549737")]
     [Description(@"No oversubscription is allowed.")]
     NoOversubscription,
-    
 }

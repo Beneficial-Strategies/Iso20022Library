@@ -23,7 +23,7 @@ public enum ProductType4Code
     [IsoId("_3BXTkebCEeW1iL_FRZt8bg")]
     [Description(@"Identifies categories of instruments that are credits.")]
     Credit = ProductTypeV2Code.Credit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of currency instruments.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -32,7 +32,7 @@ public enum ProductType4Code
     [IsoId("_3BXTk-bCEeW1iL_FRZt8bg")]
     [Description(@"Identifies categories of currency instruments.")]
     Currency = ProductTypeV2Code.Currency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies the nature or type of an equity.
     /// Encoded/decoded by serializers as &quot;EQUI&quot;.
@@ -41,7 +41,7 @@ public enum ProductType4Code
     [IsoId("_3BXTlebCEeW1iL_FRZt8bg")]
     [Description(@"Identifies the nature or type of an equity.")]
     Equity = ProductTypeV2Code.Equity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of instruments that are interest rates based.
     /// Encoded/decoded by serializers as &quot;INTR&quot;.
@@ -50,7 +50,7 @@ public enum ProductType4Code
     [IsoId("_3BXTl-bCEeW1iL_FRZt8bg")]
     [Description(@"Identifies categories of instruments that are interest rates based.")]
     InterestRate = ProductTypeV2Code.InterestRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of instruments that are commodities.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -59,7 +59,7 @@ public enum ProductType4Code
     [IsoId("_3BXTmebCEeW1iL_FRZt8bg")]
     [Description(@"Identifies categories of instruments that are commodities.")]
     Commodity = ProductTypeV2Code.Commodity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other asset type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,5 +68,4 @@ public enum ProductType4Code
     [IsoId("_5Q8wkebCEeW1iL_FRZt8bg")]
     [Description(@"Other asset type.")]
     Other = ProductTypeV2Code.Other, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
     /// </summary>
     [IsoId("_fMZ5xwAFEeqefbt-QjTNnA")]
     [DisplayName("Margin Lending")]
-    public partial record MarginLending : TransactionCollateralData15Choice_
+    public record MarginLending : TransactionCollateralData15Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identifier of the security subject of the transaction.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? Identification { get; init; } 
-        
+        public IsoISINOct2015Identifier? Identification { get; init; }
+
         /// <summary>
         /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, that is common share with voting rights, fully paid, or registered.
         /// </summary>
@@ -33,40 +31,40 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
         [DisplayName("Classification Type")]
         [IsoXmlTag("ClssfctnTp")]
         [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-        public IsoCFIOct2015Identifier? ClassificationType { get; init; } 
-        
+        public IsoCFIOct2015Identifier? ClassificationType { get; init; }
+
         /// <summary>
         /// Quantity or nominal amount of the security or commodity subject of the transaction.
         /// </summary>
         [IsoId("_rt67RdLvEem1A4OOmCK97A")]
         [DisplayName("Quantity Or Nominal Value")]
         [IsoXmlTag("QtyOrNmnlVal")]
-        public QuantityNominalValue2Choice_? QuantityOrNominalValue { get; init; } 
-        
+        public QuantityNominalValue2Choice_? QuantityOrNominalValue { get; init; }
+
         /// <summary>
         /// Price of unit of collateral component, including accrued interest for interest-bearing securities, used to value the security.
         /// </summary>
         [IsoId("_rt67R9LvEem1A4OOmCK97A")]
         [DisplayName("Unit Price")]
         [IsoXmlTag("UnitPric")]
-        public SecuritiesTransactionPrice11Choice_? UnitPrice { get; init; } 
-        
+        public SecuritiesTransactionPrice11Choice_? UnitPrice { get; init; }
+
         /// <summary>
         /// Market value of asset or collateral component.
         /// </summary>
         [IsoId("_rt67SdLvEem1A4OOmCK97A")]
         [DisplayName("Market Value")]
         [IsoXmlTag("MktVal")]
-        public ActiveOrHistoricCurrencyAndAmount? MarketValue { get; init; } 
-        
+        public ActiveOrHistoricCurrencyAndAmount? MarketValue { get; init; }
+
         /// <summary>
         /// Code that classifies the risk of the security.
         /// </summary>
         [IsoId("_rt67S9LvEem1A4OOmCK97A")]
         [DisplayName("Quality")]
         [IsoXmlTag("Qlty")]
-        public CollateralQualityType1Code? Quality { get; init; } 
-        
+        public CollateralQualityType1Code? Quality { get; init; }
+
         /// <summary>
         /// Maturity of the security.
         /// </summary>
@@ -74,24 +72,24 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
         [DisplayName("Maturity")]
         [IsoXmlTag("Mtrty")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? Maturity { get; init; } 
-        
+        public IsoISODate? Maturity { get; init; }
+
         /// <summary>
         /// Data on the securities issuer.
         /// </summary>
         [IsoId("_rt67T9LvEem1A4OOmCK97A")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
-        public SecurityIssuer2? Issuer { get; init; } 
-        
+        public SecurityIssuer2? Issuer { get; init; }
+
         /// <summary>
         /// Classification of the type of the security.
         /// </summary>
         [IsoId("_rt67UdLvEem1A4OOmCK97A")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public SecuritiesLendingType3Choice_? Type { get; init; } 
-        
+        public SecuritiesLendingType3Choice_? Type { get; init; }
+
         /// <summary>
         /// Indication whether the borrower has exclusive access to borrow from the lender&apos;s securities portfolio.
         /// </summary>
@@ -99,8 +97,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
         [DisplayName("Exclusive Arrangement")]
         [IsoXmlTag("ExclsvArrgmnt")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? ExclusiveArrangement { get; init; } 
-        
+        public IsoTrueFalseIndicator? ExclusiveArrangement { get; init; }
+
         /// <summary>
         /// Indication whether the collateral taker can reuse the securities provided as a collateral.
         /// </summary>
@@ -108,21 +106,17 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCollateralData15Choic
         [DisplayName("Available For Collateral Reuse")]
         [IsoXmlTag("AvlblForCollReuse")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? AvailableForCollateralReuse { get; init; } 
-        
+        public IsoTrueFalseIndicator? AvailableForCollateralReuse { get; init; }
+
         /// <summary>
-        /// Collateral haircut, a risk control measure applied to underlying collateral whereby the value of that underlying collateral is calculated as the market value of the assets reduced by a certain percentage. 
-        /// In the case of margin lending, collateral haircut or margin requirement, a risk control measure applied to the entire collateral portfolio whereby the value of that underlying collateral is calculated as the market value of the assets reduced by a certain percentage. 
+        /// Collateral haircut, a risk control measure applied to underlying collateral whereby the value of that underlying collateral is calculated as the market value of the assets reduced by a certain percentage.
+        /// In the case of margin lending, collateral haircut or margin requirement, a risk control measure applied to the entire collateral portfolio whereby the value of that underlying collateral is calculated as the market value of the assets reduced by a certain percentage.
         /// Only actual values, as opposed to estimated or default values are to be reported for this attribute.
         /// </summary>
         [IsoId("_rt67V9LvEem1A4OOmCK97A")]
         [DisplayName("Haircut Or Margin")]
         [IsoXmlTag("HrcutOrMrgn")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public IsoPercentageRate? HaircutOrMargin { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoPercentageRate? HaircutOrMargin { get; init; }
     }
 }

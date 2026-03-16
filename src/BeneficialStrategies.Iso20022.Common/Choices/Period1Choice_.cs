@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Period1Choice.Period))]
     [KnownType(typeof(Period1Choice.PeriodCode))]
-    [JsonDerivedType(typeof(Period1Choice.Period),nameof(Period1Choice.Period))]
-    [JsonDerivedType(typeof(Period1Choice.PeriodCode),nameof(Period1Choice.PeriodCode))]
+    [JsonDerivedType(typeof(Period1Choice.Period), nameof(Period1Choice.Period))]
+    [JsonDerivedType(typeof(Period1Choice.PeriodCode), nameof(Period1Choice.PeriodCode))]
     [IsoId("_T5oiBtp-Ed-ak6NoX_4Aeg_-201480059")]
     [DisplayName("Period 1 Choice")]
-    public abstract partial record Period1Choice_
-    {
-    }
+    public abstract record Period1Choice_ { }
 }

@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.acmt;
 
@@ -25,78 +23,71 @@ namespace BeneficialStrategies.Iso20022.acmt;
 /// The IdentificationVerificationReport message may include a reason if the presented party and/or account identification information is confirmed to be incorrect.
 /// The IdentificationVerificationReport message may include the correct party and/or account identification information.
 /// </summary>
-[Description(@"Scope|The IdentificationVerificationReport message is sent by an assigner to an assignee. It is used to confirm whether or not the presented party and/or account identification information is correct.|Usage|The IdentificationVerificationReport message is sent as a response to an IdentificationVerificationRequest message.|The IdentificationVerificationReport message can contain one or more reports.|The IdentificationVerificationReport message may include a reason if the presented party and/or account identification information is confirmed to be incorrect.|The IdentificationVerificationReport message may include the correct party and/or account identification information.")]
+[Description(
+    @"Scope|The IdentificationVerificationReport message is sent by an assigner to an assignee. It is used to confirm whether or not the presented party and/or account identification information is correct.|Usage|The IdentificationVerificationReport message is sent as a response to an IdentificationVerificationRequest message.|The IdentificationVerificationReport message can contain one or more reports.|The IdentificationVerificationReport message may include a reason if the presented party and/or account identification information is confirmed to be incorrect.|The IdentificationVerificationReport message may include the correct party and/or account identification information."
+)]
 [IsoId("_dgmtEwyYEeukGOovyT2RcQ")]
 [DisplayName("Identification Verification Report V")]
-public partial record IdentificationVerificationReportV03 : IOuterRecord
+public record IdentificationVerificationReportV03 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "acmt.024.001.03";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "IdVrfctnRpt";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:acmt.024.001.03";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Identifies the identification assignment.
     /// </summary>
     [IsoId("_dgmtFAyYEeukGOovyT2RcQ")]
     [DisplayName("Assignment")]
     [IsoXmlTag("Assgnmt")]
-    public required IdentificationAssignment3 Assignment { get; init; } 
-    
+    public required IdentificationAssignment3 Assignment { get; init; }
+
     /// <summary>
     /// Provides for the reference to the original identification assignment.
     /// </summary>
     [IsoId("_dgnUEgyYEeukGOovyT2RcQ")]
     [DisplayName("Original Assignment")]
     [IsoXmlTag("OrgnlAssgnmt")]
-    public MessageIdentification7? OriginalAssignment { get; init; } 
-    
+    public MessageIdentification7? OriginalAssignment { get; init; }
+
     /// <summary>
     /// Information concerning the verification of the identification data for which verification was requested.
     /// </summary>
     [IsoId("_dgnUEAyYEeukGOovyT2RcQ")]
     [DisplayName("Report")]
     [IsoXmlTag("Rpt")]
-    public required VerificationReport4 Report { get; init; } 
-    
+    public required VerificationReport4 Report { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_dgnUEQyYEeukGOovyT2RcQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since IdentificationVerificationReportV03Document is not really part of the logical business domain model, 
+// Since IdentificationVerificationReportV03Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to IdentificationVerificationReportV03.
-

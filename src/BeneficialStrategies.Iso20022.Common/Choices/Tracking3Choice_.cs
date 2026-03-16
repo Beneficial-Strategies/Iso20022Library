@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Tracking3Choice.Indicator))]
     [KnownType(typeof(Tracking3Choice.Proprietary))]
-    [JsonDerivedType(typeof(Tracking3Choice.Indicator),nameof(Tracking3Choice.Indicator))]
-    [JsonDerivedType(typeof(Tracking3Choice.Proprietary),nameof(Tracking3Choice.Proprietary))]
+    [JsonDerivedType(typeof(Tracking3Choice.Indicator), nameof(Tracking3Choice.Indicator))]
+    [JsonDerivedType(typeof(Tracking3Choice.Proprietary), nameof(Tracking3Choice.Proprietary))]
     [IsoId("_AZHgEdokEeC60axPepSq7g_546870439")]
     [DisplayName("Tracking 3 Choice")]
-    public abstract partial record Tracking3Choice_
-    {
-    }
+    public abstract record Tracking3Choice_ { }
 }

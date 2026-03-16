@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tclvZToyEeOr__K5A0LSog")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification62
+public record PartyIdentification62
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the financial institution expressed as a BIC.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record PartyIdentification62
     [DisplayName("BICFI")]
     [IsoXmlTag("BICFI")]
     [IsoSimpleType(IsoSimpleType.BICFIIdentifier)]
-    public IsoBICFIIdentifier? BICFI { get; init; } 
-    
+    public IsoBICFIIdentifier? BICFI { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
     /// </summary>
     [IsoId("_tclvZzoyEeOr__K5A0LSog")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public GenericIdentification1? ProprietaryIdentification { get; init; } 
-    
+    public GenericIdentification1? ProprietaryIdentification { get; init; }
+
     /// <summary>
     /// Name and address of the party.
     /// </summary>
     [IsoId("_tclvaDoyEeOr__K5A0LSog")]
     [DisplayName("Name And Address")]
     [IsoXmlTag("NmAndAdr")]
-    public NameAndAddress5? NameAndAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NameAndAddress5? NameAndAddress { get; init; }
 }

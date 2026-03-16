@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCreditorReferenceTypeCode")]
-[Description(@"Specifies the type of creditor reference as published in an external creditor reference type code set.")]
+[Description(
+    @"Specifies the type of creditor reference as published in an external creditor reference type code set."
+)]
 public enum ExternalCreditorReferenceTypeCode
 {
     /// <summary>
@@ -29,7 +31,9 @@ public enum ExternalCreditorReferenceTypeCode
     /// </summary>
     [EnumMember(Value = "FXDR")]
     [IsoId("_ExternalCreditorReferenceTypeCode_ForeignExchangeDealReference")]
-    [Description(@"Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.")]
+    [Description(
+        @"Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers."
+    )]
     ForeignExchangeDealReference,
 
     /// <summary>
@@ -56,7 +60,9 @@ public enum ExternalCreditorReferenceTypeCode
     /// </summary>
     [EnumMember(Value = "RPIN")]
     [IsoId("_ExternalCreditorReferenceTypeCode_RelatedPaymentInstruction")]
-    [Description(@"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.")]
+    [Description(
+        @"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario."
+    )]
     RelatedPaymentInstruction,
 
     /// <summary>
@@ -65,7 +71,8 @@ public enum ExternalCreditorReferenceTypeCode
     /// </summary>
     [EnumMember(Value = "SCOR")]
     [IsoId("_ExternalCreditorReferenceTypeCode_StructuredCommunicationReference")]
-    [Description(@"Document is a structured communication reference provided by the creditor to identify the referred transaction.")]
+    [Description(
+        @"Document is a structured communication reference provided by the creditor to identify the referred transaction."
+    )]
     StructuredCommunicationReference,
-
 }

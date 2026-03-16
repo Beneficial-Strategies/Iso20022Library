@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P9_OEa18EeWMg5rOByfExw")]
 [DisplayName("ATM Transaction Amounts")]
-public partial record ATMTransactionAmounts6
+public record ATMTransactionAmounts6
 {
-    #nullable enable
-    
     /// <summary>
     /// Default currency of the limits.
     /// </summary>
     [IsoId("_QJxAQa18EeWMg5rOByfExw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Maximum amount allowed for a transaction in the service.
     /// </summary>
     [IsoId("_QJxAQ618EeWMg5rOByfExw")]
     [DisplayName("Maximum Possible Amount")]
     [IsoXmlTag("MaxPssblAmt")]
-    public ImpliedCurrencyAndAmount? MaximumPossibleAmount { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? MaximumPossibleAmount { get; init; }
+
     /// <summary>
     /// Minimum amount allowed for a transaction in the service.
     /// </summary>
     [IsoId("_QJxARa18EeWMg5rOByfExw")]
     [DisplayName("Minimum Possible Amount")]
     [IsoXmlTag("MinPssblAmt")]
-    public ImpliedCurrencyAndAmount? MinimumPossibleAmount { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? MinimumPossibleAmount { get; init; }
+
     /// <summary>
     /// Additional amount that may be displayed to the customer, for instance the daily limit or the daily balance for the service.
     /// </summary>
     [IsoId("__lqC0K19EeWMg5rOByfExw")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public ATMTransactionAmounts7? AdditionalAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ATMTransactionAmounts7? AdditionalAmount { get; init; }
 }

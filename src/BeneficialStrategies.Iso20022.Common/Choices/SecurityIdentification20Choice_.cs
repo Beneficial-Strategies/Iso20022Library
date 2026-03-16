@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecurityIdentification20Choice.ISIN))]
     [KnownType(typeof(SecurityIdentification20Choice.Name))]
-    [JsonDerivedType(typeof(SecurityIdentification20Choice.ISIN),nameof(SecurityIdentification20Choice.ISIN))]
-    [JsonDerivedType(typeof(SecurityIdentification20Choice.Name),nameof(SecurityIdentification20Choice.Name))]
+    [JsonDerivedType(
+        typeof(SecurityIdentification20Choice.ISIN),
+        nameof(SecurityIdentification20Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification20Choice.Name),
+        nameof(SecurityIdentification20Choice.Name)
+    )]
     [IsoId("_R1-IMT9DEeWqd8_TqzDNuw")]
     [DisplayName("Security Identification 20 Choice")]
-    public abstract partial record SecurityIdentification20Choice_
-    {
-    }
+    public abstract record SecurityIdentification20Choice_ { }
 }

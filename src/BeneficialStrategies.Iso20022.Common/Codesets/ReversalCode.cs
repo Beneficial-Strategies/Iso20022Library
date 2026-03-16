@@ -23,7 +23,7 @@ public enum ReversalCode
     [IsoId("_Y-Bo89p-Ed-ak6NoX_4Aeg_499553797")]
     [Description(@"Debit entry used to reverse a previously booked credit entry.")]
     ReversalCredit = AmountDirectionCode.ReversalCredit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Credit entry used to reverse a previously booked debit entry.
     /// Encoded/decoded by serializers as &quot;RVDB&quot;.
@@ -32,5 +32,4 @@ public enum ReversalCode
     [IsoId("_Y-Bo9Np-Ed-ak6NoX_4Aeg_499553857")]
     [Description(@"Credit entry used to reverse a previously booked debit entry.")]
     ReversalDebit = AmountDirectionCode.ReversalDebit, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ae2moSGPEeW7gKYhAMEFCw")]
 [DisplayName("Alternate Security Identification")]
-public partial record AlternateSecurityIdentification7
+public record AlternateSecurityIdentification7
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier of a security.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record AlternateSecurityIdentification7
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Source of the identification, that is, domestic (national) or proprietary.
     /// </summary>
     [IsoId("_UwbpcCGPEeW7gKYhAMEFCw")]
     [DisplayName("Identification Source")]
     [IsoXmlTag("IdSrc")]
-    public required IdentificationSource1Choice_ IdentificationSource { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IdentificationSource1Choice_ IdentificationSource { get; init; }
 }

@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_E0Tvl8yyEeiqqJhU2tqK8A")]
 [Description(@"Contains the reconciliation type")]
-[Derivations(typeof(ReconciliationMessageType1Code),typeof(ReconciliationMessageType2Code))]
+[Derivations(typeof(ReconciliationMessageType1Code), typeof(ReconciliationMessageType2Code))]
 public enum ReconciliationMessageTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_E0TvmMyyEeiqqJhU2tqK8A")]
     [Description(@"Batch Transfer Response")]
     BatchTransferResponse,
-    
+
     /// <summary>
     /// Card Management Response
     /// Encoded/decoded by serializers as &quot;CAMR&quot;.
@@ -32,7 +32,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_E0TvmcyyEeiqqJhU2tqK8A")]
     [Description(@"Card Management Response")]
     CardManagementResponse,
-    
+
     /// <summary>
     /// Batch Transfer Initiation
     /// Encoded/decoded by serializers as &quot;BATI&quot;.
@@ -41,7 +41,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_E0TvncyyEeiqqJhU2tqK8A")]
     [Description(@"Batch Transfer Initiation")]
     BatchTransferInitiation,
-    
+
     /// <summary>
     /// Card Management Initiation
     /// Encoded/decoded by serializers as &quot;CAMI&quot;.
@@ -50,7 +50,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_E0Tvm8yyEeiqqJhU2tqK8A")]
     [Description(@"Card Management Initiation")]
     CardManagementInitiation,
-    
+
     /// <summary>
     /// Amendment
     /// Encoded/decoded by serializers as &quot;AMDT&quot;.
@@ -59,7 +59,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_hBsMYM5UEeiEmaZryQQ14Q")]
     [Description(@"Amendment")]
     Amendment,
-    
+
     /// <summary>
     /// Authorisation Initiation
     /// Encoded/decoded by serializers as &quot;ATHI&quot;.
@@ -68,7 +68,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_zETdQM5UEeiEmaZryQQ14Q")]
     [Description(@"Authorisation Initiation")]
     AuthorisationInitiation,
-    
+
     /// <summary>
     /// Authorisation Response
     /// Encoded/decoded by serializers as &quot;ATHR&quot;.
@@ -77,7 +77,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_4DPccM5UEeiEmaZryQQ14Q")]
     [Description(@"Authorisation Response")]
     AuthorisationResponse,
-    
+
     /// <summary>
     /// Batch Management Initiation
     /// Encoded/decoded by serializers as &quot;BAMI&quot;.
@@ -86,7 +86,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_Ik87QM5VEeiEmaZryQQ14Q")]
     [Description(@"Batch Management Initiation")]
     BatchManagementInitiation,
-    
+
     /// <summary>
     /// Batch Management Response
     /// Encoded/decoded by serializers as &quot;BAMR&quot;.
@@ -95,7 +95,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_IvFHoM5VEeiEmaZryQQ14Q")]
     [Description(@"Batch Management Response")]
     BatchManagementResponse,
-    
+
     /// <summary>
     /// Chargeback Initiation
     /// Encoded/decoded by serializers as &quot;CGBI&quot;.
@@ -104,7 +104,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_r5PvUM5VEeiEmaZryQQ14Q")]
     [Description(@"Chargeback Initiation")]
     ChargebackInitiation,
-    
+
     /// <summary>
     /// Chargeback Response
     /// Encoded/decoded by serializers as &quot;CGBR&quot;.
@@ -113,7 +113,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_vcl6QM5VEeiEmaZryQQ14Q")]
     [Description(@"Chargeback Response")]
     ChargebackResponse,
-    
+
     /// <summary>
     /// Error
     /// Encoded/decoded by serializers as &quot;EROR&quot;.
@@ -122,7 +122,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_2v5IwM5VEeiEmaZryQQ14Q")]
     [Description(@"Error")]
     Error,
-    
+
     /// <summary>
     /// Fee Collection Initiation
     /// Encoded/decoded by serializers as &quot;FECI&quot;.
@@ -131,7 +131,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_26Rz0M5VEeiEmaZryQQ14Q")]
     [Description(@"Fee Collection Initiation")]
     FeeCollectionInitiation,
-    
+
     /// <summary>
     /// Fee Collection Response
     /// Encoded/decoded by serializers as &quot;FECR&quot;.
@@ -140,7 +140,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_6j4-0M5VEeiEmaZryQQ14Q")]
     [Description(@"Fee Collection Response")]
     FeeCollectionResponse,
-    
+
     /// <summary>
     /// File Action Initiation
     /// Encoded/decoded by serializers as &quot;FIAI&quot;.
@@ -149,7 +149,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_Au5vkM5WEeiEmaZryQQ14Q")]
     [Description(@"File Action Initiation")]
     FileActionInitiation,
-    
+
     /// <summary>
     /// File Action Response
     /// Encoded/decoded by serializers as &quot;FIAR&quot;.
@@ -158,7 +158,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_A0VpMM5WEeiEmaZryQQ14Q")]
     [Description(@"File Action Response")]
     FileActionResponse,
-    
+
     /// <summary>
     /// Inquiry Initiation
     /// Encoded/decoded by serializers as &quot;INQI&quot;.
@@ -167,7 +167,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_GwcbQM5WEeiEmaZryQQ14Q")]
     [Description(@"Inquiry Initiation")]
     InquiryInitiation,
-    
+
     /// <summary>
     /// Inquiry Response
     /// Encoded/decoded by serializers as &quot;INQR&quot;.
@@ -176,7 +176,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_GzV-QM5WEeiEmaZryQQ14Q")]
     [Description(@"Inquiry Response")]
     InquiryResponse,
-    
+
     /// <summary>
     /// Fraud Reporting Initiation
     /// Encoded/decoded by serializers as &quot;FRRI&quot;.
@@ -185,7 +185,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_G8470M5WEeiEmaZryQQ14Q")]
     [Description(@"Fraud Reporting Initiation")]
     FraudReportingInitiation,
-    
+
     /// <summary>
     /// Fraud Reporting Response
     /// Encoded/decoded by serializers as &quot;FRRR&quot;.
@@ -194,7 +194,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_IzKg8M5WEeiEmaZryQQ14Q")]
     [Description(@"Fraud Reporting Response")]
     FraudReportingResponse,
-    
+
     /// <summary>
     /// Fraud Disposition Initiation
     /// Encoded/decoded by serializers as &quot;FRDI&quot;.
@@ -203,7 +203,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_I9x1gM5WEeiEmaZryQQ14Q")]
     [Description(@"Fraud Disposition Initiation")]
     FraudDispositionInitiation,
-    
+
     /// <summary>
     /// Fraud Disposition Response
     /// Encoded/decoded by serializers as &quot;FRDR&quot;.
@@ -212,7 +212,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_Jn6XoM5WEeiEmaZryQQ14Q")]
     [Description(@"Fraud Disposition Response")]
     FraudDispositionResponse,
-    
+
     /// <summary>
     /// Financial Initiation
     /// Encoded/decoded by serializers as &quot;FINI&quot;.
@@ -221,7 +221,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_Juqf4M5WEeiEmaZryQQ14Q")]
     [Description(@"Financial Initiation")]
     FinancialInitiation,
-    
+
     /// <summary>
     /// Financial Response
     /// Encoded/decoded by serializers as &quot;FINR&quot;.
@@ -230,7 +230,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_J6J-MM5WEeiEmaZryQQ14Q")]
     [Description(@"Financial Response")]
     FinancialResponse,
-    
+
     /// <summary>
     /// Key Exchange Initiation
     /// Encoded/decoded by serializers as &quot;KYEI&quot;.
@@ -239,7 +239,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_sZHFsM5WEeiEmaZryQQ14Q")]
     [Description(@"Key Exchange Initiation")]
     KeyExchangeInitiation,
-    
+
     /// <summary>
     /// Key Exchange Response
     /// Encoded/decoded by serializers as &quot;KYER&quot;.
@@ -248,7 +248,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_sb7wMM5WEeiEmaZryQQ14Q")]
     [Description(@"Key Exchange Response")]
     KeyExchangeResponse,
-    
+
     /// <summary>
     /// Verification Initiation.
     /// Encoded/decoded by serializers as &quot;VERI&quot;.
@@ -257,7 +257,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5Sd9wM5WEeiEmaZryQQ14Q")]
     [Description(@"Verification Initiation.")]
     VerificationInitiation,
-    
+
     /// <summary>
     /// Verification Response
     /// Encoded/decoded by serializers as &quot;VERR&quot;.
@@ -266,7 +266,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5Sek0M5WEeiEmaZryQQ14Q")]
     [Description(@"Verification Response")]
     VerificationResponse,
-    
+
     /// <summary>
     /// Settlement Reporting Initiation
     /// Encoded/decoded by serializers as &quot;SERI&quot;.
@@ -275,7 +275,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5St1YM5WEeiEmaZryQQ14Q")]
     [Description(@"Settlement Reporting Initiation")]
     SettlementReportingInitiation,
-    
+
     /// <summary>
     /// Settlement Reporting Response
     /// Encoded/decoded by serializers as &quot;SERR&quot;.
@@ -284,7 +284,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5Vy-kM5WEeiEmaZryQQ14Q")]
     [Description(@"Settlement Reporting Response")]
     SettlementReportingResponse,
-    
+
     /// <summary>
     /// Reversal Initiation
     /// Encoded/decoded by serializers as &quot;REVI&quot;.
@@ -293,7 +293,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5VzloM5WEeiEmaZryQQ14Q")]
     [Description(@"Reversal Initiation")]
     ReversalInitiation,
-    
+
     /// <summary>
     /// Reversal Response
     /// Encoded/decoded by serializers as &quot;REVR&quot;.
@@ -302,7 +302,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5YftQM5WEeiEmaZryQQ14Q")]
     [Description(@"Reversal Response")]
     ReversalResponse,
-    
+
     /// <summary>
     /// Retrieval Response
     /// Encoded/decoded by serializers as &quot;RTRI&quot;.
@@ -311,7 +311,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5YftQc5WEeiEmaZryQQ14Q")]
     [Description(@"Retrieval Response")]
     RetrievalResponse,
-    
+
     /// <summary>
     /// Retrieval Request
     /// Encoded/decoded by serializers as &quot;RTRR&quot;.
@@ -320,7 +320,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5a6vIM5WEeiEmaZryQQ14Q")]
     [Description(@"Retrieval Request")]
     RetrievalRequest,
-    
+
     /// <summary>
     /// Retrieval Fulfilment Initiation
     /// Encoded/decoded by serializers as &quot;RTFI&quot;.
@@ -329,7 +329,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5a7WMM5WEeiEmaZryQQ14Q")]
     [Description(@"Retrieval Fulfilment Initiation")]
     RetrievalFulfilmentInitiation,
-    
+
     /// <summary>
     /// Retrieval Fulfilment Response
     /// Encoded/decoded by serializers as &quot;RTFR&quot;.
@@ -338,7 +338,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5d81AM5WEeiEmaZryQQ14Q")]
     [Description(@"Retrieval Fulfilment Response")]
     RetrievalFulfilmentResponse,
-    
+
     /// <summary>
     /// Reconciliation Initiation
     /// Encoded/decoded by serializers as &quot;RECI&quot;.
@@ -347,7 +347,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5gS-YM5WEeiEmaZryQQ14Q")]
     [Description(@"Reconciliation Initiation")]
     ReconciliationInitiation,
-    
+
     /// <summary>
     /// Reconciliation Response
     /// Encoded/decoded by serializers as &quot;RECR&quot;.
@@ -356,7 +356,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5inSkM5WEeiEmaZryQQ14Q")]
     [Description(@"Reconciliation Response")]
     ReconciliationResponse,
-    
+
     /// <summary>
     /// Network Management Initiation.
     /// Encoded/decoded by serializers as &quot;NWMI&quot;.
@@ -365,7 +365,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5in5oM5WEeiEmaZryQQ14Q")]
     [Description(@"Network Management Initiation.")]
     NetworkManagementInitiation,
-    
+
     /// <summary>
     /// Network Management Response
     /// Encoded/decoded by serializers as &quot;NWMR&quot;.
@@ -374,7 +374,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_5k_4MM5WEeiEmaZryQQ14Q")]
     [Description(@"Network Management Response")]
     NetworkManagementResponse,
-    
+
     /// <summary>
     /// Addendum initiation
     /// Encoded/decoded by serializers as &quot;ADDI&quot;.
@@ -383,7 +383,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_PnU-wBqSEeqH1IQNpbVpEw")]
     [Description(@"Addendum initiation")]
     AddendumInitiation,
-    
+
     /// <summary>
     /// Addendum response
     /// Encoded/decoded by serializers as &quot;ADDR&quot;.
@@ -392,7 +392,7 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_eQKQYBqSEeqH1IQNpbVpEw")]
     [Description(@"Addendum response")]
     AddendumResponse,
-    
+
     /// <summary>
     /// Retrieval Initiation Message
     /// Encoded/decoded by serializers as &quot;RTVI&quot;.
@@ -401,5 +401,4 @@ public enum ReconciliationMessageTypeCode
     [IsoId("_k7ul0C3iEeyg-aG5nXcnfg")]
     [Description(@"Retrieval Initiation Message")]
     RetrievalInitiation,
-    
 }

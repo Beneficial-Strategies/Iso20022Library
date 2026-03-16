@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OpeningClosing1Choice.Code))]
     [KnownType(typeof(OpeningClosing1Choice.Proprietary))]
-    [JsonDerivedType(typeof(OpeningClosing1Choice.Code),nameof(OpeningClosing1Choice.Code))]
-    [JsonDerivedType(typeof(OpeningClosing1Choice.Proprietary),nameof(OpeningClosing1Choice.Proprietary))]
+    [JsonDerivedType(typeof(OpeningClosing1Choice.Code), nameof(OpeningClosing1Choice.Code))]
+    [JsonDerivedType(
+        typeof(OpeningClosing1Choice.Proprietary),
+        nameof(OpeningClosing1Choice.Proprietary)
+    )]
     [IsoId("_Qs45Ndp-Ed-ak6NoX_4Aeg_-775464350")]
     [DisplayName("Opening Closing 1 Choice")]
-    public abstract partial record OpeningClosing1Choice_
-    {
-    }
+    public abstract record OpeningClosing1Choice_ { }
 }

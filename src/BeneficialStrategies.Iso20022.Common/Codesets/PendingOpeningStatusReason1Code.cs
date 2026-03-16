@@ -23,7 +23,7 @@ public enum PendingOpeningStatusReason1Code
     [IsoId("_vgrwAWCKEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is required.")]
     Authorisation = PendingOpeningStatusReasonCode.Authorisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authorisation is provided but account opening is still pending.
     /// Encoded/decoded by serializers as &quot;ATHP&quot;.
@@ -32,7 +32,7 @@ public enum PendingOpeningStatusReason1Code
     [IsoId("_vqNfcWCKEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is provided but account opening is still pending.")]
     AuthorisedButPending = PendingOpeningStatusReasonCode.AuthorisedButPending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// FATCA reporting date is missing.
     /// Encoded/decoded by serializers as &quot;FRDM&quot;.
@@ -41,7 +41,7 @@ public enum PendingOpeningStatusReason1Code
     [IsoId("_vz4Y0WCKEeabZtzjEVWYCQ")]
     [Description(@"FATCA reporting date is missing.")]
     FATCAReportingDateMissing = PendingOpeningStatusReasonCode.FATCAReportingDateMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Know Your Customer (KYC) document is missing.
     /// Encoded/decoded by serializers as &quot;KYCM&quot;.
@@ -49,8 +49,9 @@ public enum PendingOpeningStatusReason1Code
     [EnumMember(Value = "KYCM")]
     [IsoId("_v9PwMWCKEeabZtzjEVWYCQ")]
     [Description(@"Know Your Customer (KYC) document is missing.")]
-    KnowYourCustomerDocumentMissing = PendingOpeningStatusReasonCode.KnowYourCustomerDocumentMissing, // same ordinal as derivation source for type conversions
-    
+    KnowYourCustomerDocumentMissing =
+        PendingOpeningStatusReasonCode.KnowYourCustomerDocumentMissing, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Account is not yet open, even for partial use.
     /// Encoded/decoded by serializers as &quot;NOTO&quot;.
@@ -59,7 +60,7 @@ public enum PendingOpeningStatusReason1Code
     [IsoId("_wG6pkWCKEeabZtzjEVWYCQ")]
     [Description(@"Account is not yet open, even for partial use.")]
     NotOpened = PendingOpeningStatusReasonCode.NotOpened, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account will be opened when restrictions are addressed.
     /// Encoded/decoded by serializers as &quot;REST&quot;.
@@ -68,7 +69,7 @@ public enum PendingOpeningStatusReason1Code
     [IsoId("_wQJeEWCKEeabZtzjEVWYCQ")]
     [Description(@"Account will be opened when restrictions are addressed.")]
     Restrictions = PendingOpeningStatusReasonCode.Restrictions, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rights holder information is missing.
     /// Encoded/decoded by serializers as &quot;RIGH&quot;.
@@ -77,5 +78,4 @@ public enum PendingOpeningStatusReason1Code
     [IsoId("_wZ0XcWCKEeabZtzjEVWYCQ")]
     [Description(@"Rights holder information is missing.")]
     RightsHolderMissing = PendingOpeningStatusReasonCode.RightsHolderMissing, // same ordinal as derivation source for type conversions
-    
 }

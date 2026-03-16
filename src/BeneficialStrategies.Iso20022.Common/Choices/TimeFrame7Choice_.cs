@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TimeFrame7Choice.TradePlus))]
     [KnownType(typeof(TimeFrame7Choice.Prepayment))]
-    [JsonDerivedType(typeof(TimeFrame7Choice.TradePlus),nameof(TimeFrame7Choice.TradePlus))]
-    [JsonDerivedType(typeof(TimeFrame7Choice.Prepayment),nameof(TimeFrame7Choice.Prepayment))]
+    [JsonDerivedType(typeof(TimeFrame7Choice.TradePlus), nameof(TimeFrame7Choice.TradePlus))]
+    [JsonDerivedType(typeof(TimeFrame7Choice.Prepayment), nameof(TimeFrame7Choice.Prepayment))]
     [IsoId("_5ufTETgDEei6RvewLQWEqw")]
     [DisplayName("Time Frame 7 Choice")]
-    public abstract partial record TimeFrame7Choice_
-    {
-    }
+    public abstract record TimeFrame7Choice_ { }
 }

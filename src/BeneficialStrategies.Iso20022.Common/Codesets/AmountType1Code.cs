@@ -23,7 +23,7 @@ public enum AmountType1Code
     [IsoId("_be0Kstp-Ed-ak6NoX_4Aeg_334790348")]
     [Description(@"The amount is open.")]
     Open = AmountTypeCode.Open, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The amount is unkown.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,5 +32,4 @@ public enum AmountType1Code
     [IsoId("_be0Ks9p-Ed-ak6NoX_4Aeg_334790370")]
     [Description(@"The amount is unkown.")]
     Unknown = AmountTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

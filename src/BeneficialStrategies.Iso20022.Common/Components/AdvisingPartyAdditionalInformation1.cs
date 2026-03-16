@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GBqPw34hEeG2Zfa6JvOQSQ")]
 [DisplayName("Advising Party Additional Information")]
-public partial record AdvisingPartyAdditionalInformation1
+public record AdvisingPartyAdditionalInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier assigned as a reference.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AdvisingPartyAdditionalInformation1
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ReferenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ReferenceNumber { get; init; }
+
     /// <summary>
     /// Additional information specific to the bank-to-beneficiary communication.
     /// </summary>
@@ -38,8 +36,4 @@ public partial record AdvisingPartyAdditionalInformation1
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> BankToBeneficiaryInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

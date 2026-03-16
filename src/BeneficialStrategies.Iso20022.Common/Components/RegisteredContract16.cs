@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2KDZkTEyEe6g-ffJsqGiSA")]
 [DisplayName("Registered Contract16")]
-public partial record RegisteredContract16
+public record RegisteredContract16
 {
-    #nullable enable
-
     /// <summary>
     /// Contract Registration Amendment Identification.
     /// </summary>
     [DisplayName("Contract Registration Amendment Identification")]
     [IsoXmlTag("CtrctRegnAmdmntId")]
-    public required IsoMax35Text ContractRegistrationAmendmentIdentification { get; init; } 
+    public required IsoMax35Text ContractRegistrationAmendmentIdentification { get; init; }
 
     /// <summary>
     /// Registered Contract Amendment.
@@ -37,14 +35,14 @@ public partial record RegisteredContract16
     /// </summary>
     [DisplayName("Registration Agent")]
     [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; } 
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
     /// Reporting Party.
     /// </summary>
     [DisplayName("Reporting Party")]
     [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; } 
+    public required TradeParty6 ReportingParty { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -52,8 +50,4 @@ public partial record RegisteredContract16
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

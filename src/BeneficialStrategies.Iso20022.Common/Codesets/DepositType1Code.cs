@@ -23,7 +23,7 @@ public enum DepositType1Code
     [IsoId("_YcWfQNp-Ed-ak6NoX_4Aeg_-2068684174")]
     [Description(@"Specifies that it is a fixed term deposit.")]
     FixedTerm = DepositTypeCode.FixedTerm, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that it is a call/notice deposit.
     /// Encoded/decoded by serializers as &quot;CALL&quot;.
@@ -32,5 +32,4 @@ public enum DepositType1Code
     [IsoId("_YcWfQdp-Ed-ak6NoX_4Aeg_1908506461")]
     [Description(@"Specifies that it is a call/notice deposit.")]
     Call = DepositTypeCode.Call, // same ordinal as derivation source for type conversions
-    
 }

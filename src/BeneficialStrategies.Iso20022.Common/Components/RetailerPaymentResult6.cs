@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4PmK4ZO4Ee65Pr8tnKxNQA")]
 [DisplayName("Retailer Payment Result6")]
-public partial record RetailerPaymentResult6
+public record RetailerPaymentResult6
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Service.
     /// </summary>
@@ -30,7 +28,7 @@ public partial record RetailerPaymentResult6
     /// </summary>
     [DisplayName("Customer Language")]
     [IsoXmlTag("CstmrLang")]
-    public LanguageCode? CustomerLanguage { get; init; } 
+    public LanguageCode? CustomerLanguage { get; init; }
 
     /// <summary>
     /// Customer Order.
@@ -44,58 +42,54 @@ public partial record RetailerPaymentResult6
     /// </summary>
     [DisplayName("Image Captured Signature")]
     [IsoXmlTag("ImgCaptrdSgntr")]
-    public CapturedSignature1? ImageCapturedSignature { get; init; } 
+    public CapturedSignature1? ImageCapturedSignature { get; init; }
 
     /// <summary>
     /// Merchant Override Flag.
     /// </summary>
     [DisplayName("Merchant Override Flag")]
     [IsoXmlTag("MrchntOvrrdFlg")]
-    public IsoTrueFalseIndicator? MerchantOverrideFlag { get; init; } 
+    public IsoTrueFalseIndicator? MerchantOverrideFlag { get; init; }
 
     /// <summary>
     /// Online Flag.
     /// </summary>
     [DisplayName("Online Flag")]
     [IsoXmlTag("OnlnFlg")]
-    public IsoTrueFalseIndicator? OnlineFlag { get; init; } 
+    public IsoTrueFalseIndicator? OnlineFlag { get; init; }
 
     /// <summary>
     /// Protected Captured Signature.
     /// </summary>
     [DisplayName("Protected Captured Signature")]
     [IsoXmlTag("PrtctdCaptrdSgntr")]
-    public ContentInformationType40? ProtectedCapturedSignature { get; init; } 
+    public ContentInformationType40? ProtectedCapturedSignature { get; init; }
 
     /// <summary>
     /// Requested Transaction.
     /// </summary>
     [DisplayName("Requested Transaction")]
     [IsoXmlTag("ReqdTx")]
-    public CardPaymentTransaction136? RequestedTransaction { get; init; } 
+    public CardPaymentTransaction136? RequestedTransaction { get; init; }
 
     /// <summary>
     /// Service Attribute.
     /// </summary>
     [DisplayName("Service Attribute")]
     [IsoXmlTag("SvcAttr")]
-    public CardPaymentServiceType14Code? ServiceAttribute { get; init; } 
+    public CardPaymentServiceType14Code? ServiceAttribute { get; init; }
 
     /// <summary>
     /// Transaction Response.
     /// </summary>
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
-    public CardPaymentTransaction132? TransactionResponse { get; init; } 
+    public CardPaymentTransaction132? TransactionResponse { get; init; }
 
     /// <summary>
     /// Transaction Type.
     /// </summary>
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
-    public required CardPaymentServiceType12Code TransactionType { get; init; } 
-
-    
-    #nullable disable
-    
+    public required CardPaymentServiceType12Code TransactionType { get; init; }
 }

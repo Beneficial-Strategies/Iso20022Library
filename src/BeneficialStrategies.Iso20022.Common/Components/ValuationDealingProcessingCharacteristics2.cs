@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UBOXydp-Ed-ak6NoX_4Aeg_689275880")]
 [DisplayName("Valuation Dealing Processing Characteristics")]
-public partial record ValuationDealingProcessingCharacteristics2
+public record ValuationDealingProcessingCharacteristics2
 {
-    #nullable enable
-    
     /// <summary>
     /// Frequency of the valuation.
     /// </summary>
     [IsoId("_UBOXytp-Ed-ak6NoX_4Aeg_689276311")]
     [DisplayName("Valuation Frequency")]
     [IsoXmlTag("ValtnFrqcy")]
-    public required EventFrequency5Code ValuationFrequency { get; init; } 
-    
+    public required EventFrequency5Code ValuationFrequency { get; init; }
+
     /// <summary>
     /// Further details regarding the dealing frequency, eg, Tuesday (for weekly dealing) or last business day of the month.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record ValuationDealingProcessingCharacteristics2
     [DisplayName("Valuation Frequency Description")]
     [IsoXmlTag("ValtnFrqcyDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text ValuationFrequencyDescription { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text ValuationFrequencyDescription { get; init; }
+
     /// <summary>
     /// Number of decimal places to which quantities of units/shares are rounded.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record ValuationDealingProcessingCharacteristics2
     [DisplayName("Decimalisation Units")]
     [IsoXmlTag("DcmlstnUnits")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber DecimalisationUnits { get; init; } 
-    
+    public required IsoNumber DecimalisationUnits { get; init; }
+
     /// <summary>
     /// Number of decimal places to which quantities of units/shares are rounded.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record ValuationDealingProcessingCharacteristics2
     [DisplayName("Decimalisation Price")]
     [IsoXmlTag("DcmlstnPric")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber DecimalisationPrice { get; init; } 
-    
+    public required IsoNumber DecimalisationPrice { get; init; }
+
     /// <summary>
     /// Indicates whether the fund has two prices.
     /// </summary>
@@ -61,16 +59,16 @@ public partial record ValuationDealingProcessingCharacteristics2
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator DualFundIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator DualFundIndicator { get; init; }
+
     /// <summary>
     /// Type of pricing calculation method.
     /// </summary>
     [IsoId("_UBYIw9p-Ed-ak6NoX_4Aeg_689276712")]
     [DisplayName("Price Method")]
     [IsoXmlTag("PricMtd")]
-    public required PriceMethod1Code PriceMethod { get; init; } 
-    
+    public required PriceMethod1Code PriceMethod { get; init; }
+
     /// <summary>
     /// Currencies in which the prices for the investment fund class are published by the fund management company.
     /// </summary>
@@ -79,8 +77,4 @@ public partial record ValuationDealingProcessingCharacteristics2
     [IsoXmlTag("PricCcy")]
     public SimpleValueList<string> PriceCurrency { get; init; } = [];
     // ID for the above is _UBYIxNp-Ed-ak6NoX_4Aeg_689276743
-    
-    
-    #nullable disable
-    
 }

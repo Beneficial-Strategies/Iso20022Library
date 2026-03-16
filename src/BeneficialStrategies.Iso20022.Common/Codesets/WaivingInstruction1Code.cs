@@ -23,7 +23,7 @@ public enum WaivingInstruction1Code
     [IsoId("_Y9k9CNp-Ed-ak6NoX_4Aeg_1408944804")]
     [Description(@"Form of commission waived is cash.")]
     WaiveInCash = WaivingInstructionCode.WaiveInCash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Form of commission waived is additional units of a financial instrument.
     /// Encoded/decoded by serializers as &quot;WIUN&quot;.
@@ -32,5 +32,4 @@ public enum WaivingInstruction1Code
     [IsoId("_Y9uuANp-Ed-ak6NoX_4Aeg_1408944916")]
     [Description(@"Form of commission waived is additional units of a financial instrument.")]
     WaiveInUnits = WaivingInstructionCode.WaiveInUnits, // same ordinal as derivation source for type conversions
-    
 }

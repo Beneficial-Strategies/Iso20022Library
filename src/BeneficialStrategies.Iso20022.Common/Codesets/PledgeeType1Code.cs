@@ -23,7 +23,7 @@ public enum PledgeeType1Code
     [IsoId("_o56mAVj2EeSYweXGddZAOA")]
     [Description(@"Financial instruments are pledged to a counterparty.")]
     Counterparty = PledgeeTypeCode.Counterparty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial instruments are pledged to a regulatory body.
     /// Encoded/decoded by serializers as &quot;REGB&quot;.
@@ -32,5 +32,4 @@ public enum PledgeeType1Code
     [IsoId("_pCsHgVj2EeSYweXGddZAOA")]
     [Description(@"Financial instruments are pledged to a regulatory body.")]
     RegulatoryBody = PledgeeTypeCode.RegulatoryBody, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EO4_QUmXEeqmSrLQiFB8FA")]
 [DisplayName("Security Instrument Description")]
-public partial record SecurityInstrumentDescription17
+public record SecurityInstrumentDescription17
 {
-    #nullable enable
-    
     /// <summary>
     /// Code used to identify the financial instrument.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SecurityInstrumentDescription17
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; } 
-    
+    public required IsoISINOct2015Identifier Identification { get; init; }
+
     /// <summary>
     /// Full name of the financial instrument.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record SecurityInstrumentDescription17
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? FullName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? FullName { get; init; }
+
     /// <summary>
     /// Short name of financial instrument in accordance with ISO 18774.
     /// </summary>
@@ -44,9 +42,9 @@ public partial record SecurityInstrumentDescription17
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ShortName { get; init; }
+
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification.
     /// </summary>
@@ -54,16 +52,16 @@ public partial record SecurityInstrumentDescription17
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ClassificationType { get; init; } 
-    
+    public IsoCFIOct2015Identifier? ClassificationType { get; init; }
+
     /// <summary>
     /// Currency in which the notional is denominated.
     /// </summary>
     [IsoId("_EPy-QUmXEeqmSrLQiFB8FA")]
     [DisplayName("Notional Currency")]
     [IsoXmlTag("NtnlCcy")]
-    public ActiveOrHistoricCurrencyCode? NotionalCurrency { get; init; } 
-    
+    public ActiveOrHistoricCurrencyCode? NotionalCurrency { get; init; }
+
     /// <summary>
     /// Indicates whether the financial instrument falls within the definition of commodities derivative under the local regulation.
     /// Usage: when not present, the indicator in not applicable.
@@ -72,9 +70,5 @@ public partial record SecurityInstrumentDescription17
     [DisplayName("Commodity Derivative Indicator")]
     [IsoXmlTag("CmmdtyDerivInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CommodityDerivativeIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? CommodityDerivativeIndicator { get; init; }
 }

@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SolicitationFeeRateFormat11Choice.AmountToQuantity))]
     [KnownType(typeof(SolicitationFeeRateFormat11Choice.NotSpecifiedRate))]
     [KnownType(typeof(SolicitationFeeRateFormat11Choice.Rate))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat11Choice.Amount),nameof(SolicitationFeeRateFormat11Choice.Amount))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat11Choice.AmountToQuantity),nameof(SolicitationFeeRateFormat11Choice.AmountToQuantity))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat11Choice.NotSpecifiedRate),nameof(SolicitationFeeRateFormat11Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat11Choice.Rate),nameof(SolicitationFeeRateFormat11Choice.Rate))]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat11Choice.Amount),
+        nameof(SolicitationFeeRateFormat11Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat11Choice.AmountToQuantity),
+        nameof(SolicitationFeeRateFormat11Choice.AmountToQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat11Choice.NotSpecifiedRate),
+        nameof(SolicitationFeeRateFormat11Choice.NotSpecifiedRate)
+    )]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat11Choice.Rate),
+        nameof(SolicitationFeeRateFormat11Choice.Rate)
+    )]
     [IsoId("_DIiFgYV7Ee-oeNhl-Tk6YQ")]
     [DisplayName("Solicitation Fee Rate Format11Choice")]
-    public abstract partial record SolicitationFeeRateFormat11Choice_
-    {
-    }
+    public abstract record SolicitationFeeRateFormat11Choice_ { }
 }

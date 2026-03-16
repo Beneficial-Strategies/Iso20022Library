@@ -23,7 +23,7 @@ public enum CorporateActionEventProcessingStatusCode
     [IsoId("_bDZaB9p-Ed-ak6NoX_4Aeg_428864814")]
     [Description(@"Specifies that a corporate action event processing has been completed.")]
     Complete,
-    
+
     /// <summary>
     /// Specifies that a corporate action event processing has not been completed.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,14 +32,15 @@ public enum CorporateActionEventProcessingStatusCode
     [IsoId("_bDZaCNp-Ed-ak6NoX_4Aeg_429787479")]
     [Description(@"Specifies that a corporate action event processing has not been completed.")]
     Pending,
-    
+
     /// <summary>
     /// Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).
     /// Encoded/decoded by serializers as &quot;RECD&quot;.
     /// </summary>
     [EnumMember(Value = "RECD")]
     [IsoId("_bDij8Np-Ed-ak6NoX_4Aeg_430710847")]
-    [Description(@"Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed).")]
+    [Description(
+        @"Corporate action event processing specifying that the funds paid have been reconciled with the funds received from the agent (meaning that there is no more risk of payment to be reversed)."
+    )]
     Reconciled,
-    
 }

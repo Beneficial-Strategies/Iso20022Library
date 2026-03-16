@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K9D0N31DEeCF8NjrBemJWQ_-2058168701")]
 [DisplayName("Process Retry")]
-public partial record ProcessRetry1
+public record ProcessRetry1
 {
-    #nullable enable
-    
     /// <summary>
     /// Time period to wait for a retry in months, days, hours and minutes, leading zeros could be omitted.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ProcessRetry1
     [DisplayName("Delay")]
     [IsoXmlTag("Dely")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public required IsoMax9NumericText Delay { get; init; } 
-    
+    public required IsoMax9NumericText Delay { get; init; }
+
     /// <summary>
     /// Maximum number of retries.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record ProcessRetry1
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; } 
-    
+    public IsoNumber? MaximumNumber { get; init; }
+
     /// <summary>
     /// Time of the last retry.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record ProcessRetry1
     [DisplayName("Last Re Try Time")]
     [IsoXmlTag("LastReTryTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? LastReTryTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISOTime? LastReTryTime { get; init; }
 }

@@ -1,7 +1,7 @@
-using BeneficialStrategies.Iso20022.Components;
+using System.Reflection;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
-using System.Reflection;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -15,19 +15,14 @@ public class AccountReport25Tests
     /// <summary>
     /// Creates a minimal valid CashAccount39 for testing purposes.
     /// </summary>
-    private static CashAccount39 CreateCashAccount() => new CashAccount39
-    {
-        Identification = new IBAN { Value = "DE89370400440532013000" }
-    };
+    private static CashAccount39 CreateCashAccount() =>
+        new CashAccount39 { Identification = new IBAN { Value = "DE89370400440532013000" } };
 
     /// <summary>
     /// Creates a minimal valid AccountReport25 for testing purposes.
     /// </summary>
-    private static AccountReport25 CreateAccountReport() => new AccountReport25
-    {
-        Identification = "RPT-001",
-        Account = CreateCashAccount()
-    };
+    private static AccountReport25 CreateAccountReport() =>
+        new AccountReport25 { Identification = "RPT-001", Account = CreateCashAccount() };
 
     [Fact]
     public void CanInstantiate_WithRequiredProperties()
@@ -49,8 +44,7 @@ public class AccountReport25Tests
     public void Balance_PropertyType_IsValueList_NotSingleValue_Issue1Fixed()
     {
         // Arrange
-        var balanceProperty = typeof(AccountReport25)
-            .GetProperty(nameof(AccountReport25.Balance));
+        var balanceProperty = typeof(AccountReport25).GetProperty(nameof(AccountReport25.Balance));
 
         // Act
         var propertyType = balanceProperty!.PropertyType;
@@ -69,8 +63,7 @@ public class AccountReport25Tests
     public void Entry_PropertyType_IsValueList_NotSingleValue_Issue1Fixed()
     {
         // Arrange
-        var entryProperty = typeof(AccountReport25)
-            .GetProperty(nameof(AccountReport25.Entry));
+        var entryProperty = typeof(AccountReport25).GetProperty(nameof(AccountReport25.Entry));
 
         // Act
         var propertyType = entryProperty!.PropertyType;
@@ -89,8 +82,9 @@ public class AccountReport25Tests
     public void Interest_PropertyType_IsValueList_NotSingleValue_Issue1Fixed()
     {
         // Arrange
-        var interestProperty = typeof(AccountReport25)
-            .GetProperty(nameof(AccountReport25.Interest));
+        var interestProperty = typeof(AccountReport25).GetProperty(
+            nameof(AccountReport25.Interest)
+        );
 
         // Act
         var propertyType = interestProperty!.PropertyType;

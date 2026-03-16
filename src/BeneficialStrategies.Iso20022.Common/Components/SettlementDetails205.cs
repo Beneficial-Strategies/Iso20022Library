@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sw3zQSqSEeyR9JrVGfaMKw")]
 [DisplayName("Settlement Details")]
-public partial record SettlementDetails205
+public record SettlementDetails205
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the date as known by the two parties to be used for matching purposes when settlement of securities occurs.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record SettlementDetails205
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TradeDate { get; init; } 
-    
+    public required IsoISODateTime TradeDate { get; init; }
+
     /// <summary>
     /// Provides details on either the delivering or receiving settlement parties.
     /// </summary>
     [IsoId("_TJKXcyqSEeyR9JrVGfaMKw")]
     [DisplayName("Settlement Parties")]
     [IsoXmlTag("SttlmPties")]
-    public SettlementParties35Choice_? SettlementParties { get; init; } 
-    
+    public SettlementParties35Choice_? SettlementParties { get; init; }
+
     /// <summary>
     /// Indicates the collateral ownership.
     /// </summary>
     [IsoId("_TJKXdSqSEeyR9JrVGfaMKw")]
     [DisplayName("Collateral Ownership")]
     [IsoXmlTag("CollOwnrsh")]
-    public required CollateralOwnership4 CollateralOwnership { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CollateralOwnership4 CollateralOwnership { get; init; }
 }

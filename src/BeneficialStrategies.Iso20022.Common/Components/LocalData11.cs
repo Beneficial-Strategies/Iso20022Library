@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V34-cW9nEe6DxcrvCrq6hQ")]
 [DisplayName("Local Data11")]
-public partial record LocalData11
+public record LocalData11
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Address.
     /// </summary>
     [DisplayName("Additional Address")]
     [IsoXmlTag("AddtlAdr")]
-    public IsoMax512Text? AdditionalAddress { get; init; } 
+    public IsoMax512Text? AdditionalAddress { get; init; }
 
     /// <summary>
     /// Additional Contact.
     /// </summary>
     [DisplayName("Additional Contact")]
     [IsoXmlTag("AddtlCtct")]
-    public IsoMax512Text? AdditionalContact { get; init; } 
+    public IsoMax512Text? AdditionalContact { get; init; }
 
     /// <summary>
     /// Additional Data.
@@ -44,44 +42,40 @@ public partial record LocalData11
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public LocalAddress1? Address { get; init; } 
+    public LocalAddress1? Address { get; init; }
 
     /// <summary>
     /// Encoding Format.
     /// </summary>
     [DisplayName("Encoding Format")]
     [IsoXmlTag("NcodgFrmt")]
-    public IsoMax35Text? EncodingFormat { get; init; } 
+    public IsoMax35Text? EncodingFormat { get; init; }
 
     /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public required ISOMax3ALanguageCode Language { get; init; } 
+    public required ISOMax3ALanguageCode Language { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
     /// </summary>
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax210Text? LegalCorporateName { get; init; } 
+    public IsoMax210Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Name And Location.
     /// </summary>
     [DisplayName("Name And Location")]
     [IsoXmlTag("NmAndLctn")]
-    public IsoMax200Text? NameAndLocation { get; init; } 
+    public IsoMax200Text? NameAndLocation { get; init; }
 
     /// <summary>
     /// Short Name.
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax70Text? ShortName { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax70Text? ShortName { get; init; }
 }

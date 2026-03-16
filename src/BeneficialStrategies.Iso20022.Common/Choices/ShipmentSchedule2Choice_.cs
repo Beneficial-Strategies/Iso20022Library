@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ShipmentSchedule2Choice.ShipmentDateRange))]
     [KnownType(typeof(ShipmentSchedule2Choice.ShipmentSubSchedule))]
-    [JsonDerivedType(typeof(ShipmentSchedule2Choice.ShipmentDateRange),nameof(ShipmentSchedule2Choice.ShipmentDateRange))]
-    [JsonDerivedType(typeof(ShipmentSchedule2Choice.ShipmentSubSchedule),nameof(ShipmentSchedule2Choice.ShipmentSubSchedule))]
+    [JsonDerivedType(
+        typeof(ShipmentSchedule2Choice.ShipmentDateRange),
+        nameof(ShipmentSchedule2Choice.ShipmentDateRange)
+    )]
+    [JsonDerivedType(
+        typeof(ShipmentSchedule2Choice.ShipmentSubSchedule),
+        nameof(ShipmentSchedule2Choice.ShipmentSubSchedule)
+    )]
     [IsoId("_z9WAAefHEeKNfc-Rw_dPYg")]
     [DisplayName("Shipment Schedule 2 Choice")]
-    public abstract partial record ShipmentSchedule2Choice_
-    {
-    }
+    public abstract record ShipmentSchedule2Choice_ { }
 }

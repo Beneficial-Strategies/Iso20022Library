@@ -23,7 +23,7 @@ public enum RateStatusCode
     [IsoId("_ZY_tt9p-Ed-ak6NoX_4Aeg_626942051")]
     [Description(@"Rate is actual.")]
     ActualRate,
-    
+
     /// <summary>
     /// Rate is indicative.
     /// Encoded/decoded by serializers as &quot;INDI&quot;.
@@ -32,5 +32,4 @@ public enum RateStatusCode
     [IsoId("_ZY_tuNp-Ed-ak6NoX_4Aeg_642642401")]
     [Description(@"Rate is indicative.")]
     IndicativeRate,
-    
 }

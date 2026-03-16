@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalBankTransactionDomain1Code")]
-[Description(@"Specifies the bank transaction code domain, as published in an external bank transaction code domain code list.")]
+[Description(
+    @"Specifies the bank transaction code domain, as published in an external bank transaction code domain code list."
+)]
 [DerivedFrom(typeof(ExternalBankTransactionDomainCode))]
-public enum ExternalBankTransactionDomain1Code
-{
-}
+public enum ExternalBankTransactionDomain1Code { }

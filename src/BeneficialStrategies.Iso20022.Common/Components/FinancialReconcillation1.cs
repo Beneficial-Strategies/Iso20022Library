@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OeFcWcypEeiqqJhU2tqK8A")]
 [DisplayName("Financial Reconcillation")]
-public partial record FinancialReconcillation1
+public record FinancialReconcillation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reconciliation credit or debit indicator.
     /// </summary>
     [IsoId("_OeGDY8ypEeiqqJhU2tqK8A")]
     [DisplayName("Reconciliation Impact")]
     [IsoXmlTag("RcncltnImpct")]
-    public required ReconciliationImpact1Code ReconciliationImpact { get; init; } 
-    
+    public required ReconciliationImpact1Code ReconciliationImpact { get; init; }
+
     /// <summary>
     /// Contains the reconciliation category.
     /// </summary>
     [IsoId("_OeGDZcypEeiqqJhU2tqK8A")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ReconciliationCategory1Code Type { get; init; } 
-    
+    public required ReconciliationCategory1Code Type { get; init; }
+
     /// <summary>
     /// Other reconciliation category defined at national or private level.
     /// </summary>
@@ -41,9 +39,9 @@ public partial record FinancialReconcillation1
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
     /// Cumulative amount of all financial transactions.
     /// ISO 8583:87 bit 86,87,88 &amp; 89
@@ -53,8 +51,8 @@ public partial record FinancialReconcillation1
     [IsoId("_OeGDZMypEeiqqJhU2tqK8A")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Number of transactions.
     /// ISO 8583:87 bit 74, 75, 76, 77, 78, 79 &amp; 81
@@ -65,9 +63,5 @@ public partial record FinancialReconcillation1
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Count { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoNumber Count { get; init; }
 }

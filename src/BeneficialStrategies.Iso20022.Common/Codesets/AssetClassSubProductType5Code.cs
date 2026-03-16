@@ -23,5 +23,4 @@ public enum AssetClassSubProductType5Code
     [IsoId("_5hvpgQnzEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type grain.")]
     Grain = AssetClassSubProductTypeCode.Grain, // same ordinal as derivation source for type conversions
-    
 }

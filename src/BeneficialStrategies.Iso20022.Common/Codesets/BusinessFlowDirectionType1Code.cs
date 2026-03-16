@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_HUJJQPslEeCIi9ZETLBv8g")]
-[Description(@"Identifies the business flow, in order to determine the role of the parties in the business process. This indicator is very important when there are multiple intermediaries in the exchange of information process.")]
+[Description(
+    @"Identifies the business flow, in order to determine the role of the parties in the business process. This indicator is very important when there are multiple intermediaries in the exchange of information process."
+)]
 [DerivedFrom(typeof(BusinessFlowDirectionTypeCode))]
 public enum BusinessFlowDirectionType1Code
 {
@@ -23,7 +25,7 @@ public enum BusinessFlowDirectionType1Code
     [IsoId("_ShZ7tv8yEeC-e_lDNJKWcg")]
     [Description(@"Assets to be delivered.")]
     AssetstoBeDelivered = BusinessFlowDirectionTypeCode.AssetstoBeDelivered, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Assets to be received.
     /// Encoded/decoded by serializers as &quot;ARCV&quot;.
@@ -32,5 +34,4 @@ public enum BusinessFlowDirectionType1Code
     [IsoId("_SlRvHv8yEeC-e_lDNJKWcg")]
     [Description(@"Assets to be received.")]
     AssetsToBeReceived = BusinessFlowDirectionTypeCode.AssetsToBeReceived, // same ordinal as derivation source for type conversions
-    
 }

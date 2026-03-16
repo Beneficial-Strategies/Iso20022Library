@@ -23,7 +23,7 @@ public enum FreightCharges1Code
     [IsoId("_ar_motp-Ed-ak6NoX_4Aeg_-1412907475")]
     [Description(@"Freight charges are to collect from consignee.")]
     Collect = FreightChargesCode.Collect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Freight charges are paid by shipper.
     /// Encoded/decoded by serializers as &quot;PRPD&quot;.
@@ -32,5 +32,4 @@ public enum FreightCharges1Code
     [IsoId("_ar_mo9p-Ed-ak6NoX_4Aeg_-1412907458")]
     [Description(@"Freight charges are paid by shipper.")]
     Prepaid = FreightChargesCode.Prepaid, // same ordinal as derivation source for type conversions
-    
 }

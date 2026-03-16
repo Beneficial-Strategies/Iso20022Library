@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AssetClassCommodityOtherC102Choice.Deliverable))]
     [KnownType(typeof(AssetClassCommodityOtherC102Choice.NonDeliverable))]
-    [JsonDerivedType(typeof(AssetClassCommodityOtherC102Choice.Deliverable),nameof(AssetClassCommodityOtherC102Choice.Deliverable))]
-    [JsonDerivedType(typeof(AssetClassCommodityOtherC102Choice.NonDeliverable),nameof(AssetClassCommodityOtherC102Choice.NonDeliverable))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityOtherC102Choice.Deliverable),
+        nameof(AssetClassCommodityOtherC102Choice.Deliverable)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityOtherC102Choice.NonDeliverable),
+        nameof(AssetClassCommodityOtherC102Choice.NonDeliverable)
+    )]
     [IsoId("_lTiEcXvyEeanCNPcMT7sSg")]
     [DisplayName("Asset Class Commodity Other C 102 Choice")]
-    public abstract partial record AssetClassCommodityOtherC102Choice_
-    {
-    }
+    public abstract record AssetClassCommodityOtherC102Choice_ { }
 }

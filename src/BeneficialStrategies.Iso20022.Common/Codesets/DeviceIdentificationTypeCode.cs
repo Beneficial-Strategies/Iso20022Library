@@ -23,7 +23,7 @@ public enum DeviceIdentificationTypeCode
     [IsoId("_VFsVMJfMEeuqNYk2TG3bTg")]
     [Description(@"International Mobile Equipment Identity.")]
     IMEI,
-    
+
     /// <summary>
     /// Device serial number.
     /// Encoded/decoded by serializers as &quot;SENU&quot;.
@@ -32,7 +32,7 @@ public enum DeviceIdentificationTypeCode
     [IsoId("_mqqAwJfMEeuqNYk2TG3bTg")]
     [Description(@"Device serial number.")]
     SerialNumber,
-    
+
     /// <summary>
     /// Secure element ID.
     /// Encoded/decoded by serializers as &quot;SEID&quot;.
@@ -41,7 +41,7 @@ public enum DeviceIdentificationTypeCode
     [IsoId("_Fh1JQJfNEeuqNYk2TG3bTg")]
     [Description(@"Secure element ID.")]
     SecureElementIdentification,
-    
+
     /// <summary>
     /// Other nationally assigned code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum DeviceIdentificationTypeCode
     [IsoId("_MVjf0JfNEeuqNYk2TG3bTg")]
     [Description(@"Other nationally assigned code.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other privately assigned code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum DeviceIdentificationTypeCode
     [IsoId("_YTPZ0JfNEeuqNYk2TG3bTg")]
     [Description(@"Other privately assigned code.")]
     OtherPrivate,
-    
 }

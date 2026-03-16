@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat1Choice
 {
     /// <summary>
@@ -13,36 +13,30 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateUsedForPaymentFormat
     /// </summary>
     [IsoId("_UOySpNp-Ed-ak6NoX_4Aeg_-1208255108")]
     [DisplayName("Rate Type And Amount And Rate Status")]
-    public partial record RateTypeAndAmountAndRateStatus : InterestRateUsedForPaymentFormat1Choice_
+    public record RateTypeAndAmountAndRateStatus : InterestRateUsedForPaymentFormat1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Value expressed as a rate type.
         /// </summary>
         [IsoId("_UOpIt9p-Ed-ak6NoX_4Aeg_-853622525")]
         [DisplayName("Rate Type")]
         [IsoXmlTag("RateTp")]
-        public required RateType6Choice_ RateType { get; init; } 
-        
+        public required RateType6Choice_ RateType { get; init; }
+
         /// <summary>
         /// Value expressed as an amount.
         /// </summary>
         [IsoId("_UOpIuNp-Ed-ak6NoX_4Aeg_-853622990")]
         [DisplayName("Amount")]
         [IsoXmlTag("Amt")]
-        public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-        
+        public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
         /// <summary>
         /// Value expressed as a rate status.
         /// </summary>
         [IsoId("_UOpIudp-Ed-ak6NoX_4Aeg_-853622586")]
         [DisplayName("Rate Status")]
         [IsoXmlTag("RateSts")]
-        public RateStatus1Choice_? RateStatus { get; init; } 
-        
-        
-        #nullable disable
-        
+        public RateStatus1Choice_? RateStatus { get; init; }
     }
 }

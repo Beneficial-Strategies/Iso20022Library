@@ -23,16 +23,19 @@ public enum MaturityRedemptionType1Code
     [IsoId("_hbcAp2liEeGaMcKyqKNRfQ_-716525947")]
     [Description(@"Indicates that the type of redemption at maturity is final.")]
     FinalRedemption = MaturityRedemptionTypeCode.FinalRedemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of redemption at maturity is partial without reduction.
     /// Encoded/decoded by serializers as &quot;PRNR&quot;.
     /// </summary>
     [EnumMember(Value = "PRNR")]
     [IsoId("_hbcAqGliEeGaMcKyqKNRfQ_750622816")]
-    [Description(@"Indicates that the type of redemption at maturity is partial without reduction.")]
-    PartialRedemptionWithoutReduction = MaturityRedemptionTypeCode.PartialRedemptionWithoutReduction, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Indicates that the type of redemption at maturity is partial without reduction."
+    )]
+    PartialRedemptionWithoutReduction =
+        MaturityRedemptionTypeCode.PartialRedemptionWithoutReduction, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Indicates that the type of redemption at maturity is partial with reduction.
     /// Encoded/decoded by serializers as &quot;PRWR&quot;.
@@ -41,7 +44,7 @@ public enum MaturityRedemptionType1Code
     [IsoId("_hbcAqWliEeGaMcKyqKNRfQ_641285009")]
     [Description(@"Indicates that the type of redemption at maturity is partial with reduction.")]
     PartialRedemptionWithReduction = MaturityRedemptionTypeCode.PartialRedemptionWithReduction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of redemption at maturity is drawing at random.
     /// Encoded/decoded by serializers as &quot;RNDM&quot;.
@@ -50,7 +53,7 @@ public enum MaturityRedemptionType1Code
     [IsoId("_hbcAqmliEeGaMcKyqKNRfQ_2108433772")]
     [Description(@"Indicates that the type of redemption at maturity is drawing at random.")]
     DrawingAtRandom = MaturityRedemptionTypeCode.DrawingAtRandom, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of redemption at maturity is drawing pro-rata.
     /// Encoded/decoded by serializers as &quot;PRRA&quot;.
@@ -59,7 +62,7 @@ public enum MaturityRedemptionType1Code
     [IsoId("_hbcAq2liEeGaMcKyqKNRfQ_178204958")]
     [Description(@"Indicates that the type of redemption at maturity is drawing pro-rata.")]
     DrawingProRata = MaturityRedemptionTypeCode.DrawingProRata, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of redemption at maturity is call.
     /// Encoded/decoded by serializers as &quot;CALL&quot;.
@@ -68,7 +71,7 @@ public enum MaturityRedemptionType1Code
     [IsoId("_hbcArGliEeGaMcKyqKNRfQ_938970111")]
     [Description(@"Indicates that the type of redemption at maturity is call.")]
     Call = MaturityRedemptionTypeCode.Call, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of redemption at maturity is put.
     /// Encoded/decoded by serializers as &quot;PUUT&quot;.
@@ -77,5 +80,4 @@ public enum MaturityRedemptionType1Code
     [IsoId("_hbcArWliEeGaMcKyqKNRfQ_-1888848422")]
     [Description(@"Indicates that the type of redemption at maturity is put.")]
     Put = MaturityRedemptionTypeCode.Put, // same ordinal as derivation source for type conversions
-    
 }

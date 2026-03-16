@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(GeneralBusinessOrError5Choice.OperationalError))]
     [KnownType(typeof(GeneralBusinessOrError5Choice.BusinessReport))]
-    [JsonDerivedType(typeof(GeneralBusinessOrError5Choice.OperationalError),nameof(GeneralBusinessOrError5Choice.OperationalError))]
-    [JsonDerivedType(typeof(GeneralBusinessOrError5Choice.BusinessReport),nameof(GeneralBusinessOrError5Choice.BusinessReport))]
+    [JsonDerivedType(
+        typeof(GeneralBusinessOrError5Choice.OperationalError),
+        nameof(GeneralBusinessOrError5Choice.OperationalError)
+    )]
+    [JsonDerivedType(
+        typeof(GeneralBusinessOrError5Choice.BusinessReport),
+        nameof(GeneralBusinessOrError5Choice.BusinessReport)
+    )]
     [IsoId("_MHmsgZlgEeeE1Ya-LgRsuQ")]
     [DisplayName("General Business Or Error 5 Choice")]
-    public abstract partial record GeneralBusinessOrError5Choice_
-    {
-    }
+    public abstract record GeneralBusinessOrError5Choice_ { }
 }

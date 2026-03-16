@@ -23,7 +23,7 @@ public enum ElectionType1Code
     [IsoId("_ag-CaNp-Ed-ak6NoX_4Aeg_-1543884834")]
     [Description(@"New election advice.")]
     NewElection = ElectionTypeCode.NewElection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Election advice which is the result of an option change.
     /// Encoded/decoded by serializers as &quot;CHAN&quot;.
@@ -32,5 +32,4 @@ public enum ElectionType1Code
     [IsoId("_ahHzYNp-Ed-ak6NoX_4Aeg_-1543884803")]
     [Description(@"Election advice which is the result of an option change.")]
     OptionChange = ElectionTypeCode.OptionChange, // same ordinal as derivation source for type conversions
-    
 }

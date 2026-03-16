@@ -23,16 +23,18 @@ public enum TradingCapacity5Code
     [IsoId("_Yaall9p-Ed-ak6NoX_4Aeg_524208854")]
     [Description(@"Trading as Principal.")]
     Principal = TradingCapacityCode.Principal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trading as a riskless principal, ie, the order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party.
     /// Encoded/decoded by serializers as &quot;RISP&quot;.
     /// </summary>
     [EnumMember(Value = "RISP")]
     [IsoId("_YaalmNp-Ed-ak6NoX_4Aeg_789078674")]
-    [Description(@"Trading as a riskless principal, ie, the order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party.")]
+    [Description(
+        @"Trading as a riskless principal, ie, the order to buy(sell) has been simultaneously offset by an order to sell (buy) with another party."
+    )]
     RisklessPrincipal = TradingCapacityCode.RisklessPrincipal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trading as Agent on behalf of a customer.
     /// Encoded/decoded by serializers as &quot;AGEN&quot;.
@@ -41,5 +43,4 @@ public enum TradingCapacity5Code
     [IsoId("_YajvgNp-Ed-ak6NoX_4Aeg_1711241984")]
     [Description(@"Trading as Agent on behalf of a customer.")]
     Agent = TradingCapacityCode.Agent, // same ordinal as derivation source for type conversions
-    
 }

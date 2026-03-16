@@ -23,5 +23,4 @@ public enum AssetClassProductType12Code
     [IsoId("_TxFBZ1rLEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type inflation.")]
     Inflation = AssetClassProductTypeCode.Inflation, // same ordinal as derivation source for type conversions
-    
 }

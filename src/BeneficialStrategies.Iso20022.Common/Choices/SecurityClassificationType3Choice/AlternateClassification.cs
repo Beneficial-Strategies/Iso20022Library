@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choic
     /// </summary>
     [IsoId("_SimIQ_35EeimOuZbLgw0bg")]
     [DisplayName("Alternate Classification")]
-    public partial record AlternateClassification : SecurityClassificationType3Choice_
+    public record AlternateClassification : SecurityClassificationType3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Proprietary information issued by the data source scheme issuer.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choic
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINMax30Text)]
-        [StringLength(maximumLength: 30 ,MinimumLength = 1)]
-        public required IsoRestrictedFINMax30Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 30, MinimumLength = 1)]
+        public required IsoRestrictedFINMax30Text Identification { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -34,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityClassificationType3Choic
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINMax8Text)]
-        [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-        public IsoRestrictedFINMax8Text? Issuer { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 8, MinimumLength = 1)]
+        public IsoRestrictedFINMax8Text? Issuer { get; init; }
     }
 }

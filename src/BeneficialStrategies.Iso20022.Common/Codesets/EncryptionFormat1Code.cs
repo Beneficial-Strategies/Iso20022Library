@@ -23,7 +23,7 @@ public enum EncryptionFormat1Code
     [IsoId("_KUksUGi4EeS87LmvcA55sg")]
     [Description(@"Format of a cryptographic key specified by the ANSI X9 TR-31 standard.")]
     TR31 = EncryptionFormatCode.TR31, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Format of a cryptographic key specified by the ANSI X9 TR-34 standard.
     /// Encoded/decoded by serializers as &quot;TR34&quot;.
@@ -32,5 +32,4 @@ public enum EncryptionFormat1Code
     [IsoId("_KfMn8Wi4EeS87LmvcA55sg")]
     [Description(@"Format of a cryptographic key specified by the ANSI X9 TR-34 standard.")]
     TR34 = EncryptionFormatCode.TR34, // same ordinal as derivation source for type conversions
-    
 }

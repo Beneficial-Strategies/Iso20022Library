@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ModificationCancellationAllowed4Choice.Indicator))]
     [KnownType(typeof(ModificationCancellationAllowed4Choice.Proprietary))]
-    [JsonDerivedType(typeof(ModificationCancellationAllowed4Choice.Indicator),nameof(ModificationCancellationAllowed4Choice.Indicator))]
-    [JsonDerivedType(typeof(ModificationCancellationAllowed4Choice.Proprietary),nameof(ModificationCancellationAllowed4Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ModificationCancellationAllowed4Choice.Indicator),
+        nameof(ModificationCancellationAllowed4Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationCancellationAllowed4Choice.Proprietary),
+        nameof(ModificationCancellationAllowed4Choice.Proprietary)
+    )]
     [IsoId("_421HATtFEeWRTLSN0i0tng")]
     [DisplayName("Modification Cancellation Allowed 4 Choice")]
-    public abstract partial record ModificationCancellationAllowed4Choice_
-    {
-    }
+    public abstract record ModificationCancellationAllowed4Choice_ { }
 }

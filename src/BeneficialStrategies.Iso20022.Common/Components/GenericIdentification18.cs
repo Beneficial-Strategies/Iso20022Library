@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WeJGK9p-Ed-ak6NoX_4Aeg_-458352417")]
 [DisplayName("Generic Identification")]
-public partial record GenericIdentification18
+public record GenericIdentification18
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification assigned by an institution.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record GenericIdentification18
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
-    [StringLength(maximumLength: 30 ,MinimumLength = 1)]
-    public required IsoRestrictedFINXMax30Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 30, MinimumLength = 1)]
+    public required IsoRestrictedFINXMax30Text Identification { get; init; }
+
     /// <summary>
     /// Name of the identification scheme.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record GenericIdentification18
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4AlphaNumericText? SchemeName { get; init; }
+
     /// <summary>
     /// Entity that assigns the identification.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record GenericIdentification18
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? Issuer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4AlphaNumericText? Issuer { get; init; }
 }

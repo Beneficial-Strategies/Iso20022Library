@@ -21,27 +21,33 @@ public enum GovernanceIdentificationCode
     /// </summary>
     [EnumMember(Value = "URDG")]
     [IsoId("_meNv4HybEeGWJuGCfvwOsQ")]
-    [Description(@"The version of the ICC Uniform Rules For Demand Guarantees (URDG) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking.")]
+    [Description(
+        @"The version of the ICC Uniform Rules For Demand Guarantees (URDG) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking."
+    )]
     UniformRulesForDemandGuarantees,
-    
+
     /// <summary>
     /// The version of the International Standby Practices (ISP) that is in effect on the date of issue of the undertaking.
     /// Encoded/decoded by serializers as &quot;ISPR&quot;.
     /// </summary>
     [EnumMember(Value = "ISPR")]
     [IsoId("_vWxsAHybEeGWJuGCfvwOsQ")]
-    [Description(@"The version of the International Standby Practices (ISP) that is in effect on the date of issue of the undertaking.")]
+    [Description(
+        @"The version of the International Standby Practices (ISP) that is in effect on the date of issue of the undertaking."
+    )]
     InternationalStandbyPractices,
-    
+
     /// <summary>
     /// The version of the Uniform Customs and Practice for Documentary Credits (UCP) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking.
     /// Encoded/decoded by serializers as &quot;UCPR&quot;.
     /// </summary>
     [EnumMember(Value = "UCPR")]
     [IsoId("_6-c5wHybEeGWJuGCfvwOsQ")]
-    [Description(@"The version of the Uniform Customs and Practice for Documentary Credits (UCP) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking.")]
+    [Description(
+        @"The version of the Uniform Customs and Practice for Documentary Credits (UCP) as published by the International Chamber of Commerce (ICC) that is in effect on the date of issue of the undertaking."
+    )]
     UniformCustomsAndPractice,
-    
+
     /// <summary>
     /// No applicable rule set defined.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -50,5 +56,4 @@ public enum GovernanceIdentificationCode
     [IsoId("_GpQUAHycEeGWJuGCfvwOsQ")]
     [Description(@"No applicable rule set defined.")]
     None,
-    
 }

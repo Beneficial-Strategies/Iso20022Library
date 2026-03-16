@@ -23,7 +23,7 @@ public enum OutputFormat1Code
     [IsoId("_-Q8cgXr5EeSZrs_hiwNOWA")]
     [Description(@"Predefined configured messages, identified by a reference.")]
     MessageReference = OutputFormatCode.MessageReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Text without format attributes.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -32,7 +32,7 @@ public enum OutputFormat1Code
     [IsoId("_-m43UXr5EeSZrs_hiwNOWA")]
     [Description(@"Text without format attributes.")]
     SimpleText = OutputFormatCode.SimpleText, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// XHTML document which includes a subset of the XHTML output tag.
     /// Encoded/decoded by serializers as &quot;HTML&quot;.
@@ -41,5 +41,4 @@ public enum OutputFormat1Code
     [IsoId("_-sGugXr5EeSZrs_hiwNOWA")]
     [Description(@"XHTML document which includes a subset of the XHTML output tag.")]
     XHTML = OutputFormatCode.XHTML, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rzi88ZLTEe6-zvj9Dw-ctg")]
 [DisplayName("System Abort7")]
-public partial record SystemAbort7
+public record SystemAbort7
 {
-    #nullable enable
-
     /// <summary>
     /// Context.
     /// </summary>
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
-    public required CardPaymentContext30 Context { get; init; } 
+    public required CardPaymentContext30 Context { get; init; }
 
     /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment80 Environment { get; init; } 
+    public required CardPaymentEnvironment80 Environment { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -44,9 +42,5 @@ public partial record SystemAbort7
     /// </summary>
     [DisplayName("System Abort")]
     [IsoXmlTag("SysAbrt")]
-    public required AbortData6 SystemAbort { get; init; } 
-
-    
-    #nullable disable
-    
+    public required AbortData6 SystemAbort { get; init; }
 }

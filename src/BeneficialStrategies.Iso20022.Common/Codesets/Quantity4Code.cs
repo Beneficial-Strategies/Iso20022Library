@@ -23,7 +23,7 @@ public enum Quantity4Code
     [IsoId("_mxyqZQCgEeGqP72A5EmwKQ")]
     [Description(@"Quantity is unknown by the sender or has not been established.")]
     UnknownQuantity = QuantityCode.UnknownQuantity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction applies to the entire eligible balance of underlying securities.
     /// Encoded/decoded by serializers as &quot;ANYA&quot;.
@@ -32,5 +32,4 @@ public enum Quantity4Code
     [IsoId("_n0ZW7gCgEeGqP72A5EmwKQ")]
     [Description(@"Instruction applies to the entire eligible balance of underlying securities.")]
     AnyAndAll = QuantityCode.AnyAndAll, // same ordinal as derivation source for type conversions
-    
 }

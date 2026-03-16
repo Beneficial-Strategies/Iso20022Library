@@ -21,9 +21,11 @@ public enum RetailerService3Code
     /// </summary>
     [EnumMember(Value = "FSPP")]
     [IsoId("_qmFC4dwtEeioifFt1dhnJA")]
-    [Description(@"The POI System sends a response to a payment request (Purchase/refund/PWCB/MOTO Payment/...).")]
+    [Description(
+        @"The POI System sends a response to a payment request (Purchase/refund/PWCB/MOTO Payment/...)."
+    )]
     FinancialPaymentResponse = RetailerServiceCode.FinancialPaymentResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a reversal request.
     /// Encoded/decoded by serializers as &quot;FSRP&quot;.
@@ -32,7 +34,7 @@ public enum RetailerService3Code
     [IsoId("_rgA7kdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a reversal request.")]
     FinancialReversalResponse = RetailerServiceCode.FinancialReversalResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a Balance Inquiry request.
     /// Encoded/decoded by serializers as &quot;FSIP&quot;.
@@ -41,7 +43,7 @@ public enum RetailerService3Code
     [IsoId("_sPsFAdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a Balance Inquiry request.")]
     FinancialBalanceInquiryResponse = RetailerServiceCode.FinancialBalanceInquiryResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a batch processing request.
     /// Encoded/decoded by serializers as &quot;FSBP&quot;.
@@ -50,7 +52,7 @@ public enum RetailerService3Code
     [IsoId("_s3K7wdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a batch processing request.")]
     FinancialBatchResponse = RetailerServiceCode.FinancialBatchResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a loyalty processing request.
     /// Encoded/decoded by serializers as &quot;FSLP&quot;.
@@ -59,7 +61,7 @@ public enum RetailerService3Code
     [IsoId("_tcgdcdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a loyalty processing request.")]
     FinancialLoyaltyResponse = RetailerServiceCode.FinancialLoyaltyResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a stored value card or account request.
     /// Encoded/decoded by serializers as &quot;FSVP&quot;.
@@ -68,7 +70,7 @@ public enum RetailerService3Code
     [IsoId("_uLJFEdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a stored value card or account request.")]
     FinancialStoredValueResponse = RetailerServiceCode.FinancialStoredValueResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response after enabling or not some service.
     /// Encoded/decoded by serializers as &quot;FSEP&quot;.
@@ -77,7 +79,7 @@ public enum RetailerService3Code
     [IsoId("_uvJKAdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response after enabling or not some service.")]
     FinancialEnableServiceResponse = RetailerServiceCode.FinancialEnableServiceResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a card data acquisition request.
     /// Encoded/decoded by serializers as &quot;FSAP&quot;.
@@ -86,7 +88,7 @@ public enum RetailerService3Code
     [IsoId("_vRGnkdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a card data acquisition request.")]
     FinancialCardAcquisitionResponse = RetailerServiceCode.FinancialCardAcquisitionResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The POI System sends a response to a reconciliation request.
     /// Encoded/decoded by serializers as &quot;FSCP&quot;.
@@ -95,5 +97,4 @@ public enum RetailerService3Code
     [IsoId("_wGk3AdwtEeioifFt1dhnJA")]
     [Description(@"The POI System sends a response to a reconciliation request.")]
     FinancialReconciliationResponse = RetailerServiceCode.FinancialReconciliationResponse, // same ordinal as derivation source for type conversions
-    
 }

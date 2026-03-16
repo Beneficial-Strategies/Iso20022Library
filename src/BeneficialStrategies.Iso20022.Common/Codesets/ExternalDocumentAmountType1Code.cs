@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Shv5wDH1Ee6BxvG014AZzQ")]
-[Description(@"Specifies the nature, or use, of the amount, as published in an external document amount type code set.")]
+[Description(
+    @"Specifies the nature, or use, of the amount, as published in an external document amount type code set."
+)]
 [DerivedFrom(typeof(ExternalDocumentAmountTypeCode))]
 public enum ExternalDocumentAmountType1Code
 {
@@ -22,7 +24,9 @@ public enum ExternalDocumentAmountType1Code
     /// </summary>
     [EnumMember(Value = "APDS")]
     [IsoId("")]
-    [Description(@"Addition discount based on third-party agreed business promotional activity, for example, in-store, seasonal, promotional.")]
+    [Description(
+        @"Addition discount based on third-party agreed business promotional activity, for example, in-store, seasonal, promotional."
+    )]
     AdditionalPromotionalDiscount = ExternalDocumentAmountTypeCode.AdditionalPromotionalDiscount, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -249,5 +253,4 @@ public enum ExternalDocumentAmountType1Code
     [IsoId("")]
     [Description(@"Amount is the total.")]
     TotalPayment = ExternalDocumentAmountTypeCode.TotalPayment, // same ordinal as derivation source for type conversions
-
 }

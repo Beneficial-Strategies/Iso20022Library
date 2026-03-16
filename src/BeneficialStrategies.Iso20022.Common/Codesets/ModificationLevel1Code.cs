@@ -23,7 +23,7 @@ public enum ModificationLevel1Code
     [IsoId("_YvcnEbSZEeeTnocDRx5mhw")]
     [Description(@"Modification applies to a position.")]
     Position = ModificationLevelCode.Position, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modification applies to a transaction.
     /// Encoded/decoded by serializers as &quot;TCTN&quot;.
@@ -32,5 +32,4 @@ public enum ModificationLevel1Code
     [IsoId("_Y83YAbSZEeeTnocDRx5mhw")]
     [Description(@"Modification applies to a transaction.")]
     Transaction = ModificationLevelCode.Transaction, // same ordinal as derivation source for type conversions
-    
 }

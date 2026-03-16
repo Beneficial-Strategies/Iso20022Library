@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZR7QMS9BEeu125Ip9zFcsQ")]
 [DisplayName("Payment Receipt")]
-public partial record PaymentReceipt3
+public record PaymentReceipt3
 {
-    #nullable enable
-    
     /// <summary>
     /// Qualification of the document to print to the Cashier or the Customer.
     /// </summary>
     [IsoId("_Zf6o4S9BEeu125Ip9zFcsQ")]
     [DisplayName("Document Qualifier")]
     [IsoXmlTag("DocQlfr")]
-    public required DocumentType7Code DocumentQualifier { get; init; } 
-    
+    public required DocumentType7Code DocumentQualifier { get; init; }
+
     /// <summary>
     /// Flag is the print is integrated to other prints.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record PaymentReceipt3
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; }
+
     /// <summary>
     /// Flag to indicate that the cardholder payment receipt requires a signature by the customer.
     /// </summary>
@@ -42,17 +40,13 @@ public partial record PaymentReceipt3
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; }
+
     /// <summary>
     /// Document to print.
     /// </summary>
     [IsoId("_Zf6o5y9BEeu125Ip9zFcsQ")]
     [DisplayName("Output Content")]
     [IsoXmlTag("OutptCntt")]
-    public required ActionMessage8 OutputContent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ActionMessage8 OutputContent { get; init; }
 }

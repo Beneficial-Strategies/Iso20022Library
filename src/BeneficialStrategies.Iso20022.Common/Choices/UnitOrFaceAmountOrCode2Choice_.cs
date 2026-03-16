@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UnitOrFaceAmountOrCode2Choice.Unit))]
     [KnownType(typeof(UnitOrFaceAmountOrCode2Choice.FaceAmount))]
     [KnownType(typeof(UnitOrFaceAmountOrCode2Choice.Code))]
-    [JsonDerivedType(typeof(UnitOrFaceAmountOrCode2Choice.Unit),nameof(UnitOrFaceAmountOrCode2Choice.Unit))]
-    [JsonDerivedType(typeof(UnitOrFaceAmountOrCode2Choice.FaceAmount),nameof(UnitOrFaceAmountOrCode2Choice.FaceAmount))]
-    [JsonDerivedType(typeof(UnitOrFaceAmountOrCode2Choice.Code),nameof(UnitOrFaceAmountOrCode2Choice.Code))]
+    [JsonDerivedType(
+        typeof(UnitOrFaceAmountOrCode2Choice.Unit),
+        nameof(UnitOrFaceAmountOrCode2Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(UnitOrFaceAmountOrCode2Choice.FaceAmount),
+        nameof(UnitOrFaceAmountOrCode2Choice.FaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(UnitOrFaceAmountOrCode2Choice.Code),
+        nameof(UnitOrFaceAmountOrCode2Choice.Code)
+    )]
     [IsoId("_e0BT0bqJEemCAOifqHrKJw")]
     [DisplayName("Unit Or Face Amount Or Code 2 Choice")]
-    public abstract partial record UnitOrFaceAmountOrCode2Choice_
-    {
-    }
+    public abstract record UnitOrFaceAmountOrCode2Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum AssignmentMethod1Code
     [IsoId("_bfaAktp-Ed-ak6NoX_4Aeg_-1560115838")]
     [Description(@"Assignment was conducted randomly.")]
     Random = AssignmentMethodCode.Random, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Assignment was conducted on a prorata basis.
     /// Encoded/decoded by serializers as &quot;PROR&quot;.
@@ -32,5 +32,4 @@ public enum AssignmentMethod1Code
     [IsoId("_bfaAk9p-Ed-ak6NoX_4Aeg_-1560115837")]
     [Description(@"Assignment was conducted on a prorata basis.")]
     Prorata = AssignmentMethodCode.Prorata, // same ordinal as derivation source for type conversions
-    
 }

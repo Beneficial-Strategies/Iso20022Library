@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PoliticalExposureType2Choice.Code))]
     [KnownType(typeof(PoliticalExposureType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(PoliticalExposureType2Choice.Code),nameof(PoliticalExposureType2Choice.Code))]
-    [JsonDerivedType(typeof(PoliticalExposureType2Choice.Proprietary),nameof(PoliticalExposureType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PoliticalExposureType2Choice.Code),
+        nameof(PoliticalExposureType2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(PoliticalExposureType2Choice.Proprietary),
+        nameof(PoliticalExposureType2Choice.Proprietary)
+    )]
     [IsoId("_wSAccZUgEemC09f0MxYkRg")]
     [DisplayName("Political Exposure Type 2 Choice")]
-    public abstract partial record PoliticalExposureType2Choice_
-    {
-    }
+    public abstract record PoliticalExposureType2Choice_ { }
 }

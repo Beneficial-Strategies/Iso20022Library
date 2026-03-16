@@ -23,7 +23,7 @@ public enum InterestRateCode
     [IsoId("_QDf_gduSEei2qvU6FBLZYA")]
     [Description(@"Gross interest rate of the instalment")]
     GrossRate,
-    
+
     /// <summary>
     /// Net interest rate of the instalment
     /// Encoded/decoded by serializers as &quot;NTRT&quot;.
@@ -32,7 +32,7 @@ public enum InterestRateCode
     [IsoId("_QDf_gNuSEei2qvU6FBLZYA")]
     [Description(@"Net interest rate of the instalment")]
     NetRate,
-    
+
     /// <summary>
     /// Other interest rate of the instalment
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum InterestRateCode
     [IsoId("_QDf_gtuSEei2qvU6FBLZYA")]
     [Description(@"Other interest rate of the instalment")]
     OtherNational,
-    
+
     /// <summary>
     /// Other interest rate of the instalment
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum InterestRateCode
     [IsoId("_QDf_hduSEei2qvU6FBLZYA")]
     [Description(@"Other interest rate of the instalment")]
     OtherPrivate,
-    
 }

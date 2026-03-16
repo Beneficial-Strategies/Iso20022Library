@@ -16,14 +16,14 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 public enum Endpoint1Code
 {
     /// <summary>
-    /// Destination	
+    /// Destination
     /// Encoded/decoded by serializers as &quot;DEST&quot;.
     /// </summary>
     [EnumMember(Value = "DEST")]
     [IsoId("_lMjYAYNoEeuHqfO1LgkE9Q")]
     [Description(@"Destination	")]
     Destination = EndpointCode.Destination, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Origination
     /// Encoded/decoded by serializers as &quot;ORIG&quot;.
@@ -32,7 +32,7 @@ public enum Endpoint1Code
     [IsoId("_lVDzwYNoEeuHqfO1LgkE9Q")]
     [Description(@"Origination")]
     Origination = EndpointCode.Origination, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type specified at a private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum Endpoint1Code
     [IsoId("_m5vSkYNoEeuHqfO1LgkE9Q")]
     [Description(@"Type specified at a private level.")]
     OtherPrivate = EndpointCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type specified at the national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,5 +50,4 @@ public enum Endpoint1Code
     [IsoId("_nJ4nYoNoEeuHqfO1LgkE9Q")]
     [Description(@"Type specified at the national level.")]
     OtherNational = EndpointCode.OtherNational, // same ordinal as derivation source for type conversions
-    
 }

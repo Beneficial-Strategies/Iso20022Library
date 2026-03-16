@@ -23,7 +23,7 @@ public enum Quantity3Code
     [IsoId("_q5bENmtdEeCY4-KZ9JEyUQ_-1074232711")]
     [Description(@"Instruction applies to the entire eligible balance of underlying securities.")]
     AllSecurities = QuantityCode.AllSecurities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity is unknown by the sender or has not been established.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,5 +32,4 @@ public enum Quantity3Code
     [IsoId("_q5kOIGtdEeCY4-KZ9JEyUQ_-1913030463")]
     [Description(@"Quantity is unknown by the sender or has not been established.")]
     UnknownQuantity = QuantityCode.UnknownQuantity, // same ordinal as derivation source for type conversions
-    
 }

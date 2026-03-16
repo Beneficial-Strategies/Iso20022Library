@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NettingIdentification1Choice.TradeParty))]
     [KnownType(typeof(NettingIdentification1Choice.NettingGroupIdentification))]
-    [JsonDerivedType(typeof(NettingIdentification1Choice.TradeParty),nameof(NettingIdentification1Choice.TradeParty))]
-    [JsonDerivedType(typeof(NettingIdentification1Choice.NettingGroupIdentification),nameof(NettingIdentification1Choice.NettingGroupIdentification))]
+    [JsonDerivedType(
+        typeof(NettingIdentification1Choice.TradeParty),
+        nameof(NettingIdentification1Choice.TradeParty)
+    )]
+    [JsonDerivedType(
+        typeof(NettingIdentification1Choice.NettingGroupIdentification),
+        nameof(NettingIdentification1Choice.NettingGroupIdentification)
+    )]
     [IsoId("_mzHC8JUvEeaYkf5FCqYMeA")]
     [DisplayName("Netting Identification 1 Choice")]
-    public abstract partial record NettingIdentification1Choice_
-    {
-    }
+    public abstract record NettingIdentification1Choice_ { }
 }

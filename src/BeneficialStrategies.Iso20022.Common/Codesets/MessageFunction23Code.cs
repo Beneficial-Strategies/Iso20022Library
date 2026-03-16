@@ -17,14 +17,16 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 public enum MessageFunction23Code
 {
     /// <summary>
-    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. 
+    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response.
     /// Encoded/decoded by serializers as &quot;ADVC&quot;.
     /// </summary>
     [EnumMember(Value = "ADVC")]
     [IsoId("_W52kcemuEemNVKPwszFC-A")]
-    [Description(@"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. ")]
+    [Description(
+        @"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. "
+    )]
     Advice = MessageFunctionCode.Advice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message function is a request.
     /// Encoded/decoded by serializers as &quot;REQU&quot;.
@@ -33,5 +35,4 @@ public enum MessageFunction23Code
     [IsoId("_YVDXIemuEemNVKPwszFC-A")]
     [Description(@"Message function is a request.")]
     Request = MessageFunctionCode.Request, // same ordinal as derivation source for type conversions
-    
 }

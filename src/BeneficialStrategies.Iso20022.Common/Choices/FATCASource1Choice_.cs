@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FATCASource1Choice.Code))]
     [KnownType(typeof(FATCASource1Choice.Proprietary))]
-    [JsonDerivedType(typeof(FATCASource1Choice.Code),nameof(FATCASource1Choice.Code))]
-    [JsonDerivedType(typeof(FATCASource1Choice.Proprietary),nameof(FATCASource1Choice.Proprietary))]
+    [JsonDerivedType(typeof(FATCASource1Choice.Code), nameof(FATCASource1Choice.Code))]
+    [JsonDerivedType(
+        typeof(FATCASource1Choice.Proprietary),
+        nameof(FATCASource1Choice.Proprietary)
+    )]
     [IsoId("_jR2x4QjUEeS5F6qHcKOrew")]
     [DisplayName("FATCA Source 1 Choice")]
-    public abstract partial record FATCASource1Choice_
-    {
-    }
+    public abstract record FATCASource1Choice_ { }
 }

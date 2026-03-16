@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_qt8lnWXOEem9Y55YJ70L8g")]
-[Description(@"Terminal category code of the place where the merchant actually performed the transaction.")]
+[Description(
+    @"Terminal category code of the place where the merchant actually performed the transaction."
+)]
 [Derivations(typeof(TerminalIntegrationCategory1Code))]
 public enum TerminalIntegrationCategoryCode
 {
@@ -23,7 +25,7 @@ public enum TerminalIntegrationCategoryCode
     [IsoId("_qt9Mq2XOEem9Y55YJ70L8g")]
     [Description(@"Multiple terminals linked to a unique sale terminal.")]
     MultiplePOITerminal,
-    
+
     /// <summary>
     /// Terminal serving multiple sale terminals.
     /// Encoded/decoded by serializers as &quot;MSLE&quot;.
@@ -32,7 +34,7 @@ public enum TerminalIntegrationCategoryCode
     [IsoId("_qt9Mp2XOEem9Y55YJ70L8g")]
     [Description(@"Terminal serving multiple sale terminals.")]
     MultipleSaleTerminal,
-    
+
     /// <summary>
     /// Terminal linked to a unique sale terminal.
     /// Encoded/decoded by serializers as &quot;SSLE&quot;.
@@ -41,5 +43,4 @@ public enum TerminalIntegrationCategoryCode
     [IsoId("_qt9MoWXOEem9Y55YJ70L8g")]
     [Description(@"Terminal linked to a unique sale terminal.")]
     SingleSaleTerminal,
-    
 }

@@ -23,7 +23,7 @@ public enum ProductTypeCode
     [IsoId("_ZWUNJNp-Ed-ak6NoX_4Aeg_-2015814182")]
     [Description(@"Identifies categories of instruments issued by federal agencies.")]
     Agency,
-    
+
     /// <summary>
     /// Identifies categories of instruments that are commodities.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -32,7 +32,7 @@ public enum ProductTypeCode
     [IsoId("_ZWUNJdp-Ed-ak6NoX_4Aeg_-2001964235")]
     [Description(@"Identifies categories of instruments that are commodities.")]
     Commodity,
-    
+
     /// <summary>
     /// Identifies categories of instruments issued by corporates.
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
@@ -41,7 +41,7 @@ public enum ProductTypeCode
     [IsoId("_ZWUNJtp-Ed-ak6NoX_4Aeg_-1988111298")]
     [Description(@"Identifies categories of instruments issued by corporates.")]
     Corporate,
-    
+
     /// <summary>
     /// Identifies categories of currency instruments.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -50,7 +50,7 @@ public enum ProductTypeCode
     [IsoId("_ZWUNJ9p-Ed-ak6NoX_4Aeg_-1983490715")]
     [Description(@"Identifies categories of currency instruments.")]
     Currency,
-    
+
     /// <summary>
     /// Identifies the nature or type of an equity.
     /// Encoded/decoded by serializers as &quot;EQUI&quot;.
@@ -59,7 +59,7 @@ public enum ProductTypeCode
     [IsoId("_ZWUNKNp-Ed-ak6NoX_4Aeg_-1969639916")]
     [Description(@"Identifies the nature or type of an equity.")]
     Equity,
-    
+
     /// <summary>
     /// Identifies categories of obligations issued by a government.
     /// Encoded/decoded by serializers as &quot;GOVE&quot;.
@@ -68,7 +68,7 @@ public enum ProductTypeCode
     [IsoId("_ZWUNKdp-Ed-ak6NoX_4Aeg_-1958557726")]
     [Description(@"Identifies categories of obligations issued by a government.")]
     Government,
-    
+
     /// <summary>
     /// Identifies categories of loans.
     /// Encoded/decoded by serializers as &quot;LOAN&quot;.
@@ -77,16 +77,18 @@ public enum ProductTypeCode
     [IsoId("_ZWd-INp-Ed-ak6NoX_4Aeg_-1941008876")]
     [Description(@"Identifies categories of loans.")]
     Loan,
-    
+
     /// <summary>
     /// Identifies categories of short-term debt securities maturing in less than one year.
     /// Encoded/decoded by serializers as &quot;MOMA&quot;.
     /// </summary>
     [EnumMember(Value = "MOMA")]
     [IsoId("_ZWd-Idp-Ed-ak6NoX_4Aeg_-1929929598")]
-    [Description(@"Identifies categories of short-term debt securities maturing in less than one year.")]
+    [Description(
+        @"Identifies categories of short-term debt securities maturing in less than one year."
+    )]
     MoneyMarket,
-    
+
     /// <summary>
     /// Identifies categories of mortgage securities.
     /// Encoded/decoded by serializers as &quot;MORT&quot;.
@@ -95,7 +97,7 @@ public enum ProductTypeCode
     [IsoId("_ZWd-Itp-Ed-ak6NoX_4Aeg_-1916075308")]
     [Description(@"Identifies categories of mortgage securities.")]
     Mortgage,
-    
+
     /// <summary>
     /// Identifies categories of securities issued by states and local governments.
     /// Encoded/decoded by serializers as &quot;MUNI&quot;.
@@ -104,7 +106,7 @@ public enum ProductTypeCode
     [IsoId("_ZWd-I9p-Ed-ak6NoX_4Aeg_-1910534166")]
     [Description(@"Identifies categories of securities issued by states and local governments.")]
     Municipal,
-    
+
     /// <summary>
     /// Identifies categories of financing instruments.
     /// Encoded/decoded by serializers as &quot;FINA&quot;.
@@ -113,7 +115,7 @@ public enum ProductTypeCode
     [IsoId("_ZWd-JNp-Ed-ak6NoX_4Aeg_-1883751161")]
     [Description(@"Identifies categories of financing instruments.")]
     Financing,
-    
+
     /// <summary>
     /// The asset type is property.
     /// Encoded/decoded by serializers as &quot;PROP&quot;.
@@ -122,7 +124,7 @@ public enum ProductTypeCode
     [IsoId("_bfQPltp-Ed-ak6NoX_4Aeg_-1282805152")]
     [Description(@"The asset type is property.")]
     Property,
-    
+
     /// <summary>
     /// The asset type is a swap.
     /// Encoded/decoded by serializers as &quot;SWAP&quot;.
@@ -131,7 +133,7 @@ public enum ProductTypeCode
     [IsoId("_bfQPmNp-Ed-ak6NoX_4Aeg_-1280032626")]
     [Description(@"The asset type is a swap.")]
     Swap,
-    
+
     /// <summary>
     /// The asset type is other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -140,5 +142,4 @@ public enum ProductTypeCode
     [IsoId("_bfaAkNp-Ed-ak6NoX_4Aeg_-1279108826")]
     [Description(@"The asset type is other.")]
     Other,
-    
 }

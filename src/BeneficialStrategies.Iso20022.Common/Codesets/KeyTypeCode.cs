@@ -23,7 +23,7 @@ public enum KeyTypeCode
     [IsoId("_uPcTDf8bEeic54G0fOJNMg")]
     [Description(@"PIN translation key applicable to the issuer")]
     PINTranslationKeyIssuer,
-    
+
     /// <summary>
     /// PIN translation key applicable to the acquirer
     /// Encoded/decoded by serializers as &quot;PTKA&quot;.
@@ -32,7 +32,7 @@ public enum KeyTypeCode
     [IsoId("_uPcTCv8bEeic54G0fOJNMg")]
     [Description(@"PIN translation key applicable to the acquirer")]
     PINTranslationKeyAcquirer,
-    
+
     /// <summary>
     /// Other national
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum KeyTypeCode
     [IsoId("_uPcTCf8bEeic54G0fOJNMg")]
     [Description(@"Other national")]
     OtherNational,
-    
+
     /// <summary>
     /// Other private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum KeyTypeCode
     [IsoId("_uPcTDP8bEeic54G0fOJNMg")]
     [Description(@"Other private")]
     OtherPrivate,
-    
 }

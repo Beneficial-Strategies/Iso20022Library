@@ -23,5 +23,4 @@ public enum AccountStatusUpdateRequestReasonCode
     [IsoId("_BHVYEHi9EeaRm5xIK6nGuQ")]
     [Description(@"Previous account closure instruction was sent in error.")]
     AccountClosureInstructionError,
-    
 }

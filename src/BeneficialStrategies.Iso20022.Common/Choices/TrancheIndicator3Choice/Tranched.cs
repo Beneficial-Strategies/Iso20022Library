@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
     /// </summary>
     [IsoId("_nCVaUQ06EeuJ1fOEB4bQXA")]
     [DisplayName("Tranched")]
-    public partial record Tranched : TrancheIndicator3Choice_
+    public record Tranched : TrancheIndicator3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Indicates the lower point at which the level of losses in the underlying portfolio reduces the notional of the tranche.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
         [DisplayName("Attachment Point")]
         [IsoXmlTag("AttchmntPt")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? AttachmentPoint { get; init; } 
-        
+        public IsoBaseOneRate? AttachmentPoint { get; init; }
+
         /// <summary>
         /// Indicates the point beyond which the losses in the underlying portfolio no longer reduce the notional of the tranche.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator3Choice
         [DisplayName("Detachment Point")]
         [IsoXmlTag("DtchmntPt")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? DetachmentPoint { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoBaseOneRate? DetachmentPoint { get; init; }
     }
 }

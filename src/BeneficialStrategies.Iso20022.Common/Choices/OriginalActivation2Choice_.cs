@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OriginalActivation2Choice.OriginalDebtorIdentification))]
     [KnownType(typeof(OriginalActivation2Choice.OriginalActivationData))]
-    [JsonDerivedType(typeof(OriginalActivation2Choice.OriginalDebtorIdentification),nameof(OriginalActivation2Choice.OriginalDebtorIdentification))]
-    [JsonDerivedType(typeof(OriginalActivation2Choice.OriginalActivationData),nameof(OriginalActivation2Choice.OriginalActivationData))]
+    [JsonDerivedType(
+        typeof(OriginalActivation2Choice.OriginalDebtorIdentification),
+        nameof(OriginalActivation2Choice.OriginalDebtorIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(OriginalActivation2Choice.OriginalActivationData),
+        nameof(OriginalActivation2Choice.OriginalActivationData)
+    )]
     [IsoId("_UNr4PeH7Eeqbls7Gk4-ckA")]
     [DisplayName("Original Activation 2 Choice")]
-    public abstract partial record OriginalActivation2Choice_
-    {
-    }
+    public abstract record OriginalActivation2Choice_ { }
 }

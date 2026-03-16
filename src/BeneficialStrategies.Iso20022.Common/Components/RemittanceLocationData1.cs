@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-LRmB24-EeiU9cctagi5ow")]
 [DisplayName("Remittance Location Data")]
-public partial record RemittanceLocationData1
+public record RemittanceLocationData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Method used to deliver the remittance advice information.
     /// </summary>
     [IsoId("_-VaZcW4-EeiU9cctagi5ow")]
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
-    public required RemittanceLocationMethod2Code Method { get; init; } 
-    
+    public required RemittanceLocationMethod2Code Method { get; init; }
+
     /// <summary>
     /// Electronic address to which an agent is to send the remittance information.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record RemittanceLocationData1
     [DisplayName("Electronic Address")]
     [IsoXmlTag("ElctrncAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    public IsoMax2048Text? ElectronicAddress { get; init; } 
-    
+    [StringLength(maximumLength: 2048, MinimumLength = 1)]
+    public IsoMax2048Text? ElectronicAddress { get; init; }
+
     /// <summary>
     /// Postal address to which an agent is to send the remittance information.
     /// </summary>
     [IsoId("_-VaZdW4-EeiU9cctagi5ow")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
-    public NameAndAddress16? PostalAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NameAndAddress16? PostalAddress { get; init; }
 }

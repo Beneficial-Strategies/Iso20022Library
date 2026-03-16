@@ -21,16 +21,19 @@ public enum PreConfirmation1Code
     /// </summary>
     [EnumMember(Value = "PRCA")]
     [IsoId("_zdcnYA93EeGeV5vP7Mvdig_1988763861")]
-    [Description(@"Pre-confirmation of the movement of the cash, pending the movement of securities.")]
+    [Description(
+        @"Pre-confirmation of the movement of the cash, pending the movement of securities."
+    )]
     PreConfirmCash = PreConfirmationCode.PreConfirmCash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pre-confirmation of the movement of the securities, pending the movement of cash.
     /// Encoded/decoded by serializers as &quot;PRSE&quot;.
     /// </summary>
     [EnumMember(Value = "PRSE")]
     [IsoId("_zdcnYQ93EeGeV5vP7Mvdig_-1228183097")]
-    [Description(@"Pre-confirmation of the movement of the securities, pending the movement of cash.")]
+    [Description(
+        @"Pre-confirmation of the movement of the securities, pending the movement of cash."
+    )]
     PreConfirmSecurities = PreConfirmationCode.PreConfirmSecurities, // same ordinal as derivation source for type conversions
-    
 }

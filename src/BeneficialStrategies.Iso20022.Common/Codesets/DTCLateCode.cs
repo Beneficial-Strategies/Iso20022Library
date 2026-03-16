@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1puekzL3EeKU9IrkkToqcw_1613949680")]
-[Description(@"Specifies late announcements: wither the announcement was made before or after position capture.")]
+[Description(
+    @"Specifies late announcements: wither the announcement was made before or after position capture."
+)]
 [Derivations(typeof(DTCLate1Code))]
 public enum DTCLateCode
 {
@@ -21,16 +23,19 @@ public enum DTCLateCode
     /// </summary>
     [EnumMember(Value = "LATE")]
     [IsoId("_1puelDL3EeKU9IrkkToqcw_-879956095")]
-    [Description(@"Informs both internal and external users that the announcement was added after the position capture date.")]
+    [Description(
+        @"Informs both internal and external users that the announcement was added after the position capture date."
+    )]
     LateAnnouncement,
-    
+
     /// <summary>
     /// Informs both internal and external users that the announcement is late, however, it has not gone through the position capture stage.
     /// Encoded/decoded by serializers as &quot;LAAS&quot;.
     /// </summary>
     [EnumMember(Value = "LAAS")]
     [IsoId("_1puelTL3EeKU9IrkkToqcw_-742748975")]
-    [Description(@"Informs both internal and external users that the announcement is late, however, it has not gone through the position capture stage.")]
+    [Description(
+        @"Informs both internal and external users that the announcement is late, however, it has not gone through the position capture stage."
+    )]
     LateAnnouncementPending,
-    
 }

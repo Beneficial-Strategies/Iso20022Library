@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yo3FgO3pEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Client Type")]
-public partial record SettlementInternaliserClientType1
+public record SettlementInternaliserClientType1
 {
-    #nullable enable
-    
     /// <summary>
     /// Professional clients as defined in the relevant legislation.
     /// </summary>
     [IsoId("_dCfYMO3pEeaWjpoyrnG6Rw")]
     [DisplayName("Professional")]
     [IsoXmlTag("Prfssnl")]
-    public required InternalisationData1 Professional { get; init; } 
-    
+    public required InternalisationData1 Professional { get; init; }
+
     /// <summary>
     /// Clients other than professional clients.
     /// </summary>
     [IsoId("_eG7QsO3pEeaWjpoyrnG6Rw")]
     [DisplayName("Retail")]
     [IsoXmlTag("Rtl")]
-    public required InternalisationData1 Retail { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required InternalisationData1 Retail { get; init; }
 }

@@ -23,7 +23,7 @@ public enum UndertakingName1Code
     [IsoId("_NKQpRnykEeGWJuGCfvwOsQ")]
     [Description(@"Undertaking is a standby letter of credit.")]
     StandbyLetterOfCredit = UndertakingNameCode.StandbyLetterOfCredit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undertaking is a demand guarantee.
     /// Encoded/decoded by serializers as &quot;DGAR&quot;.
@@ -32,5 +32,4 @@ public enum UndertakingName1Code
     [IsoId("_qkAn4doiEeGA-6DT389Lyw")]
     [Description(@"Undertaking is a demand guarantee.")]
     DemandGuarantee = UndertakingNameCode.DemandGuarantee, // same ordinal as derivation source for type conversions
-    
 }

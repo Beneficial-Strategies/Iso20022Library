@@ -1,13 +1,13 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.camt;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
 using BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice;
 using BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice;
-using BeneficialStrategies.Iso20022.camt;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -26,63 +26,73 @@ public class Camt054ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader81 CreateGroupHeader(string msgId = "BNPAFRPP/240315/CAM054/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(5),
-        MessageRecipient = Iso20022TestData.Creditor,
-    };
-
-    public static CashAccount41 CreateNotificationAccount() => new()
-    {
-        Identification = new IBAN { Value = "FR7630006000011234567890189" },
-        Currency = Iso20022TestData.Currency,
-        Name = "GlobalSupply S.A.S. Current Account",
-        Owner = Iso20022TestData.Creditor,
-        Servicer = Iso20022TestData.CreditorAgent,
-    };
-
-    public static ReportEntry13 CreateIncomingCreditEntry() => new()
-    {
-        Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = Iso20022TestData.Currency, Amount = Iso20022TestData.Amount },
-        CreditDebitIndicator = CreditDebitCode.Credit,
-        Status = new Code { Value = ExternalEntryStatus1Code.Booked },
-        BookingDate = new Date { Value = Iso20022TestData.SettlementDate },
-        ValueDate = new Date { Value = Iso20022TestData.SettlementDate },
-        AccountServicerReference = "BNPAFRPP20240315CR001234",
-        BankTransactionCode = new BankTransactionCodeStructure4
+    public static GroupHeader81 CreateGroupHeader(string msgId = "BNPAFRPP/240315/CAM054/00001") =>
+        new()
         {
-            Domain = new BankTransactionCodeStructure5
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(5),
+            MessageRecipient = Iso20022TestData.Creditor,
+        };
+
+    public static CashAccount41 CreateNotificationAccount() =>
+        new()
+        {
+            Identification = new IBAN { Value = "FR7630006000011234567890189" },
+            Currency = Iso20022TestData.Currency,
+            Name = "GlobalSupply S.A.S. Current Account",
+            Owner = Iso20022TestData.Creditor,
+            Servicer = Iso20022TestData.CreditorAgent,
+        };
+
+    public static ReportEntry13 CreateIncomingCreditEntry() =>
+        new()
+        {
+            Amount = new ActiveOrHistoricCurrencyAndAmount
             {
-                Code = "PMNT",
-                Family = new BankTransactionCodeStructure6
+                Currency = Iso20022TestData.Currency,
+                Amount = Iso20022TestData.Amount
+            },
+            CreditDebitIndicator = CreditDebitCode.Credit,
+            Status = new Code { Value = ExternalEntryStatus1Code.Booked },
+            BookingDate = new Date { Value = Iso20022TestData.SettlementDate },
+            ValueDate = new Date { Value = Iso20022TestData.SettlementDate },
+            AccountServicerReference = "BNPAFRPP20240315CR001234",
+            BankTransactionCode = new BankTransactionCodeStructure4
+            {
+                Domain = new BankTransactionCodeStructure5
                 {
-                    Code = "RCDT",          // Received Credit Transfer
-                    SubFamilyCode = "ESCT", // SEPA Credit Transfer
+                    Code = "PMNT",
+                    Family = new BankTransactionCodeStructure6
+                    {
+                        Code = "RCDT", // Received Credit Transfer
+                        SubFamilyCode = "ESCT", // SEPA Credit Transfer
+                    },
                 },
             },
-        },
-        EntryDetails = new EntryDetails12
-        {
-            TransactionDetails = new EntryTransaction13
+            EntryDetails = new EntryDetails12
             {
-                References = new TransactionReferences6
+                TransactionDetails = new EntryTransaction13
                 {
-                    EndToEndIdentification = Iso20022TestData.EndToEndId,
-                    UETR = Iso20022TestData.Uetr,
-                },
-                RemittanceInformation = new RemittanceInformation21
-                {
-                    Unstructured = "INV-2024-847 EUR 47250.00",
-                },
-                RelatedParties = new TransactionParties9
-                {
-                    Debtor = new Choices.Party40Choice.Party { Name = Iso20022TestData.Debtor.Name },
-                    DebtorAccount = Iso20022TestData.DebtorAccount,
+                    References = new TransactionReferences6
+                    {
+                        EndToEndIdentification = Iso20022TestData.EndToEndId,
+                        UETR = Iso20022TestData.Uetr,
+                    },
+                    RemittanceInformation = new RemittanceInformation21
+                    {
+                        Unstructured = "INV-2024-847 EUR 47250.00",
+                    },
+                    RelatedParties = new TransactionParties9
+                    {
+                        Debtor = new Choices.Party40Choice.Party
+                        {
+                            Name = Iso20022TestData.Debtor.Name
+                        },
+                        DebtorAccount = Iso20022TestData.DebtorAccount,
+                    },
                 },
             },
-        },
-    };
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -140,7 +150,11 @@ public class Camt054ExamplesTests
                 },
                 Entry = new ReportEntry13
                 {
-                    Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = Iso20022TestData.Currency, Amount = Iso20022TestData.Amount },
+                    Amount = new ActiveOrHistoricCurrencyAndAmount
+                    {
+                        Currency = Iso20022TestData.Currency,
+                        Amount = Iso20022TestData.Amount
+                    },
                     CreditDebitIndicator = CreditDebitCode.Debit,
                     Status = new Code { Value = ExternalEntryStatus1Code.Booked },
                     BookingDate = new Date { Value = Iso20022TestData.SettlementDate },
@@ -153,7 +167,7 @@ public class Camt054ExamplesTests
                             Code = "PMNT",
                             Family = new BankTransactionCodeStructure6
                             {
-                                Code = "ICDT",          // Issued Credit Transfer
+                                Code = "ICDT", // Issued Credit Transfer
                                 SubFamilyCode = "ESCT", // SEPA Credit Transfer
                             },
                         },
@@ -169,7 +183,10 @@ public class Camt054ExamplesTests
                             },
                             RelatedParties = new TransactionParties9
                             {
-                                Creditor = new Choices.Party40Choice.Party { Name = Iso20022TestData.Creditor.Name },
+                                Creditor = new Choices.Party40Choice.Party
+                                {
+                                    Name = Iso20022TestData.Creditor.Name
+                                },
                                 CreditorAccount = Iso20022TestData.CreditorAccount,
                             },
                         },

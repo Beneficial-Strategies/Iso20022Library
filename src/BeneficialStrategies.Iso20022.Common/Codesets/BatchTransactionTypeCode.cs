@@ -23,7 +23,7 @@ public enum BatchTransactionTypeCode
     [IsoId("_KU0vgH1DEeCF8NjrBemJWQ_-2001317413")]
     [Description(@"Debit and credit transactions.")]
     DebitCredit,
-    
+
     /// <summary>
     /// Cancellation of a previous transaction.
     /// Encoded/decoded by serializers as &quot;CNCL&quot;.
@@ -32,7 +32,7 @@ public enum BatchTransactionTypeCode
     [IsoId("_KU0vgX1DEeCF8NjrBemJWQ_-1823198741")]
     [Description(@"Cancellation of a previous transaction.")]
     Cancellation,
-    
+
     /// <summary>
     /// Failed transactions.
     /// Encoded/decoded by serializers as &quot;FAIL&quot;.
@@ -41,7 +41,7 @@ public enum BatchTransactionTypeCode
     [IsoId("_KU0vgn1DEeCF8NjrBemJWQ_-2115156479")]
     [Description(@"Failed transactions.")]
     Failed,
-    
+
     /// <summary>
     /// Declined transactions.
     /// Encoded/decoded by serializers as &quot;DCLN&quot;.
@@ -50,5 +50,4 @@ public enum BatchTransactionTypeCode
     [IsoId("_KU0vg31DEeCF8NjrBemJWQ_1142799055")]
     [Description(@"Declined transactions.")]
     Declined,
-    
 }

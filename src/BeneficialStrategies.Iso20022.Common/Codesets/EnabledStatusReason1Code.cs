@@ -23,5 +23,4 @@ public enum EnabledStatusReason1Code
     [IsoId("_MrP-0WBhEeaR1OOiVxm3Gg")]
     [Description(@"Modification to the account data is in process.")]
     Modified = EnabledStatusReasonCode.Modified, // same ordinal as derivation source for type conversions
-    
 }

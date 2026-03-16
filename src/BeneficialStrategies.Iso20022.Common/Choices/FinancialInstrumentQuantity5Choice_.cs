@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity5Choice.NetAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity5Choice.GrossAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity5Choice.UnitsNumber),nameof(FinancialInstrumentQuantity5Choice.UnitsNumber))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity5Choice.PercentageOfTotalSubscriptionAmount),nameof(FinancialInstrumentQuantity5Choice.PercentageOfTotalSubscriptionAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity5Choice.NetAmount),nameof(FinancialInstrumentQuantity5Choice.NetAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity5Choice.GrossAmount),nameof(FinancialInstrumentQuantity5Choice.GrossAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate),nameof(FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity5Choice.UnitsNumber),
+        nameof(FinancialInstrumentQuantity5Choice.UnitsNumber)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity5Choice.PercentageOfTotalSubscriptionAmount),
+        nameof(FinancialInstrumentQuantity5Choice.PercentageOfTotalSubscriptionAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity5Choice.NetAmount),
+        nameof(FinancialInstrumentQuantity5Choice.NetAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity5Choice.GrossAmount),
+        nameof(FinancialInstrumentQuantity5Choice.GrossAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate),
+        nameof(FinancialInstrumentQuantity5Choice.HoldingsRedemptionRate)
+    )]
     [IsoId("_Soaxwdp-Ed-ak6NoX_4Aeg_1036643949")]
     [DisplayName("Financial Instrument Quantity 5 Choice")]
-    public abstract partial record FinancialInstrumentQuantity5Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity5Choice_ { }
 }

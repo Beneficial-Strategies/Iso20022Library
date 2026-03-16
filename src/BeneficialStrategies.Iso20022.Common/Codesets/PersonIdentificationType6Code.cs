@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_QTJ5MQhFEeSUPbC7DbLJpQ")]
-[Description(@"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number.")]
+[Description(
+    @"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number."
+)]
 [DerivedFrom(typeof(PersonIdentificationTypeCode))]
 public enum PersonIdentificationType6Code
 {
@@ -23,7 +25,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDgQhFEeSUPbC7DbLJpQ")]
     [Description(@"Number assigned by a government agency to identify foreign nationals.")]
     AlienRegistrationNumber = PersonIdentificationTypeCode.AlienRegistrationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account issued by the Central Provident Fund Board (Singapore).
     /// Encoded/decoded by serializers as &quot;CPFA&quot;.
@@ -32,7 +34,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDgwhFEeSUPbC7DbLJpQ")]
     [Description(@"Account issued by the Central Provident Fund Board (Singapore).")]
     CPFAccountNumber = PersonIdentificationTypeCode.CPFAccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a license authority to a driver&apos;s license.
     /// Encoded/decoded by serializers as &quot;DRLC&quot;.
@@ -41,7 +43,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDhQhFEeSUPbC7DbLJpQ")]
     [Description(@"Number assigned by a license authority to a driver's license.")]
     DriversLicenseNumber = PersonIdentificationTypeCode.DriversLicenseNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned to an employer by a registration authority.
     /// Encoded/decoded by serializers as &quot;EMID&quot;.
@@ -50,7 +52,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDhwhFEeSUPbC7DbLJpQ")]
     [Description(@"Number assigned to an employer by a registration authority.")]
     EmployerIdentificationNumber = PersonIdentificationTypeCode.EmployerIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a national authority to an identity card.
     /// Encoded/decoded by serializers as &quot;IDCD&quot;.
@@ -59,16 +61,19 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDiQhFEeSUPbC7DbLJpQ")]
     [Description(@"Number assigned by a national authority to an identity card.")]
     IdentityCardNumber = PersonIdentificationTypeCode.IdentityCardNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// National registration identification number. In Singapore this is known as the NRIC.
     /// Encoded/decoded by serializers as &quot;NRIN&quot;.
     /// </summary>
     [EnumMember(Value = "NRIN")]
     [IsoId("_QvIDiwhFEeSUPbC7DbLJpQ")]
-    [Description(@"National registration identification number. In Singapore this is known as the NRIC.")]
-    NationalRegistrationIdentificationNumber = PersonIdentificationTypeCode.NationalRegistrationIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"National registration identification number. In Singapore this is known as the NRIC."
+    )]
+    NationalRegistrationIdentificationNumber =
+        PersonIdentificationTypeCode.NationalRegistrationIdentificationNumber, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Another type of identification type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,7 +82,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDjQhFEeSUPbC7DbLJpQ")]
     [Description(@"Another type of identification type.")]
     Other = PersonIdentificationTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a passport authority to a passport.
     /// Encoded/decoded by serializers as &quot;PASS&quot;.
@@ -86,7 +91,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDjwhFEeSUPbC7DbLJpQ")]
     [Description(@"Number assigned by a passport authority to a passport.")]
     PassportNumber = PersonIdentificationTypeCode.PassportNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Post office card number as assigned by a national post office.
     /// Encoded/decoded by serializers as &quot;POCD&quot;.
@@ -95,7 +100,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDkQhFEeSUPbC7DbLJpQ")]
     [Description(@"Post office card number as assigned by a national post office.")]
     PostOfficeCardNumber = PersonIdentificationTypeCode.PostOfficeCardNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a social security agency.
     /// Encoded/decoded by serializers as &quot;SOCS&quot;.
@@ -104,7 +109,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDkwhFEeSUPbC7DbLJpQ")]
     [Description(@"Number assigned by a social security agency.")]
     SocialSecurityNumber = PersonIdentificationTypeCode.SocialSecurityNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Supplementary retirement scheme account number.
     /// Encoded/decoded by serializers as &quot;SRSA&quot;.
@@ -113,7 +118,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDlQhFEeSUPbC7DbLJpQ")]
     [Description(@"Supplementary retirement scheme account number.")]
     SRSAccountNumber = PersonIdentificationTypeCode.SRSAccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Gun license number as assigned by a gun licensing authority.
     /// Encoded/decoded by serializers as &quot;GUNL&quot;.
@@ -122,7 +127,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_QvIDlwhFEeSUPbC7DbLJpQ")]
     [Description(@"Gun license number as assigned by a gun licensing authority.")]
     GunLicenseNumber = PersonIdentificationTypeCode.GunLicenseNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Temporary tax processing number (used in the domestic adoption of a child).
     /// Encoded/decoded by serializers as &quot;ATIN&quot;.
@@ -130,8 +135,9 @@ public enum PersonIdentificationType6Code
     [EnumMember(Value = "ATIN")]
     [IsoId("_7sydoWXEEeSrv8256XoCZg")]
     [Description(@"Temporary tax processing number (used in the domestic adoption of a child).")]
-    AdoptionTaxpayerIdentificationNumber = PersonIdentificationTypeCode.AdoptionTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    AdoptionTaxpayerIdentificationNumber =
+        PersonIdentificationTypeCode.AdoptionTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Generic tax identification number.
     /// Encoded/decoded by serializers as &quot;GTIN&quot;.
@@ -140,7 +146,7 @@ public enum PersonIdentificationType6Code
     [IsoId("_8aBXEWXEEeSrv8256XoCZg")]
     [Description(@"Generic tax identification number.")]
     GenericTaxIdentificationNumber = PersonIdentificationTypeCode.GenericTaxIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax processing number.
     /// Encoded/decoded by serializers as &quot;ITIN&quot;.
@@ -148,6 +154,6 @@ public enum PersonIdentificationType6Code
     [EnumMember(Value = "ITIN")]
     [IsoId("_9sJGQWXEEeSrv8256XoCZg")]
     [Description(@"Tax processing number.")]
-    IndividualTaxpayerIdentificationNumber = PersonIdentificationTypeCode.IndividualTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    IndividualTaxpayerIdentificationNumber =
+        PersonIdentificationTypeCode.IndividualTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
 }

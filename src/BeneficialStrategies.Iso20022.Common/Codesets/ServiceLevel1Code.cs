@@ -23,7 +23,7 @@ public enum ServiceLevel1Code
     [IsoId("_ZKZRB9p-Ed-ak6NoX_4Aeg_798217531")]
     [Description(@"Payment must be executed following the Single Euro Payments Area scheme.")]
     SingleEuroPaymentsArea = ServiceLevelCode.SingleEuroPaymentsArea, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment must be executed with same day value to the creditor.
     /// Encoded/decoded by serializers as &quot;SDVA&quot;.
@@ -32,7 +32,7 @@ public enum ServiceLevel1Code
     [IsoId("_ZKZRCNp-Ed-ak6NoX_4Aeg_798217556")]
     [Description(@"Payment must be executed with same day value to the creditor.")]
     SameDayValue = ServiceLevelCode.SameDayValue, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction must be processed according to the EBA|Priority Service.
     /// Encoded/decoded by serializers as &quot;PRPT&quot;.
@@ -41,5 +41,4 @@ public enum ServiceLevel1Code
     [IsoId("_ZKjCANp-Ed-ak6NoX_4Aeg_1645064833")]
     [Description(@"Transaction must be processed according to the EBA|Priority Service.")]
     EBAPriorityService = ServiceLevelCode.EBAPriorityService, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum InitialPhysicalForm2Code
     [IsoId("_hbu7kGliEeGaMcKyqKNRfQ_1457267840")]
     [Description(@"Initial Physical Form is GP.")]
     GP = InitialPhysicalFormCode.GP, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Initial Physical Form is definitive.
     /// Encoded/decoded by serializers as &quot;DERN&quot;.
@@ -32,5 +32,4 @@ public enum InitialPhysicalForm2Code
     [IsoId("_hbu7kWliEeGaMcKyqKNRfQ_-428414513")]
     [Description(@"Initial Physical Form is definitive.")]
     Definitive = InitialPhysicalFormCode.Definitive, // same ordinal as derivation source for type conversions
-    
 }

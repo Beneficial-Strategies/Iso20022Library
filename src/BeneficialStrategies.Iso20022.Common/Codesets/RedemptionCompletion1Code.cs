@@ -21,16 +21,19 @@ public enum RedemptionCompletion1Code
     /// </summary>
     [EnumMember(Value = "RED0")]
     [IsoId("_MMME0TwxEeaFzejt0Yw_3A")]
-    [Description(@"It is not necessary to send more redemption order instructions to the executing party to complete the redemption, the executing will generate redemption confirmations automatically.")]
+    [Description(
+        @"It is not necessary to send more redemption order instructions to the executing party to complete the redemption, the executing will generate redemption confirmations automatically."
+    )]
     RedemptionNo = RedemptionCompletionCode.RedemptionNo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional redemption order instructions must be sent to the executing party order to have the rest of the redemption executed.
     /// Encoded/decoded by serializers as &quot;RED1&quot;.
     /// </summary>
     [EnumMember(Value = "RED1")]
     [IsoId("_MWTqITwxEeaFzejt0Yw_3A")]
-    [Description(@"Additional redemption order instructions must be sent to the executing party order to have the rest of the redemption executed.")]
+    [Description(
+        @"Additional redemption order instructions must be sent to the executing party order to have the rest of the redemption executed."
+    )]
     RedemptionYes = RedemptionCompletionCode.RedemptionYes, // same ordinal as derivation source for type conversions
-    
 }

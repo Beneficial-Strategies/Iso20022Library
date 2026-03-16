@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ncGuUbTREeeyuKckOGlwuA")]
 [DisplayName("Garnishment")]
-public partial record Garnishment2
+public record Garnishment2
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of garnishment.
     /// </summary>
     [IsoId("_nkw7EbTREeeyuKckOGlwuA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required GarnishmentType1 Type { get; init; } 
-    
+    public required GarnishmentType1 Type { get; init; }
+
     /// <summary>
     /// Ultimate party that owes an amount of money to the (ultimate) creditor, in this case, to the garnisher.
     /// </summary>
     [IsoId("_nkw7E7TREeeyuKckOGlwuA")]
     [DisplayName("Garnishee")]
     [IsoXmlTag("Grnshee")]
-    public PartyIdentification125? Garnishee { get; init; } 
-    
+    public PartyIdentification125? Garnishee { get; init; }
+
     /// <summary>
     /// Party on the credit side of the transaction who administers the garnishment on behalf of the ultimate beneficiary.
     /// </summary>
     [IsoId("_nkw7FbTREeeyuKckOGlwuA")]
     [DisplayName("Garnishment Administrator")]
     [IsoXmlTag("GrnshmtAdmstr")]
-    public PartyIdentification125? GarnishmentAdministrator { get; init; } 
-    
+    public PartyIdentification125? GarnishmentAdministrator { get; init; }
+
     /// <summary>
     /// Reference information that is specific to the agency receiving the garnishment.
     /// </summary>
@@ -49,9 +47,9 @@ public partial record Garnishment2
     [DisplayName("Reference Number")]
     [IsoXmlTag("RefNb")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? ReferenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? ReferenceNumber { get; init; }
+
     /// <summary>
     /// Date of payment which garnishment was taken from.
     /// </summary>
@@ -59,16 +57,16 @@ public partial record Garnishment2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// Amount of money remitted for the referred document.
     /// </summary>
     [IsoId("_nkw7G7TREeeyuKckOGlwuA")]
     [DisplayName("Remitted Amount")]
     [IsoXmlTag("RmtdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? RemittedAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? RemittedAmount { get; init; }
+
     /// <summary>
     /// Indicates if the person to whom the garnishment applies (that is, the ultimate debtor) has family medical insurance coverage available.
     /// </summary>
@@ -76,8 +74,8 @@ public partial record Garnishment2
     [DisplayName("Family Medical Insurance Indicator")]
     [IsoXmlTag("FmlyMdclInsrncInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? FamilyMedicalInsuranceIndicator { get; init; }
+
     /// <summary>
     /// Indicates if the employment of the person to whom the garnishment applies (that is, the ultimate debtor) has been terminated.
     /// </summary>
@@ -85,9 +83,5 @@ public partial record Garnishment2
     [DisplayName("Employee Termination Indicator")]
     [IsoXmlTag("MplyeeTermntnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? EmployeeTerminationIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? EmployeeTerminationIndicator { get; init; }
 }

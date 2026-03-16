@@ -23,7 +23,7 @@ public enum AccountLevel2Code
     [IsoId("_6Uas95qlEeGSON8vddiWzQ_-77486222")]
     [Description(@"Intermediate level within an account hierarchy.")]
     Intermediate = AccountLevelCode.Intermediate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Highest level within an account hierarchy.
     /// Encoded/decoded by serializers as &quot;SMRY&quot;.
@@ -32,7 +32,7 @@ public enum AccountLevel2Code
     [IsoId("_6Ukd8JqlEeGSON8vddiWzQ_1446759063")]
     [Description(@"Highest level within an account hierarchy.")]
     Summary = AccountLevelCode.Summary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account is a real deposit/current account.
     /// Encoded/decoded by serializers as &quot;DETL&quot;.
@@ -41,5 +41,4 @@ public enum AccountLevel2Code
     [IsoId("_6Ukd8ZqlEeGSON8vddiWzQ_-2087443080")]
     [Description(@"Account is a real deposit/current account.")]
     Detail = AccountLevelCode.Detail, // same ordinal as derivation source for type conversions
-    
 }

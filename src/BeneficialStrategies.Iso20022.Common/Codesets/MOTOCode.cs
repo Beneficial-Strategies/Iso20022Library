@@ -24,7 +24,7 @@ public enum MOTOCode
     [IsoId("_QZrRMDHLEeyTT91yHXSlSQ")]
     [Description(@"Mail order.")]
     MailOrder,
-    
+
     /// <summary>
     /// Telephone order
     /// Encoded/decoded by serializers as &quot;TPOR&quot;.
@@ -33,7 +33,7 @@ public enum MOTOCode
     [IsoId("_byF68DHLEeyTT91yHXSlSQ")]
     [Description(@"Telephone order")]
     TelephoneOrder,
-    
+
     /// <summary>
     /// Mail order or telephone order.
     /// Encoded/decoded by serializers as &quot;MOTO&quot;.
@@ -42,5 +42,4 @@ public enum MOTOCode
     [IsoId("_gi3iUDHLEeyTT91yHXSlSQ")]
     [Description(@"Mail order or telephone order.|")]
     MailOrderOrTelephoneOrder,
-    
 }

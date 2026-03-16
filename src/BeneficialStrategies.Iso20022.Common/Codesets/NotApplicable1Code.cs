@@ -23,5 +23,4 @@ public enum NotApplicable1Code
     [IsoId("_eTsTgYCCEeqdQubSe21TTw")]
     [Description(@"Not applicable (N/A).")]
     NotApplicable = SpecialPurposeCode.NotApplicable, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DetailedMissingValuationsStatistics4Choice.DataSetAction))]
     [KnownType(typeof(DetailedMissingValuationsStatistics4Choice.Report))]
-    [JsonDerivedType(typeof(DetailedMissingValuationsStatistics4Choice.DataSetAction),nameof(DetailedMissingValuationsStatistics4Choice.DataSetAction))]
-    [JsonDerivedType(typeof(DetailedMissingValuationsStatistics4Choice.Report),nameof(DetailedMissingValuationsStatistics4Choice.Report))]
+    [JsonDerivedType(
+        typeof(DetailedMissingValuationsStatistics4Choice.DataSetAction),
+        nameof(DetailedMissingValuationsStatistics4Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(DetailedMissingValuationsStatistics4Choice.Report),
+        nameof(DetailedMissingValuationsStatistics4Choice.Report)
+    )]
     [IsoId("_x0O2MVyGEe24CqbZJK5XxA")]
     [DisplayName("Detailed Missing Valuations Statistics 4 Choice")]
-    public abstract partial record DetailedMissingValuationsStatistics4Choice_
-    {
-    }
+    public abstract record DetailedMissingValuationsStatistics4Choice_ { }
 }

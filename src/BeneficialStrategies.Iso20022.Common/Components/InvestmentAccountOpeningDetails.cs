@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_REb2hNp-Ed-ak6NoX_4Aeg_443591120")]
 [DisplayName("Investment Account Opening Details")]
-public partial record InvestmentAccountOpeningDetails
+public record InvestmentAccountOpeningDetails
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies if the account opening instruction is about a newly created account or a supplementary account.
     /// </summary>
     [IsoId("_REb2hdp-Ed-ak6NoX_4Aeg_-389691273")]
     [DisplayName("Opening Type")]
     [IsoXmlTag("OpngTp")]
-    public required AccountOpeningType1Code OpeningType { get; init; } 
-    
+    public required AccountOpeningType1Code OpeningType { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier of the account opening request at application level.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record InvestmentAccountOpeningDetails
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountApplicationIdentification { get; init; }
 }

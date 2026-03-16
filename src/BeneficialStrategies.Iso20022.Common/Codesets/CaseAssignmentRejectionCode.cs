@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a2IaFtp-Ed-ak6NoX_4Aeg_-898092331")]
 [Description(@"Specifies the reason for not accepting a Case.")]
-[Derivations(typeof(CaseAssignmentRejection1Code),typeof(CaseAssignmentRejection2Code))]
+[Derivations(typeof(CaseAssignmentRejection1Code), typeof(CaseAssignmentRejection2Code))]
 public enum CaseAssignmentRejectionCode
 {
     /// <summary>
@@ -23,16 +23,18 @@ public enum CaseAssignmentRejectionCode
     [IsoId("_a2IaF9p-Ed-ak6NoX_4Aeg_-141872446")]
     [Description(@"Underlying instruction can not be found.")]
     UnderlyingPaymentNotFound,
-    
+
     /// <summary>
     /// Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).
     /// Encoded/decoded by serializers as &quot;NAUT&quot;.
     /// </summary>
     [EnumMember(Value = "NAUT")]
     [IsoId("_a2IaGNp-Ed-ak6NoX_4Aeg_-141872403")]
-    [Description(@"Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).")]
+    [Description(
+        @"Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain)."
+    )]
     NotAuthorisedToInvestigate,
-    
+
     /// <summary>
     /// Case has never been assigned before.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
@@ -41,7 +43,7 @@ public enum CaseAssignmentRejectionCode
     [IsoId("_a2SLENp-Ed-ak6NoX_4Aeg_-141872368")]
     [Description(@"Case has never been assigned before.")]
     UnknownCase,
-    
+
     /// <summary>
     /// Used when the payment instruction has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -50,7 +52,7 @@ public enum CaseAssignmentRejectionCode
     [IsoId("_a2SLEdp-Ed-ak6NoX_4Aeg_-141872333")]
     [Description(@"Used when the payment instruction has been rejected.")]
     PaymentRejected,
-    
+
     /// <summary>
     /// Used when the payment instruction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CNCL&quot;.
@@ -59,7 +61,7 @@ public enum CaseAssignmentRejectionCode
     [IsoId("_a2SLEtp-Ed-ak6NoX_4Aeg_-141872308")]
     [Description(@"Used when the payment instruction has been cancelled.")]
     PaymentCancelled,
-    
+
     /// <summary>
     /// Used when the payment instruction has previously been cancelled or rejected.
     /// Encoded/decoded by serializers as &quot;PCOR&quot;.
@@ -68,5 +70,4 @@ public enum CaseAssignmentRejectionCode
     [IsoId("_a2SLE9p-Ed-ak6NoX_4Aeg_-795580088")]
     [Description(@"Used when the payment instruction has previously been cancelled or rejected.")]
     PaymentPreviouslyCancelledOrRejected,
-    
 }

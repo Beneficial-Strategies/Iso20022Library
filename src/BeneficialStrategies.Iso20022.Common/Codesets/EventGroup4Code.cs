@@ -23,7 +23,7 @@ public enum EventGroup4Code
     [IsoId("_mGuugQB8EeqouY-yI_q3qQ")]
     [Description(@"Distribution domain events.")]
     Distribution = EventGroupCode.Distribution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// General domain events.
     /// Encoded/decoded by serializers as &quot;GENL&quot;.
@@ -32,7 +32,7 @@ public enum EventGroup4Code
     [IsoId("_mLWIwQB8EeqouY-yI_q3qQ")]
     [Description(@"General domain events.")]
     General = EventGroupCode.General, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Redemption domain events.
     /// Encoded/decoded by serializers as &quot;REDM&quot;.
@@ -41,7 +41,7 @@ public enum EventGroup4Code
     [IsoId("_mPg3EQB8EeqouY-yI_q3qQ")]
     [Description(@"Redemption domain events.")]
     Redemption = EventGroupCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reorganization domain events.
     /// Encoded/decoded by serializers as &quot;REOR&quot;.
@@ -50,5 +50,4 @@ public enum EventGroup4Code
     [IsoId("_mT0vUQB8EeqouY-yI_q3qQ")]
     [Description(@"Reorganization domain events.")]
     Reorganization = EventGroupCode.Reorganization, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum CalculationBasis2Code
     [IsoId("_bVR0Ndp-Ed-ak6NoX_4Aeg_-1779457837")]
     [Description(@"Average basis.")]
     Average = CalculationBasisCode.Average, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Daily basis.
     /// Encoded/decoded by serializers as &quot;DAIL&quot;.
@@ -32,7 +32,7 @@ public enum CalculationBasis2Code
     [IsoId("_bVR0Ntp-Ed-ak6NoX_4Aeg_-1779457820")]
     [Description(@"Daily basis.")]
     Daily = CalculationBasisCode.Daily, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Monthly basis.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -41,7 +41,7 @@ public enum CalculationBasis2Code
     [IsoId("_bVR0N9p-Ed-ak6NoX_4Aeg_1334046994")]
     [Description(@"Monthly basis.")]
     Monthly = CalculationBasisCode.Monthly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Yearly basis.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -50,5 +50,4 @@ public enum CalculationBasis2Code
     [IsoId("_bVR0ONp-Ed-ak6NoX_4Aeg_1334047012")]
     [Description(@"Yearly basis.")]
     Annual = CalculationBasisCode.Annual, // same ordinal as derivation source for type conversions
-    
 }

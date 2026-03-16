@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TJDZotp-Ed-ak6NoX_4Aeg_1796808068")]
 [DisplayName("Fund Identification")]
-public partial record FundIdentification2
+public record FundIdentification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the investment fund.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record FundIdentification2
     [DisplayName("Fund Identification")]
     [IsoXmlTag("FndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text FundIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text FundIdentification { get; init; }
+
     /// <summary>
     /// Identifies the account of the fund held with the custodian.
     /// </summary>
@@ -35,18 +33,14 @@ public partial record FundIdentification2
     [DisplayName("Account Identification With Custodian")]
     [IsoXmlTag("AcctIdWthCtdn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentificationWithCustodian { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountIdentificationWithCustodian { get; init; }
+
     /// <summary>
     /// Identification of the custodian which services the account of the fund.
     /// </summary>
     [IsoId("_TJDZpdp-Ed-ak6NoX_4Aeg_1796808173")]
     [DisplayName("Custodian Identification")]
     [IsoXmlTag("CtdnId")]
-    public PartyIdentification8Choice_? CustodianIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification8Choice_? CustodianIdentification { get; init; }
 }

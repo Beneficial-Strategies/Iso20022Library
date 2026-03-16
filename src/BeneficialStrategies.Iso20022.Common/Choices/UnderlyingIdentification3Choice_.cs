@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnderlyingIdentification3Choice.Swap))]
     [KnownType(typeof(UnderlyingIdentification3Choice.Other))]
-    [JsonDerivedType(typeof(UnderlyingIdentification3Choice.Swap),nameof(UnderlyingIdentification3Choice.Swap))]
-    [JsonDerivedType(typeof(UnderlyingIdentification3Choice.Other),nameof(UnderlyingIdentification3Choice.Other))]
+    [JsonDerivedType(
+        typeof(UnderlyingIdentification3Choice.Swap),
+        nameof(UnderlyingIdentification3Choice.Swap)
+    )]
+    [JsonDerivedType(
+        typeof(UnderlyingIdentification3Choice.Other),
+        nameof(UnderlyingIdentification3Choice.Other)
+    )]
     [IsoId("_1tAh1Z3DEeuwmdq0KtnICg")]
     [DisplayName("Underlying Identification 3 Choice")]
-    public abstract partial record UnderlyingIdentification3Choice_
-    {
-    }
+    public abstract record UnderlyingIdentification3Choice_ { }
 }

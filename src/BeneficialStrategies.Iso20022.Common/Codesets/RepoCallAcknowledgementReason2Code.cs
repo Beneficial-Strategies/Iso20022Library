@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZSvUtNp-Ed-ak6NoX_4Aeg_632190422")]
-[Description(@"Specifies additional information about the repurchase agreement call processed instruction.")]
+[Description(
+    @"Specifies additional information about the repurchase agreement call processed instruction."
+)]
 [DerivedFrom(typeof(RepoCallAcknowledgementReasonCode))]
 public enum RepoCallAcknowledgementReason2Code
 {
@@ -23,7 +25,7 @@ public enum RepoCallAcknowledgementReason2Code
     [IsoId("_ZSvUtdp-Ed-ak6NoX_4Aeg_-364881931")]
     [Description(@"Repurchase agreement call is in process.")]
     InProcess = RepoCallAcknowledgementReasonCode.InProcess, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Repurchase agreement call is processed.
     /// Encoded/decoded by serializers as &quot;CALP&quot;.
@@ -32,14 +34,15 @@ public enum RepoCallAcknowledgementReason2Code
     [IsoId("_ZSvUttp-Ed-ak6NoX_4Aeg_-478720997")]
     [Description(@"Repurchase agreement call is processed.")]
     Processed = RepoCallAcknowledgementReasonCode.Processed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after the account servicer&apos;s deadline. Processed on best effort basis.
     /// Encoded/decoded by serializers as &quot;ADEA&quot;.
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_ZSvUt9p-Ed-ak6NoX_4Aeg_1840624684")]
-    [Description(@"Received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = RepoCallAcknowledgementReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
 }

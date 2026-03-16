@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,30 +14,28 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5ZlQoTEyEe6g-ffJsqGiSA")]
 [DisplayName("Account Report36")]
-public partial record AccountReport36
+public record AccountReport36
 {
-    #nullable enable
-
     /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public required CustomerAccount5 Account { get; init; } 
+    public required CustomerAccount5 Account { get; init; }
 
     /// <summary>
     /// Balance Transfer Account.
     /// </summary>
     [DisplayName("Balance Transfer Account")]
     [IsoXmlTag("BalTrfAcct")]
-    public AccountForAction1? BalanceTransferAccount { get; init; } 
+    public AccountForAction1? BalanceTransferAccount { get; init; }
 
     /// <summary>
     /// Contract Dates.
     /// </summary>
     [DisplayName("Contract Dates")]
     [IsoXmlTag("CtrctDts")]
-    public AccountContract3? ContractDates { get; init; } 
+    public AccountContract3? ContractDates { get; init; }
 
     /// <summary>
     /// Group.
@@ -58,23 +56,19 @@ public partial record AccountReport36
     /// </summary>
     [DisplayName("Reference Account")]
     [IsoXmlTag("RefAcct")]
-    public CashAccount40? ReferenceAccount { get; init; } 
+    public CashAccount40? ReferenceAccount { get; init; }
 
     /// <summary>
     /// Transfer Account Servicer Identification.
     /// </summary>
     [DisplayName("Transfer Account Servicer Identification")]
     [IsoXmlTag("TrfAcctSvcrId")]
-    public BranchAndFinancialInstitutionIdentification8? TransferAccountServicerIdentification { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? TransferAccountServicerIdentification { get; init; }
 
     /// <summary>
     /// Underlying Master Agreement.
     /// </summary>
     [DisplayName("Underlying Master Agreement")]
     [IsoXmlTag("UndrlygMstrAgrmt")]
-    public ContractDocument1? UnderlyingMasterAgreement { get; init; } 
-
-    
-    #nullable disable
-    
+    public ContractDocument1? UnderlyingMasterAgreement { get; init; }
 }

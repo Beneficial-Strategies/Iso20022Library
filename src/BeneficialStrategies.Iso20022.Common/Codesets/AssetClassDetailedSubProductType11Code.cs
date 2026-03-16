@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType11Code
     [IsoId("_lDcOQQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type gold.")]
     Gold = AssetClassDetailedSubProductTypeCode.Gold, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassDetailedSubProductType11Code
     [IsoId("_mf1TwQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type palladium.
     /// Encoded/decoded by serializers as &quot;PLDM&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassDetailedSubProductType11Code
     [IsoId("_mnaicQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type palladium.")]
     Palladium = AssetClassDetailedSubProductTypeCode.Palladium, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type platinum.
     /// Encoded/decoded by serializers as &quot;PTNM&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassDetailedSubProductType11Code
     [IsoId("_my3kgQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type platinum.")]
     Platinum = AssetClassDetailedSubProductTypeCode.Platinum, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type silver.
     /// Encoded/decoded by serializers as &quot;SLVR&quot;.
@@ -59,5 +59,4 @@ public enum AssetClassDetailedSubProductType11Code
     [IsoId("_naSw4Q2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type silver.")]
     Silver = AssetClassDetailedSubProductTypeCode.Silver, // same ordinal as derivation source for type conversions
-    
 }

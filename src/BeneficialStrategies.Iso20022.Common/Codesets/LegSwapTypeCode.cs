@@ -23,7 +23,7 @@ public enum LegSwapTypeCode
     [IsoId("_aeSh19p-Ed-ak6NoX_4Aeg_336256660")]
     [Description(@"Type of leg involved in a swap whose purpose is to exchange principal.")]
     ParForPar,
-    
+
     /// <summary>
     /// Type of leg involved in a swap whose purpose is to exchange price volatility.
     /// Encoded/decoded by serializers as &quot;MODU&quot;.
@@ -32,23 +32,26 @@ public enum LegSwapTypeCode
     [IsoId("_aeSh2Np-Ed-ak6NoX_4Aeg_336256661")]
     [Description(@"Type of leg involved in a swap whose purpose is to exchange price volatility.")]
     ModifiedDuration,
-    
+
     /// <summary>
     /// Type of leg involved in a swap whose purpose is to increase the credit quality and reduce the default risk. Also known as quality swap.
     /// Encoded/decoded by serializers as &quot;RISK&quot;.
     /// </summary>
     [EnumMember(Value = "RISK")]
     [IsoId("_aecS0Np-Ed-ak6NoX_4Aeg_336256662")]
-    [Description(@"Type of leg involved in a swap whose purpose is to increase the credit quality and reduce the default risk. Also known as quality swap.")]
+    [Description(
+        @"Type of leg involved in a swap whose purpose is to increase the credit quality and reduce the default risk. Also known as quality swap."
+    )]
     Risk,
-    
+
     /// <summary>
     /// Type of leg involved in a swap structured in the sale of a financial instrument and the simultaneous purchase of another instrument with the proceeds from the sale.
     /// Encoded/decoded by serializers as &quot;PRCD&quot;.
     /// </summary>
     [EnumMember(Value = "PRCD")]
     [IsoId("_aecS0dp-Ed-ak6NoX_4Aeg_336256663")]
-    [Description(@"Type of leg involved in a swap structured in the sale of a financial instrument and the simultaneous purchase of another instrument with the proceeds from the sale.")]
+    [Description(
+        @"Type of leg involved in a swap structured in the sale of a financial instrument and the simultaneous purchase of another instrument with the proceeds from the sale."
+    )]
     Proceeds,
-    
 }

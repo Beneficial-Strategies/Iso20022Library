@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RVa40tp-Ed-ak6NoX_4Aeg_-1270467118")]
 [DisplayName("Amend Information")]
-public partial record AmendInformation1
+public record AmendInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the linked message which was previously sent.
     /// </summary>
     [IsoId("_RVa409p-Ed-ak6NoX_4Aeg_1071515411")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public required MessageIdentification PreviousReference { get; init; } 
-    
+    public required MessageIdentification PreviousReference { get; init; }
+
     /// <summary>
     /// Indicates whether instructions must be resent (in case of modification of the parameters of a meeting for which instructions have already been sent).
     /// </summary>
@@ -33,9 +31,5 @@ public partial record AmendInformation1
     [DisplayName("Reconfirm Instructions")]
     [IsoXmlTag("RcnfrmInstrs")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ReconfirmInstructions { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator ReconfirmInstructions { get; init; }
 }

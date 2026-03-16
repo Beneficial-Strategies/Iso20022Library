@@ -12,12 +12,10 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Charges5Choice.PerTransaction))]
     [KnownType(typeof(Charges5Choice.PerType))]
     [KnownType(typeof(Charges5Choice.Single))]
-    [JsonDerivedType(typeof(Charges5Choice.PerTransaction),nameof(Charges5Choice.PerTransaction))]
-    [JsonDerivedType(typeof(Charges5Choice.PerType),nameof(Charges5Choice.PerType))]
-    [JsonDerivedType(typeof(Charges5Choice.Single),nameof(Charges5Choice.Single))]
+    [JsonDerivedType(typeof(Charges5Choice.PerTransaction), nameof(Charges5Choice.PerTransaction))]
+    [JsonDerivedType(typeof(Charges5Choice.PerType), nameof(Charges5Choice.PerType))]
+    [JsonDerivedType(typeof(Charges5Choice.Single), nameof(Charges5Choice.Single))]
     [IsoId("_ZFLpUT0JEe-thIfLZ94a1w")]
     [DisplayName("Charges5Choice")]
-    public abstract partial record Charges5Choice_
-    {
-    }
+    public abstract record Charges5Choice_ { }
 }

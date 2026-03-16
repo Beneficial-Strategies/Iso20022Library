@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MarketType11Choice.Code))]
     [KnownType(typeof(MarketType11Choice.Proprietary))]
-    [JsonDerivedType(typeof(MarketType11Choice.Code),nameof(MarketType11Choice.Code))]
-    [JsonDerivedType(typeof(MarketType11Choice.Proprietary),nameof(MarketType11Choice.Proprietary))]
+    [JsonDerivedType(typeof(MarketType11Choice.Code), nameof(MarketType11Choice.Code))]
+    [JsonDerivedType(
+        typeof(MarketType11Choice.Proprietary),
+        nameof(MarketType11Choice.Proprietary)
+    )]
     [IsoId("_AcinhdokEeC60axPepSq7g_682365512")]
     [DisplayName("Market Type 11 Choice")]
-    public abstract partial record MarketType11Choice_
-    {
-    }
+    public abstract record MarketType11Choice_ { }
 }

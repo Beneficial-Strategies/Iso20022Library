@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SR69Udp-Ed-ak6NoX_4Aeg_-59286801")]
 [DisplayName("Rate")]
-public partial record Rate3
+public record Rate3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of interest rate.
     /// </summary>
     [IsoId("_SR69Utp-Ed-ak6NoX_4Aeg_-59286460")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required RateType4Choice_ Type { get; init; } 
-    
+    public required RateType4Choice_ Type { get; init; }
+
     /// <summary>
     /// An amount range where the interest rate is applicable.
     /// </summary>
     [IsoId("_SR69U9p-Ed-ak6NoX_4Aeg_-59286399")]
     [DisplayName("Validity Range")]
     [IsoXmlTag("VldtyRg")]
-    public CurrencyAndAmountRange2? ValidityRange { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CurrencyAndAmountRange2? ValidityRange { get; init; }
 }

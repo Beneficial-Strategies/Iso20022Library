@@ -23,7 +23,7 @@ public enum AnnualChargePaymentType1Code
     [IsoId("_iTTggGAPEeiNMJ262H2pWg")]
     [Description(@"Annual charge is deducted from the fund capital.")]
     Capital = AnnualChargePaymentTypeCode.Capital, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Annual charge is deducted from the fund income.
     /// Encoded/decoded by serializers as &quot;INCO&quot;.
@@ -32,5 +32,4 @@ public enum AnnualChargePaymentType1Code
     [IsoId("_iXy-8WAPEeiNMJ262H2pWg")]
     [Description(@"Annual charge is deducted from the fund income.")]
     Income = AnnualChargePaymentTypeCode.Income, // same ordinal as derivation source for type conversions
-    
 }

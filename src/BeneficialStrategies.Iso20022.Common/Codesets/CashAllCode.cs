@@ -23,7 +23,7 @@ public enum CashAllCode
     [IsoId("_GH54Ys4FEeiAhd-njDxLnA")]
     [Description(@"All assets in a portfolio should be liquidated and transferred as cash.")]
     LiquidatedTransferAsCash,
-    
+
     /// <summary>
     /// All assets in a portfolio should not be liquidated and transferred as cash.
     /// Encoded/decoded by serializers as &quot;NLIQ&quot;.
@@ -32,5 +32,4 @@ public enum CashAllCode
     [IsoId("_GH54Y84FEeiAhd-njDxLnA")]
     [Description(@"All assets in a portfolio should not be liquidated and transferred as cash.")]
     NotLiquidatedTransferAsCash,
-    
 }

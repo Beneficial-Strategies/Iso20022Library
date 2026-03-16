@@ -23,7 +23,7 @@ public enum SettlementReportTypeCode
     [IsoId("_cLDmAFdJEeeIAMBcVOw01w")]
     [Description(@"Final settlement position.")]
     FinalPosition,
-    
+
     /// <summary>
     /// Interim settlement position.
     /// Encoded/decoded by serializers as &quot;INPO&quot;.
@@ -32,7 +32,7 @@ public enum SettlementReportTypeCode
     [IsoId("_jiREIFdJEeeIAMBcVOw01w")]
     [Description(@"Interim settlement position.")]
     InterimPosition,
-    
+
     /// <summary>
     /// Other type of settlement report defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum SettlementReportTypeCode
     [IsoId("__VWJgFdJEeeIAMBcVOw01w")]
     [Description(@"Other type of settlement report defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other settlement report defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum SettlementReportTypeCode
     [IsoId("_DqAcoFdKEeeIAMBcVOw01w")]
     [Description(@"Other settlement report defined at private level.")]
     OtherPrivate,
-    
 }

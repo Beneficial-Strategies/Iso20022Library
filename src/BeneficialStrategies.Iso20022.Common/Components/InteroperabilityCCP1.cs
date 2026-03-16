@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CX1PMFnFEe21_Ij7nUB3IA")]
 [DisplayName("Interoperability CCP1")]
-public partial record InteroperabilityCCP1
+public record InteroperabilityCCP1
 {
-    #nullable enable
-
     /// <summary>
     /// Asset Holding.
     /// </summary>
@@ -37,7 +35,7 @@ public partial record InteroperabilityCCP1
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required GenericIdentification168 Identification { get; init; } 
+    public required GenericIdentification168 Identification { get; init; }
 
     /// <summary>
     /// Total Initial Margin.
@@ -51,9 +49,5 @@ public partial record InteroperabilityCCP1
     /// </summary>
     [DisplayName("Trades Cleared")]
     [IsoXmlTag("TrdsClrd")]
-    public IsoNonNegativeNumber? TradesCleared { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoNonNegativeNumber? TradesCleared { get; init; }
 }

@@ -23,7 +23,7 @@ public enum SecuritiesStatementTypeCode
     [IsoId("_ZF7Attp-Ed-ak6NoX_4Aeg_-1780504515")]
     [Description(@"Statement is a custody statement.")]
     Custody,
-    
+
     /// <summary>
     /// Statement is an accounting statement.
     /// Encoded/decoded by serializers as &quot;ACCT&quot;.
@@ -32,5 +32,4 @@ public enum SecuritiesStatementTypeCode
     [IsoId("_ZF7At9p-Ed-ak6NoX_4Aeg_-1780504491")]
     [Description(@"Statement is an accounting statement.")]
     Accounting,
-    
 }

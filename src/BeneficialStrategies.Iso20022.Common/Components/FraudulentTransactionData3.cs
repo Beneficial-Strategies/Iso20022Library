@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mmS6IZLBEe6TWIDarRgYow")]
 [DisplayName("Fraudulent Transaction Data3")]
-public partial record FraudulentTransactionData3
+public record FraudulentTransactionData3
 {
-    #nullable enable
-
     /// <summary>
     /// Alternate Message Reason.
     /// </summary>
@@ -30,21 +28,21 @@ public partial record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
-    public IsoTrueFalseIndicator? Authorisation { get; init; } 
+    public IsoTrueFalseIndicator? Authorisation { get; init; }
 
     /// <summary>
     /// Authorisation Entity.
     /// </summary>
     [DisplayName("Authorisation Entity")]
     [IsoXmlTag("AuthstnNtty")]
-    public PartyType26Code? AuthorisationEntity { get; init; } 
+    public PartyType26Code? AuthorisationEntity { get; init; }
 
     /// <summary>
     /// Dispute Condition.
     /// </summary>
     [DisplayName("Dispute Condition")]
     [IsoXmlTag("DsptCond")]
-    public IsoMax35Text? DisputeCondition { get; init; } 
+    public IsoMax35Text? DisputeCondition { get; init; }
 
     /// <summary>
     /// Dispute Reference.
@@ -58,7 +56,7 @@ public partial record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Fraudulent Message")]
     [IsoXmlTag("FrdlntMsg")]
-    public IsoMax100KBinary? FraudulentMessage { get; init; } 
+    public IsoMax100KBinary? FraudulentMessage { get; init; }
 
     /// <summary>
     /// Message Reason.
@@ -72,16 +70,12 @@ public partial record FraudulentTransactionData3
     /// </summary>
     [DisplayName("Other Authorisation Entity")]
     [IsoXmlTag("OthrAuthstnNtty")]
-    public IsoMax35Text? OtherAuthorisationEntity { get; init; } 
+    public IsoMax35Text? OtherAuthorisationEntity { get; init; }
 
     /// <summary>
     /// Presentment Cycle.
     /// </summary>
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
-    public IsoExact1NumericText? PresentmentCycle { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoExact1NumericText? PresentmentCycle { get; init; }
 }

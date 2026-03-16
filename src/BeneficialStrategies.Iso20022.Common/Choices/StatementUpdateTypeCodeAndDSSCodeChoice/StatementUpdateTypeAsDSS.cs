@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCodeChoice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
     /// </summary>
     [IsoId("_Q7Cp9dp-Ed-ak6NoX_4Aeg_-2045399501")]
     [DisplayName("Statement Update Type As DSS")]
-    public partial record StatementUpdateTypeAsDSS : StatementUpdateTypeCodeAndDSSCodeChoice_
+    public record StatementUpdateTypeAsDSS : StatementUpdateTypeCodeAndDSSCodeChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
-        [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-        public required IsoMax8Text Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 8, MinimumLength = 1)]
+        public required IsoMax8Text Issuer { get; init; }
+
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
         /// </summary>
@@ -34,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementUpdateTypeCodeAndDSSCod
         [DisplayName("Information")]
         [IsoXmlTag("Inf")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Information { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Information { get; init; }
     }
 }

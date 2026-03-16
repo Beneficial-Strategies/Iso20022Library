@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolution3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
     /// </summary>
     [IsoId("_n0rhBa4dEemG7MmivSuE5g")]
     [DisplayName("Shareholder")]
-    public partial record Shareholder : VoteInstructionForMeetingResolution3Choice_
+    public record Shareholder : VoteInstructionForMeetingResolution3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -24,19 +22,15 @@ namespace BeneficialStrategies.Iso20022.Choices.VoteInstructionForMeetingResolut
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public required IsoMax350Text Name { get; init; } 
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public required IsoMax350Text Name { get; init; }
+
         /// <summary>
         /// Postal address of a party.
         /// </summary>
         [IsoId("_PbrI99p-Ed-ak6NoX_4Aeg_291203604")]
         [DisplayName("Address")]
         [IsoXmlTag("Adr")]
-        public LongPostalAddress2Choice_? Address { get; init; } 
-        
-        
-        #nullable disable
-        
+        public LongPostalAddress2Choice_? Address { get; init; }
     }
 }

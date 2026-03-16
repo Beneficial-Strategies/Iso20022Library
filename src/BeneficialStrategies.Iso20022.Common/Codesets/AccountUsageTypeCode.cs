@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_LjTZABKCEeKj15WxqwlXPw")]
 [Description(@"Specifies the type of usage of the account.")]
-[Derivations(typeof(AccountUsageType1Code),typeof(AccountUsageType2Code))]
+[Derivations(typeof(AccountUsageType1Code), typeof(AccountUsageType2Code))]
 public enum AccountUsageTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum AccountUsageTypeCode
     [IsoId("_Tv_toBKCEeKj15WxqwlXPw")]
     [Description(@"Investor.")]
     Investor,
-    
+
     /// <summary>
     /// Settlement participant.
     /// Encoded/decoded by serializers as &quot;SETP&quot;.
@@ -32,7 +32,7 @@ public enum AccountUsageTypeCode
     [IsoId("_YImsoBKCEeKj15WxqwlXPw")]
     [Description(@"Settlement participant.")]
     SettlementParticipant,
-    
+
     /// <summary>
     /// Trading participant.
     /// Encoded/decoded by serializers as &quot;TRDP&quot;.
@@ -41,7 +41,7 @@ public enum AccountUsageTypeCode
     [IsoId("_vsNZ0L-EEeWfsa741pI6WA")]
     [Description(@"Trading participant.")]
     TradingParticipant,
-    
+
     /// <summary>
     /// Issuing participant.
     /// Encoded/decoded by serializers as &quot;ISSP&quot;.
@@ -50,5 +50,4 @@ public enum AccountUsageTypeCode
     [IsoId("_v5KQsL-EEeWfsa741pI6WA")]
     [Description(@"Issuing participant.")]
     IssuingParticipant,
-    
 }

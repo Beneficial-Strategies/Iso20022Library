@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BlockedStatusReason2Choice.NoSpecifiedReason))]
     [KnownType(typeof(BlockedStatusReason2Choice.Reason))]
-    [JsonDerivedType(typeof(BlockedStatusReason2Choice.NoSpecifiedReason),nameof(BlockedStatusReason2Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(BlockedStatusReason2Choice.Reason),nameof(BlockedStatusReason2Choice.Reason))]
+    [JsonDerivedType(
+        typeof(BlockedStatusReason2Choice.NoSpecifiedReason),
+        nameof(BlockedStatusReason2Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(BlockedStatusReason2Choice.Reason),
+        nameof(BlockedStatusReason2Choice.Reason)
+    )]
     [IsoId("_8TcccV1LEeagR5I1rq5oaw")]
     [DisplayName("Blocked Status Reason 2 Choice")]
-    public abstract partial record BlockedStatusReason2Choice_
-    {
-    }
+    public abstract record BlockedStatusReason2Choice_ { }
 }

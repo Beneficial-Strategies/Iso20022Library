@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zAYo0Y-LEeWGMsAOtoswqg")]
 [DisplayName("Product")]
-public partial record Product3
+public record Product3
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the item inside the purchase transaction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Product3
     [DisplayName("Item Identification")]
     [IsoXmlTag("ItmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ItemIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ItemIdentification { get; init; }
+
     /// <summary>
     /// Product code of the item.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record Product3
     [DisplayName("Product Code")]
     [IsoXmlTag("PdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text ProductCode { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text ProductCode { get; init; }
+
     /// <summary>
     /// Additional product code related to the product.
     /// </summary>
@@ -45,17 +43,17 @@ public partial record Product3
     [DisplayName("Additional Product Code")]
     [IsoXmlTag("AddtlPdctCd")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AdditionalProductCode { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AdditionalProductCode { get; init; }
+
     /// <summary>
     /// Unit of measure of the item purchased.
     /// </summary>
     [IsoId("_zRqmE4-LEeWGMsAOtoswqg")]
     [DisplayName("Unit Of Measure")]
     [IsoXmlTag("UnitOfMeasr")]
-    public UnitOfMeasure6Code? UnitOfMeasure { get; init; } 
-    
+    public UnitOfMeasure6Code? UnitOfMeasure { get; init; }
+
     /// <summary>
     /// Product quantity.
     /// </summary>
@@ -63,16 +61,16 @@ public partial record Product3
     [DisplayName("Product Quantity")]
     [IsoXmlTag("PdctQty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ProductQuantity { get; init; } 
-    
+    public IsoDecimalNumber? ProductQuantity { get; init; }
+
     /// <summary>
     /// Price per unit of product.
     /// </summary>
     [IsoId("_zRqmF4-LEeWGMsAOtoswqg")]
     [DisplayName("Unit Price")]
     [IsoXmlTag("UnitPric")]
-    public ImpliedCurrencyAndAmount? UnitPrice { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? UnitPrice { get; init; }
+
     /// <summary>
     /// Sign of the unit price.
     /// </summary>
@@ -80,16 +78,16 @@ public partial record Product3
     [DisplayName("Unit Price Sign")]
     [IsoXmlTag("UnitPricSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? UnitPriceSign { get; init; } 
-    
+    public IsoPlusOrMinusIndicator? UnitPriceSign { get; init; }
+
     /// <summary>
     /// Monetary value of purchased product.
     /// </summary>
     [IsoId("_zRqmGY-LEeWGMsAOtoswqg")]
     [DisplayName("Product Amount")]
     [IsoXmlTag("PdctAmt")]
-    public required ImpliedCurrencyAndAmount ProductAmount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount ProductAmount { get; init; }
+
     /// <summary>
     /// Sign of the product amount.
     /// </summary>
@@ -97,16 +95,16 @@ public partial record Product3
     [DisplayName("Product Amount Sign")]
     [IsoXmlTag("PdctAmtSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? ProductAmountSign { get; init; } 
-    
+    public IsoPlusOrMinusIndicator? ProductAmountSign { get; init; }
+
     /// <summary>
     /// Value added tax amount of the item included in the product amount.
     /// </summary>
     [IsoId("_PtY9wJVIEeWu36UkS2TkoQ")]
     [DisplayName("Value Added Tax")]
     [IsoXmlTag("ValAddedTax")]
-    public ImpliedCurrencyAndAmount? ValueAddedTax { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? ValueAddedTax { get; init; }
+
     /// <summary>
     /// Information on tax paid on the product.
     /// </summary>
@@ -114,9 +112,9 @@ public partial record Product3
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxType { get; init; }
+
     /// <summary>
     /// Description of the product or item.
     /// </summary>
@@ -124,9 +122,9 @@ public partial record Product3
     [DisplayName("Product Description")]
     [IsoXmlTag("PdctDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? ProductDescription { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? ProductDescription { get; init; }
+
     /// <summary>
     /// Location of the delivery of the item, for instance pump number or parking bay.
     /// </summary>
@@ -134,18 +132,14 @@ public partial record Product3
     [DisplayName("Delivery Location")]
     [IsoXmlTag("DlvryLctn")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
-    [StringLength(maximumLength: 10 ,MinimumLength = 1)]
-    public IsoMax10Text? DeliveryLocation { get; init; } 
-    
+    [StringLength(maximumLength: 10, MinimumLength = 1)]
+    public IsoMax10Text? DeliveryLocation { get; init; }
+
     /// <summary>
     /// Identify the method of delivery or distribution of the item.
     /// </summary>
     [IsoId("_oiwfYJVJEeWu36UkS2TkoQ")]
     [DisplayName("Delivery Service")]
     [IsoXmlTag("DlvrySvc")]
-    public AttendanceContext2Code? DeliveryService { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AttendanceContext2Code? DeliveryService { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zRsDMFKPEeeFcfYfFkVztg")]
 [DisplayName("Fee Amount")]
-public partial record FeeAmount2
+public record FeeAmount2
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount exclusive of currency.
     /// ISO 8583:87 bit 8, 28, 29, 30 &amp; 31
@@ -26,18 +24,18 @@ public partial record FeeAmount2
     [IsoId("_zeCdIVKPEeeFcfYfFkVztg")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Currency for the type of amount.
     /// </summary>
     [IsoId("_zeCdI1KPEeeFcfYfFkVztg")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ISO3NumericCurrencyCode? Currency { get; init; } 
-    
+    public ISO3NumericCurrencyCode? Currency { get; init; }
+
     /// <summary>
-    /// Exchange rate of the currency code associated with the amount. 
+    /// Exchange rate of the currency code associated with the amount.
     /// ISO 8583 bit 9 (for use with reconciliation/settlement amount)
     /// ISO 8583 bit 10 (for use with cardholder billing amount)
     /// </summary>
@@ -45,8 +43,8 @@ public partial record FeeAmount2
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ExchangeRate { get; init; } 
-    
+    public IsoBaseOneRate? ExchangeRate { get; init; }
+
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
     /// </summary>
@@ -54,8 +52,8 @@ public partial record FeeAmount2
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; } 
-    
+    public IsoISODateTime? QuotationDate { get; init; }
+
     /// <summary>
     /// Indicates whether the amount value is positive or negative.
     /// Negative: the receiver of the message owes the fee to the sender.
@@ -65,9 +63,5 @@ public partial record FeeAmount2
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? Sign { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPlusOrMinusIndicator? Sign { get; init; }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BalanceQuantity13Choice.Quantity))]
     [KnownType(typeof(BalanceQuantity13Choice.Proprietary))]
-    [JsonDerivedType(typeof(BalanceQuantity13Choice.Quantity),nameof(BalanceQuantity13Choice.Quantity))]
-    [JsonDerivedType(typeof(BalanceQuantity13Choice.Proprietary),nameof(BalanceQuantity13Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(BalanceQuantity13Choice.Quantity),
+        nameof(BalanceQuantity13Choice.Quantity)
+    )]
+    [JsonDerivedType(
+        typeof(BalanceQuantity13Choice.Proprietary),
+        nameof(BalanceQuantity13Choice.Proprietary)
+    )]
     [IsoId("_ieYh8Sp6EeyR9JrVGfaMKw")]
     [DisplayName("Balance Quantity 13 Choice")]
-    public abstract partial record BalanceQuantity13Choice_
-    {
-    }
+    public abstract record BalanceQuantity13Choice_ { }
 }

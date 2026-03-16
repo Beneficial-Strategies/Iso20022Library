@@ -23,5 +23,4 @@ public enum RateType5Code
     [IsoId("_ZZmKo9p-Ed-ak6NoX_4Aeg_1553034192")]
     [Description(@"Rate is unknown by the sender or has not been established.")]
     Unknown = RateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

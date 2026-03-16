@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
     /// </summary>
     [IsoId("_RB5f4dp-Ed-ak6NoX_4Aeg_1770326434")]
     [DisplayName("Identification As DSS")]
-    public partial record IdentificationAsDSS : AccountIdentificationFormatChoice_
+    public record IdentificationAsDSS : AccountIdentificationFormatChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.
         /// </summary>
         [IsoId("_PoVr89p-Ed-ak6NoX_4Aeg_1372251027")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
-        public required AccountIdentification1 Identification { get; init; } 
-        
+        public required AccountIdentification1 Identification { get; init; }
+
         /// <summary>
         /// Entity that assigns the information.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
-        [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-        public required IsoMax8Text Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 8, MinimumLength = 1)]
+        public required IsoMax8Text Issuer { get; init; }
+
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
         /// </summary>
@@ -42,10 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentificationFormatChoic
         [DisplayName("Information")]
         [IsoXmlTag("Inf")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Information { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoExact4AlphaNumericText Information { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7MMxcdjKEeq5MfBBxQig1Q")]
 [DisplayName("Missing Or Incorrect Data")]
-public partial record MissingOrIncorrectData1
+public record MissingOrIncorrectData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record MissingOrIncorrectData1
     [DisplayName("Anti Money Laundering Request")]
     [IsoXmlTag("AMLReq")]
     [IsoSimpleType(IsoSimpleType.AMLIndicator)]
-    public IsoAMLIndicator? AntiMoneyLaunderingRequest { get; init; } 
-    
+    public IsoAMLIndicator? AntiMoneyLaunderingRequest { get; init; }
+
     /// <summary>
     /// Indicates the missing information.
     /// </summary>
@@ -36,7 +34,7 @@ public partial record MissingOrIncorrectData1
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<UnableToApplyMissing2> MissingInformation { get; init; } = [];
-    
+
     /// <summary>
     /// Indicates, in a coded form, the incorrect information.
     /// </summary>
@@ -46,8 +44,4 @@ public partial record MissingOrIncorrectData1
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<UnableToApplyIncorrect2> IncorrectInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

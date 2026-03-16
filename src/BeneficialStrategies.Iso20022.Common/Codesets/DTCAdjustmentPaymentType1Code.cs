@@ -23,7 +23,7 @@ public enum DTCAdjustmentPaymentType1Code
     [IsoId("_16HD8jL3EeKU9IrkkToqcw_-1873975027")]
     [Description(@"Stock loan transaction.")]
     StockLoanPayment = DTCAdjustmentPaymentTypeCode.StockLoanPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// REPO (repurchase agreement) transaction.
     /// Encoded/decoded by serializers as &quot;REPO&quot;.
@@ -32,7 +32,7 @@ public enum DTCAdjustmentPaymentType1Code
     [IsoId("_16HD8zL3EeKU9IrkkToqcw_-990741740")]
     [Description(@"REPO (repurchase agreement) transaction.")]
     RepoPayment = DTCAdjustmentPaymentTypeCode.RepoPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// FAIL (undelivered securities) transaction.
     /// Encoded/decoded by serializers as &quot;FAIL&quot;.
@@ -41,7 +41,7 @@ public enum DTCAdjustmentPaymentType1Code
     [IsoId("_16HD9DL3EeKU9IrkkToqcw_-1315859247")]
     [Description(@"FAIL (undelivered securities) transaction.")]
     FailPayment = DTCAdjustmentPaymentTypeCode.FailPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Miscellaneous (adjustment) transaction.
     /// Encoded/decoded by serializers as &quot;MISC&quot;.
@@ -50,5 +50,4 @@ public enum DTCAdjustmentPaymentType1Code
     [IsoId("_16HD9TL3EeKU9IrkkToqcw_-872870755")]
     [Description(@"Miscellaneous (adjustment) transaction.")]
     MiscellaneousPayment = DTCAdjustmentPaymentTypeCode.MiscellaneousPayment, // same ordinal as derivation source for type conversions
-    
 }

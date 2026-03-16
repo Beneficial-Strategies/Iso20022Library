@@ -23,7 +23,7 @@ public enum ConductClassificationCode
     [IsoId("_kd8QoBdvEeKYM7Bc71nDlA")]
     [Description(@"Standard.")]
     Standard,
-    
+
     /// <summary>
     /// Non standard or unusual.
     /// Encoded/decoded by serializers as &quot;NSTA&quot;.
@@ -32,7 +32,7 @@ public enum ConductClassificationCode
     [IsoId("_kmuZMBdvEeKYM7Bc71nDlA")]
     [Description(@"Non standard or unusual.")]
     NonStandard,
-    
+
     /// <summary>
     /// Reluctant.
     /// Encoded/decoded by serializers as &quot;RCLT&quot;.
@@ -41,5 +41,4 @@ public enum ConductClassificationCode
     [IsoId("_kvhI0BdvEeKYM7Bc71nDlA")]
     [Description(@"Reluctant.")]
     Reluctant,
-    
 }

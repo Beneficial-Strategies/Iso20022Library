@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice
     /// </summary>
     [IsoId("_77TPQ6MgEeCJ6YNENx4h-w_-1305206641")]
     [DisplayName("Currency Exchange")]
-    public partial record CurrencyExchange : ExchangeRateReportOrError2Choice_
+    public record CurrencyExchange : ExchangeRateReportOrError2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// The value of one currency expressed in relation to another currency. ExchangeRate expresses the ratio between UnitCurrency and QuotedCurrency (ExchangeRate = UnitCurrency/QuotedCurrency).
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice
         [DisplayName("Exchange Rate")]
         [IsoXmlTag("XchgRate")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public required IsoBaseOneRate ExchangeRate { get; init; } 
-        
+        public required IsoBaseOneRate ExchangeRate { get; init; }
+
         /// <summary>
         /// Currency into which the base currency is converted, in a currency exchange.
         /// </summary>
         [IsoId("_77cZMaMgEeCJ6YNENx4h-w_-47235485")]
         [DisplayName("Quoted Currency")]
         [IsoXmlTag("QtdCcy")]
-        public required ActiveOrHistoricCurrencyCode QuotedCurrency { get; init; } 
-        
+        public required ActiveOrHistoricCurrencyCode QuotedCurrency { get; init; }
+
         /// <summary>
         /// Date and time at which an exchange rate is quoted.
         /// </summary>
@@ -41,10 +39,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ExchangeRateReportOrError2Choice
         [DisplayName("Quotation Date")]
         [IsoXmlTag("QtnDt")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime QuotationDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISODateTime QuotationDate { get; init; }
     }
 }

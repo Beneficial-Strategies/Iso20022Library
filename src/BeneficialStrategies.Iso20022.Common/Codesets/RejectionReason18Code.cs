@@ -23,7 +23,7 @@ public enum RejectionReason18Code
     [IsoId("_Zir1Ntp-Ed-ak6NoX_4Aeg_-940679430")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient balance.
     /// Encoded/decoded by serializers as &quot;INHO&quot;.
@@ -32,7 +32,7 @@ public enum RejectionReason18Code
     [IsoId("_Zir1N9p-Ed-ak6NoX_4Aeg_-940679369")]
     [Description(@"Insufficient balance.")]
     InsufficientBalance = RejectionReasonCode.InsufficientBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction/Request arrives too late.
     /// Encoded/decoded by serializers as &quot;LATT&quot;.
@@ -41,5 +41,4 @@ public enum RejectionReason18Code
     [IsoId("_Zir1ONp-Ed-ak6NoX_4Aeg_-940679338")]
     [Description(@"Instruction/Request arrives too late.")]
     Late = RejectionReasonCode.Late, // same ordinal as derivation source for type conversions
-    
 }

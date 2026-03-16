@@ -23,7 +23,7 @@ public enum PartyRole1Code
     [IsoId("_zsaVUSDSEeWCLu74WLgP4w")]
     [Description(@"Party that safekeeps and administers assets on behalf of the owner.")]
     Custodian = PartyRoleCode.Custodian, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Party, either an individual or organisation, whose assets are being invested.
     /// Encoded/decoded by serializers as &quot;INVS&quot;.
@@ -32,5 +32,4 @@ public enum PartyRole1Code
     [IsoId("_0PE9gSDSEeWCLu74WLgP4w")]
     [Description(@"Party, either an individual or organisation, whose assets are being invested.")]
     Investor = PartyRoleCode.Investor, // same ordinal as derivation source for type conversions
-    
 }

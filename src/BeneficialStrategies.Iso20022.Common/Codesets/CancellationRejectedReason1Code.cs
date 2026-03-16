@@ -23,7 +23,7 @@ public enum CancellationRejectedReason1Code
     [IsoId("_bYjKo9p-Ed-ak6NoX_4Aeg_-1041848")]
     [Description(@"Instruction has been received after the cut-off time.")]
     CutOffTime = RejectedStatusReasonCode.CutOffTime, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order or transfer has already been executed and confirmation has been sent.
     /// Encoded/decoded by serializers as &quot;COSE&quot;.
@@ -32,5 +32,4 @@ public enum CancellationRejectedReason1Code
     [IsoId("_bYjKpNp-Ed-ak6NoX_4Aeg_-2116683787")]
     [Description(@"Order or transfer has already been executed and confirmation has been sent.")]
     AlreadyExecuted = RejectedStatusReasonCode.AlreadyExecuted, // same ordinal as derivation source for type conversions
-    
 }

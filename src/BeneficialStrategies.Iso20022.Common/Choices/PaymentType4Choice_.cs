@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PaymentType4Choice.Code))]
     [KnownType(typeof(PaymentType4Choice.Proprietary))]
-    [JsonDerivedType(typeof(PaymentType4Choice.Code),nameof(PaymentType4Choice.Code))]
-    [JsonDerivedType(typeof(PaymentType4Choice.Proprietary),nameof(PaymentType4Choice.Proprietary))]
+    [JsonDerivedType(typeof(PaymentType4Choice.Code), nameof(PaymentType4Choice.Code))]
+    [JsonDerivedType(
+        typeof(PaymentType4Choice.Proprietary),
+        nameof(PaymentType4Choice.Proprietary)
+    )]
     [IsoId("_Kjf4MxbwEeOy-PlRuFSUzQ")]
     [DisplayName("Payment Type 4 Choice")]
-    public abstract partial record PaymentType4Choice_
-    {
-    }
+    public abstract record PaymentType4Choice_ { }
 }

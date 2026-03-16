@@ -1,29 +1,23 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat64Choice
 {
     /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
-    public partial record Amount : RateAndAmountFormat64Choice_
+    public record Amount : RateAndAmountFormat64Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Amt")]
-        public required RestrictedFINActiveCurrencyAnd13DecimalAmount Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required RestrictedFINActiveCurrencyAnd13DecimalAmount Value { get; init; }
     }
 }

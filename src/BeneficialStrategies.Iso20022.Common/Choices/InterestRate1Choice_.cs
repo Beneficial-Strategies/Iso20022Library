@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InterestRate1Choice.FixedInterestRate))]
     [KnownType(typeof(InterestRate1Choice.VariableInterestRate))]
-    [JsonDerivedType(typeof(InterestRate1Choice.FixedInterestRate),nameof(InterestRate1Choice.FixedInterestRate))]
-    [JsonDerivedType(typeof(InterestRate1Choice.VariableInterestRate),nameof(InterestRate1Choice.VariableInterestRate))]
+    [JsonDerivedType(
+        typeof(InterestRate1Choice.FixedInterestRate),
+        nameof(InterestRate1Choice.FixedInterestRate)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRate1Choice.VariableInterestRate),
+        nameof(InterestRate1Choice.VariableInterestRate)
+    )]
     [IsoId("_Qk1wctp-Ed-ak6NoX_4Aeg_-868217621")]
     [DisplayName("Interest Rate 1 Choice")]
-    public abstract partial record InterestRate1Choice_
-    {
-    }
+    public abstract record InterestRate1Choice_ { }
 }

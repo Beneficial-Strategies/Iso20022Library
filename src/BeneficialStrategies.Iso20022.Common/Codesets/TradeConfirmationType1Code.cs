@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_2EE7YA26EeWmAKKPnqYEVQ")]
-[Description(@"Specifies whether the contract was electronically confirmed or non-electronically confirmed.")]
+[Description(
+    @"Specifies whether the contract was electronically confirmed or non-electronically confirmed."
+)]
 [DerivedFrom(typeof(TradeConfirmationTypeCode))]
 public enum TradeConfirmationType1Code
 {
@@ -23,7 +25,7 @@ public enum TradeConfirmationType1Code
     [IsoId("_5vcZ4Q26EeWmAKKPnqYEVQ")]
     [Description(@"Electronically confirmed.")]
     ElectronicallyConfirmed = TradeConfirmationTypeCode.ElectronicallyConfirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Non-electronically confirmed.
     /// Encoded/decoded by serializers as &quot;YCNF&quot;.
@@ -32,5 +34,4 @@ public enum TradeConfirmationType1Code
     [IsoId("_5-dtUQ26EeWmAKKPnqYEVQ")]
     [Description(@"Non-electronically confirmed.")]
     NonElectronicallyConfirmed = TradeConfirmationTypeCode.NonElectronicallyConfirmed, // same ordinal as derivation source for type conversions
-    
 }

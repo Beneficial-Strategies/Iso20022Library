@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.MatchingReason3Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason3Choice
     /// </summary>
     [IsoId("_Az7z0dokEeC60axPepSq7g_1317919921")]
     [DisplayName("Reason")]
-    public partial record Reason : MatchingReason3Choice_
+    public record Reason : MatchingReason3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why the instruction has been alleged.
         /// </summary>
         [IsoId("_A4j1JNokEeC60axPepSq7g_-40057461")]
         [DisplayName("Code")]
         [IsoXmlTag("Cd")]
-        public required AllegmentReason1Choice_ Code { get; init; } 
-        
+        public required AllegmentReason1Choice_ Code { get; init; }
+
         /// <summary>
         /// Provides additional information about the reason in narrative form.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MatchingReason3Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

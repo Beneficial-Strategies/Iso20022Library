@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EkHNFf2qEeiS2rs-hXBB5Q")]
 [DisplayName("Additional Information")]
-public partial record AdditionalInformation19
+public record AdditionalInformation19
 {
-    #nullable enable
-    
     /// <summary>
     /// Key-entered numeric data.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record AdditionalInformation19
     [DisplayName("Entered Data Numeric")]
     [IsoXmlTag("NtrdDataNmrc")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? EnteredDataNumeric { get; init; } 
-    
+    public IsoMax35NumericText? EnteredDataNumeric { get; init; }
+
     /// <summary>
     /// Key-entered alphanumeric data.
     /// </summary>
@@ -34,20 +32,16 @@ public partial record AdditionalInformation19
     [DisplayName("Entered Data Alpha Numeric")]
     [IsoXmlTag("NtrdDataAlphaNmrc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? EnteredDataAlphaNumeric { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? EnteredDataAlphaNumeric { get; init; }
+
     /// <summary>
-    /// Additional fleet summary data. 
+    /// Additional fleet summary data.
     /// </summary>
     [IsoId("_W13GIP2qEeiS2rs-hXBB5Q")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? AdditionalData { get; init; }
 }

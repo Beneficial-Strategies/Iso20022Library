@@ -21,25 +21,30 @@ public enum ReconciliationCriteria1Code
     /// </summary>
     [EnumMember(Value = "BRND")]
     [IsoId("_T3JYoSpWEeuUucRY0yCMTA")]
-    [Description(@"The set is defined by transactions made with cards belonging  to the same brand.")]
+    [Description(
+        @"The set is defined by transactions made with cards belonging  to the same brand."
+    )]
     CardBrand = ReconciliationCriteriaCode.CardBrand, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The set is defined by transactions made with cards sharing the same CardProductProfile.
     /// Encoded/decoded by serializers as &quot;PROF&quot;.
     /// </summary>
     [EnumMember(Value = "PROF")]
     [IsoId("_UHVwwSpWEeuUucRY0yCMTA")]
-    [Description(@"The set is defined by transactions made with cards sharing the same CardProductProfile.")]
+    [Description(
+        @"The set is defined by transactions made with cards sharing the same CardProductProfile."
+    )]
     CardProductProfile = ReconciliationCriteriaCode.CardProductProfile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The set is defined by transactions processed by POIs identified with the same POIGroup.
     /// Encoded/decoded by serializers as &quot;GRUP&quot;.
     /// </summary>
     [EnumMember(Value = "GRUP")]
     [IsoId("_UJQcUSpWEeuUucRY0yCMTA")]
-    [Description(@"The set is defined by transactions processed by POIs identified with the same POIGroup.")]
+    [Description(
+        @"The set is defined by transactions processed by POIs identified with the same POIGroup."
+    )]
     PoiGroup = ReconciliationCriteriaCode.PoiGroup, // same ordinal as derivation source for type conversions
-    
 }

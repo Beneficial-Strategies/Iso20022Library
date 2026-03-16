@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aODGYtp-Ed-ak6NoX_4Aeg_1172047099")]
-[Description(@"Specifies whether or not the event as mentioned in the notification occurred. Details of the event can be different from the details as per notification.")]
+[Description(
+    @"Specifies whether or not the event as mentioned in the notification occurred. Details of the event can be different from the details as per notification."
+)]
 [Derivations(typeof(NotificationStatus3Code))]
 public enum NotificationToReceiveStatusCode
 {
@@ -21,9 +23,11 @@ public enum NotificationToReceiveStatusCode
     /// </summary>
     [EnumMember(Value = "RCBD")]
     [IsoId("_aODGY9p-Ed-ak6NoX_4Aeg_1172047117")]
-    [Description(@"Event(s) as described in the notification to receive occurred but details are different.")]
+    [Description(
+        @"Event(s) as described in the notification to receive occurred but details are different."
+    )]
     ReceivedButDifferent,
-    
+
     /// <summary>
     /// Event(s) as described in the notification to receive occurred.
     /// Encoded/decoded by serializers as &quot;RCVD&quot;.
@@ -32,7 +36,7 @@ public enum NotificationToReceiveStatusCode
     [IsoId("_aODGZNp-Ed-ak6NoX_4Aeg_1172047143")]
     [Description(@"Event(s) as described in the notification to receive occurred.")]
     Received,
-    
+
     /// <summary>
     /// Event(s) as described in the notification to receive did not occur.
     /// Encoded/decoded by serializers as &quot;NRCD&quot;.
@@ -41,5 +45,4 @@ public enum NotificationToReceiveStatusCode
     [IsoId("_aODGZdp-Ed-ak6NoX_4Aeg_1172047219")]
     [Description(@"Event(s) as described in the notification to receive did not occur.")]
     NotReceived,
-    
 }

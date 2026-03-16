@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZUOicNp-Ed-ak6NoX_4Aeg_979401735")]
-[Description(@"Specifies the request used to further detail the type of information that will be queried.")]
+[Description(
+    @"Specifies the request used to further detail the type of information that will be queried."
+)]
 [DerivedFrom(typeof(RequestTypeCode))]
 public enum RequestType1Code
 {
@@ -23,7 +25,7 @@ public enum RequestType1Code
     [IsoId("_ZUOicdp-Ed-ak6NoX_4Aeg_979401766")]
     [Description(@"Type is a request to release the pending transactions.")]
     ReleasePending = RequestTypeCode.ReleasePending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type is a request to hold normal transactions.
     /// Encoded/decoded by serializers as &quot;RT02&quot;.
@@ -32,7 +34,7 @@ public enum RequestType1Code
     [IsoId("_ZUOictp-Ed-ak6NoX_4Aeg_979401797")]
     [Description(@"Type is a request to hold normal transactions.")]
     HoldNormal = RequestTypeCode.HoldNormal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type is a request to cancellation a transaction.
     /// Encoded/decoded by serializers as &quot;RT03&quot;.
@@ -41,7 +43,7 @@ public enum RequestType1Code
     [IsoId("_ZUOic9p-Ed-ak6NoX_4Aeg_979401827")]
     [Description(@"Type is a request to cancellation a transaction.")]
     Cancellation = RequestTypeCode.Cancellation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type is a request to change the sequence of the transactions.
     /// Encoded/decoded by serializers as &quot;RT04&quot;.
@@ -50,7 +52,7 @@ public enum RequestType1Code
     [IsoId("_ZUOidNp-Ed-ak6NoX_4Aeg_979401828")]
     [Description(@"Type is a request to change the sequence of the transactions.")]
     ReSequence = RequestTypeCode.ReSequence, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type is a request to release the suspicious transactions.
     /// Encoded/decoded by serializers as &quot;RT05&quot;.
@@ -59,5 +61,4 @@ public enum RequestType1Code
     [IsoId("_ZUOiddp-Ed-ak6NoX_4Aeg_979401858")]
     [Description(@"Type is a request to release the suspicious transactions.")]
     ReleaseSuspicious = RequestTypeCode.ReleaseSuspicious, // same ordinal as derivation source for type conversions
-    
 }

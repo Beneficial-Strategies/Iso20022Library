@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Direction2Choice.DirectionOfTheFirstLeg))]
     [KnownType(typeof(Direction2Choice.CounterpartySide))]
-    [JsonDerivedType(typeof(Direction2Choice.DirectionOfTheFirstLeg),nameof(Direction2Choice.DirectionOfTheFirstLeg))]
-    [JsonDerivedType(typeof(Direction2Choice.CounterpartySide),nameof(Direction2Choice.CounterpartySide))]
+    [JsonDerivedType(
+        typeof(Direction2Choice.DirectionOfTheFirstLeg),
+        nameof(Direction2Choice.DirectionOfTheFirstLeg)
+    )]
+    [JsonDerivedType(
+        typeof(Direction2Choice.CounterpartySide),
+        nameof(Direction2Choice.CounterpartySide)
+    )]
     [IsoId("_n79FOXg-Eeu3kecHd7QKUQ")]
     [DisplayName("Direction 2 Choice")]
-    public abstract partial record Direction2Choice_
-    {
-    }
+    public abstract record Direction2Choice_ { }
 }

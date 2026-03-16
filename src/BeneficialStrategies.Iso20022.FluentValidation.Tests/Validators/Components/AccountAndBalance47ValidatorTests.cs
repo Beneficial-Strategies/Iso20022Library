@@ -19,16 +19,21 @@ public class AccountAndBalance47ValidatorTests
     /// Minimal valid instance: SafekeepingAccountOrBlockChainAddress1Rule requires exactly
     /// one of SafekeepingAccount or BlockChainAddressOrWallet to be present.
     /// </summary>
-    private static AccountAndBalance47 ValidMessage() =>
-        new() { SafekeepingAccount = "ACC-001" };
+    private static AccountAndBalance47 ValidMessage() => new() { SafekeepingAccount = "ACC-001" };
 
     private static PartyId127.AnyBIC OwnerAnyBic(string bic) => new() { Value = bic };
 
     private static PartyId127.ProprietaryIdentification OwnerPropId(
         string id = "PROP-ID-001",
         string issuer = "ACME",
-        string? schemeName = null) =>
-        new() { Identification = id, Issuer = issuer, SchemeName = schemeName };
+        string? schemeName = null
+    ) =>
+        new()
+        {
+            Identification = id,
+            Issuer = issuer,
+            SchemeName = schemeName
+        };
 
     private static SfkpgPlace28.Country PlaceCountry(string code) => new() { Value = code };
 
@@ -75,21 +80,27 @@ public class AccountAndBalance47ValidatorTests
     public void NeitherAccountField_Violates1Rule()
     {
         var result = _sut.Validate(new AccountAndBalance47());
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress1Rule");
+        Assert.Contains(
+            result.Errors,
+            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress1Rule"
+        );
     }
 
     [Fact]
     public void BothAccountFields_DoesNotViolate1Rule()
     {
         // Rule 1 fires when NEITHER is present; when both are present, rules 2 and 3 fire instead.
-        var result = _sut.Validate(new AccountAndBalance47
-        {
-            SafekeepingAccount = "ACC-001",
-            BlockChainAddressOrWallet = "0xABCDEF",
-        });
-        Assert.DoesNotContain(result.Errors,
-            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress1Rule");
+        var result = _sut.Validate(
+            new AccountAndBalance47
+            {
+                SafekeepingAccount = "ACC-001",
+                BlockChainAddressOrWallet = "0xABCDEF",
+            }
+        );
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress1Rule"
+        );
     }
 
     // ── Constraint: SafekeepingAccountOrBlockChainAddress2Rule ───────────────────
@@ -98,24 +109,29 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void BothPresent_Violates2Rule()
     {
-        var result = _sut.Validate(new AccountAndBalance47
-        {
-            SafekeepingAccount = "ACC-001",
-            BlockChainAddressOrWallet = "0xABCDEF",
-        });
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress2Rule");
+        var result = _sut.Validate(
+            new AccountAndBalance47
+            {
+                SafekeepingAccount = "ACC-001",
+                BlockChainAddressOrWallet = "0xABCDEF",
+            }
+        );
+        Assert.Contains(
+            result.Errors,
+            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress2Rule"
+        );
     }
 
     [Fact]
     public void BlockChainOnly_DoesNotViolate2Rule()
     {
-        var result = _sut.Validate(new AccountAndBalance47
-        {
-            BlockChainAddressOrWallet = "0xABCDEF",
-        });
-        Assert.DoesNotContain(result.Errors,
-            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress2Rule");
+        var result = _sut.Validate(
+            new AccountAndBalance47 { BlockChainAddressOrWallet = "0xABCDEF", }
+        );
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress2Rule"
+        );
     }
 
     // ── Constraint: SafekeepingAccountOrBlockChainAddress3Rule ───────────────────
@@ -124,24 +140,27 @@ public class AccountAndBalance47ValidatorTests
     [Fact]
     public void BothPresent_Violates3Rule()
     {
-        var result = _sut.Validate(new AccountAndBalance47
-        {
-            SafekeepingAccount = "ACC-001",
-            BlockChainAddressOrWallet = "0xABCDEF",
-        });
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress3Rule");
+        var result = _sut.Validate(
+            new AccountAndBalance47
+            {
+                SafekeepingAccount = "ACC-001",
+                BlockChainAddressOrWallet = "0xABCDEF",
+            }
+        );
+        Assert.Contains(
+            result.Errors,
+            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress3Rule"
+        );
     }
 
     [Fact]
     public void SafekeepingAccountOnly_DoesNotViolate3Rule()
     {
-        var result = _sut.Validate(new AccountAndBalance47
-        {
-            SafekeepingAccount = "ACC-001",
-        });
-        Assert.DoesNotContain(result.Errors,
-            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress3Rule");
+        var result = _sut.Validate(new AccountAndBalance47 { SafekeepingAccount = "ACC-001", });
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.PropertyName == "SafekeepingAccountOrBlockChainAddress3Rule"
+        );
     }
 
     // ── SafekeepingAccount: Max35Text (0..1) ─────────────────────────────────────
@@ -204,24 +223,24 @@ public class AccountAndBalance47ValidatorTests
     public void AccountOwner_AnyBic_LowercaseLetters_HasValidationError()
     {
         var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("deutdeffxxx") };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
     }
 
     [Fact]
     public void AccountOwner_AnyBic_TooShort_HasValidationError()
     {
         var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("DEUT") };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
     }
 
     [Fact]
     public void AccountOwner_AnyBic_TooLong_HasValidationError()
     {
         var msg = ValidMessage() with { AccountOwner = OwnerAnyBic("DEUTDEFFXXXQ") }; // 12 chars
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value);
     }
 
     // ── AccountOwner: ProprietaryIdentification variant ──────────────────────────
@@ -237,24 +256,30 @@ public class AccountAndBalance47ValidatorTests
     public void AccountOwner_ProprietaryId_EmptyIdentification_HasValidationError()
     {
         var msg = ValidMessage() with { AccountOwner = OwnerPropId(id: "") };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x =>
+                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification
+            );
     }
 
     [Fact]
     public void AccountOwner_ProprietaryId_IdentificationTooLong_HasValidationError()
     {
         var msg = ValidMessage() with { AccountOwner = OwnerPropId(id: new string('X', 36)) };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x =>
+                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification
+            );
     }
 
     [Fact]
     public void AccountOwner_ProprietaryId_IssuerTooLong_HasValidationError()
     {
         var msg = ValidMessage() with { AccountOwner = OwnerPropId(issuer: new string('X', 36)) };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x =>
+                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer
+            );
     }
 
     [Fact]
@@ -264,8 +289,10 @@ public class AccountAndBalance47ValidatorTests
         {
             AccountOwner = OwnerPropId(schemeName: new string('X', 36)),
         };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x =>
+                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName
+            );
     }
 
     [Fact]
@@ -275,8 +302,10 @@ public class AccountAndBalance47ValidatorTests
         {
             AccountOwner = OwnerPropId(schemeName: new string('X', 35)),
         };
-        _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(
-            x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName);
+        _sut.TestValidate(msg)
+            .ShouldNotHaveValidationErrorFor(x =>
+                ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName
+            );
     }
 
     // ── SafekeepingPlace: Country variant ────────────────────────────────────────
@@ -292,16 +321,16 @@ public class AccountAndBalance47ValidatorTests
     public void SafekeepingPlace_Country_LowercaseCode_HasValidationError()
     {
         var msg = ValidMessage() with { SafekeepingPlace = PlaceCountry("de") };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value);
     }
 
     [Fact]
     public void SafekeepingPlace_Country_ThreeLetters_HasValidationError()
     {
         var msg = ValidMessage() with { SafekeepingPlace = PlaceCountry("DEU") };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value);
     }
 
     // ── SafekeepingPlace: TypeAndIdentification variant ───────────────────────────
@@ -317,8 +346,10 @@ public class AccountAndBalance47ValidatorTests
     public void SafekeepingPlace_TypeAndId_InvalidBic_HasValidationError()
     {
         var msg = ValidMessage() with { SafekeepingPlace = PlaceTypeAndId("not-a-bic") };
-        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(
-            x => ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification);
+        _sut.TestValidate(msg)
+            .ShouldHaveValidationErrorFor(x =>
+                ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification
+            );
     }
 
     // ── Balance: CorporateActionBalanceDetails43 ─────────────────────────────────

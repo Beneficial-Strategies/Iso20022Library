@@ -23,7 +23,7 @@ public enum GateHoldBack1Code
     [IsoId("_Sqv5ITwwEeaFzejt0Yw_3A")]
     [Description(@"Gating of redemption proceeds.")]
     Gating = GateHoldBackCode.Gating, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hold back of redemption proceeds.
     /// Encoded/decoded by serializers as &quot;HOLD&quot;.
@@ -32,5 +32,4 @@ public enum GateHoldBack1Code
     [IsoId("_S1AoYTwwEeaFzejt0Yw_3A")]
     [Description(@"Hold back of redemption proceeds.")]
     HoldBack = GateHoldBackCode.HoldBack, // same ordinal as derivation source for type conversions
-    
 }

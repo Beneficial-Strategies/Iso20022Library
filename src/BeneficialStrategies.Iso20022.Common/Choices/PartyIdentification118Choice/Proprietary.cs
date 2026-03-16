@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice
     /// </summary>
     [IsoId("_9cWkAUG0EemxGPEh9hU2Xg")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : PartyIdentification118Choice_
+    public record Proprietary : PartyIdentification118Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Proprietary code that uniquely identifies the object or subject of interest.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
-        [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-        public required IsoMax256Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 256, MinimumLength = 1)]
+        public required IsoMax256Text Identification { get; init; }
+
         /// <summary>
         /// Human readable full name of the identifier.
         /// </summary>
@@ -34,9 +32,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice
         [DisplayName("Description")]
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public IsoMax140Text? Description { get; init; } 
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public IsoMax140Text? Description { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -44,9 +42,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Issuer { get; init; }
+
         /// <summary>
         /// Short textual description of the scheme.
         /// </summary>
@@ -54,11 +52,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification118Choice
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? SchemeName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? SchemeName { get; init; }
     }
 }

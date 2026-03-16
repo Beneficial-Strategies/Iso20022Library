@@ -23,25 +23,29 @@ public enum RejectionReason11Code
     [IsoId("_ZgdAl9p-Ed-ak6NoX_4Aeg_-698385107")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was rejected since the instruction has already been cancelled.
     /// Encoded/decoded by serializers as &quot;DCAN&quot;.
     /// </summary>
     [EnumMember(Value = "DCAN")]
     [IsoId("_ZgdAmNp-Ed-ak6NoX_4Aeg_-698385076")]
-    [Description(@"Cancellation request was rejected since the instruction has already been cancelled.")]
+    [Description(
+        @"Cancellation request was rejected since the instruction has already been cancelled."
+    )]
     RejectedSinceAlreadyCancelled = RejectionReasonCode.RejectedSinceAlreadyCancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request has been rejected because the instruction process is in progress or has been processed.
     /// Encoded/decoded by serializers as &quot;DPRG&quot;.
     /// </summary>
     [EnumMember(Value = "DPRG")]
     [IsoId("_ZgdAmdp-Ed-ak6NoX_4Aeg_-698385045")]
-    [Description(@"Cancellation request has been rejected because the instruction process is in progress or has been processed.")]
+    [Description(
+        @"Cancellation request has been rejected because the instruction process is in progress or has been processed."
+    )]
     RejectedSinceInProgress = RejectionReasonCode.RejectedSinceInProgress, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid corporate action identification supplied.
     /// Encoded/decoded by serializers as &quot;REFI&quot;.
@@ -50,5 +54,4 @@ public enum RejectionReason11Code
     [IsoId("_ZgmKgNp-Ed-ak6NoX_4Aeg_-698385015")]
     [Description(@"Invalid corporate action identification supplied.")]
     InvalidCAIdentification = RejectionReasonCode.InvalidCAIdentification, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PZvPRNp-Ed-ak6NoX_4Aeg_1453147738")]
 [DisplayName("Trade Party Identification")]
-public partial record TradePartyIdentification4
+public record TradePartyIdentification4
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the fund which is one of the parties in a treasury trade.
     /// </summary>
     [IsoId("_PZvPRdp-Ed-ak6NoX_4Aeg_2110808571")]
     [DisplayName("Fund Information")]
     [IsoXmlTag("FndInf")]
-    public FundIdentification2? FundInformation { get; init; } 
-    
+    public FundIdentification2? FundInformation { get; init; }
+
     /// <summary>
     /// Specifies the party which is the buyer or the seller.
     /// </summary>
     [IsoId("_PZvPRtp-Ed-ak6NoX_4Aeg_1453147815")]
     [DisplayName("Buyer Or Seller Indicator")]
     [IsoXmlTag("BuyrOrSellrInd")]
-    public required OptionParty1Code BuyerOrSellerIndicator { get; init; } 
-    
+    public required OptionParty1Code BuyerOrSellerIndicator { get; init; }
+
     /// <summary>
     /// Specifies the party which submits a treasury trade to a matching system or to a settlement system or to a counterparty.
     /// </summary>
     [IsoId("_PZvPR9p-Ed-ak6NoX_4Aeg_1135139128")]
     [DisplayName("Submitting Party")]
     [IsoXmlTag("SubmitgPty")]
-    public required PartyIdentification8Choice_ SubmittingParty { get; init; } 
-    
+    public required PartyIdentification8Choice_ SubmittingParty { get; init; }
+
     /// <summary>
     /// Specifies the party which originated a treasury trade. This party may be the same as the submitting party.
     /// </summary>
     [IsoId("_PZvPSNp-Ed-ak6NoX_4Aeg_1195167105")]
     [DisplayName("Trade Party")]
     [IsoXmlTag("TradPty")]
-    public required PartyIdentification8Choice_ TradeParty { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PartyIdentification8Choice_ TradeParty { get; init; }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_u1-g4FhOEeih3fUfzR38Ig")]
-[Description(@"Specifies the system party type, as published in an external system party type code set.")]
+[Description(
+    @"Specifies the system party type, as published in an external system party type code set."
+)]
 [DerivedFrom(typeof(ExternalSystemPartyTypeCode))]
 public enum ExternalSystemPartyType1Code
 {
@@ -22,7 +24,9 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "ANSY")]
     [IsoId("")]
-    [Description(@"System in which payments and/or financial instruments are exchanged and/or cleared or recorded, while the ensuing monetary obligations are settled in another system, typically an RTGS system.")]
+    [Description(
+        @"System in which payments and/or financial instruments are exchanged and/or cleared or recorded, while the ensuing monetary obligations are settled in another system, typically an RTGS system."
+    )]
     AncillarySystem = ExternalSystemPartyTypeCode.AncillarySystem, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -31,8 +35,11 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "CSDP")]
     [IsoId("")]
-    [Description(@"Legal entity or, as the case may be, an individual having a contractual relationship with the CSD for the processing of its securities settlement-related activities in T2S.")]
-    CentralSecuritiesDepositoryParticipant = ExternalSystemPartyTypeCode.CentralSecuritiesDepositoryParticipant, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Legal entity or, as the case may be, an individual having a contractual relationship with the CSD for the processing of its securities settlement-related activities in T2S."
+    )]
+    CentralSecuritiesDepositoryParticipant =
+        ExternalSystemPartyTypeCode.CentralSecuritiesDepositoryParticipant, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Infrastructure that holds or controls the holding of physical or dematerialized financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralized transfer of ownership of such securities by entries on its books and records.
@@ -40,7 +47,9 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "CSDY")]
     [IsoId("")]
-    [Description(@"Infrastructure that holds or controls the holding of physical or dematerialized financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralized transfer of ownership of such securities by entries on its books and records.")]
+    [Description(
+        @"Infrastructure that holds or controls the holding of physical or dematerialized financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralized transfer of ownership of such securities by entries on its books and records."
+    )]
     CentralSecuritiesDepository = ExternalSystemPartyTypeCode.CentralSecuritiesDepository, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -49,8 +58,11 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "ECSD")]
     [IsoId("")]
-    [Description(@"Infrastructure that holds or controls the holding of physical or dematerialized financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralized transfer of ownership of such securities by entries on its books and records. The infrastructure is external to the system executing the instruction.")]
-    ExternalCentralSecuritiesDepository = ExternalSystemPartyTypeCode.ExternalCentralSecuritiesDepository, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Infrastructure that holds or controls the holding of physical or dematerialized financial instruments belonging to all, or a large portion of, the investors in a securities market. This effects the centralized transfer of ownership of such securities by entries on its books and records. The infrastructure is external to the system executing the instruction."
+    )]
+    ExternalCentralSecuritiesDepository =
+        ExternalSystemPartyTypeCode.ExternalCentralSecuritiesDepository, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// As system participant, the national central bank is the principal monetary authority of a nation and performs several key functions, including issuing currency and regulating the supply of credit in the economy.
@@ -58,7 +70,9 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "NCBK")]
     [IsoId("")]
-    [Description(@"As system participant, the national central bank is the principal monetary authority of a nation and performs several key functions, including issuing currency and regulating the supply of credit in the economy.")]
+    [Description(
+        @"As system participant, the national central bank is the principal monetary authority of a nation and performs several key functions, including issuing currency and regulating the supply of credit in the economy."
+    )]
     NationalCentralBank = ExternalSystemPartyTypeCode.NationalCentralBank, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -76,7 +90,9 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "STPR")]
     [IsoId("")]
-    [Description(@"Party that owns an account in the system, but only supports a limited range of available use cases in interaction with counterparties.")]
+    [Description(
+        @"Party that owns an account in the system, but only supports a limited range of available use cases in interaction with counterparties."
+    )]
     StandardParticipantRestricted = ExternalSystemPartyTypeCode.StandardParticipantRestricted, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -85,7 +101,9 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "STPU")]
     [IsoId("")]
-    [Description(@"Party that owns an account in the system and can interact with the system or counterparties using all use cases available to standard participants.")]
+    [Description(
+        @"Party that owns an account in the system and can interact with the system or counterparties using all use cases available to standard participants."
+    )]
     StandardParticipantUnrestricted = ExternalSystemPartyTypeCode.StandardParticipantUnrestricted, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -94,7 +112,9 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "SYMG")]
     [IsoId("")]
-    [Description(@"Party that defines the eligibility criteria of the system and is responsible for monitoring, controlling and, if necessary, operating the system. All authorizations are available to the system manager when interacting with the system.")]
+    [Description(
+        @"Party that defines the eligibility criteria of the system and is responsible for monitoring, controlling and, if necessary, operating the system. All authorizations are available to the system manager when interacting with the system."
+    )]
     SystemManager = ExternalSystemPartyTypeCode.SystemManager, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -103,7 +123,8 @@ public enum ExternalSystemPartyType1Code
     /// </summary>
     [EnumMember(Value = "SYOP")]
     [IsoId("")]
-    [Description(@"Party that operates the system on behalf of the system manager (if different from the system manager) and is provided with specific authorizations by the system manager for this purpose.")]
+    [Description(
+        @"Party that operates the system on behalf of the system manager (if different from the system manager) and is provided with specific authorizations by the system manager for this purpose."
+    )]
     SystemOperator = ExternalSystemPartyTypeCode.SystemOperator, // same ordinal as derivation source for type conversions
-
 }

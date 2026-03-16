@@ -23,7 +23,7 @@ public enum MandateClassification1Code
     [IsoId("_nHOmAWVREeacpJ-gG9kyUQ")]
     [Description(@"Direct debit amount is fixed.")]
     Fixed = MandateClassificationCode.Fixed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Direct debit amount is based on usage.
     /// Encoded/decoded by serializers as &quot;USGB&quot;.
@@ -32,7 +32,7 @@ public enum MandateClassification1Code
     [IsoId("_nMlnIWVREeacpJ-gG9kyUQ")]
     [Description(@"Direct debit amount is based on usage.")]
     UsageBased = MandateClassificationCode.UsageBased, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Direct debit amount is variable.
     /// Encoded/decoded by serializers as &quot;VARI&quot;.
@@ -41,5 +41,4 @@ public enum MandateClassification1Code
     [IsoId("_nVz0kWVREeacpJ-gG9kyUQ")]
     [Description(@"Direct debit amount is variable.")]
     Variable = MandateClassificationCode.Variable, // same ordinal as derivation source for type conversions
-    
 }

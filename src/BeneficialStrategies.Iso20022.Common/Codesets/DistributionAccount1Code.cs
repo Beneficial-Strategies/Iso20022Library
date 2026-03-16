@@ -21,16 +21,19 @@ public enum DistributionAccount1Code
     /// </summary>
     [EnumMember(Value = "GENF")]
     [IsoId("_1tcg8jL3EeKU9IrkkToqcw_1027673005")]
-    [Description(@"General free account. DTC (The Depository Trust Company) allows immediate use of securities.")]
+    [Description(
+        @"General free account. DTC (The Depository Trust Company) allows immediate use of securities."
+    )]
     GeneralFree = DistributionAccountCode.GeneralFree, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// RRG account. Sub account. DTC (The Depository Trust Company) does not allow immediate use of securities.
     /// Encoded/decoded by serializers as &quot;RRGA&quot;.
     /// </summary>
     [EnumMember(Value = "RRGA")]
     [IsoId("_1tcg8zL3EeKU9IrkkToqcw_1352790512")]
-    [Description(@"RRG account. Sub account. DTC (The Depository Trust Company) does not allow immediate use of securities.")]
+    [Description(
+        @"RRG account. Sub account. DTC (The Depository Trust Company) does not allow immediate use of securities."
+    )]
     RRGAccount = DistributionAccountCode.RRGAccount, // same ordinal as derivation source for type conversions
-    
 }

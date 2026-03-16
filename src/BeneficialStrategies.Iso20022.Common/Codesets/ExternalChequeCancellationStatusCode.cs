@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_wRR507tvEeq_cfXrH83Rcw")]
-[Description(@"Specifies the external cheque cancellation status code in the format of character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the external cheque cancellation status code in the format of character string with a maximum length of 4 characters."
+)]
 [Derivations(typeof(ExternalChequeCancellationStatus1Code))]
 public enum ExternalChequeCancellationStatusCode
 {
@@ -33,5 +35,4 @@ public enum ExternalChequeCancellationStatusCode
     [IsoId("")]
     [Description(@"Cheque cancellation request or request to stop the cheque is rejected.")]
     RejectedCancellationOrStopChequeRequest,
-
 }

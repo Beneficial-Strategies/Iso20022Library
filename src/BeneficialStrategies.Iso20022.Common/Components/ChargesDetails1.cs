@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RtQxFtp-Ed-ak6NoX_4Aeg_-308714560")]
 [DisplayName("Charges Details")]
-public partial record ChargesDetails1
+public record ChargesDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of service for which a charge is asked or paid.
     /// </summary>
     [IsoId("_RtQxF9p-Ed-ak6NoX_4Aeg_-254223423")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ChargeType8Code Type { get; init; } 
-    
+    public required ChargeType8Code Type { get; init; }
+
     /// <summary>
     /// Specifies the type of charge by means of a code.
     /// </summary>
@@ -33,17 +31,17 @@ public partial record ChargesDetails1
     [DisplayName("Other Charges Type")]
     [IsoXmlTag("OthrChrgsTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text OtherChargesType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text OtherChargesType { get; init; }
+
     /// <summary>
     /// Amount of money asked or paid for the charge.
     /// </summary>
     [IsoId("_RtZ7ANp-Ed-ak6NoX_4Aeg_-2065921609")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required CurrencyAndAmount Amount { get; init; } 
-    
+    public required CurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Rate used to calculate the amount of the charge or fee.
     /// </summary>
@@ -51,9 +49,5 @@ public partial record ChargesDetails1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoPercentageRate Rate { get; init; }
 }

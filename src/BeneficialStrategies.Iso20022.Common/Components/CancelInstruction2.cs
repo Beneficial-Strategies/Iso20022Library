@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KL1NkfNmEeqRfth943bvEA")]
 [DisplayName("Cancel Instruction")]
-public partial record CancelInstruction2
+public record CancelInstruction2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the individual instruction previously sent.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record CancelInstruction2
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text SingleInstructionIdentification { get; init; }
+
     /// <summary>
     /// Account and instructed positions to which the meeting instruction cancellation request applies.
     /// </summary>
     [IsoId("_Kgz_E_NmEeqRfth943bvEA")]
     [DisplayName("Instructed Position")]
     [IsoXmlTag("InstdPos")]
-    public SafekeepingAccount10? InstructedPosition { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SafekeepingAccount10? InstructedPosition { get; init; }
 }

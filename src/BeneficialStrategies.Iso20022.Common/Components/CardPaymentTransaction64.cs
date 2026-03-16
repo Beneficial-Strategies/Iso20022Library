@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WyyHYY3aEeW56qaqQ8B0kQ")]
 [DisplayName("Card Payment Transaction")]
-public partial record CardPaymentTransaction64
+public record CardPaymentTransaction64
 {
-    #nullable enable
-    
     /// <summary>
     /// Flag indicating whether the transaction data must be captured or not in addition to the message process.
     /// </summary>
@@ -25,32 +23,32 @@ public partial record CardPaymentTransaction64
     [DisplayName("Transaction Capture")]
     [IsoXmlTag("TxCaptr")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionCapture { get; init; } 
-    
+    public IsoTrueFalseIndicator? TransactionCapture { get; init; }
+
     /// <summary>
     /// Type of transaction being undertaken for the main service.
     /// </summary>
     [IsoId("_W_Tgc43aEeW56qaqQ8B0kQ")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
-    public required CardPaymentServiceType5Code TransactionType { get; init; } 
-    
+    public required CardPaymentServiceType5Code TransactionType { get; init; }
+
     /// <summary>
     /// Service in addition to the main service.
     /// </summary>
     [IsoId("_W_TgdY3aEeW56qaqQ8B0kQ")]
     [DisplayName("Additional Service")]
     [IsoXmlTag("AddtlSvc")]
-    public CardPaymentServiceType9Code? AdditionalService { get; init; } 
-    
+    public CardPaymentServiceType9Code? AdditionalService { get; init; }
+
     /// <summary>
     /// Additional attribute of the service type.
     /// </summary>
     [IsoId("_W_Tgd43aEeW56qaqQ8B0kQ")]
     [DisplayName("Service Attribute")]
     [IsoXmlTag("SvcAttr")]
-    public CardPaymentServiceType3Code? ServiceAttribute { get; init; } 
-    
+    public CardPaymentServiceType3Code? ServiceAttribute { get; init; }
+
     /// <summary>
     /// Category code conform to ISO 18245, related to the type of services or goods the merchant provides for the transaction.
     /// </summary>
@@ -58,9 +56,9 @@ public partial record CardPaymentTransaction64
     [DisplayName("Merchant Category Code")]
     [IsoXmlTag("MrchntCtgyCd")]
     [IsoSimpleType(IsoSimpleType.Min3Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 3)]
-    public required IsoMin3Max4Text MerchantCategoryCode { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 3)]
+    public required IsoMin3Max4Text MerchantCategoryCode { get; init; }
+
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
     /// </summary>
@@ -68,33 +66,33 @@ public partial record CardPaymentTransaction64
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+
     /// <summary>
     /// Identification of the transaction assigned by the POI (Point Of Interaction).
     /// </summary>
     [IsoId("_W_TgfY3aEeW56qaqQ8B0kQ")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier1 TransactionIdentification { get; init; } 
-    
+    public required TransactionIdentifier1 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Identification of the original transaction.
     /// </summary>
     [IsoId("_W_Tgf43aEeW56qaqQ8B0kQ")]
     [DisplayName("Original Transaction")]
     [IsoXmlTag("OrgnlTx")]
-    public CardPaymentTransaction65? OriginalTransaction { get; init; } 
-    
+    public CardPaymentTransaction65? OriginalTransaction { get; init; }
+
     /// <summary>
     /// Details of the transaction.
     /// </summary>
     [IsoId("_W_TggY3aEeW56qaqQ8B0kQ")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public required CardPaymentTransactionDetails33 TransactionDetails { get; init; } 
-    
+    public required CardPaymentTransactionDetails33 TransactionDetails { get; init; }
+
     /// <summary>
     /// Additional information related to the transaction.
     /// </summary>
@@ -102,10 +100,6 @@ public partial record CardPaymentTransaction64
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AdditionalTransactionData { get; init; }
 }

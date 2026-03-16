@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ExpectedCollateral2Choice.ExpectedCollateralDetails))]
     [KnownType(typeof(ExpectedCollateral2Choice.SegregatedIndependentAmount))]
-    [JsonDerivedType(typeof(ExpectedCollateral2Choice.ExpectedCollateralDetails),nameof(ExpectedCollateral2Choice.ExpectedCollateralDetails))]
-    [JsonDerivedType(typeof(ExpectedCollateral2Choice.SegregatedIndependentAmount),nameof(ExpectedCollateral2Choice.SegregatedIndependentAmount))]
+    [JsonDerivedType(
+        typeof(ExpectedCollateral2Choice.ExpectedCollateralDetails),
+        nameof(ExpectedCollateral2Choice.ExpectedCollateralDetails)
+    )]
+    [JsonDerivedType(
+        typeof(ExpectedCollateral2Choice.SegregatedIndependentAmount),
+        nameof(ExpectedCollateral2Choice.SegregatedIndependentAmount)
+    )]
     [IsoId("_-UW_QYLZEeWrrO9HojbPQA")]
     [DisplayName("Expected Collateral 2 Choice")]
-    public abstract partial record ExpectedCollateral2Choice_
-    {
-    }
+    public abstract record ExpectedCollateral2Choice_ { }
 }

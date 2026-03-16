@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SUuMwFfVEeqqKf65rDYWYw")]
 [DisplayName("Pre Post Haircut")]
-public partial record PrePostHaircut1
+public record PrePostHaircut1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the amount of collateral calculated pre-haircut.
     /// </summary>
     [IsoId("_ikXEIFfVEeqqKf65rDYWYw")]
     [DisplayName("Pre Haircut")]
     [IsoXmlTag("PreHrcut")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PreHaircut { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PreHaircut { get; init; }
+
     /// <summary>
     /// Indicates the amount of collateral calculated post-haircut.
     /// </summary>
     [IsoId("_j8ulQFfVEeqqKf65rDYWYw")]
     [DisplayName("Post Haircut")]
     [IsoXmlTag("PstHrcut")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PostHaircut { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PostHaircut { get; init; }
 }

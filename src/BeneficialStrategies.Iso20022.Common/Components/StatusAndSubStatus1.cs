@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X3w_o4xlEeKdxfnzD2sqyA")]
 [DisplayName("Status And Sub Status")]
-public partial record StatusAndSubStatus1
+public record StatusAndSubStatus1
 {
-    #nullable enable
-    
     /// <summary>
     /// Status expressed as a code.
     /// </summary>
     [IsoId("_nBafUIxlEeKdxfnzD2sqyA")]
     [DisplayName("Status Code")]
     [IsoXmlTag("StsCd")]
-    public required Status13Choice_ StatusCode { get; init; } 
-    
+    public required Status13Choice_ StatusCode { get; init; }
+
     /// <summary>
     /// Sub status expressed as a code.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record StatusAndSubStatus1
     [DisplayName("Sub Status Code")]
     [IsoXmlTag("SubStsCd")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SubStatusCode { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoExact4AlphaNumericText? SubStatusCode { get; init; }
 }

@@ -23,7 +23,7 @@ public enum InstructionType3Code
     [IsoId("_aYxvsNp-Ed-ak6NoX_4Aeg_-1294968773")]
     [Description(@"Instruction to match a data set.")]
     Match = InstructionTypeCode.Match, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction to pre-match a data set.
     /// Encoded/decoded by serializers as &quot;PMTC&quot;.
@@ -32,5 +32,4 @@ public enum InstructionType3Code
     [IsoId("_aYxvsdp-Ed-ak6NoX_4Aeg_-1294968370")]
     [Description(@"Instruction to pre-match a data set.")]
     PreMatch = InstructionTypeCode.PreMatch, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bkBa0tp-Ed-ak6NoX_4Aeg_678189976")]
-[Description(@"Specifies the type of counterparty to be taken into account for calculation of the balance.")]
+[Description(
+    @"Specifies the type of counterparty to be taken into account for calculation of the balance."
+)]
 [DerivedFrom(typeof(BalanceCounterpartyCode))]
 public enum BalanceCounterparty1Code
 {
@@ -23,7 +25,7 @@ public enum BalanceCounterparty1Code
     [IsoId("_bkBa09p-Ed-ak6NoX_4Aeg_678189977")]
     [Description(@"Balance calculated regarding one member in the system.")]
     Bilateral = BalanceCounterpartyCode.Bilateral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance calculated regarding all members in the system.
     /// Encoded/decoded by serializers as &quot;MULT&quot;.
@@ -32,5 +34,4 @@ public enum BalanceCounterparty1Code
     [IsoId("_bkBa1Np-Ed-ak6NoX_4Aeg_678189978")]
     [Description(@"Balance calculated regarding all members in the system.")]
     Multilateral = BalanceCounterpartyCode.Multilateral, // same ordinal as derivation source for type conversions
-    
 }

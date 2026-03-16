@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rWcjYZHlEe6qwqnYOGEReg")]
 [DisplayName("Card Payment Transaction132")]
-public partial record CardPaymentTransaction132
+public record CardPaymentTransaction132
 {
-    #nullable enable
-
     /// <summary>
     /// Action.
     /// </summary>
@@ -44,21 +42,21 @@ public partial record CardPaymentTransaction132
     /// </summary>
     [DisplayName("Authorisation Result")]
     [IsoXmlTag("AuthstnRslt")]
-    public required AuthorisationResult17 AuthorisationResult { get; init; } 
+    public required AuthorisationResult17 AuthorisationResult { get; init; }
 
     /// <summary>
     /// Balance.
     /// </summary>
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public AmountAndDirection93? Balance { get; init; } 
+    public AmountAndDirection93? Balance { get; init; }
 
     /// <summary>
     /// Currency Conversion Eligibility.
     /// </summary>
     [DisplayName("Currency Conversion Eligibility")]
     [IsoXmlTag("CcyConvsElgblty")]
-    public CurrencyConversion29? CurrencyConversionEligibility { get; init; } 
+    public CurrencyConversion29? CurrencyConversionEligibility { get; init; }
 
     /// <summary>
     /// Not Allowed Product Code.
@@ -72,9 +70,5 @@ public partial record CardPaymentTransaction132
     /// </summary>
     [DisplayName("Protected Balance")]
     [IsoXmlTag("PrtctdBal")]
-    public ContentInformationType40? ProtectedBalance { get; init; } 
-
-    
-    #nullable disable
-    
+    public ContentInformationType40? ProtectedBalance { get; init; }
 }

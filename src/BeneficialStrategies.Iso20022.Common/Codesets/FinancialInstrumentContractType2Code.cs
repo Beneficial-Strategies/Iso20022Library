@@ -23,7 +23,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_6FDLkZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type contracts for difference.")]
     ContractForDifference = FinancialInstrumentContractTypeCode.ContractForDifference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type forward rate agreement.
     /// Encoded/decoded by serializers as &quot;FRAS&quot;.
@@ -32,7 +32,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_6mlLUZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type forward rate agreement.")]
     ForwardRateAgreement = FinancialInstrumentContractTypeCode.ForwardRateAgreement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type future.
     /// Encoded/decoded by serializers as &quot;FUTR&quot;.
@@ -41,7 +41,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_7jFP0ZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type future.")]
     Futures = FinancialInstrumentContractTypeCode.Futures, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type forward.
     /// Encoded/decoded by serializers as &quot;FORW&quot;.
@@ -50,7 +50,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_8OmSAZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type forward.||")]
     Forward = FinancialInstrumentContractTypeCode.Forward, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type option.
     /// Encoded/decoded by serializers as &quot;OPTN&quot;.
@@ -59,7 +59,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_8o0v4ZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type option.|")]
     Option = FinancialInstrumentContractTypeCode.Option, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type spread betting.
     /// Encoded/decoded by serializers as &quot;SPDB&quot;.
@@ -68,7 +68,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_9HN8EZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type spread betting.|")]
     SpreadBetting = FinancialInstrumentContractTypeCode.SpreadBetting, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type swap.
     /// Encoded/decoded by serializers as &quot;SWAP&quot;.
@@ -77,7 +77,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_9yJIYZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type swap.|")]
     Swap = FinancialInstrumentContractTypeCode.Swap, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of type swaption.
     /// Encoded/decoded by serializers as &quot;SWPT&quot;.
@@ -86,7 +86,7 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_-I73wZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of type swaption.|")]
     Swaption = FinancialInstrumentContractTypeCode.Swaption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract of other financial instrument contract type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -95,5 +95,4 @@ public enum FinancialInstrumentContractType2Code
     [IsoId("_-oFR4ZHrEeabEPkKgPJPcA")]
     [Description(@"Contract of other financial instrument contract type.")]
     Other = FinancialInstrumentContractTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

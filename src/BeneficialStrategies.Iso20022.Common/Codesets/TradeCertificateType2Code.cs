@@ -23,7 +23,7 @@ public enum TradeCertificateType2Code
     [IsoId("_YmLwuNp-Ed-ak6NoX_4Aeg_2058856409")]
     [Description(@"Beneficiary certificate.")]
     Beneficiary = TradeCertificateTypeCode.Beneficiary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Shipping line certificate.
     /// Encoded/decoded by serializers as &quot;SHIP&quot;.
@@ -32,7 +32,7 @@ public enum TradeCertificateType2Code
     [IsoId("_YmLwudp-Ed-ak6NoX_4Aeg_2058856410")]
     [Description(@"Shipping line certificate.")]
     ShippingLine = TradeCertificateTypeCode.ShippingLine, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undefined certificate at this stage.
     /// Encoded/decoded by serializers as &quot;UND1&quot;.
@@ -41,7 +41,7 @@ public enum TradeCertificateType2Code
     [IsoId("_YmVhsNp-Ed-ak6NoX_4Aeg_2058856418")]
     [Description(@"Undefined certificate at this stage.")]
     Undefined1 = TradeCertificateTypeCode.Undefined1, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undefined certificate at this stage.
     /// Encoded/decoded by serializers as &quot;UND2&quot;.
@@ -50,5 +50,4 @@ public enum TradeCertificateType2Code
     [IsoId("_YmVhsdp-Ed-ak6NoX_4Aeg_2058856419")]
     [Description(@"Undefined certificate at this stage.")]
     Undefined2 = TradeCertificateTypeCode.Undefined2, // same ordinal as derivation source for type conversions
-    
 }

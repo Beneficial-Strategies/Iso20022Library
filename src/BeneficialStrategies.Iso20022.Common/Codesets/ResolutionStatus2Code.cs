@@ -23,7 +23,7 @@ public enum ResolutionStatus2Code
     [IsoId("_S5RIgV64EeSjaerr_EM7AQ")]
     [Description(@"Meeting resolution has been accepted.")]
     Accepted = ResolutionStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting resolution has been rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,7 +32,7 @@ public enum ResolutionStatus2Code
     [IsoId("_TCMbAV64EeSjaerr_EM7AQ")]
     [Description(@"Meeting resolution has been rejected.")]
     Rejected = ResolutionStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting resolution has been withdrawn.
     /// Encoded/decoded by serializers as &quot;WDRA&quot;.
@@ -41,5 +41,4 @@ public enum ResolutionStatus2Code
     [IsoId("_TK-jkV64EeSjaerr_EM7AQ")]
     [Description(@"Meeting resolution has been withdrawn.")]
     Withdrawn = ResolutionStatusCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
 }

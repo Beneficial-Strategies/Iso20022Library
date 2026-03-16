@@ -23,25 +23,29 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB4Y3JEeWjkqXgn_0Imw")]
     [Description(@"Software module.")]
     SoftwareModule = DataSetCategoryCode.SoftwareModule, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.
     /// Encoded/decoded by serializers as &quot;VDPR&quot;.
     /// </summary>
     [EnumMember(Value = "VDPR")]
     [IsoId("_CyFB443JEeWjkqXgn_0Imw")]
-    [Description(@"Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.")]
+    [Description(
+        @"Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities."
+    )]
     VendorParameters = DataSetCategoryCode.VendorParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acquirer specific configuration parameters for the point of interaction (POI) system.
     /// Encoded/decoded by serializers as &quot;AQPR&quot;.
     /// </summary>
     [EnumMember(Value = "AQPR")]
     [IsoId("_CyFB5Y3JEeWjkqXgn_0Imw")]
-    [Description(@"Acquirer specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Acquirer specific configuration parameters for the point of interaction (POI) system."
+    )]
     AcquirerParameters = DataSetCategoryCode.AcquirerParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Merchant configuration parameters for the point of interaction (POI).
     /// Encoded/decoded by serializers as &quot;MRPR&quot;.
@@ -50,7 +54,7 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB543JEeWjkqXgn_0Imw")]
     [Description(@"Merchant configuration parameters for the point of interaction (POI).")]
     MerchantParameters = DataSetCategoryCode.MerchantParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch upload of transaction data (data capture of a group of transactions).
     /// Encoded/decoded by serializers as &quot;TXCP&quot;.
@@ -59,7 +63,7 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB6Y3JEeWjkqXgn_0Imw")]
     [Description(@"Batch upload of transaction data (data capture of a group of transactions).")]
     BatchCapture = DataSetCategoryCode.BatchCapture, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch download response for the batch capture of transactions.
     /// Encoded/decoded by serializers as &quot;AKCP&quot;.
@@ -68,7 +72,7 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB643JEeWjkqXgn_0Imw")]
     [Description(@"Batch download response for the batch capture of transactions.")]
     CaptureResponse = DataSetCategoryCode.CaptureResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Report of software configuration and parameter status.
     /// Encoded/decoded by serializers as &quot;STRP&quot;.
@@ -77,7 +81,7 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB7Y3JEeWjkqXgn_0Imw")]
     [Description(@"Report of software configuration and parameter status.")]
     StatusReport = DataSetCategoryCode.StatusReport, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data needed to create a terminal management sub-domain.
     /// Encoded/decoded by serializers as &quot;DLGT&quot;.
@@ -86,7 +90,7 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB743JEeWjkqXgn_0Imw")]
     [Description(@"Data needed to create a terminal management sub-domain.")]
     DelegationData = DataSetCategoryCode.DelegationData, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration of management plan in the point of interaction.
     /// Encoded/decoded by serializers as &quot;MGTP&quot;.
@@ -95,14 +99,15 @@ public enum DataSetCategory8Code
     [IsoId("_CyFB8Y3JEeWjkqXgn_0Imw")]
     [Description(@"Configuration of management plan in the point of interaction.")]
     ManagementPlan = DataSetCategoryCode.ManagementPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch of transaction that have generated an error in the totals of the reconciliation.
     /// Encoded/decoded by serializers as &quot;RCLE&quot;.
     /// </summary>
     [EnumMember(Value = "RCLE")]
     [IsoId("_GhQpYY3JEeWjkqXgn_0Imw")]
-    [Description(@"Batch of transaction that have generated an error in the totals of the reconciliation.")]
+    [Description(
+        @"Batch of transaction that have generated an error in the totals of the reconciliation."
+    )]
     ReconciliationError = DataSetCategoryCode.ReconciliationError, // same ordinal as derivation source for type conversions
-    
 }

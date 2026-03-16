@@ -23,7 +23,7 @@ public enum DTCProtectInstructionStatus1Code
     [IsoId("_MS-eUZIdEeaNbfbSYshZYw")]
     [Description(@"Instruction pending release or delete from approval function.")]
     PendingApproval = DTCInstructionStatusCode.PendingApproval, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Client instruction withdrawn for events with withdrawal privilege.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
@@ -32,7 +32,7 @@ public enum DTCProtectInstructionStatus1Code
     [IsoId("_McjREZIdEeaNbfbSYshZYw")]
     [Description(@"Client instruction withdrawn for events with withdrawal privilege.")]
     Withdrawn = DTCInstructionStatusCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Protect instruction has been fully covered.
     /// Encoded/decoded by serializers as &quot;COVR&quot;.
@@ -41,7 +41,7 @@ public enum DTCProtectInstructionStatus1Code
     [IsoId("_MoTOEZIdEeaNbfbSYshZYw")]
     [Description(@"Protect instruction has been fully covered.")]
     FullyCovered = DTCInstructionStatusCode.FullyCovered, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Protect instruction has expired.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -50,14 +50,15 @@ public enum DTCProtectInstructionStatus1Code
     [IsoId("_NdphsZIdEeaNbfbSYshZYw")]
     [Description(@"Protect instruction has expired.")]
     Expired = DTCInstructionStatusCode.Expired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Protect instruction which has not been fully covered. Will include partial covers.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
     /// </summary>
     [EnumMember(Value = "OPEN")]
     [IsoId("_N2nbUZIdEeaNbfbSYshZYw")]
-    [Description(@"Protect instruction which has not been fully covered. Will include partial covers.")]
+    [Description(
+        @"Protect instruction which has not been fully covered. Will include partial covers."
+    )]
     Open = DTCInstructionStatusCode.Open, // same ordinal as derivation source for type conversions
-    
 }

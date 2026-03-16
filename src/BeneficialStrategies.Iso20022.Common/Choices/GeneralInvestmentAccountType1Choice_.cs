@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(GeneralInvestmentAccountType1Choice.Code))]
     [KnownType(typeof(GeneralInvestmentAccountType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(GeneralInvestmentAccountType1Choice.Code),nameof(GeneralInvestmentAccountType1Choice.Code))]
-    [JsonDerivedType(typeof(GeneralInvestmentAccountType1Choice.Proprietary),nameof(GeneralInvestmentAccountType1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(GeneralInvestmentAccountType1Choice.Code),
+        nameof(GeneralInvestmentAccountType1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(GeneralInvestmentAccountType1Choice.Proprietary),
+        nameof(GeneralInvestmentAccountType1Choice.Proprietary)
+    )]
     [IsoId("_b9WV8F2cEeiFXdiLi_Nf4A")]
     [DisplayName("General Investment Account Type 1 Choice")]
-    public abstract partial record GeneralInvestmentAccountType1Choice_
-    {
-    }
+    public abstract record GeneralInvestmentAccountType1Choice_ { }
 }

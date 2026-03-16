@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AdjustmentType1Choice.Type))]
     [KnownType(typeof(AdjustmentType1Choice.OtherAdjustmentType))]
-    [JsonDerivedType(typeof(AdjustmentType1Choice.Type),nameof(AdjustmentType1Choice.Type))]
-    [JsonDerivedType(typeof(AdjustmentType1Choice.OtherAdjustmentType),nameof(AdjustmentType1Choice.OtherAdjustmentType))]
+    [JsonDerivedType(typeof(AdjustmentType1Choice.Type), nameof(AdjustmentType1Choice.Type))]
+    [JsonDerivedType(
+        typeof(AdjustmentType1Choice.OtherAdjustmentType),
+        nameof(AdjustmentType1Choice.OtherAdjustmentType)
+    )]
     [IsoId("_HQHgwBrXEeOVR9VN6fAMUg")]
     [DisplayName("Adjustment Type 1 Choice")]
-    public abstract partial record AdjustmentType1Choice_
-    {
-    }
+    public abstract record AdjustmentType1Choice_ { }
 }

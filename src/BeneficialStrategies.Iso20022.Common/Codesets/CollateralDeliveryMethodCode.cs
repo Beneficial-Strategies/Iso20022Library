@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_DTpLsCDmEeahCJeThTBhHA")]
-[Description(@"Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use.")]
+[Description(
+    @"Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use."
+)]
 [Derivations(typeof(CollateralDeliveryMethod1Code))]
 public enum CollateralDeliveryMethodCode
 {
@@ -23,7 +25,7 @@ public enum CollateralDeliveryMethodCode
     [IsoId("_FZW7ACDmEeahCJeThTBhHA")]
     [Description(@"Title transfer collateral arrangement.")]
     TitleTransferCollateralArrangement,
-    
+
     /// <summary>
     /// Securities interest collateral arrangement.
     /// Encoded/decoded by serializers as &quot;SICA&quot;.
@@ -32,7 +34,7 @@ public enum CollateralDeliveryMethodCode
     [IsoId("_LsvkoCDmEeahCJeThTBhHA")]
     [Description(@"Securities interest collateral arrangement.")]
     SecuritiesInterestCollateralArrangement,
-    
+
     /// <summary>
     /// Securities interest with the right of use.
     /// Encoded/decoded by serializers as &quot;SIUR&quot;.
@@ -41,5 +43,4 @@ public enum CollateralDeliveryMethodCode
     [IsoId("_OowCwCDmEeahCJeThTBhHA")]
     [Description(@"Securities interest with the right of use.")]
     SecuritiesInterestWithUseRight,
-    
 }

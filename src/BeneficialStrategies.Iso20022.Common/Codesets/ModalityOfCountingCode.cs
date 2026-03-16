@@ -23,7 +23,7 @@ public enum ModalityOfCountingCode
     [IsoId("_fLXyoK-uEemJ1NnLPsTFaw")]
     [Description(@"Paper vote recorded and counted ahead of the meeting.")]
     PaperBefore,
-    
+
     /// <summary>
     /// Electronic vote recorded and counted ahead of the meeting.
     /// Encoded/decoded by serializers as &quot;EVBM&quot;.
@@ -32,7 +32,7 @@ public enum ModalityOfCountingCode
     [IsoId("_uUoQwK-uEemJ1NnLPsTFaw")]
     [Description(@"Electronic vote recorded and counted ahead of the meeting.")]
     ElectronicBefore,
-    
+
     /// <summary>
     /// Electronic vote recorded and counted at the meeting.
     /// Encoded/decoded by serializers as &quot;EVAM&quot;.
@@ -41,7 +41,7 @@ public enum ModalityOfCountingCode
     [IsoId("_04niMK-uEemJ1NnLPsTFaw")]
     [Description(@"Electronic vote recorded and counted at the meeting.")]
     ElectronicAtMeeting,
-    
+
     /// <summary>
     /// Physical attendance with vote at the meeting.
     /// Encoded/decoded by serializers as &quot;PVAM&quot;.
@@ -50,5 +50,4 @@ public enum ModalityOfCountingCode
     [IsoId("__oPtoK-uEemJ1NnLPsTFaw")]
     [Description(@"Physical attendance with vote at the meeting.")]
     PhysicalAtMeeting,
-    
 }

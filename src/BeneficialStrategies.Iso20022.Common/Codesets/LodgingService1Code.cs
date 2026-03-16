@@ -23,7 +23,7 @@ public enum LodgingService1Code
     [IsoId("_y7qT0WMtEeexSYCBvAp_qA")]
     [Description(@"Room accommodation")]
     Accommodation = LodgingServiceCode.Accommodation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Audio visual lodging service.
     /// Encoded/decoded by serializers as &quot;AUDI&quot;.
@@ -32,7 +32,7 @@ public enum LodgingService1Code
     [IsoId("_zM08UmMtEeexSYCBvAp_qA")]
     [Description(@"Audio visual lodging service.")]
     AudioVisual = LodgingServiceCode.AudioVisual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Banquet lodging service.
     /// Encoded/decoded by serializers as &quot;BANQ&quot;.
@@ -41,7 +41,7 @@ public enum LodgingService1Code
     [IsoId("_zbOksmMtEeexSYCBvAp_qA")]
     [Description(@"Banquet lodging service.")]
     Banquet = LodgingServiceCode.Banquet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Breakfast lodging service.
     /// Encoded/decoded by serializers as &quot;BREK&quot;.
@@ -50,7 +50,7 @@ public enum LodgingService1Code
     [IsoId("_zoAccmMtEeexSYCBvAp_qA")]
     [Description(@"Breakfast lodging service.")]
     Breakfast = LodgingServiceCode.Breakfast, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Business centre lodging service.
     /// Encoded/decoded by serializers as &quot;BUSS&quot;.
@@ -59,7 +59,7 @@ public enum LodgingService1Code
     [IsoId("_z1EoEmMtEeexSYCBvAp_qA")]
     [Description(@"Business centre lodging service.")]
     BusinessCentre = LodgingServiceCode.BusinessCentre, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Concierge lodging service.
     /// Encoded/decoded by serializers as &quot;CONC&quot;.
@@ -68,7 +68,7 @@ public enum LodgingService1Code
     [IsoId("_0BX-smMtEeexSYCBvAp_qA")]
     [Description(@"Concierge lodging service.")]
     Concierge = LodgingServiceCode.Concierge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Early arrival lodging service.
     /// Encoded/decoded by serializers as &quot;EARA&quot;.
@@ -77,7 +77,7 @@ public enum LodgingService1Code
     [IsoId("_0TUqUmMtEeexSYCBvAp_qA")]
     [Description(@"Early arrival lodging service.")]
     EarlyArrival = LodgingServiceCode.EarlyArrival, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Early departure lodging service.
     /// Encoded/decoded by serializers as &quot;EARD&quot;.
@@ -86,7 +86,7 @@ public enum LodgingService1Code
     [IsoId("_0mfd8mMtEeexSYCBvAp_qA")]
     [Description(@"Early departure lodging service.")]
     EarlyDeparture = LodgingServiceCode.EarlyDeparture, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entertainment lodging service.
     /// Encoded/decoded by serializers as &quot;ENTR&quot;.
@@ -95,7 +95,7 @@ public enum LodgingService1Code
     [IsoId("_05LwcmMtEeexSYCBvAp_qA")]
     [Description(@"Entertainment lodging service.")]
     Entertainment = LodgingServiceCode.Entertainment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Folio cash advance lodging service.
     /// Encoded/decoded by serializers as &quot;FCAA&quot;.
@@ -104,7 +104,7 @@ public enum LodgingService1Code
     [IsoId("_1IohsmMtEeexSYCBvAp_qA")]
     [Description(@"Folio cash advance lodging service.")]
     FolioCashAdvance = LodgingServiceCode.FolioCashAdvance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Games lodging service.
     /// Encoded/decoded by serializers as &quot;GAME&quot;.
@@ -113,7 +113,7 @@ public enum LodgingService1Code
     [IsoId("_1Xy_EmMtEeexSYCBvAp_qA")]
     [Description(@"Games lodging service.")]
     Games = LodgingServiceCode.Games, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Garage lodging service.
     /// Encoded/decoded by serializers as &quot;GARA&quot;.
@@ -122,7 +122,7 @@ public enum LodgingService1Code
     [IsoId("_1nJpsmMtEeexSYCBvAp_qA")]
     [Description(@"Garage lodging service.")]
     Garage = LodgingServiceCode.Garage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Gift shop lodging service.
     /// Encoded/decoded by serializers as &quot;GIFT&quot;.
@@ -131,7 +131,7 @@ public enum LodgingService1Code
     [IsoId("_1zdAUmMtEeexSYCBvAp_qA")]
     [Description(@"Gift shop lodging service.")]
     GiftShop = LodgingServiceCode.GiftShop, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Health lodging service.
     /// Encoded/decoded by serializers as &quot;HEAL&quot;.
@@ -140,7 +140,7 @@ public enum LodgingService1Code
     [IsoId("_1-5bUmMtEeexSYCBvAp_qA")]
     [Description(@"Health lodging service.")]
     Health = LodgingServiceCode.Health, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Internet lodging service.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -149,7 +149,7 @@ public enum LodgingService1Code
     [IsoId("_2saBkmMtEeexSYCBvAp_qA")]
     [Description(@"Internet lodging service.")]
     Internet = LodgingServiceCode.Internet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Laundry lodging service.
     /// Encoded/decoded by serializers as &quot;LAUN&quot;.
@@ -158,7 +158,7 @@ public enum LodgingService1Code
     [IsoId("_25L5UmMtEeexSYCBvAp_qA")]
     [Description(@"Laundry lodging service.")]
     Laundry = LodgingServiceCode.Laundry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Lounge bar lodging service.
     /// Encoded/decoded by serializers as &quot;LONG&quot;.
@@ -167,7 +167,7 @@ public enum LodgingService1Code
     [IsoId("_3HroUmMtEeexSYCBvAp_qA")]
     [Description(@"Lounge bar lodging service.")]
     LoungeBar = LodgingServiceCode.LoungeBar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mini bar lodging service.
     /// Encoded/decoded by serializers as &quot;MINI&quot;.
@@ -176,7 +176,7 @@ public enum LodgingService1Code
     [IsoId("_3Vgo8mMtEeexSYCBvAp_qA")]
     [Description(@"Mini bar lodging service.")]
     MiniBar = LodgingServiceCode.MiniBar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No show lodging service.
     /// Encoded/decoded by serializers as &quot;NOSH&quot;.
@@ -185,7 +185,7 @@ public enum LodgingService1Code
     [IsoId("_3slsMmMtEeexSYCBvAp_qA")]
     [Description(@"No show lodging service.")]
     NoShow = LodgingServiceCode.NoShow, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of service.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -194,7 +194,7 @@ public enum LodgingService1Code
     [IsoId("_4AnbcmMtEeexSYCBvAp_qA")]
     [Description(@"Other type of service.")]
     Other = LodgingServiceCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Parking lodging service.
     /// Encoded/decoded by serializers as &quot;PARK&quot;.
@@ -203,7 +203,7 @@ public enum LodgingService1Code
     [IsoId("_4LxikmMtEeexSYCBvAp_qA")]
     [Description(@"Parking lodging service.")]
     Parking = LodgingServiceCode.Parking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Phone lodging service.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -212,7 +212,7 @@ public enum LodgingService1Code
     [IsoId("_4YYbMmMtEeexSYCBvAp_qA")]
     [Description(@"Phone lodging service.")]
     Phone = LodgingServiceCode.Phone, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Restaurant lodging service.
     /// Encoded/decoded by serializers as &quot;REST&quot;.
@@ -221,7 +221,7 @@ public enum LodgingService1Code
     [IsoId("_4kfkkmMtEeexSYCBvAp_qA")]
     [Description(@"Restaurant lodging service.")]
     Restaurant = LodgingServiceCode.Restaurant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Room service.
     /// Encoded/decoded by serializers as &quot;RMSE&quot;.
@@ -230,7 +230,7 @@ public enum LodgingService1Code
     [IsoId("_4pvQ8WMtEeexSYCBvAp_qA")]
     [Description(@"Room service.")]
     RoomService = LodgingServiceCode.RoomService, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Spa lodging service.
     /// Encoded/decoded by serializers as &quot;SPAS&quot;.
@@ -239,7 +239,7 @@ public enum LodgingService1Code
     [IsoId("_5X_eEmMtEeexSYCBvAp_qA")]
     [Description(@"Spa lodging service.")]
     Spa = LodgingServiceCode.Spa, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Third-party lodging service.
     /// Encoded/decoded by serializers as &quot;THRD&quot;.
@@ -248,7 +248,7 @@ public enum LodgingService1Code
     [IsoId("_5o95UmMtEeexSYCBvAp_qA")]
     [Description(@"Third-party lodging service.")]
     ThirdParty = LodgingServiceCode.ThirdParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transportation lodging service.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -257,7 +257,7 @@ public enum LodgingService1Code
     [IsoId("_50UNsmMtEeexSYCBvAp_qA")]
     [Description(@"Transportation lodging service.")]
     Transportation = LodgingServiceCode.Transportation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Video on demand lodging service.
     /// Encoded/decoded by serializers as &quot;VODS&quot;.
@@ -266,5 +266,4 @@ public enum LodgingService1Code
     [IsoId("_6AzxkmMtEeexSYCBvAp_qA")]
     [Description(@"Video on demand lodging service.")]
     VideoOnDemand = LodgingServiceCode.VideoOnDemand, // same ordinal as derivation source for type conversions
-    
 }

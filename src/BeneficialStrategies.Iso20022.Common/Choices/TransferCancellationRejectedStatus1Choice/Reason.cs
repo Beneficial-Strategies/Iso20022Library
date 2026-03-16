@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStatus1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStat
     /// </summary>
     [IsoId("_U0fAs9p-Ed-ak6NoX_4Aeg_1742304027")]
     [DisplayName("Reason")]
-    public partial record Reason : TransferCancellationRejectedStatus1Choice_
+    public record Reason : TransferCancellationRejectedStatus1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Reason for a rejected status in structured form.
         /// </summary>
         [IsoId("_U0fAttp-Ed-ak6NoX_4Aeg_1814337906")]
         [DisplayName("Structured")]
         [IsoXmlTag("Strd")]
-        public required CancellationRejectedReason1Code Structured { get; init; } 
-        
+        public required CancellationRejectedReason1Code Structured { get; init; }
+
         /// <summary>
         /// Additional information about the reason for the rejected status in textual form.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferCancellationRejectedStat
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? AdditionalInformation { get; init; }
     }
 }

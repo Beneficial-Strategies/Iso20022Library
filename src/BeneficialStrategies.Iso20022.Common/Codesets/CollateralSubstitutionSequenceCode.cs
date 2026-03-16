@@ -23,7 +23,7 @@ public enum CollateralSubstitutionSequenceCode
     [IsoId("_YcDkUtp-Ed-ak6NoX_4Aeg_556952094")]
     [Description(@"Indicates this is a new collateral substitution request.")]
     Initial,
-    
+
     /// <summary>
     /// Indicates this is an updated collateral substitution request.
     /// Encoded/decoded by serializers as &quot;UPDD&quot;.
@@ -32,5 +32,4 @@ public enum CollateralSubstitutionSequenceCode
     [IsoId("_YcDkU9p-Ed-ak6NoX_4Aeg_-1690630387")]
     [Description(@"Indicates this is an updated collateral substitution request.")]
     Updated,
-    
 }

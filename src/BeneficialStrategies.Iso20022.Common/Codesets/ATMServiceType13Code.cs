@@ -21,7 +21,9 @@ public enum ATMServiceType13Code
     /// </summary>
     [EnumMember(Value = "ASTS")]
     [IsoId("_ATMServiceType13Code_AccountStatements")]
-    [Description(@"Request a full statement (that is a legal statement) related to a customer account.")]
+    [Description(
+        @"Request a full statement (that is a legal statement) related to a customer account."
+    )]
     AccountStatements = ATMServiceTypeV2Code.AccountStatements,
 
     /// <summary>
@@ -75,7 +77,9 @@ public enum ATMServiceType13Code
     /// </summary>
     [EnumMember(Value = "PATH")]
     [IsoId("_ATMServiceType13Code_PreAuthorisedWithdrawal")]
-    [Description(@"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message.")]
+    [Description(
+        @"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message."
+    )]
     PreAuthorisedWithdrawal = ATMServiceTypeV2Code.PreAuthorisedWithdrawal,
 
     /// <summary>
@@ -158,5 +162,4 @@ public enum ATMServiceType13Code
     [IsoId("_ATMServiceType13Code_Payment")]
     [Description(@"Funds transfer to pay a third party.")]
     Payment = ATMServiceTypeV2Code.Payment,
-
 }

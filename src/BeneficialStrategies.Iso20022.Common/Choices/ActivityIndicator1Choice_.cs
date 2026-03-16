@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ActivityIndicator1Choice.ISICIdentifier))]
     [KnownType(typeof(ActivityIndicator1Choice.ProprietaryIndicator))]
-    [JsonDerivedType(typeof(ActivityIndicator1Choice.ISICIdentifier),nameof(ActivityIndicator1Choice.ISICIdentifier))]
-    [JsonDerivedType(typeof(ActivityIndicator1Choice.ProprietaryIndicator),nameof(ActivityIndicator1Choice.ProprietaryIndicator))]
+    [JsonDerivedType(
+        typeof(ActivityIndicator1Choice.ISICIdentifier),
+        nameof(ActivityIndicator1Choice.ISICIdentifier)
+    )]
+    [JsonDerivedType(
+        typeof(ActivityIndicator1Choice.ProprietaryIndicator),
+        nameof(ActivityIndicator1Choice.ProprietaryIndicator)
+    )]
     [IsoId("_Lg8f41x7Ee6fgZt44_IqFA")]
     [DisplayName("Activity Indicator1Choice")]
-    public abstract partial record ActivityIndicator1Choice_
-    {
-    }
+    public abstract record ActivityIndicator1Choice_ { }
 }

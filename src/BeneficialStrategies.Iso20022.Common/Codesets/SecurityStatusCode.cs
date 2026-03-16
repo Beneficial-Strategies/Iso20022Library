@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZKGWEtp-Ed-ak6NoX_4Aeg_274745711")]
 [Description(@"Specifies the status of the security.")]
-[Derivations(typeof(SecurityStatus1Code),typeof(SecurityStatus2Code))]
+[Derivations(typeof(SecurityStatus1Code), typeof(SecurityStatus2Code))]
 public enum SecurityStatusCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKGWE9p-Ed-ak6NoX_4Aeg_875031399")]
     [Description(@"The status is active.")]
     Active,
-    
+
     /// <summary>
     /// The status is inactive.
     /// Encoded/decoded by serializers as &quot;INAC&quot;.
@@ -32,7 +32,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKGWFNp-Ed-ak6NoX_4Aeg_924902935")]
     [Description(@"The status is inactive.")]
     Inactive,
-    
+
     /// <summary>
     /// The status is when issued.
     /// Encoded/decoded by serializers as &quot;WISS&quot;.
@@ -41,7 +41,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKGWFdp-Ed-ak6NoX_4Aeg_1162247833")]
     [Description(@"The status is when issued.")]
     WhenIssued,
-    
+
     /// <summary>
     /// The status is when distributed.
     /// Encoded/decoded by serializers as &quot;WDIS&quot;.
@@ -50,7 +50,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKGWFtp-Ed-ak6NoX_4Aeg_1205652804")]
     [Description(@"The status is when distributed.")]
     WhenDistributed,
-    
+
     /// <summary>
     /// The status is issued.
     /// Encoded/decoded by serializers as &quot;ISUD&quot;.
@@ -59,7 +59,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKGWF9p-Ed-ak6NoX_4Aeg_1232436292")]
     [Description(@"The status is issued.")]
     Issued,
-    
+
     /// <summary>
     /// The status is suspended.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
@@ -68,7 +68,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKGWGNp-Ed-ak6NoX_4Aeg_1249981812")]
     [Description(@"The status is suspended.")]
     Suspended,
-    
+
     /// <summary>
     /// The status is in default.
     /// Encoded/decoded by serializers as &quot;IDEF&quot;.
@@ -77,7 +77,7 @@ public enum SecurityStatusCode
     [IsoId("_ZKPgANp-Ed-ak6NoX_4Aeg_1275841256")]
     [Description(@"The status is in default.")]
     InDefault,
-    
+
     /// <summary>
     /// Annoucement by the regulator that the security has become worthless.
     /// Encoded/decoded by serializers as &quot;WRTH&quot;.
@@ -86,5 +86,4 @@ public enum SecurityStatusCode
     [IsoId("_ZKPgAdp-Ed-ak6NoX_4Aeg_1295235874")]
     [Description(@"Annoucement by the regulator that the security has become worthless.")]
     Worthless,
-    
 }

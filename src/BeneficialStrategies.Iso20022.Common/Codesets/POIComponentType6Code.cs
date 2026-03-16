@@ -21,9 +21,11 @@ public enum POIComponentType6Code
     /// </summary>
     [EnumMember(Value = "AQPP")]
     [IsoId("_UCslQQ1JEeqjM-rxn3HuXQ")]
-    [Description(@"Parameters for acquirer interface of the point of interaction, including acquirer host configuration parameters.")]
+    [Description(
+        @"Parameters for acquirer interface of the point of interaction, including acquirer host configuration parameters."
+    )]
     AcquirerProtocolParameters = POIComponentTypeCode.AcquirerProtocolParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Parameters of a payment application running on the point of interaction.
     /// Encoded/decoded by serializers as &quot;APPR&quot;.
@@ -32,7 +34,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslQw1JEeqjM-rxn3HuXQ")]
     [Description(@"Parameters of a payment application running on the point of interaction.")]
     ApplicationParameters = POIComponentTypeCode.ApplicationParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Manufacturer configuration parameters of the point of interaction.
     /// Encoded/decoded by serializers as &quot;TLPR&quot;.
@@ -41,7 +43,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslRQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Manufacturer configuration parameters of the point of interaction.")]
     TerminalParameters = POIComponentTypeCode.TerminalParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security parameters of the point of interaction.
     /// Encoded/decoded by serializers as &quot;SCPR&quot;.
@@ -50,7 +52,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslRw1JEeqjM-rxn3HuXQ")]
     [Description(@"Security parameters of the point of interaction.")]
     SecurityParameters = POIComponentTypeCode.SecurityParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment server of a point of interaction system.
     /// Encoded/decoded by serializers as &quot;SERV&quot;.
@@ -59,7 +61,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslSQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Payment server of a point of interaction system.")]
     Server = POIComponentTypeCode.Server, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment terminal point of interaction.
     /// Encoded/decoded by serializers as &quot;TERM&quot;.
@@ -68,7 +70,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslSw1JEeqjM-rxn3HuXQ")]
     [Description(@"Payment terminal point of interaction.")]
     Terminal = POIComponentTypeCode.Terminal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Device sub-component of a component of the point of interaction.
     /// Encoded/decoded by serializers as &quot;DVCE&quot;.
@@ -77,7 +79,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslTQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Device sub-component of a component of the point of interaction.")]
     Device = POIComponentTypeCode.Device, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security module.
     /// Encoded/decoded by serializers as &quot;SECM&quot;.
@@ -86,7 +88,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslTw1JEeqjM-rxn3HuXQ")]
     [Description(@"Security module.")]
     SecureModule = POIComponentTypeCode.SecureModule, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment application software.
     /// Encoded/decoded by serializers as &quot;APLI&quot;.
@@ -95,25 +97,29 @@ public enum POIComponentType6Code
     [IsoId("_UCslUQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Payment application software.")]
     PaymentApplication = POIComponentTypeCode.PaymentApplication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// EMV application kernel (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa).
     /// Encoded/decoded by serializers as &quot;EMVK&quot;.
     /// </summary>
     [EnumMember(Value = "EMVK")]
     [IsoId("_UCslUw1JEeqjM-rxn3HuXQ")]
-    [Description(@"EMV application kernel (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa).")]
+    [Description(
+        @"EMV application kernel (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa)."
+    )]
     EMVKernel = POIComponentTypeCode.EMVKernel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// EMV physical interface (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa).
     /// Encoded/decoded by serializers as &quot;EMVO&quot;.
     /// </summary>
     [EnumMember(Value = "EMVO")]
     [IsoId("_UCslVQ1JEeqjM-rxn3HuXQ")]
-    [Description(@"EMV physical interface (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa).")]
+    [Description(
+        @"EMV physical interface (EMV is the chip card specifications initially defined by Eurocard, Mastercard and Visa)."
+    )]
     EMVLevel1 = POIComponentTypeCode.EMVLevel1, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Software module of the point of interaction.
     /// Encoded/decoded by serializers as &quot;MDWR&quot;.
@@ -122,7 +128,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslVw1JEeqjM-rxn3HuXQ")]
     [Description(@"Software module of the point of interaction.")]
     Middleware = POIComponentTypeCode.Middleware, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Driver module of the point of interaction.
     /// Encoded/decoded by serializers as &quot;DRVR&quot;.
@@ -131,7 +137,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslWQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Driver module of the point of interaction.")]
     Driver = POIComponentTypeCode.Driver, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Software that manages hardware to provide common services to the applications.
     /// Encoded/decoded by serializers as &quot;OPST&quot;.
@@ -140,7 +146,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslWw1JEeqjM-rxn3HuXQ")]
     [Description(@"Software that manages hardware to provide common services to the applications.")]
     OperatingSystem = POIComponentTypeCode.OperatingSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Merchant configuration parameters for the point of interaction (POI).
     /// Encoded/decoded by serializers as &quot;MRPR&quot;.
@@ -149,7 +155,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslXQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Merchant configuration parameters for the point of interaction (POI).")]
     MerchantParameters = POIComponentTypeCode.MerchantParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certificate provided by a terminal manager.
     /// Encoded/decoded by serializers as &quot;CRTF&quot;.
@@ -158,7 +164,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslXw1JEeqjM-rxn3HuXQ")]
     [Description(@"Certificate provided by a terminal manager.")]
     CertificateParameters = POIComponentTypeCode.CertificateParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration parameters for the TMS protocol.
     /// Encoded/decoded by serializers as &quot;TMSP&quot;.
@@ -167,7 +173,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslYQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Configuration parameters for the TMS protocol.")]
     TMSProtocolParameters = POIComponentTypeCode.TMSProtocolParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Component of the Sale system.
     /// Encoded/decoded by serializers as &quot;SACP&quot;.
@@ -176,7 +182,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslYw1JEeqjM-rxn3HuXQ")]
     [Description(@"Component of the Sale system.")]
     SaleComponent = POIComponentTypeCode.SaleComponent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Parameters related to the Sale to POI protocol.
     /// Encoded/decoded by serializers as &quot;SAPR&quot;.
@@ -185,7 +191,7 @@ public enum POIComponentType6Code
     [IsoId("_UCslZQ1JEeqjM-rxn3HuXQ")]
     [Description(@"Parameters related to the Sale to POI protocol.")]
     SaleToPOIProtocolParameters = POIComponentTypeCode.SaleToPOIProtocolParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Any repository used for recording log traces.
     /// Encoded/decoded by serializers as &quot;LOGF&quot;.
@@ -194,7 +200,7 @@ public enum POIComponentType6Code
     [IsoId("_NU6h0Q1NEeqjM-rxn3HuXQ")]
     [Description(@"Any repository used for recording log traces.")]
     LogFile = POIComponentTypeCode.LogFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Media file managed by an application of the POI.
     /// Encoded/decoded by serializers as &quot;MDFL&quot;.
@@ -203,7 +209,7 @@ public enum POIComponentType6Code
     [IsoId("_XsvRQQ1NEeqjM-rxn3HuXQ")]
     [Description(@"Media file managed by an application of the POI.")]
     MediaFile = POIComponentTypeCode.MediaFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment or other software application.
     /// Encoded/decoded by serializers as &quot;SOFT&quot;.
@@ -212,7 +218,7 @@ public enum POIComponentType6Code
     [IsoId("_ZOhNEQ1NEeqjM-rxn3HuXQ")]
     [Description(@"Payment or other software application.")]
     Soft = POIComponentTypeCode.Soft, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration file relevant for the POI.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -221,7 +227,7 @@ public enum POIComponentType6Code
     [IsoId("_eaydoQ1NEeqjM-rxn3HuXQ")]
     [Description(@"Configuration file relevant for the POI.")]
     ConfigurationFile = POIComponentTypeCode.ConfigurationFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Report file generated by the POI.
     /// Encoded/decoded by serializers as &quot;RPFL&quot;.
@@ -230,5 +236,4 @@ public enum POIComponentType6Code
     [IsoId("_iDmXYQ1NEeqjM-rxn3HuXQ")]
     [Description(@"Report file generated by the POI.")]
     ReportFile = POIComponentTypeCode.ReportFile, // same ordinal as derivation source for type conversions
-    
 }

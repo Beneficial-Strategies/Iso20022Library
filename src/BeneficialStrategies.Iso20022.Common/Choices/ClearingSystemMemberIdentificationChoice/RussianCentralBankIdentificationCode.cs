@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificationChoice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDY2htp-Ed-ak6NoX_4Aeg_-896562590")]
     [DisplayName("Russian Central Bank Identification Code")]
-    public partial record RussianCentralBankIdentificationCode : ClearingSystemMemberIdentificationChoice_
+    public record RussianCentralBankIdentificationCode : ClearingSystemMemberIdentificationChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Russian Central Bank Identification Code. Identifies Russian financial institutions on the Russian national clearing system.
         /// </summary>
         [IsoXmlTag("RUCB")]
         [IsoSimpleType(IsoSimpleType.RussianCentralBankIdentificationCodeIdentifier)]
-        public required IsoRussianCentralBankIdentificationCodeIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoRussianCentralBankIdentificationCodeIdentifier Value { get; init; }
     }
 }

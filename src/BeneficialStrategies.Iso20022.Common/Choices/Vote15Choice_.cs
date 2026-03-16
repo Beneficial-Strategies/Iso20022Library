@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Vote15Choice.VotePerAgendaResolution))]
     [KnownType(typeof(Vote15Choice.VoteForAllAgendaResolutions))]
-    [JsonDerivedType(typeof(Vote15Choice.VotePerAgendaResolution),nameof(Vote15Choice.VotePerAgendaResolution))]
-    [JsonDerivedType(typeof(Vote15Choice.VoteForAllAgendaResolutions),nameof(Vote15Choice.VoteForAllAgendaResolutions))]
+    [JsonDerivedType(
+        typeof(Vote15Choice.VotePerAgendaResolution),
+        nameof(Vote15Choice.VotePerAgendaResolution)
+    )]
+    [JsonDerivedType(
+        typeof(Vote15Choice.VoteForAllAgendaResolutions),
+        nameof(Vote15Choice.VoteForAllAgendaResolutions)
+    )]
     [IsoId("_9DJBZ_NXEeqRfth943bvEA")]
     [DisplayName("Vote 15 Choice")]
-    public abstract partial record Vote15Choice_
-    {
-    }
+    public abstract record Vote15Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum CivilStatus1Code
     [IsoId("_xZ1E8SChEeWJd9HF2tO7BA")]
     [Description(@"Person is divorced.")]
     Divorced = CivilStatusCode.Divorced, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Person is legally divorced.
     /// Encoded/decoded by serializers as &quot;LDIV&quot;.
@@ -32,7 +32,7 @@ public enum CivilStatus1Code
     [IsoId("_xhkEoSChEeWJd9HF2tO7BA")]
     [Description(@"Person is legally divorced.")]
     LegallyDivorced = CivilStatusCode.LegallyDivorced, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Person is married.
     /// Encoded/decoded by serializers as &quot;MARR&quot;.
@@ -41,7 +41,7 @@ public enum CivilStatus1Code
     [IsoId("_xpAJYSChEeWJd9HF2tO7BA")]
     [Description(@"Person is married.")]
     Married = CivilStatusCode.Married, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Person is separated.
     /// Encoded/decoded by serializers as &quot;SEPA&quot;.
@@ -50,7 +50,7 @@ public enum CivilStatus1Code
     [IsoId("_xwl_ISChEeWJd9HF2tO7BA")]
     [Description(@"Person is separated.")]
     Separated = CivilStatusCode.Separated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Person is single.
     /// Encoded/decoded by serializers as &quot;SING&quot;.
@@ -59,7 +59,7 @@ public enum CivilStatus1Code
     [IsoId("_x34S4SChEeWJd9HF2tO7BA")]
     [Description(@"Person is single.")]
     Single = CivilStatusCode.Single, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Person is in a stable union.
     /// Encoded/decoded by serializers as &quot;UNIO&quot;.
@@ -68,7 +68,7 @@ public enum CivilStatus1Code
     [IsoId("_x6tkcSChEeWJd9HF2tO7BA")]
     [Description(@"Person is in a stable union.")]
     StableUnion = CivilStatusCode.StableUnion, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Person is a widower.
     /// Encoded/decoded by serializers as &quot;WIDO&quot;.
@@ -77,5 +77,4 @@ public enum CivilStatus1Code
     [IsoId("_yBjMQSChEeWJd9HF2tO7BA")]
     [Description(@"Person is a widower.")]
     Widow = CivilStatusCode.Widow, // same ordinal as derivation source for type conversions
-    
 }

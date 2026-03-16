@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ModificationProcessingStatus2Choice.Repaired))]
     [KnownType(typeof(ModificationProcessingStatus2Choice.Modified))]
     [KnownType(typeof(ModificationProcessingStatus2Choice.Proprietary))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.AcknowledgedAccepted),nameof(ModificationProcessingStatus2Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.PendingProcessing),nameof(ModificationProcessingStatus2Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.Denied),nameof(ModificationProcessingStatus2Choice.Denied))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.Rejected),nameof(ModificationProcessingStatus2Choice.Rejected))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.Repaired),nameof(ModificationProcessingStatus2Choice.Repaired))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.Modified),nameof(ModificationProcessingStatus2Choice.Modified))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus2Choice.Proprietary),nameof(ModificationProcessingStatus2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.AcknowledgedAccepted),
+        nameof(ModificationProcessingStatus2Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.PendingProcessing),
+        nameof(ModificationProcessingStatus2Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.Denied),
+        nameof(ModificationProcessingStatus2Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.Rejected),
+        nameof(ModificationProcessingStatus2Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.Repaired),
+        nameof(ModificationProcessingStatus2Choice.Repaired)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.Modified),
+        nameof(ModificationProcessingStatus2Choice.Modified)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus2Choice.Proprietary),
+        nameof(ModificationProcessingStatus2Choice.Proprietary)
+    )]
     [IsoId("_0kkl1AlIEeGATtfOBToyew_205414048")]
     [DisplayName("Modification Processing Status 2 Choice")]
-    public abstract partial record ModificationProcessingStatus2Choice_
-    {
-    }
+    public abstract record ModificationProcessingStatus2Choice_ { }
 }

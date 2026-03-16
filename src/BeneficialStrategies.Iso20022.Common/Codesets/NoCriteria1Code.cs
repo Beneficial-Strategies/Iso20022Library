@@ -23,5 +23,4 @@ public enum NoCriteria1Code
     [IsoId("_aNcpc9p-Ed-ak6NoX_4Aeg_-678428636")]
     [Description(@"No criteria.")]
     NoCriteria = NoCriteriaCode.NoCriteria, // same ordinal as derivation source for type conversions
-    
 }

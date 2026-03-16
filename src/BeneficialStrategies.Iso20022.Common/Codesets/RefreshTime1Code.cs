@@ -23,7 +23,7 @@ public enum RefreshTime1Code
     [IsoId("_Zayddtp-Ed-ak6NoX_4Aeg_820053979")]
     [Description(@"After each fill.")]
     Immediate = RefreshTimeCode.Immediate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// When quantity to be displayed equals 0.
     /// Encoded/decoded by serializers as &quot;EXHA&quot;.
@@ -32,5 +32,4 @@ public enum RefreshTime1Code
     [IsoId("_Zaydd9p-Ed-ak6NoX_4Aeg_820054304")]
     [Description(@"When quantity to be displayed equals 0.")]
     Exhaust = RefreshTimeCode.Exhaust, // same ordinal as derivation source for type conversions
-    
 }

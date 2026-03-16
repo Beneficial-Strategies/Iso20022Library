@@ -23,7 +23,7 @@ public enum AssetClassSubProductFreight1Code
     [IsoId("_pxgg4UDbEeWOL-OsSq2h6w")]
     [Description(@"Commodity of type dry freight.")]
     Dry = AssetClassSubProductTypeCode.Dry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type wet freight.
     /// Encoded/decoded by serializers as &quot;WETF&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassSubProductFreight1Code
     [IsoId("_q4LOAUDbEeWOL-OsSq2h6w")]
     [Description(@"Commodity of type wet freight.")]
     Wet = AssetClassSubProductTypeCode.Wet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum AssetClassSubProductFreight1Code
     [IsoId("_mmQ5MafvEeW_OId9wS8dsQ")]
     [Description(@"Commodity of other type.")]
     Other = AssetClassSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Y50Ksh-1EeuxStysDTgLiw")]
-[Description(@"Specifies the pay creditor by cheque instruction code for the cross-element validation rules.")]
+[Description(
+    @"Specifies the pay creditor by cheque instruction code for the cross-element validation rules."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRulePayCreditorByCheque1Code
 {
@@ -23,5 +25,4 @@ public enum ValidationRulePayCreditorByCheque1Code
     [IsoId("_XJzf0SAcEeuxStysDTgLiw")]
     [Description(@"Pay creditor by cheque.")]
     PayCreditorByCheque = ValidationRuleCode.PayCreditorByCheque, // same ordinal as derivation source for type conversions
-    
 }

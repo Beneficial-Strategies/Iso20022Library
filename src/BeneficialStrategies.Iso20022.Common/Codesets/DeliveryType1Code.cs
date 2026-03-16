@@ -23,7 +23,7 @@ public enum DeliveryType1Code
     [IsoId("_azmDddp-Ed-ak6NoX_4Aeg_202824033")]
     [Description(@"Indicates that the delivery is against payment.")]
     AgainstPayment = DeliveryTypeCode.AgainstPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates the delivery is free of payment.
     /// Encoded/decoded by serializers as &quot;FREE&quot;.
@@ -32,23 +32,26 @@ public enum DeliveryType1Code
     [IsoId("_azv0cNp-Ed-ak6NoX_4Aeg_202824093")]
     [Description(@"Indicates the delivery is free of payment.")]
     Free = DeliveryTypeCode.Free, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that a custodian bank or international clearing organization acts as an intermediary between the two parties to the repo.
     /// Encoded/decoded by serializers as &quot;TRIP&quot;.
     /// </summary>
     [EnumMember(Value = "TRIP")]
     [IsoId("_azv0cdp-Ed-ak6NoX_4Aeg_203744107")]
-    [Description(@"Indicates that a custodian bank or international clearing organization acts as an intermediary between the two parties to the repo.")]
+    [Description(
+        @"Indicates that a custodian bank or international clearing organization acts as an intermediary between the two parties to the repo."
+    )]
     Triparty = DeliveryTypeCode.Triparty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the collateral pledged by the (cash) borrower is not actually delivered to the cash lender. Rather, it is placed in an internal account (&quot;held in custody&quot;) by the borrower, for the lender, throughout the duration of the trade.
     /// Encoded/decoded by serializers as &quot;HOIC&quot;.
     /// </summary>
     [EnumMember(Value = "HOIC")]
     [IsoId("_azv0ctp-Ed-ak6NoX_4Aeg_203744124")]
-    [Description(@"Indicates that the collateral pledged by the (cash) borrower is not actually delivered to the cash lender. Rather, it is placed in an internal account (""held in custody"") by the borrower, for the lender, throughout the duration of the trade.")]
+    [Description(
+        @"Indicates that the collateral pledged by the (cash) borrower is not actually delivered to the cash lender. Rather, it is placed in an internal account (""held in custody"") by the borrower, for the lender, throughout the duration of the trade."
+    )]
     HoldInCustody = DeliveryTypeCode.HoldInCustody, // same ordinal as derivation source for type conversions
-    
 }

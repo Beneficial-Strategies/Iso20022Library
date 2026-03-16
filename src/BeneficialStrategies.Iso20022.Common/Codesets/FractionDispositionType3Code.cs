@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_arZwx9p-Ed-ak6NoX_4Aeg_1382196643")]
-[Description(@"Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.")]
+[Description(
+    @"Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate."
+)]
 [DerivedFrom(typeof(FractionDispositionTypeCode))]
 public enum FractionDispositionType3Code
 {
@@ -23,7 +25,7 @@ public enum FractionDispositionType3Code
     [IsoId("_arjhwNp-Ed-ak6NoX_4Aeg_1382196652")]
     [Description(@"Buy securities up to next whole number.")]
     BuyUp = FractionDispositionTypeCode.BuyUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fractional part of cash. Take cash in lieu of fractions.
     /// Encoded/decoded by serializers as &quot;CINL&quot;.
@@ -32,7 +34,7 @@ public enum FractionDispositionType3Code
     [IsoId("_arjhwdp-Ed-ak6NoX_4Aeg_1382196668")]
     [Description(@"Fractional part of cash. Take cash in lieu of fractions.")]
     CashInLieuOfFraction = FractionDispositionTypeCode.CashInLieuOfFraction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Take distribution of fractions in the form of securities.
     /// Encoded/decoded by serializers as &quot;DIST&quot;.
@@ -41,7 +43,7 @@ public enum FractionDispositionType3Code
     [IsoId("_arjhwtp-Ed-ak6NoX_4Aeg_1382196669")]
     [Description(@"Take distribution of fractions in the form of securities.")]
     IssueFraction = FractionDispositionTypeCode.IssueFraction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Let fractions expire worthless.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -50,7 +52,7 @@ public enum FractionDispositionType3Code
     [IsoId("_arjhw9p-Ed-ak6NoX_4Aeg_1758992666")]
     [Description(@"Let fractions expire worthless.")]
     Expire = FractionDispositionTypeCode.Expire, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Characteristics of the disposition of fractions are unknown.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -59,5 +61,4 @@ public enum FractionDispositionType3Code
     [IsoId("_arjhxNp-Ed-ak6NoX_4Aeg_299584857")]
     [Description(@"Characteristics of the disposition of fractions are unknown.")]
     Unknown = FractionDispositionTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

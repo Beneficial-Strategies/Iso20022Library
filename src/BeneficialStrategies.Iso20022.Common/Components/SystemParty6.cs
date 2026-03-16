@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YV9LxTE_Ee62xuUQ2zyZww")]
 [DisplayName("System Party6")]
-public partial record SystemParty6
+public record SystemParty6
 {
-    #nullable enable
-
     /// <summary>
     /// Address.
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public PostalAddress28? Address { get; init; } 
+    public PostalAddress28? Address { get; init; }
 
     /// <summary>
     /// Closing Date.
     /// </summary>
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
-    public IsoISODate? ClosingDate { get; init; } 
+    public IsoISODate? ClosingDate { get; init; }
 
     /// <summary>
     /// Contact Details.
@@ -44,7 +42,7 @@ public partial record SystemParty6
     /// </summary>
     [DisplayName("Lock Status")]
     [IsoXmlTag("LckSts")]
-    public PartyLockStatus1? LockStatus { get; init; } 
+    public PartyLockStatus1? LockStatus { get; init; }
 
     /// <summary>
     /// Market Specific Attribute.
@@ -58,28 +56,28 @@ public partial record SystemParty6
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public PartyName4? Name { get; init; } 
+    public PartyName4? Name { get; init; }
 
     /// <summary>
     /// Opening Date.
     /// </summary>
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
-    public IsoISODate? OpeningDate { get; init; } 
+    public IsoISODate? OpeningDate { get; init; }
 
     /// <summary>
     /// Party Identification.
     /// </summary>
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public SystemPartyIdentification9? PartyIdentification { get; init; } 
+    public SystemPartyIdentification9? PartyIdentification { get; init; }
 
     /// <summary>
     /// Residence Type.
     /// </summary>
     [DisplayName("Residence Type")]
     [IsoXmlTag("ResTp")]
-    public ResidenceType1Code? ResidenceType { get; init; } 
+    public ResidenceType1Code? ResidenceType { get; init; }
 
     /// <summary>
     /// Restriction.
@@ -100,9 +98,5 @@ public partial record SystemParty6
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public SystemPartyType1Choice_? Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public SystemPartyType1Choice_? Type { get; init; }
 }

@@ -23,7 +23,7 @@ public enum OperationalStatusCode
     [IsoId("_8DcqACDYEeWCLu74WLgP4w")]
     [Description(@"Enabled.")]
     Enabled,
-    
+
     /// <summary>
     /// Special circumstances.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
@@ -32,5 +32,4 @@ public enum OperationalStatusCode
     [IsoId("__qqBQCDYEeWCLu74WLgP4w")]
     [Description(@"Special circumstances.")]
     SpecialCircumstances,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_58Yc4eLVEeWFtOV72FbX9w")]
 [DisplayName("Classification Type")]
-public partial record ClassificationType2
+public record ClassificationType2
 {
-    #nullable enable
-    
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, for example, common share with voting rights, fully paid, or registered.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record ClassificationType2
     [DisplayName("Classification Financial Instrument")]
     [IsoXmlTag("ClssfctnFinInstrm")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public IsoCFIOct2015Identifier? ClassificationFinancialInstrument { get; init; } 
-    
+    public IsoCFIOct2015Identifier? ClassificationFinancialInstrument { get; init; }
+
     /// <summary>
     /// Name of the identification scheme, in a coded form as published in an external list.
     /// </summary>
     [IsoId("_6LaXY-LVEeWFtOV72FbX9w")]
     [DisplayName("Financial Instrument Product Type Code")]
     [IsoXmlTag("FinInstrmPdctTpCd")]
-    public ExternalFinancialInstrumentProductType1Code? FinancialInstrumentProductTypeCode { get; init; } 
-    
+    public ExternalFinancialInstrumentProductType1Code? FinancialInstrumentProductTypeCode { get; init; }
+
     /// <summary>
     /// Proprietary classification of financial instrument.
     /// </summary>
     [IsoId("_6LaXZeLVEeWFtOV72FbX9w")]
     [DisplayName("Alternate Classification")]
     [IsoXmlTag("AltrnClssfctn")]
-    public GenericIdentification36? AlternateClassification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public GenericIdentification36? AlternateClassification { get; init; }
 }

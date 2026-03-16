@@ -23,7 +23,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_AFCNoXhSEee6_vnrijrKgg")]
     [Description(@"Number assigned by a government agency to identify foreign nationals.")]
     AlienRegistration = OfficialDocumentTypeCode.AlienRegistration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Travel authorisation assigned by a government agency (e.g. ESTA, etc.)
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -32,7 +32,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_AQG1MXhSEee6_vnrijrKgg")]
     [Description(@"Travel authorisation assigned by a government agency (e.g. ESTA, etc.)")]
     Authorisation = OfficialDocumentTypeCode.Authorisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Diplomatic passport or travel document.
     /// Encoded/decoded by serializers as &quot;DIPL&quot;.
@@ -41,7 +41,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_Ac2QsXhSEee6_vnrijrKgg")]
     [Description(@"Diplomatic passport or travel document.")]
     Diplomatic = OfficialDocumentTypeCode.Diplomatic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Driving license.
     /// Encoded/decoded by serializers as &quot;DVLC&quot;.
@@ -50,7 +50,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_AoA-4XhSEee6_vnrijrKgg")]
     [Description(@"Driving license.")]
     DrivingLicense = OfficialDocumentTypeCode.DrivingLicense, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Europol-issued travel or related document.
     /// Encoded/decoded by serializers as &quot;EURO&quot;.
@@ -59,7 +59,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_A2ZZIXhSEee6_vnrijrKgg")]
     [Description(@"Europol-issued travel or related document.")]
     Europol = OfficialDocumentTypeCode.Europol, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identity card.
     /// Encoded/decoded by serializers as &quot;IDEN&quot;.
@@ -68,7 +68,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_BC7ZQXhSEee6_vnrijrKgg")]
     [Description(@"Identity card.")]
     IdentityCard = OfficialDocumentTypeCode.IdentityCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Internal travel document.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -77,16 +77,16 @@ public enum OfficialDocumentType1Code
     [IsoId("_BOUJ4XhSEee6_vnrijrKgg")]
     [Description(@"Internal travel document.")]
     Internal = OfficialDocumentTypeCode.Internal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Interpol-issued travel or related document 
+    /// Interpol-issued travel or related document
     /// Encoded/decoded by serializers as &quot;INPO&quot;.
     /// </summary>
     [EnumMember(Value = "INPO")]
     [IsoId("_BZ3SkXhSEee6_vnrijrKgg")]
     [Description(@"Interpol-issued travel or related document ")]
     Interpol = OfficialDocumentTypeCode.Interpol, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Emergency travel or related document.
     /// Encoded/decoded by serializers as &quot;LZPR&quot;.
@@ -95,7 +95,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_Bmbu8XhSEee6_vnrijrKgg")]
     [Description(@"Emergency travel or related document.")]
     Laissezpasser = OfficialDocumentTypeCode.Laissezpasser, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of official document defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -104,7 +104,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_CPItsXhSEee6_vnrijrKgg")]
     [Description(@"Other type of official document defined at national level.")]
     OtherNational = OfficialDocumentTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of official document defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -113,7 +113,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_CdkyUXhSEee6_vnrijrKgg")]
     [Description(@"Other type of official document defined at private level.")]
     OtherPrivate = OfficialDocumentTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Passport.
     /// Encoded/decoded by serializers as &quot;PASS&quot;.
@@ -122,7 +122,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_Cvr2AXhSEee6_vnrijrKgg")]
     [Description(@"Passport.")]
     Passport = OfficialDocumentTypeCode.Passport, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Visa issued by a government or related authority.
     /// Encoded/decoded by serializers as &quot;VISA&quot;.
@@ -131,7 +131,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_C96fQXhSEee6_vnrijrKgg")]
     [Description(@"Visa issued by a government or related authority.")]
     PassportVisa = OfficialDocumentTypeCode.PassportVisa, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Permit.
     /// Encoded/decoded by serializers as &quot;PERM&quot;.
@@ -140,7 +140,7 @@ public enum OfficialDocumentType1Code
     [IsoId("_DNYeoXhSEee6_vnrijrKgg")]
     [Description(@"Permit.")]
     Permit = OfficialDocumentTypeCode.Permit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Travel or related document issued to refugees.
     /// Encoded/decoded by serializers as &quot;REFU&quot;.
@@ -149,5 +149,4 @@ public enum OfficialDocumentType1Code
     [IsoId("_D9yn4XhSEee6_vnrijrKgg")]
     [Description(@"Travel or related document issued to refugees.")]
     Refugee = OfficialDocumentTypeCode.Refugee, // same ordinal as derivation source for type conversions
-    
 }

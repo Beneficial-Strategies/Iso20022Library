@@ -23,5 +23,4 @@ public enum ServiceLevel4Code
     [IsoId("_ZKjCBdp-Ed-ak6NoX_4Aeg_918510723")]
     [Description(@"Payment must be executed following the Single Euro Payments Area scheme.")]
     SingleEuroPaymentsArea = ServiceLevelCode.SingleEuroPaymentsArea, // same ordinal as derivation source for type conversions
-    
 }

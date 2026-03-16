@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ExchangeRateReportOrError1Choice.CurrencyExchangeReport))]
     [KnownType(typeof(ExchangeRateReportOrError1Choice.OperationalError))]
-    [JsonDerivedType(typeof(ExchangeRateReportOrError1Choice.CurrencyExchangeReport),nameof(ExchangeRateReportOrError1Choice.CurrencyExchangeReport))]
-    [JsonDerivedType(typeof(ExchangeRateReportOrError1Choice.OperationalError),nameof(ExchangeRateReportOrError1Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(ExchangeRateReportOrError1Choice.CurrencyExchangeReport),
+        nameof(ExchangeRateReportOrError1Choice.CurrencyExchangeReport)
+    )]
+    [JsonDerivedType(
+        typeof(ExchangeRateReportOrError1Choice.OperationalError),
+        nameof(ExchangeRateReportOrError1Choice.OperationalError)
+    )]
     [IsoId("_77JeQ6MgEeCJ6YNENx4h-w_1304764556")]
     [DisplayName("Exchange Rate Report Or Error 1 Choice")]
-    public abstract partial record ExchangeRateReportOrError1Choice_
-    {
-    }
+    public abstract record ExchangeRateReportOrError1Choice_ { }
 }

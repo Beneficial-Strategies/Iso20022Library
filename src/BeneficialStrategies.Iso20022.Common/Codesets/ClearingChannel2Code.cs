@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_a_OEo9p-Ed-ak6NoX_4Aeg_1501459302")]
-[Description(@"Specifies the clearing channel for the routing of the transaction, as part of the payment type identification.")]
+[Description(
+    @"Specifies the clearing channel for the routing of the transaction, as part of the payment type identification."
+)]
 [DerivedFrom(typeof(ClearingChannelCode))]
 public enum ClearingChannel2Code
 {
@@ -23,7 +25,7 @@ public enum ClearingChannel2Code
     [IsoId("_a_OEpNp-Ed-ak6NoX_4Aeg_1501459782")]
     [Description(@"Clearing channel is a real-time gross settlement system.")]
     RealTimeGrossSettlementSystem = ClearingChannelCode.RealTimeGrossSettlementSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing channel is a real-time net settlement system.
     /// Encoded/decoded by serializers as &quot;RTNS&quot;.
@@ -32,7 +34,7 @@ public enum ClearingChannel2Code
     [IsoId("_a_OEpdp-Ed-ak6NoX_4Aeg_1501460232")]
     [Description(@"Clearing channel is a real-time net settlement system.")]
     RealTimeNetSettlementSystem = ClearingChannelCode.RealTimeNetSettlementSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing channel is a mass payment net settlement system.
     /// Encoded/decoded by serializers as &quot;MPNS&quot;.
@@ -41,7 +43,7 @@ public enum ClearingChannel2Code
     [IsoId("_a_OEptp-Ed-ak6NoX_4Aeg_1501460309")]
     [Description(@"Clearing channel is a mass payment net settlement system.")]
     MassPaymentNetSystem = ClearingChannelCode.MassPaymentNetSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment through internal book transfer.
     /// Encoded/decoded by serializers as &quot;BOOK&quot;.
@@ -50,5 +52,4 @@ public enum ClearingChannel2Code
     [IsoId("_a_OEp9p-Ed-ak6NoX_4Aeg_1524547392")]
     [Description(@"Payment through internal book transfer.")]
     BookTransfer = ClearingChannelCode.BookTransfer, // same ordinal as derivation source for type conversions
-    
 }

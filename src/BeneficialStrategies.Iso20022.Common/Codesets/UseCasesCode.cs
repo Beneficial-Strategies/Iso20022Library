@@ -23,7 +23,7 @@ public enum UseCasesCode
     [IsoId("_Ya3Rgtp-Ed-ak6NoX_4Aeg_1759403756")]
     [Description(@"Code indicating the opening of an account.")]
     Opening,
-    
+
     /// <summary>
     /// Code indicating the maintenance of an account.
     /// Encoded/decoded by serializers as &quot;MNTN&quot;.
@@ -32,7 +32,7 @@ public enum UseCasesCode
     [IsoId("_Ya3Rg9p-Ed-ak6NoX_4Aeg_1772332772")]
     [Description(@"Code indicating the maintenance of an account.")]
     Maintenance,
-    
+
     /// <summary>
     /// Code indicating the closing of an account.
     /// Encoded/decoded by serializers as &quot;CLSG&quot;.
@@ -41,7 +41,7 @@ public enum UseCasesCode
     [IsoId("_Ya3RhNp-Ed-ak6NoX_4Aeg_1784340417")]
     [Description(@"Code indicating the closing of an account.")]
     Closing,
-    
+
     /// <summary>
     /// Code indicating the view of an account.
     /// Encoded/decoded by serializers as &quot;VIEW&quot;.
@@ -50,5 +50,4 @@ public enum UseCasesCode
     [IsoId("_Ya3Rhdp-Ed-ak6NoX_4Aeg_2026301994")]
     [Description(@"Code indicating the view of an account.")]
     View,
-    
 }

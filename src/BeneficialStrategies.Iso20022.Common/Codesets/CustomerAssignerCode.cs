@@ -23,7 +23,7 @@ public enum CustomerAssignerCode
     [IsoId("_eW7w0FyxEeeve7Je9cXtkQ")]
     [Description(@"Travel agency assigning an identification.")]
     TravelAgency,
-    
+
     /// <summary>
     /// Legal authority assigning an identification.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -32,7 +32,7 @@ public enum CustomerAssignerCode
     [IsoId("_i-GwQFyxEeeve7Je9cXtkQ")]
     [Description(@"Legal authority assigning an identification.")]
     Authority,
-    
+
     /// <summary>
     /// Company for which the customer is on duty.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -41,7 +41,7 @@ public enum CustomerAssignerCode
     [IsoId("_2ND4cFyxEeeve7Je9cXtkQ")]
     [Description(@"Company for which the customer is on duty.")]
     Customer,
-    
+
     /// <summary>
     /// Company assigning an identification to a customer.
     /// Encoded/decoded by serializers as &quot;CRCY&quot;.
@@ -50,7 +50,7 @@ public enum CustomerAssignerCode
     [IsoId("__X0X0FyxEeeve7Je9cXtkQ")]
     [Description(@"Company assigning an identification to a customer.")]
     Company,
-    
+
     /// <summary>
     /// On file identification.
     /// Encoded/decoded by serializers as &quot;ONFL&quot;.
@@ -59,7 +59,7 @@ public enum CustomerAssignerCode
     [IsoId("_FuHykFyyEeeve7Je9cXtkQ")]
     [Description(@"On file identification.")]
     OnFile,
-    
+
     /// <summary>
     /// Other party assigning an identification.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,5 +68,4 @@ public enum CustomerAssignerCode
     [IsoId("_JVBAwFyyEeeve7Je9cXtkQ")]
     [Description(@"Other party assigning an identification.")]
     Other,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9nU3QfPYEeS_qLctCs2aRQ")]
 [DisplayName("Person Identification")]
-public partial record PersonIdentification10
+public record PersonIdentification10
 {
-    #nullable enable
-    
     /// <summary>
     /// First name of a person (also known as given name).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PersonIdentification10
     [DisplayName("First Name")]
     [IsoXmlTag("FrstNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text FirstName { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text FirstName { get; init; }
+
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record PersonIdentification10
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text Name { get; init; }
+
     /// <summary>
     /// Date on which a person is born.
     /// </summary>
@@ -45,17 +43,13 @@ public partial record PersonIdentification10
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate BirthDate { get; init; } 
-    
+    public required IsoISODate BirthDate { get; init; }
+
     /// <summary>
     /// Unique identification of a person, as assigned by an institution, using an identification scheme.
     /// </summary>
     [IsoId("_98J3xfPYEeS_qLctCs2aRQ")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public required GenericPersonIdentification1 Other { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required GenericPersonIdentification1 Other { get; init; }
 }

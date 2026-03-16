@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4KU98GpuEeSMqvBfBY1c9A")]
 [DisplayName("Local Date Time")]
-public partial record LocalDateTime1
+public record LocalDateTime1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date time of the beginning of the period (inclusive).
     /// </summary>
@@ -25,8 +23,8 @@ public partial record LocalDateTime1
     [DisplayName("From Date Time")]
     [IsoXmlTag("FrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FromDateTime { get; init; } 
-    
+    public IsoISODateTime? FromDateTime { get; init; }
+
     /// <summary>
     /// Date time of the end of the period (exclusive).
     /// </summary>
@@ -34,8 +32,8 @@ public partial record LocalDateTime1
     [DisplayName("To Date Time")]
     [IsoXmlTag("ToDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ToDateTime { get; init; } 
-    
+    public IsoISODateTime? ToDateTime { get; init; }
+
     /// <summary>
     /// UTC offset in minutes, of the local time during the period. For instance, 120 for Central European Time, -720 for Central Standard Time (North America).
     /// </summary>
@@ -43,9 +41,5 @@ public partial record LocalDateTime1
     [DisplayName("UTC Offset")]
     [IsoXmlTag("UTCOffset")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber UTCOffset { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoNumber UTCOffset { get; init; }
 }

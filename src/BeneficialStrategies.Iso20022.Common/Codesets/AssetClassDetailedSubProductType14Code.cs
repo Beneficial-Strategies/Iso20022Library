@@ -23,5 +23,4 @@ public enum AssetClassDetailedSubProductType14Code
     [IsoId("_fntCUFuVEeWyucVx3N7tNg")]
     [Description(@"Commodity attribute of type dry bulk carrier.")]
     DryBulkCarrier = AssetClassDetailedSubProductTypeCode.DryBulkCarrier, // same ordinal as derivation source for type conversions
-    
 }

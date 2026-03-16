@@ -60,5 +60,4 @@ public enum ExternalRequestStatus1Code
     [IsoId("")]
     [Description(@"Message has been rejected.")]
     Rejected = ExternalRequestStatusCode.Rejected, // same ordinal as derivation source for type conversions
-
 }

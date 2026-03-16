@@ -23,5 +23,4 @@ public enum AssetClassSubProductType40Code
     [IsoId("_VOFt81r3EeWN79Bl6BUd3g")]
     [Description(@"Commodity of type diammonium phosphate.")]
     DiammoniumPhosphate = AssetClassSubProductTypeCode.DiammoniumPhosphate, // same ordinal as derivation source for type conversions
-    
 }

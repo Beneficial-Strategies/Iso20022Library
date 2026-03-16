@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rb1C09p-Ed-ak6NoX_4Aeg_1491461462")]
 [DisplayName("Queue Transaction Identification Details")]
-public partial record QueueTransactionIdentificationDetails
+public record QueueTransactionIdentificationDetails
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the payment queue where the payment instruction resides.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record QueueTransactionIdentificationDetails
     [DisplayName("Queue Identification")]
     [IsoXmlTag("QId")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public required IsoMax16Text QueueIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public required IsoMax16Text QueueIdentification { get; init; }
+
     /// <summary>
     /// Position of the payment instruction within the identified queue.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record QueueTransactionIdentificationDetails
     [DisplayName("Position In Queue")]
     [IsoXmlTag("PosInQ")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public required IsoMax16Text PositionInQueue { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public required IsoMax16Text PositionInQueue { get; init; }
 }

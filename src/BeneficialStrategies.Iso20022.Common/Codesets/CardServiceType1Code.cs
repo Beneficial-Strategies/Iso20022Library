@@ -23,7 +23,7 @@ public enum CardServiceType1Code
     [IsoId("_AFicAXu9EeSLmfFG0DG7zQ")]
     [Description(@"Partial reconciliation of the day.")]
     CheckPoint = CardServiceTypeCode.CheckPoint, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Final reconciliation.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -32,7 +32,7 @@ public enum CardServiceType1Code
     [IsoId("_AK5dIXu9EeSLmfFG0DG7zQ")]
     [Description(@"Final reconciliation.")]
     Final = CardServiceTypeCode.Final, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request for totals of a previous reconciliation.
     /// Encoded/decoded by serializers as &quot;PRVS&quot;.
@@ -41,5 +41,4 @@ public enum CardServiceType1Code
     [IsoId("_AUbzo3u9EeSLmfFG0DG7zQ")]
     [Description(@"Request for totals of a previous reconciliation.")]
     TotalInquiry = CardServiceTypeCode.TotalInquiry, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum CorporateActionCalculationMethodCode
     [IsoId("_bCgCKNp-Ed-ak6NoX_4Aeg_833244970")]
     [Description(@"Pro-rata for drawings.")]
     ProRata,
-    
+
     /// <summary>
     /// Lottery for drawings.
     /// Encoded/decoded by serializers as &quot;LOTT&quot;.
@@ -32,7 +32,7 @@ public enum CorporateActionCalculationMethodCode
     [IsoId("_bCpMENp-Ed-ak6NoX_4Aeg_882190885")]
     [Description(@"Lottery for drawings.")]
     Lottery,
-    
+
     /// <summary>
     /// Reduction of nominal for partial redemption.
     /// Encoded/decoded by serializers as &quot;NOMI&quot;.
@@ -41,7 +41,7 @@ public enum CorporateActionCalculationMethodCode
     [IsoId("_bCpMEdp-Ed-ak6NoX_4Aeg_1221120970")]
     [Description(@"Reduction of nominal for partial redemption.")]
     NominalReduction,
-    
+
     /// <summary>
     /// Without reduction of nominal (via pool factor) for partial redemption.
     /// Encoded/decoded by serializers as &quot;NNOM&quot;.
@@ -50,5 +50,4 @@ public enum CorporateActionCalculationMethodCode
     [IsoId("_bCpMEtp-Ed-ak6NoX_4Aeg_-766558628")]
     [Description(@"Without reduction of nominal (via pool factor) for partial redemption.")]
     NoNominalReduction,
-    
 }

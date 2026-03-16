@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3ZZIEVo6Ee23K4GXSpBSeg")]
 [DisplayName("Date Period")]
-public partial record DatePeriod4
+public record DatePeriod4
 {
-    #nullable enable
-    
     /// <summary>
     /// Start date of the range.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DatePeriod4
     [DisplayName("From Date")]
     [IsoXmlTag("FrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FromDate { get; init; } 
-    
+    public IsoISODate? FromDate { get; init; }
+
     /// <summary>
     /// End date of the range.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record DatePeriod4
     [DisplayName("To Date")]
     [IsoXmlTag("ToDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ToDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? ToDate { get; init; }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CollateralStatus2Choice.Code))]
     [KnownType(typeof(CollateralStatus2Choice.Proprietary))]
-    [JsonDerivedType(typeof(CollateralStatus2Choice.Code),nameof(CollateralStatus2Choice.Code))]
-    [JsonDerivedType(typeof(CollateralStatus2Choice.Proprietary),nameof(CollateralStatus2Choice.Proprietary))]
+    [JsonDerivedType(typeof(CollateralStatus2Choice.Code), nameof(CollateralStatus2Choice.Code))]
+    [JsonDerivedType(
+        typeof(CollateralStatus2Choice.Proprietary),
+        nameof(CollateralStatus2Choice.Proprietary)
+    )]
     [IsoId("_5S5l0MX2EeiSF9q-coWegA")]
     [DisplayName("Collateral Status 2 Choice")]
-    public abstract partial record CollateralStatus2Choice_
-    {
-    }
+    public abstract record CollateralStatus2Choice_ { }
 }

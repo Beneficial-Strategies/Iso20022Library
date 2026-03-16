@@ -23,7 +23,7 @@ public enum DisplayMethodCode
     [IsoId("_awUtA9p-Ed-ak6NoX_4Aeg_751651641")]
     [Description(@"Indicates that original quantity must be used.")]
     Initial,
-    
+
     /// <summary>
     /// Indicates that Quantity must be refreshed.
     /// Encoded/decoded by serializers as &quot;NEW1&quot;.
@@ -32,7 +32,7 @@ public enum DisplayMethodCode
     [IsoId("_awUtBNp-Ed-ak6NoX_4Aeg_1093354350")]
     [Description(@"Indicates that Quantity must be refreshed.")]
     New,
-    
+
     /// <summary>
     /// Randomize value.
     /// Encoded/decoded by serializers as &quot;RAND&quot;.
@@ -41,5 +41,4 @@ public enum DisplayMethodCode
     [IsoId("_awUtBdp-Ed-ak6NoX_4Aeg_1226340443")]
     [Description(@"Randomize value.")]
     Random,
-    
 }

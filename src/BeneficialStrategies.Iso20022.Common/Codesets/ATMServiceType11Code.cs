@@ -30,7 +30,9 @@ public enum ATMServiceType11Code
     /// </summary>
     [EnumMember(Value = "ASTS")]
     [IsoId("_ATMServiceType11Code_AccountStatements")]
-    [Description(@"Request a full statement (that is a legal statement) related to a customer account.")]
+    [Description(
+        @"Request a full statement (that is a legal statement) related to a customer account."
+    )]
     AccountStatements = ATMServiceTypeV2Code.AccountStatements,
 
     /// <summary>
@@ -120,7 +122,9 @@ public enum ATMServiceType11Code
     /// </summary>
     [EnumMember(Value = "MINI")]
     [IsoId("_ATMServiceType11Code_MiniStatement")]
-    [Description(@"Request a mini-statement (i.e. partial statement) related to a customer account.")]
+    [Description(
+        @"Request a mini-statement (i.e. partial statement) related to a customer account."
+    )]
     MiniStatement = ATMServiceTypeV2Code.MiniStatement,
 
     /// <summary>
@@ -129,7 +133,9 @@ public enum ATMServiceType11Code
     /// </summary>
     [EnumMember(Value = "PATH")]
     [IsoId("_ATMServiceType11Code_PreAuthorisedWithdrawal")]
-    [Description(@"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message.")]
+    [Description(
+        @"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message."
+    )]
     PreAuthorisedWithdrawal = ATMServiceTypeV2Code.PreAuthorisedWithdrawal,
 
     /// <summary>
@@ -230,5 +236,4 @@ public enum ATMServiceType11Code
     [IsoId("_ATMServiceType11Code_ExchangeRateWithdrawal")]
     [Description(@"Ask for exchange rate for the ongoing withdrawal transaction.")]
     ExchangeRateWithdrawal = ATMServiceTypeV2Code.ExchangeRateWithdrawal,
-
 }

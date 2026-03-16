@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(NetDividendRateFormat5Choice.Amount))]
     [KnownType(typeof(NetDividendRateFormat5Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(NetDividendRateFormat5Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(NetDividendRateFormat5Choice.Amount),nameof(NetDividendRateFormat5Choice.Amount))]
-    [JsonDerivedType(typeof(NetDividendRateFormat5Choice.RateTypeAndAmountAndRateStatus),nameof(NetDividendRateFormat5Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(NetDividendRateFormat5Choice.NotSpecifiedRate),nameof(NetDividendRateFormat5Choice.NotSpecifiedRate))]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat5Choice.Amount),
+        nameof(NetDividendRateFormat5Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat5Choice.RateTypeAndAmountAndRateStatus),
+        nameof(NetDividendRateFormat5Choice.RateTypeAndAmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat5Choice.NotSpecifiedRate),
+        nameof(NetDividendRateFormat5Choice.NotSpecifiedRate)
+    )]
     [IsoId("__XFDgOwOEd-sn-FiNtktcA")]
     [DisplayName("Net Dividend Rate Format 5 Choice")]
-    public abstract partial record NetDividendRateFormat5Choice_
-    {
-    }
+    public abstract record NetDividendRateFormat5Choice_ { }
 }

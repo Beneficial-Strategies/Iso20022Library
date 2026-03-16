@@ -23,7 +23,7 @@ public enum SettledStatusReason1Code
     [IsoId("_ZKsL8tp-Ed-ak6NoX_4Aeg_514877099")]
     [Description(@"Units are partially settled.")]
     UnitsPartiallySettled = SettledStatusReasonCode.UnitsPartiallySettled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash is partially settled.
     /// Encoded/decoded by serializers as &quot;CPST&quot;.
@@ -32,7 +32,7 @@ public enum SettledStatusReason1Code
     [IsoId("_ZKsL89p-Ed-ak6NoX_4Aeg_514877159")]
     [Description(@"Cash is partially settled.")]
     CashPartiallySettled = SettledStatusReasonCode.CashPartiallySettled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Units and cash are both partially settled.
     /// Encoded/decoded by serializers as &quot;UCPS&quot;.
@@ -41,5 +41,4 @@ public enum SettledStatusReason1Code
     [IsoId("_ZKsL9Np-Ed-ak6NoX_4Aeg_514878209")]
     [Description(@"Units and cash are both partially settled.")]
     UnitsCashPartiallySettled = SettledStatusReasonCode.UnitsCashPartiallySettled, // same ordinal as derivation source for type conversions
-    
 }

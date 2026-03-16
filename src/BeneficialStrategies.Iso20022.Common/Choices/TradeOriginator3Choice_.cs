@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeOriginator3Choice.Code))]
     [KnownType(typeof(TradeOriginator3Choice.Proprietary))]
-    [JsonDerivedType(typeof(TradeOriginator3Choice.Code),nameof(TradeOriginator3Choice.Code))]
-    [JsonDerivedType(typeof(TradeOriginator3Choice.Proprietary),nameof(TradeOriginator3Choice.Proprietary))]
+    [JsonDerivedType(typeof(TradeOriginator3Choice.Code), nameof(TradeOriginator3Choice.Code))]
+    [JsonDerivedType(
+        typeof(TradeOriginator3Choice.Proprietary),
+        nameof(TradeOriginator3Choice.Proprietary)
+    )]
     [IsoId("_6bs6cTtCEeWRTLSN0i0tng")]
     [DisplayName("Trade Originator 3 Choice")]
-    public abstract partial record TradeOriginator3Choice_
-    {
-    }
+    public abstract record TradeOriginator3Choice_ { }
 }

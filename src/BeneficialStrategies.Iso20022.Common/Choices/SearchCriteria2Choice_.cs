@@ -13,13 +13,20 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SearchCriteria2Choice.CustomerIdentification))]
     [KnownType(typeof(SearchCriteria2Choice.OriginalTransactionNumber))]
     [KnownType(typeof(SearchCriteria2Choice.PaymentInstrument))]
-    [JsonDerivedType(typeof(SearchCriteria2Choice.Account),nameof(SearchCriteria2Choice.Account))]
-    [JsonDerivedType(typeof(SearchCriteria2Choice.CustomerIdentification),nameof(SearchCriteria2Choice.CustomerIdentification))]
-    [JsonDerivedType(typeof(SearchCriteria2Choice.OriginalTransactionNumber),nameof(SearchCriteria2Choice.OriginalTransactionNumber))]
-    [JsonDerivedType(typeof(SearchCriteria2Choice.PaymentInstrument),nameof(SearchCriteria2Choice.PaymentInstrument))]
+    [JsonDerivedType(typeof(SearchCriteria2Choice.Account), nameof(SearchCriteria2Choice.Account))]
+    [JsonDerivedType(
+        typeof(SearchCriteria2Choice.CustomerIdentification),
+        nameof(SearchCriteria2Choice.CustomerIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(SearchCriteria2Choice.OriginalTransactionNumber),
+        nameof(SearchCriteria2Choice.OriginalTransactionNumber)
+    )]
+    [JsonDerivedType(
+        typeof(SearchCriteria2Choice.PaymentInstrument),
+        nameof(SearchCriteria2Choice.PaymentInstrument)
+    )]
     [IsoId("_8U6MN248EeiU9cctagi5ow")]
     [DisplayName("Search Criteria2Choice")]
-    public abstract partial record SearchCriteria2Choice_
-    {
-    }
+    public abstract record SearchCriteria2Choice_ { }
 }

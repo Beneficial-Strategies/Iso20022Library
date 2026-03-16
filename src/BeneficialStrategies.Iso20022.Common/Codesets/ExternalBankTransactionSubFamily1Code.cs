@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalBankTransactionSubFamily1Code")]
-[Description(@"Specifies the bank transaction code sub-family, as published in an external bank transaction code sub-family code list.")]
+[Description(
+    @"Specifies the bank transaction code sub-family, as published in an external bank transaction code sub-family code list."
+)]
 [DerivedFrom(typeof(ExternalBankTransactionSubFamilyCode))]
-public enum ExternalBankTransactionSubFamily1Code
-{
-}
+public enum ExternalBankTransactionSubFamily1Code { }

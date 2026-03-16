@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Wvju4ZjvEemFu85t1CYjSw")]
 [DisplayName("Time Frame")]
-public partial record TimeFrame6
+public record TimeFrame6
 {
-    #nullable enable
-    
     /// <summary>
     /// Description of the timeframe.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TimeFrame6
     [DisplayName("Other Time Frame Description")]
     [IsoXmlTag("OthrTmFrameDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? OtherTimeFrameDescription { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? OtherTimeFrameDescription { get; init; }
+
     /// <summary>
     /// Number of days after the trade date (T) used for the standard timeframe for the issue of a deal confirmation.
     /// </summary>
@@ -35,25 +33,21 @@ public partial record TimeFrame6
     [DisplayName("Trade Plus")]
     [IsoXmlTag("TPlus")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TradePlus { get; init; } 
-    
+    public IsoNumber? TradePlus { get; init; }
+
     /// <summary>
     /// Convention used for adjusting a date when it is not a business day.
     /// </summary>
     [IsoId("_XCwXuZjvEemFu85t1CYjSw")]
     [DisplayName("Non Working Day Adjustment")]
     [IsoXmlTag("NonWorkgDayAdjstmnt")]
-    public BusinessDayConvention1Code? NonWorkingDayAdjustment { get; init; } 
-    
+    public BusinessDayConvention1Code? NonWorkingDayAdjustment { get; init; }
+
     /// <summary>
     /// For the time of the issuance of the deal confirmation, the order desk must be contacted.
     /// </summary>
     [IsoId("_XCwXu5jvEemFu85t1CYjSw")]
     [DisplayName("Refer To Order Desk")]
     [IsoXmlTag("RefrToOrdrDsk")]
-    public ReferToFundOrderDesk1Code? ReferToOrderDesk { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ReferToFundOrderDesk1Code? ReferToOrderDesk { get; init; }
 }

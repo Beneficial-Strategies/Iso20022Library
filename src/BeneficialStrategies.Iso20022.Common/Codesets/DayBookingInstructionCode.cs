@@ -23,7 +23,7 @@ public enum DayBookingInstructionCode
     [IsoId("_ay2ckNp-Ed-ak6NoX_4Aeg_335336067")]
     [Description(@"Can trigger booking without reference to the order initiator.")]
     Auto,
-    
+
     /// <summary>
     /// Speak with order initiator before booking.
     /// Encoded/decoded by serializers as &quot;TALK&quot;.
@@ -32,5 +32,4 @@ public enum DayBookingInstructionCode
     [IsoId("_ay2ckdp-Ed-ak6NoX_4Aeg_335336068")]
     [Description(@"Speak with order initiator before booking.")]
     SpeakFirst,
-    
 }

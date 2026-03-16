@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,19 +14,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O6b2QeE6EeeV6-yubHrZaQ")]
 [DisplayName("Context")]
-public partial record Context6
+public record Context6
 {
-    #nullable enable
-    
     /// <summary>
     /// Context of the transaction.
     /// </summary>
     [IsoId("_PGLzQeE6EeeV6-yubHrZaQ")]
     [DisplayName("Transaction Context")]
     [IsoXmlTag("TxCntxt")]
-    public TransactionContext6? TransactionContext { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransactionContext6? TransactionContext { get; init; }
 }

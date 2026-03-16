@@ -23,5 +23,4 @@ public enum InternalPartyRole1Code
     [IsoId("_T0-jUR5ZEeWc9bJOIIhUUw")]
     [Description(@"Party acting as an internal agent.")]
     Internal = PartyRoleCode.Internal, // same ordinal as derivation source for type conversions
-    
 }

@@ -16,7 +16,8 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Constraints: *(none defined in spec)*
 /// </remarks>
-public sealed class PaymentCancellationReason5Validator : AbstractValidator<PaymentCancellationReason5>
+public sealed class PaymentCancellationReason5Validator
+    : AbstractValidator<PaymentCancellationReason5>
 {
     public PaymentCancellationReason5Validator()
     {
@@ -24,8 +25,9 @@ public sealed class PaymentCancellationReason5Validator : AbstractValidator<Paym
         RuleFor(x => x.AdditionalInformation)
             .MinimumLength(1)
             .MaximumLength(105)
-                .WithMessage(
-                    "PaymentCancellationReason5.AdditionalInformation must not exceed 105 characters (Max105Text).")
+            .WithMessage(
+                "PaymentCancellationReason5.AdditionalInformation must not exceed 105 characters (Max105Text)."
+            )
             .When(x => x.AdditionalInformation is not null);
     }
 }

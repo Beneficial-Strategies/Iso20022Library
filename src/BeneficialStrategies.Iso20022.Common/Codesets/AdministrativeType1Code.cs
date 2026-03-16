@@ -23,7 +23,7 @@ public enum AdministrativeType1Code
     [IsoId("_6oeIMTNKEeylu6lH-gut-A")]
     [Description(@"Other administrative type defined at national level.")]
     OtherNational = AdministrativeTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other administrative type defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum AdministrativeType1Code
     [IsoId("_6tdV4TNKEeylu6lH-gut-A")]
     [Description(@"Other administrative type defined at private level.")]
     OtherPrivate = AdministrativeTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Text message.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -41,5 +41,4 @@ public enum AdministrativeType1Code
     [IsoId("_6zMxgTNKEeylu6lH-gut-A")]
     [Description(@"Text message.")]
     TextMessage = AdministrativeTypeCode.TextMessage, // same ordinal as derivation source for type conversions
-    
 }

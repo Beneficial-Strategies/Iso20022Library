@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ENP28UgnEea9YuSvQGoi-w")]
 [DisplayName("Fund Order Data")]
-public partial record FundOrderData6
+public record FundOrderData6
 {
-    #nullable enable
-    
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
     /// </summary>
     [IsoId("_EmYvt0gnEea9YuSvQGoi-w")]
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
-    public ActiveCurrencyAndAmount? SettlementAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? SettlementAmount { get; init; }
+
     /// <summary>
     /// Method by which the transaction is settled.
     /// </summary>
     [IsoId("_EmYvuUgnEea9YuSvQGoi-w")]
     [DisplayName("Settlement Method")]
     [IsoXmlTag("SttlmMtd")]
-    public DeliveryReceiptType2Code? SettlementMethod { get; init; } 
-    
+    public DeliveryReceiptType2Code? SettlementMethod { get; init; }
+
     /// <summary>
     /// Choice between additional cash in or resulting cash out.
     /// </summary>
     [IsoId("_vRD7cUgnEea9YuSvQGoi-w")]
     [DisplayName("Additional Amount")]
     [IsoXmlTag("AddtlAmt")]
-    public AdditionalAmount1Choice_? AdditionalAmount { get; init; } 
-    
+    public AdditionalAmount1Choice_? AdditionalAmount { get; init; }
+
     /// <summary>
     /// Currency from which the quoted currency is converted in an exchange rate calculation.
     /// 1 x &lt;UnitCcy&gt; = &lt;XchgRate&gt; x &lt;QtdCcy&gt;.
@@ -49,8 +47,8 @@ public partial record FundOrderData6
     [IsoId("_EmYvv0gnEea9YuSvQGoi-w")]
     [DisplayName("Unit Currency")]
     [IsoXmlTag("UnitCcy")]
-    public ActiveCurrencyCode? UnitCurrency { get; init; } 
-    
+    public ActiveCurrencyCode? UnitCurrency { get; init; }
+
     /// <summary>
     /// Currency into which the unit currency is converted in an exchange rate calculation.
     /// 1 x &lt;UnitCcy&gt; = &lt;XchgRate&gt; x &lt;QtdCcy&gt;.
@@ -58,9 +56,5 @@ public partial record FundOrderData6
     [IsoId("_EmYvwUgnEea9YuSvQGoi-w")]
     [DisplayName("Quoted Currency")]
     [IsoXmlTag("QtdCcy")]
-    public ActiveCurrencyCode? QuotedCurrency { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActiveCurrencyCode? QuotedCurrency { get; init; }
 }

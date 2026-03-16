@@ -23,7 +23,7 @@ public enum OptionStyle2Code
     [IsoId("_aQIxF9p-Ed-ak6NoX_4Aeg_-1107826186")]
     [Description(@"Option can be exercised before or on expiry date.")]
     American = OptionStyleCode.American, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option that can be exercised on expiry date only.
     /// Encoded/decoded by serializers as &quot;EURO&quot;.
@@ -32,5 +32,4 @@ public enum OptionStyle2Code
     [IsoId("_aQIxGNp-Ed-ak6NoX_4Aeg_-1107826168")]
     [Description(@"Option that can be exercised on expiry date only.")]
     European = OptionStyleCode.European, // same ordinal as derivation source for type conversions
-    
 }

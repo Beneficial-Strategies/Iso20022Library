@@ -23,7 +23,7 @@ public enum AccountChoiceMethod1Code
     [IsoId("_ojWosXs7EeSTS7uHCe8FPQ")]
     [Description(@"Account selected in an account list.")]
     AccountSelected = AccountChoiceMethodCode.AccountSelected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account identification is entered by the customer.
     /// Encoded/decoded by serializers as &quot;ENTR&quot;.
@@ -32,7 +32,7 @@ public enum AccountChoiceMethod1Code
     [IsoId("_ot0MQ3s7EeSTS7uHCe8FPQ")]
     [Description(@"Account identification is entered by the customer.")]
     Entered = AccountChoiceMethodCode.Entered, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account is selected according to the configuration.
     /// Encoded/decoded by serializers as &quot;IMAC&quot;.
@@ -41,7 +41,7 @@ public enum AccountChoiceMethod1Code
     [IsoId("_o4i1k3s7EeSTS7uHCe8FPQ")]
     [Description(@"Account is selected according to the configuration.")]
     ImplicitAccount = AccountChoiceMethodCode.ImplicitAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of account is selected according to the configuration.
     /// Encoded/decoded by serializers as &quot;IMPL&quot;.
@@ -50,7 +50,7 @@ public enum AccountChoiceMethod1Code
     [IsoId("_o--0wXs7EeSTS7uHCe8FPQ")]
     [Description(@"Type of account is selected according to the configuration.")]
     ImplicitType = AccountChoiceMethodCode.ImplicitType, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account is not selected by the customer or a profile, but by the issuer.
     /// Encoded/decoded by serializers as &quot;NOSL&quot;.
@@ -59,7 +59,7 @@ public enum AccountChoiceMethod1Code
     [IsoId("_pJsP83s7EeSTS7uHCe8FPQ")]
     [Description(@"Account is not selected by the customer or a profile, but by the issuer.")]
     NoSelection = AccountChoiceMethodCode.NoSelection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of account selected in a list.
     /// Encoded/decoded by serializers as &quot;TPSL&quot;.
@@ -68,5 +68,4 @@ public enum AccountChoiceMethod1Code
     [IsoId("_pREDQ3s7EeSTS7uHCe8FPQ")]
     [Description(@"Type of account selected in a list.")]
     TypeSelected = AccountChoiceMethodCode.TypeSelected, // same ordinal as derivation source for type conversions
-    
 }

@@ -20,13 +20,13 @@ public sealed class Case5Validator : AbstractValidator<Case5>
     {
         RuleFor(x => x.Identification)
             .NotEmpty()
-                .WithMessage("Case5.Identification is required (Max35Text, 1..1).")
+            .WithMessage("Case5.Identification is required (Max35Text, 1..1).")
             .MinimumLength(1)
             .MaximumLength(35)
-                .WithMessage("Case5.Identification must not exceed 35 characters (Max35Text).");
+            .WithMessage("Case5.Identification must not exceed 35 characters (Max35Text).");
 
         RuleFor(x => x.Creator)
             .NotNull()
-                .WithMessage("Case5.Creator is required (Party40Choice, 1..1).");
+            .WithMessage("Case5.Creator is required (Party40Choice, 1..1).");
     }
 }

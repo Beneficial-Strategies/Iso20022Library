@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sCwFwexREeakeva4q26Yqg")]
 [DisplayName("Interest Rate Contract Term")]
-public partial record InterestRateContractTerm3
+public record InterestRateContractTerm3
 {
-    #nullable enable
-    
     /// <summary>
     /// Unit for the rate basis.
     /// </summary>
     [IsoId("_sO0L0exREeakeva4q26Yqg")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public RateBasis1Code? Unit { get; init; } 
-    
+    public RateBasis1Code? Unit { get; init; }
+
     /// <summary>
     /// Value of the contract term in number of units.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record InterestRateContractTerm3
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max3Number)]
-    public IsoMax3Number? Value { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax3Number? Value { get; init; }
 }

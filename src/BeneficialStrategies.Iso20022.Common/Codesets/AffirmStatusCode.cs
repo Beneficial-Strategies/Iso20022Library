@@ -23,7 +23,7 @@ public enum AffirmStatusCode
     [IsoId("_HDYCEEStEeSTS-T7FO4CUQ")]
     [Description(@"Data was successfully matched.")]
     Compared,
-    
+
     /// <summary>
     /// Format of upload data was right, and system receives successfully.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,7 +32,7 @@ public enum AffirmStatusCode
     [IsoId("_JjXSkEStEeSTS-T7FO4CUQ")]
     [Description(@"Format of upload data was right, and system receives successfully.")]
     Received,
-    
+
     /// <summary>
     /// Data was mismatched.
     /// Encoded/decoded by serializers as &quot;MISM&quot;.
@@ -41,7 +41,7 @@ public enum AffirmStatusCode
     [IsoId("_MD9nEEStEeSTS-T7FO4CUQ")]
     [Description(@"Data was mismatched.")]
     MisMatched,
-    
+
     /// <summary>
     /// Query time was over system service time.
     /// Encoded/decoded by serializers as &quot;OUOS&quot;.
@@ -50,7 +50,7 @@ public enum AffirmStatusCode
     [IsoId("_O4ngAEStEeSTS-T7FO4CUQ")]
     [Description(@"Query time was over system service time.")]
     OutOfService,
-    
+
     /// <summary>
     /// Query time was out of range.
     /// Encoded/decoded by serializers as &quot;OUOR&quot;.
@@ -59,7 +59,7 @@ public enum AffirmStatusCode
     [IsoId("_RA4NAEStEeSTS-T7FO4CUQ")]
     [Description(@"Query time was out of range.")]
     OutOfRange,
-    
+
     /// <summary>
     /// Notfies that the trade confimation was conpleted.
     /// Encoded/decoded by serializers as &quot;ATCN&quot;.
@@ -68,7 +68,7 @@ public enum AffirmStatusCode
     [IsoId("_UB5uAEStEeSTS-T7FO4CUQ")]
     [Description(@"Notfies that the trade confimation was conpleted.")]
     AckToConfirmCompleteNotification,
-    
+
     /// <summary>
     /// Format of upload data was wrong, and system receives unsuccessfully.
     /// Encoded/decoded by serializers as &quot;UNRE&quot;.
@@ -77,7 +77,7 @@ public enum AffirmStatusCode
     [IsoId("_XgxBkEStEeSTS-T7FO4CUQ")]
     [Description(@"Format of upload data was wrong, and system receives unsuccessfully.")]
     Unreceived,
-    
+
     /// <summary>
     /// Model has errors.
     /// Encoded/decoded by serializers as &quot;MISE&quot;.
@@ -86,7 +86,7 @@ public enum AffirmStatusCode
     [IsoId("_Y7ViIEStEeSTS-T7FO4CUQ")]
     [Description(@"Model has errors.")]
     ModeError,
-    
+
     /// <summary>
     /// Notfies the clearing status changed.
     /// Encoded/decoded by serializers as &quot;ATSC&quot;.
@@ -95,7 +95,7 @@ public enum AffirmStatusCode
     [IsoId("_bC0MAEStEeSTS-T7FO4CUQ")]
     [Description(@"Notfies the clearing status changed.")]
     AckToSettlementStateChanged,
-    
+
     /// <summary>
     /// Have no trading permissions.
     /// Encoded/decoded by serializers as &quot;NOTP&quot;.
@@ -104,5 +104,4 @@ public enum AffirmStatusCode
     [IsoId("_duHUoEStEeSTS-T7FO4CUQ")]
     [Description(@"Have no trading permissions.")]
     NoTradingPrivilege,
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_whTckFlIEeGYqvgbBHXAZw")]
-[Description(@"Provides the status of the investigation response related to a previously sent request.")]
+[Description(
+    @"Provides the status of the investigation response related to a previously sent request."
+)]
 [DerivedFrom(typeof(InvestigationStatusCode))]
 public enum InvestigationStatus1Code
 {
@@ -21,9 +23,11 @@ public enum InvestigationStatus1Code
     /// </summary>
     [EnumMember(Value = "FOUN")]
     [IsoId("_xZMG1llIEeGYqvgbBHXAZw")]
-    [Description(@"Search for requested data is complete, the data has been found and will be sent using a separate message flow.")]
+    [Description(
+        @"Search for requested data is complete, the data has been found and will be sent using a separate message flow."
+    )]
     DataFound = InvestigationStatusCode.DataFound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Search for requested data is complete, data not found.
     /// Encoded/decoded by serializers as &quot;NFOU&quot;.
@@ -32,7 +36,7 @@ public enum InvestigationStatus1Code
     [IsoId("_xeGcBllIEeGYqvgbBHXAZw")]
     [Description(@"Search for requested data is complete, data not found.")]
     DataNotFound = InvestigationStatusCode.DataNotFound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Search for requested data not complete yet.
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -41,5 +45,4 @@ public enum InvestigationStatus1Code
     [IsoId("_xj6wJllIEeGYqvgbBHXAZw")]
     [Description(@"Search for requested data not complete yet.")]
     NotApplicable = InvestigationStatusCode.NotApplicable, // same ordinal as derivation source for type conversions
-    
 }

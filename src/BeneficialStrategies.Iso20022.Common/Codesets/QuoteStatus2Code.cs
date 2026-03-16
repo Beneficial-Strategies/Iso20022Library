@@ -23,7 +23,7 @@ public enum QuoteStatus2Code
     [IsoId("_ZYjBwNp-Ed-ak6NoX_4Aeg_-1041278909")]
     [Description(@"Indicates that all quotes are cancelled for a financial instrument's symbol.")]
     CancelSymbol = QuoteStatusCode.CancelSymbol, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that all quotes are cancelled for a specific security.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,16 +32,18 @@ public enum QuoteStatus2Code
     [IsoId("_ZYjBwdp-Ed-ak6NoX_4Aeg_-1041278866")]
     [Description(@"Indicates that all quotes are cancelled for a specific security.")]
     CancelSecurity = QuoteStatusCode.CancelSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that all quotes are cancelled for an underlying financial instrument.
     /// Encoded/decoded by serializers as &quot;UNSY&quot;.
     /// </summary>
     [EnumMember(Value = "UNSY")]
     [IsoId("_ZYjBwtp-Ed-ak6NoX_4Aeg_-1041278806")]
-    [Description(@"Indicates that all quotes are cancelled for an underlying financial instrument.")]
+    [Description(
+        @"Indicates that all quotes are cancelled for an underlying financial instrument."
+    )]
     CancelUnderlying = QuoteStatusCode.CancelUnderlying, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that all quotes are cancelled.
     /// Encoded/decoded by serializers as &quot;ALLE&quot;.
@@ -50,7 +52,7 @@ public enum QuoteStatus2Code
     [IsoId("_ZYjBw9p-Ed-ak6NoX_4Aeg_-1041278771")]
     [Description(@"Indicates that all quotes are cancelled.")]
     CancelAll = QuoteStatusCode.CancelAll, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that no quote can be computed or communicated.
     /// Encoded/decoded by serializers as &quot;NQUO&quot;.
@@ -59,5 +61,4 @@ public enum QuoteStatus2Code
     [IsoId("_ZYjBxNp-Ed-ak6NoX_4Aeg_-799316486")]
     [Description(@"Indicates that no quote can be computed or communicated.")]
     QuoteNotFound = QuoteStatusCode.QuoteNotFound, // same ordinal as derivation source for type conversions
-    
 }

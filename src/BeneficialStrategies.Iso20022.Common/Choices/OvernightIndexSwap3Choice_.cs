@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OvernightIndexSwap3Choice.DataSetAction))]
     [KnownType(typeof(OvernightIndexSwap3Choice.Transaction))]
-    [JsonDerivedType(typeof(OvernightIndexSwap3Choice.DataSetAction),nameof(OvernightIndexSwap3Choice.DataSetAction))]
-    [JsonDerivedType(typeof(OvernightIndexSwap3Choice.Transaction),nameof(OvernightIndexSwap3Choice.Transaction))]
+    [JsonDerivedType(
+        typeof(OvernightIndexSwap3Choice.DataSetAction),
+        nameof(OvernightIndexSwap3Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(OvernightIndexSwap3Choice.Transaction),
+        nameof(OvernightIndexSwap3Choice.Transaction)
+    )]
     [IsoId("_ypcOkaicEeWHO_l3hf2rlA")]
     [DisplayName("Overnight Index Swap 3 Choice")]
-    public abstract partial record OvernightIndexSwap3Choice_
-    {
-    }
+    public abstract record OvernightIndexSwap3Choice_ { }
 }

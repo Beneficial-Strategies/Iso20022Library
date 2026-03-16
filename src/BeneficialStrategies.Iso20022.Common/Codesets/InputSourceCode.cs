@@ -23,16 +23,18 @@ public enum InputSourceCode
     [IsoId("_alnpsMmMEeWAGphE2LvqeA")]
     [Description(@"File has been encoded.")]
     Encoded,
-    
+
     /// <summary>
     /// File has been uploaded through the CIS (Customer Identification System) system.
     /// Encoded/decoded by serializers as &quot;UCIS&quot;.
     /// </summary>
     [EnumMember(Value = "UCIS")]
     [IsoId("_dgGd0MmMEeWAGphE2LvqeA")]
-    [Description(@"File has been uploaded through the CIS (Customer Identification System) system.")]
+    [Description(
+        @"File has been uploaded through the CIS (Customer Identification System) system."
+    )]
     UploadedViaCIS,
-    
+
     /// <summary>
     /// File has been uploaded manually.
     /// Encoded/decoded by serializers as &quot;UMNL&quot;.
@@ -41,5 +43,4 @@ public enum InputSourceCode
     [IsoId("_iUrnIMmMEeWAGphE2LvqeA")]
     [Description(@"File has been uploaded manually.")]
     UploadedManually,
-    
 }

@@ -23,7 +23,7 @@ public enum TR34Status1Code
     [IsoId("_MpMAQbTjEeeQy4o2AayYHg")]
     [Description(@"The device is bound.")]
     Bound = TR34StatusCode.Bound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The device is unbound.
     /// Encoded/decoded by serializers as &quot;UBND&quot;.
@@ -32,5 +32,4 @@ public enum TR34Status1Code
     [IsoId("_MtU5YbTjEeeQy4o2AayYHg")]
     [Description(@"The device is unbound.")]
     Unbound = TR34StatusCode.Unbound, // same ordinal as derivation source for type conversions
-    
 }

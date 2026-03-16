@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aVDGQ9p-Ed-ak6NoX_4Aeg_132545126")]
-[Description(@"Provides the matching status of the instruction at the time the settlement instruction was sent.")]
+[Description(
+    @"Provides the matching status of the instruction at the time the settlement instruction was sent."
+)]
 [DerivedFrom(typeof(MatchingStatusCode))]
 public enum MatchingStatus1Code
 {
@@ -23,7 +25,7 @@ public enum MatchingStatus1Code
     [IsoId("_aVDGRNp-Ed-ak6NoX_4Aeg_189804200")]
     [Description(@"Instruction has been matched.")]
     Matched = MatchingStatusCode.Matched, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has not been matched.
     /// Encoded/decoded by serializers as &quot;NMAT&quot;.
@@ -32,5 +34,4 @@ public enum MatchingStatus1Code
     [IsoId("_aVDGRdp-Ed-ak6NoX_4Aeg_234135671")]
     [Description(@"Instruction has not been matched.")]
     Unmatched = MatchingStatusCode.Unmatched, // same ordinal as derivation source for type conversions
-    
 }

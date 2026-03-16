@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2tACecgxEeuGrNSsxk3B0A")]
 [DisplayName("Compare Organisation Identification")]
-public partial record CompareOrganisationIdentification6
+public record CompareOrganisationIdentification6
 {
-    #nullable enable
-    
     /// <summary>
     /// Information for the first side of the transaction.
     /// </summary>
     [IsoId("_2uZwo8gxEeuGrNSsxk3B0A")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
-    public OrganisationIdentification15Choice_? Value1 { get; init; } 
-    
+    public OrganisationIdentification15Choice_? Value1 { get; init; }
+
     /// <summary>
     /// Information for the second side of the transaction.
     /// </summary>
     [IsoId("_2uZwpcgxEeuGrNSsxk3B0A")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
-    public OrganisationIdentification15Choice_? Value2 { get; init; } 
-    
-    
-    #nullable disable
-    
+    public OrganisationIdentification15Choice_? Value2 { get; init; }
 }

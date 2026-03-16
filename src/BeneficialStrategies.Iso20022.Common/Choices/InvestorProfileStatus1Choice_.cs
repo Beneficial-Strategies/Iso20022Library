@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InvestorProfileStatus1Choice.Code))]
     [KnownType(typeof(InvestorProfileStatus1Choice.Proprietary))]
-    [JsonDerivedType(typeof(InvestorProfileStatus1Choice.Code),nameof(InvestorProfileStatus1Choice.Code))]
-    [JsonDerivedType(typeof(InvestorProfileStatus1Choice.Proprietary),nameof(InvestorProfileStatus1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(InvestorProfileStatus1Choice.Code),
+        nameof(InvestorProfileStatus1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(InvestorProfileStatus1Choice.Proprietary),
+        nameof(InvestorProfileStatus1Choice.Proprietary)
+    )]
     [IsoId("_pd-vQCDOEeWPMvNwVtiMsA")]
     [DisplayName("Investor Profile Status 1 Choice")]
-    public abstract partial record InvestorProfileStatus1Choice_
-    {
-    }
+    public abstract record InvestorProfileStatus1Choice_ { }
 }

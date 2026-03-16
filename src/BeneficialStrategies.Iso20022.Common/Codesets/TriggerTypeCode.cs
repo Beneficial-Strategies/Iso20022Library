@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YwUkIdp-Ed-ak6NoX_4Aeg_-70363813")]
-[Description(@"Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.")]
+[Description(
+    @"Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect."
+)]
 [Derivations(typeof(TriggerType1Code))]
 public enum TriggerTypeCode
 {
@@ -23,7 +25,7 @@ public enum TriggerTypeCode
     [IsoId("_YwUkItp-Ed-ak6NoX_4Aeg_45075403")]
     [Description(@"Trigger Instructions come into effect in case of partial execution.")]
     PartialExecution,
-    
+
     /// <summary>
     /// Trigger Instructions come into effect at specified trading session.
     /// Encoded/decoded by serializers as &quot;SPTS&quot;.
@@ -32,7 +34,7 @@ public enum TriggerTypeCode
     [IsoId("_YwUkI9p-Ed-ak6NoX_4Aeg_140198154")]
     [Description(@"Trigger Instructions come into effect at specified trading session.")]
     SpecifiedTradingSession,
-    
+
     /// <summary>
     /// Trigger Instructions come into effect at next auction.
     /// Encoded/decoded by serializers as &quot;NEAU&quot;.
@@ -41,7 +43,7 @@ public enum TriggerTypeCode
     [IsoId("_YwUkJNp-Ed-ak6NoX_4Aeg_359997608")]
     [Description(@"Trigger Instructions come into effect at next auction.")]
     NextAuction,
-    
+
     /// <summary>
     /// Trigger Instructions come into effect in case of price movement.
     /// Encoded/decoded by serializers as &quot;PRMO&quot;.
@@ -50,5 +52,4 @@ public enum TriggerTypeCode
     [IsoId("_YwUkJdp-Ed-ak6NoX_4Aeg_383086593")]
     [Description(@"Trigger Instructions come into effect in case of price movement.")]
     PriceMovement,
-    
 }

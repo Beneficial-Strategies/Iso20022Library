@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_R_kY3O3tEemV1LTEADuPBQ")]
 [DisplayName("Trade Data")]
-public partial record TradeData20
+public record TradeData20
 {
-    #nullable enable
-    
     /// <summary>
     /// Information about accepted and rejected reports and the reasons of rejection.
     /// </summary>
@@ -25,8 +23,9 @@ public partial record TradeData20
     [DisplayName("Report Statistics")]
     [IsoXmlTag("RptSttstcs")]
     public ValueList<DetailedReportStatistics5> ReportStatistics { get; init; } = [];
+
     // ID for the above is _R_kY3u3tEemV1LTEADuPBQ
-    
+
     /// <summary>
     /// Information about accepted and rejected transactions and the reasons of rejection.
     /// </summary>
@@ -34,17 +33,14 @@ public partial record TradeData20
     [DisplayName("Transaction Statistics")]
     [IsoXmlTag("TxSttstcs")]
     public ValueList<DetailedTransactionStatistics10> TransactionStatistics { get; init; } = [];
+
     // ID for the above is _R_kY3-3tEemV1LTEADuPBQ
-    
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_R_kY3e3tEemV1LTEADuPBQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

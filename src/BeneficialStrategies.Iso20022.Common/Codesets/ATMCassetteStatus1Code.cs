@@ -30,7 +30,9 @@ public enum ATMCassetteStatus1Code
     /// </summary>
     [EnumMember(Value = "CUHG")]
     [IsoId("_ATMCassetteStatus1Code_High")]
-    [Description(@"The cash unit is high, that is it has reached or exceeded the threshold defined for this cassette.")]
+    [Description(
+        @"The cash unit is high, that is it has reached or exceeded the threshold defined for this cassette."
+    )]
     High = ATMCassetteStatusCode.High,
 
     /// <summary>
@@ -39,7 +41,9 @@ public enum ATMCassetteStatus1Code
     /// </summary>
     [EnumMember(Value = "CULW")]
     [IsoId("_ATMCassetteStatus1Code_Low")]
-    [Description(@"The cash unit is low, that is it has reached or is below the threshold defined for this cassette.")]
+    [Description(
+        @"The cash unit is low, that is it has reached or is below the threshold defined for this cassette."
+    )]
     Low = ATMCassetteStatusCode.Low,
 
     /// <summary>
@@ -104,5 +108,4 @@ public enum ATMCassetteStatus1Code
     [IsoId("_ATMCassetteStatus1Code_Ok")]
     [Description(@"The cash unit is in a good state.")]
     Ok = ATMCassetteStatusCode.Ok,
-
 }

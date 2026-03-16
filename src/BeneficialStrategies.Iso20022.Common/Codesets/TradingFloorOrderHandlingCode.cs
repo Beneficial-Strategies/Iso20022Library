@@ -21,18 +21,22 @@ public enum TradingFloorOrderHandlingCode
     /// </summary>
     [EnumMember(Value = "ATPR")]
     [IsoId("_Yq878dp-Ed-ak6NoX_4Aeg_337179656")]
-    [Description(@"Indicates that the order should be executed automatically, private initiative, no broker intervention. Its sales trading desk will not be informed of the order and trade.")]
+    [Description(
+        @"Indicates that the order should be executed automatically, private initiative, no broker intervention. Its sales trading desk will not be informed of the order and trade."
+    )]
     AutomatedPrivate,
-    
+
     /// <summary>
     /// Indicates that the order should be executed automatically, public initiative, broker intervention allowed.
     /// Encoded/decoded by serializers as &quot;ATPU&quot;.
     /// </summary>
     [EnumMember(Value = "ATPU")]
     [IsoId("_Yq878tp-Ed-ak6NoX_4Aeg_337179657")]
-    [Description(@"Indicates that the order should be executed automatically, public initiative, broker intervention allowed.")]
+    [Description(
+        @"Indicates that the order should be executed automatically, public initiative, broker intervention allowed."
+    )]
     AutomatedPublic,
-    
+
     /// <summary>
     /// Manual order, best execution.
     /// Encoded/decoded by serializers as &quot;MANU&quot;.
@@ -41,5 +45,4 @@ public enum TradingFloorOrderHandlingCode
     [IsoId("_Yq8789p-Ed-ak6NoX_4Aeg_337179658")]
     [Description(@"Manual order, best execution.")]
     Manual,
-    
 }

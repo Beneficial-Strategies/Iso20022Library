@@ -23,7 +23,7 @@ public enum ATMServiceType6Code
     [IsoId("_P5EiUa3_EeWL1uap3dNhCQ")]
     [Description(@"Making change between media types.")]
     MakingChange = ATMServiceTypeCode.MakingChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deposit of media items unverified by the ATM, for instance in an envelope.
     /// Encoded/decoded by serializers as &quot;DPSN&quot;.
@@ -32,7 +32,7 @@ public enum ATMServiceType6Code
     [IsoId("_QHYEE63_EeWL1uap3dNhCQ")]
     [Description(@"Deposit of media items unverified by the ATM, for instance in an envelope.")]
     NonVerifiedDeposit = ATMServiceTypeCode.NonVerifiedDeposit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deposit of media items verified by the ATM.
     /// Encoded/decoded by serializers as &quot;DPSV&quot;.
@@ -41,5 +41,4 @@ public enum ATMServiceType6Code
     [IsoId("_QbvKg63_EeWL1uap3dNhCQ")]
     [Description(@"Deposit of media items verified by the ATM.")]
     VerifiedDeposit = ATMServiceTypeCode.VerifiedDeposit, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2xhasLzhEeivTd4NUfCi2g")]
 [DisplayName("Additional Information")]
-public partial record AdditionalInformation24
+public record AdditionalInformation24
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides additional information on the collateral instruction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AdditionalInformation24
     [DisplayName("Collateral Instruction")]
     [IsoXmlTag("CollInstr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? CollateralInstruction { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? CollateralInstruction { get; init; }
+
     /// <summary>
     /// Narrative information visible to other parties.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record AdditionalInformation24
     [DisplayName("Note")]
     [IsoXmlTag("Note")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Note { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Note { get; init; }
 }

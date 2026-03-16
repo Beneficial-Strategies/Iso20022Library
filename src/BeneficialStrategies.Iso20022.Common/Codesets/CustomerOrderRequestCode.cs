@@ -23,7 +23,7 @@ public enum CustomerOrderRequestCode
     [IsoId("_J3KiMN6JEeiwsev40qZGEQ")]
     [Description(@"Customer order not completed.")]
     Open,
-    
+
     /// <summary>
     /// Completed customer orders.
     /// Encoded/decoded by serializers as &quot;CLSD&quot;.
@@ -32,7 +32,7 @@ public enum CustomerOrderRequestCode
     [IsoId("_J5EmsN6JEeiwsev40qZGEQ")]
     [Description(@"Completed customer orders.")]
     Closed,
-    
+
     /// <summary>
     /// All types of CustomerOrder should be listed, some are open others closed.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +41,4 @@ public enum CustomerOrderRequestCode
     [IsoId("_J-B_MN6JEeiwsev40qZGEQ")]
     [Description(@"All types of CustomerOrder should be listed, some are open others closed.")]
     Both,
-    
 }

@@ -23,14 +23,15 @@ public enum DebitTypeCode
     [IsoId("_NBtqsMmKEeWAGphE2LvqeA")]
     [Description(@"Debit is performed as a global debit for all instructions in the file.")]
     Global,
-    
+
     /// <summary>
     /// Debit is performed as an individual single debit for each instruction in the file.
     /// Encoded/decoded by serializers as &quot;SNGL&quot;.
     /// </summary>
     [EnumMember(Value = "SNGL")]
     [IsoId("_P6wUYMmKEeWAGphE2LvqeA")]
-    [Description(@"Debit is performed as an individual single debit for each instruction in the file.")]
+    [Description(
+        @"Debit is performed as an individual single debit for each instruction in the file."
+    )]
     Single,
-    
 }

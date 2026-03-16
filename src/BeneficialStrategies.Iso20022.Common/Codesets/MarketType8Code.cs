@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_90JVoDzyEeWLuazO9XdCTg")]
-[Description(@"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.")]
+[Description(
+    @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
+)]
 [DerivedFrom(typeof(MarketTypeCode))]
 public enum MarketType8Code
 {
@@ -23,7 +25,7 @@ public enum MarketType8Code
     [IsoId("_FcGlgTzzEeWLuazO9XdCTg")]
     [Description(@"Specified type of market is counter market.")]
     Counter = MarketTypeCode.Counter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specified type of market is inter bank market.
     /// Encoded/decoded by serializers as &quot;INBA&quot;.
@@ -32,7 +34,7 @@ public enum MarketType8Code
     [IsoId("_F4RkITzzEeWLuazO9XdCTg")]
     [Description(@"Specified type of market is inter bank market.")]
     InterBank = MarketTypeCode.InterBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is over the counter.
     /// Encoded/decoded by serializers as &quot;OTCO&quot;.
@@ -41,7 +43,7 @@ public enum MarketType8Code
     [IsoId("_GeAucTzzEeWLuazO9XdCTg")]
     [Description(@"The place is over the counter.")]
     OverTheCounter = MarketTypeCode.OverTheCounter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a primary market.
     /// Encoded/decoded by serializers as &quot;PRIM&quot;.
@@ -50,7 +52,7 @@ public enum MarketType8Code
     [IsoId("_G9KvoTzzEeWLuazO9XdCTg")]
     [Description(@"The place is a primary market.")]
     PrimaryMarket = MarketTypeCode.PrimaryMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a secondary market.
     /// Encoded/decoded by serializers as &quot;SECM&quot;.
@@ -59,7 +61,7 @@ public enum MarketType8Code
     [IsoId("_HgWVMTzzEeWLuazO9XdCTg")]
     [Description(@"The place is a secondary market.")]
     SecondaryMarket = MarketTypeCode.SecondaryMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a stock exchange.
     /// Encoded/decoded by serializers as &quot;EXCH&quot;.
@@ -68,7 +70,7 @@ public enum MarketType8Code
     [IsoId("_IEdH0TzzEeWLuazO9XdCTg")]
     [Description(@"The place is a stock exchange.")]
     StockExchange = MarketTypeCode.StockExchange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Various places.
     /// Encoded/decoded by serializers as &quot;VARI&quot;.
@@ -77,5 +79,4 @@ public enum MarketType8Code
     [IsoId("_OIREYTzzEeWLuazO9XdCTg")]
     [Description(@"Various places.")]
     Various = MarketTypeCode.Various, // same ordinal as derivation source for type conversions
-    
 }

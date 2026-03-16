@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementParties38Choice.DeliveringSettlementParties))]
     [KnownType(typeof(SettlementParties38Choice.ReceivingSettlementParties))]
-    [JsonDerivedType(typeof(SettlementParties38Choice.DeliveringSettlementParties),nameof(SettlementParties38Choice.DeliveringSettlementParties))]
-    [JsonDerivedType(typeof(SettlementParties38Choice.ReceivingSettlementParties),nameof(SettlementParties38Choice.ReceivingSettlementParties))]
+    [JsonDerivedType(
+        typeof(SettlementParties38Choice.DeliveringSettlementParties),
+        nameof(SettlementParties38Choice.DeliveringSettlementParties)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementParties38Choice.ReceivingSettlementParties),
+        nameof(SettlementParties38Choice.ReceivingSettlementParties)
+    )]
     [IsoId("_3wzzIZIOEe-HRNGM304Vlw")]
     [DisplayName("Settlement Parties38Choice")]
-    public abstract partial record SettlementParties38Choice_
-    {
-    }
+    public abstract record SettlementParties38Choice_ { }
 }

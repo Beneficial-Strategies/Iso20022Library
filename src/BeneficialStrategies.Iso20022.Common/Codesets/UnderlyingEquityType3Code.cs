@@ -23,5 +23,4 @@ public enum UnderlyingEquityType3Code
     [IsoId("_rI7j8WlOEeaLAKoEUNsD9g")]
     [Description(@"Underlying is a basket.")]
     Basket = UnderlyingTypeV2Code.Basket, // same ordinal as derivation source for type conversions
-    
 }

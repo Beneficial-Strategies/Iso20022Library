@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_TBRWcHGzEe6S2Llv74R19w")]
-[Description(@"Indicates how prorated instructions will be handled when the prorated entitlement results in less than the minimum denomination.")]
+[Description(
+    @"Indicates how prorated instructions will be handled when the prorated entitlement results in less than the minimum denomination."
+)]
 [Derivations(typeof(ProrationReturnQuantityTreatment1Code))]
 public enum ProrationReturnQuantityTreatmentCode
 {
@@ -21,7 +23,9 @@ public enum ProrationReturnQuantityTreatmentCode
     /// </summary>
     [EnumMember(Value = "ACPT")]
     [IsoId("")]
-    [Description(@"Prorated instructions which result in less than the minimum denominations will be accepted in full.")]
+    [Description(
+        @"Prorated instructions which result in less than the minimum denominations will be accepted in full."
+    )]
     Accept,
 
     /// <summary>
@@ -30,7 +34,9 @@ public enum ProrationReturnQuantityTreatmentCode
     /// </summary>
     [EnumMember(Value = "ADJT")]
     [IsoId("")]
-    [Description(@"Prorated instructions which result in less than the minimum denominations will be adjusted up.")]
+    [Description(
+        @"Prorated instructions which result in less than the minimum denominations will be adjusted up."
+    )]
     Adjust,
 
     /// <summary>
@@ -39,7 +45,8 @@ public enum ProrationReturnQuantityTreatmentCode
     /// </summary>
     [EnumMember(Value = "REJT")]
     [IsoId("")]
-    [Description(@"Prorated instructions which result in less than the minimum denominations will be rejected in full.")]
+    [Description(
+        @"Prorated instructions which result in less than the minimum denominations will be rejected in full."
+    )]
     Reject,
-
 }

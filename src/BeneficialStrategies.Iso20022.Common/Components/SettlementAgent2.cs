@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9uI_4TzUEe6P1b-XWVSh4g")]
 [DisplayName("Settlement Agent2")]
-public partial record SettlementAgent2
+public record SettlementAgent2
 {
-    #nullable enable
-
     /// <summary>
     /// Account.
     /// </summary>
@@ -30,9 +28,5 @@ public partial record SettlementAgent2
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoLEIIdentifier Identification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoLEIIdentifier Identification { get; init; }
 }

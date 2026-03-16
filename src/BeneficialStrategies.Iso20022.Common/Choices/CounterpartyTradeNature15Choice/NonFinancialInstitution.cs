@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
     /// </summary>
     [IsoId("_1z1A8wz1Ee2YoLD-1vFj0g")]
     [DisplayName("Non Financial Institution")]
-    public partial record NonFinancialInstitution : CounterpartyTradeNature15Choice_
+    public record NonFinancialInstitution : CounterpartyTradeNature15Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Taxonomy for non-financial counterparties. The categories correspond to the main sections of NACE classification as defined in the regulation.
         /// </summary>
@@ -24,8 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Sector")]
         [IsoXmlTag("Sctr")]
         public ValueList<GenericIdentification175> Sector { get; init; } = [];
+
         // ID for the above is _ygiOwQz2Ee2YoLD-1vFj0g
-        
+
         /// <summary>
         /// Information whether the counterparty is above the clearing threshold.
         /// Usage: If the element is not present, the ClearingThreshold is False.
@@ -34,8 +33,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Clearing Threshold")]
         [IsoXmlTag("ClrThrshld")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? ClearingThreshold { get; init; } 
-        
+        public IsoTrueFalseIndicator? ClearingThreshold { get; init; }
+
         /// <summary>
         /// Directly linked to commercial activity or treasury financing: Information on whether the contract is objectively measurable as directly linked to the counterparty&apos;s commercial or treasury financing activity.
         /// Usage: If the element is not present, the DirectlyLinkedActivity is False.
@@ -44,8 +43,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Directly Linked Activity")]
         [IsoXmlTag("DrctlyLkdActvty")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? DirectlyLinkedActivity { get; init; } 
-        
+        public IsoTrueFalseIndicator? DirectlyLinkedActivity { get; init; }
+
         /// <summary>
         /// Indicates whether the counterparty is an entity established pursuant to federal law like for example a federal authority or a government corporation.
         /// Usage: If the element is not present, the FederalInstitution is False.
@@ -54,10 +53,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CounterpartyTradeNature15Choice
         [DisplayName("Federal Institution")]
         [IsoXmlTag("FdrlInstn")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? FederalInstitution { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoTrueFalseIndicator? FederalInstitution { get; init; }
     }
 }

@@ -18,18 +18,43 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus88Choice.Proprietary))]
     [KnownType(typeof(ProcessingStatus88Choice.CancellationRequested))]
     [KnownType(typeof(ProcessingStatus88Choice.ModificationRequested))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.AcknowledgedAccepted),nameof(ProcessingStatus88Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.PendingProcessing),nameof(ProcessingStatus88Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.Rejected),nameof(ProcessingStatus88Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.Repair),nameof(ProcessingStatus88Choice.Repair))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.Cancelled),nameof(ProcessingStatus88Choice.Cancelled))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.PendingCancellation),nameof(ProcessingStatus88Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.Proprietary),nameof(ProcessingStatus88Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.CancellationRequested),nameof(ProcessingStatus88Choice.CancellationRequested))]
-    [JsonDerivedType(typeof(ProcessingStatus88Choice.ModificationRequested),nameof(ProcessingStatus88Choice.ModificationRequested))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus88Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.PendingProcessing),
+        nameof(ProcessingStatus88Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.Rejected),
+        nameof(ProcessingStatus88Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.Repair),
+        nameof(ProcessingStatus88Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.Cancelled),
+        nameof(ProcessingStatus88Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.PendingCancellation),
+        nameof(ProcessingStatus88Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.Proprietary),
+        nameof(ProcessingStatus88Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.CancellationRequested),
+        nameof(ProcessingStatus88Choice.CancellationRequested)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus88Choice.ModificationRequested),
+        nameof(ProcessingStatus88Choice.ModificationRequested)
+    )]
     [IsoId("_g5IR4StXEeyhipY4f42fZQ")]
     [DisplayName("Processing Status 88 Choice")]
-    public abstract partial record ProcessingStatus88Choice_
-    {
-    }
+    public abstract record ProcessingStatus88Choice_ { }
 }

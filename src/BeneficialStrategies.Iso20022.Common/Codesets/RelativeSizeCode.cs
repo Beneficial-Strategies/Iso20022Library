@@ -23,7 +23,7 @@ public enum RelativeSizeCode
     [IsoId("_ZsOLs9p-Ed-ak6NoX_4Aeg_336258694")]
     [Description(@"Indicates that the relative size is small.")]
     Small,
-    
+
     /// <summary>
     /// Indicates that the relative size is medium.
     /// Encoded/decoded by serializers as &quot;MEDI&quot;.
@@ -32,7 +32,7 @@ public enum RelativeSizeCode
     [IsoId("_ZsOLtNp-Ed-ak6NoX_4Aeg_336258695")]
     [Description(@"Indicates that the relative size is medium.")]
     Medium,
-    
+
     /// <summary>
     /// Indicates that the relative size is large.
     /// Encoded/decoded by serializers as &quot;LARG&quot;.
@@ -41,7 +41,7 @@ public enum RelativeSizeCode
     [IsoId("_ZsOLtdp-Ed-ak6NoX_4Aeg_336258696")]
     [Description(@"Indicates that the relative size is large.")]
     Large,
-    
+
     /// <summary>
     /// Indicates that the quantity is undisclosed.
     /// Encoded/decoded by serializers as &quot;UNDI&quot;.
@@ -50,5 +50,4 @@ public enum RelativeSizeCode
     [IsoId("_ZsOLttp-Ed-ak6NoX_4Aeg_1323051777")]
     [Description(@"Indicates that the quantity is undisclosed.")]
     Undisclosed,
-    
 }

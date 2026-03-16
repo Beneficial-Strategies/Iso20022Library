@@ -23,7 +23,7 @@ public enum OrganisationType1Code
     [IsoId("_jvGFMSCfEeWJd9HF2tO7BA")]
     [Description(@"Organisation is an investment fund.")]
     InvestmentFund = OrganisationTypeCode.InvestmentFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Organisation is a private association.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -32,7 +32,7 @@ public enum OrganisationType1Code
     [IsoId("_j2YY8SCfEeWJd9HF2tO7BA")]
     [Description(@"Organisation is a private association.")]
     PrivateAssociation = OrganisationTypeCode.PrivateAssociation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Organisation is a public company.
     /// Encoded/decoded by serializers as &quot;PUBL&quot;.
@@ -41,7 +41,7 @@ public enum OrganisationType1Code
     [IsoId("_j9rTwSCfEeWJd9HF2tO7BA")]
     [Description(@"Organisation is a public company.")]
     Public = OrganisationTypeCode.Public, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Organisation is a public fund.
     /// Encoded/decoded by serializers as &quot;PFUN&quot;.
@@ -50,5 +50,4 @@ public enum OrganisationType1Code
     [IsoId("_kFHYgSCfEeWJd9HF2tO7BA")]
     [Description(@"Organisation is a public fund.")]
     PublicFund = OrganisationTypeCode.PublicFund, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TKaGYQeFEe2fOITqoTnSLQ")]
 [DisplayName("Future Or Option Details")]
-public partial record FutureOrOptionDetails3
+public record FutureOrOptionDetails3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of the contract for futures and options.
     /// </summary>
     [IsoId("_TdVCYQeFEe2fOITqoTnSLQ")]
     [DisplayName("Future And Option Contract Type")]
     [IsoXmlTag("FutrAndOptnCtrctTp")]
-    public FutureAndOptionContractType1Code? FutureAndOptionContractType { get; init; } 
-    
+    public FutureAndOptionContractType1Code? FutureAndOptionContractType { get; init; }
+
     /// <summary>
     /// Last date/time by which the option for physical delivery may still be exercised.
     /// </summary>
@@ -33,16 +31,16 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Last Delivery Date")]
     [IsoXmlTag("LastDlvryDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastDeliveryDate { get; init; } 
-    
+    public IsoISODateTime? LastDeliveryDate { get; init; }
+
     /// <summary>
     /// Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.).
     /// </summary>
     [IsoId("_TdVCZQeFEe2fOITqoTnSLQ")]
     [DisplayName("Unit Of Measure")]
     [IsoXmlTag("UnitOfMeasr")]
-    public UnitOfMeasure1Code? UnitOfMeasure { get; init; } 
-    
+    public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
+
     /// <summary>
     /// Date on which future contracts settle.
     /// </summary>
@@ -50,16 +48,16 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Future Date")]
     [IsoXmlTag("FutrDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FutureDate { get; init; } 
-    
+    public IsoISODateTime? FutureDate { get; init; }
+
     /// <summary>
     /// Specifies the minimum ratio or multiply factor used to convert from contracts to shares.
     /// </summary>
     [IsoId("_TdVCaQeFEe2fOITqoTnSLQ")]
     [DisplayName("Minimum Size")]
     [IsoXmlTag("MinSz")]
-    public ActiveCurrencyAndAmount? MinimumSize { get; init; } 
-    
+    public ActiveCurrencyAndAmount? MinimumSize { get; init; }
+
     /// <summary>
     /// Date/time, as announced by the issuer, at which the securities will be issued.
     /// </summary>
@@ -67,16 +65,16 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Announcement Date")]
     [IsoXmlTag("AnncmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? AnnouncementDate { get; init; } 
-    
+    public IsoISODateTime? AnnouncementDate { get; init; }
+
     /// <summary>
     /// Specifies the deliverability of a security.
     /// </summary>
     [IsoId("_TdVCbQeFEe2fOITqoTnSLQ")]
     [DisplayName("Appearance")]
     [IsoXmlTag("Apprnc")]
-    public Appearance1Code? Appearance { get; init; } 
-    
+    public Appearance1Code? Appearance { get; init; }
+
     /// <summary>
     /// Indicates whether the interest is separable from the principal.
     /// </summary>
@@ -84,8 +82,8 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Strippable Indicator")]
     [IsoXmlTag("StrpblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StrippableIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? StrippableIndicator { get; init; }
+
     /// <summary>
     /// Indicates the maximum number of listed option contracts on a single security which can be held by an investor or group of investors acting jointly.
     /// </summary>
@@ -93,8 +91,8 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Position Limit")]
     [IsoXmlTag("PosLmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PositionLimit { get; init; } 
-    
+    public IsoNumber? PositionLimit { get; init; }
+
     /// <summary>
     /// Position limit in the near-term contract for a given exchange-traded product.
     /// </summary>
@@ -102,8 +100,8 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Near Term Position Limit")]
     [IsoXmlTag("NearTermPosLmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NearTermPositionLimit { get; init; } 
-    
+    public IsoNumber? NearTermPositionLimit { get; init; }
+
     /// <summary>
     /// Minimum price increase for a given exchange-traded Instrument.
     /// </summary>
@@ -111,8 +109,8 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Minimum Trading Pricing Increment")]
     [IsoXmlTag("MinTradgPricgIncrmt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MinimumTradingPricingIncrement { get; init; } 
-    
+    public IsoNumber? MinimumTradingPricingIncrement { get; init; }
+
     /// <summary>
     /// Reason for which money is raised through the issuance of a security.
     /// </summary>
@@ -120,9 +118,9 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? Purpose { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? Purpose { get; init; }
+
     /// <summary>
     /// Specifies when the contract (i.e. MBS/TBA) will settle.
     /// </summary>
@@ -130,48 +128,48 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Contract Settlement Month")]
     [IsoXmlTag("CtrctSttlmMnth")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? ContractSettlementMonth { get; init; } 
-    
+    public IsoISOYearMonth? ContractSettlementMonth { get; init; }
+
     /// <summary>
     /// Date on which new securities begin trading.
     /// </summary>
     [IsoId("_TdVCeweFEe2fOITqoTnSLQ")]
     [DisplayName("First Dealing Date")]
     [IsoXmlTag("FrstDealgDt")]
-    public DateAndDateTime1Choice_? FirstDealingDate { get; init; } 
-    
+    public DateAndDateTime1Choice_? FirstDealingDate { get; init; }
+
     /// <summary>
     /// Ratio applied to convert the related security.
     /// </summary>
     [IsoId("_TdVCfQeFEe2fOITqoTnSLQ")]
     [DisplayName("Ratio")]
     [IsoXmlTag("Ratio")]
-    public UnderlyingRatio2? Ratio { get; init; } 
-    
+    public UnderlyingRatio2? Ratio { get; init; }
+
     /// <summary>
     /// Rating(s) of the security.
     /// </summary>
     [IsoId("_TdVCfweFEe2fOITqoTnSLQ")]
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
-    public Rating1? Rating { get; init; } 
-    
+    public Rating1? Rating { get; init; }
+
     /// <summary>
     /// Initial issue price of a financial instrument.
     /// </summary>
     [IsoId("_TdVCgQeFEe2fOITqoTnSLQ")]
     [DisplayName("Issue Price")]
     [IsoXmlTag("IssePric")]
-    public Price14? IssuePrice { get; init; } 
-    
+    public Price14? IssuePrice { get; init; }
+
     /// <summary>
     /// Rights to exercise the privilege to purchase or to sell the assets specified at a predetermined price or formula at or within a time in the future.
     /// </summary>
     [IsoId("_TdVCgweFEe2fOITqoTnSLQ")]
     [DisplayName("Option Rights")]
     [IsoXmlTag("OptnRghts")]
-    public OptionRight2Choice_? OptionRights { get; init; } 
-    
+    public OptionRight2Choice_? OptionRights { get; init; }
+
     /// <summary>
     /// Indicates whether or not this is the last transaction.
     /// </summary>
@@ -179,8 +177,8 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Last Transaction")]
     [IsoXmlTag("LastTx")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? LastTransaction { get; init; } 
-    
+    public IsoYesNoIndicator? LastTransaction { get; init; }
+
     /// <summary>
     /// Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.
     /// </summary>
@@ -188,9 +186,5 @@ public partial record FutureOrOptionDetails3
     [DisplayName("Spread Transaction")]
     [IsoXmlTag("SprdTx")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SpreadTransaction { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? SpreadTransaction { get; init; }
 }

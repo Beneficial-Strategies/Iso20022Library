@@ -21,21 +21,23 @@ public sealed class CaseAssignment5Validator : AbstractValidator<CaseAssignment5
     {
         RuleFor(x => x.Identification)
             .NotEmpty()
-                .WithMessage("CaseAssignment5.Identification is required (Max35Text, 1..1).")
+            .WithMessage("CaseAssignment5.Identification is required (Max35Text, 1..1).")
             .MinimumLength(1)
             .MaximumLength(35)
-                .WithMessage("CaseAssignment5.Identification must not exceed 35 characters (Max35Text).");
+            .WithMessage(
+                "CaseAssignment5.Identification must not exceed 35 characters (Max35Text)."
+            );
 
         RuleFor(x => x.Assigner)
             .NotNull()
-                .WithMessage("CaseAssignment5.Assigner is required (Party40Choice, 1..1).");
+            .WithMessage("CaseAssignment5.Assigner is required (Party40Choice, 1..1).");
 
         RuleFor(x => x.Assignee)
             .NotNull()
-                .WithMessage("CaseAssignment5.Assignee is required (Party40Choice, 1..1).");
+            .WithMessage("CaseAssignment5.Assignee is required (Party40Choice, 1..1).");
 
         RuleFor(x => x.CreationDateTime)
             .NotEqual(default(DateTime))
-                .WithMessage("CaseAssignment5.CreationDateTime is required (ISODateTime, 1..1).");
+            .WithMessage("CaseAssignment5.CreationDateTime is required (ISODateTime, 1..1).");
     }
 }

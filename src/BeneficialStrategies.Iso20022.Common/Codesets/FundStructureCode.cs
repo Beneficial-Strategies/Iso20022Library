@@ -22,7 +22,7 @@ public enum FundStructureCode
     [IsoId("_atyWZdp-Ed-ak6NoX_4Aeg_-1363507035")]
     [Description(@"Investment fund that contains more than one investment fund class.")]
     MultiClassFund,
-    
+
     /// <summary>
     /// Investment fund that contains only one investment fund class.
     /// Encoded/decoded by serializers as &quot;SFUN&quot;.
@@ -31,5 +31,4 @@ public enum FundStructureCode
     [IsoId("_atyWZtp-Ed-ak6NoX_4Aeg_-904519550")]
     [Description(@"Investment fund that contains only one investment fund class.")]
     SingleClassFund,
-    
 }

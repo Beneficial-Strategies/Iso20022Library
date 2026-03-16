@@ -23,14 +23,15 @@ public enum CRSSourceStatus1Code
     [IsoId("_A1tMMUNtEeaS-NnwLNvMPg")]
     [Description(@"Source of the Common Reporting Standard (CRS) status is calculated.")]
     Calculated = CRSSourceStatusCode.Calculated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Source of the Common Reporting Standard (CRS) status is as declared by the investor.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
     /// </summary>
     [EnumMember(Value = "DECL")]
     [IsoId("_A_-igUNtEeaS-NnwLNvMPg")]
-    [Description(@"Source of the Common Reporting Standard (CRS) status is as declared by the investor.")]
+    [Description(
+        @"Source of the Common Reporting Standard (CRS) status is as declared by the investor."
+    )]
     Declared = CRSSourceStatusCode.Declared, // same ordinal as derivation source for type conversions
-    
 }

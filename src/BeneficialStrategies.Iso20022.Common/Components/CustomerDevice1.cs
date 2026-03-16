@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2b4TgGjLEeSHBr6v3XO0Mg")]
 [DisplayName("Customer Device")]
-public partial record CustomerDevice1
+public record CustomerDevice1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifier of the component.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CustomerDevice1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Identification { get; init; }
+
     /// <summary>
     /// Type of component.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CustomerDevice1
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Type { get; init; }
+
     /// <summary>
     /// Provider of the component.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record CustomerDevice1
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Provider { get; init; }
 }

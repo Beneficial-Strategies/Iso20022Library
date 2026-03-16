@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CryptographicKey1Choice.ILPV4))]
     [KnownType(typeof(CryptographicKey1Choice.Signature))]
-    [JsonDerivedType(typeof(CryptographicKey1Choice.ILPV4),nameof(CryptographicKey1Choice.ILPV4))]
-    [JsonDerivedType(typeof(CryptographicKey1Choice.Signature),nameof(CryptographicKey1Choice.Signature))]
+    [JsonDerivedType(typeof(CryptographicKey1Choice.ILPV4), nameof(CryptographicKey1Choice.ILPV4))]
+    [JsonDerivedType(
+        typeof(CryptographicKey1Choice.Signature),
+        nameof(CryptographicKey1Choice.Signature)
+    )]
     [IsoId("__lk0wD6wEe-QZYT2pcGFZw")]
     [DisplayName("Cryptographic Key1Choice")]
-    public abstract partial record CryptographicKey1Choice_
-    {
-    }
+    public abstract record CryptographicKey1Choice_ { }
 }

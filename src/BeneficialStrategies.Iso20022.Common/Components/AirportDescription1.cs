@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SsSlINp-Ed-ak6NoX_4Aeg_-1395385132")]
 [DisplayName("Airport Description")]
-public partial record AirportDescription1
+public record AirportDescription1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the town where the airport is located. For example: London.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AirportDescription1
     [DisplayName("Town")]
     [IsoXmlTag("Twn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Town { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Town { get; init; }
+
     /// <summary>
     /// Identifies the airport by its name. For example: Heathrow.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record AirportDescription1
     [DisplayName("Airport Name")]
     [IsoXmlTag("AirprtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AirportName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AirportName { get; init; }
 }

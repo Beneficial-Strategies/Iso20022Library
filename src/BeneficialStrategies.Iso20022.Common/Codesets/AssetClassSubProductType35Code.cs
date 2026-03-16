@@ -23,5 +23,4 @@ public enum AssetClassSubProductType35Code
     [IsoId("_mxGD8VryEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type containerboard.")]
     Containerboard = AssetClassSubProductTypeCode.Containerboard, // same ordinal as derivation source for type conversions
-    
 }

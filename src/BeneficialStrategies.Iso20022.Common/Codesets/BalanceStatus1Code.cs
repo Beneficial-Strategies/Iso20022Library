@@ -23,14 +23,15 @@ public enum BalanceStatus1Code
     [IsoId("_bkLL0Np-Ed-ak6NoX_4Aeg_992302531")]
     [Description(@"Balance corresponding to the pending transactions.")]
     Pending = BalanceStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Final status of a transaction when the associated transfer of cash has been successfully processed.
     /// Encoded/decoded by serializers as &quot;STLD&quot;.
     /// </summary>
     [EnumMember(Value = "STLD")]
     [IsoId("_bkLL0dp-Ed-ak6NoX_4Aeg_992302584")]
-    [Description(@"Final status of a transaction when the associated transfer of cash has been successfully processed.")]
+    [Description(
+        @"Final status of a transaction when the associated transfer of cash has been successfully processed."
+    )]
     Settled = BalanceStatusCode.Settled, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_sSD7UWkBEeS7zPBpvm732w")]
-[Description(@"Identifies the type of the communication channels used by the cardholder to the acceptor system.")]
+[Description(
+    @"Identifies the type of the communication channels used by the cardholder to the acceptor system."
+)]
 [DerivedFrom(typeof(TransactionChannelCode))]
 public enum TransactionChannel3Code
 {
@@ -23,7 +25,7 @@ public enum TransactionChannel3Code
     [IsoId("_sfvK8WkBEeS7zPBpvm732w")]
     [Description(@"Mail order.")]
     MailOrder = TransactionChannelCode.MailOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Telephone order.
     /// Encoded/decoded by serializers as &quot;TLPH&quot;.
@@ -32,7 +34,7 @@ public enum TransactionChannel3Code
     [IsoId("_sfvK82kBEeS7zPBpvm732w")]
     [Description(@"Telephone order.")]
     TelephoneOrder = TransactionChannelCode.TelephoneOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic commerce.
     /// Encoded/decoded by serializers as &quot;ECOM&quot;.
@@ -41,7 +43,7 @@ public enum TransactionChannel3Code
     [IsoId("_sfvK9WkBEeS7zPBpvm732w")]
     [Description(@"Electronic commerce.")]
     ElectronicCommerce = TransactionChannelCode.ElectronicCommerce, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment on television.
     /// Encoded/decoded by serializers as &quot;TVPY&quot;.
@@ -50,7 +52,7 @@ public enum TransactionChannel3Code
     [IsoId("_sfvK92kBEeS7zPBpvm732w")]
     [Description(@"Payment on television.")]
     TelevisionPayment = TransactionChannelCode.TelevisionPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic commerce with cardholder authentication.
     /// Encoded/decoded by serializers as &quot;SECM&quot;.
@@ -59,7 +61,7 @@ public enum TransactionChannel3Code
     [IsoId("_9IwLoWkBEeS7zPBpvm732w")]
     [Description(@"Electronic commerce with cardholder authentication.")]
     SecuredElectronicCommerce = TransactionChannelCode.SecuredElectronicCommerce, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment performed through a cardholder mobile device.
     /// Encoded/decoded by serializers as &quot;MOBL&quot;.
@@ -68,5 +70,4 @@ public enum TransactionChannel3Code
     [IsoId("_9T2oYWkBEeS7zPBpvm732w")]
     [Description(@"Payment performed through a cardholder mobile device.")]
     MobilePayment = TransactionChannelCode.MobilePayment, // same ordinal as derivation source for type conversions
-    
 }

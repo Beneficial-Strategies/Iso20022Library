@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CancellationStatus32Choice.PendingCancellation))]
     [KnownType(typeof(CancellationStatus32Choice.ProcessingStatus))]
     [KnownType(typeof(CancellationStatus32Choice.Rejected))]
-    [JsonDerivedType(typeof(CancellationStatus32Choice.PendingCancellation),nameof(CancellationStatus32Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(CancellationStatus32Choice.ProcessingStatus),nameof(CancellationStatus32Choice.ProcessingStatus))]
-    [JsonDerivedType(typeof(CancellationStatus32Choice.Rejected),nameof(CancellationStatus32Choice.Rejected))]
+    [JsonDerivedType(
+        typeof(CancellationStatus32Choice.PendingCancellation),
+        nameof(CancellationStatus32Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus32Choice.ProcessingStatus),
+        nameof(CancellationStatus32Choice.ProcessingStatus)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus32Choice.Rejected),
+        nameof(CancellationStatus32Choice.Rejected)
+    )]
     [IsoId("_pvZB0YYQEe-9jM3-w7OB3g")]
     [DisplayName("Cancellation Status32Choice")]
-    public abstract partial record CancellationStatus32Choice_
-    {
-    }
+    public abstract record CancellationStatus32Choice_ { }
 }

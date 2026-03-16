@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
     /// </summary>
     [IsoId("_6gAQYyqREeyR9JrVGfaMKw")]
     [DisplayName("Return")]
-    public partial record Return : CollateralMovement6Choice_
+    public record Return : CollateralMovement6Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reference to the unambiguous identification of the margin call request.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
         [DisplayName("Margin Call Request Identification")]
         [IsoXmlTag("MrgnCallReqId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text MarginCallRequestIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text MarginCallRequestIdentification { get; init; }
+
         /// <summary>
         /// Specifies the reference to the unambiguous identification of the margin call response.
         /// </summary>
@@ -34,9 +32,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
         [DisplayName("Margin Call Response Identification")]
         [IsoXmlTag("MrgnCallRspnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? MarginCallResponseIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MarginCallResponseIdentification { get; init; }
+
         /// <summary>
         /// Specifies the standard settlement instructions.
         /// </summary>
@@ -44,9 +42,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
         [DisplayName("Standard Settlement Instructions")]
         [IsoXmlTag("StdSttlmInstrs")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public IsoMax140Text? StandardSettlementInstructions { get; init; } 
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public IsoMax140Text? StandardSettlementInstructions { get; init; }
+
         /// <summary>
         /// Specifies the reference to the unambiguous identification of the collateral proposal response (in case of counter proposal).
         /// </summary>
@@ -54,35 +52,31 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralMovement6Choice
         [DisplayName("Collateral Proposal Response Identification")]
         [IsoXmlTag("CollPrpslRspnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? CollateralProposalResponseIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? CollateralProposalResponseIdentification { get; init; }
+
         /// <summary>
         /// Collateral type is securities.
         /// </summary>
         [IsoId("_63jNuSqREeyR9JrVGfaMKw")]
         [DisplayName("Securities Collateral")]
         [IsoXmlTag("SctiesColl")]
-        public SecuritiesCollateral10? SecuritiesCollateral { get; init; } 
-        
+        public SecuritiesCollateral10? SecuritiesCollateral { get; init; }
+
         /// <summary>
         /// Collateral type is cash.
         /// </summary>
         [IsoId("_63jNuyqREeyR9JrVGfaMKw")]
         [DisplayName("Cash Collateral")]
         [IsoXmlTag("CshColl")]
-        public CashCollateral2? CashCollateral { get; init; } 
-        
+        public CashCollateral2? CashCollateral { get; init; }
+
         /// <summary>
         /// Collateral type is other than securities or cash for example letter of credit.
         /// </summary>
         [IsoId("_63jNvSqREeyR9JrVGfaMKw")]
         [DisplayName("Other Collateral")]
         [IsoXmlTag("OthrColl")]
-        public OtherCollateral9? OtherCollateral { get; init; } 
-        
-        
-        #nullable disable
-        
+        public OtherCollateral9? OtherCollateral { get; init; }
     }
 }

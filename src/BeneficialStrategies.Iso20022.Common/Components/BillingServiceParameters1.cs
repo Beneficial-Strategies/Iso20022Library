@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PgXwZqlEeGSON8vddiWzQ_-423301635")]
 [DisplayName("Billing Service Parameters")]
-public partial record BillingServiceParameters1
+public record BillingServiceParameters1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the details to fully identify the bank service.
     /// </summary>
     [IsoId("_6PgXwpqlEeGSON8vddiWzQ_-245182963")]
     [DisplayName("Bank Service")]
     [IsoXmlTag("BkSvc")]
-    public required BillingServiceIdentification1 BankService { get; init; } 
-    
+    public required BillingServiceIdentification1 BankService { get; init; }
+
     /// <summary>
     /// Count or number of items (volume) involved in the charge.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record BillingServiceParameters1
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Volume { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoDecimalNumber? Volume { get; init; }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aVytJ9p-Ed-ak6NoX_4Aeg_-1439628964")]
-[Description(@"Indicate whether or not registered investors are able to transfer some or all of their holdings to third parties.")]
+[Description(
+    @"Indicate whether or not registered investors are able to transfer some or all of their holdings to third parties."
+)]
 [DerivedFrom(typeof(HoldingTransferableCode))]
 public enum HoldingTransferable1Code
 {
@@ -23,7 +25,7 @@ public enum HoldingTransferable1Code
     [IsoId("_aV8eINp-Ed-ak6NoX_4Aeg_-1077608606")]
     [Description(@"Transfer is allowed.")]
     TransferAllowed = HoldingTransferableCode.TransferAllowed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer is not allowed.
     /// Encoded/decoded by serializers as &quot;TRNA&quot;.
@@ -32,7 +34,7 @@ public enum HoldingTransferable1Code
     [IsoId("_aV8eIdp-Ed-ak6NoX_4Aeg_-1064678911")]
     [Description(@"Transfer is not allowed.")]
     TransferNotAllowed = HoldingTransferableCode.TransferNotAllowed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the operation is only possible in restricted circumstances.
     /// Encoded/decoded by serializers as &quot;RFOD&quot;.
@@ -41,5 +43,4 @@ public enum HoldingTransferable1Code
     [IsoId("_aV8eItp-Ed-ak6NoX_4Aeg_-823640508")]
     [Description(@"Indicates that the operation is only possible in restricted circumstances.")]
     ReferToFundOrderDesk = HoldingTransferableCode.ReferToFundOrderDesk, // same ordinal as derivation source for type conversions
-    
 }

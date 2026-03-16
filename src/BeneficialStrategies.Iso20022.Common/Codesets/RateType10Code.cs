@@ -23,7 +23,7 @@ public enum RateType10Code
     [IsoId("_uBZyFQCoEeGt2odvTAOpog")]
     [Description(@"Any and all rate is sought.")]
     AnyAndAll = RateTypeCode.AnyAndAll, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is unknown by the sender or has not been established.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,5 +32,4 @@ public enum RateType10Code
     [IsoId("_wN7UAgCoEeGt2odvTAOpog")]
     [Description(@"Rate is unknown by the sender or has not been established.")]
     Unknown = RateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

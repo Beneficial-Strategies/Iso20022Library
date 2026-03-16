@@ -23,7 +23,7 @@ public enum MailType1Code
     [IsoId("_jWjjASCXEeWJd9HF2tO7BA")]
     [Description(@"Air mail.")]
     AirMail = MailTypeCode.AirMail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Ordinary mail.
     /// Encoded/decoded by serializers as &quot;ORDM&quot;.
@@ -32,7 +32,7 @@ public enum MailType1Code
     [IsoId("_jdi70SCXEeWJd9HF2tO7BA")]
     [Description(@"Ordinary mail.")]
     OrdinaryMail = MailTypeCode.OrdinaryMail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Registered Mail.
     /// Encoded/decoded by serializers as &quot;REGM&quot;.
@@ -41,5 +41,4 @@ public enum MailType1Code
     [IsoId("_jkZKsSCXEeWJd9HF2tO7BA")]
     [Description(@"Registered Mail.")]
     RegisteredMail = MailTypeCode.RegisteredMail, // same ordinal as derivation source for type conversions
-    
 }

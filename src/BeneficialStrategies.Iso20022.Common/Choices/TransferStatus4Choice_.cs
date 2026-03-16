@@ -18,18 +18,40 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TransferStatus4Choice.Cancelled))]
     [KnownType(typeof(TransferStatus4Choice.Reversed))]
     [KnownType(typeof(TransferStatus4Choice.CancellationPending))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.Status),nameof(TransferStatus4Choice.Status))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.PendingSettlement),nameof(TransferStatus4Choice.PendingSettlement))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.Unmatched),nameof(TransferStatus4Choice.Unmatched))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.InRepair),nameof(TransferStatus4Choice.InRepair))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.Rejected),nameof(TransferStatus4Choice.Rejected))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.FailedSettlement),nameof(TransferStatus4Choice.FailedSettlement))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.Cancelled),nameof(TransferStatus4Choice.Cancelled))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.Reversed),nameof(TransferStatus4Choice.Reversed))]
-    [JsonDerivedType(typeof(TransferStatus4Choice.CancellationPending),nameof(TransferStatus4Choice.CancellationPending))]
+    [JsonDerivedType(typeof(TransferStatus4Choice.Status), nameof(TransferStatus4Choice.Status))]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.PendingSettlement),
+        nameof(TransferStatus4Choice.PendingSettlement)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.Unmatched),
+        nameof(TransferStatus4Choice.Unmatched)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.InRepair),
+        nameof(TransferStatus4Choice.InRepair)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.Rejected),
+        nameof(TransferStatus4Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.FailedSettlement),
+        nameof(TransferStatus4Choice.FailedSettlement)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.Cancelled),
+        nameof(TransferStatus4Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.Reversed),
+        nameof(TransferStatus4Choice.Reversed)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatus4Choice.CancellationPending),
+        nameof(TransferStatus4Choice.CancellationPending)
+    )]
     [IsoId("_fTIFwZM5EemKz5EOjv82iQ")]
     [DisplayName("Transfer Status 4 Choice")]
-    public abstract partial record TransferStatus4Choice_
-    {
-    }
+    public abstract record TransferStatus4Choice_ { }
 }

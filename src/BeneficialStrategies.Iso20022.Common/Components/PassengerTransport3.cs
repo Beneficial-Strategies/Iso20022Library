@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8chqQXQ7Ee6Y1uOeeiF_Eg")]
 [DisplayName("Passenger Transport3")]
-public partial record PassengerTransport3
+public record PassengerTransport3
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -44,21 +42,21 @@ public partial record PassengerTransport3
     /// </summary>
     [DisplayName("Departure")]
     [IsoXmlTag("Dprture")]
-    public DepartureOrArrival1? Departure { get; init; } 
+    public DepartureOrArrival1? Departure { get; init; }
 
     /// <summary>
     /// Document Number.
     /// </summary>
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public IsoMax35Text? DocumentNumber { get; init; } 
+    public IsoMax35Text? DocumentNumber { get; init; }
 
     /// <summary>
     /// Duration.
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; } 
+    public IsoMax4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Hired Vehicle Details.
@@ -72,35 +70,35 @@ public partial record PassengerTransport3
     /// </summary>
     [DisplayName("Insurance")]
     [IsoXmlTag("Insrnc")]
-    public IsoTrueFalseIndicator? Insurance { get; init; } 
+    public IsoTrueFalseIndicator? Insurance { get; init; }
 
     /// <summary>
     /// Loyalty Programme.
     /// </summary>
     [DisplayName("Loyalty Programme")]
     [IsoXmlTag("LltyPrgrmm")]
-    public LoyaltyProgramme4? LoyaltyProgramme { get; init; } 
+    public LoyaltyProgramme4? LoyaltyProgramme { get; init; }
 
     /// <summary>
     /// Open Ticket.
     /// </summary>
     [DisplayName("Open Ticket")]
     [IsoXmlTag("OpnTckt")]
-    public IsoTrueFalseIndicator? OpenTicket { get; init; } 
+    public IsoTrueFalseIndicator? OpenTicket { get; init; }
 
     /// <summary>
     /// Original Reservation Number.
     /// </summary>
     [DisplayName("Original Reservation Number")]
     [IsoXmlTag("OrgnlRsvatnNb")]
-    public IsoMax35Text? OriginalReservationNumber { get; init; } 
+    public IsoMax35Text? OriginalReservationNumber { get; init; }
 
     /// <summary>
     /// Original Reservation System.
     /// </summary>
     [DisplayName("Original Reservation System")]
     [IsoXmlTag("OrgnlRsvatnSys")]
-    public IsoMax4Text? OriginalReservationSystem { get; init; } 
+    public IsoMax4Text? OriginalReservationSystem { get; init; }
 
     /// <summary>
     /// Passenger.
@@ -114,28 +112,28 @@ public partial record PassengerTransport3
     /// </summary>
     [DisplayName("Reservation Number")]
     [IsoXmlTag("RsvatnNb")]
-    public IsoMax35Text? ReservationNumber { get; init; } 
+    public IsoMax35Text? ReservationNumber { get; init; }
 
     /// <summary>
     /// Reservation System.
     /// </summary>
     [DisplayName("Reservation System")]
     [IsoXmlTag("RsvatnSys")]
-    public IsoMax4Text? ReservationSystem { get; init; } 
+    public IsoMax4Text? ReservationSystem { get; init; }
 
     /// <summary>
     /// Summary Commodity Identification.
     /// </summary>
     [DisplayName("Summary Commodity Identification")]
     [IsoXmlTag("SummryCmmdtyId")]
-    public IsoMax35Text? SummaryCommodityIdentification { get; init; } 
+    public IsoMax35Text? SummaryCommodityIdentification { get; init; }
 
     /// <summary>
     /// Ticket Issuer.
     /// </summary>
     [DisplayName("Ticket Issuer")]
     [IsoXmlTag("TcktIssr")]
-    public IsoMax35Text? TicketIssuer { get; init; } 
+    public IsoMax35Text? TicketIssuer { get; init; }
 
     /// <summary>
     /// Total Amount.
@@ -149,7 +147,7 @@ public partial record PassengerTransport3
     /// </summary>
     [DisplayName("Travel Authorisation Code")]
     [IsoXmlTag("TrvlAuthstnCd")]
-    public IsoMax70Text? TravelAuthorisationCode { get; init; } 
+    public IsoMax70Text? TravelAuthorisationCode { get; init; }
 
     /// <summary>
     /// Trip Leg.
@@ -157,8 +155,4 @@ public partial record PassengerTransport3
     [DisplayName("Trip Leg")]
     [IsoXmlTag("TripLeg")]
     public ValueList<TripLeg3> TripLeg { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

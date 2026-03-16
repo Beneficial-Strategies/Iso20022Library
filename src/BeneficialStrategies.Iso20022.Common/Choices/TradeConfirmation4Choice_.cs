@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeConfirmation4Choice.Confirmed))]
     [KnownType(typeof(TradeConfirmation4Choice.NonConfirmed))]
-    [JsonDerivedType(typeof(TradeConfirmation4Choice.Confirmed),nameof(TradeConfirmation4Choice.Confirmed))]
-    [JsonDerivedType(typeof(TradeConfirmation4Choice.NonConfirmed),nameof(TradeConfirmation4Choice.NonConfirmed))]
+    [JsonDerivedType(
+        typeof(TradeConfirmation4Choice.Confirmed),
+        nameof(TradeConfirmation4Choice.Confirmed)
+    )]
+    [JsonDerivedType(
+        typeof(TradeConfirmation4Choice.NonConfirmed),
+        nameof(TradeConfirmation4Choice.NonConfirmed)
+    )]
     [IsoId("_-DShYY-SEe6Ojt1b3tfu9Q")]
     [DisplayName("Trade Confirmation4Choice")]
-    public abstract partial record TradeConfirmation4Choice_
-    {
-    }
+    public abstract record TradeConfirmation4Choice_ { }
 }

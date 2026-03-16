@@ -23,7 +23,7 @@ public enum VerificationEntity1Code
     [IsoId("_NSJxcRZOEeiXa46FI4OtcQ")]
     [Description(@"Acceptor (for example signature verification by the attendant).")]
     Acceptor = VerificationEntityCode.Acceptor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acquirer of the transaction.
     /// Encoded/decoded by serializers as &quot;ACQR&quot;.
@@ -32,16 +32,18 @@ public enum VerificationEntity1Code
     [IsoId("_Ne8QQhZOEeiXa46FI4OtcQ")]
     [Description(@"Acquirer of the transaction.")]
     Acquirer = VerificationEntityCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing card payment processing services acting as an intermediary between (or on behalf of) an acquirer and an issuer.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
     /// </summary>
     [EnumMember(Value = "AGNT")]
     [IsoId("_NonJohZOEeiXa46FI4OtcQ")]
-    [Description(@"Entity providing card payment processing services acting as an intermediary between (or on behalf of) an acquirer and an issuer.")]
+    [Description(
+        @"Entity providing card payment processing services acting as an intermediary between (or on behalf of) an acquirer and an issuer."
+    )]
     Agent = VerificationEntityCode.Agent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card issuer.
     /// Encoded/decoded by serializers as &quot;ISSR&quot;.
@@ -50,7 +52,7 @@ public enum VerificationEntity1Code
     [IsoId("_OG95khZOEeiXa46FI4OtcQ")]
     [Description(@"Card issuer.")]
     Issuer = VerificationEntityCode.Issuer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of authentication entity defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +61,7 @@ public enum VerificationEntity1Code
     [IsoId("_OVPmIhZOEeiXa46FI4OtcQ")]
     [Description(@"Other type of authentication entity defined at national level.")]
     OtherNational = VerificationEntityCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of authentication entity defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,5 +70,4 @@ public enum VerificationEntity1Code
     [IsoId("_OifX8hZOEeiXa46FI4OtcQ")]
     [Description(@"Other type of authentication entity defined at private level.")]
     OtherPrivate = VerificationEntityCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

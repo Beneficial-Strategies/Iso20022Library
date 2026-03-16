@@ -23,5 +23,4 @@ public enum PriceValueType13Code
     [IsoId("_M2HEYQ-zEeuE0Pnt-OcNOA")]
     [Description(@"Price is not required to be specified by account owner.")]
     Unspecified = PriceValueTypeCode.Unspecified, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum VoteTypeCode
     [IsoId("_aq1OUK37EemG7MmivSuE5g")]
     [Description(@"Results of a vote on a proposal is binding.")]
     Binding,
-    
+
     /// <summary>
     /// Results of a vote on a proposal is for advice only.
     /// Encoded/decoded by serializers as &quot;ADVI&quot;.
@@ -32,5 +32,4 @@ public enum VoteTypeCode
     [IsoId("_qJ910K37EemG7MmivSuE5g")]
     [Description(@"Results of a vote on a proposal is for advice only.")]
     Advisory,
-    
 }

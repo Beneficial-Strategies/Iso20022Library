@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__XpcEOCwEee83LAjB5Kqdw")]
 [DisplayName("Originator Information")]
-public partial record OriginatorInformation1
+public record OriginatorInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// It may contain originator certificates associated with several different key management algorithms.
     /// </summary>
@@ -25,9 +23,5 @@ public partial record OriginatorInformation1
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? Certificate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax5000Binary? Certificate { get; init; }
 }

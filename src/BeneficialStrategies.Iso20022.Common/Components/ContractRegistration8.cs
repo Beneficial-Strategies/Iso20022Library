@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7LO0gTEyEe6g-ffJsqGiSA")]
 [DisplayName("Contract Registration8")]
-public partial record ContractRegistration8
+public record ContractRegistration8
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Information.
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public IsoMax1025Text? AdditionalInformation { get; init; } 
+    public IsoMax1025Text? AdditionalInformation { get; init; }
 
     /// <summary>
     /// Attachment.
@@ -37,7 +35,7 @@ public partial record ContractRegistration8
     /// </summary>
     [DisplayName("Contract")]
     [IsoXmlTag("Ctrct")]
-    public required UnderlyingContract4Choice_ Contract { get; init; } 
+    public required UnderlyingContract4Choice_ Contract { get; init; }
 
     /// <summary>
     /// Contract Balance.
@@ -51,28 +49,29 @@ public partial record ContractRegistration8
     /// </summary>
     [DisplayName("Contract Registration Opening Identification")]
     [IsoXmlTag("CtrctRegnOpngId")]
-    public required IsoMax35Text ContractRegistrationOpeningIdentification { get; init; } 
+    public required IsoMax35Text ContractRegistrationOpeningIdentification { get; init; }
 
     /// <summary>
     /// Payment Schedule Type.
     /// </summary>
     [DisplayName("Payment Schedule Type")]
     [IsoXmlTag("PmtSchdlTp")]
-    public PaymentScheduleType2Choice_? PaymentScheduleType { get; init; } 
+    public PaymentScheduleType2Choice_? PaymentScheduleType { get; init; }
 
     /// <summary>
     /// Previous Registration Identification.
     /// </summary>
     [DisplayName("Previous Registration Identification")]
     [IsoXmlTag("PrvsRegnId")]
-    public ValueList<DocumentIdentification22> PreviousRegistrationIdentification { get; init; } = [];
+    public ValueList<DocumentIdentification22> PreviousRegistrationIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Priority.
     /// </summary>
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public required Priority2Code Priority { get; init; } 
+    public required Priority2Code Priority { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -80,8 +79,4 @@ public partial record ContractRegistration8
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

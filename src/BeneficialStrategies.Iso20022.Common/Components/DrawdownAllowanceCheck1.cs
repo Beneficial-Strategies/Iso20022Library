@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6Oo4kLGuEeirN-C08vro8Q")]
 [DisplayName("Drawdown Allowance Check")]
-public partial record DrawdownAllowanceCheck1
+public record DrawdownAllowanceCheck1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the Benefit Crystallised Event (BCE).
     /// If the Benefit Crystallised Event (BCE ) is other than 1 and 6 then the BCEIndicator must contain the value &quot;true&apos;.
@@ -27,8 +25,8 @@ public partial record DrawdownAllowanceCheck1
     [DisplayName("BCE Indicator")]
     [IsoXmlTag("BCEInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BCEIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? BCEIndicator { get; init; }
+
     /// <summary>
     /// Species information about the drawdown allowance check.
     /// </summary>
@@ -36,10 +34,6 @@ public partial record DrawdownAllowanceCheck1
     [DisplayName("Check Information")]
     [IsoXmlTag("ChckInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? CheckInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? CheckInformation { get; init; }
 }

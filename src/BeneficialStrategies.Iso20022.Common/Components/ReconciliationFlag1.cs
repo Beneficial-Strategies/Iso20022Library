@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N6obcNIDEeiG-o-KpBT4-g")]
 [DisplayName("Reconciliation Flag")]
-public partial record ReconciliationFlag1
+public record ReconciliationFlag1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether both counterparties to the transaction have reported to the same Trade Repository
     /// </summary>
     [IsoId("_giwXsNIEEeiG-o-KpBT4-g")]
     [DisplayName("Report Type")]
     [IsoXmlTag("RptTp")]
-    public TradeRepositoryReportingType1Code? ReportType { get; init; } 
-    
+    public TradeRepositoryReportingType1Code? ReportType { get; init; }
+
     /// <summary>
     /// Indicates whether both counterparties are obliged to report the transaction data.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record ReconciliationFlag1
     [DisplayName("Both Counterparties Reporting")]
     [IsoXmlTag("BothCtrPtiesRptg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BothCounterpartiesReporting { get; init; } 
-    
+    public IsoTrueFalseIndicator? BothCounterpartiesReporting { get; init; }
+
     /// <summary>
     /// Indicates whether the transaction is paired.
     /// </summary>
@@ -42,8 +40,8 @@ public partial record ReconciliationFlag1
     [DisplayName("Paired Status")]
     [IsoXmlTag("PairdSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PairedStatus { get; init; } 
-    
+    public IsoTrueFalseIndicator? PairedStatus { get; init; }
+
     /// <summary>
     /// Indicates whether loan data is reconciled.
     /// </summary>
@@ -51,8 +49,8 @@ public partial record ReconciliationFlag1
     [DisplayName("Loan Reconciliation Status")]
     [IsoXmlTag("LnRcncltnSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LoanReconciliationStatus { get; init; } 
-    
+    public IsoTrueFalseIndicator? LoanReconciliationStatus { get; init; }
+
     /// <summary>
     /// Indicates whether collateral data is reconciled.
     /// </summary>
@@ -60,8 +58,8 @@ public partial record ReconciliationFlag1
     [DisplayName("Collateral Reconciliation Status")]
     [IsoXmlTag("CollRcncltnSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CollateralReconciliationStatus { get; init; } 
-    
+    public IsoTrueFalseIndicator? CollateralReconciliationStatus { get; init; }
+
     /// <summary>
     /// Indicates whether the initially submitted report was further modified using action type modification.
     /// </summary>
@@ -69,9 +67,5 @@ public partial record ReconciliationFlag1
     [DisplayName("Modification Status")]
     [IsoXmlTag("ModSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ModificationStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? ModificationStatus { get; init; }
 }

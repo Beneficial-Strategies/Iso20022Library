@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DGuj8YrrEeq91phomTRDDA")]
 [DisplayName("Security Identification")]
-public partial record SecurityIdentification22
+public record SecurityIdentification22
 {
-    #nullable enable
-    
     /// <summary>
     /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SecurityIdentification22
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISIN2021Identifier)]
-    public IsoISIN2021Identifier? ISIN { get; init; } 
-    
+    public IsoISIN2021Identifier? ISIN { get; init; }
+
     /// <summary>
     /// Identification through a unique product identifier.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record SecurityIdentification22
     [DisplayName("Unique Product Identifier")]
     [IsoXmlTag("UnqPdctIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-    public IsoMax52Text? UniqueProductIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public IsoMax52Text? UniqueProductIdentifier { get; init; }
+
     /// <summary>
     /// Proprietary identification of a security assigned by an institution or organisation.
     /// </summary>
@@ -44,10 +42,6 @@ public partial record SecurityIdentification22
     [DisplayName("Alternative Instrument Identification")]
     [IsoXmlTag("AltrntvInstrmId")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-    public IsoMax52Text? AlternativeInstrumentIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public IsoMax52Text? AlternativeInstrumentIdentification { get; init; }
 }

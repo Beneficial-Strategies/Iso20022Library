@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_H6MiMdNAEeSDLevdaFPXHw")]
-[Description(@"Specifies a shipment conditions code, as published in the external ISO 20022 external code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies a shipment conditions code, as published in the external ISO 20022 external code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalShipmentConditionCode))]
 public enum ExternalShipmentCondition1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalShipmentCondition1Code
     [IsoId("_uUDne_RYEeuLhpyIdtJzwg")]
     [Description(@"Goods/service delivered after payment")]
     AdvancePayment = ExternalShipmentConditionCode.AdvancePayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Goods/service delivered at the same time as payment.
     /// Encoded/decoded by serializers as &quot;PMNT&quot;.
@@ -33,7 +35,7 @@ public enum ExternalShipmentCondition1Code
     [IsoId("_uUDnfvRYEeuLhpyIdtJzwg")]
     [Description(@"Goods/service delivered at the same time as payment.")]
     DeliveryversusPayment = ExternalShipmentConditionCode.DeliveryversusPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Goods/service delivered before payment
     /// Encoded/decoded by serializers as &quot;TRLN&quot;.
@@ -42,5 +44,4 @@ public enum ExternalShipmentCondition1Code
     [IsoId("_uUMxYvRYEeuLhpyIdtJzwg")]
     [Description(@"Goods/service delivered before payment")]
     TradeLoan = ExternalShipmentConditionCode.TradeLoan, // same ordinal as derivation source for type conversions
-    
 }

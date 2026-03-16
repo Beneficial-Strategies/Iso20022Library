@@ -14,14 +14,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Period11Choice.FromToDate))]
     [KnownType(typeof(Period11Choice.FromToDateTime))]
     [KnownType(typeof(Period11Choice.ToDate))]
-    [JsonDerivedType(typeof(Period11Choice.Date),nameof(Period11Choice.Date))]
-    [JsonDerivedType(typeof(Period11Choice.FromDate),nameof(Period11Choice.FromDate))]
-    [JsonDerivedType(typeof(Period11Choice.FromToDate),nameof(Period11Choice.FromToDate))]
-    [JsonDerivedType(typeof(Period11Choice.FromToDateTime),nameof(Period11Choice.FromToDateTime))]
-    [JsonDerivedType(typeof(Period11Choice.ToDate),nameof(Period11Choice.ToDate))]
+    [JsonDerivedType(typeof(Period11Choice.Date), nameof(Period11Choice.Date))]
+    [JsonDerivedType(typeof(Period11Choice.FromDate), nameof(Period11Choice.FromDate))]
+    [JsonDerivedType(typeof(Period11Choice.FromToDate), nameof(Period11Choice.FromToDate))]
+    [JsonDerivedType(typeof(Period11Choice.FromToDateTime), nameof(Period11Choice.FromToDateTime))]
+    [JsonDerivedType(typeof(Period11Choice.ToDate), nameof(Period11Choice.ToDate))]
     [IsoId("_3JrykTgtEe60j93i-cxu5Q")]
     [DisplayName("Period11Choice")]
-    public abstract partial record Period11Choice_
-    {
-    }
+    public abstract record Period11Choice_ { }
 }

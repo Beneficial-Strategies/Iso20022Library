@@ -23,7 +23,7 @@ public enum InstalmentPlanCode
     [IsoId("_-LwUkDDgEeO9waS4ina8CA")]
     [Description(@"The payment is split in several instalments of equal amounts.")]
     EqualPayment,
-    
+
     /// <summary>
     /// The payment is split in several instalments of different amounts.
     /// Encoded/decoded by serializers as &quot;NQPM&quot;.
@@ -32,7 +32,7 @@ public enum InstalmentPlanCode
     [IsoId("_CtHm8DDhEeO9waS4ina8CA")]
     [Description(@"The payment is split in several instalments of different amounts.")]
     InequalPayment,
-    
+
     /// <summary>
     /// The first instalment is deferred.
     /// Encoded/decoded by serializers as &quot;DFRI&quot;.
@@ -41,5 +41,4 @@ public enum InstalmentPlanCode
     [IsoId("_gt1ZwDGrEeOVuYdyXoFwuA")]
     [Description(@"The first instalment is deferred.")]
     DeferredInstalment,
-    
 }

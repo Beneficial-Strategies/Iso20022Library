@@ -21,16 +21,19 @@ public enum Operation3Code
     /// </summary>
     [EnumMember(Value = "ANDD")]
     [IsoId("_zxpM0dGyEeaokquJJ-K6uA")]
-    [Description(@"Indicates that only when all if all of its elements are valid, the whole expression is valid.")]
+    [Description(
+        @"Indicates that only when all if all of its elements are valid, the whole expression is valid."
+    )]
     And = OperationV2Code.And, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that when at least one of its elements is valid, the whole expression is valid.
     /// Encoded/decoded by serializers as &quot;ORRR&quot;.
     /// </summary>
     [EnumMember(Value = "ORRR")]
     [IsoId("_0EAIItGyEeaokquJJ-K6uA")]
-    [Description(@"Indicates that when at least one of its elements is valid, the whole expression is valid.")]
+    [Description(
+        @"Indicates that when at least one of its elements is valid, the whole expression is valid."
+    )]
     Or = OperationV2Code.Or, // same ordinal as derivation source for type conversions
-    
 }

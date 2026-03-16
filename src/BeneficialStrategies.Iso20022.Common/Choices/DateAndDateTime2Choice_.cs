@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DateAndDateTime2Choice.Date))]
     [KnownType(typeof(DateAndDateTime2Choice.DateTime))]
-    [JsonDerivedType(typeof(DateAndDateTime2Choice.Date),nameof(DateAndDateTime2Choice.Date))]
-    [JsonDerivedType(typeof(DateAndDateTime2Choice.DateTime),nameof(DateAndDateTime2Choice.DateTime))]
+    [JsonDerivedType(typeof(DateAndDateTime2Choice.Date), nameof(DateAndDateTime2Choice.Date))]
+    [JsonDerivedType(
+        typeof(DateAndDateTime2Choice.DateTime),
+        nameof(DateAndDateTime2Choice.DateTime)
+    )]
     [IsoId("_fGuzgZlhEeeE1Ya-LgRsuQ")]
     [DisplayName("Date And Date Time 2 Choice")]
-    public abstract partial record DateAndDateTime2Choice_
-    {
-    }
+    public abstract record DateAndDateTime2Choice_ { }
 }

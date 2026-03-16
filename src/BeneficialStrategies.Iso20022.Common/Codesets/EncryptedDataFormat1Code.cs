@@ -23,7 +23,7 @@ public enum EncryptedDataFormat1Code
     [IsoId("_kQkL0QHzEeiJObvChJn-OA")]
     [Description(@"ASCII Format.")]
     ASCII = EncryptedDataFormatCode.ASCII, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Binary format.
     /// Encoded/decoded by serializers as &quot;BINF&quot;.
@@ -32,7 +32,7 @@ public enum EncryptedDataFormat1Code
     [IsoId("_kd9HkgHzEeiJObvChJn-OA")]
     [Description(@"Binary format.")]
     Binary = EncryptedDataFormatCode.Binary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// EBCDIC format.
     /// Encoded/decoded by serializers as &quot;EBCD&quot;.
@@ -41,7 +41,7 @@ public enum EncryptedDataFormat1Code
     [IsoId("_kryvQgHzEeiJObvChJn-OA")]
     [Description(@"EBCDIC format.")]
     EBCDIC = EncryptedDataFormatCode.EBCDIC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// HEX Format.
     /// Encoded/decoded by serializers as &quot;HEXF&quot;.
@@ -50,7 +50,7 @@ public enum EncryptedDataFormat1Code
     [IsoId("_k-1AAgHzEeiJObvChJn-OA")]
     [Description(@"HEX Format.")]
     HEX = EncryptedDataFormatCode.HEX, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other format defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum EncryptedDataFormat1Code
     [IsoId("_lNtJggHzEeiJObvChJn-OA")]
     [Description(@"Other format defined at national level.")]
     OtherNational = EncryptedDataFormatCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of format defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,5 +68,4 @@ public enum EncryptedDataFormat1Code
     [IsoId("_lb_dIgHzEeiJObvChJn-OA")]
     [Description(@"Other type of format defined at private level.")]
     OtherPrivate = EncryptedDataFormatCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MarketClientSide4Choice.Code))]
     [KnownType(typeof(MarketClientSide4Choice.Proprietary))]
-    [JsonDerivedType(typeof(MarketClientSide4Choice.Code),nameof(MarketClientSide4Choice.Code))]
-    [JsonDerivedType(typeof(MarketClientSide4Choice.Proprietary),nameof(MarketClientSide4Choice.Proprietary))]
+    [JsonDerivedType(typeof(MarketClientSide4Choice.Code), nameof(MarketClientSide4Choice.Code))]
+    [JsonDerivedType(
+        typeof(MarketClientSide4Choice.Proprietary),
+        nameof(MarketClientSide4Choice.Proprietary)
+    )]
     [IsoId("_rqc9oTqHEeWVrPy0StzzSg")]
     [DisplayName("Market Client Side 4 Choice")]
-    public abstract partial record MarketClientSide4Choice_
-    {
-    }
+    public abstract record MarketClientSide4Choice_ { }
 }

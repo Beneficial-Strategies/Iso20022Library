@@ -23,5 +23,4 @@ public enum AwaitingCancellationReason1Code
     [IsoId("__0Ti0tojEeC60axPepSq7g_323091822")]
     [Description(@"Cancellation has not been received yet.")]
     AwaitingCancellation = AwaitingCancellationReasonCode.AwaitingCancellation, // same ordinal as derivation source for type conversions
-    
 }

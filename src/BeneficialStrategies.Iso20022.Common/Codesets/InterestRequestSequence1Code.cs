@@ -23,7 +23,7 @@ public enum InterestRequestSequence1Code
     [IsoId("_YbKMeNp-Ed-ak6NoX_4Aeg_-654514650")]
     [Description(@"Indicates this is a new interest payment request.")]
     Initial = InterestRequestSequenceCode.Initial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates this is an updated interest payement request.
     /// Encoded/decoded by serializers as &quot;UPDA&quot;.
@@ -32,5 +32,4 @@ public enum InterestRequestSequence1Code
     [IsoId("_YbT9cNp-Ed-ak6NoX_4Aeg_-200427381")]
     [Description(@"Indicates this is an updated interest payement request.")]
     Updated = InterestRequestSequenceCode.Updated, // same ordinal as derivation source for type conversions
-    
 }

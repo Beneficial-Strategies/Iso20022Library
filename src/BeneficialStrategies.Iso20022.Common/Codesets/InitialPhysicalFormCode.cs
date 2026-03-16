@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_hblKmGliEeGaMcKyqKNRfQ_420935209")]
 [Description(@"Indicates the physical form of the securities.")]
-[Derivations(typeof(InitialPhysicalForm1Code),typeof(InitialPhysicalForm2Code))]
+[Derivations(typeof(InitialPhysicalForm1Code), typeof(InitialPhysicalForm2Code))]
 public enum InitialPhysicalFormCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum InitialPhysicalFormCode
     [IsoId("_hblKmWliEeGaMcKyqKNRfQ_-939155429")]
     [Description(@"Initial Physical Form is GT.")]
     GT,
-    
+
     /// <summary>
     /// Initial Physical Form is GP.
     /// Encoded/decoded by serializers as &quot;GPGP&quot;.
@@ -32,7 +32,7 @@ public enum InitialPhysicalFormCode
     [IsoId("_hblKmmliEeGaMcKyqKNRfQ_145243167")]
     [Description(@"Initial Physical Form is GP.")]
     GP,
-    
+
     /// <summary>
     /// Initial Physical Form is definitive.
     /// Encoded/decoded by serializers as &quot;DERN&quot;.
@@ -41,5 +41,4 @@ public enum InitialPhysicalFormCode
     [IsoId("_hblKm2liEeGaMcKyqKNRfQ_1943280310")]
     [Description(@"Initial Physical Form is definitive.")]
     Definitive,
-    
 }

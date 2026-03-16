@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i9OiMYYCEemxIqbaFEE8-w")]
 [DisplayName("System Event Notification")]
-public partial record SystemEventNotification2
+public record SystemEventNotification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the transaction.
     /// </summary>
     [IsoId("_jHeqYYYCEemxIqbaFEE8-w")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment73 Environment { get; init; } 
-    
+    public required CardPaymentEnvironment73 Environment { get; init; }
+
     /// <summary>
     /// Context in which the transaction is performed (payment and sale).
     /// </summary>
     [IsoId("_jHeqY4YCEemxIqbaFEE8-w")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
-    public required CardPaymentContext27 Context { get; init; } 
-    
+    public required CardPaymentContext27 Context { get; init; }
+
     /// <summary>
     /// Content of the EventNotification message.
     /// </summary>
     [IsoId("_jHeqZYYCEemxIqbaFEE8-w")]
     [DisplayName("Event Notification")]
     [IsoXmlTag("EvtNtfctn")]
-    public required EventNotificationData1 EventNotification { get; init; } 
-    
+    public required EventNotificationData1 EventNotification { get; init; }
+
     /// <summary>
     /// Additional information incorporated as an extension to the message.
     /// </summary>
     [IsoId("_jHeqZ4YCEemxIqbaFEE8-w")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

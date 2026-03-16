@@ -23,7 +23,7 @@ public enum GenderCode
     [IsoId("_atyWaNp-Ed-ak6NoX_4Aeg_319238514")]
     [Description(@"Individual is a male.")]
     Male,
-    
+
     /// <summary>
     /// Individual is a female.
     /// Encoded/decoded by serializers as &quot;FEMA&quot;.
@@ -32,5 +32,4 @@ public enum GenderCode
     [IsoId("_at8HYNp-Ed-ak6NoX_4Aeg_332166896")]
     [Description(@"Individual is a female.")]
     Female,
-    
 }

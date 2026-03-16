@@ -23,5 +23,4 @@ public enum IssuerTaxability1Code
     [IsoId("_zlMDJgFKEeGOtY_0fwodfg")]
     [Description(@"The cash proceeds are taxable.")]
     Taxable = IssuerTaxabilityCode.Taxable, // same ordinal as derivation source for type conversions
-    
 }

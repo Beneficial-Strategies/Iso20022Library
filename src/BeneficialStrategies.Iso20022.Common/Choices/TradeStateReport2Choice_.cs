@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeStateReport2Choice.DataSetAction))]
     [KnownType(typeof(TradeStateReport2Choice.State))]
-    [JsonDerivedType(typeof(TradeStateReport2Choice.DataSetAction),nameof(TradeStateReport2Choice.DataSetAction))]
-    [JsonDerivedType(typeof(TradeStateReport2Choice.State),nameof(TradeStateReport2Choice.State))]
+    [JsonDerivedType(
+        typeof(TradeStateReport2Choice.DataSetAction),
+        nameof(TradeStateReport2Choice.DataSetAction)
+    )]
+    [JsonDerivedType(typeof(TradeStateReport2Choice.State), nameof(TradeStateReport2Choice.State))]
     [IsoId("_e9vysQAFEeqefbt-QjTNnA")]
     [DisplayName("Trade State Report 2 Choice")]
-    public abstract partial record TradeStateReport2Choice_
-    {
-    }
+    public abstract record TradeStateReport2Choice_ { }
 }

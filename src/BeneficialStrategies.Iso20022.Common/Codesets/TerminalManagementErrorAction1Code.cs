@@ -23,7 +23,7 @@ public enum TerminalManagementErrorAction1Code
     [IsoId("_KUh0l31DEeCF8NjrBemJWQ_-1839509664")]
     [Description(@"Ignore the error.")]
     IgnoreError = TerminalManagementErrorActionCode.IgnoreError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Send a status report immediately.
     /// Encoded/decoded by serializers as &quot;SDSR&quot;.
@@ -32,5 +32,4 @@ public enum TerminalManagementErrorAction1Code
     [IsoId("_KUh0mH1DEeCF8NjrBemJWQ_-1174724220")]
     [Description(@"Send a status report immediately.")]
     SendStatusReport = TerminalManagementErrorActionCode.SendStatusReport, // same ordinal as derivation source for type conversions
-    
 }

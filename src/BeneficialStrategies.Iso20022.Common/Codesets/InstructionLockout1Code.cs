@@ -23,7 +23,7 @@ public enum InstructionLockout1Code
     [IsoId("_1tJmBDL3EeKU9IrkkToqcw_-1287259278")]
     [Description(@"System suspended elections processing based on business rules.")]
     SystemicLocked = InstructionLockoutCode.SystemicLocked, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// DTC (the Depository Trust Company) personnel suspended elections processing.
     /// Encoded/decoded by serializers as &quot;MALK&quot;.
@@ -32,7 +32,7 @@ public enum InstructionLockout1Code
     [IsoId("_1tTXADL3EeKU9IrkkToqcw_964591391")]
     [Description(@"DTC (the Depository Trust Company) personnel suspended elections processing.")]
     ManualLocked = InstructionLockoutCode.ManualLocked, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Eligible for elections processing.
     /// Encoded/decoded by serializers as &quot;NOLO&quot;.
@@ -41,5 +41,4 @@ public enum InstructionLockout1Code
     [IsoId("_1tTXATL3EeKU9IrkkToqcw_1289708898")]
     [Description(@"Eligible for elections processing.")]
     NotLocked = InstructionLockoutCode.NotLocked, // same ordinal as derivation source for type conversions
-    
 }

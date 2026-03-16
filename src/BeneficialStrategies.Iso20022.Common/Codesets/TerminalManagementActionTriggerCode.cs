@@ -23,7 +23,7 @@ public enum TerminalManagementActionTriggerCode
     [IsoId("_KUYDk31DEeCF8NjrBemJWQ_2024412951")]
     [Description(@"Date and time trigger the terminal management action.")]
     DateTime,
-    
+
     /// <summary>
     /// Acquirer triggers the terminal management action.
     /// Encoded/decoded by serializers as &quot;HOST&quot;.
@@ -32,7 +32,7 @@ public enum TerminalManagementActionTriggerCode
     [IsoId("_KUYDlH1DEeCF8NjrBemJWQ_-1095363320")]
     [Description(@"Acquirer triggers the terminal management action.")]
     HostEvent,
-    
+
     /// <summary>
     /// Acceptor triggers the terminal management action.
     /// Encoded/decoded by serializers as &quot;MANU&quot;.
@@ -41,7 +41,7 @@ public enum TerminalManagementActionTriggerCode
     [IsoId("_KUYDlX1DEeCF8NjrBemJWQ_-1209202386")]
     [Description(@"Acceptor triggers the terminal management action.")]
     Manual,
-    
+
     /// <summary>
     /// Sale system triggers the terminal management action.
     /// Encoded/decoded by serializers as &quot;SALE&quot;.
@@ -50,5 +50,4 @@ public enum TerminalManagementActionTriggerCode
     [IsoId("_KUYDln1DEeCF8NjrBemJWQ_-1387321058")]
     [Description(@"Sale system triggers the terminal management action.")]
     SaleEvent,
-    
 }

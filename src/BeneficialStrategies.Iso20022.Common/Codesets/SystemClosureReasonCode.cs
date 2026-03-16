@@ -23,7 +23,7 @@ public enum SystemClosureReasonCode
     [IsoId("_ZRZQ4Np-Ed-ak6NoX_4Aeg_2007403379")]
     [Description(@"System is closed due to a bank holiday.")]
     BankingHoliday,
-    
+
     /// <summary>
     /// System is closed for maintenance reasons.
     /// Encoded/decoded by serializers as &quot;SMTN&quot;.
@@ -32,7 +32,7 @@ public enum SystemClosureReasonCode
     [IsoId("_ZRZQ4dp-Ed-ak6NoX_4Aeg_2007403380")]
     [Description(@"System is closed for maintenance reasons.")]
     SystemMaintenance,
-    
+
     /// <summary>
     /// System is not processing any operation.
     /// Encoded/decoded by serializers as &quot;NOOP&quot;.
@@ -41,7 +41,7 @@ public enum SystemClosureReasonCode
     [IsoId("_ZRZQ4tp-Ed-ak6NoX_4Aeg_2007403389")]
     [Description(@"System is not processing any operation.")]
     NoOperation,
-    
+
     /// <summary>
     /// System is not operational during recovery operations.
     /// Encoded/decoded by serializers as &quot;RCVR&quot;.
@@ -50,7 +50,7 @@ public enum SystemClosureReasonCode
     [IsoId("_ZRZQ49p-Ed-ak6NoX_4Aeg_2007403390")]
     [Description(@"System is not operational during recovery operations.")]
     Recovery,
-    
+
     /// <summary>
     /// System is not operational during allowed downtime windows.
     /// Encoded/decoded by serializers as &quot;ADTW&quot;.
@@ -59,5 +59,4 @@ public enum SystemClosureReasonCode
     [IsoId("_ZRZQ5Np-Ed-ak6NoX_4Aeg_2007403391")]
     [Description(@"System is not operational during allowed downtime windows.")]
     AllowedDowntimeWindow,
-    
 }

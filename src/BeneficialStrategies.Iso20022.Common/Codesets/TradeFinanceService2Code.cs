@@ -23,7 +23,7 @@ public enum TradeFinanceService2Code
     [IsoId("_Ymocptp-Ed-ak6NoX_4Aeg_-547265145")]
     [Description(@"Code for level 1 services.")]
     Level1Services = TradeFinanceServiceCode.Level1Services, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for level 2 services.
     /// Encoded/decoded by serializers as &quot;LEV2&quot;.
@@ -32,7 +32,7 @@ public enum TradeFinanceService2Code
     [IsoId("_Ymocp9p-Ed-ak6NoX_4Aeg_-543571648")]
     [Description(@"Code for level 2 services.")]
     Level2Services = TradeFinanceServiceCode.Level2Services, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for level 3 services.
     /// Encoded/decoded by serializers as &quot;LEV3&quot;.
@@ -41,5 +41,4 @@ public enum TradeFinanceService2Code
     [IsoId("_YmocqNp-Ed-ak6NoX_4Aeg_-530643751")]
     [Description(@"Code for level 3 services.")]
     Level3Services = TradeFinanceServiceCode.Level3Services, // same ordinal as derivation source for type conversions
-    
 }

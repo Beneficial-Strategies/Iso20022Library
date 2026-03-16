@@ -23,7 +23,7 @@ public enum CashForecastMessage1Code
     [IsoId("_a65lUdp-Ed-ak6NoX_4Aeg_1040652616")]
     [Description(@"Fund estimated cash forecast report (camt.040).")]
     Estimated = MessageTypeCode.Estimated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fund detailed estimated cash forecast Report (042).
     /// Encoded/decoded by serializers as &quot;CF42&quot;.
@@ -32,7 +32,7 @@ public enum CashForecastMessage1Code
     [IsoId("_a65lUtp-Ed-ak6NoX_4Aeg_-1588280260")]
     [Description(@"Fund detailed estimated cash forecast Report (042).")]
     EstimatedDetailed = MessageTypeCode.EstimatedDetailed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fund confirmed cash forecast report (camt.041).
     /// Encoded/decoded by serializers as &quot;CF41&quot;.
@@ -41,7 +41,7 @@ public enum CashForecastMessage1Code
     [IsoId("_a65lU9p-Ed-ak6NoX_4Aeg_-1557804493")]
     [Description(@"Fund confirmed cash forecast report (camt.041).")]
     Confirmed = MessageTypeCode.Confirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fund detailed confirmed cash forecast report (camt.043).
     /// Encoded/decoded by serializers as &quot;CF43&quot;.
@@ -50,5 +50,4 @@ public enum CashForecastMessage1Code
     [IsoId("_a65lVNp-Ed-ak6NoX_4Aeg_-1535641166")]
     [Description(@"Fund detailed confirmed cash forecast report (camt.043).")]
     CornfirmedDetailed = MessageTypeCode.CornfirmedDetailed, // same ordinal as derivation source for type conversions
-    
 }

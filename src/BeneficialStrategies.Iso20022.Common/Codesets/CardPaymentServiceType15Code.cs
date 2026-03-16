@@ -30,7 +30,9 @@ public enum CardPaymentServiceType15Code
     /// </summary>
     [EnumMember(Value = "DFCL")]
     [IsoId("")]
-    [Description(@"DeferredClearing identifies transactions, like ones related to health care system, that allows a delay in clearing which ensure the payer to be refunded by a system, for example an insurance, before its bank account is debited.")]
+    [Description(
+        @"DeferredClearing identifies transactions, like ones related to health care system, that allows a delay in clearing which ensure the payer to be refunded by a system, for example an insurance, before its bank account is debited."
+    )]
     DeferredClearing = CardPaymentServiceTypeCode.DeferredClearing, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -86,5 +88,4 @@ public enum CardPaymentServiceType15Code
     [IsoId("")]
     [Description(@"Update reservation.")]
     UpdateReservation = CardPaymentServiceTypeCode.UpdateReservation, // same ordinal as derivation source for type conversions
-
 }

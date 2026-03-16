@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,20 +14,18 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2_qZ9-3rEeaWjpoyrnG6Rw")]
 [DisplayName("Issuer CSD Report")]
-public partial record IssuerCSDReport1
+public record IssuerCSDReport1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the issuer CSD (central securities depository) for which data is reported.
     /// </summary>
     [IsoId("_2_qZ_O3rEeaWjpoyrnG6Rw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IssuerCSDIdentification1 Identification { get; init; } 
-    
+    public required IssuerCSDIdentification1 Identification { get; init; }
+
     /// <summary>
-    /// Overall aggregated total value and volume of 
+    /// Overall aggregated total value and volume of
     /// - settled and failed and total of internalised settlement instructions, and
     /// - failed rate of internalised settlement instructions
     /// performed during the period covered by the report, for all financial instruments, types of transactions, types of clients and cash transfers.
@@ -35,41 +33,37 @@ public partial record IssuerCSDReport1
     [IsoId("_2_qZ-O3rEeaWjpoyrnG6Rw")]
     [DisplayName("Overall Total")]
     [IsoXmlTag("OvrllTtl")]
-    public required InternalisationData1 OverallTotal { get; init; } 
-    
+    public required InternalisationData1 OverallTotal { get; init; }
+
     /// <summary>
     /// Classification of financial instrument covering the types of financial instruments as defined in the relevant regulation.
     /// </summary>
     [IsoId("_2_qZ_e3rEeaWjpoyrnG6Rw")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
-    public required SettlementInternaliserFinancialInstrument1 FinancialInstrument { get; init; } 
-    
+    public required SettlementInternaliserFinancialInstrument1 FinancialInstrument { get; init; }
+
     /// <summary>
     /// Classification of securities movements according to the categories defined in the relevant legislation.
     /// </summary>
     [IsoId("_2_qZ-u3rEeaWjpoyrnG6Rw")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
-    public required SettlementInternaliserTransactionType1 TransactionType { get; init; } 
-    
+    public required SettlementInternaliserTransactionType1 TransactionType { get; init; }
+
     /// <summary>
     /// Classification of a settlement internaliser&apos;s clients as referred to in the relevant legislation.
     /// </summary>
     [IsoId("_2_qZ--3rEeaWjpoyrnG6Rw")]
     [DisplayName("Client Type")]
     [IsoXmlTag("ClntTp")]
-    public required SettlementInternaliserClientType1 ClientType { get; init; } 
-    
+    public required SettlementInternaliserClientType1 ClientType { get; init; }
+
     /// <summary>
     /// Covers cash payments related to securities transactions.
     /// </summary>
     [IsoId("_2_qZ-e3rEeaWjpoyrnG6Rw")]
     [DisplayName("Total Cash Transfer")]
     [IsoXmlTag("TtlCshTrf")]
-    public required InternalisationData1 TotalCashTransfer { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required InternalisationData1 TotalCashTransfer { get; init; }
 }

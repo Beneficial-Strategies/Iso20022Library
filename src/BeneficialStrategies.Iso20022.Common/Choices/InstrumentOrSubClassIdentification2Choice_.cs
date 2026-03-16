@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InstrumentOrSubClassIdentification2Choice.ISINAndSubClass))]
     [KnownType(typeof(InstrumentOrSubClassIdentification2Choice.AssetClassAndSubClass))]
-    [JsonDerivedType(typeof(InstrumentOrSubClassIdentification2Choice.ISINAndSubClass),nameof(InstrumentOrSubClassIdentification2Choice.ISINAndSubClass))]
-    [JsonDerivedType(typeof(InstrumentOrSubClassIdentification2Choice.AssetClassAndSubClass),nameof(InstrumentOrSubClassIdentification2Choice.AssetClassAndSubClass))]
+    [JsonDerivedType(
+        typeof(InstrumentOrSubClassIdentification2Choice.ISINAndSubClass),
+        nameof(InstrumentOrSubClassIdentification2Choice.ISINAndSubClass)
+    )]
+    [JsonDerivedType(
+        typeof(InstrumentOrSubClassIdentification2Choice.AssetClassAndSubClass),
+        nameof(InstrumentOrSubClassIdentification2Choice.AssetClassAndSubClass)
+    )]
     [IsoId("_BRbDkaaUEeqZmriXpMtonA")]
     [DisplayName("Instrument Or Sub Class Identification 2 Choice")]
-    public abstract partial record InstrumentOrSubClassIdentification2Choice_
-    {
-    }
+    public abstract record InstrumentOrSubClassIdentification2Choice_ { }
 }

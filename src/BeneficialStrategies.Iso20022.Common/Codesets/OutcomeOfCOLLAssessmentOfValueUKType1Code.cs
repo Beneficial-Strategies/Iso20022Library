@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_71siQCuWEe6GGqp7D_oKtA")]
-[Description(@"Specifies whether charges are justified based on the COLL assessment. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09050.")]
+[Description(
+    @"Specifies whether charges are justified based on the COLL assessment. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09050."
+)]
 [DerivedFrom(typeof(OutcomeOfCOLLAssessmentOfValueUKTypeCode))]
 public enum OutcomeOfCOLLAssessmentOfValueUKType1Code
 {
@@ -21,7 +23,9 @@ public enum OutcomeOfCOLLAssessmentOfValueUKType1Code
     /// </summary>
     [EnumMember(Value = "COL1")]
     [IsoId("")]
-    [Description(@"Charges are justified based on assessment and any action identified or, where the first assessment is not yet due, based on initial product design.")]
+    [Description(
+        @"Charges are justified based on assessment and any action identified or, where the first assessment is not yet due, based on initial product design."
+    )]
     ChargesJustified = OutcomeOfCOLLAssessmentOfValueUKTypeCode.ChargesJustified, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -32,5 +36,4 @@ public enum OutcomeOfCOLLAssessmentOfValueUKType1Code
     [IsoId("")]
     [Description(@"Charges are not justified, significant action is required.")]
     ChargesNotJustified = OutcomeOfCOLLAssessmentOfValueUKTypeCode.ChargesNotJustified, // same ordinal as derivation source for type conversions
-
 }

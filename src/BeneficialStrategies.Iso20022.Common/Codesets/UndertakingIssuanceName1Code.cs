@@ -23,7 +23,7 @@ public enum UndertakingIssuanceName1Code
     [IsoId("_03AwIq-NEeG6R7UXUOz4dQ")]
     [Description(@"Standby letter of credit.")]
     Standby = UndertakingIssuanceNameCode.Standby, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Demand guarantee.
     /// Encoded/decoded by serializers as &quot;DGAR&quot;.
@@ -32,5 +32,4 @@ public enum UndertakingIssuanceName1Code
     [IsoId("_nvg48q-OEeG6R7UXUOz4dQ")]
     [Description(@"Demand guarantee.")]
     Guarantee = UndertakingIssuanceNameCode.Guarantee, // same ordinal as derivation source for type conversions
-    
 }

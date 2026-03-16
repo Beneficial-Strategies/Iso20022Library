@@ -23,7 +23,7 @@ public enum LevelOfControl1Code
     [IsoId("_mhS8sSDDEeWPMvNwVtiMsA")]
     [Description(@"Transactions are permitted on the account.")]
     Transactions = LevelOfControlCode.Transactions, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account may be viewed only.
     /// Encoded/decoded by serializers as &quot;VIEW&quot;.
@@ -32,5 +32,4 @@ public enum LevelOfControl1Code
     [IsoId("_mpeoUSDDEeWPMvNwVtiMsA")]
     [Description(@"Account may be viewed only.")]
     View = LevelOfControlCode.View, // same ordinal as derivation source for type conversions
-    
 }

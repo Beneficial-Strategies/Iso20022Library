@@ -23,7 +23,7 @@ public enum BarcodeTypeCode
     [IsoId("_QG8Q4NuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the EAN8 standard.")]
     BarcodeEncodedAsEAN8,
-    
+
     /// <summary>
     /// Barcode encoded according to the EAN13 standard.
     /// Encoded/decoded by serializers as &quot;EA13&quot;.
@@ -32,7 +32,7 @@ public enum BarcodeTypeCode
     [IsoId("_VyLVYNuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the EAN13 standard.")]
     BarcodeEncodedAsEA13,
-    
+
     /// <summary>
     /// Barcode encoded according to the Code 39 standard.
     /// Encoded/decoded by serializers as &quot;C039&quot;.
@@ -41,7 +41,7 @@ public enum BarcodeTypeCode
     [IsoId("_ZRfU4NuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the Code 39 standard.")]
     BarcodeEncodedAsCode39,
-    
+
     /// <summary>
     /// Barcode encoded according to the UPCA standard.
     /// Encoded/decoded by serializers as &quot;UPCA&quot;.
@@ -50,7 +50,7 @@ public enum BarcodeTypeCode
     [IsoId("_dcmDYNuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the UPCA standard.")]
     BarcodeEncodedAsUPCA,
-    
+
     /// <summary>
     /// Barcode encoded according to the Code 25 standard.
     /// Encoded/decoded by serializers as &quot;C025&quot;.
@@ -59,7 +59,7 @@ public enum BarcodeTypeCode
     [IsoId("_hhElcNuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the Code 25 standard.")]
     BarcodeEncodedAsCode25,
-    
+
     /// <summary>
     /// Barcode encoded according to the Code 128 standard.
     /// Encoded/decoded by serializers as &quot;C128&quot;.
@@ -68,7 +68,7 @@ public enum BarcodeTypeCode
     [IsoId("_laFeYNuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the Code 128 standard.")]
     BarcodeEncodedAsCode128,
-    
+
     /// <summary>
     /// Barcode encoded according to the PDF417 standard.
     /// Encoded/decoded by serializers as &quot;P417&quot;.
@@ -77,7 +77,7 @@ public enum BarcodeTypeCode
     [IsoId("_oyYP4NuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the PDF417 standard.")]
     BarcodeEncodedAsPDF417,
-    
+
     /// <summary>
     /// Barcode encoded according to the 2Dimensions Quick Response Code Standard.
     /// Encoded/decoded by serializers as &quot;COQR&quot;.
@@ -86,5 +86,4 @@ public enum BarcodeTypeCode
     [IsoId("_sx0g8NuZEeiB5uLfkg9ZJA")]
     [Description(@"Barcode encoded according to the 2Dimensions Quick Response Code Standard.")]
     BarcodeEncodedAs2DQRCode,
-    
 }

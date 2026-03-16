@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
@@ -20,232 +18,223 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// </summary>
 [IsoId("_xnbT0WHCEe6yt_d72zQZeQ")]
 [DisplayName("Corporate Action Movement Preliminary Advice V15")]
-public partial record CorporateActionMovementPreliminaryAdviceV15 : IOuterRecord
+public record CorporateActionMovementPreliminaryAdviceV15 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "seev.035.001.15";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "CorpActnMvmntPrlimryAdvc";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:seev.035.001.15";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Account Details.
     /// </summary>
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public required AccountIdentification47Choice_ AccountDetails { get; init; } 
-    
+    public required AccountIdentification47Choice_ AccountDetails { get; init; }
+
     /// <summary>
     /// Additional Information.
     /// </summary>
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative56? AdditionalInformation { get; init; } 
-    
+    public CorporateActionNarrative56? AdditionalInformation { get; init; }
+
     /// <summary>
     /// Corporate Action Details.
     /// </summary>
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
-    public CorporateAction69? CorporateActionDetails { get; init; } 
-    
+    public CorporateAction69? CorporateActionDetails { get; init; }
+
     /// <summary>
     /// Corporate Action General Information.
     /// </summary>
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation163 CorporateActionGeneralInformation { get; init; } 
-    
+    public required CorporateActionGeneralInformation163 CorporateActionGeneralInformation { get; init; }
+
     /// <summary>
     /// Corporate Action Movement Details.
     /// </summary>
     [DisplayName("Corporate Action Movement Details")]
     [IsoXmlTag("CorpActnMvmntDtls")]
     public ValueList<CorporateActionOption220> CorporateActionMovementDetails { get; init; } = [];
-    
+
     /// <summary>
     /// Drop Agent.
     /// </summary>
     [DisplayName("Drop Agent")]
     [IsoXmlTag("DrpAgt")]
-    public PartyIdentification120Choice_? DropAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? DropAgent { get; init; }
+
     /// <summary>
     /// Events Linkage.
     /// </summary>
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
     public ValueList<CorporateActionEventReference3> EventsLinkage { get; init; } = [];
-    
+
     /// <summary>
     /// Information Agent.
     /// </summary>
     [DisplayName("Information Agent")]
     [IsoXmlTag("InfAgt")]
-    public PartyIdentification120Choice_? InformationAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? InformationAgent { get; init; }
+
     /// <summary>
     /// Instruction Identification.
     /// </summary>
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public DocumentIdentification9? InstructionIdentification { get; init; } 
-    
+    public DocumentIdentification9? InstructionIdentification { get; init; }
+
     /// <summary>
     /// Issuer.
     /// </summary>
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public PartyIdentification129Choice_? Issuer { get; init; } 
-    
+    public PartyIdentification129Choice_? Issuer { get; init; }
+
     /// <summary>
     /// Issuer Agent.
     /// </summary>
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
     public ValueList<PartyIdentification129Choice_> IssuerAgent { get; init; } = [];
-    
+
     /// <summary>
     /// Movement Confirmation Identification.
     /// </summary>
     [DisplayName("Movement Confirmation Identification")]
     [IsoXmlTag("MvmntConfId")]
-    public DocumentIdentification31? MovementConfirmationIdentification { get; init; } 
-    
+    public DocumentIdentification31? MovementConfirmationIdentification { get; init; }
+
     /// <summary>
     /// Movement Preliminary Advice General Information.
     /// </summary>
     [DisplayName("Movement Preliminary Advice General Information")]
     [IsoXmlTag("MvmntPrlimryAdvcGnlInf")]
-    public required CorporateActionPreliminaryAdviceType4 MovementPreliminaryAdviceGeneralInformation { get; init; } 
-    
+    public required CorporateActionPreliminaryAdviceType4 MovementPreliminaryAdviceGeneralInformation { get; init; }
+
     /// <summary>
     /// Notification Identification.
     /// </summary>
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
-    public DocumentIdentification31? NotificationIdentification { get; init; } 
-    
+    public DocumentIdentification31? NotificationIdentification { get; init; }
+
     /// <summary>
     /// Offeror.
     /// </summary>
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
     public ValueList<PartyIdentification129Choice_> Offeror { get; init; } = [];
-    
+
     /// <summary>
     /// Other Document Identification.
     /// </summary>
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
     public ValueList<DocumentIdentification32> OtherDocumentIdentification { get; init; } = [];
-    
+
     /// <summary>
     /// Pagination.
     /// </summary>
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; } 
-    
+    public Pagination1? Pagination { get; init; }
+
     /// <summary>
     /// Paying Agent.
     /// </summary>
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
     public ValueList<PartyIdentification120Choice_> PayingAgent { get; init; } = [];
-    
+
     /// <summary>
     /// Physical Securities Agent.
     /// </summary>
     [DisplayName("Physical Securities Agent")]
     [IsoXmlTag("PhysSctiesAgt")]
-    public PartyIdentification120Choice_? PhysicalSecuritiesAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? PhysicalSecuritiesAgent { get; init; }
+
     /// <summary>
     /// Previous Movement Preliminary Advice Identification.
     /// </summary>
     [DisplayName("Previous Movement Preliminary Advice Identification")]
     [IsoXmlTag("PrvsMvmntPrlimryAdvcId")]
-    public DocumentIdentification31? PreviousMovementPreliminaryAdviceIdentification { get; init; } 
-    
+    public DocumentIdentification31? PreviousMovementPreliminaryAdviceIdentification { get; init; }
+
     /// <summary>
     /// Registrar.
     /// </summary>
     [DisplayName("Registrar")]
     [IsoXmlTag("Regar")]
-    public PartyIdentification120Choice_? Registrar { get; init; } 
-    
+    public PartyIdentification120Choice_? Registrar { get; init; }
+
     /// <summary>
     /// Reselling Agent.
     /// </summary>
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
     public ValueList<PartyIdentification120Choice_> ResellingAgent { get; init; } = [];
-    
+
     /// <summary>
     /// Reversal Reason.
     /// </summary>
     [DisplayName("Reversal Reason")]
     [IsoXmlTag("RvslRsn")]
-    public CorporateActionReversalReason5? ReversalReason { get; init; } 
-    
+    public CorporateActionReversalReason5? ReversalReason { get; init; }
+
     /// <summary>
     /// Solicitation Agent.
     /// </summary>
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
     public ValueList<PartyIdentification120Choice_> SolicitationAgent { get; init; } = [];
-    
+
     /// <summary>
     /// Sub Paying Agent.
     /// </summary>
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
     public ValueList<PartyIdentification120Choice_> SubPayingAgent { get; init; } = [];
-    
+
     /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-    
+
     /// <summary>
     /// Transfer Agent.
     /// </summary>
     [DisplayName("Transfer Agent")]
     [IsoXmlTag("TrfAgt")]
-    public PartyIdentification129Choice_? TransferAgent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification129Choice_? TransferAgent { get; init; }
 }
 
-
-// Since CorporateActionMovementPreliminaryAdviceV15Document is not really part of the logical business domain model, 
+// Since CorporateActionMovementPreliminaryAdviceV15Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to CorporateActionMovementPreliminaryAdviceV15.
-

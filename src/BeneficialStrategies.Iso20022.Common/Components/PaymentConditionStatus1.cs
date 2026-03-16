@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IGiOt3VlEeiEU7thYTAN1w")]
 [DisplayName("Payment Condition Status")]
-public partial record PaymentConditionStatus1
+public record PaymentConditionStatus1
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount accepted to be paid.
     /// Usage:
@@ -26,8 +24,8 @@ public partial record PaymentConditionStatus1
     [IsoId("_p7y48HVlEeiEU7thYTAN1w")]
     [DisplayName("Accepted Amount")]
     [IsoXmlTag("AccptdAmt")]
-    public ActiveCurrencyAndAmount? AcceptedAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? AcceptedAmount { get; init; }
+
     /// <summary>
     /// Indicates if the DebtorAgent guarantees the payment, assuming a payment guarantee contract exists between the different actors.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record PaymentConditionStatus1
     [DisplayName("Guaranteed Payment")]
     [IsoXmlTag("GrntedPmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator GuaranteedPayment { get; init; } 
-    
+    public required IsoTrueFalseIndicator GuaranteedPayment { get; init; }
+
     /// <summary>
     /// Indicates if the debtor will pay before the requested execution date.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record PaymentConditionStatus1
     [DisplayName("Early Payment")]
     [IsoXmlTag("EarlyPmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EarlyPayment { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoTrueFalseIndicator EarlyPayment { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XEpRcLVZEeadLcJesEbkTQ")]
 [DisplayName("Open Interest")]
-public partial record OpenInterest1
+public record OpenInterest1
 {
-    #nullable enable
-    
     /// <summary>
     /// Gross notional of product cleared, if applicable.
     /// </summary>
     [IsoId("_bzGkoLVZEeadLcJesEbkTQ")]
     [DisplayName("Gross Notional Amount")]
     [IsoXmlTag("GrssNtnlAmt")]
-    public required ActiveCurrencyAnd24Amount GrossNotionalAmount { get; init; } 
-    
+    public required ActiveCurrencyAnd24Amount GrossNotionalAmount { get; init; }
+
     /// <summary>
     /// Open interest in number of lots, if applicable.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record OpenInterest1
     [DisplayName("Number Of Lots")]
     [IsoXmlTag("NbOfLots")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public IsoPositiveNumber? NumberOfLots { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPositiveNumber? NumberOfLots { get; init; }
 }

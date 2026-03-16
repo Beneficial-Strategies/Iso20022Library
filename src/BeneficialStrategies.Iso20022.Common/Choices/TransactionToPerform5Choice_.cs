@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TransactionToPerform5Choice.PaymentRequest))]
     [KnownType(typeof(TransactionToPerform5Choice.LoyaltyRequest))]
     [KnownType(typeof(TransactionToPerform5Choice.ReversalRequest))]
-    [JsonDerivedType(typeof(TransactionToPerform5Choice.PaymentRequest),nameof(TransactionToPerform5Choice.PaymentRequest))]
-    [JsonDerivedType(typeof(TransactionToPerform5Choice.LoyaltyRequest),nameof(TransactionToPerform5Choice.LoyaltyRequest))]
-    [JsonDerivedType(typeof(TransactionToPerform5Choice.ReversalRequest),nameof(TransactionToPerform5Choice.ReversalRequest))]
+    [JsonDerivedType(
+        typeof(TransactionToPerform5Choice.PaymentRequest),
+        nameof(TransactionToPerform5Choice.PaymentRequest)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionToPerform5Choice.LoyaltyRequest),
+        nameof(TransactionToPerform5Choice.LoyaltyRequest)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionToPerform5Choice.ReversalRequest),
+        nameof(TransactionToPerform5Choice.ReversalRequest)
+    )]
     [IsoId("_XnUecXGwEe2TbaNWBpRZpQ")]
     [DisplayName("Transaction To Perform 5 Choice")]
-    public abstract partial record TransactionToPerform5Choice_
-    {
-    }
+    public abstract record TransactionToPerform5Choice_ { }
 }

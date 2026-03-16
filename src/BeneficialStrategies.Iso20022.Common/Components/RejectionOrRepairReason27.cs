@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5SFAhZNLEeWGlc8L7oPDIg")]
 [DisplayName("Rejection Or Repair Reason")]
-public partial record RejectionOrRepairReason27
+public record RejectionOrRepairReason27
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the reason why the instruction/request has a rejected or repair status.
     /// </summary>
     [IsoId("_5SFAh5NLEeWGlc8L7oPDIg")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public RejectionAndRepairReason27Choice_? Code { get; init; } 
-    
+    public RejectionAndRepairReason27Choice_? Code { get; init; }
+
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record RejectionOrRepairReason27
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
-    [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax210Text? AdditionalReasonInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoRestrictedFINXMax210Text? AdditionalReasonInformation { get; init; }
 }

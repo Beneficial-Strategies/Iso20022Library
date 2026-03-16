@@ -23,7 +23,7 @@ public enum RemarketingMarginType1Code
     [IsoId("_aUJuZdp-Ed-ak6NoX_4Aeg_818404999")]
     [Description(@"Agreed margin.")]
     Agreed = RemarketingMarginTypeCode.Agreed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Alternative margin.
     /// Encoded/decoded by serializers as &quot;ALTE&quot;.
@@ -32,5 +32,4 @@ public enum RemarketingMarginType1Code
     [IsoId("_aUJuZtp-Ed-ak6NoX_4Aeg_1072371865")]
     [Description(@"Alternative margin.")]
     Alternative = RemarketingMarginTypeCode.Alternative, // same ordinal as derivation source for type conversions
-    
 }

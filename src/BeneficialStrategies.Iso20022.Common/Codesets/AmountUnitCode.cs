@@ -23,7 +23,7 @@ public enum AmountUnitCode
     [IsoId("_bvF9YNtlEeipuvJHTHIw9A")]
     [Description(@"The amount is expressed in point.")]
     Point,
-    
+
     /// <summary>
     /// The amount is expressed in a monetary value in a currency.
     /// Encoded/decoded by serializers as &quot;MONE&quot;.
@@ -32,5 +32,4 @@ public enum AmountUnitCode
     [IsoId("_eaRKMNtlEeipuvJHTHIw9A")]
     [Description(@"The amount is expressed in a monetary value in a currency.")]
     Monetary,
-    
 }

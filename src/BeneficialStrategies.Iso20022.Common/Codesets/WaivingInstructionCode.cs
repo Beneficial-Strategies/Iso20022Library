@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Y9uuAdp-Ed-ak6NoX_4Aeg_-1758874043")]
 [Description(@"Specifies the form of the rebate when commission is waived.")]
-[Derivations(typeof(WaivingInstruction2Code),typeof(WaivingInstruction1Code))]
+[Derivations(typeof(WaivingInstruction2Code), typeof(WaivingInstruction1Code))]
 public enum WaivingInstructionCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum WaivingInstructionCode
     [IsoId("_Y9uuAtp-Ed-ak6NoX_4Aeg_165921005")]
     [Description(@"Form of commission waived is cash.")]
     WaiveInCash,
-    
+
     /// <summary>
     /// Form of commission waived is additional units of a financial instrument.
     /// Encoded/decoded by serializers as &quot;WIUN&quot;.
@@ -32,7 +32,7 @@ public enum WaivingInstructionCode
     [IsoId("_Y9uuA9p-Ed-ak6NoX_4Aeg_633220258")]
     [Description(@"Form of commission waived is additional units of a financial instrument.")]
     WaiveInUnits,
-    
+
     /// <summary>
     /// Another type of commission waiving.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum WaivingInstructionCode
     [IsoId("_Y9uuBNp-Ed-ak6NoX_4Aeg_-268156093")]
     [Description(@"Another type of commission waiving.")]
     Other,
-    
 }

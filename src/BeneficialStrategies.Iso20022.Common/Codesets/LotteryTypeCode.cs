@@ -23,14 +23,15 @@ public enum LotteryTypeCode
     [IsoId("_afolpdp-Ed-ak6NoX_4Aeg_2038993840")]
     [Description(@"Original lottery that has been announced for a specific amount and date.")]
     OriginalLotteryNotification,
-    
+
     /// <summary>
     /// Supplemental or additional quantity called on a previously announced original lottery.
     /// Encoded/decoded by serializers as &quot;SUPP&quot;.
     /// </summary>
     [EnumMember(Value = "SUPP")]
     [IsoId("_afolptp-Ed-ak6NoX_4Aeg_2144275992")]
-    [Description(@"Supplemental or additional quantity called on a previously announced original lottery.")]
+    [Description(
+        @"Supplemental or additional quantity called on a previously announced original lottery."
+    )]
     SupplementalLotteryNotification,
-    
 }

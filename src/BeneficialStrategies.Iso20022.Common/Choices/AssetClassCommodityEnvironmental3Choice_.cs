@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodityEnvironmental3Choice.Weather))]
     [KnownType(typeof(AssetClassCommodityEnvironmental3Choice.CarbonRelated))]
     [KnownType(typeof(AssetClassCommodityEnvironmental3Choice.Other))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental3Choice.Emissions),nameof(AssetClassCommodityEnvironmental3Choice.Emissions))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental3Choice.Weather),nameof(AssetClassCommodityEnvironmental3Choice.Weather))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental3Choice.CarbonRelated),nameof(AssetClassCommodityEnvironmental3Choice.CarbonRelated))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental3Choice.Other),nameof(AssetClassCommodityEnvironmental3Choice.Other))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental3Choice.Emissions),
+        nameof(AssetClassCommodityEnvironmental3Choice.Emissions)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental3Choice.Weather),
+        nameof(AssetClassCommodityEnvironmental3Choice.Weather)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental3Choice.CarbonRelated),
+        nameof(AssetClassCommodityEnvironmental3Choice.CarbonRelated)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental3Choice.Other),
+        nameof(AssetClassCommodityEnvironmental3Choice.Other)
+    )]
     [IsoId("_9bs7AU8REe2PGo0mhYCh1g")]
     [DisplayName("Asset Class Commodity Environmental 3 Choice")]
-    public abstract partial record AssetClassCommodityEnvironmental3Choice_
-    {
-    }
+    public abstract record AssetClassCommodityEnvironmental3Choice_ { }
 }

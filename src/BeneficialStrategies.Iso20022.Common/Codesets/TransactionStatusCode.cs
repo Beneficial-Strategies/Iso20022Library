@@ -23,7 +23,7 @@ public enum TransactionStatusCode
     [IsoId("_YuO5dtp-Ed-ak6NoX_4Aeg_-163376564")]
     [Description(@"Transaction has been reversed.")]
     Reversal,
-    
+
     /// <summary>
     /// Transaction has been rebooked.
     /// Encoded/decoded by serializers as &quot;REBO&quot;.
@@ -32,7 +32,7 @@ public enum TransactionStatusCode
     [IsoId("_YuO5d9p-Ed-ak6NoX_4Aeg_-163376563")]
     [Description(@"Transaction has been rebooked.")]
     Rebooked,
-    
+
     /// <summary>
     /// Transaction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,5 +41,4 @@ public enum TransactionStatusCode
     [IsoId("_YuYqcNp-Ed-ak6NoX_4Aeg_-163376562")]
     [Description(@"Transaction has been cancelled.")]
     Cancelled,
-    
 }

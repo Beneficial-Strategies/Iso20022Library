@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
     /// </summary>
     [IsoId("_XthjsIKPEeKmtdhZXgREOQ")]
     [DisplayName("Party Identification")]
-    public partial record PartyIdentification : PartyIdentification73Choice_
+    public record PartyIdentification : PartyIdentification73Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the party expressed as the party&apos;s name.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
         [DisplayName("Party Name")]
         [IsoXmlTag("PtyNm")]
         [IsoSimpleType(IsoSimpleType.Max34Text)]
-        [StringLength(maximumLength: 34 ,MinimumLength = 1)]
-        public IsoMax34Text? PartyName { get; init; } 
-        
+        [StringLength(maximumLength: 34, MinimumLength = 1)]
+        public IsoMax34Text? PartyName { get; init; }
+
         /// <summary>
         /// Identification of the party expressed as a BIC and an optional alternative identifier.
         /// </summary>
         [IsoId("_ocnb44YsEeKuscgzs7HVKw")]
         [DisplayName("Any BIC")]
         [IsoXmlTag("AnyBIC")]
-        public PartyIdentification44? AnyBIC { get; init; } 
-        
+        public PartyIdentification44? AnyBIC { get; init; }
+
         /// <summary>
         /// Identification of the party&apos;s account number.
         /// </summary>
@@ -42,9 +40,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
         [DisplayName("Account Number")]
         [IsoXmlTag("AcctNb")]
         [IsoSimpleType(IsoSimpleType.Max34Text)]
-        [StringLength(maximumLength: 34 ,MinimumLength = 1)]
-        public IsoMax34Text? AccountNumber { get; init; } 
-        
+        [StringLength(maximumLength: 34, MinimumLength = 1)]
+        public IsoMax34Text? AccountNumber { get; init; }
+
         /// <summary>
         /// Identification of the party&apos;s address.
         /// </summary>
@@ -52,17 +50,17 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
         [DisplayName("Address")]
         [IsoXmlTag("Adr")]
         [IsoSimpleType(IsoSimpleType.Max105Text)]
-        [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-        public IsoMax105Text? Address { get; init; } 
-        
+        [StringLength(maximumLength: 105, MinimumLength = 1)]
+        public IsoMax105Text? Address { get; init; }
+
         /// <summary>
         /// Choice of a clearing system identifier.
         /// </summary>
         [IsoId("_VwsfQIoREeKINPO736UM8w")]
         [DisplayName("Clearing System Identification")]
         [IsoXmlTag("ClrSysId")]
-        public ClearingSystemIdentification2Choice_? ClearingSystemIdentification { get; init; } 
-        
+        public ClearingSystemIdentification2Choice_? ClearingSystemIdentification { get; init; }
+
         /// <summary>
         /// Identification of the Legal Entity Identifier. This is a code allocated to a party as described in ISO 17442 &quot;Financial Services - Legal Entity Identifier (LEI)&quot;.
         /// </summary>
@@ -70,10 +68,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification73Choice
         [DisplayName("Legal Entity Identifier")]
         [IsoXmlTag("LglNttyIdr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LegalEntityIdentifier { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoLEIIdentifier? LegalEntityIdentifier { get; init; }
     }
 }

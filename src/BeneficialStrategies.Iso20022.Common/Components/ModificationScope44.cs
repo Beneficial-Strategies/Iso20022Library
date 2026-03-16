@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_47VDUZTLEemqYPWMBuVawg")]
 [DisplayName("Modification Scope")]
-public partial record ModificationScope44
+public record ModificationScope44
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of modification to be applied.
     /// </summary>
     [IsoId("_5QKD0ZTLEemqYPWMBuVawg")]
     [DisplayName("Modification Scope Indication")]
     [IsoXmlTag("ModScpIndctn")]
-    public required DataModification1Code ModificationScopeIndication { get; init; } 
-    
+    public required DataModification1Code ModificationScopeIndication { get; init; }
+
     /// <summary>
     /// Identification of information which is part of a service level agreement.
     /// </summary>
     [IsoId("_5QKD05TLEemqYPWMBuVawg")]
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
-    public required DocumentToSend4 ServiceLevelAgreement { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required DocumentToSend4 ServiceLevelAgreement { get; init; }
 }

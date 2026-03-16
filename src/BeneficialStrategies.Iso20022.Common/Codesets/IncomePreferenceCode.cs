@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aWGPIdp-Ed-ak6NoX_4Aeg_-1985616336")]
 [Description(@"Specifies the options for distribution of dividend income.")]
-[Derivations(typeof(IncomePreference1Code),typeof(IncomePreference2Code))]
+[Derivations(typeof(IncomePreference1Code), typeof(IncomePreference2Code))]
 public enum IncomePreferenceCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum IncomePreferenceCode
     [IsoId("_aWGPItp-Ed-ak6NoX_4Aeg_-238756116")]
     [Description(@"Distribution in cash.")]
     Cash,
-    
+
     /// <summary>
     /// Reinvestment of proceeds into securities.
     /// Encoded/decoded by serializers as &quot;DRIP&quot;.
@@ -32,7 +32,7 @@ public enum IncomePreferenceCode
     [IsoId("_aWGPI9p-Ed-ak6NoX_4Aeg_-226750448")]
     [Description(@"Reinvestment of proceeds into securities.")]
     DividendReinvestment,
-    
+
     /// <summary>
     /// Distribution in securities.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -41,5 +41,4 @@ public enum IncomePreferenceCode
     [IsoId("_fJyswCFJEeWgV9SQSyaAog")]
     [Description(@"Distribution in securities.")]
     Securities,
-    
 }

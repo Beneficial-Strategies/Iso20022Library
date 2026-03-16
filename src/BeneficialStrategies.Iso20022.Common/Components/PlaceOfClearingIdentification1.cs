@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GVozg2wwEeWLq_lbZ2Mhyw")]
 [DisplayName("Place Of Clearing Identification")]
-public partial record PlaceOfClearingIdentification1
+public record PlaceOfClearingIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of the place of clearing.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PlaceOfClearingIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public IsoAnyBICIdentifier? Identification { get; init; } 
-    
+    public IsoAnyBICIdentifier? Identification { get; init; }
+
     /// <summary>
     /// Legal entity identification as an alternate identification for a place of clearing.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record PlaceOfClearingIdentification1
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLEIIdentifier? LEI { get; init; }
 }

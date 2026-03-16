@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MatchingDenied4Choice.Code))]
     [KnownType(typeof(MatchingDenied4Choice.Proprietary))]
-    [JsonDerivedType(typeof(MatchingDenied4Choice.Code),nameof(MatchingDenied4Choice.Code))]
-    [JsonDerivedType(typeof(MatchingDenied4Choice.Proprietary),nameof(MatchingDenied4Choice.Proprietary))]
+    [JsonDerivedType(typeof(MatchingDenied4Choice.Code), nameof(MatchingDenied4Choice.Code))]
+    [JsonDerivedType(
+        typeof(MatchingDenied4Choice.Proprietary),
+        nameof(MatchingDenied4Choice.Proprietary)
+    )]
     [IsoId("_6GWWDZNLEeWGlc8L7oPDIg")]
     [DisplayName("Matching Denied 4 Choice")]
-    public abstract partial record MatchingDenied4Choice_
-    {
-    }
+    public abstract record MatchingDenied4Choice_ { }
 }

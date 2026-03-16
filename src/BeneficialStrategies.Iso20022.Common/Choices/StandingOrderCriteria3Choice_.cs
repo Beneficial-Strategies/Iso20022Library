@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(StandingOrderCriteria3Choice.QueryName))]
     [KnownType(typeof(StandingOrderCriteria3Choice.NewCriteria))]
-    [JsonDerivedType(typeof(StandingOrderCriteria3Choice.QueryName),nameof(StandingOrderCriteria3Choice.QueryName))]
-    [JsonDerivedType(typeof(StandingOrderCriteria3Choice.NewCriteria),nameof(StandingOrderCriteria3Choice.NewCriteria))]
+    [JsonDerivedType(
+        typeof(StandingOrderCriteria3Choice.QueryName),
+        nameof(StandingOrderCriteria3Choice.QueryName)
+    )]
+    [JsonDerivedType(
+        typeof(StandingOrderCriteria3Choice.NewCriteria),
+        nameof(StandingOrderCriteria3Choice.NewCriteria)
+    )]
     [IsoId("_GBYcFW4-EeiU9cctagi5ow")]
     [DisplayName("Standing Order Criteria 3 Choice")]
-    public abstract partial record StandingOrderCriteria3Choice_
-    {
-    }
+    public abstract record StandingOrderCriteria3Choice_ { }
 }

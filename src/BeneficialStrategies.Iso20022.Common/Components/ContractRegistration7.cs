@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7I5SITEyEe6g-ffJsqGiSA")]
 [DisplayName("Contract Registration7")]
-public partial record ContractRegistration7
+public record ContractRegistration7
 {
-    #nullable enable
-
     /// <summary>
     /// Contract Registration Identification.
     /// </summary>
     [DisplayName("Contract Registration Identification")]
     [IsoXmlTag("CtrctRegnId")]
-    public required IsoMax35Text ContractRegistrationIdentification { get; init; } 
+    public required IsoMax35Text ContractRegistrationIdentification { get; init; }
 
     /// <summary>
     /// Contract Registration Opening.
@@ -37,14 +35,14 @@ public partial record ContractRegistration7
     /// </summary>
     [DisplayName("Registration Agent")]
     [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; } 
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
     /// Reporting Party.
     /// </summary>
     [DisplayName("Reporting Party")]
     [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; } 
+    public required TradeParty6 ReportingParty { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -52,8 +50,4 @@ public partial record ContractRegistration7
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

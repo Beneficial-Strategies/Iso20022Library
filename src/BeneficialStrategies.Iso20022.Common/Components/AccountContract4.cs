@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UkGbYdp-Ed-ak6NoX_4Aeg_197946061")]
 [DisplayName("Account Contract")]
-public partial record AccountContract4
+public record AccountContract4
 {
-    #nullable enable
-    
     /// <summary>
     /// Date on which the account and related services are expected to cease to be operational for the account owner.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record AccountContract4
     [DisplayName("Target Closing Date")]
     [IsoXmlTag("TrgtClsgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TargetClosingDate { get; init; } 
-    
+    public IsoISODate? TargetClosingDate { get; init; }
+
     /// <summary>
     /// Indicator that the account opening/maintenance/closing process needs to be treated urgently, that is, sooner than the terms established by the service level agreed between the account holder customer and the account servicing institution.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record AccountContract4
     [DisplayName("Urgency Flag")]
     [IsoXmlTag("UrgcyFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? UrgencyFlag { get; init; } 
-    
+    public IsoYesNoIndicator? UrgencyFlag { get; init; }
+
     /// <summary>
     /// Indicates removal of the account. After removal, an account will not appear anymore in reports.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record AccountContract4
     [DisplayName("Removal Indicator")]
     [IsoXmlTag("RmvlInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RemovalIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? RemovalIndicator { get; init; }
 }

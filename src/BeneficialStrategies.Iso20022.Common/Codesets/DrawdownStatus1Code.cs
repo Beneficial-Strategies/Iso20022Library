@@ -23,7 +23,7 @@ public enum DrawdownStatus1Code
     [IsoId("_KDEMEVKjEeiSDqv62fL07g")]
     [Description(@"Pension is fully in drawdown.")]
     Full = DrawdownStatusCode.Full, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pension is not in drawdown.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -32,7 +32,7 @@ public enum DrawdownStatus1Code
     [IsoId("_KIthEVKjEeiSDqv62fL07g")]
     [Description(@"Pension is not in drawdown.")]
     None = DrawdownStatusCode.None, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pension is in partial drawdown.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -41,5 +41,4 @@ public enum DrawdownStatus1Code
     [IsoId("_KNesUVKjEeiSDqv62fL07g")]
     [Description(@"Pension is in partial drawdown.")]
     Partial = DrawdownStatusCode.Partial, // same ordinal as derivation source for type conversions
-    
 }

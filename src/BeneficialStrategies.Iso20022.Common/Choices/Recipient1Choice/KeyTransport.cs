@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Recipient1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient1Choice
     /// </summary>
     [IsoId("_SxIvvAEcEeCQm6a_G2yO_w_-1700784430")]
     [DisplayName("Key Transport")]
-    public partial record KeyTransport : Recipient1Choice_
+    public record KeyTransport : Recipient1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Version of the cryptographic key.
         /// </summary>
@@ -24,24 +22,24 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient1Choice
         [DisplayName("Version")]
         [IsoXmlTag("Vrsn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Version { get; init; } 
-        
+        public required IsoNumber Version { get; init; }
+
         /// <summary>
         /// Transport key or key encryption key (KEK) for the recipient.
         /// </summary>
         [IsoId("_SxIvuAEcEeCQm6a_G2yO_w_-69977673")]
         [DisplayName("Recipient Identification")]
         [IsoXmlTag("RcptId")]
-        public required CertificateIdentifier1 RecipientIdentification { get; init; } 
-        
+        public required CertificateIdentifier1 RecipientIdentification { get; init; }
+
         /// <summary>
         /// Algorithm to encrypt the key encryption key (KEK).
         /// </summary>
         [IsoId("_SxIvuQEcEeCQm6a_G2yO_w_-1927066470")]
         [DisplayName("Key Encryption Algorithm")]
         [IsoXmlTag("KeyNcrptnAlgo")]
-        public required AlgorithmIdentification1 KeyEncryptionAlgorithm { get; init; } 
-        
+        public required AlgorithmIdentification1 KeyEncryptionAlgorithm { get; init; }
+
         /// <summary>
         /// Encrypted key encryption key (KEK).
         /// </summary>
@@ -49,10 +47,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient1Choice
         [DisplayName("Encrypted Key")]
         [IsoXmlTag("NcrptdKey")]
         [IsoSimpleType(IsoSimpleType.Max140Binary)]
-        public required IsoMax140Binary EncryptedKey { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoMax140Binary EncryptedKey { get; init; }
     }
 }

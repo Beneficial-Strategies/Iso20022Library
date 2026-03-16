@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery3Choice
 {
     /// <summary>
@@ -14,19 +14,13 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentificationQuery3Choi
     /// </summary>
     [IsoId("_P-19BdGgEeaQk737TH1Fzw")]
     [DisplayName("Not Available")]
-    public partial record NotAvailable : SecurityIdentificationQuery3Choice_
+    public record NotAvailable : SecurityIdentificationQuery3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies a not available value code.
         /// </summary>
         [IsoXmlTag("NotAvlbl")]
-        public required NotAvailable1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required NotAvailable1Code Value { get; init; }
     }
 }

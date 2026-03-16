@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tb1HSZlVEeeE1Ya-LgRsuQ")]
 [DisplayName("Member Return Criteria")]
-public partial record MemberReturnCriteria1
+public record MemberReturnCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the member name is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record MemberReturnCriteria1
     [DisplayName("Name Indicator")]
     [IsoXmlTag("NmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? NameIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? NameIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the member return address is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record MemberReturnCriteria1
     [DisplayName("Member Return Address Indicator")]
     [IsoXmlTag("MmbRtrAdrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MemberReturnAddressIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? MemberReturnAddressIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the member account is requested.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record MemberReturnCriteria1
     [DisplayName("Account Indicator")]
     [IsoXmlTag("AcctInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? AccountIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the member type is requested.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record MemberReturnCriteria1
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TypeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? TypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the member status is requested.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record MemberReturnCriteria1
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StatusIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? StatusIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the contact references are requested.
     /// </summary>
@@ -70,8 +68,8 @@ public partial record MemberReturnCriteria1
     [DisplayName("Contact Reference Indicator")]
     [IsoXmlTag("CtctRefInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ContactReferenceIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? ContactReferenceIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the communication addresses are requested.
     /// </summary>
@@ -79,9 +77,5 @@ public partial record MemberReturnCriteria1
     [DisplayName("Communication Address Indicator")]
     [IsoXmlTag("ComAdrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CommunicationAddressIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? CommunicationAddressIndicator { get; init; }
 }

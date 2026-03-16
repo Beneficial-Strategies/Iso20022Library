@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification1Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.PlaceOfTradeIdentification1Choic
     /// </summary>
     [IsoId("_TCfeotp-Ed-ak6NoX_4Aeg_-508773714")]
     [DisplayName("Party")]
-    public partial record Party : PlaceOfTradeIdentification1Choice_
+    public record Party : PlaceOfTradeIdentification1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
         /// </summary>
         [IsoXmlTag("Pty")]
         [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-        public required IsoAnyBICIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoAnyBICIdentifier Value { get; init; }
     }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_TRd1mAEcEeCQm6a_G2yO_w_337823132")]
-[Description(@"Specifies the packaging type as published in an external packaging type code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the packaging type as published in an external packaging type code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalPackagingTypeCode))]
 public enum ExternalPackagingType1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalPackagingType1Code
     [IsoId("_uIlXS_RYEeuLhpyIdtJzwg")]
     [Description(@"Packaging is high density polyethylene.")]
     HighDensityPolyethylene = ExternalPackagingTypeCode.HighDensityPolyethylene, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Packaging is low density polyethylene.
     /// Encoded/decoded by serializers as &quot;LDPE&quot;.
@@ -33,7 +35,7 @@ public enum ExternalPackagingType1Code
     [IsoId("_uIlXTvRYEeuLhpyIdtJzwg")]
     [Description(@"Packaging is low density polyethylene.")]
     LowDensityPolyethylene = ExternalPackagingTypeCode.LowDensityPolyethylene, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Packaging is linear low density polyethylene.
     /// Encoded/decoded by serializers as &quot;LLDP&quot;.
@@ -42,7 +44,7 @@ public enum ExternalPackagingType1Code
     [IsoId("_uIvIQvRYEeuLhpyIdtJzwg")]
     [Description(@"Packaging is linear low density polyethylene.")]
     LinearLowDensityPolyethylene = ExternalPackagingTypeCode.LinearLowDensityPolyethylene, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other packaging type not otherwise specified.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -51,5 +53,4 @@ public enum ExternalPackagingType1Code
     [IsoId("_uIvIRfRYEeuLhpyIdtJzwg")]
     [Description(@"Other packaging type not otherwise specified.")]
     OtherPackagingType = ExternalPackagingTypeCode.OtherPackagingType, // same ordinal as derivation source for type conversions
-    
 }

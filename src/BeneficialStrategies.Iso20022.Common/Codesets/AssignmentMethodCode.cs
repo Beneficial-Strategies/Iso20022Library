@@ -23,7 +23,7 @@ public enum AssignmentMethodCode
     [IsoId("_bfaAldp-Ed-ak6NoX_4Aeg_-1677400986")]
     [Description(@"Assignment was conducted randomly.")]
     Random,
-    
+
     /// <summary>
     /// Assignment was conducted on a prorata basis.
     /// Encoded/decoded by serializers as &quot;PROR&quot;.
@@ -32,5 +32,4 @@ public enum AssignmentMethodCode
     [IsoId("_bfaAltp-Ed-ak6NoX_4Aeg_-1652467505")]
     [Description(@"Assignment was conducted on a prorata basis.")]
     Prorata,
-    
 }

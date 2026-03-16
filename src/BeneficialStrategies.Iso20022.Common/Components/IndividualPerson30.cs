@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_07I4sV0fEeWFBqZ9f7Sd_g")]
 [DisplayName("Individual Person")]
-public partial record IndividualPerson30
+public record IndividualPerson30
 {
-    #nullable enable
-    
     /// <summary>
     /// First name of the person.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record IndividualPerson30
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? GivenName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? GivenName { get; init; }
+
     /// <summary>
     /// Second name of the person.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record IndividualPerson30
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MiddleName { get; init; }
+
     /// <summary>
     /// Name by which the party is known and which is usually used to identify that party.
     /// </summary>
@@ -45,17 +43,17 @@ public partial record IndividualPerson30
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Name { get; init; }
+
     /// <summary>
     /// Gender of the person.
     /// </summary>
     [IsoId("_1X2C110fEeWFBqZ9f7Sd_g")]
     [DisplayName("Gender")]
     [IsoXmlTag("Gndr")]
-    public GenderCode? Gender { get; init; } 
-    
+    public GenderCode? Gender { get; init; }
+
     /// <summary>
     /// Date on which the person is born.
     /// </summary>
@@ -63,9 +61,5 @@ public partial record IndividualPerson30
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? BirthDate { get; init; }
 }

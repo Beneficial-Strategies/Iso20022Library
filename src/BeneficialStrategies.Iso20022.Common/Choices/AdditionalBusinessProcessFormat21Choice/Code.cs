@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat21Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.AdditionalBusinessProcessFormat2
     /// </summary>
     [IsoId("_ptGmmTi7Eeydid5dcNPKvg")]
     [DisplayName("Code")]
-    public partial record Code : AdditionalBusinessProcessFormat21Choice_
+    public record Code : AdditionalBusinessProcessFormat21Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the additional business process linked to a corporate action event.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required AdditionalBusinessProcess10Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required AdditionalBusinessProcess10Code Value { get; init; }
     }
 }

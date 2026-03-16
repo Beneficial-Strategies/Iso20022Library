@@ -23,7 +23,7 @@ public enum LimitStatusCode
     [IsoId("_aecS09p-Ed-ak6NoX_4Aeg_231381285")]
     [Description(@"Limit is currently in effect.")]
     Enabled,
-    
+
     /// <summary>
     /// Limit is not currently in effect.
     /// Encoded/decoded by serializers as &quot;DISA&quot;.
@@ -32,7 +32,7 @@ public enum LimitStatusCode
     [IsoId("_aecS1Np-Ed-ak6NoX_4Aeg_231381286")]
     [Description(@"Limit is not currently in effect.")]
     Disabled,
-    
+
     /// <summary>
     /// Limit has been deleted or suspended.
     /// Encoded/decoded by serializers as &quot;DELD&quot;.
@@ -41,7 +41,7 @@ public enum LimitStatusCode
     [IsoId("_aecS1dp-Ed-ak6NoX_4Aeg_231381287")]
     [Description(@"Limit has been deleted or suspended.")]
     Deleted,
-    
+
     /// <summary>
     /// Limit has been asked for and is not yet enabled.
     /// Encoded/decoded by serializers as &quot;REQD&quot;.
@@ -50,5 +50,4 @@ public enum LimitStatusCode
     [IsoId("_aecS1tp-Ed-ak6NoX_4Aeg_231381288")]
     [Description(@"Limit has been asked for and is not yet enabled.")]
     Requested,
-    
 }

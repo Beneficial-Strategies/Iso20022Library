@@ -22,7 +22,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fItp-Ed-ak6NoX_4Aeg_545560156")]
     [Description(@"Approved capital.")]
     Approved,
-    
+
     /// <summary>
     /// Issued voting rights.
     /// Encoded/decoded by serializers as &quot;ISVR&quot;.
@@ -31,7 +31,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fI9p-Ed-ak6NoX_4Aeg_545563282")]
     [Description(@"Issued voting rights.")]
     IssuedVotingRights,
-    
+
     /// <summary>
     /// Maximum amount of increase.
     /// Encoded/decoded by serializers as &quot;MXIN&quot;.
@@ -40,7 +40,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fJNp-Ed-ak6NoX_4Aeg_546486650")]
     [Description(@"Maximum amount of increase.")]
     MaximumIncrease,
-    
+
     /// <summary>
     /// Outstanding capital.
     /// Encoded/decoded by serializers as &quot;OUTS&quot;.
@@ -49,7 +49,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fJdp-Ed-ak6NoX_4Aeg_547409678")]
     [Description(@"Outstanding capital.")]
     Outstanding,
-    
+
     /// <summary>
     /// Redeemed capital.
     /// Encoded/decoded by serializers as &quot;REDE&quot;.
@@ -58,7 +58,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fJtp-Ed-ak6NoX_4Aeg_554798278")]
     [Description(@"Redeemed capital.")]
     Redeemed,
-    
+
     /// <summary>
     /// Stated capital.
     /// Encoded/decoded by serializers as &quot;STCA&quot;.
@@ -67,7 +67,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fJ9p-Ed-ak6NoX_4Aeg_555721367")]
     [Description(@"Stated capital.")]
     StatedCapital,
-    
+
     /// <summary>
     /// Issued reserve capital.
     /// Encoded/decoded by serializers as &quot;TRSO&quot;.
@@ -76,7 +76,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fKNp-Ed-ak6NoX_4Aeg_556644310")]
     [Description(@"Issued reserve capital.")]
     TreasuryStock,
-    
+
     /// <summary>
     /// Contingent capital.
     /// Encoded/decoded by serializers as &quot;UISS&quot;.
@@ -85,7 +85,7 @@ public enum CapitalTypeCode
     [IsoId("_a11fKdp-Ed-ak6NoX_4Aeg_557567152")]
     [Description(@"Contingent capital.")]
     Unissued,
-    
+
     /// <summary>
     /// Withdrawn capital.
     /// Encoded/decoded by serializers as &quot;WTHD&quot;.
@@ -94,7 +94,7 @@ public enum CapitalTypeCode
     [IsoId("_a1-pENp-Ed-ak6NoX_4Aeg_572344351")]
     [Description(@"Withdrawn capital.")]
     Withdrawn,
-    
+
     /// <summary>
     /// Authorised capital.
     /// Encoded/decoded by serializers as &quot;AUTD&quot;.
@@ -103,7 +103,7 @@ public enum CapitalTypeCode
     [IsoId("_a1-pEdp-Ed-ak6NoX_4Aeg_573267379")]
     [Description(@"Authorised capital.")]
     Authorised,
-    
+
     /// <summary>
     /// In circulation.
     /// Encoded/decoded by serializers as &quot;ICIR&quot;.
@@ -112,7 +112,7 @@ public enum CapitalTypeCode
     [IsoId("_a1-pEtp-Ed-ak6NoX_4Aeg_574190900")]
     [Description(@"In circulation.")]
     InCirculation,
-    
+
     /// <summary>
     /// Issued capital.
     /// Encoded/decoded by serializers as &quot;ISUD&quot;.
@@ -121,7 +121,7 @@ public enum CapitalTypeCode
     [IsoId("_a1-pE9p-Ed-ak6NoX_4Aeg_576037973")]
     [Description(@"Issued capital.")]
     Issued,
-    
+
     /// <summary>
     /// Issued reserve capital.
     /// Encoded/decoded by serializers as &quot;IRCA&quot;.
@@ -130,5 +130,4 @@ public enum CapitalTypeCode
     [IsoId("_a1-pFNp-Ed-ak6NoX_4Aeg_583426997")]
     [Description(@"Issued reserve capital.")]
     IssuedReserveCapital,
-    
 }

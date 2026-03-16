@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InterestRateUsedForPaymentFormat9Choice.Rate))]
     [KnownType(typeof(InterestRateUsedForPaymentFormat9Choice.Amount))]
     [KnownType(typeof(InterestRateUsedForPaymentFormat9Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat9Choice.Rate),nameof(InterestRateUsedForPaymentFormat9Choice.Rate))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat9Choice.Amount),nameof(InterestRateUsedForPaymentFormat9Choice.Amount))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat9Choice.RateTypeAndAmountAndRateStatus),nameof(InterestRateUsedForPaymentFormat9Choice.RateTypeAndAmountAndRateStatus))]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat9Choice.Rate),
+        nameof(InterestRateUsedForPaymentFormat9Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat9Choice.Amount),
+        nameof(InterestRateUsedForPaymentFormat9Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat9Choice.RateTypeAndAmountAndRateStatus),
+        nameof(InterestRateUsedForPaymentFormat9Choice.RateTypeAndAmountAndRateStatus)
+    )]
     [IsoId("_cj-G-ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Interest Rate Used For Payment Format 9 Choice")]
-    public abstract partial record InterestRateUsedForPaymentFormat9Choice_
-    {
-    }
+    public abstract record InterestRateUsedForPaymentFormat9Choice_ { }
 }

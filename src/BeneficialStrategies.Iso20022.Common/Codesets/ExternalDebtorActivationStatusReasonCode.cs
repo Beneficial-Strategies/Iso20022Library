@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_pe4x5OIwEeqbls7Gk4-ckA")]
-[Description(@"Specifies the debtor activation status reason code, as published in an external debtor activation status reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the debtor activation status reason code, as published in an external debtor activation status reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalDebtorActivationStatusReason1Code))]
 public enum ExternalDebtorActivationStatusReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uvoJJvRYEeuLhpyIdtJzwg")]
     [Description(@"Already existing creditor.")]
     AlreadyExistingCreditor,
-    
+
     /// <summary>
     /// Duplication.
     /// Encoded/decoded by serializers as &quot;AM05&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uvoJKfRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication,
-    
+
     /// <summary>
     /// Invalid file format.
     /// Encoded/decoded by serializers as &quot;FF01&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uvxTEPRYEeuLhpyIdtJzwg")]
     [Description(@"Invalid file format.")]
     InvalidFileFormat,
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uvxTE_RYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference,
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -60,7 +62,7 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uvxTFvRYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason,
-    
+
     /// <summary>
     /// Invalid character set.
     /// Encoded/decoded by serializers as &quot;RR10&quot;.
@@ -69,7 +71,7 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uv7EEPRYEeuLhpyIdtJzwg")]
     [Description(@"Invalid character set.")]
     InvalidCharacterSet,
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -78,5 +80,4 @@ public enum ExternalDebtorActivationStatusReasonCode
     [IsoId("_uv7EE_RYEeuLhpyIdtJzwg")]
     [Description(@"Technical rejection.")]
     TechnicalRejection,
-    
 }

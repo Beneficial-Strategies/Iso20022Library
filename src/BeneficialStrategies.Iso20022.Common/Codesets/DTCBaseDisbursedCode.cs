@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1qBZgDL3EeKU9IrkkToqcw_183881059")]
-[Description(@"Specifies whether the calculation basis is on base (original) or disbursed (distributed) security.")]
+[Description(
+    @"Specifies whether the calculation basis is on base (original) or disbursed (distributed) security."
+)]
 [Derivations(typeof(DTCBaseDisbursed1Code))]
 public enum DTCBaseDisbursedCode
 {
@@ -23,7 +25,7 @@ public enum DTCBaseDisbursedCode
     [IsoId("_1qBZgTL3EeKU9IrkkToqcw_682874645")]
     [Description(@"Based on base security.")]
     Base,
-    
+
     /// <summary>
     /// Based on disbursed security.
     /// Encoded/decoded by serializers as &quot;DISB&quot;.
@@ -32,5 +34,4 @@ public enum DTCBaseDisbursedCode
     [IsoId("_1qBZgjL3EeKU9IrkkToqcw_-1428030677")]
     [Description(@"Based on disbursed security.")]
     Disbursed,
-    
 }

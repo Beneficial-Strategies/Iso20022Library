@@ -21,9 +21,11 @@ public enum SecuritiesBalanceType9Code
     /// </summary>
     [EnumMember(Value = "AVLB")]
     [IsoId("_ZC8lONp-Ed-ak6NoX_4Aeg_-1937993977")]
-    [Description(@"Balance of money or securities that is at the disposal of the account owner on the date specified.")]
+    [Description(
+        @"Balance of money or securities that is at the disposal of the account owner on the date specified."
+    )]
     Available = BalanceTypeCode.Available, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance of instructed position.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +34,7 @@ public enum SecuritiesBalanceType9Code
     [IsoId("_ZC8lOdp-Ed-ak6NoX_4Aeg_-1937993976")]
     [Description(@"Balance of instructed position.")]
     Elected = BalanceTypeCode.Elected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance of uninstructed position.
     /// Encoded/decoded by serializers as &quot;UNEL&quot;.
@@ -41,23 +43,26 @@ public enum SecuritiesBalanceType9Code
     [IsoId("_ZDFvINp-Ed-ak6NoX_4Aeg_-1937993948")]
     [Description(@"Balance of uninstructed position.")]
     Unelected = BalanceTypeCode.Unelected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance of financial instruments that are reserved for the distribution of the proceeds.
     /// Encoded/decoded by serializers as &quot;RDIS&quot;.
     /// </summary>
     [EnumMember(Value = "RDIS")]
     [IsoId("_ZDFvIdp-Ed-ak6NoX_4Aeg_-1937993947")]
-    [Description(@"Balance of financial instruments that are reserved for the distribution of the proceeds.")]
+    [Description(
+        @"Balance of financial instruments that are reserved for the distribution of the proceeds."
+    )]
     ReservedForDistribution = BalanceTypeCode.ReservedForDistribution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance of securities which are reserved temporarily in the SPA account before they will effectively be exchanged.
     /// Encoded/decoded by serializers as &quot;RREM&quot;.
     /// </summary>
     [EnumMember(Value = "RREM")]
     [IsoId("_ZDFvItp-Ed-ak6NoX_4Aeg_-1937993918")]
-    [Description(@"Balance of securities which are reserved temporarily in the SPA account before they will effectively be exchanged.")]
+    [Description(
+        @"Balance of securities which are reserved temporarily in the SPA account before they will effectively be exchanged."
+    )]
     ReservedForRemoval = BalanceTypeCode.ReservedForRemoval, // same ordinal as derivation source for type conversions
-    
 }

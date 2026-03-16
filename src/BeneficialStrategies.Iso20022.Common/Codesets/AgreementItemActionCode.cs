@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_OTgzMjc4-AOSNFX-8224496")]
-[Description(@"Specifies the type of action concerning registration information.|The default value is OPEN.")]
+[Description(
+    @"Specifies the type of action concerning registration information.|The default value is OPEN."
+)]
 [Derivations(typeof(AgreementItemAction1Code))]
 public enum AgreementItemActionCode
 {
@@ -24,7 +26,7 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTY3-AOSNFX-0262741L")]
     [Description(@"Deactivate agreement item.")]
     Deactivate,
-    
+
     /// <summary>
     /// Hold the agreement item.
     /// Encoded/decoded by serializers as &quot;HOLD&quot;.
@@ -33,7 +35,7 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTY2-AOSNFX-0262741L")]
     [Description(@"Hold the agreement item.")]
     Hold,
-    
+
     /// <summary>
     /// Modify agreement item information.
     /// Encoded/decoded by serializers as &quot;MDFY&quot;.
@@ -42,7 +44,7 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTY1-AOSNFX-0262740L")]
     [Description(@"Modify agreement item information.")]
     Modify,
-    
+
     /// <summary>
     /// Reactivate agreement item.
     /// Encoded/decoded by serializers as &quot;REAC&quot;.
@@ -51,7 +53,7 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTY4-AOSNFX-0262741L")]
     [Description(@"Reactivate agreement item.")]
     Reactivate,
-    
+
     /// <summary>
     /// Register item as new agreement.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -60,7 +62,7 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTY0-AOSNFX-0262740L")]
     [Description(@"Register item as new agreement.")]
     Register,
-    
+
     /// <summary>
     /// Send status with full agreement information details.
     /// Encoded/decoded by serializers as &quot;SYNC&quot;.
@@ -69,7 +71,7 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTcw-AOSNFX-0262741L")]
     [Description(@"Send status with full agreement information details.")]
     Synchronize,
-    
+
     /// <summary>
     /// Verify agreement item information.
     /// Encoded/decoded by serializers as &quot;VRFY&quot;.
@@ -78,5 +80,4 @@ public enum AgreementItemActionCode
     [IsoId("_OTMxOTY5-AOSNFX-0262741L")]
     [Description(@"Verify agreement item information.")]
     Verify,
-    
 }

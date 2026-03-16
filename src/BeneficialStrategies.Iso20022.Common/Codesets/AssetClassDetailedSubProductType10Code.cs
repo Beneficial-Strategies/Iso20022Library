@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_TEO2sQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type aluminium.")]
     Aluminium = AssetClassDetailedSubProductTypeCode.Aluminium, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type aluminium alloy.
     /// Encoded/decoded by serializers as &quot;ALUA&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_TLYAgQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type aluminium alloy.")]
     AluminiumAlloy = AssetClassDetailedSubProductTypeCode.AluminiumAlloy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type cobalt.
     /// Encoded/decoded by serializers as &quot;CBLT&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_TtvGsQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type cobalt.")]
     Cobalt = AssetClassDetailedSubProductTypeCode.Cobalt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type copper.
     /// Encoded/decoded by serializers as &quot;COPR&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_UcwI0Q2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type copper.")]
     Copper = AssetClassDetailedSubProductTypeCode.Copper, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     ///  Commodity attribute of type iron ore.
     /// Encoded/decoded by serializers as &quot;IRON&quot;.
@@ -59,7 +59,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_XdkOcQ2hEeW72qLtWESimw")]
     [Description(@" Commodity attribute of type iron ore.")]
     IronOre = AssetClassDetailedSubProductTypeCode.IronOre, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type molybdenum.
     /// Encoded/decoded by serializers as &quot;MOLY&quot;.
@@ -68,16 +68,18 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_YP_w8Q2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type molybdenum.")]
     Molybdenum = AssetClassDetailedSubProductTypeCode.Molybdenum, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type NASAAC (North American Special Aluminum Alloy Contract).
     /// Encoded/decoded by serializers as &quot;NASC&quot;.
     /// </summary>
     [EnumMember(Value = "NASC")]
     [IsoId("_b7pjUQ2hEeW72qLtWESimw")]
-    [Description(@"Commodity attribute of type NASAAC (North American Special Aluminum Alloy Contract).")]
+    [Description(
+        @"Commodity attribute of type NASAAC (North American Special Aluminum Alloy Contract)."
+    )]
     NASAAC = AssetClassDetailedSubProductTypeCode.NASAAC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type nickel.
     /// Encoded/decoded by serializers as &quot;NICK&quot;.
@@ -86,7 +88,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_cfgeUQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type nickel.")]
     Nickel = AssetClassDetailedSubProductTypeCode.Nickel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type steel.
     /// Encoded/decoded by serializers as &quot;STEL&quot;.
@@ -95,7 +97,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_fS7oMQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type steel.")]
     Steel = AssetClassDetailedSubProductTypeCode.Steel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type tin.
     /// Encoded/decoded by serializers as &quot;TINN&quot;.
@@ -104,7 +106,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_gj3EkQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type tin.")]
     Tin = AssetClassDetailedSubProductTypeCode.Tin, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type zinc.
     /// Encoded/decoded by serializers as &quot;ZINC&quot;.
@@ -113,7 +115,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_h6mOAQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type zinc.")]
     Zinc = AssetClassDetailedSubProductTypeCode.Zinc, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -122,7 +124,7 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_jKfIkQ2hEeW72qLtWESimw")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type lead.
     /// Encoded/decoded by serializers as &quot;LEAD&quot;.
@@ -131,5 +133,4 @@ public enum AssetClassDetailedSubProductType10Code
     [IsoId("_j32xUVrDEeWN79Bl6BUd3g")]
     [Description(@"Commodity attribute of type lead.")]
     Lead = AssetClassDetailedSubProductTypeCode.Lead, // same ordinal as derivation source for type conversions
-    
 }

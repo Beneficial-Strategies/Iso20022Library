@@ -23,7 +23,7 @@ public enum SWIFTServiceLevelCode
     [IsoId("_ZRGV-Np-Ed-ak6NoX_4Aeg_1129333404")]
     [Description(@"Credit transfer is to be processed according to the SWIFTPay Service Level.")]
     SWIFTPay,
-    
+
     /// <summary>
     /// Credit transfer is to be processed according to the Priority Service Level.
     /// Encoded/decoded by serializers as &quot;SPRI&quot;.
@@ -32,7 +32,7 @@ public enum SWIFTServiceLevelCode
     [IsoId("_ZRQG8Np-Ed-ak6NoX_4Aeg_1129333405")]
     [Description(@"Credit transfer is to be processed according to the Priority Service Level.")]
     Priority,
-    
+
     /// <summary>
     /// Credit transfer is to be processed according to the Standard Service Level.
     /// Encoded/decoded by serializers as &quot;SSTD&quot;.
@@ -41,5 +41,4 @@ public enum SWIFTServiceLevelCode
     [IsoId("_ZRQG8dp-Ed-ak6NoX_4Aeg_1129333422")]
     [Description(@"Credit transfer is to be processed according to the Standard Service Level.")]
     Standard,
-    
 }

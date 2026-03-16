@@ -30,7 +30,9 @@ public enum TransactionOperationType13Code
     /// </summary>
     [EnumMember(Value = "EROR")]
     [IsoId("")]
-    [Description(@"Cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to regulatory reporting requirements but was reported to a regulatory authority by mistake or a cancellation of duplicate report.")]
+    [Description(
+        @"Cancellation of a wrongly submitted entire report in case the contract never came into existence or was not subject to regulatory reporting requirements but was reported to a regulatory authority by mistake or a cancellation of duplicate report."
+    )]
     Error = TransactionOperationTypeV2Code.Error, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -50,5 +52,4 @@ public enum TransactionOperationType13Code
     [IsoId("")]
     [Description(@"Transaction is a new transaction.")]
     NewTransaction = TransactionOperationTypeV2Code.NewTransaction, // same ordinal as derivation source for type conversions
-
 }

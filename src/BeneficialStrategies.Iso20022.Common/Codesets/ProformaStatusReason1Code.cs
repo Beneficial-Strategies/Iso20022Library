@@ -23,7 +23,7 @@ public enum ProformaStatusReason1Code
     [IsoId("_kDXs0U_vEeaB8-OWTiMVrQ")]
     [Description(@"Modification to the account data is in process.")]
     ModificationInProcess = ProformaStatusReasonCode.ModificationInProcess, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account opening is waiting for rights holder information.
     /// Encoded/decoded by serializers as &quot;RIGH&quot;.
@@ -32,5 +32,4 @@ public enum ProformaStatusReason1Code
     [IsoId("_kWRasU_vEeaB8-OWTiMVrQ")]
     [Description(@"Account opening is waiting for rights holder information.")]
     Rights = ProformaStatusReasonCode.Rights, // same ordinal as derivation source for type conversions
-    
 }

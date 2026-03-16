@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FailedSettlementStatus2Choice.Reason))]
     [KnownType(typeof(FailedSettlementStatus2Choice.DataSourceScheme))]
     [KnownType(typeof(FailedSettlementStatus2Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(FailedSettlementStatus2Choice.Reason),nameof(FailedSettlementStatus2Choice.Reason))]
-    [JsonDerivedType(typeof(FailedSettlementStatus2Choice.DataSourceScheme),nameof(FailedSettlementStatus2Choice.DataSourceScheme))]
-    [JsonDerivedType(typeof(FailedSettlementStatus2Choice.NoSpecifiedReason),nameof(FailedSettlementStatus2Choice.NoSpecifiedReason))]
+    [JsonDerivedType(
+        typeof(FailedSettlementStatus2Choice.Reason),
+        nameof(FailedSettlementStatus2Choice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(FailedSettlementStatus2Choice.DataSourceScheme),
+        nameof(FailedSettlementStatus2Choice.DataSourceScheme)
+    )]
+    [JsonDerivedType(
+        typeof(FailedSettlementStatus2Choice.NoSpecifiedReason),
+        nameof(FailedSettlementStatus2Choice.NoSpecifiedReason)
+    )]
     [IsoId("_DOTJ4SY5EeW_ZNn8gbfY7Q")]
     [DisplayName("Failed Settlement Status 2 Choice")]
-    public abstract partial record FailedSettlementStatus2Choice_
-    {
-    }
+    public abstract record FailedSettlementStatus2Choice_ { }
 }

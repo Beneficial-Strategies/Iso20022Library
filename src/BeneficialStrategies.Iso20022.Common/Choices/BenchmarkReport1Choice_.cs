@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(BenchmarkReport1Choice.Create))]
     [KnownType(typeof(BenchmarkReport1Choice.Update))]
     [KnownType(typeof(BenchmarkReport1Choice.Cancellation))]
-    [JsonDerivedType(typeof(BenchmarkReport1Choice.Create),nameof(BenchmarkReport1Choice.Create))]
-    [JsonDerivedType(typeof(BenchmarkReport1Choice.Update),nameof(BenchmarkReport1Choice.Update))]
-    [JsonDerivedType(typeof(BenchmarkReport1Choice.Cancellation),nameof(BenchmarkReport1Choice.Cancellation))]
+    [JsonDerivedType(typeof(BenchmarkReport1Choice.Create), nameof(BenchmarkReport1Choice.Create))]
+    [JsonDerivedType(typeof(BenchmarkReport1Choice.Update), nameof(BenchmarkReport1Choice.Update))]
+    [JsonDerivedType(
+        typeof(BenchmarkReport1Choice.Cancellation),
+        nameof(BenchmarkReport1Choice.Cancellation)
+    )]
     [IsoId("_P2VfczrWEeedCZZ8dIPp6g")]
     [DisplayName("Benchmark Report 1 Choice")]
-    public abstract partial record BenchmarkReport1Choice_
-    {
-    }
+    public abstract record BenchmarkReport1Choice_ { }
 }

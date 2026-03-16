@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio9Choice
 {
     /// <summary>
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio9Choice
     /// </summary>
     [IsoId("_ZYn_welqEeuvhrZwLF0fDg")]
     [DisplayName("Tax Efficient Product")]
-    public partial record TaxEfficientProduct : FundPortfolio9Choice_
+    public record TaxEfficientProduct : FundPortfolio9Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Type of tax efficient product, for example, an individual savings account (ISA) in the UK.
         /// </summary>
         [IsoId("_PogP4ZNNEemQB_8XA98K0Q")]
         [DisplayName("Tax Efficient Product Type")]
         [IsoXmlTag("TaxEffcntPdctTp")]
-        public required TaxEfficientProductType2Choice_ TaxEfficientProductType { get; init; } 
-        
+        public required TaxEfficientProductType2Choice_ TaxEfficientProductType { get; init; }
+
         /// <summary>
         /// Indicates that all the current fiscal year’s products are to be included.
         /// </summary>
@@ -33,26 +31,22 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio9Choice
         [DisplayName("Current Year")]
         [IsoXmlTag("CurYr")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? CurrentYear { get; init; } 
-        
+        public IsoYesNoIndicator? CurrentYear { get; init; }
+
         /// <summary>
         /// Investment plans issued during previous years.
         /// </summary>
         [IsoId("_PogP45NNEemQB_8XA98K0Q")]
         [DisplayName("Previous Years")]
         [IsoXmlTag("PrvsYrs")]
-        public PreviousYear2Choice_? PreviousYears { get; init; } 
-        
+        public PreviousYear2Choice_? PreviousYears { get; init; }
+
         /// <summary>
         /// Additional information about the tax efficient product.
         /// </summary>
         [IsoId("_PogP55NNEemQB_8XA98K0Q")]
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
-        public AdditionalInformation15? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        public AdditionalInformation15? AdditionalInformation { get; init; }
     }
 }

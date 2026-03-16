@@ -23,7 +23,7 @@ public enum SenderTriggerCode
     [IsoId("_jSXz4MmLEeWAGphE2LvqeA")]
     [Description(@"File generated based on a date/time event.")]
     DateTime,
-    
+
     /// <summary>
     /// File generated based on a forced event (file generation has been forced).
     /// Encoded/decoded by serializers as &quot;FRCD&quot;.
@@ -32,7 +32,7 @@ public enum SenderTriggerCode
     [IsoId("_oAGHQMmLEeWAGphE2LvqeA")]
     [Description(@"File generated based on a forced event (file generation has been forced).")]
     Forced,
-    
+
     /// <summary>
     /// File generated based on a manual event (file has been
     /// generated manually).
@@ -42,14 +42,15 @@ public enum SenderTriggerCode
     [IsoId("_qjgfMMmLEeWAGphE2LvqeA")]
     [Description(@"File generated based on a manual event (file has been|generated manually).")]
     Manual,
-    
+
     /// <summary>
     /// File generated based on a signature event (file has the minimum required signature from the sender).
     /// Encoded/decoded by serializers as &quot;SFSG&quot;.
     /// </summary>
     [EnumMember(Value = "SFSG")]
     [IsoId("_uTR8kMmLEeWAGphE2LvqeA")]
-    [Description(@"File generated based on a signature event (file has the minimum required signature from the sender).")]
+    [Description(
+        @"File generated based on a signature event (file has the minimum required signature from the sender)."
+    )]
     SufficientlySigned,
-    
 }

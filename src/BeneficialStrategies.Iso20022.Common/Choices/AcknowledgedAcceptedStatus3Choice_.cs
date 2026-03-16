@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AcknowledgedAcceptedStatus3Choice.NoSpecifiedReason))]
     [KnownType(typeof(AcknowledgedAcceptedStatus3Choice.Reason))]
-    [JsonDerivedType(typeof(AcknowledgedAcceptedStatus3Choice.NoSpecifiedReason),nameof(AcknowledgedAcceptedStatus3Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(AcknowledgedAcceptedStatus3Choice.Reason),nameof(AcknowledgedAcceptedStatus3Choice.Reason))]
+    [JsonDerivedType(
+        typeof(AcknowledgedAcceptedStatus3Choice.NoSpecifiedReason),
+        nameof(AcknowledgedAcceptedStatus3Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(AcknowledgedAcceptedStatus3Choice.Reason),
+        nameof(AcknowledgedAcceptedStatus3Choice.Reason)
+    )]
     [IsoId("_UZOBBNp-Ed-ak6NoX_4Aeg_331394466")]
     [DisplayName("Acknowledged Accepted Status 3 Choice")]
-    public abstract partial record AcknowledgedAcceptedStatus3Choice_
-    {
-    }
+    public abstract record AcknowledgedAcceptedStatus3Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xUfkRUgtEeaGKYpLDboHPQ")]
 [DisplayName("Debit Authorisation")]
-public partial record DebitAuthorisation2
+public record DebitAuthorisation2
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the reason for the cancellation request.
     /// </summary>
     [IsoId("_xeOH00gtEeaGKYpLDboHPQ")]
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
-    public required CancellationReason33Choice_ CancellationReason { get; init; } 
-    
+    public required CancellationReason33Choice_ CancellationReason { get; init; }
+
     /// <summary>
     /// Amount of money requested for debit authorisation.
     /// </summary>
     [IsoId("_xeOH1UgtEeaGKYpLDboHPQ")]
     [DisplayName("Amount To Debit")]
     [IsoXmlTag("AmtToDbt")]
-    public ActiveOrHistoricCurrencyAndAmount? AmountToDebit { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? AmountToDebit { get; init; }
+
     /// <summary>
     /// Value date for debiting the amount.
     /// </summary>
@@ -41,8 +39,8 @@ public partial record DebitAuthorisation2
     [DisplayName("Value Date To Debit")]
     [IsoXmlTag("ValDtToDbt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDateToDebit { get; init; } 
-    
+    public IsoISODate? ValueDateToDebit { get; init; }
+
     /// <summary>
     /// Further details on the cancellation request reason.
     /// </summary>
@@ -50,10 +48,6 @@ public partial record DebitAuthorisation2
     [DisplayName("Additional Cancellation Reason Information")]
     [IsoXmlTag("AddtlCxlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? AdditionalCancellationReasonInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? AdditionalCancellationReasonInformation { get; init; }
 }

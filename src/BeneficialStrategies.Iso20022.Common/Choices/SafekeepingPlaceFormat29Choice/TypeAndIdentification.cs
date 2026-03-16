@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat29Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat29Choice
     /// </summary>
     [IsoId("_XqXF8bXEEeiTob_PrFFUxA")]
     [DisplayName("Type And Identification")]
-    public partial record TypeAndIdentification : SafekeepingPlaceFormat29Choice_
+    public record TypeAndIdentification : SafekeepingPlaceFormat29Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Place of safekeeping as a code.
         /// </summary>
         [IsoId("_W1QC0bXEEeiTob_PrFFUxA")]
         [DisplayName("Safekeeping Place Type")]
         [IsoXmlTag("SfkpgPlcTp")]
-        public required SafekeepingPlace1Code SafekeepingPlaceType { get; init; } 
-        
+        public required SafekeepingPlace1Code SafekeepingPlaceType { get; init; }
+
         /// <summary>
         /// Place of safekeeping.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat29Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-        public required IsoAnyBICDec2014Identifier Identification { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoAnyBICDec2014Identifier Identification { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum PaymentTime4Code
     [IsoId("_w_H1ERVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment on receipt of invoice.")]
     PaymentOnReceiptOfInvoice = PaymentTimeCode.PaymentOnReceiptOfInvoice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment on delivery.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,7 +32,7 @@ public enum PaymentTime4Code
     [IsoId("_xGRl8RVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment on delivery.")]
     PaymentOnDelivery = PaymentTimeCode.PaymentOnDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment at end of period after shipment date.
     /// Encoded/decoded by serializers as &quot;EPSD&quot;.
@@ -41,7 +41,7 @@ public enum PaymentTime4Code
     [IsoId("_xPEVkRVeEeOrY9qSHVspCA")]
     [Description(@"Payment at end of period after shipment date.")]
     EndOfPeriodAfterShipmentDate = PaymentTimeCode.EndOfPeriodAfterShipmentDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment at end of period after receipt of invoice.
     /// Encoded/decoded by serializers as &quot;EPRR&quot;.
@@ -50,7 +50,7 @@ public enum PaymentTime4Code
     [IsoId("_xYA2MRVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment at end of period after receipt of invoice.")]
     EndOfPeriodAfterReceipt = PaymentTimeCode.EndOfPeriodAfterReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment at end of period after purchase order date.
     /// Encoded/decoded by serializers as &quot;EPPO&quot;.
@@ -59,7 +59,7 @@ public enum PaymentTime4Code
     [IsoId("_xgDX4RVeEeOrY9qSHVspCA")]
     [Description(@"Payment at end of period after purchase order date.")]
     EndOfPeriodAfterPurchaseOrderDate = PaymentTimeCode.EndOfPeriodAfterPurchaseOrderDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment at end of period after invoice date.
     /// Encoded/decoded by serializers as &quot;EPIN&quot;.
@@ -68,7 +68,7 @@ public enum PaymentTime4Code
     [IsoId("_xqyBMRVeEeOrY9qSHVspCA")]
     [Description(@"Payment at end of period after invoice date.")]
     EndOfPeriodAfterInvoiceDate = PaymentTimeCode.EndOfPeriodAfterInvoiceDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment at end of period after end of month of receipt of invoice.
     /// Encoded/decoded by serializers as &quot;PRMR&quot;.
@@ -77,7 +77,7 @@ public enum PaymentTime4Code
     [IsoId("_x1EloRVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment at end of period after end of month of receipt of invoice.")]
     EndOfPeriodAfterEndOfReceiptMonth = PaymentTimeCode.EndOfPeriodAfterEndOfReceiptMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment at end of period after end of month of delivery.
     /// Encoded/decoded by serializers as &quot;PRMD&quot;.
@@ -86,7 +86,7 @@ public enum PaymentTime4Code
     [IsoId("_x8OWgRVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment at end of period after end of month of delivery.")]
     EndOfPeriodAfterEndOfDeliveryMonth = PaymentTimeCode.EndOfPeriodAfterEndOfDeliveryMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment at end of period after delivery.
     /// Encoded/decoded by serializers as &quot;EPRD&quot;.
@@ -95,7 +95,7 @@ public enum PaymentTime4Code
     [IsoId("_yDYHYRVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment at end of period after delivery.")]
     EndOfPeriodAfterDelivery = PaymentTimeCode.EndOfPeriodAfterDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment at end of period after baseline establishment date.
     /// Encoded/decoded by serializers as &quot;EPBE&quot;.
@@ -104,7 +104,7 @@ public enum PaymentTime4Code
     [IsoId("_yKOWQRVeEeOrY9qSHVspCA")]
     [Description(@"Payment at end of period after baseline establishment date.")]
     EndOfPeriodAfterBaselineEstablishment = PaymentTimeCode.EndOfPeriodAfterBaselineEstablishment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment at end of month of receipt of invoice.
     /// Encoded/decoded by serializers as &quot;EMTR&quot;.
@@ -113,7 +113,7 @@ public enum PaymentTime4Code
     [IsoId("_yRO9MRVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment at end of month of receipt of invoice.")]
     EndOfMonthOfReceipt = PaymentTimeCode.EndOfMonthOfReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code for payment at end of month of delivery.
     /// Encoded/decoded by serializers as &quot;EMTD&quot;.
@@ -122,5 +122,4 @@ public enum PaymentTime4Code
     [IsoId("_yYFMERVeEeOrY9qSHVspCA")]
     [Description(@"Code for payment at end of month of delivery.")]
     EndOfMonthOfDelivery = PaymentTimeCode.EndOfMonthOfDelivery, // same ordinal as derivation source for type conversions
-    
 }

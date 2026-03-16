@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TToR8Np-Ed-ak6NoX_4Aeg_-2110798678")]
 [DisplayName("Equalisation")]
-public partial record Equalisation1
+public record Equalisation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount of money resulting from the calculation of the equalisation.
     /// </summary>
     [IsoId("_TToR8dp-Ed-ak6NoX_4Aeg_-2039690036")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveOrHistoricCurrencyAndAmount? Amount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? Amount { get; init; }
+
     /// <summary>
     /// Rate used for calculation of the equalisation.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record Equalisation1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? Rate { get; init; }
 }

@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RatioFormat18Choice.AmountToAmount))]
     [KnownType(typeof(RatioFormat18Choice.AmountToQuantity))]
     [KnownType(typeof(RatioFormat18Choice.QuantityToAmount))]
-    [JsonDerivedType(typeof(RatioFormat18Choice.QuantityToQuantity),nameof(RatioFormat18Choice.QuantityToQuantity))]
-    [JsonDerivedType(typeof(RatioFormat18Choice.NotSpecifiedRate),nameof(RatioFormat18Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(RatioFormat18Choice.AmountToAmount),nameof(RatioFormat18Choice.AmountToAmount))]
-    [JsonDerivedType(typeof(RatioFormat18Choice.AmountToQuantity),nameof(RatioFormat18Choice.AmountToQuantity))]
-    [JsonDerivedType(typeof(RatioFormat18Choice.QuantityToAmount),nameof(RatioFormat18Choice.QuantityToAmount))]
+    [JsonDerivedType(
+        typeof(RatioFormat18Choice.QuantityToQuantity),
+        nameof(RatioFormat18Choice.QuantityToQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(RatioFormat18Choice.NotSpecifiedRate),
+        nameof(RatioFormat18Choice.NotSpecifiedRate)
+    )]
+    [JsonDerivedType(
+        typeof(RatioFormat18Choice.AmountToAmount),
+        nameof(RatioFormat18Choice.AmountToAmount)
+    )]
+    [JsonDerivedType(
+        typeof(RatioFormat18Choice.AmountToQuantity),
+        nameof(RatioFormat18Choice.AmountToQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(RatioFormat18Choice.QuantityToAmount),
+        nameof(RatioFormat18Choice.QuantityToAmount)
+    )]
     [IsoId("_7Z03EUEKEeWVgfuHGaKtRQ")]
     [DisplayName("Ratio Format 18 Choice")]
-    public abstract partial record RatioFormat18Choice_
-    {
-    }
+    public abstract record RatioFormat18Choice_ { }
 }

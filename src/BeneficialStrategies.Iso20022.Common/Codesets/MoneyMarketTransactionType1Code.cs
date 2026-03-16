@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_AaCp4JfsEeSfnc-VXAEapg")]
-[Description(@"Specifies the transaction type used in the money market statistical reporting for the secured market.")]
+[Description(
+    @"Specifies the transaction type used in the money market statistical reporting for the secured market."
+)]
 [DerivedFrom(typeof(MoneyMarketTransactionTypeCode))]
 public enum MoneyMarketTransactionType1Code
 {
@@ -23,7 +25,7 @@ public enum MoneyMarketTransactionType1Code
     [IsoId("_IwD5oZfsEeSfnc-VXAEapg")]
     [Description(@"Transaction is a borrowing.")]
     CashBorrowing = MoneyMarketTransactionTypeCode.CashBorrowing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a lending.
     /// Encoded/decoded by serializers as &quot;LEND&quot;.
@@ -32,5 +34,4 @@ public enum MoneyMarketTransactionType1Code
     [IsoId("_I4gD8ZfsEeSfnc-VXAEapg")]
     [Description(@"Transaction is a lending.")]
     CashLending = MoneyMarketTransactionTypeCode.CashLending, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     /// </summary>
     [IsoId("_PWk1NmHcEeGrBqfAqyy96Q")]
     [DisplayName("Original Transaction Number")]
-    public partial record OriginalTransactionNumber : SearchCriteria1Choice_
+    public record OriginalTransactionNumber : SearchCriteria1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Idetifies the transaction number.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Number")]
         [IsoXmlTag("Nb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Number { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Number { get; init; }
+
         /// <summary>
         /// Identifies the type of information request related to an original transaction number as a code.
         /// </summary>
@@ -34,8 +32,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
         public SimpleValueList<TransactionRequestType1Code> Type { get; init; } = [];
+
         // ID for the above is _wc1usWHgEeGrBqfAqyy96Q
-        
+
         /// <summary>
         /// Additional information, in free text form, to complement the requested information.
         /// </summary>
@@ -43,11 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max500Text)]
-        [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-        public IsoMax500Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 500, MinimumLength = 1)]
+        public IsoMax500Text? AdditionalInformation { get; init; }
     }
 }

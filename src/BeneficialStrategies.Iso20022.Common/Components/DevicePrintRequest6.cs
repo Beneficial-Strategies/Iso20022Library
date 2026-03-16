@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,46 +14,40 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4ozh4ZCTEe6zroekBXoFoQ")]
 [DisplayName("Device Print Request6")]
-public partial record DevicePrintRequest6
+public record DevicePrintRequest6
 {
-    #nullable enable
-
     /// <summary>
     /// Document Qualifier.
     /// </summary>
     [DisplayName("Document Qualifier")]
     [IsoXmlTag("DocQlfr")]
-    public required DocumentType7Code DocumentQualifier { get; init; } 
+    public required DocumentType7Code DocumentQualifier { get; init; }
 
     /// <summary>
     /// Integrated Print Flag.
     /// </summary>
     [DisplayName("Integrated Print Flag")]
     [IsoXmlTag("IntgrtdPrtFlg")]
-    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; } 
+    public IsoTrueFalseIndicator? IntegratedPrintFlag { get; init; }
 
     /// <summary>
     /// Output Content.
     /// </summary>
     [DisplayName("Output Content")]
     [IsoXmlTag("OutptCntt")]
-    public required ActionMessage11 OutputContent { get; init; } 
+    public required ActionMessage11 OutputContent { get; init; }
 
     /// <summary>
     /// Required Signature Flag.
     /// </summary>
     [DisplayName("Required Signature Flag")]
     [IsoXmlTag("ReqrdSgntrFlg")]
-    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; } 
+    public IsoTrueFalseIndicator? RequiredSignatureFlag { get; init; }
 
     /// <summary>
     /// Response Mode.
     /// </summary>
     [DisplayName("Response Mode")]
     [IsoXmlTag("RspnMd")]
-    public required ResponseMode2Code ResponseMode { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ResponseMode2Code ResponseMode { get; init; }
 }

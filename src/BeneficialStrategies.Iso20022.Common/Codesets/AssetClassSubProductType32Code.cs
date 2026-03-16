@@ -23,5 +23,4 @@ public enum AssetClassSubProductType32Code
     [IsoId("_RB1uw1rdEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type wet freight.")]
     Wet = AssetClassSubProductTypeCode.Wet, // same ordinal as derivation source for type conversions
-    
 }

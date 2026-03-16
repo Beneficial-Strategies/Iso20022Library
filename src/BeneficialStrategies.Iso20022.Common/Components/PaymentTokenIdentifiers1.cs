@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PxXUcGkhEeSTIuB9A-QJ6g")]
 [DisplayName("Payment Token Identifiers")]
-public partial record PaymentTokenIdentifiers1
+public record PaymentTokenIdentifiers1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifier of the token provider.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PaymentTokenIdentifiers1
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text ProviderIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text ProviderIdentification { get; init; }
+
     /// <summary>
     /// Identifier of the token requestor.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record PaymentTokenIdentifiers1
     [DisplayName("Requestor Identification")]
     [IsoXmlTag("RqstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text RequestorIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text RequestorIdentification { get; init; }
 }

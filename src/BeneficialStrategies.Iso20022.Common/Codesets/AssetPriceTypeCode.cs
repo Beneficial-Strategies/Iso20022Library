@@ -23,7 +23,7 @@ public enum AssetPriceTypeCode
     [IsoId("_N3C1EBsTEeWhp-Wous5jzA")]
     [Description(@"Argus / Mc Closkey price.")]
     ArgusMcCloskey,
-    
+
     /// <summary>
     /// Baltic price.
     /// Encoded/decoded by serializers as &quot;BLTC&quot;.
@@ -32,7 +32,7 @@ public enum AssetPriceTypeCode
     [IsoId("_N-VI0BsTEeWhp-Wous5jzA")]
     [Description(@"Baltic price.")]
     Baltic,
-    
+
     /// <summary>
     /// Exchange price.
     /// Encoded/decoded by serializers as &quot;EXOF&quot;.
@@ -41,7 +41,7 @@ public enum AssetPriceTypeCode
     [IsoId("_OARCgBsTEeWhp-Wous5jzA")]
     [Description(@"Exchange price.")]
     Exchange,
-    
+
     /// <summary>
     /// Global coal price.
     /// Encoded/decoded by serializers as &quot;GBCL&quot;.
@@ -50,7 +50,7 @@ public enum AssetPriceTypeCode
     [IsoId("_OCDLMBsTEeWhp-Wous5jzA")]
     [Description(@"Global coal price.")]
     GlobalCoal,
-    
+
     /// <summary>
     /// IHS Mc Closkey price.
     /// Encoded/decoded by serializers as &quot;IHSM&quot;.
@@ -59,7 +59,7 @@ public enum AssetPriceTypeCode
     [IsoId("_OD_E4BsTEeWhp-Wous5jzA")]
     [Description(@"IHS Mc Closkey price.")]
     IHSMcCloskey,
-    
+
     /// <summary>
     /// Platts price.
     /// Encoded/decoded by serializers as &quot;PLAT&quot;.
@@ -68,7 +68,7 @@ public enum AssetPriceTypeCode
     [IsoId("_OFnckBsTEeWhp-Wous5jzA")]
     [Description(@"Platts price.")]
     Platts,
-    
+
     /// <summary>
     /// Other price.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,5 +77,4 @@ public enum AssetPriceTypeCode
     [IsoId("_OHjWQBsTEeWhp-Wous5jzA")]
     [Description(@"Other price.")]
     Other,
-    
 }

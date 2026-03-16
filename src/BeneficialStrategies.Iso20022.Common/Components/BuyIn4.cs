@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7xh9US9WEeS94oXWDaBauA")]
 [DisplayName("Buy In")]
-public partial record BuyIn4
+public record BuyIn4
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the message is a warning only or a notification.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record BuyIn4
     [DisplayName("Warning Indicator")]
     [IsoXmlTag("WrngInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WarningIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? WarningIndicator { get; init; }
+
     /// <summary>
     /// Provides the date at which the buy-in will occur.
     /// </summary>
     [IsoId("_8D9KEy9WEeS94oXWDaBauA")]
     [DisplayName("Expected Buy In Date")]
     [IsoXmlTag("XpctdBuyInDt")]
-    public required DateFormat15Choice_ ExpectedBuyInDate { get; init; } 
-    
+    public required DateFormat15Choice_ ExpectedBuyInDate { get; init; }
+
     /// <summary>
     /// Identifies the latest date by which the buy-in operation can be cancelled.
     /// </summary>
@@ -42,8 +40,8 @@ public partial record BuyIn4
     [DisplayName("Cancellation Limit Date")]
     [IsoXmlTag("CxlLmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CancellationLimitDate { get; init; } 
-    
+    public IsoISODate? CancellationLimitDate { get; init; }
+
     /// <summary>
     /// Identifies the date by which the buy-in operation is reversed by the CCP.
     /// </summary>
@@ -51,9 +49,5 @@ public partial record BuyIn4
     [DisplayName("Buy In Reversion Date")]
     [IsoXmlTag("BuyInRvrsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BuyInReversionDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? BuyInReversionDate { get; init; }
 }

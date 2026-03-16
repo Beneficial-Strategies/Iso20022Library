@@ -23,7 +23,7 @@ public enum TriggerPriceType1Code
     [IsoId("_Yv34N9p-Ed-ak6NoX_4Aeg_-319323277")]
     [Description(@"Trigger is compared to best offer.")]
     BestOffer = TriggerPriceTypeCode.BestOffer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger is compared to last trade.
     /// Encoded/decoded by serializers as &quot;LATR&quot;.
@@ -32,7 +32,7 @@ public enum TriggerPriceType1Code
     [IsoId("_YwBCINp-Ed-ak6NoX_4Aeg_-319323259")]
     [Description(@"Trigger is compared to last trade.")]
     LastTrade = TriggerPriceTypeCode.LastTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger is compared to best bid.
     /// Encoded/decoded by serializers as &quot;BEBI&quot;.
@@ -41,7 +41,7 @@ public enum TriggerPriceType1Code
     [IsoId("_YwBCIdp-Ed-ak6NoX_4Aeg_-319323258")]
     [Description(@"Trigger is compared to best bid.")]
     BestBid = TriggerPriceTypeCode.BestBid, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger is compared to best bid or last trade.
     /// Encoded/decoded by serializers as &quot;BBLT&quot;.
@@ -50,7 +50,7 @@ public enum TriggerPriceType1Code
     [IsoId("_YwBCItp-Ed-ak6NoX_4Aeg_-319323234")]
     [Description(@"Trigger is compared to best bid or last trade.")]
     BestBidOrLastTrade = TriggerPriceTypeCode.BestBidOrLastTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger is compared to best offer or last trade.
     /// Encoded/decoded by serializers as &quot;BOLT&quot;.
@@ -59,7 +59,7 @@ public enum TriggerPriceType1Code
     [IsoId("_YwBCI9p-Ed-ak6NoX_4Aeg_-319323217")]
     [Description(@"Trigger is compared to best offer or last trade.")]
     BestOfferOrLastTrade = TriggerPriceTypeCode.BestOfferOrLastTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger is compared to best mid.
     /// Encoded/decoded by serializers as &quot;BEMI&quot;.
@@ -68,5 +68,4 @@ public enum TriggerPriceType1Code
     [IsoId("_YwBCJNp-Ed-ak6NoX_4Aeg_-319323199")]
     [Description(@"Trigger is compared to best mid.")]
     BestMid = TriggerPriceTypeCode.BestMid, // same ordinal as derivation source for type conversions
-    
 }

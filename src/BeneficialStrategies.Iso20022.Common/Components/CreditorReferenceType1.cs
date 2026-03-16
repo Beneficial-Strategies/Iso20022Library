@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T31ySNp-Ed-ak6NoX_4Aeg_96960704")]
 [DisplayName("Creditor Reference Type")]
-public partial record CreditorReferenceType1
+public record CreditorReferenceType1
 {
-    #nullable enable
-    
     /// <summary>
     /// Coded creditor reference type.
     /// </summary>
     [IsoId("_T31ySdp-Ed-ak6NoX_4Aeg_96961291")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required DocumentType3Code Code { get; init; } 
-    
+    public required DocumentType3Code Code { get; init; }
+
     /// <summary>
     /// Creditor reference type not avilable in a coded format.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record CreditorReferenceType1
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Proprietary { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Proprietary { get; init; }
+
     /// <summary>
     /// Identification of the issuer of the credit reference type.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record CreditorReferenceType1
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Issuer { get; init; }
 }

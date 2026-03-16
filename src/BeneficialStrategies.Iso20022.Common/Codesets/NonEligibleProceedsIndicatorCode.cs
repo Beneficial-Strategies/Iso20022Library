@@ -23,16 +23,18 @@ public enum NonEligibleProceedsIndicatorCode
     [IsoId("_aNmac9p-Ed-ak6NoX_4Aeg_-1729563943")]
     [Description(@"Security not eligible in the Central Securities Depository (CSD).")]
     NonEligibleSecurity,
-    
+
     /// <summary>
     /// Currency not eligible for settlement in the Central Securities Depository (CSD).
     /// Encoded/decoded by serializers as &quot;NELC&quot;.
     /// </summary>
     [EnumMember(Value = "NELC")]
     [IsoId("_aNmadNp-Ed-ak6NoX_4Aeg_-1670456685")]
-    [Description(@"Currency not eligible for settlement in the Central Securities Depository (CSD).")]
+    [Description(
+        @"Currency not eligible for settlement in the Central Securities Depository (CSD)."
+    )]
     NonEligibleCurrency,
-    
+
     /// <summary>
     /// Participant&apos;s account limitation.
     /// Encoded/decoded by serializers as &quot;ACLI&quot;.
@@ -41,7 +43,7 @@ public enum NonEligibleProceedsIndicatorCode
     [IsoId("_aNmaddp-Ed-ak6NoX_4Aeg_-1627052409")]
     [Description(@"Participant's account limitation.")]
     AccountLimitation,
-    
+
     /// <summary>
     /// Other source of non eligibility.
     /// Encoded/decoded by serializers as &quot;ONEL&quot;.
@@ -50,5 +52,4 @@ public enum NonEligibleProceedsIndicatorCode
     [IsoId("_aNmadtp-Ed-ak6NoX_4Aeg_-1602117129")]
     [Description(@"Other source of non eligibility.")]
     OtherNonEligibility,
-    
 }

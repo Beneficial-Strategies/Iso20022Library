@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
     /// </summary>
     [IsoId("_upvuMEyGEeir2sRRVd9XhA")]
     [DisplayName("Security")]
-    public partial record Security : FinancialInstrument1Choice_
+    public record Security : FinancialInstrument1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identifier of a security, assigned under a formal or proprietary identification scheme.
         /// </summary>
         [IsoId("_MtsC8UyHEeir2sRRVd9XhA")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
-        public required SecurityIdentification25Choice_ Identification { get; init; } 
-        
+        public required SecurityIdentification25Choice_ Identification { get; init; }
+
         /// <summary>
         /// Name of the financial instrument in free format text.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? Name { get; init; } 
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? Name { get; init; }
+
         /// <summary>
         /// Financial Instrument Short Name (FISN) expressed in conformance with the ISO 18774 standard.
         /// </summary>
@@ -42,11 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrument1Choice
         [DisplayName("Short Name")]
         [IsoXmlTag("ShrtNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? ShortName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? ShortName { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,19 +14,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SXbvdNp-Ed-ak6NoX_4Aeg_1496666102")]
 [DisplayName("Pay In Call Item")]
-public partial record PayInCallItem
+public record PayInCallItem
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the currency and amount of the called item.
     /// </summary>
     [IsoId("_SXbvddp-Ed-ak6NoX_4Aeg_1674784774")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
 }

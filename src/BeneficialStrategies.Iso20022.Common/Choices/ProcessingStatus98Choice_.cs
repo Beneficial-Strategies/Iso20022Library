@@ -28,28 +28,80 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus98Choice.TradingSuspendedByStockExchange))]
     [KnownType(typeof(ProcessingStatus98Choice.Treated))]
     [KnownType(typeof(ProcessingStatus98Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.AcknowledgedAccepted),nameof(ProcessingStatus98Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.AlreadyMatchedAndAffirmed),nameof(ProcessingStatus98Choice.AlreadyMatchedAndAffirmed))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.DefaultAction),nameof(ProcessingStatus98Choice.DefaultAction))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.Done),nameof(ProcessingStatus98Choice.Done))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.ForcedRejection),nameof(ProcessingStatus98Choice.ForcedRejection))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.FullyExecutedConfirmationSent),nameof(ProcessingStatus98Choice.FullyExecutedConfirmationSent))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.Future),nameof(ProcessingStatus98Choice.Future))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.Generated),nameof(ProcessingStatus98Choice.Generated))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.InRepair),nameof(ProcessingStatus98Choice.InRepair))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.NoInstruction),nameof(ProcessingStatus98Choice.NoInstruction))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.OpenOrder),nameof(ProcessingStatus98Choice.OpenOrder))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.PendingProcessing),nameof(ProcessingStatus98Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.ReceivedAtIntermediary),nameof(ProcessingStatus98Choice.ReceivedAtIntermediary))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.Rejected),nameof(ProcessingStatus98Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.SettlementInstructionSent),nameof(ProcessingStatus98Choice.SettlementInstructionSent))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.StandingInstruction),nameof(ProcessingStatus98Choice.StandingInstruction))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.TradingSuspendedByStockExchange),nameof(ProcessingStatus98Choice.TradingSuspendedByStockExchange))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.Treated),nameof(ProcessingStatus98Choice.Treated))]
-    [JsonDerivedType(typeof(ProcessingStatus98Choice.ProprietaryStatus),nameof(ProcessingStatus98Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus98Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.AlreadyMatchedAndAffirmed),
+        nameof(ProcessingStatus98Choice.AlreadyMatchedAndAffirmed)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.DefaultAction),
+        nameof(ProcessingStatus98Choice.DefaultAction)
+    )]
+    [JsonDerivedType(typeof(ProcessingStatus98Choice.Done), nameof(ProcessingStatus98Choice.Done))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.ForcedRejection),
+        nameof(ProcessingStatus98Choice.ForcedRejection)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.FullyExecutedConfirmationSent),
+        nameof(ProcessingStatus98Choice.FullyExecutedConfirmationSent)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.Future),
+        nameof(ProcessingStatus98Choice.Future)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.Generated),
+        nameof(ProcessingStatus98Choice.Generated)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.InRepair),
+        nameof(ProcessingStatus98Choice.InRepair)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.NoInstruction),
+        nameof(ProcessingStatus98Choice.NoInstruction)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.OpenOrder),
+        nameof(ProcessingStatus98Choice.OpenOrder)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.PendingProcessing),
+        nameof(ProcessingStatus98Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.ReceivedAtIntermediary),
+        nameof(ProcessingStatus98Choice.ReceivedAtIntermediary)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.Rejected),
+        nameof(ProcessingStatus98Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.SettlementInstructionSent),
+        nameof(ProcessingStatus98Choice.SettlementInstructionSent)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.StandingInstruction),
+        nameof(ProcessingStatus98Choice.StandingInstruction)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.TradingSuspendedByStockExchange),
+        nameof(ProcessingStatus98Choice.TradingSuspendedByStockExchange)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.Treated),
+        nameof(ProcessingStatus98Choice.Treated)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus98Choice.ProprietaryStatus),
+        nameof(ProcessingStatus98Choice.ProprietaryStatus)
+    )]
     [IsoId("_xnOQMQarEe2phaVG0lYKTw")]
     [DisplayName("Processing Status 98 Choice")]
-    public abstract partial record ProcessingStatus98Choice_
-    {
-    }
+    public abstract record ProcessingStatus98Choice_ { }
 }

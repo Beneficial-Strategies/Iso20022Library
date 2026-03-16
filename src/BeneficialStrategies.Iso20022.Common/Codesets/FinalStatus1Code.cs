@@ -23,7 +23,7 @@ public enum FinalStatus1Code
     [IsoId("_8PRUJaMgEeCJ6YNENx4h-w_-1768690296")]
     [Description(@"Transaction has been successfully processed by the clearing agent.")]
     Settled = PaymentInstructionStatusCode.Settled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has been rejected by the clearing agent.
     /// Encoded/decoded by serializers as &quot;RJTD&quot;.
@@ -32,7 +32,7 @@ public enum FinalStatus1Code
     [IsoId("_8PRUJqMgEeCJ6YNENx4h-w_-116062788")]
     [Description(@"Transaction has been rejected by the clearing agent.")]
     Rejected = PaymentInstructionStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CAND&quot;.
@@ -41,14 +41,15 @@ public enum FinalStatus1Code
     [IsoId("_8PRUJ6MgEeCJ6YNENx4h-w_-408020526")]
     [Description(@"Transaction has been cancelled.")]
     Cancelled = PaymentInstructionStatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has been successfully processed by the clearing agent. Settlement will take place outside of the system.
     /// Encoded/decoded by serializers as &quot;FNLD&quot;.
     /// </summary>
     [EnumMember(Value = "FNLD")]
     [IsoId("_8PaeEKMgEeCJ6YNENx4h-w_-229901854")]
-    [Description(@"Transaction has been successfully processed by the clearing agent. Settlement will take place outside of the system.")]
+    [Description(
+        @"Transaction has been successfully processed by the clearing agent. Settlement will take place outside of the system."
+    )]
     Finalised = PaymentInstructionStatusCode.Finalised, // same ordinal as derivation source for type conversions
-    
 }

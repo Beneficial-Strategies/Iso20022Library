@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UllpEdp-Ed-ak6NoX_4Aeg_-1732352034")]
 [DisplayName("Variation Margin Dispute")]
-public partial record VariationMarginDispute1
+public record VariationMarginDispute1
 {
-    #nullable enable
-    
     /// <summary>
     /// Details of the disputed instruction.
     /// </summary>
     [IsoId("_UllpEtp-Ed-ak6NoX_4Aeg_1114938110")]
     [DisplayName("Dispute Details")]
     [IsoXmlTag("DsptDtls")]
-    public required Dispute1 DisputeDetails { get; init; } 
-    
+    public required Dispute1 DisputeDetails { get; init; }
+
     /// <summary>
     /// Specifies the type of dispute that is to be resolved regarding the disputed collateral amount.
     /// </summary>
     [IsoId("_UllpE9p-Ed-ak6NoX_4Aeg_2088365475")]
     [DisplayName("Resolution Type Details")]
     [IsoXmlTag("RsltnTpDtls")]
-    public DisputeResolutionType2Choice_? ResolutionTypeDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DisputeResolutionType2Choice_? ResolutionTypeDetails { get; init; }
 }

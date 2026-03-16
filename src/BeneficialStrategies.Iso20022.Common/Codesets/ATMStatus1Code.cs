@@ -23,7 +23,7 @@ public enum ATMStatus1Code
     [IsoId("_pVnK0YqLEeSRT5rEzcAHEw")]
     [Description(@"Component is in service.")]
     InService = ATMStatusCode.InService, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ATM out of service.
     /// Encoded/decoded by serializers as &quot;OUTS&quot;.
@@ -32,5 +32,4 @@ public enum ATMStatus1Code
     [IsoId("_pZx5IYqLEeSRT5rEzcAHEw")]
     [Description(@"ATM out of service.")]
     OutOfService = ATMStatusCode.OutOfService, // same ordinal as derivation source for type conversions
-    
 }

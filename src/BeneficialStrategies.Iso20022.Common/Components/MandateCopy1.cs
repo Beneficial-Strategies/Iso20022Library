@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fytnkH5gEea7cqFPsAF3tQ")]
 [DisplayName("Mandate Copy")]
-public partial record MandateCopy1
+public record MandateCopy1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides information on the original message.
     /// </summary>
     [IsoId("_P7yVsH5hEea7cqFPsAF3tQ")]
     [DisplayName("Original Message Information")]
     [IsoXmlTag("OrgnlMsgInf")]
-    public OriginalMessageInformation1? OriginalMessageInformation { get; init; } 
-    
+    public OriginalMessageInformation1? OriginalMessageInformation { get; init; }
+
     /// <summary>
     /// Provides the original mandate data.
     /// </summary>
     [IsoId("_v8iK0H5gEea7cqFPsAF3tQ")]
     [DisplayName("Original Mandate")]
     [IsoXmlTag("OrgnlMndt")]
-    public required OriginalMandate4Choice_ OriginalMandate { get; init; } 
-    
+    public required OriginalMandate4Choice_ OriginalMandate { get; init; }
+
     /// <summary>
     /// Indicates the status of the mandate.
     /// </summary>
     [IsoId("_XY87UJm_Eeao_Z127E9uYg")]
     [DisplayName("Mandate Status")]
     [IsoXmlTag("MndtSts")]
-    public MandateStatus1Choice_? MandateStatus { get; init; } 
-    
+    public MandateStatus1Choice_? MandateStatus { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_IoCecH5lEea7cqFPsAF3tQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

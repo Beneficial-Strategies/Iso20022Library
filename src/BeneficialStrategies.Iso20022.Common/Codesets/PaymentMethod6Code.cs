@@ -23,7 +23,7 @@ public enum PaymentMethod6Code
     [IsoId("_Z0kPZ9p-Ed-ak6NoX_4Aeg_1534180343")]
     [Description(@"Direct method.")]
     Direct = PaymentMethodCode.Direct, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Classical method.
     /// Encoded/decoded by serializers as &quot;CLAS&quot;.
@@ -32,5 +32,4 @@ public enum PaymentMethod6Code
     [IsoId("_Z0kPaNp-Ed-ak6NoX_4Aeg_1534180372")]
     [Description(@"Classical method.")]
     Classical = PaymentMethodCode.Classical, // same ordinal as derivation source for type conversions
-    
 }

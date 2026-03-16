@@ -23,7 +23,7 @@ public enum Collateral1Code
     [IsoId("_QHQx4SC-EeWPMvNwVtiMsA")]
     [Description(@"Item is used as collateral.")]
     Collateral = CollateralCode.Collateral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Item is not used as collateral.
     /// Encoded/decoded by serializers as &quot;NCOL&quot;.
@@ -32,5 +32,4 @@ public enum Collateral1Code
     [IsoId("_QPdEkSC-EeWPMvNwVtiMsA")]
     [Description(@"Item is not used as collateral.")]
     NotCollateral = CollateralCode.NotCollateral, // same ordinal as derivation source for type conversions
-    
 }

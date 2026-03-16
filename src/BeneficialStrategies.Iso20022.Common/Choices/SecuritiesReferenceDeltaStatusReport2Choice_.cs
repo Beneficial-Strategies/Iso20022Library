@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord))]
     [KnownType(typeof(SecuritiesReferenceDeltaStatusReport2Choice.NewRecord))]
     [KnownType(typeof(SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord))]
-    [JsonDerivedType(typeof(SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord),nameof(SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord))]
-    [JsonDerivedType(typeof(SecuritiesReferenceDeltaStatusReport2Choice.NewRecord),nameof(SecuritiesReferenceDeltaStatusReport2Choice.NewRecord))]
-    [JsonDerivedType(typeof(SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord),nameof(SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord))]
+    [JsonDerivedType(
+        typeof(SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord),
+        nameof(SecuritiesReferenceDeltaStatusReport2Choice.ModifiedRecord)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesReferenceDeltaStatusReport2Choice.NewRecord),
+        nameof(SecuritiesReferenceDeltaStatusReport2Choice.NewRecord)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord),
+        nameof(SecuritiesReferenceDeltaStatusReport2Choice.TerminatedRecord)
+    )]
     [IsoId("_2XCW1Hv0EeanCNPcMT7sSg")]
     [DisplayName("Securities Reference Delta Status Report 2 Choice")]
-    public abstract partial record SecuritiesReferenceDeltaStatusReport2Choice_
-    {
-    }
+    public abstract record SecuritiesReferenceDeltaStatusReport2Choice_ { }
 }

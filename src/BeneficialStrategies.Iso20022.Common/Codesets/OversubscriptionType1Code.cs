@@ -23,7 +23,7 @@ public enum OversubscriptionType1Code
     [IsoId("_1rW2QjL3EeKU9IrkkToqcw_490787890")]
     [Description(@"Unlimited oversubscription.")]
     Unlimited = OversubscriptionTypeCode.Unlimited, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The subscription is limited by quantity or percentage.
     /// Encoded/decoded by serializers as &quot;LTDB&quot;.
@@ -32,7 +32,7 @@ public enum OversubscriptionType1Code
     [IsoId("_1rW2QzL3EeKU9IrkkToqcw_-1016864815")]
     [Description(@"The subscription is limited by quantity or percentage.")]
     LimitedByQuantityOrPercentage = OversubscriptionTypeCode.LimitedByQuantityOrPercentage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No oversubscription is allowed.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,5 +41,4 @@ public enum OversubscriptionType1Code
     [IsoId("_1rW2RDL3EeKU9IrkkToqcw_-1130703881")]
     [Description(@"No oversubscription is allowed.")]
     NoOversubscription = OversubscriptionTypeCode.NoOversubscription, // same ordinal as derivation source for type conversions
-    
 }

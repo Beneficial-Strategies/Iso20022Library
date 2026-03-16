@@ -23,7 +23,7 @@ public enum DirectionCode
     [IsoId("_awK8Bdp-Ed-ak6NoX_4Aeg_1863385879")]
     [Description(@"Down.")]
     Down,
-    
+
     /// <summary>
     /// Up.
     /// Encoded/decoded by serializers as &quot;DRUP&quot;.
@@ -32,5 +32,4 @@ public enum DirectionCode
     [IsoId("_awK8Btp-Ed-ak6NoX_4Aeg_1863385888")]
     [Description(@"Up.")]
     Up,
-    
 }

@@ -23,7 +23,7 @@ public enum CustomerAssigner1Code
     [IsoId("_Vb-ykVyyEeeve7Je9cXtkQ")]
     [Description(@"Legal authority assigning an identification.")]
     Authority = CustomerAssignerCode.Authority, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Company assigning an identification to a customer.
     /// Encoded/decoded by serializers as &quot;CRCY&quot;.
@@ -32,7 +32,7 @@ public enum CustomerAssigner1Code
     [IsoId("_Vnk-klyyEeeve7Je9cXtkQ")]
     [Description(@"Company assigning an identification to a customer.")]
     Company = CustomerAssignerCode.Company, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Company for which the customer is on duty.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -41,7 +41,7 @@ public enum CustomerAssigner1Code
     [IsoId("_V-C90VyyEeeve7Je9cXtkQ")]
     [Description(@"Company for which the customer is on duty.")]
     Customer = CustomerAssignerCode.Customer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// On file identification.
     /// Encoded/decoded by serializers as &quot;ONFL&quot;.
@@ -50,7 +50,7 @@ public enum CustomerAssigner1Code
     [IsoId("_WMVRclyyEeeve7Je9cXtkQ")]
     [Description(@"On file identification.")]
     OnFile = CustomerAssignerCode.OnFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other party assigning an identification.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,7 +59,7 @@ public enum CustomerAssigner1Code
     [IsoId("_WZHwQlyyEeeve7Je9cXtkQ")]
     [Description(@"Other party assigning an identification.")]
     Other = CustomerAssignerCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Travel agency assigning an identification.
     /// Encoded/decoded by serializers as &quot;TRAY&quot;.
@@ -68,5 +68,4 @@ public enum CustomerAssigner1Code
     [IsoId("_WkujUlyyEeeve7Je9cXtkQ")]
     [Description(@"Travel agency assigning an identification.")]
     TravelAgency = CustomerAssignerCode.TravelAgency, // same ordinal as derivation source for type conversions
-    
 }

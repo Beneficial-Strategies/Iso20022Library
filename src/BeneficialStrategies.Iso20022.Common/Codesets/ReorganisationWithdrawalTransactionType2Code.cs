@@ -21,7 +21,9 @@ public enum ReorganisationWithdrawalTransactionType2Code
     /// </summary>
     [EnumMember(Value = "PRPW")]
     [IsoId("_Nax0kecpEei5aPS232E3Mw")]
-    [Description(@"The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant.")]
-    WithdrawalProtectOnBehalfOfAnotherParticipant = ReorganisationWithdrawalTransactionTypeCode.WithdrawalProtectOnBehalfOfAnotherParticipant, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant."
+    )]
+    WithdrawalProtectOnBehalfOfAnotherParticipant =
+        ReorganisationWithdrawalTransactionTypeCode.WithdrawalProtectOnBehalfOfAnotherParticipant, // same ordinal as derivation source for type conversions
 }

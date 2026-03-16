@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DateCode22Choice.Code))]
     [KnownType(typeof(DateCode22Choice.Proprietary))]
-    [JsonDerivedType(typeof(DateCode22Choice.Code),nameof(DateCode22Choice.Code))]
-    [JsonDerivedType(typeof(DateCode22Choice.Proprietary),nameof(DateCode22Choice.Proprietary))]
+    [JsonDerivedType(typeof(DateCode22Choice.Code), nameof(DateCode22Choice.Code))]
+    [JsonDerivedType(typeof(DateCode22Choice.Proprietary), nameof(DateCode22Choice.Proprietary))]
     [IsoId("_cdSQd5KQEeWHWpTQn1FFVg")]
     [DisplayName("Date Code 22 Choice")]
-    public abstract partial record DateCode22Choice_
-    {
-    }
+    public abstract record DateCode22Choice_ { }
 }

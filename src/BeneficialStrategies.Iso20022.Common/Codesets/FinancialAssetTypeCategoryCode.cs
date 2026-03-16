@@ -23,7 +23,7 @@ public enum FinancialAssetTypeCategoryCode
     [IsoId("_m9ZG0fNBEeCuA5Tr22BnwA_1512048060")]
     [Description(@"Balance attributed to equities.")]
     Equities,
-    
+
     /// <summary>
     /// Balance attributed to debt instruments.
     /// Encoded/decoded by serializers as &quot;DEBT&quot;.
@@ -32,7 +32,7 @@ public enum FinancialAssetTypeCategoryCode
     [IsoId("_m9ZG0vNBEeCuA5Tr22BnwA_-1310716183")]
     [Description(@"Balance attributed to debt instruments.")]
     DebtInstruments,
-    
+
     /// <summary>
     /// Balance attributed to entitlements.
     /// Encoded/decoded by serializers as &quot;ENTL&quot;.
@@ -41,7 +41,7 @@ public enum FinancialAssetTypeCategoryCode
     [IsoId("_m9ZG0_NBEeCuA5Tr22BnwA_-492039069")]
     [Description(@"Balance attributed to entitlements.")]
     Entitlements,
-    
+
     /// <summary>
     /// Balance attributed to derivatives.
     /// Encoded/decoded by serializers as &quot;DERV&quot;.
@@ -50,7 +50,7 @@ public enum FinancialAssetTypeCategoryCode
     [IsoId("_m9ZG1PNBEeCuA5Tr22BnwA_2127191488")]
     [Description(@"Balance attributed to derivatives.")]
     Derivatives,
-    
+
     /// <summary>
     /// Balance attributed to money market instruments.
     /// Encoded/decoded by serializers as &quot;MMKT&quot;.
@@ -59,14 +59,15 @@ public enum FinancialAssetTypeCategoryCode
     [IsoId("_m9ZG1fNBEeCuA5Tr22BnwA_-1923244113")]
     [Description(@"Balance attributed to money market instruments.")]
     MoneyMarket,
-    
+
     /// <summary>
     /// Other financial asset type balance according to a different classification, which is not explictly defined.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
     /// </summary>
     [EnumMember(Value = "OTHR")]
     [IsoId("_m9i30PNBEeCuA5Tr22BnwA_-878884426")]
-    [Description(@"Other financial asset type balance according to a different classification, which is not explictly defined.")]
+    [Description(
+        @"Other financial asset type balance according to a different classification, which is not explictly defined."
+    )]
     Others,
-    
 }

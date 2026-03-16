@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(MarketClaimCancellationRequestStatus1Choice.Rejected))]
     [KnownType(typeof(MarketClaimCancellationRequestStatus1Choice.PendingCancellation))]
     [KnownType(typeof(MarketClaimCancellationRequestStatus1Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(MarketClaimCancellationRequestStatus1Choice.CancellationCompleted),nameof(MarketClaimCancellationRequestStatus1Choice.CancellationCompleted))]
-    [JsonDerivedType(typeof(MarketClaimCancellationRequestStatus1Choice.Accepted),nameof(MarketClaimCancellationRequestStatus1Choice.Accepted))]
-    [JsonDerivedType(typeof(MarketClaimCancellationRequestStatus1Choice.Rejected),nameof(MarketClaimCancellationRequestStatus1Choice.Rejected))]
-    [JsonDerivedType(typeof(MarketClaimCancellationRequestStatus1Choice.PendingCancellation),nameof(MarketClaimCancellationRequestStatus1Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(MarketClaimCancellationRequestStatus1Choice.ProprietaryStatus),nameof(MarketClaimCancellationRequestStatus1Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(MarketClaimCancellationRequestStatus1Choice.CancellationCompleted),
+        nameof(MarketClaimCancellationRequestStatus1Choice.CancellationCompleted)
+    )]
+    [JsonDerivedType(
+        typeof(MarketClaimCancellationRequestStatus1Choice.Accepted),
+        nameof(MarketClaimCancellationRequestStatus1Choice.Accepted)
+    )]
+    [JsonDerivedType(
+        typeof(MarketClaimCancellationRequestStatus1Choice.Rejected),
+        nameof(MarketClaimCancellationRequestStatus1Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(MarketClaimCancellationRequestStatus1Choice.PendingCancellation),
+        nameof(MarketClaimCancellationRequestStatus1Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(MarketClaimCancellationRequestStatus1Choice.ProprietaryStatus),
+        nameof(MarketClaimCancellationRequestStatus1Choice.ProprietaryStatus)
+    )]
     [IsoId("_1TcqZtx4EeqESbVR5AloZQ")]
     [DisplayName("Market Claim Cancellation Request Status 1 Choice")]
-    public abstract partial record MarketClaimCancellationRequestStatus1Choice_
-    {
-    }
+    public abstract record MarketClaimCancellationRequestStatus1Choice_ { }
 }

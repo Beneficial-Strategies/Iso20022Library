@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W1Yhgdp-Ed-ak6NoX_4Aeg_535920401")]
 [DisplayName("Quantity And Availability")]
-public partial record QuantityAndAvailability2
+public record QuantityAndAvailability2
 {
-    #nullable enable
-    
     /// <summary>
     /// Quantity of securities in the sub-balance.
     /// </summary>
     [IsoId("_W1iScNp-Ed-ak6NoX_4Aeg_-1750182043")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required FinancialInstrumentQuantity15Choice_ Quantity { get; init; } 
-    
+    public required FinancialInstrumentQuantity15Choice_ Quantity { get; init; }
+
     /// <summary>
     /// Indicates whether the quantity of securities on the sub-balance is available.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record QuantityAndAvailability2
     [DisplayName("Availability Indicator")]
     [IsoXmlTag("AvlbtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AvailabilityIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator AvailabilityIndicator { get; init; }
 }

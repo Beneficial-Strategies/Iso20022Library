@@ -23,7 +23,7 @@ public enum QueryOrderStatusCode
     [IsoId("_HiymcA2NEeSwB74WgTbh4Q")]
     [Description(@"Query for orders which are not confirmed by a party.")]
     QueryUnconfirmedOrder,
-    
+
     /// <summary>
     /// Query for all orders.
     /// Encoded/decoded by serializers as &quot;QUAO&quot;.
@@ -32,7 +32,7 @@ public enum QueryOrderStatusCode
     [IsoId("_KJzE8A2NEeSwB74WgTbh4Q")]
     [Description(@"Query for all orders.|")]
     QueryAllOrders,
-    
+
     /// <summary>
     /// Query for orders have been partially executed.
     /// Encoded/decoded by serializers as &quot;QPEO&quot;.
@@ -41,7 +41,7 @@ public enum QueryOrderStatusCode
     [IsoId("_nTiX0A4oEeSvVsudrRLaVg")]
     [Description(@"Query for orders have been partially executed.")]
     QueryPartiallyExecutedOrder,
-    
+
     /// <summary>
     /// Query for orders have been completely executed.
     /// Encoded/decoded by serializers as &quot;QFEO&quot;.
@@ -50,7 +50,7 @@ public enum QueryOrderStatusCode
     [IsoId("_B0iKQA4pEeSvVsudrRLaVg")]
     [Description(@"Query for orders have been completely executed.")]
     QueryFullyExecutedOrder,
-    
+
     /// <summary>
     /// Query for all orders for a party.
     /// Encoded/decoded by serializers as &quot;QOFP&quot;.
@@ -59,5 +59,4 @@ public enum QueryOrderStatusCode
     [IsoId("_7Rxz0B0OEeStecMDdGBmFg")]
     [Description(@"Query for all orders for a party.")]
     QueryOrdersForTheParty,
-    
 }

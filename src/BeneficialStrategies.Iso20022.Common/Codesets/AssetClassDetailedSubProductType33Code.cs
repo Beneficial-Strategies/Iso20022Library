@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType33Code
     [IsoId("_Gov8gbv6EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type dry bulk carrier.")]
     DryBulkCarrier = AssetClassDetailedSubProductTypeCode.DryBulkCarrier, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +32,4 @@ public enum AssetClassDetailedSubProductType33Code
     [IsoId("_Ktu04bv6EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

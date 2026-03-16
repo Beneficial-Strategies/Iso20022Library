@@ -23,7 +23,7 @@ public enum PaymentScheduleType2Code
     [IsoId("_k51YEbb0Eeu9Cp6InX88Vw")]
     [Description(@"Payment schedule is defined as per contract.")]
     Contract = PaymentScheduleTypeCode.Contract, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment schedule is estimated.
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -32,7 +32,7 @@ public enum PaymentScheduleType2Code
     [IsoId("_k-B7kbb0Eeu9Cp6InX88Vw")]
     [Description(@"Payment schedule is estimated.")]
     Estimated = PaymentScheduleTypeCode.Estimated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract Payment schedule is both defined as per Contract and estimated.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +41,4 @@ public enum PaymentScheduleType2Code
     [IsoId("_pFQPobb0Eeu9Cp6InX88Vw")]
     [Description(@"Contract Payment schedule is both defined as per Contract and estimated.")]
     Both = PaymentScheduleTypeCode.Both, // same ordinal as derivation source for type conversions
-    
 }

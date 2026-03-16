@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_kC5QICDmEeahCJeThTBhHA")]
-[Description(@"Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use.")]
+[Description(
+    @"Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use."
+)]
 [DerivedFrom(typeof(CollateralDeliveryMethodCode))]
 public enum CollateralDeliveryMethod1Code
 {
@@ -22,8 +24,9 @@ public enum CollateralDeliveryMethod1Code
     [EnumMember(Value = "SICA")]
     [IsoId("_lJtHMSDmEeahCJeThTBhHA")]
     [Description(@"Securities interest collateral arrangement.")]
-    SecuritiesInterestCollateralArrangement = CollateralDeliveryMethodCode.SecuritiesInterestCollateralArrangement, // same ordinal as derivation source for type conversions
-    
+    SecuritiesInterestCollateralArrangement =
+        CollateralDeliveryMethodCode.SecuritiesInterestCollateralArrangement, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Securities interest with the right of use.
     /// Encoded/decoded by serializers as &quot;SIUR&quot;.
@@ -32,7 +35,7 @@ public enum CollateralDeliveryMethod1Code
     [IsoId("_lS7UoSDmEeahCJeThTBhHA")]
     [Description(@"Securities interest with the right of use.")]
     SecuritiesInterestWithUseRight = CollateralDeliveryMethodCode.SecuritiesInterestWithUseRight, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Title transfer collateral arrangement.
     /// Encoded/decoded by serializers as &quot;TTCA&quot;.
@@ -40,6 +43,6 @@ public enum CollateralDeliveryMethod1Code
     [EnumMember(Value = "TTCA")]
     [IsoId("_laNoYSDmEeahCJeThTBhHA")]
     [Description(@"Title transfer collateral arrangement.")]
-    TitleTransferCollateralArrangement = CollateralDeliveryMethodCode.TitleTransferCollateralArrangement, // same ordinal as derivation source for type conversions
-    
+    TitleTransferCollateralArrangement =
+        CollateralDeliveryMethodCode.TitleTransferCollateralArrangement, // same ordinal as derivation source for type conversions
 }

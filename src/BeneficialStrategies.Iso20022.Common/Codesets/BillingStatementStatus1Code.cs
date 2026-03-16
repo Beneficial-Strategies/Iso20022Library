@@ -23,7 +23,7 @@ public enum BillingStatementStatus1Code
     [IsoId("_6VUE05qlEeGSON8vddiWzQ_1712373044")]
     [Description(@"Statement is the original statement.")]
     Original = BillingStatementStatusCode.Original, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement replaces the original statement.
     /// Encoded/decoded by serializers as &quot;RPLC&quot;.
@@ -32,7 +32,7 @@ public enum BillingStatementStatus1Code
     [IsoId("_6VUE1JqlEeGSON8vddiWzQ_1116652808")]
     [Description(@"Statement replaces the original statement.")]
     Replace = BillingStatementStatusCode.Replace, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement is a test statement.
     /// Encoded/decoded by serializers as &quot;TEST&quot;.
@@ -41,5 +41,4 @@ public enum BillingStatementStatus1Code
     [IsoId("_6VUE1ZqlEeGSON8vddiWzQ_1105554031")]
     [Description(@"Statement is a test statement.")]
     Test = BillingStatementStatusCode.Test, // same ordinal as derivation source for type conversions
-    
 }

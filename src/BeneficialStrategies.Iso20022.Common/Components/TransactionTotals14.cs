@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-yMVUY1OEe6S0_1AaJzQCA")]
 [DisplayName("Transaction Totals14")]
-public partial record TransactionTotals14
+public record TransactionTotals14
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Fee Reconciliation.
     /// </summary>
@@ -30,35 +28,35 @@ public partial record TransactionTotals14
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
     /// Checkpoint Reference.
     /// </summary>
     [DisplayName("Checkpoint Reference")]
     [IsoXmlTag("ChckptRef")]
-    public IsoMax35Text? CheckpointReference { get; init; } 
+    public IsoMax35Text? CheckpointReference { get; init; }
 
     /// <summary>
     /// Credit Debit.
     /// </summary>
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; } 
+    public CreditDebit3Code? CreditDebit { get; init; }
 
     /// <summary>
     /// Currency.
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public required IsoMin2Max3NumericText Currency { get; init; } 
+    public required IsoMin2Max3NumericText Currency { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; } 
+    public IsoISODate? Date { get; init; }
 
     /// <summary>
     /// Financial.
@@ -72,7 +70,7 @@ public partial record TransactionTotals14
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax35Text? Identification { get; init; } 
+    public IsoMax35Text? Identification { get; init; }
 
     /// <summary>
     /// Message.
@@ -80,8 +78,4 @@ public partial record TransactionTotals14
     [DisplayName("Message")]
     [IsoXmlTag("Msg")]
     public ValueList<MessageReconciliation3> Message { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

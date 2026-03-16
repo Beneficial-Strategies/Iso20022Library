@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x4xX8VyGEe24CqbZJK5XxA")]
 [DisplayName("Detailed Transaction Statistics")]
-public partial record DetailedTransactionStatistics28
+public record DetailedTransactionStatistics28
 {
-    #nullable enable
-    
     /// <summary>
     /// Number of reported derivatives.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DetailedTransactionStatistics28
     [DisplayName("Number Of Derivatives Reported")]
     [IsoXmlTag("NbOfDerivsRptd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDerivativesReported { get; init; } 
-    
+    public required IsoNumber NumberOfDerivativesReported { get; init; }
+
     /// <summary>
     /// Number of reported derivatives with outliers.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record DetailedTransactionStatistics28
     [DisplayName("Number Of Derivatives Reported With Outliers")]
     [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; } 
-    
+    public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; }
+
     /// <summary>
     /// Details of abnormal values.
     /// </summary>
@@ -44,8 +42,4 @@ public partial record DetailedTransactionStatistics28
     [IsoXmlTag("Wrnngs")]
     public ValueList<AbnormalValuesData4> Warnings { get; init; } = [];
     // ID for the above is _x5wPZVyGEe24CqbZJK5XxA
-    
-    
-    #nullable disable
-    
 }

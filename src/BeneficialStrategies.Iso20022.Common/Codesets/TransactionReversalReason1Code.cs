@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YuFIdtp-Ed-ak6NoX_4Aeg_1201919260")]
-[Description(@"Specifies the reason for a transaction to be reversed by an instructed agent or somebody acting on behalf of an instructed agent.")]
+[Description(
+    @"Specifies the reason for a transaction to be reversed by an instructed agent or somebody acting on behalf of an instructed agent."
+)]
 [DerivedFrom(typeof(TransactionReasonCode))]
 public enum TransactionReversalReason1Code
 {
@@ -23,7 +25,7 @@ public enum TransactionReversalReason1Code
     [IsoId("_YuFId9p-Ed-ak6NoX_4Aeg_1201920053")]
     [Description(@"Account number specified has been closed on the Receiver's books.")]
     ClosedAccountNumber = TransactionReasonCode.ClosedAccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// This message appears to have been duplicated.
     /// Encoded/decoded by serializers as &quot;AM05&quot;.
@@ -32,7 +34,7 @@ public enum TransactionReversalReason1Code
     [IsoId("_YuFIeNp-Ed-ak6NoX_4Aeg_1202840611")]
     [Description(@"This message appears to have been duplicated.")]
     Duplication = TransactionReasonCode.Duplication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bank Operation code specified in the message is not valid for receiver.
     /// Encoded/decoded by serializers as &quot;AG02&quot;.
@@ -41,7 +43,7 @@ public enum TransactionReversalReason1Code
     [IsoId("_YuO5cNp-Ed-ak6NoX_4Aeg_1202842147")]
     [Description(@"Bank Operation code specified in the message is not valid for receiver.")]
     InvalidBankOperationCode = TransactionReasonCode.InvalidBankOperationCode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mandate is cancelled or invalid.
     /// Encoded/decoded by serializers as &quot;MD01&quot;.
@@ -50,7 +52,7 @@ public enum TransactionReversalReason1Code
     [IsoId("_YuO5cdp-Ed-ak6NoX_4Aeg_1204688750")]
     [Description(@"Mandate is cancelled or invalid.")]
     NoMandate = TransactionReasonCode.NoMandate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Creditor or creditor&apos;s agent should not have collected the direct debit.
     /// Encoded/decoded by serializers as &quot;MD05&quot;.
@@ -59,5 +61,4 @@ public enum TransactionReversalReason1Code
     [IsoId("_YuO5ctp-Ed-ak6NoX_4Aeg_1205611187")]
     [Description(@"Creditor or creditor's agent should not have collected the direct debit.")]
     CollectionNotDue = TransactionReasonCode.CollectionNotDue, // same ordinal as derivation source for type conversions
-    
 }

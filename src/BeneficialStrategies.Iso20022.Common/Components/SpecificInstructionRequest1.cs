@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RVH95Np-Ed-ak6NoX_4Aeg_-1758177157")]
 [DisplayName("Specific Instruction Request")]
-public partial record SpecificInstructionRequest1
+public record SpecificInstructionRequest1
 {
-    #nullable enable
-    
     /// <summary>
     /// Request to register for participation to the meeting.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SpecificInstructionRequest1
     [DisplayName("Participation Registration")]
     [IsoXmlTag("PrtcptnRegn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ParticipationRegistration { get; init; } 
-    
+    public IsoYesNoIndicator? ParticipationRegistration { get; init; }
+
     /// <summary>
     /// Request to block the securities.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record SpecificInstructionRequest1
     [DisplayName("Blocking Securities")]
     [IsoXmlTag("BlckgScties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? BlockingSecurities { get; init; } 
-    
+    public IsoYesNoIndicator? BlockingSecurities { get; init; }
+
     /// <summary>
     /// Request to register the securities for the meeting.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record SpecificInstructionRequest1
     [DisplayName("Securities Registration")]
     [IsoXmlTag("SctiesRegn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SecuritiesRegistration { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? SecuritiesRegistration { get; init; }
 }

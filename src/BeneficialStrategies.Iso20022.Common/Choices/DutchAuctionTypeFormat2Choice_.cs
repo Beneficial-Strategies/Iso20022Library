@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DutchAuctionTypeFormat2Choice.Code))]
     [KnownType(typeof(DutchAuctionTypeFormat2Choice.Proprietary))]
-    [JsonDerivedType(typeof(DutchAuctionTypeFormat2Choice.Code),nameof(DutchAuctionTypeFormat2Choice.Code))]
-    [JsonDerivedType(typeof(DutchAuctionTypeFormat2Choice.Proprietary),nameof(DutchAuctionTypeFormat2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(DutchAuctionTypeFormat2Choice.Code),
+        nameof(DutchAuctionTypeFormat2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(DutchAuctionTypeFormat2Choice.Proprietary),
+        nameof(DutchAuctionTypeFormat2Choice.Proprietary)
+    )]
     [IsoId("_t5KOQaAUEe-BUYcGJFWBWA")]
     [DisplayName("Dutch Auction Type Format2Choice")]
-    public abstract partial record DutchAuctionTypeFormat2Choice_
-    {
-    }
+    public abstract record DutchAuctionTypeFormat2Choice_ { }
 }

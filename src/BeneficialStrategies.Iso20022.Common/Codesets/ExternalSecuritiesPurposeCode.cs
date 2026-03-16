@@ -13,7 +13,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_5eZzoPomEe2ClqPWkEN24A")]
-[Description(@"Specifies the external securities purpose code in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code set published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external securities purpose code in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code set published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalSecuritiesPurpose1Code))]
 public enum ExternalSecuritiesPurposeCode
 {
@@ -25,7 +27,7 @@ public enum ExternalSecuritiesPurposeCode
     [IsoId("_5eZzrPomEe2ClqPWkEN24A")]
     [Description(@"Relates to collateral management.")]
     CollateralManagement,
-    
+
     /// <summary>
     /// Relates to securities lending.
     /// Encoded/decoded by serializers as &quot;SECL&quot;.
@@ -34,7 +36,7 @@ public enum ExternalSecuritiesPurposeCode
     [IsoId("_5eZztPomEe2ClqPWkEN24A")]
     [Description(@"Relates to securities lending.")]
     SecuritiesLending,
-    
+
     /// <summary>
     /// Relates to settlements.
     /// Encoded/decoded by serializers as &quot;STMT&quot;.
@@ -43,5 +45,4 @@ public enum ExternalSecuritiesPurposeCode
     [IsoId("_5eZzqfomEe2ClqPWkEN24A")]
     [Description(@"Relates to settlements.")]
     Settlements,
-    
 }

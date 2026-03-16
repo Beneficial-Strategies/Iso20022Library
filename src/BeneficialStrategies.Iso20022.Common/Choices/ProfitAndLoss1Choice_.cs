@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ProfitAndLoss1Choice.Profit))]
     [KnownType(typeof(ProfitAndLoss1Choice.Loss))]
-    [JsonDerivedType(typeof(ProfitAndLoss1Choice.Profit),nameof(ProfitAndLoss1Choice.Profit))]
-    [JsonDerivedType(typeof(ProfitAndLoss1Choice.Loss),nameof(ProfitAndLoss1Choice.Loss))]
+    [JsonDerivedType(typeof(ProfitAndLoss1Choice.Profit), nameof(ProfitAndLoss1Choice.Profit))]
+    [JsonDerivedType(typeof(ProfitAndLoss1Choice.Loss), nameof(ProfitAndLoss1Choice.Loss))]
     [IsoId("_Q65gCNp-Ed-ak6NoX_4Aeg_-931034423")]
     [DisplayName("Profit And Loss 1 Choice")]
-    public abstract partial record ProfitAndLoss1Choice_
-    {
-    }
+    public abstract record ProfitAndLoss1Choice_ { }
 }

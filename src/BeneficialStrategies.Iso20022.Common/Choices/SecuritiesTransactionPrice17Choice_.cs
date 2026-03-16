@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesTransactionPrice17Choice.Decimal))]
     [KnownType(typeof(SecuritiesTransactionPrice17Choice.PendingPrice))]
     [KnownType(typeof(SecuritiesTransactionPrice17Choice.Other))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.MonetaryValue),nameof(SecuritiesTransactionPrice17Choice.MonetaryValue))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.Unit),nameof(SecuritiesTransactionPrice17Choice.Unit))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.Percentage),nameof(SecuritiesTransactionPrice17Choice.Percentage))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.Yield),nameof(SecuritiesTransactionPrice17Choice.Yield))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.Decimal),nameof(SecuritiesTransactionPrice17Choice.Decimal))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.PendingPrice),nameof(SecuritiesTransactionPrice17Choice.PendingPrice))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice17Choice.Other),nameof(SecuritiesTransactionPrice17Choice.Other))]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.MonetaryValue),
+        nameof(SecuritiesTransactionPrice17Choice.MonetaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.Unit),
+        nameof(SecuritiesTransactionPrice17Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.Percentage),
+        nameof(SecuritiesTransactionPrice17Choice.Percentage)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.Yield),
+        nameof(SecuritiesTransactionPrice17Choice.Yield)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.Decimal),
+        nameof(SecuritiesTransactionPrice17Choice.Decimal)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.PendingPrice),
+        nameof(SecuritiesTransactionPrice17Choice.PendingPrice)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice17Choice.Other),
+        nameof(SecuritiesTransactionPrice17Choice.Other)
+    )]
     [IsoId("_gRtSoZjcEeqkLZLH6DK3UQ")]
     [DisplayName("Securities Transaction Price 17 Choice")]
-    public abstract partial record SecuritiesTransactionPrice17Choice_
-    {
-    }
+    public abstract record SecuritiesTransactionPrice17Choice_ { }
 }

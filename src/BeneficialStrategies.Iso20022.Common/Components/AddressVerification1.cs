@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SqbqxgEcEeCQm6a_G2yO_w_1267025270")]
 [DisplayName("Address Verification")]
-public partial record AddressVerification1
+public record AddressVerification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Numeric characters from the cardholder&apos;s address excluding the postal code (that is street number).
     /// </summary>
@@ -25,8 +23,8 @@ public partial record AddressVerification1
     [DisplayName("Address Digits")]
     [IsoXmlTag("AdrDgts")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? AddressDigits { get; init; } 
-    
+    public IsoMax5NumericText? AddressDigits { get; init; }
+
     /// <summary>
     /// Numeric characters from the cardholder&apos;s postal code.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record AddressVerification1
     [DisplayName("Postal Code Digits")]
     [IsoXmlTag("PstlCdDgts")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? PostalCodeDigits { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax5NumericText? PostalCodeDigits { get; init; }
 }

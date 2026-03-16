@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Status21Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Status21Choice
     /// </summary>
     [IsoId("_MHhOUyYuEeW_ZNn8gbfY7Q")]
     [DisplayName("Pending")]
-    public partial record Pending : Status21Choice_
+    public record Pending : Status21Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Reason for the cancellation pending status.
         /// </summary>
@@ -24,11 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Status21Choice
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? Reason { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? Reason { get; init; }
     }
 }

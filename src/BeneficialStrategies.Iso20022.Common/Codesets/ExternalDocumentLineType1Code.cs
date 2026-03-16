@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Nv6E4RtqEeOa4Kl-9PmHww")]
-[Description(@"Specifies the document line type as published in an external document type code list.")]
+[Description(
+    @"Specifies the document line type as published in an external document type code list."
+)]
 [DerivedFrom(typeof(ExternalDocumentLineTypeCode))]
 public enum ExternalDocumentLineType1Code
 {
@@ -21,9 +23,12 @@ public enum ExternalDocumentLineType1Code
     /// </summary>
     [EnumMember(Value = "ADPI")]
     [IsoId("_uSQ3vvRYEeuLhpyIdtJzwg")]
-    [Description(@"Line item reference is an additional product identification assigned by the manufacturer.")]
-    AdditionalProductIdentificationAssignedByTheManufacturer = ExternalDocumentLineTypeCode.AdditionalProductIdentificationAssignedByTheManufacturer, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Line item reference is an additional product identification assigned by the manufacturer."
+    )]
+    AdditionalProductIdentificationAssignedByTheManufacturer =
+        ExternalDocumentLineTypeCode.AdditionalProductIdentificationAssignedByTheManufacturer, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Line item reference is an alternate International Standard Book Number (ISBN).
     /// Encoded/decoded by serializers as &quot;AISB&quot;.
@@ -32,7 +37,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uSaosvRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an alternate International Standard Book Number (ISBN).")]
     AlternateISBN = ExternalDocumentLineTypeCode.AlternateISBN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is an asset number.
     /// Encoded/decoded by serializers as &quot;ASNB&quot;.
@@ -41,7 +46,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uSaotfRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an asset number.")]
     AssetNumber = ExternalDocumentLineTypeCode.AssetNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a catalog number.
     /// Encoded/decoded by serializers as &quot;CTNB&quot;.
@@ -50,7 +55,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uSaouPRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a catalog number.")]
     CatalogNumber = ExternalDocumentLineTypeCode.CatalogNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is Dun &amp; Bradstreet Standard Product and Service code.
     /// Encoded/decoded by serializers as &quot;DBSP&quot;.
@@ -58,8 +63,9 @@ public enum ExternalDocumentLineType1Code
     [EnumMember(Value = "DBSP")]
     [IsoId("_uSjyovRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is Dun & Bradstreet Standard Product and Service code.")]
-    DunBradstreetStandardProductAndServiceCode = ExternalDocumentLineTypeCode.DunBradstreetStandardProductAndServiceCode, // same ordinal as derivation source for type conversions
-    
+    DunBradstreetStandardProductAndServiceCode =
+        ExternalDocumentLineTypeCode.DunBradstreetStandardProductAndServiceCode, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Line item reference is an European Article Number (EAN).
     /// Encoded/decoded by serializers as &quot;EANN&quot;.
@@ -68,7 +74,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uSjypfRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an European Article Number (EAN).")]
     EuropeanArticleNumberEAN2551 = ExternalDocumentLineTypeCode.EuropeanArticleNumberEAN2551, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is an equipment identification number.
     /// Encoded/decoded by serializers as &quot;EINB&quot;.
@@ -77,7 +83,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uSjyqPRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an equipment identification number.")]
     EquipmentIdentificationNumber = ExternalDocumentLineTypeCode.EquipmentIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a general specification number.
     /// Encoded/decoded by serializers as &quot;GSNB&quot;.
@@ -86,7 +92,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uStjovRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a general specification number.")]
     GeneralSpecificationNumber = ExternalDocumentLineTypeCode.GeneralSpecificationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a Health Care Industry Bar Code (HIBC)
     /// Encoded/decoded by serializers as &quot;HIBC&quot;.
@@ -95,7 +101,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uStjpfRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a Health Care Industry Bar Code (HIBC)")]
     HIBCHealthCareIndustryBarCode = ExternalDocumentLineTypeCode.HIBCHealthCareIndustryBarCode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is an International Standard Book Number (ISBN).
     /// Encoded/decoded by serializers as &quot;ISBN&quot;.
@@ -103,8 +109,9 @@ public enum ExternalDocumentLineType1Code
     [EnumMember(Value = "ISBN")]
     [IsoId("_uStjqPRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an International Standard Book Number (ISBN).")]
-    InternationalStandardBookNumberISBN = ExternalDocumentLineTypeCode.InternationalStandardBookNumberISBN, // same ordinal as derivation source for type conversions
-    
+    InternationalStandardBookNumberISBN =
+        ExternalDocumentLineTypeCode.InternationalStandardBookNumberISBN, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Line item reference is a lot number.
     /// Encoded/decoded by serializers as &quot;LTNB&quot;.
@@ -113,7 +120,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uS3UovRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a lot number.")]
     LotNumber = ExternalDocumentLineTypeCode.LotNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a model number
     /// Encoded/decoded by serializers as &quot;MDNB&quot;.
@@ -122,7 +129,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uS3UpfRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a model number")]
     ModelNumber = ExternalDocumentLineTypeCode.ModelNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a part reference number.
     /// Encoded/decoded by serializers as &quot;PRNB&quot;.
@@ -131,7 +138,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uS3UqPRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a part reference number.")]
     PartNumber = ExternalDocumentLineTypeCode.PartNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a product type code.
     /// Encoded/decoded by serializers as &quot;PTCD&quot;.
@@ -140,7 +147,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uS3Uq_RYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a product type code.")]
     ProductTypeCode = ExternalDocumentLineTypeCode.ProductTypeCode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a stock number.
     /// Encoded/decoded by serializers as &quot;SKNB&quot;.
@@ -149,7 +156,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uS3UrvRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a stock number.")]
     StockNumber = ExternalDocumentLineTypeCode.StockNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a style number.
     /// Encoded/decoded by serializers as &quot;STNB&quot;.
@@ -158,7 +165,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uTAekvRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a style number.")]
     StyleNumber = ExternalDocumentLineTypeCode.StyleNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is a technical order number.
     /// Encoded/decoded by serializers as &quot;TONB&quot;.
@@ -167,7 +174,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uTAelfRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is a technical order number.")]
     TechnicalOrderNumber = ExternalDocumentLineTypeCode.TechnicalOrderNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is an UPC consumer package code.
     /// Encoded/decoded by serializers as &quot;UPCC&quot;.
@@ -176,7 +183,7 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uTAemPRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an UPC consumer package code.")]
     UPCConsumerPackageCode = ExternalDocumentLineTypeCode.UPCConsumerPackageCode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line item reference is an Universal Product Number.
     /// Encoded/decoded by serializers as &quot;UPNB&quot;.
@@ -185,5 +192,4 @@ public enum ExternalDocumentLineType1Code
     [IsoId("_uTKPkvRYEeuLhpyIdtJzwg")]
     [Description(@"Line item reference is an Universal Product Number.")]
     UniversalProductNumber = ExternalDocumentLineTypeCode.UniversalProductNumber, // same ordinal as derivation source for type conversions
-    
 }

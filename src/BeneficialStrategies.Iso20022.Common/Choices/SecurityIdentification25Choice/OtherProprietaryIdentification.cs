@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
     /// </summary>
     [IsoId("_cH-V2TnxEeabspMEjqY5TQ")]
     [DisplayName("Other Proprietary Identification")]
-    public partial record OtherProprietaryIdentification : SecurityIdentification25Choice_
+    public record OtherProprietaryIdentification : SecurityIdentification25Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identifier of a security.
         /// </summary>
@@ -24,19 +22,15 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification25Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
+
         /// <summary>
         /// Source of the identification, that is, domestic (national) or proprietary.
         /// </summary>
         [IsoId("_UwbpcCGPEeW7gKYhAMEFCw")]
         [DisplayName("Identification Source")]
         [IsoXmlTag("IdSrc")]
-        public required IdentificationSource1Choice_ IdentificationSource { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IdentificationSource1Choice_ IdentificationSource { get; init; }
     }
 }

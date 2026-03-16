@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jTmkYCCREeWJd9HF2tO7BA")]
 [DisplayName("Tax Reporting")]
-public partial record TaxReporting1
+public record TaxReporting1
 {
-    #nullable enable
-    
     /// <summary>
     /// Country of taxation of the organisation or individual person.
     /// </summary>
     [IsoId("_xEux8SCREeWJd9HF2tO7BA")]
     [DisplayName("Taxation Country")]
     [IsoXmlTag("TaxtnCtry")]
-    public required CountryCode TaxationCountry { get; init; } 
-    
+    public required CountryCode TaxationCountry { get; init; }
+
     /// <summary>
     /// Tax rate to be applied.
     /// </summary>
@@ -33,32 +31,32 @@ public partial record TaxReporting1
     [DisplayName("Tax Rate")]
     [IsoXmlTag("TaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxRate { get; init; } 
-    
+    public IsoPercentageRate? TaxRate { get; init; }
+
     /// <summary>
     /// Party that pays the tax.
     /// </summary>
     [IsoId("_7yU9ECCREeWJd9HF2tO7BA")]
     [DisplayName("Tax Payer")]
     [IsoXmlTag("TaxPyer")]
-    public PartyIdentification70Choice_? TaxPayer { get; init; } 
-    
+    public PartyIdentification70Choice_? TaxPayer { get; init; }
+
     /// <summary>
     /// Party that receives the tax.
     /// </summary>
     [IsoId("_AdFcACCSEeWJd9HF2tO7BA")]
     [DisplayName("Tax Recipient")]
     [IsoXmlTag("TaxRcpt")]
-    public PartyIdentification70Choice_? TaxRecipient { get; init; } 
-    
+    public PartyIdentification70Choice_? TaxRecipient { get; init; }
+
     /// <summary>
     /// Cash account information for the payment of tax.
     /// </summary>
     [IsoId("_EKjMQCCSEeWJd9HF2tO7BA")]
     [DisplayName("Cash Account Details")]
     [IsoXmlTag("CshAcctDtls")]
-    public CashAccount32? CashAccountDetails { get; init; } 
-    
+    public CashAccount32? CashAccountDetails { get; init; }
+
     /// <summary>
     /// Additional information for the reporting of tax.
     /// </summary>
@@ -66,10 +64,6 @@ public partial record TaxReporting1
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Description { get; init; }
 }

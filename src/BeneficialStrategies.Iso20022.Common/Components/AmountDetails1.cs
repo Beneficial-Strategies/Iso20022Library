@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lw9aNPPrEeihCvvpsmGI2w")]
 [DisplayName("Amount Details")]
-public partial record AmountDetails1
+public record AmountDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Code that describes the type of amount or fee.
     /// </summary>
     [IsoId("_0bKk0PPrEeihCvvpsmGI2w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public TypeOfAmount18Code? Type { get; init; } 
-    
+    public TypeOfAmount18Code? Type { get; init; }
+
     /// <summary>
     /// Description of other type of amount or fee.
     /// </summary>
@@ -33,35 +31,31 @@ public partial record AmountDetails1
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
     /// Contains the amount.
     /// </summary>
     [IsoId("_lw9aNvPrEeihCvvpsmGI2w")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
-    /// Indicates whether or not the amount is a credit or debit. 
+    /// Indicates whether or not the amount is a credit or debit.
     /// </summary>
     [IsoId("_lw9aNfPrEeihCvvpsmGI2w")]
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CreditIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? CreditIndicator { get; init; }
+
     /// <summary>
-    /// Taxes related to the products or services. 
+    /// Taxes related to the products or services.
     /// </summary>
     [IsoId("_pYjpAP4dEeix6ug6HlF6IQ")]
     [DisplayName("Tax")]
     [IsoXmlTag("Tax")]
-    public Tax33? Tax { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Tax33? Tax { get; init; }
 }

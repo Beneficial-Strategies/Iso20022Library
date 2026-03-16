@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_TdaocAmFEeKKaIHo7gv4XA")]
-[Description(@"Mask generator functions of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding).")]
+[Description(
+    @"Mask generator functions of the RSAES-OAEP encryption algorithm (RSA Encryption Scheme: Optimal Asymmetric Encryption Padding)."
+)]
 [DerivedFrom(typeof(AlgorithmCode))]
 public enum Algorithm8Code
 {
@@ -21,7 +23,8 @@ public enum Algorithm8Code
     /// </summary>
     [EnumMember(Value = "MGF1")]
     [IsoId("_Z4B7cQmFEeKKaIHo7gv4XA")]
-    [Description(@"Generator Function, used for RSA encryption and RSA igital signature (PKCS #1 version 2.1) - (ASN.1 Object Identifier: id-mgf1).")]
+    [Description(
+        @"Generator Function, used for RSA encryption and RSA igital signature (PKCS #1 version 2.1) - (ASN.1 Object Identifier: id-mgf1)."
+    )]
     MGF1 = AlgorithmCode.MGF1, // same ordinal as derivation source for type conversions
-    
 }

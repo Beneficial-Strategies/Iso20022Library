@@ -23,5 +23,4 @@ public enum AssetClassProductType15Code
     [IsoId("_a3iGs1rLEeWN79Bl6BUd3g")]
     [Description(@"Commodity of other type.")]
     Other = AssetClassProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

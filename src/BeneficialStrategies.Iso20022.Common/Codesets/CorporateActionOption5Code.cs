@@ -23,7 +23,7 @@ public enum CorporateActionOption5Code
     [IsoId("_bMfEk9p-Ed-ak6NoX_4Aeg_160952572")]
     [Description(@"Option to choose cash.")]
     Cash = CorporateActionOptionCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of securities to holders.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,5 +32,4 @@ public enum CorporateActionOption5Code
     [IsoId("_bMfElNp-Ed-ak6NoX_4Aeg_720605213")]
     [Description(@"Distribution of securities to holders.")]
     Security = CorporateActionOptionCode.Security, // same ordinal as derivation source for type conversions
-    
 }

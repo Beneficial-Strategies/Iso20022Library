@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Standardisation3Choice.Code))]
     [KnownType(typeof(Standardisation3Choice.Proprietary))]
-    [JsonDerivedType(typeof(Standardisation3Choice.Code),nameof(Standardisation3Choice.Code))]
-    [JsonDerivedType(typeof(Standardisation3Choice.Proprietary),nameof(Standardisation3Choice.Proprietary))]
+    [JsonDerivedType(typeof(Standardisation3Choice.Code), nameof(Standardisation3Choice.Code))]
+    [JsonDerivedType(
+        typeof(Standardisation3Choice.Proprietary),
+        nameof(Standardisation3Choice.Proprietary)
+    )]
     [IsoId("_PbNAMWp7EemmaZLSPtWX5A")]
     [DisplayName("Standardisation 3 Choice")]
-    public abstract partial record Standardisation3Choice_
-    {
-    }
+    public abstract record Standardisation3Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum ProtectionMethodCode
     [IsoId("_ihY0MJyAEeuo7tDc4CDHXg")]
     [Description(@"Software protection method.")]
     Software,
-    
+
     /// <summary>
     /// Trusted execution environment method.
     /// Encoded/decoded by serializers as &quot;TEEN&quot;.
@@ -32,7 +32,7 @@ public enum ProtectionMethodCode
     [IsoId("_nIdtAJyAEeuo7tDc4CDHXg")]
     [Description(@"Trusted execution environment method.")]
     TrustedExectutionEnvironment,
-    
+
     /// <summary>
     /// Secure element method.
     /// Encoded/decoded by serializers as &quot;SELM&quot;.
@@ -41,7 +41,7 @@ public enum ProtectionMethodCode
     [IsoId("_v09jEJyAEeuo7tDc4CDHXg")]
     [Description(@"Secure element method.")]
     SecureElement,
-    
+
     /// <summary>
     /// Secure enclave method.
     /// Encoded/decoded by serializers as &quot;SNCL&quot;.
@@ -50,7 +50,7 @@ public enum ProtectionMethodCode
     [IsoId("_2HHdoJyAEeuo7tDc4CDHXg")]
     [Description(@"Secure enclave method.")]
     SecureEnclave,
-    
+
     /// <summary>
     /// Other privately assigned code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum ProtectionMethodCode
     [IsoId("_6kwtoJyAEeuo7tDc4CDHXg")]
     [Description(@"Other privately assigned code.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Other code assigned by national organisation.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +68,7 @@ public enum ProtectionMethodCode
     [IsoId("_KZ-S0JyBEeuo7tDc4CDHXg")]
     [Description(@"Other code assigned by national organisation.")]
     OtherNational,
-    
+
     /// <summary>
     /// Trusted Platform Module (TPM).
     /// Encoded/decoded by serializers as &quot;TPMD&quot;.
@@ -77,14 +77,13 @@ public enum ProtectionMethodCode
     [IsoId("_P8l5gKH1EeuiuNcvKhXmNQ")]
     [Description(@"Trusted Platform Module (TPM).")]
     TrustedPlatformModule,
-    
+
     /// <summary>
-    /// Virtual trusted execution environment	
+    /// Virtual trusted execution environment
     /// Encoded/decoded by serializers as &quot;VTEE&quot;.
     /// </summary>
     [EnumMember(Value = "VTEE")]
     [IsoId("_fMd9AKH1EeuiuNcvKhXmNQ")]
     [Description(@"Virtual trusted execution environment	")]
     VirtualTrustedExecutionEnvironment,
-    
 }

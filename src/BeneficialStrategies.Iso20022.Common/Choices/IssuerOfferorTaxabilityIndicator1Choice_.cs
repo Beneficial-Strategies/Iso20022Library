@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(IssuerOfferorTaxabilityIndicator1Choice.Code))]
     [KnownType(typeof(IssuerOfferorTaxabilityIndicator1Choice.Proprietary))]
-    [JsonDerivedType(typeof(IssuerOfferorTaxabilityIndicator1Choice.Code),nameof(IssuerOfferorTaxabilityIndicator1Choice.Code))]
-    [JsonDerivedType(typeof(IssuerOfferorTaxabilityIndicator1Choice.Proprietary),nameof(IssuerOfferorTaxabilityIndicator1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(IssuerOfferorTaxabilityIndicator1Choice.Code),
+        nameof(IssuerOfferorTaxabilityIndicator1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(IssuerOfferorTaxabilityIndicator1Choice.Proprietary),
+        nameof(IssuerOfferorTaxabilityIndicator1Choice.Proprietary)
+    )]
     [IsoId("_DUEMcIlzEeavwKddCbm3hg")]
     [DisplayName("Issuer Offeror Taxability Indicator 1 Choice")]
-    public abstract partial record IssuerOfferorTaxabilityIndicator1Choice_
-    {
-    }
+    public abstract record IssuerOfferorTaxabilityIndicator1Choice_ { }
 }

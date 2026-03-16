@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LinkageType1Choice.Code))]
     [KnownType(typeof(LinkageType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(LinkageType1Choice.Code),nameof(LinkageType1Choice.Code))]
-    [JsonDerivedType(typeof(LinkageType1Choice.Proprietary),nameof(LinkageType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(LinkageType1Choice.Code), nameof(LinkageType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(LinkageType1Choice.Proprietary),
+        nameof(LinkageType1Choice.Proprietary)
+    )]
     [IsoId("_QtyREdp-Ed-ak6NoX_4Aeg_-1874530301")]
     [DisplayName("Linkage Type 1 Choice")]
-    public abstract partial record LinkageType1Choice_
-    {
-    }
+    public abstract record LinkageType1Choice_ { }
 }

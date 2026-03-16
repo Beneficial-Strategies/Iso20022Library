@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3IeEUNLlEeSDLevdaFPXHw")]
 [DisplayName("Document Amendment")]
-public partial record DocumentAmendment1
+public record DocumentAmendment1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the correction sequence number used to identify the amendment.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DocumentAmendment1
     [DisplayName("Correction Identification")]
     [IsoXmlTag("CrrctnId")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber CorrectionIdentification { get; init; } 
-    
+    public required IsoNumber CorrectionIdentification { get; init; }
+
     /// <summary>
     /// Identification of the original document being amended.
     /// </summary>
@@ -34,10 +32,6 @@ public partial record DocumentAmendment1
     [DisplayName("Original Document Identification")]
     [IsoXmlTag("OrgnlDocId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OriginalDocumentIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OriginalDocumentIdentification { get; init; }
 }

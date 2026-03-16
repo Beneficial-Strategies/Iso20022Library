@@ -23,23 +23,26 @@ public enum PartyRole2Code
     [IsoId("_nbvCcY6VEemzmeK8_tPygg")]
     [Description(@"Party that act as an wholesaler of funds.")]
     Distributor = PartyRoleCode.Distributor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Party that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.
     /// Encoded/decoded by serializers as &quot;LGRD&quot;.
     /// </summary>
     [EnumMember(Value = "LGRD")]
     [IsoId("_nzPjgo6VEemzmeK8_tPygg")]
-    [Description(@"Party that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated.")]
+    [Description(
+        @"Party that has been appointed by a legal authority to act on behalf of a person judged to be incapacitated."
+    )]
     LegalGuardian = PartyRoleCode.LegalGuardian, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Party that is authorised to take investment decisions on behalf of the shareholder.
     /// Encoded/decoded by serializers as &quot;DECM&quot;.
     /// </summary>
     [EnumMember(Value = "DECM")]
     [IsoId("_pQEt4o6VEemzmeK8_tPygg")]
-    [Description(@"Party that is authorised to take investment decisions on behalf of the shareholder.")]
+    [Description(
+        @"Party that is authorised to take investment decisions on behalf of the shareholder."
+    )]
     DecisionMaker = PartyRoleCode.DecisionMaker, // same ordinal as derivation source for type conversions
-    
 }

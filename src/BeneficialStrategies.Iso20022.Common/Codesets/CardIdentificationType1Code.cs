@@ -23,7 +23,7 @@ public enum CardIdentificationType1Code
     [IsoId("_E-KqodtiEeipuvJHTHIw9A")]
     [Description(@"Account identification.")]
     AccountNumber = CardIdentificationTypeCode.AccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bar-code with a specific form of identification.
     /// Encoded/decoded by serializers as &quot;BARC&quot;.
@@ -32,7 +32,7 @@ public enum CardIdentificationType1Code
     [IsoId("_FCB28dtiEeipuvJHTHIw9A")]
     [Description(@"Bar-code with a specific form of identification.")]
     BarCode = CardIdentificationTypeCode.BarCode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ISO Track 2 including identification.
     /// Encoded/decoded by serializers as &quot;ISO2&quot;.
@@ -41,7 +41,7 @@ public enum CardIdentificationType1Code
     [IsoId("_FFv5UdtiEeipuvJHTHIw9A")]
     [Description(@"ISO Track 2 including identification.")]
     ISOTrack2 = CardIdentificationTypeCode.ISOTrack2, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// A phone number identifies the account on which the phone card is assigned.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -50,7 +50,7 @@ public enum CardIdentificationType1Code
     [IsoId("_FKiSsdtiEeipuvJHTHIw9A")]
     [Description(@"A phone number identifies the account on which the phone card is assigned.")]
     PhoneNumber = CardIdentificationTypeCode.PhoneNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Standard card identification (card number).
     /// Encoded/decoded by serializers as &quot;CPAN&quot;.
@@ -59,7 +59,7 @@ public enum CardIdentificationType1Code
     [IsoId("_FPHQsdtiEeipuvJHTHIw9A")]
     [Description(@"Standard card identification (card number).")]
     PrimaryAccountNumber = CardIdentificationTypeCode.PrimaryAccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// An identification set by a privative application.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -68,7 +68,7 @@ public enum CardIdentificationType1Code
     [IsoId("_FTxHMdtiEeipuvJHTHIw9A")]
     [Description(@"An identification set by a privative application.")]
     PrivativeNumbering = CardIdentificationTypeCode.PrivativeNumbering, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// A Universal Unique Identification code is set for identification.
     /// Encoded/decoded by serializers as &quot;UUID&quot;.
@@ -77,5 +77,4 @@ public enum CardIdentificationType1Code
     [IsoId("_FYiScdtiEeipuvJHTHIw9A")]
     [Description(@"A Universal Unique Identification code is set for identification.")]
     UniversalUniqueIdentification = CardIdentificationTypeCode.UniversalUniqueIdentification, // same ordinal as derivation source for type conversions
-    
 }

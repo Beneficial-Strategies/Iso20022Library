@@ -21,9 +21,11 @@ public enum CorporateActionOption10Code
     /// </summary>
     [EnumMember(Value = "ABST")]
     [IsoId("_tzGsNwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Vote expressed as abstain. In this case, the issuing company will add the number of shares to the quorum of the meeting.|If the voting right is not executed, it will not be added to the quorum. In this case, code NOAC should be used.")]
+    [Description(
+        @"Vote expressed as abstain. In this case, the issuing company will add the number of shares to the quorum of the meeting.|If the voting right is not executed, it will not be added to the quorum. In this case, code NOAC should be used."
+    )]
     Abstain = CorporateActionOptionCode.Abstain, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote against management.
     /// Encoded/decoded by serializers as &quot;AMGT&quot;.
@@ -32,16 +34,18 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsOwrAEeGFLZ_5tFfOnw")]
     [Description(@"Vote against management.")]
     VoteAgainstManagement = CorporateActionOptionCode.VoteAgainstManagement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Receive equities from the share premium reserve of the company and considered as a capital distribution rather than a disbursement of income with different tax implications (typically found in Australia).
     /// Encoded/decoded by serializers as &quot;BSPL&quot;.
     /// </summary>
     [EnumMember(Value = "BSPL")]
     [IsoId("_tzGsPwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Receive equities from the share premium reserve of the company and considered as a capital distribution rather than a disbursement of income with different tax implications (typically found in Australia).")]
+    [Description(
+        @"Receive equities from the share premium reserve of the company and considered as a capital distribution rather than a disbursement of income with different tax implications (typically found in Australia)."
+    )]
     BonusSharePlan = CorporateActionOptionCode.BonusSharePlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buy additional securities to round up position.
     /// Encoded/decoded by serializers as &quot;BUYA&quot;.
@@ -50,7 +54,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsQwrAEeGFLZ_5tFfOnw")]
     [Description(@"Buy additional securities to round up position.")]
     BuyUp = CorporateActionOptionCode.BuyUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option to choose between different security and cash options.
     /// Encoded/decoded by serializers as &quot;CASE&quot;.
@@ -59,7 +63,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsRwrAEeGFLZ_5tFfOnw")]
     [Description(@"Option to choose between different security and cash options.")]
     CashAndSecurity = CorporateActionOptionCode.CashAndSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option to choose cash.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -68,16 +72,18 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsSwrAEeGFLZ_5tFfOnw")]
     [Description(@"Option to choose cash.")]
     Cash = CorporateActionOptionCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote to consent to change the terms of the securities agreement and to exchange securities.
     /// Encoded/decoded by serializers as &quot;CEXC&quot;.
     /// </summary>
     [EnumMember(Value = "CEXC")]
     [IsoId("_tzGsTwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Vote to consent to change the terms of the securities agreement and to exchange securities.")]
+    [Description(
+        @"Vote to consent to change the terms of the securities agreement and to exchange securities."
+    )]
     ConsentAndExchange = CorporateActionOptionCode.ConsentAndExchange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote not to approve the event or proposal.
     /// Encoded/decoded by serializers as &quot;CONN&quot;.
@@ -86,7 +92,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsUwrAEeGFLZ_5tFfOnw")]
     [Description(@"Vote not to approve the event or proposal.")]
     ConsentDenied = CorporateActionOptionCode.ConsentDenied, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote to approve the event or proposal.
     /// Encoded/decoded by serializers as &quot;CONY&quot;.
@@ -95,16 +101,18 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsVwrAEeGFLZ_5tFfOnw")]
     [Description(@"Vote to approve the event or proposal.")]
     ConsentGranted = CorporateActionOptionCode.ConsentGranted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote to consent to change the terms of the securities agreement and to tender securities for cash.
     /// Encoded/decoded by serializers as &quot;CTEN&quot;.
     /// </summary>
     [EnumMember(Value = "CTEN")]
     [IsoId("_tzGsWwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Vote to consent to change the terms of the securities agreement and to tender securities for cash.")]
+    [Description(
+        @"Vote to consent to change the terms of the securities agreement and to tender securities for cash."
+    )]
     ConsentAndTender = CorporateActionOptionCode.ConsentAndTender, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exercise intermediate securities or warrants.
     /// Encoded/decoded by serializers as &quot;EXER&quot;.
@@ -113,7 +121,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsXwrAEeGFLZ_5tFfOnw")]
     [Description(@"Exercise intermediate securities or warrants.")]
     Exercise = CorporateActionOptionCode.Exercise, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Allow event or entitled security to expire.
     /// Encoded/decoded by serializers as &quot;LAPS&quot;.
@@ -122,25 +130,29 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsYwrAEeGFLZ_5tFfOnw")]
     [Description(@"Allow event or entitled security to expire.")]
     Lapse = CorporateActionOptionCode.Lapse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mark down the global certificate as a result of a corporate action (instruction from International Central Securities Depositories (ICSDs) to common depositories who are holding the global certificate on behalf of the International Central Securities Depositories (ICSDs)).
     /// Encoded/decoded by serializers as &quot;MKDW&quot;.
     /// </summary>
     [EnumMember(Value = "MKDW")]
     [IsoId("_tzGsZwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Mark down the global certificate as a result of a corporate action (instruction from International Central Securities Depositories (ICSDs) to common depositories who are holding the global certificate on behalf of the International Central Securities Depositories (ICSDs)).")]
+    [Description(
+        @"Mark down the global certificate as a result of a corporate action (instruction from International Central Securities Depositories (ICSDs) to common depositories who are holding the global certificate on behalf of the International Central Securities Depositories (ICSDs))."
+    )]
     MarkDown = CorporateActionOptionCode.MarkDown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mark up the global certificate as a result of a corporate action (instruction from International Central Securities Depositories (ICSDs) to common depositories who are holding the global certificate on behalf of the International Central Securities Depositories (ICSDs)).
     /// Encoded/decoded by serializers as &quot;MKUP&quot;.
     /// </summary>
     [EnumMember(Value = "MKUP")]
     [IsoId("_tzGsawrAEeGFLZ_5tFfOnw")]
-    [Description(@"Mark up the global certificate as a result of a corporate action (instruction from International Central Securities Depositories (ICSDs) to common depositories who are holding the global certificate on behalf of the International Central Securities Depositories (ICSDs)).")]
+    [Description(
+        @"Mark up the global certificate as a result of a corporate action (instruction from International Central Securities Depositories (ICSDs) to common depositories who are holding the global certificate on behalf of the International Central Securities Depositories (ICSDs))."
+    )]
     MarkUp = CorporateActionOptionCode.MarkUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote with management.
     /// Encoded/decoded by serializers as &quot;MNGT&quot;.
@@ -149,25 +161,29 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsbwrAEeGFLZ_5tFfOnw")]
     [Description(@"Vote with management.")]
     VoteWithManagement = CorporateActionOptionCode.VoteWithManagement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option that allows a holder to elect to retain their holding, for example, a putable bond.
     /// Encoded/decoded by serializers as &quot;MPUT&quot;.
     /// </summary>
     [EnumMember(Value = "MPUT")]
     [IsoId("_tzGscwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Option that allows a holder to elect to retain their holding, for example, a putable bond.")]
+    [Description(
+        @"Option that allows a holder to elect to retain their holding, for example, a putable bond."
+    )]
     Retain = CorporateActionOptionCode.Retain, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option for the account owner not to take part in the event. This would include opt-out for class actions and lodging of dissenters&apos; rights.
     /// Encoded/decoded by serializers as &quot;NOAC&quot;.
     /// </summary>
     [EnumMember(Value = "NOAC")]
     [IsoId("_tzGsdwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Option for the account owner not to take part in the event. This would include opt-out for class actions and lodging of dissenters' rights.")]
+    [Description(
+        @"Option for the account owner not to take part in the event. This would include opt-out for class actions and lodging of dissenters' rights."
+    )]
     NoAction = CorporateActionOptionCode.NoAction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account owner is a non-qualified investor.
     /// Encoded/decoded by serializers as &quot;NOQU&quot;.
@@ -176,25 +192,29 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsewrAEeGFLZ_5tFfOnw")]
     [Description(@"Account owner is a non-qualified investor.")]
     NonQualifiedInvestor = CorporateActionOptionCode.NonQualifiedInvestor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// In a remarketing of variable notes, the margin that shareholders can propose in respect of the next interest period.
     /// Encoded/decoded by serializers as &quot;OFFR&quot;.
     /// </summary>
     [EnumMember(Value = "OFFR")]
     [IsoId("_tzGsfwrAEeGFLZ_5tFfOnw")]
-    [Description(@"In a remarketing of variable notes, the margin that shareholders can propose in respect of the next interest period.")]
+    [Description(
+        @"In a remarketing of variable notes, the margin that shareholders can propose in respect of the next interest period."
+    )]
     ProposedRate = CorporateActionOptionCode.ProposedRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Generic corporate action option to be used in case that no other specific code is appropriate.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
     /// </summary>
     [EnumMember(Value = "OTHR")]
     [IsoId("_tzGsgwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Generic corporate action option to be used in case that no other specific code is appropriate.")]
+    [Description(
+        @"Generic corporate action option to be used in case that no other specific code is appropriate."
+    )]
     Other = CorporateActionOptionCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Subscribe to more equities than underlying securities position allows.
     /// Encoded/decoded by serializers as &quot;OVER&quot;.
@@ -203,7 +223,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGshwrAEeGFLZ_5tFfOnw")]
     [Description(@"Subscribe to more equities than underlying securities position allows.")]
     Oversubscribe = CorporateActionOptionCode.Oversubscribe, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issue a proxy card in case of voting.
     /// Encoded/decoded by serializers as &quot;PROX&quot;.
@@ -212,7 +232,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsiwrAEeGFLZ_5tFfOnw")]
     [Description(@"Issue a proxy card in case of voting.")]
     ProxyCard = CorporateActionOptionCode.ProxyCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account owner is a qualified investor.
     /// Encoded/decoded by serializers as &quot;QINV&quot;.
@@ -221,7 +241,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsjwrAEeGFLZ_5tFfOnw")]
     [Description(@"Account owner is a qualified investor.")]
     QualifiedInvestor = CorporateActionOptionCode.QualifiedInvestor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of securities to holders.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -230,7 +250,7 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGskwrAEeGFLZ_5tFfOnw")]
     [Description(@"Distribution of securities to holders.")]
     Security = CorporateActionOptionCode.Security, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sell the intermediate securities.
     /// Encoded/decoded by serializers as &quot;SLLE&quot;.
@@ -239,16 +259,18 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGslwrAEeGFLZ_5tFfOnw")]
     [Description(@"Sell the intermediate securities.")]
     SellEntitlement = CorporateActionOptionCode.SellEntitlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option to give a split instruction, for example, a split voting instruction on a meeting.
     /// Encoded/decoded by serializers as &quot;SPLI&quot;.
     /// </summary>
     [EnumMember(Value = "SPLI")]
     [IsoId("_tzGsmwrAEeGFLZ_5tFfOnw")]
-    [Description(@"Option to give a split instruction, for example, a split voting instruction on a meeting.")]
+    [Description(
+        @"Option to give a split instruction, for example, a split voting instruction on a meeting."
+    )]
     SplitInstruction = CorporateActionOptionCode.SplitInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax instruction.
     /// Encoded/decoded by serializers as &quot;TAXI&quot;.
@@ -257,14 +279,15 @@ public enum CorporateActionOption10Code
     [IsoId("_tzGsnwrAEeGFLZ_5tFfOnw")]
     [Description(@"Tax instruction.")]
     TaxInstruction = CorporateActionOptionCode.TaxInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Proceeds not known during election period. The option can result in cash and/or securities.
     /// Encoded/decoded by serializers as &quot;PRUN&quot;.
     /// </summary>
     [EnumMember(Value = "PRUN")]
     [IsoId("_usUzMgrAEeGFLZ_5tFfOnw")]
-    [Description(@"Proceeds not known during election period. The option can result in cash and/or securities.")]
+    [Description(
+        @"Proceeds not known during election period. The option can result in cash and/or securities."
+    )]
     UnknownProceeds = CorporateActionOptionCode.UnknownProceeds, // same ordinal as derivation source for type conversions
-    
 }

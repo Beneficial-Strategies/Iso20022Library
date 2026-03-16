@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,65 +14,63 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7EuuYOq_Ee6VKYlUtt-ZtQ")]
 [DisplayName("Foreign Exchange Trade Confirmation1")]
-public partial record ForeignExchangeTradeConfirmation1
+public record ForeignExchangeTradeConfirmation1
 {
-    #nullable enable
-
     /// <summary>
     /// Common Identification.
     /// </summary>
     [DisplayName("Common Identification")]
     [IsoXmlTag("")]
-    public IsoMax35Text? CommonIdentification { get; init; } 
+    public IsoMax35Text? CommonIdentification { get; init; }
 
     /// <summary>
     /// Creation Date Time.
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("")]
-    public required IsoISODateTime CreationDateTime { get; init; } 
+    public required IsoISODateTime CreationDateTime { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("")]
-    public required IsoMax47Text Identification { get; init; } 
+    public required IsoMax47Text Identification { get; init; }
 
     /// <summary>
     /// Initiating Party.
     /// </summary>
     [DisplayName("Initiating Party")]
     [IsoXmlTag("")]
-    public required TradeParty7 InitiatingParty { get; init; } 
+    public required TradeParty7 InitiatingParty { get; init; }
 
     /// <summary>
     /// Lifecycle Status.
     /// </summary>
     [DisplayName("Lifecycle Status")]
     [IsoXmlTag("")]
-    public required FXTradeConfirmationStatusCode LifecycleStatus { get; init; } 
+    public required FXTradeConfirmationStatusCode LifecycleStatus { get; init; }
 
     /// <summary>
     /// Product Type.
     /// </summary>
     [DisplayName("Product Type")]
     [IsoXmlTag("")]
-    public OptionDefinitionType1Code? ProductType { get; init; } 
+    public OptionDefinitionType1Code? ProductType { get; init; }
 
     /// <summary>
     /// Receiving Party.
     /// </summary>
     [DisplayName("Receiving Party")]
     [IsoXmlTag("")]
-    public required TradeParty7 ReceivingParty { get; init; } 
+    public required TradeParty7 ReceivingParty { get; init; }
 
     /// <summary>
     /// Sender Reference.
     /// </summary>
     [DisplayName("Sender Reference")]
     [IsoXmlTag("")]
-    public required IsoMax35Text SenderReference { get; init; } 
+    public required IsoMax35Text SenderReference { get; init; }
 
     /// <summary>
     /// Settlement Instruction.
@@ -86,30 +84,26 @@ public partial record ForeignExchangeTradeConfirmation1
     /// </summary>
     [DisplayName("Split Settlement Count")]
     [IsoXmlTag("")]
-    public IsoNonNegativeNumber? SplitSettlementCount { get; init; } 
+    public IsoNonNegativeNumber? SplitSettlementCount { get; init; }
 
     /// <summary>
     /// Split Settlement Indicator.
     /// </summary>
     [DisplayName("Split Settlement Indicator")]
     [IsoXmlTag("")]
-    public Isoboolean? SplitSettlementIndicator { get; init; } 
+    public Isoboolean? SplitSettlementIndicator { get; init; }
 
     /// <summary>
     /// Status Reason.
     /// </summary>
     [DisplayName("Status Reason")]
     [IsoXmlTag("")]
-    public ExternalStatusReasonCode? StatusReason { get; init; } 
+    public ExternalStatusReasonCode? StatusReason { get; init; }
 
     /// <summary>
     /// Trade Detail.
     /// </summary>
     [DisplayName("Trade Detail")]
     [IsoXmlTag("")]
-    public required ForeignExchangeTrade1 TradeDetail { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ForeignExchangeTrade1 TradeDetail { get; init; }
 }

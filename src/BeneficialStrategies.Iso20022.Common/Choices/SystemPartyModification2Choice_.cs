@@ -19,19 +19,47 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SystemPartyModification2Choice.LockStatus))]
     [KnownType(typeof(SystemPartyModification2Choice.SystemRestriction))]
     [KnownType(typeof(SystemPartyModification2Choice.MarketSpecificAttribute))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.SystemPartyDate),nameof(SystemPartyModification2Choice.SystemPartyDate))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.PartyIdentification),nameof(SystemPartyModification2Choice.PartyIdentification))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.PartyName),nameof(SystemPartyModification2Choice.PartyName))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.ContactDetails),nameof(SystemPartyModification2Choice.ContactDetails))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.TechnicalAddress),nameof(SystemPartyModification2Choice.TechnicalAddress))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.PartyAddress),nameof(SystemPartyModification2Choice.PartyAddress))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.ResidenceType),nameof(SystemPartyModification2Choice.ResidenceType))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.LockStatus),nameof(SystemPartyModification2Choice.LockStatus))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.SystemRestriction),nameof(SystemPartyModification2Choice.SystemRestriction))]
-    [JsonDerivedType(typeof(SystemPartyModification2Choice.MarketSpecificAttribute),nameof(SystemPartyModification2Choice.MarketSpecificAttribute))]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.SystemPartyDate),
+        nameof(SystemPartyModification2Choice.SystemPartyDate)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.PartyIdentification),
+        nameof(SystemPartyModification2Choice.PartyIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.PartyName),
+        nameof(SystemPartyModification2Choice.PartyName)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.ContactDetails),
+        nameof(SystemPartyModification2Choice.ContactDetails)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.TechnicalAddress),
+        nameof(SystemPartyModification2Choice.TechnicalAddress)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.PartyAddress),
+        nameof(SystemPartyModification2Choice.PartyAddress)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.ResidenceType),
+        nameof(SystemPartyModification2Choice.ResidenceType)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.LockStatus),
+        nameof(SystemPartyModification2Choice.LockStatus)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.SystemRestriction),
+        nameof(SystemPartyModification2Choice.SystemRestriction)
+    )]
+    [JsonDerivedType(
+        typeof(SystemPartyModification2Choice.MarketSpecificAttribute),
+        nameof(SystemPartyModification2Choice.MarketSpecificAttribute)
+    )]
     [IsoId("_x87oIYv-Eei289CGNqs21g")]
     [DisplayName("System Party Modification 2 Choice")]
-    public abstract partial record SystemPartyModification2Choice_
-    {
-    }
+    public abstract record SystemPartyModification2Choice_ { }
 }

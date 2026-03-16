@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XqDlJelqEeuvhrZwLF0fDg")]
 [DisplayName("Portfolio Transfer")]
-public partial record PortfolioTransfer11
+public record PortfolioTransfer11
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PortfolioTransfer11
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MasterReference { get; init; }
+
     /// <summary>
     /// Identification assigned to the transfer of assets.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record PortfolioTransfer11
     [DisplayName("Transfer Identification")]
     [IsoXmlTag("TrfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TransferIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TransferIdentification { get; init; }
+
     /// <summary>
     /// Identification of the confirmation assigned by the transferor to the transfer.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record PortfolioTransfer11
     [DisplayName("Transfer Confirmation Identification")]
     [IsoXmlTag("TrfConfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TransferConfirmationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TransferConfirmationIdentification { get; init; }
+
     /// <summary>
     /// Date for which the instructing party requests the transfer of the portfolio as a whole.
     /// </summary>
@@ -55,65 +53,61 @@ public partial record PortfolioTransfer11
     [DisplayName("Requested Transfer Date")]
     [IsoXmlTag("ReqdTrfDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedTransferDate { get; init; } 
-    
+    public IsoISODate? RequestedTransferDate { get; init; }
+
     /// <summary>
     /// Choice of tax efficient product, general investment or pension.
     /// </summary>
     [IsoId("_X_g3y-lqEeuvhrZwLF0fDg")]
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public FundPortfolio8Choice_? Portfolio { get; init; } 
-    
+    public FundPortfolio8Choice_? Portfolio { get; init; }
+
     /// <summary>
-    /// Specifies whether all remaining assets in the portfolio not listed for transfer should be liquidated and transferred as cash. 
+    /// Specifies whether all remaining assets in the portfolio not listed for transfer should be liquidated and transferred as cash.
     /// </summary>
     [IsoId("_X_g3zelqEeuvhrZwLF0fDg")]
     [DisplayName("All Other Cash")]
     [IsoXmlTag("AllOthrCsh")]
-    public AllOtherCash1? AllOtherCash { get; init; } 
-    
+    public AllOtherCash1? AllOtherCash { get; init; }
+
     /// <summary>
     /// Specifies whether all assets in the portfolio are to be liquidated and transferred as cash.
     /// </summary>
     [IsoId("_X_g3z-lqEeuvhrZwLF0fDg")]
     [DisplayName("Cash All")]
     [IsoXmlTag("CshAll")]
-    public CashAll1? CashAll { get; init; } 
-    
+    public CashAll1? CashAll { get; init; }
+
     /// <summary>
     /// Specifies how the cash in the account that is awaiting investment is to be dealt with.
     /// </summary>
     [IsoId("_X_g30elqEeuvhrZwLF0fDg")]
     [DisplayName("Residual Cash")]
     [IsoXmlTag("RsdlCsh")]
-    public ResidualCash2? ResidualCash { get; init; } 
-    
+    public ResidualCash2? ResidualCash { get; init; }
+
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.
     /// </summary>
     [IsoId("_X_g30-lqEeuvhrZwLF0fDg")]
     [DisplayName("Payment Details")]
     [IsoXmlTag("PmtDtls")]
-    public PaymentInstrument14? PaymentDetails { get; init; } 
-    
+    public PaymentInstrument14? PaymentDetails { get; init; }
+
     /// <summary>
     /// Asset to be transferred.
     /// </summary>
     [IsoId("_X_g31elqEeuvhrZwLF0fDg")]
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public FinancialInstrument102? FinancialInstrumentAssetForTransfer { get; init; } 
-    
+    public FinancialInstrument102? FinancialInstrumentAssetForTransfer { get; init; }
+
     /// <summary>
     /// Additional information about the product transfer.
     /// </summary>
     [IsoId("_X_g31-lqEeuvhrZwLF0fDg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

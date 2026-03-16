@@ -23,7 +23,7 @@ public enum BusinessDayConvention1Code
     [IsoId("_bVIDNtp-Ed-ak6NoX_4Aeg_1252936265")]
     [Description(@"The date will be the first following day that is a business day.")]
     Following = BusinessDayConventionCode.Following, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The date will be the first preceding day that is a business day.
     /// Encoded/decoded by serializers as &quot;PREC&quot;.
@@ -32,5 +32,4 @@ public enum BusinessDayConvention1Code
     [IsoId("_bVIDN9p-Ed-ak6NoX_4Aeg_-522159377")]
     [Description(@"The date will be the first preceding day that is a business day.")]
     Preceding = BusinessDayConventionCode.Preceding, // same ordinal as derivation source for type conversions
-    
 }

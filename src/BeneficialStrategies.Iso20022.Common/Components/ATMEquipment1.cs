@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eqOMIIn8EeShMpas3885ww")]
 [DisplayName("ATM Equipment")]
-public partial record ATMEquipment1
+public record ATMEquipment1
 {
-    #nullable enable
-    
     /// <summary>
     /// ATM Manufacturer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ATMEquipment1
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Manufacturer { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Manufacturer { get; init; }
+
     /// <summary>
     /// Model of ATM.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ATMEquipment1
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Model { get; init; }
+
     /// <summary>
     /// Serial number of the ATM.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record ATMEquipment1
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SerialNumber { get; init; }
+
     /// <summary>
     /// Provider of the ATM application software.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record ATMEquipment1
     [DisplayName("Application Provider")]
     [IsoXmlTag("ApplPrvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ApplicationProvider { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ApplicationProvider { get; init; }
+
     /// <summary>
     /// Name of the software product.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record ATMEquipment1
     [DisplayName("Application Name")]
     [IsoXmlTag("ApplNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ApplicationName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ApplicationName { get; init; }
+
     /// <summary>
     /// Current version of the software that might include the release number.
     /// </summary>
@@ -75,9 +73,9 @@ public partial record ATMEquipment1
     [DisplayName("Application Version")]
     [IsoXmlTag("ApplVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ApplicationVersion { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ApplicationVersion { get; init; }
+
     /// <summary>
     /// Unique assessment number for the component.
     /// </summary>
@@ -85,18 +83,14 @@ public partial record ATMEquipment1
     [DisplayName("Approval Number")]
     [IsoXmlTag("ApprvlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ApprovalNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ApprovalNumber { get; init; }
+
     /// <summary>
     /// Configuration parameter version.
     /// </summary>
     [IsoId("_fAK8EIn-EeShMpas3885ww")]
     [DisplayName("Configuration Parameter")]
     [IsoXmlTag("CfgtnParam")]
-    public ATMConfigurationParameter1? ConfigurationParameter { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ATMConfigurationParameter1? ConfigurationParameter { get; init; }
 }

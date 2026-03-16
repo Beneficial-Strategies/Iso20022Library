@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T6ZIUVm_EeOQYsoJizpkVw")]
 [DisplayName("Early Payment")]
-public partial record EarlyPayment1
+public record EarlyPayment1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date before which the early payment discount is valid for payment.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record EarlyPayment1
     [DisplayName("Early Payment Date")]
     [IsoXmlTag("EarlyPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EarlyPaymentDate { get; init; } 
-    
+    public required IsoISODate EarlyPaymentDate { get; init; }
+
     /// <summary>
     /// Discount percent for early payment.
     /// </summary>
@@ -34,41 +32,37 @@ public partial record EarlyPayment1
     [DisplayName("Discount Percent")]
     [IsoXmlTag("DscntPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate DiscountPercent { get; init; } 
-    
+    public required IsoPercentageRate DiscountPercent { get; init; }
+
     /// <summary>
     /// Early payment discount with tax, with currency.
     /// </summary>
     [IsoId("_UGcnZVm_EeOQYsoJizpkVw")]
     [DisplayName("Discount Amount")]
     [IsoXmlTag("DscntAmt")]
-    public required CurrencyAndAmount DiscountAmount { get; init; } 
-    
+    public required CurrencyAndAmount DiscountAmount { get; init; }
+
     /// <summary>
     /// In tax specification for early payment discount one defined the applied tax rates for specific early payment. VAT stands for value added tax.
     /// </summary>
     [IsoId("_EkXkEFnAEeOQYsoJizpkVw")]
     [DisplayName("Early Payment Tax Specification")]
     [IsoXmlTag("EarlyPmtTaxSpcfctn")]
-    public EarlyPaymentsVAT1? EarlyPaymentTaxSpecification { get; init; } 
-    
+    public EarlyPaymentsVAT1? EarlyPaymentTaxSpecification { get; init; }
+
     /// <summary>
     /// Tax total in early payment, with currency.
     /// </summary>
     [IsoId("_sh6QoFm_EeOQYsoJizpkVw")]
     [DisplayName("Early Payment Tax Total")]
     [IsoXmlTag("EarlyPmtTaxTtl")]
-    public CurrencyAndAmount? EarlyPaymentTaxTotal { get; init; } 
-    
+    public CurrencyAndAmount? EarlyPaymentTaxTotal { get; init; }
+
     /// <summary>
     /// Payable amount with discount of early payment, with currency.
     /// </summary>
     [IsoId("_3UqokFm_EeOQYsoJizpkVw")]
     [DisplayName("Due Payable Amount With Early Payment")]
     [IsoXmlTag("DuePyblAmtWthEarlyPmt")]
-    public CurrencyAndAmount? DuePayableAmountWithEarlyPayment { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CurrencyAndAmount? DuePayableAmountWithEarlyPayment { get; init; }
 }

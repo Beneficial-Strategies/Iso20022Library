@@ -23,7 +23,7 @@ public enum SwitchTypeCode
     [IsoId("_Tt_zgA2XEeStB9HSJRk0Qw")]
     [Description(@"Indicates a partial switch for an account.")]
     PartSwitch,
-    
+
     /// <summary>
     /// Indicates a full switch for an account.
     /// Encoded/decoded by serializers as &quot;FULL&quot;.
@@ -32,5 +32,4 @@ public enum SwitchTypeCode
     [IsoId("_VwU3oA2XEeStB9HSJRk0Qw")]
     [Description(@"Indicates a full switch for an account.")]
     FullSwitch,
-    
 }

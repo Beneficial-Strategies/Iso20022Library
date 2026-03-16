@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O_wlcfpGEeCBpukrOuC4uQ")]
 [DisplayName("Rate Details")]
-public partial record RateDetails7
+public record RateDetails7
 {
-    #nullable enable
-    
     /// <summary>
     /// Rate used for additional tax that cannot be categorised.
     /// </summary>
     [IsoId("_O_wlj_pGEeCBpukrOuC4uQ")]
     [DisplayName("Additional Tax")]
     [IsoXmlTag("AddtlTax")]
-    public RateAndAmountFormat5Choice_? AdditionalTax { get; init; } 
-    
+    public RateAndAmountFormat5Choice_? AdditionalTax { get; init; }
+
     /// <summary>
     /// Rate used to calculate the amount of the charges/fees that cannot be categorised.
     /// </summary>
     [IsoId("_O_wlk_pGEeCBpukrOuC4uQ")]
     [DisplayName("Charges Fees")]
     [IsoXmlTag("ChrgsFees")]
-    public RateAndAmountFormat5Choice_? ChargesFees { get; init; } 
-    
+    public RateAndAmountFormat5Choice_? ChargesFees { get; init; }
+
     /// <summary>
     /// Dividend is final.
     /// </summary>
     [IsoId("_O_wll_pGEeCBpukrOuC4uQ")]
     [DisplayName("Final Dividend Rate")]
     [IsoXmlTag("FnlDvddRate")]
-    public ActiveCurrencyAnd13DecimalAmount? FinalDividendRate { get; init; } 
-    
+    public ActiveCurrencyAnd13DecimalAmount? FinalDividendRate { get; init; }
+
     /// <summary>
     /// Percentage of fiscal tax to apply.
     /// </summary>
@@ -49,24 +47,24 @@ public partial record RateDetails7
     [DisplayName("Fiscal Stamp")]
     [IsoXmlTag("FsclStmp")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? FiscalStamp { get; init; } 
-    
+    public IsoPercentageRate? FiscalStamp { get; init; }
+
     /// <summary>
     /// Rate resulting from a fully franked dividend paid by a company; rate includes tax credit for companies that have made sufficient tax payments during fiscal period.
     /// </summary>
     [IsoId("_O_wln_pGEeCBpukrOuC4uQ")]
     [DisplayName("Fully Franked Rate")]
     [IsoXmlTag("FullyFrnkdRate")]
-    public RateAndAmountFormat5Choice_? FullyFrankedRate { get; init; } 
-    
+    public RateAndAmountFormat5Choice_? FullyFrankedRate { get; init; }
+
     /// <summary>
     /// Cash dividend amount per equity before deductions or allowances have been made.
     /// </summary>
     [IsoId("_O_wlo_pGEeCBpukrOuC4uQ")]
     [DisplayName("Gross Dividend Rate")]
     [IsoXmlTag("GrssDvddRate")]
-    public GrossDividendRateFormat2Choice_? GrossDividendRate { get; init; } 
-    
+    public GrossDividendRateFormat2Choice_? GrossDividendRate { get; init; }
+
     /// <summary>
     /// Cash rate made available, as an incentive, in addition to the solicitation fee, in order to encourage early participation in an offer.
     /// </summary>
@@ -74,8 +72,8 @@ public partial record RateDetails7
     [DisplayName("Early Solicitation Fee Rate")]
     [IsoXmlTag("EarlySlctnFeeRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? EarlySolicitationFeeRate { get; init; } 
-    
+    public IsoPercentageRate? EarlySolicitationFeeRate { get; init; }
+
     /// <summary>
     /// Rate of the cash premium made available if the securities holder consents or participates to an event, for example, consent fees.
     /// </summary>
@@ -83,40 +81,40 @@ public partial record RateDetails7
     [DisplayName("Cash Incentive Rate")]
     [IsoXmlTag("CshIncntivRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CashIncentiveRate { get; init; } 
-    
+    public IsoPercentageRate? CashIncentiveRate { get; init; }
+
     /// <summary>
     /// Actual interest rate used for the payment of the interest for the specified interest period.
     /// </summary>
     [IsoId("_O_wlq_pGEeCBpukrOuC4uQ")]
     [DisplayName("Interest Rate Used For Payment")]
     [IsoXmlTag("IntrstRateUsdForPmt")]
-    public InterestRateUsedForPaymentFormat2Choice_? InterestRateUsedForPayment { get; init; } 
-    
+    public InterestRateUsedForPaymentFormat2Choice_? InterestRateUsedForPayment { get; init; }
+
     /// <summary>
     /// Cash dividend amount per equity after deductions or allowances have been made.
     /// </summary>
     [IsoId("_O_wlr_pGEeCBpukrOuC4uQ")]
     [DisplayName("Net Dividend Rate")]
     [IsoXmlTag("NetDvddRate")]
-    public NetDividendRateFormat2Choice_? NetDividendRate { get; init; } 
-    
+    public NetDividendRateFormat2Choice_? NetDividendRate { get; init; }
+
     /// <summary>
     /// Rate per share to which a non-resident is entitled.
     /// </summary>
     [IsoId("_O_wls_pGEeCBpukrOuC4uQ")]
     [DisplayName("Non Resident Rate")]
     [IsoXmlTag("NonResdtRate")]
-    public RateAndAmountFormat5Choice_? NonResidentRate { get; init; } 
-    
+    public RateAndAmountFormat5Choice_? NonResidentRate { get; init; }
+
     /// <summary>
     /// Dividend is provisional.
     /// </summary>
     [IsoId("_O_wlt_pGEeCBpukrOuC4uQ")]
     [DisplayName("Provisional Dividend Rate")]
     [IsoXmlTag("PrvsnlDvddRate")]
-    public ActiveCurrencyAnd13DecimalAmount? ProvisionalDividendRate { get; init; } 
-    
+    public ActiveCurrencyAnd13DecimalAmount? ProvisionalDividendRate { get; init; }
+
     /// <summary>
     /// Rate applicable to the event announced, for example, redemption rate for a redemption event.
     /// </summary>
@@ -124,8 +122,8 @@ public partial record RateDetails7
     [DisplayName("Applicable Rate")]
     [IsoXmlTag("AplblRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ApplicableRate { get; init; } 
-    
+    public IsoPercentageRate? ApplicableRate { get; init; }
+
     /// <summary>
     /// Cash rate made available in an offer in order to encourage participation in the offer.
     /// </summary>
@@ -133,24 +131,24 @@ public partial record RateDetails7
     [DisplayName("Solicitation Fee Rate")]
     [IsoXmlTag("SlctnFeeRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? SolicitationFeeRate { get; init; } 
-    
+    public IsoPercentageRate? SolicitationFeeRate { get; init; }
+
     /// <summary>
     /// Amount of money per equity allocated as the result of a tax credit.
     /// </summary>
     [IsoId("_O_wlw_pGEeCBpukrOuC4uQ")]
     [DisplayName("Tax Credit Rate")]
     [IsoXmlTag("TaxCdtRate")]
-    public TaxCreditRateFormat2Choice_? TaxCreditRate { get; init; } 
-    
+    public TaxCreditRateFormat2Choice_? TaxCreditRate { get; init; }
+
     /// <summary>
     /// Percentage of the gross dividend rate on which tax must be paid.
     /// </summary>
     [IsoId("_O_wlx_pGEeCBpukrOuC4uQ")]
     [DisplayName("Tax Related Rate")]
     [IsoXmlTag("TaxRltdRate")]
-    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; } 
-    
+    public RateTypeAndAmountAndStatus6? TaxRelatedRate { get; init; }
+
     /// <summary>
     /// Percentage of a cash distribution that will be withheld by a tax authority.
     /// </summary>
@@ -158,8 +156,8 @@ public partial record RateDetails7
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? WithholdingTaxRate { get; init; } 
-    
+    public IsoPercentageRate? WithholdingTaxRate { get; init; }
+
     /// <summary>
     /// Taxation applied on an amount clearly identified as an income.
     /// </summary>
@@ -167,8 +165,8 @@ public partial record RateDetails7
     [DisplayName("Tax On Income")]
     [IsoXmlTag("TaxOnIncm")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxOnIncome { get; init; } 
-    
+    public IsoPercentageRate? TaxOnIncome { get; init; }
+
     /// <summary>
     /// Taxation applied on an amount clearly identified as capital profits, capital gains.
     /// </summary>
@@ -176,8 +174,8 @@ public partial record RateDetails7
     [DisplayName("Tax On Profits")]
     [IsoXmlTag("TaxOnPrfts")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxOnProfits { get; init; } 
-    
+    public IsoPercentageRate? TaxOnProfits { get; init; }
+
     /// <summary>
     /// Percentage of cash that was paid in excess of actual tax obligation and was reclaimed.
     /// </summary>
@@ -185,25 +183,21 @@ public partial record RateDetails7
     [DisplayName("Tax Reclaim Rate")]
     [IsoXmlTag("TaxRclmRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? TaxReclaimRate { get; init; } 
-    
+    public IsoPercentageRate? TaxReclaimRate { get; init; }
+
     /// <summary>
     /// Rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.
     /// </summary>
     [IsoId("_O_wl2_pGEeCBpukrOuC4uQ")]
     [DisplayName("Withholding Of Foreign Tax")]
     [IsoXmlTag("WhldgOfFrgnTax")]
-    public RateAndAmountFormat5Choice_? WithholdingOfForeignTax { get; init; } 
-    
+    public RateAndAmountFormat5Choice_? WithholdingOfForeignTax { get; init; }
+
     /// <summary>
     /// Rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.
     /// </summary>
     [IsoId("_O_wl3_pGEeCBpukrOuC4uQ")]
     [DisplayName("Withholding Of Local Tax")]
     [IsoXmlTag("WhldgOfLclTax")]
-    public RateAndAmountFormat5Choice_? WithholdingOfLocalTax { get; init; } 
-    
-    
-    #nullable disable
-    
+    public RateAndAmountFormat5Choice_? WithholdingOfLocalTax { get; init; }
 }

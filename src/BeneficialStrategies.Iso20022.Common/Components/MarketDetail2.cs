@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1Jjy4X5sEeasY4u9QTizPQ")]
 [DisplayName("Market Detail")]
-public partial record MarketDetail2
+public record MarketDetail2
 {
-    #nullable enable
-    
     /// <summary>
     /// Most relevant market in terms of liquidity as defined in the local regulation.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record MarketDetail2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public required IsoMICIdentifier Identification { get; init; } 
-    
+    public required IsoMICIdentifier Identification { get; init; }
+
     /// <summary>
     /// Average daily number of transactions that have been performed on the most relevant market in terms of liquidity.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record MarketDetail2
     [DisplayName("Average Daily Number Of Transactions")]
     [IsoXmlTag("AvrgDalyNbOfTxs")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? AverageDailyNumberOfTransactions { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoDecimalNumber? AverageDailyNumberOfTransactions { get; init; }
 }

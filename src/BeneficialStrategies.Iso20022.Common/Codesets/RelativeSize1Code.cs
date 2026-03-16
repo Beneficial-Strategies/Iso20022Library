@@ -23,7 +23,7 @@ public enum RelativeSize1Code
     [IsoId("_ZsEauNp-Ed-ak6NoX_4Aeg_-1702072394")]
     [Description(@"Indicates that the relative size is small.")]
     Small = RelativeSizeCode.Small, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the relative size is medium.
     /// Encoded/decoded by serializers as &quot;MEDI&quot;.
@@ -32,7 +32,7 @@ public enum RelativeSize1Code
     [IsoId("_ZsEaudp-Ed-ak6NoX_4Aeg_-1702072377")]
     [Description(@"Indicates that the relative size is medium.")]
     Medium = RelativeSizeCode.Medium, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the relative size is large.
     /// Encoded/decoded by serializers as &quot;LARG&quot;.
@@ -41,7 +41,7 @@ public enum RelativeSize1Code
     [IsoId("_ZsOLsNp-Ed-ak6NoX_4Aeg_-1702072334")]
     [Description(@"Indicates that the relative size is large.")]
     Large = RelativeSizeCode.Large, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the quantity is undisclosed.
     /// Encoded/decoded by serializers as &quot;UNDI&quot;.
@@ -50,5 +50,4 @@ public enum RelativeSize1Code
     [IsoId("_ZsOLsdp-Ed-ak6NoX_4Aeg_-1702072317")]
     [Description(@"Indicates that the quantity is undisclosed.")]
     Undisclosed = RelativeSizeCode.Undisclosed, // same ordinal as derivation source for type conversions
-    
 }

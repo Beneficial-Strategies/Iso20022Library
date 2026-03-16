@@ -23,7 +23,7 @@ public enum ProductType5Code
     [IsoId("_Ty9kEWlDEeaLAKoEUNsD9g")]
     [Description(@"Identifies categories of instruments related to Emission Allowance.")]
     EmissionAllowance = ProductTypeV2Code.EmissionAllowance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of instruments that are interest rates based.
     /// Encoded/decoded by serializers as &quot;INTR&quot;.
@@ -32,7 +32,7 @@ public enum ProductType5Code
     [IsoId("_VAB0IWlDEeaLAKoEUNsD9g")]
     [Description(@"Identifies categories of instruments that are interest rates based.")]
     InterestRate = ProductTypeV2Code.InterestRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies the nature or type of an equity.
     /// Encoded/decoded by serializers as &quot;EQUI&quot;.
@@ -41,7 +41,7 @@ public enum ProductType5Code
     [IsoId("_VdArEWlDEeaLAKoEUNsD9g")]
     [Description(@"Identifies the nature or type of an equity.")]
     Equity = ProductTypeV2Code.Equity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of instruments that are commodities.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -50,7 +50,7 @@ public enum ProductType5Code
     [IsoId("_VzUSQWlDEeaLAKoEUNsD9g")]
     [Description(@"Identifies categories of instruments that are commodities.")]
     Commodity = ProductTypeV2Code.Commodity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of instruments that are credits.
     /// Encoded/decoded by serializers as &quot;CRDT&quot;.
@@ -59,7 +59,7 @@ public enum ProductType5Code
     [IsoId("_WGPOQWlDEeaLAKoEUNsD9g")]
     [Description(@"Identifies categories of instruments that are credits.")]
     Credit = ProductTypeV2Code.Credit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies categories of currency instruments.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -68,5 +68,4 @@ public enum ProductType5Code
     [IsoId("_WZ5KEWlDEeaLAKoEUNsD9g")]
     [Description(@"Identifies categories of currency instruments.")]
     Currency = ProductTypeV2Code.Currency, // same ordinal as derivation source for type conversions
-    
 }

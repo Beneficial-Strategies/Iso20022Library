@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionInformationStatus1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionInformationStatus
     /// </summary>
     [IsoId("_RiPM09p-Ed-ak6NoX_4Aeg_-880551807")]
     [DisplayName("Processed Status")]
-    public partial record ProcessedStatus : CorporateActionInformationStatus1Choice_
+    public record ProcessedStatus : CorporateActionInformationStatus1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// The processing status.
         /// </summary>
         [IsoId("_Rknyctp-Ed-ak6NoX_4Aeg_6027375")]
         [DisplayName("Status")]
         [IsoXmlTag("Sts")]
-        public required ProcessedStatus5FormatChoice_ Status { get; init; } 
-        
+        public required ProcessedStatus5FormatChoice_ Status { get; init; }
+
         /// <summary>
         /// Additional information about the status.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionInformationStatus
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? AdditionalInformation { get; init; }
     }
 }

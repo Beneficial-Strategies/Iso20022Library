@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_AFUk0e8hEemHC5W45DWzKA")]
-[Description(@"Specifies a shipment conditions code, as published in the external ISO 20022 external code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies a shipment conditions code, as published in the external ISO 20022 external code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalShipmentCondition1Code))]
 public enum ExternalShipmentConditionCode
 {
@@ -24,7 +26,7 @@ public enum ExternalShipmentConditionCode
     [IsoId("_uUDnefRYEeuLhpyIdtJzwg")]
     [Description(@"Goods/service delivered after payment")]
     AdvancePayment,
-    
+
     /// <summary>
     /// Goods/service delivered at the same time as payment.
     /// Encoded/decoded by serializers as &quot;PMNT&quot;.
@@ -33,7 +35,7 @@ public enum ExternalShipmentConditionCode
     [IsoId("_uUDnfPRYEeuLhpyIdtJzwg")]
     [Description(@"Goods/service delivered at the same time as payment.")]
     DeliveryversusPayment,
-    
+
     /// <summary>
     /// Goods/service delivered before payment
     /// Encoded/decoded by serializers as &quot;TRLN&quot;.
@@ -42,5 +44,4 @@ public enum ExternalShipmentConditionCode
     [IsoId("_uUMxYPRYEeuLhpyIdtJzwg")]
     [Description(@"Goods/service delivered before payment")]
     TradeLoan,
-    
 }

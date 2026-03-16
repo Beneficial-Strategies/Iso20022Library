@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification1Choic
     /// </summary>
     [IsoId("_T-i3Mtp-Ed-ak6NoX_4Aeg_-1346615971")]
     [DisplayName("Missing Or Incorrect Information")]
-    public partial record MissingOrIncorrectInformation : UnableToApplyJustification1Choice_
+    public record MissingOrIncorrectInformation : UnableToApplyJustification1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Indicates the missing information.
         /// </summary>
@@ -25,8 +23,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification1Choic
         [IsoXmlTag("MssngInf")]
         [MinLength(0)]
         [MaxLength(10)]
-        public SimpleValueList<UnableToApplyMissingInfo1Code> MissingInformation { get; init; } = [];
-        
+        public SimpleValueList<UnableToApplyMissingInfo1Code> MissingInformation { get; init; } =
+            [];
+
         /// <summary>
         /// Indicates the incorrect information.
         /// </summary>
@@ -35,10 +34,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification1Choic
         [IsoXmlTag("IncrrctInf")]
         [MinLength(0)]
         [MaxLength(10)]
-        public SimpleValueList<UnableToApplyIncorrectInfo2Code> IncorrectInformation { get; init; } = [];
-        
-        
-        #nullable disable
-        
+        public SimpleValueList<UnableToApplyIncorrectInfo2Code> IncorrectInformation { get; init; } =
+            [];
     }
 }

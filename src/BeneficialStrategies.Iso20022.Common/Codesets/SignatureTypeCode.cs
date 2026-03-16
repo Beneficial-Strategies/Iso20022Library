@@ -21,18 +21,22 @@ public enum SignatureTypeCode
     /// </summary>
     [EnumMember(Value = "ORIG")]
     [IsoId("_ZPUNR9p-Ed-ak6NoX_4Aeg_1551868331")]
-    [Description(@"The investor's written signature is required. Can also be known as physical or wet signature.")]
+    [Description(
+        @"The investor's written signature is required. Can also be known as physical or wet signature."
+    )]
     Original,
-    
+
     /// <summary>
     /// A technical signature that includes algorithms and private key and public key information. Used to sign and verify the contents of a message.
     /// Encoded/decoded by serializers as &quot;DIGI&quot;.
     /// </summary>
     [EnumMember(Value = "DIGI")]
     [IsoId("_ZPUNSNp-Ed-ak6NoX_4Aeg_1551868361")]
-    [Description(@"A technical signature that includes algorithms and private key and public key information. Used to sign and verify the contents of a message.")]
+    [Description(
+        @"A technical signature that includes algorithms and private key and public key information. Used to sign and verify the contents of a message."
+    )]
     Digital,
-    
+
     /// <summary>
     /// A copy of a physical or original signature in an electronic format.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -41,7 +45,7 @@ public enum SignatureTypeCode
     [IsoId("_ZPdXMNp-Ed-ak6NoX_4Aeg_1551868392")]
     [Description(@"A copy of a physical or original signature in an electronic format.")]
     Electronic,
-    
+
     /// <summary>
     /// There is no signature required in any form.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -50,5 +54,4 @@ public enum SignatureTypeCode
     [IsoId("_ZPdXMdp-Ed-ak6NoX_4Aeg_1551868393")]
     [Description(@"There is no signature required in any form.")]
     None,
-    
 }

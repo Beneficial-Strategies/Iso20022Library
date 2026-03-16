@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity20Choice.FaceAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity20Choice.AmortisedValue))]
     [KnownType(typeof(FinancialInstrumentQuantity20Choice.Code))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity20Choice.Unit),nameof(FinancialInstrumentQuantity20Choice.Unit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity20Choice.FaceAmount),nameof(FinancialInstrumentQuantity20Choice.FaceAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity20Choice.AmortisedValue),nameof(FinancialInstrumentQuantity20Choice.AmortisedValue))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity20Choice.Code),nameof(FinancialInstrumentQuantity20Choice.Code))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity20Choice.Unit),
+        nameof(FinancialInstrumentQuantity20Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity20Choice.FaceAmount),
+        nameof(FinancialInstrumentQuantity20Choice.FaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity20Choice.AmortisedValue),
+        nameof(FinancialInstrumentQuantity20Choice.AmortisedValue)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity20Choice.Code),
+        nameof(FinancialInstrumentQuantity20Choice.Code)
+    )]
     [IsoId("_pPlzMQFIEeGhYJiRaPcH8g")]
     [DisplayName("Financial Instrument Quantity 20 Choice")]
-    public abstract partial record FinancialInstrumentQuantity20Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity20Choice_ { }
 }

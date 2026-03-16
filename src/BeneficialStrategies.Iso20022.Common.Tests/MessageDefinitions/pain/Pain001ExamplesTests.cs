@@ -1,13 +1,13 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Choices.AmountType4Choice;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
+using BeneficialStrategies.Iso20022.Choices.AmountType4Choice;
 using BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice;
 using BeneficialStrategies.Iso20022.Choices.Purpose2Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.pain;
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -29,48 +29,52 @@ public class Pain001ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader95 CreateGroupHeader(string msgId = "ACME/240315/PAI001/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime,
-        NumberOfTransactions = "1",
-        InitiatingParty = Iso20022TestData.Debtor,
-    };
+    public static GroupHeader95 CreateGroupHeader(string msgId = "ACME/240315/PAI001/00001") =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime,
+            NumberOfTransactions = "1",
+            InitiatingParty = Iso20022TestData.Debtor,
+        };
 
     public static PaymentInstruction40 CreatePaymentInstruction(
-        CreditTransferTransaction54? txn = null) => new()
-    {
-        PaymentInformationIdentification = "ACME/240315/PMTINF/001",
-        PaymentMethod = PaymentMethod3Code.CreditTransfer,
-        RequestedExecutionDate = new Date { Value = Iso20022TestData.SettlementDate },
-        Debtor = Iso20022TestData.Debtor,
-        DebtorAccount = Iso20022TestData.DebtorAccount,
-        DebtorAgent = Iso20022TestData.DebtorAgent,
-        CreditTransferTransactionInformation =
-        [
-            txn ?? CreateCreditTransfer(),
-        ],
-    };
+        CreditTransferTransaction54? txn = null
+    ) =>
+        new()
+        {
+            PaymentInformationIdentification = "ACME/240315/PMTINF/001",
+            PaymentMethod = PaymentMethod3Code.CreditTransfer,
+            RequestedExecutionDate = new Date { Value = Iso20022TestData.SettlementDate },
+            Debtor = Iso20022TestData.Debtor,
+            DebtorAccount = Iso20022TestData.DebtorAccount,
+            DebtorAgent = Iso20022TestData.DebtorAgent,
+            CreditTransferTransactionInformation = [txn ?? CreateCreditTransfer(),],
+        };
 
     public static CreditTransferTransaction54 CreateCreditTransfer(
-        AmountType4Choice_? amount = null) => new()
-    {
-        PaymentIdentification = new PaymentIdentification6
+        AmountType4Choice_? amount = null
+    ) =>
+        new()
         {
-            InstructionIdentification = Iso20022TestData.InstructionId,
-            EndToEndIdentification = Iso20022TestData.EndToEndId,
-            UETR = Iso20022TestData.Uetr,
-        },
-        Amount = amount ?? new InstructedAmount
-        {
-            Currency = Iso20022TestData.Currency,
-            Amount = Iso20022TestData.Amount,
-        },
-        ChargeBearer = ChargeBearerType1Code.Shared,
-        CreditorAgent = Iso20022TestData.CreditorAgent,
-        CreditorAccount = Iso20022TestData.CreditorAccount,
-        Creditor = Iso20022TestData.Creditor,
-    };
+            PaymentIdentification = new PaymentIdentification6
+            {
+                InstructionIdentification = Iso20022TestData.InstructionId,
+                EndToEndIdentification = Iso20022TestData.EndToEndId,
+                UETR = Iso20022TestData.Uetr,
+            },
+            Amount =
+                amount
+                ?? new InstructedAmount
+                {
+                    Currency = Iso20022TestData.Currency,
+                    Amount = Iso20022TestData.Amount,
+                },
+            ChargeBearer = ChargeBearerType1Code.Shared,
+            CreditorAgent = Iso20022TestData.CreditorAgent,
+            CreditorAccount = Iso20022TestData.CreditorAccount,
+            Creditor = Iso20022TestData.Creditor,
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -92,7 +96,8 @@ public class Pain001ExamplesTests
         Assert.NotNull(message);
         Assert.Equal("pain.001.001.11", CustomerCreditTransferInitiationV11.IsoIdentifier);
         Assert.IsType<InstructedAmount>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Amount);
+            message.PaymentInformation.CreditTransferTransactionInformation[0].Amount
+        );
     }
 
     /// <summary>
@@ -108,20 +113,24 @@ public class Pain001ExamplesTests
         {
             GroupHeader = CreateGroupHeader("ACME/240315/PAI001/00002"),
             PaymentInformation = CreatePaymentInstruction(
-                CreateCreditTransfer(new Choices.AmountType4Choice.EquivalentAmount
-                {
-                    Amount = new ActiveOrHistoricCurrencyAndAmount
+                CreateCreditTransfer(
+                    new Choices.AmountType4Choice.EquivalentAmount
                     {
-                        Currency = Iso20022TestData.Currency,
-                        Amount = Iso20022TestData.Amount,
-                    },
-                    CurrencyOfTransfer = "USD",
-                })),
+                        Amount = new ActiveOrHistoricCurrencyAndAmount
+                        {
+                            Currency = Iso20022TestData.Currency,
+                            Amount = Iso20022TestData.Amount,
+                        },
+                        CurrencyOfTransfer = "USD",
+                    }
+                )
+            ),
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.AmountType4Choice.EquivalentAmount>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Amount);
+            message.PaymentInformation.CreditTransferTransactionInformation[0].Amount
+        );
     }
 
     /// <summary>
@@ -147,12 +156,14 @@ public class Pain001ExamplesTests
                     {
                         Unstructured = "INV-2024-847 EUR 47250.00 due 2024-03-15",
                     },
-                }),
+                }
+            ),
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.Purpose2Choice.Code>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Purpose);
+            message.PaymentInformation.CreditTransferTransactionInformation[0].Purpose
+        );
     }
 
     /// <summary>
@@ -173,12 +184,14 @@ public class Pain001ExamplesTests
                     {
                         Value = "ACME-INTERCOMPANY-LOAN",
                     },
-                }),
+                }
+            ),
         };
 
         Assert.NotNull(message);
         Assert.IsType<Choices.Purpose2Choice.Proprietary>(
-            message.PaymentInformation.CreditTransferTransactionInformation[0].Purpose);
+            message.PaymentInformation.CreditTransferTransactionInformation[0].Purpose
+        );
     }
 
     /// <summary>
@@ -217,6 +230,7 @@ public class Pain001ExamplesTests
 
         Assert.NotNull(message);
         Assert.IsType<Choices.DateAndDateTime2Choice.DateTime>(
-            message.PaymentInformation.RequestedExecutionDate);
+            message.PaymentInformation.RequestedExecutionDate
+        );
     }
 }

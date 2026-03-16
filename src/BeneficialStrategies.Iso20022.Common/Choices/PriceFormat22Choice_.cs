@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat22Choice.NotSpecifiedPrice))]
     [KnownType(typeof(PriceFormat22Choice.AmountPricePerFinancialInstrumentQuantity))]
     [KnownType(typeof(PriceFormat22Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat22Choice.PercentagePrice),nameof(PriceFormat22Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat22Choice.AmountPrice),nameof(PriceFormat22Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat22Choice.NotSpecifiedPrice),nameof(PriceFormat22Choice.NotSpecifiedPrice))]
-    [JsonDerivedType(typeof(PriceFormat22Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat22Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat22Choice.AmountPricePerAmount),nameof(PriceFormat22Choice.AmountPricePerAmount))]
+    [JsonDerivedType(
+        typeof(PriceFormat22Choice.PercentagePrice),
+        nameof(PriceFormat22Choice.PercentagePrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat22Choice.AmountPrice),
+        nameof(PriceFormat22Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat22Choice.NotSpecifiedPrice),
+        nameof(PriceFormat22Choice.NotSpecifiedPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat22Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat22Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat22Choice.AmountPricePerAmount),
+        nameof(PriceFormat22Choice.AmountPricePerAmount)
+    )]
     [IsoId("_xvzyAOwNEd-sn-FiNtktcA")]
     [DisplayName("Price Format 22 Choice")]
-    public abstract partial record PriceFormat22Choice_
-    {
-    }
+    public abstract record PriceFormat22Choice_ { }
 }

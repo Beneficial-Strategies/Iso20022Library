@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus58Choice.Denied))]
     [KnownType(typeof(ProcessingStatus58Choice.Pending))]
     [KnownType(typeof(ProcessingStatus58Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus58Choice.AcknowledgedAccepted),nameof(ProcessingStatus58Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus58Choice.Rejected),nameof(ProcessingStatus58Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus58Choice.Completed),nameof(ProcessingStatus58Choice.Completed))]
-    [JsonDerivedType(typeof(ProcessingStatus58Choice.Denied),nameof(ProcessingStatus58Choice.Denied))]
-    [JsonDerivedType(typeof(ProcessingStatus58Choice.Pending),nameof(ProcessingStatus58Choice.Pending))]
-    [JsonDerivedType(typeof(ProcessingStatus58Choice.Proprietary),nameof(ProcessingStatus58Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus58Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus58Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus58Choice.Rejected),
+        nameof(ProcessingStatus58Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus58Choice.Completed),
+        nameof(ProcessingStatus58Choice.Completed)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus58Choice.Denied),
+        nameof(ProcessingStatus58Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus58Choice.Pending),
+        nameof(ProcessingStatus58Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus58Choice.Proprietary),
+        nameof(ProcessingStatus58Choice.Proprietary)
+    )]
     [IsoId("_6GW9O5NLEeWGlc8L7oPDIg")]
     [DisplayName("Processing Status 58 Choice")]
-    public abstract partial record ProcessingStatus58Choice_
-    {
-    }
+    public abstract record ProcessingStatus58Choice_ { }
 }

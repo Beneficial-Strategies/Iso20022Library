@@ -23,7 +23,7 @@ public enum Reporting1Code
     [IsoId("_ZTMAoNp-Ed-ak6NoX_4Aeg_-1707100866")]
     [Description(@"Trade details are to be reported to a stock exchange.")]
     StockExchange = ReportingCode.StockExchange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade details are to be reported to a regulatory organisation.
     /// Encoded/decoded by serializers as &quot;REGU&quot;.
@@ -32,5 +32,4 @@ public enum Reporting1Code
     [IsoId("_ZTMAodp-Ed-ak6NoX_4Aeg_-1707100823")]
     [Description(@"Trade details are to be reported to a regulatory organisation.")]
     RegulatoryOrganisation = ReportingCode.RegulatoryOrganisation, // same ordinal as derivation source for type conversions
-    
 }

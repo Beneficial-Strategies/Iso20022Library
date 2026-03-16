@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,19 +14,13 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S3i5sAEcEeCQm6a_G2yO_w_756219526")]
 [DisplayName("Balance Status")]
-public partial record BalanceStatus2
+public record BalanceStatus2
 {
-    #nullable enable
-    
     /// <summary>
     /// Balance in each currency calculated at the value date and time indicated in the report.
     /// </summary>
     [IsoId("_S3i5sQEcEeCQm6a_G2yO_w_642380460")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public required ActiveCurrencyAndAmount Balance { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ActiveCurrencyAndAmount Balance { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2nkHEYqhEeS4a4abTJTSSw")]
 [DisplayName("ATM Cassette Counters")]
-public partial record ATMCassetteCounters2
+public record ATMCassetteCounters2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of counters.
     /// </summary>
     [IsoId("_GUVFcIqjEeS4a4abTJTSSw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ATMCounterType1Code Type { get; init; } 
-    
+    public required ATMCounterType1Code Type { get; init; }
+
     /// <summary>
     /// Number of added media during servicing operations.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Added Number")]
     [IsoXmlTag("AddedNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AddedNumber { get; init; } 
-    
+    public IsoNumber? AddedNumber { get; init; }
+
     /// <summary>
     /// Number of removed media during servicing operations.
     /// </summary>
@@ -42,8 +40,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Removed Number")]
     [IsoXmlTag("RmvdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RemovedNumber { get; init; } 
-    
+    public IsoNumber? RemovedNumber { get; init; }
+
     /// <summary>
     /// Total number of media out of the cassette.
     /// </summary>
@@ -51,8 +49,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Dispensed Number")]
     [IsoXmlTag("DspnsdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DispensedNumber { get; init; } 
-    
+    public IsoNumber? DispensedNumber { get; init; }
+
     /// <summary>
     /// Total number of media deposited in the cassette.
     /// </summary>
@@ -60,8 +58,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Deposit Number")]
     [IsoXmlTag("DpstNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DepositNumber { get; init; } 
-    
+    public IsoNumber? DepositNumber { get; init; }
+
     /// <summary>
     /// Total number of recycled media from the cassette.
     /// </summary>
@@ -69,8 +67,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Recycled Number")]
     [IsoXmlTag("RcycldNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RecycledNumber { get; init; } 
-    
+    public IsoNumber? RecycledNumber { get; init; }
+
     /// <summary>
     /// Total number of retracted media originating from the cassette.
     /// </summary>
@@ -78,8 +76,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Retracted Number")]
     [IsoXmlTag("RtrctdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RetractedNumber { get; init; } 
-    
+    public IsoNumber? RetractedNumber { get; init; }
+
     /// <summary>
     /// Total number of media from this cassette which are on the reject bin.
     /// </summary>
@@ -87,8 +85,8 @@ public partial record ATMCassetteCounters2
     [DisplayName("Rejected Number")]
     [IsoXmlTag("RjctdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RejectedNumber { get; init; } 
-    
+    public IsoNumber? RejectedNumber { get; init; }
+
     /// <summary>
     /// Total number of media presented to the customer.
     /// </summary>
@@ -96,9 +94,5 @@ public partial record ATMCassetteCounters2
     [DisplayName("Presented Number")]
     [IsoXmlTag("PresntdNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PresentedNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoNumber? PresentedNumber { get; init; }
 }

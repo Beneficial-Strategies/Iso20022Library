@@ -23,7 +23,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiT9Vdp-Ed-ak6NoX_4Aeg_-1322025421")]
     [Description(@"Tax is related to the second month of the period.")]
     FirstMonth = TaxRecordPeriodCode.FirstMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the first month of the period.
     /// Encoded/decoded by serializers as &quot;MM02&quot;.
@@ -32,7 +32,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiT9Vtp-Ed-ak6NoX_4Aeg_-1322025391")]
     [Description(@"Tax is related to the first month of the period.")]
     SecondMonth = TaxRecordPeriodCode.SecondMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the third month of the period.
     /// Encoded/decoded by serializers as &quot;MM03&quot;.
@@ -41,7 +41,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiT9V9p-Ed-ak6NoX_4Aeg_-1322025390")]
     [Description(@"Tax is related to the third month of the period.")]
     ThirdMonth = TaxRecordPeriodCode.ThirdMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the fourth month of the period.
     /// Encoded/decoded by serializers as &quot;MM04&quot;.
@@ -50,7 +50,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiT9WNp-Ed-ak6NoX_4Aeg_-1322025360")]
     [Description(@"Tax is related to the fourth month of the period.")]
     FourthMonth = TaxRecordPeriodCode.FourthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the fifth month of the period.
     /// Encoded/decoded by serializers as &quot;MM05&quot;.
@@ -59,7 +59,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduUNp-Ed-ak6NoX_4Aeg_-1322025330")]
     [Description(@"Tax is related to the fifth month of the period.")]
     FifthMonth = TaxRecordPeriodCode.FifthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the sixth month of the period.
     /// Encoded/decoded by serializers as &quot;MM06&quot;.
@@ -68,7 +68,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduUdp-Ed-ak6NoX_4Aeg_-1322025329")]
     [Description(@"Tax is related to the sixth month of the period.")]
     SixthMonth = TaxRecordPeriodCode.SixthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the seventh month of the period.
     /// Encoded/decoded by serializers as &quot;MM07&quot;.
@@ -77,7 +77,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduUtp-Ed-ak6NoX_4Aeg_-1322025299")]
     [Description(@"Tax is related to the seventh month of the period.")]
     SeventhMonth = TaxRecordPeriodCode.SeventhMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the eighth month of the period.
     /// Encoded/decoded by serializers as &quot;MM08&quot;.
@@ -86,7 +86,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduU9p-Ed-ak6NoX_4Aeg_-1322025268")]
     [Description(@"Tax is related to the eighth month of the period.")]
     EighthMonth = TaxRecordPeriodCode.EighthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the ninth month of the period.
     /// Encoded/decoded by serializers as &quot;MM09&quot;.
@@ -95,7 +95,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduVNp-Ed-ak6NoX_4Aeg_-1322024990")]
     [Description(@"Tax is related to the ninth month of the period.")]
     NinthMonth = TaxRecordPeriodCode.NinthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the tenth month of the period.
     /// Encoded/decoded by serializers as &quot;MM10&quot;.
@@ -104,7 +104,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduVdp-Ed-ak6NoX_4Aeg_-1322024989")]
     [Description(@"Tax is related to the tenth month of the period.")]
     TenthMonth = TaxRecordPeriodCode.TenthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the eleventh month of the period.
     /// Encoded/decoded by serializers as &quot;MM11&quot;.
@@ -113,7 +113,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduVtp-Ed-ak6NoX_4Aeg_-1322024959")]
     [Description(@"Tax is related to the eleventh month of the period.")]
     EleventhMonth = TaxRecordPeriodCode.EleventhMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the twelfth month of the period.
     /// Encoded/decoded by serializers as &quot;MM12&quot;.
@@ -122,7 +122,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduV9p-Ed-ak6NoX_4Aeg_-1322024929")]
     [Description(@"Tax is related to the twelfth month of the period.")]
     TwelfthMonth = TaxRecordPeriodCode.TwelfthMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the first quarter of the period.
     /// Encoded/decoded by serializers as &quot;QTR1&quot;.
@@ -131,7 +131,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduWNp-Ed-ak6NoX_4Aeg_-1322024928")]
     [Description(@"Tax is related to the first quarter of the period.")]
     FirstQuarter = TaxRecordPeriodCode.FirstQuarter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the second quarter of the period.
     /// Encoded/decoded by serializers as &quot;QTR2&quot;.
@@ -140,7 +140,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_YiduWdp-Ed-ak6NoX_4Aeg_-1322024898")]
     [Description(@"Tax is related to the second quarter of the period.")]
     SecondQuarter = TaxRecordPeriodCode.SecondQuarter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the third quarter of the period.
     /// Encoded/decoded by serializers as &quot;QTR3&quot;.
@@ -149,7 +149,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_Yim4QNp-Ed-ak6NoX_4Aeg_-1322024867")]
     [Description(@"Tax is related to the third quarter of the period.")]
     ThirdQuarter = TaxRecordPeriodCode.ThirdQuarter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the forth quarter of the period.
     /// Encoded/decoded by serializers as &quot;QTR4&quot;.
@@ -158,7 +158,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_Yim4Qdp-Ed-ak6NoX_4Aeg_-1322024866")]
     [Description(@"Tax is related to the forth quarter of the period.")]
     FourthQuarter = TaxRecordPeriodCode.FourthQuarter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the first half of the period.
     /// Encoded/decoded by serializers as &quot;HLF1&quot;.
@@ -167,7 +167,7 @@ public enum TaxRecordPeriod1Code
     [IsoId("_Yim4Qtp-Ed-ak6NoX_4Aeg_-1322024837")]
     [Description(@"Tax is related to the first half of the period.")]
     FirstHalf = TaxRecordPeriodCode.FirstHalf, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is related to the second half of the period.
     /// Encoded/decoded by serializers as &quot;HLF2&quot;.
@@ -176,5 +176,4 @@ public enum TaxRecordPeriod1Code
     [IsoId("_Yim4Q9p-Ed-ak6NoX_4Aeg_-1322024806")]
     [Description(@"Tax is related to the second half of the period.")]
     SecondHalf = TaxRecordPeriodCode.SecondHalf, // same ordinal as derivation source for type conversions
-    
 }

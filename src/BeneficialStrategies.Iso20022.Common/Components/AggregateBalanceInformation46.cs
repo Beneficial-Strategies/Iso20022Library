@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W2ghr4S2Ee-Pv9KR9bv9IA")]
 [DisplayName("Aggregate Balance Information46")]
-public partial record AggregateBalanceInformation46
+public record AggregateBalanceInformation46
 {
-    #nullable enable
-
     /// <summary>
     /// Account Base Currency Amounts.
     /// </summary>
     [DisplayName("Account Base Currency Amounts")]
     [IsoXmlTag("AcctBaseCcyAmts")]
-    public BalanceAmounts3? AccountBaseCurrencyAmounts { get; init; } 
+    public BalanceAmounts3? AccountBaseCurrencyAmounts { get; init; }
 
     /// <summary>
     /// Additional Balance Breakdown.
@@ -37,21 +35,22 @@ public partial record AggregateBalanceInformation46
     /// </summary>
     [DisplayName("Aggregate Balance")]
     [IsoXmlTag("AggtBal")]
-    public required Balance17 AggregateBalance { get; init; } 
+    public required Balance17 AggregateBalance { get; init; }
 
     /// <summary>
     /// Available Balance.
     /// </summary>
     [DisplayName("Available Balance")]
     [IsoXmlTag("AvlblBal")]
-    public Balance18? AvailableBalance { get; init; } 
+    public Balance18? AvailableBalance { get; init; }
 
     /// <summary>
     /// Balance At Safekeeping Place.
     /// </summary>
     [DisplayName("Balance At Safekeeping Place")]
     [IsoXmlTag("BalAtSfkpgPlc")]
-    public ValueList<AggregateBalancePerSafekeepingPlace43> BalanceAtSafekeepingPlace { get; init; } = [];
+    public ValueList<AggregateBalancePerSafekeepingPlace43> BalanceAtSafekeepingPlace { get; init; } =
+        [];
 
     /// <summary>
     /// Balance Breakdown.
@@ -65,28 +64,28 @@ public partial record AggregateBalanceInformation46
     /// </summary>
     [DisplayName("Corporate Action Option Type")]
     [IsoXmlTag("CorpActnOptnTp")]
-    public CorporateActionOption5Code? CorporateActionOptionType { get; init; } 
+    public CorporateActionOption5Code? CorporateActionOptionType { get; init; }
 
     /// <summary>
     /// Days Accrued.
     /// </summary>
     [DisplayName("Days Accrued")]
     [IsoXmlTag("DaysAcrd")]
-    public IsoNumber? DaysAccrued { get; init; } 
+    public IsoNumber? DaysAccrued { get; init; }
 
     /// <summary>
     /// Financial Instrument Attributes.
     /// </summary>
     [DisplayName("Financial Instrument Attributes")]
     [IsoXmlTag("FinInstrmAttrbts")]
-    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; } 
+    public FinancialInstrumentAttributes111? FinancialInstrumentAttributes { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Foreign Exchange Details.
@@ -100,28 +99,28 @@ public partial record AggregateBalanceInformation46
     /// </summary>
     [DisplayName("Holding Additional Details")]
     [IsoXmlTag("HldgAddtlDtls")]
-    public IsoMax350Text? HoldingAdditionalDetails { get; init; } 
+    public IsoMax350Text? HoldingAdditionalDetails { get; init; }
 
     /// <summary>
     /// Instrument Currency Amounts.
     /// </summary>
     [DisplayName("Instrument Currency Amounts")]
     [IsoXmlTag("InstrmCcyAmts")]
-    public BalanceAmounts3? InstrumentCurrencyAmounts { get; init; } 
+    public BalanceAmounts3? InstrumentCurrencyAmounts { get; init; }
 
     /// <summary>
     /// Investment Funds Financial Instrument Attributes.
     /// </summary>
     [DisplayName("Investment Funds Financial Instrument Attributes")]
     [IsoXmlTag("InvstmtFndsFinInstrmAttrbts")]
-    public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; init; } 
+    public FinancialInstrument21? InvestmentFundsFinancialInstrumentAttributes { get; init; }
 
     /// <summary>
     /// Not Available Balance.
     /// </summary>
     [DisplayName("Not Available Balance")]
     [IsoXmlTag("NotAvlblBal")]
-    public BalanceQuantity14Choice_? NotAvailableBalance { get; init; } 
+    public BalanceQuantity14Choice_? NotAvailableBalance { get; init; }
 
     /// <summary>
     /// Price Details.
@@ -142,7 +141,7 @@ public partial record AggregateBalanceInformation46
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafeKeepingPlace5? SafekeepingPlace { get; init; } 
+    public SafeKeepingPlace5? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -156,9 +155,5 @@ public partial record AggregateBalanceInformation46
     /// </summary>
     [DisplayName("Valuation Haircut Details")]
     [IsoXmlTag("ValtnHrcutDtls")]
-    public BasicCollateralValuation1Details? ValuationHaircutDetails { get; init; } 
-
-    
-    #nullable disable
-    
+    public BasicCollateralValuation1Details? ValuationHaircutDetails { get; init; }
 }

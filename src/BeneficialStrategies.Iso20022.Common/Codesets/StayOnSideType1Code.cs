@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_wn8Z4A93EeGeV5vP7Mvdig_-1370869444")]
-[Description(@"Indicates that an order is pegged against the offer/bid at the time of the order submission.")]
+[Description(
+    @"Indicates that an order is pegged against the offer/bid at the time of the order submission."
+)]
 [DerivedFrom(typeof(StayOnSideTypeCode))]
 public enum StayOnSideType1Code
 {
@@ -23,7 +25,7 @@ public enum StayOnSideType1Code
     [IsoId("_zbzooA93EeGeV5vP7Mvdig_183499807")]
     [Description(@"An order pegged against the offer price.")]
     Offer = StayOnSideTypeCode.Offer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// An order pegged against the bid price.
     /// Encoded/decoded by serializers as &quot;BIDE&quot;.
@@ -32,7 +34,7 @@ public enum StayOnSideType1Code
     [IsoId("_zbzooQ93EeGeV5vP7Mvdig_-571250067")]
     [Description(@"An order pegged against the bid price.")]
     Bid = StayOnSideTypeCode.Bid, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates a voluntary absence of choice/decision.
     /// Encoded/decoded by serializers as &quot;DCAR&quot;.
@@ -41,5 +43,4 @@ public enum StayOnSideType1Code
     [IsoId("_zbzoog93EeGeV5vP7Mvdig_-128261575")]
     [Description(@"Indicates a voluntary absence of choice/decision.")]
     DontCare = StayOnSideTypeCode.DontCare, // same ordinal as derivation source for type conversions
-    
 }

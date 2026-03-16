@@ -23,7 +23,7 @@ public enum DerivativeExerciseStatus1Code
     [IsoId("_ULyikYAxEeSUJZYcWGKkkw")]
     [Description(@"Derivative is exercised.")]
     Exercised = DerivativeExerciseStatusCode.Exercised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Derivative is expired and will not be exercised.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -32,7 +32,7 @@ public enum DerivativeExerciseStatus1Code
     [IsoId("_UQXgkYAxEeSUJZYcWGKkkw")]
     [Description(@"Derivative is expired and will not be exercised.")]
     Expired = DerivativeExerciseStatusCode.Expired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Derivative is not exercised.
     /// Encoded/decoded by serializers as &quot;VALI&quot;.
@@ -41,5 +41,4 @@ public enum DerivativeExerciseStatus1Code
     [IsoId("_UU6CUYAxEeSUJZYcWGKkkw")]
     [Description(@"Derivative is not exercised.")]
     Valid = DerivativeExerciseStatusCode.Valid, // same ordinal as derivation source for type conversions
-    
 }

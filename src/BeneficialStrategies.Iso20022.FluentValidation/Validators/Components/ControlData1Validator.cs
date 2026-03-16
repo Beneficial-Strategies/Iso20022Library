@@ -19,8 +19,10 @@ public sealed class ControlData1Validator : AbstractValidator<ControlData1>
     {
         RuleFor(x => x.NumberOfTransactions)
             .NotEmpty()
-                .WithMessage("ControlData1.NumberOfTransactions is required (Max15NumericText, 1..1).")
+            .WithMessage("ControlData1.NumberOfTransactions is required (Max15NumericText, 1..1).")
             .Matches(@"^[0-9]{1,15}$")
-                .WithMessage("ControlData1.NumberOfTransactions must be a numeric string of 1–15 digits (Max15NumericText, pattern: [0-9]{1,15}).");
+            .WithMessage(
+                "ControlData1.NumberOfTransactions must be a numeric string of 1–15 digits (Max15NumericText, pattern: [0-9]{1,15})."
+            );
     }
 }

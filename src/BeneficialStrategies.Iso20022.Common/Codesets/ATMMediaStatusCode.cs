@@ -31,5 +31,4 @@ public enum ATMMediaStatusCode
     [IsoId("_ATMMediaStatusCode_Rejected")]
     [Description(@"Item (such as a check) has been rejected.")]
     Rejected,
-
 }

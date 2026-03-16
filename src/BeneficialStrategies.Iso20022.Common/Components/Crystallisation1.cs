@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PzGf8E3gEeidB49bWZiS0g")]
 [DisplayName("Crystallisation")]
-public partial record Crystallisation1
+public record Crystallisation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the tranche.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Crystallisation1
     [DisplayName("Tranche Identification")]
     [IsoXmlTag("TrchId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TrancheIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TrancheIdentification { get; init; }
+
     /// <summary>
     /// Number of units crystallised.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record Crystallisation1
     [DisplayName("Crystallised Units Number")]
     [IsoXmlTag("CrstllsdUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? CrystallisedUnitsNumber { get; init; } 
-    
+    public IsoDecimalNumber? CrystallisedUnitsNumber { get; init; }
+
     /// <summary>
     /// Number of units uncrystallised.
     /// </summary>
@@ -44,17 +42,13 @@ public partial record Crystallisation1
     [DisplayName("Uncrystallised Units Number")]
     [IsoXmlTag("UcrstllsdUnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? UncrystallisedUnitsNumber { get; init; } 
-    
+    public IsoDecimalNumber? UncrystallisedUnitsNumber { get; init; }
+
     /// <summary>
     /// Additional information about the crystallisation.
     /// </summary>
     [IsoId("_tmFnkE3gEeidB49bWZiS0g")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

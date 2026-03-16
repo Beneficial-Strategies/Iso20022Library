@@ -23,7 +23,7 @@ public enum RoutingTypeCode
     [IsoId("_Y-eU4dp-Ed-ak6NoX_4Aeg_-713294906")]
     [Description(@"Indicates that routing is allowed.")]
     Allowed,
-    
+
     /// <summary>
     /// Indicates that routing is blocked.
     /// Encoded/decoded by serializers as &quot;BLOC&quot;.
@@ -32,5 +32,4 @@ public enum RoutingTypeCode
     [IsoId("_Y-eU4tp-Ed-ak6NoX_4Aeg_-697596993")]
     [Description(@"Indicates that routing is blocked.")]
     Blocked,
-    
 }

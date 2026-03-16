@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesTransactionPrice3Choice.Percentage))]
     [KnownType(typeof(SecuritiesTransactionPrice3Choice.Yield))]
     [KnownType(typeof(SecuritiesTransactionPrice3Choice.PendingPrice))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice3Choice.MonetaryValue),nameof(SecuritiesTransactionPrice3Choice.MonetaryValue))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice3Choice.Unit),nameof(SecuritiesTransactionPrice3Choice.Unit))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice3Choice.Percentage),nameof(SecuritiesTransactionPrice3Choice.Percentage))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice3Choice.Yield),nameof(SecuritiesTransactionPrice3Choice.Yield))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice3Choice.PendingPrice),nameof(SecuritiesTransactionPrice3Choice.PendingPrice))]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice3Choice.MonetaryValue),
+        nameof(SecuritiesTransactionPrice3Choice.MonetaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice3Choice.Unit),
+        nameof(SecuritiesTransactionPrice3Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice3Choice.Percentage),
+        nameof(SecuritiesTransactionPrice3Choice.Percentage)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice3Choice.Yield),
+        nameof(SecuritiesTransactionPrice3Choice.Yield)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice3Choice.PendingPrice),
+        nameof(SecuritiesTransactionPrice3Choice.PendingPrice)
+    )]
     [IsoId("_rS83x0DWEeWOL-OsSq2h6w")]
     [DisplayName("Securities Transaction Price 3 Choice")]
-    public abstract partial record SecuritiesTransactionPrice3Choice_
-    {
-    }
+    public abstract record SecuritiesTransactionPrice3Choice_ { }
 }

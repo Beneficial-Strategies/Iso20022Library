@@ -23,7 +23,7 @@ public enum TaxAdvantageType1Code
     [IsoId("_PeElYVf7EeOuDtoQo1qilA")]
     [Description(@"Tax advantage type is: Concessional Goods and Services Tax.")]
     ConcessionalGST = TaxAdvantageTypeCode.ConcessionalGST, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax advantage type is not applicable.
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -32,7 +32,7 @@ public enum TaxAdvantageType1Code
     [IsoId("_PlNvMVf7EeOuDtoQo1qilA")]
     [Description(@"Tax advantage type is not applicable.")]
     NotApplicable = TaxAdvantageTypeCode.NotApplicable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax advantage type is not available.
     /// Encoded/decoded by serializers as &quot;NOAV&quot;.
@@ -41,7 +41,7 @@ public enum TaxAdvantageType1Code
     [IsoId("_PqROUVf7EeOuDtoQo1qilA")]
     [Description(@"Tax advantage type is not available.")]
     NotAvailable = TaxAdvantageTypeCode.NotAvailable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of tax advantage type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,7 +50,7 @@ public enum TaxAdvantageType1Code
     [IsoId("_PyJ_AVf7EeOuDtoQo1qilA")]
     [Description(@"Other type of tax advantage type.")]
     Other = TaxAdvantageTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax advantage type is: pooled development fund Rebta.
     /// Encoded/decoded by serializers as &quot;PDFR&quot;.
@@ -59,5 +59,4 @@ public enum TaxAdvantageType1Code
     [IsoId("_P3qKEVf7EeOuDtoQo1qilA")]
     [Description(@"Tax advantage type is: pooled development fund Rebta.")]
     PooledDevelopmentFundRebta = TaxAdvantageTypeCode.PooledDevelopmentFundRebta, // same ordinal as derivation source for type conversions
-    
 }

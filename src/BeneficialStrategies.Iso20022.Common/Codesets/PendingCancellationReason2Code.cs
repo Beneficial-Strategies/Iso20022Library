@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Z-Gl5Np-Ed-ak6NoX_4Aeg_608029284")]
-[Description(@"Specifies the reason why a cancellation request sent for the related instruction is pending.")]
+[Description(
+    @"Specifies the reason why a cancellation request sent for the related instruction is pending."
+)]
 [DerivedFrom(typeof(PendingFailingReasonCode))]
 public enum PendingCancellationReason2Code
 {
@@ -21,18 +23,22 @@ public enum PendingCancellationReason2Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_Z-Gl5dp-Ed-ak6NoX_4Aeg_608029315")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Prior payment credited to account based contractual income collection agreement has been collected from issuer.
     /// Encoded/decoded by serializers as &quot;PCNF&quot;.
     /// </summary>
     [EnumMember(Value = "PCNF")]
     [IsoId("_Z-Gl5tp-Ed-ak6NoX_4Aeg_608031128")]
-    [Description(@"Prior payment credited to account based contractual income collection agreement has been collected from issuer.")]
+    [Description(
+        @"Prior payment credited to account based contractual income collection agreement has been collected from issuer."
+    )]
     ConfirmationOfPayment = PendingFailingReasonCode.ConfirmationOfPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity of financial instruments does not match.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -41,5 +47,4 @@ public enum PendingCancellationReason2Code
     [IsoId("_Z-Gl59p-Ed-ak6NoX_4Aeg_608031188")]
     [Description(@"Quantity of financial instruments does not match.")]
     QuantityDisagreement = PendingFailingReasonCode.QuantityDisagreement, // same ordinal as derivation source for type conversions
-    
 }

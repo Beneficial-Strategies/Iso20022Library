@@ -18,16 +18,13 @@ public sealed class GenericIdentification36Validator : AbstractValidator<Generic
 {
     public GenericIdentification36Validator()
     {
-        RuleFor(x => x.Identification)
-            .NotEmpty()
-            .MinimumLength(1).MaximumLength(35);
+        RuleFor(x => x.Identification).NotEmpty().MinimumLength(1).MaximumLength(35);
 
-        RuleFor(x => x.Issuer)
-            .NotEmpty()
-            .MinimumLength(1).MaximumLength(35);
+        RuleFor(x => x.Issuer).NotEmpty().MinimumLength(1).MaximumLength(35);
 
         RuleFor(x => x.SchemeName)
-            .MinimumLength(1).MaximumLength(35)
+            .MinimumLength(1)
+            .MaximumLength(35)
             .When(x => x.SchemeName is not null);
     }
 }

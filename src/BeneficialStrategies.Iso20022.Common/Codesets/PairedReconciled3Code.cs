@@ -23,7 +23,7 @@ public enum PairedReconciled3Code
     [IsoId("_ByvJoZiDEeumhIk_Pv20Lg")]
     [Description(@"Collateral associated with the loan(s) matched.")]
     CollateralReconciled = PairedReconciledV2Code.CollateralReconciled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loan paired and matched.
     /// Encoded/decoded by serializers as &quot;LNRC&quot;.
@@ -32,7 +32,7 @@ public enum PairedReconciled3Code
     [IsoId("_CKSG8ZiDEeumhIk_Pv20Lg")]
     [Description(@"Loan paired and matched.")]
     LoanReconciled = PairedReconciledV2Code.LoanReconciled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loan is paired, but not reconciled.
     /// Encoded/decoded by serializers as &quot;PARD&quot;.
@@ -41,7 +41,7 @@ public enum PairedReconciled3Code
     [IsoId("_CarTYZiDEeumhIk_Pv20Lg")]
     [Description(@"Loan is paired, but not reconciled.")]
     Paired = PairedReconciledV2Code.Paired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Both loan and collateral matched.
     /// Encoded/decoded by serializers as &quot;RECO&quot;.
@@ -50,7 +50,7 @@ public enum PairedReconciled3Code
     [IsoId("_Cg7sYZiDEeumhIk_Pv20Lg")]
     [Description(@"Both loan and collateral matched.")]
     Reconciled = PairedReconciledV2Code.Reconciled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loan is unpaired.
     /// Encoded/decoded by serializers as &quot;UNPR&quot;.
@@ -59,5 +59,4 @@ public enum PairedReconciled3Code
     [IsoId("_CoYYMZiDEeumhIk_Pv20Lg")]
     [Description(@"Loan is unpaired.")]
     Unpaired = PairedReconciledV2Code.Unpaired, // same ordinal as derivation source for type conversions
-    
 }

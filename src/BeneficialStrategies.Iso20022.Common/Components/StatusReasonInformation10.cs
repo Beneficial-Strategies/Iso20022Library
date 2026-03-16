@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kpLGou5NEeCisYr99QEiWA_743644615")]
 [DisplayName("Status Reason Information")]
-public partial record StatusReasonInformation10
+public record StatusReasonInformation10
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the reason for the status report.
     /// </summary>
     [IsoId("_kpLGo-5NEeCisYr99QEiWA_-457987999")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public required StatusReason6Choice_ Reason { get; init; } 
-    
+    public required StatusReason6Choice_ Reason { get; init; }
+
     /// <summary>
     /// Further details on the status reason.||Usage: Additional information can be used for several purposes such as the reporting of repaired information.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record StatusReasonInformation10
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? AdditionalInformation { get; init; }
 }

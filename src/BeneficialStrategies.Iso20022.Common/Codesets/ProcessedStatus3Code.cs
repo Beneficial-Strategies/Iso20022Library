@@ -23,7 +23,7 @@ public enum ProcessedStatus3Code
     [IsoId("_aKnX4Np-Ed-ak6NoX_4Aeg_-807236817")]
     [Description(@"The instruction/request has been received.")]
     Received = CorporateActionProcessedStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The processing of the request is pending.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,7 +32,7 @@ public enum ProcessedStatus3Code
     [IsoId("_aKnX4dp-Ed-ak6NoX_4Aeg_-807236816")]
     [Description(@"The processing of the request is pending.")]
     Pending = CorporateActionProcessedStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The request is accepted.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
@@ -41,5 +41,4 @@ public enum ProcessedStatus3Code
     [IsoId("_aKnX4tp-Ed-ak6NoX_4Aeg_-807236786")]
     [Description(@"The request is accepted.")]
     Accepted = CorporateActionProcessedStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
 }

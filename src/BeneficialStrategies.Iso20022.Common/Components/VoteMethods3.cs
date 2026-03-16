@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MPdpxa4jEemG7MmivSuE5g")]
 [DisplayName("Vote Methods")]
-public partial record VoteMethods3
+public record VoteMethods3
 {
-    #nullable enable
-    
     /// <summary>
     /// Network address through which a voting party can cast its vote via a structured message.
     /// </summary>
@@ -28,7 +26,7 @@ public partial record VoteMethods3
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> VoteThroughNetwork { get; init; } = [];
-    
+
     /// <summary>
     /// Address where the voting ballot can be sent.
     /// </summary>
@@ -38,7 +36,7 @@ public partial record VoteMethods3
     [MinLength(0)]
     [MaxLength(5)]
     public ValueList<PostalAddress1> VoteByMail { get; init; } = [];
-    
+
     /// <summary>
     /// Electronic address, e-mail or web site, where a security holder can vote.
     /// </summary>
@@ -48,7 +46,7 @@ public partial record VoteMethods3
     [MinLength(0)]
     [MaxLength(5)]
     public ValueList<CommunicationAddress11> ElectronicVote { get; init; } = [];
-    
+
     /// <summary>
     /// Telephone number providing access to an automated voting system.
     /// </summary>
@@ -59,8 +57,4 @@ public partial record VoteMethods3
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> VoteByTelephone { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

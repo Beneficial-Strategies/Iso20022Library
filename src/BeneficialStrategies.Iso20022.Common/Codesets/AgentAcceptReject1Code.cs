@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_9w3pAHG0Ee6S2Llv74R19w")]
-[Description(@"Indicates whether the event agent has approved the acceptance of volunatry instructions for a given event.")]
+[Description(
+    @"Indicates whether the event agent has approved the acceptance of volunatry instructions for a given event."
+)]
 [DerivedFrom(typeof(AgentAcceptRejectCode))]
 public enum AgentAcceptReject1Code
 {
@@ -32,5 +34,4 @@ public enum AgentAcceptReject1Code
     [IsoId("")]
     [Description(@"Offer rejected by agent.")]
     Reject = AgentAcceptRejectCode.Reject, // same ordinal as derivation source for type conversions
-
 }

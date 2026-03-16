@@ -23,7 +23,7 @@ public enum ServiceTaxDesignationCode
     [IsoId("_6WXNsJqlEeGSON8vddiWzQ_-1826168172")]
     [Description(@"No taxes are due.")]
     Exempt,
-    
+
     /// <summary>
     /// Tax is due but at zero percent and a zero charge.
     /// Encoded/decoded by serializers as &quot;ZERO&quot;.
@@ -32,7 +32,7 @@ public enum ServiceTaxDesignationCode
     [IsoId("_6WXNsZqlEeGSON8vddiWzQ_-1583318414")]
     [Description(@"Tax is due but at zero percent and a zero charge.")]
     ZeroRate,
-    
+
     /// <summary>
     /// One or more taxes are due on this service.
     /// Encoded/decoded by serializers as &quot;TAXE&quot;.
@@ -41,5 +41,4 @@ public enum ServiceTaxDesignationCode
     [IsoId("_6WXNspqlEeGSON8vddiWzQ_-1665032100")]
     [Description(@"One or more taxes are due on this service.")]
     Taxable,
-    
 }

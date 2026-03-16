@@ -23,7 +23,7 @@ public enum TransactionOperationType4Code
     [IsoId("_kzZz9w1GEeaj35fzaZHUIg")]
     [Description(@"Transaction is a new transaction.")]
     NewTransaction = TransactionOperationTypeCode.NewTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction amends a previously sent transaction.
     /// Encoded/decoded by serializers as &quot;AMND&quot;.
@@ -32,14 +32,15 @@ public enum TransactionOperationType4Code
     [IsoId("_rVWeAQ1GEeaj35fzaZHUIg")]
     [Description(@"Transaction amends a previously sent transaction.")]
     Amendment = TransactionOperationTypeCode.Amendment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction requests the deletion/cancellation of a previously sent transaction.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
     /// </summary>
     [EnumMember(Value = "CANC")]
     [IsoId("_sSjGEQ1GEeaj35fzaZHUIg")]
-    [Description(@"Transaction requests the deletion/cancellation of a previously sent transaction.")]
+    [Description(
+        @"Transaction requests the deletion/cancellation of a previously sent transaction."
+    )]
     Cancellation = TransactionOperationTypeCode.Cancellation, // same ordinal as derivation source for type conversions
-    
 }

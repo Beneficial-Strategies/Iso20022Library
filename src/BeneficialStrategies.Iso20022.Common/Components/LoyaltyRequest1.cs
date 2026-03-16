@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KO6ZcNuMEeiB5uLfkg9ZJA")]
 [DisplayName("Loyalty Request")]
-public partial record LoyaltyRequest1
+public record LoyaltyRequest1
 {
-    #nullable enable
-    
     /// <summary>
     /// To retrieve Card Acquisition Data.
     /// </summary>
     [IsoId("_WzxBINuMEeiB5uLfkg9ZJA")]
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; } 
-    
+    public CustomerOrder1? CustomerOrder { get; init; }
+
     /// <summary>
     /// Data related to the loyalty transaction.
     /// </summary>
     [IsoId("_ZkYuoNuMEeiB5uLfkg9ZJA")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required LoyaltyTransaction1 Transaction { get; init; } 
-    
+    public required LoyaltyTransaction1 Transaction { get; init; }
+
     /// <summary>
     /// Data related to a Loyalty program or account.
     /// </summary>
     [IsoId("_dN7BINuMEeiB5uLfkg9ZJA")]
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
-    public LoyaltyRequestData1? Data { get; init; } 
-    
-    
-    #nullable disable
-    
+    public LoyaltyRequestData1? Data { get; init; }
 }

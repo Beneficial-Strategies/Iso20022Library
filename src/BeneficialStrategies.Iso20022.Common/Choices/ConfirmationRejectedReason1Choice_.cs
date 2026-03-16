@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ConfirmationRejectedReason1Choice.Code))]
     [KnownType(typeof(ConfirmationRejectedReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ConfirmationRejectedReason1Choice.Code),nameof(ConfirmationRejectedReason1Choice.Code))]
-    [JsonDerivedType(typeof(ConfirmationRejectedReason1Choice.Proprietary),nameof(ConfirmationRejectedReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ConfirmationRejectedReason1Choice.Code),
+        nameof(ConfirmationRejectedReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ConfirmationRejectedReason1Choice.Proprietary),
+        nameof(ConfirmationRejectedReason1Choice.Proprietary)
+    )]
     [IsoId("_-qFdQXZxEeaN2c674jyTxQ")]
     [DisplayName("Confirmation Rejected Reason 1 Choice")]
-    public abstract partial record ConfirmationRejectedReason1Choice_
-    {
-    }
+    public abstract record ConfirmationRejectedReason1Choice_ { }
 }

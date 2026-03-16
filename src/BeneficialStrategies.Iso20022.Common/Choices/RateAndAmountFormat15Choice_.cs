@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RateAndAmountFormat15Choice.Amount))]
     [KnownType(typeof(RateAndAmountFormat15Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat15Choice.Amount),nameof(RateAndAmountFormat15Choice.Amount))]
-    [JsonDerivedType(typeof(RateAndAmountFormat15Choice.NotSpecifiedRate),nameof(RateAndAmountFormat15Choice.NotSpecifiedRate))]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat15Choice.Amount),
+        nameof(RateAndAmountFormat15Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat15Choice.NotSpecifiedRate),
+        nameof(RateAndAmountFormat15Choice.NotSpecifiedRate)
+    )]
     [IsoId("_637-sOwOEd-sn-FiNtktcA")]
     [DisplayName("Rate And Amount Format 15 Choice")]
-    public abstract partial record RateAndAmountFormat15Choice_
-    {
-    }
+    public abstract record RateAndAmountFormat15Choice_ { }
 }

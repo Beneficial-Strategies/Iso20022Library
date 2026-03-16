@@ -22,7 +22,7 @@ public enum MergerTypeCode
     [IsoId("_MvsxwFOzEeGs_NnqHXQZkw")]
     [Description(@"The type of merger is an ordinary merger.")]
     OrdinaryMerger,
-    
+
     /// <summary>
     /// The type of merger is an exchange of shares.
     /// Encoded/decoded by serializers as &quot;EXSH&quot;.
@@ -31,7 +31,7 @@ public enum MergerTypeCode
     [IsoId("_bCyc4FOzEeGs_NnqHXQZkw")]
     [Description(@"The type of merger is an exchange of shares.")]
     ExchangeofShares,
-    
+
     /// <summary>
     /// The type of merger is a transfer of shares.
     /// Encoded/decoded by serializers as &quot;TRSH&quot;.
@@ -40,5 +40,4 @@ public enum MergerTypeCode
     [IsoId("_gOo2sFOzEeGs_NnqHXQZkw")]
     [Description(@"The type of merger is a transfer of shares.")]
     TransferofShares,
-    
 }

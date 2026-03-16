@@ -23,5 +23,4 @@ public enum NotAvailable1Code
     [IsoId("_n4ZWsRvaEeWeg9zOuV6DZQ")]
     [Description(@"Not available (N/A).")]
     NotAvailable = SpecialPurposeCode.NotAvailable, // same ordinal as derivation source for type conversions
-    
 }

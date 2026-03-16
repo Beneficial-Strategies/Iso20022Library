@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecuritiesLendingType1Choice.Code))]
     [KnownType(typeof(SecuritiesLendingType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(SecuritiesLendingType1Choice.Code),nameof(SecuritiesLendingType1Choice.Code))]
-    [JsonDerivedType(typeof(SecuritiesLendingType1Choice.Proprietary),nameof(SecuritiesLendingType1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SecuritiesLendingType1Choice.Code),
+        nameof(SecuritiesLendingType1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesLendingType1Choice.Proprietary),
+        nameof(SecuritiesLendingType1Choice.Proprietary)
+    )]
     [IsoId("_AYXSItokEeC60axPepSq7g_-214940639")]
     [DisplayName("Securities Lending Type 1 Choice")]
-    public abstract partial record SecuritiesLendingType1Choice_
-    {
-    }
+    public abstract record SecuritiesLendingType1Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum DemandType1Code
     [IsoId("_hAxXJnyYEeGWJuGCfvwOsQ")]
     [Description(@"Pay only.")]
     PayOnly = DemandTypeCode.PayOnly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pay or extend.
     /// Encoded/decoded by serializers as &quot;PAEX&quot;.
@@ -32,5 +32,4 @@ public enum DemandType1Code
     [IsoId("_hJ3BtnyYEeGWJuGCfvwOsQ")]
     [Description(@"Pay or extend.")]
     PayOrExtend = DemandTypeCode.PayOrExtend, // same ordinal as derivation source for type conversions
-    
 }

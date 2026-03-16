@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat84Choice.IndexPoints))]
     [KnownType(typeof(PriceFormat84Choice.NotSpecifiedPrice))]
     [KnownType(typeof(PriceFormat84Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat84Choice.AmountPrice),nameof(PriceFormat84Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat84Choice.AmountPricePerAmount),nameof(PriceFormat84Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat84Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat84Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat84Choice.IndexPoints),nameof(PriceFormat84Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat84Choice.NotSpecifiedPrice),nameof(PriceFormat84Choice.NotSpecifiedPrice))]
-    [JsonDerivedType(typeof(PriceFormat84Choice.PercentagePrice),nameof(PriceFormat84Choice.PercentagePrice))]
+    [JsonDerivedType(
+        typeof(PriceFormat84Choice.AmountPrice),
+        nameof(PriceFormat84Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat84Choice.AmountPricePerAmount),
+        nameof(PriceFormat84Choice.AmountPricePerAmount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat84Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat84Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat84Choice.IndexPoints),
+        nameof(PriceFormat84Choice.IndexPoints)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat84Choice.NotSpecifiedPrice),
+        nameof(PriceFormat84Choice.NotSpecifiedPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat84Choice.PercentagePrice),
+        nameof(PriceFormat84Choice.PercentagePrice)
+    )]
     [IsoId("_kV6x75t3Ee-wQIOX0djF2w")]
     [DisplayName("Price Format84Choice")]
-    public abstract partial record PriceFormat84Choice_
-    {
-    }
+    public abstract record PriceFormat84Choice_ { }
 }

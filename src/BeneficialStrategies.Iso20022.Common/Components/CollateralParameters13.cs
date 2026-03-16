@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,42 +14,40 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MOvFUSs9EeySlt9bF77XfA")]
 [DisplayName("Collateral Parameters")]
-public partial record CollateralParameters13
+public record CollateralParameters13
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of collateral instruction.
     /// </summary>
     [IsoId("_Ml-gkSs9EeySlt9bF77XfA")]
     [DisplayName("Collateral Instruction Type")]
     [IsoXmlTag("CollInstrTp")]
-    public required CollateralTransactionType1Choice_ CollateralInstructionType { get; init; } 
-    
+    public required CollateralTransactionType1Choice_ CollateralInstructionType { get; init; }
+
     /// <summary>
     /// Specifies the underlying business area/type of trade causing the exposure.
     /// </summary>
     [IsoId("_Ml-gkys9EeySlt9bF77XfA")]
     [DisplayName("Exposure Type")]
     [IsoXmlTag("XpsrTp")]
-    public required ExposureType23Choice_ ExposureType { get; init; } 
-    
+    public required ExposureType23Choice_ ExposureType { get; init; }
+
     /// <summary>
     /// Specifies whether the client is the collateral taker or giver.
     /// </summary>
     [IsoId("_Ml-glSs9EeySlt9bF77XfA")]
     [DisplayName("Collateral Side")]
     [IsoXmlTag("CollSd")]
-    public required CollateralRole1Code CollateralSide { get; init; } 
-    
+    public required CollateralRole1Code CollateralSide { get; init; }
+
     /// <summary>
     /// Specifies the priority with which the instruction needs to be executed.
     /// </summary>
     [IsoId("_Ml-glys9EeySlt9bF77XfA")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public GenericIdentification30? Priority { get; init; } 
-    
+    public GenericIdentification30? Priority { get; init; }
+
     /// <summary>
     /// Specifies whether the allocation of the collateral is manual or automatic.
     /// </summary>
@@ -57,8 +55,8 @@ public partial record CollateralParameters13
     [DisplayName("Automatic Allocation")]
     [IsoXmlTag("AutomtcAllcn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AutomaticAllocation { get; init; } 
-    
+    public IsoYesNoIndicator? AutomaticAllocation { get; init; }
+
     /// <summary>
     /// Indicates whether the proposed collateral movements can be accepted.
     /// </summary>
@@ -66,8 +64,8 @@ public partial record CollateralParameters13
     [DisplayName("Collateral Approved")]
     [IsoXmlTag("CollApprvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CollateralApproved { get; init; } 
-    
+    public IsoYesNoIndicator? CollateralApproved { get; init; }
+
     /// <summary>
     /// Indicates whether the proposed collateral movements have settled or not.
     /// </summary>
@@ -75,17 +73,13 @@ public partial record CollateralParameters13
     [DisplayName("Settlement Approved")]
     [IsoXmlTag("SttlmApprvd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? SettlementApproved { get; init; } 
-    
+    public IsoYesNoIndicator? SettlementApproved { get; init; }
+
     /// <summary>
     /// Specifies the amount of the collateral.
     /// </summary>
     [IsoId("_Ml-gnys9EeySlt9bF77XfA")]
     [DisplayName("Collateral Amount")]
     [IsoXmlTag("CollAmt")]
-    public CollateralAmount5? CollateralAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CollateralAmount5? CollateralAmount { get; init; }
 }

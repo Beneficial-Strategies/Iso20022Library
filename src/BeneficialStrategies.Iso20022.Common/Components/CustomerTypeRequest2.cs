@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AEhcceH5Eeqbls7Gk4-ckA")]
 [DisplayName("Customer Type Request")]
-public partial record CustomerTypeRequest2
+public record CustomerTypeRequest2
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the customer identification is required by the creditor or not.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record CustomerTypeRequest2
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator Requested { get; init; } 
-    
+    public required IsoRequestedIndicator Requested { get; init; }
+
     /// <summary>
     /// Specifies which type of customer identification is requested for an organisation.
     /// </summary>
     [IsoId("_AGP6xeH5Eeqbls7Gk4-ckA")]
     [DisplayName("Organisation Type")]
     [IsoXmlTag("OrgTp")]
-    public OrganisationType2? OrganisationType { get; init; } 
-    
+    public OrganisationType2? OrganisationType { get; init; }
+
     /// <summary>
     /// Specifies which type of customer identification is requested for a person.
     /// </summary>
     [IsoId("_AGP6x-H5Eeqbls7Gk4-ckA")]
     [DisplayName("Private Type")]
     [IsoXmlTag("PrvtTp")]
-    public PersonType2? PrivateType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PersonType2? PrivateType { get; init; }
 }

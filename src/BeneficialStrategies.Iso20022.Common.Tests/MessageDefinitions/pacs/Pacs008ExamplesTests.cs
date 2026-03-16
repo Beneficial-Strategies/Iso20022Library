@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
 using BeneficialStrategies.Iso20022.Choices.Party38Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.pacs;
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -27,36 +27,41 @@ public class Pacs008ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader96 CreateGroupHeader(string msgId = Iso20022TestData.OriginalPacs008MsgId) => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime,
-        NumberOfTransactions = "1",
-        SettlementInformation = Iso20022TestData.ClearingSettlement,
-        InstructingAgent = Iso20022TestData.DebtorAgent,
-        InstructedAgent = Iso20022TestData.CreditorAgent,
-    };
+    public static GroupHeader96 CreateGroupHeader(
+        string msgId = Iso20022TestData.OriginalPacs008MsgId
+    ) =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime,
+            NumberOfTransactions = "1",
+            SettlementInformation = Iso20022TestData.ClearingSettlement,
+            InstructingAgent = Iso20022TestData.DebtorAgent,
+            InstructedAgent = Iso20022TestData.CreditorAgent,
+        };
 
-    public static PaymentIdentification13 CreatePaymentIdentification() => new()
-    {
-        InstructionIdentification = Iso20022TestData.InstructionId,
-        EndToEndIdentification = Iso20022TestData.EndToEndId,
-        UETR = Iso20022TestData.Uetr,
-    };
+    public static PaymentIdentification13 CreatePaymentIdentification() =>
+        new()
+        {
+            InstructionIdentification = Iso20022TestData.InstructionId,
+            EndToEndIdentification = Iso20022TestData.EndToEndId,
+            UETR = Iso20022TestData.Uetr,
+        };
 
-    public static CreditTransferTransaction58 CreateCreditTransfer() => new()
-    {
-        PaymentIdentification = CreatePaymentIdentification(),
-        InterbankSettlementAmount = Iso20022TestData.InvoiceAmount,
-        InterbankSettlementDate = Iso20022TestData.SettlementDate,
-        ChargeBearer = ChargeBearerType1Code.Shared,
-        Debtor = Iso20022TestData.Debtor,
-        DebtorAccount = Iso20022TestData.DebtorAccount,
-        DebtorAgent = Iso20022TestData.DebtorAgent,
-        CreditorAgent = Iso20022TestData.CreditorAgent,
-        CreditorAccount = Iso20022TestData.CreditorAccount,
-        Creditor = Iso20022TestData.Creditor,
-    };
+    public static CreditTransferTransaction58 CreateCreditTransfer() =>
+        new()
+        {
+            PaymentIdentification = CreatePaymentIdentification(),
+            InterbankSettlementAmount = Iso20022TestData.InvoiceAmount,
+            InterbankSettlementDate = Iso20022TestData.SettlementDate,
+            ChargeBearer = ChargeBearerType1Code.Shared,
+            Debtor = Iso20022TestData.Debtor,
+            DebtorAccount = Iso20022TestData.DebtorAccount,
+            DebtorAgent = Iso20022TestData.DebtorAgent,
+            CreditorAgent = Iso20022TestData.CreditorAgent,
+            CreditorAccount = Iso20022TestData.CreditorAccount,
+            Creditor = Iso20022TestData.Creditor,
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -75,7 +80,10 @@ public class Pacs008ExamplesTests
 
         Assert.NotNull(message);
         Assert.Equal("pacs.008.001.11", FIToFICustomerCreditTransferV11.IsoIdentifier);
-        Assert.Equal(Iso20022TestData.Uetr, message.CreditTransferTransactionInformation.PaymentIdentification.UETR);
+        Assert.Equal(
+            Iso20022TestData.Uetr,
+            message.CreditTransferTransactionInformation.PaymentIdentification.UETR
+        );
     }
 
     /// <summary>
@@ -88,10 +96,7 @@ public class Pacs008ExamplesTests
     {
         var creditorWithLei = Iso20022TestData.Creditor with
         {
-            Identification = new OrganisationIdentification
-            {
-                LEI = "969500T3MBS4SQAMHJ45",
-            },
+            Identification = new OrganisationIdentification { LEI = "969500T3MBS4SQAMHJ45", },
         };
 
         var message = new FIToFICustomerCreditTransferV11
@@ -105,7 +110,8 @@ public class Pacs008ExamplesTests
 
         Assert.NotNull(message);
         Assert.IsType<OrganisationIdentification>(
-            message.CreditTransferTransactionInformation.Creditor!.Identification);
+            message.CreditTransferTransactionInformation.Creditor!.Identification
+        );
     }
 
     /// <summary>
@@ -120,11 +126,8 @@ public class Pacs008ExamplesTests
         {
             Identification = new Other
             {
-                Identification = "021000021-987654321",   // ABA + account number
-                SchemeName = new Choices.AccountSchemeName1Choice.Proprietary
-                {
-                    Value = "USABA",
-                },
+                Identification = "021000021-987654321", // ABA + account number
+                SchemeName = new Choices.AccountSchemeName1Choice.Proprietary { Value = "USABA", },
             },
             Currency = "USD",
             Name = "Acme Operating Account",
@@ -141,7 +144,8 @@ public class Pacs008ExamplesTests
 
         Assert.NotNull(message);
         Assert.IsType<Other>(
-            message.CreditTransferTransactionInformation.DebtorAccount!.Identification);
+            message.CreditTransferTransactionInformation.DebtorAccount!.Identification
+        );
     }
 
     /// <summary>
@@ -167,7 +171,9 @@ public class Pacs008ExamplesTests
         };
 
         Assert.NotNull(message);
-        Assert.Equal(SettlementMethod1Code.CoverMethod,
-            message.GroupHeader.SettlementInformation.SettlementMethod);
+        Assert.Equal(
+            SettlementMethod1Code.CoverMethod,
+            message.GroupHeader.SettlementInformation.SettlementMethod
+        );
     }
 }

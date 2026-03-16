@@ -23,7 +23,7 @@ public enum ConversionType1Code
     [IsoId("_bCNHN9p-Ed-ak6NoX_4Aeg_-371886103")]
     [Description(@"This is a final conversion.")]
     Final = ConversionTypeCode.Final, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// This is an interim conversion.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,5 +32,4 @@ public enum ConversionType1Code
     [IsoId("_bCNHONp-Ed-ak6NoX_4Aeg_-371886073")]
     [Description(@"This is an interim conversion.")]
     Interim = ConversionTypeCode.Interim, // same ordinal as derivation source for type conversions
-    
 }

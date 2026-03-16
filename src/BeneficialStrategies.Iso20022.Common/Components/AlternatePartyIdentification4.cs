@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PWdRw9p-Ed-ak6NoX_4Aeg_-1995851730")]
 [DisplayName("Alternate Party Identification")]
-public partial record AlternatePartyIdentification4
+public record AlternatePartyIdentification4
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of alternate identification of the party identified.
     /// </summary>
     [IsoId("_PWdRxNp-Ed-ak6NoX_4Aeg_-2109690796")]
     [DisplayName("Identification Type")]
     [IsoXmlTag("IdTp")]
-    public required IdentificationType6Choice_ IdentificationType { get; init; } 
-    
+    public required IdentificationType6Choice_ IdentificationType { get; init; }
+
     /// <summary>
     /// Country in which a person resides (the place of a person&apos;s home). In the case of a company, it is the country from which the affairs of that company are directed.
     /// </summary>
     [IsoId("_PWdRxdp-Ed-ak6NoX_4Aeg_1302043213")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public required CountryCode Country { get; init; } 
-    
+    public required CountryCode Country { get; init; }
+
     /// <summary>
     /// Alternate identification for a party.
     /// </summary>
@@ -41,10 +39,6 @@ public partial record AlternatePartyIdentification4
     [DisplayName("Alternate Identification")]
     [IsoXmlTag("AltrnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text AlternateIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text AlternateIdentification { get; init; }
 }

@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeDate6Choice.Date))]
     [KnownType(typeof(TradeDate6Choice.DateCode))]
-    [JsonDerivedType(typeof(TradeDate6Choice.Date),nameof(TradeDate6Choice.Date))]
-    [JsonDerivedType(typeof(TradeDate6Choice.DateCode),nameof(TradeDate6Choice.DateCode))]
+    [JsonDerivedType(typeof(TradeDate6Choice.Date), nameof(TradeDate6Choice.Date))]
+    [JsonDerivedType(typeof(TradeDate6Choice.DateCode), nameof(TradeDate6Choice.DateCode))]
     [IsoId("_5TGUWZNLEeWGlc8L7oPDIg")]
     [DisplayName("Trade Date 6 Choice")]
-    public abstract partial record TradeDate6Choice_
-    {
-    }
+    public abstract record TradeDate6Choice_ { }
 }

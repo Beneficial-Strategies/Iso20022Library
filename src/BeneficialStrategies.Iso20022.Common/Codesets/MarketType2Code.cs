@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aUdQYdp-Ed-ak6NoX_4Aeg_-922054322")]
-[Description(@"Specifies the type of market in which transactions take place, for example, primary.")]
+[Description(
+    @"Specifies the type of market in which transactions take place, for example, primary."
+)]
 [DerivedFrom(typeof(MarketTypeCode))]
 public enum MarketType2Code
 {
@@ -23,7 +25,7 @@ public enum MarketType2Code
     [IsoId("_aUdQYtp-Ed-ak6NoX_4Aeg_-922054296")]
     [Description(@"The place is a primary market.")]
     PrimaryMarket = MarketTypeCode.PrimaryMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a secondary market.
     /// Encoded/decoded by serializers as &quot;SECM&quot;.
@@ -32,7 +34,7 @@ public enum MarketType2Code
     [IsoId("_aUdQY9p-Ed-ak6NoX_4Aeg_-922054280")]
     [Description(@"The place is a secondary market.")]
     SecondaryMarket = MarketTypeCode.SecondaryMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is over the counter.
     /// Encoded/decoded by serializers as &quot;OTCO&quot;.
@@ -41,7 +43,7 @@ public enum MarketType2Code
     [IsoId("_aUdQZNp-Ed-ak6NoX_4Aeg_-922054262")]
     [Description(@"The place is over the counter.")]
     OverTheCounter = MarketTypeCode.OverTheCounter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Various places.
     /// Encoded/decoded by serializers as &quot;VARI&quot;.
@@ -50,7 +52,7 @@ public enum MarketType2Code
     [IsoId("_aUdQZdp-Ed-ak6NoX_4Aeg_-922054261")]
     [Description(@"Various places.")]
     Various = MarketTypeCode.Various, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a stock exchange.
     /// Encoded/decoded by serializers as &quot;EXCH&quot;.
@@ -59,5 +61,4 @@ public enum MarketType2Code
     [IsoId("_aUdQZtp-Ed-ak6NoX_4Aeg_127744806")]
     [Description(@"The place is a stock exchange.")]
     StockExchange = MarketTypeCode.StockExchange, // same ordinal as derivation source for type conversions
-    
 }

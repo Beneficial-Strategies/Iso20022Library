@@ -23,5 +23,4 @@ public enum AssetClassSubProductType36Code
     [IsoId("_uxcls1ryEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type newsprint.")]
     Newsprint = AssetClassSubProductTypeCode.Newsprint, // same ordinal as derivation source for type conversions
-    
 }

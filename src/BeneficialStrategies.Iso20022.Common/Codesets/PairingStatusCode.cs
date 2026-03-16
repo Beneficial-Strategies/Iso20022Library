@@ -23,7 +23,7 @@ public enum PairingStatusCode
     [IsoId("_sPf1Bl54Ee2a_-MvhEjKmA")]
     [Description(@"Transaction has been paired.")]
     Paired,
-    
+
     /// <summary>
     /// Transaction has not been paired.
     /// Encoded/decoded by serializers as &quot;UNPR&quot;.
@@ -32,5 +32,4 @@ public enum PairingStatusCode
     [IsoId("_sPf1BV54Ee2a_-MvhEjKmA")]
     [Description(@"Transaction has not been paired.")]
     Unpaired,
-    
 }

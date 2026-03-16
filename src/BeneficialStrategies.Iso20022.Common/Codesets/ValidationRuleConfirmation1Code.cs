@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_lfBx8CBpEeugLNJneiyzbA")]
-[Description(@"Specifies the confirmation for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets.")]
+[Description(
+    @"Specifies the confirmation for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleConfirmation1Code
 {
@@ -24,5 +26,4 @@ public enum ValidationRuleConfirmation1Code
     [IsoId("_0NxeUSBpEeugLNJneiyzbA")]
     [Description(@"Confirmation party in trade.")]
     Confirmation = ValidationRuleCode.Confirmation, // same ordinal as derivation source for type conversions
-    
 }

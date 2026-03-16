@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h8DYIYF0EeWtPe6Crjmeug")]
 [DisplayName("Interest Statement")]
-public partial record InterestStatement4
+public record InterestStatement4
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the period during which the interest rate has been applied.
     /// </summary>
     [IsoId("_iSErcYF0EeWtPe6Crjmeug")]
     [DisplayName("Interest Period")]
     [IsoXmlTag("IntrstPrd")]
-    public required DatePeriodDetails InterestPeriod { get; init; } 
-    
+    public required DatePeriodDetails InterestPeriod { get; init; }
+
     /// <summary>
     /// Provides the total amount of interest that is due to partyA.
     /// </summary>
     [IsoId("_iSErc4F0EeWtPe6Crjmeug")]
     [DisplayName("Total Interest Amount Due To A")]
     [IsoXmlTag("TtlIntrstAmtDueToA")]
-    public ActiveCurrencyAndAmount? TotalInterestAmountDueToA { get; init; } 
-    
+    public ActiveCurrencyAndAmount? TotalInterestAmountDueToA { get; init; }
+
     /// <summary>
     /// Provides the total amount of interest that is due to partyB.
     /// </summary>
     [IsoId("_iSErdYF0EeWtPe6Crjmeug")]
     [DisplayName("Total Interest Amount Due To B")]
     [IsoXmlTag("TtlIntrstAmtDueToB")]
-    public ActiveCurrencyAndAmount? TotalInterestAmountDueToB { get; init; } 
-    
+    public ActiveCurrencyAndAmount? TotalInterestAmountDueToB { get; init; }
+
     /// <summary>
     /// Indicates the value date of the interest statement.
     /// </summary>
@@ -49,8 +47,8 @@ public partial record InterestStatement4
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; } 
-    
+    public required IsoISODate ValueDate { get; init; }
+
     /// <summary>
     /// Provides the reference to the interest payment request.
     /// </summary>
@@ -58,18 +56,14 @@ public partial record InterestStatement4
     [DisplayName("Interest Payment Request Identification")]
     [IsoXmlTag("IntrstPmtReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? InterestPaymentRequestIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? InterestPaymentRequestIdentification { get; init; }
+
     /// <summary>
     /// Provides the details of the interest calculation.
     /// </summary>
     [IsoId("_iSEre4F0EeWtPe6Crjmeug")]
     [DisplayName("Interest Calculation")]
     [IsoXmlTag("IntrstClctn")]
-    public InterestCalculation4? InterestCalculation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public InterestCalculation4? InterestCalculation { get; init; }
 }

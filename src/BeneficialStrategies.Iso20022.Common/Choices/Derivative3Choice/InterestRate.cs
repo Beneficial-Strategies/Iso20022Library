@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice
 {
     /// <summary>
@@ -13,34 +13,32 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice
     /// </summary>
     [IsoId("_xH-zYye0Eei12pGEsJIAeQ")]
     [DisplayName("Interest Rate")]
-    public partial record InterestRate : Derivative3Choice_
+    public record InterestRate : Derivative3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specific details on the underlying type of the interest rate derivative.
         /// </summary>
         [IsoId("_xSfx8WlIEeaLAKoEUNsD9g")]
         [DisplayName("Underlying Type")]
         [IsoXmlTag("UndrlygTp")]
-        public required InterestRateDerivative2Choice_ UnderlyingType { get; init; } 
-        
+        public required InterestRateDerivative2Choice_ UnderlyingType { get; init; }
+
         /// <summary>
         /// Populated when the underlying type is a bond or a bond future. Details the issuer and maturity date of the bond.
         /// </summary>
         [IsoId("_xSfx82lIEeaLAKoEUNsD9g")]
         [DisplayName("Underlying Bond")]
         [IsoXmlTag("UndrlygBd")]
-        public BondDerivative2? UnderlyingBond { get; init; } 
-        
+        public BondDerivative2? UnderlyingBond { get; init; }
+
         /// <summary>
         /// Notional currency of a swaption.
         /// </summary>
         [IsoId("_xSfx9WlIEeaLAKoEUNsD9g")]
         [DisplayName("Swaption Notional Currency")]
         [IsoXmlTag("SwptnNtnlCcy")]
-        public ActiveCurrencyCode? SwaptionNotionalCurrency { get; init; } 
-        
+        public ActiveCurrencyCode? SwaptionNotionalCurrency { get; init; }
+
         /// <summary>
         /// Maturity date of the underlying swap, populated for swaptions, futures on swaps and forwards on a swap only.
         /// </summary>
@@ -48,26 +46,22 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative3Choice
         [DisplayName("Underlying Swap Maturity Date")]
         [IsoXmlTag("UndrlygSwpMtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? UnderlyingSwapMaturityDate { get; init; } 
-        
+        public IsoISODate? UnderlyingSwapMaturityDate { get; init; }
+
         /// <summary>
         /// Populated to define the inflation index.
         /// </summary>
         [IsoId("_xSfx-WlIEeaLAKoEUNsD9g")]
         [DisplayName("Inflation Index")]
         [IsoXmlTag("InfltnIndx")]
-        public InflationIndex1Choice_? InflationIndex { get; init; } 
-        
+        public InflationIndex1Choice_? InflationIndex { get; init; }
+
         /// <summary>
         /// Provides the interest rate against a reference rate and term in number of days, weeks, months or years.
         /// </summary>
         [IsoId("_xSfx-2lIEeaLAKoEUNsD9g")]
         [DisplayName("Interest Rate Reference")]
         [IsoXmlTag("IntrstRateRef")]
-        public required FloatingInterestRate8 InterestRateReference { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required FloatingInterestRate8 InterestRateReference { get; init; }
     }
 }

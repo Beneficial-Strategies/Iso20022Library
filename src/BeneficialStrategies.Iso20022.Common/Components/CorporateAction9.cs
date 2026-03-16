@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t20OQVkyEeGeoaLUQk__nA_-1416100338")]
 [DisplayName("Corporate Action")]
-public partial record CorporateAction9
+public record CorporateAction9
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of corporate action event, in a free-text format.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateAction9
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text EventType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text EventType { get; init; }
+
     /// <summary>
     /// Identification of a corporate action assigned by an official central body/entity within a given market.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record CorporateAction9
     [DisplayName("Event Identification")]
     [IsoXmlTag("EvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text EventIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text EventIdentification { get; init; }
 }

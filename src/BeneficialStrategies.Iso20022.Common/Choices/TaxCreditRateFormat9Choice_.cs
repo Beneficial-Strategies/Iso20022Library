@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TaxCreditRateFormat9Choice.Rate))]
     [KnownType(typeof(TaxCreditRateFormat9Choice.Amount))]
     [KnownType(typeof(TaxCreditRateFormat9Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat9Choice.Rate),nameof(TaxCreditRateFormat9Choice.Rate))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat9Choice.Amount),nameof(TaxCreditRateFormat9Choice.Amount))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat9Choice.RateTypeAndAmountAndRateStatus),nameof(TaxCreditRateFormat9Choice.RateTypeAndAmountAndRateStatus))]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat9Choice.Rate),
+        nameof(TaxCreditRateFormat9Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat9Choice.Amount),
+        nameof(TaxCreditRateFormat9Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat9Choice.RateTypeAndAmountAndRateStatus),
+        nameof(TaxCreditRateFormat9Choice.RateTypeAndAmountAndRateStatus)
+    )]
     [IsoId("_ckCYvpKQEeWHWpTQn1FFVg")]
     [DisplayName("Tax Credit Rate Format 9 Choice")]
-    public abstract partial record TaxCreditRateFormat9Choice_
-    {
-    }
+    public abstract record TaxCreditRateFormat9Choice_ { }
 }

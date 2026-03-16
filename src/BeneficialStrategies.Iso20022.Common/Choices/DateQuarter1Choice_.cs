@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DateQuarter1Choice.Date))]
     [KnownType(typeof(DateQuarter1Choice.Period))]
-    [JsonDerivedType(typeof(DateQuarter1Choice.Date),nameof(DateQuarter1Choice.Date))]
-    [JsonDerivedType(typeof(DateQuarter1Choice.Period),nameof(DateQuarter1Choice.Period))]
+    [JsonDerivedType(typeof(DateQuarter1Choice.Date), nameof(DateQuarter1Choice.Date))]
+    [JsonDerivedType(typeof(DateQuarter1Choice.Period), nameof(DateQuarter1Choice.Period))]
     [IsoId("_CUTHIKFTEei_VZq-6SQkuQ")]
     [DisplayName("Date Quarter 1 Choice")]
-    public abstract partial record DateQuarter1Choice_
-    {
-    }
+    public abstract record DateQuarter1Choice_ { }
 }

@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UpdateType9Choice.Addition))]
     [KnownType(typeof(UpdateType9Choice.Deletion))]
     [KnownType(typeof(UpdateType9Choice.Modification))]
-    [JsonDerivedType(typeof(UpdateType9Choice.Addition),nameof(UpdateType9Choice.Addition))]
-    [JsonDerivedType(typeof(UpdateType9Choice.Deletion),nameof(UpdateType9Choice.Deletion))]
-    [JsonDerivedType(typeof(UpdateType9Choice.Modification),nameof(UpdateType9Choice.Modification))]
+    [JsonDerivedType(typeof(UpdateType9Choice.Addition), nameof(UpdateType9Choice.Addition))]
+    [JsonDerivedType(typeof(UpdateType9Choice.Deletion), nameof(UpdateType9Choice.Deletion))]
+    [JsonDerivedType(
+        typeof(UpdateType9Choice.Modification),
+        nameof(UpdateType9Choice.Modification)
+    )]
     [IsoId("_nBXQ4Q0BEeKd14R19frrfQ")]
     [DisplayName("Update Type 9 Choice")]
-    public abstract partial record UpdateType9Choice_
-    {
-    }
+    public abstract record UpdateType9Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum MemberStatusCode
     [IsoId("_aLqgw9p-Ed-ak6NoX_4Aeg_-1869032550")]
     [Description(@"Member is live on the system.")]
     Enabled,
-    
+
     /// <summary>
     /// Member is temporarily not live on the system.
     /// Encoded/decoded by serializers as &quot;DSBL&quot;.
@@ -32,7 +32,7 @@ public enum MemberStatusCode
     [IsoId("_aLqgxNp-Ed-ak6NoX_4Aeg_-1869032549")]
     [Description(@"Member is temporarily not live on the system.")]
     Disabled,
-    
+
     /// <summary>
     /// Member is no longer live on the system.
     /// Encoded/decoded by serializers as &quot;DLTD&quot;.
@@ -41,7 +41,7 @@ public enum MemberStatusCode
     [IsoId("_aLqgxdp-Ed-ak6NoX_4Aeg_-1869032548")]
     [Description(@"Member is no longer live on the system.")]
     Deleted,
-    
+
     /// <summary>
     /// Member is joining and will soon be enabled on the system.
     /// Encoded/decoded by serializers as &quot;JOIN&quot;.
@@ -50,5 +50,4 @@ public enum MemberStatusCode
     [IsoId("_aLqgxtp-Ed-ak6NoX_4Aeg_-1869032540")]
     [Description(@"Member is joining and will soon be enabled on the system.")]
     Joining,
-    
 }

@@ -23,7 +23,7 @@ public enum DataSetCategory7Code
     [IsoId("_2KOdUYn9EeShMpas3885ww")]
     [Description(@"Configuration parameters of the ATM.")]
     ATMConfiguration = DataSetCategoryCode.ATMConfiguration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ATM protocol parameters, including the configuration of the hosts.
     /// Encoded/decoded by serializers as &quot;ATMP&quot;.
@@ -32,16 +32,18 @@ public enum DataSetCategory7Code
     [IsoId("_2RPEQ4n9EeShMpas3885ww")]
     [Description(@"ATM protocol parameters, including the configuration of the hosts.")]
     ATMProtocol = DataSetCategoryCode.ATMProtocol, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment application specific configuration parameters for the point of interaction (POI) system.
     /// Encoded/decoded by serializers as &quot;APPR&quot;.
     /// </summary>
     [EnumMember(Value = "APPR")]
     [IsoId("_6zEQs4n9EeShMpas3885ww")]
-    [Description(@"Payment application specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Payment application specific configuration parameters for the point of interaction (POI) system."
+    )]
     ApplicationParameters = DataSetCategoryCode.ApplicationParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration parameters of the card application.
     /// Encoded/decoded by serializers as &quot;CRAP&quot;.
@@ -50,7 +52,7 @@ public enum DataSetCategory7Code
     [IsoId("__QYwk4n9EeShMpas3885ww")]
     [Description(@"Configuration parameters of the card application.")]
     CardApplication = DataSetCategoryCode.CardApplication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration of the cards accepted by the terminal.
     /// Encoded/decoded by serializers as &quot;CPRC&quot;.
@@ -59,7 +61,7 @@ public enum DataSetCategory7Code
     [IsoId("__XsSc4n9EeShMpas3885ww")]
     [Description(@"Configuration of the cards accepted by the terminal.")]
     CardConfiguration = DataSetCategoryCode.CardConfiguration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Local rates for currency exchanges.
     /// Encoded/decoded by serializers as &quot;OEXR&quot;.
@@ -68,7 +70,7 @@ public enum DataSetCategory7Code
     [IsoId("_As9cQ4n-EeShMpas3885ww")]
     [Description(@"Local rates for currency exchanges.")]
     OfflineExchangeRate = DataSetCategoryCode.OfflineExchangeRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Predefined amounts to be presented to the customer.
     /// Encoded/decoded by serializers as &quot;AMNT&quot;.
@@ -77,7 +79,7 @@ public enum DataSetCategory7Code
     [IsoId("_A1wL44n-EeShMpas3885ww")]
     [Description(@"Predefined amounts to be presented to the customer.")]
     PreDefinedAmount = DataSetCategoryCode.PreDefinedAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration of the location.
     /// Encoded/decoded by serializers as &quot;LOCC&quot;.
@@ -86,7 +88,7 @@ public enum DataSetCategory7Code
     [IsoId("_CL-X84n-EeShMpas3885ww")]
     [Description(@"Configuration of the location.")]
     LocationConfiguration = DataSetCategoryCode.LocationConfiguration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration of the mobile operator cards accepted by the terminal.
     /// Encoded/decoded by serializers as &quot;MNOC&quot;.
@@ -95,5 +97,4 @@ public enum DataSetCategory7Code
     [IsoId("_E8OSA4n-EeShMpas3885ww")]
     [Description(@"Configuration of the mobile operator cards accepted by the terminal.")]
     MobileOperator = DataSetCategoryCode.MobileOperator, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum HoldingsPlanType1Code
     [IsoId("_HrnWjv81EeC-e_lDNJKWcg")]
     [Description(@"Holding to be transferred belongs to an investment plan.")]
     InvestmentPlan = HoldingsPlanTypeCode.InvestmentPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Holding to be transferred belongs to a switch plan.
     /// Encoded/decoded by serializers as &quot;SWIP&quot;.
@@ -32,7 +32,7 @@ public enum HoldingsPlanType1Code
     [IsoId("_H1dPBv81EeC-e_lDNJKWcg")]
     [Description(@"Holding to be transferred belongs to a switch plan.")]
     SwitchPlan = HoldingsPlanTypeCode.SwitchPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Holding to be transferred belongs to a withdrawal plan.
     /// Encoded/decoded by serializers as &quot;PLAR&quot;.
@@ -41,5 +41,4 @@ public enum HoldingsPlanType1Code
     [IsoId("_H5LRbv81EeC-e_lDNJKWcg")]
     [Description(@"Holding to be transferred belongs to a withdrawal plan.")]
     WithdrawalPlan = HoldingsPlanTypeCode.WithdrawalPlan, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G6sUUTAVEeOKib24wnHaFg")]
 [DisplayName("Charge")]
-public partial record Charge25
+public record Charge25
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies whether the freight charges associated with the goods are &quot;prepaid&quot; or &quot;collect&quot;.
     /// </summary>
     [IsoId("_HaIpYTAVEeOKib24wnHaFg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required FreightCharges1Code Type { get; init; } 
-    
+    public required FreightCharges1Code Type { get; init; }
+
     /// <summary>
     /// Amount of money associated with a service.
     /// </summary>
     [IsoId("_HaIpYzAVEeOKib24wnHaFg")]
     [DisplayName("Charges")]
     [IsoXmlTag("Chrgs")]
-    public ChargesDetails4? Charges { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ChargesDetails4? Charges { get; init; }
 }

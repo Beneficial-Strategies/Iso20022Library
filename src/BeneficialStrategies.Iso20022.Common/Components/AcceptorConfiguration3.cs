@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5vqksTZ7EeOP_KvUKe29ng")]
 [DisplayName("Acceptor Configuration")]
-public partial record AcceptorConfiguration3
+public record AcceptorConfiguration3
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the point of interaction for terminal management.
     /// </summary>
     [IsoId("_6Bn3YTZ7EeOP_KvUKe29ng")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
-    public GenericIdentification35? POIIdentification { get; init; } 
-    
+    public GenericIdentification35? POIIdentification { get; init; }
+
     /// <summary>
     /// Identification of the terminal management system (TMS) sending the acceptor parameters.
     /// </summary>
     [IsoId("_6Bn3YzZ7EeOP_KvUKe29ng")]
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
-    public required GenericIdentification35 TerminalManagerIdentification { get; init; } 
-    
+    public required GenericIdentification35 TerminalManagerIdentification { get; init; }
+
     /// <summary>
     /// Data set containing the acceptor parameters of a point of interaction (POI).
     /// </summary>
@@ -42,8 +40,4 @@ public partial record AcceptorConfiguration3
     [IsoXmlTag("DataSet")]
     public ValueList<TerminalManagementDataSet11> DataSet { get; init; } = [];
     // ID for the above is _6Bn3ZTZ7EeOP_KvUKe29ng
-    
-    
-    #nullable disable
-    
 }

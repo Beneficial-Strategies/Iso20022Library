@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
     /// </summary>
     [IsoId("_ISFv4W49EeiU9cctagi5ow")]
     [DisplayName("Initiation")]
-    public partial record Initiation : UnderlyingTransaction5Choice_
+    public record Initiation : UnderlyingTransaction5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Set of elements used to provide information on the original message.
         /// </summary>
         [IsoId("_IlAr5W49EeiU9cctagi5ow")]
         [DisplayName("Original Group Information")]
         [IsoXmlTag("OrgnlGrpInf")]
-        public UnderlyingGroupInformation1? OriginalGroupInformation { get; init; } 
-        
+        public UnderlyingGroupInformation1? OriginalGroupInformation { get; init; }
+
         /// <summary>
         /// Unique identification, as assigned by the original sending party, to unambiguously identify the original payment information group.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
         [DisplayName("Original Payment Information Identification")]
         [IsoXmlTag("OrgnlPmtInfId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? OriginalPaymentInformationIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? OriginalPaymentInformationIdentification { get; init; }
+
         /// <summary>
         /// Unique identification, as assigned by the original instructing party for the original instructed party, to unambiguously identify the original instruction.
         /// </summary>
@@ -42,9 +40,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
         [DisplayName("Original Instruction Identification")]
         [IsoXmlTag("OrgnlInstrId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? OriginalInstructionIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+
         /// <summary>
         /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
         /// </summary>
@@ -52,9 +50,9 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
         [DisplayName("Original End To End Identification")]
         [IsoXmlTag("OrgnlEndToEndId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? OriginalEndToEndIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+
         /// <summary>
         /// Universally unique identifier to provide the original end-to-end reference of a payment transaction.
         /// </summary>
@@ -62,24 +60,24 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
         [DisplayName("Original UETR")]
         [IsoXmlTag("OrgnlUETR")]
         [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-        public IsoUUIDv4Identifier? OriginalUETR { get; init; } 
-        
+        public IsoUUIDv4Identifier? OriginalUETR { get; init; }
+
         /// <summary>
         /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.
         /// </summary>
         [IsoId("_IlAr7W49EeiU9cctagi5ow")]
         [DisplayName("Original Instructed Amount")]
         [IsoXmlTag("OrgnlInstdAmt")]
-        public required ActiveOrHistoricCurrencyAndAmount OriginalInstructedAmount { get; init; } 
-        
+        public required ActiveOrHistoricCurrencyAndAmount OriginalInstructedAmount { get; init; }
+
         /// <summary>
         /// Date at which the initiating party requests the clearing agent to process the payment. |Usage: This is the date on which the debtor&apos;s account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.
         /// </summary>
         [IsoId("_IlAr7249EeiU9cctagi5ow")]
         [DisplayName("Requested Execution Date")]
         [IsoXmlTag("ReqdExctnDt")]
-        public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; } 
-        
+        public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
         /// <summary>
         /// Date at which the creditor requests the amount of money to be collected from the debtor.
         /// </summary>
@@ -87,18 +85,14 @@ namespace BeneficialStrategies.Iso20022.Choices.UnderlyingTransaction5Choice
         [DisplayName("Requested Collection Date")]
         [IsoXmlTag("ReqdColltnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? RequestedCollectionDate { get; init; } 
-        
+        public IsoISODate? RequestedCollectionDate { get; init; }
+
         /// <summary>
         /// Key elements used to identify the original transaction that is being referred to.
         /// </summary>
         [IsoId("_IlAr8249EeiU9cctagi5ow")]
         [DisplayName("Original Transaction Reference")]
         [IsoXmlTag("OrgnlTxRef")]
-        public OriginalTransactionReference28? OriginalTransactionReference { get; init; } 
-        
-        
-        #nullable disable
-        
+        public OriginalTransactionReference28? OriginalTransactionReference { get; init; }
     }
 }

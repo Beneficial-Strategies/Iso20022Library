@@ -23,7 +23,7 @@ public enum WeekDay2Code
     [IsoId("_ArjrhS-pEeWvZpCvNOLJLQ")]
     [Description(@"Wednesday.")]
     Wednesday = WeekDayCode.Wednesday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tuesday.
     /// Encoded/decoded by serializers as &quot;TUED&quot;.
@@ -32,7 +32,7 @@ public enum WeekDay2Code
     [IsoId("_Arjrhy-pEeWvZpCvNOLJLQ")]
     [Description(@"Tuesday.")]
     Tuesday = WeekDayCode.Tuesday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Thursday.
     /// Encoded/decoded by serializers as &quot;THUD&quot;.
@@ -41,7 +41,7 @@ public enum WeekDay2Code
     [IsoId("_ArjriS-pEeWvZpCvNOLJLQ")]
     [Description(@"Thursday.")]
     Thursday = WeekDayCode.Thursday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sunday.
     /// Encoded/decoded by serializers as &quot;SUND&quot;.
@@ -50,7 +50,7 @@ public enum WeekDay2Code
     [IsoId("_Arjriy-pEeWvZpCvNOLJLQ")]
     [Description(@"Sunday.")]
     Sunday = WeekDayCode.Sunday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Saturday.
     /// Encoded/decoded by serializers as &quot;SATD&quot;.
@@ -59,7 +59,7 @@ public enum WeekDay2Code
     [IsoId("_ArjrjS-pEeWvZpCvNOLJLQ")]
     [Description(@"Saturday.")]
     Saturday = WeekDayCode.Saturday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Monday.
     /// Encoded/decoded by serializers as &quot;MOND&quot;.
@@ -68,7 +68,7 @@ public enum WeekDay2Code
     [IsoId("_Arjrjy-pEeWvZpCvNOLJLQ")]
     [Description(@"Monday.")]
     Monday = WeekDayCode.Monday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Friday.
     /// Encoded/decoded by serializers as &quot;FRID&quot;.
@@ -77,5 +77,4 @@ public enum WeekDay2Code
     [IsoId("_ArjrkS-pEeWvZpCvNOLJLQ")]
     [Description(@"Friday.")]
     Friday = WeekDayCode.Friday, // same ordinal as derivation source for type conversions
-    
 }

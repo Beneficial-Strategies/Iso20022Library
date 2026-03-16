@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k5AXMENiEeiut6dbx3wnBg")]
 [DisplayName("Dispute Data")]
-public partial record DisputeData1
+public record DisputeData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the cycle of presentment or of the chargeback  (1= first cycle for chargeback, 2= second cycle of presentment or chargeback, etc.).
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DisputeData1
     [DisplayName("Presentment Cycle")]
     [IsoXmlTag("PresntmntCycl")]
     [IsoSimpleType(IsoSimpleType.Exact1NumericText)]
-    public IsoExact1NumericText? PresentmentCycle { get; init; } 
-    
+    public IsoExact1NumericText? PresentmentCycle { get; init; }
+
     /// <summary>
     /// Condition of the dispute.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record DisputeData1
     [DisplayName("Dispute Condition")]
     [IsoXmlTag("DsptCond")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DisputeCondition { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DisputeCondition { get; init; }
+
     /// <summary>
     /// Status of dispute.
     /// </summary>
@@ -44,9 +42,9 @@ public partial record DisputeData1
     [DisplayName("Dispute Status")]
     [IsoXmlTag("DsptSts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DisputeStatus { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DisputeStatus { get; init; }
+
     /// <summary>
     /// Partial dispute indicator.
     /// </summary>
@@ -54,16 +52,16 @@ public partial record DisputeData1
     [DisplayName("Partial Dispute")]
     [IsoXmlTag("PrtlDspt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialDispute { get; init; } 
-    
+    public IsoYesNoIndicator? PartialDispute { get; init; }
+
     /// <summary>
     /// Reference for the dispute.
     /// </summary>
     [IsoId("_qnBp9UNiEeiut6dbx3wnBg")]
     [DisplayName("Dispute Reference")]
     [IsoXmlTag("DsptRef")]
-    public DisputeReference1? DisputeReference { get; init; } 
-    
+    public DisputeReference1? DisputeReference { get; init; }
+
     /// <summary>
     /// Status of the dispute documentation.
     /// </summary>
@@ -71,9 +69,9 @@ public partial record DisputeData1
     [DisplayName("Documentation Status")]
     [IsoXmlTag("DcmnttnSts")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DocumentationStatus { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DocumentationStatus { get; init; }
+
     /// <summary>
     /// Additional information related to the dispute.
     /// </summary>
@@ -81,9 +79,9 @@ public partial record DisputeData1
     [DisplayName("Additional Dispute Data")]
     [IsoXmlTag("AddtlDsptData")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
-    [StringLength(maximumLength: 1000 ,MinimumLength = 1)]
-    public IsoMax1000Text? AdditionalDisputeData { get; init; } 
-    
+    [StringLength(maximumLength: 1000, MinimumLength = 1)]
+    public IsoMax1000Text? AdditionalDisputeData { get; init; }
+
     /// <summary>
     /// Reason for rejecting a dispute.
     /// </summary>
@@ -91,9 +89,9 @@ public partial record DisputeData1
     [DisplayName("Dispute Reject Reason")]
     [IsoXmlTag("DsptRjctRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DisputeRejectReason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DisputeRejectReason { get; init; }
+
     /// <summary>
     /// Provides transaction chargeback eligibility conditions.
     /// </summary>
@@ -101,10 +99,6 @@ public partial record DisputeData1
     [DisplayName("Chargeback Eligibility")]
     [IsoXmlTag("ChrgbckElgblty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ChargebackEligibility { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ChargebackEligibility { get; init; }
 }

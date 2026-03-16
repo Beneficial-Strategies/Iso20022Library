@@ -21,7 +21,8 @@ public enum PartyRole3Code
     /// </summary>
     [EnumMember(Value = "GATR")]
     [IsoId("_0BtyYfRCEeqAradXpAelDQ")]
-    [Description(@"Legal entity, other than the issuer, who gives a guarantee. The guarantor becomes liable in case of default.")]
+    [Description(
+        @"Legal entity, other than the issuer, who gives a guarantee. The guarantor becomes liable in case of default."
+    )]
     Guarantor = PartyRoleCode.Guarantor, // same ordinal as derivation source for type conversions
-    
 }

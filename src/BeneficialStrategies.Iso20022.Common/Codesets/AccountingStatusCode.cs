@@ -23,7 +23,7 @@ public enum AccountingStatusCode
     [IsoId("_RfFRsCDEEeWPMvNwVtiMsA")]
     [Description(@"Account or party is regarded as domestic for reporting purposes.")]
     Domestic,
-    
+
     /// <summary>
     /// Account or party is not regarded as domestic for reporting purposes.
     /// Encoded/decoded by serializers as &quot;NDOM&quot;.
@@ -32,5 +32,4 @@ public enum AccountingStatusCode
     [IsoId("_Y8DZkCDEEeWPMvNwVtiMsA")]
     [Description(@"Account or party is not regarded as domestic for reporting purposes.")]
     NotDomestic,
-    
 }

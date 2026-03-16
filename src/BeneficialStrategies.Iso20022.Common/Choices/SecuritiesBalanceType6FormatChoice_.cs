@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecuritiesBalanceType6FormatChoice.Code))]
     [KnownType(typeof(SecuritiesBalanceType6FormatChoice.Proprietary))]
-    [JsonDerivedType(typeof(SecuritiesBalanceType6FormatChoice.Code),nameof(SecuritiesBalanceType6FormatChoice.Code))]
-    [JsonDerivedType(typeof(SecuritiesBalanceType6FormatChoice.Proprietary),nameof(SecuritiesBalanceType6FormatChoice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SecuritiesBalanceType6FormatChoice.Code),
+        nameof(SecuritiesBalanceType6FormatChoice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesBalanceType6FormatChoice.Proprietary),
+        nameof(SecuritiesBalanceType6FormatChoice.Proprietary)
+    )]
     [IsoId("_Roygxtp-Ed-ak6NoX_4Aeg_758304831")]
     [DisplayName("Securities Balance Type 6 Format Choice")]
-    public abstract partial record SecuritiesBalanceType6FormatChoice_
-    {
-    }
+    public abstract record SecuritiesBalanceType6FormatChoice_ { }
 }

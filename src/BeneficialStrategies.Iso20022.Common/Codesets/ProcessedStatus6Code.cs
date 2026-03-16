@@ -23,7 +23,7 @@ public enum ProcessedStatus6Code
     [IsoId("_aKxI49p-Ed-ak6NoX_4Aeg_-1149003943")]
     [Description(@"The instruction/request has been received.")]
     Received = CorporateActionProcessedStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Awaiting the deactivation date.
     /// Encoded/decoded by serializers as &quot;DEAC&quot;.
@@ -32,7 +32,7 @@ public enum ProcessedStatus6Code
     [IsoId("_aKxI5Np-Ed-ak6NoX_4Aeg_-1149003942")]
     [Description(@"Awaiting the deactivation date.")]
     WaitingDeactivationDate = CorporateActionProcessedStatusCode.WaitingDeactivationDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The request has been completed.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -41,5 +41,4 @@ public enum ProcessedStatus6Code
     [IsoId("_aKxI5dp-Ed-ak6NoX_4Aeg_-1149003664")]
     [Description(@"The request has been completed.")]
     Completed = CorporateActionProcessedStatusCode.Completed, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum DeliveryReturnCode
     [IsoId("_azc5hNp-Ed-ak6NoX_4Aeg_-2045082220")]
     [Description(@"Original delivery is not recognized.")]
     UnrecognisedDelivery,
-    
+
     /// <summary>
     /// Wrong quantity delivered in the original instruction.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -32,7 +32,7 @@ public enum DeliveryReturnCode
     [IsoId("_azc5hdp-Ed-ak6NoX_4Aeg_-2045082197")]
     [Description(@"Wrong quantity delivered in the original instruction.")]
     WrongQuantity,
-    
+
     /// <summary>
     /// Wrong settlement amount settled in the original delivery.
     /// Encoded/decoded by serializers as &quot;DMON&quot;.
@@ -41,16 +41,18 @@ public enum DeliveryReturnCode
     [IsoId("_azc5htp-Ed-ak6NoX_4Aeg_-2045082196")]
     [Description(@"Wrong settlement amount settled in the original delivery.")]
     WrongSettlementAmount,
-    
+
     /// <summary>
     /// Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD).
     /// Encoded/decoded by serializers as &quot;PART&quot;.
     /// </summary>
     [EnumMember(Value = "PART")]
     [IsoId("_azmDcNp-Ed-ak6NoX_4Aeg_-2045082180")]
-    [Description(@"Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD).")]
+    [Description(
+        @"Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD)."
+    )]
     PartialDelivery,
-    
+
     /// <summary>
     /// Account information is missing in the original delivery.
     /// Encoded/decoded by serializers as &quot;SAFE&quot;.
@@ -59,7 +61,7 @@ public enum DeliveryReturnCode
     [IsoId("_azmDcdp-Ed-ak6NoX_4Aeg_-2045082179")]
     [Description(@"Account information is missing in the original delivery.")]
     AccountMissing,
-    
+
     /// <summary>
     /// Due bill information missing in the original delivery.
     /// Encoded/decoded by serializers as &quot;DUEB&quot;.
@@ -68,7 +70,7 @@ public enum DeliveryReturnCode
     [IsoId("_azmDctp-Ed-ak6NoX_4Aeg_-2045082145")]
     [Description(@"Due bill information missing in the original delivery.")]
     DueBiillMissing,
-    
+
     /// <summary>
     /// Portion of the original transaction quantity was returned by the receiver.
     /// Encoded/decoded by serializers as &quot;PARD&quot;.
@@ -77,5 +79,4 @@ public enum DeliveryReturnCode
     [IsoId("_azmDc9p-Ed-ak6NoX_4Aeg_-2045082136")]
     [Description(@"Portion of the original transaction quantity was returned by the receiver.")]
     PartialReturn,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,25 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SDCRMEVCEeea-M6VZkEPUw")]
 [DisplayName("Grace Period")]
-public partial record GracePeriod1
+public record GracePeriod1
 {
-    #nullable enable
-    
     /// <summary>
-    /// Grace period time relative to the grace period unit type. 
+    /// Grace period time relative to the grace period unit type.
     /// </summary>
     [IsoId("_mEDvgEVCEeea-M6VZkEPUw")]
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText Time { get; init; } 
-    
+    public required IsoMax3NumericText Time { get; init; }
+
     /// <summary>
     /// Grace period unit type.
     /// </summary>
     [IsoId("_tgcBgEVCEeea-M6VZkEPUw")]
     [DisplayName("Unit Type")]
     [IsoXmlTag("UnitTp")]
-    public required GracePeriodUnitType1Code UnitType { get; init; } 
-    
+    public required GracePeriodUnitType1Code UnitType { get; init; }
+
     /// <summary>
     /// Grace period other unit type.
     /// </summary>
@@ -42,10 +40,6 @@ public partial record GracePeriod1
     [DisplayName("Other Unit Type")]
     [IsoXmlTag("OthrUnitTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherUnitType { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherUnitType { get; init; }
 }

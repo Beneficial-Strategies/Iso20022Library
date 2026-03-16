@@ -23,7 +23,7 @@ public enum InterestType3Code
     [IsoId("_ha_UvGliEeGaMcKyqKNRfQ_2005580526")]
     [Description(@"Indicates that the type of interest is a zero coupon.")]
     ZeroCoupon = InterestTypeCode.ZeroCoupon, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of interest is fixed.
     /// Encoded/decoded by serializers as &quot;FIXD&quot;.
@@ -32,7 +32,7 @@ public enum InterestType3Code
     [IsoId("_ha_UvWliEeGaMcKyqKNRfQ_-583192410")]
     [Description(@"Indicates that the type of interest is fixed.")]
     Fixed = InterestTypeCode.Fixed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of interest is a floating rate note.
     /// Encoded/decoded by serializers as &quot;FLRN&quot;.
@@ -41,7 +41,7 @@ public enum InterestType3Code
     [IsoId("_ha_UvmliEeGaMcKyqKNRfQ_-1218224256")]
     [Description(@"Indicates that the type of interest is a floating rate note.")]
     FloatingRateNote = InterestTypeCode.FloatingRateNote, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of interest is a dual basis.
     /// Encoded/decoded by serializers as &quot;DUAL&quot;.
@@ -50,7 +50,7 @@ public enum InterestType3Code
     [IsoId("_ha_Uv2liEeGaMcKyqKNRfQ_1701818028")]
     [Description(@"Indicates that the type of interest is a dual basis.")]
     DualBasis = InterestTypeCode.DualBasis, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of interest is index.
     /// Encoded/decoded by serializers as &quot;INDE&quot;.
@@ -59,7 +59,7 @@ public enum InterestType3Code
     [IsoId("_ha_UwGliEeGaMcKyqKNRfQ_1306353277")]
     [Description(@"Indicates that the type of interest is index.")]
     Index = InterestTypeCode.Index, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the type of interest is discounted.
     /// Encoded/decoded by serializers as &quot;DSCO&quot;.
@@ -68,5 +68,4 @@ public enum InterestType3Code
     [IsoId("_ha_UwWliEeGaMcKyqKNRfQ_-1863117043")]
     [Description(@"Indicates that the type of interest is discounted.")]
     Discounted = InterestTypeCode.Discounted, // same ordinal as derivation source for type conversions
-    
 }

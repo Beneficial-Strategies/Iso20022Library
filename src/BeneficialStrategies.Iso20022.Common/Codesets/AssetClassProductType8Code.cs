@@ -23,5 +23,4 @@ public enum AssetClassProductType8Code
     [IsoId("_qdn_gQnyEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type paper.")]
     Paper = AssetClassProductTypeCode.Paper, // same ordinal as derivation source for type conversions
-    
 }

@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat32Choice.AmountPricePerFinancialInstrumentQuantity))]
     [KnownType(typeof(PriceFormat32Choice.AmountPricePerAmount))]
     [KnownType(typeof(PriceFormat32Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat32Choice.PercentagePrice),nameof(PriceFormat32Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat32Choice.AmountPrice),nameof(PriceFormat32Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat32Choice.NotSpecifiedPrice),nameof(PriceFormat32Choice.NotSpecifiedPrice))]
-    [JsonDerivedType(typeof(PriceFormat32Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat32Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat32Choice.AmountPricePerAmount),nameof(PriceFormat32Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat32Choice.IndexPoints),nameof(PriceFormat32Choice.IndexPoints))]
+    [JsonDerivedType(
+        typeof(PriceFormat32Choice.PercentagePrice),
+        nameof(PriceFormat32Choice.PercentagePrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat32Choice.AmountPrice),
+        nameof(PriceFormat32Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat32Choice.NotSpecifiedPrice),
+        nameof(PriceFormat32Choice.NotSpecifiedPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat32Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat32Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat32Choice.AmountPricePerAmount),
+        nameof(PriceFormat32Choice.AmountPricePerAmount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat32Choice.IndexPoints),
+        nameof(PriceFormat32Choice.IndexPoints)
+    )]
     [IsoId("_4vHhsSXoEeO4bIO_HtGo9Q")]
     [DisplayName("Price Format 32 Choice")]
-    public abstract partial record PriceFormat32Choice_
-    {
-    }
+    public abstract record PriceFormat32Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VvH_sR1CEey8XKHwKquEQw")]
 [DisplayName("Telecom Call Details")]
-public partial record TelecomCallDetails2
+public record TelecomCallDetails2
 {
-    #nullable enable
-    
     /// <summary>
     /// Contains call type values.
     /// </summary>
     [IsoId("_V25boR1CEey8XKHwKquEQw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public TelephonyCallType1Code? Type { get; init; } 
-    
+    public TelephonyCallType1Code? Type { get; init; }
+
     /// <summary>
     /// Contains other call type values.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record TelecomCallDetails2
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? OtherType { get; init; }
+
     /// <summary>
     /// Origination or destination phone number.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record TelecomCallDetails2
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? PhoneNumber { get; init; }
+
     /// <summary>
     /// City from which or to which the call was made.
     /// </summary>
@@ -52,9 +50,9 @@ public partial record TelecomCallDetails2
     [DisplayName("City")]
     [IsoXmlTag("City")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? City { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? City { get; init; }
+
     /// <summary>
     /// State from which or to which the call was made.
     /// </summary>
@@ -62,9 +60,9 @@ public partial record TelecomCallDetails2
     [DisplayName("State")]
     [IsoXmlTag("Stat")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? State { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? State { get; init; }
+
     /// <summary>
     /// Province from which or to which the call was made.
     /// </summary>
@@ -72,18 +70,14 @@ public partial record TelecomCallDetails2
     [DisplayName("Province")]
     [IsoXmlTag("Prvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Province { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Province { get; init; }
+
     /// <summary>
     /// Country from which or to which the call was made.
     /// </summary>
     [IsoId("_V25brR1CEey8XKHwKquEQw")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public ISOMax3ACountryCode? Country { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ISOMax3ACountryCode? Country { get; init; }
 }

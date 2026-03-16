@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VIwAiNp-Ed-ak6NoX_4Aeg_2085827171")]
 [DisplayName("Charge")]
-public partial record Charge11
+public record Charge11
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount of money asked or paid for the charge.
     /// </summary>
     [IsoId("_VIwAidp-Ed-ak6NoX_4Aeg_2085827369")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-    
+    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
     /// <summary>
     /// Rate used to calculate the amount of the charge or fee.
     /// </summary>
@@ -33,17 +31,13 @@ public partial record Charge11
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; } 
-    
+    public required IsoPercentageRate Rate { get; init; }
+
     /// <summary>
     /// Type of service for which a charge is asked or paid.
     /// </summary>
     [IsoId("_VI5xgNp-Ed-ak6NoX_4Aeg_2085827309")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ChargeType1 Type { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ChargeType1 Type { get; init; }
 }

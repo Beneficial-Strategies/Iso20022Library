@@ -23,7 +23,7 @@ public enum ChequePartyRoleCode
     [IsoId("_hn9FECmxEeutWNGMV2XKIQ")]
     [Description(@"Party that receives an amount of money as specified in the cheque.")]
     Payee,
-    
+
     /// <summary>
     /// Specifies the agent servicing the account of the cheque payer.
     /// Encoded/decoded by serializers as &quot;DWRA&quot;.
@@ -32,23 +32,26 @@ public enum ChequePartyRoleCode
     [IsoId("_htiIoCmxEeutWNGMV2XKIQ")]
     [Description(@"Specifies the agent servicing the account of the cheque payer.")]
     DrawerAgent,
-    
+
     /// <summary>
     /// Specifies the agent on which a cheque is drawn, that is the financial institution that services the account of the payee that issued the cheque.
     /// Encoded/decoded by serializers as &quot;DWEA&quot;.
     /// </summary>
     [EnumMember(Value = "DWEA")]
     [IsoId("_hxVqkCmxEeutWNGMV2XKIQ")]
-    [Description(@"Specifies the agent on which a cheque is drawn, that is the financial institution that services the account of the payee that issued the cheque.")]
+    [Description(
+        @"Specifies the agent on which a cheque is drawn, that is the financial institution that services the account of the payee that issued the cheque."
+    )]
     DraweeAgent,
-    
+
     /// <summary>
     /// Party that issues a cheque ordering the drawee agent to pay a specific amount, upon demand, to the payee.
     /// Encoded/decoded by serializers as &quot;PAYR&quot;.
     /// </summary>
     [EnumMember(Value = "PAYR")]
     [IsoId("_j2rmcCmxEeutWNGMV2XKIQ")]
-    [Description(@"Party that issues a cheque ordering the drawee agent to pay a specific amount, upon demand, to the payee.")]
+    [Description(
+        @"Party that issues a cheque ordering the drawee agent to pay a specific amount, upon demand, to the payee."
+    )]
     Payer,
-    
 }

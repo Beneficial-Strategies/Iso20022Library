@@ -22,8 +22,9 @@ public enum NonEquityInstrumentReportingClassification1Code
     [EnumMember(Value = "SFPS")]
     [IsoId("_eT4oMfVGEeSKpdoott6G4g")]
     [Description(@"Contract is of type structured finance products (SFPs).")]
-    StructuredFinanceProduct = FinancialInstrumentReportingClassificationCode.StructuredFinanceProduct, // same ordinal as derivation source for type conversions
-    
+    StructuredFinanceProduct =
+        FinancialInstrumentReportingClassificationCode.StructuredFinanceProduct, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Contract is of type securitised derivatives.
     /// Encoded/decoded by serializers as &quot;SDRV&quot;.
@@ -32,7 +33,7 @@ public enum NonEquityInstrumentReportingClassification1Code
     [IsoId("_eZruMfVGEeSKpdoott6G4g")]
     [Description(@"Contract is of type securitised derivatives.")]
     SecuritisedDerivative = FinancialInstrumentReportingClassificationCode.SecuritisedDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type derivative.
     /// Encoded/decoded by serializers as &quot;DERV&quot;.
@@ -41,7 +42,7 @@ public enum NonEquityInstrumentReportingClassification1Code
     [IsoId("_egh9EfVGEeSKpdoott6G4g")]
     [Description(@"Contract is of type derivative.|")]
     Derivative = FinancialInstrumentReportingClassificationCode.Derivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type emission allowances.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -50,7 +51,7 @@ public enum NonEquityInstrumentReportingClassification1Code
     [IsoId("_enhV4fVGEeSKpdoott6G4g")]
     [Description(@"Contract is of type emission allowances.")]
     EmissionAllowance = FinancialInstrumentReportingClassificationCode.EmissionAllowance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type bonds.
     /// Encoded/decoded by serializers as &quot;BOND&quot;.
@@ -59,7 +60,7 @@ public enum NonEquityInstrumentReportingClassification1Code
     [IsoId("_e0KqwfVGEeSKpdoott6G4g")]
     [Description(@"Contract is of type bonds.|")]
     Bond = FinancialInstrumentReportingClassificationCode.Bond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type exchange traded commodities.
     /// Encoded/decoded by serializers as &quot;ETCS&quot;.
@@ -67,8 +68,9 @@ public enum NonEquityInstrumentReportingClassification1Code
     [EnumMember(Value = "ETCS")]
     [IsoId("_KNPywQnOEeW1sbwBDSZgiA")]
     [Description(@"Contract is of type exchange traded commodities.")]
-    ExchangeTradedCommodities = FinancialInstrumentReportingClassificationCode.ExchangeTradedCommodities, // same ordinal as derivation source for type conversions
-    
+    ExchangeTradedCommodities =
+        FinancialInstrumentReportingClassificationCode.ExchangeTradedCommodities, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Contract is of type exchange traded note.
     /// Encoded/decoded by serializers as &quot;ETNS&quot;.
@@ -77,5 +79,4 @@ public enum NonEquityInstrumentReportingClassification1Code
     [IsoId("_v3ZaIX1tEeW6DpJJTspC5Q")]
     [Description(@"Contract is of type exchange traded note.")]
     ExchangeTradedNote = FinancialInstrumentReportingClassificationCode.ExchangeTradedNote, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ElectionAmendmentStatus1Choice.ProcessedStatus))]
     [KnownType(typeof(ElectionAmendmentStatus1Choice.RejectedStatus))]
-    [JsonDerivedType(typeof(ElectionAmendmentStatus1Choice.ProcessedStatus),nameof(ElectionAmendmentStatus1Choice.ProcessedStatus))]
-    [JsonDerivedType(typeof(ElectionAmendmentStatus1Choice.RejectedStatus),nameof(ElectionAmendmentStatus1Choice.RejectedStatus))]
+    [JsonDerivedType(
+        typeof(ElectionAmendmentStatus1Choice.ProcessedStatus),
+        nameof(ElectionAmendmentStatus1Choice.ProcessedStatus)
+    )]
+    [JsonDerivedType(
+        typeof(ElectionAmendmentStatus1Choice.RejectedStatus),
+        nameof(ElectionAmendmentStatus1Choice.RejectedStatus)
+    )]
     [IsoId("_RiiHxdp-Ed-ak6NoX_4Aeg_1987378998")]
     [DisplayName("Election Amendment Status 1 Choice")]
-    public abstract partial record ElectionAmendmentStatus1Choice_
-    {
-    }
+    public abstract record ElectionAmendmentStatus1Choice_ { }
 }

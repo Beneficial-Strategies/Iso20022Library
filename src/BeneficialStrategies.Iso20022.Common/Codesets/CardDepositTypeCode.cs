@@ -23,7 +23,7 @@ public enum CardDepositTypeCode
     [IsoId("_nVa9cNCHEei_pMueJh_zOA")]
     [Description(@"Cash")]
     Cash,
-    
+
     /// <summary>
     /// Cheque
     /// Encoded/decoded by serializers as &quot;CHEC&quot;.
@@ -32,7 +32,7 @@ public enum CardDepositTypeCode
     [IsoId("_nVaWYNCHEei_pMueJh_zOA")]
     [Description(@"Cheque")]
     Cheque,
-    
+
     /// <summary>
     /// Envelope
     /// Encoded/decoded by serializers as &quot;ENVL&quot;.
@@ -41,7 +41,7 @@ public enum CardDepositTypeCode
     [IsoId("_nVa9cdCHEei_pMueJh_zOA")]
     [Description(@"Envelope")]
     Envelope,
-    
+
     /// <summary>
     /// Other National
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum CardDepositTypeCode
     [IsoId("_nVaWYdCHEei_pMueJh_zOA")]
     [Description(@"Other National")]
     OtherNational,
-    
+
     /// <summary>
     /// Other Private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum CardDepositTypeCode
     [IsoId("_nVaWYtCHEei_pMueJh_zOA")]
     [Description(@"Other Private")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Card
     /// Encoded/decoded by serializers as &quot;CARD&quot;.
@@ -68,5 +68,4 @@ public enum CardDepositTypeCode
     [IsoId("_6GwjkBsxEeqrvK3udMUsNQ")]
     [Description(@"Card")]
     Card,
-    
 }

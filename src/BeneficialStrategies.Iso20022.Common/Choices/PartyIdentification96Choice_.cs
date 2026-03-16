@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification96Choice.NameAndAddress))]
     [KnownType(typeof(PartyIdentification96Choice.TaxIdentificationNumber))]
     [KnownType(typeof(PartyIdentification96Choice.NationalRegistrationNumber))]
-    [JsonDerivedType(typeof(PartyIdentification96Choice.AnyBIC),nameof(PartyIdentification96Choice.AnyBIC))]
-    [JsonDerivedType(typeof(PartyIdentification96Choice.ProprietaryIdentification),nameof(PartyIdentification96Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(PartyIdentification96Choice.NameAndAddress),nameof(PartyIdentification96Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(PartyIdentification96Choice.TaxIdentificationNumber),nameof(PartyIdentification96Choice.TaxIdentificationNumber))]
-    [JsonDerivedType(typeof(PartyIdentification96Choice.NationalRegistrationNumber),nameof(PartyIdentification96Choice.NationalRegistrationNumber))]
+    [JsonDerivedType(
+        typeof(PartyIdentification96Choice.AnyBIC),
+        nameof(PartyIdentification96Choice.AnyBIC)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification96Choice.ProprietaryIdentification),
+        nameof(PartyIdentification96Choice.ProprietaryIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification96Choice.NameAndAddress),
+        nameof(PartyIdentification96Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification96Choice.TaxIdentificationNumber),
+        nameof(PartyIdentification96Choice.TaxIdentificationNumber)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification96Choice.NationalRegistrationNumber),
+        nameof(PartyIdentification96Choice.NationalRegistrationNumber)
+    )]
     [IsoId("_vsuhsSGYEeWKAaDJcYGKLw")]
     [DisplayName("Party Identification 96 Choice")]
-    public abstract partial record PartyIdentification96Choice_
-    {
-    }
+    public abstract record PartyIdentification96Choice_ { }
 }

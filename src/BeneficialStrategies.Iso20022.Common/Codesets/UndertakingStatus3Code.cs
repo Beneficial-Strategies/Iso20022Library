@@ -23,7 +23,7 @@ public enum UndertakingStatus3Code
     [IsoId("_e_hVNn1VEeGlwNeVP9egyg")]
     [Description(@"Accepted.")]
     Accepted = UndertakingStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undertaking not confirmed.
     /// Encoded/decoded by serializers as &quot;NCON&quot;.
@@ -32,7 +32,7 @@ public enum UndertakingStatus3Code
     [IsoId("_fUrs5n1VEeGlwNeVP9egyg")]
     [Description(@"Undertaking not confirmed.")]
     NonConfirmation = UndertakingStatusCode.NonConfirmation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -41,7 +41,7 @@ public enum UndertakingStatus3Code
     [IsoId("_fr7INn1VEeGlwNeVP9egyg")]
     [Description(@"Rejected.")]
     Rejected = UndertakingStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Demand has been withdrawn.
     /// Encoded/decoded by serializers as &quot;WTHD&quot;.
@@ -50,7 +50,7 @@ public enum UndertakingStatus3Code
     [IsoId("_fyVSNn1VEeGlwNeVP9egyg")]
     [Description(@"Demand has been withdrawn.")]
     Withdrawn = UndertakingStatusCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Change to counter-undertaking amount.
     /// Encoded/decoded by serializers as &quot;AMTC&quot;.
@@ -59,7 +59,7 @@ public enum UndertakingStatus3Code
     [IsoId("_Emv1Fq-yEeGNi5z8K_XPKQ")]
     [Description(@"Change to counter-undertaking amount.")]
     CounterUndertakingAmountChange = UndertakingStatusCode.CounterUndertakingAmountChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Change to undertaking amount.
     /// Encoded/decoded by serializers as &quot;AMTU&quot;.
@@ -68,5 +68,4 @@ public enum UndertakingStatus3Code
     [IsoId("_FA0h9q-yEeGNi5z8K_XPKQ")]
     [Description(@"Change to undertaking amount.")]
     UndertakingAmountChange = UndertakingStatusCode.UndertakingAmountChange, // same ordinal as derivation source for type conversions
-    
 }

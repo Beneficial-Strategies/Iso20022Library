@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementSystemMethod1Choice.Code))]
     [KnownType(typeof(SettlementSystemMethod1Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlementSystemMethod1Choice.Code),nameof(SettlementSystemMethod1Choice.Code))]
-    [JsonDerivedType(typeof(SettlementSystemMethod1Choice.Proprietary),nameof(SettlementSystemMethod1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SettlementSystemMethod1Choice.Code),
+        nameof(SettlementSystemMethod1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementSystemMethod1Choice.Proprietary),
+        nameof(SettlementSystemMethod1Choice.Proprietary)
+    )]
     [IsoId("_QvkZxNp-Ed-ak6NoX_4Aeg_-1971430733")]
     [DisplayName("Settlement System Method 1 Choice")]
-    public abstract partial record SettlementSystemMethod1Choice_
-    {
-    }
+    public abstract record SettlementSystemMethod1Choice_ { }
 }

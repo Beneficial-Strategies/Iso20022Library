@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q6TwEZb7Eee4htziCyV8eA")]
 [DisplayName("Resend Search Criteria")]
-public partial record ResendSearchCriteria2
+public record ResendSearchCriteria2
 {
-    #nullable enable
-    
     /// <summary>
     /// Date of the business day of the requested messages the resend function is used for.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ResendSearchCriteria2
     [DisplayName("Business Date")]
     [IsoXmlTag("BizDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BusinessDate { get; init; } 
-    
+    public IsoISODate? BusinessDate { get; init; }
+
     /// <summary>
     /// Independent counter for message sequence, which is available once per party technical address.|Specifies the identification sequence number for a specific couple sender/receiver.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record ResendSearchCriteria2
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SequenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SequenceNumber { get; init; }
+
     /// <summary>
     /// Independent counter for a range of message sequences, which are available once per party technical address.
     /// Specifies the range of identification sequence numbers for a specific couple sender/receiver.
@@ -44,8 +42,8 @@ public partial record ResendSearchCriteria2
     [IsoId("_UsXFYJb7Eee4htziCyV8eA")]
     [DisplayName("Sequence Range")]
     [IsoXmlTag("SeqRg")]
-    public SequenceRange1Choice_? SequenceRange { get; init; } 
-    
+    public SequenceRange1Choice_? SequenceRange { get; init; }
+
     /// <summary>
     /// Unambiguously identifies the original bsiness message, which was delivered by the business sender.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record ResendSearchCriteria2
     [DisplayName("Original Message Name Identification")]
     [IsoXmlTag("OrgnlMsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OriginalMessageNameIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OriginalMessageNameIdentification { get; init; }
+
     /// <summary>
     /// String of characters that uniquely identifies the file, which was delivered by the sender.
     /// </summary>
@@ -63,18 +61,14 @@ public partial record ResendSearchCriteria2
     [DisplayName("File Reference")]
     [IsoXmlTag("FileRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FileReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FileReference { get; init; }
+
     /// <summary>
     /// Unique identification to unambiguously identify the recipient of the report message.
     /// </summary>
     [IsoId("_RDPCmZb7Eee4htziCyV8eA")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
-    public required PartyIdentification136 Recipient { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PartyIdentification136 Recipient { get; init; }
 }

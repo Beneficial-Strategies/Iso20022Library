@@ -8,12 +8,12 @@
 //             library's C# model represents Currency and Amount as child elements.
 //             Round-trip coverage for amounts is tracked separately.
 
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice;
-using BeneficialStrategies.Iso20022.Choices.Party40Choice;
-using BeneficialStrategies.Iso20022.camt;
 using System.Reflection;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.camt;
+using BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice;
+using BeneficialStrategies.Iso20022.Choices.Party40Choice;
+using BeneficialStrategies.Iso20022.Codesets;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -42,10 +42,12 @@ public class FIToFIPaymentCancellationRequestV10XmlTests
     private static XDocument LoadEmbeddedXml()
     {
         var asm = Assembly.GetExecutingAssembly();
-        using var stream = asm.GetManifestResourceStream(ResourceName)
+        using var stream =
+            asm.GetManifestResourceStream(ResourceName)
             ?? throw new InvalidOperationException(
-                $"Embedded resource '{ResourceName}' not found. " +
-                $"Available: {string.Join(", ", asm.GetManifestResourceNames())}");
+                $"Embedded resource '{ResourceName}' not found. "
+                    + $"Available: {string.Join(", ", asm.GetManifestResourceNames())}"
+            );
         return XDocument.Load(stream);
     }
 

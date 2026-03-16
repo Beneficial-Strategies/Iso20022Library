@@ -15,15 +15,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(OrderStatus3Choice.Rejected))]
     [KnownType(typeof(OrderStatus3Choice.Suspended))]
     [KnownType(typeof(OrderStatus3Choice.PartiallySettled))]
-    [JsonDerivedType(typeof(OrderStatus3Choice.Status),nameof(OrderStatus3Choice.Status))]
-    [JsonDerivedType(typeof(OrderStatus3Choice.Cancelled),nameof(OrderStatus3Choice.Cancelled))]
-    [JsonDerivedType(typeof(OrderStatus3Choice.ConditionallyAccepted),nameof(OrderStatus3Choice.ConditionallyAccepted))]
-    [JsonDerivedType(typeof(OrderStatus3Choice.Rejected),nameof(OrderStatus3Choice.Rejected))]
-    [JsonDerivedType(typeof(OrderStatus3Choice.Suspended),nameof(OrderStatus3Choice.Suspended))]
-    [JsonDerivedType(typeof(OrderStatus3Choice.PartiallySettled),nameof(OrderStatus3Choice.PartiallySettled))]
+    [JsonDerivedType(typeof(OrderStatus3Choice.Status), nameof(OrderStatus3Choice.Status))]
+    [JsonDerivedType(typeof(OrderStatus3Choice.Cancelled), nameof(OrderStatus3Choice.Cancelled))]
+    [JsonDerivedType(
+        typeof(OrderStatus3Choice.ConditionallyAccepted),
+        nameof(OrderStatus3Choice.ConditionallyAccepted)
+    )]
+    [JsonDerivedType(typeof(OrderStatus3Choice.Rejected), nameof(OrderStatus3Choice.Rejected))]
+    [JsonDerivedType(typeof(OrderStatus3Choice.Suspended), nameof(OrderStatus3Choice.Suspended))]
+    [JsonDerivedType(
+        typeof(OrderStatus3Choice.PartiallySettled),
+        nameof(OrderStatus3Choice.PartiallySettled)
+    )]
     [IsoId("_uvD4kUH7EeaV3ab_pHzFIQ")]
     [DisplayName("Order Status 3 Choice")]
-    public abstract partial record OrderStatus3Choice_
-    {
-    }
+    public abstract record OrderStatus3Choice_ { }
 }

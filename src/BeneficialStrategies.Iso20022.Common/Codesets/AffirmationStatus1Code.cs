@@ -23,7 +23,7 @@ public enum AffirmationStatus1Code
     [IsoId("_bndJUNp-Ed-ak6NoX_4Aeg_589689024")]
     [Description(@"Status of the transaction is affirmed.")]
     Affirmed = AffirmationStatusCode.Affirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the transaction is unaffirmed.
     /// Encoded/decoded by serializers as &quot;NAFI&quot;.
@@ -32,5 +32,4 @@ public enum AffirmationStatus1Code
     [IsoId("_bndJUdp-Ed-ak6NoX_4Aeg_618318083")]
     [Description(@"Status of the transaction is unaffirmed.")]
     Unaffirmed = AffirmationStatusCode.Unaffirmed, // same ordinal as derivation source for type conversions
-    
 }

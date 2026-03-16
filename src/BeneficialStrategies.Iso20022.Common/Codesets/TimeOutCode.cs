@@ -23,7 +23,7 @@ public enum TimeOutCode
     [IsoId("_Vr6_Atp-Ed-ak6NoX_4Aeg_1039902628")]
     [Description(@"Reason for time-out is the reaching of latest shipment date.")]
     LatestShipmentDateDue,
-    
+
     /// <summary>
     /// Reason for time-out is the lack of action from the user side.
     /// Encoded/decoded by serializers as &quot;NACT&quot;.
@@ -32,5 +32,4 @@ public enum TimeOutCode
     [IsoId("_Vr6_A9p-Ed-ak6NoX_4Aeg_1081458249")]
     [Description(@"Reason for time-out is the lack of action from the user side.")]
     NoAction,
-    
 }

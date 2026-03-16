@@ -31,5 +31,4 @@ public enum DutchAuctionTypeCode
     [IsoId("_DutchAuctionTypeCode_Unmodified")]
     [Description(@"All instructions are accepted at the instructed price (offering bid).")]
     Unmodified,
-
 }

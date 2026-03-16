@@ -104,5 +104,4 @@ public enum ATMMediaType4Code
     [IsoId("_ATMMediaType4Code_Undetermined")]
     [Description(@"Undetermined medias.")]
     Undetermined = ATMMediaTypeCode.Undetermined,
-
 }

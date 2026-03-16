@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7mLRL0EKEeWVgfuHGaKtRQ")]
 [DisplayName("Amount And Quantity Ratio")]
-public partial record AmountAndQuantityRatio4
+public record AmountAndQuantityRatio4
 {
-    #nullable enable
-    
     /// <summary>
     /// Cash amount.
     /// </summary>
     [IsoId("_7y0l5UEKEeWVgfuHGaKtRQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-    
+    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
     /// <summary>
     /// Quantity expressed as number.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record AmountAndQuantityRatio4
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Quantity { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoDecimalNumber Quantity { get; init; }
 }

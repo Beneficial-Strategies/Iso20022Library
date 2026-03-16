@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_gHsJgIoZEeSirOZJBRz_nA")]
-[Description(@"Describes the main way customer information was collected to build up the customer menu and the withdrawal request.")]
+[Description(
+    @"Describes the main way customer information was collected to build up the customer menu and the withdrawal request."
+)]
 [DerivedFrom(typeof(ATMCustomerProfileCode))]
 public enum ATMCustomerProfile1Code
 {
@@ -23,7 +25,7 @@ public enum ATMCustomerProfile1Code
     [IsoId("_kD1O8YoZEeSirOZJBRz_nA")]
     [Description(@"Customer profile is deduced from the card data and the local configuration.")]
     CardInformation = ATMCustomerProfileCode.CardInformation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer profile is sent via an account enquiry selecting an account.
     /// Encoded/decoded by serializers as &quot;OREQ&quot;.
@@ -32,7 +34,7 @@ public enum ATMCustomerProfile1Code
     [IsoId("_kMZ8IYoZEeSirOZJBRz_nA")]
     [Description(@"Customer profile is sent via an account enquiry selecting an account.")]
     OtherRequest = ATMCustomerProfileCode.OtherRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer profile is built via a specific profile message exchange.
     /// Encoded/decoded by serializers as &quot;PREQ&quot;.
@@ -41,5 +43,4 @@ public enum ATMCustomerProfile1Code
     [IsoId("_kUNNQYoZEeSirOZJBRz_nA")]
     [Description(@"Customer profile is built via a specific profile message exchange.")]
     ProfileRequest = ATMCustomerProfileCode.ProfileRequest, // same ordinal as derivation source for type conversions
-    
 }

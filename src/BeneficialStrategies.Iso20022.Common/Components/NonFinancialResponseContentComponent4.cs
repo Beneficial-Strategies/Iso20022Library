@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BWeW8ZHkEe6qwqnYOGEReg")]
 [DisplayName("Non Financial Response Content Component4")]
-public partial record NonFinancialResponseContentComponent4
+public record NonFinancialResponseContentComponent4
 {
-    #nullable enable
-
     /// <summary>
     /// Acquirer Selected.
     /// </summary>
     [DisplayName("Acquirer Selected")]
     [IsoXmlTag("AcqrrSelctd")]
-    public Acquirer10? AcquirerSelected { get; init; } 
+    public Acquirer10? AcquirerSelected { get; init; }
 
     /// <summary>
     /// Action.
@@ -51,23 +49,19 @@ public partial record NonFinancialResponseContentComponent4
     /// </summary>
     [DisplayName("Non Financial Request Type")]
     [IsoXmlTag("NonFinReqTp")]
-    public required NonFinancialRequestType2Code NonFinancialRequestType { get; init; } 
+    public required NonFinancialRequestType2Code NonFinancialRequestType { get; init; }
 
     /// <summary>
     /// Response.
     /// </summary>
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public required ResponseType11 Response { get; init; } 
+    public required ResponseType11 Response { get; init; }
 
     /// <summary>
     /// Risk Management Result.
     /// </summary>
     [DisplayName("Risk Management Result")]
     [IsoXmlTag("RskMgmtRslt")]
-    public NonFinancialResponseRisk1Code? RiskManagementResult { get; init; } 
-
-    
-    #nullable disable
-    
+    public NonFinancialResponseRisk1Code? RiskManagementResult { get; init; }
 }

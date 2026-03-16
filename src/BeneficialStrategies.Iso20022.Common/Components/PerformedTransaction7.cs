@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2O7nsaEXEe-MRKYsaX6JDg")]
 [DisplayName("Performed Transaction7")]
-public partial record PerformedTransaction7
+public record PerformedTransaction7
 {
-    #nullable enable
-
     /// <summary>
     /// Loyalty Result.
     /// </summary>
@@ -30,44 +28,40 @@ public partial record PerformedTransaction7
     /// </summary>
     [DisplayName("Payment Result")]
     [IsoXmlTag("PmtRslt")]
-    public RetailerPaymentResult7? PaymentResult { get; init; } 
+    public RetailerPaymentResult7? PaymentResult { get; init; }
 
     /// <summary>
     /// POI Reconciliation Identification.
     /// </summary>
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; } 
+    public IsoMax35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// POI Transaction Identification.
     /// </summary>
     [DisplayName("POI Transaction Identification")]
     [IsoXmlTag("POITxId")]
-    public TransactionIdentifier1? POITransactionIdentification { get; init; } 
+    public TransactionIdentifier1? POITransactionIdentification { get; init; }
 
     /// <summary>
     /// Response.
     /// </summary>
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public required ResponseType11 Response { get; init; } 
+    public required ResponseType11 Response { get; init; }
 
     /// <summary>
     /// Reversed Amount.
     /// </summary>
     [DisplayName("Reversed Amount")]
     [IsoXmlTag("RvsdAmt")]
-    public ImpliedCurrencyAndAmount? ReversedAmount { get; init; } 
+    public ImpliedCurrencyAndAmount? ReversedAmount { get; init; }
 
     /// <summary>
     /// Sale Transaction Identification.
     /// </summary>
     [DisplayName("Sale Transaction Identification")]
     [IsoXmlTag("SaleTxId")]
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 }

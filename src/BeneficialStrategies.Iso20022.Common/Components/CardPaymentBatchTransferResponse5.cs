@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lutXAap1EeanIZ10Ka8PnA")]
 [DisplayName("Card Payment Batch Transfer Response")]
-public partial record CardPaymentBatchTransferResponse5
+public record CardPaymentBatchTransferResponse5
 {
-    #nullable enable
-    
     /// <summary>
     /// Totals of transactions of all the data sets.
     /// </summary>
     [IsoId("_l5oNkap1EeanIZ10Ka8PnA")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public TransactionTotals7? TransactionTotals { get; init; } 
-    
+    public TransactionTotals7? TransactionTotals { get; init; }
+
     /// <summary>
     /// Information related to the previously sent set of transaction.
     /// </summary>
     [IsoId("_l5oNk6p1EeanIZ10Ka8PnA")]
     [DisplayName("Data Set")]
     [IsoXmlTag("DataSet")]
-    public CardPaymentDataSet18? DataSet { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CardPaymentDataSet18? DataSet { get; init; }
 }

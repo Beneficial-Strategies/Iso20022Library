@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PendingProcessingStatus7Choice.NoSpecifiedReason))]
     [KnownType(typeof(PendingProcessingStatus7Choice.Reason))]
-    [JsonDerivedType(typeof(PendingProcessingStatus7Choice.NoSpecifiedReason),nameof(PendingProcessingStatus7Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(PendingProcessingStatus7Choice.Reason),nameof(PendingProcessingStatus7Choice.Reason))]
+    [JsonDerivedType(
+        typeof(PendingProcessingStatus7Choice.NoSpecifiedReason),
+        nameof(PendingProcessingStatus7Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(PendingProcessingStatus7Choice.Reason),
+        nameof(PendingProcessingStatus7Choice.Reason)
+    )]
     [IsoId("_0i7nEAlIEeGATtfOBToyew_810652191")]
     [DisplayName("Pending Processing Status 7 Choice")]
-    public abstract partial record PendingProcessingStatus7Choice_
-    {
-    }
+    public abstract record PendingProcessingStatus7Choice_ { }
 }

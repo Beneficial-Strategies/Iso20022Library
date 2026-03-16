@@ -23,7 +23,7 @@ public enum InformationTypeCode
     [IsoId("_aWsFA9p-Ed-ak6NoX_4Aeg_1218573157")]
     [Description(@"Instructions used to ease automatic request processing.")]
     ProcessingInstructions,
-    
+
     /// <summary>
     /// Instructions used to ease automatic request relay.
     /// Encoded/decoded by serializers as &quot;RELY&quot;.
@@ -32,5 +32,4 @@ public enum InformationTypeCode
     [IsoId("_aWsFBNp-Ed-ak6NoX_4Aeg_1222266779")]
     [Description(@"Instructions used to ease automatic request relay.")]
     RelayInstructions,
-    
 }

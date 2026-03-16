@@ -23,7 +23,7 @@ public enum ResourceAction1Code
     [IsoId("_Zlf9AS8AEeu125Ip9zFcsQ")]
     [Description(@"Pause the media resource in progress as specified in the message.")]
     Pause = ResourceActionCode.Pause, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Start the media resource as specified in the message.
     /// Encoded/decoded by serializers as &quot;STAS&quot;.
@@ -32,7 +32,7 @@ public enum ResourceAction1Code
     [IsoId("_ZpxZAS8AEeu125Ip9zFcsQ")]
     [Description(@"Start the media resource as specified in the message.")]
     Play = ResourceActionCode.Play, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Play in a loop the media resource as specified in the message.
     /// Encoded/decoded by serializers as &quot;LOOP&quot;.
@@ -41,7 +41,7 @@ public enum ResourceAction1Code
     [IsoId("_Zu6XsS8AEeu125Ip9zFcsQ")]
     [Description(@"Play in a loop the media resource as specified in the message.")]
     PlayInLoop = ResourceActionCode.PlayInLoop, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Resume the progress of the media resource as specified in the message.
     /// Encoded/decoded by serializers as &quot;RESU&quot;.
@@ -50,7 +50,7 @@ public enum ResourceAction1Code
     [IsoId("_ZzjAES8AEeu125Ip9zFcsQ")]
     [Description(@"Resume the progress of the media resource as specified in the message.")]
     Resume = ResourceActionCode.Resume, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Set the default volume of sounds.
     /// Encoded/decoded by serializers as &quot;DVOL&quot;.
@@ -59,7 +59,7 @@ public enum ResourceAction1Code
     [IsoId("_Z4VZcS8AEeu125Ip9zFcsQ")]
     [Description(@"Set the default volume of sounds.")]
     SetDefaultVolume = ResourceActionCode.SetDefaultVolume, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Stop the media resource in progress.
     /// Encoded/decoded by serializers as &quot;STOS&quot;.
@@ -68,5 +68,4 @@ public enum ResourceAction1Code
     [IsoId("_Z9HLwS8AEeu125Ip9zFcsQ")]
     [Description(@"Stop the media resource in progress.")]
     Stop = ResourceActionCode.Stop, // same ordinal as derivation source for type conversions
-    
 }

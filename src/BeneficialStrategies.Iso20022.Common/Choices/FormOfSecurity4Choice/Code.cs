@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FormOfSecurity4Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.FormOfSecurity4Choice
     /// </summary>
     [IsoId("_AbzAo9okEeC60axPepSq7g_-777924532")]
     [DisplayName("Code")]
-    public partial record Code : FormOfSecurity4Choice_
+    public record Code : FormOfSecurity4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Form of a financial instrument.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required FormOfSecurity1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required FormOfSecurity1Code Value { get; init; }
     }
 }

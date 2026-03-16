@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
     /// </summary>
     [IsoId("_29C6ANM-EeSDLevdaFPXHw")]
     [DisplayName("Contract")]
-    public partial record Contract : ContractRegistrationReference1Choice_
+    public record Contract : ContractRegistrationReference1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identifies the document.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Identification { get; init; }
+
         /// <summary>
         /// Date of issuance of the document.
         /// </summary>
@@ -34,10 +32,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractRegistrationReference1Ch
         [DisplayName("Date Of Issue")]
         [IsoXmlTag("DtOfIsse")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate DateOfIssue { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISODate DateOfIssue { get; init; }
     }
 }

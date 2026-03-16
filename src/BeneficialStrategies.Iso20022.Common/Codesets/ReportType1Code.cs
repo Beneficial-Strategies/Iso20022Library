@@ -23,7 +23,7 @@ public enum ReportType1Code
     [IsoId("_ZTVxo9p-Ed-ak6NoX_4Aeg_302562336")]
     [Description(@"The report contains a baseline submitted for the first time.")]
     ForwardInitialSubmission = ReportTypeCode.ForwardInitialSubmission, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The report contains a baseline that is resubmitted.
     /// Encoded/decoded by serializers as &quot;FWRE&quot;.
@@ -32,7 +32,7 @@ public enum ReportType1Code
     [IsoId("_ZTVxpNp-Ed-ak6NoX_4Aeg_302562354")]
     [Description(@"The report contains a baseline that is resubmitted.")]
     ForwardReSubmission = ReportTypeCode.ForwardReSubmission, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The report contains a baseline that is amended.
     /// Encoded/decoded by serializers as &quot;FWAM&quot;.
@@ -41,5 +41,4 @@ public enum ReportType1Code
     [IsoId("_ZTVxpdp-Ed-ak6NoX_4Aeg_302562379")]
     [Description(@"The report contains a baseline that is amended.")]
     ForwardAmend = ReportTypeCode.ForwardAmend, // same ordinal as derivation source for type conversions
-    
 }

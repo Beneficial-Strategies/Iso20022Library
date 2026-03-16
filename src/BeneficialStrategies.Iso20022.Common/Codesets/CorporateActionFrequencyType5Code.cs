@@ -23,7 +23,7 @@ public enum CorporateActionFrequencyType5Code
     [IsoId("_2DlLkWK-EeWR9ZSfjmHwUA")]
     [Description(@"Payment of a dividend, less amounts already paid through interim dividends.")]
     Final = CorporateActionFrequencyTypeV2Code.Final, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend declared and paid before annual earnings have been determined.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,7 +32,7 @@ public enum CorporateActionFrequencyType5Code
     [IsoId("_2DlLk2K-EeWR9ZSfjmHwUA")]
     [Description(@"Dividend declared and paid before annual earnings have been determined.")]
     Interim = CorporateActionFrequencyTypeV2Code.Interim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reinvestment of cash distributed.
     /// Encoded/decoded by serializers as &quot;REIN&quot;.
@@ -41,7 +41,7 @@ public enum CorporateActionFrequencyType5Code
     [IsoId("_2DlLlWK-EeWR9ZSfjmHwUA")]
     [Description(@"Reinvestment of cash distributed.")]
     Reinvestment = CorporateActionFrequencyTypeV2Code.Reinvestment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend paid at regular interval, for example, quarterly.
     /// Encoded/decoded by serializers as &quot;REGR&quot;.
@@ -50,7 +50,7 @@ public enum CorporateActionFrequencyType5Code
     [IsoId("_2DlLl2K-EeWR9ZSfjmHwUA")]
     [Description(@"Dividend paid at regular interval, for example, quarterly.")]
     Regular = CorporateActionFrequencyTypeV2Code.Regular, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend in addition to the regular dividend being paid by the company.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
@@ -59,7 +59,7 @@ public enum CorporateActionFrequencyType5Code
     [IsoId("_2DlLmWK-EeWR9ZSfjmHwUA")]
     [Description(@"Dividend in addition to the regular dividend being paid by the company.")]
     Special = CorporateActionFrequencyTypeV2Code.Special, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Special Dividend with reinvestment component.
     /// Encoded/decoded by serializers as &quot;SPRE&quot;.
@@ -67,6 +67,6 @@ public enum CorporateActionFrequencyType5Code
     [EnumMember(Value = "SPRE")]
     [IsoId("_5TuGoWK-EeWR9ZSfjmHwUA")]
     [Description(@"Special Dividend with reinvestment component.")]
-    SpecialDividendWithReinvestment = CorporateActionFrequencyTypeV2Code.SpecialDividendWithReinvestment, // same ordinal as derivation source for type conversions
-    
+    SpecialDividendWithReinvestment =
+        CorporateActionFrequencyTypeV2Code.SpecialDividendWithReinvestment, // same ordinal as derivation source for type conversions
 }

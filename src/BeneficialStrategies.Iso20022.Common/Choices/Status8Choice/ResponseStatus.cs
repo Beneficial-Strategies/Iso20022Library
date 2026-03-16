@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Status8Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.Status8Choice
     /// </summary>
     [IsoId("_w2B750ABEeCaq78Ig8ATcA")]
     [DisplayName("Response Status")]
-    public partial record ResponseStatus : Status8Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record ResponseStatus : Status8Choice_ { }
 }

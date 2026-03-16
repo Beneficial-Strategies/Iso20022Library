@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.supl;
 
@@ -19,198 +17,191 @@ namespace BeneficialStrategies.Iso20022.supl;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// The DTCCCANOCSDDataSD1 message extends ISO corporate action notification (CANO) asset servicer data message (CSD type) with data elements that are not covered by the standard message, and additionally, with issuer/offeror/market values where DTC corresponding values are mapped to CANO. For example DTCC announced cash rate will be mapped to the CANO and issuer/offeror/market declared cash rate will be extended in this DTCCCANOCSDDataSD1 message.
 /// </summary>
-[Description(@"The DTCCCANOCSDDataSD1 message extends ISO corporate action notification (CANO) asset servicer data message (CSD type) with data elements that are not covered by the standard message, and additionally, with issuer/offeror/market values where DTC corresponding values are mapped to CANO. For example DTCC announced cash rate will be mapped to the CANO and issuer/offeror/market declared cash rate will be extended in this DTCCCANOCSDDataSD1 message.")]
+[Description(
+    @"The DTCCCANOCSDDataSD1 message extends ISO corporate action notification (CANO) asset servicer data message (CSD type) with data elements that are not covered by the standard message, and additionally, with issuer/offeror/market values where DTC corresponding values are mapped to CANO. For example DTCC announced cash rate will be mapped to the CANO and issuer/offeror/market declared cash rate will be extended in this DTCCCANOCSDDataSD1 message."
+)]
 [IsoId("_myaAUVB5Ee2KGNXAcFL5RA")]
 [DisplayName("DTCCCANOCSD Data SD 1 V")]
-public partial record DTCCCANOCSDDataSD1V15 : IOuterRecord
+public record DTCCCANOCSDDataSD1V15 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "supl.001.001.15";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "DTCCCANOCSDDataSD1";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:supl.001.001.15";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Information to be extended as supplementary data to notification general information.
     /// </summary>
     [IsoId("_myaAU1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Notification General Information")]
     [IsoXmlTag("NtfctnGnlInf")]
-    public CorporateActionNotificationSD9? NotificationGeneralInformation { get; init; } 
-    
+    public CorporateActionNotificationSD9? NotificationGeneralInformation { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to notification general information.
     /// </summary>
     [IsoId("_myaAVVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
-    public CorporateActionGeneralInformationSD47? CorporateActionGeneralInformation { get; init; } 
-    
+    public CorporateActionGeneralInformationSD47? CorporateActionGeneralInformation { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to underlying security details.
     /// </summary>
     [IsoId("_myaAV1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]
-    public FinancialInstrumentAttributesSD19? UnderlyingSecurity { get; init; } 
-    
+    public FinancialInstrumentAttributesSD19? UnderlyingSecurity { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to corporate action details.
     /// </summary>
     [IsoId("_myaAWVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
-    public CorporateActionSD23? CorporateActionDetails { get; init; } 
-    
+    public CorporateActionSD23? CorporateActionDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to corporate action date details.
     /// </summary>
     [IsoId("_myaAW1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action Date Details")]
     [IsoXmlTag("CorpActnDtDtls")]
-    public CorporateActionDateSD10? CorporateActionDateDetails { get; init; } 
-    
+    public CorporateActionDateSD10? CorporateActionDateDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to corporate action price details.
     /// </summary>
     [IsoId("_myaAXVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action Price Details")]
     [IsoXmlTag("CorpActnPricDtls")]
-    public CorporateActionPriceSD4? CorporateActionPriceDetails { get; init; } 
-    
+    public CorporateActionPriceSD4? CorporateActionPriceDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to corporate action period.
     /// </summary>
     [IsoId("_myaAX1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action Period Details")]
     [IsoXmlTag("CorpActnPrdDtls")]
-    public CorporateActionPeriodSD3? CorporateActionPeriodDetails { get; init; } 
-    
+    public CorporateActionPeriodSD3? CorporateActionPeriodDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to corporate action rate and amount.
     /// </summary>
     [IsoId("_myaAYVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action Rate And Amount Details")]
     [IsoXmlTag("CorpActnRateAndAmtDtls")]
-    public CorporateActionRateSD9? CorporateActionRateAndAmountDetails { get; init; } 
-    
+    public CorporateActionRateSD9? CorporateActionRateAndAmountDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to corporate action securities quantity.
     /// </summary>
     [IsoId("_myaAY1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Corporate Action Securities Quantity")]
     [IsoXmlTag("CorpActnSctiesQty")]
-    public CorporateActionQuantitySD3? CorporateActionSecuritiesQuantity { get; init; } 
-    
+    public CorporateActionQuantitySD3? CorporateActionSecuritiesQuantity { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to option details.
     /// </summary>
     [IsoId("_myaAZVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Option Details")]
     [IsoXmlTag("OptnDtls")]
-    public CorporateActionOptionSD14? OptionDetails { get; init; } 
-    
+    public CorporateActionOptionSD14? OptionDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to option date details.
     /// </summary>
     [IsoId("_myaAZ1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Option Date Details")]
     [IsoXmlTag("OptnDtDtls")]
-    public CorporateActionDateSD11? OptionDateDetails { get; init; } 
-    
+    public CorporateActionDateSD11? OptionDateDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to securities movement details.
     /// </summary>
     [IsoId("_myaAaVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Securities Movement Details")]
     [IsoXmlTag("SctiesMvmntDtls")]
-    public SecuritiesOptionSD9? SecuritiesMovementDetails { get; init; } 
-    
+    public SecuritiesOptionSD9? SecuritiesMovementDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to securities movement security details.
     /// </summary>
     [IsoId("_myaAa1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Securities Movement Security Details")]
     [IsoXmlTag("SctiesMvmntSctyDtls")]
-    public FinancialInstrumentAttributesSD16? SecuritiesMovementSecurityDetails { get; init; } 
-    
+    public FinancialInstrumentAttributesSD16? SecuritiesMovementSecurityDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to securities movement rate details.
     /// </summary>
     [IsoId("_myaAbVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Securities Movement Rate Details")]
     [IsoXmlTag("SctiesMvmntRateDtls")]
-    public CorporateActionRateSD10? SecuritiesMovementRateDetails { get; init; } 
-    
+    public CorporateActionRateSD10? SecuritiesMovementRateDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to securities movement for cash in lieu details.
     /// </summary>
     [IsoId("_myaAb1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Securities Movement Cash In Lieu Details")]
     [IsoXmlTag("SctiesMvmntCshInLieuDtls")]
-    public CorporateActionPriceSD5? SecuritiesMovementCashInLieuDetails { get; init; } 
-    
+    public CorporateActionPriceSD5? SecuritiesMovementCashInLieuDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to securities movement fraction disposition.
     /// </summary>
     [IsoId("_myaAcVB5Ee2KGNXAcFL5RA")]
     [DisplayName("Securities Movement Fraction Disposition")]
     [IsoXmlTag("SctiesMvmntFrctnDspstn")]
-    public FractionDispositionTypeSD3? SecuritiesMovementFractionDisposition { get; init; } 
-    
+    public FractionDispositionTypeSD3? SecuritiesMovementFractionDisposition { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to cash movement details.
     /// </summary>
     [IsoId("_myaAc1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Cash Movement Details")]
     [IsoXmlTag("CshMvmntDtls")]
-    public CashOptionSD13? CashMovementDetails { get; init; } 
-    
+    public CashOptionSD13? CashMovementDetails { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to new agent. Used when the required ISO agent type does not exist and an entire new component must be generated.
     /// </summary>
     [IsoId("_myaAdVB5Ee2KGNXAcFL5RA")]
     [DisplayName("New Agent")]
     [IsoXmlTag("NewAgt")]
-    public PartyIdentificationSD5? NewAgent { get; init; } 
-    
+    public PartyIdentificationSD5? NewAgent { get; init; }
+
     /// <summary>
     /// Information to be extended as supplementary data to agent, for example, &quot;issuer agent&quot; and &quot;reselling agent. Used when the required &quot;ISO agent type&quot; exists and only additional details need to be extended.
     /// </summary>
     [IsoId("_myaAd1B5Ee2KGNXAcFL5RA")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public PartyIdentificationSD6? Agent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentificationSD6? Agent { get; init; }
 }
 
-
-// Since DTCCCANOCSDDataSD1V15Document is not really part of the logical business domain model, 
+// Since DTCCCANOCSDDataSD1V15Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to DTCCCANOCSDDataSD1V15.
-

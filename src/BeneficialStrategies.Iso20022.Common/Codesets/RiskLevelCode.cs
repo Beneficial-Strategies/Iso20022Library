@@ -23,7 +23,7 @@ public enum RiskLevelCode
     [IsoId("_1Fus0BdwEeKYM7Bc71nDlA")]
     [Description(@"High.")]
     High,
-    
+
     /// <summary>
     /// Medium.
     /// Encoded/decoded by serializers as &quot;MEDM&quot;.
@@ -32,7 +32,7 @@ public enum RiskLevelCode
     [IsoId("_1R8j4BdwEeKYM7Bc71nDlA")]
     [Description(@"Medium.")]
     Medium,
-    
+
     /// <summary>
     /// Low.
     /// Encoded/decoded by serializers as &quot;LOWW&quot;.
@@ -41,5 +41,4 @@ public enum RiskLevelCode
     [IsoId("_1Z17oBdwEeKYM7Bc71nDlA")]
     [Description(@"Low.")]
     Low,
-    
 }

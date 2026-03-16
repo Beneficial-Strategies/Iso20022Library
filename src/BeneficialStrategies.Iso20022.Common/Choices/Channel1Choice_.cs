@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Channel1Choice.Code))]
     [KnownType(typeof(Channel1Choice.Proprietary))]
-    [JsonDerivedType(typeof(Channel1Choice.Code),nameof(Channel1Choice.Code))]
-    [JsonDerivedType(typeof(Channel1Choice.Proprietary),nameof(Channel1Choice.Proprietary))]
+    [JsonDerivedType(typeof(Channel1Choice.Code), nameof(Channel1Choice.Code))]
+    [JsonDerivedType(typeof(Channel1Choice.Proprietary), nameof(Channel1Choice.Proprietary))]
     [IsoId("_93Z_wHltEeG7BsjMvd1mEw_-1487139441")]
     [DisplayName("Channel 1 Choice")]
-    public abstract partial record Channel1Choice_
-    {
-    }
+    public abstract record Channel1Choice_ { }
 }

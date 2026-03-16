@@ -1,9 +1,9 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.StatusReason6Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.pacs;
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -21,28 +21,31 @@ public class Pacs002ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader101 CreateGroupHeader(string msgId = "BNPAFRPP/240315/PAC002/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(2),
-        InstructingAgent = Iso20022TestData.CreditorAgent,
-        InstructedAgent = Iso20022TestData.DebtorAgent,
-    };
+    public static GroupHeader101 CreateGroupHeader(string msgId = "BNPAFRPP/240315/PAC002/00001") =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(2),
+            InstructingAgent = Iso20022TestData.CreditorAgent,
+            InstructedAgent = Iso20022TestData.DebtorAgent,
+        };
 
-    public static OriginalGroupHeader17 CreateOriginalGroupInfo() => new()
-    {
-        OriginalMessageIdentification = Iso20022TestData.OriginalPacs008MsgId,
-        OriginalMessageNameIdentification = "pacs.008.001.11",
-        OriginalCreationDateTime = Iso20022TestData.MessageCreationDateTime,
-    };
+    public static OriginalGroupHeader17 CreateOriginalGroupInfo() =>
+        new()
+        {
+            OriginalMessageIdentification = Iso20022TestData.OriginalPacs008MsgId,
+            OriginalMessageNameIdentification = "pacs.008.001.11",
+            OriginalCreationDateTime = Iso20022TestData.MessageCreationDateTime,
+        };
 
-    public static PaymentTransaction142 CreateAcceptedTransactionStatus() => new()
-    {
-        OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
-        OriginalUETR = Iso20022TestData.Uetr,
-        TransactionStatus = ExternalPaymentTransactionStatus1Code.AcceptedSettlementInProcess,
-        AcceptanceDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(1),
-    };
+    public static PaymentTransaction142 CreateAcceptedTransactionStatus() =>
+        new()
+        {
+            OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
+            OriginalUETR = Iso20022TestData.Uetr,
+            TransactionStatus = ExternalPaymentTransactionStatus1Code.AcceptedSettlementInProcess,
+            AcceptanceDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(1),
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -62,8 +65,10 @@ public class Pacs002ExamplesTests
 
         Assert.NotNull(message);
         Assert.Equal("pacs.002.001.13", FIToFIPaymentStatusReportV13.IsoIdentifier);
-        Assert.Equal(ExternalPaymentTransactionStatus1Code.AcceptedSettlementInProcess,
-            message.TransactionInformationAndStatus!.TransactionStatus);
+        Assert.Equal(
+            ExternalPaymentTransactionStatus1Code.AcceptedSettlementInProcess,
+            message.TransactionInformationAndStatus!.TransactionStatus
+        );
     }
 
     /// <summary>
@@ -78,7 +83,8 @@ public class Pacs002ExamplesTests
             GroupHeader = CreateGroupHeader("BNPAFRPP/240315/PAC002/00002"),
             TransactionInformationAndStatus = CreateAcceptedTransactionStatus() with
             {
-                TransactionStatus = ExternalPaymentTransactionStatus1Code.AcceptedSettlementCompletedCreditorAccount,
+                TransactionStatus =
+                    ExternalPaymentTransactionStatus1Code.AcceptedSettlementCompletedCreditorAccount,
                 EffectiveInterbankSettlementDate = new Choices.DateAndDateTime2Choice.Date
                 {
                     Value = Iso20022TestData.SettlementDate,
@@ -87,8 +93,10 @@ public class Pacs002ExamplesTests
         };
 
         Assert.NotNull(message);
-        Assert.Equal(ExternalPaymentTransactionStatus1Code.AcceptedSettlementCompletedCreditorAccount,
-            message.TransactionInformationAndStatus!.TransactionStatus);
+        Assert.Equal(
+            ExternalPaymentTransactionStatus1Code.AcceptedSettlementCompletedCreditorAccount,
+            message.TransactionInformationAndStatus!.TransactionStatus
+        );
     }
 
     /// <summary>
@@ -110,19 +118,21 @@ public class Pacs002ExamplesTests
                 StatusReasonInformation = new StatusReasonInformation12
                 {
                     Originator = Iso20022TestData.Creditor,
-                    Reason = new Code
-                    {
-                        Value = ExternalStatusReason1Code.ClosedAccountNumber,
-                    },
-                    AdditionalInformation = "Beneficiary account FR7630006000011234567890189 was closed on 2024-01-31.",
+                    Reason = new Code { Value = ExternalStatusReason1Code.ClosedAccountNumber, },
+                    AdditionalInformation =
+                        "Beneficiary account FR7630006000011234567890189 was closed on 2024-01-31.",
                 },
             },
         };
 
         Assert.NotNull(message);
-        Assert.Equal(ExternalPaymentTransactionStatus1Code.Rejected,
-            message.TransactionInformationAndStatus!.TransactionStatus);
-        Assert.IsType<Code>(message.TransactionInformationAndStatus.StatusReasonInformation!.Reason);
+        Assert.Equal(
+            ExternalPaymentTransactionStatus1Code.Rejected,
+            message.TransactionInformationAndStatus!.TransactionStatus
+        );
+        Assert.IsType<Code>(
+            message.TransactionInformationAndStatus.StatusReasonInformation!.Reason
+        );
     }
 
     /// <summary>
@@ -144,16 +154,16 @@ public class Pacs002ExamplesTests
                 StatusReasonInformation = new StatusReasonInformation12
                 {
                     Originator = Iso20022TestData.Creditor,
-                    Reason = new Proprietary
-                    {
-                        Value = "BNPFR-SANCTION-SCREENING-HOLD",
-                    },
-                    AdditionalInformation = "Transaction held pending compliance review per internal policy CP-2024-007.",
+                    Reason = new Proprietary { Value = "BNPFR-SANCTION-SCREENING-HOLD", },
+                    AdditionalInformation =
+                        "Transaction held pending compliance review per internal policy CP-2024-007.",
                 },
             },
         };
 
         Assert.NotNull(message);
-        Assert.IsType<Proprietary>(message.TransactionInformationAndStatus!.StatusReasonInformation!.Reason);
+        Assert.IsType<Proprietary>(
+            message.TransactionInformationAndStatus!.StatusReasonInformation!.Reason
+        );
     }
 }

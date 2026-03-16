@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_S1ANk_DCEemsS_0xy2XRug")]
-[Description(@"Specifies the creditor enrolment amendment reason code, as published in an external creditor enrolment amendment reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the creditor enrolment amendment reason code, as published in an external creditor enrolment amendment reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalCreditorEnrolmentAmendmentReason1Code))]
 public enum ExternalCreditorEnrolmentAmendmentReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalCreditorEnrolmentAmendmentReasonCode
     [IsoId("_uuIUVvRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication,
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -33,7 +35,7 @@ public enum ExternalCreditorEnrolmentAmendmentReasonCode
     [IsoId("_uuIUWfRYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference,
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -42,7 +44,7 @@ public enum ExternalCreditorEnrolmentAmendmentReasonCode
     [IsoId("_uuSFUPRYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason,
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -51,7 +53,7 @@ public enum ExternalCreditorEnrolmentAmendmentReasonCode
     [IsoId("_E5wqofDWEemsS_0xy2XRug")]
     [Description(@"Technical rejection.")]
     TechnicalRejection,
-    
+
     /// <summary>
     /// Unknown creditor.
     /// Encoded/decoded by serializers as &quot;UCRD&quot;.
@@ -60,5 +62,4 @@ public enum ExternalCreditorEnrolmentAmendmentReasonCode
     [IsoId("_Ci0BYPDWEemsS_0xy2XRug")]
     [Description(@"Unknown creditor.")]
     UnknownCreditor,
-    
 }

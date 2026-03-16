@@ -23,7 +23,7 @@ public enum CancellationCompleteStatusReason1Code
     [IsoId("_Vjk7Utp-Ed-ak6NoX_4Aeg_1328122502")]
     [Description(@"Transaction is cancelled by yourself.")]
     CancelledByYourself = CancelledStatusReasonCode.CancelledByYourself, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is cancelled by the system.
     /// Encoded/decoded by serializers as &quot;CANS&quot;.
@@ -32,7 +32,7 @@ public enum CancellationCompleteStatusReason1Code
     [IsoId("_Vjk7U9p-Ed-ak6NoX_4Aeg_1339203856")]
     [Description(@"Transaction is cancelled by the system.")]
     CancelledBySystem = CancelledStatusReasonCode.CancelledBySystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is cancelled by the agent.
     /// Encoded/decoded by serializers as &quot;CSUB&quot;.
@@ -41,7 +41,7 @@ public enum CancellationCompleteStatusReason1Code
     [IsoId("_Vjk7VNp-Ed-ak6NoX_4Aeg_1351207826")]
     [Description(@"Transaction is cancelled by the agent.")]
     CancelledByAgent = CancelledStatusReasonCode.CancelledByAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other (see additional information).
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,5 +50,4 @@ public enum CancellationCompleteStatusReason1Code
     [IsoId("_Vjk7Vdp-Ed-ak6NoX_4Aeg_1579319938")]
     [Description(@"Other (see additional information).")]
     Other = CancelledStatusReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

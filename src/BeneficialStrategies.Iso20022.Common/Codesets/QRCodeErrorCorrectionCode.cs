@@ -23,7 +23,7 @@ public enum QRCodeErrorCorrectionCode
     [IsoId("_-CY0YNuaEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction  7%")]
     ErrorCorrection7Percent,
-    
+
     /// <summary>
     /// Reed-Solomon error correction 15%
     /// Encoded/decoded by serializers as &quot;M015&quot;.
@@ -32,7 +32,7 @@ public enum QRCodeErrorCorrectionCode
     [IsoId("_C9HB8NubEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction 15%")]
     ErrorCorrection15Percent,
-    
+
     /// <summary>
     /// Reed-Solomon error correction 25%
     /// Encoded/decoded by serializers as &quot;Q025&quot;.
@@ -41,7 +41,7 @@ public enum QRCodeErrorCorrectionCode
     [IsoId("_F43BYNubEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction 25%")]
     ErrorCorrection25Percent,
-    
+
     /// <summary>
     /// Reed-Solomon error correction 30%
     /// Encoded/decoded by serializers as &quot;H030&quot;.
@@ -50,5 +50,4 @@ public enum QRCodeErrorCorrectionCode
     [IsoId("_IqPj4NubEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction 30%")]
     ErrorCorrection30Percent,
-    
 }

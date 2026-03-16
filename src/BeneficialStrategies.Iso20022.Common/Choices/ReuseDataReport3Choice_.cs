@@ -13,13 +13,17 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ReuseDataReport3Choice.Error))]
     [KnownType(typeof(ReuseDataReport3Choice.Correction))]
     [KnownType(typeof(ReuseDataReport3Choice.CollateralReuseUpdate))]
-    [JsonDerivedType(typeof(ReuseDataReport3Choice.New),nameof(ReuseDataReport3Choice.New))]
-    [JsonDerivedType(typeof(ReuseDataReport3Choice.Error),nameof(ReuseDataReport3Choice.Error))]
-    [JsonDerivedType(typeof(ReuseDataReport3Choice.Correction),nameof(ReuseDataReport3Choice.Correction))]
-    [JsonDerivedType(typeof(ReuseDataReport3Choice.CollateralReuseUpdate),nameof(ReuseDataReport3Choice.CollateralReuseUpdate))]
+    [JsonDerivedType(typeof(ReuseDataReport3Choice.New), nameof(ReuseDataReport3Choice.New))]
+    [JsonDerivedType(typeof(ReuseDataReport3Choice.Error), nameof(ReuseDataReport3Choice.Error))]
+    [JsonDerivedType(
+        typeof(ReuseDataReport3Choice.Correction),
+        nameof(ReuseDataReport3Choice.Correction)
+    )]
+    [JsonDerivedType(
+        typeof(ReuseDataReport3Choice.CollateralReuseUpdate),
+        nameof(ReuseDataReport3Choice.CollateralReuseUpdate)
+    )]
     [IsoId("_0hwiga4bEemB_csI4yyKLA")]
     [DisplayName("Reuse Data Report 3 Choice")]
-    public abstract partial record ReuseDataReport3Choice_
-    {
-    }
+    public abstract record ReuseDataReport3Choice_ { }
 }

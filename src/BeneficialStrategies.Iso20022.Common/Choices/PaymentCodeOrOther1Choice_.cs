@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentCodeOrOther1Choice.PaymentCode))]
     [KnownType(typeof(PaymentCodeOrOther1Choice.PaymentDueDate))]
     [KnownType(typeof(PaymentCodeOrOther1Choice.OtherPaymentTerms))]
-    [JsonDerivedType(typeof(PaymentCodeOrOther1Choice.PaymentCode),nameof(PaymentCodeOrOther1Choice.PaymentCode))]
-    [JsonDerivedType(typeof(PaymentCodeOrOther1Choice.PaymentDueDate),nameof(PaymentCodeOrOther1Choice.PaymentDueDate))]
-    [JsonDerivedType(typeof(PaymentCodeOrOther1Choice.OtherPaymentTerms),nameof(PaymentCodeOrOther1Choice.OtherPaymentTerms))]
+    [JsonDerivedType(
+        typeof(PaymentCodeOrOther1Choice.PaymentCode),
+        nameof(PaymentCodeOrOther1Choice.PaymentCode)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentCodeOrOther1Choice.PaymentDueDate),
+        nameof(PaymentCodeOrOther1Choice.PaymentDueDate)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentCodeOrOther1Choice.OtherPaymentTerms),
+        nameof(PaymentCodeOrOther1Choice.OtherPaymentTerms)
+    )]
     [IsoId("_ogNJwNP8EeK0PPbKncCqzA")]
     [DisplayName("Payment Code Or Other 1 Choice")]
-    public abstract partial record PaymentCodeOrOther1Choice_
-    {
-    }
+    public abstract record PaymentCodeOrOther1Choice_ { }
 }

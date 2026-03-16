@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aczUE9p-Ed-ak6NoX_4Aeg_1672602191")]
-[Description(@"Specifies the type of investment fund transaction that results in a cash movement out of a fund.")]
+[Description(
+    @"Specifies the type of investment fund transaction that results in a cash movement out of a fund."
+)]
 [DerivedFrom(typeof(InvestmentFundTransactionTypeCode))]
 public enum InvestmentFundTransactionOutType1Code
 {
@@ -23,7 +25,7 @@ public enum InvestmentFundTransactionOutType1Code
     [IsoId("_aczUFNp-Ed-ak6NoX_4Aeg_1717851866")]
     [Description(@"Transaction is a redemption of an investment fund.")]
     Redemption = InvestmentFundTransactionTypeCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a subscription leg of a switch order execution.
     /// Encoded/decoded by serializers as &quot;SWIO&quot;.
@@ -32,7 +34,7 @@ public enum InvestmentFundTransactionOutType1Code
     [IsoId("_aczUFdp-Ed-ak6NoX_4Aeg_1717851883")]
     [Description(@"Transaction is a subscription leg of a switch order execution.")]
     SwitchOut = InvestmentFundTransactionTypeCode.SwitchOut, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is an InSpecie.
     /// Encoded/decoded by serializers as &quot;INSP&quot;.
@@ -41,7 +43,7 @@ public enum InvestmentFundTransactionOutType1Code
     [IsoId("_aczUFtp-Ed-ak6NoX_4Aeg_1717851901")]
     [Description(@"Transaction is an InSpecie.")]
     InSpecie = InvestmentFundTransactionTypeCode.InSpecie, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a cross out.
     /// Encoded/decoded by serializers as &quot;CROO&quot;.
@@ -50,5 +52,4 @@ public enum InvestmentFundTransactionOutType1Code
     [IsoId("_aczUF9p-Ed-ak6NoX_4Aeg_1717851902")]
     [Description(@"Transaction is a cross out.")]
     CrossOut = InvestmentFundTransactionTypeCode.CrossOut, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TransactionInitiator1Code
     [IsoId("_KWdxcWzgEemD24gVaMSpeA")]
     [Description(@"Merchant initiated transaction.")]
     Merchant = TransactionInitiatorCode.Merchant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer initiated transaction.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -32,5 +32,4 @@ public enum TransactionInitiator1Code
     [IsoId("_KicX8WzgEemD24gVaMSpeA")]
     [Description(@"Customer initiated transaction.")]
     Customer = TransactionInitiatorCode.Customer, // same ordinal as derivation source for type conversions
-    
 }

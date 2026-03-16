@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ycu9YGkGEeS7zPBpvm732w")]
 [DisplayName("Currency Details")]
-public partial record CurrencyDetails1
+public record CurrencyDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Alpha currency code (ISO 4217, 3 alphanumeric characters).
     /// </summary>
     [IsoId("_izPeMGkGEeS7zPBpvm732w")]
     [DisplayName("Alpha Code")]
     [IsoXmlTag("AlphaCd")]
-    public required CurrencyCode AlphaCode { get; init; } 
-    
+    public required CurrencyCode AlphaCode { get; init; }
+
     /// <summary>
     /// Numeric currency code (ISO 4217, 3 numeric characters).
     /// </summary>
@@ -33,8 +31,8 @@ public partial record CurrencyDetails1
     [DisplayName("Numeric Code")]
     [IsoXmlTag("NmrcCd")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText NumericCode { get; init; } 
-    
+    public required IsoExact3NumericText NumericCode { get; init; }
+
     /// <summary>
     /// Maximal number of digits after the decimal separator for the currency.
     /// </summary>
@@ -42,8 +40,8 @@ public partial record CurrencyDetails1
     [DisplayName("Decimal")]
     [IsoXmlTag("Dcml")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Decimal { get; init; } 
-    
+    public required IsoNumber Decimal { get; init; }
+
     /// <summary>
     /// Full name of the currency.
     /// </summary>
@@ -51,10 +49,6 @@ public partial record CurrencyDetails1
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Name { get; init; }
 }

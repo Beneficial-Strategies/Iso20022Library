@@ -21,16 +21,19 @@ public enum CancellationStatus4Code
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_a0VqUdp-Ed-ak6NoX_4Aeg_-927683854")]
-    [Description(@"Cancellation instruction / request has been received and has been acknowledged / accepted for further processing.")]
+    [Description(
+        @"Cancellation instruction / request has been received and has been acknowledged / accepted for further processing."
+    )]
     Accepted = CancellationStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation instruction / request has been rejected / denied for further processing.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
     /// </summary>
     [EnumMember(Value = "REJT")]
     [IsoId("_a0VqUtp-Ed-ak6NoX_4Aeg_-831637751")]
-    [Description(@"Cancellation instruction / request has been rejected / denied for further processing.")]
+    [Description(
+        @"Cancellation instruction / request has been rejected / denied for further processing."
+    )]
     Rejected = CancellationStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

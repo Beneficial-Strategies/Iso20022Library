@@ -23,7 +23,7 @@ public enum PartyType15Code
     [IsoId("_jtF7gY33EeWRwov1g9WL_A")]
     [Description(@"Configuration to apply to a subset of the whole POI system.")]
     POIGroup = PartyTypeCode.POIGroup, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration to apply to the whole POI system.
     /// Encoded/decoded by serializers as &quot;PSYS&quot;.
@@ -32,7 +32,7 @@ public enum PartyType15Code
     [IsoId("_j2B1EY33EeWRwov1g9WL_A")]
     [Description(@"Configuration to apply to the whole POI system.")]
     POISystem = PartyTypeCode.POISystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration to apply to a single POI terminal.
     /// Encoded/decoded by serializers as &quot;PSNG&quot;.
@@ -41,5 +41,4 @@ public enum PartyType15Code
     [IsoId("_kCQTMY33EeWRwov1g9WL_A")]
     [Description(@"Configuration to apply to a single POI terminal.")]
     SinglePOI = PartyTypeCode.SinglePOI, // same ordinal as derivation source for type conversions
-    
 }

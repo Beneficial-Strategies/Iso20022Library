@@ -23,7 +23,7 @@ public enum MemberStatus1Code
     [IsoId("_zdmYZA93EeGeV5vP7Mvdig_-507442078")]
     [Description(@"Member is live on the system.")]
     Enabled = MemberStatusCode.Enabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Member is temporarily not live on the system.
     /// Encoded/decoded by serializers as &quot;DSBL&quot;.
@@ -32,7 +32,7 @@ public enum MemberStatus1Code
     [IsoId("_zdmYZQ93EeGeV5vP7Mvdig_943717544")]
     [Description(@"Member is temporarily not live on the system.")]
     Disabled = MemberStatusCode.Disabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Member is no longer live on the system.
     /// Encoded/decoded by serializers as &quot;DLTD&quot;.
@@ -41,7 +41,7 @@ public enum MemberStatus1Code
     [IsoId("_zdmYZg93EeGeV5vP7Mvdig_1865880854")]
     [Description(@"Member is no longer live on the system.")]
     Deleted = MemberStatusCode.Deleted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Member is joining and will soon be enabled on the system.
     /// Encoded/decoded by serializers as &quot;JOIN&quot;.
@@ -50,5 +50,4 @@ public enum MemberStatus1Code
     [IsoId("_zdviUA93EeGeV5vP7Mvdig_1111130980")]
     [Description(@"Member is joining and will soon be enabled on the system.")]
     Joining = MemberStatusCode.Joining, // same ordinal as derivation source for type conversions
-    
 }

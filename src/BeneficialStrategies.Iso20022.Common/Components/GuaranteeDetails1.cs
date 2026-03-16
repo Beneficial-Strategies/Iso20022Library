@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzc0-AOSNFX-8224501")]
 [DisplayName("Guarantee Details")]
-public partial record GuaranteeDetails1
+public record GuaranteeDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Party issuing the guarantee.
     /// </summary>
     [IsoId("_OTgzMzg4-AOSNFX-8224502")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public QualifiedPartyIdentification1? Issuer { get; init; } 
-    
+    public QualifiedPartyIdentification1? Issuer { get; init; }
+
     /// <summary>
     /// Rank of the guarantee provider. A value of 1 means highest rank. Providers may have the same position.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record GuaranteeDetails1
     [DisplayName("Position")]
     [IsoXmlTag("Pos")]
     [IsoSimpleType(IsoSimpleType.positiveInteger)]
-    public IsopositiveInteger? Position { get; init; } 
-    
+    public IsopositiveInteger? Position { get; init; }
+
     /// <summary>
     /// Textual description of guarantee details.
     /// </summary>
@@ -42,41 +40,41 @@ public partial record GuaranteeDetails1
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max2000Text)]
-    [StringLength(maximumLength: 2000 ,MinimumLength = 1)]
-    public IsoMax2000Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 2000, MinimumLength = 1)]
+    public IsoMax2000Text? Description { get; init; }
+
     /// <summary>
     /// Amount by time periods, maximum value applies at any given date.
     /// </summary>
     [IsoId("_OTgzMzkx-AOSNFX-8224502")]
     [DisplayName("Guaranteed Amount")]
     [IsoXmlTag("GrntedAmt")]
-    public AmountAndPeriod1? GuaranteedAmount { get; init; } 
-    
+    public AmountAndPeriod1? GuaranteedAmount { get; init; }
+
     /// <summary>
     /// Amount not covered by the guarantee. Maximum value applies at any given date.
     /// </summary>
     [IsoId("_OTgzMzky-AOSNFX-8224502")]
     [DisplayName("Excess")]
     [IsoXmlTag("Xcss")]
-    public AmountAndPeriod1? Excess { get; init; } 
-    
+    public AmountAndPeriod1? Excess { get; init; }
+
     /// <summary>
     /// Covered percentage, the maximum value applies at any given date.
     /// </summary>
     [IsoId("_OTgzMzkz-AOSNFX-8224502")]
     [DisplayName("Covered Percentage")]
     [IsoXmlTag("CvrdPctg")]
-    public PercentageAndPeriod1? CoveredPercentage { get; init; } 
-    
+    public PercentageAndPeriod1? CoveredPercentage { get; init; }
+
     /// <summary>
     /// Associated free form document.
     /// </summary>
     [IsoId("_OTgzMzk0-AOSNFX-8224502")]
     [DisplayName("Associated Document")]
     [IsoXmlTag("AssoctdDoc")]
-    public QualifiedDocumentInformation1? AssociatedDocument { get; init; } 
-    
+    public QualifiedDocumentInformation1? AssociatedDocument { get; init; }
+
     /// <summary>
     /// Additional information related to the demand.
     /// </summary>
@@ -87,8 +85,4 @@ public partial record GuaranteeDetails1
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

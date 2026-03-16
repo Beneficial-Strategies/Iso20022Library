@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YYAkcFK7EeiSDqv62fL07g")]
 [DisplayName("Money Purchase Annual Allowance")]
-public partial record MoneyPurchaseAnnualAllowance1
+public record MoneyPurchaseAnnualAllowance1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the annual allowance has been triggered.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record MoneyPurchaseAnnualAllowance1
     [DisplayName("Triggered")]
     [IsoXmlTag("Trggrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Triggered { get; init; } 
-    
+    public required IsoYesNoIndicator Triggered { get; init; }
+
     /// <summary>
     /// Date the annual allowance is taken.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record MoneyPurchaseAnnualAllowance1
     [DisplayName("Triggered Date")]
     [IsoXmlTag("TrggrdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TriggeredDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? TriggeredDate { get; init; }
 }

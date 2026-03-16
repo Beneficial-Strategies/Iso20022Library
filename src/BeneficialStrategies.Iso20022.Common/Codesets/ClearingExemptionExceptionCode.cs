@@ -23,7 +23,7 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_xGxLIIJTEeuDe9SyRl5qeg")]
     [Description(@"End user exemption.")]
     EndUserException,
-    
+
     /// <summary>
     /// Inter affiliate exemption.
     /// Encoded/decoded by serializers as &quot;AFFL&quot;.
@@ -32,7 +32,7 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_0FpXEIJTEeuDe9SyRl5qeg")]
     [Description(@"Inter affiliate exemption.")]
     InterAffiliateExemption,
-    
+
     /// <summary>
     /// Small bank exemption
     /// Encoded/decoded by serializers as &quot;SMBK&quot;.
@@ -41,7 +41,7 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_3ErUAIJTEeuDe9SyRl5qeg")]
     [Description(@"Small bank exemption")]
     SmallBankExemption,
-    
+
     /// <summary>
     /// Cooperative exemption.
     /// Encoded/decoded by serializers as &quot;COOP&quot;.
@@ -50,7 +50,7 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_5E6tcIJTEeuDe9SyRl5qeg")]
     [Description(@"Cooperative exemption.")]
     CooperativeExemption,
-    
+
     /// <summary>
     /// No action letter relief.
     /// Encoded/decoded by serializers as &quot;NOAL&quot;.
@@ -59,7 +59,7 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_7TvVcIJTEeuDe9SyRl5qeg")]
     [Description(@"No action letter relief.")]
     NoActionLetterRelief,
-    
+
     /// <summary>
     /// No reason.
     /// Encoded/decoded by serializers as &quot;NORE&quot;.
@@ -68,7 +68,7 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_-yAzIIJTEeuDe9SyRl5qeg")]
     [Description(@"No reason.")]
     NoReason,
-    
+
     /// <summary>
     /// Other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,5 +77,4 @@ public enum ClearingExemptionExceptionCode
     [IsoId("_A0x8IIJUEeuDe9SyRl5qeg")]
     [Description(@"Other.")]
     Other,
-    
 }

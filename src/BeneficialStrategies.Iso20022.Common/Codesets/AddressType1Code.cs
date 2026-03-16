@@ -23,7 +23,7 @@ public enum AddressType1Code
     [IsoId("_bmtidtp-Ed-ak6NoX_4Aeg_-1758352550")]
     [Description(@"Address is the home address.")]
     Residential = AddressTypeCode.Residential, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Address is the business address.
     /// Encoded/decoded by serializers as &quot;BIZZ&quot;.
@@ -32,5 +32,4 @@ public enum AddressType1Code
     [IsoId("_bmtid9p-Ed-ak6NoX_4Aeg_-1742653638")]
     [Description(@"Address is the business address.")]
     Business = AddressTypeCode.Business, // same ordinal as derivation source for type conversions
-    
 }

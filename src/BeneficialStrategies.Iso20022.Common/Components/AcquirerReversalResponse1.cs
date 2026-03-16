@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mdPa4Hu2EeS2Z_kGi7H1VQ")]
 [DisplayName("Acquirer Reversal Response")]
-public partial record AcquirerReversalResponse1
+public record AcquirerReversalResponse1
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the transaction.
     /// </summary>
     [IsoId("_9USEEHu2EeS2Z_kGi7H1VQ")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardTransactionEnvironment4 Environment { get; init; } 
-    
+    public required CardTransactionEnvironment4 Environment { get; init; }
+
     /// <summary>
     /// Reversal card transaction.
     /// </summary>
     [IsoId("_7GmPEHu3EeS2Z_kGi7H1VQ")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required CardTransaction8 Transaction { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CardTransaction8 Transaction { get; init; }
 }

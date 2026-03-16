@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ny9Dz5lPEee-Zps0fZQaFQ")]
 [DisplayName("Proprietary Status Justification")]
-public partial record ProprietaryStatusJustification1
+public record ProprietaryStatusJustification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Defines the reason why the Target2 SSP system has rejected the transaction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ProprietaryStatusJustification1
     [DisplayName("Proprietary Status Reason")]
     [IsoXmlTag("PrtryStsRsn")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText ProprietaryStatusReason { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public required IsoMax4AlphaNumericText ProprietaryStatusReason { get; init; }
+
     /// <summary>
     /// Provides detailed information about the reason why the Target2 SSP system has rejected the transaction.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record ProprietaryStatusJustification1
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public required IsoMax256Text Reason { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public required IsoMax256Text Reason { get; init; }
 }

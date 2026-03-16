@@ -23,7 +23,7 @@ public enum CryptographicKeyType4Code
     [IsoId("_VAq5oYtJEeSxlKlAGYErFg")]
     [Description(@"Key used to protect application information.")]
     Application = CryptographicKeyTypeCode.Application, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key used to protect data in the messages.
     /// Encoded/decoded by serializers as &quot;DATA&quot;.
@@ -32,7 +32,7 @@ public enum CryptographicKeyType4Code
     [IsoId("_VKNQI4tJEeSxlKlAGYErFg")]
     [Description(@"Key used to protect data in the messages.")]
     Data = CryptographicKeyTypeCode.Data, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Any cryptographic key that can be downloaded.
     /// Encoded/decoded by serializers as &quot;DYNC&quot;.
@@ -41,7 +41,7 @@ public enum CryptographicKeyType4Code
     [IsoId("_VcPbU4tJEeSxlKlAGYErFg")]
     [Description(@"Any cryptographic key that can be downloaded.")]
     Dynamic = CryptographicKeyTypeCode.Dynamic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key used to encrypt other keys.
     /// Encoded/decoded by serializers as &quot;KENC&quot;.
@@ -50,7 +50,7 @@ public enum CryptographicKeyType4Code
     [IsoId("_Vntrg4tJEeSxlKlAGYErFg")]
     [Description(@"Key used to encrypt other keys.")]
     KeyEncryption = CryptographicKeyTypeCode.KeyEncryption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key used to generate the MAC of a message.
     /// Encoded/decoded by serializers as &quot;MACK&quot;.
@@ -59,7 +59,7 @@ public enum CryptographicKeyType4Code
     [IsoId("_V28aU4tJEeSxlKlAGYErFg")]
     [Description(@"Key used to generate the MAC of a message.")]
     MAC = CryptographicKeyTypeCode.MAC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key used to encrypt a PIN.
     /// Encoded/decoded by serializers as &quot;PINK&quot;.
@@ -68,7 +68,7 @@ public enum CryptographicKeyType4Code
     [IsoId("_WBHC84tJEeSxlKlAGYErFg")]
     [Description(@"Key used to encrypt a PIN.")]
     PIN = CryptographicKeyTypeCode.PIN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Temporary key used to download keys.
     /// Encoded/decoded by serializers as &quot;WRKG&quot;.
@@ -77,5 +77,4 @@ public enum CryptographicKeyType4Code
     [IsoId("_WJwBk4tJEeSxlKlAGYErFg")]
     [Description(@"Temporary key used to download keys.")]
     Working = CryptographicKeyTypeCode.Working, // same ordinal as derivation source for type conversions
-    
 }

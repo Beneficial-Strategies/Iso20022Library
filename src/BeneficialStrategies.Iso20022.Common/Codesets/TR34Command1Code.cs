@@ -23,7 +23,7 @@ public enum TR34Command1Code
     [IsoId("_KalWQV2lEeekzJIz1JxYSQ")]
     [Description(@"TR34 bind operation.")]
     Bind = TR34CommandCode.Bind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// TR34 Higher Level rebind operation.
     /// Encoded/decoded by serializers as &quot;HILR&quot;.
@@ -32,7 +32,7 @@ public enum TR34Command1Code
     [IsoId("_KfcoIV2lEeekzJIz1JxYSQ")]
     [Description(@"TR34 Higher Level rebind operation.")]
     HigherLevelRebind = TR34CommandCode.HigherLevelRebind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// TR34 Higher Level unbind operation.
     /// Encoded/decoded by serializers as &quot;HILU&quot;.
@@ -41,7 +41,7 @@ public enum TR34Command1Code
     [IsoId("_KiyQAV2lEeekzJIz1JxYSQ")]
     [Description(@"TR34 Higher Level unbind operation.")]
     HigherLevelUnbind = TR34CommandCode.HigherLevelUnbind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// TR34 rebind operation.
     /// Encoded/decoded by serializers as &quot;RBND&quot;.
@@ -50,7 +50,7 @@ public enum TR34Command1Code
     [IsoId("_KndUoV2lEeekzJIz1JxYSQ")]
     [Description(@"TR34 rebind operation.")]
     Rebind = TR34CommandCode.Rebind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// TR34 unbind operation.
     /// Encoded/decoded by serializers as &quot;UBND&quot;.
@@ -59,5 +59,4 @@ public enum TR34Command1Code
     [IsoId("_KsIZQV2lEeekzJIz1JxYSQ")]
     [Description(@"TR34 unbind operation.")]
     Unbind = TR34CommandCode.Unbind, // same ordinal as derivation source for type conversions
-    
 }

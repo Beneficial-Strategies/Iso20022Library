@@ -23,7 +23,7 @@ public enum DataModification1Code
     [IsoId("_ax9Esdp-Ed-ak6NoX_4Aeg_-1785750283")]
     [Description(@"Insert a new set of data.")]
     InsertNewDataSet = DataModificationCode.InsertNewDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the details of an existing set of data.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -32,7 +32,7 @@ public enum DataModification1Code
     [IsoId("_ax9Estp-Ed-ak6NoX_4Aeg_-1785750265")]
     [Description(@"Update the details of an existing set of data.")]
     UpdateDataSetDetails = DataModificationCode.UpdateDataSetDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delete an existing set of data.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -41,5 +41,4 @@ public enum DataModification1Code
     [IsoId("_ax9Es9p-Ed-ak6NoX_4Aeg_-1785749975")]
     [Description(@"Delete an existing set of data.")]
     DeleteDataSet = DataModificationCode.DeleteDataSet, // same ordinal as derivation source for type conversions
-    
 }

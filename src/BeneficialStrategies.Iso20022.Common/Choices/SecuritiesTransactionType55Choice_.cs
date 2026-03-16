@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecuritiesTransactionType55Choice.Code))]
     [KnownType(typeof(SecuritiesTransactionType55Choice.Proprietary))]
-    [JsonDerivedType(typeof(SecuritiesTransactionType55Choice.Code),nameof(SecuritiesTransactionType55Choice.Code))]
-    [JsonDerivedType(typeof(SecuritiesTransactionType55Choice.Proprietary),nameof(SecuritiesTransactionType55Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionType55Choice.Code),
+        nameof(SecuritiesTransactionType55Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionType55Choice.Proprietary),
+        nameof(SecuritiesTransactionType55Choice.Proprietary)
+    )]
     [IsoId("_qIKqe_fYEeiNZp_PtLohLw")]
     [DisplayName("Securities Transaction Type 55 Choice")]
-    public abstract partial record SecuritiesTransactionType55Choice_
-    {
-    }
+    public abstract record SecuritiesTransactionType55Choice_ { }
 }

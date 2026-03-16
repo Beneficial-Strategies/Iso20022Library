@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jg-jkZQPEeiok48Eh9lW9Q")]
 [DisplayName("Clearing Party And Time")]
-public partial record ClearingPartyAndTime8
+public record ClearingPartyAndTime8
 {
-    #nullable enable
-    
     /// <summary>
     /// In the case of a contract that has been cleared, the unique code for the CCP that has cleared the contract.
     /// </summary>
     [IsoId("_jtjnA5QPEeiok48Eh9lW9Q")]
     [DisplayName("CCP")]
     [IsoXmlTag("CCP")]
-    public OrganisationIdentification9Choice_? CCP { get; init; } 
-    
+    public OrganisationIdentification9Choice_? CCP { get; init; }
+
     /// <summary>
     /// Time and date when clearing took place.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record ClearingPartyAndTime8
     [DisplayName("Clearing Date Time")]
     [IsoXmlTag("ClrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ClearingDateTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODateTime? ClearingDateTime { get; init; }
 }

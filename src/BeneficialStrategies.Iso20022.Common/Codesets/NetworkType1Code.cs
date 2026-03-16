@@ -23,7 +23,7 @@ public enum NetworkType1Code
     [IsoId("_pr02YWpVEeSR-ZWLvO-1dg")]
     [Description(@"Protocol of an IP network.")]
     InternetProtocol = NetworkTypeCode.InternetProtocol, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Protocol of a Public Switched Telephone Network (PSTN).
     /// Encoded/decoded by serializers as &quot;PSTN&quot;.
@@ -32,5 +32,4 @@ public enum NetworkType1Code
     [IsoId("_pyrsUWpVEeSR-ZWLvO-1dg")]
     [Description(@"Protocol of a Public Switched Telephone Network (PSTN).")]
     PublicTelephone = NetworkTypeCode.PublicTelephone, // same ordinal as derivation source for type conversions
-    
 }

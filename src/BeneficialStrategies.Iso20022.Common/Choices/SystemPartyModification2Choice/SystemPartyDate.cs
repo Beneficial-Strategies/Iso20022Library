@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSoYv-Eei289CGNqs21g")]
     [DisplayName("System Party Date")]
-    public partial record SystemPartyDate : SystemPartyModification2Choice_
+    public record SystemPartyDate : SystemPartyModification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the opening date of the party.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Opening Date")]
         [IsoXmlTag("OpngDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? OpeningDate { get; init; } 
-        
+        public IsoISODate? OpeningDate { get; init; }
+
         /// <summary>
         /// Specifies the closing date of the party.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Closing Date")]
         [IsoXmlTag("ClsgDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ClosingDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? ClosingDate { get; init; }
     }
 }

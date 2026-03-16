@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Su5UAQEcEeCQm6a_G2yO_w_1332252059")]
 [DisplayName("Requestor Details")]
-public partial record RequestorDetails1
+public record RequestorDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and time at which the request was created.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record RequestorDetails1
     [DisplayName("Date Time Stamp")]
     [IsoXmlTag("DtTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateTimeStamp { get; init; } 
-    
+    public required IsoISODateTime DateTimeStamp { get; init; }
+
     /// <summary>
     /// Identification of the requester.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record RequestorDetails1
     [DisplayName("Requestor")]
     [IsoXmlTag("Rqstr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Requestor { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoAnyBICIdentifier Requestor { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MXlzwXvOEeSCJdwgzb6SFw")]
 [DisplayName("KEK Identifier")]
-public partial record KEKIdentifier3
+public record KEKIdentifier3
 {
-    #nullable enable
-    
     /// <summary>
     /// Name or label of the key.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record KEKIdentifier3
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Name { get; init; }
+
     /// <summary>
     /// Identification of the cryptographic key.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record KEKIdentifier3
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text Identification { get; init; }
+
     /// <summary>
     /// Version of the cryptographic key.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record KEKIdentifier3
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Version { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Version { get; init; }
+
     /// <summary>
     /// Value to check the key, for instance, result of the encryption of the null binary string.
     /// </summary>
@@ -55,9 +53,5 @@ public partial record KEKIdentifier3
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? KeyCheckValue { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax35Binary? KeyCheckValue { get; init; }
 }

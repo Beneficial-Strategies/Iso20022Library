@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.caaa;
 
@@ -19,70 +17,63 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// The AcceptorCompletionAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) of the outcome of the payment transaction, and the transfer the financial data of the transaction contained in the completion advice.
 /// </summary>
-[Description(@"The AcceptorCompletionAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) of the outcome of the payment transaction, and the transfer the financial data of the transaction contained in the completion advice.")]
+[Description(
+    @"The AcceptorCompletionAdviceResponse message is sent by the acquirer (or its agent) to acknowledge the acceptor (or its agent) of the outcome of the payment transaction, and the transfer the financial data of the transaction contained in the completion advice."
+)]
 [IsoId("_46JYoQudEeqw5uEXxQ9H4g")]
 [DisplayName("Acceptor Completion Advice Response V")]
-public partial record AcceptorCompletionAdviceResponseV08 : IOuterRecord
+public record AcceptorCompletionAdviceResponseV08 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "caaa.004.001.08";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "AccptrCmpltnAdvcRspn";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.004.001.08";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Completion advice response message management information.
     /// </summary>
     [IsoId("_46JYpQudEeqw5uEXxQ9H4g")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header58 Header { get; init; } 
-    
+    public required Header58 Header { get; init; }
+
     /// <summary>
     /// Information related to the completion advice response.
     /// </summary>
     [IsoId("_46JYpwudEeqw5uEXxQ9H4g")]
     [DisplayName("Completion Advice Response")]
     [IsoXmlTag("CmpltnAdvcRspn")]
-    public required AcceptorCompletionAdviceResponse8 CompletionAdviceResponse { get; init; } 
-    
+    public required AcceptorCompletionAdviceResponse8 CompletionAdviceResponse { get; init; }
+
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_46JYqQudEeqw5uEXxQ9H4g")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType24? SecurityTrailer { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ContentInformationType24? SecurityTrailer { get; init; }
 }
 
-
-// Since AcceptorCompletionAdviceResponseV08Document is not really part of the logical business domain model, 
+// Since AcceptorCompletionAdviceResponseV08Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to AcceptorCompletionAdviceResponseV08.
-

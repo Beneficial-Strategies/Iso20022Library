@@ -23,7 +23,7 @@ public enum StorageLocationCode
     [IsoId("_k3ZUMJx-EeuwYeL1lHu9zw")]
     [Description(@"Stored in device.")]
     Device,
-    
+
     /// <summary>
     /// Storage is on file.
     /// Encoded/decoded by serializers as &quot;ONFL&quot;.
@@ -32,7 +32,7 @@ public enum StorageLocationCode
     [IsoId("_qxgiMJx-EeuwYeL1lHu9zw")]
     [Description(@"Storage is on file.")]
     OnFile,
-    
+
     /// <summary>
     /// Storage is in wallet managed by card acceptor.
     /// Encoded/decoded by serializers as &quot;CAWL&quot;.
@@ -41,7 +41,7 @@ public enum StorageLocationCode
     [IsoId("_xy5hUJx-EeuwYeL1lHu9zw")]
     [Description(@"Storage is in wallet managed by card acceptor.")]
     CardAcceptorWallet,
-    
+
     /// <summary>
     /// Storage is in wallet managed by Issuer.
     /// Encoded/decoded by serializers as &quot;ISWL&quot;.
@@ -50,7 +50,7 @@ public enum StorageLocationCode
     [IsoId("_4I2WwJx-EeuwYeL1lHu9zw")]
     [Description(@"Storage is in wallet managed by Issuer.")]
     IssuerWallet,
-    
+
     /// <summary>
     /// Storage location is in wallet managed by a third party.
     /// Encoded/decoded by serializers as &quot;TPWL&quot;.
@@ -59,7 +59,7 @@ public enum StorageLocationCode
     [IsoId("_-YK_wJx-EeuwYeL1lHu9zw")]
     [Description(@"Storage location is in wallet managed by a third party.")]
     ThirdPartyWallet,
-    
+
     /// <summary>
     /// Code defined by private agreement.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +68,7 @@ public enum StorageLocationCode
     [IsoId("_D7VGUJx_EeuwYeL1lHu9zw")]
     [Description(@"Code defined by private agreement.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Code defined by national standards organisation.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -77,5 +77,4 @@ public enum StorageLocationCode
     [IsoId("_H9R40Jx_EeuwYeL1lHu9zw")]
     [Description(@"Code defined by national standards organisation.")]
     OtherNational,
-    
 }

@@ -23,7 +23,7 @@ public enum DisplayMethod1Code
     [IsoId("_awK8CNp-Ed-ak6NoX_4Aeg_1639154433")]
     [Description(@"Indicates that original quantity must be used.")]
     Initial = DisplayMethodCode.Initial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that Quantity must be refreshed.
     /// Encoded/decoded by serializers as &quot;NEW1&quot;.
@@ -32,7 +32,7 @@ public enum DisplayMethod1Code
     [IsoId("_awUtANp-Ed-ak6NoX_4Aeg_1639154468")]
     [Description(@"Indicates that Quantity must be refreshed.")]
     New = DisplayMethodCode.New, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Randomize value.
     /// Encoded/decoded by serializers as &quot;RAND&quot;.
@@ -41,5 +41,4 @@ public enum DisplayMethod1Code
     [IsoId("_awUtAdp-Ed-ak6NoX_4Aeg_1639154503")]
     [Description(@"Randomize value.")]
     Random = DisplayMethodCode.Random, // same ordinal as derivation source for type conversions
-    
 }

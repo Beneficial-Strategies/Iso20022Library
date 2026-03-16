@@ -23,7 +23,7 @@ public enum DerivativeExerciseStatusCode
     [IsoId("_yRPZcCKKEeSbDuI5b0sFEQ")]
     [Description(@"Derivative is exercised.")]
     Exercised,
-    
+
     /// <summary>
     /// Derivative is expired and will not be exercised.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -32,7 +32,7 @@ public enum DerivativeExerciseStatusCode
     [IsoId("_6c1h4CKKEeSbDuI5b0sFEQ")]
     [Description(@"Derivative is expired and will not be exercised.")]
     Expired,
-    
+
     /// <summary>
     /// Derivative is not exercised.
     /// Encoded/decoded by serializers as &quot;VALI&quot;.
@@ -41,5 +41,4 @@ public enum DerivativeExerciseStatusCode
     [IsoId("_W9KHwCKLEeSbDuI5b0sFEQ")]
     [Description(@"Derivative is not exercised.")]
     Valid,
-    
 }

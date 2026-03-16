@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_acpjF9p-Ed-ak6NoX_4Aeg_-159991838")]
-[Description(@"Specifies the type of investment fund transaction that results in a cash movement into a fund.")]
+[Description(
+    @"Specifies the type of investment fund transaction that results in a cash movement into a fund."
+)]
 [DerivedFrom(typeof(InvestmentFundTransactionTypeCode))]
 public enum InvestmentFundTransactionInType1Code
 {
@@ -23,7 +25,7 @@ public enum InvestmentFundTransactionInType1Code
     [IsoId("_acpjGNp-Ed-ak6NoX_4Aeg_99517208")]
     [Description(@"Transaction is a subscription to an investment fund.")]
     Subscription = InvestmentFundTransactionTypeCode.Subscription, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a subscription leg of a switch order execution.
     /// Encoded/decoded by serializers as &quot;SWII&quot;.
@@ -32,7 +34,7 @@ public enum InvestmentFundTransactionInType1Code
     [IsoId("_acpjGdp-Ed-ak6NoX_4Aeg_99517562")]
     [Description(@"Transaction is a subscription leg of a switch order execution.")]
     SwitchIn = InvestmentFundTransactionTypeCode.SwitchIn, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is an InSpecie.
     /// Encoded/decoded by serializers as &quot;INSP&quot;.
@@ -41,7 +43,7 @@ public enum InvestmentFundTransactionInType1Code
     [IsoId("_aczUENp-Ed-ak6NoX_4Aeg_100437611")]
     [Description(@"Transaction is an InSpecie.")]
     InSpecie = InvestmentFundTransactionTypeCode.InSpecie, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a cross-in.
     /// Encoded/decoded by serializers as &quot;CROI&quot;.
@@ -50,7 +52,7 @@ public enum InvestmentFundTransactionInType1Code
     [IsoId("_aczUEdp-Ed-ak6NoX_4Aeg_100437629")]
     [Description(@"Transaction is a cross-in.")]
     CrossIn = InvestmentFundTransactionTypeCode.CrossIn, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a reinvestment of dividend.
     /// Encoded/decoded by serializers as &quot;RDIV&quot;.
@@ -59,5 +61,4 @@ public enum InvestmentFundTransactionInType1Code
     [IsoId("_aczUEtp-Ed-ak6NoX_4Aeg_711808534")]
     [Description(@"Transaction is a reinvestment of dividend.")]
     ReinvestmentOfDividend = InvestmentFundTransactionTypeCode.ReinvestmentOfDividend, // same ordinal as derivation source for type conversions
-    
 }

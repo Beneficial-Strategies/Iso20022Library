@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(MarginCallResult2Choice.MarginCallResultDetails))]
     [KnownType(typeof(MarginCallResult2Choice.MarginCallAmount))]
     [KnownType(typeof(MarginCallResult2Choice.SegregatedIndependentAmount))]
-    [JsonDerivedType(typeof(MarginCallResult2Choice.MarginCallResultDetails),nameof(MarginCallResult2Choice.MarginCallResultDetails))]
-    [JsonDerivedType(typeof(MarginCallResult2Choice.MarginCallAmount),nameof(MarginCallResult2Choice.MarginCallAmount))]
-    [JsonDerivedType(typeof(MarginCallResult2Choice.SegregatedIndependentAmount),nameof(MarginCallResult2Choice.SegregatedIndependentAmount))]
+    [JsonDerivedType(
+        typeof(MarginCallResult2Choice.MarginCallResultDetails),
+        nameof(MarginCallResult2Choice.MarginCallResultDetails)
+    )]
+    [JsonDerivedType(
+        typeof(MarginCallResult2Choice.MarginCallAmount),
+        nameof(MarginCallResult2Choice.MarginCallAmount)
+    )]
+    [JsonDerivedType(
+        typeof(MarginCallResult2Choice.SegregatedIndependentAmount),
+        nameof(MarginCallResult2Choice.SegregatedIndependentAmount)
+    )]
     [IsoId("_9beRS6MPEeCojJW5vEuTEQ_-1338603652")]
     [DisplayName("Margin Call Result 2 Choice")]
-    public abstract partial record MarginCallResult2Choice_
-    {
-    }
+    public abstract record MarginCallResult2Choice_ { }
 }

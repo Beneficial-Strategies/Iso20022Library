@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ForeignExchangeSwap3Choice.DataSetAction))]
     [KnownType(typeof(ForeignExchangeSwap3Choice.Transaction))]
-    [JsonDerivedType(typeof(ForeignExchangeSwap3Choice.DataSetAction),nameof(ForeignExchangeSwap3Choice.DataSetAction))]
-    [JsonDerivedType(typeof(ForeignExchangeSwap3Choice.Transaction),nameof(ForeignExchangeSwap3Choice.Transaction))]
+    [JsonDerivedType(
+        typeof(ForeignExchangeSwap3Choice.DataSetAction),
+        nameof(ForeignExchangeSwap3Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(ForeignExchangeSwap3Choice.Transaction),
+        nameof(ForeignExchangeSwap3Choice.Transaction)
+    )]
     [IsoId("_E2DFYcESEea7jLfvGi1PDw")]
     [DisplayName("Foreign Exchange Swap 3 Choice")]
-    public abstract partial record ForeignExchangeSwap3Choice_
-    {
-    }
+    public abstract record ForeignExchangeSwap3Choice_ { }
 }

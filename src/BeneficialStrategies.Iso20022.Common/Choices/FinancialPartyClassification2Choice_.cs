@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialPartyClassification2Choice.Code))]
     [KnownType(typeof(FinancialPartyClassification2Choice.Proprietary))]
-    [JsonDerivedType(typeof(FinancialPartyClassification2Choice.Code),nameof(FinancialPartyClassification2Choice.Code))]
-    [JsonDerivedType(typeof(FinancialPartyClassification2Choice.Proprietary),nameof(FinancialPartyClassification2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FinancialPartyClassification2Choice.Code),
+        nameof(FinancialPartyClassification2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialPartyClassification2Choice.Proprietary),
+        nameof(FinancialPartyClassification2Choice.Proprietary)
+    )]
     [IsoId("_IH7-oSI4Ee2zWP9pqvmqdw")]
     [DisplayName("Financial Party Classification 2 Choice")]
-    public abstract partial record FinancialPartyClassification2Choice_
-    {
-    }
+    public abstract record FinancialPartyClassification2Choice_ { }
 }

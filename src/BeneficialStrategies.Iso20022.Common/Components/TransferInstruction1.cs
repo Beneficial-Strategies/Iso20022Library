@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AU8gYUz5EeepdbMfWGyv3Q")]
 [DisplayName("Transfer Instruction")]
-public partial record TransferInstruction1
+public record TransferInstruction1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether a payment arrangement is transferable.
     /// Usage: Default value for TransferIndicator is false.
@@ -26,8 +24,8 @@ public partial record TransferInstruction1
     [DisplayName("Transfer Indicator")]
     [IsoXmlTag("TrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? TransferIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? TransferIndicator { get; init; }
+
     /// <summary>
     /// Specifies an additional parameter to be applied to the requested transaction schedule.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TransferInstruction1
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Code { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Code { get; init; }
+
     /// <summary>
     /// Specifies an additional parameter to be applied to the transaction schedule in a proprietary format.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record TransferInstruction1
     [DisplayName("Proprietary")]
     [IsoXmlTag("Prtry")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? Proprietary { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? Proprietary { get; init; }
+
     /// <summary>
     /// The date and time at which the event specified by Code commences.
     /// </summary>
@@ -55,8 +53,8 @@ public partial record TransferInstruction1
     [DisplayName("Start Date Time")]
     [IsoXmlTag("StartDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartDateTime { get; init; } 
-    
+    public IsoISODateTime? StartDateTime { get; init; }
+
     /// <summary>
     /// The date on which the event specified by Code commences.
     /// </summary>
@@ -64,8 +62,8 @@ public partial record TransferInstruction1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; } 
-    
+    public IsoISODate? StartDate { get; init; }
+
     /// <summary>
     /// Additional switch parameters in a free text format.
     /// </summary>
@@ -73,10 +71,6 @@ public partial record TransferInstruction1
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Description { get; init; }
 }

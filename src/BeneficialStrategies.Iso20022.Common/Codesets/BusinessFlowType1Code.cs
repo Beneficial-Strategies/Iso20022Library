@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_p7MmMPsMEeCZF5_uug7xyA")]
-[Description(@"Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).")]
+[Description(
+    @"Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process)."
+)]
 [DerivedFrom(typeof(BusinessFlowTypeCode))]
 public enum BusinessFlowType1Code
 {
@@ -23,7 +25,7 @@ public enum BusinessFlowType1Code
     [IsoId("_ad9YDv8xEeC-e_lDNJKWcg")]
     [Description(@"Single leg process initiated by the delivering party.")]
     SingleLegDeliveringParty = BusinessFlowTypeCode.SingleLegDeliveringParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Single leg process initiated by the receiving party.
     /// Encoded/decoded by serializers as &quot;SLRP&quot;.
@@ -32,7 +34,7 @@ public enum BusinessFlowType1Code
     [IsoId("_aiItbv8xEeC-e_lDNJKWcg")]
     [Description(@"Single leg process initiated by the receiving party.")]
     SingleLegReceivingParty = BusinessFlowTypeCode.SingleLegReceivingParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Double leg process.
     /// Encoded/decoded by serializers as &quot;DLPR&quot;.
@@ -41,5 +43,4 @@ public enum BusinessFlowType1Code
     [IsoId("_bIIWbv8xEeC-e_lDNJKWcg")]
     [Description(@"Double leg process.")]
     DoubleLegProcess = BusinessFlowTypeCode.DoubleLegProcess, // same ordinal as derivation source for type conversions
-    
 }

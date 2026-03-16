@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JA4MkEXkEeegp_DADCe7HQ")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification197
+public record PartyIdentification197
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PartyIdentification197
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Entity in charge of assigning an identification to a party.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record PartyIdentification197
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Assigner { get; init; }
+
     /// <summary>
     /// Country of the party.
     /// </summary>
     [IsoId("_sfFxoEXkEeegp_DADCe7HQ")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public ISO3NumericCountryCode? Country { get; init; } 
-    
+    public ISO3NumericCountryCode? Country { get; init; }
+
     /// <summary>
     /// Short name of the party.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record PartyIdentification197
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ShortName { get; init; }
+
     /// <summary>
     /// Additional identification of the party.
     /// </summary>
@@ -63,10 +61,6 @@ public partial record PartyIdentification197
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AdditionalIdentification { get; init; }
 }

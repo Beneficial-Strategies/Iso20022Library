@@ -23,7 +23,7 @@ public enum FractionDispositionType10Code
     [IsoId("_XLY_sWSCEeKFfdK0gKYFLQ")]
     [Description(@"Buy securities up to next whole number.")]
     BuyUp = FractionDispositionTypeV2Code.BuyUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fractional part of cash. Take cash in lieu of fractions.
     /// Encoded/decoded by serializers as &quot;CINL&quot;.
@@ -32,7 +32,7 @@ public enum FractionDispositionType10Code
     [IsoId("_XVO4MWSCEeKFfdK0gKYFLQ")]
     [Description(@"Fractional part of cash. Take cash in lieu of fractions.")]
     CashInLieuOfFraction = FractionDispositionTypeV2Code.CashInLieuOfFraction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Let fractions expire worthless.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -41,7 +41,7 @@ public enum FractionDispositionType10Code
     [IsoId("_XtEwcWSCEeKFfdK0gKYFLQ")]
     [Description(@"Let fractions expire worthless.")]
     Expire = FractionDispositionTypeV2Code.Expire, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Take distribution of fractions in the form of securities.
     /// Encoded/decoded by serializers as &quot;DIST&quot;.
@@ -50,5 +50,4 @@ public enum FractionDispositionType10Code
     [IsoId("_YNHicWSCEeKFfdK0gKYFLQ")]
     [Description(@"Take distribution of fractions in the form of securities.")]
     IssueFraction = FractionDispositionTypeV2Code.IssueFraction, // same ordinal as derivation source for type conversions
-    
 }

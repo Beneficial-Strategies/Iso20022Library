@@ -23,16 +23,18 @@ public enum CustomerTypeCode
     [IsoId("_s5GxEFzCEeeDqe2giKl0eQ")]
     [Description(@"Customer acting on his own as an individual.")]
     IndividualPerson,
-    
+
     /// <summary>
     /// Customer acting on behalf of a corporation  (e.g. in the framework of an employment contract).
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
     /// </summary>
     [EnumMember(Value = "CORP")]
     [IsoId("_5QSJIFzCEeeDqe2giKl0eQ")]
-    [Description(@"Customer acting on behalf of a corporation  (e.g. in the framework of an employment contract).")]
+    [Description(
+        @"Customer acting on behalf of a corporation  (e.g. in the framework of an employment contract)."
+    )]
     CorporateCustomer,
-    
+
     /// <summary>
     /// Customer acting on behalf of a government or related entity.
     /// Encoded/decoded by serializers as &quot;GOVE&quot;.
@@ -41,7 +43,7 @@ public enum CustomerTypeCode
     [IsoId("_Gz77YFzDEeeDqe2giKl0eQ")]
     [Description(@"Customer acting on behalf of a government or related entity.")]
     Government,
-    
+
     /// <summary>
     /// Customer acting in the framework of a commercial contract with a third-party.
     /// Encoded/decoded by serializers as &quot;COMC&quot;.
@@ -50,7 +52,7 @@ public enum CustomerTypeCode
     [IsoId("_cMyvUFzDEeeDqe2giKl0eQ")]
     [Description(@"Customer acting in the framework of a commercial contract with a third-party.")]
     Commercial,
-    
+
     /// <summary>
     /// Other type of activity defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +61,7 @@ public enum CustomerTypeCode
     [IsoId("_szCv4FzDEeeDqe2giKl0eQ")]
     [Description(@"Other type of activity defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of activity defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +70,7 @@ public enum CustomerTypeCode
     [IsoId("_xRuhsFzDEeeDqe2giKl0eQ")]
     [Description(@"Other type of activity defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Customer acting as an individual in a group.
     /// Encoded/decoded by serializers as &quot;INGR&quot;.
@@ -77,7 +79,7 @@ public enum CustomerTypeCode
     [IsoId("_sRkccHhMEee6_vnrijrKgg")]
     [Description(@"Customer acting as an individual in a group.")]
     IndividualInAGroup,
-    
+
     /// <summary>
     /// Guest travelling in a business group on duty.
     /// Encoded/decoded by serializers as &quot;COGR&quot;.
@@ -86,7 +88,7 @@ public enum CustomerTypeCode
     [IsoId("_TexZwHhjEeeDqfQQWUtugw")]
     [Description(@"Guest travelling in a business group on duty.")]
     CorporateGroup,
-    
+
     /// <summary>
     /// Person engaged in a self employment contract.
     /// Encoded/decoded by serializers as &quot;SELF&quot;.
@@ -95,7 +97,7 @@ public enum CustomerTypeCode
     [IsoId("_w2opMHjzEeeiMfkH-CbtpQ")]
     [Description(@"Person engaged in a self employment contract.")]
     SelfEmployed,
-    
+
     /// <summary>
     /// Company
     /// Encoded/decoded by serializers as &quot;CPNY&quot;.
@@ -104,7 +106,7 @@ public enum CustomerTypeCode
     [IsoId("_jSqEwC7QEemIy6A-26wnAg")]
     [Description(@"Company")]
     Company,
-    
+
     /// <summary>
     /// Consumer
     /// Encoded/decoded by serializers as &quot;CSMR&quot;.
@@ -113,5 +115,4 @@ public enum CustomerTypeCode
     [IsoId("_jZAkYC7QEemIy6A-26wnAg")]
     [Description(@"Consumer")]
     Consumer,
-    
 }

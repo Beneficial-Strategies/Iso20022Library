@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PreviousYear2Choice.AllPreviousYears))]
     [KnownType(typeof(PreviousYear2Choice.SpecificPreviousYears))]
-    [JsonDerivedType(typeof(PreviousYear2Choice.AllPreviousYears),nameof(PreviousYear2Choice.AllPreviousYears))]
-    [JsonDerivedType(typeof(PreviousYear2Choice.SpecificPreviousYears),nameof(PreviousYear2Choice.SpecificPreviousYears))]
+    [JsonDerivedType(
+        typeof(PreviousYear2Choice.AllPreviousYears),
+        nameof(PreviousYear2Choice.AllPreviousYears)
+    )]
+    [JsonDerivedType(
+        typeof(PreviousYear2Choice.SpecificPreviousYears),
+        nameof(PreviousYear2Choice.SpecificPreviousYears)
+    )]
     [IsoId("_dNZ_cbNBEeex65jrLOfSTw")]
     [DisplayName("Previous Year 2 Choice")]
-    public abstract partial record PreviousYear2Choice_
-    {
-    }
+    public abstract record PreviousYear2Choice_ { }
 }

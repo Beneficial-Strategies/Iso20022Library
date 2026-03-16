@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WhkGsaybEeupy7O5H7ITjQ")]
 [DisplayName("Balance")]
-public partial record Balance28
+public record Balance28
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of card account balance.
     /// </summary>
     [IsoId("_Wl6bMaybEeupy7O5H7ITjQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required BalanceType15Code Type { get; init; } 
-    
+    public required BalanceType15Code Type { get; init; }
+
     /// <summary>
     /// Other card account balance type.
     /// </summary>
@@ -33,33 +31,33 @@ public partial record Balance28
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
     /// Amount value.
     /// </summary>
     [IsoId("_Wl6bNaybEeupy7O5H7ITjQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Currency of the account.
     /// </summary>
     [IsoId("_Wl6bN6ybEeupy7O5H7ITjQ")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ISO3NumericCurrencyCode? Currency { get; init; } 
-    
+    public ISO3NumericCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Indicates whether the value of the balance id positive or negative.
     /// </summary>
     [IsoId("_Wl6bOaybEeupy7O5H7ITjQ")]
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; } 
-    
+    public CreditDebit3Code? CreditDebit { get; init; }
+
     /// <summary>
     /// Indicates whether the value of balance is expressed in the currency of the cardholder or not.
     /// True: Balance is expressed in the currency of the cardholder
@@ -69,8 +67,8 @@ public partial record Balance28
     [DisplayName("Cardholder Currency Indicator")]
     [IsoXmlTag("CrdhldrCcyInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardholderCurrencyIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? CardholderCurrencyIndicator { get; init; }
+
     /// <summary>
     /// Date of the balance.
     /// </summary>
@@ -78,9 +76,5 @@ public partial record Balance28
     [DisplayName("Balance Date")]
     [IsoXmlTag("BalDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BalanceDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? BalanceDate { get; init; }
 }

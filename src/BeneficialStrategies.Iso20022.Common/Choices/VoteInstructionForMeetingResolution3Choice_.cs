@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(VoteInstructionForMeetingResolution3Choice.VoteIndication))]
     [KnownType(typeof(VoteInstructionForMeetingResolution3Choice.Shareholder))]
-    [JsonDerivedType(typeof(VoteInstructionForMeetingResolution3Choice.VoteIndication),nameof(VoteInstructionForMeetingResolution3Choice.VoteIndication))]
-    [JsonDerivedType(typeof(VoteInstructionForMeetingResolution3Choice.Shareholder),nameof(VoteInstructionForMeetingResolution3Choice.Shareholder))]
+    [JsonDerivedType(
+        typeof(VoteInstructionForMeetingResolution3Choice.VoteIndication),
+        nameof(VoteInstructionForMeetingResolution3Choice.VoteIndication)
+    )]
+    [JsonDerivedType(
+        typeof(VoteInstructionForMeetingResolution3Choice.Shareholder),
+        nameof(VoteInstructionForMeetingResolution3Choice.Shareholder)
+    )]
     [IsoId("_nguqQa4dEemG7MmivSuE5g")]
     [DisplayName("Vote Instruction For Meeting Resolution 3 Choice")]
-    public abstract partial record VoteInstructionForMeetingResolution3Choice_
-    {
-    }
+    public abstract record VoteInstructionForMeetingResolution3Choice_ { }
 }

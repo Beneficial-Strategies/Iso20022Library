@@ -55,12 +55,15 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
     {
         // Practical check: at least one cancellation target must be specified.
         RuleFor(x => x)
-            .Must(x => x.OriginalGroupInformationAndCancellation is not null
-                    || x.TransactionInformation is not null)
-                .WithName("UnderlyingTransaction28")
-                .WithMessage(
-                    "UnderlyingTransaction28: at least one of OriginalGroupInformationAndCancellation " +
-                    "or TransactionInformation must be present.");
+            .Must(x =>
+                x.OriginalGroupInformationAndCancellation is not null
+                || x.TransactionInformation is not null
+            )
+            .WithName("UnderlyingTransaction28")
+            .WithMessage(
+                "UnderlyingTransaction28: at least one of OriginalGroupInformationAndCancellation "
+                    + "or TransactionInformation must be present."
+            );
 
         // ── GroupCancellationAndReasonRule ───────────────────────────────────────
         RuleFor(x => x)
@@ -69,12 +72,15 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
                 if (x.OriginalGroupInformationAndCancellation?.GroupCancellation != "true")
                     return true;
                 return x.OriginalGroupInformationAndCancellation
-                         .CancellationReasonInformation?.Reason is not null;
+                    .CancellationReasonInformation
+                    ?.Reason
+                    is not null;
             })
-                .WithName("GroupCancellationAndReasonRule")
-                .WithMessage(
-                    "If GroupCancellation is true, CancellationReasonInformation/Reason must be present " +
-                    "(GroupCancellationAndReasonRule).");
+            .WithName("GroupCancellationAndReasonRule")
+            .WithMessage(
+                "If GroupCancellation is true, CancellationReasonInformation/Reason must be present "
+                    + "(GroupCancellationAndReasonRule)."
+            );
 
         // ── GroupCancellationAndNumberOfTransactionsRule ─────────────────────────
         RuleFor(x => x)
@@ -83,53 +89,74 @@ public sealed class UnderlyingTransaction28Validator : AbstractValidator<Underly
                 if (x.OriginalGroupInformationAndCancellation?.GroupCancellation != "false")
                     return true;
                 var nbStr = x.OriginalGroupInformationAndCancellation.NumberOfTransactions;
-                if (nbStr is null) return true; // NumberOfTransactions is optional — skip if absent
-                if (!int.TryParse(nbStr, out int nb)) return false;
+                if (nbStr is null)
+                    return true; // NumberOfTransactions is optional — skip if absent
+                if (!int.TryParse(nbStr, out int nb))
+                    return false;
                 int txCount = x.TransactionInformation is null ? 0 : 1;
                 return nb == txCount;
             })
-                .WithName("GroupCancellationAndNumberOfTransactionsRule")
-                .WithMessage(
-                    "If GroupCancellation is false, NumberOfTransactions must equal the number of " +
-                    "TransactionInformation occurrences (GroupCancellationAndNumberOfTransactionsRule).");
+            .WithName("GroupCancellationAndNumberOfTransactionsRule")
+            .WithMessage(
+                "If GroupCancellation is false, NumberOfTransactions must equal the number of "
+                    + "TransactionInformation occurrences (GroupCancellationAndNumberOfTransactionsRule)."
+            );
 
         // ── GroupCancellationTrueAndTransactionInformationRule ───────────────────
         RuleFor(x => x)
             .Must(x =>
-                !(x.OriginalGroupInformationAndCancellation?.GroupCancellation == "true"
-                  && x.TransactionInformation is not null))
-                .WithName("GroupCancellationTrueAndTransactionInformationRule")
-                .WithMessage(
-                    "If GroupCancellation is true, TransactionInformation must not be present " +
-                    "(GroupCancellationTrueAndTransactionInformationRule).");
+                !(
+                    x.OriginalGroupInformationAndCancellation?.GroupCancellation == "true"
+                    && x.TransactionInformation is not null
+                )
+            )
+            .WithName("GroupCancellationTrueAndTransactionInformationRule")
+            .WithMessage(
+                "If GroupCancellation is true, TransactionInformation must not be present "
+                    + "(GroupCancellationTrueAndTransactionInformationRule)."
+            );
 
         // ── GroupCancellationFalseAndTransactionInformationRule ──────────────────
         RuleFor(x => x)
             .Must(x =>
-                !(x.OriginalGroupInformationAndCancellation?.GroupCancellation == "false"
-                  && x.TransactionInformation is null))
-                .WithName("GroupCancellationFalseAndTransactionInformationRule")
-                .WithMessage(
-                    "If GroupCancellation is false, TransactionInformation must be present " +
-                    "(GroupCancellationFalseAndTransactionInformationRule).");
+                !(
+                    x.OriginalGroupInformationAndCancellation?.GroupCancellation == "false"
+                    && x.TransactionInformation is null
+                )
+            )
+            .WithName("GroupCancellationFalseAndTransactionInformationRule")
+            .WithMessage(
+                "If GroupCancellation is false, TransactionInformation must be present "
+                    + "(GroupCancellationFalseAndTransactionInformationRule)."
+            );
 
         // ── GroupOrTransactionCaseRule ───────────────────────────────────────────
         RuleFor(x => x)
             .Must(x =>
-                !(x.OriginalGroupInformationAndCancellation?.Case is not null
-                  && x.TransactionInformation?.Case is not null))
-                .WithName("GroupOrTransactionCaseRule")
-                .WithMessage(
-                    "Case may be present at either OriginalGroupInformationAndCancellation or " +
-                    "TransactionInformation level, but not both (GroupOrTransactionCaseRule).");
+                !(
+                    x.OriginalGroupInformationAndCancellation?.Case is not null
+                    && x.TransactionInformation?.Case is not null
+                )
+            )
+            .WithName("GroupOrTransactionCaseRule")
+            .WithMessage(
+                "Case may be present at either OriginalGroupInformationAndCancellation or "
+                    + "TransactionInformation level, but not both (GroupOrTransactionCaseRule)."
+            );
 
         // ── Nested component validators ──────────────────────────────────────────
-        When(x => x.OriginalGroupInformationAndCancellation is not null, () =>
-            RuleFor(x => x.OriginalGroupInformationAndCancellation)
-                .SetValidator(new OriginalGroupHeader15Validator()!));
+        When(
+            x => x.OriginalGroupInformationAndCancellation is not null,
+            () =>
+                RuleFor(x => x.OriginalGroupInformationAndCancellation)
+                    .SetValidator(new OriginalGroupHeader15Validator()!)
+        );
 
-        When(x => x.TransactionInformation is not null, () =>
-            RuleFor(x => x.TransactionInformation)
-                .SetValidator(new PaymentTransaction137Validator()!));
+        When(
+            x => x.TransactionInformation is not null,
+            () =>
+                RuleFor(x => x.TransactionInformation)
+                    .SetValidator(new PaymentTransaction137Validator()!)
+        );
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tqQ9pZEhEe-Goq1fIU72qA")]
 [DisplayName("Limit Journal3")]
-public partial record LimitJournal3
+public record LimitJournal3
 {
-    #nullable enable
-
     /// <summary>
     /// Journal Activity Date.
     /// </summary>
     [DisplayName("Journal Activity Date")]
     [IsoXmlTag("JrnlActvtyDt")]
-    public required IsoISODate JournalActivityDate { get; init; } 
+    public required IsoISODate JournalActivityDate { get; init; }
 
     /// <summary>
     /// Journal Entry.
@@ -37,9 +35,5 @@ public partial record LimitJournal3
     /// </summary>
     [DisplayName("Limit")]
     [IsoXmlTag("Lmt")]
-    public required LimitAmount1 Limit { get; init; } 
-
-    
-    #nullable disable
-    
+    public required LimitAmount1 Limit { get; init; }
 }

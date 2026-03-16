@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KLMHgaEoEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction48")]
-public partial record ATMTransaction48
+public record ATMTransaction48
 {
-    #nullable enable
-
     /// <summary>
     /// Account Information.
     /// </summary>
@@ -44,7 +42,7 @@ public partial record ATMTransaction48
     /// </summary>
     [DisplayName("Authorisation Result")]
     [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; } 
+    public AuthorisationResult20? AuthorisationResult { get; init; }
 
     /// <summary>
     /// Command.
@@ -58,44 +56,40 @@ public partial record ATMTransaction48
     /// </summary>
     [DisplayName("Currency Conversion")]
     [IsoXmlTag("CcyConvs")]
-    public CurrencyConversion33? CurrencyConversion { get; init; } 
+    public CurrencyConversion33? CurrencyConversion { get; init; }
 
     /// <summary>
     /// Currency Exchange.
     /// </summary>
     [DisplayName("Currency Exchange")]
     [IsoXmlTag("CcyXchg")]
-    public CurrencyConversion5? CurrencyExchange { get; init; } 
+    public CurrencyConversion5? CurrencyExchange { get; init; }
 
     /// <summary>
     /// Customer Service Profile.
     /// </summary>
     [DisplayName("Customer Service Profile")]
     [IsoXmlTag("CstmrSvcPrfl")]
-    public ATMCustomerProfile7? CustomerServiceProfile { get; init; } 
+    public ATMCustomerProfile7? CustomerServiceProfile { get; init; }
 
     /// <summary>
     /// ICC Related Data.
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; } 
+    public IsoMax10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; } 
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Response.
     /// </summary>
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
-    public required ResponseType12 TransactionResponse { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ResponseType12 TransactionResponse { get; init; }
 }

@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(MatchingStatus33Choice.Matched))]
     [KnownType(typeof(MatchingStatus33Choice.Unmatched))]
     [KnownType(typeof(MatchingStatus33Choice.Proprietary))]
-    [JsonDerivedType(typeof(MatchingStatus33Choice.Matched),nameof(MatchingStatus33Choice.Matched))]
-    [JsonDerivedType(typeof(MatchingStatus33Choice.Unmatched),nameof(MatchingStatus33Choice.Unmatched))]
-    [JsonDerivedType(typeof(MatchingStatus33Choice.Proprietary),nameof(MatchingStatus33Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(MatchingStatus33Choice.Matched),
+        nameof(MatchingStatus33Choice.Matched)
+    )]
+    [JsonDerivedType(
+        typeof(MatchingStatus33Choice.Unmatched),
+        nameof(MatchingStatus33Choice.Unmatched)
+    )]
+    [JsonDerivedType(
+        typeof(MatchingStatus33Choice.Proprietary),
+        nameof(MatchingStatus33Choice.Proprietary)
+    )]
     [IsoId("_7lZ_IOB9Eei2UYJ62ws-Fw")]
     [DisplayName("Matching Status 33 Choice")]
-    public abstract partial record MatchingStatus33Choice_
-    {
-    }
+    public abstract record MatchingStatus33Choice_ { }
 }

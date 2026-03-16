@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_OGUBUGXPEem9Y55YJ70L8g")]
-[Description(@"Terminal category code of the place where the merchant actually performed the transaction.")]
+[Description(
+    @"Terminal category code of the place where the merchant actually performed the transaction."
+)]
 [DerivedFrom(typeof(TerminalIntegrationCategoryCode))]
 public enum TerminalIntegrationCategory1Code
 {
@@ -23,7 +25,7 @@ public enum TerminalIntegrationCategory1Code
     [IsoId("_hundoWXPEem9Y55YJ70L8g")]
     [Description(@"Multiple terminals linked to a unique sale terminal.")]
     MultiplePOITerminal = TerminalIntegrationCategoryCode.MultiplePOITerminal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal serving multiple sale terminals.
     /// Encoded/decoded by serializers as &quot;MSLE&quot;.
@@ -32,7 +34,7 @@ public enum TerminalIntegrationCategory1Code
     [IsoId("_jFUx4WXPEem9Y55YJ70L8g")]
     [Description(@"Terminal serving multiple sale terminals.")]
     MultipleSaleTerminal = TerminalIntegrationCategoryCode.MultipleSaleTerminal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal linked to a unique sale terminal.
     /// Encoded/decoded by serializers as &quot;SSLE&quot;.
@@ -41,5 +43,4 @@ public enum TerminalIntegrationCategory1Code
     [IsoId("_jfLcUWXPEem9Y55YJ70L8g")]
     [Description(@"Terminal linked to a unique sale terminal.")]
     SingleSaleTerminal = TerminalIntegrationCategoryCode.SingleSaleTerminal, // same ordinal as derivation source for type conversions
-    
 }

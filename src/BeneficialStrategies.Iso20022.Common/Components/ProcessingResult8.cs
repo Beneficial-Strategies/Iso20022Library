@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QVynMUQlEeiO2efj8UFv0A")]
 [DisplayName("Processing Result")]
-public partial record ProcessingResult8
+public record ProcessingResult8
 {
-    #nullable enable
-    
     /// <summary>
     /// Result of the processing.
     /// </summary>
     [IsoId("_Qh_QIUQlEeiO2efj8UFv0A")]
     [DisplayName("Result Data")]
     [IsoXmlTag("RsltData")]
-    public ResultData1? ResultData { get; init; } 
-    
+    public ResultData1? ResultData { get; init; }
+
     /// <summary>
     /// Additional information relevant for the destination.
     /// ISO 8583 bit 44
@@ -33,9 +31,5 @@ public partial record ProcessingResult8
     [IsoId("_Qh_QJUQlEeiO2efj8UFv0A")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation20? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation20? AdditionalInformation { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GejwcShKEeyhZIgCcGlTyA")]
 [DisplayName("Sale Context")]
-public partial record SaleContext8
+public record SaleContext8
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the sale terminal (electronic cash register or point of sale terminal) or the sale system.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SaleContext8
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleIdentification { get; init; }
+
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record SaleContext8
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+
     /// <summary>
     /// Identify a sale transaction assigned by the sale system.
     /// </summary>
@@ -45,25 +43,25 @@ public partial record SaleContext8
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReferenceNumber { get; init; }
+
     /// <summary>
     /// Type of goods and/or services.
     /// </summary>
     [IsoId("_GknVJyhKEeyhZIgCcGlTyA")]
     [DisplayName("Goods And Services Type")]
     [IsoXmlTag("GoodsAndSvcsTp")]
-    public GoodsAndServices1Code? GoodsAndServicesType { get; init; } 
-    
+    public GoodsAndServices1Code? GoodsAndServicesType { get; init; }
+
     /// <summary>
     /// Sub type of goods and/or services.
     /// </summary>
     [IsoId("_GknVKShKEeyhZIgCcGlTyA")]
     [DisplayName("Good And Services Sub Type")]
     [IsoXmlTag("GoodAndSvcsSubTp")]
-    public GoodsAndServicesSubType1Code? GoodAndServicesSubType { get; init; } 
-    
+    public GoodsAndServicesSubType1Code? GoodAndServicesSubType { get; init; }
+
     /// <summary>
     /// Other goods and services sub type applied to the transaction.
     /// </summary>
@@ -71,17 +69,17 @@ public partial record SaleContext8
     [DisplayName("Good And Services Other Sub Type")]
     [IsoXmlTag("GoodAndSvcsOthrSubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? GoodAndServicesOtherSubType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? GoodAndServicesOtherSubType { get; init; }
+
     /// <summary>
     /// Code that specifies the good or service delivery channel.
     /// </summary>
     [IsoId("_pHSlYD5LEeyHI64WSlzTlg")]
     [DisplayName("Good And Service Delivery Channel")]
     [IsoXmlTag("GoodAndSvcDlvryChanl")]
-    public GoodAndServiceDeliveryChannel1Code? GoodAndServiceDeliveryChannel { get; init; } 
-    
+    public GoodAndServiceDeliveryChannel1Code? GoodAndServiceDeliveryChannel { get; init; }
+
     /// <summary>
     /// Other good or service delivery channel defined at private or national level.
     /// </summary>
@@ -89,17 +87,17 @@ public partial record SaleContext8
     [DisplayName("Other Good And Service Delivery Channel")]
     [IsoXmlTag("OthrGoodAndSvcDlvryChanl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherGoodAndServiceDeliveryChannel { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherGoodAndServiceDeliveryChannel { get; init; }
+
     /// <summary>
     /// Code that specifies the good or service delivery schedule.
     /// </summary>
     [IsoId("_AJPeED5MEeyHI64WSlzTlg")]
     [DisplayName("Good And Service Delivery Schedule")]
     [IsoXmlTag("GoodAndSvcDlvrySchdl")]
-    public GoodAndServiceDeliverySchedule1Code? GoodAndServiceDeliverySchedule { get; init; } 
-    
+    public GoodAndServiceDeliverySchedule1Code? GoodAndServiceDeliverySchedule { get; init; }
+
     /// <summary>
     /// Other good or service delivery schedule defined at private or national level.
     /// </summary>
@@ -107,9 +105,9 @@ public partial record SaleContext8
     [DisplayName("Other Good And Service Delivery Schedule")]
     [IsoXmlTag("OthrGoodAndSvcDlvrySchdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherGoodAndServiceDeliverySchedule { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherGoodAndServiceDeliverySchedule { get; init; }
+
     /// <summary>
     /// Also referred to as split tender. Indicates whether the payment transaction is a partial payment of the sale transaction.
     /// True: Partial payment of a sale transaction
@@ -119,8 +117,8 @@ public partial record SaleContext8
     [DisplayName("Split Payment Indicator")]
     [IsoXmlTag("SpltPmtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SplitPaymentIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? SplitPaymentIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether a receipt from the goods or services provider was requested.
     /// True: Receipt requested
@@ -130,16 +128,16 @@ public partial record SaleContext8
     [DisplayName("Receipt Request Indicator")]
     [IsoXmlTag("RctReqInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ReceiptRequestIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? ReceiptRequestIndicator { get; init; }
+
     /// <summary>
     /// Type of receipt requested or communication channel used.
     /// </summary>
     [IsoId("_GknVMShKEeyhZIgCcGlTyA")]
     [DisplayName("Receipt Type")]
     [IsoXmlTag("RctTp")]
-    public ReceiptType1Code? ReceiptType { get; init; } 
-    
+    public ReceiptType1Code? ReceiptType { get; init; }
+
     /// <summary>
     /// Destination of the receipt (for example, e-mail address, SMS number, etc.).
     /// </summary>
@@ -147,18 +145,14 @@ public partial record SaleContext8
     [DisplayName("Receipt Destination")]
     [IsoXmlTag("RctDstn")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? ReceiptDestination { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? ReceiptDestination { get; init; }
+
     /// <summary>
     /// Contains additional data.
     /// </summary>
     [IsoId("_SeXxYShKEeyhZIgCcGlTyA")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalData { get; init; }
 }

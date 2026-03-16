@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_90jEyPGAEemQ7oqCO5NTQw")]
-[Description(@"Specifies the debtor activation amendment reason code, as published in an external debtor activation amendment reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the debtor activation amendment reason code, as published in an external debtor activation amendment reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalDebtorActivationAmendmentReason1Code))]
 public enum ExternalDebtorActivationAmendmentReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalDebtorActivationAmendmentReasonCode
     [IsoId("_uuSFWfRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication,
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDebtorActivationAmendmentReasonCode
     [IsoId("_uubPQPRYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference,
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDebtorActivationAmendmentReasonCode
     [IsoId("_uulAQPRYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason,
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDebtorActivationAmendmentReasonCode
     [IsoId("_90jEyfGAEemQ7oqCO5NTQw")]
     [Description(@"Technical rejection.")]
     TechnicalRejection,
-    
+
     /// <summary>
     /// Unknown creditor.
     /// Encoded/decoded by serializers as &quot;UCRD&quot;.
@@ -60,5 +62,4 @@ public enum ExternalDebtorActivationAmendmentReasonCode
     [IsoId("_90jEyvGAEemQ7oqCO5NTQw")]
     [Description(@"Unknown creditor.")]
     UnknownCreditor,
-    
 }

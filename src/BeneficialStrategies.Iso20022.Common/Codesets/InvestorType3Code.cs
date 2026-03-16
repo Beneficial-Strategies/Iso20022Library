@@ -23,7 +23,7 @@ public enum InvestorType3Code
     [IsoId("_KSbzAddkEeibyvRfU9vJ7w")]
     [Description(@"Investor is a retail investor.")]
     Retail = InvestorTypeCode.Retail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is professional or professional per se.
     /// Encoded/decoded by serializers as &quot;PRF2&quot;.
@@ -32,7 +32,7 @@ public enum InvestorType3Code
     [IsoId("_LvkfYddkEeibyvRfU9vJ7w")]
     [Description(@"Investor is professional or professional per se.")]
     ProfessionalOrPerSe = InvestorTypeCode.ProfessionalOrPerSe, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is neither professional or retail.
     /// Encoded/decoded by serializers as &quot;NEI1&quot;.
@@ -41,7 +41,7 @@ public enum InvestorType3Code
     [IsoId("_Mq77cddkEeibyvRfU9vJ7w")]
     [Description(@"Investor is neither professional or retail.")]
     NeitherProfessionalOrRetail = InvestorTypeCode.NeitherProfessionalOrRetail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is both professional and retail.
     /// Encoded/decoded by serializers as &quot;BOT2&quot;.
@@ -50,5 +50,4 @@ public enum InvestorType3Code
     [IsoId("_NgC-gddkEeibyvRfU9vJ7w")]
     [Description(@"Investor is both professional and retail.")]
     BothProfessionalAndRetail = InvestorTypeCode.BothProfessionalAndRetail, // same ordinal as derivation source for type conversions
-    
 }

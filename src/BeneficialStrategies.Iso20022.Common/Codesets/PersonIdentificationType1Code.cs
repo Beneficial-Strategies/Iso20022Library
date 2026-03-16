@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aGcplNp-Ed-ak6NoX_4Aeg_1146103115")]
-[Description(@"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number.")]
+[Description(
+    @"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number."
+)]
 [DerivedFrom(typeof(PersonIdentificationTypeCode))]
 public enum PersonIdentificationType1Code
 {
@@ -23,7 +25,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGcpldp-Ed-ak6NoX_4Aeg_-962231662")]
     [Description(@"Number assigned by a passport authority to a passport.")]
     PassportNumber = PersonIdentificationTypeCode.PassportNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account issued by the Central Provident Fund Board (Singapore).
     /// Encoded/decoded by serializers as &quot;CPFA&quot;.
@@ -32,7 +34,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGcpltp-Ed-ak6NoX_4Aeg_-962231602")]
     [Description(@"Account issued by the Central Provident Fund Board (Singapore).")]
     CPFAccountNumber = PersonIdentificationTypeCode.CPFAccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Supplementary retirement scheme account number.
     /// Encoded/decoded by serializers as &quot;SRSA&quot;.
@@ -41,16 +43,19 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGcpl9p-Ed-ak6NoX_4Aeg_-962231560")]
     [Description(@"Supplementary retirement scheme account number.")]
     SRSAccountNumber = PersonIdentificationTypeCode.SRSAccountNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// National registration identification number. In Singapore this is known as the NRIC.
     /// Encoded/decoded by serializers as &quot;NRIN&quot;.
     /// </summary>
     [EnumMember(Value = "NRIN")]
     [IsoId("_aGcpmNp-Ed-ak6NoX_4Aeg_-962231259")]
-    [Description(@"National registration identification number. In Singapore this is known as the NRIC.")]
-    NationalRegistrationIdentificationNumber = PersonIdentificationTypeCode.NationalRegistrationIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"National registration identification number. In Singapore this is known as the NRIC."
+    )]
+    NationalRegistrationIdentificationNumber =
+        PersonIdentificationTypeCode.NationalRegistrationIdentificationNumber, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Another type of identification type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,7 +64,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGmakNp-Ed-ak6NoX_4Aeg_-962231217")]
     [Description(@"Another type of identification type.")]
     Other = PersonIdentificationTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a license authority to a driver&apos;s license.
     /// Encoded/decoded by serializers as &quot;DRLC&quot;.
@@ -68,7 +73,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGmakdp-Ed-ak6NoX_4Aeg_-2107022610")]
     [Description(@"Number assigned by a license authority to a driver's license.")]
     DriversLicenseNumber = PersonIdentificationTypeCode.DriversLicenseNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a social security agency.
     /// Encoded/decoded by serializers as &quot;SOCS&quot;.
@@ -77,7 +82,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGmaktp-Ed-ak6NoX_4Aeg_-2107022143")]
     [Description(@"Number assigned by a social security agency.")]
     SocialSecurityNumber = PersonIdentificationTypeCode.SocialSecurityNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a government agency to identify foreign nationals.
     /// Encoded/decoded by serializers as &quot;AREG&quot;.
@@ -86,7 +91,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGmak9p-Ed-ak6NoX_4Aeg_-2107022083")]
     [Description(@"Number assigned by a government agency to identify foreign nationals.")]
     AlienRegistrationNumber = PersonIdentificationTypeCode.AlienRegistrationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned by a national authority to an identity card.
     /// Encoded/decoded by serializers as &quot;IDCD&quot;.
@@ -95,7 +100,7 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGmalNp-Ed-ak6NoX_4Aeg_-2106102034")]
     [Description(@"Number assigned by a national authority to an identity card.")]
     IdentityCardNumber = PersonIdentificationTypeCode.IdentityCardNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number assigned to an employer by a registration authority.
     /// Encoded/decoded by serializers as &quot;EMID&quot;.
@@ -104,5 +109,4 @@ public enum PersonIdentificationType1Code
     [IsoId("_aGmaldp-Ed-ak6NoX_4Aeg_-2106101948")]
     [Description(@"Number assigned to an employer by a registration authority.")]
     EmployerIdentificationNumber = PersonIdentificationTypeCode.EmployerIdentificationNumber, // same ordinal as derivation source for type conversions
-    
 }

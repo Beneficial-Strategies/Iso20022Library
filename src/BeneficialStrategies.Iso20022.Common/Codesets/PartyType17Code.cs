@@ -23,7 +23,7 @@ public enum PartyType17Code
     [IsoId("_T1iDwUqLEeenp6hmNprBHg")]
     [Description(@"Other card payment entity type defined at national level")]
     OtherNational = PartyTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum PartyType17Code
     [IsoId("_UBmw4UqLEeenp6hmNprBHg")]
     [Description(@"Other card payment entity type defined at private level")]
     OtherPrivate = PartyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity acquiring card transactions.
     /// Encoded/decoded by serializers as &quot;ACQR&quot;.
@@ -41,16 +41,18 @@ public enum PartyType17Code
     [IsoId("_VNeHEUqLEeenp6hmNprBHg")]
     [Description(@"Entity acquiring card transactions.")]
     Acquirer = PartyTypeCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing acquiring card payment processing services on behalf on an acquirer.
     /// Encoded/decoded by serializers as &quot;ACQP&quot;.
     /// </summary>
     [EnumMember(Value = "ACQP")]
     [IsoId("_VcQxAUqLEeenp6hmNprBHg")]
-    [Description(@"Entity providing acquiring card payment processing services on behalf on an acquirer.")]
+    [Description(
+        @"Entity providing acquiring card payment processing services on behalf on an acquirer."
+    )]
     AcquirerProcessor = PartyTypeCode.AcquirerProcessor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Party that issues cards.
     /// Encoded/decoded by serializers as &quot;CISS&quot;.
@@ -59,23 +61,26 @@ public enum PartyType17Code
     [IsoId("_WAHE8UqLEeenp6hmNprBHg")]
     [Description(@"Party that issues cards.")]
     CardIssuer = PartyTypeCode.CardIssuer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing issuing card payment processing services on behalf on an issuer.
     /// Encoded/decoded by serializers as &quot;CISP&quot;.
     /// </summary>
     [EnumMember(Value = "CISP")]
     [IsoId("_WM15YUqLEeenp6hmNprBHg")]
-    [Description(@"Entity providing issuing card payment processing services on behalf on an issuer.")]
+    [Description(
+        @"Entity providing issuing card payment processing services on behalf on an issuer."
+    )]
     CardIssuerProcessor = PartyTypeCode.CardIssuerProcessor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
     /// </summary>
     [EnumMember(Value = "AGNT")]
     [IsoId("_XcCQYUqLEeenp6hmNprBHg")]
-    [Description(@"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.")]
+    [Description(
+        @"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer."
+    )]
     Agent = PartyTypeCode.Agent, // same ordinal as derivation source for type conversions
-    
 }

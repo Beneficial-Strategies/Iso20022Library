@@ -23,7 +23,7 @@ public enum CashAll1Code
     [IsoId("_S1Ptsc4FEeiAhd-njDxLnA")]
     [Description(@"All assets in a portfolio should be liquidated and transferred as cash.")]
     LiquidatedTransferAsCash = CashAllCode.LiquidatedTransferAsCash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// All assets in a portfolio should not be liquidated and transferred as cash.
     /// Encoded/decoded by serializers as &quot;NLIQ&quot;.
@@ -32,5 +32,4 @@ public enum CashAll1Code
     [IsoId("_S7Dawc4FEeiAhd-njDxLnA")]
     [Description(@"All assets in a portfolio should not be liquidated and transferred as cash.")]
     NotLiquidatedTransferAsCash = CashAllCode.NotLiquidatedTransferAsCash, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum ReinvestmentPlanCode
     [IsoId("_0FXc8Ff8EeOuDtoQo1qilA")]
     [Description(@"Reinvestment plan is for retail investors only.")]
     ForRetailInvestorsOnly,
-    
+
     /// <summary>
     /// Full reinvestment plan offered.
     /// Encoded/decoded by serializers as &quot;FULL&quot;.
@@ -32,7 +32,7 @@ public enum ReinvestmentPlanCode
     [IsoId("_6eN1YFf8EeOuDtoQo1qilA")]
     [Description(@"Full reinvestment plan offered.")]
     FullReinvestmentPlanOffered,
-    
+
     /// <summary>
     /// Reinvestment plan is subject to shareholder approval.
     /// Encoded/decoded by serializers as &quot;SUAP&quot;.
@@ -41,5 +41,4 @@ public enum ReinvestmentPlanCode
     [IsoId("__Q_n4Ff8EeOuDtoQo1qilA")]
     [Description(@"Reinvestment plan is subject to shareholder approval.")]
     SubjectToShareholderApproval,
-    
 }

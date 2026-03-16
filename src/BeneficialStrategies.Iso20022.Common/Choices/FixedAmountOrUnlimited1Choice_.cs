@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FixedAmountOrUnlimited1Choice.Amount))]
     [KnownType(typeof(FixedAmountOrUnlimited1Choice.NotLimited))]
-    [JsonDerivedType(typeof(FixedAmountOrUnlimited1Choice.Amount),nameof(FixedAmountOrUnlimited1Choice.Amount))]
-    [JsonDerivedType(typeof(FixedAmountOrUnlimited1Choice.NotLimited),nameof(FixedAmountOrUnlimited1Choice.NotLimited))]
+    [JsonDerivedType(
+        typeof(FixedAmountOrUnlimited1Choice.Amount),
+        nameof(FixedAmountOrUnlimited1Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(FixedAmountOrUnlimited1Choice.NotLimited),
+        nameof(FixedAmountOrUnlimited1Choice.NotLimited)
+    )]
     [IsoId("_9m4ooEqAEeKw5sECfP82rg")]
     [DisplayName("Fixed Amount Or Unlimited 1 Choice")]
-    public abstract partial record FixedAmountOrUnlimited1Choice_
-    {
-    }
+    public abstract record FixedAmountOrUnlimited1Choice_ { }
 }

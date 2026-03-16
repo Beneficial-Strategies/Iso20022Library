@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pacs;
 
@@ -25,78 +23,71 @@ namespace BeneficialStrategies.Iso20022.pacs;
 /// The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.
 /// The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.
 /// </summary>
-[Description(@"Scope|The FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.|The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios.")]
+[Description(
+    @"Scope|The FinancialInstitutionToFinancialInstitutionPaymentStatusReport message is sent by an instructed agent to the previous party in the payment chain. It is used to inform this party about the positive or negative status of an instruction (either single or file). It is also used to report on a pending instruction.|Usage|The FIToFIPaymentStatusReport message is exchanged between agents to provide status information about instructions previously sent. Its usage will always be governed by a bilateral agreement between the agents.|The FIToFIPaymentStatusReport message can be used to provide information about the status (e.g. rejection, acceptance) of a credit transfer instruction, a direct debit instruction, as well as other intra-agent instructions (for example FIToFIPaymentCancellationRequest).|The FIToFIPaymentStatusReport message refers to the original instruction(s) by means of references only or by means of references and a set of elements from the original instruction.|The FIToFIPaymentStatusReport message can be used in domestic and cross-border scenarios."
+)]
 [IsoId("_akmerTqxEeWZFYSPlduMhw")]
 [DisplayName("FI To FI Payment Status Report V")]
-public partial record FIToFIPaymentStatusReportV07 : IOuterRecord
+public record FIToFIPaymentStatusReportV07 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "pacs.002.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "FIToFIPmtStsRpt";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:pacs.002.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Set of characteristics shared by all individual transactions included in the status report message.
     /// </summary>
     [IsoId("_akmevzqxEeWZFYSPlduMhw")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
-    public required GroupHeader53 GroupHeader { get; init; } 
-    
+    public required GroupHeader53 GroupHeader { get; init; }
+
     /// <summary>
     /// Original group information concerning the group of transactions, to which the status report message refers to.
     /// </summary>
     [IsoId("_akmewTqxEeWZFYSPlduMhw")]
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
-    public OriginalGroupHeader1? OriginalGroupInformationAndStatus { get; init; } 
-    
+    public OriginalGroupHeader1? OriginalGroupInformationAndStatus { get; init; }
+
     /// <summary>
     /// Information concerning the original transactions, to which the status report message refers.
     /// </summary>
     [IsoId("_akmewzqxEeWZFYSPlduMhw")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransaction63? TransactionInformationAndStatus { get; init; } 
-    
+    public PaymentTransaction63? TransactionInformationAndStatus { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_akmexTqxEeWZFYSPlduMhw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since FIToFIPaymentStatusReportV07Document is not really part of the logical business domain model, 
+// Since FIToFIPaymentStatusReportV07Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to FIToFIPaymentStatusReportV07.
-

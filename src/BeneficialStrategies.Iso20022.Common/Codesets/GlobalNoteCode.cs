@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_hbcAoGliEeGaMcKyqKNRfQ_-953519462")]
-[Description(@"Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN).")]
+[Description(
+    @"Identifies if the security will be issued in New Global Note (NGN) or Classical Global Note (CGN)."
+)]
 [Derivations(typeof(GlobalNote1Code))]
 public enum GlobalNoteCode
 {
@@ -21,16 +23,19 @@ public enum GlobalNoteCode
     /// </summary>
     [EnumMember(Value = "NGNO")]
     [IsoId("_hbcAoWliEeGaMcKyqKNRfQ_1154534279")]
-    [Description(@"Form of global certificate which refers to the books and records of the ICSDs to determine the Issue Outstanding Amount (IOA).")]
+    [Description(
+        @"Form of global certificate which refers to the books and records of the ICSDs to determine the Issue Outstanding Amount (IOA)."
+    )]
     NewGlobalNote,
-    
+
     /// <summary>
     /// Form of global certificate which requires physical annotation on the attached schedule to reflect changes in the Issue Outstanding Amount (IOA).
     /// Encoded/decoded by serializers as &quot;CGNO&quot;.
     /// </summary>
     [EnumMember(Value = "CGNO")]
     [IsoId("_hbcAomliEeGaMcKyqKNRfQ_1453098033")]
-    [Description(@"Form of global certificate which requires physical annotation on the attached schedule to reflect changes in the Issue Outstanding Amount (IOA).")]
+    [Description(
+        @"Form of global certificate which requires physical annotation on the attached schedule to reflect changes in the Issue Outstanding Amount (IOA)."
+    )]
     ClassicalGlobalNote,
-    
 }

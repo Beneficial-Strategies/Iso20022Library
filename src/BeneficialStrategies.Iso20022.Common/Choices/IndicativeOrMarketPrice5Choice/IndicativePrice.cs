@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice5Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.IndicativeOrMarketPrice5Choice
     /// </summary>
     [IsoId("_oc_1c-EJEd-udr336SN7mQ")]
     [DisplayName("Indicative Price")]
-    public partial record IndicativePrice : IndicativeOrMarketPrice5Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record IndicativePrice : IndicativeOrMarketPrice5Choice_ { }
 }

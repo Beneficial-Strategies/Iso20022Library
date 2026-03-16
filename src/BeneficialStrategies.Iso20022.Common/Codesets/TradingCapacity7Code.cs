@@ -23,7 +23,7 @@ public enum TradingCapacity7Code
     [IsoId("_yxDyIfP1EeS_qLctCs2aRQ")]
     [Description(@"Trading as Agent on behalf of a customer.")]
     Agent = TradingCapacityCode.Agent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trading as Principal.
     /// Encoded/decoded by serializers as &quot;PRIN&quot;.
@@ -32,5 +32,4 @@ public enum TradingCapacity7Code
     [IsoId("_zMIkk_P1EeS_qLctCs2aRQ")]
     [Description(@"Trading as Principal.")]
     Principal = TradingCapacityCode.Principal, // same ordinal as derivation source for type conversions
-    
 }

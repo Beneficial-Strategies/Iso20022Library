@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_xyDjAHyYEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the status of the demand for payment.")]
-[Derivations(typeof(DemandStatus1Code),typeof(DemandStatus2Code))]
+[Derivations(typeof(DemandStatus1Code), typeof(DemandStatus2Code))]
 public enum DemandStatusCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum DemandStatusCode
     [IsoId("_V0vHEHyZEeGWJuGCfvwOsQ")]
     [Description(@"Demand refused.")]
     Refused,
-    
+
     /// <summary>
     /// Extend undertaking expiry date.
     /// Encoded/decoded by serializers as &quot;EXTD&quot;.
@@ -32,7 +32,7 @@ public enum DemandStatusCode
     [IsoId("_WJq0INryEeGuxusC7C-WeA")]
     [Description(@"Extend undertaking expiry date.")]
     Extend,
-    
+
     /// <summary>
     /// Pay undertaking demand.
     /// Encoded/decoded by serializers as &quot;PAYD&quot;.
@@ -41,5 +41,4 @@ public enum DemandStatusCode
     [IsoId("_nrhhUNryEeGuxusC7C-WeA")]
     [Description(@"Pay undertaking demand.")]
     PAY,
-    
 }

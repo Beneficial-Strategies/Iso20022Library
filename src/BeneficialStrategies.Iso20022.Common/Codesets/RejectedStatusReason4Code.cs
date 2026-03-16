@@ -23,7 +23,7 @@ public enum RejectedStatusReason4Code
     [IsoId("_ViiZhtp-Ed-ak6NoX_4Aeg_-640387122")]
     [Description(@"Instruction has been received after the cut-off time.")]
     CutOffTime = RejectedStatusReasonCode.CutOffTime, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instructing party is not allowed to request a cancellation.
     /// Encoded/decoded by serializers as &quot;NALC&quot;.
@@ -32,7 +32,7 @@ public enum RejectedStatusReason4Code
     [IsoId("_ViiZh9p-Ed-ak6NoX_4Aeg_-640386732")]
     [Description(@"Instructing party is not allowed to request a cancellation.")]
     NotAllowedToCancel = RejectedStatusReasonCode.NotAllowedToCancel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is not compliant with the service level agreement.
     /// Encoded/decoded by serializers as &quot;NSLA&quot;.
@@ -41,7 +41,7 @@ public enum RejectedStatusReason4Code
     [IsoId("_ViiZiNp-Ed-ak6NoX_4Aeg_-640386347")]
     [Description(@"Instruction is not compliant with the service level agreement.")]
     NotCompliantWithSLA = RejectedStatusReasonCode.NotCompliantWithSLA, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legally impossible to cancel.
     /// Encoded/decoded by serializers as &quot;LEGL&quot;.
@@ -50,7 +50,7 @@ public enum RejectedStatusReason4Code
     [IsoId("_VirjcNp-Ed-ak6NoX_4Aeg_-640386174")]
     [Description(@"Legally impossible to cancel.")]
     LegallyImpossible = RejectedStatusReasonCode.LegallyImpossible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Another reason for the status rejected.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +59,4 @@ public enum RejectedStatusReason4Code
     [IsoId("_Virjcdp-Ed-ak6NoX_4Aeg_277257123")]
     [Description(@"Another reason for the status rejected.")]
     Other = RejectedStatusReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

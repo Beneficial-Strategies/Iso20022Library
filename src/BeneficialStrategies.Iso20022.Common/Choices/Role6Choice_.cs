@@ -12,12 +12,10 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Role6Choice.Code))]
     [KnownType(typeof(Role6Choice.Proprietary))]
     [KnownType(typeof(Role6Choice.Text))]
-    [JsonDerivedType(typeof(Role6Choice.Code),nameof(Role6Choice.Code))]
-    [JsonDerivedType(typeof(Role6Choice.Proprietary),nameof(Role6Choice.Proprietary))]
-    [JsonDerivedType(typeof(Role6Choice.Text),nameof(Role6Choice.Text))]
+    [JsonDerivedType(typeof(Role6Choice.Code), nameof(Role6Choice.Code))]
+    [JsonDerivedType(typeof(Role6Choice.Proprietary), nameof(Role6Choice.Proprietary))]
+    [JsonDerivedType(typeof(Role6Choice.Text), nameof(Role6Choice.Text))]
     [IsoId("_eSQcQTm9EeWV5sr121Fc8A")]
     [DisplayName("Role 6 Choice")]
-    public abstract partial record Role6Choice_
-    {
-    }
+    public abstract record Role6Choice_ { }
 }

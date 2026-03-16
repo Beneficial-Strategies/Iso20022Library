@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType30Code
     [IsoId("_Tlws4bv3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type milled wheat.")]
     MillingWheat = AssetClassDetailedSubProductTypeCode.MillingWheat, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +32,4 @@ public enum AssetClassDetailedSubProductType30Code
     [IsoId("_VhCGwbv3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sd6csZ9uEe-nbM0aSPcoiQ")]
 [DisplayName("Acquirer Protocol Parameters17")]
-public partial record AcquirerProtocolParameters17
+public record AcquirerProtocolParameters17
 {
-    #nullable enable
-
     /// <summary>
     /// Acquirer Identification.
     /// </summary>
@@ -30,7 +28,7 @@ public partial record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
-    public required TerminalManagementAction3Code ActionType { get; init; } 
+    public required TerminalManagementAction3Code ActionType { get; init; }
 
     /// <summary>
     /// Amount Qualifier For Reservation.
@@ -51,7 +49,7 @@ public partial record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Batch Digital Signature")]
     [IsoXmlTag("BtchDgtlSgntr")]
-    public IsoTrueFalseIndicator? BatchDigitalSignature { get; init; } 
+    public IsoTrueFalseIndicator? BatchDigitalSignature { get; init; }
 
     /// <summary>
     /// Batch Transfer Content.
@@ -65,21 +63,21 @@ public partial record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Card Data Verification")]
     [IsoXmlTag("CardDataVrfctn")]
-    public IsoTrueFalseIndicator? CardDataVerification { get; init; } 
+    public IsoTrueFalseIndicator? CardDataVerification { get; init; }
 
     /// <summary>
     /// Completion Advice Mandated.
     /// </summary>
     [DisplayName("Completion Advice Mandated")]
     [IsoXmlTag("CmpltnAdvcMndtd")]
-    public IsoTrueFalseIndicator? CompletionAdviceMandated { get; init; } 
+    public IsoTrueFalseIndicator? CompletionAdviceMandated { get; init; }
 
     /// <summary>
     /// File Transfer Batch.
     /// </summary>
     [DisplayName("File Transfer Batch")]
     [IsoXmlTag("FileTrfBtch")]
-    public IsoTrueFalseIndicator? FileTransferBatch { get; init; } 
+    public IsoTrueFalseIndicator? FileTransferBatch { get; init; }
 
     /// <summary>
     /// Host.
@@ -93,7 +91,7 @@ public partial record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Mandatory Security Trailer")]
     [IsoXmlTag("MndtrySctyTrlr")]
-    public IsoTrueFalseIndicator? MandatorySecurityTrailer { get; init; } 
+    public IsoTrueFalseIndicator? MandatorySecurityTrailer { get; init; }
 
     /// <summary>
     /// Message Item.
@@ -107,56 +105,56 @@ public partial record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Notify Off Line Cancellation")]
     [IsoXmlTag("NtfyOffLineCxl")]
-    public IsoTrueFalseIndicator? NotifyOffLineCancellation { get; init; } 
+    public IsoTrueFalseIndicator? NotifyOffLineCancellation { get; init; }
 
     /// <summary>
     /// Off Line Transaction.
     /// </summary>
     [DisplayName("Off Line Transaction")]
     [IsoXmlTag("OffLineTx")]
-    public AcquirerProtocolExchangeBehavior2? OffLineTransaction { get; init; } 
+    public AcquirerProtocolExchangeBehavior2? OffLineTransaction { get; init; }
 
     /// <summary>
     /// On Line Transaction.
     /// </summary>
     [DisplayName("On Line Transaction")]
     [IsoXmlTag("OnLineTx")]
-    public AcquirerProtocolExchangeBehavior2? OnLineTransaction { get; init; } 
+    public AcquirerProtocolExchangeBehavior2? OnLineTransaction { get; init; }
 
     /// <summary>
     /// Private Card Data.
     /// </summary>
     [DisplayName("Private Card Data")]
     [IsoXmlTag("PrvtCardData")]
-    public IsoTrueFalseIndicator? PrivateCardData { get; init; } 
+    public IsoTrueFalseIndicator? PrivateCardData { get; init; }
 
     /// <summary>
     /// Protect Card Data.
     /// </summary>
     [DisplayName("Protect Card Data")]
     [IsoXmlTag("PrtctCardData")]
-    public required IsoTrueFalseIndicator ProtectCardData { get; init; } 
+    public required IsoTrueFalseIndicator ProtectCardData { get; init; }
 
     /// <summary>
     /// Reconciliation By Acquirer.
     /// </summary>
     [DisplayName("Reconciliation By Acquirer")]
     [IsoXmlTag("RcncltnByAcqrr")]
-    public IsoTrueFalseIndicator? ReconciliationByAcquirer { get; init; } 
+    public IsoTrueFalseIndicator? ReconciliationByAcquirer { get; init; }
 
     /// <summary>
     /// Reconciliation Error.
     /// </summary>
     [DisplayName("Reconciliation Error")]
     [IsoXmlTag("RcncltnErr")]
-    public IsoTrueFalseIndicator? ReconciliationError { get; init; } 
+    public IsoTrueFalseIndicator? ReconciliationError { get; init; }
 
     /// <summary>
     /// Reconciliation Exchange.
     /// </summary>
     [DisplayName("Reconciliation Exchange")]
     [IsoXmlTag("RcncltnXchg")]
-    public ExchangeConfiguration9? ReconciliationExchange { get; init; } 
+    public ExchangeConfiguration9? ReconciliationExchange { get; init; }
 
     /// <summary>
     /// Split Total Criteria.
@@ -170,23 +168,19 @@ public partial record AcquirerProtocolParameters17
     /// </summary>
     [DisplayName("Split Totals")]
     [IsoXmlTag("SpltTtls")]
-    public IsoTrueFalseIndicator? SplitTotals { get; init; } 
+    public IsoTrueFalseIndicator? SplitTotals { get; init; }
 
     /// <summary>
     /// Totals Per Currency.
     /// </summary>
     [DisplayName("Totals Per Currency")]
     [IsoXmlTag("TtlsPerCcy")]
-    public IsoTrueFalseIndicator? TotalsPerCurrency { get; init; } 
+    public IsoTrueFalseIndicator? TotalsPerCurrency { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax256Text Version { get; init; }
 }

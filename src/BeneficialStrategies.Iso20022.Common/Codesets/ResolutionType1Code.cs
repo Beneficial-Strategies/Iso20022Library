@@ -21,25 +21,30 @@ public enum ResolutionType1Code
     /// </summary>
     [EnumMember(Value = "EXTR")]
     [IsoId("_ZU-JU9p-Ed-ak6NoX_4Aeg_1357307111")]
-    [Description(@"Meeting resolution is extraordinary and may be subject to specific voting requirements.")]
+    [Description(
+        @"Meeting resolution is extraordinary and may be subject to specific voting requirements."
+    )]
     Extraordinary = ResolutionTypeCode.Extraordinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting resolution is ordinary and is not subject to any specific voting requirements.
     /// Encoded/decoded by serializers as &quot;ORDI&quot;.
     /// </summary>
     [EnumMember(Value = "ORDI")]
     [IsoId("_ZU-JVNp-Ed-ak6NoX_4Aeg_1357307136")]
-    [Description(@"Meeting resolution is ordinary and is not subject to any specific voting requirements.")]
+    [Description(
+        @"Meeting resolution is ordinary and is not subject to any specific voting requirements."
+    )]
     Ordinary = ResolutionTypeCode.Ordinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Resolution that is neither ordinary nor extraordinary (eg. decision on an investment strategy).
     /// Encoded/decoded by serializers as &quot;SPCL&quot;.
     /// </summary>
     [EnumMember(Value = "SPCL")]
     [IsoId("_ZU-JVdp-Ed-ak6NoX_4Aeg_-689950721")]
-    [Description(@"Resolution that is neither ordinary nor extraordinary (eg. decision on an investment strategy).")]
+    [Description(
+        @"Resolution that is neither ordinary nor extraordinary (eg. decision on an investment strategy)."
+    )]
     Special = ResolutionTypeCode.Special, // same ordinal as derivation source for type conversions
-    
 }

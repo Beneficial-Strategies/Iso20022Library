@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CalendarReportOrError1Choice.CalendarReport))]
     [KnownType(typeof(CalendarReportOrError1Choice.OperationalError))]
-    [JsonDerivedType(typeof(CalendarReportOrError1Choice.CalendarReport),nameof(CalendarReportOrError1Choice.CalendarReport))]
-    [JsonDerivedType(typeof(CalendarReportOrError1Choice.OperationalError),nameof(CalendarReportOrError1Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(CalendarReportOrError1Choice.CalendarReport),
+        nameof(CalendarReportOrError1Choice.CalendarReport)
+    )]
+    [JsonDerivedType(
+        typeof(CalendarReportOrError1Choice.OperationalError),
+        nameof(CalendarReportOrError1Choice.OperationalError)
+    )]
     [IsoId("_dVcQ4Ym7Eeipw6hHPgB4Sw")]
     [DisplayName("Calendar Report Or Error 1 Choice")]
-    public abstract partial record CalendarReportOrError1Choice_
-    {
-    }
+    public abstract record CalendarReportOrError1Choice_ { }
 }

@@ -12,12 +12,16 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ResponseStatus8Choice.Consented))]
     [KnownType(typeof(ResponseStatus8Choice.Rejected))]
     [KnownType(typeof(ResponseStatus8Choice.Pending))]
-    [JsonDerivedType(typeof(ResponseStatus8Choice.Consented),nameof(ResponseStatus8Choice.Consented))]
-    [JsonDerivedType(typeof(ResponseStatus8Choice.Rejected),nameof(ResponseStatus8Choice.Rejected))]
-    [JsonDerivedType(typeof(ResponseStatus8Choice.Pending),nameof(ResponseStatus8Choice.Pending))]
+    [JsonDerivedType(
+        typeof(ResponseStatus8Choice.Consented),
+        nameof(ResponseStatus8Choice.Consented)
+    )]
+    [JsonDerivedType(
+        typeof(ResponseStatus8Choice.Rejected),
+        nameof(ResponseStatus8Choice.Rejected)
+    )]
+    [JsonDerivedType(typeof(ResponseStatus8Choice.Pending), nameof(ResponseStatus8Choice.Pending))]
     [IsoId("_Vl2wJZNSEeWGlc8L7oPDIg")]
     [DisplayName("Response Status 8 Choice")]
-    public abstract partial record ResponseStatus8Choice_
-    {
-    }
+    public abstract record ResponseStatus8Choice_ { }
 }

@@ -22,7 +22,7 @@ public enum TargetCompanyAgreementCode
     [IsoId("_rXO_wDFZEeGpgKb_ecoJPw")]
     [Description(@"No agreement of the target company.")]
     No,
-    
+
     /// <summary>
     /// Agreement of the target company.
     /// Encoded/decoded by serializers as &quot;AGYS&quot;.
@@ -31,7 +31,7 @@ public enum TargetCompanyAgreementCode
     [IsoId("_rG1zUDFZEeGpgKb_ecoJPw")]
     [Description(@"Agreement of the target company.")]
     Yes,
-    
+
     /// <summary>
     /// Agreement of the target company is not decided.
     /// Encoded/decoded by serializers as &quot;AGND&quot;.
@@ -40,5 +40,4 @@ public enum TargetCompanyAgreementCode
     [IsoId("_SYM54DFaEeGpgKb_ecoJPw")]
     [Description(@"Agreement of the target company is not decided.")]
     NotDecided,
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_tnAmA1OzEeGs_NnqHXQZkw")]
-[Description(@"Classification of the regulatory condition of a merger for the TSE/JASDEC extension.")]
+[Description(
+    @"Classification of the regulatory condition of a merger for the TSE/JASDEC extension."
+)]
 public enum MergerCode
 {
     /// <summary>
@@ -22,14 +24,15 @@ public enum MergerCode
     [IsoId("_98CTsFOzEeGs_NnqHXQZkw")]
     [Description(@"The merger regulatory condition is unknown.")]
     MergerClassificationIsUnknown,
-    
+
     /// <summary>
     /// The merger regulatory condition is: no general shareholders meeting at discontinued company or subsidiary to be acquired.
     /// Encoded/decoded by serializers as &quot;OMIT&quot;.
     /// </summary>
     [EnumMember(Value = "OMIT")]
     [IsoId("__x6QMFOzEeGs_NnqHXQZkw")]
-    [Description(@"The merger regulatory condition is: no general shareholders meeting at discontinued company or subsidiary to be acquired.")]
+    [Description(
+        @"The merger regulatory condition is: no general shareholders meeting at discontinued company or subsidiary to be acquired."
+    )]
     NoGeneralShareholdersMeeting,
-    
 }

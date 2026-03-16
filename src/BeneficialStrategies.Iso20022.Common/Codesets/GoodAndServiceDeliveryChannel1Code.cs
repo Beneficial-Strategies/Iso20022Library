@@ -23,7 +23,7 @@ public enum GoodAndServiceDeliveryChannel1Code
     [IsoId("_UWH5AT5KEeyHI64WSlzTlg")]
     [Description(@"Electronic delivery.")]
     ElectronicDelivery = GoodAndServiceDeliveryChannelCode.ElectronicDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pick up locally
     /// Encoded/decoded by serializers as &quot;PULC&quot;.
@@ -32,7 +32,7 @@ public enum GoodAndServiceDeliveryChannel1Code
     [IsoId("_UbhWYT5KEeyHI64WSlzTlg")]
     [Description(@"Pick up locally")]
     LocalPickUp = GoodAndServiceDeliveryChannelCode.LocalPickUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No delivery.
     /// Encoded/decoded by serializers as &quot;NDEL&quot;.
@@ -41,7 +41,7 @@ public enum GoodAndServiceDeliveryChannel1Code
     [IsoId("_Uf_msT5KEeyHI64WSlzTlg")]
     [Description(@"No delivery.|")]
     NoDelivery = GoodAndServiceDeliveryChannelCode.NoDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other delivery channel defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum GoodAndServiceDeliveryChannel1Code
     [IsoId("_UlHXQT5KEeyHI64WSlzTlg")]
     [Description(@"Other delivery channel defined at national level.|")]
     OtherNational = GoodAndServiceDeliveryChannelCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other delivery channel defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum GoodAndServiceDeliveryChannel1Code
     [IsoId("_UqV1gT5KEeyHI64WSlzTlg")]
     [Description(@"Other delivery channel defined at private level.")]
     OtherPrivate = GoodAndServiceDeliveryChannelCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Shipping to cardholder billing address
     /// Encoded/decoded by serializers as &quot;SCBA&quot;.
@@ -67,8 +67,9 @@ public enum GoodAndServiceDeliveryChannel1Code
     [EnumMember(Value = "SCBA")]
     [IsoId("_UvaiwT5KEeyHI64WSlzTlg")]
     [Description(@"Shipping to cardholder billing address")]
-    ShippingToCardholderBillingAddress = GoodAndServiceDeliveryChannelCode.ShippingToCardholderBillingAddress, // same ordinal as derivation source for type conversions
-    
+    ShippingToCardholderBillingAddress =
+        GoodAndServiceDeliveryChannelCode.ShippingToCardholderBillingAddress, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Shipping to consumer specified shipping address
     /// Encoded/decoded by serializers as &quot;SCSA&quot;.
@@ -76,6 +77,6 @@ public enum GoodAndServiceDeliveryChannel1Code
     [EnumMember(Value = "SCSA")]
     [IsoId("_Uz-5sT5KEeyHI64WSlzTlg")]
     [Description(@"Shipping to consumer specified shipping address")]
-    ShippingToConsumerSpecifiedShippingAddress = GoodAndServiceDeliveryChannelCode.ShippingToConsumerSpecifiedShippingAddress, // same ordinal as derivation source for type conversions
-    
+    ShippingToConsumerSpecifiedShippingAddress =
+        GoodAndServiceDeliveryChannelCode.ShippingToConsumerSpecifiedShippingAddress, // same ordinal as derivation source for type conversions
 }

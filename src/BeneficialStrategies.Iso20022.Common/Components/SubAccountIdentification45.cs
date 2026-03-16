@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5XAj1ZNLEeWGlc8L7oPDIg")]
 [DisplayName("Sub Account Identification")]
-public partial record SubAccountIdentification45
+public record SubAccountIdentification45
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_5XAj3ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification109? AccountOwner { get; init; } 
-    
+    public PartyIdentification109? AccountOwner { get; init; }
+
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_5XAj5ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public required SecuritiesAccount34 SafekeepingAccount { get; init; } 
-    
+    public required SecuritiesAccount34 SafekeepingAccount { get; init; }
+
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.
     /// </summary>
@@ -41,17 +39,13 @@ public partial record SubAccountIdentification45
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator ActivityIndicator { get; init; }
+
     /// <summary>
     /// Net position of a segregated holding, in a single security, within the overall position held in a securities subaccount.
     /// </summary>
     [IsoId("_5XAj9ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Balance For Sub Account")]
     [IsoXmlTag("BalForSubAcct")]
-    public AggregateBalanceInformation32? BalanceForSubAccount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AggregateBalanceInformation32? BalanceForSubAccount { get; init; }
 }

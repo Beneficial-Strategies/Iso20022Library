@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_7TMJ8RRuEeOKWo1NF21OVw")]
 [Description(@"Specifies the political exposure type.")]
-[Derivations(typeof(PoliticalExposureType1Code),typeof(PoliticalExposureType2Code))]
+[Derivations(typeof(PoliticalExposureType1Code), typeof(PoliticalExposureType2Code))]
 public enum PoliticalExposureTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum PoliticalExposureTypeCode
     [IsoId("_CDrmUBRvEeOKWo1NF21OVw")]
     [Description(@"Political exposure type is domestic.")]
     PoliticalExposureDomestic,
-    
+
     /// <summary>
     /// Political exposure type is foreign.
     /// Encoded/decoded by serializers as &quot;PEXF&quot;.
@@ -32,7 +32,7 @@ public enum PoliticalExposureTypeCode
     [IsoId("_CHiyoBRvEeOKWo1NF21OVw")]
     [Description(@"Political exposure type is foreign.")]
     PoliticalExposureForeign,
-    
+
     /// <summary>
     /// No political exposure.
     /// Encoded/decoded by serializers as &quot;NPEX&quot;.
@@ -41,7 +41,7 @@ public enum PoliticalExposureTypeCode
     [IsoId("_CjXL8BRvEeOKWo1NF21OVw")]
     [Description(@"No political exposure.")]
     NoPoliticalExposure,
-    
+
     /// <summary>
     /// Political exposure.
     /// Encoded/decoded by serializers as &quot;YPEX&quot;.
@@ -50,5 +50,4 @@ public enum PoliticalExposureTypeCode
     [IsoId("_9vrX8JUfEemC09f0MxYkRg")]
     [Description(@"Political exposure.")]
     PoliticalExposure,
-    
 }

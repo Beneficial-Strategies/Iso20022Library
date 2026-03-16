@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CollateralBalance1Choice.TotalCollateral))]
     [KnownType(typeof(CollateralBalance1Choice.CollateralDetails))]
     [KnownType(typeof(CollateralBalance1Choice.SegregatedIndependentAmount))]
-    [JsonDerivedType(typeof(CollateralBalance1Choice.TotalCollateral),nameof(CollateralBalance1Choice.TotalCollateral))]
-    [JsonDerivedType(typeof(CollateralBalance1Choice.CollateralDetails),nameof(CollateralBalance1Choice.CollateralDetails))]
-    [JsonDerivedType(typeof(CollateralBalance1Choice.SegregatedIndependentAmount),nameof(CollateralBalance1Choice.SegregatedIndependentAmount))]
+    [JsonDerivedType(
+        typeof(CollateralBalance1Choice.TotalCollateral),
+        nameof(CollateralBalance1Choice.TotalCollateral)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralBalance1Choice.CollateralDetails),
+        nameof(CollateralBalance1Choice.CollateralDetails)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralBalance1Choice.SegregatedIndependentAmount),
+        nameof(CollateralBalance1Choice.SegregatedIndependentAmount)
+    )]
     [IsoId("_UnXxx9p-Ed-ak6NoX_4Aeg_-92530976")]
     [DisplayName("Collateral Balance 1 Choice")]
-    public abstract partial record CollateralBalance1Choice_
-    {
-    }
+    public abstract record CollateralBalance1Choice_ { }
 }

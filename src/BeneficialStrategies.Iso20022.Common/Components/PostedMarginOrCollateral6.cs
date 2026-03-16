@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y75JsYmKEeybbN9emGqfiw")]
 [DisplayName("Posted Margin Or Collateral")]
-public partial record PostedMarginOrCollateral6
+public record PostedMarginOrCollateral6
 {
-    #nullable enable
-    
     /// <summary>
     /// Value of the initial margin posted by the reporting counterparty to the other counterparty.
     /// Where initial margin is posted on a portfolio basis, this field should include the overall value of initial margin posted for the portfolio.
@@ -25,8 +23,8 @@ public partial record PostedMarginOrCollateral6
     [IsoId("_Y8_88YmKEeybbN9emGqfiw")]
     [DisplayName("Initial Margin Posted Pre Haircut")]
     [IsoXmlTag("InitlMrgnPstdPreHrcut")]
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPreHaircut { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPreHaircut { get; init; }
+
     /// <summary>
     /// Value of the initial margin posted by the reporting counterparty to the other counterparty.
     /// Where initial margin is posted on a portfolio basis, this field should include the overall value of initial margin posted for the portfolio.
@@ -35,8 +33,8 @@ public partial record PostedMarginOrCollateral6
     [IsoId("_Y8_884mKEeybbN9emGqfiw")]
     [DisplayName("Initial Margin Posted Post Haircut")]
     [IsoXmlTag("InitlMrgnPstdPstHrcut")]
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPostHaircut { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd20DecimalAmount? InitialMarginPostedPostHaircut { get; init; }
+
     /// <summary>
     /// Value of the variation margin posted, including cash settled, by the reporting counterparty to the other counterparty.
     /// Where variation margin is posted on a portfolio basis, this field should include the overall value of variation margin posted for the portfolio.
@@ -44,8 +42,8 @@ public partial record PostedMarginOrCollateral6
     [IsoId("_Y8_89YmKEeybbN9emGqfiw")]
     [DisplayName("Variation Margin Posted Pre Haircut")]
     [IsoXmlTag("VartnMrgnPstdPreHrcut")]
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPreHaircut { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPreHaircut { get; init; }
+
     /// <summary>
     /// Value of the variation margin posted, including cash settled, by the reporting counterparty to the other counterparty.
     /// Where variation margin is posted on a portfolio basis, this field should include the overall value of variation margin posted for the portfolio.
@@ -54,17 +52,13 @@ public partial record PostedMarginOrCollateral6
     [IsoId("_Y8_894mKEeybbN9emGqfiw")]
     [DisplayName("Variation Margin Posted Post Haircut")]
     [IsoXmlTag("VartnMrgnPstdPstHrcut")]
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPostHaircut { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd20DecimalAmount? VariationMarginPostedPostHaircut { get; init; }
+
     /// <summary>
     /// Value of collateral posted in excess of the required collateral.
     /// </summary>
     [IsoId("_Y8_8-YmKEeybbN9emGqfiw")]
     [DisplayName("Excess Collateral Posted")]
     [IsoXmlTag("XcssCollPstd")]
-    public ActiveOrHistoricCurrencyAnd20DecimalAmount? ExcessCollateralPosted { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActiveOrHistoricCurrencyAnd20DecimalAmount? ExcessCollateralPosted { get; init; }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aiUGM9p-Ed-ak6NoX_4Aeg_511985802")]
-[Description(@"Indicates whether or not the fund is subject to reporting under the EU Savings Directive. Enter ""Variable"" if the status of the fund is likely to change from time to time.")]
+[Description(
+    @"Indicates whether or not the fund is subject to reporting under the EU Savings Directive. Enter ""Variable"" if the status of the fund is likely to change from time to time."
+)]
 [DerivedFrom(typeof(EUSavingsDirectiveCode))]
 public enum EUSavingsDirective1Code
 {
@@ -23,7 +25,7 @@ public enum EUSavingsDirective1Code
     [IsoId("_aiUGNNp-Ed-ak6NoX_4Aeg_796430025")]
     [Description(@"Investment Fund is in the scope of the directive.")]
     EUSavingsInScope = EUSavingsDirectiveCode.EUSavingsInScope, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment Fund is out of the scope of the directive.
     /// Encoded/decoded by serializers as &quot;EUSO&quot;.
@@ -32,7 +34,7 @@ public enum EUSavingsDirective1Code
     [IsoId("_aiUGNdp-Ed-ak6NoX_4Aeg_796430056")]
     [Description(@"Investment Fund is out of the scope of the directive.")]
     EUSavingsOutScope = EUSavingsDirectiveCode.EUSavingsOutScope, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment Fund may vary for inclusion in the scope of the directive.
     /// Encoded/decoded by serializers as &quot;VARI&quot;.
@@ -41,5 +43,4 @@ public enum EUSavingsDirective1Code
     [IsoId("_ai58ENp-Ed-ak6NoX_4Aeg_796430057")]
     [Description(@"Investment Fund may vary for inclusion in the scope of the directive.")]
     EUSavingsVariable = EUSavingsDirectiveCode.EUSavingsVariable, // same ordinal as derivation source for type conversions
-    
 }

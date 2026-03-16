@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9Dpetp-Ed-ak6NoX_4Aeg_588710247")]
 [DisplayName("Case Assignment")]
-public partial record CaseAssignment
+public record CaseAssignment
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of an assignment within a case.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CaseAssignment
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Party that assigns the case to another party. This is also the sender of the message.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record CaseAssignment
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Assigner { get; init; } 
-    
+    public required IsoAnyBICIdentifier Assigner { get; init; }
+
     /// <summary>
     /// Party that the case is assigned to. This is also the receiver of the message.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record CaseAssignment
     [DisplayName("Assignee")]
     [IsoXmlTag("Assgne")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Assignee { get; init; } 
-    
+    public required IsoAnyBICIdentifier Assignee { get; init; }
+
     /// <summary>
     /// Date and time at which the assignment was created.
     /// </summary>
@@ -53,9 +51,5 @@ public partial record CaseAssignment
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
 }

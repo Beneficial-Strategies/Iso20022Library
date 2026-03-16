@@ -23,5 +23,4 @@ public enum AssetClassSubProductType27Code
     [IsoId("_oxn4d1rKEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type light ends.")]
     LightEnds = AssetClassSubProductTypeCode.LightEnds, // same ordinal as derivation source for type conversions
-    
 }

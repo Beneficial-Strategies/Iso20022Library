@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice
     /// </summary>
     [IsoId("_VK1rM9p-Ed-ak6NoX_4Aeg_1453545196")]
     [DisplayName("Account Details")]
-    public partial record AccountDetails : PaymentInstrument9Choice_
+    public record AccountDetails : PaymentInstrument9Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.
         /// </summary>
         [IsoId("_U9RwVNp-Ed-ak6NoX_4Aeg_-2850192")]
         [DisplayName("Account Identification")]
         [IsoXmlTag("AcctId")]
-        public AccountIdentification1? AccountIdentification { get; init; } 
-        
+        public AccountIdentification1? AccountIdentification { get; init; }
+
         /// <summary>
         /// Account type.
         /// </summary>
         [IsoId("_U9RwVdp-Ed-ak6NoX_4Aeg_791350549")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public CashAccountType1? Type { get; init; } 
-        
-        
-        #nullable disable
-        
+        public CashAccountType1? Type { get; init; }
     }
 }

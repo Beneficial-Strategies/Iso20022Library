@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
     /// </summary>
     [IsoId("_nYAXYDAZEeOKib24wnHaFg")]
     [DisplayName("Buyer Bank Contact Person")]
-    public partial record BuyerBankContactPerson : BankContactPerson1Choice_
+    public record BuyerBankContactPerson : BankContactPerson1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Name { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Name { get; init; }
+
         /// <summary>
         /// Specifies the terms used to formally address a person.
         /// </summary>
         [IsoId("_QBOtFdp-Ed-ak6NoX_4Aeg_-1825403256")]
         [DisplayName("Name Prefix")]
         [IsoXmlTag("NmPrfx")]
-        public NamePrefix1Code? NamePrefix { get; init; } 
-        
+        public NamePrefix1Code? NamePrefix { get; init; }
+
         /// <summary>
         /// First name of a person.
         /// </summary>
@@ -42,9 +40,9 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
         [DisplayName("Given Name")]
         [IsoXmlTag("GvnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? GivenName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? GivenName { get; init; }
+
         /// <summary>
         /// Role of the party in the activity.
         /// </summary>
@@ -52,9 +50,9 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
         [DisplayName("Role")]
         [IsoXmlTag("Role")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Role { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Role { get; init; }
+
         /// <summary>
         /// Collection of information that identifies a phone number, as defined by telecom services.
         /// </summary>
@@ -62,8 +60,8 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
         [DisplayName("Phone Number")]
         [IsoXmlTag("PhneNb")]
         [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-        public IsoPhoneNumber? PhoneNumber { get; init; } 
-        
+        public IsoPhoneNumber? PhoneNumber { get; init; }
+
         /// <summary>
         /// Collection of information that identifies a FAX number, as defined by telecom services.
         /// </summary>
@@ -71,8 +69,8 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
         [DisplayName("Fax Number")]
         [IsoXmlTag("FaxNb")]
         [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-        public IsoPhoneNumber? FaxNumber { get; init; } 
-        
+        public IsoPhoneNumber? FaxNumber { get; init; }
+
         /// <summary>
         /// Address for electronic mail (e-mail).
         /// </summary>
@@ -80,11 +78,7 @@ namespace BeneficialStrategies.Iso20022.Choices.BankContactPerson1Choice
         [DisplayName("Email Address")]
         [IsoXmlTag("EmailAdr")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
-        [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-        public IsoMax256Text? EmailAddress { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 256, MinimumLength = 1)]
+        public IsoMax256Text? EmailAddress { get; init; }
     }
 }

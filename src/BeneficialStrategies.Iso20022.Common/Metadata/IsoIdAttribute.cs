@@ -19,4 +19,3 @@ public class IsoIdAttribute : Attribute
     /// </summary>
     public string Id { get; }
 }
-

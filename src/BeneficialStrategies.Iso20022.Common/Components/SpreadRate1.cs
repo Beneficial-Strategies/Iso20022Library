@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q-niYtp-Ed-ak6NoX_4Aeg_-1715964179")]
 [DisplayName("Spread Rate")]
-public partial record SpreadRate1
+public record SpreadRate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the sign of the rate.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record SpreadRate1
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public required IsoPlusOrMinusIndicator Sign { get; init; } 
-    
+    public required IsoPlusOrMinusIndicator Sign { get; init; }
+
     /// <summary>
     /// Specifies if the spreadf is expressed as an amount or a rate.
     /// </summary>
     [IsoId("_Q-niZNp-Ed-ak6NoX_4Aeg_88699368")]
     [DisplayName("Rate Or Amount")]
     [IsoXmlTag("RateOrAmt")]
-    public required AmountOrRate1Choice_ RateOrAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required AmountOrRate1Choice_ RateOrAmount { get; init; }
 }

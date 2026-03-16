@@ -23,7 +23,7 @@ public enum ReconciliationImpactCode
     [IsoId("_fGhYzsyqEeiqqJhU2tqK8A")]
     [Description(@"Credit category")]
     Credit,
-    
+
     /// <summary>
     /// Debit category
     /// Encoded/decoded by serializers as &quot;DEBT&quot;.
@@ -32,5 +32,4 @@ public enum ReconciliationImpactCode
     [IsoId("_fGVyk8yqEeiqqJhU2tqK8A")]
     [Description(@"Debit category")]
     Debit,
-    
 }

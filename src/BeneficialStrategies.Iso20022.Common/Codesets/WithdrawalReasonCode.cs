@@ -23,7 +23,7 @@ public enum WithdrawalReasonCode
     [IsoId("_N4ADUJElEeKcLcxonNWTXg")]
     [Description(@"Alleged trade is rescinded.")]
     Rescinded,
-    
+
     /// <summary>
     /// Alleged trade is rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -32,7 +32,7 @@ public enum WithdrawalReasonCode
     [IsoId("_OBsK0JElEeKcLcxonNWTXg")]
     [Description(@"Alleged trade is rejected.")]
     Rejected,
-    
+
     /// <summary>
     /// Alleged trade is withdrawn due to an amendment.
     /// Encoded/decoded by serializers as &quot;WTDN&quot;.
@@ -41,5 +41,4 @@ public enum WithdrawalReasonCode
     [IsoId("_OKLYcJElEeKcLcxonNWTXg")]
     [Description(@"Alleged trade is withdrawn due to an amendment.")]
     Withdrawn,
-    
 }

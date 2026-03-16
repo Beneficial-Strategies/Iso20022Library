@@ -23,7 +23,7 @@ public enum ReversalReasonCode
     [IsoId("_vzKFoNuGEeiB5uLfkg9ZJA")]
     [Description(@"Customer cancels the transaction.")]
     CustomerCancellation,
-    
+
     /// <summary>
     /// Merchant or Cashier cancels the transaction.
     /// Encoded/decoded by serializers as &quot;MERC&quot;.
@@ -32,7 +32,7 @@ public enum ReversalReasonCode
     [IsoId("_zyg3INuGEeiB5uLfkg9ZJA")]
     [Description(@"Merchant or Cashier cancels the transaction.")]
     MerchantCancellation,
-    
+
     /// <summary>
     /// Reversal after a suspection of malfunction of the POI system.
     /// Encoded/decoded by serializers as &quot;MALF&quot;.
@@ -41,7 +41,7 @@ public enum ReversalReasonCode
     [IsoId("_4ypwMNuGEeiB5uLfkg9ZJA")]
     [Description(@"Reversal after a suspection of malfunction of the POI system.")]
     Malfuntion,
-    
+
     /// <summary>
     /// POI System unable to complete transaction.
     /// Encoded/decoded by serializers as &quot;UNAB&quot;.
@@ -50,5 +50,4 @@ public enum ReversalReasonCode
     [IsoId("_-J-aMNuGEeiB5uLfkg9ZJA")]
     [Description(@"POI System unable to complete transaction.")]
     UnableToComplete,
-    
 }

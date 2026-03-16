@@ -23,7 +23,7 @@ public enum RejectionReason9Code
     [IsoId("_ZmQto9p-Ed-ak6NoX_4Aeg_920218233")]
     [Description(@"Cancellation is not allowed.")]
     CancellationNotAllowed = RejectionReasonCode.CancellationNotAllowed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction/Request arrives too late.
     /// Encoded/decoded by serializers as &quot;LATT&quot;.
@@ -32,7 +32,7 @@ public enum RejectionReason9Code
     [IsoId("_ZmQtpNp-Ed-ak6NoX_4Aeg_920218264")]
     [Description(@"Instruction/Request arrives too late.")]
     Late = RejectionReasonCode.Late, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The election advice is already cancelled.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -41,7 +41,7 @@ public enum RejectionReason9Code
     [IsoId("_ZmQtpdp-Ed-ak6NoX_4Aeg_920218294")]
     [Description(@"The election advice is already cancelled.")]
     ElectionAlreadyCancelled = RejectionReasonCode.ElectionAlreadyCancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The validation of the advice/instruction/request failed.
     /// Encoded/decoded by serializers as &quot;FAIL&quot;.
@@ -50,5 +50,4 @@ public enum RejectionReason9Code
     [IsoId("_ZmQtptp-Ed-ak6NoX_4Aeg_920218325")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
 }

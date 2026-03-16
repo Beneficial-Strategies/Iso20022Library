@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W5fkMa4XEeW_TaP-ygI0SQ")]
 [DisplayName("ATM Service")]
-public partial record ATMService17
+public record ATMService17
 {
-    #nullable enable
-    
     /// <summary>
     /// Describes the type of inquiry selected by the customer or the ATM.
     /// </summary>
     [IsoId("_XFtbQa4XEeW_TaP-ygI0SQ")]
     [DisplayName("Service Type")]
     [IsoXmlTag("SvcTp")]
-    public required ATMServiceType8Code ServiceType { get; init; } 
-    
+    public required ATMServiceType8Code ServiceType { get; init; }
+
     /// <summary>
     /// Variant of the service.
     /// </summary>
     [IsoId("_Y-HR4K4YEeW_TaP-ygI0SQ")]
     [DisplayName("Service Variant")]
     [IsoXmlTag("SvcVarnt")]
-    public ATMService18? ServiceVariant { get; init; } 
-    
+    public ATMService18? ServiceVariant { get; init; }
+
     /// <summary>
     /// Limits of amounts.
     /// </summary>
     [IsoId("_XFtbQ64XEeW_TaP-ygI0SQ")]
     [DisplayName("Limits")]
     [IsoXmlTag("Lmts")]
-    public ATMTransactionAmounts6? Limits { get; init; } 
-    
+    public ATMTransactionAmounts6? Limits { get; init; }
+
     /// <summary>
     /// Preferred withdrawal transaction chosen by the customer.
     /// </summary>
     [IsoId("_XFtbRa4XEeW_TaP-ygI0SQ")]
     [DisplayName("Preferred Withdrawal")]
     [IsoXmlTag("PrefrdWdrwl")]
-    public ATMTransaction8? PreferredWithdrawal { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ATMTransaction8? PreferredWithdrawal { get; init; }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PartyOrGroup2Choice.GroupIdentification))]
     [KnownType(typeof(PartyOrGroup2Choice.Party))]
-    [JsonDerivedType(typeof(PartyOrGroup2Choice.GroupIdentification),nameof(PartyOrGroup2Choice.GroupIdentification))]
-    [JsonDerivedType(typeof(PartyOrGroup2Choice.Party),nameof(PartyOrGroup2Choice.Party))]
+    [JsonDerivedType(
+        typeof(PartyOrGroup2Choice.GroupIdentification),
+        nameof(PartyOrGroup2Choice.GroupIdentification)
+    )]
+    [JsonDerivedType(typeof(PartyOrGroup2Choice.Party), nameof(PartyOrGroup2Choice.Party))]
     [IsoId("_C3Ccd249EeiU9cctagi5ow")]
     [DisplayName("Party Or Group 2 Choice")]
-    public abstract partial record PartyOrGroup2Choice_
-    {
-    }
+    public abstract record PartyOrGroup2Choice_ { }
 }

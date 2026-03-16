@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AuditTrailOrBusinessError6Choice.AuditTrail))]
     [KnownType(typeof(AuditTrailOrBusinessError6Choice.BusinessError))]
-    [JsonDerivedType(typeof(AuditTrailOrBusinessError6Choice.AuditTrail),nameof(AuditTrailOrBusinessError6Choice.AuditTrail))]
-    [JsonDerivedType(typeof(AuditTrailOrBusinessError6Choice.BusinessError),nameof(AuditTrailOrBusinessError6Choice.BusinessError))]
+    [JsonDerivedType(
+        typeof(AuditTrailOrBusinessError6Choice.AuditTrail),
+        nameof(AuditTrailOrBusinessError6Choice.AuditTrail)
+    )]
+    [JsonDerivedType(
+        typeof(AuditTrailOrBusinessError6Choice.BusinessError),
+        nameof(AuditTrailOrBusinessError6Choice.BusinessError)
+    )]
     [IsoId("_bRP60Wc-EemvNLufWGIVOQ")]
     [DisplayName("Audit Trail Or Business Error 6 Choice")]
-    public abstract partial record AuditTrailOrBusinessError6Choice_
-    {
-    }
+    public abstract record AuditTrailOrBusinessError6Choice_ { }
 }

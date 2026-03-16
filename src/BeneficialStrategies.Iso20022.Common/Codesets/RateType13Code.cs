@@ -23,7 +23,7 @@ public enum RateType13Code
     [IsoId("_q5kOIWtdEeCY4-KZ9JEyUQ_1754715972")]
     [Description(@"Rate is unknown by the sender or has not been established.")]
     Unknown = RateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate will not be paid.
     /// Encoded/decoded by serializers as &quot;NILP&quot;.
@@ -32,5 +32,4 @@ public enum RateType13Code
     [IsoId("_q5kOImtdEeCY4-KZ9JEyUQ_-228191112")]
     [Description(@"Rate will not be paid.")]
     NilPayment = RateTypeCode.NilPayment, // same ordinal as derivation source for type conversions
-    
 }

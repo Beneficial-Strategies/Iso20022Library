@@ -23,7 +23,7 @@ public enum TypeOfAmount22Code
     [IsoId("_-9S_4VFFEeyhmN3K0lwfug")]
     [Description(@"Actual amount.")]
     Actual = TypeOfAmountCode.Actual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Default amount.
     /// Encoded/decoded by serializers as &quot;DFLT&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfAmount22Code
     [IsoId("__unIEVFFEeyhmN3K0lwfug")]
     [Description(@"Default amount.")]
     Default = TypeOfAmountCode.Default, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deposit amount.
     /// Encoded/decoded by serializers as &quot;DPST&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfAmount22Code
     [IsoId("_ARnHcVFGEeyhmN3K0lwfug")]
     [Description(@"Deposit amount.")]
     Deposit = TypeOfAmountCode.Deposit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Estimated amount (the final amount could be above or below).
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfAmount22Code
     [IsoId("_Al1rAVFGEeyhmN3K0lwfug")]
     [Description(@"Estimated amount (the final amount could be above or below).")]
     Estimated = TypeOfAmountCode.Estimated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Maximum amount (the final amount must be less or equal).
     /// Encoded/decoded by serializers as &quot;MAXI&quot;.
@@ -59,7 +59,7 @@ public enum TypeOfAmount22Code
     [IsoId("_BQzTkVFGEeyhmN3K0lwfug")]
     [Description(@"Maximum amount (the final amount must be less or equal).")]
     Maximum = TypeOfAmountCode.Maximum, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Substitute for an amount to be authorised.
     /// Encoded/decoded by serializers as &quot;PRXY&quot;.
@@ -68,7 +68,7 @@ public enum TypeOfAmount22Code
     [IsoId("_CP_fsVFGEeyhmN3K0lwfug")]
     [Description(@"Substitute for an amount to be authorised.")]
     Proxy = TypeOfAmountCode.Proxy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reserved or updated reserved amount for reservation.
     /// Encoded/decoded by serializers as &quot;RESD&quot;.
@@ -77,5 +77,4 @@ public enum TypeOfAmount22Code
     [IsoId("_DV9CMVFGEeyhmN3K0lwfug")]
     [Description(@"Reserved or updated reserved amount for reservation.")]
     Reserved = TypeOfAmountCode.Reserved, // same ordinal as derivation source for type conversions
-    
 }

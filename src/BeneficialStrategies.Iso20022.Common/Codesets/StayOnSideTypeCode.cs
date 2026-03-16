@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZQpqANp-Ed-ak6NoX_4Aeg_1097083970")]
-[Description(@"Indicates that an order is pegged against the offer/bid at the time of the order submission.")]
+[Description(
+    @"Indicates that an order is pegged against the offer/bid at the time of the order submission."
+)]
 [Derivations(typeof(StayOnSideType1Code))]
 public enum StayOnSideTypeCode
 {
@@ -23,7 +25,7 @@ public enum StayOnSideTypeCode
     [IsoId("_ZQpqAdp-Ed-ak6NoX_4Aeg_1520979426")]
     [Description(@"An order pegged against the offer price.")]
     Offer,
-    
+
     /// <summary>
     /// An order pegged against the bid price.
     /// Encoded/decoded by serializers as &quot;BIDE&quot;.
@@ -32,7 +34,7 @@ public enum StayOnSideTypeCode
     [IsoId("_ZQpqAtp-Ed-ak6NoX_4Aeg_1525594701")]
     [Description(@"An order pegged against the bid price.")]
     Bid,
-    
+
     /// <summary>
     /// Indicates a voluntary absence of choice/decision.
     /// Encoded/decoded by serializers as &quot;DCAR&quot;.
@@ -41,5 +43,4 @@ public enum StayOnSideTypeCode
     [IsoId("_ZQpqA9p-Ed-ak6NoX_4Aeg_1547762094")]
     [Description(@"Indicates a voluntary absence of choice/decision.")]
     DontCare,
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_zfRGYCzzEeOsiuMH68so7Q")]
-[Description(@"Specifies the underlying reason for the cancellation of the associated transaction.")]
+[Description(
+    @"Specifies the underlying reason for the cancellation of the associated transaction."
+)]
 [DerivedFrom(typeof(CancelledStatusReasonV2Code))]
 public enum CancelledStatusReason14Code
 {
@@ -23,5 +25,4 @@ public enum CancelledStatusReason14Code
     [IsoId("_LqRR0Sz0EeOsiuMH68so7Q")]
     [Description(@"See narrative field for reason.")]
     NarrativeReason = CancelledStatusReasonV2Code.NarrativeReason, // same ordinal as derivation source for type conversions
-    
 }

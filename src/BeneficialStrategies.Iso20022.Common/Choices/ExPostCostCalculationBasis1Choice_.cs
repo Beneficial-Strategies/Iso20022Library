@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ExPostCostCalculationBasis1Choice.Code))]
     [KnownType(typeof(ExPostCostCalculationBasis1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ExPostCostCalculationBasis1Choice.Code),nameof(ExPostCostCalculationBasis1Choice.Code))]
-    [JsonDerivedType(typeof(ExPostCostCalculationBasis1Choice.Proprietary),nameof(ExPostCostCalculationBasis1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ExPostCostCalculationBasis1Choice.Code),
+        nameof(ExPostCostCalculationBasis1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ExPostCostCalculationBasis1Choice.Proprietary),
+        nameof(ExPostCostCalculationBasis1Choice.Proprietary)
+    )]
     [IsoId("_Wb5bQJ9XEeqxTNfi5y7ywQ")]
     [DisplayName("Ex Post Cost Calculation Basis 1 Choice")]
-    public abstract partial record ExPostCostCalculationBasis1Choice_
-    {
-    }
+    public abstract record ExPostCostCalculationBasis1Choice_ { }
 }

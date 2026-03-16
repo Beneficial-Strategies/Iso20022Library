@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bMhUgcW2EeuhguwJmlgagQ")]
 [DisplayName("Loyalty Programme")]
-public partial record LoyaltyProgramme3
+public record LoyaltyProgramme3
 {
-    #nullable enable
-    
     /// <summary>
     /// Eligibility for loyalty.
     /// True: Eligible for loyalty
@@ -28,8 +26,8 @@ public partial record LoyaltyProgramme3
     [DisplayName("Programme Eligibility Indicator")]
     [IsoXmlTag("PrgrmmElgbltyInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ProgrammeEligibilityIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? ProgrammeEligibilityIndicator { get; init; }
+
     /// <summary>
     /// Entity issuing the loyalty programme.
     /// </summary>
@@ -37,18 +35,14 @@ public partial record LoyaltyProgramme3
     [DisplayName("Programme Issuer")]
     [IsoXmlTag("PrgrmmIssr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ProgrammeIssuer { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ProgrammeIssuer { get; init; }
+
     /// <summary>
     /// Details about the member of the loyalty programme
     /// </summary>
     [IsoId("_bQ4QFcW2EeuhguwJmlgagQ")]
     [DisplayName("Loyalty Member")]
     [IsoXmlTag("LltyMmb")]
-    public LoyaltyMember2? LoyaltyMember { get; init; } 
-    
-    
-    #nullable disable
-    
+    public LoyaltyMember2? LoyaltyMember { get; init; }
 }

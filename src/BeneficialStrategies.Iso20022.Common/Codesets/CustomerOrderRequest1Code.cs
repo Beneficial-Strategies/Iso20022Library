@@ -23,7 +23,7 @@ public enum CustomerOrderRequest1Code
     [IsoId("_TzXFkd6JEeiwsev40qZGEQ")]
     [Description(@"All types of CustomerOrder should be listed, some are open others closed.")]
     Both = CustomerOrderRequestCode.Both, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Completed customer orders.
     /// Encoded/decoded by serializers as &quot;CLSD&quot;.
@@ -32,7 +32,7 @@ public enum CustomerOrderRequest1Code
     [IsoId("_T3Kngd6JEeiwsev40qZGEQ")]
     [Description(@"Completed customer orders.")]
     Closed = CustomerOrderRequestCode.Closed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer order not completed.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -41,5 +41,4 @@ public enum CustomerOrderRequest1Code
     [IsoId("_T64C0d6JEeiwsev40qZGEQ")]
     [Description(@"Customer order not completed.")]
     Open = CustomerOrderRequestCode.Open, // same ordinal as derivation source for type conversions
-    
 }

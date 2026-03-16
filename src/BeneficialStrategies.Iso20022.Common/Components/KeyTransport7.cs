@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SNoCoS8jEeu125Ip9zFcsQ")]
 [DisplayName("Key Transport")]
-public partial record KeyTransport7
+public record KeyTransport7
 {
-    #nullable enable
-    
     /// <summary>
     /// Version of the data structure.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record KeyTransport7
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; } 
-    
+    public IsoNumber? Version { get; init; }
+
     /// <summary>
     /// Identification of a cryptographic asymmetric key for the recipient.
     /// </summary>
     [IsoId("_SahPIy8jEeu125Ip9zFcsQ")]
     [DisplayName("Recipient Identification")]
     [IsoXmlTag("RcptId")]
-    public required Recipient9Choice_ RecipientIdentification { get; init; } 
-    
+    public required Recipient9Choice_ RecipientIdentification { get; init; }
+
     /// <summary>
     /// Algorithm to encrypt the key encryption key (KEK).
     /// </summary>
     [IsoId("_SahPJS8jEeu125Ip9zFcsQ")]
     [DisplayName("Key Encryption Algorithm")]
     [IsoXmlTag("KeyNcrptnAlgo")]
-    public required AlgorithmIdentification19 KeyEncryptionAlgorithm { get; init; } 
-    
+    public required AlgorithmIdentification19 KeyEncryptionAlgorithm { get; init; }
+
     /// <summary>
     /// Encrypted key encryption key (KEK).
     /// </summary>
@@ -50,9 +48,5 @@ public partial record KeyTransport7
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public required IsoMax5000Binary EncryptedKey { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax5000Binary EncryptedKey { get; init; }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_gTbMYI8qEeeBmcwCTnMfBg")]
-[Description(@"Specifies the transaction authentication channel, as published in an external authentication channel code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the transaction authentication channel, as published in an external authentication channel code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalAuthenticationChannel1Code))]
 public enum ExternalAuthenticationChannelCode
 {
@@ -24,7 +26,7 @@ public enum ExternalAuthenticationChannelCode
     [IsoId("_uZHtoPRYEeuLhpyIdtJzwg")]
     [Description(@"Authentication provided through ATM")]
     ATM,
-    
+
     /// <summary>
     /// Authentication provided through Card
     /// Encoded/decoded by serializers as &quot;CARD&quot;.
@@ -33,7 +35,7 @@ public enum ExternalAuthenticationChannelCode
     [IsoId("_uZHto_RYEeuLhpyIdtJzwg")]
     [Description(@"Authentication provided through Card")]
     Card,
-    
+
     /// <summary>
     /// Authentication provided through Internet Banking
     /// Encoded/decoded by serializers as &quot;INBA&quot;.
@@ -42,7 +44,7 @@ public enum ExternalAuthenticationChannelCode
     [IsoId("_uZHtpvRYEeuLhpyIdtJzwg")]
     [Description(@"Authentication provided through Internet Banking")]
     InternetBanking,
-    
+
     /// <summary>
     /// Authentication provided through Mobile
     /// Encoded/decoded by serializers as &quot;MOBI&quot;.
@@ -51,5 +53,4 @@ public enum ExternalAuthenticationChannelCode
     [IsoId("_uZReoPRYEeuLhpyIdtJzwg")]
     [Description(@"Authentication provided through Mobile")]
     Mobile,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c5HM8HdVEeeKH6vrEwvLHA")]
 [DisplayName("Card Not Received Details")]
-public partial record CardNotReceivedDetails1
+public record CardNotReceivedDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date of card when mailed to the cardholder.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record CardNotReceivedDetails1
     [DisplayName("Date Of Card Mailed")]
     [IsoXmlTag("DtOfCardMld")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate DateOfCardMailed { get; init; } 
-    
+    public required IsoISODate DateOfCardMailed { get; init; }
+
     /// <summary>
     /// Address where card was mailed to.
     /// </summary>
     [IsoId("_OtxTIHdWEeeKH6vrEwvLHA")]
     [DisplayName("Mailing Address")]
     [IsoXmlTag("MlngAdr")]
-    public Address1? MailingAddress { get; init; } 
-    
+    public Address1? MailingAddress { get; init; }
+
     /// <summary>
     /// Unstructured mailing address where card was mailed to.
     /// </summary>
@@ -42,9 +40,9 @@ public partial record CardNotReceivedDetails1
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? MailingAddressUnstructured { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? MailingAddressUnstructured { get; init; }
+
     /// <summary>
     /// Postal code where the card was mailed from.
     /// </summary>
@@ -52,9 +50,9 @@ public partial record CardNotReceivedDetails1
     [DisplayName("Mailed From Postal Code")]
     [IsoXmlTag("MldFrPstlCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public required IsoMax16Text MailedFromPostalCode { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public required IsoMax16Text MailedFromPostalCode { get; init; }
+
     /// <summary>
     /// Date of the beginning of validation of the card.
     /// </summary>
@@ -62,8 +60,8 @@ public partial record CardNotReceivedDetails1
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; } 
-    
+    public IsoISODate? ValidFrom { get; init; }
+
     /// <summary>
     /// Indicates whether card provides a Card Security Code.
     /// True: Card provides a Card Security Code.
@@ -73,17 +71,13 @@ public partial record CardNotReceivedDetails1
     [DisplayName("Card Security Code Indicator")]
     [IsoXmlTag("CardSctyCdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardSecurityCodeIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? CardSecurityCodeIndicator { get; init; }
+
     /// <summary>
     /// Identifies the security capabilities of the card.
     /// </summary>
     [IsoId("_9PS30HdaEeeKH6vrEwvLHA")]
     [DisplayName("Card Security Capability")]
     [IsoXmlTag("CardSctyCpblty")]
-    public CardSecurityCapability1? CardSecurityCapability { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CardSecurityCapability1? CardSecurityCapability { get; init; }
 }

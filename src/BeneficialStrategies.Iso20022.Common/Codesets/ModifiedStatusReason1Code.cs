@@ -23,7 +23,7 @@ public enum ModifiedStatusReason1Code
     [IsoId("_0mgfgwlIEeGATtfOBToyew_1659777313")]
     [Description(@"Modification of a transaction by the account owner.")]
     ModifiedByYourself = ModifiedStatusReasonCode.ModifiedByYourself, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +32,4 @@ public enum ModifiedStatusReason1Code
     [IsoId("_0mgfhAlIEeGATtfOBToyew_-1957918323")]
     [Description(@"Other. See Narrative.")]
     Other = ModifiedStatusReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

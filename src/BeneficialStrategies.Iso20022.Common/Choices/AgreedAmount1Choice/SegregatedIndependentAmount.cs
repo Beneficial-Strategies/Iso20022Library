@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
     /// </summary>
     [IsoId("_Qm7bJ9p-Ed-ak6NoX_4Aeg_-1857537663")]
     [DisplayName("Segregated Independent Amount")]
-    public partial record SegregatedIndependentAmount : AgreedAmount1Choice_
+    public record SegregatedIndependentAmount : AgreedAmount1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Undisputed amount of the margin call request.
         /// </summary>
         [IsoId("_Ul4kB9p-Ed-ak6NoX_4Aeg_-1514098340")]
         [DisplayName("Agreed Amount")]
         [IsoXmlTag("AgrdAmt")]
-        public required ActiveCurrencyAndAmount AgreedAmount { get; init; } 
-        
+        public required ActiveCurrencyAndAmount AgreedAmount { get; init; }
+
         /// <summary>
         /// Unique identifier for the margin call request.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
         [DisplayName("Margin Call Request Identification")]
         [IsoXmlTag("MrgnCallReqId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text MarginCallRequestIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text MarginCallRequestIdentification { get; init; }
+
         /// <summary>
         /// Provides additional information related to the margin call amount that has been agreed.
         /// </summary>
@@ -42,11 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AgreedAmount1Choice
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalInformation { get; init; }
     }
 }

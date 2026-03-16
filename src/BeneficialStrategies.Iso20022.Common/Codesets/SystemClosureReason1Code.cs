@@ -23,7 +23,7 @@ public enum SystemClosureReason1Code
     [IsoId("_ZRQG89p-Ed-ak6NoX_4Aeg_2007403395")]
     [Description(@"System is closed due to a bank holiday.")]
     BankingHoliday = SystemClosureReasonCode.BankingHoliday, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// System is closed for maintenance reasons.
     /// Encoded/decoded by serializers as &quot;SMTN&quot;.
@@ -32,7 +32,7 @@ public enum SystemClosureReason1Code
     [IsoId("_ZRQG9Np-Ed-ak6NoX_4Aeg_2007403396")]
     [Description(@"System is closed for maintenance reasons.")]
     SystemMaintenance = SystemClosureReasonCode.SystemMaintenance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// System is not processing any operation.
     /// Encoded/decoded by serializers as &quot;NOOP&quot;.
@@ -41,7 +41,7 @@ public enum SystemClosureReason1Code
     [IsoId("_ZRQG9dp-Ed-ak6NoX_4Aeg_2007403397")]
     [Description(@"System is not processing any operation.")]
     NoOperation = SystemClosureReasonCode.NoOperation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// System is not operational during recovery operations.
     /// Encoded/decoded by serializers as &quot;RCVR&quot;.
@@ -50,7 +50,7 @@ public enum SystemClosureReason1Code
     [IsoId("_ZRQG9tp-Ed-ak6NoX_4Aeg_2007403398")]
     [Description(@"System is not operational during recovery operations.")]
     Recovery = SystemClosureReasonCode.Recovery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// System is not operational during allowed downtime windows.
     /// Encoded/decoded by serializers as &quot;ADTW&quot;.
@@ -59,5 +59,4 @@ public enum SystemClosureReason1Code
     [IsoId("_ZRQG99p-Ed-ak6NoX_4Aeg_2007403406")]
     [Description(@"System is not operational during allowed downtime windows.")]
     AllowedDowntimeWindow = SystemClosureReasonCode.AllowedDowntimeWindow, // same ordinal as derivation source for type conversions
-    
 }

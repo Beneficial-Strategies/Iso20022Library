@@ -23,7 +23,7 @@ public enum OptionEventTypeCode
     [IsoId("_Vg3rEMR0EeOg-a7zWL_U0A")]
     [Description(@"Notice of a close out of the position.")]
     CloseOut,
-    
+
     /// <summary>
     /// First confirmation.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -32,25 +32,29 @@ public enum OptionEventTypeCode
     [IsoId("_ZDT3EMR0EeOg-a7zWL_U0A")]
     [Description(@"First confirmation.")]
     FirstConfirmation,
-    
+
     /// <summary>
     /// Notice of a knock-in. The option has a specified spot level, which, if touched during the knock-in period, triggers the option into existence. Prior to that level being touched, no option exists.
     /// Encoded/decoded by serializers as &quot;KNIN&quot;.
     /// </summary>
     [EnumMember(Value = "KNIN")]
     [IsoId("_cBSrIMR0EeOg-a7zWL_U0A")]
-    [Description(@"Notice of a knock-in. The option has a specified spot level, which, if touched during the knock-in period, triggers the option into existence. Prior to that level being touched, no option exists.")]
+    [Description(
+        @"Notice of a knock-in. The option has a specified spot level, which, if touched during the knock-in period, triggers the option into existence. Prior to that level being touched, no option exists."
+    )]
     KnockIn,
-    
+
     /// <summary>
     /// Notice of a knock-out. The option has a specified spot level, which, if touched during the knock-out period, terminates the option.
     /// Encoded/decoded by serializers as &quot;KNOC&quot;.
     /// </summary>
     [EnumMember(Value = "KNOC")]
     [IsoId("_g95IAsR0EeOg-a7zWL_U0A")]
-    [Description(@"Notice of a knock-out. The option has a specified spot level, which, if touched during the knock-out period, terminates the option.")]
+    [Description(
+        @"Notice of a knock-out. The option has a specified spot level, which, if touched during the knock-out period, terminates the option."
+    )]
     KnockOut,
-    
+
     /// <summary>
     /// Another type of event.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,7 +63,7 @@ public enum OptionEventTypeCode
     [IsoId("_4GD9cMR0EeOg-a7zWL_U0A")]
     [Description(@"Another type of event.")]
     Other,
-    
+
     /// <summary>
     /// Notice of a trigger hit.
     /// Encoded/decoded by serializers as &quot;TRIG&quot;.
@@ -68,5 +72,4 @@ public enum OptionEventTypeCode
     [IsoId("_7rek8MR0EeOg-a7zWL_U0A")]
     [Description(@"Notice of a trigger hit.")]
     Trigger,
-    
 }

@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.sese;
 
@@ -24,79 +22,78 @@ namespace BeneficialStrategies.Iso20022.sese;
 /// Usage
 /// The TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.
 /// </summary>
-[Description(@"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferInInstruction message to the executing party, for example, a transfer agent, to instruct the receipt of a financial instrument, free of payment, on a given date from a specified party.|This message may also be used to instruct the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.|This message may also be used as an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer.|Usage|The TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party.")]
+[Description(
+    @"Scope|An instructing party, for example, an investment manager or its authorised representative, sends the TransferInInstruction message to the executing party, for example, a transfer agent, to instruct the receipt of a financial instrument, free of payment, on a given date from a specified party.|This message may also be used to instruct the receipt of a financial instrument, free of payment, from another of the instructing parties own accounts or from a third party.|This message may also be used as an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer.|Usage|The TransferInInstruction message is used to instruct the receipt of a financial instrument from another account, either owned by the instructing party or by a third party."
+)]
 [IsoId("_1ejVMR8NEeWpZde3LQh6dg")]
 [DisplayName("Transfer In Instruction V")]
-public partial record TransferInInstructionV07 : IOuterRecord
+public record TransferInInstructionV07 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "sese.005.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "TrfInInstr";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:sese.005.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Reference that uniquely identifies a message from a business application standpoint.
     /// </summary>
     [IsoId("_1ejVNR8NEeWpZde3LQh6dg")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    
+    public required MessageIdentification1 MessageIdentification { get; init; }
+
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_1ejVNx8NEeWpZde3LQh6dg")]
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
-    public AdditionalReference6? PoolReference { get; init; } 
-    
+    public AdditionalReference6? PoolReference { get; init; }
+
     /// <summary>
     /// Reference of the linked message that was previously sent.
     /// </summary>
     [IsoId("_1ejVOR8NEeWpZde3LQh6dg")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference6? PreviousReference { get; init; } 
-    
+    public AdditionalReference6? PreviousReference { get; init; }
+
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_1ejVOx8NEeWpZde3LQh6dg")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference6? RelatedReference { get; init; } 
-    
+    public AdditionalReference6? RelatedReference { get; init; }
+
     /// <summary>
     /// Function of the transfer in, that is, whether the transfer in message is used as an instruction or an advice and request for information. The absence of Function indicates the message is an instruction.
     /// </summary>
     [IsoId("_PtbgwCVMEeWI0orciOKunQ")]
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
-    public TransferInFunction1Code? Function { get; init; } 
-    
+    public TransferInFunction1Code? Function { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
     /// </summary>
@@ -104,64 +101,58 @@ public partial record TransferInInstructionV07 : IOuterRecord
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MasterReference { get; init; }
+
     /// <summary>
     /// General information related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_1ejVPx8NEeWpZde3LQh6dg")]
     [DisplayName("Transfer Details")]
     [IsoXmlTag("TrfDtls")]
-    public required Transfer32 TransferDetails { get; init; } 
-    
+    public required Transfer32 TransferDetails { get; init; }
+
     /// <summary>
     /// Information related to the account into which the financial instrument is to be received.
     /// </summary>
     [IsoId("_1ejVQR8NEeWpZde3LQh6dg")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public required InvestmentAccount56 AccountDetails { get; init; } 
-    
+    public required InvestmentAccount56 AccountDetails { get; init; }
+
     /// <summary>
     /// Information related to the delivering side of the transfer.
     /// </summary>
     [IsoId("_1ejVQx8NEeWpZde3LQh6dg")]
     [DisplayName("Settlement Details")]
     [IsoXmlTag("SttlmDtls")]
-    public DeliverInformation16? SettlementDetails { get; init; } 
-    
+    public DeliverInformation16? SettlementDetails { get; init; }
+
     /// <summary>
     /// Identifies the market practice to which the message conforms.
     /// </summary>
     [IsoId("_1ejVRR8NEeWpZde3LQh6dg")]
     [DisplayName("Market Practice Version")]
     [IsoXmlTag("MktPrctcVrsn")]
-    public MarketPracticeVersion1? MarketPracticeVersion { get; init; } 
-    
+    public MarketPracticeVersion1? MarketPracticeVersion { get; init; }
+
     /// <summary>
     /// Information provided when the message is a copy of a previous message.
     /// </summary>
     [IsoId("_1ejVRx8NEeWpZde3LQh6dg")]
     [DisplayName("Copy Details")]
     [IsoXmlTag("CpyDtls")]
-    public CopyInformation4? CopyDetails { get; init; } 
-    
+    public CopyInformation4? CopyDetails { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_1ejVSR8NEeWpZde3LQh6dg")]
     [DisplayName("Extension")]
     [IsoXmlTag("Xtnsn")]
-    public Extension1? Extension { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Extension1? Extension { get; init; }
 }
 
-
-// Since TransferInInstructionV07Document is not really part of the logical business domain model, 
+// Since TransferInInstructionV07Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to TransferInInstructionV07.
-

@@ -21,18 +21,22 @@ public enum CompanyAssigner2Code
     /// </summary>
     [EnumMember(Value = "ASSO")]
     [IsoId("_qVBv0WMaEeexSYCBvAp_qA")]
-    [Description(@"Any relevant association in charge of assigning an identification to a company.")]
+    [Description(
+        @"Any relevant association in charge of assigning an identification to a company."
+    )]
     Association = CompanyAssignerCode.Association, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal authority assigning an identification to a company (for example, a local, regional or national authority).
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
     /// </summary>
     [EnumMember(Value = "AUTH")]
     [IsoId("_qeFlMWMaEeexSYCBvAp_qA")]
-    [Description(@"Legal authority assigning an identification to a company (for example, a local, regional or national authority).")]
+    [Description(
+        @"Legal authority assigning an identification to a company (for example, a local, regional or national authority)."
+    )]
     Authority = CompanyAssignerCode.Authority, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identification assigned by the company itself.
     /// Encoded/decoded by serializers as &quot;CPNY&quot;.
@@ -41,7 +45,7 @@ public enum CompanyAssigner2Code
     [IsoId("_qrDqMWMaEeexSYCBvAp_qA")]
     [Description(@"Identification assigned by the company itself.")]
     Company = CompanyAssignerCode.Company, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal Entity Identifier.
     /// Encoded/decoded by serializers as &quot;LEII&quot;.
@@ -50,7 +54,7 @@ public enum CompanyAssigner2Code
     [IsoId("_q6aU0WMaEeexSYCBvAp_qA")]
     [Description(@"Legal Entity Identifier.")]
     LEI = CompanyAssignerCode.LEI, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identification assigned by a travel agency.
     /// Encoded/decoded by serializers as &quot;TRAG&quot;.
@@ -59,7 +63,7 @@ public enum CompanyAssigner2Code
     [IsoId("_rC_pEWMaEeexSYCBvAp_qA")]
     [Description(@"Identification assigned by a travel agency.")]
     TravelAgency = CompanyAssignerCode.TravelAgency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other company assigner entity defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +72,7 @@ public enum CompanyAssigner2Code
     [IsoId("_9vdIMWMaEeexSYCBvAp_qA")]
     [Description(@"Other company assigner entity defined at private level.")]
     OtherPrivate = CompanyAssignerCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other company assigner entity defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -77,5 +81,4 @@ public enum CompanyAssigner2Code
     [IsoId("_97L3EWMaEeexSYCBvAp_qA")]
     [Description(@"Other company assigner entity defined at national level.")]
     OtherNational = CompanyAssignerCode.OtherNational, // same ordinal as derivation source for type conversions
-    
 }

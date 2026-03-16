@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InstructionProcessingReason4Choice.Reason))]
     [KnownType(typeof(InstructionProcessingReason4Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(InstructionProcessingReason4Choice.Reason),nameof(InstructionProcessingReason4Choice.Reason))]
-    [JsonDerivedType(typeof(InstructionProcessingReason4Choice.NoSpecifiedReason),nameof(InstructionProcessingReason4Choice.NoSpecifiedReason))]
+    [JsonDerivedType(
+        typeof(InstructionProcessingReason4Choice.Reason),
+        nameof(InstructionProcessingReason4Choice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingReason4Choice.NoSpecifiedReason),
+        nameof(InstructionProcessingReason4Choice.NoSpecifiedReason)
+    )]
     [IsoId("_gajPIQd3Ee2fOITqoTnSLQ")]
     [DisplayName("Instruction Processing Reason 4 Choice")]
-    public abstract partial record InstructionProcessingReason4Choice_
-    {
-    }
+    public abstract record InstructionProcessingReason4Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum RateValueType6Code
     [IsoId("_ZaVxgdp-Ed-ak6NoX_4Aeg_-1378979921")]
     [Description(@"Rate is unknown by the sender or has not been established.")]
     Unknown = RateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate has not been established.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -32,5 +32,4 @@ public enum RateValueType6Code
     [IsoId("_ZaVxgtp-Ed-ak6NoX_4Aeg_-1378979892")]
     [Description(@"Rate has not been established.")]
     Open = RateTypeCode.Open, // same ordinal as derivation source for type conversions
-    
 }

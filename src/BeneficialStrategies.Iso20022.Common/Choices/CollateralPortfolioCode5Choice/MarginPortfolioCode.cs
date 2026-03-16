@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
     /// </summary>
     [IsoId("_YxDO0zIDEe2fXedS_ucFOA")]
     [DisplayName("Margin Portfolio Code")]
-    public partial record MarginPortfolioCode : CollateralPortfolioCode5Choice_
+    public record MarginPortfolioCode : CollateralPortfolioCode5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.
         /// Usage:
@@ -25,8 +23,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
         [IsoId("_tnypoTICEe2fXedS_ucFOA")]
         [DisplayName("Initial Margin Portfolio Code")]
         [IsoXmlTag("InitlMrgnPrtflCd")]
-        public required PortfolioCode5Choice_ InitialMarginPortfolioCode { get; init; } 
-        
+        public required PortfolioCode5Choice_ InitialMarginPortfolioCode { get; init; }
+
         /// <summary>
         /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.
         /// Usage:
@@ -35,10 +33,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
         [IsoId("_tnypozICEe2fXedS_ucFOA")]
         [DisplayName("Variation Margin Portfolio Code")]
         [IsoXmlTag("VartnMrgnPrtflCd")]
-        public PortfolioCode5Choice_? VariationMarginPortfolioCode { get; init; } 
-        
-        
-        #nullable disable
-        
+        public PortfolioCode5Choice_? VariationMarginPortfolioCode { get; init; }
     }
 }

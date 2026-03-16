@@ -21,16 +21,19 @@ public enum ScenarioType1Code
     /// </summary>
     [EnumMember(Value = "HIST")]
     [IsoId("_WJzxkassEeayv9XxdmMwKQ")]
-    [Description(@"Scenario that replays an event that occurred in the past, including antithetic historical scenarios.")]
+    [Description(
+        @"Scenario that replays an event that occurred in the past, including antithetic historical scenarios."
+    )]
     Historical = ScenarioTypeCode.Historical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Scenario that is defined by a hypothetical or theoretical event that may happen in the future.
     /// Encoded/decoded by serializers as &quot;HYPT&quot;.
     /// </summary>
     [EnumMember(Value = "HYPT")]
     [IsoId("_WN-f4assEeayv9XxdmMwKQ")]
-    [Description(@"Scenario that is defined by a hypothetical or theoretical event that may happen in the future.")]
+    [Description(
+        @"Scenario that is defined by a hypothetical or theoretical event that may happen in the future."
+    )]
     Hypothetical = ScenarioTypeCode.Hypothetical, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OptionBarrierLevel1Choice.Multiple))]
     [KnownType(typeof(OptionBarrierLevel1Choice.Single))]
-    [JsonDerivedType(typeof(OptionBarrierLevel1Choice.Multiple),nameof(OptionBarrierLevel1Choice.Multiple))]
-    [JsonDerivedType(typeof(OptionBarrierLevel1Choice.Single),nameof(OptionBarrierLevel1Choice.Single))]
+    [JsonDerivedType(
+        typeof(OptionBarrierLevel1Choice.Multiple),
+        nameof(OptionBarrierLevel1Choice.Multiple)
+    )]
+    [JsonDerivedType(
+        typeof(OptionBarrierLevel1Choice.Single),
+        nameof(OptionBarrierLevel1Choice.Single)
+    )]
     [IsoId("_pVNJcNyZEe6BHYBNhkieQQ")]
     [DisplayName("Option Barrier Level1Choice")]
-    public abstract partial record OptionBarrierLevel1Choice_
-    {
-    }
+    public abstract record OptionBarrierLevel1Choice_ { }
 }

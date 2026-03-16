@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RejectionAndRepairReason38Choice.Code))]
     [KnownType(typeof(RejectionAndRepairReason38Choice.Proprietary))]
-    [JsonDerivedType(typeof(RejectionAndRepairReason38Choice.Code),nameof(RejectionAndRepairReason38Choice.Code))]
-    [JsonDerivedType(typeof(RejectionAndRepairReason38Choice.Proprietary),nameof(RejectionAndRepairReason38Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RejectionAndRepairReason38Choice.Code),
+        nameof(RejectionAndRepairReason38Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(RejectionAndRepairReason38Choice.Proprietary),
+        nameof(RejectionAndRepairReason38Choice.Proprietary)
+    )]
     [IsoId("_ET1FcytXEeyhipY4f42fZQ")]
     [DisplayName("Rejection And Repair Reason 38 Choice")]
-    public abstract partial record RejectionAndRepairReason38Choice_
-    {
-    }
+    public abstract record RejectionAndRepairReason38Choice_ { }
 }

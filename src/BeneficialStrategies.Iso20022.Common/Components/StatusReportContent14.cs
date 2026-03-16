@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mLAtwaE7Ee-MRKYsaX6JDg")]
 [DisplayName("Status Report Content14")]
-public partial record StatusReportContent14
+public record StatusReportContent14
 {
-    #nullable enable
-
     /// <summary>
     /// Attendance Context.
     /// </summary>
     [DisplayName("Attendance Context")]
     [IsoXmlTag("AttndncCntxt")]
-    public AttendanceContext1Code? AttendanceContext { get; init; } 
+    public AttendanceContext1Code? AttendanceContext { get; init; }
 
     /// <summary>
     /// Data Set Required.
@@ -51,7 +49,7 @@ public partial record StatusReportContent14
     /// </summary>
     [DisplayName("POI Capabilities")]
     [IsoXmlTag("POICpblties")]
-    public PointOfInteractionCapabilities9? POICapabilities { get; init; } 
+    public PointOfInteractionCapabilities9? POICapabilities { get; init; }
 
     /// <summary>
     /// POI Component.
@@ -65,7 +63,7 @@ public partial record StatusReportContent14
     /// </summary>
     [DisplayName("POI Date Time")]
     [IsoXmlTag("POIDtTm")]
-    public required IsoISODateTime POIDateTime { get; init; } 
+    public required IsoISODateTime POIDateTime { get; init; }
 
     /// <summary>
     /// POI Group Identification.
@@ -73,8 +71,4 @@ public partial record StatusReportContent14
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
     public ValueList<IsoMax35Text> POIGroupIdentification { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

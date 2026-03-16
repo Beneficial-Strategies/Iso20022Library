@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MOeEW7iEeKo25nLKvGr8w_1230837438")]
-[Description(@"Specifies the external date frequency code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external date frequency code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalDateFrequencyCode))]
 public enum ExternalDateFrequency1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalDateFrequency1Code
     [IsoId("_uO_hRfRYEeuLhpyIdtJzwg")]
     [Description(@"Frequency is monthly.")]
     Monthly = ExternalDateFrequencyCode.Monthly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Frequency is quarterly (every three months).
     /// Encoded/decoded by serializers as &quot;QUTR&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDateFrequency1Code
     [IsoId("_uO_hSPRYEeuLhpyIdtJzwg")]
     [Description(@"Frequency is quarterly (every three months).")]
     Quarterly = ExternalDateFrequencyCode.Quarterly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Frequency is semi-annual (every six months).
     /// Encoded/decoded by serializers as &quot;SEMI&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDateFrequency1Code
     [IsoId("_uO_hS_RYEeuLhpyIdtJzwg")]
     [Description(@"Frequency is semi-annual (every six months).")]
     SemiAnnual = ExternalDateFrequencyCode.SemiAnnual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Frequency is two-monthly (every two months).
     /// Encoded/decoded by serializers as &quot;TOMN&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDateFrequency1Code
     [IsoId("_uO_hTvRYEeuLhpyIdtJzwg")]
     [Description(@"Frequency is two-monthly (every two months).")]
     TwoMonthly = ExternalDateFrequencyCode.TwoMonthly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Frequency is annual.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -60,5 +62,4 @@ public enum ExternalDateFrequency1Code
     [IsoId("_uPIrMvRYEeuLhpyIdtJzwg")]
     [Description(@"Frequency is annual.")]
     Annual = ExternalDateFrequencyCode.Annual, // same ordinal as derivation source for type conversions
-    
 }

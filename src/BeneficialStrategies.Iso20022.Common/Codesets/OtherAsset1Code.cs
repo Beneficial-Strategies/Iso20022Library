@@ -23,7 +23,7 @@ public enum OtherAsset1Code
     [IsoId("_rkYRAUyMEeiepssxrmRw1A")]
     [Description(@"Property that is not real estate. Also known as 'movable chattels'.")]
     MovableProperty = OtherAssetCode.MovableProperty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Property that is real estate.
     /// Encoded/decoded by serializers as &quot;PROP&quot;.
@@ -32,5 +32,4 @@ public enum OtherAsset1Code
     [IsoId("_rqe5AUyMEeiepssxrmRw1A")]
     [Description(@"Property that is real estate.")]
     Property = OtherAssetCode.Property, // same ordinal as derivation source for type conversions
-    
 }

@@ -20,25 +20,30 @@ public enum EventClassificationCode
     /// </summary>
     [EnumMember(Value = "MAND")]
     [IsoId("_ajDtEdp-Ed-ak6NoX_4Aeg_-354497585")]
-    [Description(@"Specifies that the event will occur without the beneficial owner or agent taking any action.")]
+    [Description(
+        @"Specifies that the event will occur without the beneficial owner or agent taking any action."
+    )]
     Mandatory,
-    
+
     /// <summary>
     /// Specifies that the event will occur but the beneficial owner or agent has a choice as to the action taken against the holdings.
     /// Encoded/decoded by serializers as &quot;MAOP&quot;.
     /// </summary>
     [EnumMember(Value = "MAOP")]
     [IsoId("_ajDtEtp-Ed-ak6NoX_4Aeg_-353573140")]
-    [Description(@"Specifies that the event will occur but the beneficial owner or agent has a choice as to the action taken against the holdings.")]
+    [Description(
+        @"Specifies that the event will occur but the beneficial owner or agent has a choice as to the action taken against the holdings."
+    )]
     MandatoryWithOptions,
-    
+
     /// <summary>
     /// Specifies that this is an event in whichthe beneficial owner or agent of a security need to take action if the event is to affect their holdings.
     /// Encoded/decoded by serializers as &quot;VOLU&quot;.
     /// </summary>
     [EnumMember(Value = "VOLU")]
     [IsoId("_ajDtE9p-Ed-ak6NoX_4Aeg_-352650112")]
-    [Description(@"Specifies that this is an event in whichthe beneficial owner or agent of a security need to take action if the event is to affect their holdings.")]
+    [Description(
+        @"Specifies that this is an event in whichthe beneficial owner or agent of a security need to take action if the event is to affect their holdings."
+    )]
     Voluntary,
-    
 }

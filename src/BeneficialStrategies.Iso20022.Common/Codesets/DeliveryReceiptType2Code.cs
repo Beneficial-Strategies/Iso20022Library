@@ -23,14 +23,15 @@ public enum DeliveryReceiptType2Code
     [IsoId("_azJXhtp-Ed-ak6NoX_4Aeg_-2033362077")]
     [Description(@"Settlement of the financial instrument and cash is separate.")]
     SeparateSettlement = DeliveryReceiptTypeCode.SeparateSettlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of the financial instrument and cash takes place in a delivery versus payment (DVP) environment, that is, through an International Central Securities Depository (ICSD) or Central Securities Depository (CSD).
     /// Encoded/decoded by serializers as &quot;APMT&quot;.
     /// </summary>
     [EnumMember(Value = "APMT")]
     [IsoId("_azJXh9p-Ed-ak6NoX_4Aeg_-2033361692")]
-    [Description(@"Settlement of the financial instrument and cash takes place in a delivery versus payment (DVP) environment, that is, through an International Central Securities Depository (ICSD) or Central Securities Depository (CSD).")]
+    [Description(
+        @"Settlement of the financial instrument and cash takes place in a delivery versus payment (DVP) environment, that is, through an International Central Securities Depository (ICSD) or Central Securities Depository (CSD)."
+    )]
     AgainstPaymentSettlement = DeliveryReceiptTypeCode.AgainstPaymentSettlement, // same ordinal as derivation source for type conversions
-    
 }

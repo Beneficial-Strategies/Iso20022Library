@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4WGqR5laEeeE1Ya-LgRsuQ")]
 [DisplayName("Cash Balance Return Criteria")]
-public partial record CashBalanceReturnCriteria1
+public record CashBalanceReturnCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the balance type is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record CashBalanceReturnCriteria1
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator TypeIndicator { get; init; } 
-    
+    public required IsoRequestedIndicator TypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the balance status is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record CashBalanceReturnCriteria1
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator StatusIndicator { get; init; } 
-    
+    public required IsoRequestedIndicator StatusIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the value date is requested.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record CashBalanceReturnCriteria1
     [DisplayName("Value Date Indicator")]
     [IsoXmlTag("ValDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator ValueDateIndicator { get; init; } 
-    
+    public required IsoRequestedIndicator ValueDateIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the number of payment is requested.
     /// </summary>
@@ -52,9 +50,5 @@ public partial record CashBalanceReturnCriteria1
     [DisplayName("Number Of Payments Indicator")]
     [IsoXmlTag("NbOfPmtsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator NumberOfPaymentsIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoRequestedIndicator NumberOfPaymentsIndicator { get; init; }
 }

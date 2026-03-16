@@ -30,7 +30,9 @@ public enum TradingCapacity9Code
     /// </summary>
     [EnumMember(Value = "BILA")]
     [IsoId("")]
-    [Description(@"Counterparties neogiate trading details to execute trades. Bilateral confirmation, that is, the Sender and the Receiver are the principals.")]
+    [Description(
+        @"Counterparties neogiate trading details to execute trades. Bilateral confirmation, that is, the Sender and the Receiver are the principals."
+    )]
     Bilateral = TradingCapacityCode.Bilateral, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -41,5 +43,4 @@ public enum TradingCapacity9Code
     [IsoId("")]
     [Description(@"Trade executed through a broker. The confirmation is sent by a money broker.")]
     Broker = TradingCapacityCode.Broker, // same ordinal as derivation source for type conversions
-
 }

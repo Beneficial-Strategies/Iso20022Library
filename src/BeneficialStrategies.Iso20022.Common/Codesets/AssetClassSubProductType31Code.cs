@@ -23,5 +23,4 @@ public enum AssetClassSubProductType31Code
     [IsoId("_MvTikVrdEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type dry freight.")]
     Dry = AssetClassSubProductTypeCode.Dry, // same ordinal as derivation source for type conversions
-    
 }

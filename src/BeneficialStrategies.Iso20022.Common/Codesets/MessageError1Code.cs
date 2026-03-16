@@ -23,7 +23,7 @@ public enum MessageError1Code
     [IsoId("_wQpcofGwEeiGNursv3uE_g")]
     [Description(@"Invalid data element format")]
     InvalidDataElementFormat = MessageErrorCode.InvalidDataElementFormat, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid data element length
     /// Encoded/decoded by serializers as &quot;IDEL&quot;.
@@ -32,7 +32,7 @@ public enum MessageError1Code
     [IsoId("_wUmIgfGwEeiGNursv3uE_g")]
     [Description(@"Invalid data element length")]
     InvalidDataElementLength = MessageErrorCode.InvalidDataElementLength, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid data element value
     /// Encoded/decoded by serializers as &quot;IDEV&quot;.
@@ -41,7 +41,7 @@ public enum MessageError1Code
     [IsoId("_wYS8wfGwEeiGNursv3uE_g")]
     [Description(@"Invalid data element value")]
     InvalidDataElementValue = MessageErrorCode.InvalidDataElementValue, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid message
     /// Encoded/decoded by serializers as &quot;INME&quot;.
@@ -50,7 +50,7 @@ public enum MessageError1Code
     [IsoId("_wdMD0fGwEeiGNursv3uE_g")]
     [Description(@"Invalid message")]
     InvalidMessage = MessageErrorCode.InvalidMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid Message Function
     /// Encoded/decoded by serializers as &quot;INMF&quot;.
@@ -59,7 +59,7 @@ public enum MessageError1Code
     [IsoId("_whFFUfGwEeiGNursv3uE_g")]
     [Description(@"Invalid Message Function")]
     InvalidMessageFunction = MessageErrorCode.InvalidMessageFunction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message Parse Error
     /// Encoded/decoded by serializers as &quot;MEPE&quot;.
@@ -68,7 +68,7 @@ public enum MessageError1Code
     [IsoId("_wppLcfGwEeiGNursv3uE_g")]
     [Description(@"Message Parse Error")]
     MessageParseError = MessageErrorCode.MessageParseError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other reason to reject a message defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,7 +77,7 @@ public enum MessageError1Code
     [IsoId("_wxHFYfGwEeiGNursv3uE_g")]
     [Description(@"Other reason to reject a message defined at private level.")]
     OtherPrivate = MessageErrorCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Protocol Version
     /// Encoded/decoded by serializers as &quot;PRVE&quot;.
@@ -86,7 +86,7 @@ public enum MessageError1Code
     [IsoId("_w3BgIfGwEeiGNursv3uE_g")]
     [Description(@"Protocol Version")]
     ProtocolVersion = MessageErrorCode.ProtocolVersion, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Required data element missing
     /// Encoded/decoded by serializers as &quot;RDEM&quot;.
@@ -95,7 +95,7 @@ public enum MessageError1Code
     [IsoId("_xA0VUfGwEeiGNursv3uE_g")]
     [Description(@"Required data element missing")]
     RequiredDataElementMissing = MessageErrorCode.RequiredDataElementMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -104,16 +104,18 @@ public enum MessageError1Code
     [IsoId("_xF7e0fGwEeiGNursv3uE_g")]
     [Description(@"Security")]
     Security = MessageErrorCode.Security, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Error that is not defined in the Message type Error and is not OtherNational or OtherPrivate Error 
+    /// Error that is not defined in the Message type Error and is not OtherNational or OtherPrivate Error
     /// Encoded/decoded by serializers as &quot;UDFD&quot;.
     /// </summary>
     [EnumMember(Value = "UDFD")]
     [IsoId("_xLVjQfGwEeiGNursv3uE_g")]
-    [Description(@"Error that is not defined in the Message type Error and is not OtherNational or OtherPrivate Error ")]
+    [Description(
+        @"Error that is not defined in the Message type Error and is not OtherNational or OtherPrivate Error "
+    )]
     Undefined = MessageErrorCode.Undefined, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other reason defined at national level to reject a message.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -122,7 +124,7 @@ public enum MessageError1Code
     [IsoId("_xSn3AfGwEeiGNursv3uE_g")]
     [Description(@"Other reason defined at national level to reject a message.")]
     OtherNational = MessageErrorCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Iterative data error
     /// Encoded/decoded by serializers as &quot;ITDE&quot;.
@@ -131,7 +133,7 @@ public enum MessageError1Code
     [IsoId("_xcrx8fGwEeiGNursv3uE_g")]
     [Description(@"Iterative data error")]
     IterativeDataError = MessageErrorCode.IterativeDataError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duplicate Message
     /// Encoded/decoded by serializers as &quot;DUME&quot;.
@@ -140,7 +142,7 @@ public enum MessageError1Code
     [IsoId("_yFe3UfGwEeiGNursv3uE_g")]
     [Description(@"Duplicate Message")]
     DuplicateMessage = MessageErrorCode.DuplicateMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Inconsistent data within message
     /// Encoded/decoded by serializers as &quot;IDWM&quot;.
@@ -149,7 +151,7 @@ public enum MessageError1Code
     [IsoId("_yJnwcfGwEeiGNursv3uE_g")]
     [Description(@"Inconsistent data within message")]
     InconsistentDataWithinMessage = MessageErrorCode.InconsistentDataWithinMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Inconsistent data with related message
     /// Encoded/decoded by serializers as &quot;IDRM&quot;.
@@ -158,7 +160,7 @@ public enum MessageError1Code
     [IsoId("_yNfj0fGwEeiGNursv3uE_g")]
     [Description(@"Inconsistent data with related message")]
     InconsistentDataWithRelatedMessage = MessageErrorCode.InconsistentDataWithRelatedMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid Batch
     /// Encoded/decoded by serializers as &quot;IBAT&quot;.
@@ -167,7 +169,7 @@ public enum MessageError1Code
     [IsoId("_yRYlUfGwEeiGNursv3uE_g")]
     [Description(@"Invalid Batch")]
     InvalidBatch = MessageErrorCode.InvalidBatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid Collection
     /// Encoded/decoded by serializers as &quot;ICOL&quot;.
@@ -176,5 +178,4 @@ public enum MessageError1Code
     [IsoId("_yWE4EfGwEeiGNursv3uE_g")]
     [Description(@"Invalid Collection")]
     InvalidCollection = MessageErrorCode.InvalidCollection, // same ordinal as derivation source for type conversions
-    
 }

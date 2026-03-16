@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat4Choice
 {
     /// <summary>
@@ -13,21 +13,15 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationFormat4Choice
     /// </summary>
     [IsoId("_c5VTP5KQEeWHWpTQn1FFVg")]
     [DisplayName("Long Identification")]
-    public partial record LongIdentification : IdentificationFormat4Choice_
+    public record LongIdentification : IdentificationFormat4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies a character string with a maximum length of 30 characters. It has a pattern that disables the use of characters that is not part of the character set X, that is, that is not a-z A-Z / - ? : ( ) . , ‘ + , and disable the use of slash &quot;/&quot; at the beginning and end of line and double slash &quot;//&quot; within the line.
         /// </summary>
         [IsoXmlTag("LngId")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
-        [StringLength(maximumLength: 30 ,MinimumLength = 1)]
-        public required IsoRestrictedFINXMax30Text Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 30, MinimumLength = 1)]
+        public required IsoRestrictedFINXMax30Text Value { get; init; }
     }
 }

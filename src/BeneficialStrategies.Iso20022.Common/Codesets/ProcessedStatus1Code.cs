@@ -23,7 +23,7 @@ public enum ProcessedStatus1Code
     [IsoId("_aKeN8dp-Ed-ak6NoX_4Aeg_-236563833")]
     [Description(@"The instruction/request has been received.")]
     Received = CorporateActionProcessedStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The advice has been sent to the market.
     /// Encoded/decoded by serializers as &quot;SENT&quot;.
@@ -32,16 +32,18 @@ public enum ProcessedStatus1Code
     [IsoId("_aKeN8tp-Ed-ak6NoX_4Aeg_-236563832")]
     [Description(@"The advice has been sent to the market.")]
     SentToMarket = CorporateActionProcessedStatusCode.SentToMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The announcement has been accepted but another source has provided different information.
     /// Encoded/decoded by serializers as &quot;WARN&quot;.
     /// </summary>
     [EnumMember(Value = "WARN")]
     [IsoId("_aKeN89p-Ed-ak6NoX_4Aeg_-236563803")]
-    [Description(@"The announcement has been accepted but another source has provided different information.")]
+    [Description(
+        @"The announcement has been accepted but another source has provided different information."
+    )]
     AcceptedWithWarning = CorporateActionProcessedStatusCode.AcceptedWithWarning, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The request is accepted.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
@@ -50,5 +52,4 @@ public enum ProcessedStatus1Code
     [IsoId("_aKeN9Np-Ed-ak6NoX_4Aeg_-236563802")]
     [Description(@"The request is accepted.")]
     Accepted = CorporateActionProcessedStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
 }

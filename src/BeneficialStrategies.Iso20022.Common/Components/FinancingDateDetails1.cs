@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T8KRktp-Ed-ak6NoX_4Aeg_1418174558")]
 [DisplayName("Financing Date Details")]
-public partial record FinancingDateDetails1
+public record FinancingDateDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date on which the financing transaction has been booked in an account.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record FinancingDateDetails1
     [DisplayName("Book Date")]
     [IsoXmlTag("BookDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BookDate { get; init; } 
-    
+    public IsoISODate? BookDate { get; init; }
+
     /// <summary>
     /// Date on which a financed amount has been credited.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record FinancingDateDetails1
     [DisplayName("Credit Date")]
     [IsoXmlTag("CdtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate CreditDate { get; init; } 
-    
+    public required IsoISODate CreditDate { get; init; }
+
     /// <summary>
     /// Date on which a financed amount has been debited.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record FinancingDateDetails1
     [DisplayName("Debit Date")]
     [IsoXmlTag("DbtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DebitDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? DebitDate { get; init; }
 }

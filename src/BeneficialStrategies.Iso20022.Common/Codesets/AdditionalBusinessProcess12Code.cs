@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_AdditionalBusinessProcess12Code")]
-[Description(@"Specifies the additional business process linked to a corporate action event such as an automatic market claim.")]
+[Description(
+    @"Specifies the additional business process linked to a corporate action event such as an automatic market claim."
+)]
 [DerivedFrom(typeof(AdditionalBusinessProcessCode))]
 public enum AdditionalBusinessProcess12Code
 {
@@ -30,7 +32,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "CLFT")]
     [IsoId("_AdditionalBusinessProcess12Code_FullTransferOfReceivedProceeds")]
-    [Description(@"Market Claim is to transfer proceeds received from the issuer to the entitled party.")]
+    [Description(
+        @"Market Claim is to transfer proceeds received from the issuer to the entitled party."
+    )]
     FullTransferOfReceivedProceeds,
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "CLNT")]
     [IsoId("_AdditionalBusinessProcess12Code_PartialTransferOfReceivedProceeds")]
-    [Description(@"Market Claim is to transfer proceeds partially received from the issuer to the entitled party. Part is compensated in cash by the party that failed to fulfil its obligation.")]
+    [Description(
+        @"Market Claim is to transfer proceeds partially received from the issuer to the entitled party. Part is compensated in cash by the party that failed to fulfil its obligation."
+    )]
     PartialTransferOfReceivedProceeds,
 
     /// <summary>
@@ -48,7 +54,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "CLPT")]
     [IsoId("_AdditionalBusinessProcess12Code_NoTransferOfReceivedProceeds")]
-    [Description(@"Market Claim is to compensate the entitled party in cash by the party that failed to fulfil its obligation. No proceeds have been received from the issuer.")]
+    [Description(
+        @"Market Claim is to compensate the entitled party in cash by the party that failed to fulfil its obligation. No proceeds have been received from the issuer."
+    )]
     NoTransferOfReceivedProceeds,
 
     /// <summary>
@@ -57,7 +65,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "CONS")]
     [IsoId("_AdditionalBusinessProcess12Code_Consent")]
-    [Description(@"Relates to a consent within a corporate action event other than a Consent event (: 22F:: CAEV//CONS).")]
+    [Description(
+        @"Relates to a consent within a corporate action event other than a Consent event (: 22F:: CAEV//CONS)."
+    )]
     Consent = AdditionalBusinessProcessCode.Consent,
 
     /// <summary>
@@ -66,7 +76,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "FPRE")]
     [IsoId("_AdditionalBusinessProcess12Code_FullPrefunding")]
-    [Description(@"Full pre-funding of a debt instrument by the issuer prior to original maturity when the issuer deposits assets in trust. Applicable only in the frame of a partial defeasance corporate action event.")]
+    [Description(
+        @"Full pre-funding of a debt instrument by the issuer prior to original maturity when the issuer deposits assets in trust. Applicable only in the frame of a partial defeasance corporate action event."
+    )]
     FullPrefunding = AdditionalBusinessProcessCode.FullPrefunding,
 
     /// <summary>
@@ -75,7 +87,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "INCP")]
     [IsoId("_AdditionalBusinessProcess12Code_IncentivePremiumPayment")]
-    [Description(@"The event is a payment of an incentive premium related to the voting conditions prescribed at a general meeting.")]
+    [Description(
+        @"The event is a payment of an incentive premium related to the voting conditions prescribed at a general meeting."
+    )]
     IncentivePremiumPayment = AdditionalBusinessProcessCode.IncentivePremiumPayment,
 
     /// <summary>
@@ -93,7 +107,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "PPRE")]
     [IsoId("_AdditionalBusinessProcess12Code_PartialPreFunding")]
-    [Description(@"Partial pre-funding of a debt instrument prior to maturity drawn through a lottery process. One new security is issued with an earlier maturity date for the refunded (called portion) and the other new security is issued with the original maturity date for the non refunded (remaining) portion. Applicable only in the frame of a partial defeasance corporate action event.")]
+    [Description(
+        @"Partial pre-funding of a debt instrument prior to maturity drawn through a lottery process. One new security is issued with an earlier maturity date for the refunded (called portion) and the other new security is issued with the original maturity date for the non refunded (remaining) portion. Applicable only in the frame of a partial defeasance corporate action event."
+    )]
     PartialPreFunding = AdditionalBusinessProcessCode.PartialPreFunding,
 
     /// <summary>
@@ -102,7 +118,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "PPUT")]
     [IsoId("_AdditionalBusinessProcess12Code_PartialMandatoryPutRedemption")]
-    [Description(@"Partial mandatory exchange of a portion of bonds where the exchanged securities are usually remarketed. The issuer may offer holders the right to retain instead of exchanging their securities. A lottery will be used to determine eligibility for the event.")]
+    [Description(
+        @"Partial mandatory exchange of a portion of bonds where the exchanged securities are usually remarketed. The issuer may offer holders the right to retain instead of exchanging their securities. A lottery will be used to determine eligibility for the event."
+    )]
     PartialMandatoryPutRedemption = AdditionalBusinessProcessCode.PartialMandatoryPutRedemption,
 
     /// <summary>
@@ -111,7 +129,9 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "SCHM")]
     [IsoId("_AdditionalBusinessProcess12Code_SchemeOrPlanOfArrangement")]
-    [Description(@"Component event of a scheme/plan of arrangement: a reorganisation of a company or a group of companies, and their capital.")]
+    [Description(
+        @"Component event of a scheme/plan of arrangement: a reorganisation of a company or a group of companies, and their capital."
+    )]
     SchemeOrPlanOfArrangement = AdditionalBusinessProcessCode.SchemeOrPlanOfArrangement,
 
     /// <summary>
@@ -120,7 +140,8 @@ public enum AdditionalBusinessProcess12Code
     /// </summary>
     [EnumMember(Value = "TAXR")]
     [IsoId("_AdditionalBusinessProcess12Code_TaxRefund")]
-    [Description(@"Relates to a tax refund from the authorities on the associated corporate action event.")]
+    [Description(
+        @"Relates to a tax refund from the authorities on the associated corporate action event."
+    )]
     TaxRefund = AdditionalBusinessProcessCode.TaxRefund,
-
 }

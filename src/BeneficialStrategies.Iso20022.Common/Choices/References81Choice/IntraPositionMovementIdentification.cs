@@ -1,29 +1,23 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.References81Choice
 {
     /// <summary>
     /// Intra Position Movement Identification.
     /// </summary>
     [DisplayName("Intra Position Movement Identification")]
-    public partial record IntraPositionMovementIdentification : References81Choice_
+    public record IntraPositionMovementIdentification : References81Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("IntraPosMvmntId")]
-        public required IsoMax35Text Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoMax35Text Value { get; init; }
     }
 }

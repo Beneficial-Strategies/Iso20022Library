@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8V3FELbhEeaqL_M7XFD7PQ")]
 [DisplayName("Position Account")]
-public partial record PositionAccount2
+public record PositionAccount2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique internal identification of the position account.
     /// </summary>
     [IsoId("_EmAWULbiEeaqL_M7XFD7PQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required GenericIdentification165 Identification { get; init; } 
-    
+    public required GenericIdentification165 Identification { get; init; }
+
     /// <summary>
     /// Position in a financial instrument or set of financial instruments.
     /// </summary>
@@ -34,8 +32,4 @@ public partial record PositionAccount2
     [IsoXmlTag("Pos")]
     public ValueList<Position1> Position { get; init; } = [];
     // ID for the above is _tRiU0bbiEeaqL_M7XFD7PQ
-    
-    
-    #nullable disable
-    
 }

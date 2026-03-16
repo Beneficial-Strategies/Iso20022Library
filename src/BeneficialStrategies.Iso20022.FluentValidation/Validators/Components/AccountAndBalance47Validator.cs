@@ -52,14 +52,15 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
 {
     // AnyBICDec2014Identifier (ISO ID: _jp-90kI6EeirV6K70JJQ8Q):
     // Format: 4 chars institution + 2 chars country + 2 chars location + optional 3 chars branch
-    private static readonly Regex AnyBicRegex = new(
-        @"^[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}$",
-        RegexOptions.Compiled | RegexOptions.CultureInvariant);
+    private static readonly Regex AnyBicRegex =
+        new(
+            @"^[A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1}$",
+            RegexOptions.Compiled | RegexOptions.CultureInvariant
+        );
 
     // CountryCode — ISO 3166 Alpha-2
-    private static readonly Regex CountryRegex = new(
-        @"^[A-Z]{2}$",
-        RegexOptions.Compiled | RegexOptions.CultureInvariant);
+    private static readonly Regex CountryRegex =
+        new(@"^[A-Z]{2}$", RegexOptions.Compiled | RegexOptions.CultureInvariant);
 
     public AccountAndBalance47Validator()
     {
@@ -69,94 +70,137 @@ public sealed class AccountAndBalance47Validator : AbstractValidator<AccountAndB
 
         RuleFor(x => x)
             .Must(x => x.SafekeepingAccount is not null || x.BlockChainAddressOrWallet is not null)
-                .WithName("SafekeepingAccountOrBlockChainAddress1Rule")
-                .WithMessage(
-                    "Either SafekeepingAccount or BlockChainAddressOrWallet must be present, " +
-                    "but not both (SafekeepingAccountOrBlockChainAddress1Rule).");
+            .WithName("SafekeepingAccountOrBlockChainAddress1Rule")
+            .WithMessage(
+                "Either SafekeepingAccount or BlockChainAddressOrWallet must be present, "
+                    + "but not both (SafekeepingAccountOrBlockChainAddress1Rule)."
+            );
 
         RuleFor(x => x)
-            .Must(x => !(x.BlockChainAddressOrWallet is not null && x.SafekeepingAccount is not null))
-                .WithName("SafekeepingAccountOrBlockChainAddress2Rule")
-                .WithMessage(
-                    "If BlockChainAddressOrWallet is present then SafekeepingAccount must be absent " +
-                    "(SafekeepingAccountOrBlockChainAddress2Rule).");
+            .Must(x =>
+                !(x.BlockChainAddressOrWallet is not null && x.SafekeepingAccount is not null)
+            )
+            .WithName("SafekeepingAccountOrBlockChainAddress2Rule")
+            .WithMessage(
+                "If BlockChainAddressOrWallet is present then SafekeepingAccount must be absent "
+                    + "(SafekeepingAccountOrBlockChainAddress2Rule)."
+            );
 
         RuleFor(x => x)
-            .Must(x => !(x.SafekeepingAccount is not null && x.BlockChainAddressOrWallet is not null))
-                .WithName("SafekeepingAccountOrBlockChainAddress3Rule")
-                .WithMessage(
-                    "If SafekeepingAccount is present then BlockChainAddressOrWallet must be absent " +
-                    "(SafekeepingAccountOrBlockChainAddress3Rule).");
+            .Must(x =>
+                !(x.SafekeepingAccount is not null && x.BlockChainAddressOrWallet is not null)
+            )
+            .WithName("SafekeepingAccountOrBlockChainAddress3Rule")
+            .WithMessage(
+                "If SafekeepingAccount is present then BlockChainAddressOrWallet must be absent "
+                    + "(SafekeepingAccountOrBlockChainAddress3Rule)."
+            );
 
         // ── SafekeepingAccount: Max35Text (0..1) ─────────────────────────────────
         RuleFor(x => x.SafekeepingAccount)
-            .MinimumLength(1).MaximumLength(35)
+            .MinimumLength(1)
+            .MaximumLength(35)
             .When(x => x.SafekeepingAccount is not null);
 
         // ── BlockChainAddressOrWallet: Max140Text (0..1) ─────────────────────────
         RuleFor(x => x.BlockChainAddressOrWallet)
-            .MinimumLength(1).MaximumLength(140)
+            .MinimumLength(1)
+            .MaximumLength(140)
             .When(x => x.BlockChainAddressOrWallet is not null);
 
         // ── AccountOwner: PartyIdentification127Choice (0..1) ────────────────────
         // Variant: AnyBIC — value must match AnyBICDec2014Identifier pattern
-        When(x => x.AccountOwner is PartyId127.AnyBIC, () =>
-            RuleFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value)
-                .NotEmpty()
-                .Matches(AnyBicRegex)
+        When(
+            x => x.AccountOwner is PartyId127.AnyBIC,
+            () =>
+                RuleFor(x => ((PartyId127.AnyBIC)x.AccountOwner!).Value)
+                    .NotEmpty()
+                    .Matches(AnyBicRegex)
                     .WithMessage(
-                        "AccountOwner.AnyBIC must match the AnyBICDec2014Identifier pattern " +
-                        "([A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1})."));
+                        "AccountOwner.AnyBIC must match the AnyBICDec2014Identifier pattern "
+                            + "([A-Z0-9]{4,4}[A-Z]{2,2}[A-Z0-9]{2,2}([A-Z0-9]{3,3}){0,1})."
+                    )
+        );
 
         // Variant: ProprietaryIdentification — Identification and Issuer required Max35Text;
         // SchemeName optional Max35Text
-        When(x => x.AccountOwner is PartyId127.ProprietaryIdentification, () =>
-        {
-            RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification)
-                .NotEmpty()
-                .MinimumLength(1).MaximumLength(35);
+        When(
+            x => x.AccountOwner is PartyId127.ProprietaryIdentification,
+            () =>
+            {
+                RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Identification)
+                    .NotEmpty()
+                    .MinimumLength(1)
+                    .MaximumLength(35);
 
-            RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer)
-                .NotEmpty()
-                .MinimumLength(1).MaximumLength(35);
+                RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).Issuer)
+                    .NotEmpty()
+                    .MinimumLength(1)
+                    .MaximumLength(35);
 
-            RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName)
-                .MinimumLength(1).MaximumLength(35)
-                .When(x =>
-                    ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName is not null);
-        });
+                RuleFor(x => ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName)
+                    .MinimumLength(1)
+                    .MaximumLength(35)
+                    .When(x =>
+                        ((PartyId127.ProprietaryIdentification)x.AccountOwner!).SchemeName
+                            is not null
+                    );
+            }
+        );
 
         // ── SafekeepingPlace: SafekeepingPlaceFormat28Choice (0..1) ──────────────
         // Variant: Country — value is ISO 3166 Alpha-2 country code
-        When(x => x.SafekeepingPlace is SfkpgPlace28.Country, () =>
-            RuleFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value)
-                .NotEmpty()
-                .Matches(CountryRegex)
+        When(
+            x => x.SafekeepingPlace is SfkpgPlace28.Country,
+            () =>
+                RuleFor(x => ((SfkpgPlace28.Country)x.SafekeepingPlace!).Value)
+                    .NotEmpty()
+                    .Matches(CountryRegex)
                     .WithMessage(
-                        "SafekeepingPlace.Country must be a valid ISO 3166 Alpha-2 country code " +
-                        "(two uppercase letters, e.g. DE, US)."));
+                        "SafekeepingPlace.Country must be a valid ISO 3166 Alpha-2 country code "
+                            + "(two uppercase letters, e.g. DE, US)."
+                    )
+        );
 
         // Variant: Identification — optional Max35Text narrative description
-        When(x => x.SafekeepingPlace is SfkpgPlace28.Identification id && id.Value is not null, () =>
-            RuleFor(x => ((SfkpgPlace28.Identification)x.SafekeepingPlace!).Value)
-                .MinimumLength(1).MaximumLength(35));
+        When(
+            x => x.SafekeepingPlace is SfkpgPlace28.Identification id && id.Value is not null,
+            () =>
+                RuleFor(x => ((SfkpgPlace28.Identification)x.SafekeepingPlace!).Value)
+                    .MinimumLength(1)
+                    .MaximumLength(35)
+        );
 
         // Variant: TypeAndIdentification — Identification must match AnyBICDec2014Identifier
-        When(x => x.SafekeepingPlace is SfkpgPlace28.TypeAndIdentification, () =>
-            RuleFor(x => ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification)
-                .NotEmpty()
-                .Matches(AnyBicRegex)
+        When(
+            x => x.SafekeepingPlace is SfkpgPlace28.TypeAndIdentification,
+            () =>
+                RuleFor(x =>
+                        ((SfkpgPlace28.TypeAndIdentification)x.SafekeepingPlace!).Identification
+                    )
+                    .NotEmpty()
+                    .Matches(AnyBicRegex)
                     .WithMessage(
-                        "SafekeepingPlace.TypeAndIdentification.Identification must match the " +
-                        "AnyBICDec2014Identifier pattern."));
+                        "SafekeepingPlace.TypeAndIdentification.Identification must match the "
+                            + "AnyBICDec2014Identifier pattern."
+                    )
+        );
 
         // Variant: Proprietary — Identification optional Max35Text
-        When(x => x.SafekeepingPlace is SfkpgPlace28.Proprietary p && p.Identification is not null, () =>
-            RuleFor(x => ((SfkpgPlace28.Proprietary)x.SafekeepingPlace!).Identification)
-                .MinimumLength(1).MaximumLength(35));
+        When(
+            x => x.SafekeepingPlace is SfkpgPlace28.Proprietary p && p.Identification is not null,
+            () =>
+                RuleFor(x => ((SfkpgPlace28.Proprietary)x.SafekeepingPlace!).Identification)
+                    .MinimumLength(1)
+                    .MaximumLength(35)
+        );
 
         // ── Balance: CorporateActionBalanceDetails43 (0..1) ──────────────────────
-        When(x => x.Balance is not null, () =>
-            RuleFor(x => x.Balance).SetValidator(new CorporateActionBalanceDetails43Validator()!));
+        When(
+            x => x.Balance is not null,
+            () =>
+                RuleFor(x => x.Balance)
+                    .SetValidator(new CorporateActionBalanceDetails43Validator()!)
+        );
     }
 }

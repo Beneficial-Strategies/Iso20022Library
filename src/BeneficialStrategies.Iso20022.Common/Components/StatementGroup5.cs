@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xZNgwTEyEe6g-ffJsqGiSA")]
 [DisplayName("Statement Group5")]
-public partial record StatementGroup5
+public record StatementGroup5
 {
-    #nullable enable
-
     /// <summary>
     /// Billing Statement.
     /// </summary>
@@ -30,37 +28,33 @@ public partial record StatementGroup5
     /// </summary>
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
-    public required IsoMax35Text GroupIdentification { get; init; } 
+    public required IsoMax35Text GroupIdentification { get; init; }
 
     /// <summary>
     /// Receiver.
     /// </summary>
     [DisplayName("Receiver")]
     [IsoXmlTag("Rcvr")]
-    public required PartyIdentification273 Receiver { get; init; } 
+    public required PartyIdentification273 Receiver { get; init; }
 
     /// <summary>
     /// Receiver Individual Contact.
     /// </summary>
     [DisplayName("Receiver Individual Contact")]
     [IsoXmlTag("RcvrIndvCtct")]
-    public Contact13? ReceiverIndividualContact { get; init; } 
+    public Contact13? ReceiverIndividualContact { get; init; }
 
     /// <summary>
     /// Sender.
     /// </summary>
     [DisplayName("Sender")]
     [IsoXmlTag("Sndr")]
-    public required PartyIdentification273 Sender { get; init; } 
+    public required PartyIdentification273 Sender { get; init; }
 
     /// <summary>
     /// Sender Individual Contact.
     /// </summary>
     [DisplayName("Sender Individual Contact")]
     [IsoXmlTag("SndrIndvCtct")]
-    public Contact13? SenderIndividualContact { get; init; } 
-
-    
-    #nullable disable
-    
+    public Contact13? SenderIndividualContact { get; init; }
 }

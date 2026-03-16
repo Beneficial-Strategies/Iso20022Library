@@ -22,22 +22,38 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Reason7Choice.RepairReason))]
     [KnownType(typeof(Reason7Choice.PendingModificationReason))]
     [KnownType(typeof(Reason7Choice.UnmatchedReason))]
-    [JsonDerivedType(typeof(Reason7Choice.RepoCallAcknowledgementReason),nameof(Reason7Choice.RepoCallAcknowledgementReason))]
-    [JsonDerivedType(typeof(Reason7Choice.CancellationReason),nameof(Reason7Choice.CancellationReason))]
-    [JsonDerivedType(typeof(Reason7Choice.PendingCancellationReason),nameof(Reason7Choice.PendingCancellationReason))]
-    [JsonDerivedType(typeof(Reason7Choice.GeneratedReason),nameof(Reason7Choice.GeneratedReason))]
-    [JsonDerivedType(typeof(Reason7Choice.DeniedReason),nameof(Reason7Choice.DeniedReason))]
-    [JsonDerivedType(typeof(Reason7Choice.AcknowledgedAcceptedReason),nameof(Reason7Choice.AcknowledgedAcceptedReason))]
-    [JsonDerivedType(typeof(Reason7Choice.PendingReason),nameof(Reason7Choice.PendingReason))]
-    [JsonDerivedType(typeof(Reason7Choice.FailingReason),nameof(Reason7Choice.FailingReason))]
-    [JsonDerivedType(typeof(Reason7Choice.PendingProcessingReason),nameof(Reason7Choice.PendingProcessingReason))]
-    [JsonDerivedType(typeof(Reason7Choice.RejectionReason),nameof(Reason7Choice.RejectionReason))]
-    [JsonDerivedType(typeof(Reason7Choice.RepairReason),nameof(Reason7Choice.RepairReason))]
-    [JsonDerivedType(typeof(Reason7Choice.PendingModificationReason),nameof(Reason7Choice.PendingModificationReason))]
-    [JsonDerivedType(typeof(Reason7Choice.UnmatchedReason),nameof(Reason7Choice.UnmatchedReason))]
+    [JsonDerivedType(
+        typeof(Reason7Choice.RepoCallAcknowledgementReason),
+        nameof(Reason7Choice.RepoCallAcknowledgementReason)
+    )]
+    [JsonDerivedType(
+        typeof(Reason7Choice.CancellationReason),
+        nameof(Reason7Choice.CancellationReason)
+    )]
+    [JsonDerivedType(
+        typeof(Reason7Choice.PendingCancellationReason),
+        nameof(Reason7Choice.PendingCancellationReason)
+    )]
+    [JsonDerivedType(typeof(Reason7Choice.GeneratedReason), nameof(Reason7Choice.GeneratedReason))]
+    [JsonDerivedType(typeof(Reason7Choice.DeniedReason), nameof(Reason7Choice.DeniedReason))]
+    [JsonDerivedType(
+        typeof(Reason7Choice.AcknowledgedAcceptedReason),
+        nameof(Reason7Choice.AcknowledgedAcceptedReason)
+    )]
+    [JsonDerivedType(typeof(Reason7Choice.PendingReason), nameof(Reason7Choice.PendingReason))]
+    [JsonDerivedType(typeof(Reason7Choice.FailingReason), nameof(Reason7Choice.FailingReason))]
+    [JsonDerivedType(
+        typeof(Reason7Choice.PendingProcessingReason),
+        nameof(Reason7Choice.PendingProcessingReason)
+    )]
+    [JsonDerivedType(typeof(Reason7Choice.RejectionReason), nameof(Reason7Choice.RejectionReason))]
+    [JsonDerivedType(typeof(Reason7Choice.RepairReason), nameof(Reason7Choice.RepairReason))]
+    [JsonDerivedType(
+        typeof(Reason7Choice.PendingModificationReason),
+        nameof(Reason7Choice.PendingModificationReason)
+    )]
+    [JsonDerivedType(typeof(Reason7Choice.UnmatchedReason), nameof(Reason7Choice.UnmatchedReason))]
     [IsoId("_E2DtN_4hEeCH9dkaY_DhYw")]
     [DisplayName("Reason 7 Choice")]
-    public abstract partial record Reason7Choice_
-    {
-    }
+    public abstract record Reason7Choice_ { }
 }

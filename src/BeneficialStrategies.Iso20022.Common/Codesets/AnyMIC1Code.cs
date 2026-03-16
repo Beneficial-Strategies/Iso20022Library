@@ -23,5 +23,4 @@ public enum AnyMIC1Code
     [IsoId("_SW4c0R3ZEeWNp95x0ENf8w")]
     [Description(@"Any MIC code.")]
     AnyMIC = SpecialPurposeCode.AnyMIC, // same ordinal as derivation source for type conversions
-    
 }

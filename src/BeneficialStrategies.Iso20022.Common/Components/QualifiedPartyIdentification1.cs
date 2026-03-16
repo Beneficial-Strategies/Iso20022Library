@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -17,10 +17,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjEy-AOSNFX-8224491")]
 [DisplayName("Qualified Party Identification")]
-public partial record QualifiedPartyIdentification1
+public record QualifiedPartyIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Schema ID to be used in IDREF values.
     /// </summary>
@@ -28,8 +26,8 @@ public partial record QualifiedPartyIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public required IsoID Identification { get; init; } 
-    
+    public required IsoID Identification { get; init; }
+
     /// <summary>
     /// List of identifications for the same party.
     /// </summary>
@@ -37,24 +35,25 @@ public partial record QualifiedPartyIdentification1
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
     public ValueList<SingleQualifiedPartyIdentification1> Party { get; init; } = [];
+
     // ID for the above is _OTgzMjU1-AOSNFX-8224494
-    
+
     /// <summary>
     /// Short identification of the resulting party as a control mechanism for humans.
     /// </summary>
     [IsoId("_OTgzMjU2-AOSNFX-8224494")]
     [DisplayName("Short Identification")]
     [IsoXmlTag("ShrtId")]
-    public PartyIdentification2Choice_? ShortIdentification { get; init; } 
-    
+    public PartyIdentification2Choice_? ShortIdentification { get; init; }
+
     /// <summary>
     /// Formally defined role qualifying the party.
     /// </summary>
     [IsoId("_OTgzMjU3-AOSNFX-8224494")]
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
-    public GenericIdentification1? Role { get; init; } 
-    
+    public GenericIdentification1? Role { get; init; }
+
     /// <summary>
     /// Free form description of the party&apos;s role.
     /// </summary>
@@ -62,10 +61,6 @@ public partial record QualifiedPartyIdentification1
     [DisplayName("Role Description")]
     [IsoXmlTag("RoleDesc")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? RoleDescription { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? RoleDescription { get; init; }
 }

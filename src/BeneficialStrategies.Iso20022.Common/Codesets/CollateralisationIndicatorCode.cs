@@ -23,7 +23,7 @@ public enum CollateralisationIndicatorCode
     [IsoId("_Ze1M8C5TEeK7-OZOLIksSw")]
     [Description(@"Transaction is fully collateralised.")]
     FullyCollateralised,
-    
+
     /// <summary>
     /// Transaction is one-way collateralised.
     /// Encoded/decoded by serializers as &quot;ONEW&quot;.
@@ -32,7 +32,7 @@ public enum CollateralisationIndicatorCode
     [IsoId("_hq8SwC5TEeK7-OZOLIksSw")]
     [Description(@"Transaction is one-way collateralised.")]
     OneWayCollateralised,
-    
+
     /// <summary>
     /// Transaction is partially collateralised.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -41,7 +41,7 @@ public enum CollateralisationIndicatorCode
     [IsoId("_k7rDsC5TEeK7-OZOLIksSw")]
     [Description(@"Transaction is partially collateralised.")]
     PartiallyCollateralised,
-    
+
     /// <summary>
     /// Transaction is uncollateralised.
     /// Encoded/decoded by serializers as &quot;UNCO&quot;.
@@ -50,5 +50,4 @@ public enum CollateralisationIndicatorCode
     [IsoId("_oNARkC5TEeK7-OZOLIksSw")]
     [Description(@"Transaction is uncollateralised.")]
     Uncollateralised,
-    
 }

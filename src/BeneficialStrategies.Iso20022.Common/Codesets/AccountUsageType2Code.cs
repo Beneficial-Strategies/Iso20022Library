@@ -23,7 +23,7 @@ public enum AccountUsageType2Code
     [IsoId("_FcoZMb-FEeWfsa741pI6WA")]
     [Description(@"Investor.")]
     Investor = AccountUsageTypeCode.Investor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuing participant.
     /// Encoded/decoded by serializers as &quot;ISSP&quot;.
@@ -32,7 +32,7 @@ public enum AccountUsageType2Code
     [IsoId("_FjxjAb-FEeWfsa741pI6WA")]
     [Description(@"Issuing participant.")]
     IssuingParticipant = AccountUsageTypeCode.IssuingParticipant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement participant.
     /// Encoded/decoded by serializers as &quot;SETP&quot;.
@@ -41,7 +41,7 @@ public enum AccountUsageType2Code
     [IsoId("_Fqw70b-FEeWfsa741pI6WA")]
     [Description(@"Settlement participant.")]
     SettlementParticipant = AccountUsageTypeCode.SettlementParticipant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trading participant.
     /// Encoded/decoded by serializers as &quot;TRDP&quot;.
@@ -50,5 +50,4 @@ public enum AccountUsageType2Code
     [IsoId("_FyD2ob-FEeWfsa741pI6WA")]
     [Description(@"Trading participant.")]
     TradingParticipant = AccountUsageTypeCode.TradingParticipant, // same ordinal as derivation source for type conversions
-    
 }

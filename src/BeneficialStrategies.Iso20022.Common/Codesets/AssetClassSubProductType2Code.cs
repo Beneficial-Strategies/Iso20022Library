@@ -23,5 +23,4 @@ public enum AssetClassSubProductType2Code
     [IsoId("_MkTJ4QnzEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type softs.")]
     Softs = AssetClassSubProductTypeCode.Softs, // same ordinal as derivation source for type conversions
-    
 }

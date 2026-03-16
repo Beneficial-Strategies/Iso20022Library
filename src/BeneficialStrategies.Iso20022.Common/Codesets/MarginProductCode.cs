@@ -23,7 +23,7 @@ public enum MarginProductCode
     [IsoId("_YZq-uNp-Ed-ak6NoX_4Aeg_997889557")]
     [Description(@"Specifies that the margin is related to equities.")]
     Equities,
-    
+
     /// <summary>
     /// Specifies that the margin is related to fixed income.
     /// Encoded/decoded by serializers as &quot;FIXI&quot;.
@@ -32,5 +32,4 @@ public enum MarginProductCode
     [IsoId("_YZ0IoNp-Ed-ak6NoX_4Aeg_-1565139017")]
     [Description(@"Specifies that the margin is related to fixed income.")]
     FixedIncome,
-    
 }

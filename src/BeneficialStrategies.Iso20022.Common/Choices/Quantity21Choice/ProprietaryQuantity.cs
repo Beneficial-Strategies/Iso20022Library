@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Quantity21Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity21Choice
     /// </summary>
     [IsoId("_cfAup5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary Quantity")]
-    public partial record ProprietaryQuantity : Quantity21Choice_
+    public record ProprietaryQuantity : Quantity21Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Provides the proprietary quantity with a decimal number.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity21Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Quantity { get; init; } 
-        
+        public required IsoRestrictedFINDecimalNumber Quantity { get; init; }
+
         /// <summary>
         /// Identifies the type of proprietary quantity reported.
         /// </summary>
@@ -33,8 +31,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity21Choice
         [DisplayName("Quantity Type")]
         [IsoXmlTag("QtyTp")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText QuantityType { get; init; } 
-        
+        public required IsoExact4AlphaNumericText QuantityType { get; init; }
+
         /// <summary>
         /// Provides information related to issuer in free format.
         /// </summary>
@@ -42,9 +40,9 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity21Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public required IsoMax4AlphaNumericText Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public required IsoMax4AlphaNumericText Issuer { get; init; }
+
         /// <summary>
         /// Name of the identification scheme.
         /// </summary>
@@ -52,11 +50,7 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity21Choice
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public IsoMax4AlphaNumericText? SchemeName { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum EventCompletenessStatus1Code
     [IsoId("_ajDtFdp-Ed-ak6NoX_4Aeg_1572153086")]
     [Description(@"Event details are complete.")]
     Complete = EventCompletenessStatusCode.Complete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event details are not complete.
     /// Encoded/decoded by serializers as &quot;INCO&quot;.
@@ -32,5 +32,4 @@ public enum EventCompletenessStatus1Code
     [IsoId("_ajDtFtp-Ed-ak6NoX_4Aeg_1572153199")]
     [Description(@"Event details are not complete.")]
     Incomplete = EventCompletenessStatusCode.Incomplete, // same ordinal as derivation source for type conversions
-    
 }

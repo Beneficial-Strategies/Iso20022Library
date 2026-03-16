@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rvygrdp-Ed-ak6NoX_4Aeg_438228373")]
 [DisplayName("Tax Charges")]
-public partial record TaxCharges1
+public record TaxCharges1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference used to identify the nature of tax levied, such as Value Added Tax (VAT).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TaxCharges1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Identification { get; init; }
+
     /// <summary>
     /// Rate used to calculate the tax.
     /// </summary>
@@ -35,17 +33,13 @@ public partial record TaxCharges1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; } 
-    
+    public IsoPercentageRate? Rate { get; init; }
+
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.
     /// </summary>
     [IsoId("_Rv8Rodp-Ed-ak6NoX_4Aeg_438228733")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public CurrencyAndAmount? Amount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CurrencyAndAmount? Amount { get; init; }
 }

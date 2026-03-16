@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aUmaVNp-Ed-ak6NoX_4Aeg_-863621443")]
-[Description(@"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.")]
+[Description(
+    @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
+)]
 [DerivedFrom(typeof(MarketTypeCode))]
 public enum MarketType4Code
 {
@@ -23,7 +25,7 @@ public enum MarketType4Code
     [IsoId("_aUmaVdp-Ed-ak6NoX_4Aeg_-1841693350")]
     [Description(@"The place is a fund (transfer agent, fund itself, etc.).")]
     Fund = MarketTypeCode.Fund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a local market.
     /// Encoded/decoded by serializers as &quot;LMAR&quot;.
@@ -32,7 +34,7 @@ public enum MarketType4Code
     [IsoId("_aUmaVtp-Ed-ak6NoX_4Aeg_-790560278")]
     [Description(@"The place is a local market.")]
     LocalMarket = MarketTypeCode.LocalMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is theoretical.
     /// Encoded/decoded by serializers as &quot;THEO&quot;.
@@ -41,7 +43,7 @@ public enum MarketType4Code
     [IsoId("_aUmaV9p-Ed-ak6NoX_4Aeg_1996754313")]
     [Description(@"The place is theoretical.")]
     Theoretical = MarketTypeCode.Theoretical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a vendor.
     /// Encoded/decoded by serializers as &quot;VEND&quot;.
@@ -50,5 +52,4 @@ public enum MarketType4Code
     [IsoId("_aUmaWNp-Ed-ak6NoX_4Aeg_-831064220")]
     [Description(@"The place is a vendor.")]
     Vendor = MarketTypeCode.Vendor, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(EnergyQuantityUnit1Choice.Code))]
     [KnownType(typeof(EnergyQuantityUnit1Choice.Proprietary))]
-    [JsonDerivedType(typeof(EnergyQuantityUnit1Choice.Code),nameof(EnergyQuantityUnit1Choice.Code))]
-    [JsonDerivedType(typeof(EnergyQuantityUnit1Choice.Proprietary),nameof(EnergyQuantityUnit1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(EnergyQuantityUnit1Choice.Code),
+        nameof(EnergyQuantityUnit1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(EnergyQuantityUnit1Choice.Proprietary),
+        nameof(EnergyQuantityUnit1Choice.Proprietary)
+    )]
     [IsoId("_GCAHUKfwEeW_OId9wS8dsQ")]
     [DisplayName("Energy Quantity Unit 1 Choice")]
-    public abstract partial record EnergyQuantityUnit1Choice_
-    {
-    }
+    public abstract record EnergyQuantityUnit1Choice_ { }
 }

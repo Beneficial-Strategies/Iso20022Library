@@ -23,7 +23,7 @@ public enum ObligationType1Code
     [IsoId("_YZ95odp-Ed-ak6NoX_4Aeg_-590738382")]
     [Description(@"Specifies that the obligation is related to a failed trade.")]
     Fails = ObligationTypeCode.Fails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the obligation is related to new a trade.
     /// Encoded/decoded by serializers as &quot;NEW1&quot;.
@@ -32,7 +32,7 @@ public enum ObligationType1Code
     [IsoId("_YZ95otp-Ed-ak6NoX_4Aeg_155306625")]
     [Description(@"Specifies that the obligation is related to new a trade.")]
     New = ObligationTypeCode.New, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the obligation is related to a corporate event.
     /// Encoded/decoded by serializers as &quot;COEV&quot;.
@@ -41,5 +41,4 @@ public enum ObligationType1Code
     [IsoId("_YZ95o9p-Ed-ak6NoX_4Aeg_-1536873572")]
     [Description(@"Specifies that the obligation is related to a corporate event.")]
     CorporateEvent = ObligationTypeCode.CorporateEvent, // same ordinal as derivation source for type conversions
-    
 }

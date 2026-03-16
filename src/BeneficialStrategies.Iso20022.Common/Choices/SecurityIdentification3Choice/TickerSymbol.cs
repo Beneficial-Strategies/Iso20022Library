@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification3Choice
     /// </summary>
     [IsoId("_Qdr_lNp-Ed-ak6NoX_4Aeg_1064399370")]
     [DisplayName("Ticker Symbol")]
-    public partial record TickerSymbol : SecurityIdentification3Choice_
+    public record TickerSymbol : SecurityIdentification3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Letters that identify a stock traded on a stock exchange. The Ticker Symbol is a short and convenient way of identifying a stock, for example, RTR.L for Reuters quoted in London.
         /// </summary>
         [IsoXmlTag("TckrSymb")]
         [IsoSimpleType(IsoSimpleType.TickerIdentifier)]
-        public required IsoTickerIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoTickerIdentifier Value { get; init; }
     }
 }

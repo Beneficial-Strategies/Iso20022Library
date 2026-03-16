@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason))]
     [KnownType(typeof(AccountStatusUpdateInstructionReason1Choice.Reason))]
-    [JsonDerivedType(typeof(AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason),nameof(AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(AccountStatusUpdateInstructionReason1Choice.Reason),nameof(AccountStatusUpdateInstructionReason1Choice.Reason))]
+    [JsonDerivedType(
+        typeof(AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason),
+        nameof(AccountStatusUpdateInstructionReason1Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(AccountStatusUpdateInstructionReason1Choice.Reason),
+        nameof(AccountStatusUpdateInstructionReason1Choice.Reason)
+    )]
     [IsoId("_MizyUXi8EeaRm5xIK6nGuQ")]
     [DisplayName("Account Status Update Instruction Reason 1 Choice")]
-    public abstract partial record AccountStatusUpdateInstructionReason1Choice_
-    {
-    }
+    public abstract record AccountStatusUpdateInstructionReason1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,30 +14,28 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zUrnoaEYEe-MRKYsaX6JDg")]
 [DisplayName("Card Payment Data Set39")]
-public partial record CardPaymentDataSet39
+public record CardPaymentDataSet39
 {
-    #nullable enable
-
     /// <summary>
     /// Data Set Identification.
     /// </summary>
     [DisplayName("Data Set Identification")]
     [IsoXmlTag("DataSetId")]
-    public required DataSetIdentification5 DataSetIdentification { get; init; } 
+    public required DataSetIdentification5 DataSetIdentification { get; init; }
 
     /// <summary>
     /// Data Set Initiator.
     /// </summary>
     [DisplayName("Data Set Initiator")]
     [IsoXmlTag("DataSetInitr")]
-    public GenericIdentification176? DataSetInitiator { get; init; } 
+    public GenericIdentification176? DataSetInitiator { get; init; }
 
     /// <summary>
     /// Data Set Result.
     /// </summary>
     [DisplayName("Data Set Result")]
     [IsoXmlTag("DataSetRslt")]
-    public required ResponseType10 DataSetResult { get; init; } 
+    public required ResponseType10 DataSetResult { get; init; }
 
     /// <summary>
     /// Rejected Transaction.
@@ -51,7 +49,7 @@ public partial record CardPaymentDataSet39
     /// </summary>
     [DisplayName("Remove Data Set")]
     [IsoXmlTag("RmvDataSet")]
-    public required IsoTrueFalseIndicator RemoveDataSet { get; init; } 
+    public required IsoTrueFalseIndicator RemoveDataSet { get; init; }
 
     /// <summary>
     /// Resumed Approval.
@@ -80,8 +78,4 @@ public partial record CardPaymentDataSet39
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
     public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

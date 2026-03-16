@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
     /// </summary>
     [IsoId("_cFghI1ovEe23K4GXSpBSeg")]
     [DisplayName("Report")]
-    public partial record Report : StatisticsPerCounterparty15Choice_
+    public record Report : StatisticsPerCounterparty15Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Reference date for statistics collection.
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
         [DisplayName("Reference Date")]
         [IsoXmlTag("RefDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate ReferenceDate { get; init; } 
-        
+        public required IsoISODate ReferenceDate { get; init; }
+
         /// <summary>
         /// Different categories of statuses for a derivative.
         /// </summary>
         [IsoId("_cHFOc1ovEe23K4GXSpBSeg")]
         [DisplayName("Reconciliation Categories")]
         [IsoXmlTag("RcncltnCtgrs")]
-        public required ReportingRequirement2Choice_ ReconciliationCategories { get; init; } 
-        
+        public required ReportingRequirement2Choice_ ReconciliationCategories { get; init; }
+
         /// <summary>
         /// Number of all reports per status on derivatives submitted for reconciliation.
         /// </summary>
@@ -41,18 +39,14 @@ namespace BeneficialStrategies.Iso20022.Choices.StatisticsPerCounterparty15Choic
         [DisplayName("Total Number Of Transactions")]
         [IsoXmlTag("TtlNbOfTxs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? TotalNumberOfTransactions { get; init; } 
-        
+        public IsoNumber? TotalNumberOfTransactions { get; init; }
+
         /// <summary>
         /// Details of derivatives submitted for reconciliation per counterparty pair.
         /// </summary>
         [IsoId("_cHFOd1ovEe23K4GXSpBSeg")]
         [DisplayName("Transaction Details")]
         [IsoXmlTag("TxDtls")]
-        public ReconciliationCounterpartyPairStatistics6? TransactionDetails { get; init; } 
-        
-        
-        #nullable disable
-        
+        public ReconciliationCounterpartyPairStatistics6? TransactionDetails { get; init; }
     }
 }

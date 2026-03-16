@@ -23,7 +23,7 @@ public enum CardServiceType4Code
     [IsoId("_GQgWgU-DEeePXdaAO32Uew")]
     [Description(@"Partial reconciliation of the day.")]
     CheckPoint = CardServiceTypeCode.CheckPoint, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Final reconciliation.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -32,7 +32,7 @@ public enum CardServiceType4Code
     [IsoId("_HStaYk-DEeePXdaAO32Uew")]
     [Description(@"Final reconciliation.")]
     Final = CardServiceTypeCode.Final, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// National defined code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum CardServiceType4Code
     [IsoId("_H7LIkk-DEeePXdaAO32Uew")]
     [Description(@"National defined code.")]
     OtherNational = CardServiceTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Private defined code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum CardServiceType4Code
     [IsoId("_IH-Ock-DEeePXdaAO32Uew")]
     [Description(@"Private defined code.")]
     OtherPrivate = CardServiceTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

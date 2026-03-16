@@ -23,7 +23,7 @@ public enum ConfirmationRequest1Code
     [IsoId("_lrBcsX6IEeSAlrUr1Vow5g")]
     [Description(@"To confirm the trade.")]
     Confirmation = ConfirmationRequestCode.Confirmation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// To reject the confirmation of the trade.
     /// Encoded/decoded by serializers as &quot;CNRR&quot;.
@@ -32,7 +32,7 @@ public enum ConfirmationRequest1Code
     [IsoId("_lwYd0X6IEeSAlrUr1Vow5g")]
     [Description(@"To reject the confirmation of the trade.")]
     ConfirmationRequestRejected = ConfirmationRequestCode.ConfirmationRequestRejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// To inquire about the status of the trade confirmation.
     /// Encoded/decoded by serializers as &quot;STAT&quot;.
@@ -41,5 +41,4 @@ public enum ConfirmationRequest1Code
     [IsoId("_l1rNgX6IEeSAlrUr1Vow5g")]
     [Description(@"To inquire about the status of the trade confirmation.")]
     Status = ConfirmationRequestCode.Status, // same ordinal as derivation source for type conversions
-    
 }

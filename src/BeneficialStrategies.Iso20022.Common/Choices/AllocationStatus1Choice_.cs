@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AllocationStatus1Choice.FullyAllocated))]
     [KnownType(typeof(AllocationStatus1Choice.PartiallyAllocated))]
     [KnownType(typeof(AllocationStatus1Choice.Proprietary))]
-    [JsonDerivedType(typeof(AllocationStatus1Choice.FullyAllocated),nameof(AllocationStatus1Choice.FullyAllocated))]
-    [JsonDerivedType(typeof(AllocationStatus1Choice.PartiallyAllocated),nameof(AllocationStatus1Choice.PartiallyAllocated))]
-    [JsonDerivedType(typeof(AllocationStatus1Choice.Proprietary),nameof(AllocationStatus1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(AllocationStatus1Choice.FullyAllocated),
+        nameof(AllocationStatus1Choice.FullyAllocated)
+    )]
+    [JsonDerivedType(
+        typeof(AllocationStatus1Choice.PartiallyAllocated),
+        nameof(AllocationStatus1Choice.PartiallyAllocated)
+    )]
+    [JsonDerivedType(
+        typeof(AllocationStatus1Choice.Proprietary),
+        nameof(AllocationStatus1Choice.Proprietary)
+    )]
     [IsoId("_D01G0N_-EeiVRbNQx5-Vhg")]
     [DisplayName("Allocation Status 1 Choice")]
-    public abstract partial record AllocationStatus1Choice_
-    {
-    }
+    public abstract record AllocationStatus1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTK5caE8Ee-MRKYsaX6JDg")]
 [DisplayName("Diagnosis Response7")]
-public partial record DiagnosisResponse7
+public record DiagnosisResponse7
 {
-    #nullable enable
-
     /// <summary>
     /// Host Status.
     /// </summary>
@@ -37,9 +35,5 @@ public partial record DiagnosisResponse7
     /// </summary>
     [DisplayName("POI Status")]
     [IsoXmlTag("POISts")]
-    public StatusReportContent14? POIStatus { get; init; } 
-
-    
-    #nullable disable
-    
+    public StatusReportContent14? POIStatus { get; init; }
 }

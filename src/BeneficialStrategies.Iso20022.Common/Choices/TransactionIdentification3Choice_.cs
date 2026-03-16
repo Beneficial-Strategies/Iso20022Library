@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TransactionIdentification3Choice.Transaction))]
     [KnownType(typeof(TransactionIdentification3Choice.MarginReporting))]
     [KnownType(typeof(TransactionIdentification3Choice.CollateralReuse))]
-    [JsonDerivedType(typeof(TransactionIdentification3Choice.Transaction),nameof(TransactionIdentification3Choice.Transaction))]
-    [JsonDerivedType(typeof(TransactionIdentification3Choice.MarginReporting),nameof(TransactionIdentification3Choice.MarginReporting))]
-    [JsonDerivedType(typeof(TransactionIdentification3Choice.CollateralReuse),nameof(TransactionIdentification3Choice.CollateralReuse))]
+    [JsonDerivedType(
+        typeof(TransactionIdentification3Choice.Transaction),
+        nameof(TransactionIdentification3Choice.Transaction)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionIdentification3Choice.MarginReporting),
+        nameof(TransactionIdentification3Choice.MarginReporting)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionIdentification3Choice.CollateralReuse),
+        nameof(TransactionIdentification3Choice.CollateralReuse)
+    )]
     [IsoId("_hXhZR8K4EeuFNp8LZAnorg")]
     [DisplayName("Transaction Identification 3 Choice")]
-    public abstract partial record TransactionIdentification3Choice_
-    {
-    }
+    public abstract record TransactionIdentification3Choice_ { }
 }

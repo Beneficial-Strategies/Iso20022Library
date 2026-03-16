@@ -23,7 +23,7 @@ public enum FailureReason5Code
     [IsoId("_4Y2kQYr-EeSvuOJS0mmL0g")]
     [Description(@"General security error.")]
     Security = FailureReasonCode.Security, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hardware error on the device.
     /// Encoded/decoded by serializers as &quot;HRDW&quot;.
@@ -32,5 +32,4 @@ public enum FailureReason5Code
     [IsoId("_-lfssYr-EeSvuOJS0mmL0g")]
     [Description(@"Hardware error on the device.")]
     Hardware = FailureReasonCode.Hardware, // same ordinal as derivation source for type conversions
-    
 }

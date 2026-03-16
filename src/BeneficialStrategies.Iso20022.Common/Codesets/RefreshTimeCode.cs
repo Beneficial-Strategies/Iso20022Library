@@ -23,7 +23,7 @@ public enum RefreshTimeCode
     [IsoId("_Za7nYdp-Ed-ak6NoX_4Aeg_-1468432665")]
     [Description(@"After each fill.")]
     Immediate,
-    
+
     /// <summary>
     /// When quantity to be displayed equals 0.
     /// Encoded/decoded by serializers as &quot;EXHA&quot;.
@@ -32,5 +32,4 @@ public enum RefreshTimeCode
     [IsoId("_Za7nYtp-Ed-ak6NoX_4Aeg_-1027912177")]
     [Description(@"When quantity to be displayed equals 0.")]
     Exhaust,
-    
 }

@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus43Choice.PendingProcessing))]
     [KnownType(typeof(ProcessingStatus43Choice.Rejected))]
     [KnownType(typeof(ProcessingStatus43Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(ProcessingStatus43Choice.Received),nameof(ProcessingStatus43Choice.Received))]
-    [JsonDerivedType(typeof(ProcessingStatus43Choice.Accepted),nameof(ProcessingStatus43Choice.Accepted))]
-    [JsonDerivedType(typeof(ProcessingStatus43Choice.PendingProcessing),nameof(ProcessingStatus43Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(ProcessingStatus43Choice.Rejected),nameof(ProcessingStatus43Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus43Choice.ProprietaryStatus),nameof(ProcessingStatus43Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus43Choice.Received),
+        nameof(ProcessingStatus43Choice.Received)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus43Choice.Accepted),
+        nameof(ProcessingStatus43Choice.Accepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus43Choice.PendingProcessing),
+        nameof(ProcessingStatus43Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus43Choice.Rejected),
+        nameof(ProcessingStatus43Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus43Choice.ProprietaryStatus),
+        nameof(ProcessingStatus43Choice.ProprietaryStatus)
+    )]
     [IsoId("_ezCkoVhFEeOMYfRGLS0NbA")]
     [DisplayName("Processing Status 43 Choice")]
-    public abstract partial record ProcessingStatus43Choice_
-    {
-    }
+    public abstract record ProcessingStatus43Choice_ { }
 }

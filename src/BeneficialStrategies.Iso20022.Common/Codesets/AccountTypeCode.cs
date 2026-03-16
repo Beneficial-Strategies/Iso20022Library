@@ -23,7 +23,7 @@ public enum AccountTypeCode
     [IsoId("_brxoodp-Ed-ak6NoX_4Aeg_-841858447")]
     [Description(@"Cash account.")]
     Cash,
-    
+
     /// <summary>
     /// Securities account.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,5 +32,4 @@ public enum AccountTypeCode
     [IsoId("_brxootp-Ed-ak6NoX_4Aeg_-841858438")]
     [Description(@"Securities account.")]
     Securities,
-    
 }

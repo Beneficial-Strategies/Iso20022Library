@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DocumentIdentification4Choice.AccountServicerDocumentIdentification))]
     [KnownType(typeof(DocumentIdentification4Choice.AccountOwnerDocumentIdentification))]
-    [JsonDerivedType(typeof(DocumentIdentification4Choice.AccountServicerDocumentIdentification),nameof(DocumentIdentification4Choice.AccountServicerDocumentIdentification))]
-    [JsonDerivedType(typeof(DocumentIdentification4Choice.AccountOwnerDocumentIdentification),nameof(DocumentIdentification4Choice.AccountOwnerDocumentIdentification))]
+    [JsonDerivedType(
+        typeof(DocumentIdentification4Choice.AccountServicerDocumentIdentification),
+        nameof(DocumentIdentification4Choice.AccountServicerDocumentIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(DocumentIdentification4Choice.AccountOwnerDocumentIdentification),
+        nameof(DocumentIdentification4Choice.AccountOwnerDocumentIdentification)
+    )]
     [IsoId("_celQvZKQEeWHWpTQn1FFVg")]
     [DisplayName("Document Identification 4 Choice")]
-    public abstract partial record DocumentIdentification4Choice_
-    {
-    }
+    public abstract record DocumentIdentification4Choice_ { }
 }

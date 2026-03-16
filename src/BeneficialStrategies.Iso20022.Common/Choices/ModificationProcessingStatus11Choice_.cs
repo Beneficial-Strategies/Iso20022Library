@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ModificationProcessingStatus11Choice.Repaired))]
     [KnownType(typeof(ModificationProcessingStatus11Choice.Modified))]
     [KnownType(typeof(ModificationProcessingStatus11Choice.Proprietary))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.AcknowledgedAccepted),nameof(ModificationProcessingStatus11Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.PendingProcessing),nameof(ModificationProcessingStatus11Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.Denied),nameof(ModificationProcessingStatus11Choice.Denied))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.Rejected),nameof(ModificationProcessingStatus11Choice.Rejected))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.Repaired),nameof(ModificationProcessingStatus11Choice.Repaired))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.Modified),nameof(ModificationProcessingStatus11Choice.Modified))]
-    [JsonDerivedType(typeof(ModificationProcessingStatus11Choice.Proprietary),nameof(ModificationProcessingStatus11Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.AcknowledgedAccepted),
+        nameof(ModificationProcessingStatus11Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.PendingProcessing),
+        nameof(ModificationProcessingStatus11Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.Denied),
+        nameof(ModificationProcessingStatus11Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.Rejected),
+        nameof(ModificationProcessingStatus11Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.Repaired),
+        nameof(ModificationProcessingStatus11Choice.Repaired)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.Modified),
+        nameof(ModificationProcessingStatus11Choice.Modified)
+    )]
+    [JsonDerivedType(
+        typeof(ModificationProcessingStatus11Choice.Proprietary),
+        nameof(ModificationProcessingStatus11Choice.Proprietary)
+    )]
     [IsoId("_ds02HTi8Eeydid5dcNPKvg")]
     [DisplayName("Modification Processing Status 11 Choice")]
-    public abstract partial record ModificationProcessingStatus11Choice_
-    {
-    }
+    public abstract record ModificationProcessingStatus11Choice_ { }
 }

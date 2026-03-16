@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a-oOxdp-Ed-ak6NoX_4Aeg_337061457")]
 [Description(@"Specifies the method to be used in delivering a cheque to a party.")]
-[Derivations(typeof(ChequeDelivery1Code),typeof(ChequeDelivery2Code))]
+[Derivations(typeof(ChequeDelivery1Code), typeof(ChequeDelivery2Code))]
 public enum ChequeDeliveryCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-oOxtp-Ed-ak6NoX_4Aeg_369384589")]
     [Description(@"Cheque is to be sent through mail services to debtor.")]
     MailToDebtor,
-    
+
     /// <summary>
     /// Cheque is to be sent through mail services to creditor.
     /// Encoded/decoded by serializers as &quot;MLCD&quot;.
@@ -32,7 +32,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-oOx9p-Ed-ak6NoX_4Aeg_454348891")]
     [Description(@"Cheque is to be sent through mail services to creditor.")]
     MailToCreditor,
-    
+
     /// <summary>
     /// Cheque is to be sent through mail services to creditor agent.
     /// Encoded/decoded by serializers as &quot;MLFA&quot;.
@@ -41,7 +41,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-oOyNp-Ed-ak6NoX_4Aeg_455271423")]
     [Description(@"Cheque is to be sent through mail services to creditor agent.")]
     MailToFinalAgent,
-    
+
     /// <summary>
     /// Cheque is to be sent through courier services to debtor.
     /// Encoded/decoded by serializers as &quot;CRDB&quot;.
@@ -50,7 +50,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYsNp-Ed-ak6NoX_4Aeg_456194658")]
     [Description(@"Cheque is to be sent through courier services to debtor.")]
     CourierToDebtor,
-    
+
     /// <summary>
     /// Cheque is to be sent through courier services to creditor.
     /// Encoded/decoded by serializers as &quot;CRCD&quot;.
@@ -59,7 +59,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYsdp-Ed-ak6NoX_4Aeg_55718226")]
     [Description(@"Cheque is to be sent through courier services to creditor.")]
     CourierToCreditor,
-    
+
     /// <summary>
     /// Cheque is to be sent through courier services to creditor agent.
     /// Encoded/decoded by serializers as &quot;CRFA&quot;.
@@ -68,7 +68,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYstp-Ed-ak6NoX_4Aeg_56641303")]
     [Description(@"Cheque is to be sent through courier services to creditor agent.")]
     CourierToFinalAgent,
-    
+
     /// <summary>
     /// Cheque will be picked up by the debtor.
     /// Encoded/decoded by serializers as &quot;PUDB&quot;.
@@ -77,7 +77,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYs9p-Ed-ak6NoX_4Aeg_557187710")]
     [Description(@"Cheque will be picked up by the debtor.")]
     PickUpByDebtor,
-    
+
     /// <summary>
     /// Cheque will be picked up by the creditor.
     /// Encoded/decoded by serializers as &quot;PUCD&quot;.
@@ -86,7 +86,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYtNp-Ed-ak6NoX_4Aeg_-61836275")]
     [Description(@"Cheque will be picked up by the creditor.")]
     PickUpByCreditor,
-    
+
     /// <summary>
     /// Cheque will be picked up by the creditor agent.
     /// Encoded/decoded by serializers as &quot;PUFA&quot;.
@@ -95,7 +95,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYtdp-Ed-ak6NoX_4Aeg_-59989603")]
     [Description(@"Cheque will be picked up by the creditor agent.")]
     PickUpByFinalAgent,
-    
+
     /// <summary>
     /// Cheque is to be sent through registered mail services to debtor.
     /// Encoded/decoded by serializers as &quot;RGDB&quot;.
@@ -104,7 +104,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYttp-Ed-ak6NoX_4Aeg_22203700")]
     [Description(@"Cheque is to be sent through registered mail services to debtor.")]
     RegisteredMailToDebtor,
-    
+
     /// <summary>
     /// Cheque is to be sent through registered mail services to creditor.
     /// Encoded/decoded by serializers as &quot;RGCD&quot;.
@@ -113,7 +113,7 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYt9p-Ed-ak6NoX_4Aeg_337125880")]
     [Description(@"Cheque is to be sent through registered mail services to creditor.")]
     RegisteredMailToCreditor,
-    
+
     /// <summary>
     /// Cheque is to be sent through registered mail services to creditor agent.
     /// Encoded/decoded by serializers as &quot;RGFA&quot;.
@@ -122,5 +122,4 @@ public enum ChequeDeliveryCode
     [IsoId("_a-xYuNp-Ed-ak6NoX_4Aeg_339893887")]
     [Description(@"Cheque is to be sent through registered mail services to creditor agent.")]
     RegisteredMailToFinalAgent,
-    
 }

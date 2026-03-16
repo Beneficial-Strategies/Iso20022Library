@@ -32,5 +32,4 @@ public enum AssetClassSubProductType50Code
     [IsoId("")]
     [Description(@"Commodity of type recovered paper.")]
     RecoveredPaper = AssetClassSubProductTypeCode.RecoveredPaper, // same ordinal as derivation source for type conversions
-
 }

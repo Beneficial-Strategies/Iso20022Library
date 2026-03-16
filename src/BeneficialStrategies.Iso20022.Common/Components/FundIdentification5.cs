@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CQR_IQN1Ee2-vqzwMUAewg")]
 [DisplayName("Fund Identification")]
-public partial record FundIdentification5
+public record FundIdentification5
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the investment fund.
     /// </summary>
     [IsoId("_CV2bowN1Ee2-vqzwMUAewg")]
     [DisplayName("Fund Identification")]
     [IsoXmlTag("FndId")]
-    public required PartyIdentification60 FundIdentification { get; init; } 
-    
+    public required PartyIdentification60 FundIdentification { get; init; }
+
     /// <summary>
     /// Identifies the account of the fund held with the custodian.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record FundIdentification5
     [DisplayName("Account Identification With Custodian")]
     [IsoXmlTag("AcctIdWthCtdn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentificationWithCustodian { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountIdentificationWithCustodian { get; init; }
+
     /// <summary>
     /// Identification of the custodian which services the account of the fund.
     /// </summary>
     [IsoId("_CV2bpwN1Ee2-vqzwMUAewg")]
     [DisplayName("Custodian Identification")]
     [IsoXmlTag("CtdnId")]
-    public PartyIdentification242Choice_? CustodianIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification242Choice_? CustodianIdentification { get; init; }
 }

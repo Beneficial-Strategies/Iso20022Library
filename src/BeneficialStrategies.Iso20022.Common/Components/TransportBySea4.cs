@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuiA0tp-Ed-ak6NoX_4Aeg_-1269157967")]
 [DisplayName("Transport By Sea")]
-public partial record TransportBySea4
+public record TransportBySea4
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the port where the goods are loaded on board the ship.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TransportBySea4
     [DisplayName("Port Of Loading")]
     [IsoXmlTag("PortOfLoadng")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PortOfLoading { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PortOfLoading { get; init; }
+
     /// <summary>
     /// Identifies the port where the goods are discharged.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TransportBySea4
     [DisplayName("Port Of Discharge")]
     [IsoXmlTag("PortOfDschrge")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PortOfDischarge { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PortOfDischarge { get; init; }
+
     /// <summary>
     /// Name of a vessel.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record TransportBySea4
     [DisplayName("Vessel Name")]
     [IsoXmlTag("VsslNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? VesselName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? VesselName { get; init; }
+
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
     /// </summary>
@@ -55,10 +53,6 @@ public partial record TransportBySea4
     [DisplayName("Sea Carrier Name")]
     [IsoXmlTag("SeaCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SeaCarrierName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SeaCarrierName { get; init; }
 }

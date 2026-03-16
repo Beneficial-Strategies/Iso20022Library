@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ConversionTypeFormat4Choice.Code))]
     [KnownType(typeof(ConversionTypeFormat4Choice.Proprietary))]
-    [JsonDerivedType(typeof(ConversionTypeFormat4Choice.Code),nameof(ConversionTypeFormat4Choice.Code))]
-    [JsonDerivedType(typeof(ConversionTypeFormat4Choice.Proprietary),nameof(ConversionTypeFormat4Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ConversionTypeFormat4Choice.Code),
+        nameof(ConversionTypeFormat4Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ConversionTypeFormat4Choice.Proprietary),
+        nameof(ConversionTypeFormat4Choice.Proprietary)
+    )]
     [IsoId("_c5VTb5KQEeWHWpTQn1FFVg")]
     [DisplayName("Conversion Type Format 4 Choice")]
-    public abstract partial record ConversionTypeFormat4Choice_
-    {
-    }
+    public abstract record ConversionTypeFormat4Choice_ { }
 }

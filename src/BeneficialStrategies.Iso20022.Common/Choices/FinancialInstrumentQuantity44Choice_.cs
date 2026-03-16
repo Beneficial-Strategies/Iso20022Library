@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity44Choice.AmortisedValue))]
     [KnownType(typeof(FinancialInstrumentQuantity44Choice.Code))]
     [KnownType(typeof(FinancialInstrumentQuantity44Choice.DigitalTokenUnit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity44Choice.Unit),nameof(FinancialInstrumentQuantity44Choice.Unit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity44Choice.FaceAmount),nameof(FinancialInstrumentQuantity44Choice.FaceAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity44Choice.AmortisedValue),nameof(FinancialInstrumentQuantity44Choice.AmortisedValue))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity44Choice.Code),nameof(FinancialInstrumentQuantity44Choice.Code))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity44Choice.DigitalTokenUnit),nameof(FinancialInstrumentQuantity44Choice.DigitalTokenUnit))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity44Choice.Unit),
+        nameof(FinancialInstrumentQuantity44Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity44Choice.FaceAmount),
+        nameof(FinancialInstrumentQuantity44Choice.FaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity44Choice.AmortisedValue),
+        nameof(FinancialInstrumentQuantity44Choice.AmortisedValue)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity44Choice.Code),
+        nameof(FinancialInstrumentQuantity44Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity44Choice.DigitalTokenUnit),
+        nameof(FinancialInstrumentQuantity44Choice.DigitalTokenUnit)
+    )]
     [IsoId("_ptJrOzi7Eeydid5dcNPKvg")]
     [DisplayName("Financial Instrument Quantity 44 Choice")]
-    public abstract partial record FinancialInstrumentQuantity44Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity44Choice_ { }
 }

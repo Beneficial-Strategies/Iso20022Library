@@ -18,18 +18,34 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TradeReport15Choice.Compression))]
     [KnownType(typeof(TradeReport15Choice.Error))]
     [KnownType(typeof(TradeReport15Choice.Other))]
-    [JsonDerivedType(typeof(TradeReport15Choice.New),nameof(TradeReport15Choice.New))]
-    [JsonDerivedType(typeof(TradeReport15Choice.Modification),nameof(TradeReport15Choice.Modification))]
-    [JsonDerivedType(typeof(TradeReport15Choice.Correction),nameof(TradeReport15Choice.Correction))]
-    [JsonDerivedType(typeof(TradeReport15Choice.Termination),nameof(TradeReport15Choice.Termination))]
-    [JsonDerivedType(typeof(TradeReport15Choice.PositionComponent),nameof(TradeReport15Choice.PositionComponent))]
-    [JsonDerivedType(typeof(TradeReport15Choice.ValuationUpdate),nameof(TradeReport15Choice.ValuationUpdate))]
-    [JsonDerivedType(typeof(TradeReport15Choice.Compression),nameof(TradeReport15Choice.Compression))]
-    [JsonDerivedType(typeof(TradeReport15Choice.Error),nameof(TradeReport15Choice.Error))]
-    [JsonDerivedType(typeof(TradeReport15Choice.Other),nameof(TradeReport15Choice.Other))]
+    [JsonDerivedType(typeof(TradeReport15Choice.New), nameof(TradeReport15Choice.New))]
+    [JsonDerivedType(
+        typeof(TradeReport15Choice.Modification),
+        nameof(TradeReport15Choice.Modification)
+    )]
+    [JsonDerivedType(
+        typeof(TradeReport15Choice.Correction),
+        nameof(TradeReport15Choice.Correction)
+    )]
+    [JsonDerivedType(
+        typeof(TradeReport15Choice.Termination),
+        nameof(TradeReport15Choice.Termination)
+    )]
+    [JsonDerivedType(
+        typeof(TradeReport15Choice.PositionComponent),
+        nameof(TradeReport15Choice.PositionComponent)
+    )]
+    [JsonDerivedType(
+        typeof(TradeReport15Choice.ValuationUpdate),
+        nameof(TradeReport15Choice.ValuationUpdate)
+    )]
+    [JsonDerivedType(
+        typeof(TradeReport15Choice.Compression),
+        nameof(TradeReport15Choice.Compression)
+    )]
+    [JsonDerivedType(typeof(TradeReport15Choice.Error), nameof(TradeReport15Choice.Error))]
+    [JsonDerivedType(typeof(TradeReport15Choice.Other), nameof(TradeReport15Choice.Other))]
     [IsoId("_oKFn1Xg-Eeu3kecHd7QKUQ")]
     [DisplayName("Trade Report 15 Choice")]
-    public abstract partial record TradeReport15Choice_
-    {
-    }
+    public abstract record TradeReport15Choice_ { }
 }

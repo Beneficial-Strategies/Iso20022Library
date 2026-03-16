@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_VnJzwdp-Ed-ak6NoX_4Aeg_-1043344711")]
-[Description(@"Specifies the status of an investigation case.||Note: |The Cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown.")]
+[Description(
+    @"Specifies the status of an investigation case.||Note: |The Cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown."
+)]
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum CaseStatus1Code
 {
@@ -23,7 +25,7 @@ public enum CaseStatus1Code
     [IsoId("_VnJzwtp-Ed-ak6NoX_4Aeg_-1011019924")]
     [Description(@"Case has been closed.")]
     Closed,
-    
+
     /// <summary>
     /// Case has been assigned to another party.
     /// Encoded/decoded by serializers as &quot;ASGN&quot;.
@@ -32,7 +34,7 @@ public enum CaseStatus1Code
     [IsoId("_VnJzw9p-Ed-ak6NoX_4Aeg_-955611187")]
     [Description(@"Case has been assigned to another party.")]
     Assigned,
-    
+
     /// <summary>
     /// Case is currently under investigation.
     /// Encoded/decoded by serializers as &quot;INVE&quot;.
@@ -41,7 +43,7 @@ public enum CaseStatus1Code
     [IsoId("_VnJzxNp-Ed-ak6NoX_4Aeg_-839246940")]
     [Description(@"Case is currently under investigation.")]
     UnderInvestigation,
-    
+
     /// <summary>
     /// Case has never been assigned before.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
@@ -50,5 +52,4 @@ public enum CaseStatus1Code
     [IsoId("_VnJzxdp-Ed-ak6NoX_4Aeg_-692327460")]
     [Description(@"Case has never been assigned before.")]
     Unknown,
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CollateralValueReportOrError5Choice.BusinessReport))]
     [KnownType(typeof(CollateralValueReportOrError5Choice.OperationalError))]
-    [JsonDerivedType(typeof(CollateralValueReportOrError5Choice.BusinessReport),nameof(CollateralValueReportOrError5Choice.BusinessReport))]
-    [JsonDerivedType(typeof(CollateralValueReportOrError5Choice.OperationalError),nameof(CollateralValueReportOrError5Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(CollateralValueReportOrError5Choice.BusinessReport),
+        nameof(CollateralValueReportOrError5Choice.BusinessReport)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralValueReportOrError5Choice.OperationalError),
+        nameof(CollateralValueReportOrError5Choice.OperationalError)
+    )]
     [IsoId("_95GpHzpvEemk2e6qGBk8IQ")]
     [DisplayName("Collateral Value Report Or Error 5 Choice")]
-    public abstract partial record CollateralValueReportOrError5Choice_
-    {
-    }
+    public abstract record CollateralValueReportOrError5Choice_ { }
 }

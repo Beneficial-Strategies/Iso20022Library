@@ -23,7 +23,7 @@ public enum InvestorType1Code
     [IsoId("_haryuWliEeGaMcKyqKNRfQ_-1196008348")]
     [Description(@"Investor is a retail investor.")]
     Retail = InvestorTypeCode.Retail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is a professional or institutional investor.
     /// Encoded/decoded by serializers as &quot;PROF&quot;.
@@ -32,7 +32,7 @@ public enum InvestorType1Code
     [IsoId("_haryumliEeGaMcKyqKNRfQ_271140415")]
     [Description(@"Investor is a professional or institutional investor.")]
     Professional = InvestorTypeCode.Professional, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is an employee.
     /// Encoded/decoded by serializers as &quot;STAF&quot;.
@@ -41,7 +41,7 @@ public enum InvestorType1Code
     [IsoId("_haryu2liEeGaMcKyqKNRfQ_-1207107125")]
     [Description(@"Investor is an employee.")]
     Staff = InvestorTypeCode.Staff, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is a physical person.
     /// Encoded/decoded by serializers as &quot;PPER&quot;.
@@ -50,5 +50,4 @@ public enum InvestorType1Code
     [IsoId("_haryvGliEeGaMcKyqKNRfQ_260041638")]
     [Description(@"Investor is a physical person.")]
     PhysicalPerson = InvestorTypeCode.PhysicalPerson, // same ordinal as derivation source for type conversions
-    
 }

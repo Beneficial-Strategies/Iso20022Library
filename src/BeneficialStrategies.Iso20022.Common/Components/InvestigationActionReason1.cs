@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nj6woSU_Ee6EvsLBQ6cYtA")]
 [DisplayName("Investigation Action Reason1")]
-public partial record InvestigationActionReason1
+public record InvestigationActionReason1
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Information.
     /// </summary>
@@ -30,16 +28,12 @@ public partial record InvestigationActionReason1
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification135? Originator { get; init; } 
+    public PartyIdentification135? Originator { get; init; }
 
     /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public required InvestigationActionReason1Choice_ Reason { get; init; } 
-
-    
-    #nullable disable
-    
+    public required InvestigationActionReason1Choice_ Reason { get; init; }
 }

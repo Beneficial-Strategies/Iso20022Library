@@ -23,7 +23,7 @@ public enum DayType1Code
     [IsoId("_ay2ck9p-Ed-ak6NoX_4Aeg_1678509570")]
     [Description(@"Elapsed calendar days.")]
     ElapsedCalendarDays = DayTypeCode.ElapsedCalendarDays, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Elapsed business days.
     /// Encoded/decoded by serializers as &quot;BUSE&quot;.
@@ -32,5 +32,4 @@ public enum DayType1Code
     [IsoId("_ay2clNp-Ed-ak6NoX_4Aeg_1678509571")]
     [Description(@"Elapsed business days.")]
     ElapsedBusinessDays = DayTypeCode.ElapsedBusinessDays, // same ordinal as derivation source for type conversions
-    
 }

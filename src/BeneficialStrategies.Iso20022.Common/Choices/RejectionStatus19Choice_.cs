@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RejectionStatus19Choice.NoSpecifiedReason))]
     [KnownType(typeof(RejectionStatus19Choice.Reason))]
-    [JsonDerivedType(typeof(RejectionStatus19Choice.NoSpecifiedReason),nameof(RejectionStatus19Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(RejectionStatus19Choice.Reason),nameof(RejectionStatus19Choice.Reason))]
+    [JsonDerivedType(
+        typeof(RejectionStatus19Choice.NoSpecifiedReason),
+        nameof(RejectionStatus19Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(RejectionStatus19Choice.Reason),
+        nameof(RejectionStatus19Choice.Reason)
+    )]
     [IsoId("_beLxITw5EeW3QqUkIQtIUA")]
     [DisplayName("Rejection Status 19 Choice")]
-    public abstract partial record RejectionStatus19Choice_
-    {
-    }
+    public abstract record RejectionStatus19Choice_ { }
 }

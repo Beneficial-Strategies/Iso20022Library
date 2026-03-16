@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RiskLevel1Choice.Code))]
     [KnownType(typeof(RiskLevel1Choice.Proprietary))]
-    [JsonDerivedType(typeof(RiskLevel1Choice.Code),nameof(RiskLevel1Choice.Code))]
-    [JsonDerivedType(typeof(RiskLevel1Choice.Proprietary),nameof(RiskLevel1Choice.Proprietary))]
+    [JsonDerivedType(typeof(RiskLevel1Choice.Code), nameof(RiskLevel1Choice.Code))]
+    [JsonDerivedType(typeof(RiskLevel1Choice.Proprietary), nameof(RiskLevel1Choice.Proprietary))]
     [IsoId("_aZdpExdxEeKYM7Bc71nDlA")]
     [DisplayName("Risk Level 1 Choice")]
-    public abstract partial record RiskLevel1Choice_
-    {
-    }
+    public abstract record RiskLevel1Choice_ { }
 }

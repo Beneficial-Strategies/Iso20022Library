@@ -23,7 +23,7 @@ public enum ReceiveDeliveryCode
     [IsoId("_ZafiiNp-Ed-ak6NoX_4Aeg_448211319")]
     [Description(@"Financial instruments will be debited from the safekeeping account.")]
     Delivery,
-    
+
     /// <summary>
     /// Financial instruments will be credited to the safekeeping account.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,5 +32,4 @@ public enum ReceiveDeliveryCode
     [IsoId("_ZaoscNp-Ed-ak6NoX_4Aeg_448211335")]
     [Description(@"Financial instruments will be credited to the safekeeping account.")]
     Receive,
-    
 }

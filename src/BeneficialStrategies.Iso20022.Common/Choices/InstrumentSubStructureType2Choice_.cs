@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InstrumentSubStructureType2Choice.Code))]
     [KnownType(typeof(InstrumentSubStructureType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(InstrumentSubStructureType2Choice.Code),nameof(InstrumentSubStructureType2Choice.Code))]
-    [JsonDerivedType(typeof(InstrumentSubStructureType2Choice.Proprietary),nameof(InstrumentSubStructureType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(InstrumentSubStructureType2Choice.Code),
+        nameof(InstrumentSubStructureType2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(InstrumentSubStructureType2Choice.Proprietary),
+        nameof(InstrumentSubStructureType2Choice.Proprietary)
+    )]
     [IsoId("_QYb2YeLaEeWFtOV72FbX9w")]
     [DisplayName("Instrument Sub Structure Type 2 Choice")]
-    public abstract partial record InstrumentSubStructureType2Choice_
-    {
-    }
+    public abstract record InstrumentSubStructureType2Choice_ { }
 }

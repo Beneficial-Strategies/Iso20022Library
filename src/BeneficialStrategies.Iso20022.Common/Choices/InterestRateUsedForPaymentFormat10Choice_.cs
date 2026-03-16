@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InterestRateUsedForPaymentFormat10Choice.Amount))]
     [KnownType(typeof(InterestRateUsedForPaymentFormat10Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(InterestRateUsedForPaymentFormat10Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat10Choice.Rate),nameof(InterestRateUsedForPaymentFormat10Choice.Rate))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat10Choice.Amount),nameof(InterestRateUsedForPaymentFormat10Choice.Amount))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat10Choice.RateTypeAndAmountAndRateStatus),nameof(InterestRateUsedForPaymentFormat10Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(InterestRateUsedForPaymentFormat10Choice.NotSpecifiedRate),nameof(InterestRateUsedForPaymentFormat10Choice.NotSpecifiedRate))]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat10Choice.Rate),
+        nameof(InterestRateUsedForPaymentFormat10Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat10Choice.Amount),
+        nameof(InterestRateUsedForPaymentFormat10Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat10Choice.RateTypeAndAmountAndRateStatus),
+        nameof(InterestRateUsedForPaymentFormat10Choice.RateTypeAndAmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRateUsedForPaymentFormat10Choice.NotSpecifiedRate),
+        nameof(InterestRateUsedForPaymentFormat10Choice.NotSpecifiedRate)
+    )]
     [IsoId("_cteBw5KQEeWHWpTQn1FFVg")]
     [DisplayName("Interest Rate Used For Payment Format 10 Choice")]
-    public abstract partial record InterestRateUsedForPaymentFormat10Choice_
-    {
-    }
+    public abstract record InterestRateUsedForPaymentFormat10Choice_ { }
 }

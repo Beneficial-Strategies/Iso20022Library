@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bU-SMtp-Ed-ak6NoX_4Aeg_-1785739759")]
-[Description(@"Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar).")]
+[Description(
+    @"Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an OTC derivative (e.g. CFD or similar)."
+)]
 [Derivations(typeof(BookingType1Code))]
 public enum BookingTypeCode
 {
@@ -23,7 +25,7 @@ public enum BookingTypeCode
     [IsoId("_bU-SM9p-Ed-ak6NoX_4Aeg_-1429261582")]
     [Description(@"Booking type is regular.")]
     Regular,
-    
+
     /// <summary>
     /// Order is to be booked out as a CFD.
     /// Encoded/decoded by serializers as &quot;CFOD&quot;.
@@ -32,7 +34,7 @@ public enum BookingTypeCode
     [IsoId("_bU-SNNp-Ed-ak6NoX_4Aeg_-1344295757")]
     [Description(@"Order is to be booked out as a CFD.")]
     ContractForDifference,
-    
+
     /// <summary>
     /// Order is to be booked out as an OTC derivative (for example, Swap).
     /// Encoded/decoded by serializers as &quot;TRSW&quot;.
@@ -41,5 +43,4 @@ public enum BookingTypeCode
     [IsoId("_bU-SNdp-Ed-ak6NoX_4Aeg_-999825381")]
     [Description(@"Order is to be booked out as an OTC derivative (for example, Swap).")]
     TotalReturnSwap,
-    
 }

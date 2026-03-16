@@ -23,7 +23,7 @@ public enum TransferType1Code
     [IsoId("_YvbMSNp-Ed-ak6NoX_4Aeg_-1303244696")]
     [Description(@"Transfer the security as an asset in specie, that is, 'in its actual form'.")]
     InSpecie = TransferTypeCode.InSpecie, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer as cash.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,5 +32,4 @@ public enum TransferType1Code
     [IsoId("_Yvk9QNp-Ed-ak6NoX_4Aeg_-1291238985")]
     [Description(@"Transfer as cash.")]
     Cash = TransferTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
 }

@@ -22,8 +22,9 @@ public enum InvestigationExecutionConfirmation4Code
     [EnumMember(Value = "PECR")]
     [IsoId("_abdQQNp-Ed-ak6NoX_4Aeg_-698006802")]
     [Description(@"Used when a requested cancellation has been partially executed.")]
-    PartiallyExecutedCancellationRequest = InvestigationExecutionConfirmationCode.PartiallyExecutedCancellationRequest, // same ordinal as derivation source for type conversions
-    
+    PartiallyExecutedCancellationRequest =
+        InvestigationExecutionConfirmationCode.PartiallyExecutedCancellationRequest, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Used when a requested cancellation has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCR&quot;.
@@ -31,6 +32,6 @@ public enum InvestigationExecutionConfirmation4Code
     [EnumMember(Value = "RJCR")]
     [IsoId("_abdQQdp-Ed-ak6NoX_4Aeg_-698006801")]
     [Description(@"Used when a requested cancellation has been rejected.")]
-    RejectedCancellationRequest = InvestigationExecutionConfirmationCode.RejectedCancellationRequest, // same ordinal as derivation source for type conversions
-    
+    RejectedCancellationRequest =
+        InvestigationExecutionConfirmationCode.RejectedCancellationRequest, // same ordinal as derivation source for type conversions
 }

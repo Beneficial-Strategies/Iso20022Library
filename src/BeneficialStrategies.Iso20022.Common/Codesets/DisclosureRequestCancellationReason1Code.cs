@@ -23,14 +23,15 @@ public enum DisclosureRequestCancellationReason1Code
     [IsoId("_uyAM8UV5EemRx7jyevcLwg")]
     [Description(@"The cancellation of the disclosure request is due to a processsing error.")]
     Processing = DisclosureRequestCancellationReasonCode.Processing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The cancellation of the discolure request is due to the withdrawal of the request  by the issuer.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
     /// </summary>
     [EnumMember(Value = "WITH")]
     [IsoId("_u4Zv4UV5EemRx7jyevcLwg")]
-    [Description(@"The cancellation of the discolure request is due to the withdrawal of the request  by the issuer.")]
+    [Description(
+        @"The cancellation of the discolure request is due to the withdrawal of the request  by the issuer."
+    )]
     Withdrawal = DisclosureRequestCancellationReasonCode.Withdrawal, // same ordinal as derivation source for type conversions
-    
 }

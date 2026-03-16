@@ -30,7 +30,9 @@ public enum RejectionReason82Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV3Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -147,7 +149,9 @@ public enum RejectionReason82Code
     /// </summary>
     [EnumMember(Value = "LIST")]
     [IsoId("")]
-    [Description(@"Instruction is invalid due to multiple resolutions instructed as vote ""For"" and belonging to the same listing group resolution label number.")]
+    [Description(
+        @"Instruction is invalid due to multiple resolutions instructed as vote ""For"" and belonging to the same listing group resolution label number."
+    )]
     InvalidVoteInFavourInGroupListing = RejectionReasonV3Code.InvalidVoteInFavourInGroupListing, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -165,7 +169,9 @@ public enum RejectionReason82Code
     /// </summary>
     [EnumMember(Value = "NOSL")]
     [IsoId("")]
-    [Description(@"Invalid instruction as the shareholder or its delegate is not registered in the company stock ledger book.")]
+    [Description(
+        @"Invalid instruction as the shareholder or its delegate is not registered in the company stock ledger book."
+    )]
     NotRegisteredInInStockLedger = RejectionReasonV3Code.NotRegisteredInInStockLedger, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -210,7 +216,9 @@ public enum RejectionReason82Code
     /// </summary>
     [EnumMember(Value = "PMNS")]
     [IsoId("")]
-    [Description(@"Instruction rejected due to the method of participation not supported by the account servicer.")]
+    [Description(
+        @"Instruction rejected due to the method of participation not supported by the account servicer."
+    )]
     ParticipationMethodNotSupported = RejectionReasonV3Code.ParticipationMethodNotSupported, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -266,5 +274,4 @@ public enum RejectionReason82Code
     [IsoId("")]
     [Description(@"Linked reference is unknown.")]
     InvalidReference = RejectionReasonV3Code.InvalidReference, // same ordinal as derivation source for type conversions
-
 }

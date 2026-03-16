@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CommodityDerivate2Choice.Freight))]
     [KnownType(typeof(CommodityDerivate2Choice.Energy))]
-    [JsonDerivedType(typeof(CommodityDerivate2Choice.Freight),nameof(CommodityDerivate2Choice.Freight))]
-    [JsonDerivedType(typeof(CommodityDerivate2Choice.Energy),nameof(CommodityDerivate2Choice.Energy))]
+    [JsonDerivedType(
+        typeof(CommodityDerivate2Choice.Freight),
+        nameof(CommodityDerivate2Choice.Freight)
+    )]
+    [JsonDerivedType(
+        typeof(CommodityDerivate2Choice.Energy),
+        nameof(CommodityDerivate2Choice.Energy)
+    )]
     [IsoId("_znH8cWlHEeaLAKoEUNsD9g")]
     [DisplayName("Commodity Derivate 2 Choice")]
-    public abstract partial record CommodityDerivate2Choice_
-    {
-    }
+    public abstract record CommodityDerivate2Choice_ { }
 }

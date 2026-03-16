@@ -23,7 +23,7 @@ public enum CashSettlementSystem2Code
     [IsoId("_a7WRRNp-Ed-ak6NoX_4Aeg_-702652999")]
     [Description(@"Settle money through gross settlement system.")]
     GrossSettlementSystem = CashSettlementSystemCode.GrossSettlementSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settle money through net settlement system.
     /// Encoded/decoded by serializers as &quot;NETS&quot;.
@@ -32,5 +32,4 @@ public enum CashSettlementSystem2Code
     [IsoId("_a7WRRdp-Ed-ak6NoX_4Aeg_1056453502")]
     [Description(@"Settle money through net settlement system.")]
     NetSettlementSystem = CashSettlementSystemCode.NetSettlementSystem, // same ordinal as derivation source for type conversions
-    
 }

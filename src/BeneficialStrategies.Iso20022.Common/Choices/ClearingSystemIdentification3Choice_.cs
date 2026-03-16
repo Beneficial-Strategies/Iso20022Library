@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClearingSystemIdentification3Choice.Code))]
     [KnownType(typeof(ClearingSystemIdentification3Choice.Proprietary))]
-    [JsonDerivedType(typeof(ClearingSystemIdentification3Choice.Code),nameof(ClearingSystemIdentification3Choice.Code))]
-    [JsonDerivedType(typeof(ClearingSystemIdentification3Choice.Proprietary),nameof(ClearingSystemIdentification3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ClearingSystemIdentification3Choice.Code),
+        nameof(ClearingSystemIdentification3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ClearingSystemIdentification3Choice.Proprietary),
+        nameof(ClearingSystemIdentification3Choice.Proprietary)
+    )]
     [IsoId("_TMVXJdp-Ed-ak6NoX_4Aeg_948374898")]
     [DisplayName("Clearing System Identification 3 Choice")]
-    public abstract partial record ClearingSystemIdentification3Choice_
-    {
-    }
+    public abstract record ClearingSystemIdentification3Choice_ { }
 }

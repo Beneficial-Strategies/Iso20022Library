@@ -23,7 +23,7 @@ public enum CollateralType3Code
     [IsoId("__1WEotojEeC60axPepSq7g_-80556502")]
     [Description(@"Collateral type is cash.")]
     Cash = CollateralTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type is securities.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,16 +32,18 @@ public enum CollateralType3Code
     [IsoId("__1WEo9ojEeC60axPepSq7g_680208651")]
     [Description(@"Collateral type is securities.")]
     Securities = CollateralTypeCode.Securities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type are physical entities, for example, airplanes for debt issued by the airline industry.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
     /// </summary>
     [EnumMember(Value = "PHYS")]
     [IsoId("__1WEpNojEeC60axPepSq7g_2147357414")]
-    [Description(@"Collateral type are physical entities, for example, airplanes for debt issued by the airline industry.")]
+    [Description(
+        @"Collateral type are physical entities, for example, airplanes for debt issued by the airline industry."
+    )]
     PhysicalEntities = CollateralTypeCode.PhysicalEntities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type is an insurance contract.
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
@@ -50,7 +52,7 @@ public enum CollateralType3Code
     [IsoId("__1WEpdojEeC60axPepSq7g_1134295920")]
     [Description(@"Collateral type is an insurance contract.")]
     Insurance = CollateralTypeCode.Insurance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type is stock certificates.
     /// Encoded/decoded by serializers as &quot;STCF&quot;.
@@ -59,7 +61,7 @@ public enum CollateralType3Code
     [IsoId("__1f1oNojEeC60axPepSq7g_-1329748207")]
     [Description(@"Collateral type is stock certificates.")]
     StockCertificate = CollateralTypeCode.StockCertificate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type is bonds.
     /// Encoded/decoded by serializers as &quot;BOND&quot;.
@@ -68,7 +70,7 @@ public enum CollateralType3Code
     [IsoId("__1f1odojEeC60axPepSq7g_137400556")]
     [Description(@"Collateral type is bonds.")]
     Bond = CollateralTypeCode.Bond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type is a bank guarantee.
     /// Encoded/decoded by serializers as &quot;GBBK&quot;.
@@ -77,7 +79,7 @@ public enum CollateralType3Code
     [IsoId("__1f1otojEeC60axPepSq7g_-875660938")]
     [Description(@"Collateral type is a bank guarantee.")]
     BankGuarantee = CollateralTypeCode.BankGuarantee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other assets that could be used as collateral.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -86,5 +88,4 @@ public enum CollateralType3Code
     [IsoId("__1f1o9ojEeC60axPepSq7g_-702733106")]
     [Description(@"Other assets that could be used as collateral.")]
     Other = CollateralTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum CaseStatusCode
     [IsoId("_a2uP9dp-Ed-ak6NoX_4Aeg_-1002966531")]
     [Description(@"Case has been closed.")]
     Closed,
-    
+
     /// <summary>
     /// Case has been assigned to another party.
     /// Encoded/decoded by serializers as &quot;ASGN&quot;.
@@ -32,7 +32,7 @@ public enum CaseStatusCode
     [IsoId("_a2uP9tp-Ed-ak6NoX_4Aeg_-1002966514")]
     [Description(@"Case has been assigned to another party.")]
     Assigned,
-    
+
     /// <summary>
     /// Case is currently under investigation.
     /// Encoded/decoded by serializers as &quot;INVE&quot;.
@@ -41,7 +41,7 @@ public enum CaseStatusCode
     [IsoId("_a2uP99p-Ed-ak6NoX_4Aeg_-1002966497")]
     [Description(@"Case is currently under investigation.")]
     UnderInvestigation,
-    
+
     /// <summary>
     /// Case has never been assigned before.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
@@ -50,7 +50,7 @@ public enum CaseStatusCode
     [IsoId("_a2uP-Np-Ed-ak6NoX_4Aeg_-1002966479")]
     [Description(@"Case has never been assigned before.")]
     Unknown,
-    
+
     /// <summary>
     /// Investigation is taking too long.
     /// Encoded/decoded by serializers as &quot;ODUE&quot;.
@@ -59,5 +59,4 @@ public enum CaseStatusCode
     [IsoId("_a24A8Np-Ed-ak6NoX_4Aeg_-960484981")]
     [Description(@"Investigation is taking too long.")]
     Overdue,
-    
 }

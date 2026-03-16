@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwsDzAEcEeCQm6a_G2yO_w_1953670809")]
 [DisplayName("Sale Context")]
-public partial record SaleContext1
+public record SaleContext1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the sale terminal (electronic cash register) or the sale system.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SaleContext1
     [DisplayName("Sale Identification")]
     [IsoXmlTag("SaleId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleIdentification { get; init; }
+
     /// <summary>
     /// Identify a sale transaction assigned by the sale system.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record SaleContext1
     [DisplayName("Sale Reference Number")]
     [IsoXmlTag("SaleRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReferenceNumber { get; init; }
+
     /// <summary>
     /// Identifier of the reconciliation between the Sale system and the POI system.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record SaleContext1
     [DisplayName("Sale Reconciliation Identification")]
     [IsoXmlTag("SaleRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReconciliationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReconciliationIdentification { get; init; }
+
     /// <summary>
     /// Identification of the cashier who carried out the transaction.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record SaleContext1
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CashierIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CashierIdentification { get; init; }
+
     /// <summary>
     /// Identifies the shift of the cashier.
     /// </summary>
@@ -65,8 +63,8 @@ public partial record SaleContext1
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? ShiftNumber { get; init; } 
-    
+    public IsoMax2NumericText? ShiftNumber { get; init; }
+
     /// <summary>
     /// Additional information associated with the sale transaction.
     /// </summary>
@@ -74,10 +72,6 @@ public partial record SaleContext1
     [DisplayName("Additional Sale Data")]
     [IsoXmlTag("AddtlSaleData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AdditionalSaleData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AdditionalSaleData { get; init; }
 }

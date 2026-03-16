@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IEREBX5aEea2k7EBUopqxw")]
 [DisplayName("Securities Invalid Reference Data Report")]
-public partial record SecuritiesInvalidReferenceDataReport3
+public record SecuritiesInvalidReferenceDataReport3
 {
-    #nullable enable
-    
     /// <summary>
     /// Instrument details at the time this specific details on the financial instrument was invalidated.
     /// </summary>
     [IsoId("_INfRcX5aEea2k7EBUopqxw")]
     [DisplayName("Financial Instrument")]
     [IsoXmlTag("FinInstrm")]
-    public required SecuritiesReferenceDataReport5 FinancialInstrument { get; init; } 
-    
+    public required SecuritiesReferenceDataReport5 FinancialInstrument { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_INfRc35aEea2k7EBUopqxw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

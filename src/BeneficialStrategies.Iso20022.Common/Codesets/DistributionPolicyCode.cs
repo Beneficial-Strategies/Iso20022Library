@@ -23,7 +23,7 @@ public enum DistributionPolicyCode
     [IsoId("_awwx5tp-Ed-ak6NoX_4Aeg_1041617774")]
     [Description(@"Income is distributed to the investors in the fund.")]
     Distribution,
-    
+
     /// <summary>
     /// Income is added to the capital of the fund.
     /// Encoded/decoded by serializers as &quot;ACCU&quot;.
@@ -32,5 +32,4 @@ public enum DistributionPolicyCode
     [IsoId("_aw6i4Np-Ed-ak6NoX_4Aeg_1041617805")]
     [Description(@"Income is added to the capital of the fund.")]
     Accumulation,
-    
 }

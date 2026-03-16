@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ApDrEC_9EeOKib24wnHaFg")]
 [DisplayName("Account And Parties")]
-public partial record AccountAndParties2
+public record AccountAndParties2
 {
-    #nullable enable
-    
     /// <summary>
     /// Description of the account.
     /// </summary>
     [IsoId("_IIeC8C_9EeOKib24wnHaFg")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public required CustomerAccount1 Account { get; init; } 
-    
+    public required CustomerAccount1 Account { get; init; }
+
     /// <summary>
     /// Specifies the role related to the account.
     /// </summary>
@@ -33,8 +31,9 @@ public partial record AccountAndParties2
     [DisplayName("Role")]
     [IsoXmlTag("Role")]
     public ValueList<AccountRole1> Role { get; init; } = [];
+
     // ID for the above is _clKesC__EeOKib24wnHaFg
-    
+
     /// <summary>
     /// Additional information.
     /// </summary>
@@ -42,10 +41,6 @@ public partial record AccountAndParties2
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? AdditionalInformation { get; init; }
 }

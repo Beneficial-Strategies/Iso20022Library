@@ -23,7 +23,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_KhLZFnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an undertaking amendment.")]
     UndertakingAmendment = SettlementAdviceTypeCode.UndertakingAmendment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to an automatic booking of charges.
     /// Encoded/decoded by serializers as &quot;ACHG&quot;.
@@ -32,7 +32,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_Km_tNnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an automatic booking of charges.")]
     AutomaticChargesBooking = SettlementAdviceTypeCode.AutomaticChargesBooking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to a claim for payment.
     /// Encoded/decoded by serializers as &quot;CLAM&quot;.
@@ -41,7 +41,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_Ks9LRnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to a claim for payment.")]
     PaymentClaim = SettlementAdviceTypeCode.PaymentClaim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to correspondent bank charges.
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
@@ -50,7 +50,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_KzNkRnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to correspondent bank charges.")]
     CorrespondentBankCharges = SettlementAdviceTypeCode.CorrespondentBankCharges, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to an undertaking issuance.
     /// Encoded/decoded by serializers as &quot;ISSU&quot;.
@@ -59,7 +59,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_K5xfRnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an undertaking issuance.")]
     UndertakingIssuance = SettlementAdviceTypeCode.UndertakingIssuance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to a manual booking of charges.
     /// Encoded/decoded by serializers as &quot;MCHG&quot;.
@@ -68,7 +68,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_LALpRnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to a manual booking of charges.")]
     ManualChargesBooking = SettlementAdviceTypeCode.ManualChargesBooking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to a refund.
     /// Encoded/decoded by serializers as &quot;REFD&quot;.
@@ -77,7 +77,7 @@ public enum SettlementAdviceType1Code
     [IsoId("_LHfLJnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to a refund.")]
     Refund = SettlementAdviceTypeCode.Refund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement advice related to an undertaking termination.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -86,5 +86,4 @@ public enum SettlementAdviceType1Code
     [IsoId("_LOCfFnyiEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an undertaking termination.")]
     Termination = SettlementAdviceTypeCode.Termination, // same ordinal as derivation source for type conversions
-    
 }

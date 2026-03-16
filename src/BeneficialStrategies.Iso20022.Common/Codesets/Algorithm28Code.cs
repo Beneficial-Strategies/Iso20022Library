@@ -21,7 +21,9 @@ public enum Algorithm28Code
     /// </summary>
     [EnumMember(Value = "DA12")]
     [IsoId("_Algorithm28Code_AESDUKPT128ECB")]
-    [Description(@"AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A, With key length of 128 bits.")]
+    [Description(
+        @"AES DUKPT (Derived Unique Key Per Transaction) ECB algorithm, as specified in ANSI X9.24-3-2017 Annex A, With key length of 128 bits."
+    )]
     AESDUKPT128ECB = AlgorithmCode.AESDUKPT128ECB,
 
     /// <summary>
@@ -48,7 +50,9 @@ public enum Algorithm28Code
     /// </summary>
     [EnumMember(Value = "DKP9")]
     [IsoId("_Algorithm28Code_DUKPT2009")]
-    [Description(@"DUKPT (Derived Unique Key Per Transaction) algorithm, as specified in ANSI X9.24-2009 Annex A.")]
+    [Description(
+        @"DUKPT (Derived Unique Key Per Transaction) algorithm, as specified in ANSI X9.24-2009 Annex A."
+    )]
     DUKPT2009 = AlgorithmCode.DUKPT2009,
 
     /// <summary>
@@ -147,7 +151,9 @@ public enum Algorithm28Code
     /// </summary>
     [EnumMember(Value = "N108")]
     [IsoId("_Algorithm28Code_Nist800_108KeyDerivation")]
-    [Description(@"Key Derivation according to the Special Publication from the NIST entitled 800-108.")]
+    [Description(
+        @"Key Derivation according to the Special Publication from the NIST entitled 800-108."
+    )]
     Nist800_108KeyDerivation = AlgorithmCode.Nist800_108KeyDerivation,
 
     /// <summary>
@@ -212,5 +218,4 @@ public enum Algorithm28Code
     [IsoId("_Algorithm28Code_UKPT")]
     [Description(@"UKPT (Unique Key Per Transaction) or Master Session Key key encryption.")]
     UKPT = AlgorithmCode.UKPT,
-
 }

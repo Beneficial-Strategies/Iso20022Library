@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentOrigin1Choice.XMLMessageName))]
     [KnownType(typeof(PaymentOrigin1Choice.Proprietary))]
     [KnownType(typeof(PaymentOrigin1Choice.Instrument))]
-    [JsonDerivedType(typeof(PaymentOrigin1Choice.FINMessageType),nameof(PaymentOrigin1Choice.FINMessageType))]
-    [JsonDerivedType(typeof(PaymentOrigin1Choice.XMLMessageName),nameof(PaymentOrigin1Choice.XMLMessageName))]
-    [JsonDerivedType(typeof(PaymentOrigin1Choice.Proprietary),nameof(PaymentOrigin1Choice.Proprietary))]
-    [JsonDerivedType(typeof(PaymentOrigin1Choice.Instrument),nameof(PaymentOrigin1Choice.Instrument))]
+    [JsonDerivedType(
+        typeof(PaymentOrigin1Choice.FINMessageType),
+        nameof(PaymentOrigin1Choice.FINMessageType)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentOrigin1Choice.XMLMessageName),
+        nameof(PaymentOrigin1Choice.XMLMessageName)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentOrigin1Choice.Proprietary),
+        nameof(PaymentOrigin1Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentOrigin1Choice.Instrument),
+        nameof(PaymentOrigin1Choice.Instrument)
+    )]
     [IsoId("_RIwV1Np-Ed-ak6NoX_4Aeg_1623377139")]
     [DisplayName("Payment Origin 1 Choice")]
-    public abstract partial record PaymentOrigin1Choice_
-    {
-    }
+    public abstract record PaymentOrigin1Choice_ { }
 }

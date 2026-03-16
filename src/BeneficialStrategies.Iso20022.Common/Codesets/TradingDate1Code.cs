@@ -23,5 +23,4 @@ public enum TradingDate1Code
     [IsoId("__ztF4NojEeC60axPepSq7g_2007838442")]
     [Description(@"Partial trades have occurred over a period of two or more days.")]
     Various = TradingDateCode.Various, // same ordinal as derivation source for type conversions
-    
 }

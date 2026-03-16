@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCalculationAgentCode")]
-[Description(@"Specifies the calculation agent, as published in an external calculation agent code list.")]
+[Description(
+    @"Specifies the calculation agent, as published in an external calculation agent code list."
+)]
 public enum ExternalCalculationAgentCode
 {
     /// <summary>
@@ -49,5 +51,4 @@ public enum ExternalCalculationAgentCode
     [IsoId("_ExternalCalculationAgentCode_TradingSide")]
     [Description(@"Trading side will act.")]
     TradingSide,
-
 }

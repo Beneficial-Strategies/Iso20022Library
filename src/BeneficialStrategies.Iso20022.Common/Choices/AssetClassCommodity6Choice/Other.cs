@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodity6Choice
     /// </summary>
     [IsoId("_1bgUKxZXEe2QNcZTDeoKnQ")]
     [DisplayName("Other")]
-    public partial record Other : AssetClassCommodity6Choice_
+    public record Other : AssetClassCommodity6Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.
         /// </summary>
         [IsoId("_DQTkoFr1EeWN79Bl6BUd3g")]
         [DisplayName("Base Product")]
         [IsoXmlTag("BasePdct")]
-        public required AssetClassProductType15Code BaseProduct { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required AssetClassProductType15Code BaseProduct { get; init; }
     }
 }

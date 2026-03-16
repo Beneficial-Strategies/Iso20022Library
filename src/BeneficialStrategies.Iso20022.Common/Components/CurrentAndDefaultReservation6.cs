@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6zrQETEyEe6g-ffJsqGiSA")]
 [DisplayName("Current And Default Reservation6")]
-public partial record CurrentAndDefaultReservation6
+public record CurrentAndDefaultReservation6
 {
-    #nullable enable
-
     /// <summary>
     /// Current Reservation.
     /// </summary>
@@ -31,8 +29,4 @@ public partial record CurrentAndDefaultReservation6
     [DisplayName("Default Reservation")]
     [IsoXmlTag("DfltRsvatn")]
     public ValueList<ReservationReport8> DefaultReservation { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

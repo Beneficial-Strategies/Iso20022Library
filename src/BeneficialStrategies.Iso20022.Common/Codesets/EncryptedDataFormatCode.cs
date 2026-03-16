@@ -23,7 +23,7 @@ public enum EncryptedDataFormatCode
     [IsoId("_xUSBIAHwEeiJObvChJn-OA")]
     [Description(@"ASCII Format.")]
     ASCII,
-    
+
     /// <summary>
     /// HEX Format.
     /// Encoded/decoded by serializers as &quot;HEXF&quot;.
@@ -32,7 +32,7 @@ public enum EncryptedDataFormatCode
     [IsoId("_33X6sAHwEeiJObvChJn-OA")]
     [Description(@"HEX Format.")]
     HEX,
-    
+
     /// <summary>
     /// Binary format.
     /// Encoded/decoded by serializers as &quot;BINF&quot;.
@@ -41,7 +41,7 @@ public enum EncryptedDataFormatCode
     [IsoId("_FUVPEAHxEeiJObvChJn-OA")]
     [Description(@"Binary format.")]
     Binary,
-    
+
     /// <summary>
     /// Other format defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum EncryptedDataFormatCode
     [IsoId("_VyY88AHxEeiJObvChJn-OA")]
     [Description(@"Other format defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of format defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum EncryptedDataFormatCode
     [IsoId("_a5ZTAAHxEeiJObvChJn-OA")]
     [Description(@"Other type of format defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// EBCDIC format.
     /// Encoded/decoded by serializers as &quot;EBCD&quot;.
@@ -68,5 +68,4 @@ public enum EncryptedDataFormatCode
     [IsoId("_V0-sAAHzEeiJObvChJn-OA")]
     [Description(@"EBCDIC format.")]
     EBCDIC,
-    
 }

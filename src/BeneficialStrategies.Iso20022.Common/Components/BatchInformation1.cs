@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RUE1CNp-Ed-ak6NoX_4Aeg_408833196")]
 [DisplayName("Batch Information")]
-public partial record BatchInformation1
+public record BatchInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Point to point reference assigned by the sending party to unambiguously identify the batch of transactions.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record BatchInformation1
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MessageIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MessageIdentification { get; init; }
+
     /// <summary>
     /// Reference assigned by a sending party to unambiguously identify a payment information block within a payment message.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record BatchInformation1
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+
     /// <summary>
     /// Number of individual transactions included in the batch.
     /// </summary>
@@ -45,9 +43,5 @@ public partial record BatchInformation1
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax15NumericText? NumberOfTransactions { get; init; }
 }

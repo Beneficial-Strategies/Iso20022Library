@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_72-v8aMgEeCJ6YNENx4h-w_1129668542")]
 [DisplayName("Standing Order Return Criteria")]
-public partial record StandingOrderReturnCriteria1
+public record StandingOrderReturnCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Defines the criteria used to report on a multilateral balance.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Standing Order Identification Indicator")]
     [IsoXmlTag("StgOrdrIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StandingOrderIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? StandingOrderIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the standing order type is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TypeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? TypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the system member identification is requested.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("System Member Indicator")]
     [IsoXmlTag("SysMmbInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SystemMemberIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? SystemMemberIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the responsible party identification is requested.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Responsible Party Indicator")]
     [IsoXmlTag("RspnsblPtyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ResponsiblePartyIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? ResponsiblePartyIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account currency is requested.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Currency Indicator")]
     [IsoXmlTag("CcyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CurrencyIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? CurrencyIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account type is requested.
     /// </summary>
@@ -70,8 +68,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Debtor Account Indicator")]
     [IsoXmlTag("DbtrAcctInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? DebtorAccountIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? DebtorAccountIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the multilateral limit is requested.
     /// </summary>
@@ -79,8 +77,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Creditor Account Indicator")]
     [IsoXmlTag("CdtrAcctInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CreditorAccountIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? CreditorAccountIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the associated pool account is requested.
     /// </summary>
@@ -88,8 +86,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Associated Pool Account")]
     [IsoXmlTag("AssoctdPoolAcct")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AssociatedPoolAccount { get; init; } 
-    
+    public IsoRequestedIndicator? AssociatedPoolAccount { get; init; }
+
     /// <summary>
     /// Indicates whether the frequency is requested.
     /// </summary>
@@ -97,8 +95,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Frequency Indicator")]
     [IsoXmlTag("FrqcyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? FrequencyIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? FrequencyIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the execution type is requested.
     /// </summary>
@@ -106,8 +104,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Execution Type Indicator")]
     [IsoXmlTag("ExctnTpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ExecutionTypeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? ExecutionTypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account standing order is requested.
     /// </summary>
@@ -115,8 +113,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Validity From Indicator")]
     [IsoXmlTag("VldtyFrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ValidityFromIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? ValidityFromIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account owner information is requested.
     /// </summary>
@@ -124,8 +122,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Valid To Indicator")]
     [IsoXmlTag("VldToInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ValidToIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? ValidToIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the link set identification is requested.
     /// </summary>
@@ -133,8 +131,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Link Set Identification Indicator")]
     [IsoXmlTag("LkSetIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? LinkSetIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? LinkSetIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the identification of a standing order within a link set is requested.
     /// </summary>
@@ -142,8 +140,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Link Set Order Identification Indicator")]
     [IsoXmlTag("LkSetOrdrIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? LinkSetOrderIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? LinkSetOrderIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the sequence of a standing order within a link set is requested.
     /// </summary>
@@ -151,8 +149,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Link Set Order Sequence Indicator")]
     [IsoXmlTag("LkSetOrdrSeqInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? LinkSetOrderSequenceIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? LinkSetOrderSequenceIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the total amount per standing order type is requested.
     /// </summary>
@@ -160,8 +158,8 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Total Amount Indicator")]
     [IsoXmlTag("TtlAmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TotalAmountIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? TotalAmountIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the zero sweeping indicator is requested.
     /// </summary>
@@ -169,9 +167,5 @@ public partial record StandingOrderReturnCriteria1
     [DisplayName("Zero Sweep Indicator")]
     [IsoXmlTag("ZeroSweepInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ZeroSweepIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? ZeroSweepIndicator { get; init; }
 }

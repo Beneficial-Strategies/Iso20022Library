@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialInstrumentIdentification5Choice.Single))]
     [KnownType(typeof(FinancialInstrumentIdentification5Choice.Basket))]
-    [JsonDerivedType(typeof(FinancialInstrumentIdentification5Choice.Single),nameof(FinancialInstrumentIdentification5Choice.Single))]
-    [JsonDerivedType(typeof(FinancialInstrumentIdentification5Choice.Basket),nameof(FinancialInstrumentIdentification5Choice.Basket))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentIdentification5Choice.Single),
+        nameof(FinancialInstrumentIdentification5Choice.Single)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentIdentification5Choice.Basket),
+        nameof(FinancialInstrumentIdentification5Choice.Basket)
+    )]
     [IsoId("_HH3GN35aEea2k7EBUopqxw")]
     [DisplayName("Financial Instrument Identification 5 Choice")]
-    public abstract partial record FinancialInstrumentIdentification5Choice_
-    {
-    }
+    public abstract record FinancialInstrumentIdentification5Choice_ { }
 }

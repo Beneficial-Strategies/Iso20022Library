@@ -23,7 +23,7 @@ public enum StatementStatusTypeCode
     [IsoId("_DQH18NBVEeiirviLm7P0IA")]
     [Description(@"Transactions reported are confirmed.")]
     Confirmed,
-    
+
     /// <summary>
     /// Instructions or transactions  reported are pending.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,5 +32,4 @@ public enum StatementStatusTypeCode
     [IsoId("_SbArwNBVEeiirviLm7P0IA")]
     [Description(@"Instructions or transactions  reported are pending.")]
     Pending,
-    
 }

@@ -23,7 +23,7 @@ public enum EnergyLoadType1Code
     [IsoId("_rT4f4RVoEeWXLoZC9OIRgg")]
     [Description(@"Base load.")]
     BaseLoad = EnergyLoadTypeCode.BaseLoad, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Gas day.
     /// Encoded/decoded by serializers as &quot;GASD&quot;.
@@ -32,7 +32,7 @@ public enum EnergyLoadType1Code
     [IsoId("_rf7X0RVoEeWXLoZC9OIRgg")]
     [Description(@"Gas day.")]
     GasDay = EnergyLoadTypeCode.GasDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hour and block hours.
     /// Encoded/decoded by serializers as &quot;HABH&quot;.
@@ -41,7 +41,7 @@ public enum EnergyLoadType1Code
     [IsoId("_rsRxwRVoEeWXLoZC9OIRgg")]
     [Description(@"Hour and block hours.")]
     HourAndBlockHours = EnergyLoadTypeCode.HourAndBlockHours, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Off-Peak.
     /// Encoded/decoded by serializers as &quot;OFFP&quot;.
@@ -50,7 +50,7 @@ public enum EnergyLoadType1Code
     [IsoId("_r4VQwRVoEeWXLoZC9OIRgg")]
     [Description(@"Off-Peak.|")]
     Off_Peak = EnergyLoadTypeCode.Off_Peak, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,7 +59,7 @@ public enum EnergyLoadType1Code
     [IsoId("_sEYIsRVoEeWXLoZC9OIRgg")]
     [Description(@"Other.")]
     Other = EnergyLoadTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Peak load.
     /// Encoded/decoded by serializers as &quot;PKLD&quot;.
@@ -68,7 +68,7 @@ public enum EnergyLoadType1Code
     [IsoId("_sQbnsRVoEeWXLoZC9OIRgg")]
     [Description(@"Peak load.")]
     PeakLoad = EnergyLoadTypeCode.PeakLoad, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Shaped.
     /// Encoded/decoded by serializers as &quot;SHPD&quot;.
@@ -77,5 +77,4 @@ public enum EnergyLoadType1Code
     [IsoId("_scVVsRVoEeWXLoZC9OIRgg")]
     [Description(@"Shaped.")]
     Shaped = EnergyLoadTypeCode.Shaped, // same ordinal as derivation source for type conversions
-    
 }

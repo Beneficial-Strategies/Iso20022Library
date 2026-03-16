@@ -12,7 +12,11 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_sLedkEerEeODR7vDcYOqmg")]
 [Description(@"Result of a currency conversion request.")]
-[Derivations(typeof(CurrencyConversionResponse1Code),typeof(CurrencyConversionResponse2Code),typeof(CurrencyConversionResponse3Code))]
+[Derivations(
+    typeof(CurrencyConversionResponse1Code),
+    typeof(CurrencyConversionResponse2Code),
+    typeof(CurrencyConversionResponse3Code)
+)]
 public enum CurrencyConversionResponseCode
 {
     /// <summary>
@@ -23,7 +27,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_zUhj4EerEeODR7vDcYOqmg")]
     [Description(@"The card acceptor has not been recognised.")]
     InvalidMerchant,
-    
+
     /// <summary>
     /// The card is not valid for dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;ICRD&quot;.
@@ -32,7 +36,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_6P2XQEerEeODR7vDcYOqmg")]
     [Description(@"The card is not valid for dynamic currency conversion.")]
     InvalidCard,
-    
+
     /// <summary>
     /// Dynamic currency conversion service cannot be offered for this card product.
     /// Encoded/decoded by serializers as &quot;IPRD&quot;.
@@ -41,7 +45,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_-SjXsEerEeODR7vDcYOqmg")]
     [Description(@"Dynamic currency conversion service cannot be offered for this card product.")]
     InvalidProduct,
-    
+
     /// <summary>
     /// Exchange rates are not available.
     /// Encoded/decoded by serializers as &quot;IRAT&quot;.
@@ -50,7 +54,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_GG0lQEesEeODR7vDcYOqmg")]
     [Description(@"Exchange rates are not available.")]
     NoRate,
-    
+
     /// <summary>
     /// Dynamic currency conversion may be offered to the cardholder.
     /// Encoded/decoded by serializers as &quot;ODCC&quot;.
@@ -59,7 +63,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_NRrCYEesEeODR7vDcYOqmg")]
     [Description(@"Dynamic currency conversion may be offered to the cardholder.")]
     Allowed,
-    
+
     /// <summary>
     /// Transaction authorised with dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;DCCA&quot;.
@@ -68,7 +72,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_Q23ncEesEeODR7vDcYOqmg")]
     [Description(@"Transaction authorised with dynamic currency conversion.")]
     Assumed,
-    
+
     /// <summary>
     /// Dynamic currency conversion is not available for other reason.
     /// Encoded/decoded by serializers as &quot;NDCC&quot;.
@@ -77,7 +81,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_U82lYEesEeODR7vDcYOqmg")]
     [Description(@"Dynamic currency conversion is not available for other reason.")]
     NotAvailable,
-    
+
     /// <summary>
     /// The ATM is not valid for dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;IATM&quot;.
@@ -86,7 +90,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_Iv0o4K4ZEeW_TaP-ygI0SQ")]
     [Description(@"The ATM is not valid for dynamic currency conversion.")]
     InvalidATM,
-    
+
     /// <summary>
     /// The ATM manager is not valid for dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;IAMG&quot;.
@@ -95,7 +99,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_MDR9sK4ZEeW_TaP-ygI0SQ")]
     [Description(@"The ATM manager is not valid for dynamic currency conversion.")]
     InvalidATMManager,
-    
+
     /// <summary>
     /// Conversion accepted for the requested amount exclusively.
     /// Encoded/decoded by serializers as &quot;REST&quot;.
@@ -104,7 +108,7 @@ public enum CurrencyConversionResponseCode
     [IsoId("_Ft9aEK_VEeaepNKtQMrGAQ")]
     [Description(@"Conversion accepted for the requested amount exclusively.")]
     Restriction,
-    
+
     /// <summary>
     /// Conversion accepted for a range of amounts.
     /// Encoded/decoded by serializers as &quot;CATG&quot;.
@@ -113,5 +117,4 @@ public enum CurrencyConversionResponseCode
     [IsoId("_LJ43QK_VEeaepNKtQMrGAQ")]
     [Description(@"Conversion accepted for a range of amounts.")]
     Catalogue,
-    
 }

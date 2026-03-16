@@ -23,7 +23,7 @@ public enum ATMServiceType5Code
     [IsoId("_djyvg4rAEeSgLpgNvMAP2g")]
     [Description(@"Modification of the card PIN value.")]
     PINChange = ATMServiceTypeCode.PINChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Resetting of a PIN.
     /// Encoded/decoded by serializers as &quot;PINR&quot;.
@@ -32,7 +32,7 @@ public enum ATMServiceType5Code
     [IsoId("_djyvhYrAEeSgLpgNvMAP2g")]
     [Description(@"Resetting of a PIN.")]
     PINRecovery = ATMServiceTypeCode.PINRecovery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unblock the PIN.
     /// Encoded/decoded by serializers as &quot;PINU&quot;.
@@ -41,5 +41,4 @@ public enum ATMServiceType5Code
     [IsoId("_djyvh4rAEeSgLpgNvMAP2g")]
     [Description(@"Unblock the PIN.")]
     PINUnblock = ATMServiceTypeCode.PINUnblock, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J-eOwayHEem81-uIvTF5rQ")]
 [DisplayName("Received Margin Or Collateral")]
-public partial record ReceivedMarginOrCollateral3
+public record ReceivedMarginOrCollateral3
 {
-    #nullable enable
-    
     /// <summary>
     /// Value of the initial margin received by the reporting counterparty from the other counterparty.
     /// Where initial margin is received on a portfolio basis, this field should include the overall value of initial margin received for the portfolio.
@@ -25,26 +23,22 @@ public partial record ReceivedMarginOrCollateral3
     [IsoId("_KC8fEayHEem81-uIvTF5rQ")]
     [DisplayName("Initial Margin Received")]
     [IsoXmlTag("InitlMrgnRcvd")]
-    public ActiveOrHistoricCurrencyAndAmount? InitialMarginReceived { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? InitialMarginReceived { get; init; }
+
     /// <summary>
-    /// Value of the variation margin received, including cash settled, by the reporting counterparty from the other counterparty. 
+    /// Value of the variation margin received, including cash settled, by the reporting counterparty from the other counterparty.
     /// Where variation margin is received on a portfolio basis, this field should include the overall value of variation margin received for the portfolio.
     /// </summary>
     [IsoId("_KC8fE6yHEem81-uIvTF5rQ")]
     [DisplayName("Variation Margin Received")]
     [IsoXmlTag("VartnMrgnRcvd")]
-    public ActiveOrHistoricCurrencyAndAmount? VariationMarginReceived { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? VariationMarginReceived { get; init; }
+
     /// <summary>
     /// Value of collateral received in excess of the required collateral.
     /// </summary>
     [IsoId("_KC8fFayHEem81-uIvTF5rQ")]
     [DisplayName("Excess Collateral Received")]
     [IsoXmlTag("XcssCollRcvd")]
-    public ActiveOrHistoricCurrencyAndAmount? ExcessCollateralReceived { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActiveOrHistoricCurrencyAndAmount? ExcessCollateralReceived { get; init; }
 }

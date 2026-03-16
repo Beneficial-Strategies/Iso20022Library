@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t8j3cXDGEe2MCaKO5AtGsA")]
 [DisplayName("Signed Data")]
-public partial record SignedData8
+public record SignedData8
 {
-    #nullable enable
-    
     /// <summary>
     /// Version of the data structure.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record SignedData8
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; } 
-    
+    public IsoNumber? Version { get; init; }
+
     /// <summary>
     /// Identification of digest algorithm applied before signature.
     /// </summary>
     [IsoId("_uD6coXDGEe2MCaKO5AtGsA")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public AlgorithmIdentification21? DigestAlgorithm { get; init; } 
-    
+    public AlgorithmIdentification21? DigestAlgorithm { get; init; }
+
     /// <summary>
     /// Data to sign.
     /// </summary>
     [IsoId("_uD6co3DGEe2MCaKO5AtGsA")]
     [DisplayName("Encapsulated Content")]
     [IsoXmlTag("NcpsltdCntt")]
-    public EncapsulatedContent3? EncapsulatedContent { get; init; } 
-    
+    public EncapsulatedContent3? EncapsulatedContent { get; init; }
+
     /// <summary>
     /// Chain of X.509 certificates.
     /// </summary>
@@ -50,17 +48,13 @@ public partial record SignedData8
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? Certificate { get; init; } 
-    
+    public IsoMax5000Binary? Certificate { get; init; }
+
     /// <summary>
     /// Digital signature and identification of a signer.
     /// </summary>
     [IsoId("_uD8R03DGEe2MCaKO5AtGsA")]
     [DisplayName("Signer")]
     [IsoXmlTag("Sgnr")]
-    public Signer7? Signer { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Signer7? Signer { get; init; }
 }

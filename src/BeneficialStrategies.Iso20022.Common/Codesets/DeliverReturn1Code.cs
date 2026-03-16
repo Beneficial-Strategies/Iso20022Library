@@ -23,7 +23,7 @@ public enum DeliverReturn1Code
     [IsoId("_YcMuQ9p-Ed-ak6NoX_4Aeg_1267443780")]
     [Description(@"Specifies that the collateral is to be delivered.")]
     Deliver = DeliverReturnCode.Deliver, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the collateral is to be returned.
     /// Encoded/decoded by serializers as &quot;RETN&quot;.
@@ -32,5 +32,4 @@ public enum DeliverReturn1Code
     [IsoId("_YcMuRNp-Ed-ak6NoX_4Aeg_1710432272")]
     [Description(@"Specifies that the collateral is to be returned.")]
     Return = DeliverReturnCode.Return, // same ordinal as derivation source for type conversions
-    
 }

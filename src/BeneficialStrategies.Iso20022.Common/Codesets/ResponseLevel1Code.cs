@@ -23,7 +23,7 @@ public enum ResponseLevel1Code
     [IsoId("_ZVH6Utp-Ed-ak6NoX_4Aeg_-1557115638")]
     [Description(@"No acknowledgement is requested.")]
     NoAcknowledgement = ResponseLevelCode.NoAcknowledgement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acknowledgement of only negative or erroneous messages is requested.
     /// Encoded/decoded by serializers as &quot;ACNE&quot;.
@@ -32,7 +32,7 @@ public enum ResponseLevel1Code
     [IsoId("_ZVH6U9p-Ed-ak6NoX_4Aeg_-1557115330")]
     [Description(@"Acknowledgement of only negative or erroneous messages is requested.")]
     AcknowledgementNegativeError = ResponseLevelCode.AcknowledgementNegativeError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acknowledgement of each message is requested.
     /// Encoded/decoded by serializers as &quot;ACEA&quot;.
@@ -41,5 +41,4 @@ public enum ResponseLevel1Code
     [IsoId("_ZVH6VNp-Ed-ak6NoX_4Aeg_-1557115288")]
     [Description(@"Acknowledgement of each message is requested.")]
     AcknowledgementEach = ResponseLevelCode.AcknowledgementEach, // same ordinal as derivation source for type conversions
-    
 }

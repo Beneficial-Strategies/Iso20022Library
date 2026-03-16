@@ -23,7 +23,7 @@ public enum CreditDebit3Code
     [IsoId("_s9EFxzzcEeWg1_uD_bF5Og")]
     [Description(@"Operation is an increase.")]
     Credit = AmountDirectionCode.Credit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Operation is a decrease.
     /// Encoded/decoded by serializers as &quot;DBIT&quot;.
@@ -32,5 +32,4 @@ public enum CreditDebit3Code
     [IsoId("_s9EFyDzcEeWg1_uD_bF5Og")]
     [Description(@"Operation is a decrease.")]
     Debit = AmountDirectionCode.Debit, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YZXcuNp-Ed-ak6NoX_4Aeg_1268885357")]
-[Description(@"Indicates whether the collateral has been posted against the variation margin or the segregated independent amount.")]
+[Description(
+    @"Indicates whether the collateral has been posted against the variation margin or the segregated independent amount."
+)]
 [Derivations(typeof(CollateralPurpose1Code))]
 public enum CollateralPurposeCode
 {
@@ -23,7 +25,7 @@ public enum CollateralPurposeCode
     [IsoId("_YZXcudp-Ed-ak6NoX_4Aeg_-2132642673")]
     [Description(@"Collateral has been posted against the variation margin.")]
     VariationMargin,
-    
+
     /// <summary>
     /// Collateral has been posted against the segregated independent amount.
     /// Encoded/decoded by serializers as &quot;SINA&quot;.
@@ -32,5 +34,4 @@ public enum CollateralPurposeCode
     [IsoId("_YZXcutp-Ed-ak6NoX_4Aeg_846367471")]
     [Description(@"Collateral has been posted against the segregated independent amount.")]
     SegregatedIndependentAmount,
-    
 }

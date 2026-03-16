@@ -23,7 +23,7 @@ public enum DisclosureRequestType1Code
     [IsoId("_SWm1QUV3EemRx7jyevcLwg")]
     [Description(@"New disclosure request.")]
     New = DisclosureRequestTypeCode.New, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Disclosure request replacing a previously sent request.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
@@ -32,5 +32,4 @@ public enum DisclosureRequestType1Code
     [IsoId("_SdTTIUV3EemRx7jyevcLwg")]
     [Description(@"Disclosure request replacing a previously sent request.")]
     Replacement = DisclosureRequestTypeCode.Replacement, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G-wMEdSZEemZdYGWu384Zw")]
 [DisplayName("Compare Clearing Status")]
-public partial record CompareClearingStatus2
+public record CompareClearingStatus2
 {
-    #nullable enable
-    
     /// <summary>
     /// Information for the first side of the transaction.
     /// </summary>
     [IsoId("_HFP1odSZEemZdYGWu384Zw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
-    public Cleared4Choice_? Value1 { get; init; } 
-    
+    public Cleared4Choice_? Value1 { get; init; }
+
     /// <summary>
     /// Information for the second side of the transaction.
     /// </summary>
     [IsoId("_HFP1o9SZEemZdYGWu384Zw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
-    public Cleared4Choice_? Value2 { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Cleared4Choice_? Value2 { get; init; }
 }

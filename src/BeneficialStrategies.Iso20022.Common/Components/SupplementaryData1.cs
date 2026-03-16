@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qn0zC9p-Ed-ak6NoX_4Aeg_468227563")]
 [DisplayName("Supplementary Data")]
-public partial record SupplementaryData1
+public record SupplementaryData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unambiguous reference to the location where the supplementary data must be inserted in the message instance.
     /// In the case of XML, this is expressed by a valid XPath.
@@ -26,18 +24,14 @@ public partial record SupplementaryData1
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? PlaceAndName { get; init; }
+
     /// <summary>
     /// Technical element wrapping the supplementary data.
     /// </summary>
     [IsoId("_Qn988dp-Ed-ak6NoX_4Aeg_-642683856")]
     [DisplayName("Envelope")]
     [IsoXmlTag("Envlp")]
-    public required SupplementaryDataEnvelope1 Envelope { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required SupplementaryDataEnvelope1 Envelope { get; init; }
 }

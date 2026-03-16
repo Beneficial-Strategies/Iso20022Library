@@ -23,7 +23,7 @@ public enum InformationDistribution2Code
     [IsoId("_18fqwSCUEeWJd9HF2tO7BA")]
     [Description(@"Electronic distribution.")]
     Electronic = InformationDistributionCode.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No distribution.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -32,7 +32,7 @@ public enum InformationDistribution2Code
     [IsoId("_2C5NsSCUEeWJd9HF2tO7BA")]
     [Description(@"No distribution.")]
     NoDistribution = InformationDistributionCode.NoDistribution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Paper distribution.
     /// Encoded/decoded by serializers as &quot;PAPR&quot;.
@@ -41,5 +41,4 @@ public enum InformationDistribution2Code
     [IsoId("_2Hpx4SCUEeWJd9HF2tO7BA")]
     [Description(@"Paper distribution.")]
     Paper = InformationDistributionCode.Paper, // same ordinal as derivation source for type conversions
-    
 }

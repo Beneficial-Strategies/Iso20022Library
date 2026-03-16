@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TFLmRNp-Ed-ak6NoX_4Aeg_-434069114")]
 [DisplayName("Financial Institution Identification")]
-public partial record FinancialInstitutionIdentification7
+public record FinancialInstitutionIdentification7
 {
-    #nullable enable
-    
     /// <summary>
     /// Code allocated to a financial institution by the ISO 9362 Registration Authority as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record FinancialInstitutionIdentification7
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
     [IsoSimpleType(IsoSimpleType.BICIdentifier)]
-    public IsoBICIdentifier? BIC { get; init; } 
-    
+    public IsoBICIdentifier? BIC { get; init; }
+
     /// <summary>
     /// Information used to identify a member within a clearing system.
     /// </summary>
     [IsoId("_TFLmRtp-Ed-ak6NoX_4Aeg_494072236")]
     [DisplayName("Clearing System Member Identification")]
     [IsoXmlTag("ClrSysMmbId")]
-    public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; } 
-    
+    public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; }
+
     /// <summary>
     /// Name by which an agent is known and which is usually used to identify that agent.
     /// </summary>
@@ -42,26 +40,22 @@ public partial record FinancialInstitutionIdentification7
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Name { get; init; }
+
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.
     /// </summary>
     [IsoId("_TFLmSNp-Ed-ak6NoX_4Aeg_-434068379")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
-    public PostalAddress6? PostalAddress { get; init; } 
-    
+    public PostalAddress6? PostalAddress { get; init; }
+
     /// <summary>
     /// Unique identification of an agent, as assigned by an institution, using an identification scheme.
     /// </summary>
     [IsoId("_TFUwMNp-Ed-ak6NoX_4Aeg_-434068709")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public GenericFinancialIdentification1? Other { get; init; } 
-    
-    
-    #nullable disable
-    
+    public GenericFinancialIdentification1? Other { get; init; }
 }

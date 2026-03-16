@@ -23,7 +23,7 @@ public enum MoneyMarketTransactionTypeCode
     [IsoId("_lmE4IJfrEeSfnc-VXAEapg")]
     [Description(@"Transaction is a borrowing.")]
     CashBorrowing,
-    
+
     /// <summary>
     /// Transaction is a lending.
     /// Encoded/decoded by serializers as &quot;LEND&quot;.
@@ -32,5 +32,4 @@ public enum MoneyMarketTransactionTypeCode
     [IsoId("_n-_3UJfrEeSfnc-VXAEapg")]
     [Description(@"Transaction is a lending.")]
     CashLending,
-    
 }

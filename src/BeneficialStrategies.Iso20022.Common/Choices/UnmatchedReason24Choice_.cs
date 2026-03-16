@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnmatchedReason24Choice.Code))]
     [KnownType(typeof(UnmatchedReason24Choice.Proprietary))]
-    [JsonDerivedType(typeof(UnmatchedReason24Choice.Code),nameof(UnmatchedReason24Choice.Code))]
-    [JsonDerivedType(typeof(UnmatchedReason24Choice.Proprietary),nameof(UnmatchedReason24Choice.Proprietary))]
+    [JsonDerivedType(typeof(UnmatchedReason24Choice.Code), nameof(UnmatchedReason24Choice.Code))]
+    [JsonDerivedType(
+        typeof(UnmatchedReason24Choice.Proprietary),
+        nameof(UnmatchedReason24Choice.Proprietary)
+    )]
     [IsoId("_DFsb-Tw8EeW3QqUkIQtIUA")]
     [DisplayName("Unmatched Reason 24 Choice")]
-    public abstract partial record UnmatchedReason24Choice_
-    {
-    }
+    public abstract record UnmatchedReason24Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usWLoPRYEeuLhpyIdtJzwg")]
     [Description(@"Australian Masters Securities Lending Agreement (AMSLA).")]
     AustralianMastersSecuritiesLendingAgreementAMSLA,
-    
+
     /// <summary>
     /// Bilateral agreement.
     /// Encoded/decoded by serializers as &quot;BIAG&quot;.
@@ -32,16 +32,18 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usWLo_RYEeuLhpyIdtJzwg")]
     [Description(@"Bilateral agreement.")]
     BilateralAgreement,
-    
+
     /// <summary>
     /// Investment Industry Regulatory Organization of Canada (IIROC) Repurchase/Reverse Repurchase Transaction Agreement.
     /// Encoded/decoded by serializers as &quot;CARA&quot;.
     /// </summary>
     [EnumMember(Value = "CARA")]
     [IsoId("_usfVkPRYEeuLhpyIdtJzwg")]
-    [Description(@"Investment Industry Regulatory Organization of Canada (IIROC) Repurchase/Reverse Repurchase Transaction Agreement.")]
+    [Description(
+        @"Investment Industry Regulatory Organization of Canada (IIROC) Repurchase/Reverse Repurchase Transaction Agreement."
+    )]
     InvestmentIndustryRegulatoryOrganizationofCanadaIIROCRepurchaseReverseRepurchaseTransactionAgreement,
-    
+
     /// <summary>
     /// FIA-ISDA Cleared Derivatives Execution Agreement.
     /// Encoded/decoded by serializers as &quot;CDEA&quot;.
@@ -50,7 +52,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usfVk_RYEeuLhpyIdtJzwg")]
     [Description(@"FIA-ISDA Cleared Derivatives Execution Agreement.")]
     FIAISDAClearedDerivativesExecutionAgreement,
-    
+
     /// <summary>
     /// Swiss Master Agreement.
     /// Encoded/decoded by serializers as &quot;CHMA&quot;.
@@ -59,7 +61,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usfVlvRYEeuLhpyIdtJzwg")]
     [Description(@"Swiss Master Agreement.")]
     SwissMasterAgreement,
-    
+
     /// <summary>
     /// Swiss Master Repurchase Agreement.
     /// Encoded/decoded by serializers as &quot;CHRA&quot;.
@@ -68,7 +70,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_uspGkPRYEeuLhpyIdtJzwg")]
     [Description(@"Swiss Master Repurchase Agreement.")]
     SwissMasterRepurchaseAgreement,
-    
+
     /// <summary>
     /// Contrato Marco de Operaciones Financieras.
     /// Encoded/decoded by serializers as &quot;CMOP&quot;.
@@ -77,7 +79,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_uspGk_RYEeuLhpyIdtJzwg")]
     [Description(@"Contrato Marco de Operaciones Financieras.")]
     ContratoMarcoDeOperacionesFinancieras,
-    
+
     /// <summary>
     /// China Bond Repurchase Master Agreement.
     /// Encoded/decoded by serializers as &quot;CNBR&quot;.
@@ -86,7 +88,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_uspGlvRYEeuLhpyIdtJzwg")]
     [Description(@"China Bond Repurchase Master Agreement.")]
     ChinaBondRepurchaseMasterAgreement,
-    
+
     /// <summary>
     /// CSD bilateral agreement.
     /// Encoded/decoded by serializers as &quot;CSDA&quot;.
@@ -95,7 +97,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usy3kPRYEeuLhpyIdtJzwg")]
     [Description(@"CSD bilateral agreement.")]
     CSDBilateralAgreement,
-    
+
     /// <summary>
     /// German Master Agreement.
     /// Encoded/decoded by serializers as &quot;DEMA&quot;.
@@ -104,7 +106,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usy3k_RYEeuLhpyIdtJzwg")]
     [Description(@"German Master Agreement.")]
     GermanMasterAgreement,
-    
+
     /// <summary>
     /// Deutscher Rahmenvertrag für Wertpapierdarlehen.
     /// Encoded/decoded by serializers as &quot;DERD&quot;.
@@ -113,7 +115,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usy3lvRYEeuLhpyIdtJzwg")]
     [Description(@"Deutscher Rahmenvertrag für Wertpapierdarlehen.")]
     DeutscherRahmenvertragfurWertpapierdarlehen,
-    
+
     /// <summary>
     /// Deutscher Rahmenvertrag für Wertpapierpensionsgeschäfte .
     /// Encoded/decoded by serializers as &quot;DERP&quot;.
@@ -122,7 +124,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_usy3mfRYEeuLhpyIdtJzwg")]
     [Description(@"Deutscher Rahmenvertrag für Wertpapierpensionsgeschäfte .")]
     DeutscherRahmenvertragfurWertpapierpensionsgeschafte,
-    
+
     /// <summary>
     /// Deutscher Rahmenvertrag für Finanztermingeschäfte (DRV).
     /// Encoded/decoded by serializers as &quot;DERV&quot;.
@@ -131,7 +133,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_us8BgPRYEeuLhpyIdtJzwg")]
     [Description(@"Deutscher Rahmenvertrag für Finanztermingeschäfte (DRV).")]
     DeutscherRahmenvertragfurFinanztermingeschafteDRV,
-    
+
     /// <summary>
     /// EFET Master Agreement.
     /// Encoded/decoded by serializers as &quot;EFMA&quot;.
@@ -140,7 +142,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_us8Bg_RYEeuLhpyIdtJzwg")]
     [Description(@"EFET Master Agreement.")]
     EFETMasterAgreement,
-    
+
     /// <summary>
     /// Contrato Marco de compraventa y Reporto de valores.
     /// Encoded/decoded by serializers as &quot;ESRA&quot;.
@@ -149,7 +151,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_us8BhvRYEeuLhpyIdtJzwg")]
     [Description(@"Contrato Marco de compraventa y Reporto de valores.")]
     ContratoMarcoDeCompraventaYReportoDeValores,
-    
+
     /// <summary>
     /// European Master Agreement.
     /// Encoded/decoded by serializers as &quot;EUMA&quot;.
@@ -158,7 +160,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_us8BifRYEeuLhpyIdtJzwg")]
     [Description(@"European Master Agreement.")]
     EuropeanMasterAgreement,
-    
+
     /// <summary>
     /// FBF Master Agreement related to transactions on forward financial instruments.
     /// Encoded/decoded by serializers as &quot;FMAT&quot;.
@@ -167,7 +169,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utFygPRYEeuLhpyIdtJzwg")]
     [Description(@"FBF Master Agreement related to transactions on forward financial instruments.")]
     FBFMasterAgreementRelatedToTransactionsOnForwardFinancialInstruments,
-    
+
     /// <summary>
     /// FOA Professional Client Agreement.
     /// Encoded/decoded by serializers as &quot;FPCA&quot;.
@@ -176,7 +178,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utFyg_RYEeuLhpyIdtJzwg")]
     [Description(@"FOA Professional Client Agreement.")]
     FOAProfessionalClientAgreement,
-    
+
     /// <summary>
     /// Convention-Cadre Relative aux Operations de Pensions Livrees.
     /// Encoded/decoded by serializers as &quot;FRFB&quot;.
@@ -185,7 +187,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utFyhvRYEeuLhpyIdtJzwg")]
     [Description(@"Convention-Cadre Relative aux Operations de Pensions Livrees.")]
     ConventionCadreRelativeauxOperationsdePensionsLivrees,
-    
+
     /// <summary>
     /// Gilt Edged Stock Lending Agreement (GESLA).
     /// Encoded/decoded by serializers as &quot;GESL&quot;.
@@ -194,7 +196,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utFyifRYEeuLhpyIdtJzwg")]
     [Description(@"Gilt Edged Stock Lending Agreement (GESLA).")]
     GiltEdgedStockLendingAgreementGESLA,
-    
+
     /// <summary>
     /// Global Master Repurchase Agreement.
     /// Encoded/decoded by serializers as &quot;GMRA&quot;.
@@ -203,7 +205,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utFyjPRYEeuLhpyIdtJzwg")]
     [Description(@"Global Master Repurchase Agreement.")]
     GlobalMasterRepurchaseAgreement,
-    
+
     /// <summary>
     /// Global Master Securities Lending Agreement.
     /// Encoded/decoded by serializers as &quot;GMSL&quot;.
@@ -212,7 +214,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utO8cPRYEeuLhpyIdtJzwg")]
     [Description(@"Global Master Securities Lending Agreement.")]
     GlobalMasterSecuritiesLendingAgreement,
-    
+
     /// <summary>
     /// Islamic Derivative Master Agreement.
     /// Encoded/decoded by serializers as &quot;IDMA&quot;.
@@ -221,7 +223,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utO8c_RYEeuLhpyIdtJzwg")]
     [Description(@"Islamic Derivative Master Agreement.")]
     IslamicDerivativeMasterAgreement,
-    
+
     /// <summary>
     /// International Swaps and Derivatives Association Agreement.
     /// Encoded/decoded by serializers as &quot;ISDA&quot;.
@@ -230,7 +232,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utYtcPRYEeuLhpyIdtJzwg")]
     [Description(@"International Swaps and Derivatives Association Agreement.")]
     InternationalSwapsAndDerivativesAssociationAgreement,
-    
+
     /// <summary>
     /// Japanese Master Agreement on Lending Transaction of Bonds.
     /// Encoded/decoded by serializers as &quot;JPBL&quot;.
@@ -239,25 +241,29 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utYtc_RYEeuLhpyIdtJzwg")]
     [Description(@"Japanese Master Agreement on Lending Transaction of Bonds.")]
     JapaneseMasterAgreementonLendingTransactionOfBonds,
-    
+
     /// <summary>
     /// Japanese Master Agreement on the Transaction with Repurchase Agreement of the Bonds.
     /// Encoded/decoded by serializers as &quot;JPBR&quot;.
     /// </summary>
     [EnumMember(Value = "JPBR")]
     [IsoId("_utYtdvRYEeuLhpyIdtJzwg")]
-    [Description(@"Japanese Master Agreement on the Transaction with Repurchase Agreement of the Bonds.")]
+    [Description(
+        @"Japanese Master Agreement on the Transaction with Repurchase Agreement of the Bonds."
+    )]
     JapaneseMasterAgreementontheTransactionwithRepurchaseAgreementOfTheBonds,
-    
+
     /// <summary>
     /// Japanese Master Agreement on the Borrowing and Lending Transactions of Share Certificates.
     /// Encoded/decoded by serializers as &quot;JPSL&quot;.
     /// </summary>
     [EnumMember(Value = "JPSL")]
     [IsoId("_utYtefRYEeuLhpyIdtJzwg")]
-    [Description(@"Japanese Master Agreement on the Borrowing and Lending Transactions of Share Certificates.")]
+    [Description(
+        @"Japanese Master Agreement on the Borrowing and Lending Transactions of Share Certificates."
+    )]
     JapaneseMasterAgreementOnTheBorrowingAndLendingTransactionsofShareCertificates,
-    
+
     /// <summary>
     /// Korea Financial Investment Association (KOFIA) Standard Repurchase Agreement.
     /// Encoded/decoded by serializers as &quot;KRRA&quot;.
@@ -266,7 +272,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utYtfPRYEeuLhpyIdtJzwg")]
     [Description(@"Korea Financial Investment Association (KOFIA) Standard Repurchase Agreement.")]
     KoreaFinancialInvestmentAssociationKOFIAStandardRepurchaseAgreement,
-    
+
     /// <summary>
     /// Korean Securities Lending Agreement (KOSLA).
     /// Encoded/decoded by serializers as &quot;KRSL&quot;.
@@ -275,7 +281,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utiecPRYEeuLhpyIdtJzwg")]
     [Description(@"Korean Securities Lending Agreement (KOSLA).")]
     KoreanSecuritiesLendingAgreementKOSLA,
-    
+
     /// <summary>
     /// Master Equity and Fixed Interest Stock Lending Agreement (MEFISLA).
     /// Encoded/decoded by serializers as &quot;MEFI&quot;.
@@ -284,7 +290,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utiec_RYEeuLhpyIdtJzwg")]
     [Description(@"Master Equity and Fixed Interest Stock Lending Agreement (MEFISLA).")]
     MasterEquityandFixedInterestStockLendingAgreementMEFISLA,
-    
+
     /// <summary>
     /// Master Repurchase Agreement.
     /// Encoded/decoded by serializers as &quot;MRAA&quot;.
@@ -293,7 +299,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utroYPRYEeuLhpyIdtJzwg")]
     [Description(@"Master Repurchase Agreement.")]
     MasterRepurchaseAgreement,
-    
+
     /// <summary>
     /// Master Securities Loan Agreement.
     /// Encoded/decoded by serializers as &quot;MSLA&quot;.
@@ -302,7 +308,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utroY_RYEeuLhpyIdtJzwg")]
     [Description(@"Master Securities Loan Agreement.")]
     MasterSecuritiesLoanAgreement,
-    
+
     /// <summary>
     /// Overseas Securities Lending Agreement.
     /// Encoded/decoded by serializers as &quot;OSLA&quot;.
@@ -311,7 +317,7 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utroZvRYEeuLhpyIdtJzwg")]
     [Description(@"Overseas Securities Lending Agreement.")]
     OverseasSecuritiesLendingAgreement,
-    
+
     /// <summary>
     /// Other type of master agreement.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -320,5 +326,4 @@ public enum ExternalAgreementTypeCode
     [IsoId("_utroafRYEeuLhpyIdtJzwg")]
     [Description(@"Other type of master agreement.")]
     OtherTypeOfMasterAgreement,
-    
 }

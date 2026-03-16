@@ -21,9 +21,11 @@ public enum WithholdingTaxRateTypeCode
     /// </summary>
     [EnumMember(Value = "FTCA")]
     [IsoId("_xdqgoCeFEeOXAt_43VmZGw")]
-    [Description(@"Withholding tax related to income subject to FATCA (Foreign Account Tax Compliance Act).")]
+    [Description(
+        @"Withholding tax related to income subject to FATCA (Foreign Account Tax Compliance Act)."
+    )]
     FATCATax,
-    
+
     /// <summary>
     /// Withholding tax related to income subject to NRA (Non Resident Alien).
     /// Encoded/decoded by serializers as &quot;NRAT&quot;.
@@ -32,7 +34,7 @@ public enum WithholdingTaxRateTypeCode
     [IsoId("_3gCSwCeFEeOXAt_43VmZGw")]
     [Description(@"Withholding tax related to income subject to NRA (Non Resident Alien).")]
     NRATax,
-    
+
     /// <summary>
     /// Withholding tax related to payments subject to back up withholding.
     /// Encoded/decoded by serializers as &quot;BWIT&quot;.
@@ -41,5 +43,4 @@ public enum WithholdingTaxRateTypeCode
     [IsoId("_-AKX4CeFEeOXAt_43VmZGw")]
     [Description(@"Withholding tax related to payments subject to back up withholding.")]
     BackUpWithholding,
-    
 }

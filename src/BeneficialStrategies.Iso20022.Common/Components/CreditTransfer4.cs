@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VRiwKNp-Ed-ak6NoX_4Aeg_949302748")]
 [DisplayName("Credit Transfer")]
-public partial record CreditTransfer4
+public record CreditTransfer4
 {
-    #nullable enable
-    
     /// <summary>
     /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
     /// </summary>
@@ -25,26 +23,22 @@ public partial record CreditTransfer4
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Reference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Reference { get; init; }
+
     /// <summary>
     /// Party that receives an amount of money from the debtor. The creditor is also the credit account owner.
     /// </summary>
     [IsoId("_VRshINp-Ed-ak6NoX_4Aeg_949302826")]
     [DisplayName("Creditor Details")]
     [IsoXmlTag("CdtrDtls")]
-    public Creditor2? CreditorDetails { get; init; } 
-    
+    public Creditor2? CreditorDetails { get; init; }
+
     /// <summary>
     /// Party that owes the cash to the creditor/final party. The debtor is also the debit account owner.
     /// </summary>
     [IsoId("_VRshIdp-Ed-ak6NoX_4Aeg_949302784")]
     [DisplayName("Debtor Details")]
     [IsoXmlTag("DbtrDtls")]
-    public required Debtor2 DebtorDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required Debtor2 DebtorDetails { get; init; }
 }

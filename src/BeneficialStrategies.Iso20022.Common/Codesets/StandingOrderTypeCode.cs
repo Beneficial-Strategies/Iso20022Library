@@ -21,9 +21,11 @@ public enum StandingOrderTypeCode
     /// </summary>
     [EnumMember(Value = "USTO")]
     [IsoId("_8N7QVKMgEeCJ6YNENx4h-w_-1951616938")]
-    [Description(@"Liquidity transfer standing order type, that has been customised or defined to the specific need of the user.")]
+    [Description(
+        @"Liquidity transfer standing order type, that has been customised or defined to the specific need of the user."
+    )]
     UserDefinedStandingOrder,
-    
+
     /// <summary>
     /// Liquidity transfer standing order type, as predefined in the system.
     /// Encoded/decoded by serializers as &quot;PSTO&quot;.
@@ -32,5 +34,4 @@ public enum StandingOrderTypeCode
     [IsoId("_8N7QVaMgEeCJ6YNENx4h-w_1666330764")]
     [Description(@"Liquidity transfer standing order type, as predefined in the system.")]
     PredefinedStandingOrder,
-    
 }

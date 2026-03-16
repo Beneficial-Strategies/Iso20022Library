@@ -21,9 +21,11 @@ public enum PINRequestType1Code
     /// </summary>
     [EnumMember(Value = "PIAE")]
     [IsoId("_WYR0Yd7AEeiwsev40qZGEQ")]
-    [Description(@"The cardholder enters the PIN, the POI enciphers the PIN Block and provides it as a result to the Sale System.")]
+    [Description(
+        @"The cardholder enters the PIN, the POI enciphers the PIN Block and provides it as a result to the Sale System."
+    )]
     PINAcquisitionEncryption = PINRequestTypeCode.PINAcquisitionEncryption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Cardholder enters the PIN and the POI verifies it.
     /// Encoded/decoded by serializers as &quot;PIAV&quot;.
@@ -32,7 +34,7 @@ public enum PINRequestType1Code
     [IsoId("_WbNMkd7AEeiwsev40qZGEQ")]
     [Description(@"The Cardholder enters the PIN and the POI verifies it.")]
     PINAcquisitionVerification = PINRequestTypeCode.PINAcquisitionVerification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System send a previous keyed PIN and the POI verifies it.
     /// Encoded/decoded by serializers as &quot;PIVO&quot;.
@@ -41,5 +43,4 @@ public enum PINRequestType1Code
     [IsoId("_WfOw8d7AEeiwsev40qZGEQ")]
     [Description(@"The Sale System send a previous keyed PIN and the POI verifies it.")]
     PINVerifyOnly = PINRequestTypeCode.PINVerifyOnly, // same ordinal as derivation source for type conversions
-    
 }

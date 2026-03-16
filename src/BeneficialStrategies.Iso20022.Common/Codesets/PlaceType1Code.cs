@@ -23,5 +23,4 @@ public enum PlaceType1Code
     [IsoId("_aHWBctp-Ed-ak6NoX_4Aeg_-1566893880")]
     [Description(@"The type of place is unknown.")]
     Unknown = PlaceTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

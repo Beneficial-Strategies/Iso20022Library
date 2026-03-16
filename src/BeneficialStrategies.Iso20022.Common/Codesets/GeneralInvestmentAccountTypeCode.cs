@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_pXBs0F2cEeiFXdiLi_Nf4A")]
 [Description(@"Specifies a type of investment account.")]
-[Derivations(typeof(GeneralInvestmentAccountType1Code),typeof(GeneralInvestmentAccountType2Code))]
+[Derivations(typeof(GeneralInvestmentAccountType1Code), typeof(GeneralInvestmentAccountType2Code))]
 public enum GeneralInvestmentAccountTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum GeneralInvestmentAccountTypeCode
     [IsoId("_sSL2YF2cEeiFXdiLi_Nf4A")]
     [Description(@"General shares or equity savings account.")]
     ShareSavingsAccount,
-    
+
     /// <summary>
     /// Any type of general investment account.
     /// Encoded/decoded by serializers as &quot;ANYY&quot;.
@@ -32,5 +32,4 @@ public enum GeneralInvestmentAccountTypeCode
     [IsoId("_8neWgJNuEembCsVG-3f_AA")]
     [Description(@"Any type of general investment account.")]
     Any,
-    
 }

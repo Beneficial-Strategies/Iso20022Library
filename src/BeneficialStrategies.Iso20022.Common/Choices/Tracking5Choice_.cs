@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Tracking5Choice.Indicator))]
     [KnownType(typeof(Tracking5Choice.Proprietary))]
-    [JsonDerivedType(typeof(Tracking5Choice.Indicator),nameof(Tracking5Choice.Indicator))]
-    [JsonDerivedType(typeof(Tracking5Choice.Proprietary),nameof(Tracking5Choice.Proprietary))]
+    [JsonDerivedType(typeof(Tracking5Choice.Indicator), nameof(Tracking5Choice.Indicator))]
+    [JsonDerivedType(typeof(Tracking5Choice.Proprietary), nameof(Tracking5Choice.Proprietary))]
     [IsoId("_5xrt85NLEeWGlc8L7oPDIg")]
     [DisplayName("Tracking 5 Choice")]
-    public abstract partial record Tracking5Choice_
-    {
-    }
+    public abstract record Tracking5Choice_ { }
 }

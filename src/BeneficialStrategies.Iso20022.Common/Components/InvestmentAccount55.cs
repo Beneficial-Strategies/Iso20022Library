@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1_oToSSMEeWdoOFYMt-Lzw")]
 [DisplayName("Investment Account")]
-public partial record InvestmentAccount55
+public record InvestmentAccount55
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_2b5Y5ySMEeWdoOFYMt-Lzw")]
     [DisplayName("Owner Identification")]
     [IsoXmlTag("OwnrId")]
-    public PartyIdentification70Choice_? OwnerIdentification { get; init; } 
-    
+    public PartyIdentification70Choice_? OwnerIdentification { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record InvestmentAccount55
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountIdentification { get; init; }
+
     /// <summary>
     /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record InvestmentAccount55
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountName { get; init; }
+
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
     /// </summary>
@@ -53,17 +51,17 @@ public partial record InvestmentAccount55
     [DisplayName("Account Designation")]
     [IsoXmlTag("AcctDsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountDesignation { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountDesignation { get; init; }
+
     /// <summary>
     /// Form, that is, ownership, of the security, that is, registered or bearer.
     /// </summary>
     [IsoId("_2b5Y8SSMEeWdoOFYMt-Lzw")]
     [DisplayName("Securities Form")]
     [IsoXmlTag("SctiesForm")]
-    public FormOfSecurity1Code? SecuritiesForm { get; init; } 
-    
+    public FormOfSecurity1Code? SecuritiesForm { get; init; }
+
     /// <summary>
     /// Indicates whether a security exists only as an electronic record, that is, there is no physical document representing the security.
     /// </summary>
@@ -71,41 +69,37 @@ public partial record InvestmentAccount55
     [DisplayName("Dematerialised Indicator")]
     [IsoXmlTag("DmtrlsdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DematerialisedIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? DematerialisedIndicator { get; init; }
+
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
     /// </summary>
     [IsoId("_2b5Y9SSMEeWdoOFYMt-Lzw")]
     [DisplayName("Income Preference")]
     [IsoXmlTag("IncmPref")]
-    public IncomePreference2Code? IncomePreference { get; init; } 
-    
+    public IncomePreference2Code? IncomePreference { get; init; }
+
     /// <summary>
     /// Beneficial owner or its designated agent certifies that it complies with any holding or investment restrictions or requirements of the fund.
     /// </summary>
     [IsoId("_2b5Y9ySMEeWdoOFYMt-Lzw")]
     [DisplayName("Beneficiary Certification Completion")]
     [IsoXmlTag("BnfcryCertfctnCmpltn")]
-    public BeneficiaryCertificationCompletion1Code? BeneficiaryCertificationCompletion { get; init; } 
-    
+    public BeneficiaryCertificationCompletion1Code? BeneficiaryCertificationCompletion { get; init; }
+
     /// <summary>
     /// Institution that maintains the records where the account is held.
     /// </summary>
     [IsoId("_2b5Y-SSMEeWdoOFYMt-Lzw")]
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
-    public PartyIdentification70Choice_? AccountServicer { get; init; } 
-    
+    public PartyIdentification70Choice_? AccountServicer { get; init; }
+
     /// <summary>
     /// Sub-accounts that are grouped in a master or omnibus account.
     /// </summary>
     [IsoId("_2b5Y-ySMEeWdoOFYMt-Lzw")]
     [DisplayName("Sub Account Details")]
     [IsoXmlTag("SubAcctDtls")]
-    public SubAccount5? SubAccountDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SubAccount5? SubAccountDetails { get; init; }
 }

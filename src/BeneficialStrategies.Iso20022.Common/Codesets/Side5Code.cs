@@ -21,9 +21,11 @@ public enum Side5Code
     /// </summary>
     [EnumMember(Value = "SESH")]
     [IsoId("_J93mcezkEeSBf_ghFpb9rQ")]
-    [Description(@"An order to sell a security that the seller does not own; a sale effected by delivering a security borrowed by, or for the account of, the seller. Can only be executed on a plus or zero plus tick.")]
+    [Description(
+        @"An order to sell a security that the seller does not own; a sale effected by delivering a security borrowed by, or for the account of, the seller. Can only be executed on a plus or zero plus tick."
+    )]
     SellShort = SideCode.SellShort, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order is sell driven.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -32,7 +34,7 @@ public enum Side5Code
     [IsoId("_KGQtcezkEeSBf_ghFpb9rQ")]
     [Description(@"Order is sell driven.")]
     Sell = SideCode.Sell, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Short sale exempt from short-sale rules.
     /// Encoded/decoded by serializers as &quot;SSEX&quot;.
@@ -41,7 +43,7 @@ public enum Side5Code
     [IsoId("_Kaep8ezkEeSBf_ghFpb9rQ")]
     [Description(@"Short sale exempt from short-sale rules.")]
     SellShortExempt = SideCode.SellShortExempt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The side of the indication of interest is not disclosed.
     /// Encoded/decoded by serializers as &quot;UNDI&quot;.
@@ -50,5 +52,4 @@ public enum Side5Code
     [IsoId("_KA-CwaiqEeWRLJcxVQAwmw")]
     [Description(@"The side of the indication of interest is not disclosed.")]
     Undisclosed = SideCode.Undisclosed, // same ordinal as derivation source for type conversions
-    
 }

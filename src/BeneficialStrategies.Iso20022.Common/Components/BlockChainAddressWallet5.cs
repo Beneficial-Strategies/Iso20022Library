@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9KVakSqPEeyR9JrVGfaMKw")]
 [DisplayName("Block Chain Address Wallet")]
-public partial record BlockChainAddressWallet5
+public record BlockChainAddressWallet5
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of the collateral account.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record BlockChainAddressWallet5
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text Identification { get; init; }
+
     /// <summary>
     /// Indicates the type of collateral account.
     /// </summary>
     [IsoId("_9hum4yqPEeyR9JrVGfaMKw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public CollateralAccountIdentificationType3Choice_? Type { get; init; } 
-    
+    public CollateralAccountIdentificationType3Choice_? Type { get; init; }
+
     /// <summary>
     /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record BlockChainAddressWallet5
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Name { get; init; }
 }

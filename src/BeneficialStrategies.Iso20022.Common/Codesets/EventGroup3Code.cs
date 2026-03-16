@@ -23,5 +23,4 @@ public enum EventGroup3Code
     [IsoId("_y02d8egcEei5aPS232E3Mw")]
     [Description(@"Distribution domain events.")]
     Distribution = EventGroupCode.Distribution, // same ordinal as derivation source for type conversions
-    
 }

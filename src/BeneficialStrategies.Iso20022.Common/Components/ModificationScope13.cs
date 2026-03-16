@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CfguYRKwEeKj15WxqwlXPw")]
 [DisplayName("Modification Scope")]
-public partial record ModificationScope13
+public record ModificationScope13
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of modification to be applied on a set of information.
     /// </summary>
     [IsoId("_C1j24RKwEeKj15WxqwlXPw")]
     [DisplayName("Modification Scope Indication")]
     [IsoXmlTag("ModScpIndctn")]
-    public required DataModification2Code ModificationScopeIndication { get; init; } 
-    
+    public required DataModification2Code ModificationScopeIndication { get; init; }
+
     /// <summary>
     /// Information related to the account to be modified.
     /// </summary>
     [IsoId("_C1j25RKwEeKj15WxqwlXPw")]
     [DisplayName("Fund Details")]
     [IsoXmlTag("FndDtls")]
-    public required FinancialInstrument29 FundDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required FinancialInstrument29 FundDetails { get; init; }
 }

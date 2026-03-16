@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Q4dpgJf_EeSfnc-VXAEapg")]
-[Description(@"Specifies the collateral type against which all repurchase agreements are conducted.")]
-[Derivations(typeof(SpecialCollateral1Code),typeof(SpecialCollateral2Code))]
+[Description(
+    @"Specifies the collateral type against which all repurchase agreements are conducted."
+)]
+[Derivations(typeof(SpecialCollateral1Code), typeof(SpecialCollateral2Code))]
 public enum SpecialCollateralCode
 {
     /// <summary>
@@ -21,25 +23,30 @@ public enum SpecialCollateralCode
     /// </summary>
     [EnumMember(Value = "GENE")]
     [IsoId("_TACaAJf_EeSfnc-VXAEapg")]
-    [Description(@"Identifies that all repurchase agreements are conducted against general collateral.")]
+    [Description(
+        @"Identifies that all repurchase agreements are conducted against general collateral."
+    )]
     GeneralCollateral,
-    
+
     /// <summary>
     /// Identifies that all repurchase agreements are conducted against special collateral.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
     /// </summary>
     [EnumMember(Value = "SPEC")]
     [IsoId("_Tb3aYJf_EeSfnc-VXAEapg")]
-    [Description(@"Identifies that all repurchase agreements are conducted against special collateral.")]
+    [Description(
+        @"Identifies that all repurchase agreements are conducted against special collateral."
+    )]
     SpecialCollateral,
-    
+
     /// <summary>
     /// Identifies that this is a securities lending transaction, made of repurchase agreements and reverse repurchase agreements versus cash.
     /// Encoded/decoded by serializers as &quot;MRRP&quot;.
     /// </summary>
     [EnumMember(Value = "MRRP")]
     [IsoId("_UKZfkMEaEea7jLfvGi1PDw")]
-    [Description(@"Identifies that this is a securities lending transaction, made of repurchase agreements and reverse repurchase agreements versus cash.")]
+    [Description(
+        @"Identifies that this is a securities lending transaction, made of repurchase agreements and reverse repurchase agreements versus cash."
+    )]
     MatchedAndReverseRepurchaseAgreement,
-    
 }

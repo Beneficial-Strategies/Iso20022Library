@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YwKzJdp-Ed-ak6NoX_4Aeg_159326277")]
-[Description(@"Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect.")]
+[Description(
+    @"Defines when the trigger will hit, i.e. the action specified by the trigger instructions will come into effect."
+)]
 [DerivedFrom(typeof(TriggerTypeCode))]
 public enum TriggerType1Code
 {
@@ -23,7 +25,7 @@ public enum TriggerType1Code
     [IsoId("_YwKzJtp-Ed-ak6NoX_4Aeg_256297454")]
     [Description(@"Trigger Instructions come into effect in case of partial execution.")]
     PartialExecution = TriggerTypeCode.PartialExecution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger Instructions come into effect at specified trading session.
     /// Encoded/decoded by serializers as &quot;SPTS&quot;.
@@ -32,7 +34,7 @@ public enum TriggerType1Code
     [IsoId("_YwKzJ9p-Ed-ak6NoX_4Aeg_256297489")]
     [Description(@"Trigger Instructions come into effect at specified trading session.")]
     SpecifiedTradingSession = TriggerTypeCode.SpecifiedTradingSession, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger Instructions come into effect at next auction.
     /// Encoded/decoded by serializers as &quot;NEAU&quot;.
@@ -41,7 +43,7 @@ public enum TriggerType1Code
     [IsoId("_YwKzKNp-Ed-ak6NoX_4Aeg_256297531")]
     [Description(@"Trigger Instructions come into effect at next auction.")]
     NextAuction = TriggerTypeCode.NextAuction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger Instructions come into effect in case of price movement.
     /// Encoded/decoded by serializers as &quot;PRMO&quot;.
@@ -50,5 +52,4 @@ public enum TriggerType1Code
     [IsoId("_YwUkINp-Ed-ak6NoX_4Aeg_256297814")]
     [Description(@"Trigger Instructions come into effect in case of price movement.")]
     PriceMovement = TriggerTypeCode.PriceMovement, // same ordinal as derivation source for type conversions
-    
 }

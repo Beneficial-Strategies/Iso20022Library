@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10C
     /// </summary>
     [IsoId("_bgZKt00ZEeybj420QgWBkA")]
     [DisplayName("Authorisation Response")]
-    public partial record AuthorisationResponse : CardPaymentDataSetTransaction10Choice_
+    public record AuthorisationResponse : CardPaymentDataSetTransaction10Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Sequential counter of the transaction.
         /// </summary>
@@ -24,42 +22,38 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction10C
         [DisplayName("Transaction Sequence Counter")]
         [IsoXmlTag("TxSeqCntr")]
         [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-        public required IsoMax9NumericText TransactionSequenceCounter { get; init; } 
-        
+        public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+
         /// <summary>
         /// Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.
         /// </summary>
         [IsoId("_G9cEA00ZEeybj420QgWBkA")]
         [DisplayName("Traceability")]
         [IsoXmlTag("Tracblt")]
-        public Traceability8? Traceability { get; init; } 
-        
+        public Traceability8? Traceability { get; init; }
+
         /// <summary>
         /// Data related to the environment of the card payment transaction.
         /// </summary>
         [IsoId("_G9cEBU0ZEeybj420QgWBkA")]
         [DisplayName("Environment")]
         [IsoXmlTag("Envt")]
-        public required CardPaymentEnvironment78 Environment { get; init; } 
-        
+        public required CardPaymentEnvironment78 Environment { get; init; }
+
         /// <summary>
         /// Card payment transaction authorisation result.
         /// </summary>
         [IsoId("_G9cEB00ZEeybj420QgWBkA")]
         [DisplayName("Transaction")]
         [IsoXmlTag("Tx")]
-        public required CardPaymentTransaction121 Transaction { get; init; } 
-        
+        public required CardPaymentTransaction121 Transaction { get; init; }
+
         /// <summary>
         /// Response to the authorisation request from the acquirer.
         /// </summary>
         [IsoId("_G9cECU0ZEeybj420QgWBkA")]
         [DisplayName("Transaction Response")]
         [IsoXmlTag("TxRspn")]
-        public required CardPaymentTransaction114 TransactionResponse { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required CardPaymentTransaction114 TransactionResponse { get; init; }
     }
 }

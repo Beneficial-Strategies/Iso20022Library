@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_vvgkkMYMEeexPc-mfUU5zQ")]
-[Description(@"Reason for rejection of a corporate action instruction or of an instruction cancellation.")]
-[Derivations(typeof(InstructionRejectionReason1Code),typeof(InstructionRejectionReason2Code))]
+[Description(
+    @"Reason for rejection of a corporate action instruction or of an instruction cancellation."
+)]
+[Derivations(typeof(InstructionRejectionReason1Code), typeof(InstructionRejectionReason2Code))]
 public enum InstructionRejectionReasonCode
 {
     /// <summary>
@@ -23,7 +25,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_FXGYEMYNEeexPc-mfUU5zQ")]
     [Description(@"Acknowledgement must be agreed.")]
     AcknowledgementNotAgreed,
-    
+
     /// <summary>
     /// Acknowledgment indicator is missing.
     /// Encoded/decoded by serializers as &quot;ACKS&quot;.
@@ -32,7 +34,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_0LkJ4MhhEee7W-rN1yqPMg")]
     [Description(@"Acknowledgment indicator is missing.")]
     AcknowledgmentIndicatorMissing,
-    
+
     /// <summary>
     /// Offer is not ATOP eligible.
     /// Encoded/decoded by serializers as &quot;ATOP&quot;.
@@ -41,7 +43,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2sGM8MhhEee7W-rN1yqPMg")]
     [Description(@"Offer is not ATOP eligible.")]
     OfferNotATOPEligible,
-    
+
     /// <summary>
     /// Zeroes are required for bid price.
     /// Encoded/decoded by serializers as &quot;BID0&quot;.
@@ -50,7 +52,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2vqeUMhhEee7W-rN1yqPMg")]
     [Description(@"Zeroes are required for bid price.")]
     BidPriceZeroesRequired,
-    
+
     /// <summary>
     /// Bid Price exceeds maximum bid price allowed for the offer.
     /// Encoded/decoded by serializers as &quot;BIDE&quot;.
@@ -59,7 +61,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2yfI0MhhEee7W-rN1yqPMg")]
     [Description(@"Bid Price exceeds maximum bid price allowed for the offer.")]
     BidPriceOverMaximumAllowed,
-    
+
     /// <summary>
     /// Bid Price cannot be greater than 9999.99999.
     /// Encoded/decoded by serializers as &quot;BIDG&quot;.
@@ -68,7 +70,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_20t9cMhhEee7W-rN1yqPMg")]
     [Description(@"Bid Price cannot be greater than 9999.99999.")]
     BidPriceOverflow,
-    
+
     /// <summary>
     /// Bid price is missing or invalid.
     /// Encoded/decoded by serializers as &quot;BIDI&quot;.
@@ -77,7 +79,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_23sY8MhhEee7W-rN1yqPMg")]
     [Description(@"Bid price is missing or invalid.")]
     BidPriceMissingOrInvalid,
-    
+
     /// <summary>
     /// Bid Price is less than the minimum bid price allowed for the offer.
     /// Encoded/decoded by serializers as &quot;BIDM&quot;.
@@ -86,7 +88,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_257NkMhhEee7W-rN1yqPMg")]
     [Description(@"Bid Price is less than the minimum bid price allowed for the offer.")]
     BidPriceUnderMinimumAllowed,
-    
+
     /// <summary>
     /// Bond check on master table is not available.
     /// Encoded/decoded by serializers as &quot;BNDU&quot;.
@@ -95,7 +97,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_28A4QMhhEee7W-rN1yqPMg")]
     [Description(@"Bond check on master table is not available.")]
     BondCheckOnMasterTableNotAvailable,
-    
+
     /// <summary>
     /// Corporate action event identification is invalid.
     /// Encoded/decoded by serializers as &quot;CAID&quot;.
@@ -104,7 +106,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2-Ps4MhhEee7W-rN1yqPMg")]
     [Description(@"Corporate action event identification is invalid.")]
     CorporateActionEventInvalid,
-    
+
     /// <summary>
     /// CUSIP is depository deliver chilled.
     /// Encoded/decoded by serializers as &quot;CHIL&quot;.
@@ -113,7 +115,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_3AehgMhhEee7W-rN1yqPMg")]
     [Description(@"CUSIP is depository deliver chilled.")]
     CUSIPDepositoryDeliverChilled,
-    
+
     /// <summary>
     /// Condition 1 indicator is must be present.
     /// Encoded/decoded by serializers as &quot;CN1R&quot;.
@@ -122,7 +124,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_76E8oMiAEee7W-rN1yqPMg")]
     [Description(@"Condition 1 indicator is must be present.")]
     Condition1Required,
-    
+
     /// <summary>
     /// Condition 2 indicator is must be present.
     /// Encoded/decoded by serializers as &quot;CN2R&quot;.
@@ -131,7 +133,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Vdr5wMiBEee7W-rN1yqPMg")]
     [Description(@"Condition 2 indicator is must be present.")]
     Condition2Required,
-    
+
     /// <summary>
     /// Condition 3 indicator is must be present.
     /// Encoded/decoded by serializers as &quot;CN3R&quot;.
@@ -140,7 +142,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_ViAZEMiBEee7W-rN1yqPMg")]
     [Description(@"Condition 3 indicator is must be present.")]
     Condition3Required,
-    
+
     /// <summary>
     /// Condition 4 indicator is must be present.
     /// Encoded/decoded by serializers as &quot;CN4R&quot;.
@@ -149,7 +151,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_VmBWYMiBEee7W-rN1yqPMg")]
     [Description(@"Condition 4 indicator is must be present.")]
     Condition4Required,
-    
+
     /// <summary>
     /// Condition 5 indicator is must be present.
     /// Encoded/decoded by serializers as &quot;CN5R&quot;.
@@ -158,7 +160,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_VqMEsMiBEee7W-rN1yqPMg")]
     [Description(@"Condition 5 indicator is must be present.")]
     Condition5Required,
-    
+
     /// <summary>
     /// Condition 6 indicator is must be present.
     /// Encoded/decoded by serializers as &quot;CN6R&quot;.
@@ -167,7 +169,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Vuy34MiBEee7W-rN1yqPMg")]
     [Description(@"Condition 6 indicator is must be present.")]
     Condition6Required,
-    
+
     /// <summary>
     /// Condition 1 indicator is invalid. It must be No.
     /// Encoded/decoded by serializers as &quot;CN1N&quot;.
@@ -176,7 +178,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_z_hrcMiBEee7W-rN1yqPMg")]
     [Description(@"Condition 1 indicator is invalid. It must be No.")]
     Condition1InvalidMustBeNo,
-    
+
     /// <summary>
     /// Condition 2 indicator is invalid. It must be No.
     /// Encoded/decoded by serializers as &quot;CN2N&quot;.
@@ -185,7 +187,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_E8-rEMiCEee7W-rN1yqPMg")]
     [Description(@"Condition 2 indicator is invalid. It must be No.")]
     Condition2InvalidMustBeNo,
-    
+
     /// <summary>
     /// Condition 3 indicator is invalid. It must be No.
     /// Encoded/decoded by serializers as &quot;CN3N&quot;.
@@ -194,7 +196,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_FBleQMiCEee7W-rN1yqPMg")]
     [Description(@"Condition 3 indicator is invalid. It must be No.")]
     Condition3InvalidMustBeNo,
-    
+
     /// <summary>
     /// Condition 4 indicator is invalid. It must be No.
     /// Encoded/decoded by serializers as &quot;CN4N&quot;.
@@ -203,7 +205,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_FFwMkMiCEee7W-rN1yqPMg")]
     [Description(@"Condition 4 indicator is invalid. It must be No.")]
     Condition4InvalidMustBeNo,
-    
+
     /// <summary>
     /// Condition 5 indicator is invalid. It must be No.
     /// Encoded/decoded by serializers as &quot;CN5N&quot;.
@@ -212,7 +214,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_FJxJ4MiCEee7W-rN1yqPMg")]
     [Description(@"Condition 5 indicator is invalid. It must be No.")]
     Condition5InvalidMustBeNo,
-    
+
     /// <summary>
     /// Condition 6 indicator is invalid. It must be No.
     /// Encoded/decoded by serializers as &quot;CN6N&quot;.
@@ -221,7 +223,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_FNo9QMiCEee7W-rN1yqPMg")]
     [Description(@"Condition 6 indicator is invalid. It must be No.")]
     Condition6InvalidMustBeNo,
-    
+
     /// <summary>
     /// Condition 1 indicator is invalid. It must be Yes.
     /// Encoded/decoded by serializers as &quot;CN1Y&quot;.
@@ -230,7 +232,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_TPyCUMiCEee7W-rN1yqPMg")]
     [Description(@"Condition 1 indicator is invalid. It must be Yes.")]
     Condition1InvalidMustBeYes,
-    
+
     /// <summary>
     /// Condition 2 indicator is invalid. It must be Yes.
     /// Encoded/decoded by serializers as &quot;CN2Y&quot;.
@@ -239,7 +241,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_B6ZmsMiJEee7W-rN1yqPMg")]
     [Description(@"Condition 2 indicator is invalid. It must be Yes.")]
     Condition2InvalidMustBeYes,
-    
+
     /// <summary>
     /// Condition 3 indicator is invalid. It must be Yes.
     /// Encoded/decoded by serializers as &quot;CN3Y&quot;.
@@ -248,7 +250,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_B-3P8MiJEee7W-rN1yqPMg")]
     [Description(@"Condition 3 indicator is invalid. It must be Yes.")]
     Condition3InvalidMustBeYes,
-    
+
     /// <summary>
     /// Condition 4 indicator is invalid. It must be Yes.
     /// Encoded/decoded by serializers as &quot;CN4Y&quot;.
@@ -257,7 +259,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_CC4NQMiJEee7W-rN1yqPMg")]
     [Description(@"Condition 4 indicator is invalid. It must be Yes.")]
     Condition4InvalidMustBeYes,
-    
+
     /// <summary>
     /// Condition 5 indicator is invalid. It must be Yes.
     /// Encoded/decoded by serializers as &quot;CN5Y&quot;.
@@ -266,7 +268,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_CHC7kMiJEee7W-rN1yqPMg")]
     [Description(@"Condition 5 indicator is invalid. It must be Yes.")]
     Condition5InvalidMustBeYes,
-    
+
     /// <summary>
     /// Condition 6 indicator is invalid. It must be Yes.
     /// Encoded/decoded by serializers as &quot;CN6Y&quot;.
@@ -275,7 +277,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_CdgTwMiJEee7W-rN1yqPMg")]
     [Description(@"Condition 6 indicator is invalid. It must be Yes.")]
     Condition6InvalidMustBeYes,
-    
+
     /// <summary>
     /// Contact name is missing.
     /// Encoded/decoded by serializers as &quot;CNAM&quot;.
@@ -284,7 +286,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_tW-JcMiJEee7W-rN1yqPMg")]
     [Description(@"Contact name is missing.")]
     ContactNameMissing,
-    
+
     /// <summary>
     /// Contact name is not used with this event.
     /// Encoded/decoded by serializers as &quot;CNAX&quot;.
@@ -293,7 +295,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_TY5ocMiKEee7W-rN1yqPMg")]
     [Description(@"Contact name is not used with this event.")]
     ContactNameNotUsedWithEvent,
-    
+
     /// <summary>
     /// Contact phone number is missing.
     /// Encoded/decoded by serializers as &quot;CNPM&quot;.
@@ -302,7 +304,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_UbP2QMiKEee7W-rN1yqPMg")]
     [Description(@"Contact phone number is missing.")]
     ContactPhoneNumberMissing,
-    
+
     /// <summary>
     /// Contact phone number is not used with this event.
     /// Encoded/decoded by serializers as &quot;CNPX&quot;.
@@ -311,7 +313,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_UftfgMiKEee7W-rN1yqPMg")]
     [Description(@"Contact phone number is not used with this event.")]
     ContactPhoneNumberNotUsedWithEvent,
-    
+
     /// <summary>
     /// Comment area is invalid.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -320,7 +322,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Uj4N0MiKEee7W-rN1yqPMg")]
     [Description(@"Comment area is invalid.")]
     CommentAreaInvalid,
-    
+
     /// <summary>
     /// Conditional quantity zeroes are required.
     /// Encoded/decoded by serializers as &quot;COQ0&quot;.
@@ -329,7 +331,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_UnwBMMiKEee7W-rN1yqPMg")]
     [Description(@"Conditional quantity zeroes are required.")]
     ConditionalQuantityZeroesRequired,
-    
+
     /// <summary>
     /// Conditional quantity exceeds the transaction quantity.
     /// Encoded/decoded by serializers as &quot;COQE&quot;.
@@ -338,7 +340,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_UsD5cMiKEee7W-rN1yqPMg")]
     [Description(@"Conditional quantity exceeds the transaction quantity.")]
     ConditionalQuantityExceedsTransactionQuantity,
-    
+
     /// <summary>
     /// Conditional quantity is missing or invalid.
     /// Encoded/decoded by serializers as &quot;COQI&quot;.
@@ -347,7 +349,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_UsD5cciKEee7W-rN1yqPMg")]
     [Description(@"Conditional quantity is missing or invalid.")]
     ConditionalQuantityMissingOrInvalid,
-    
+
     /// <summary>
     /// Conditional quantity cannot be zero.
     /// Encoded/decoded by serializers as &quot;COQX&quot;.
@@ -356,16 +358,18 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Uv7s0MiKEee7W-rN1yqPMg")]
     [Description(@"Conditional quantity cannot be zero.")]
     ConditionalQuantityCannotBeZero,
-    
+
     /// <summary>
     /// Conditional quantity does not equal the transaction quantity whilst this offer accepts only full conditional quantity.
     /// Encoded/decoded by serializers as &quot;COTQ&quot;.
     /// </summary>
     [EnumMember(Value = "COTQ")]
     [IsoId("_Uzf-MMiKEee7W-rN1yqPMg")]
-    [Description(@"Conditional quantity does not equal the transaction quantity whilst this offer accepts only full conditional quantity.")]
+    [Description(
+        @"Conditional quantity does not equal the transaction quantity whilst this offer accepts only full conditional quantity."
+    )]
     ConditionalQuantityDoesNotEqualTransactionQuantity,
-    
+
     /// <summary>
     /// Cover quantity is greater than the remaining protect quantity.
     /// Encoded/decoded by serializers as &quot;COVR&quot;.
@@ -374,7 +378,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_U68C8MiKEee7W-rN1yqPMg")]
     [Description(@"Cover quantity is greater than the remaining protect quantity.")]
     CoverQuantityGreaterThanProtectQuantity,
-    
+
     /// <summary>
     /// Customer quantities do not add up to total rights quantities.
     /// Encoded/decoded by serializers as &quot;CQRQ&quot;.
@@ -383,7 +387,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_U-z2UMiKEee7W-rN1yqPMg")]
     [Description(@"Customer quantities do not add up to total rights quantities.")]
     CustomerQuantitiesAndTotalRightsQuantitiesMismatch,
-    
+
     /// <summary>
     /// Customer Sequence number is invalid or out of sequence.
     /// Encoded/decoded by serializers as &quot;CSEQ&quot;.
@@ -392,7 +396,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_VD3VcMiKEee7W-rN1yqPMg")]
     [Description(@"Customer Sequence number is invalid or out of sequence.")]
     CustomerSequenceNumberInvalid,
-    
+
     /// <summary>
     /// Customer identification is missing or invalid.
     /// Encoded/decoded by serializers as &quot;CUID&quot;.
@@ -401,7 +405,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_VIevsMiKEee7W-rN1yqPMg")]
     [Description(@"Customer identification is missing or invalid.")]
     CustomerIdentificationMissingOrInvalid,
-    
+
     /// <summary>
     /// Target CUSIP or contra CUSIP identification is not DTC eligible.
     /// Encoded/decoded by serializers as &quot;CUSD&quot;.
@@ -410,7 +414,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_VNiO0MiKEee7W-rN1yqPMg")]
     [Description(@"Target CUSIP or contra CUSIP identification is not DTC eligible.")]
     CUSIPNotDTCEligible,
-    
+
     /// <summary>
     /// Target CUSIP or contra CUSIP identification is missing or invalid.
     /// Encoded/decoded by serializers as &quot;CUSI&quot;.
@@ -419,7 +423,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_1vqBgMkfEee7W-rN1yqPMg")]
     [Description(@"Target CUSIP or contra CUSIP identification is missing or invalid.")]
     CUSIPMissingOrInvalid,
-    
+
     /// <summary>
     /// Underlying security CUSIP is invalid.
     /// Encoded/decoded by serializers as &quot;CUSP&quot;.
@@ -428,7 +432,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_1z0v0MkfEee7W-rN1yqPMg")]
     [Description(@"Underlying security CUSIP is invalid.")]
     UnderlyingSecurityCUSIPInvalid,
-    
+
     /// <summary>
     /// Underlying security CUSIP does not match the original.
     /// Encoded/decoded by serializers as &quot;CUSU&quot;.
@@ -437,7 +441,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_144O8MkfEee7W-rN1yqPMg")]
     [Description(@"Underlying security CUSIP does not match the original.")]
     UnderlyingSecurityCUSIPMismatch,
-    
+
     /// <summary>
     /// Cut-off time check has failed.
     /// Encoded/decoded by serializers as &quot;CUTC&quot;.
@@ -446,7 +450,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_185MQMkfEee7W-rN1yqPMg")]
     [Description(@"Cut-off time check has failed.")]
     CutoffTimeCheckFailed,
-    
+
     /// <summary>
     /// Cut-off time has passed.
     /// Encoded/decoded by serializers as &quot;CUTT&quot;.
@@ -455,7 +459,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2A6woMkfEee7W-rN1yqPMg")]
     [Description(@"Cut-off time has passed.")]
     CutoffTimePassed,
-    
+
     /// <summary>
     /// Entry date must be less than or equal to current date.
     /// Encoded/decoded by serializers as &quot;ENTL&quot;.
@@ -464,7 +468,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2E7t8MkfEee7W-rN1yqPMg")]
     [Description(@"Entry date must be less than or equal to current date.")]
     EntryDatePassed,
-    
+
     /// <summary>
     /// Entry Date is invalid.
     /// Encoded/decoded by serializers as &quot;ENTR&quot;.
@@ -473,7 +477,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2JZXMMkfEee7W-rN1yqPMg")]
     [Description(@"Entry Date is invalid.")]
     EntryDateInvalid,
-    
+
     /// <summary>
     /// Customer has fractional underlying quantity, adjust quantity.
     /// Encoded/decoded by serializers as &quot;FRAQ&quot;.
@@ -482,7 +486,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2NtPcMkfEee7W-rN1yqPMg")]
     [Description(@"Customer has fractional underlying quantity, adjust quantity.")]
     FractionalUnderlyingQuantity,
-    
+
     /// <summary>
     /// Transaction type or withdrawal transaction type is invalid.
     /// Encoded/decoded by serializers as &quot;TRTI&quot;.
@@ -491,16 +495,18 @@ public enum InstructionRejectionReasonCode
     [IsoId("_2SnkoMkfEee7W-rN1yqPMg")]
     [Description(@"Transaction type or withdrawal transaction type is invalid.")]
     TransactionTypeInvalid,
-    
+
     /// <summary>
     /// Function is not available at this time. Please check expiration start and end times for the event.
     /// Encoded/decoded by serializers as &quot;FUNU&quot;.
     /// </summary>
     [EnumMember(Value = "FUNU")]
     [IsoId("_2XO-4MkfEee7W-rN1yqPMg")]
-    [Description(@"Function is not available at this time. Please check expiration start and end times for the event.")]
+    [Description(
+        @"Function is not available at this time. Please check expiration start and end times for the event."
+    )]
     FunctionNotAvailable,
-    
+
     /// <summary>
     /// Offer is already on historical data base.
     /// Encoded/decoded by serializers as &quot;HIST&quot;.
@@ -509,7 +515,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_KBml0MkiEee7W-rN1yqPMg")]
     [Description(@"Offer is already on historical data base.")]
     OfferInDatabase,
-    
+
     /// <summary>
     /// Key Information is missing (tenders data).
     /// Encoded/decoded by serializers as &quot;KEYM&quot;.
@@ -518,7 +524,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_KKFMYMkiEee7W-rN1yqPMg")]
     [Description(@"Key Information is missing (tenders data).")]
     KeyInformationMissing,
-    
+
     /// <summary>
     /// Key data (VOI transaction) cannot be found.
     /// Encoded/decoded by serializers as &quot;KEYV&quot;.
@@ -527,7 +533,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_KTKP4MkiEee7W-rN1yqPMg")]
     [Description(@"Key data (VOI transaction) cannot be found.")]
     KayDataNotFound,
-    
+
     /// <summary>
     /// Participant has insufficient position.
     /// Encoded/decoded by serializers as &quot;LACK&quot;.
@@ -536,7 +542,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_KTwFwMkiEee7W-rN1yqPMg")]
     [Description(@"Participant has insufficient position.")]
     InsufficientPosition,
-    
+
     /// <summary>
     /// Master tables are not available.
     /// Encoded/decoded by serializers as &quot;MSTB&quot;.
@@ -545,7 +551,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_K3dPwMkiEee7W-rN1yqPMg")]
     [Description(@"Master tables are not available.")]
     MasterTablesNotAvailable,
-    
+
     /// <summary>
     /// There is no withdrawal privilege on this offer.
     /// Encoded/decoded by serializers as &quot;NWIT&quot;.
@@ -554,7 +560,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_LXvSUMkiEee7W-rN1yqPMg")]
     [Description(@"There is no withdrawal privilege on this offer.")]
     NoWithdrawalPrivilege,
-    
+
     /// <summary>
     /// Odd lot indicator is missing or invalid.
     /// Encoded/decoded by serializers as &quot;ODLI&quot;.
@@ -563,7 +569,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Lgqk0MkiEee7W-rN1yqPMg")]
     [Description(@"Odd lot indicator is missing or invalid.")]
     OddLotIndicatorMissingOrInvalid,
-    
+
     /// <summary>
     /// Cannot submit odd lot indicator &apos;Yes&apos; for the offer.
     /// Encoded/decoded by serializers as &quot;ODLY&quot;.
@@ -572,7 +578,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_LyOO4MkiEee7W-rN1yqPMg")]
     [Description(@"Cannot submit odd lot indicator 'Yes' for the offer.")]
     OddLotIndicatorYesInvalid,
-    
+
     /// <summary>
     /// Offer is not eligible for the PUTS function.
     /// Encoded/decoded by serializers as &quot;OFFP&quot;.
@@ -581,7 +587,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_L6s1cMkiEee7W-rN1yqPMg")]
     [Description(@"Offer is not eligible for the PUTS function.")]
     OfferNotEligibleForPuts,
-    
+
     /// <summary>
     /// The rejection reason is unknown.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -590,16 +596,18 @@ public enum InstructionRejectionReasonCode
     [IsoId("_TPGL8MkpEee7W-rN1yqPMg")]
     [Description(@"The rejection reason is unknown.")]
     UnknownErrorCondition,
-    
+
     /// <summary>
     /// Customer oversubscription quantities do not add up to total oversubscription quantity.
     /// Encoded/decoded by serializers as &quot;OVCU&quot;.
     /// </summary>
     [EnumMember(Value = "OVCU")]
     [IsoId("_TebBYMkpEee7W-rN1yqPMg")]
-    [Description(@"Customer oversubscription quantities do not add up to total oversubscription quantity.")]
+    [Description(
+        @"Customer oversubscription quantities do not add up to total oversubscription quantity."
+    )]
     CustomerAndTotalOversubscriptionQuantitiesMismatch,
-    
+
     /// <summary>
     /// Oversubscription quantity is greater than percentage of underlying shares.
     /// Encoded/decoded by serializers as &quot;OVRG&quot;.
@@ -608,7 +616,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_TlRQQMkpEee7W-rN1yqPMg")]
     [Description(@"Oversubscription quantity is greater than percentage of underlying shares.")]
     OversubscriptionQuantityExceeded,
-    
+
     /// <summary>
     /// Oversubscription quantity is invalid.
     /// Encoded/decoded by serializers as &quot;OVRI&quot;.
@@ -617,7 +625,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_b_OIUMkqEee7W-rN1yqPMg")]
     [Description(@"Oversubscription quantity is invalid.")]
     OversubscriptionQuantityInvalid,
-    
+
     /// <summary>
     /// Oversubscription is not allowed.
     /// Encoded/decoded by serializers as &quot;OVRX&quot;.
@@ -626,7 +634,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_kyU8sMkqEee7W-rN1yqPMg")]
     [Description(@"Oversubscription is not allowed.")]
     OversubscriptionNotAllowed,
-    
+
     /// <summary>
     /// Oversubscription quantity not used with this transaction type.
     /// Encoded/decoded by serializers as &quot;OVTT&quot;.
@@ -635,7 +643,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_rvGWAMk0Eee7W-rN1yqPMg")]
     [Description(@"Oversubscription quantity not used with this transaction type.")]
     OversubscriptionQuantityNotUsed,
-    
+
     /// <summary>
     /// Participant is DO chilled.
     /// Encoded/decoded by serializers as &quot;PACH&quot;.
@@ -644,7 +652,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_r5zxMMk0Eee7W-rN1yqPMg")]
     [Description(@"Participant is DO chilled.")]
     ParticipantDOChilled,
-    
+
     /// <summary>
     /// Participant eligibility check on master table is not available.
     /// Encoded/decoded by serializers as &quot;PAEC&quot;.
@@ -653,7 +661,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_r7J1AMk0Eee7W-rN1yqPMg")]
     [Description(@"Participant eligibility check on master table is not available.")]
     ParticipantEligibilityCheckNotAvailable,
-    
+
     /// <summary>
     /// Participant does not match participant on Protect ID.
     /// Encoded/decoded by serializers as &quot;PAPI&quot;.
@@ -662,7 +670,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_sDClsMk0Eee7W-rN1yqPMg")]
     [Description(@"Participant does not match participant on Protect ID.")]
     ParticipantNoMatchOnProtectIdentification,
-    
+
     /// <summary>
     /// Participant is globally locked.
     /// Encoded/decoded by serializers as &quot;PARL&quot;.
@@ -671,7 +679,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_sLORUMk0Eee7W-rN1yqPMg")]
     [Description(@"Participant is globally locked.")]
     ParticipantLocked,
-    
+
     /// <summary>
     /// Participant number is invalid.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -680,7 +688,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_sT2B0Mk0Eee7W-rN1yqPMg")]
     [Description(@"Participant number is invalid.")]
     ParticipantNumberInvalid,
-    
+
     /// <summary>
     /// Participant is not DTC eligible.
     /// Encoded/decoded by serializers as &quot;PARX&quot;.
@@ -689,7 +697,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_sT2B0ck0Eee7W-rN1yqPMg")]
     [Description(@"Participant is not DTC eligible.")]
     ParticipantNotEligible,
-    
+
     /// <summary>
     /// Protect date on file must be zero.
     /// Encoded/decoded by serializers as &quot;PRO0&quot;.
@@ -698,7 +706,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_seHYIMk0Eee7W-rN1yqPMg")]
     [Description(@"Protect date on file must be zero.")]
     ProtectDateZero,
-    
+
     /// <summary>
     /// Current date is greater than protect submission end date.
     /// Encoded/decoded by serializers as &quot;PROE&quot;.
@@ -707,7 +715,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_sl2X0Mk0Eee7W-rN1yqPMg")]
     [Description(@"Current date is greater than protect submission end date.")]
     CurrentDatePassedProtectSubmissionEndDate,
-    
+
     /// <summary>
     /// Protect Date invalid or missing.
     /// Encoded/decoded by serializers as &quot;PROI&quot;.
@@ -716,7 +724,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_stcNkMk0Eee7W-rN1yqPMg")]
     [Description(@"Protect Date invalid or missing.")]
     ProtectDateInvalidOrMissing,
-    
+
     /// <summary>
     /// Protect date must be less than or equal to current date.
     /// Encoded/decoded by serializers as &quot;PROL&quot;.
@@ -725,7 +733,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_pGGBgMk2Eee7W-rN1yqPMg")]
     [Description(@"Protect date must be less than or equal to current date.")]
     ProtectDatePassed,
-    
+
     /// <summary>
     /// Current date is less than protect submission start date.
     /// Encoded/decoded by serializers as &quot;PROS&quot;.
@@ -734,7 +742,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_zPMYcMk2Eee7W-rN1yqPMg")]
     [Description(@"Current date is less than protect submission start date.")]
     CurrentDatePrecedesProtectSubmissionStartDate,
-    
+
     /// <summary>
     /// Protect identification is missing or invalid.
     /// Encoded/decoded by serializers as &quot;PROT&quot;.
@@ -743,7 +751,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_zX958Mk2Eee7W-rN1yqPMg")]
     [Description(@"Protect identification is missing or invalid.")]
     ProtectIdentificationMissingOrInvalid,
-    
+
     /// <summary>
     /// Protect identification is not used with this event.
     /// Encoded/decoded by serializers as &quot;PROX&quot;.
@@ -752,7 +760,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_zg5McMk2Eee7W-rN1yqPMg")]
     [Description(@"Protect identification is not used with this event.")]
     ProtectIdentificationNotUsed,
-    
+
     /// <summary>
     /// Function is quiesced (not available).
     /// Encoded/decoded by serializers as &quot;QUIE&quot;.
@@ -761,7 +769,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_zqIA8Mk2Eee7W-rN1yqPMg")]
     [Description(@"Function is quiesced (not available).")]
     FunctionQuiesced,
-    
+
     /// <summary>
     /// Record type is invalid.
     /// Encoded/decoded by serializers as &quot;RECI&quot;.
@@ -770,7 +778,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_z0O_MMk2Eee7W-rN1yqPMg")]
     [Description(@"Record type is invalid.")]
     RecordTypeInvalid,
-    
+
     /// <summary>
     /// Rights CUSIP has insufficient position.
     /// Encoded/decoded by serializers as &quot;RILA&quot;.
@@ -779,7 +787,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_AiCqYMk-Eee7W-rN1yqPMg")]
     [Description(@"Rights CUSIP has insufficient position.")]
     RightsCUSIPInsufficientPosition,
-    
+
     /// <summary>
     /// Not a good return code from rights position check.
     /// Encoded/decoded by serializers as &quot;RPCI&quot;.
@@ -788,7 +796,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Ar3UwMk-Eee7W-rN1yqPMg")]
     [Description(@"Not a good return code from rights position check.")]
     RightsPositionCheckInvalid,
-    
+
     /// <summary>
     /// Rights quantity for this subscription must be divisible by rights.
     /// Encoded/decoded by serializers as &quot;RQDV&quot;.
@@ -797,7 +805,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_A11JEMk-Eee7W-rN1yqPMg")]
     [Description(@"Rights quantity for this subscription must be divisible by rights.")]
     RightsQuantityDivisibleByRights,
-    
+
     /// <summary>
     /// Rights quantity is invalid.
     /// Encoded/decoded by serializers as &quot;RQIN&quot;.
@@ -806,7 +814,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_BAZaUMk-Eee7W-rN1yqPMg")]
     [Description(@"Rights quantity is invalid.")]
     RightsQuantityInvalid,
-    
+
     /// <summary>
     /// Rights ratio not found on data base.
     /// Encoded/decoded by serializers as &quot;RTIO&quot;.
@@ -815,7 +823,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_BCoO8Mk-Eee7W-rN1yqPMg")]
     [Description(@"Rights ratio not found on data base.")]
     RightsRatioNotFound,
-    
+
     /// <summary>
     /// RTS processing is in progress. Submit later.
     /// Encoded/decoded by serializers as &quot;RTSP&quot;.
@@ -824,7 +832,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_BLjhcMk-Eee7W-rN1yqPMg")]
     [Description(@"RTS processing is in progress. Submit later.")]
     RTSProcessingInProgress,
-    
+
     /// <summary>
     /// Customer Sequence number must be all zero.
     /// Encoded/decoded by serializers as &quot;SEQ0&quot;.
@@ -833,7 +841,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_BT4XAMk-Eee7W-rN1yqPMg")]
     [Description(@"Customer Sequence number must be all zero.")]
     CustomerSequenceNumberAllZero,
-    
+
     /// <summary>
     /// Transaction sequence number is duplicated.
     /// Encoded/decoded by serializers as &quot;SEQD&quot;.
@@ -842,7 +850,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_BbUbwMk-Eee7W-rN1yqPMg")]
     [Description(@"Transaction sequence number is duplicated.")]
     DuplicateTransactionSequenceNumber,
-    
+
     /// <summary>
     /// Sequence number is missing.
     /// Encoded/decoded by serializers as &quot;SEQM&quot;.
@@ -851,7 +859,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_BlcBEMk-Eee7W-rN1yqPMg")]
     [Description(@"Sequence number is missing.")]
     SequenceNumberMissing,
-    
+
     /// <summary>
     /// Sequence number is out of sequence.
     /// Encoded/decoded by serializers as &quot;SEQO&quot;.
@@ -860,16 +868,18 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Btd7sMk-Eee7W-rN1yqPMg")]
     [Description(@"Sequence number is out of sequence.")]
     SequenceNumberOutOfSync,
-    
+
     /// <summary>
     /// Customer sequence number must be between 1 and 1 or for PUTS between 9999901 and 9999912.
     /// Encoded/decoded by serializers as &quot;SEQP&quot;.
     /// </summary>
     [EnumMember(Value = "SEQP")]
     [IsoId("_-ikBwMlEEee7W-rN1yqPMg")]
-    [Description(@"Customer sequence number must be between 1 and 1 or for PUTS between 9999901 and 9999912.")]
+    [Description(
+        @"Customer sequence number must be between 1 and 1 or for PUTS between 9999901 and 9999912."
+    )]
     SequenceNumberInvalidBounds,
-    
+
     /// <summary>
     /// Underlying share quantity is invalid.
     /// Encoded/decoded by serializers as &quot;SHQI&quot;.
@@ -878,7 +888,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_-srnEMlEEee7W-rN1yqPMg")]
     [Description(@"Underlying share quantity is invalid.")]
     UnderlyingShareQuantityInvalid,
-    
+
     /// <summary>
     /// Underlying share quantity does not match original share quantity.
     /// Encoded/decoded by serializers as &quot;SHQO&quot;.
@@ -887,7 +897,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_-1m5kMlEEee7W-rN1yqPMg")]
     [Description(@"Underlying share quantity does not match original share quantity.")]
     UnderlyingShareQuantityMismatch,
-    
+
     /// <summary>
     /// Comments are required for solicitation fee.
     /// Encoded/decoded by serializers as &quot;SOCR&quot;.
@@ -896,7 +906,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_-1m5kclEEee7W-rN1yqPMg")]
     [Description(@"Comments are required for solicitation fee.")]
     SolicitationFeeCommentsRequired,
-    
+
     /// <summary>
     /// Solicitation fee indicator is required.
     /// Encoded/decoded by serializers as &quot;SOLI&quot;.
@@ -905,7 +915,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_---Q8MlEEee7W-rN1yqPMg")]
     [Description(@"Solicitation fee indicator is required.")]
     SolicitationFeeIndicatorRequired,
-    
+
     /// <summary>
     /// Solicitation fee indicator is not used with this event.
     /// Encoded/decoded by serializers as &quot;SOLX&quot;.
@@ -914,7 +924,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_qnK_cMlGEee7W-rN1yqPMg")]
     [Description(@"Solicitation fee indicator is not used with this event.")]
     SolicitationFeeIndicatorNotUsed,
-    
+
     /// <summary>
     /// Submission date is not yet reached.
     /// Encoded/decoded by serializers as &quot;SUBE&quot;.
@@ -923,7 +933,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_qyL8oMlGEee7W-rN1yqPMg")]
     [Description(@"Submission date is not yet reached.")]
     SubmissionDateNotReached,
-    
+
     /// <summary>
     /// Date of submission has passed.
     /// Encoded/decoded by serializers as &quot;SUBL&quot;.
@@ -932,7 +942,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_q7aKEMlGEee7W-rN1yqPMg")]
     [Description(@"Date of submission has passed.")]
     SubmissionDatePassed,
-    
+
     /// <summary>
     /// Transaction type and event are incompatible.
     /// Encoded/decoded by serializers as &quot;TNFN&quot;.
@@ -941,7 +951,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RJiSAMlHEee7W-rN1yqPMg")]
     [Description(@"Transaction type and event are incompatible.")]
     TransactionTypeAndEventIncompatible,
-    
+
     /// <summary>
     /// Transaction Identification is invalid.
     /// Encoded/decoded by serializers as &quot;TRNI&quot;.
@@ -950,7 +960,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RSnVgMlHEee7W-rN1yqPMg")]
     [Description(@"Transaction Identification is invalid.")]
     TransactionIdentificationInvalid,
-    
+
     /// <summary>
     /// Transaction type is missing.
     /// Encoded/decoded by serializers as &quot;TRNM&quot;.
@@ -959,7 +969,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RbF8EMlHEee7W-rN1yqPMg")]
     [Description(@"Transaction type is missing.")]
     TransactionTypeMissing,
-    
+
     /// <summary>
     /// Transaction sequence number is invalid, not numeric.
     /// Encoded/decoded by serializers as &quot;TRNS&quot;.
@@ -968,7 +978,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RbF8EclHEee7W-rN1yqPMg")]
     [Description(@"Transaction sequence number is invalid, not numeric.")]
     TransactionSequenceNumberInvalid,
-    
+
     /// <summary>
     /// Transaction Quantity cannot be zero.
     /// Encoded/decoded by serializers as &quot;TRQ0&quot;.
@@ -977,7 +987,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RknEcMlHEee7W-rN1yqPMg")]
     [Description(@"Transaction Quantity cannot be zero.")]
     TransactionQuantityCannotBeZero,
-    
+
     /// <summary>
     /// Transaction Quantity is missing or invalid.
     /// Encoded/decoded by serializers as &quot;TRQI&quot;.
@@ -986,7 +996,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RrTiUMlHEee7W-rN1yqPMg")]
     [Description(@"Transaction Quantity is missing or invalid.")]
     TransactionQuantityMissingOrInvalid,
-    
+
     /// <summary>
     /// Transaction quantity is less than the transaction minimum.
     /// Encoded/decoded by serializers as &quot;TRQM&quot;.
@@ -995,7 +1005,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_RtsH8MlHEee7W-rN1yqPMg")]
     [Description(@"Transaction quantity is less than the transaction minimum.")]
     TransactionQuantityLessThanTransactionMinimum,
-    
+
     /// <summary>
     /// Provided by protect, enter 0 for transaction quantity.
     /// Encoded/decoded by serializers as &quot;TRQP&quot;.
@@ -1004,7 +1014,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_R83MYMlHEee7W-rN1yqPMg")]
     [Description(@"Provided by protect, enter 0 for transaction quantity.")]
     ProvidedByProtect,
-    
+
     /// <summary>
     /// Withdrawal transaction quantity cannot be zero.
     /// Encoded/decoded by serializers as &quot;WIT0&quot;.
@@ -1013,7 +1023,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_R_GBAMlHEee7W-rN1yqPMg")]
     [Description(@"Withdrawal transaction quantity cannot be zero.")]
     WithdrawalTransactionQuantityCannotBeZero,
-    
+
     /// <summary>
     /// Error in withdraw occurred.
     /// Encoded/decoded by serializers as &quot;WITE&quot;.
@@ -1022,7 +1032,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_ewDgIMlJEee7W-rN1yqPMg")]
     [Description(@"Error in withdraw occurred.")]
     WithdrawError,
-    
+
     /// <summary>
     /// Withdrawal quantity is greater than VOI / protect quantity.
     /// Encoded/decoded by serializers as &quot;WITG&quot;.
@@ -1031,7 +1041,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_e7NnQMlJEee7W-rN1yqPMg")]
     [Description(@"Withdrawal quantity is greater than VOI / protect quantity.")]
     WithdrawalQuantityGreaterThanProtectQuantity,
-    
+
     /// <summary>
     /// Withdrawal quantity exceeds the remaining quantity.
     /// Encoded/decoded by serializers as &quot;WITQ&quot;.
@@ -1040,7 +1050,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fE4goMlJEee7W-rN1yqPMg")]
     [Description(@"Withdrawal quantity exceeds the remaining quantity.")]
     WithdrawalQuantityExceedsRemainingQuantity,
-    
+
     /// <summary>
     /// Beneficial owner name is missing.
     /// Encoded/decoded by serializers as &quot;BONM&quot;.
@@ -1049,7 +1059,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fHRGQMlJEee7W-rN1yqPMg")]
     [Description(@"Beneficial owner name is missing.")]
     BeneficialOwnerNameMissing,
-    
+
     /// <summary>
     /// Beneficial owner death date is missing.
     /// Encoded/decoded by serializers as &quot;BODD&quot;.
@@ -1058,7 +1068,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fPAF8MlJEee7W-rN1yqPMg")]
     [Description(@"Beneficial owner death date is missing.")]
     BeneficialOwnerDeathDateMissing,
-    
+
     /// <summary>
     /// Death certificate details are missing.
     /// Encoded/decoded by serializers as &quot;BODC&quot;.
@@ -1067,7 +1077,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fYFJcMlJEee7W-rN1yqPMg")]
     [Description(@"Death certificate details are missing.")]
     DeathCertificateMissing,
-    
+
     /// <summary>
     /// Issuing jurisdiction is missing.
     /// Encoded/decoded by serializers as &quot;BOIJ&quot;.
@@ -1076,7 +1086,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fgZ_AMlJEee7W-rN1yqPMg")]
     [Description(@"Issuing jurisdiction is missing.")]
     IssuingJurisdictionMissing,
-    
+
     /// <summary>
     /// Certificate number is invalid.
     /// Encoded/decoded by serializers as &quot;CERN&quot;.
@@ -1085,7 +1095,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fhJl4MlJEee7W-rN1yqPMg")]
     [Description(@"Certificate number is invalid.")]
     CertificateNumberInvalid,
-    
+
     /// <summary>
     /// Certificate sequence number is invalid.
     /// Encoded/decoded by serializers as &quot;CERS&quot;.
@@ -1094,7 +1104,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fq-QQMlJEee7W-rN1yqPMg")]
     [Description(@"Certificate sequence number is invalid.")]
     CertificateSequenceNumberInvalid,
-    
+
     /// <summary>
     /// Certificate number is missing.
     /// Encoded/decoded by serializers as &quot;CENM&quot;.
@@ -1103,7 +1113,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_fxz4EMlJEee7W-rN1yqPMg")]
     [Description(@"Certificate number is missing.")]
     CertificateNameMissing,
-    
+
     /// <summary>
     /// Adjudication of incompetency acknowledgement indicator is invalid.
     /// Encoded/decoded by serializers as &quot;ADIN&quot;.
@@ -1112,7 +1122,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_LSIc8MlLEee7W-rN1yqPMg")]
     [Description(@"Adjudication of incompetency acknowledgement indicator is invalid.")]
     AdjudicationOfIncompetencyAcknowledgementIndicatorInvalid,
-    
+
     /// <summary>
     /// Adjudication of incompetency acknowledgement indicator is missing.
     /// Encoded/decoded by serializers as &quot;ADIM&quot;.
@@ -1121,25 +1131,29 @@ public enum InstructionRejectionReasonCode
     [IsoId("_LdSkEMlLEee7W-rN1yqPMg")]
     [Description(@"Adjudication of incompetency acknowledgement indicator is missing.")]
     AdjudicationOfIncompetencyAcknowledgmentIndicatorMissing,
-    
+
     /// <summary>
     /// Legal documentation thirty months retention acknowledgement indicator is invalid.
     /// Encoded/decoded by serializers as &quot;LEGI&quot;.
     /// </summary>
     [EnumMember(Value = "LEGI")]
     [IsoId("_Lmp7cMlLEee7W-rN1yqPMg")]
-    [Description(@"Legal documentation thirty months retention acknowledgement indicator is invalid.")]
+    [Description(
+        @"Legal documentation thirty months retention acknowledgement indicator is invalid."
+    )]
     LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorInvalid,
-    
+
     /// <summary>
     /// Legal documentation thirty Months retention acknowledgement indicator is missing.
     /// Encoded/decoded by serializers as &quot;LEGM&quot;.
     /// </summary>
     [EnumMember(Value = "LEGM")]
     [IsoId("_Lmp7cclLEee7W-rN1yqPMg")]
-    [Description(@"Legal documentation thirty Months retention acknowledgement indicator is missing.")]
+    [Description(
+        @"Legal documentation thirty Months retention acknowledgement indicator is missing."
+    )]
     LegalDocumentationThirtyMonthsRetentionAcknowledgementIndicatorMissing,
-    
+
     /// <summary>
     /// Instruction deletion acknowledgement indicator is invalid.
     /// Encoded/decoded by serializers as &quot;INDI&quot;.
@@ -1148,7 +1162,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_Lvu-8MlLEee7W-rN1yqPMg")]
     [Description(@"Instruction deletion acknowledgement indicator is invalid.")]
     InstructionDeletionAcknowledgementIndicatorInvalid,
-    
+
     /// <summary>
     /// Instruction deletion acknowledgement indicator is missing.
     /// Encoded/decoded by serializers as &quot;INDM&quot;.
@@ -1157,7 +1171,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_L3U0sMlLEee7W-rN1yqPMg")]
     [Description(@"Instruction deletion acknowledgement indicator is missing.")]
     InstructionDeletionAcknowledgementIndicatorMissing,
-    
+
     /// <summary>
     /// Potential loss acknowledgement indicator is invalid.
     /// Encoded/decoded by serializers as &quot;POLI&quot;.
@@ -1166,7 +1180,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_L4EbkMlLEee7W-rN1yqPMg")]
     [Description(@"Potential loss acknowledgement indicator is invalid.")]
     PotentiaLossAcknowledgementIndicatorInvalid,
-    
+
     /// <summary>
     /// Potential loss acknowledgement indicator is missing.
     /// Encoded/decoded by serializers as &quot;POLM&quot;.
@@ -1175,7 +1189,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_MBlj8MlLEee7W-rN1yqPMg")]
     [Description(@"Potential loss acknowledgement indicator is missing.")]
     PotentiaLossAcknowledgementIndicatorMissing,
-    
+
     /// <summary>
     /// Warrant subscription charge amount is not balancing.
     /// Encoded/decoded by serializers as &quot;WARC&quot;.
@@ -1184,25 +1198,29 @@ public enum InstructionRejectionReasonCode
     [IsoId("_MJeUoMlLEee7W-rN1yqPMg")]
     [Description(@"Warrant subscription charge amount is not balancing.")]
     WarrantSubscriptionChargeAmountInvalid,
-    
+
     /// <summary>
     /// There is a summary difference between the core instruction quantity and the extension transaction details.
     /// Encoded/decoded by serializers as &quot;SUME&quot;.
     /// </summary>
     [EnumMember(Value = "SUME")]
     [IsoId("_MJnekMlLEee7W-rN1yqPMg")]
-    [Description(@"There is a summary difference between the core instruction quantity and the extension transaction details.")]
+    [Description(
+        @"There is a summary difference between the core instruction quantity and the extension transaction details."
+    )]
     CoreInstructionQuantityAndExtensionTransactionDetailsDifference,
-    
+
     /// <summary>
     /// There is summary difference between core oversubscription quantity and extension transaction details.
     /// Encoded/decoded by serializers as &quot;SUMO&quot;.
     /// </summary>
     [EnumMember(Value = "SUMO")]
     [IsoId("_0z2xsMlNEee7W-rN1yqPMg")]
-    [Description(@"There is summary difference between core oversubscription quantity and extension transaction details.")]
+    [Description(
+        @"There is summary difference between core oversubscription quantity and extension transaction details."
+    )]
     CoreInstructionOversubscriptionQuantityAndExtensionTransactionDetailsDifference,
-    
+
     /// <summary>
     /// Withdrawal Transaction type is invalid.
     /// Encoded/decoded by serializers as &quot;WITI&quot;.
@@ -1211,7 +1229,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_SLeIgMnpEee6kIhZjMqQ2Q")]
     [Description(@"Withdrawal Transaction type is invalid.")]
     WithdrawalTransactionTypeInvalid,
-    
+
     /// <summary>
     /// Current date has passed cover protect submission end date.
     /// Encoded/decoded by serializers as &quot;PROC&quot;.
@@ -1220,7 +1238,7 @@ public enum InstructionRejectionReasonCode
     [IsoId("_9oGDEACoEeqouY-yI_q3qQ")]
     [Description(@"Current date has passed cover protect submission end date.")]
     PassedProtectSubmissionEndDate,
-    
+
     /// <summary>
     /// Customer Reference Identification must be populated for each sequence.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -1229,5 +1247,4 @@ public enum InstructionRejectionReasonCode
     [IsoId("_kKw3oACpEeqouY-yI_q3qQ")]
     [Description(@"Customer Reference Identification must be populated for each sequence.")]
     CustomerReferenceIdentificationMissingInSequence,
-    
 }

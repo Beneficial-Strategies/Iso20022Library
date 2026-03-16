@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SknWoAEcEeCQm6a_G2yO_w_-837981111")]
 [DisplayName("Tax Party")]
-public partial record TaxParty3
+public record TaxParty3
 {
-    #nullable enable
-    
     /// <summary>
     /// Number assigned by a tax authority to an entity.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TaxParty3
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxIdentification { get; init; }
+
     /// <summary>
     /// Type of tax payer.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TaxParty3
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxType { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
     /// </summary>
@@ -45,18 +43,14 @@ public partial record TaxParty3
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RegistrationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RegistrationIdentification { get; init; }
+
     /// <summary>
     /// Specification of the tax exemption reason.
     /// </summary>
     [IsoId("_SknWpAEcEeCQm6a_G2yO_w_377116311")]
     [DisplayName("Tax Exemption Reason")]
     [IsoXmlTag("TaxXmptnRsn")]
-    public TaxExemptionReasonFormatChoice_? TaxExemptionReason { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TaxExemptionReasonFormatChoice_? TaxExemptionReason { get; init; }
 }

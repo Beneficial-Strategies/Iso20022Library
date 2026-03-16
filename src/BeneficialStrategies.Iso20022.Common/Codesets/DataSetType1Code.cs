@@ -23,7 +23,7 @@ public enum DataSetType1Code
     [IsoId("_VrxOBNp-Ed-ak6NoX_4Aeg_2126617722")]
     [Description(@"Data set is a baseline.")]
     Baseline = DataSetTypeCode.Baseline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is a transport data set.
     /// Encoded/decoded by serializers as &quot;TRDS&quot;.
@@ -32,7 +32,7 @@ public enum DataSetType1Code
     [IsoId("_VrxOBdp-Ed-ak6NoX_4Aeg_2126617739")]
     [Description(@"Data set is a transport data set.")]
     TransportDataSet = DataSetTypeCode.TransportDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is a commercial data set.
     /// Encoded/decoded by serializers as &quot;CODS&quot;.
@@ -41,5 +41,4 @@ public enum DataSetType1Code
     [IsoId("_VrxOBtp-Ed-ak6NoX_4Aeg_2126617757")]
     [Description(@"Data set is a commercial data set.")]
     CommercialDataSet = DataSetTypeCode.CommercialDataSet, // same ordinal as derivation source for type conversions
-    
 }

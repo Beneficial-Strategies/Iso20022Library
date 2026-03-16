@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Svfw9wEcEeCQm6a_G2yO_w_1794621080")]
 [DisplayName("Acceptor Rejection")]
-public partial record AcceptorRejection1
+public record AcceptorRejection1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reject reason of the request or the advice.
     /// </summary>
     [IsoId("_Svfw-AEcEeCQm6a_G2yO_w_-144097158")]
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
-    public required RejectReason1Code RejectReason { get; init; } 
-    
+    public required RejectReason1Code RejectReason { get; init; }
+
     /// <summary>
     /// Additional information related to the reject of the exchange.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record AcceptorRejection1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
-    [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; } 
-    
+    [StringLength(maximumLength: 500, MinimumLength = 1)]
+    public IsoMax500Text? AdditionalInformation { get; init; }
+
     /// <summary>
     /// Original request that caused the recipient party to reject it.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record AcceptorRejection1
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? MessageInError { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax5000Binary? MessageInError { get; init; }
 }

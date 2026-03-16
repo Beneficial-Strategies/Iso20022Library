@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t-nrYXX4Eei3jO6riKEVXg")]
 [DisplayName("Cash Account Return Criteria")]
-public partial record CashAccountReturnCriteria5
+public record CashAccountReturnCriteria5
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the account name is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Name Indicator")]
     [IsoXmlTag("NmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? NameIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? NameIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account currency is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Currency Indicator")]
     [IsoXmlTag("CcyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CurrencyIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? CurrencyIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account type is requested.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Type Indicator")]
     [IsoXmlTag("TpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TypeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? TypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the multilateral limit is requested.
     /// </summary>
@@ -52,16 +50,16 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Multilateral Limit Indicator")]
     [IsoXmlTag("MulLmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MultilateralLimitIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? MultilateralLimitIndicator { get; init; }
+
     /// <summary>
     /// Defines the criteria used to report on a multilateral balance.
     /// </summary>
     [IsoId("_uIKB63X4Eei3jO6riKEVXg")]
     [DisplayName("Multilateral Balance Return Criteria")]
     [IsoXmlTag("MulBalRtrCrit")]
-    public CashBalanceReturnCriteria2? MultilateralBalanceReturnCriteria { get; init; } 
-    
+    public CashBalanceReturnCriteria2? MultilateralBalanceReturnCriteria { get; init; }
+
     /// <summary>
     /// Indicates whether the bilateral limit is requested.
     /// </summary>
@@ -69,16 +67,16 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Bilateral Limit Indicator")]
     [IsoXmlTag("BilLmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? BilateralLimitIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? BilateralLimitIndicator { get; init; }
+
     /// <summary>
     /// Defines the criteria used to report on a bilateral balance.
     /// </summary>
     [IsoId("_uIKB73X4Eei3jO6riKEVXg")]
     [DisplayName("Bilateral Balance Return Criteria")]
     [IsoXmlTag("BilBalRtrCrit")]
-    public CashBalanceReturnCriteria2? BilateralBalanceReturnCriteria { get; init; } 
-    
+    public CashBalanceReturnCriteria2? BilateralBalanceReturnCriteria { get; init; }
+
     /// <summary>
     /// Indicates whether the account standing order is requested.
     /// </summary>
@@ -86,8 +84,8 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Standing Order Indicator")]
     [IsoXmlTag("StgOrdrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StandingOrderIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? StandingOrderIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account owner information is requested.
     /// </summary>
@@ -95,8 +93,8 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Account Owner Indicator")]
     [IsoXmlTag("AcctOwnrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountOwnerIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? AccountOwnerIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account servicer information is requested.
     /// </summary>
@@ -104,9 +102,5 @@ public partial record CashAccountReturnCriteria5
     [DisplayName("Account Servicer Indicator")]
     [IsoXmlTag("AcctSvcrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountServicerIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? AccountServicerIndicator { get; init; }
 }

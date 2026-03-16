@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pyVCEZHhEe6qwqnYOGEReg")]
 [DisplayName("Point Of Interaction14")]
-public partial record PointOfInteraction14
+public record PointOfInteraction14
 {
-    #nullable enable
-
     /// <summary>
     /// Capabilities.
     /// </summary>
     [DisplayName("Capabilities")]
     [IsoXmlTag("Cpblties")]
-    public PointOfInteractionCapabilities9? Capabilities { get; init; } 
+    public PointOfInteractionCapabilities9? Capabilities { get; init; }
 
     /// <summary>
     /// Component.
@@ -37,37 +35,33 @@ public partial record PointOfInteraction14
     /// </summary>
     [DisplayName("Group Identification")]
     [IsoXmlTag("GrpId")]
-    public IsoMax35Text? GroupIdentification { get; init; } 
+    public IsoMax35Text? GroupIdentification { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required GenericIdentification177 Identification { get; init; } 
+    public required GenericIdentification177 Identification { get; init; }
 
     /// <summary>
     /// System Name.
     /// </summary>
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
-    public IsoMax70Text? SystemName { get; init; } 
+    public IsoMax70Text? SystemName { get; init; }
 
     /// <summary>
     /// Terminal Integration.
     /// </summary>
     [DisplayName("Terminal Integration")]
     [IsoXmlTag("TermnlIntgtn")]
-    public LocationCategory3Code? TerminalIntegration { get; init; } 
+    public LocationCategory3Code? TerminalIntegration { get; init; }
 
     /// <summary>
     /// Time Zone.
     /// </summary>
     [DisplayName("Time Zone")]
     [IsoXmlTag("TmZone")]
-    public IsoMax70Text? TimeZone { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax70Text? TimeZone { get; init; }
 }

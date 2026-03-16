@@ -22,8 +22,9 @@ public enum InvestorType2Code
     [EnumMember(Value = "BOT3")]
     [IsoId("_Rk308ddbEeibyvRfU9vJ7w")]
     [Description(@"Investor is both professional per se and elective professional.")]
-    BothProfessionalPerSeAndElectiveProfessional = InvestorTypeCode.BothProfessionalPerSeAndElectiveProfessional, // same ordinal as derivation source for type conversions
-    
+    BothProfessionalPerSeAndElectiveProfessional =
+        InvestorTypeCode.BothProfessionalPerSeAndElectiveProfessional, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Investor is an elective professional.
     /// Encoded/decoded by serializers as &quot;EPRO&quot;.
@@ -32,7 +33,7 @@ public enum InvestorType2Code
     [IsoId("_SH1YEddbEeibyvRfU9vJ7w")]
     [Description(@"Investor is an elective professional.")]
     ElectiveProfessional = InvestorTypeCode.ElectiveProfessional, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investor is professional or professional per se.
     /// Encoded/decoded by serializers as &quot;PRF2&quot;.
@@ -41,5 +42,4 @@ public enum InvestorType2Code
     [IsoId("_TMkLgddbEeibyvRfU9vJ7w")]
     [Description(@"Investor is professional or professional per se.")]
     ProfessionalOrPerSe = InvestorTypeCode.ProfessionalOrPerSe, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gbtqIEVGEeea-M6VZkEPUw")]
 [DisplayName("Plan")]
-public partial record Plan1
+public record Plan1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the instalment plan.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record Plan1
     [DisplayName("Plan Identification")]
     [IsoXmlTag("PlanId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PlanIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PlanIdentification { get; init; }
+
     /// <summary>
     /// List of plan owners.
     /// </summary>
     [IsoId("_pO6_wduKEei2qvU6FBLZYA")]
     [DisplayName("Plan Owner")]
     [IsoXmlTag("PlanOwnr")]
-    public PlanOwner1Code? PlanOwner { get; init; } 
-    
+    public PlanOwner1Code? PlanOwner { get; init; }
+
     /// <summary>
     /// Other plan owner, used when PlanOwner is OtherNational or OtherPrivate.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record Plan1
     [DisplayName("Other Plan Owner")]
     [IsoXmlTag("OthrPlanOwnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherPlanOwner { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherPlanOwner { get; init; }
+
     /// <summary>
     /// Instalment payment type.
     /// </summary>
@@ -53,17 +51,17 @@ public partial record Plan1
     [DisplayName("Instalment Payment Type")]
     [IsoXmlTag("InstlmtPmtTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? InstalmentPaymentType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? InstalmentPaymentType { get; init; }
+
     /// <summary>
     /// Period unit between consecutive payments.
     /// </summary>
     [IsoId("_4f7REEVGEeea-M6VZkEPUw")]
     [DisplayName("Period Unit")]
     [IsoXmlTag("PrdUnit")]
-    public Frequency12Code? PeriodUnit { get; init; } 
-    
+    public Frequency12Code? PeriodUnit { get; init; }
+
     /// <summary>
     /// Number of period units between consecutive payments.
     /// </summary>
@@ -71,16 +69,16 @@ public partial record Plan1
     [DisplayName("Number Of Periods")]
     [IsoXmlTag("NbOfPrds")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfPeriods { get; init; } 
-    
+    public IsoNumber? NumberOfPeriods { get; init; }
+
     /// <summary>
     /// Details of the interest rate.
     /// </summary>
     [IsoId("_M7qVwdubEei2qvU6FBLZYA")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public InterestRateDetails1? InterestRate { get; init; } 
-    
+    public InterestRateDetails1? InterestRate { get; init; }
+
     /// <summary>
     /// Date of the first payment.
     /// </summary>
@@ -88,24 +86,24 @@ public partial record Plan1
     [DisplayName("First Payment Date")]
     [IsoXmlTag("FrstPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? FirstPaymentDate { get; init; } 
-    
+    public IsoISODate? FirstPaymentDate { get; init; }
+
     /// <summary>
     /// Amount of the first payment when different from the subsequent payments.
     /// </summary>
     [IsoId("_g0XlQEVHEeea-M6VZkEPUw")]
     [DisplayName("First Amount")]
     [IsoXmlTag("FrstAmt")]
-    public ImpliedCurrencyAndAmount? FirstAmount { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? FirstAmount { get; init; }
+
     /// <summary>
     /// Amount of subsequent payments.
     /// </summary>
     [IsoId("_sVYxYEVHEeea-M6VZkEPUw")]
     [DisplayName("Subsequent Amount")]
     [IsoXmlTag("SbsqntAmt")]
-    public ImpliedCurrencyAndAmount? SubsequentAmount { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? SubsequentAmount { get; init; }
+
     /// <summary>
     /// Total number of instalment payments.
     /// ISO 8583 bit 59
@@ -114,41 +112,37 @@ public partial record Plan1
     [DisplayName("Total Number Of Payments")]
     [IsoXmlTag("TtlNbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TotalNumberOfPayments { get; init; } 
-    
+    public IsoNumber? TotalNumberOfPayments { get; init; }
+
     /// <summary>
     /// Currency code associated with the instalment amount.  ISO 4217 &quot;Codes for the representation of currencies and funds&quot;.
     /// </summary>
     [IsoId("_5X9UUNuUEei2qvU6FBLZYA")]
     [DisplayName("Instalment Currency")]
     [IsoXmlTag("InstlmtCcy")]
-    public ISO3NumericCurrencyCode? InstalmentCurrency { get; init; } 
-    
+    public ISO3NumericCurrencyCode? InstalmentCurrency { get; init; }
+
     /// <summary>
     /// Contains grace period details.
     /// </summary>
     [IsoId("_IcL5cEVHEeea-M6VZkEPUw")]
     [DisplayName("Grace Period")]
     [IsoXmlTag("GracePrd")]
-    public GracePeriod1? GracePeriod { get; init; } 
-    
+    public GracePeriod1? GracePeriod { get; init; }
+
     /// <summary>
     /// Contains the amount details of an instalment plan.
     /// </summary>
     [IsoId("_3FE5cduZEei2qvU6FBLZYA")]
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
-    public InstalmentAmountDetails1? AmountDetails { get; init; } 
-    
+    public InstalmentAmountDetails1? AmountDetails { get; init; }
+
     /// <summary>
     /// Total amount of the instalment including charges, insurance and taxes in addition to the funded amount.
     /// </summary>
     [IsoId("_BEHDMEVIEeea-M6VZkEPUw")]
     [DisplayName("Grand Total Amount")]
     [IsoXmlTag("GrdTtlAmt")]
-    public ImpliedCurrencyAndAmount? GrandTotalAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ImpliedCurrencyAndAmount? GrandTotalAmount { get; init; }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aIFoVdp-Ed-ak6NoX_4Aeg_-943074065")]
-[Description(@"Indicates the level of priority to claim on income and assets of |the company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc.")]
+[Description(
+    @"Indicates the level of priority to claim on income and assets of |the company in case of the payment of dividends and in the event of a bankruptcy, eg, ordinary/common stocks, preferred stocks, subordinated debt, etc."
+)]
 [DerivedFrom(typeof(PreferenceToIncomeCode))]
 public enum PreferenceToIncome1Code
 {
@@ -23,7 +25,7 @@ public enum PreferenceToIncome1Code
     [IsoId("_aIFoVtp-Ed-ak6NoX_4Aeg_-943073945")]
     [Description(@"Indicates an ordinary/common preference to income.")]
     Ordinary = PreferenceToIncomeCode.Ordinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates a preferred claim upon income and assets.
     /// Encoded/decoded by serializers as &quot;PFRD&quot;.
@@ -32,5 +34,4 @@ public enum PreferenceToIncome1Code
     [IsoId("_aIFoV9p-Ed-ak6NoX_4Aeg_-943073928")]
     [Description(@"Indicates a preferred claim upon income and assets.")]
     Preferred = PreferenceToIncomeCode.Preferred, // same ordinal as derivation source for type conversions
-    
 }

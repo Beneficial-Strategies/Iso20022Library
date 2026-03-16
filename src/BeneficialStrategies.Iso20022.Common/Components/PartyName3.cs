@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kmfmE-5NEeCisYr99QEiWA_-568957759")]
 [DisplayName("Party Name")]
-public partial record PartyName3
+public record PartyName3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the date from which the party name is valid.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PartyName3
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; } 
-    
+    public IsoISODate? ValidFrom { get; init; }
+
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record PartyName3
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Name { get; init; }
+
     /// <summary>
     /// Specifies the short name of the organisation.
     /// </summary>
@@ -44,10 +42,6 @@ public partial record PartyName3
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ShortName { get; init; }
 }

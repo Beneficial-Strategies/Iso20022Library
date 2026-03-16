@@ -23,7 +23,7 @@ public enum Holding1Code
     [IsoId("_HrQ00RKgEeKj15WxqwlXPw")]
     [Description(@"Certificate.")]
     Certificate = HoldingCode.Certificate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Non partial holding.
     /// Encoded/decoded by serializers as &quot;NPRH&quot;.
@@ -32,7 +32,7 @@ public enum Holding1Code
     [IsoId("_H08VQRKgEeKj15WxqwlXPw")]
     [Description(@"Non partial holding.")]
     NonPartialHolding = HoldingCode.NonPartialHolding, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Partial holding.
     /// Encoded/decoded by serializers as &quot;PRTH&quot;.
@@ -41,5 +41,4 @@ public enum Holding1Code
     [IsoId("_IBT9URKgEeKj15WxqwlXPw")]
     [Description(@"Partial holding.")]
     PartialHolding = HoldingCode.PartialHolding, // same ordinal as derivation source for type conversions
-    
 }

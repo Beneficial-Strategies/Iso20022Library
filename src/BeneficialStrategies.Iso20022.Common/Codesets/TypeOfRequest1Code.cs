@@ -23,7 +23,7 @@ public enum TypeOfRequest1Code
     [IsoId("_GYj0kdveEeqxGfKJubfhIw")]
     [Description(@"Request for information.")]
     Information = TypeOfRequestCode.Information, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request for status.
     /// Encoded/decoded by serializers as &quot;STAT&quot;.
@@ -32,5 +32,4 @@ public enum TypeOfRequest1Code
     [IsoId("_GhCbIdveEeqxGfKJubfhIw")]
     [Description(@"Request for status.")]
     Status = TypeOfRequestCode.Status, // same ordinal as derivation source for type conversions
-    
 }

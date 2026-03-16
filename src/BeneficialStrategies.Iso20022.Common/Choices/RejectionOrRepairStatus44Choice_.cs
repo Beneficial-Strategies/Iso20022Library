@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RejectionOrRepairStatus44Choice.NoSpecifiedReason))]
     [KnownType(typeof(RejectionOrRepairStatus44Choice.Reason))]
-    [JsonDerivedType(typeof(RejectionOrRepairStatus44Choice.NoSpecifiedReason),nameof(RejectionOrRepairStatus44Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(RejectionOrRepairStatus44Choice.Reason),nameof(RejectionOrRepairStatus44Choice.Reason))]
+    [JsonDerivedType(
+        typeof(RejectionOrRepairStatus44Choice.NoSpecifiedReason),
+        nameof(RejectionOrRepairStatus44Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(RejectionOrRepairStatus44Choice.Reason),
+        nameof(RejectionOrRepairStatus44Choice.Reason)
+    )]
     [IsoId("_SeYDKStYEeyhipY4f42fZQ")]
     [DisplayName("Rejection Or Repair Status 44 Choice")]
-    public abstract partial record RejectionOrRepairStatus44Choice_
-    {
-    }
+    public abstract record RejectionOrRepairStatus44Choice_ { }
 }

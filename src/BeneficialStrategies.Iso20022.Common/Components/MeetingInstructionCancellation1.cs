@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mbPBQDUAEe2tRf29bleifQ")]
 [DisplayName("Meeting Instruction Cancellation")]
-public partial record MeetingInstructionCancellation1
+public record MeetingInstructionCancellation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the meeting instruction cancellation request message containing the individual instruction(s) for which the cancellation was requested.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MeetingInstructionCancellation1
     [DisplayName("Meeting Instruction Cancellation Request Identification")]
     [IsoXmlTag("MtgInstrCxlReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MeetingInstructionCancellationRequestIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MeetingInstructionCancellationRequestIdentification { get; init; }
+
     /// <summary>
     /// Identification of the individual instruction for which the cancellation was requested.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record MeetingInstructionCancellation1
     [DisplayName("Single Instruction Identification")]
     [IsoXmlTag("SnglInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text SingleInstructionIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text SingleInstructionIdentification { get; init; }
 }

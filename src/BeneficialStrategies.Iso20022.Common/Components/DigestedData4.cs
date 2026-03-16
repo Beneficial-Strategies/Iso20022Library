@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7USsgWmSEeSkutXKrVpkCQ")]
 [DisplayName("Digested Data")]
-public partial record DigestedData4
+public record DigestedData4
 {
-    #nullable enable
-    
     /// <summary>
     /// Version of the data structure.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record DigestedData4
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; } 
-    
+    public IsoNumber? Version { get; init; }
+
     /// <summary>
     /// Identification of the digest algorithm.
     /// </summary>
     [IsoId("_7iIUM2mSEeSkutXKrVpkCQ")]
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public required AlgorithmIdentification16 DigestAlgorithm { get; init; } 
-    
+    public required AlgorithmIdentification16 DigestAlgorithm { get; init; }
+
     /// <summary>
     /// Data on which the digest is computed.
     /// </summary>
     [IsoId("_7iIUNWmSEeSkutXKrVpkCQ")]
     [DisplayName("Encapsulated Content")]
     [IsoXmlTag("NcpsltdCntt")]
-    public required EncapsulatedContent3 EncapsulatedContent { get; init; } 
-    
+    public required EncapsulatedContent3 EncapsulatedContent { get; init; }
+
     /// <summary>
     /// Result of data-digesting process.
     /// </summary>
@@ -50,9 +48,5 @@ public partial record DigestedData4
     [DisplayName("Digest")]
     [IsoXmlTag("Dgst")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public required IsoMax140Binary Digest { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax140Binary Digest { get; init; }
 }

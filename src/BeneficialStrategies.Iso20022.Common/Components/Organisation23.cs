@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GNFpEVxZEeWvPv3PXpS3fw")]
 [DisplayName("Organisation")]
-public partial record Organisation23
+public record Organisation23
 {
-    #nullable enable
-    
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Organisation23
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Name { get; init; }
+
     /// <summary>
     /// Name of the organisation in short form.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record Organisation23
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ShortName { get; init; }
+
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.
     /// </summary>
@@ -47,8 +45,4 @@ public partial record Organisation23
     [MinLength(1)]
     [MaxLength(5)]
     public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

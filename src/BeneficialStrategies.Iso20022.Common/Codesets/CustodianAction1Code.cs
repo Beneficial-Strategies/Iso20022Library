@@ -23,7 +23,7 @@ public enum CustodianAction1Code
     [IsoId("_14n2MTL3EeKU9IrkkToqcw_-892224501")]
     [Description(@"Custodian is researching pending issues raised by the validation service.")]
     Research = CustodianActionCode.Research, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Custodian is expected to send updated information.
     /// Encoded/decoded by serializers as &quot;SEND&quot;.
@@ -32,16 +32,18 @@ public enum CustodianAction1Code
     [IsoId("_14n2MjL3EeKU9IrkkToqcw_-146179494")]
     [Description(@"Custodian is expected to send updated information.")]
     SendInfo = CustodianActionCode.SendInfo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Custodian disagrees with the validation service and will take no further action.
     /// Encoded/decoded by serializers as &quot;DISS&quot;.
     /// </summary>
     [EnumMember(Value = "DISS")]
     [IsoId("_14n2MzL3EeKU9IrkkToqcw_1320969269")]
-    [Description(@"Custodian disagrees with the validation service and will take no further action.")]
+    [Description(
+        @"Custodian disagrees with the validation service and will take no further action."
+    )]
     Disagrees = CustodianActionCode.Disagrees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No action required by the custodian.
     /// Encoded/decoded by serializers as &quot;NOAC&quot;.
@@ -50,5 +52,4 @@ public enum CustodianAction1Code
     [IsoId("_14n2NDL3EeKU9IrkkToqcw_-1838359691")]
     [Description(@"No action required by the custodian.")]
     NoAction = CustodianActionCode.NoAction, // same ordinal as derivation source for type conversions
-    
 }

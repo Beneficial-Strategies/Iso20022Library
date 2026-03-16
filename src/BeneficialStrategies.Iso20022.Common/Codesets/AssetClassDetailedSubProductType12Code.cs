@@ -23,5 +23,4 @@ public enum AssetClassDetailedSubProductType12Code
     [IsoId("_qaGXhVrdEeWN79Bl6BUd3g")]
     [Description(@"Commodity attribute of type tanker.")]
     Tanker = AssetClassDetailedSubProductTypeCode.Tanker, // same ordinal as derivation source for type conversions
-    
 }

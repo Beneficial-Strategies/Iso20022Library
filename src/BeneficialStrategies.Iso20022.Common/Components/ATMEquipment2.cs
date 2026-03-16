@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JjYv4Yr6EeSvuOJS0mmL0g")]
 [DisplayName("ATM Equipment")]
-public partial record ATMEquipment2
+public record ATMEquipment2
 {
-    #nullable enable
-    
     /// <summary>
     /// ATM Manufacturer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ATMEquipment2
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Manufacturer { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Manufacturer { get; init; }
+
     /// <summary>
     /// Model of ATM.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ATMEquipment2
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Model { get; init; }
+
     /// <summary>
     /// Version of the device model.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record ATMEquipment2
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Version { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Version { get; init; }
+
     /// <summary>
     /// Serial number of the ATM.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record ATMEquipment2
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SerialNumber { get; init; }
+
     /// <summary>
     /// Provider of the firmware.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record ATMEquipment2
     [DisplayName("Firmware Provider")]
     [IsoXmlTag("FrmwrPrvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirmwareProvider { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirmwareProvider { get; init; }
+
     /// <summary>
     /// Identification of the firmware.
     /// </summary>
@@ -75,9 +73,9 @@ public partial record ATMEquipment2
     [DisplayName("Firmware Identification")]
     [IsoXmlTag("FrmwrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirmwareIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirmwareIdentification { get; init; }
+
     /// <summary>
     /// Version of the firmware.
     /// </summary>
@@ -85,10 +83,6 @@ public partial record ATMEquipment2
     [DisplayName("Firmware Version")]
     [IsoXmlTag("FrmwrVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirmwareVersion { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirmwareVersion { get; init; }
 }

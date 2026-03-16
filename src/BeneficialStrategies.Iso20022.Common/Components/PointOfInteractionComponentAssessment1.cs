@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0nUakAyQEeKa_56Jbsi1RQ")]
 [DisplayName("Point Of Interaction Component Assessment")]
-public partial record PointOfInteractionComponentAssessment1
+public record PointOfInteractionComponentAssessment1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of assessment of the component.
     /// </summary>
     [IsoId("_Buco4AyREeKa_56Jbsi1RQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required POIComponentAssessment1Code Type { get; init; } 
-    
+    public required POIComponentAssessment1Code Type { get; init; }
+
     /// <summary>
     /// Body which has delivered the assessment.
     /// </summary>
@@ -34,8 +32,9 @@ public partial record PointOfInteractionComponentAssessment1
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
     public SimpleValueList<System.String> Assigner { get; init; } = [];
+
     // ID for the above is _L3GT4AyREeKa_56Jbsi1RQ
-    
+
     /// <summary>
     /// Date when the assessment has been delivered.
     /// </summary>
@@ -43,8 +42,8 @@ public partial record PointOfInteractionComponentAssessment1
     [DisplayName("Delivery Date")]
     [IsoXmlTag("DlvryDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeliveryDate { get; init; } 
-    
+    public IsoISODateTime? DeliveryDate { get; init; }
+
     /// <summary>
     /// Date when the assessment will expire.
     /// </summary>
@@ -52,8 +51,8 @@ public partial record PointOfInteractionComponentAssessment1
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExpirationDate { get; init; } 
-    
+    public IsoISODateTime? ExpirationDate { get; init; }
+
     /// <summary>
     /// Unique assessment number for the component.
     /// </summary>
@@ -61,10 +60,6 @@ public partial record PointOfInteractionComponentAssessment1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Number { get; init; }
 }

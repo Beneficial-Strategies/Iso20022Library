@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jOPbKaocEemdLtwzt4CWxg")]
 [DisplayName("Quantity")]
-public partial record Quantity17
+public record Quantity17
 {
-    #nullable enable
-    
     /// <summary>
     /// Fair value of the individual collateral component expressed in price currency.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record Quantity17
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Value { get; init; } 
-    
+    public required IsoDecimalNumber Value { get; init; }
+
     /// <summary>
     /// Unit of measure in which the quantity is expressed.
     /// </summary>
     [IsoId("_jRzsg6ocEemdLtwzt4CWxg")]
     [DisplayName("Unit Of Measure")]
     [IsoXmlTag("UnitOfMeasr")]
-    public required UnitOfMeasure11Code UnitOfMeasure { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required UnitOfMeasure11Code UnitOfMeasure { get; init; }
 }

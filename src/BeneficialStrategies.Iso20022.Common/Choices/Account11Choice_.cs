@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Account11Choice.CashAccount))]
     [KnownType(typeof(Account11Choice.ChargesAccount))]
     [KnownType(typeof(Account11Choice.TaxAccount))]
-    [JsonDerivedType(typeof(Account11Choice.CashAccount),nameof(Account11Choice.CashAccount))]
-    [JsonDerivedType(typeof(Account11Choice.ChargesAccount),nameof(Account11Choice.ChargesAccount))]
-    [JsonDerivedType(typeof(Account11Choice.TaxAccount),nameof(Account11Choice.TaxAccount))]
+    [JsonDerivedType(typeof(Account11Choice.CashAccount), nameof(Account11Choice.CashAccount))]
+    [JsonDerivedType(
+        typeof(Account11Choice.ChargesAccount),
+        nameof(Account11Choice.ChargesAccount)
+    )]
+    [JsonDerivedType(typeof(Account11Choice.TaxAccount), nameof(Account11Choice.TaxAccount))]
     [IsoId("_kv-O3Zt3Ee-wQIOX0djF2w")]
     [DisplayName("Account11Choice")]
-    public abstract partial record Account11Choice_
-    {
-    }
+    public abstract record Account11Choice_ { }
 }

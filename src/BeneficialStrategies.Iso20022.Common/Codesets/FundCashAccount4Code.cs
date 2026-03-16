@@ -23,7 +23,7 @@ public enum FundCashAccount4Code
     [IsoId("_o_Z3gSC7EeWPMvNwVtiMsA")]
     [Description(@"Hedge fund account.")]
     HedgeFund = FundCashAccountCode.HedgeFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Central Provident Fund (CPF) ordinary account.
     /// Encoded/decoded by serializers as &quot;CPFO&quot;.
@@ -32,7 +32,7 @@ public enum FundCashAccount4Code
     [IsoId("_pGldkSC7EeWPMvNwVtiMsA")]
     [Description(@"Central Provident Fund (CPF) ordinary account.")]
     PensionFundOrdinary = FundCashAccountCode.PensionFundOrdinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Central Provident Fund (CPF) special account.
     /// Encoded/decoded by serializers as &quot;CPFS&quot;.
@@ -41,7 +41,7 @@ public enum FundCashAccount4Code
     [IsoId("_pL-T4SC7EeWPMvNwVtiMsA")]
     [Description(@"Central Provident Fund (CPF) special account.")]
     PensionFundSpecial = FundCashAccountCode.PensionFundSpecial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Supplementary Retirement Scheme (SRS) account.
     /// Encoded/decoded by serializers as &quot;SRSA&quot;.
@@ -50,7 +50,7 @@ public enum FundCashAccount4Code
     [IsoId("_pRzPESC7EeWPMvNwVtiMsA")]
     [Description(@"Supplementary Retirement Scheme (SRS) account.")]
     RetirementScheme = FundCashAccountCode.RetirementScheme, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account operated by a CSD in cross-CSD settlement context.
     /// Encoded/decoded by serializers as &quot;CSDO&quot;.
@@ -59,7 +59,7 @@ public enum FundCashAccount4Code
     [IsoId("_I6ZNcSC8EeWPMvNwVtiMsA")]
     [Description(@"Account operated by a CSD in cross-CSD settlement context.")]
     CSDOmnibusAccount = FundCashAccountCode.CSDOmnibusAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account operated by a CSD in a direct holding market context.
     /// Encoded/decoded by serializers as &quot;TOFF&quot;.
@@ -68,16 +68,18 @@ public enum FundCashAccount4Code
     [IsoId("_JQ7eISC8EeWPMvNwVtiMsA")]
     [Description(@"Account operated by a CSD in a direct holding market context.")]
     TechnicalOffsetAccount = FundCashAccountCode.TechnicalOffsetAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account operated by a CSD for settlement of securities legs for instructions involving internal CSDs.
     /// Encoded/decoded by serializers as &quot;ICSA&quot;.
     /// </summary>
     [EnumMember(Value = "ICSA")]
     [IsoId("_JWmBQSC8EeWPMvNwVtiMsA")]
-    [Description(@"Account operated by a CSD for settlement of securities legs for instructions involving internal CSDs.")]
+    [Description(
+        @"Account operated by a CSD for settlement of securities legs for instructions involving internal CSDs."
+    )]
     InterCSDAccount = FundCashAccountCode.InterCSDAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account operated by a CSD for mirroring positions.
     /// Encoded/decoded by serializers as &quot;CSDM&quot;.
@@ -86,7 +88,7 @@ public enum FundCashAccount4Code
     [IsoId("_JeNFISC8EeWPMvNwVtiMsA")]
     [Description(@"Account operated by a CSD for mirroring positions.")]
     CSDMirrorAccount = FundCashAccountCode.CSDMirrorAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account owned by a CSD participant.
     /// Encoded/decoded by serializers as &quot;CSDP&quot;.
@@ -95,7 +97,7 @@ public enum FundCashAccount4Code
     [IsoId("_JoWfoSC8EeWPMvNwVtiMsA")]
     [Description(@"Account owned by a CSD participant.")]
     CSDParticipantAccount = FundCashAccountCode.CSDParticipantAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Private pension account.
     /// Encoded/decoded by serializers as &quot;PPEN&quot;.
@@ -104,7 +106,7 @@ public enum FundCashAccount4Code
     [IsoId("_JvqokSC8EeWPMvNwVtiMsA")]
     [Description(@"Private pension account.")]
     PrivatePensionScheme = FundCashAccountCode.PrivatePensionScheme, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Workplace or company pension account.
     /// Encoded/decoded by serializers as &quot;CPEN&quot;.
@@ -113,5 +115,4 @@ public enum FundCashAccount4Code
     [IsoId("_J2YUkSC8EeWPMvNwVtiMsA")]
     [Description(@"Workplace or company pension account.")]
     WorkplacePensionSchema = FundCashAccountCode.WorkplacePensionSchema, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum Frequency10Code
     [IsoId("_ns-iwWoEEearR-CA7eRZXQ")]
     [Description(@"Event does never take place.")]
     Never = FrequencyCode.Never, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every year or once a year.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -32,7 +32,7 @@ public enum Frequency10Code
     [IsoId("_vQ94oWoEEearR-CA7eRZXQ")]
     [Description(@"Event takes place every year or once a year.")]
     Annual = FrequencyCode.Annual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place based on a change of a rate.
     /// Encoded/decoded by serializers as &quot;RATE&quot;.
@@ -41,7 +41,7 @@ public enum Frequency10Code
     [IsoId("_5MNZwWoEEearR-CA7eRZXQ")]
     [Description(@"Event takes place based on a change of a rate.")]
     Rate = FrequencyCode.Rate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every six months or two times a year.
     /// Encoded/decoded by serializers as &quot;MIAN&quot;.
@@ -50,7 +50,7 @@ public enum Frequency10Code
     [IsoId("_6xlcIWoEEearR-CA7eRZXQ")]
     [Description(@"Event takes place every six months or two times a year.")]
     SemiAnnual = FrequencyCode.SemiAnnual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every three months or four times a year.
     /// Encoded/decoded by serializers as &quot;QURT&quot;.
@@ -59,5 +59,4 @@ public enum Frequency10Code
     [IsoId("_7SZDIWoEEearR-CA7eRZXQ")]
     [Description(@"Event takes place every three months or four times a year.")]
     Quarterly = FrequencyCode.Quarterly, // same ordinal as derivation source for type conversions
-    
 }

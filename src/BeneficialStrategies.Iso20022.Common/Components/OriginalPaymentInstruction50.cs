@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,51 +14,49 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9sSqsTEsEe6GxLzpkVnWYg")]
 [DisplayName("Original Payment Instruction50")]
-public partial record OriginalPaymentInstruction50
+public record OriginalPaymentInstruction50
 {
-    #nullable enable
-
     /// <summary>
     /// Batch Booking.
     /// </summary>
     [DisplayName("Batch Booking")]
     [IsoXmlTag("BtchBookg")]
-    public IsoBatchBookingIndicator? BatchBooking { get; init; } 
+    public IsoBatchBookingIndicator? BatchBooking { get; init; }
 
     /// <summary>
     /// Original Control Sum.
     /// </summary>
     [DisplayName("Original Control Sum")]
     [IsoXmlTag("OrgnlCtrlSum")]
-    public IsoDecimalNumber? OriginalControlSum { get; init; } 
+    public IsoDecimalNumber? OriginalControlSum { get; init; }
 
     /// <summary>
     /// Original Number Of Transactions.
     /// </summary>
     [DisplayName("Original Number Of Transactions")]
     [IsoXmlTag("OrgnlNbOfTxs")]
-    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; } 
+    public IsoMax15NumericText? OriginalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Original Payment Information Identification.
     /// </summary>
     [DisplayName("Original Payment Information Identification")]
     [IsoXmlTag("OrgnlPmtInfId")]
-    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; } 
+    public required IsoMax35Text OriginalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Payment Information Reversal.
     /// </summary>
     [DisplayName("Payment Information Reversal")]
     [IsoXmlTag("PmtInfRvsl")]
-    public IsoTrueFalseIndicator? PaymentInformationReversal { get; init; } 
+    public IsoTrueFalseIndicator? PaymentInformationReversal { get; init; }
 
     /// <summary>
     /// Reversal Payment Information Identification.
     /// </summary>
     [DisplayName("Reversal Payment Information Identification")]
     [IsoXmlTag("RvslPmtInfId")]
-    public IsoMax35Text? ReversalPaymentInformationIdentification { get; init; } 
+    public IsoMax35Text? ReversalPaymentInformationIdentification { get; init; }
 
     /// <summary>
     /// Reversal Reason Information.
@@ -73,8 +71,4 @@ public partial record OriginalPaymentInstruction50
     [DisplayName("Transaction Information")]
     [IsoXmlTag("TxInf")]
     public ValueList<PaymentTransaction156> TransactionInformation { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

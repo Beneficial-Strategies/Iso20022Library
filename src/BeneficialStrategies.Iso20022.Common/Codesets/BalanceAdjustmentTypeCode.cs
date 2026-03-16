@@ -23,7 +23,7 @@ public enum BalanceAdjustmentTypeCode
     [IsoId("_6Uas8JqlEeGSON8vddiWzQ_817535103")]
     [Description(@"Adjustment applies to the average ledger (book) balance.")]
     Ledger,
-    
+
     /// <summary>
     /// Adjustment applies to the average float (unavailable) balance.
     /// Encoded/decoded by serializers as &quot;FLOT&quot;.
@@ -32,7 +32,7 @@ public enum BalanceAdjustmentTypeCode
     [IsoId("_6Uas8ZqlEeGSON8vddiWzQ_1333312355")]
     [Description(@"Adjustment applies to the average float (unavailable) balance.")]
     Float,
-    
+
     /// <summary>
     /// Adjustment applies to the average collected (book less float) balance.
     /// Encoded/decoded by serializers as &quot;CLLD&quot;.
@@ -41,5 +41,4 @@ public enum BalanceAdjustmentTypeCode
     [IsoId("_6Uas8pqlEeGSON8vddiWzQ_-2029841198")]
     [Description(@"Adjustment applies to the average collected (book less float) balance.")]
     Collected,
-    
 }

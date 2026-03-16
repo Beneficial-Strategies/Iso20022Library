@@ -9,7 +9,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// <summary>
     /// Choice of reference.
     /// </summary>
-    [KnownType(typeof(References69Choice.SecuritiesSettlementTransactionConfirmationIdentification))]
+    [KnownType(
+        typeof(References69Choice.SecuritiesSettlementTransactionConfirmationIdentification)
+    )]
     [KnownType(typeof(References69Choice.IntraPositionMovementConfirmationIdentification))]
     [KnownType(typeof(References69Choice.SecuritiesBalanceAccountingReportIdentification))]
     [KnownType(typeof(References69Choice.SecuritiesBalanceCustodyReportIdentification))]
@@ -17,35 +19,98 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References69Choice.SecuritiesFinancingConfirmationIdentification))]
     [KnownType(typeof(References69Choice.SecuritiesTransactionPendingReportIdentification))]
     [KnownType(typeof(References69Choice.SecuritiesTransactionPostingReportIdentification))]
-    [KnownType(typeof(References69Choice.SecuritiesSettlementTransactionAllegementReportIdentification))]
-    [KnownType(typeof(References69Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification))]
+    [KnownType(
+        typeof(References69Choice.SecuritiesSettlementTransactionAllegementReportIdentification)
+    )]
+    [KnownType(
+        typeof(References69Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification)
+    )]
     [KnownType(typeof(References69Choice.PortfolioTransferNotificationIdentification))]
-    [KnownType(typeof(References69Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification))]
+    [KnownType(
+        typeof(References69Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification)
+    )]
     [KnownType(typeof(References69Choice.OtherMessageIdentification))]
     [KnownType(typeof(References69Choice.TotalPortfolioValuationReportIdentification))]
-    [KnownType(typeof(References69Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification))]
+    [KnownType(
+        typeof(References69Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification)
+    )]
     [KnownType(typeof(References69Choice.TripartyCollateralStatusAdviceIdentification))]
     [KnownType(typeof(References69Choice.TripartyCollateralAndExposureReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesSettlementTransactionConfirmationIdentification),nameof(References69Choice.SecuritiesSettlementTransactionConfirmationIdentification))]
-    [JsonDerivedType(typeof(References69Choice.IntraPositionMovementConfirmationIdentification),nameof(References69Choice.IntraPositionMovementConfirmationIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesBalanceAccountingReportIdentification),nameof(References69Choice.SecuritiesBalanceAccountingReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesBalanceCustodyReportIdentification),nameof(References69Choice.SecuritiesBalanceCustodyReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.IntraPositionMovementPostingReportIdentification),nameof(References69Choice.IntraPositionMovementPostingReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesFinancingConfirmationIdentification),nameof(References69Choice.SecuritiesFinancingConfirmationIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesTransactionPendingReportIdentification),nameof(References69Choice.SecuritiesTransactionPendingReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesTransactionPostingReportIdentification),nameof(References69Choice.SecuritiesTransactionPostingReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesSettlementTransactionAllegementReportIdentification),nameof(References69Choice.SecuritiesSettlementTransactionAllegementReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification),nameof(References69Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification))]
-    [JsonDerivedType(typeof(References69Choice.PortfolioTransferNotificationIdentification),nameof(References69Choice.PortfolioTransferNotificationIdentification))]
-    [JsonDerivedType(typeof(References69Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification),nameof(References69Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification))]
-    [JsonDerivedType(typeof(References69Choice.OtherMessageIdentification),nameof(References69Choice.OtherMessageIdentification))]
-    [JsonDerivedType(typeof(References69Choice.TotalPortfolioValuationReportIdentification),nameof(References69Choice.TotalPortfolioValuationReportIdentification))]
-    [JsonDerivedType(typeof(References69Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification),nameof(References69Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification))]
-    [JsonDerivedType(typeof(References69Choice.TripartyCollateralStatusAdviceIdentification),nameof(References69Choice.TripartyCollateralStatusAdviceIdentification))]
-    [JsonDerivedType(typeof(References69Choice.TripartyCollateralAndExposureReportIdentification),nameof(References69Choice.TripartyCollateralAndExposureReportIdentification))]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesSettlementTransactionConfirmationIdentification),
+        nameof(References69Choice.SecuritiesSettlementTransactionConfirmationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.IntraPositionMovementConfirmationIdentification),
+        nameof(References69Choice.IntraPositionMovementConfirmationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesBalanceAccountingReportIdentification),
+        nameof(References69Choice.SecuritiesBalanceAccountingReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesBalanceCustodyReportIdentification),
+        nameof(References69Choice.SecuritiesBalanceCustodyReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.IntraPositionMovementPostingReportIdentification),
+        nameof(References69Choice.IntraPositionMovementPostingReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesFinancingConfirmationIdentification),
+        nameof(References69Choice.SecuritiesFinancingConfirmationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesTransactionPendingReportIdentification),
+        nameof(References69Choice.SecuritiesTransactionPendingReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesTransactionPostingReportIdentification),
+        nameof(References69Choice.SecuritiesTransactionPostingReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesSettlementTransactionAllegementReportIdentification),
+        nameof(References69Choice.SecuritiesSettlementTransactionAllegementReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification),
+        nameof(
+            References69Choice.SecuritiesSettlementTransactionAllegementNotificationTransactionIdentification
+        )
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.PortfolioTransferNotificationIdentification),
+        nameof(References69Choice.PortfolioTransferNotificationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification),
+        nameof(
+            References69Choice.SecuritiesSettlementTransactionGenerationNotificationIdentification
+        )
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.OtherMessageIdentification),
+        nameof(References69Choice.OtherMessageIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.TotalPortfolioValuationReportIdentification),
+        nameof(References69Choice.TotalPortfolioValuationReportIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification),
+        nameof(
+            References69Choice.TripartyCollateralTransactionInstructionProcessingStatusAdviceIdentification
+        )
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.TripartyCollateralStatusAdviceIdentification),
+        nameof(References69Choice.TripartyCollateralStatusAdviceIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References69Choice.TripartyCollateralAndExposureReportIdentification),
+        nameof(References69Choice.TripartyCollateralAndExposureReportIdentification)
+    )]
     [IsoId("_zwc0sQzXEeuUZuaHWzkTew")]
     [DisplayName("References 69 Choice")]
-    public abstract partial record References69Choice_
-    {
-    }
+    public abstract record References69Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum LockStatusCode
     [IsoId("_fvXfoGjMEeiRg5NzP0jkQg")]
     [Description(@"Party has been locked for operations.")]
     Locked,
-    
+
     /// <summary>
     /// Party is ready for operations.
     /// Encoded/decoded by serializers as &quot;ULCK&quot;.
@@ -32,5 +32,4 @@ public enum LockStatusCode
     [IsoId("_hh8QgGjMEeiRg5NzP0jkQg")]
     [Description(@"Party is ready for operations.")]
     Unlocked,
-    
 }

@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesAccountModification2Choice.SystemSecuritiesAccount))]
     [KnownType(typeof(SecuritiesAccountModification2Choice.SystemRestriction))]
     [KnownType(typeof(SecuritiesAccountModification2Choice.MarketSpecificAttribute))]
-    [JsonDerivedType(typeof(SecuritiesAccountModification2Choice.SystemSecuritiesAccount),nameof(SecuritiesAccountModification2Choice.SystemSecuritiesAccount))]
-    [JsonDerivedType(typeof(SecuritiesAccountModification2Choice.SystemRestriction),nameof(SecuritiesAccountModification2Choice.SystemRestriction))]
-    [JsonDerivedType(typeof(SecuritiesAccountModification2Choice.MarketSpecificAttribute),nameof(SecuritiesAccountModification2Choice.MarketSpecificAttribute))]
+    [JsonDerivedType(
+        typeof(SecuritiesAccountModification2Choice.SystemSecuritiesAccount),
+        nameof(SecuritiesAccountModification2Choice.SystemSecuritiesAccount)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesAccountModification2Choice.SystemRestriction),
+        nameof(SecuritiesAccountModification2Choice.SystemRestriction)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesAccountModification2Choice.MarketSpecificAttribute),
+        nameof(SecuritiesAccountModification2Choice.MarketSpecificAttribute)
+    )]
     [IsoId("_7-eWJTp0Eemk2e6qGBk8IQ")]
     [DisplayName("Securities Account Modification 2 Choice")]
-    public abstract partial record SecuritiesAccountModification2Choice_
-    {
-    }
+    public abstract record SecuritiesAccountModification2Choice_ { }
 }

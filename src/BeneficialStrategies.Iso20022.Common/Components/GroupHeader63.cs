@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4jH0gWkkEeKAGeP1fbluEg")]
 [DisplayName("Group Header")]
-public partial record GroupHeader63
+public record GroupHeader63
 {
-    #nullable enable
-    
     /// <summary>
     /// Point to point reference, as assigned by the instructing party, and sent to the next party in the chain to unambiguously identify the message.|Usage: The instructing party has to make sure that MessageIdentification is unique per instructed party for a pre-agreed period.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record GroupHeader63
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
     /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record GroupHeader63
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
+
     /// <summary>
     /// Number of individual transactions contained in the message.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record GroupHeader63
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfTransactions { get; init; } 
-    
+    public required IsoMax15NumericText NumberOfTransactions { get; init; }
+
     /// <summary>
     /// Total of all individual amounts included in the message, irrespective of currencies.
     /// </summary>
@@ -53,25 +51,21 @@ public partial record GroupHeader63
     [DisplayName("Control Sum")]
     [IsoXmlTag("CtrlSum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? ControlSum { get; init; } 
-    
+    public IsoDecimalNumber? ControlSum { get; init; }
+
     /// <summary>
     /// Agent that instructs the next party in the chain to carry out the (set of) instruction(s).
     /// </summary>
     [IsoId("_4wHHtWkkEeKAGeP1fbluEg")]
     [DisplayName("Instructing Agent")]
     [IsoXmlTag("InstgAgt")]
-    public BranchAndFinancialInstitutionIdentification5? InstructingAgent { get; init; } 
-    
+    public BranchAndFinancialInstitutionIdentification5? InstructingAgent { get; init; }
+
     /// <summary>
     /// Agent that is instructed by the previous party in the chain to carry out the (set of) instruction(s).
     /// </summary>
     [IsoId("_4wHHvWkkEeKAGeP1fbluEg")]
     [DisplayName("Instructed Agent")]
     [IsoXmlTag("InstdAgt")]
-    public BranchAndFinancialInstitutionIdentification5? InstructedAgent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public BranchAndFinancialInstitutionIdentification5? InstructedAgent { get; init; }
 }

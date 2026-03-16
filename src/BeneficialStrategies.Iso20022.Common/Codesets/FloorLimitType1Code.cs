@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aqzT0tp-Ed-ak6NoX_4Aeg_-1031522617")]
-[Description(@"Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries.")]
+[Description(
+    @"Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries."
+)]
 [DerivedFrom(typeof(FloorLimitTypeCode))]
 public enum FloorLimitType1Code
 {
@@ -23,7 +25,7 @@ public enum FloorLimitType1Code
     [IsoId("_aqzT09p-Ed-ak6NoX_4Aeg_-430226238")]
     [Description(@"Floor limit applies to credit entries.")]
     Credit = FloorLimitTypeCode.Credit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Floor limit applies to debit entries.
     /// Encoded/decoded by serializers as &quot;DEBT&quot;.
@@ -32,7 +34,7 @@ public enum FloorLimitType1Code
     [IsoId("_aqzT1Np-Ed-ak6NoX_4Aeg_-371121394")]
     [Description(@"Floor limit applies to debit entries.")]
     Debit = FloorLimitTypeCode.Debit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Floor limit applies to both credit and debit entries.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +43,4 @@ public enum FloorLimitType1Code
     [IsoId("_aqzT1dp-Ed-ak6NoX_4Aeg_-344337748")]
     [Description(@"Floor limit applies to both credit and debit entries.")]
     Both = FloorLimitTypeCode.Both, // same ordinal as derivation source for type conversions
-    
 }

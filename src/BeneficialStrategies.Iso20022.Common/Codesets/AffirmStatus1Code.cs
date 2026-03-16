@@ -23,7 +23,7 @@ public enum AffirmStatus1Code
     [IsoId("_Nub5sXOxEeSG-OV0nXMl5w")]
     [Description(@"Notfies that the trade confimation was conpleted.")]
     AckToConfirmCompleteNotification = AffirmStatusCode.AckToConfirmCompleteNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notfies the clearing status changed.
     /// Encoded/decoded by serializers as &quot;ATSC&quot;.
@@ -32,7 +32,7 @@ public enum AffirmStatus1Code
     [IsoId("_N0344XOxEeSG-OV0nXMl5w")]
     [Description(@"Notfies the clearing status changed.")]
     AckToSettlementStateChanged = AffirmStatusCode.AckToSettlementStateChanged, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data was successfully matched.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -41,7 +41,7 @@ public enum AffirmStatus1Code
     [IsoId("_N7VGMXOxEeSG-OV0nXMl5w")]
     [Description(@"Data was successfully matched.")]
     Compared = AffirmStatusCode.Compared, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data was mismatched.
     /// Encoded/decoded by serializers as &quot;MISM&quot;.
@@ -50,7 +50,7 @@ public enum AffirmStatus1Code
     [IsoId("_OBfYkXOxEeSG-OV0nXMl5w")]
     [Description(@"Data was mismatched.")]
     MisMatched = AffirmStatusCode.MisMatched, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Model has errors.
     /// Encoded/decoded by serializers as &quot;MISE&quot;.
@@ -59,7 +59,7 @@ public enum AffirmStatus1Code
     [IsoId("_OHzb8XOxEeSG-OV0nXMl5w")]
     [Description(@"Model has errors.")]
     ModeError = AffirmStatusCode.ModeError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Have no trading permissions.
     /// Encoded/decoded by serializers as &quot;NOTP&quot;.
@@ -68,7 +68,7 @@ public enum AffirmStatus1Code
     [IsoId("_OOAxoXOxEeSG-OV0nXMl5w")]
     [Description(@"Have no trading permissions.")]
     NoTradingPrivilege = AffirmStatusCode.NoTradingPrivilege, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query time was out of range.
     /// Encoded/decoded by serializers as &quot;OUOR&quot;.
@@ -77,7 +77,7 @@ public enum AffirmStatus1Code
     [IsoId("_OUS_0XOxEeSG-OV0nXMl5w")]
     [Description(@"Query time was out of range.")]
     OutOfRange = AffirmStatusCode.OutOfRange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query time was over system service time.
     /// Encoded/decoded by serializers as &quot;OUOS&quot;.
@@ -86,7 +86,7 @@ public enum AffirmStatus1Code
     [IsoId("_OaqGgXOxEeSG-OV0nXMl5w")]
     [Description(@"Query time was over system service time.")]
     OutOfService = AffirmStatusCode.OutOfService, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Format of upload data was right, and system receives successfully.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -95,7 +95,7 @@ public enum AffirmStatus1Code
     [IsoId("_OhAmIXOxEeSG-OV0nXMl5w")]
     [Description(@"Format of upload data was right, and system receives successfully.")]
     Received = AffirmStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Format of upload data was wrong, and system receives unsuccessfully.
     /// Encoded/decoded by serializers as &quot;UNRE&quot;.
@@ -104,5 +104,4 @@ public enum AffirmStatus1Code
     [IsoId("_OnPxAXOxEeSG-OV0nXMl5w")]
     [Description(@"Format of upload data was wrong, and system receives unsuccessfully.")]
     Unreceived = AffirmStatusCode.Unreceived, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NDFOpeningFixing1Choice.OpeningConditions))]
     [KnownType(typeof(NDFOpeningFixing1Choice.OpeningConfirmationReference))]
-    [JsonDerivedType(typeof(NDFOpeningFixing1Choice.OpeningConditions),nameof(NDFOpeningFixing1Choice.OpeningConditions))]
-    [JsonDerivedType(typeof(NDFOpeningFixing1Choice.OpeningConfirmationReference),nameof(NDFOpeningFixing1Choice.OpeningConfirmationReference))]
+    [JsonDerivedType(
+        typeof(NDFOpeningFixing1Choice.OpeningConditions),
+        nameof(NDFOpeningFixing1Choice.OpeningConditions)
+    )]
+    [JsonDerivedType(
+        typeof(NDFOpeningFixing1Choice.OpeningConfirmationReference),
+        nameof(NDFOpeningFixing1Choice.OpeningConfirmationReference)
+    )]
     [IsoId("_1koBMJUIEeak6e8_Fc5fQg")]
     [DisplayName("NDF Opening Fixing 1 Choice")]
-    public abstract partial record NDFOpeningFixing1Choice_
-    {
-    }
+    public abstract record NDFOpeningFixing1Choice_ { }
 }

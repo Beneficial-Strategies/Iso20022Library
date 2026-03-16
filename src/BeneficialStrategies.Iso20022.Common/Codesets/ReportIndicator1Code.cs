@@ -23,7 +23,7 @@ public enum ReportIndicator1Code
     [IsoId("_ZTCPo9p-Ed-ak6NoX_4Aeg_1969382793")]
     [Description(@"Requested report must contain information in the format of a statement.")]
     Standard = ReportIndicatorCode.Standard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Requested report must contain information in a bilaterally agreed format.
     /// Encoded/decoded by serializers as &quot;PRPR&quot;.
@@ -32,5 +32,4 @@ public enum ReportIndicator1Code
     [IsoId("_ZTCPpNp-Ed-ak6NoX_4Aeg_2001706027")]
     [Description(@"Requested report must contain information in a bilaterally agreed format.")]
     Proprietary = ReportIndicatorCode.Proprietary, // same ordinal as derivation source for type conversions
-    
 }

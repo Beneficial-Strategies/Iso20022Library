@@ -23,7 +23,7 @@ public enum RegistrationProcessingStatusCode
     [IsoId("_ZbFYZNp-Ed-ak6NoX_4Aeg_-713352141")]
     [Description(@"Registration has been acknowledged/accepted by the issuer/registrar.")]
     AcknowledgedAccepted,
-    
+
     /// <summary>
     /// Registration has been rejected by the issuer/registrar.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,5 +32,4 @@ public enum RegistrationProcessingStatusCode
     [IsoId("_ZbFYZdp-Ed-ak6NoX_4Aeg_-712428249")]
     [Description(@"Registration has been rejected by the issuer/registrar.")]
     Rejected,
-    
 }

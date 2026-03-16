@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_0g248FJ3EeeHVODnW-1ONQ")]
-[Description(@"Indicates the point in the transaction lifecycle at which the lifecycle identifier was assigned.")]
+[Description(
+    @"Indicates the point in the transaction lifecycle at which the lifecycle identifier was assigned."
+)]
 [Derivations(typeof(LifeCycleSupport1Code))]
 public enum LifeCycleSupportCode
 {
@@ -23,7 +25,7 @@ public enum LifeCycleSupportCode
     [IsoId("_88m9QFJ3EeeHVODnW-1ONQ")]
     [Description(@"Assigned at authorisation time.")]
     Authorisation,
-    
+
     /// <summary>
     /// Assigned at financial time.
     /// Encoded/decoded by serializers as &quot;FINC&quot;.
@@ -32,5 +34,4 @@ public enum LifeCycleSupportCode
     [IsoId("_BxBHcFJ4EeeHVODnW-1ONQ")]
     [Description(@"Assigned at financial time.")]
     Financial,
-    
 }

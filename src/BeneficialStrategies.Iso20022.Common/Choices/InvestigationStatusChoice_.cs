@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InvestigationStatusChoice.RejectedCancellation))]
     [KnownType(typeof(InvestigationStatusChoice.DuplicateOf))]
     [KnownType(typeof(InvestigationStatusChoice.AssignmentCancellationConfirmation))]
-    [JsonDerivedType(typeof(InvestigationStatusChoice.Confirmation),nameof(InvestigationStatusChoice.Confirmation))]
-    [JsonDerivedType(typeof(InvestigationStatusChoice.RejectedModification),nameof(InvestigationStatusChoice.RejectedModification))]
-    [JsonDerivedType(typeof(InvestigationStatusChoice.RejectedCancellation),nameof(InvestigationStatusChoice.RejectedCancellation))]
-    [JsonDerivedType(typeof(InvestigationStatusChoice.DuplicateOf),nameof(InvestigationStatusChoice.DuplicateOf))]
-    [JsonDerivedType(typeof(InvestigationStatusChoice.AssignmentCancellationConfirmation),nameof(InvestigationStatusChoice.AssignmentCancellationConfirmation))]
+    [JsonDerivedType(
+        typeof(InvestigationStatusChoice.Confirmation),
+        nameof(InvestigationStatusChoice.Confirmation)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationStatusChoice.RejectedModification),
+        nameof(InvestigationStatusChoice.RejectedModification)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationStatusChoice.RejectedCancellation),
+        nameof(InvestigationStatusChoice.RejectedCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationStatusChoice.DuplicateOf),
+        nameof(InvestigationStatusChoice.DuplicateOf)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationStatusChoice.AssignmentCancellationConfirmation),
+        nameof(InvestigationStatusChoice.AssignmentCancellationConfirmation)
+    )]
     [IsoId("_UuYYstp-Ed-ak6NoX_4Aeg_788596093")]
     [DisplayName("Investigation Status Choice")]
-    public abstract partial record InvestigationStatusChoice_
-    {
-    }
+    public abstract record InvestigationStatusChoice_ { }
 }

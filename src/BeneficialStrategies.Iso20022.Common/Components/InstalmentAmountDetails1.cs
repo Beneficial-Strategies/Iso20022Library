@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yiOENNuXEei2qvU6FBLZYA")]
 [DisplayName("Instalment Amount Details")]
-public partial record InstalmentAmountDetails1
+public record InstalmentAmountDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Grace period unit type.
     /// </summary>
     [IsoId("_yiOENtuXEei2qvU6FBLZYA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public InstalmentAmountDetailsType1Code? Type { get; init; } 
-    
+    public InstalmentAmountDetailsType1Code? Type { get; init; }
+
     /// <summary>
     /// Grace period other unit type.
     /// </summary>
@@ -33,27 +31,27 @@ public partial record InstalmentAmountDetails1
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
-    /// Grace period sub type. 
+    /// Grace period sub type.
     /// </summary>
     [IsoId("_yiOENduXEei2qvU6FBLZYA")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SubType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SubType { get; init; }
+
     /// <summary>
     /// Detailed instalment amount.
     /// </summary>
     [IsoId("_gJzQgNuZEei2qvU6FBLZYA")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public Amount5? Amount { get; init; } 
-    
+    public Amount5? Amount { get; init; }
+
     /// <summary>
     /// Rate expressed as a percentage, that is, in hundredths, example, 0.7 is 7/10 of a percent, and 7.0 is 7%.
     /// </summary>
@@ -61,9 +59,5 @@ public partial record InstalmentAmountDetails1
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Percentage { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? Percentage { get; init; }
 }

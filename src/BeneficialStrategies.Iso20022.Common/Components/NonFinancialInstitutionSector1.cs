@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LLI50IOdEeW2EdhfKzeL1w")]
 [DisplayName("Non Financial Institution Sector")]
-public partial record NonFinancialInstitutionSector1
+public record NonFinancialInstitutionSector1
 {
-    #nullable enable
-    
     /// <summary>
     /// Taxonomy for non-financial counterparties. The categories correspond to the main sections of NACE classification as defined in the regulation.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record NonFinancialInstitutionSector1
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.NACEDomainIdentifier)]
-    public IsoNACEDomainIdentifier? Sector { get; init; } 
-    
+    public IsoNACEDomainIdentifier? Sector { get; init; }
+
     /// <summary>
     /// Information whether the reporting counterparty is above the clearing threshold referred to the regulation.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record NonFinancialInstitutionSector1
     [DisplayName("Clearing Threshold")]
     [IsoXmlTag("ClrThrshld")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator ClearingThreshold { get; init; } 
-    
+    public required IsoTrueFalseIndicator ClearingThreshold { get; init; }
+
     /// <summary>
     /// Directly linked to commercial activity or treasury financing: Information on whether the contract is objectively measurable as directly linked to the reporting counterparty&apos;s commercial or treasury financing activity.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record NonFinancialInstitutionSector1
     [DisplayName("Directly Linked Activity")]
     [IsoXmlTag("DrctlyLkdActvty")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator DirectlyLinkedActivity { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoTrueFalseIndicator DirectlyLinkedActivity { get; init; }
 }

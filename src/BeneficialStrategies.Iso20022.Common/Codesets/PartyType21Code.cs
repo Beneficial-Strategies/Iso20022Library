@@ -21,9 +21,11 @@ public enum PartyType21Code
     /// </summary>
     [EnumMember(Value = "ACCP")]
     [IsoId("_3Apa8U0uEeea0Mdu1TOzDQ")]
-    [Description(@"Card acceptor, party accepting the card and presenting transaction data to the acquirer.")]
+    [Description(
+        @"Card acceptor, party accepting the card and presenting transaction data to the acquirer."
+    )]
     Acceptor = PartyTypeCode.Acceptor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Holder of a payment card.
     /// Encoded/decoded by serializers as &quot;CRDH&quot;.
@@ -32,7 +34,7 @@ public enum PartyType21Code
     [IsoId("_3W3ikk0uEeea0Mdu1TOzDQ")]
     [Description(@"Holder of a payment card.")]
     Cardholder = PartyTypeCode.Cardholder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +43,7 @@ public enum PartyType21Code
     [IsoId("_4jfGsk0uEeea0Mdu1TOzDQ")]
     [Description(@"Other card payment entity type defined at national level")]
     OtherNational = PartyTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +52,4 @@ public enum PartyType21Code
     [IsoId("_4x3g8k0uEeea0Mdu1TOzDQ")]
     [Description(@"Other card payment entity type defined at private level")]
     OtherPrivate = PartyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

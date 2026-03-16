@@ -23,7 +23,7 @@ public enum AccountChoiceMethodCode
     [IsoId("_L62-QHs7EeSTS7uHCe8FPQ")]
     [Description(@"Account selected in an account list.")]
     AccountSelected,
-    
+
     /// <summary>
     /// Account identification is entered by the customer.
     /// Encoded/decoded by serializers as &quot;ENTR&quot;.
@@ -32,7 +32,7 @@ public enum AccountChoiceMethodCode
     [IsoId("_OzfYQHs7EeSTS7uHCe8FPQ")]
     [Description(@"Account identification is entered by the customer.")]
     Entered,
-    
+
     /// <summary>
     /// Account is selected according to the configuration.
     /// Encoded/decoded by serializers as &quot;IMAC&quot;.
@@ -41,7 +41,7 @@ public enum AccountChoiceMethodCode
     [IsoId("_Q_G7QHs7EeSTS7uHCe8FPQ")]
     [Description(@"Account is selected according to the configuration.")]
     ImplicitAccount,
-    
+
     /// <summary>
     /// Type of account is selected according to the configuration.
     /// Encoded/decoded by serializers as &quot;IMPL&quot;.
@@ -50,7 +50,7 @@ public enum AccountChoiceMethodCode
     [IsoId("_T4HvwHs7EeSTS7uHCe8FPQ")]
     [Description(@"Type of account is selected according to the configuration.")]
     ImplicitType,
-    
+
     /// <summary>
     /// Type of account selected in a list.
     /// Encoded/decoded by serializers as &quot;TPSL&quot;.
@@ -59,7 +59,7 @@ public enum AccountChoiceMethodCode
     [IsoId("_WnguMHs7EeSTS7uHCe8FPQ")]
     [Description(@"Type of account selected in a list.")]
     TypeSelected,
-    
+
     /// <summary>
     /// Account is not selected by the customer or a profile, but by the issuer.
     /// Encoded/decoded by serializers as &quot;NOSL&quot;.
@@ -68,5 +68,4 @@ public enum AccountChoiceMethodCode
     [IsoId("_aLRv4Hs7EeSTS7uHCe8FPQ")]
     [Description(@"Account is not selected by the customer or a profile, but by the issuer.")]
     NoSelection,
-    
 }

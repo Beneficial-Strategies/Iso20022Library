@@ -23,7 +23,7 @@ public enum QuotationType1Code
     [IsoId("_anpo8dK5EeihtcVwfFPNlg")]
     [Description(@"Quotation expressed as a currency and amount.")]
     ActualAmount = QuotationTypeCode.ActualAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quotation is expressed as percentage.
     /// Encoded/decoded by serializers as &quot;PRCT&quot;.
@@ -32,5 +32,4 @@ public enum QuotationType1Code
     [IsoId("_atwQ8dK5EeihtcVwfFPNlg")]
     [Description(@"Quotation is expressed as percentage.")]
     Percentage = QuotationTypeCode.Percentage, // same ordinal as derivation source for type conversions
-    
 }

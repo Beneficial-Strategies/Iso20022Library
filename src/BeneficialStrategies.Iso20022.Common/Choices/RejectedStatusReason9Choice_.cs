@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RejectedStatusReason9Choice.Reason))]
     [KnownType(typeof(RejectedStatusReason9Choice.ExtendedReason))]
     [KnownType(typeof(RejectedStatusReason9Choice.DataSourceScheme))]
-    [JsonDerivedType(typeof(RejectedStatusReason9Choice.Reason),nameof(RejectedStatusReason9Choice.Reason))]
-    [JsonDerivedType(typeof(RejectedStatusReason9Choice.ExtendedReason),nameof(RejectedStatusReason9Choice.ExtendedReason))]
-    [JsonDerivedType(typeof(RejectedStatusReason9Choice.DataSourceScheme),nameof(RejectedStatusReason9Choice.DataSourceScheme))]
+    [JsonDerivedType(
+        typeof(RejectedStatusReason9Choice.Reason),
+        nameof(RejectedStatusReason9Choice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(RejectedStatusReason9Choice.ExtendedReason),
+        nameof(RejectedStatusReason9Choice.ExtendedReason)
+    )]
+    [JsonDerivedType(
+        typeof(RejectedStatusReason9Choice.DataSourceScheme),
+        nameof(RejectedStatusReason9Choice.DataSourceScheme)
+    )]
     [IsoId("_RXWyh9p-Ed-ak6NoX_4Aeg_-1456677531")]
     [DisplayName("Rejected Status Reason 9 Choice")]
-    public abstract partial record RejectedStatusReason9Choice_
-    {
-    }
+    public abstract record RejectedStatusReason9Choice_ { }
 }

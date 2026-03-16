@@ -23,23 +23,26 @@ public enum CardFallbackCode
     [IsoId("_WDZrUGkCEeS7zPBpvm732w")]
     [Description(@"No card fall-back during the transaction in progress.")]
     NoFallback,
-    
+
     /// <summary>
     /// Card fall-back occurred during the transaction in progress. The previous transaction on the terminal was successful.
     /// Encoded/decoded by serializers as &quot;SFLB&quot;.
     /// </summary>
     [EnumMember(Value = "SFLB")]
     [IsoId("_ZaPEQGkCEeS7zPBpvm732w")]
-    [Description(@"Card fall-back occurred during the transaction in progress. The previous transaction on the terminal was successful.")]
+    [Description(
+        @"Card fall-back occurred during the transaction in progress. The previous transaction on the terminal was successful."
+    )]
     FallbackAfterSuccess,
-    
+
     /// <summary>
     /// Card fall-back occurred during the transaction in progress. The previous transaction on the terminal failed.
     /// Encoded/decoded by serializers as &quot;FFLB&quot;.
     /// </summary>
     [EnumMember(Value = "FFLB")]
     [IsoId("_e2q3wGkCEeS7zPBpvm732w")]
-    [Description(@"Card fall-back occurred during the transaction in progress. The previous transaction on the terminal failed.")]
+    [Description(
+        @"Card fall-back occurred during the transaction in progress. The previous transaction on the terminal failed."
+    )]
     FallbackAfterFailure,
-    
 }

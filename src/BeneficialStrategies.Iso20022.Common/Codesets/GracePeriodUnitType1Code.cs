@@ -23,7 +23,7 @@ public enum GracePeriodUnitType1Code
     [IsoId("_xb7ZcTEpEemzCpWiCwK4aQ")]
     [Description(@"Grace period weeks.")]
     Weeks = GracePeriodUnitTypeCode.Weeks, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Grace period payments.
     /// Encoded/decoded by serializers as &quot;PMTS&quot;.
@@ -32,7 +32,7 @@ public enum GracePeriodUnitType1Code
     [IsoId("_xwpFMTEpEemzCpWiCwK4aQ")]
     [Description(@"Grace period payments.")]
     Payments = GracePeriodUnitTypeCode.Payments, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other Private Grace period.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum GracePeriodUnitType1Code
     [IsoId("_yFqS8TEpEemzCpWiCwK4aQ")]
     [Description(@"Other Private Grace period.")]
     OtherPrivate = GracePeriodUnitTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other National Grace period.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum GracePeriodUnitType1Code
     [IsoId("_yaONsTEpEemzCpWiCwK4aQ")]
     [Description(@"Other National Grace period.")]
     OtherNational = GracePeriodUnitTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Grace period months.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -59,7 +59,7 @@ public enum GracePeriodUnitType1Code
     [IsoId("_yuo-gTEpEemzCpWiCwK4aQ")]
     [Description(@"Grace period months.")]
     Months = GracePeriodUnitTypeCode.Months, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Grace period days.
     /// Encoded/decoded by serializers as &quot;DAYS&quot;.
@@ -68,5 +68,4 @@ public enum GracePeriodUnitType1Code
     [IsoId("_zDWqQTEpEemzCpWiCwK4aQ")]
     [Description(@"Grace period days.")]
     Days = GracePeriodUnitTypeCode.Days, // same ordinal as derivation source for type conversions
-    
 }

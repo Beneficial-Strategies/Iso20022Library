@@ -23,7 +23,7 @@ public enum PreferredContactMethodCode
     [IsoId("_6UHyCZqlEeGSON8vddiWzQ_-1387252991")]
     [Description(@"Preferred method used to reach the contact is per letter.")]
     Letter,
-    
+
     /// <summary>
     /// Preferred method used to reach the contact is per email.
     /// Encoded/decoded by serializers as &quot;MAIL&quot;.
@@ -32,7 +32,7 @@ public enum PreferredContactMethodCode
     [IsoId("_6URjAJqlEeGSON8vddiWzQ_-735312912")]
     [Description(@"Preferred method used to reach the contact is per email.")]
     Email,
-    
+
     /// <summary>
     /// Preferred method used to reach the contact is per phone.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -41,7 +41,7 @@ public enum PreferredContactMethodCode
     [IsoId("_6URjAZqlEeGSON8vddiWzQ_877055563")]
     [Description(@"Preferred method used to reach the contact is per phone.")]
     Phone,
-    
+
     /// <summary>
     /// Preferred method used to reach the contact is per fax.
     /// Encoded/decoded by serializers as &quot;FAXX&quot;.
@@ -50,7 +50,7 @@ public enum PreferredContactMethodCode
     [IsoId("_6URjApqlEeGSON8vddiWzQ_-724061441")]
     [Description(@"Preferred method used to reach the contact is per fax.")]
     Fax,
-    
+
     /// <summary>
     /// Preferred method used to reach the contact is per mobile or cell phone.
     /// Encoded/decoded by serializers as &quot;CELL&quot;.
@@ -59,5 +59,4 @@ public enum PreferredContactMethodCode
     [IsoId("_6URjA5qlEeGSON8vddiWzQ_-2097794174")]
     [Description(@"Preferred method used to reach the contact is per mobile or cell phone.")]
     MobileOrCellPhone,
-    
 }

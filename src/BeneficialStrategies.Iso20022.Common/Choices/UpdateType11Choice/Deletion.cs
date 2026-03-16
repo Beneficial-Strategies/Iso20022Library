@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.UpdateType11Choice
 {
     /// <summary>
@@ -13,132 +13,126 @@ namespace BeneficialStrategies.Iso20022.Choices.UpdateType11Choice
     /// </summary>
     [IsoId("_5_bQsyTwEeOSHvJr_wacAw")]
     [DisplayName("Deletion")]
-    public partial record Deletion : UpdateType11Choice_
+    public record Deletion : UpdateType11Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Provides settlement type and identification information.
         /// </summary>
         [IsoId("_7aCNgSTwEeOSHvJr_wacAw")]
         [DisplayName("Settlement Type And Additional Parameters")]
         [IsoXmlTag("SttlmTpAndAddtlParams")]
-        public SettlementTypeAndAdditionalParameters6? SettlementTypeAndAdditionalParameters { get; init; } 
-        
+        public SettlementTypeAndAdditionalParameters6? SettlementTypeAndAdditionalParameters { get; init; }
+
         /// <summary>
         /// Link to another transaction that must be processed after, before or at the same time.
         /// </summary>
         [IsoId("_7aCNgyTwEeOSHvJr_wacAw")]
         [DisplayName("Linkages")]
         [IsoXmlTag("Lnkgs")]
-        public Linkages21? Linkages { get; init; } 
-        
+        public Linkages21? Linkages { get; init; }
+
         /// <summary>
         /// Details of the trade.
         /// </summary>
         [IsoId("_7aCNhSTwEeOSHvJr_wacAw")]
         [DisplayName("Trade Details")]
         [IsoXmlTag("TradDtls")]
-        public SecuritiesTradeDetails32? TradeDetails { get; init; } 
-        
+        public SecuritiesTradeDetails32? TradeDetails { get; init; }
+
         /// <summary>
         /// Attributes defining a financial instrument.
         /// </summary>
         [IsoId("_7aCNhyTwEeOSHvJr_wacAw")]
         [DisplayName("Financial Instrument Attributes")]
         [IsoXmlTag("FinInstrmAttrbts")]
-        public FinancialInstrumentAttributes35? FinancialInstrumentAttributes { get; init; } 
-        
+        public FinancialInstrumentAttributes35? FinancialInstrumentAttributes { get; init; }
+
         /// <summary>
         /// Details related to the account and quantity involved in the transaction.
         /// </summary>
         [IsoId("_7aCNiSTwEeOSHvJr_wacAw")]
         [DisplayName("Quantity And Account Details")]
         [IsoXmlTag("QtyAndAcctDtls")]
-        public QuantityAndAccount29? QuantityAndAccountDetails { get; init; } 
-        
+        public QuantityAndAccount29? QuantityAndAccountDetails { get; init; }
+
         /// <summary>
         /// Parameters which explicitly state the conditions that must be fulfilled before a particular transaction of a financial instrument can be settled. These parameters are defined by the instructing party in compliance with settlement rules in the market the transaction will settle in.
         /// </summary>
         [IsoId("_7aCNiyTwEeOSHvJr_wacAw")]
         [DisplayName("Settlement Parameters")]
         [IsoXmlTag("SttlmParams")]
-        public SettlementDetails68? SettlementParameters { get; init; } 
-        
+        public SettlementDetails68? SettlementParameters { get; init; }
+
         /// <summary>
         /// Specifies what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.
         /// </summary>
         [IsoId("_7aCNjSTwEeOSHvJr_wacAw")]
         [DisplayName("Standing Settlement Instruction Details")]
         [IsoXmlTag("StgSttlmInstrDtls")]
-        public StandingSettlementInstruction4? StandingSettlementInstructionDetails { get; init; } 
-        
+        public StandingSettlementInstruction4? StandingSettlementInstructionDetails { get; init; }
+
         /// <summary>
         /// Identifies the chain of delivering settlement parties.
         /// </summary>
         [IsoId("_7aCNjyTwEeOSHvJr_wacAw")]
         [DisplayName("Delivering Settlement Parties")]
         [IsoXmlTag("DlvrgSttlmPties")]
-        public SettlementParties26? DeliveringSettlementParties { get; init; } 
-        
+        public SettlementParties26? DeliveringSettlementParties { get; init; }
+
         /// <summary>
         /// Identifies the chain of receiving settlement parties.
         /// </summary>
         [IsoId("_7aCNkSTwEeOSHvJr_wacAw")]
         [DisplayName("Receiving Settlement Parties")]
         [IsoXmlTag("RcvgSttlmPties")]
-        public SettlementParties26? ReceivingSettlementParties { get; init; } 
-        
+        public SettlementParties26? ReceivingSettlementParties { get; init; }
+
         /// <summary>
         /// Cash parties involved in the transaction if different for the securities settlement parties.
         /// </summary>
         [IsoId("_7aCNkyTwEeOSHvJr_wacAw")]
         [DisplayName("Cash Parties")]
         [IsoXmlTag("CshPties")]
-        public CashParties17? CashParties { get; init; } 
-        
+        public CashParties17? CashParties { get; init; }
+
         /// <summary>
         /// Total amount of money to be paid or received in exchange for the securities.
         /// </summary>
         [IsoId("_7aCNlSTwEeOSHvJr_wacAw")]
         [DisplayName("Settlement Amount")]
         [IsoXmlTag("SttlmAmt")]
-        public AmountAndDirection37? SettlementAmount { get; init; } 
-        
+        public AmountAndDirection37? SettlementAmount { get; init; }
+
         /// <summary>
         /// Other amounts than the settlement amount.
         /// </summary>
         [IsoId("_7aCNlyTwEeOSHvJr_wacAw")]
         [DisplayName("Other Amounts")]
         [IsoXmlTag("OthrAmts")]
-        public OtherAmounts14? OtherAmounts { get; init; } 
-        
+        public OtherAmounts14? OtherAmounts { get; init; }
+
         /// <summary>
         /// Other business parties relevant to the transaction.
         /// </summary>
         [IsoId("_7aCNmSTwEeOSHvJr_wacAw")]
         [DisplayName("Other Business Parties")]
         [IsoXmlTag("OthrBizPties")]
-        public OtherParties19? OtherBusinessParties { get; init; } 
-        
+        public OtherParties19? OtherBusinessParties { get; init; }
+
         /// <summary>
         /// Provides information required for the registration or physical settlement.
         /// </summary>
         [IsoId("_7aCNmyTwEeOSHvJr_wacAw")]
         [DisplayName("Additional Physical Or Registration Details")]
         [IsoXmlTag("AddtlPhysOrRegnDtls")]
-        public RegistrationParameters1? AdditionalPhysicalOrRegistrationDetails { get; init; } 
-        
+        public RegistrationParameters1? AdditionalPhysicalOrRegistrationDetails { get; init; }
+
         /// <summary>
         /// Additional information that cannot be captured in the structured elements and/or any other specific block.
         /// </summary>
         [IsoId("_7aCNnSTwEeOSHvJr_wacAw")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; } 
-        
-        
-        #nullable disable
-        
+        public SupplementaryData1? SupplementaryData { get; init; }
     }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OriginalMandate3Choice.OriginalMandateIdentification))]
     [KnownType(typeof(OriginalMandate3Choice.OriginalMandate))]
-    [JsonDerivedType(typeof(OriginalMandate3Choice.OriginalMandateIdentification),nameof(OriginalMandate3Choice.OriginalMandateIdentification))]
-    [JsonDerivedType(typeof(OriginalMandate3Choice.OriginalMandate),nameof(OriginalMandate3Choice.OriginalMandate))]
+    [JsonDerivedType(
+        typeof(OriginalMandate3Choice.OriginalMandateIdentification),
+        nameof(OriginalMandate3Choice.OriginalMandateIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(OriginalMandate3Choice.OriginalMandate),
+        nameof(OriginalMandate3Choice.OriginalMandate)
+    )]
     [IsoId("_YThGLR77EeSxevWRRWxNAg")]
     [DisplayName("Original Mandate 3 Choice")]
-    public abstract partial record OriginalMandate3Choice_
-    {
-    }
+    public abstract record OriginalMandate3Choice_ { }
 }

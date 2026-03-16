@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FW05gYYMEemxIqbaFEE8-w")]
 [DisplayName("Stored Value Response")]
-public partial record StoredValueResponse2
+public record StoredValueResponse2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of a POI transaction.
     /// </summary>
     [IsoId("_FhPZwYYMEemxIqbaFEE8-w")]
     [DisplayName("POI Transaction Identification")]
     [IsoXmlTag("POITxId")]
-    public required TransactionIdentifier1 POITransactionIdentification { get; init; } 
-    
+    public required TransactionIdentifier1 POITransactionIdentification { get; init; }
+
     /// <summary>
     /// Result of loading/reloading a stored value card.
     /// </summary>
     [IsoId("_FhPZw4YMEemxIqbaFEE8-w")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public StoredValueData2? Result { get; init; } 
-    
+    public StoredValueData2? Result { get; init; }
+
     /// <summary>
     /// Customer or Merchant payment receipt.
     /// </summary>
     [IsoId("_FhPZxYYMEemxIqbaFEE8-w")]
     [DisplayName("Receipt")]
     [IsoXmlTag("Rct")]
-    public PaymentReceipt1? Receipt { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PaymentReceipt1? Receipt { get; init; }
 }

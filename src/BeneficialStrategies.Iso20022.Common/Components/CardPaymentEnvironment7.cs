@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TDwwwwEcEeCQm6a_G2yO_w_-1497481893")]
 [DisplayName("Card Payment Environment")]
-public partial record CardPaymentEnvironment7
+public record CardPaymentEnvironment7
 {
-    #nullable enable
-    
     /// <summary>
     /// Acquirer involved in the card payment reconciliation.
     /// </summary>
     [IsoId("_TDwwxAEcEeCQm6a_G2yO_w_915910768")]
     [DisplayName("Acquirer")]
     [IsoXmlTag("Acqrr")]
-    public required Acquirer1 Acquirer { get; init; } 
-    
+    public required Acquirer1 Acquirer { get; init; }
+
     /// <summary>
     /// Identification of the merchant requesting the reconciliation.
     /// </summary>
     [IsoId("_TDwwxQEcEeCQm6a_G2yO_w_-210812803")]
     [DisplayName("Merchant Identification")]
     [IsoXmlTag("MrchntId")]
-    public GenericIdentification32? MerchantIdentification { get; init; } 
-    
+    public GenericIdentification32? MerchantIdentification { get; init; }
+
     /// <summary>
     /// Identification of the POI requesting the reconciliation.
     /// </summary>
     [IsoId("_TDwwxgEcEeCQm6a_G2yO_w_-221911580")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
-    public GenericIdentification32? POIIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public GenericIdentification32? POIIdentification { get; init; }
 }

@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SettlementStatus20Choice.Pending))]
     [KnownType(typeof(SettlementStatus20Choice.Failing))]
     [KnownType(typeof(SettlementStatus20Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlementStatus20Choice.Pending),nameof(SettlementStatus20Choice.Pending))]
-    [JsonDerivedType(typeof(SettlementStatus20Choice.Failing),nameof(SettlementStatus20Choice.Failing))]
-    [JsonDerivedType(typeof(SettlementStatus20Choice.Proprietary),nameof(SettlementStatus20Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SettlementStatus20Choice.Pending),
+        nameof(SettlementStatus20Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementStatus20Choice.Failing),
+        nameof(SettlementStatus20Choice.Failing)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementStatus20Choice.Proprietary),
+        nameof(SettlementStatus20Choice.Proprietary)
+    )]
     [IsoId("_5SGOQ5NLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Status 20 Choice")]
-    public abstract partial record SettlementStatus20Choice_
-    {
-    }
+    public abstract record SettlementStatus20Choice_ { }
 }

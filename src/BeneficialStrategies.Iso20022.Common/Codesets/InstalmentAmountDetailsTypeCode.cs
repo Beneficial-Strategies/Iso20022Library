@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_J00oB9uYEei2qvU6FBLZYA")]
 [Description(@"Contains the details of the grace period applicable to the instalment")]
-[Derivations(typeof(InstalmentAmountDetailsType1Code),typeof(InstalmentAmountDetailsType2Code))]
+[Derivations(typeof(InstalmentAmountDetailsType1Code), typeof(InstalmentAmountDetailsType2Code))]
 public enum InstalmentAmountDetailsTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_J01PFNuYEei2qvU6FBLZYA")]
     [Description(@"Insurance amount")]
     Insurance,
-    
+
     /// <summary>
     /// Requested amount
     /// Encoded/decoded by serializers as &quot;RQST&quot;.
@@ -32,7 +32,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_J01PFduYEei2qvU6FBLZYA")]
     [Description(@"Requested amount")]
     Requested,
-    
+
     /// <summary>
     /// Instalment amount tax
     /// Encoded/decoded by serializers as &quot;TAXX&quot;.
@@ -41,7 +41,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_J01PENuYEei2qvU6FBLZYA")]
     [Description(@"Instalment amount tax")]
     Tax,
-    
+
     /// <summary>
     /// Expense Amount
     /// Encoded/decoded by serializers as &quot;EXPN&quot;.
@@ -50,7 +50,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_J01PEtuYEei2qvU6FBLZYA")]
     [Description(@"Expense Amount")]
     Expense,
-    
+
     /// <summary>
     /// Grace period unit type
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_J01PE9uYEei2qvU6FBLZYA")]
     [Description(@"Grace period unit type")]
     OtherNational,
-    
+
     /// <summary>
     /// Grace period unit type
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +68,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_J01PEduYEei2qvU6FBLZYA")]
     [Description(@"Grace period unit type")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Other amounts
     /// Encoded/decoded by serializers as &quot;OTHC&quot;.
@@ -77,7 +77,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_qeGAQNuYEei2qvU6FBLZYA")]
     [Description(@"Other amounts")]
     OtherCharges,
-    
+
     /// <summary>
     /// Funded amount
     /// Encoded/decoded by serializers as &quot;FUNA&quot;.
@@ -86,7 +86,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_u_P3QNuYEei2qvU6FBLZYA")]
     [Description(@"Funded amount")]
     Funded,
-    
+
     /// <summary>
     /// Fees amount
     /// Encoded/decoded by serializers as &quot;FEES&quot;.
@@ -95,7 +95,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_LHhCINucEei2qvU6FBLZYA")]
     [Description(@"Fees amount")]
     Fees,
-    
+
     /// <summary>
     /// Total financing cost per annum.
     /// Encoded/decoded by serializers as &quot;AFCO&quot;.
@@ -104,7 +104,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_8MWRMOkXEemeDPHh-U9b6w")]
     [Description(@"Total financing cost per annum.")]
     AnnualFinancingCost,
-    
+
     /// <summary>
     /// Interest amount.
     /// Encoded/decoded by serializers as &quot;INTR&quot;.
@@ -113,7 +113,7 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_sMJBsJJNEeuuktRxxQZoNQ")]
     [Description(@"Interest amount.")]
     Interest,
-    
+
     /// <summary>
     /// Principal amount.
     /// Encoded/decoded by serializers as &quot;PRNC&quot;.
@@ -122,5 +122,4 @@ public enum InstalmentAmountDetailsTypeCode
     [IsoId("_0qtJcJJNEeuuktRxxQZoNQ")]
     [Description(@"Principal amount.")]
     Principal,
-    
 }

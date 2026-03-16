@@ -21,16 +21,19 @@ public enum CardType1Code
     /// </summary>
     [EnumMember(Value = "CRDT")]
     [IsoId("_zd5TUw93EeGeV5vP7Mvdig_-1511071309")]
-    [Description(@"Card where the holder has been granted a line of credit. The card enables the holder to make purchases and withdraw cash up to a pre-arranged ceiling.")]
+    [Description(
+        @"Card where the holder has been granted a line of credit. The card enables the holder to make purchases and withdraw cash up to a pre-arranged ceiling."
+    )]
     CreditCard = CardTypeCode.CreditCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card enabling the holder to have its purchases directly charged to its account. The card may also combine other functions, for example, cash card or cheque guaranteed card.
     /// Encoded/decoded by serializers as &quot;DBIT&quot;.
     /// </summary>
     [EnumMember(Value = "DBIT")]
     [IsoId("_zd5TVA93EeGeV5vP7Mvdig_-502422457")]
-    [Description(@"Card enabling the holder to have its purchases directly charged to its account. The card may also combine other functions, for example, cash card or cheque guaranteed card.")]
+    [Description(
+        @"Card enabling the holder to have its purchases directly charged to its account. The card may also combine other functions, for example, cash card or cheque guaranteed card."
+    )]
     DebitCard = CardTypeCode.DebitCard, // same ordinal as derivation source for type conversions
-    
 }

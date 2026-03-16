@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Specifies the sub-status of a resolution. 
+/// Specifies the sub-status of a resolution.
 /// </summary>
 [DataContract]
 [Serializable]
@@ -23,14 +23,13 @@ public enum ResolutionSubStatus1Code
     [IsoId("_Zd6yETUHEe2tRf29bleifQ")]
     [Description(@"Resolution voted at the meeting was amended.")]
     AmendedResolution = ResolutionSubStatusCode.AmendedResolution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Resolution voted at the meeting is new. 
+    /// Resolution voted at the meeting is new.
     /// Encoded/decoded by serializers as &quot;NEWR&quot;.
     /// </summary>
     [EnumMember(Value = "NEWR")]
     [IsoId("_ZkxoATUHEe2tRf29bleifQ")]
     [Description(@"Resolution voted at the meeting is new. ")]
     NewResolution = ResolutionSubStatusCode.NewResolution, // same ordinal as derivation source for type conversions
-    
 }

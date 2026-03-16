@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_OTgzMjc5-AOSNFX-8224496")]
-[Description(@"Specifies the type of action concerning registration information.|The default value is OPEN.")]
+[Description(
+    @"Specifies the type of action concerning registration information.|The default value is OPEN."
+)]
 [DerivedFrom(typeof(AgreementItemActionCode))]
 public enum AgreementItemAction1Code
 {
@@ -24,7 +26,7 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTY3-AOSNFX-0262741")]
     [Description(@"Deactivate agreement item.")]
     Deactivate = AgreementItemActionCode.Deactivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hold the agreement item.
     /// Encoded/decoded by serializers as &quot;HOLD&quot;.
@@ -33,7 +35,7 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTY2-AOSNFX-0262741")]
     [Description(@"Hold the agreement item.")]
     Hold = AgreementItemActionCode.Hold, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modify agreement item information.
     /// Encoded/decoded by serializers as &quot;MDFY&quot;.
@@ -42,7 +44,7 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTY1-AOSNFX-0262740")]
     [Description(@"Modify agreement item information.")]
     Modify = AgreementItemActionCode.Modify, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reactivate agreement item.
     /// Encoded/decoded by serializers as &quot;REAC&quot;.
@@ -51,7 +53,7 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTY4-AOSNFX-0262741")]
     [Description(@"Reactivate agreement item.")]
     Reactivate = AgreementItemActionCode.Reactivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Register item as new agreement.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -60,7 +62,7 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTY0-AOSNFX-0262740")]
     [Description(@"Register item as new agreement.")]
     Register = AgreementItemActionCode.Register, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Send status with full agreement information details.
     /// Encoded/decoded by serializers as &quot;SYNC&quot;.
@@ -69,7 +71,7 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTcw-AOSNFX-0262741")]
     [Description(@"Send status with full agreement information details.")]
     Synchronize = AgreementItemActionCode.Synchronize, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verify agreement item information.
     /// Encoded/decoded by serializers as &quot;VRFY&quot;.
@@ -78,5 +80,4 @@ public enum AgreementItemAction1Code
     [IsoId("_OTMxOTY5-AOSNFX-0262741")]
     [Description(@"Verify agreement item information.")]
     Verify = AgreementItemActionCode.Verify, // same ordinal as derivation source for type conversions
-    
 }

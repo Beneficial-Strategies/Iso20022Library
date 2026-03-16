@@ -23,7 +23,7 @@ public enum ATMCounterType1Code
     [IsoId("_InqOYeg3EeSbwP3G-MV9YA")]
     [Description(@"Counters since the last counters inquiry.")]
     CountersInquiry = ATMCounterTypeCode.CountersInquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counters for a customer transaction.
     /// Encoded/decoded by serializers as &quot;CTXN&quot;.
@@ -32,7 +32,7 @@ public enum ATMCounterType1Code
     [IsoId("_IvHhQeg3EeSbwP3G-MV9YA")]
     [Description(@"Counters for a customer transaction.")]
     CustomerTransaction = ATMCounterTypeCode.CustomerTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counters since the last cut-off.
     /// Encoded/decoded by serializers as &quot;CTOF&quot;.
@@ -41,7 +41,7 @@ public enum ATMCounterType1Code
     [IsoId("_I1X6Qeg3EeSbwP3G-MV9YA")]
     [Description(@"Counters since the last cut-off.")]
     CutOff = ATMCounterTypeCode.CutOff, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counters since the beginning of the business day.
     /// Encoded/decoded by serializers as &quot;BDAY&quot;.
@@ -50,7 +50,7 @@ public enum ATMCounterType1Code
     [IsoId("_I7fJUeg3EeSbwP3G-MV9YA")]
     [Description(@"Counters since the beginning of the business day.")]
     BusinessDay = ATMCounterTypeCode.BusinessDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counters for an operation performed by an operator on the ATM.
     /// Encoded/decoded by serializers as &quot;PRTN&quot;.
@@ -59,7 +59,7 @@ public enum ATMCounterType1Code
     [IsoId("_JBviUeg3EeSbwP3G-MV9YA")]
     [Description(@"Counters for an operation performed by an operator on the ATM.")]
     Operation = ATMCounterTypeCode.Operation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counters since the last update by an operator on the ATM.
     /// Encoded/decoded by serializers as &quot;OPER&quot;.
@@ -68,5 +68,4 @@ public enum ATMCounterType1Code
     [IsoId("_JImYQeg3EeSbwP3G-MV9YA")]
     [Description(@"Counters since the last update by an operator on the ATM.")]
     OperatorAdjust = ATMCounterTypeCode.OperatorAdjust, // same ordinal as derivation source for type conversions
-    
 }

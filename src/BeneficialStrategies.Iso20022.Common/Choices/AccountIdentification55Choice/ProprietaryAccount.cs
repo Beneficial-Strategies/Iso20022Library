@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice
     /// </summary>
     [IsoId("_e6Hl9watEe2phaVG0lYKTw")]
     [DisplayName("Proprietary Account")]
-    public partial record ProprietaryAccount : AccountIdentification55Choice_
+    public record ProprietaryAccount : AccountIdentification55Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, eg, account identifier.
         /// </summary>
@@ -24,11 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification55Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max34Text)]
-        [StringLength(maximumLength: 34 ,MinimumLength = 1)]
-        public required IsoMax34Text Identification { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 34, MinimumLength = 1)]
+        public required IsoMax34Text Identification { get; init; }
     }
 }

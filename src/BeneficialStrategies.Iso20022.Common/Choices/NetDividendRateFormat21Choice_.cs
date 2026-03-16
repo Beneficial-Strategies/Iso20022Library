@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(NetDividendRateFormat21Choice.AmountAndRateStatus))]
     [KnownType(typeof(NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(NetDividendRateFormat21Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(NetDividendRateFormat21Choice.Amount),nameof(NetDividendRateFormat21Choice.Amount))]
-    [JsonDerivedType(typeof(NetDividendRateFormat21Choice.AmountAndRateStatus),nameof(NetDividendRateFormat21Choice.AmountAndRateStatus))]
-    [JsonDerivedType(typeof(NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus),nameof(NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(NetDividendRateFormat21Choice.NotSpecifiedRate),nameof(NetDividendRateFormat21Choice.NotSpecifiedRate))]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat21Choice.Amount),
+        nameof(NetDividendRateFormat21Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat21Choice.AmountAndRateStatus),
+        nameof(NetDividendRateFormat21Choice.AmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus),
+        nameof(NetDividendRateFormat21Choice.RateTypeAndAmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(NetDividendRateFormat21Choice.NotSpecifiedRate),
+        nameof(NetDividendRateFormat21Choice.NotSpecifiedRate)
+    )]
     [IsoId("_Gr_NkWOWEeWYYI9c62RCjw")]
     [DisplayName("Net Dividend Rate Format 21 Choice")]
-    public abstract partial record NetDividendRateFormat21Choice_
-    {
-    }
+    public abstract record NetDividendRateFormat21Choice_ { }
 }

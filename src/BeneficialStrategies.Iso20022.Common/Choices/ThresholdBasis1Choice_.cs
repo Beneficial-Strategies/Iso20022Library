@@ -7,15 +7,16 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Choice between a threshold basis defined as a predefined code or as a proprietary value. 
+    /// Choice between a threshold basis defined as a predefined code or as a proprietary value.
     /// </summary>
     [KnownType(typeof(ThresholdBasis1Choice.Code))]
     [KnownType(typeof(ThresholdBasis1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ThresholdBasis1Choice.Code),nameof(ThresholdBasis1Choice.Code))]
-    [JsonDerivedType(typeof(ThresholdBasis1Choice.Proprietary),nameof(ThresholdBasis1Choice.Proprietary))]
+    [JsonDerivedType(typeof(ThresholdBasis1Choice.Code), nameof(ThresholdBasis1Choice.Code))]
+    [JsonDerivedType(
+        typeof(ThresholdBasis1Choice.Proprietary),
+        nameof(ThresholdBasis1Choice.Proprietary)
+    )]
     [IsoId("_wlX_cBuMEeyhRdHRjakS2w")]
     [DisplayName("Threshold Basis 1 Choice")]
-    public abstract partial record ThresholdBasis1Choice_
-    {
-    }
+    public abstract record ThresholdBasis1Choice_ { }
 }

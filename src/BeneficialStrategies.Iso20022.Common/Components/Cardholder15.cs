@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_91eHMEarEeeIjf8aP9KbJA")]
 [DisplayName("Cardholder")]
-public partial record Cardholder15
+public record Cardholder15
 {
-    #nullable enable
-    
     /// <summary>
     /// Contains the registered cardholder name that issuer knows to be correct.
     /// </summary>
     [IsoId("_Ozg8sEasEeeIjf8aP9KbJA")]
     [DisplayName("Cardholder Name")]
     [IsoXmlTag("CrdhldrNm")]
-    public CardholderName1? CardholderName { get; init; } 
-    
+    public CardholderName1? CardholderName { get; init; }
+
     /// <summary>
     /// Identification of the cardholder.
     /// ISO 8583:87 bit 56 (TLV tag 03/dataset 73)
@@ -35,16 +33,16 @@ public partial record Cardholder15
     [IsoId("_Wy6cMEasEeeIjf8aP9KbJA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public Credentials1? Identification { get; init; } 
-    
+    public Credentials1? Identification { get; init; }
+
     /// <summary>
     /// Complete address of the cardholder.
     /// </summary>
     [IsoId("_mALlsEauEeeIjf8aP9KbJA")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public Address1? Address { get; init; } 
-    
+    public Address1? Address { get; init; }
+
     /// <summary>
     /// Contact information.
     /// ISO 8583:87 bit 56 (TLV tag 02/dataset 72)
@@ -54,8 +52,8 @@ public partial record Cardholder15
     [IsoId("_VXD3MJjHEeeMBq7G6mQ32Q")]
     [DisplayName("Contact Information")]
     [IsoXmlTag("CtctInf")]
-    public Contact1? ContactInformation { get; init; } 
-    
+    public Contact1? ContactInformation { get; init; }
+
     /// <summary>
     /// Date of birth of the party.
     /// </summary>
@@ -63,9 +61,5 @@ public partial record Cardholder15
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? DateOfBirth { get; init; }
 }

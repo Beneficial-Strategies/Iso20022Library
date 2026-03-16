@@ -23,7 +23,7 @@ public enum AssetClassSubProductEnvironmentalType1Code
     [IsoId("_mjMYsc5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type emission.")]
     Emission = AssetClassSubProductTypeCode.Emission, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type weather.
     /// Encoded/decoded by serializers as &quot;WTHR&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassSubProductEnvironmentalType1Code
     [IsoId("_mzjv8c5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type weather.")]
     Weather = AssetClassSubProductTypeCode.Weather, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum AssetClassSubProductEnvironmentalType1Code
     [IsoId("_jVjxIUDbEeWOL-OsSq2h6w")]
     [Description(@"Commodity of other type.")]
     Other = AssetClassSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

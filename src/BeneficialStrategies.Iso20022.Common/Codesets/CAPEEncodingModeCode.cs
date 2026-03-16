@@ -31,5 +31,4 @@ public enum CAPEEncodingModeCode
     [IsoId("_CAPEEncodingModeCode_XMLEncoding")]
     [Description(@"Data exchanged with the protocol between both parties are encoded in XML.")]
     XMLEncoding,
-
 }

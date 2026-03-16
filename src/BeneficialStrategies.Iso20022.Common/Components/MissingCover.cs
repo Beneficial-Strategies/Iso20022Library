@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9zQWdp-Ed-ak6NoX_4Aeg_-539916461")]
 [DisplayName("Missing Cover")]
-public partial record MissingCover
+public record MissingCover
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether or not the claim is related to a missing cover.
     /// </summary>
@@ -25,9 +23,5 @@ public partial record MissingCover
     [DisplayName("Missing Cover Indication")]
     [IsoXmlTag("MssngCoverIndctn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MissingCoverIndication { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator MissingCoverIndication { get; init; }
 }

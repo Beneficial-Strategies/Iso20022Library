@@ -23,7 +23,7 @@ public enum RemarketingMarginTypeCode
     [IsoId("_aUJuaNp-Ed-ak6NoX_4Aeg_2083917829")]
     [Description(@"Agreed margin.")]
     Agreed,
-    
+
     /// <summary>
     /// Alternative margin.
     /// Encoded/decoded by serializers as &quot;ALTE&quot;.
@@ -32,5 +32,4 @@ public enum RemarketingMarginTypeCode
     [IsoId("_aUTfYNp-Ed-ak6NoX_4Aeg_2083917830")]
     [Description(@"Alternative margin.")]
     Alternative,
-    
 }

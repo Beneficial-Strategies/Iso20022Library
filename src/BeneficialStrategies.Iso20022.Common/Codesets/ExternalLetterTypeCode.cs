@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_DhrL0LTLEeuzjuBeu7kFjQ")]
-[Description(@"Specifies the letter type as published in an external letter type code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the letter type as published in an external letter type code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalLetterType1Code))]
 public enum ExternalLetterTypeCode
 {
@@ -24,7 +26,7 @@ public enum ExternalLetterTypeCode
     [IsoId("_BdblcyqmEeyXnMF3dld6dw")]
     [Description(@"Document is a letter from the bank.")]
     LetterFromBank,
-    
+
     /// <summary>
     /// Document is a letter to the bank.
     /// Encoded/decoded by serializers as &quot;LTBK&quot;.
@@ -33,7 +35,7 @@ public enum ExternalLetterTypeCode
     [IsoId("_BdbldCqmEeyXnMF3dld6dw")]
     [Description(@"Document is a letter to the bank.")]
     LetterToBank,
-    
+
     /// <summary>
     /// Document is a supporting document.
     /// Encoded/decoded by serializers as &quot;SUPP&quot;.
@@ -42,5 +44,4 @@ public enum ExternalLetterTypeCode
     [IsoId("_BdbldSqmEeyXnMF3dld6dw")]
     [Description(@"Document is a supporting document.")]
     SupportingDocument,
-    
 }

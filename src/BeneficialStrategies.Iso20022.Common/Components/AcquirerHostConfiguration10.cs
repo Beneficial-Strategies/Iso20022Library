@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7TgNYZ9tEe-nbM0aSPcoiQ")]
 [DisplayName("Acquirer Host Configuration10")]
-public partial record AcquirerHostConfiguration10
+public record AcquirerHostConfiguration10
 {
-    #nullable enable
-
     /// <summary>
     /// Externally Type Supported.
     /// </summary>
@@ -30,7 +28,7 @@ public partial record AcquirerHostConfiguration10
     /// </summary>
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; } 
+    public required IsoMax35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Message To Send.
@@ -44,9 +42,5 @@ public partial record AcquirerHostConfiguration10
     /// </summary>
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
-    public IsoMax8Text? ProtocolVersion { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax8Text? ProtocolVersion { get; init; }
 }

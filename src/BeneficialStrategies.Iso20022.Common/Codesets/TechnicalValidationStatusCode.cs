@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Yll61Np-Ed-ak6NoX_4Aeg_771598790")]
-[Description(@"Specifies the result of the technical validation carried out by the receiver (forwarding or first agent).")]
+[Description(
+    @"Specifies the result of the technical validation carried out by the receiver (forwarding or first agent)."
+)]
 [Derivations(typeof(TechnicalValidationStatus1Code))]
 public enum TechnicalValidationStatusCode
 {
@@ -21,16 +23,19 @@ public enum TechnicalValidationStatusCode
     /// </summary>
     [EnumMember(Value = "RCCF")]
     [IsoId("_Yll61dp-Ed-ak6NoX_4Aeg_1506722144")]
-    [Description(@"Indicates that the request has been correctly received and that the technical validation was successful.")]
+    [Description(
+        @"Indicates that the request has been correctly received and that the technical validation was successful."
+    )]
     ReceptionConfirmation,
-    
+
     /// <summary>
     /// Indicates there was an error in the reception of the request or that the technical validation was not successful.
     /// Encoded/decoded by serializers as &quot;RCER&quot;.
     /// </summary>
     [EnumMember(Value = "RCER")]
     [IsoId("_Yll61tp-Ed-ak6NoX_4Aeg_1529808681")]
-    [Description(@"Indicates there was an error in the reception of the request or that the technical validation was not successful.")]
+    [Description(
+        @"Indicates there was an error in the reception of the request or that the technical validation was not successful."
+    )]
     ReceptionError,
-    
 }

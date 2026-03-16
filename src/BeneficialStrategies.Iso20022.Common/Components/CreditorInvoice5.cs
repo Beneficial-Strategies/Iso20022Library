@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zjVO_TEyEe6g-ffJsqGiSA")]
 [DisplayName("Creditor Invoice5")]
-public partial record CreditorInvoice5
+public record CreditorInvoice5
 {
-    #nullable enable
-
     /// <summary>
     /// Activation Request Delivery Party.
     /// </summary>
     [DisplayName("Activation Request Delivery Party")]
     [IsoXmlTag("ActvtnReqDlvryPty")]
-    public RTPPartyIdentification2? ActivationRequestDeliveryParty { get; init; } 
+    public RTPPartyIdentification2? ActivationRequestDeliveryParty { get; init; }
 
     /// <summary>
     /// Contract Format Type.
@@ -44,23 +42,19 @@ public partial record CreditorInvoice5
     /// </summary>
     [DisplayName("Creditor Instruction")]
     [IsoXmlTag("CdtrInstr")]
-    public IsoMax500Text? CreditorInstruction { get; init; } 
+    public IsoMax500Text? CreditorInstruction { get; init; }
 
     /// <summary>
     /// Customer Identification Type.
     /// </summary>
     [DisplayName("Customer Identification Type")]
     [IsoXmlTag("CstmrIdTp")]
-    public CustomerTypeRequest2? CustomerIdentificationType { get; init; } 
+    public CustomerTypeRequest2? CustomerIdentificationType { get; init; }
 
     /// <summary>
     /// Limited Presentment Indicator.
     /// </summary>
     [DisplayName("Limited Presentment Indicator")]
     [IsoXmlTag("LtdPresntmntInd")]
-    public IsoTrueFalseIndicator? LimitedPresentmentIndicator { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? LimitedPresentmentIndicator { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QSNvYtp-Ed-ak6NoX_4Aeg_-517737874")]
 [DisplayName("Security Position")]
-public partial record SecurityPosition7
+public record SecurityPosition7
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a security, as assigned under a formal or proprietary identification scheme.
     /// </summary>
     [IsoId("_QSNvY9p-Ed-ak6NoX_4Aeg_960778354")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required SecurityIdentification11 Identification { get; init; } 
-    
+    public required SecurityIdentification11 Identification { get; init; }
+
     /// <summary>
     /// Amount of securities that are eligible for the vote.
     /// </summary>
@@ -35,8 +33,4 @@ public partial record SecurityPosition7
     [MinLength(0)]
     [MaxLength(1000)]
     public ValueList<EligiblePosition4> Position { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

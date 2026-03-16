@@ -23,7 +23,7 @@ public enum PriceValueType5Code
     [IsoId("_aJk2FNp-Ed-ak6NoX_4Aeg_-647834596")]
     [Description(@"Price is unknown by the sender or has not been established.")]
     Unknown = PriceValueTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price has not been established.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -32,5 +32,4 @@ public enum PriceValueType5Code
     [IsoId("_aJk2Fdp-Ed-ak6NoX_4Aeg_-647834587")]
     [Description(@"Price has not been established.")]
     OpenDated = PriceValueTypeCode.OpenDated, // same ordinal as derivation source for type conversions
-    
 }

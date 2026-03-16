@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QENImdp-Ed-ak6NoX_4Aeg_1939129475")]
 [DisplayName("Person Identification")]
-public partial record PersonIdentification6
+public record PersonIdentification6
 {
-    #nullable enable
-    
     /// <summary>
     /// Entity that assigns the identifier.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record PersonIdentification6
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Issuer { get; init; }
+
     /// <summary>
     /// Personal identification type.
     /// </summary>
     [IsoId("_QEW5kNp-Ed-ak6NoX_4Aeg_2117937583")]
     [DisplayName("Person Identification Type")]
     [IsoXmlTag("PrsnIdTp")]
-    public required PersonIdentificationType1Choice_ PersonIdentificationType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PersonIdentificationType1Choice_ PersonIdentificationType { get; init; }
 }

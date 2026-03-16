@@ -23,5 +23,4 @@ public enum SettlementTransactionCondition11Code
     [IsoId("_87Lz4Uc8EeaBWtcfqEyXyw")]
     [Description(@"No market claim should be automatically generated.")]
     NoAutomaticMarketClaim = SettlementTransactionConditionCode.NoAutomaticMarketClaim, // same ordinal as derivation source for type conversions
-    
 }

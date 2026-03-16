@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xa1IQRytEey6gI8SKlv7rg")]
 [DisplayName("Driver")]
-public partial record Driver2
+public record Driver2
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of fleet driver.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Driver2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Name { get; init; }
+
     /// <summary>
     /// Fleet driver identification.
     /// </summary>
@@ -35,37 +33,37 @@ public partial record Driver2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Identification { get; init; }
+
     /// <summary>
     /// Driving license details.
     /// </summary>
     [IsoId("_XkokhRytEey6gI8SKlv7rg")]
     [DisplayName("Driving License")]
     [IsoXmlTag("DrvgLic")]
-    public DrivingLicense2? DrivingLicense { get; init; } 
-    
+    public DrivingLicense2? DrivingLicense { get; init; }
+
     /// <summary>
-    /// Contains the employer information. 
+    /// Contains the employer information.
     /// </summary>
     [IsoId("_XkokhxytEey6gI8SKlv7rg")]
     [DisplayName("Employer")]
     [IsoXmlTag("Mplyr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Employer { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Employer { get; init; }
+
     /// <summary>
-    /// Contains the employee identification number as assigned by the fleet operator. 
+    /// Contains the employee identification number as assigned by the fleet operator.
     /// </summary>
     [IsoId("_XkokiRytEey6gI8SKlv7rg")]
     [DisplayName("Employee Identification")]
     [IsoXmlTag("MplyeeId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? EmployeeIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? EmployeeIdentification { get; init; }
+
     /// <summary>
     /// Contains the fleet driver&apos;s department number as assigned by the fleet operator.
     /// </summary>
@@ -73,35 +71,31 @@ public partial record Driver2
     [DisplayName("Department Number")]
     [IsoXmlTag("DeptNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DepartmentNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DepartmentNumber { get; init; }
+
     /// <summary>
     /// Additional identification used for the driver.
     /// </summary>
     [IsoId("_XkokjRytEey6gI8SKlv7rg")]
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public TravelDocument2? AdditionalIdentification { get; init; } 
-    
+    public TravelDocument2? AdditionalIdentification { get; init; }
+
     /// <summary>
-    /// Date of birth of vehicle rental driver. 
+    /// Date of birth of vehicle rental driver.
     /// </summary>
     [IsoId("_XkokjxytEey6gI8SKlv7rg")]
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; } 
-    
+    public IsoISODate? DateOfBirth { get; init; }
+
     /// <summary>
-    /// Additional fleet summary-level information. 
+    /// Additional fleet summary-level information.
     /// </summary>
     [IsoId("_XkokkRytEey6gI8SKlv7rg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalData { get; init; }
 }

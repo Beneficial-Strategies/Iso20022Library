@@ -23,7 +23,7 @@ public enum PriceValueType6Code
     [IsoId("_aJk2F9p-Ed-ak6NoX_4Aeg_-608123492")]
     [Description(@"Price is unknown by the sender or has not been established.")]
     Unknown = PriceValueTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price has not been established.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -32,7 +32,7 @@ public enum PriceValueType6Code
     [IsoId("_aJk2GNp-Ed-ak6NoX_4Aeg_-608123463")]
     [Description(@"Price has not been established.")]
     OpenDated = PriceValueTypeCode.OpenDated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is not required to be specified by account owner.
     /// Encoded/decoded by serializers as &quot;UNSP&quot;.
@@ -41,7 +41,7 @@ public enum PriceValueType6Code
     [IsoId("_aJunENp-Ed-ak6NoX_4Aeg_-608123462")]
     [Description(@"Price is not required to be specified by account owner.")]
     Unspecified = PriceValueTypeCode.Unspecified, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price to be specified by account owner.
     /// Encoded/decoded by serializers as &quot;TBSP&quot;.
@@ -50,5 +50,4 @@ public enum PriceValueType6Code
     [IsoId("_aJunEdp-Ed-ak6NoX_4Aeg_-608123441")]
     [Description(@"Price to be specified by account owner.")]
     ToBeSpecified = PriceValueTypeCode.ToBeSpecified, // same ordinal as derivation source for type conversions
-    
 }

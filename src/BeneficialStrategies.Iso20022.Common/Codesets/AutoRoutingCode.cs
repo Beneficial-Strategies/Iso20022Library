@@ -21,16 +21,19 @@ public enum AutoRoutingCode
     /// </summary>
     [EnumMember(Value = "DDOT")]
     [IsoId("_bkBa0Np-Ed-ak6NoX_4Aeg_1056016458")]
-    [Description(@"Indicates the Designated Order Turnaround system: computerized order routing system (used at the New York Stock Exchange) is to be used.")]
+    [Description(
+        @"Indicates the Designated Order Turnaround system: computerized order routing system (used at the New York Stock Exchange) is to be used."
+    )]
     DOTSystem,
-    
+
     /// <summary>
     /// Indicates the evolution of the DOT system, a Designated Order Turnaround system: computerized order routing system (used at the New York Stock Exchange) is to be used.
     /// Encoded/decoded by serializers as &quot;SDOT&quot;.
     /// </summary>
     [EnumMember(Value = "SDOT")]
     [IsoId("_bkBa0dp-Ed-ak6NoX_4Aeg_1056016502")]
-    [Description(@"Indicates the evolution of the DOT system, a Designated Order Turnaround system: computerized order routing system (used at the New York Stock Exchange) is to be used.")]
+    [Description(
+        @"Indicates the evolution of the DOT system, a Designated Order Turnaround system: computerized order routing system (used at the New York Stock Exchange) is to be used."
+    )]
     SuperDOTSystem,
-    
 }

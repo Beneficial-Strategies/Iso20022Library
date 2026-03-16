@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AdditionalAmount1Choice.AdditionalCashIn))]
     [KnownType(typeof(AdditionalAmount1Choice.ResultingCashOut))]
-    [JsonDerivedType(typeof(AdditionalAmount1Choice.AdditionalCashIn),nameof(AdditionalAmount1Choice.AdditionalCashIn))]
-    [JsonDerivedType(typeof(AdditionalAmount1Choice.ResultingCashOut),nameof(AdditionalAmount1Choice.ResultingCashOut))]
+    [JsonDerivedType(
+        typeof(AdditionalAmount1Choice.AdditionalCashIn),
+        nameof(AdditionalAmount1Choice.AdditionalCashIn)
+    )]
+    [JsonDerivedType(
+        typeof(AdditionalAmount1Choice.ResultingCashOut),
+        nameof(AdditionalAmount1Choice.ResultingCashOut)
+    )]
     [IsoId("_hlWuoEG_EeaNEqIb_fgRZg")]
     [DisplayName("Additional Amount 1 Choice")]
-    public abstract partial record AdditionalAmount1Choice_
-    {
-    }
+    public abstract record AdditionalAmount1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5pdeAEzaEea8fovz_9xSTQ")]
 [DisplayName("Ownership Beneficiary Rate")]
-public partial record OwnershipBeneficiaryRate1
+public record OwnershipBeneficiaryRate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Ownership or beneficial ownership expressed as a percentage.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record OwnershipBeneficiaryRate1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; } 
-    
+    public IsoPercentageRate? Rate { get; init; }
+
     /// <summary>
     /// Ownership or beneficial ownership expressed as a fraction or another form.
     /// </summary>
@@ -34,10 +32,6 @@ public partial record OwnershipBeneficiaryRate1
     [DisplayName("Fraction")]
     [IsoXmlTag("Frctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Fraction { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Fraction { get; init; }
 }

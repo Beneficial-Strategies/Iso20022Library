@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fX6l4PTaEeife6veM7daYw")]
 [DisplayName("Vehicle")]
-public partial record Vehicle4
+public record Vehicle4
 {
-    #nullable enable
-    
     /// <summary>
     /// Contains the classification of the vehicle (for example, economy, intermediate, luxury, etc.)
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Vehicle4
     [DisplayName("Class")]
     [IsoXmlTag("Clss")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Class { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Class { get; init; }
+
     /// <summary>
     /// Brand or manufacturer of the vehicle.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record Vehicle4
     [DisplayName("Make")]
     [IsoXmlTag("Make")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? Make { get; init; } 
-    
+    public IsoMax35NumericText? Make { get; init; }
+
     /// <summary>
-    /// Product line of vehicle within the make. 
+    /// Product line of vehicle within the make.
     /// </summary>
     [IsoId("_fX6l5_TaEeife6veM7daYw")]
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public IsoMax35NumericText? Model { get; init; } 
-    
+    public IsoMax35NumericText? Model { get; init; }
+
     /// <summary>
     /// Registration number of vehicle.
     /// </summary>
@@ -53,10 +51,6 @@ public partial record Vehicle4
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RegistrationNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RegistrationNumber { get; init; }
 }

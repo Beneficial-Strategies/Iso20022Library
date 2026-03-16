@@ -23,7 +23,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSqIcAEcEeCQm6a_G2yO_w_-607130617")]
     [Description(@"Aggregation of low payments.")]
     Aggregation = CardPaymentServiceTypeCode.Aggregation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dynamic currency conversion (DCC).
     /// Encoded/decoded by serializers as &quot;DCCV&quot;.
@@ -32,7 +32,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSqIcQEcEeCQm6a_G2yO_w_1045496891")]
     [Description(@"Dynamic currency conversion (DCC).")]
     DCC = CardPaymentServiceTypeCode.DCC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card payment with gratuity.
     /// Encoded/decoded by serializers as &quot;GRTT&quot;.
@@ -41,7 +41,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSqIcgEcEeCQm6a_G2yO_w_1223615563")]
     [Description(@"Card payment with gratuity.")]
     Gratuity = CardPaymentServiceTypeCode.Gratuity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instalment payment.
     /// Encoded/decoded by serializers as &quot;INSP&quot;.
@@ -50,7 +50,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSqIcwEcEeCQm6a_G2yO_w_931657825")]
     [Description(@"Instalment payment.")]
     Instalment = CardPaymentServiceTypeCode.Instalment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loyalty services.
     /// Encoded/decoded by serializers as &quot;LOYT&quot;.
@@ -59,7 +59,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSqIdAEcEeCQm6a_G2yO_w_-1604202970")]
     [Description(@"Loyalty services.")]
     Loyalty = CardPaymentServiceTypeCode.Loyalty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No show after reservation.
     /// Encoded/decoded by serializers as &quot;NRES&quot;.
@@ -68,7 +68,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSz5YAEcEeCQm6a_G2yO_w_48424538")]
     [Description(@"No show after reservation.")]
     NoShow = CardPaymentServiceTypeCode.NoShow, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Purchase and corporate data.
     /// Encoded/decoded by serializers as &quot;PUCO&quot;.
@@ -77,7 +77,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSz5YQEcEeCQm6a_G2yO_w_226543210")]
     [Description(@"Purchase and corporate data.")]
     PurchaseCorporate = CardPaymentServiceTypeCode.PurchaseCorporate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Recurring payment.
     /// Encoded/decoded by serializers as &quot;RECP&quot;.
@@ -86,7 +86,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSz5YgEcEeCQm6a_G2yO_w_-65414528")]
     [Description(@"Recurring payment.")]
     RecurringPayment = CardPaymentServiceTypeCode.RecurringPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Solicited available funds.
     /// Encoded/decoded by serializers as &quot;SOAF&quot;.
@@ -95,7 +95,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSz5YwEcEeCQm6a_G2yO_w_1693691973")]
     [Description(@"Solicited available funds.")]
     SolicitedAvailableFunds = CardPaymentServiceTypeCode.SolicitedAvailableFunds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unsolicited available funds.
     /// Encoded/decoded by serializers as &quot;UNAF&quot;.
@@ -104,7 +104,7 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSz5ZAEcEeCQm6a_G2yO_w_-948647815")]
     [Description(@"Unsolicited available funds.")]
     UnsolicitedAvailableFunds = CardPaymentServiceTypeCode.UnsolicitedAvailableFunds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Voice authorisation.
     /// Encoded/decoded by serializers as &quot;VCAU&quot;.
@@ -113,5 +113,4 @@ public enum CardPaymentServiceType2Code
     [IsoId("_TSz5ZQEcEeCQm6a_G2yO_w_-770529143")]
     [Description(@"Voice authorisation.")]
     VoiceAuthorisation = CardPaymentServiceTypeCode.VoiceAuthorisation, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QfLNU9p-Ed-ak6NoX_4Aeg_1382237696")]
 [DisplayName("Unit Price")]
-public partial record UnitPrice11
+public record UnitPrice11
 {
-    #nullable enable
-    
     /// <summary>
     /// Type and information about a price.
     /// </summary>
     [IsoId("_QfLNVNp-Ed-ak6NoX_4Aeg_1382237940")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TypeOfPrice10Code Type { get; init; } 
-    
+    public required TypeOfPrice10Code Type { get; init; }
+
     /// <summary>
     /// Type and information about a price.
     /// </summary>
@@ -33,26 +31,22 @@ public partial record UnitPrice11
     [DisplayName("Extended Type")]
     [IsoXmlTag("XtndedTp")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedType { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoExtended350Code ExtendedType { get; init; }
+
     /// <summary>
     /// Value of the price, eg, as a currency and value.
     /// </summary>
     [IsoId("_QfLNVtp-Ed-ak6NoX_4Aeg_1382237957")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required PriceValue1 Value { get; init; } 
-    
+    public required PriceValue1 Value { get; init; }
+
     /// <summary>
     /// Type of pricing calculation method.
     /// </summary>
     [IsoId("_QfLNV9p-Ed-ak6NoX_4Aeg_1382237974")]
     [DisplayName("Price Method")]
     [IsoXmlTag("PricMtd")]
-    public PriceMethod1Code? PriceMethod { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PriceMethod1Code? PriceMethod { get; init; }
 }

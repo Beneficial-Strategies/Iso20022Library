@@ -23,16 +23,18 @@ public enum CaseAssignmentRejection1Code
     [IsoId("_Vm2419p-Ed-ak6NoX_4Aeg_-407386472")]
     [Description(@"Underlying instruction can not be found.")]
     UnderlyingPaymentNotFound = CaseAssignmentRejectionCode.UnderlyingPaymentNotFound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).
     /// Encoded/decoded by serializers as &quot;NAUT&quot;.
     /// </summary>
     [EnumMember(Value = "NAUT")]
     [IsoId("_VnACwNp-Ed-ak6NoX_4Aeg_-48136805")]
-    [Description(@"Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).")]
+    [Description(
+        @"Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain)."
+    )]
     NotAuthorisedToInvestigate = CaseAssignmentRejectionCode.NotAuthorisedToInvestigate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case has never been assigned before.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
@@ -41,7 +43,7 @@ public enum CaseAssignmentRejection1Code
     [IsoId("_VnACwdp-Ed-ak6NoX_4Aeg_-1993051148")]
     [Description(@"Case has never been assigned before.")]
     UnknownCase = CaseAssignmentRejectionCode.UnknownCase, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Used when the payment instruction has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -50,7 +52,7 @@ public enum CaseAssignmentRejection1Code
     [IsoId("_VnACwtp-Ed-ak6NoX_4Aeg_-1951794735")]
     [Description(@"Used when the payment instruction has been rejected.")]
     PaymentRejected = CaseAssignmentRejectionCode.PaymentRejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Used when the payment instruction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CNCL&quot;.
@@ -59,5 +61,4 @@ public enum CaseAssignmentRejection1Code
     [IsoId("_VnACw9p-Ed-ak6NoX_4Aeg_-1881606195")]
     [Description(@"Used when the payment instruction has been cancelled.")]
     PaymentCancelled = CaseAssignmentRejectionCode.PaymentCancelled, // same ordinal as derivation source for type conversions
-    
 }

@@ -21,16 +21,19 @@ public enum ElectionMovementType1Code
     /// </summary>
     [EnumMember(Value = "REST")]
     [IsoId("_ag04d9p-Ed-ak6NoX_4Aeg_1964804967")]
-    [Description(@"Election results in a change of balance type that transfers control of the securities rather than the securities themselves.")]
+    [Description(
+        @"Election results in a change of balance type that transfers control of the securities rather than the securities themselves."
+    )]
     Restricted = ElectionMovementTypeCode.Restricted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Direct movement of resource, that is, cash or security that is directly credited to the paying agent account.
     /// Encoded/decoded by serializers as &quot;DRCT&quot;.
     /// </summary>
     [EnumMember(Value = "DRCT")]
     [IsoId("_ag04eNp-Ed-ak6NoX_4Aeg_1964804975")]
-    [Description(@"Direct movement of resource, that is, cash or security that is directly credited to the paying agent account.")]
+    [Description(
+        @"Direct movement of resource, that is, cash or security that is directly credited to the paying agent account."
+    )]
     Direct = ElectionMovementTypeCode.Direct, // same ordinal as derivation source for type conversions
-    
 }

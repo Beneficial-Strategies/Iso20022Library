@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice
     /// </summary>
     [IsoId("_nbwAl4mxEeeKR__nUfxjwA")]
     [DisplayName("Duplicate Of")]
-    public partial record DuplicateOf : InvestigationStatus4Choice_
+    public record DuplicateOf : InvestigationStatus4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Uniquely identifies the case.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
+
         /// <summary>
         /// Party that created the investigation case.
         /// </summary>
         [IsoId("_mvnbw7TREeeyuKckOGlwuA")]
         [DisplayName("Creator")]
         [IsoXmlTag("Cretr")]
-        public required Party35Choice_ Creator { get; init; } 
-        
+        public required Party35Choice_ Creator { get; init; }
+
         /// <summary>
         /// Indicates whether or not the case was previously closed and is now re-opened.
         /// </summary>
@@ -42,10 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InvestigationStatus4Choice
         [DisplayName("Reopen Case Indication")]
         [IsoXmlTag("ReopCaseIndctn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ReopenCaseIndication { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoYesNoIndicator? ReopenCaseIndication { get; init; }
     }
 }

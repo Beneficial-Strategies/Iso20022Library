@@ -21,7 +21,9 @@ public enum PendingReason27Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonV2Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -85,7 +87,8 @@ public enum PendingReason27Code
     [EnumMember(Value = "IPED")]
     [IsoId("")]
     [Description(@"Instruction was received prior to entitlement date.")]
-    InstructionPriorToEntitlementDate = PendingFailingReasonV2Code.InstructionPriorToEntitlementDate, // same ordinal as derivation source for type conversions
+    InstructionPriorToEntitlementDate =
+        PendingFailingReasonV2Code.InstructionPriorToEntitlementDate, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.
@@ -93,7 +96,9 @@ public enum PendingReason27Code
     /// </summary>
     [EnumMember(Value = "ITAX")]
     [IsoId("")]
-    [Description(@"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.")]
+    [Description(
+        @"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country."
+    )]
     IncorrectTaxRate = PendingFailingReasonV2Code.IncorrectTaxRate, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -165,7 +170,9 @@ public enum PendingReason27Code
     /// </summary>
     [EnumMember(Value = "PENR")]
     [IsoId("")]
-    [Description(@"The instruction is pending receipt of securities, for example, from a purchase or loan.")]
+    [Description(
+        @"The instruction is pending receipt of securities, for example, from a purchase or loan."
+    )]
     PendingReceipt = PendingFailingReasonV2Code.PendingReceipt, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -176,5 +183,4 @@ public enum PendingReason27Code
     [IsoId("")]
     [Description(@"System is not available. Instruction is sent outside of business hours.")]
     SystemNotAvailable = PendingFailingReasonV2Code.SystemNotAvailable, // same ordinal as derivation source for type conversions
-
 }

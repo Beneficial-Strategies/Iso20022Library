@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MAsZ8aEPEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction40")]
-public partial record ATMTransaction40
+public record ATMTransaction40
 {
-    #nullable enable
-
     /// <summary>
     /// Electronic Purse Balance.
     /// </summary>
     [DisplayName("Electronic Purse Balance")]
     [IsoXmlTag("ElctrncPrsBal")]
-    public CurrencyAndAmount? ElectronicPurseBalance { get; init; } 
+    public CurrencyAndAmount? ElectronicPurseBalance { get; init; }
 
     /// <summary>
     /// Exception.
@@ -44,16 +42,12 @@ public partial record ATMTransaction40
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; } 
+    public IsoMax35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public TransactionIdentifier3? TransactionIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public TransactionIdentifier3? TransactionIdentification { get; init; }
 }

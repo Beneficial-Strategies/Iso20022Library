@@ -13,13 +13,11 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AutoExtend1Choice.Months))]
     [KnownType(typeof(AutoExtend1Choice.Years))]
     [KnownType(typeof(AutoExtend1Choice.Date))]
-    [JsonDerivedType(typeof(AutoExtend1Choice.Days),nameof(AutoExtend1Choice.Days))]
-    [JsonDerivedType(typeof(AutoExtend1Choice.Months),nameof(AutoExtend1Choice.Months))]
-    [JsonDerivedType(typeof(AutoExtend1Choice.Years),nameof(AutoExtend1Choice.Years))]
-    [JsonDerivedType(typeof(AutoExtend1Choice.Date),nameof(AutoExtend1Choice.Date))]
+    [JsonDerivedType(typeof(AutoExtend1Choice.Days), nameof(AutoExtend1Choice.Days))]
+    [JsonDerivedType(typeof(AutoExtend1Choice.Months), nameof(AutoExtend1Choice.Months))]
+    [JsonDerivedType(typeof(AutoExtend1Choice.Years), nameof(AutoExtend1Choice.Years))]
+    [JsonDerivedType(typeof(AutoExtend1Choice.Date), nameof(AutoExtend1Choice.Date))]
     [IsoId("_95V5enltEeG7BsjMvd1mEw_-1540173231")]
     [DisplayName("Auto Extend 1 Choice")]
-    public abstract partial record AutoExtend1Choice_
-    {
-    }
+    public abstract record AutoExtend1Choice_ { }
 }

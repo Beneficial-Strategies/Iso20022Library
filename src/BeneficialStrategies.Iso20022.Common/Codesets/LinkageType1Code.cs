@@ -23,7 +23,7 @@ public enum LinkageType1Code
     [IsoId("_ae4Xt9p-Ed-ak6NoX_4Aeg_-2003821118")]
     [Description(@"Request is to link the referenced transactions.")]
     Link = LinkageTypeCode.Link, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request is to unlink the referenced transactions.
     /// Encoded/decoded by serializers as &quot;UNLK&quot;.
@@ -32,7 +32,7 @@ public enum LinkageType1Code
     [IsoId("_ae4XuNp-Ed-ak6NoX_4Aeg_-2003821117")]
     [Description(@"Request is to unlink the referenced transactions.")]
     Unlink = LinkageTypeCode.Unlink, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request is to soft link the referenced transactions.
     /// Encoded/decoded by serializers as &quot;SOFT&quot;.
@@ -41,5 +41,4 @@ public enum LinkageType1Code
     [IsoId("_ae4Xudp-Ed-ak6NoX_4Aeg_-2003821101")]
     [Description(@"Request is to soft link the referenced transactions.")]
     Soft = LinkageTypeCode.Soft, // same ordinal as derivation source for type conversions
-    
 }

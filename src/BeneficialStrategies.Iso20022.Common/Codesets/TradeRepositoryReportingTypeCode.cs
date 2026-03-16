@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_gIoLANIFEeiG-o-KpBT4-g")]
-[Description(@"Indication whether both counterparties to the transaction have reported to the same trade repository or each counteraprty to the transaction reported two different trade repository.")]
+[Description(
+    @"Indication whether both counterparties to the transaction have reported to the same trade repository or each counteraprty to the transaction reported two different trade repository."
+)]
 [Derivations(typeof(TradeRepositoryReportingType1Code))]
 public enum TradeRepositoryReportingTypeCode
 {
@@ -21,16 +23,19 @@ public enum TradeRepositoryReportingTypeCode
     /// </summary>
     [EnumMember(Value = "SWOS")]
     [IsoId("_iPyr0NIFEeiG-o-KpBT4-g")]
-    [Description(@"Only one counterparty to the transaction has reported to the same trade repository.")]
+    [Description(
+        @"Only one counterparty to the transaction has reported to the same trade repository."
+    )]
     SingleSided,
-    
+
     /// <summary>
     ///  Both counterparties to the transaction have reported to the same trade repository.
     /// Encoded/decoded by serializers as &quot;TWOS&quot;.
     /// </summary>
     [EnumMember(Value = "TWOS")]
     [IsoId("_jlMYgNIFEeiG-o-KpBT4-g")]
-    [Description(@" Both counterparties to the transaction have reported to the same trade repository.")]
+    [Description(
+        @" Both counterparties to the transaction have reported to the same trade repository."
+    )]
     DualSided,
-    
 }

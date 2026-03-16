@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_EHaIYDQTEe2o-K1dwNg8Gg")]
-[Description(@"Specifies whether the message is a final eligible balance and entitlements message or a preliminary advice of payment message.")]
+[Description(
+    @"Specifies whether the message is a final eligible balance and entitlements message or a preliminary advice of payment message."
+)]
 [Derivations(typeof(CorporateActionMovementPreliminaryAdviceFunction1Code))]
 public enum CorporateActionMovementPreliminaryAdviceFunctionCode
 {
@@ -23,7 +25,7 @@ public enum CorporateActionMovementPreliminaryAdviceFunctionCode
     [IsoId("_u2ONQDQTEe2o-K1dwNg8Gg")]
     [Description(@"Message is an entitlement.")]
     Entitlement,
-    
+
     /// <summary>
     /// Message is a preadvice of movement.
     /// Encoded/decoded by serializers as &quot;CAPA&quot;.
@@ -32,5 +34,4 @@ public enum CorporateActionMovementPreliminaryAdviceFunctionCode
     [IsoId("_2oqO0DQTEe2o-K1dwNg8Gg")]
     [Description(@"Message is a preadvice of movement.")]
     PreadviceOfMovement,
-    
 }

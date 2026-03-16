@@ -23,7 +23,7 @@ public enum CryptographicKeyType1Code
     [IsoId("_KU0vhX1DEeCF8NjrBemJWQ_2128463419")]
     [Description(@"Data encryption standard.")]
     DES = CryptographicKeyTypeCode.DES, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advanced encryption standard.
     /// Encoded/decoded by serializers as &quot;AESC&quot;.
@@ -32,7 +32,7 @@ public enum CryptographicKeyType1Code
     [IsoId("_KU0vhn1DEeCF8NjrBemJWQ_-2088353466")]
     [Description(@"Advanced encryption standard.")]
     AES = CryptographicKeyTypeCode.AES, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rivest, Shamir and Adleman.
     /// Encoded/decoded by serializers as &quot;RSAC&quot;.
@@ -41,7 +41,7 @@ public enum CryptographicKeyType1Code
     [IsoId("_KU0vh31DEeCF8NjrBemJWQ_-1222392590")]
     [Description(@"Rivest, Shamir and Adleman.")]
     RSA = CryptographicKeyTypeCode.RSA, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Elliptic-curve cryptography.
     /// Encoded/decoded by serializers as &quot;ECCC&quot;.
@@ -50,5 +50,4 @@ public enum CryptographicKeyType1Code
     [IsoId("_KU0viH1DEeCF8NjrBemJWQ_-505240776")]
     [Description(@"Elliptic-curve cryptography.")]
     ECC = CryptographicKeyTypeCode.ECC, // same ordinal as derivation source for type conversions
-    
 }

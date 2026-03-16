@@ -21,7 +21,9 @@ public enum ProrationBelowMinimumQuantityCode
     /// </summary>
     [EnumMember(Value = "FULL")]
     [IsoId("")]
-    [Description(@"Instructions will be accepted in full (with their original quantity of securities).")]
+    [Description(
+        @"Instructions will be accepted in full (with their original quantity of securities)."
+    )]
     AcceptedInFull,
 
     /// <summary>
@@ -30,7 +32,9 @@ public enum ProrationBelowMinimumQuantityCode
     /// </summary>
     [EnumMember(Value = "MIEX")]
     [IsoId("")]
-    [Description(@"Instructions will be accepted but prorated to the minimum quantity to instruct.")]
+    [Description(
+        @"Instructions will be accepted but prorated to the minimum quantity to instruct."
+    )]
     MinimumQuantity,
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum ProrationBelowMinimumQuantityCode
     /// </summary>
     [EnumMember(Value = "MILT")]
     [IsoId("")]
-    [Description(@"Instructions will be accepted but rounded up or down to the specified minimum multiple quantity.")]
+    [Description(
+        @"Instructions will be accepted but rounded up or down to the specified minimum multiple quantity."
+    )]
     MultipleQuantity,
 
     /// <summary>
@@ -57,7 +63,8 @@ public enum ProrationBelowMinimumQuantityCode
     /// </summary>
     [EnumMember(Value = "UKWN")]
     [IsoId("")]
-    [Description(@"Processing of instructions prorated below the minimum quantity to instruct is unknown.")]
+    [Description(
+        @"Processing of instructions prorated below the minimum quantity to instruct is unknown."
+    )]
     Unknown,
-
 }

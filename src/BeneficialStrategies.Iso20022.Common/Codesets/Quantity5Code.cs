@@ -23,5 +23,4 @@ public enum Quantity5Code
     [IsoId("_lYgM6QFIEeGhYJiRaPcH8g")]
     [Description(@"Quantity is unknown by the sender or has not been established.")]
     UnknownQuantity = QuantityCode.UnknownQuantity, // same ordinal as derivation source for type conversions
-    
 }

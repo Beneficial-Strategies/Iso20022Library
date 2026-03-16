@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Recipient9Choice.IssuerAndSerialNumber))]
     [KnownType(typeof(Recipient9Choice.KeyIdentifier))]
-    [JsonDerivedType(typeof(Recipient9Choice.IssuerAndSerialNumber),nameof(Recipient9Choice.IssuerAndSerialNumber))]
-    [JsonDerivedType(typeof(Recipient9Choice.KeyIdentifier),nameof(Recipient9Choice.KeyIdentifier))]
+    [JsonDerivedType(
+        typeof(Recipient9Choice.IssuerAndSerialNumber),
+        nameof(Recipient9Choice.IssuerAndSerialNumber)
+    )]
+    [JsonDerivedType(
+        typeof(Recipient9Choice.KeyIdentifier),
+        nameof(Recipient9Choice.KeyIdentifier)
+    )]
     [IsoId("_Mns78S8jEeu125Ip9zFcsQ")]
     [DisplayName("Recipient 9 Choice")]
-    public abstract partial record Recipient9Choice_
-    {
-    }
+    public abstract record Recipient9Choice_ { }
 }

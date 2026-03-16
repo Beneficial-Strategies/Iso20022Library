@@ -11,15 +11,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialInstitutionIdentification10Choice.NameAndAddress))]
     [KnownType(typeof(FinancialInstitutionIdentification10Choice.BICFI))]
-    [KnownType(typeof(FinancialInstitutionIdentification10Choice.ClearingSystemMemberIdentification))]
+    [KnownType(
+        typeof(FinancialInstitutionIdentification10Choice.ClearingSystemMemberIdentification)
+    )]
     [KnownType(typeof(FinancialInstitutionIdentification10Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(FinancialInstitutionIdentification10Choice.NameAndAddress),nameof(FinancialInstitutionIdentification10Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(FinancialInstitutionIdentification10Choice.BICFI),nameof(FinancialInstitutionIdentification10Choice.BICFI))]
-    [JsonDerivedType(typeof(FinancialInstitutionIdentification10Choice.ClearingSystemMemberIdentification),nameof(FinancialInstitutionIdentification10Choice.ClearingSystemMemberIdentification))]
-    [JsonDerivedType(typeof(FinancialInstitutionIdentification10Choice.ProprietaryIdentification),nameof(FinancialInstitutionIdentification10Choice.ProprietaryIdentification))]
+    [JsonDerivedType(
+        typeof(FinancialInstitutionIdentification10Choice.NameAndAddress),
+        nameof(FinancialInstitutionIdentification10Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstitutionIdentification10Choice.BICFI),
+        nameof(FinancialInstitutionIdentification10Choice.BICFI)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstitutionIdentification10Choice.ClearingSystemMemberIdentification),
+        nameof(FinancialInstitutionIdentification10Choice.ClearingSystemMemberIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstitutionIdentification10Choice.ProprietaryIdentification),
+        nameof(FinancialInstitutionIdentification10Choice.ProprietaryIdentification)
+    )]
     [IsoId("_RY0JwWAZEeiH9-hkDDXUHA")]
     [DisplayName("Financial Institution Identification 10 Choice")]
-    public abstract partial record FinancialInstitutionIdentification10Choice_
-    {
-    }
+    public abstract record FinancialInstitutionIdentification10Choice_ { }
 }

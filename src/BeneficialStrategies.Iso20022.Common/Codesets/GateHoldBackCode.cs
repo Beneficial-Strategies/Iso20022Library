@@ -23,7 +23,7 @@ public enum GateHoldBackCode
     [IsoId("_AmK5YDwwEeaFzejt0Yw_3A")]
     [Description(@"Hold back of redemption proceeds.")]
     HoldBack,
-    
+
     /// <summary>
     /// Gating of redemption proceeds.
     /// Encoded/decoded by serializers as &quot;GATE&quot;.
@@ -32,5 +32,4 @@ public enum GateHoldBackCode
     [IsoId("_F7KoIDwwEeaFzejt0Yw_3A")]
     [Description(@"Gating of redemption proceeds.")]
     Gating,
-    
 }

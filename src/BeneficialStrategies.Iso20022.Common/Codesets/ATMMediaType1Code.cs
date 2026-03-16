@@ -23,7 +23,7 @@ public enum ATMMediaType1Code
     [IsoId("_JV2vAYqeEeS4a4abTJTSSw")]
     [Description(@"Card media.")]
     Cards = ATMMediaTypeCode.Cards, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Coin media.
     /// Encoded/decoded by serializers as &quot;COIN&quot;.
@@ -32,7 +32,7 @@ public enum ATMMediaType1Code
     [IsoId("_Jcs94YqeEeS4a4abTJTSSw")]
     [Description(@"Coin media.")]
     Coins = ATMMediaTypeCode.Coins, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Non fixed value of the media, for instance gold, silver.
     /// Encoded/decoded by serializers as &quot;CMDT&quot;.
@@ -41,7 +41,7 @@ public enum ATMMediaType1Code
     [IsoId("_Jiqb8YqeEeS4a4abTJTSSw")]
     [Description(@"Non fixed value of the media, for instance gold, silver.")]
     Commodity = ATMMediaTypeCode.Commodity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Coupon media.
     /// Encoded/decoded by serializers as &quot;CPNS&quot;.
@@ -50,7 +50,7 @@ public enum ATMMediaType1Code
     [IsoId("_JnvJMYqeEeS4a4abTJTSSw")]
     [Description(@"Coupon media.")]
     Coupons = ATMMediaTypeCode.Coupons, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bank note media.
     /// Encoded/decoded by serializers as &quot;NOTE&quot;.
@@ -59,7 +59,7 @@ public enum ATMMediaType1Code
     [IsoId("_J9VlwYqeEeS4a4abTJTSSw")]
     [Description(@"Bank note media.")]
     Notes = ATMMediaTypeCode.Notes, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Stamp media.
     /// Encoded/decoded by serializers as &quot;STMP&quot;.
@@ -68,7 +68,7 @@ public enum ATMMediaType1Code
     [IsoId("_KFrpcYqeEeS4a4abTJTSSw")]
     [Description(@"Stamp media.")]
     Stamps = ATMMediaTypeCode.Stamps, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undetermined medias.
     /// Encoded/decoded by serializers as &quot;UDTM&quot;.
@@ -77,5 +77,4 @@ public enum ATMMediaType1Code
     [IsoId("_KMFzcYqeEeS4a4abTJTSSw")]
     [Description(@"Undetermined medias.")]
     Undetermined = ATMMediaTypeCode.Undetermined, // same ordinal as derivation source for type conversions
-    
 }

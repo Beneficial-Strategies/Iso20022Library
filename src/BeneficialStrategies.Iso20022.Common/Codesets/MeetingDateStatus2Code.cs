@@ -23,7 +23,7 @@ public enum MeetingDateStatus2Code
     [IsoId("_M6Qg8a4oEemG7MmivSuE5g")]
     [Description(@"Meeting date is confirmed.")]
     Confirmed = MeetingDateStatusCode.Confirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting date is tentative.
     /// Encoded/decoded by serializers as &quot;TNTA&quot;.
@@ -32,5 +32,4 @@ public enum MeetingDateStatus2Code
     [IsoId("_NIP5oq4oEemG7MmivSuE5g")]
     [Description(@"Meeting date is tentative.")]
     Tentative = MeetingDateStatusCode.Tentative, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hs1wsLJPEeaYqc4G3TTwhA")]
 [DisplayName("Cover Two Defaulters")]
-public partial record CoverTwoDefaulters1
+public record CoverTwoDefaulters1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the member whose default would generate the largest liquidity exposure for the CCP under the scenario and for the relevant currency.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record CoverTwoDefaulters1
     [DisplayName("Cover 1 Identification")]
     [IsoXmlTag("Cover1Id")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Cover1Identification { get; init; } 
-    
+    public required IsoLEIIdentifier Cover1Identification { get; init; }
+
     /// <summary>
     /// Identifies the member whose default would generate the second largest liquidity exposure for the CCP under the scenario and for the relevant currency.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record CoverTwoDefaulters1
     [DisplayName("Cover 2 Identification")]
     [IsoXmlTag("Cover2Id")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Cover2Identification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoLEIIdentifier Cover2Identification { get; init; }
 }

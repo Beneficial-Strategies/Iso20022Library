@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_EbRBA_sMEeCZF5_uug7xyA")]
-[Description(@"Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process).")]
+[Description(
+    @"Identifies the business process in which the actors are involved. This is important to trigger the right business process, according to the market business model, which may require matching instructions in a CSD environment (double leg process) or not (single leg process)."
+)]
 [Derivations(typeof(BusinessFlowType1Code))]
 public enum BusinessFlowTypeCode
 {
@@ -23,7 +25,7 @@ public enum BusinessFlowTypeCode
     [IsoId("_HgklF_sMEeCZF5_uug7xyA")]
     [Description(@"Single leg process initiated by the delivering party.")]
     SingleLegDeliveringParty,
-    
+
     /// <summary>
     /// Single leg process initiated by the receiving party.
     /// Encoded/decoded by serializers as &quot;SLRP&quot;.
@@ -32,7 +34,7 @@ public enum BusinessFlowTypeCode
     [IsoId("_SCRpR_sMEeCZF5_uug7xyA")]
     [Description(@"Single leg process initiated by the receiving party.")]
     SingleLegReceivingParty,
-    
+
     /// <summary>
     /// Double leg process.
     /// Encoded/decoded by serializers as &quot;DLPR&quot;.
@@ -41,5 +43,4 @@ public enum BusinessFlowTypeCode
     [IsoId("_ZA4aJ_sMEeCZF5_uug7xyA")]
     [Description(@"Double leg process.")]
     DoubleLegProcess,
-    
 }

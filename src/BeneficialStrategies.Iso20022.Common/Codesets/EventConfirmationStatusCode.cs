@@ -23,7 +23,7 @@ public enum EventConfirmationStatusCode
     [IsoId("_ajNeFdp-Ed-ak6NoX_4Aeg_-88336775")]
     [Description(@"Occurrence of the event has been confirmed.")]
     Confirmed,
-    
+
     /// <summary>
     /// Occurrence of the event has not been confirmed.
     /// Encoded/decoded by serializers as &quot;UCON&quot;.
@@ -32,7 +32,7 @@ public enum EventConfirmationStatusCode
     [IsoId("_ajNeFtp-Ed-ak6NoX_4Aeg_-88336774")]
     [Description(@"Occurrence of the event has not been confirmed.")]
     Unconfirmed,
-    
+
     /// <summary>
     /// Occurrence of the event is pending.
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
@@ -41,5 +41,4 @@ public enum EventConfirmationStatusCode
     [IsoId("_k_9VoPyhEeq1mLMo4Zt_TQ")]
     [Description(@"Occurrence of the event is pending.")]
     Pending,
-    
 }

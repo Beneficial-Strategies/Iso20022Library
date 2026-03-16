@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mW7mF5NBEemQB_8XA98K0Q")]
 [DisplayName("Other Asset")]
-public partial record OtherAsset2
+public record OtherAsset2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of asset.
     /// </summary>
     [IsoId("_mrKwsZNBEemQB_8XA98K0Q")]
     [DisplayName("Other Asset Type")]
     [IsoXmlTag("OthrAsstTp")]
-    public required OtherAsset2Choice_ OtherAssetType { get; init; } 
-    
+    public required OtherAsset2Choice_ OtherAssetType { get; init; }
+
     /// <summary>
     /// Technical identification of the asset.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record OtherAsset2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Name of the asset.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record OtherAsset2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Name { get; init; }
+
     /// <summary>
     /// Description of the asset.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record OtherAsset2
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Description { get; init; }
+
     /// <summary>
     /// Additional identification of the asset.
     /// </summary>
@@ -66,16 +64,12 @@ public partial record OtherAsset2
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> OtherIdentification { get; init; } = [];
-    
+
     /// <summary>
     /// Additional information about the other asset.
     /// </summary>
     [IsoId("_mrKwuZNBEemQB_8XA98K0Q")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

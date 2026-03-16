@@ -12,7 +12,11 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_TVWQCwEcEeCQm6a_G2yO_w_1815843099")]
 [Description(@"Indicates the environment of the transaction.")]
-[Derivations(typeof(TransactionEnvironment1Code),typeof(TransactionEnvironment3Code),typeof(TransactionEnvironment2Code))]
+[Derivations(
+    typeof(TransactionEnvironment1Code),
+    typeof(TransactionEnvironment3Code),
+    typeof(TransactionEnvironment2Code)
+)]
 public enum TransactionEnvironmentCode
 {
     /// <summary>
@@ -23,7 +27,7 @@ public enum TransactionEnvironmentCode
     [IsoId("_TVWQDAEcEeCQm6a_G2yO_w_-194113759")]
     [Description(@"Merchant environment.")]
     Merchant,
-    
+
     /// <summary>
     /// Private environment.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -32,7 +36,7 @@ public enum TransactionEnvironmentCode
     [IsoId("_TVWQDQEcEeCQm6a_G2yO_w_1617784466")]
     [Description(@"Private environment.")]
     Private,
-    
+
     /// <summary>
     /// Public environment.
     /// Encoded/decoded by serializers as &quot;PUBL&quot;.
@@ -41,7 +45,7 @@ public enum TransactionEnvironmentCode
     [IsoId("_TVWQDgEcEeCQm6a_G2yO_w_-226084523")]
     [Description(@"Public environment.")]
     Public,
-    
+
     /// <summary>
     /// Bank environment.
     /// Encoded/decoded by serializers as &quot;BRCH&quot;.
@@ -50,7 +54,7 @@ public enum TransactionEnvironmentCode
     [IsoId("_qPp6oHsIEeSR68OJvMfxJQ")]
     [Description(@"Bank environment.")]
     Branch,
-    
+
     /// <summary>
     /// Other environments, for instance a mall or an airport.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +63,4 @@ public enum TransactionEnvironmentCode
     [IsoId("_ttxAQHsIEeSR68OJvMfxJQ")]
     [Description(@"Other environments, for instance a mall or an airport.")]
     Other,
-    
 }

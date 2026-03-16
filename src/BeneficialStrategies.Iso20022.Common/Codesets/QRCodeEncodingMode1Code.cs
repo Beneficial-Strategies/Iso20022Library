@@ -23,7 +23,7 @@ public enum QRCodeEncodingMode1Code
     [IsoId("_C2JMYdudEeiB5uLfkg9ZJA")]
     [Description(@"Alphanumeric value provided in Barcode field.")]
     Alphanumeric = QRCodeEncodingModeCode.Alphanumeric, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Binary value provided in Quick Response Code Binary Value.
     /// Encoded/decoded by serializers as &quot;BINA&quot;.
@@ -32,7 +32,7 @@ public enum QRCodeEncodingMode1Code
     [IsoId("_C6I7kdudEeiB5uLfkg9ZJA")]
     [Description(@"Binary value provided in Quick Response Code Binary Value.")]
     Binary = QRCodeEncodingModeCode.Binary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Kanji value provided in Quick Response Code Binary Value.
     /// Encoded/decoded by serializers as &quot;KANJ&quot;.
@@ -41,7 +41,7 @@ public enum QRCodeEncodingMode1Code
     [IsoId("_C-EZUdudEeiB5uLfkg9ZJA")]
     [Description(@"Kanji value provided in Quick Response Code Binary Value.")]
     Kanji = QRCodeEncodingModeCode.Kanji, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Numeric value provided in Barcode field.
     /// Encoded/decoded by serializers as &quot;NUME&quot;.
@@ -50,5 +50,4 @@ public enum QRCodeEncodingMode1Code
     [IsoId("_DCOgkdudEeiB5uLfkg9ZJA")]
     [Description(@"Numeric value provided in Barcode field.")]
     Numeric = QRCodeEncodingModeCode.Numeric, // same ordinal as derivation source for type conversions
-    
 }

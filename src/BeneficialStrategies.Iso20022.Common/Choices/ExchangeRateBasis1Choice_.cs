@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ExchangeRateBasis1Choice.CurrencyPair))]
     [KnownType(typeof(ExchangeRateBasis1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ExchangeRateBasis1Choice.CurrencyPair),nameof(ExchangeRateBasis1Choice.CurrencyPair))]
-    [JsonDerivedType(typeof(ExchangeRateBasis1Choice.Proprietary),nameof(ExchangeRateBasis1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ExchangeRateBasis1Choice.CurrencyPair),
+        nameof(ExchangeRateBasis1Choice.CurrencyPair)
+    )]
+    [JsonDerivedType(
+        typeof(ExchangeRateBasis1Choice.Proprietary),
+        nameof(ExchangeRateBasis1Choice.Proprietary)
+    )]
     [IsoId("_n2_eYLppEea_jI1vMH_RbA")]
     [DisplayName("Exchange Rate Basis 1 Choice")]
-    public abstract partial record ExchangeRateBasis1Choice_
-    {
-    }
+    public abstract record ExchangeRateBasis1Choice_ { }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1sQOIzL3EeKU9IrkkToqcw_1983837671")]
-[Description(@"Specifies the function the agent is performing (for example, event agent, information agent).")]
+[Description(
+    @"Specifies the function the agent is performing (for example, event agent, information agent)."
+)]
 [DerivedFrom(typeof(AgentTypeCode))]
 public enum AgentType1Code
 {
@@ -21,9 +23,11 @@ public enum AgentType1Code
     /// </summary>
     [EnumMember(Value = "DAGB")]
     [IsoId("_1sQOJDL3EeKU9IrkkToqcw_38160419")]
-    [Description(@"Trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. Specific to bearer securities.")]
+    [Description(
+        @"Trust company, bank or similar financial institution who acts on behalf of an out of town agent or event agent where securities can be delivered in person. Specific to bearer securities."
+    )]
     DropAgentBearer = AgentTypeCode.DropAgentBearer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Agent that cannot be classified as any listed type of agent.
     /// Encoded/decoded by serializers as &quot;OTAG&quot;.
@@ -32,5 +36,4 @@ public enum AgentType1Code
     [IsoId("_1sQOJTL3EeKU9IrkkToqcw_108929944")]
     [Description(@"Agent that cannot be classified as any listed type of agent.")]
     Other = AgentTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

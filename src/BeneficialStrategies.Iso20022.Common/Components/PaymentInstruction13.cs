@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Lss7yxbwEeOy-PlRuFSUzQ")]
 [DisplayName("Payment Instruction")]
-public partial record PaymentInstruction13
+public record PaymentInstruction13
 {
-    #nullable enable
-    
     /// <summary>
     /// Date at which the initiating party requests that the payment instruction be processed. |.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record PaymentInstruction13
     [DisplayName("Requested Execution Date Time")]
     [IsoXmlTag("ReqdExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RequestedExecutionDateTime { get; init; } 
-    
+    public IsoISODateTime? RequestedExecutionDateTime { get; init; }
+
     /// <summary>
     /// Type, or nature, of the payment, for example an express payment.
     /// </summary>
     [IsoId("_MFP-pRbwEeOy-PlRuFSUzQ")]
     [DisplayName("Payment Type")]
     [IsoXmlTag("PmtTp")]
-    public PaymentType4Choice_? PaymentType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PaymentType4Choice_? PaymentType { get; init; }
 }

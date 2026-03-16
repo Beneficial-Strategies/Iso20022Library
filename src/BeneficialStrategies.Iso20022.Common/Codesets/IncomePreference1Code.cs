@@ -23,7 +23,7 @@ public enum IncomePreference1Code
     [IsoId("_aV8eKNp-Ed-ak6NoX_4Aeg_-1613438305")]
     [Description(@"Distribution in cash.")]
     Cash = IncomePreferenceCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reinvestment of proceeds into securities.
     /// Encoded/decoded by serializers as &quot;DRIP&quot;.
@@ -32,5 +32,4 @@ public enum IncomePreference1Code
     [IsoId("_aWGPINp-Ed-ak6NoX_4Aeg_-1601434888")]
     [Description(@"Reinvestment of proceeds into securities.")]
     DividendReinvestment = IncomePreferenceCode.DividendReinvestment, // same ordinal as derivation source for type conversions
-    
 }

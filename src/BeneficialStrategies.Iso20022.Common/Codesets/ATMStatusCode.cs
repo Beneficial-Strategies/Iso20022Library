@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_W1_04IqLEeSRT5rEzcAHEw")]
 [Description(@"Required status of the ATM, parameters of the status update command.")]
-[Derivations(typeof(ATMStatus1Code),typeof(ATMStatus2Code),typeof(ATMStatus3Code))]
+[Derivations(typeof(ATMStatus1Code), typeof(ATMStatus2Code), typeof(ATMStatus3Code))]
 public enum ATMStatusCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ATMStatusCode
     [IsoId("_a2vtgIqLEeSRT5rEzcAHEw")]
     [Description(@"Component is in service.")]
     InService,
-    
+
     /// <summary>
     /// ATM out of service.
     /// Encoded/decoded by serializers as &quot;OUTS&quot;.
@@ -32,7 +32,7 @@ public enum ATMStatusCode
     [IsoId("_f0JboIqLEeSRT5rEzcAHEw")]
     [Description(@"ATM out of service.")]
     OutOfService,
-    
+
     /// <summary>
     /// Component is activated and in operation.
     /// Encoded/decoded by serializers as &quot;OPER&quot;.
@@ -41,7 +41,7 @@ public enum ATMStatusCode
     [IsoId("_a3AP8Ir-EeSvuOJS0mmL0g")]
     [Description(@"Component is activated and in operation.")]
     InOperation,
-    
+
     /// <summary>
     /// Component has been stopped.
     /// Encoded/decoded by serializers as &quot;STOP&quot;.
@@ -50,7 +50,7 @@ public enum ATMStatusCode
     [IsoId("_wnKYsItCEeSxlKlAGYErFg")]
     [Description(@"Component has been stopped.")]
     Stopped,
-    
+
     /// <summary>
     /// Component has been loaded, but not yet activated.
     /// Encoded/decoded by serializers as &quot;WACT&quot;.
@@ -59,5 +59,4 @@ public enum ATMStatusCode
     [IsoId("_6BC5MItCEeSxlKlAGYErFg")]
     [Description(@"Component has been loaded, but not yet activated.")]
     WaitingActivation,
-    
 }

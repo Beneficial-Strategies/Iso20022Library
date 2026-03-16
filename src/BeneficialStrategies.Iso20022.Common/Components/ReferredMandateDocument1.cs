@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_p5hTAWVHEeacpJ-gG9kyUQ")]
 [DisplayName("Referred Mandate Document")]
-public partial record ReferredMandateDocument1
+public record ReferredMandateDocument1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of referred document.
     /// </summary>
     [IsoId("_qDMMY2VHEeacpJ-gG9kyUQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public ReferredDocumentType4? Type { get; init; } 
-    
+    public ReferredDocumentType4? Type { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identification of the referred document.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record ReferredMandateDocument1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Number { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Number { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identification as assigned by the creditor to the referred document shared with the debtor for its own reference.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record ReferredMandateDocument1
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CreditorReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CreditorReference { get; init; }
+
     /// <summary>
     /// Date associated with the referred document.
     /// </summary>
@@ -53,9 +51,5 @@ public partial record ReferredMandateDocument1
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RelatedDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? RelatedDate { get; init; }
 }

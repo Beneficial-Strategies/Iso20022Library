@@ -23,7 +23,7 @@ public enum PutTypeCode
     [IsoId("_ha1jtGliEeGaMcKyqKNRfQ_-304925813")]
     [Description(@"Type of execution of the put feature is mandatory.")]
     Mandatory,
-    
+
     /// <summary>
     /// Type of execution of the put feature is optional.
     /// Encoded/decoded by serializers as &quot;OPTI&quot;.
@@ -32,7 +32,7 @@ public enum PutTypeCode
     [IsoId("_ha1jtWliEeGaMcKyqKNRfQ_-1889555559")]
     [Description(@"Type of execution of the put feature is optional.")]
     Optional,
-    
+
     /// <summary>
     /// Type of execution of the put feature could be optional or mandatory.
     /// Encoded/decoded by serializers as &quot;TWOS&quot;.
@@ -41,5 +41,4 @@ public enum PutTypeCode
     [IsoId("_ha1jtmliEeGaMcKyqKNRfQ_-1569124192")]
     [Description(@"Type of execution of the put feature could be optional or mandatory.")]
     Both,
-    
 }

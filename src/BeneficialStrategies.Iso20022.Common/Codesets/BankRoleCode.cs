@@ -23,7 +23,7 @@ public enum BankRoleCode
     [IsoId("_4OpbANNsEeKdOs2hjJ_3WQ")]
     [Description(@"Bank of the buyer.")]
     BuyersBank,
-    
+
     /// <summary>
     /// Bank of the seller.
     /// Encoded/decoded by serializers as &quot;SELB&quot;.
@@ -32,7 +32,7 @@ public enum BankRoleCode
     [IsoId("__ov1ENNsEeKdOs2hjJ_3WQ")]
     [Description(@"Bank of the seller.")]
     SellersBank,
-    
+
     /// <summary>
     /// Obligor bank.
     /// Encoded/decoded by serializers as &quot;OBLB&quot;.
@@ -41,7 +41,7 @@ public enum BankRoleCode
     [IsoId("_CXLxQNNtEeKdOs2hjJ_3WQ")]
     [Description(@"Obligor bank.")]
     ObligorBank,
-    
+
     /// <summary>
     /// Recipient bank.
     /// Encoded/decoded by serializers as &quot;RECB&quot;.
@@ -50,5 +50,4 @@ public enum BankRoleCode
     [IsoId("_FYWcMNNtEeKdOs2hjJ_3WQ")]
     [Description(@"Recipient bank.")]
     RecipientBank,
-    
 }

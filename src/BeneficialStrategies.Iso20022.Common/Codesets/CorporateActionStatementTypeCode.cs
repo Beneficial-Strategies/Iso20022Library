@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bTMJhdp-Ed-ak6NoX_4Aeg_-454336053")]
-[Description(@"Indicates whether the statement contains missing instructions only or all instructions.")]
-[Derivations(typeof(CorporateActionStatementType1Code),typeof(CorporateActionStatementType2Code))]
+[Description(
+    @"Indicates whether the statement contains missing instructions only or all instructions."
+)]
+[Derivations(typeof(CorporateActionStatementType1Code), typeof(CorporateActionStatementType2Code))]
 public enum CorporateActionStatementTypeCode
 {
     /// <summary>
@@ -23,7 +25,7 @@ public enum CorporateActionStatementTypeCode
     [IsoId("_bTMJhtp-Ed-ak6NoX_4Aeg_-454336023")]
     [Description(@"Statement contains missing instructions.")]
     Missing,
-    
+
     /// <summary>
     /// Statement contains all instructions.
     /// Encoded/decoded by serializers as &quot;ALLL&quot;.
@@ -32,7 +34,7 @@ public enum CorporateActionStatementTypeCode
     [IsoId("_bTMJh9p-Ed-ak6NoX_4Aeg_-454335992")]
     [Description(@"Statement contains all instructions.")]
     All,
-    
+
     /// <summary>
     /// Balance information with no instruction details provided.
     /// Encoded/decoded by serializers as &quot;BALO&quot;.
@@ -41,7 +43,7 @@ public enum CorporateActionStatementTypeCode
     [IsoId("_8PcooLtEEeilsanBGAzy4A")]
     [Description(@"Balance information with no instruction details provided.")]
     BalanceOnlyNotification,
-    
+
     /// <summary>
     /// Balance information with instruction details.
     /// Encoded/decoded by serializers as &quot;BALI&quot;.
@@ -50,5 +52,4 @@ public enum CorporateActionStatementTypeCode
     [IsoId("_NMpwoLtFEeilsanBGAzy4A")]
     [Description(@"Balance information with instruction details.")]
     BalanceInformation,
-    
 }

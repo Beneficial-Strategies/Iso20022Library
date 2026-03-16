@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QHyBEdp-Ed-ak6NoX_4Aeg_564730971")]
 [DisplayName("Settlement Time Request")]
-public partial record SettlementTimeRequest1
+public record SettlementTimeRequest1
 {
-    #nullable enable
-    
     /// <summary>
     /// Time by which the funds must be credited, with confirmation, to the CLS Bank&apos;s account at the central bank, expressed in Central European Time (CET).
     /// </summary>
@@ -25,9 +23,5 @@ public partial record SettlementTimeRequest1
     [DisplayName("CLS Time")]
     [IsoXmlTag("CLSTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime CLSTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISOTime CLSTime { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJDQxtp-Ed-ak6NoX_4Aeg_632201605")]
 [DisplayName("Document Identification")]
-public partial record DocumentIdentification1
+public record DocumentIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a set of data.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record DocumentIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the version of a set of data. Example: Version 1.
     /// </summary>
@@ -35,17 +33,13 @@ public partial record DocumentIdentification1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Version { get; init; } 
-    
+    public required IsoNumber Version { get; init; }
+
     /// <summary>
     /// Uniquely identifies the financial institution which has submitted the set of data by using a BIC.
     /// </summary>
     [IsoId("_RJNBwNp-Ed-ak6NoX_4Aeg_-237333531")]
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
-    public required BICIdentification1 Submitter { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required BICIdentification1 Submitter { get; init; }
 }

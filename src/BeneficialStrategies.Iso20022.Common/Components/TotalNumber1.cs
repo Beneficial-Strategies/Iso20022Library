@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qr_hWNp-Ed-ak6NoX_4Aeg_-606322098")]
 [DisplayName("Total Number")]
-public partial record TotalNumber1
+public record TotalNumber1
 {
-    #nullable enable
-    
     /// <summary>
     /// Sequential number of the instruction in a range of linked settlement instructions.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record TotalNumber1
     [DisplayName("Current Instruction Number")]
     [IsoXmlTag("CurInstrNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText CurrentInstructionNumber { get; init; } 
-    
+    public required IsoExact3NumericText CurrentInstructionNumber { get; init; }
+
     /// <summary>
     /// Total number of settlement instructions that are linked together.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record TotalNumber1
     [DisplayName("Total Of Linked Instructions")]
     [IsoXmlTag("TtlOfLkdInstrs")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText TotalOfLinkedInstructions { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoExact3NumericText TotalOfLinkedInstructions { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jrZ20EXWEeegp_DADCe7HQ")]
 [DisplayName("Content")]
-public partial record Content1
+public record Content1
 {
-    #nullable enable
-    
     /// <summary>
     /// Value of the content of or the reference to the message.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Content1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20KText)]
-    [StringLength(maximumLength: 20000 ,MinimumLength = 1)]
-    public required IsoMax20KText Value { get; init; } 
-    
+    [StringLength(maximumLength: 20000, MinimumLength = 1)]
+    public required IsoMax20KText Value { get; init; }
+
     /// <summary>
     /// Digital signature of the content of or the reference to the message.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record Content1
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? Signature { get; init; } 
-    
+    public IsoMax140Binary? Signature { get; init; }
+
     /// <summary>
     /// Signing certificate identification.
     /// </summary>
@@ -44,10 +42,6 @@ public partial record Content1
     [DisplayName("Certificate Identification")]
     [IsoXmlTag("CertId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? CertificateIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? CertificateIdentification { get; init; }
 }

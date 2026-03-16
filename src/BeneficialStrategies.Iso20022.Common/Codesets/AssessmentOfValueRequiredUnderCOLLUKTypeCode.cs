@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_vpn44CuUEe6GGqp7D_oKtA")]
-[Description(@"Specifies if assessment of value is required under UK Collective Investment Schemes. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09040.")]
+[Description(
+    @"Specifies if assessment of value is required under UK Collective Investment Schemes. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09040."
+)]
 [Derivations(typeof(AssessmentOfValueRequiredUnderCOLLUKType1Code))]
 public enum AssessmentOfValueRequiredUnderCOLLUKTypeCode
 {
@@ -32,5 +34,4 @@ public enum AssessmentOfValueRequiredUnderCOLLUKTypeCode
     [IsoId("")]
     [Description(@"Assessement of value is required.")]
     Yes,
-
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,30 +14,28 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PPm5UXQ9Ee6Y1uOeeiF_Eg")]
 [DisplayName("Amount Details3")]
-public partial record AmountDetails3
+public record AmountDetails3
 {
-    #nullable enable
-
     /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
 
     /// <summary>
     /// Credit Debit.
     /// </summary>
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; } 
+    public CreditDebit3Code? CreditDebit { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; } 
+    public IsoMax35Text? OtherType { get; init; }
 
     /// <summary>
     /// Tax.
@@ -51,9 +49,5 @@ public partial record AmountDetails3
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public TypeOfAmount23Code? Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public TypeOfAmount23Code? Type { get; init; }
 }

@@ -19,18 +19,22 @@ public sealed class SimpleValueList<T> : ImmutableValueList<T>
     public SimpleValueList() { }
 
     /// <summary>Creates a list by copying elements from <paramref name="items"/>.</summary>
-    public SimpleValueList(ReadOnlySpan<T> items) : base(items) { }
+    public SimpleValueList(ReadOnlySpan<T> items)
+        : base(items) { }
 
     /// <summary>Creates a list by copying elements from <paramref name="items"/>.</summary>
-    public SimpleValueList(IEnumerable<T> items) : base(items) { }
+    public SimpleValueList(IEnumerable<T> items)
+        : base(items) { }
 
     /// <summary>
     /// Not supported — <see cref="SimpleValueList{T}"/> is immutable.
     /// Use collection expressions (<c>[ item1, item2 ]</c>) to construct instances.
     /// </summary>
     /// <exception cref="NotSupportedException">Always thrown.</exception>
-    public void Add(T item) => throw new NotSupportedException(
-        $"{nameof(SimpleValueList<T>)} is immutable. Use collection expressions [] to construct.");
+    public void Add(T item) =>
+        throw new NotSupportedException(
+            $"{nameof(SimpleValueList<T>)} is immutable. Use collection expressions [] to construct."
+        );
 }
 
 /// <summary>Factory required by <see cref="CollectionBuilderAttribute"/> on <see cref="SimpleValueList{T}"/>.</summary>

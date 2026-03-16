@@ -23,7 +23,7 @@ public enum AssetClassSubProductType19Code
     [IsoId("_TB5cIQ3oEeWc7_0KPiuk6w")]
     [Description(@"Commodity of type deliverable.")]
     Deliverable = AssetClassSubProductTypeCode.Deliverable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type non deliverable.
     /// Encoded/decoded by serializers as &quot;NDLV&quot;.
@@ -32,5 +32,4 @@ public enum AssetClassSubProductType19Code
     [IsoId("_T0xqkQ3oEeWc7_0KPiuk6w")]
     [Description(@"Commodity of type non deliverable.")]
     NonDeliverable = AssetClassSubProductTypeCode.NonDeliverable, // same ordinal as derivation source for type conversions
-    
 }

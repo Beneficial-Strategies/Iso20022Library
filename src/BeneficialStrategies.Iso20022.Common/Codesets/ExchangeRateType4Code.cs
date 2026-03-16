@@ -41,5 +41,4 @@ public enum ExchangeRateType4Code
     [IsoId("_ExchangeRateType4Code_Spot")]
     [Description(@"Exchange rate applied is the spot rate.")]
     Spot = ExchangeRateTypeCode.Spot,
-
 }

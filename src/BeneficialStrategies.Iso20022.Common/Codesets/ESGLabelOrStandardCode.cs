@@ -23,7 +23,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_Rmxy8M2xEeuAE-cYsQdwHQ")]
     [Description(@"International Capital Markets Association (ICMA) Green Bond Principles.")]
     ICMAGreenBond,
-    
+
     /// <summary>
     /// EU Green Bond Standard.
     /// Encoded/decoded by serializers as &quot;B002&quot;.
@@ -32,7 +32,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_XDlZ4M2xEeuAE-cYsQdwHQ")]
     [Description(@"EU Green Bond Standard.")]
     EUGreenBond,
-    
+
     /// <summary>
     /// EU Ecolabel for financial products.
     /// Encoded/decoded by serializers as &quot;C003&quot;.
@@ -41,7 +41,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_bozRgM2xEeuAE-cYsQdwHQ")]
     [Description(@"EU Ecolabel for financial products.")]
     EUEcolabel,
-    
+
     /// <summary>
     /// FNG-Siegel.
     /// Encoded/decoded by serializers as &quot;D004&quot;.
@@ -50,7 +50,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_gIkocM2xEeuAE-cYsQdwHQ")]
     [Description(@"FNG-Siegel.")]
     FNGSiegel,
-    
+
     /// <summary>
     /// Climate Bonds Initiative (CBI) Climate Bonds Standard.
     /// Encoded/decoded by serializers as &quot;E005&quot;.
@@ -59,7 +59,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_kHwa0M2xEeuAE-cYsQdwHQ")]
     [Description(@"Climate Bonds Initiative (CBI) Climate Bonds Standard.")]
     CBIClimateBonds,
-    
+
     /// <summary>
     /// International Capital Markets Association (ICMA) Social Bonds Principles.
     /// Encoded/decoded by serializers as &quot;F006&quot;.
@@ -68,7 +68,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_qL8K0M2xEeuAE-cYsQdwHQ")]
     [Description(@"International Capital Markets Association (ICMA) Social Bonds Principles.")]
     ICMASocialBonds,
-    
+
     /// <summary>
     /// LuxFLAG ESG label.
     /// Encoded/decoded by serializers as &quot;G007&quot;.
@@ -77,7 +77,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_uZwPEM2xEeuAE-cYsQdwHQ")]
     [Description(@"LuxFLAG ESG label.")]
     LuxFLAGESG,
-    
+
     /// <summary>
     /// LuxFLAG climate finance label.
     /// Encoded/decoded by serializers as &quot;H008&quot;.
@@ -86,7 +86,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_x5fFUM2xEeuAE-cYsQdwHQ")]
     [Description(@"LuxFLAG climate finance label.")]
     LuxFLAGClimate,
-    
+
     /// <summary>
     /// LuxFLAG environment label.
     /// Encoded/decoded by serializers as &quot;I009&quot;.
@@ -95,7 +95,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_7UqmUM2xEeuAE-cYsQdwHQ")]
     [Description(@"LuxFLAG environment label.")]
     LuxFLAGEnvironment,
-    
+
     /// <summary>
     /// Kein Verstoss gegen Atomwaffensperrvertrag.
     /// Encoded/decoded by serializers as &quot;J010&quot;.
@@ -104,7 +104,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_ATLuwM2yEeuAE-cYsQdwHQ")]
     [Description(@"Kein Verstoss gegen Atomwaffensperrvertrag.")]
     KeinVerstoßGegenAtomwaffensperrvertrag,
-    
+
     /// <summary>
     /// Label &quot;Investissement Socialement Responsable&quot; (ISR).
     /// Encoded/decoded by serializers as &quot;K011&quot;.
@@ -113,7 +113,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_EENJUM2yEeuAE-cYsQdwHQ")]
     [Description(@"Label ""Investissement Socialement Responsable"" (ISR).")]
     ISR,
-    
+
     /// <summary>
     /// Febelfin Towards Sustainability label.
     /// Encoded/decoded by serializers as &quot;L012&quot;.
@@ -122,7 +122,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_JiJ_wM2yEeuAE-cYsQdwHQ")]
     [Description(@"Febelfin Towards Sustainability label.")]
     FebelfinTowardsSustainability,
-    
+
     /// <summary>
     /// UZ49 - das Oesterreichische Umweltzeichen.
     /// Encoded/decoded by serializers as &quot;M013&quot;.
@@ -131,7 +131,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_NtUYoM2yEeuAE-cYsQdwHQ")]
     [Description(@"UZ49 - das Oesterreichische Umweltzeichen.")]
     UZ49,
-    
+
     /// <summary>
     /// Nordic Swan Ecolabel.
     /// Encoded/decoded by serializers as &quot;N014&quot;.
@@ -140,7 +140,7 @@ public enum ESGLabelOrStandardCode
     [IsoId("_SlY60M2yEeuAE-cYsQdwHQ")]
     [Description(@"Nordic Swan Ecolabel.")]
     NordicSwan,
-    
+
     /// <summary>
     /// Greenfin label.
     /// Encoded/decoded by serializers as &quot;O015&quot;.
@@ -149,5 +149,4 @@ public enum ESGLabelOrStandardCode
     [IsoId("_VitAgM2yEeuAE-cYsQdwHQ")]
     [Description(@"Greenfin label.")]
     GreenfinLabel,
-    
 }

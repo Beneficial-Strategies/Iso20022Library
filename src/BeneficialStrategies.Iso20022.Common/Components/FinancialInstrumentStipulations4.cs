@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5DuEYQgTEe2fOITqoTnSLQ")]
 [DisplayName("Financial Instrument Stipulations")]
-public partial record FinancialInstrumentStipulations4
+public record FinancialInstrumentStipulations4
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of stipulation expressing geographical constraints on a fixed income instrument. It is expressed with a state or country abbreviation and a minimum or maximum percentage. Example: CA 0-80 (minimum of 80 percent in Californian assests).
     /// </summary>
@@ -25,33 +23,33 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Geographics")]
     [IsoXmlTag("Geogcs")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Geographics { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Geographics { get; init; }
+
     /// <summary>
     /// Range of allowed yield.
     /// </summary>
     [IsoId("_5XPdXwgTEe2fOITqoTnSLQ")]
     [DisplayName("Yield Range")]
     [IsoXmlTag("YldRg")]
-    public AmountOrPercentageRange1? YieldRange { get; init; } 
-    
+    public AmountOrPercentageRange1? YieldRange { get; init; }
+
     /// <summary>
     /// Range of assessment of securities credit and investment risk.
     /// </summary>
     [IsoId("_5XPdYQgTEe2fOITqoTnSLQ")]
     [DisplayName("Rating")]
     [IsoXmlTag("Ratg")]
-    public Rating1? Rating { get; init; } 
-    
+    public Rating1? Rating { get; init; }
+
     /// <summary>
     /// Identification of a range of coupon numbers attached to its related financial instrument.
     /// </summary>
     [IsoId("_5XPdYwgTEe2fOITqoTnSLQ")]
     [DisplayName("Coupon Range")]
     [IsoXmlTag("CpnRg")]
-    public AmountOrPercentageRange1? CouponRange { get; init; } 
-    
+    public AmountOrPercentageRange1? CouponRange { get; init; }
+
     /// <summary>
     /// Indicates whether the financial instrument repays the principal amount in parts during the life cycle of the security.
     /// </summary>
@@ -59,8 +57,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Amortisable Indicator")]
     [IsoXmlTag("AmtsblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AmortisableIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? AmortisableIndicator { get; init; }
+
     /// <summary>
     /// Reason for which money is raised through the issuance of a security.
     /// </summary>
@@ -68,9 +66,9 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? Purpose { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? Purpose { get; init; }
+
     /// <summary>
     /// Identifies whether the issue is subject to alternative minimum taxation (used for municipal bonds).
     /// </summary>
@@ -78,8 +76,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Alternative Minimum Tax Indicator")]
     [IsoXmlTag("AltrntvMinTaxInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AlternativeMinimumTaxIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? AlternativeMinimumTaxIndicator { get; init; }
+
     /// <summary>
     /// Indicates an instruction to reinvest dividends in the underlying security (or proceeds at maturity in a similar instrument) if the current rate is &lt;rate&gt; or better.
     /// </summary>
@@ -87,32 +85,32 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Auto Reinvestment")]
     [IsoXmlTag("AutoRinvstmt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? AutoReinvestment { get; init; } 
-    
+    public IsoPercentageRate? AutoReinvestment { get; init; }
+
     /// <summary>
     /// Indicates the conditions under which the order/trade is to be/was executed.
     /// </summary>
     [IsoId("_5XPdbQgTEe2fOITqoTnSLQ")]
     [DisplayName("Transaction Conditions")]
     [IsoXmlTag("TxConds")]
-    public TradeTransactionCondition2Code? TransactionConditions { get; init; } 
-    
+    public TradeTransactionCondition2Code? TransactionConditions { get; init; }
+
     /// <summary>
     /// Currency in which a security is issued or redenominated.
     /// </summary>
     [IsoId("_5XPdbwgTEe2fOITqoTnSLQ")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Indicates an instruction to override an investment&apos;s default start and/or end date with a custom date.
     /// </summary>
     [IsoId("_5XPdcQgTEe2fOITqoTnSLQ")]
     [DisplayName("Custom Date")]
     [IsoXmlTag("CstmDt")]
-    public DateTimePeriod2? CustomDate { get; init; } 
-    
+    public DateTimePeriod2? CustomDate { get; init; }
+
     /// <summary>
     /// Haircut or valuation factor on the security expressed as a percentage.
     /// </summary>
@@ -120,8 +118,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Haircut { get; init; } 
-    
+    public IsoPercentageRate? Haircut { get; init; }
+
     /// <summary>
     /// Identifies whether the lender is assured partial or full payment by a third party if the borrower defaults.
     /// </summary>
@@ -129,8 +127,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Insured Indicator")]
     [IsoXmlTag("InsrdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? InsuredIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? InsuredIndicator { get; init; }
+
     /// <summary>
     /// Indicates an instruction or attribute giving the number of days to be included in the look-back period for the investment. E.g. some options allow exercise based on the underlying asset&apos;s optimal value over the look-back period.
     /// </summary>
@@ -138,8 +136,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Look Back")]
     [IsoXmlTag("LookBck")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? LookBack { get; init; } 
-    
+    public IsoNumber? LookBack { get; init; }
+
     /// <summary>
     /// Indicates the maturity date.
     /// </summary>
@@ -147,8 +145,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? MaturityDate { get; init; } 
-    
+    public IsoISOYearMonth? MaturityDate { get; init; }
+
     /// <summary>
     /// Indicates the issue date.
     /// </summary>
@@ -156,8 +154,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? IssueDate { get; init; } 
-    
+    public IsoISOYearMonth? IssueDate { get; init; }
+
     /// <summary>
     /// Identification of the issuer.
     /// </summary>
@@ -165,8 +163,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Issuer Identification")]
     [IsoXmlTag("IssrId")]
     [IsoSimpleType(IsoSimpleType.BICNonFIDec2014Identifier)]
-    public IsoBICNonFIDec2014Identifier? IssuerIdentification { get; init; } 
-    
+    public IsoBICNonFIDec2014Identifier? IssuerIdentification { get; init; }
+
     /// <summary>
     /// Identifies the issue size range.
     /// </summary>
@@ -174,16 +172,16 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Issue Size")]
     [IsoXmlTag("IsseSz")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? IssueSize { get; init; } 
-    
+    public IsoNumber? IssueSize { get; init; }
+
     /// <summary>
     /// Indicates the minimum denomination of a security.
     /// </summary>
     [IsoId("_5XPdhwgTEe2fOITqoTnSLQ")]
     [DisplayName("Minimum Denomination")]
     [IsoXmlTag("MinDnmtn")]
-    public FinancialInstrumentQuantity1Choice_? MinimumDenomination { get; init; } 
-    
+    public FinancialInstrumentQuantity1Choice_? MinimumDenomination { get; init; }
+
     /// <summary>
     /// Maximum number of time the collateral can be substitute.
     /// </summary>
@@ -191,32 +189,32 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Maximum Substitution")]
     [IsoXmlTag("MaxSbstitn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumSubstitution { get; init; } 
-    
+    public IsoNumber? MaximumSubstitution { get; init; }
+
     /// <summary>
     /// Indicates the minimum tradable increments of a security.
     /// </summary>
     [IsoId("_5XPdiwgTEe2fOITqoTnSLQ")]
     [DisplayName("Minimum Increment")]
     [IsoXmlTag("MinIncrmt")]
-    public FinancialInstrumentQuantity1Choice_? MinimumIncrement { get; init; } 
-    
+    public FinancialInstrumentQuantity1Choice_? MinimumIncrement { get; init; }
+
     /// <summary>
     /// Indicates the periodic or regular cycle of interest payments.
     /// </summary>
     [IsoId("_5XPdjQgTEe2fOITqoTnSLQ")]
     [DisplayName("Payment Frequency")]
     [IsoXmlTag("PmtFrqcy")]
-    public Frequency1Code? PaymentFrequency { get; init; } 
-    
+    public Frequency1Code? PaymentFrequency { get; init; }
+
     /// <summary>
     /// Indicates the minimum tradable quantity of a security.
     /// </summary>
     [IsoId("_5XPdjwgTEe2fOITqoTnSLQ")]
     [DisplayName("Minimum Quantity")]
     [IsoXmlTag("MinQty")]
-    public FinancialInstrumentQuantity1Choice_? MinimumQuantity { get; init; } 
-    
+    public FinancialInstrumentQuantity1Choice_? MinimumQuantity { get; init; }
+
     /// <summary>
     /// Indicates a search criterion used when looking to buy a bond, particularly an MBS, issued in a particular year.
     /// </summary>
@@ -224,9 +222,9 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Production")]
     [IsoXmlTag("Pdctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Production { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Production { get; init; }
+
     /// <summary>
     /// Identifies if the securities is restricted or not (as per Rule 144).
     /// </summary>
@@ -234,16 +232,16 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Restricted Indicator")]
     [IsoXmlTag("RstrctdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? RestrictedIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? RestrictedIndicator { get; init; }
+
     /// <summary>
     /// Indicates the frequency at which the bond is re-rated and therefore re-priced (bond attribute, particularly of floating rate and index linked instruments).
     /// </summary>
     [IsoId("_5XPdlQgTEe2fOITqoTnSLQ")]
     [DisplayName("Price Frequency")]
     [IsoXmlTag("PricFrqcy")]
-    public Frequency1Code? PriceFrequency { get; init; } 
-    
+    public Frequency1Code? PriceFrequency { get; init; }
+
     /// <summary>
     /// Indicates the market sector the security is classified as. E.g. pharmacuticals, automobile, housing, etc.
     /// </summary>
@@ -251,17 +249,17 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Sector { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Sector { get; init; }
+
     /// <summary>
     /// Indicates the maximum number of times collateral can be substituted.
     /// </summary>
     [IsoId("_5XPdmQgTEe2fOITqoTnSLQ")]
     [DisplayName("Substitution Frequency")]
     [IsoXmlTag("SbstitnFrqcy")]
-    public Frequency1Code? SubstitutionFrequency { get; init; } 
-    
+    public Frequency1Code? SubstitutionFrequency { get; init; }
+
     /// <summary>
     /// Number of remaining times the collateral can be substitute.
     /// </summary>
@@ -269,8 +267,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Substitution Left")]
     [IsoXmlTag("SbstitnLft")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? SubstitutionLeft { get; init; } 
-    
+    public IsoNumber? SubstitutionLeft { get; init; }
+
     /// <summary>
     /// Indicates a search criterion when looking to buy an MBS that either is [yes] or is not [no] an entire pool.
     /// </summary>
@@ -278,8 +276,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Whole Pool Indicator")]
     [IsoXmlTag("WhlPoolInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? WholePoolIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? WholePoolIndicator { get; init; }
+
     /// <summary>
     /// Identifies the Benchmark source price (eg. BB Generic, BB Fairvalue, Brokertec.).
     /// </summary>
@@ -287,9 +285,9 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Price Source")]
     [IsoXmlTag("PricSrc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PriceSource { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PriceSource { get; init; }
+
     /// <summary>
     /// Date/time at which an interest bearing security becomes due and assets are to be repaid.
     /// </summary>
@@ -297,16 +295,16 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Expiration Date")]
     [IsoXmlTag("XprtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ExpirationDate { get; init; } 
-    
+    public IsoISODateTime? ExpirationDate { get; init; }
+
     /// <summary>
     /// Amount for which a security can be overalloted (as in greenshoe option).
     /// </summary>
     [IsoId("_5XPdowgTEe2fOITqoTnSLQ")]
     [DisplayName("Over Allotment Amount")]
     [IsoXmlTag("OverAlltmtAmt")]
-    public ActiveCurrencyAndAmount? OverAllotmentAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? OverAllotmentAmount { get; init; }
+
     /// <summary>
     /// Percentage for which a security can be overalloted (as in greenshoe option).
     /// </summary>
@@ -314,16 +312,16 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Over Allotment Rate")]
     [IsoXmlTag("OverAlltmtRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? OverAllotmentRate { get; init; } 
-    
+    public IsoPercentageRate? OverAllotmentRate { get; init; }
+
     /// <summary>
     /// Indicates a search criterion used when looking to buy a bond within a particular price range.
     /// </summary>
     [IsoId("_5XPdpwgTEe2fOITqoTnSLQ")]
     [DisplayName("Price Range")]
     [IsoXmlTag("PricRg")]
-    public AmountOrPercentageRange1? PriceRange { get; init; } 
-    
+    public AmountOrPercentageRange1? PriceRange { get; init; }
+
     /// <summary>
     /// Indicates whether the issuer has the right to pay the security prior to maturity. Also called RetractableIndicator.
     /// </summary>
@@ -331,8 +329,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Callable Indicator")]
     [IsoXmlTag("CllblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? CallableIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? CallableIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the interest bearing security is convertible into another type of security.
     /// </summary>
@@ -340,8 +338,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Convertible Indicator")]
     [IsoXmlTag("ConvtblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ConvertibleIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? ConvertibleIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the holder has the right to ask for redemption of the security prior to final maturity. Also called RedeemableIndicator.
     /// </summary>
@@ -349,8 +347,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Putable Indicator")]
     [IsoXmlTag("PutblInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PutableIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? PutableIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether an interest bearing instrument is deposited in a fund that will be used to pay debt service on refunded securities.
     /// </summary>
@@ -358,8 +356,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Pre Funded Indicator")]
     [IsoXmlTag("PreFnddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PreFundedIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? PreFundedIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether an interest bearing instrument is being escrowed or collateralized either by direct obligations guaranteed by the US government, or by other types of securities. The maturity schedules of the securities in the escrow fund are determined in such a way to pay the maturity value, coupon, and premium payments (if any) of the refunded bonds.
     /// </summary>
@@ -367,8 +365,8 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Escrowed Indicator")]
     [IsoXmlTag("EscrwdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? EscrowedIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? EscrowedIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the security has no maturity date.
     /// </summary>
@@ -376,9 +374,5 @@ public partial record FinancialInstrumentStipulations4
     [DisplayName("Perpetual Indicator")]
     [IsoXmlTag("PerptlInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PerpetualIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? PerpetualIndicator { get; init; }
 }

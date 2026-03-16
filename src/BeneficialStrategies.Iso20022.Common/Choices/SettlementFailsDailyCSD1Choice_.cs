@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementFailsDailyCSD1Choice.DataSetAction))]
     [KnownType(typeof(SettlementFailsDailyCSD1Choice.Data))]
-    [JsonDerivedType(typeof(SettlementFailsDailyCSD1Choice.DataSetAction),nameof(SettlementFailsDailyCSD1Choice.DataSetAction))]
-    [JsonDerivedType(typeof(SettlementFailsDailyCSD1Choice.Data),nameof(SettlementFailsDailyCSD1Choice.Data))]
+    [JsonDerivedType(
+        typeof(SettlementFailsDailyCSD1Choice.DataSetAction),
+        nameof(SettlementFailsDailyCSD1Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementFailsDailyCSD1Choice.Data),
+        nameof(SettlementFailsDailyCSD1Choice.Data)
+    )]
     [IsoId("_OxcU0zOaEeqBfed1bmSPqg")]
     [DisplayName("Settlement Fails Daily CSD 1 Choice")]
-    public abstract partial record SettlementFailsDailyCSD1Choice_
-    {
-    }
+    public abstract record SettlementFailsDailyCSD1Choice_ { }
 }

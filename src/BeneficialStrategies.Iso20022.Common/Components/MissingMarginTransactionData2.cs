@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rud9m1owEe23K4GXSpBSeg")]
 [DisplayName("Missing Margin Transaction Data")]
-public partial record MissingMarginTransactionData2
+public record MissingMarginTransactionData2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a transaction.
     /// </summary>
     [IsoId("_rvjisVowEe23K4GXSpBSeg")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TradeTransactionIdentification24 TransactionIdentification { get; init; } 
-    
+    public required TradeTransactionIdentification24 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Indicates the date and time of the last collateral amount determination or calculation.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record MissingMarginTransactionData2
     [DisplayName("Collateral Time Stamp")]
     [IsoXmlTag("CollTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CollateralTimeStamp { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODateTime? CollateralTimeStamp { get; init; }
 }

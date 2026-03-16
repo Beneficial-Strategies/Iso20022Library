@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vWqvNaMOEeCojJW5vEuTEQ_-992555144")]
 [DisplayName("Collateral Account")]
-public partial record CollateralAccount1
+public record CollateralAccount1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of the Collateral Account.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record CollateralAccount1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Indicates the Type of Collateral Account.
     /// </summary>
     [IsoId("_vWqvN6MOEeCojJW5vEuTEQ_250529344")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public CollateralAccountIdentificationType1Choice_? Type { get; init; } 
-    
+    public CollateralAccountIdentificationType1Choice_? Type { get; init; }
+
     /// <summary>
     /// Description of the account.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record CollateralAccount1
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Name { get; init; }
 }

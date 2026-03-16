@@ -23,7 +23,7 @@ public enum AuthenticationMethod7Code
     [IsoId("_BIbxIYobEeSirOZJBRz_nA")]
     [Description(@"A token is used to verify an already performed authentication.")]
     AuthenticationToken = AuthenticationMethodCode.AuthenticationToken, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Biometric authentication of the cardholder.
     /// Encoded/decoded by serializers as &quot;BIOM&quot;.
@@ -32,7 +32,7 @@ public enum AuthenticationMethod7Code
     [IsoId("_CGhKAYobEeSirOZJBRz_nA")]
     [Description(@"Biometric authentication of the cardholder.")]
     Biometry = AuthenticationMethodCode.Biometry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer mobile device.
     /// Encoded/decoded by serializers as &quot;MOBL&quot;.
@@ -41,7 +41,7 @@ public enum AuthenticationMethod7Code
     [IsoId("_CV8tIYobEeSirOZJBRz_nA")]
     [Description(@"Customer mobile device.")]
     Mobile = AuthenticationMethodCode.Mobile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other customer authentication.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,7 +50,7 @@ public enum AuthenticationMethod7Code
     [IsoId("_ChAGkYobEeSirOZJBRz_nA")]
     [Description(@"Other customer authentication.")]
     Other = AuthenticationMethodCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Off-line PIN authentication (Personal Identification Number).
     /// Encoded/decoded by serializers as &quot;FPIN&quot;.
@@ -59,7 +59,7 @@ public enum AuthenticationMethod7Code
     [IsoId("_DaprYYobEeSirOZJBRz_nA")]
     [Description(@"Off-line PIN authentication (Personal Identification Number).")]
     OfflinePIN = AuthenticationMethodCode.OfflinePIN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// On-line PIN authentication (Personal Identification Number).
     /// Encoded/decoded by serializers as &quot;NPIN&quot;.
@@ -68,7 +68,7 @@ public enum AuthenticationMethod7Code
     [IsoId("_DgP9EYobEeSirOZJBRz_nA")]
     [Description(@"On-line PIN authentication (Personal Identification Number).")]
     OnLinePIN = AuthenticationMethodCode.OnLinePIN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authentication by a password.
     /// Encoded/decoded by serializers as &quot;PSWD&quot;.
@@ -77,16 +77,18 @@ public enum AuthenticationMethod7Code
     [IsoId("_FZTJYYobEeSirOZJBRz_nA")]
     [Description(@"Authentication by a password.")]
     Password = AuthenticationMethodCode.Password, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic commerce transaction secured with the X.509 certificate of a customer.
     /// Encoded/decoded by serializers as &quot;SCRT&quot;.
     /// </summary>
     [EnumMember(Value = "SCRT")]
     [IsoId("_FquQkYobEeSirOZJBRz_nA")]
-    [Description(@"Electronic commerce transaction secured with the X.509 certificate of a customer.")]
+    [Description(
+        @"Electronic commerce transaction secured with the X.509 certificate of a customer."
+    )]
     SecureCertificate = AuthenticationMethodCode.SecureCertificate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Channel-encrypted transaction.
     /// Encoded/decoded by serializers as &quot;SCNL&quot;.
@@ -95,5 +97,4 @@ public enum AuthenticationMethod7Code
     [IsoId("_G1VpkYobEeSirOZJBRz_nA")]
     [Description(@"Channel-encrypted transaction.")]
     SecuredChannel = AuthenticationMethodCode.SecuredChannel, // same ordinal as derivation source for type conversions
-    
 }

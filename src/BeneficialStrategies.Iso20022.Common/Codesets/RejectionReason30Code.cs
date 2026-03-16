@@ -23,7 +23,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLZ_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid message sender's safekeeping account.")]
     SafekeepingAccountRejection = RejectionReasonV2Code.SafekeepingAccountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed quantity.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -32,16 +32,18 @@ public enum RejectionReason30Code
     [IsoId("_2FoLa_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid instructed quantity.")]
     QuantityRejection = RejectionReasonV2Code.QuantityRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction/instruction received after the account servicer&apos;s specified deadline.
     /// Encoded/decoded by serializers as &quot;ADEA&quot;.
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_2FoLb_4wEeClUvPNHKL9Zw")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV2Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid financial instrument identification.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
@@ -50,7 +52,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLc_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid financial instrument identification.")]
     InvalidSecurity = RejectionReasonV2Code.InvalidSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -59,7 +61,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLd_4wEeClUvPNHKL9Zw")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonV2Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid cash account.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -68,7 +70,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLe_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid cash account.")]
     CashAccount = RejectionReasonV2Code.CashAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid deal price.
     /// Encoded/decoded by serializers as &quot;DDEA&quot;.
@@ -77,16 +79,18 @@ public enum RejectionReason30Code
     [IsoId("_2FoLf_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid deal price.")]
     DealPrice = RejectionReasonV2Code.DealPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid trade date or requested trade date or future trade date.
     /// Encoded/decoded by serializers as &quot;DTRD&quot;.
     /// </summary>
     [EnumMember(Value = "DTRD")]
     [IsoId("_2FoLg_4wEeClUvPNHKL9Zw")]
-    [Description(@"Unrecognised or invalid trade date or requested trade date or future trade date.")]
+    [Description(
+        @"Unrecognised or invalid trade date or requested trade date or future trade date."
+    )]
     TradeDate = RejectionReasonV2Code.TradeDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid place of trade.
     /// Encoded/decoded by serializers as &quot;PLCE&quot;.
@@ -95,7 +99,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLh_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid place of trade.")]
     PlaceOfTrade = RejectionReasonV2Code.PlaceOfTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not possible to use the RTGS system instructed (NRTG or YRTG).
     /// Encoded/decoded by serializers as &quot;RTGS&quot;.
@@ -103,8 +107,9 @@ public enum RejectionReason30Code
     [EnumMember(Value = "RTGS")]
     [IsoId("_2FoLi_4wEeClUvPNHKL9Zw")]
     [Description(@"Not possible to use the RTGS system instructed (NRTG or YRTG).")]
-    ImpossibleToUseTheRTGSSystemInstructed = RejectionReasonV2Code.ImpossibleToUseTheRTGSSystemInstructed, // same ordinal as derivation source for type conversions
-    
+    ImpossibleToUseTheRTGSSystemInstructed =
+        RejectionReasonV2Code.ImpossibleToUseTheRTGSSystemInstructed, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Unrecognised or invalid settlement amount currency.
     /// Encoded/decoded by serializers as &quot;NCRR&quot;.
@@ -113,7 +118,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLj_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid settlement amount currency.")]
     SettlementAmountCurrencyRejection = RejectionReasonV2Code.SettlementAmountCurrencyRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Physical settlement is impossible for the instructed financial instrument.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -122,16 +127,18 @@ public enum RejectionReason30Code
     [IsoId("_2FoLk_4wEeClUvPNHKL9Zw")]
     [Description(@"Physical settlement is impossible for the instructed financial instrument.")]
     PhysicalSettlementImpossible = RejectionReasonV2Code.PhysicalSettlementImpossible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has a reference identical to another previously received instruction.
     /// Encoded/decoded by serializers as &quot;REFE&quot;.
     /// </summary>
     [EnumMember(Value = "REFE")]
     [IsoId("_2FoLl_4wEeClUvPNHKL9Zw")]
-    [Description(@"Instruction has a reference identical to another previously received instruction.")]
+    [Description(
+        @"Instruction has a reference identical to another previously received instruction."
+    )]
     ReferenceRejection = RejectionReasonV2Code.ReferenceRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid settlement amount.
     /// Encoded/decoded by serializers as &quot;DMON&quot;.
@@ -140,34 +147,40 @@ public enum RejectionReason30Code
     [IsoId("_2FoLm_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid settlement amount.")]
     SettlementAmountRejection = RejectionReasonV2Code.SettlementAmountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument.
     /// Encoded/decoded by serializers as &quot;MINO&quot;.
     /// </summary>
     [EnumMember(Value = "MINO")]
     [IsoId("_2FoLn_4wEeClUvPNHKL9Zw")]
-    [Description(@"Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument.")]
+    [Description(
+        @"Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument."
+    )]
     MinimumSettlementQuantity = RejectionReasonV2Code.MinimumSettlementQuantity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid processing batch, that is, daytime/real-time while only possible to settle in overnight batch.
     /// Encoded/decoded by serializers as &quot;BATC&quot;.
     /// </summary>
     [EnumMember(Value = "BATC")]
     [IsoId("_2FoLo_4wEeClUvPNHKL9Zw")]
-    [Description(@"Unrecognised or invalid processing batch, that is, daytime/real-time while only possible to settle in overnight batch.")]
+    [Description(
+        @"Unrecognised or invalid processing batch, that is, daytime/real-time while only possible to settle in overnight batch."
+    )]
     ProcessingBatchRejection = RejectionReasonV2Code.ProcessingBatchRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument.
     /// Encoded/decoded by serializers as &quot;MUNO&quot;.
     /// </summary>
     [EnumMember(Value = "MUNO")]
     [IsoId("_2FoLp_4wEeClUvPNHKL9Zw")]
-    [Description(@"Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument.")]
+    [Description(
+        @"Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument."
+    )]
     MultipleSettlementQuantity = RejectionReasonV2Code.MultipleSettlementQuantity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid tax status of the securities instructed.
     /// Encoded/decoded by serializers as &quot;TXST&quot;.
@@ -176,7 +189,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLq_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid tax status of the securities instructed.")]
     TaxStatusRejection = RejectionReasonV2Code.TaxStatusRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid settlement system/method instructed.
     /// Encoded/decoded by serializers as &quot;SETS&quot;.
@@ -185,7 +198,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLr_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid settlement system/method instructed.")]
     SettlementSystemMethodRejection = RejectionReasonV2Code.SettlementSystemMethodRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised, invalid or missing common reference.
     /// Encoded/decoded by serializers as &quot;IIND&quot;.
@@ -194,7 +207,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLs_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised, invalid or missing common reference.")]
     CommonReferenceRejection = RejectionReasonV2Code.CommonReferenceRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Corporate action pending on the financial instrument instructed.
     /// Encoded/decoded by serializers as &quot;CAEV&quot;.
@@ -203,16 +216,18 @@ public enum RejectionReason30Code
     [IsoId("_2FoLt_4wEeClUvPNHKL9Zw")]
     [Description(@"Corporate action pending on the financial instrument instructed.")]
     CorporateActionRejection = RejectionReasonV2Code.CorporateActionRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Impossible standing arrangements override instruction for the cash settlement system.
     /// Encoded/decoded by serializers as &quot;CASY&quot;.
     /// </summary>
     [EnumMember(Value = "CASY")]
     [IsoId("_2FoLu_4wEeClUvPNHKL9Zw")]
-    [Description(@"Impossible standing arrangements override instruction for the cash settlement system.")]
+    [Description(
+        @"Impossible standing arrangements override instruction for the cash settlement system."
+    )]
     ImpossibleCashSettlementSystem = RejectionReasonV2Code.ImpossibleCashSettlementSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid settlement date.
     /// Encoded/decoded by serializers as &quot;DDAT&quot;.
@@ -221,7 +236,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLv_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid settlement date.")]
     SettlementDateRejection = RejectionReasonV2Code.SettlementDateRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid settlement transaction type.
     /// Encoded/decoded by serializers as &quot;SETR&quot;.
@@ -230,7 +245,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLw_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid settlement transaction type.")]
     SettlementTransactionRejection = RejectionReasonV2Code.SettlementTransactionRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Required stamp duty information is missing.
     /// Encoded/decoded by serializers as &quot;SDUT&quot;.
@@ -239,7 +254,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLx_4wEeClUvPNHKL9Zw")]
     [Description(@"Required stamp duty information is missing.")]
     LackOfStampDuty = RejectionReasonV2Code.LackOfStampDuty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised, invalid or missing place of safekeeping.
     /// Encoded/decoded by serializers as &quot;INPS&quot;.
@@ -248,7 +263,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLy_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised, invalid or missing place of safekeeping.")]
     PlaceOfSafekeeping = RejectionReasonV2Code.PlaceOfSafekeeping, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -257,7 +272,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoLz_4wEeClUvPNHKL9Zw")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV2Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid client of delivering or receiving party 1.
     /// Encoded/decoded by serializers as &quot;ICUS&quot;.
@@ -266,7 +281,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoL0_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid client of delivering or receiving party 1.")]
     ReceivingDeliveringParty2 = RejectionReasonV2Code.ReceivingDeliveringParty2, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid participant of delivering or receiving depository.
     /// Encoded/decoded by serializers as &quot;ICAG&quot;.
@@ -275,7 +290,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoL1_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid participant of delivering or receiving depository.")]
     ReceivingDeliveringParty1 = RejectionReasonV2Code.ReceivingDeliveringParty1, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid depository.
     /// Encoded/decoded by serializers as &quot;DEPT&quot;.
@@ -284,7 +299,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoL2_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid depository.")]
     ReceivingDeliveringDepository = RejectionReasonV2Code.ReceivingDeliveringDepository, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid client of delivering or receiving party 2.
     /// Encoded/decoded by serializers as &quot;IEXE&quot;.
@@ -293,7 +308,7 @@ public enum RejectionReason30Code
     [IsoId("_2FoL3_4wEeClUvPNHKL9Zw")]
     [Description(@"Unrecognised or invalid client of delivering or receiving party 2.")]
     ReceivingDeliveringParty3 = RejectionReasonV2Code.ReceivingDeliveringParty3, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction aims at using an invalid balance.
     /// Encoded/decoded by serializers as &quot;INVB&quot;.
@@ -302,7 +317,7 @@ public enum RejectionReason30Code
     [IsoId("_iBNyFv8FEeCCq-oUcJbFqw")]
     [Description(@"Instruction aims at using an invalid balance.")]
     InvalidBalance = RejectionReasonV2Code.InvalidBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid or unrecognized link.
     /// Encoded/decoded by serializers as &quot;INVL&quot;.
@@ -311,7 +326,7 @@ public enum RejectionReason30Code
     [IsoId("_ixDTlv8FEeCCq-oUcJbFqw")]
     [Description(@"Invalid or unrecognized link.")]
     InvalidLink = RejectionReasonV2Code.InvalidLink, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid or unrecognized lot number.
     /// Encoded/decoded by serializers as &quot;INVN&quot;.
@@ -320,7 +335,7 @@ public enum RejectionReason30Code
     [IsoId("_jN0IHv8FEeCCq-oUcJbFqw")]
     [Description(@"Invalid or unrecognized lot number.")]
     InvalidLotNumber = RejectionReasonV2Code.InvalidLotNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account servicer validation rule rejection.
     /// Encoded/decoded by serializers as &quot;VALR&quot;.
@@ -329,5 +344,4 @@ public enum RejectionReason30Code
     [IsoId("_j3Yphv8FEeCCq-oUcJbFqw")]
     [Description(@"Account servicer validation rule rejection.")]
     InvalidRule = RejectionReasonV2Code.InvalidRule, // same ordinal as derivation source for type conversions
-    
 }

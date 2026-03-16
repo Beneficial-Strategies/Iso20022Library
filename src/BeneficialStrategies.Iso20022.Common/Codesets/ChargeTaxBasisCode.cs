@@ -23,7 +23,7 @@ public enum ChargeTaxBasisCode
     [IsoId("__1DJstojEeC60axPepSq7g_303938455")]
     [Description(@"Charges/tax basis is flat or absolute for the trade being allocated.")]
     FlatOrAbsolute,
-    
+
     /// <summary>
     /// Charge/tax basis is per unit of financial instrument.
     /// Encoded/decoded by serializers as &quot;PERU&quot;.
@@ -32,5 +32,4 @@ public enum ChargeTaxBasisCode
     [IsoId("__1DJs9ojEeC60axPepSq7g_-13293518")]
     [Description(@"Charge/tax basis is per unit of financial instrument.")]
     PerUnit,
-    
 }

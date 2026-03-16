@@ -39,7 +39,9 @@ public enum DeliveryType4Code
     /// </summary>
     [EnumMember(Value = "HOIC")]
     [IsoId("_DeliveryType4Code_HoldInCustody")]
-    [Description(@"Indicates that the collateral pledged by the (cash) borrower is not actually delivered to the cash lender.")]
+    [Description(
+        @"Indicates that the collateral pledged by the (cash) borrower is not actually delivered to the cash lender."
+    )]
     HoldInCustody = DeliveryTypeCode.HoldInCustody,
 
     /// <summary>
@@ -57,7 +59,8 @@ public enum DeliveryType4Code
     /// </summary>
     [EnumMember(Value = "TRIP")]
     [IsoId("_DeliveryType4Code_Triparty")]
-    [Description(@"Indicates that a custodian bank or international clearing organization acts as an intermediary between the two parties to the repo.")]
+    [Description(
+        @"Indicates that a custodian bank or international clearing organization acts as an intermediary between the two parties to the repo."
+    )]
     Triparty = DeliveryTypeCode.Triparty,
-
 }

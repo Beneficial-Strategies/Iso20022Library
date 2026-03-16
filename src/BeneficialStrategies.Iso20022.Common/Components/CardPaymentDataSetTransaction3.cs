@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yhb8ES8NEeKW5usMQLtzqw")]
 [DisplayName("Card Payment Data Set Transaction")]
-public partial record CardPaymentDataSetTransaction3
+public record CardPaymentDataSetTransaction3
 {
-    #nullable enable
-    
     /// <summary>
     /// Sequential counter of the transaction.
     /// </summary>
@@ -25,41 +23,37 @@ public partial record CardPaymentDataSetTransaction3
     [DisplayName("Transaction Sequence Counter")]
     [IsoXmlTag("TxSeqCntr")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public required IsoMax9NumericText TransactionSequenceCounter { get; init; } 
-    
+    public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+
     /// <summary>
     /// Identification of partners involved in the exchange from the merchant to the issuer, with the corresponding timestamp of their exchanges.
     /// </summary>
     [IsoId("_Yq9EdS8NEeKW5usMQLtzqw")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability1? Traceability { get; init; } 
-    
+    public Traceability1? Traceability { get; init; }
+
     /// <summary>
     /// Data related to the environment of the cancelled transaction captured in batch.
     /// </summary>
     [IsoId("_Yq9EeS8NEeKW5usMQLtzqw")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment14 Environment { get; init; } 
-    
+    public required CardPaymentEnvironment14 Environment { get; init; }
+
     /// <summary>
     /// Context in which the transaction is performed (payment and sale).
     /// </summary>
     [IsoId("_tdwYYDTIEeKBdvYpL_aSEg")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
-    public CardPaymentContext4? Context { get; init; } 
-    
+    public CardPaymentContext4? Context { get; init; }
+
     /// <summary>
     /// Card payment cancellation transaction between an acceptor and an acquirer.
     /// </summary>
     [IsoId("_Yq9EgS8NEeKW5usMQLtzqw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required CardPaymentTransaction20 Transaction { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CardPaymentTransaction20 Transaction { get; init; }
 }

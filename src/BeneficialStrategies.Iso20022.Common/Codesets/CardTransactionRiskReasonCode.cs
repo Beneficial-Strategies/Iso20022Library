@@ -23,7 +23,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_5Op-oHsKEeSR68OJvMfxJQ")]
     [Description(@"Suspicious sequence of approve and decline messages.")]
     ApproveDeclineSequence,
-    
+
     /// <summary>
     /// Suspicious authorization activity.
     /// Encoded/decoded by serializers as &quot;ATHA&quot;.
@@ -32,7 +32,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_8lU_gHsKEeSR68OJvMfxJQ")]
     [Description(@"Suspicious authorization activity.")]
     AuthorizationActivity,
-    
+
     /// <summary>
     /// Suspicious approve or decline pattern.
     /// Encoded/decoded by serializers as &quot;APDP&quot;.
@@ -41,7 +41,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_TbeQ0HsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious approve or decline pattern.")]
     ApproveDeclinePattern,
-    
+
     /// <summary>
     /// Compromised card.
     /// Encoded/decoded by serializers as &quot;CRDC&quot;.
@@ -50,7 +50,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_W4E6kHsLEeSR68OJvMfxJQ")]
     [Description(@"Compromised card.")]
     CompromisedCard,
-    
+
     /// <summary>
     /// Suspicious electronic commerce activity.
     /// Encoded/decoded by serializers as &quot;ECMA&quot;.
@@ -59,7 +59,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_ZuvlsHsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious electronic commerce activity.")]
     EcommerceActivity,
-    
+
     /// <summary>
     /// Expiry date mismatch.
     /// Encoded/decoded by serializers as &quot;EXCD&quot;.
@@ -68,7 +68,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_dsnwgHsLEeSR68OJvMfxJQ")]
     [Description(@"Expiry date mismatch.")]
     ExpiryDateMismatch,
-    
+
     /// <summary>
     /// Suspicious foreign activity.
     /// Encoded/decoded by serializers as &quot;FGNA&quot;.
@@ -77,7 +77,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_hl-nsHsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious foreign activity.")]
     ForeignActivity,
-    
+
     /// <summary>
     /// Suspicious geographic activity.
     /// Encoded/decoded by serializers as &quot;GEOA&quot;.
@@ -86,7 +86,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_mKulQHsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious geographic activity.")]
     GeographicActivity,
-    
+
     /// <summary>
     /// High Risk MCC (Merchant Category Code).
     /// Encoded/decoded by serializers as &quot;MCCH&quot;.
@@ -95,7 +95,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_pzFzEHsLEeSR68OJvMfxJQ")]
     [Description(@"High Risk MCC (Merchant Category Code).")]
     HighRiskMCC,
-    
+
     /// <summary>
     /// Suspicious manual card data entry mode.
     /// Encoded/decoded by serializers as &quot;KEYA&quot;.
@@ -104,7 +104,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_vtO2QHsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious manual card data entry mode.")]
     ManualEntryActivity,
-    
+
     /// <summary>
     /// Suspicious MCC (Merchant Category Code) activity.
     /// Encoded/decoded by serializers as &quot;MCCA&quot;.
@@ -113,7 +113,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_yk4_4HsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious MCC (Merchant Category Code) activity.")]
     MerchantCategoryActivity,
-    
+
     /// <summary>
     /// Suspicious amount.
     /// Encoded/decoded by serializers as &quot;AMNT&quot;.
@@ -122,7 +122,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_5X3IgHsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious amount.")]
     SuspiciousAmount,
-    
+
     /// <summary>
     /// Suspicious fraudulent cardholder.
     /// Encoded/decoded by serializers as &quot;CRDF&quot;.
@@ -131,7 +131,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_78LfYHsLEeSR68OJvMfxJQ")]
     [Description(@"Suspicious fraudulent cardholder.")]
     SuspiciousFraudulentCardholder,
-    
+
     /// <summary>
     /// Suspicious fraudulent merchant.
     /// Encoded/decoded by serializers as &quot;MRCF&quot;.
@@ -140,7 +140,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_O0vg0HsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious fraudulent merchant.")]
     SuspiciousFraudulentMerchant,
-    
+
     /// <summary>
     /// Suspicious transaction cumulated amount at merchant.
     /// Encoded/decoded by serializers as &quot;TXCA&quot;.
@@ -149,7 +149,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_Xjk5MHsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious transaction cumulated amount at merchant.")]
     TransactionCumulativeAmount,
-    
+
     /// <summary>
     /// Suspicious transaction number at merchant.
     /// Encoded/decoded by serializers as &quot;TXNB&quot;.
@@ -158,7 +158,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_bh-ocHsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious transaction number at merchant.")]
     TransactionNumber,
-    
+
     /// <summary>
     /// Suspicious transaction time interval.
     /// Encoded/decoded by serializers as &quot;TMIN&quot;.
@@ -167,7 +167,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_eN8fcHsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious transaction time interval.")]
     TransactionTimeIinterval,
-    
+
     /// <summary>
     /// Suspicious transaction time.
     /// Encoded/decoded by serializers as &quot;TXTM&quot;.
@@ -176,7 +176,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_hZ4P8HsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious transaction time.")]
     TransactionTime,
-    
+
     /// <summary>
     /// Suspicious transaction type.
     /// Encoded/decoded by serializers as &quot;TXTP&quot;.
@@ -185,7 +185,7 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_koHGgHsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious transaction type.")]
     TransactionType,
-    
+
     /// <summary>
     /// Suspicious unattended terminal activity.
     /// Encoded/decoded by serializers as &quot;UATA&quot;.
@@ -194,5 +194,4 @@ public enum CardTransactionRiskReasonCode
     [IsoId("_tQX80HsMEeSR68OJvMfxJQ")]
     [Description(@"Suspicious unattended terminal activity.")]
     UnattendedActivity,
-    
 }

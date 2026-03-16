@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementMethod3Choice.Credit))]
     [KnownType(typeof(SettlementMethod3Choice.Debit))]
-    [JsonDerivedType(typeof(SettlementMethod3Choice.Credit),nameof(SettlementMethod3Choice.Credit))]
-    [JsonDerivedType(typeof(SettlementMethod3Choice.Debit),nameof(SettlementMethod3Choice.Debit))]
+    [JsonDerivedType(
+        typeof(SettlementMethod3Choice.Credit),
+        nameof(SettlementMethod3Choice.Credit)
+    )]
+    [JsonDerivedType(typeof(SettlementMethod3Choice.Debit), nameof(SettlementMethod3Choice.Debit))]
     [IsoId("_Po-0AcQAEemsic1bQcEtLA")]
     [DisplayName("Settlement Method 3 Choice")]
-    public abstract partial record SettlementMethod3Choice_
-    {
-    }
+    public abstract record SettlementMethod3Choice_ { }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DeliveryReturn4Choice.Code))]
     [KnownType(typeof(DeliveryReturn4Choice.Proprietary))]
-    [JsonDerivedType(typeof(DeliveryReturn4Choice.Code),nameof(DeliveryReturn4Choice.Code))]
-    [JsonDerivedType(typeof(DeliveryReturn4Choice.Proprietary),nameof(DeliveryReturn4Choice.Proprietary))]
+    [JsonDerivedType(typeof(DeliveryReturn4Choice.Code), nameof(DeliveryReturn4Choice.Code))]
+    [JsonDerivedType(
+        typeof(DeliveryReturn4Choice.Proprietary),
+        nameof(DeliveryReturn4Choice.Proprietary)
+    )]
     [IsoId("_6dqqNZNLEeWGlc8L7oPDIg")]
     [DisplayName("Delivery Return 4 Choice")]
-    public abstract partial record DeliveryReturn4Choice_
-    {
-    }
+    public abstract record DeliveryReturn4Choice_ { }
 }

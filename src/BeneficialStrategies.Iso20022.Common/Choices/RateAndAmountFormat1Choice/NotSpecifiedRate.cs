@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat1Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.RateAndAmountFormat1Choice
     /// </summary>
     [IsoId("_UPrqhtp-Ed-ak6NoX_4Aeg_307786287")]
     [DisplayName("Not Specified Rate")]
-    public partial record NotSpecifiedRate : RateAndAmountFormat1Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record NotSpecifiedRate : RateAndAmountFormat1Choice_ { }
 }

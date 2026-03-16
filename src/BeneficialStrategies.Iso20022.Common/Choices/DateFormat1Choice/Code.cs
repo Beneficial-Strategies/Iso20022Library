@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DateFormat1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat1Choice
     /// </summary>
     [IsoId("_RE37Ztp-Ed-ak6NoX_4Aeg_-1019742655")]
     [DisplayName("Code")]
-    public partial record Code : DateFormat1Choice_
+    public record Code : DateFormat1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Indicates the date of settlement in coded form.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required SettlementDate1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SettlementDate1Code Value { get; init; }
     }
 }

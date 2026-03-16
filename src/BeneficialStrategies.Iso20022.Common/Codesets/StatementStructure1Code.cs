@@ -23,7 +23,7 @@ public enum StatementStructure1Code
     [IsoId("_ZQD0J9p-Ed-ak6NoX_4Aeg_-1906483117")]
     [Description(@"Statement is sorted by status.")]
     Statuses = StatementStructureCode.Statuses, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement is sorted by transaction.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -32,5 +32,4 @@ public enum StatementStructure1Code
     [IsoId("_ZQD0KNp-Ed-ak6NoX_4Aeg_-1906483092")]
     [Description(@"Statement is sorted by transaction.")]
     Transactions = StatementStructureCode.Transactions, // same ordinal as derivation source for type conversions
-    
 }

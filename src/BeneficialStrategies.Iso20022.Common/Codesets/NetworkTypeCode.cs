@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Wl2EAGpVEeSR-ZWLvO-1dg")]
 [Description(@"Type of communication network.")]
-[Derivations(typeof(NetworkType1Code),typeof(NetworkType2Code))]
+[Derivations(typeof(NetworkType1Code), typeof(NetworkType2Code))]
 public enum NetworkTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum NetworkTypeCode
     [IsoId("_bOwI0GpVEeSR-ZWLvO-1dg")]
     [Description(@"Protocol of an IP network.")]
     InternetProtocol,
-    
+
     /// <summary>
     /// Protocol of a Public Switched Telephone Network (PSTN).
     /// Encoded/decoded by serializers as &quot;PSTN&quot;.
@@ -32,7 +32,7 @@ public enum NetworkTypeCode
     [IsoId("_iuROYGpVEeSR-ZWLvO-1dg")]
     [Description(@"Protocol of a Public Switched Telephone Network (PSTN).")]
     PublicTelephone,
-    
+
     /// <summary>
     /// HTTP proxy.
     /// Encoded/decoded by serializers as &quot;HTTP&quot;.
@@ -41,7 +41,7 @@ public enum NetworkTypeCode
     [IsoId("_ykyg0I39EeWRwov1g9WL_A")]
     [Description(@"HTTP proxy.")]
     HTTP,
-    
+
     /// <summary>
     /// Sock4 proxy.
     /// Encoded/decoded by serializers as &quot;SCK4&quot;.
@@ -50,7 +50,7 @@ public enum NetworkTypeCode
     [IsoId("_0jHOsI39EeWRwov1g9WL_A")]
     [Description(@"Sock4 proxy.")]
     Sock4,
-    
+
     /// <summary>
     /// Sock5 proxy.
     /// Encoded/decoded by serializers as &quot;SCK5&quot;.
@@ -59,5 +59,4 @@ public enum NetworkTypeCode
     [IsoId("_5VfYkI39EeWRwov1g9WL_A")]
     [Description(@"Sock5 proxy.")]
     Sock5,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus20Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingStatus20Cho
     /// </summary>
     [IsoId("_inrWw1hYEeSewsfsZR0hxA")]
     [DisplayName("Rejected")]
-    public partial record Rejected : InstructionProcessingStatus20Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record Rejected : InstructionProcessingStatus20Choice_ { }
 }

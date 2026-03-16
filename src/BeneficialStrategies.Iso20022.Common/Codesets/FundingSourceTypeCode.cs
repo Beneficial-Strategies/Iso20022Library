@@ -23,7 +23,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrP9woEeeiWo5KG3eipw")]
     [Description(@"Default account.")]
     Default,
-    
+
     /// <summary>
     /// Savings account.
     /// Encoded/decoded by serializers as &quot;SVNG&quot;.
@@ -32,7 +32,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrPtwoEeeiWo5KG3eipw")]
     [Description(@"Savings account.")]
     Savings,
-    
+
     /// <summary>
     /// Checking account.
     /// Encoded/decoded by serializers as &quot;CHCK&quot;.
@@ -41,7 +41,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrTdwoEeeiWo5KG3eipw")]
     [Description(@"Checking account.")]
     Checking,
-    
+
     /// <summary>
     /// Credit card account.
     /// Encoded/decoded by serializers as &quot;CRDT&quot;.
@@ -50,7 +50,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrU9woEeeiWo5KG3eipw")]
     [Description(@"Credit card account.")]
     CreditCard,
-    
+
     /// <summary>
     /// Universal account.
     /// Encoded/decoded by serializers as &quot;UVRL&quot;.
@@ -59,7 +59,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrT9woEeeiWo5KG3eipw")]
     [Description(@"Universal account.")]
     Universal,
-    
+
     /// <summary>
     /// Investment account.
     /// Encoded/decoded by serializers as &quot;INVS&quot;.
@@ -68,7 +68,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrSdwoEeeiWo5KG3eipw")]
     [Description(@"Investment account.")]
     Investment,
-    
+
     /// <summary>
     /// Electronic purse card account.
     /// Encoded/decoded by serializers as &quot;EPRS&quot;.
@@ -77,7 +77,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrRdwoEeeiWo5KG3eipw")]
     [Description(@"Electronic purse card account.")]
     EpurseCard,
-    
+
     /// <summary>
     /// Certificate of deposit saving account.
     /// Encoded/decoded by serializers as &quot;CTDP&quot;.
@@ -86,7 +86,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrSNwoEeeiWo5KG3eipw")]
     [Description(@"Certificate of deposit saving account.")]
     CertificateOfDeposit,
-    
+
     /// <summary>
     /// Current account.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -95,7 +95,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrVtwoEeeiWo5KG3eipw")]
     [Description(@"Current account.")]
     Current,
-    
+
     /// <summary>
     /// Debit card account.
     /// Encoded/decoded by serializers as &quot;CDBT&quot;.
@@ -104,7 +104,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrUtwoEeeiWo5KG3eipw")]
     [Description(@"Debit card account.")]
     DebitCard,
-    
+
     /// <summary>
     /// Home equity loan credit account.
     /// Encoded/decoded by serializers as &quot;HEQL&quot;.
@@ -113,7 +113,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrV9woEeeiWo5KG3eipw")]
     [Description(@"Home equity loan credit account.")]
     HomeEquityLoan,
-    
+
     /// <summary>
     /// Instalment loan credit account.
     /// Encoded/decoded by serializers as &quot;ISTL&quot;.
@@ -122,7 +122,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrUNwoEeeiWo5KG3eipw")]
     [Description(@"Instalment loan credit account.")]
     InstalmentLoan,
-    
+
     /// <summary>
     /// Line of credit account.
     /// Encoded/decoded by serializers as &quot;LCDT&quot;.
@@ -131,7 +131,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrS9woEeeiWo5KG3eipw")]
     [Description(@"Line of credit account.")]
     LineOfCredit,
-    
+
     /// <summary>
     /// Mobile Station Integrated Services Digital Network Number (MSISDN).
     /// Encoded/decoded by serializers as &quot;MBNW&quot;.
@@ -140,7 +140,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrQtwoEeeiWo5KG3eipw")]
     [Description(@"Mobile Station Integrated Services Digital Network Number (MSISDN).")]
     MobilePhoneAccount,
-    
+
     /// <summary>
     /// Money market saving account.
     /// Encoded/decoded by serializers as &quot;MNMK&quot;.
@@ -149,7 +149,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrRNwoEeeiWo5KG3eipw")]
     [Description(@"Money market saving account.")]
     MoneyMarket,
-    
+
     /// <summary>
     /// Money market checking account.
     /// Encoded/decoded by serializers as &quot;MNMC&quot;.
@@ -158,7 +158,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrQdwoEeeiWo5KG3eipw")]
     [Description(@"Money market checking account.")]
     MoneyMarketChecking,
-    
+
     /// <summary>
     /// Mortgage loan credit account.
     /// Encoded/decoded by serializers as &quot;MTGL&quot;.
@@ -167,7 +167,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrR9woEeeiWo5KG3eipw")]
     [Description(@"Mortgage loan credit account.")]
     MortgageLoan,
-    
+
     /// <summary>
     /// Retirement account.
     /// Encoded/decoded by serializers as &quot;RTRM&quot;.
@@ -176,7 +176,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrVdwoEeeiWo5KG3eipw")]
     [Description(@"Retirement account.")]
     RetirementAccount,
-    
+
     /// <summary>
     /// Revolving loan account.
     /// Encoded/decoded by serializers as &quot;RVLV&quot;.
@@ -185,7 +185,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrTtwoEeeiWo5KG3eipw")]
     [Description(@"Revolving loan account.")]
     RevolvingLoanAccount,
-    
+
     /// <summary>
     /// Stock or bond investment account.
     /// Encoded/decoded by serializers as &quot;STBD&quot;.
@@ -194,7 +194,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrVNwoEeeiWo5KG3eipw")]
     [Description(@"Stock or bond investment account.")]
     StockOrBond,
-    
+
     /// <summary>
     /// Pre-paid account.
     /// Encoded/decoded by serializers as &quot;PRPD&quot;.
@@ -203,7 +203,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrPdwoEeeiWo5KG3eipw")]
     [Description(@"Pre-paid account.")]
     PrePaid,
-    
+
     /// <summary>
     /// Fleet card account.
     /// Encoded/decoded by serializers as &quot;FLTC&quot;.
@@ -212,7 +212,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrStwoEeeiWo5KG3eipw")]
     [Description(@"Fleet card account.")]
     FleetCard,
-    
+
     /// <summary>
     /// Cash as a source type  to perform the transaction.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -221,7 +221,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrRtwoEeeiWo5KG3eipw")]
     [Description(@"Cash as a source type  to perform the transaction.")]
     Cash,
-    
+
     /// <summary>
     /// Account for debiting funds.
     /// Encoded/decoded by serializers as &quot;DBAC&quot;.
@@ -230,7 +230,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrTNwoEeeiWo5KG3eipw")]
     [Description(@"Account for debiting funds.")]
     DebitAccount,
-    
+
     /// <summary>
     /// Account for crediting funds.
     /// Encoded/decoded by serializers as &quot;CRAC&quot;.
@@ -239,7 +239,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrQNwoEeeiWo5KG3eipw")]
     [Description(@"Account for crediting funds.")]
     CreditAccount,
-    
+
     /// <summary>
     /// Other type of account defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -248,7 +248,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrUdwoEeeiWo5KG3eipw")]
     [Description(@"Other type of account defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of account defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -257,7 +257,7 @@ public enum FundingSourceTypeCode
     [IsoId("_LeQrQ9woEeeiWo5KG3eipw")]
     [Description(@"Other type of account defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Cheque
     /// Encoded/decoded by serializers as &quot;CHQE&quot;.
@@ -266,7 +266,7 @@ public enum FundingSourceTypeCode
     [IsoId("_hsPJMNwoEeeiWo5KG3eipw")]
     [Description(@"Cheque")]
     Cheque,
-    
+
     /// <summary>
     /// Loyalty points converted into cash
     /// Encoded/decoded by serializers as &quot;LOYL&quot;.
@@ -275,5 +275,4 @@ public enum FundingSourceTypeCode
     [IsoId("_odBggNwoEeeiWo5KG3eipw")]
     [Description(@"Loyalty points converted into cash")]
     Loyaly,
-    
 }

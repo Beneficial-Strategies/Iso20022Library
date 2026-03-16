@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
     /// </summary>
     [IsoId("_tjJEU1kyEeGeoaLUQk__nA_-265813283")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : ChargeType3Choice_
+    public record Proprietary : ChargeType3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name or number assigned by an entity to enable recognition of that entity, for example, account identifier.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -34,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeType3Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Issuer { get; init; }
     }
 }

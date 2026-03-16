@@ -23,7 +23,7 @@ public enum RejectedStatusReason6Code
     [IsoId("_ZdnvAtp-Ed-ak6NoX_4Aeg_281881272")]
     [Description(@"Investment account identification is not recognised or is invalid.")]
     InvestmentAccount = RejectedStatusReasonCode.InvestmentAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is not compliant with the service level agreement.
     /// Encoded/decoded by serializers as &quot;NSLA&quot;.
@@ -32,5 +32,4 @@ public enum RejectedStatusReason6Code
     [IsoId("_ZdnvA9p-Ed-ak6NoX_4Aeg_598649737")]
     [Description(@"Instruction is not compliant with the service level agreement.")]
     NotCompliantWithSLA = RejectedStatusReasonCode.NotCompliantWithSLA, // same ordinal as derivation source for type conversions
-    
 }

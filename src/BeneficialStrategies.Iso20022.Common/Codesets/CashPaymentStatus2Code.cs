@@ -23,7 +23,7 @@ public enum CashPaymentStatus2Code
     [IsoId("_a7DWVdp-Ed-ak6NoX_4Aeg_1461915330")]
     [Description(@"The payment is awaiting settlement.")]
     Pending = CashPaymentStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The payment has been settled or stopped.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -32,5 +32,4 @@ public enum CashPaymentStatus2Code
     [IsoId("_a7DWVtp-Ed-ak6NoX_4Aeg_1461915331")]
     [Description(@"The payment has been settled or stopped.")]
     Final = CashPaymentStatusCode.Final, // same ordinal as derivation source for type conversions
-    
 }

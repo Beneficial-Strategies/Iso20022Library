@@ -1,9 +1,9 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.StatusReason6Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.pain;
 
 namespace BeneficialStrategies.Iso20022.pain;
@@ -22,26 +22,30 @@ public class Pain002ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader86 CreateGroupHeader(string msgId = "DEUTDEFF/240315/PAI002/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(1),
-        DebtorAgent = Iso20022TestData.DebtorAgent,
-    };
+    public static GroupHeader86 CreateGroupHeader(string msgId = "DEUTDEFF/240315/PAI002/00001") =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddMinutes(1),
+            DebtorAgent = Iso20022TestData.DebtorAgent,
+        };
 
-    public static OriginalGroupHeader17 CreateOriginalGroupInfo() => new()
-    {
-        OriginalMessageIdentification = "ACME/240315/PAI001/00001",
-        OriginalMessageNameIdentification = "pain.001.001.11",
-        OriginalCreationDateTime = Iso20022TestData.MessageCreationDateTime,
-    };
+    public static OriginalGroupHeader17 CreateOriginalGroupInfo() =>
+        new()
+        {
+            OriginalMessageIdentification = "ACME/240315/PAI001/00001",
+            OriginalMessageNameIdentification = "pain.001.001.11",
+            OriginalCreationDateTime = Iso20022TestData.MessageCreationDateTime,
+        };
 
     public static OriginalPaymentInstruction45 CreateOriginalPaymentInfo(
-        ExternalPaymentGroupStatus1Code? status = null) => new()
-    {
-        OriginalPaymentInformationIdentification = "ACME/240315/PMTINF/001",
-        PaymentInformationStatus = status,
-    };
+        ExternalPaymentGroupStatus1Code? status = null
+    ) =>
+        new()
+        {
+            OriginalPaymentInformationIdentification = "ACME/240315/PMTINF/001",
+            PaymentInformationStatus = status,
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -64,8 +68,10 @@ public class Pain002ExamplesTests
 
         Assert.NotNull(message);
         Assert.Equal("pain.002.001.13", CustomerPaymentStatusReportV13.IsoIdentifier);
-        Assert.Equal(ExternalPaymentGroupStatus1Code.AcceptedCustomerProfile,
-            message.OriginalGroupInformationAndStatus.GroupStatus);
+        Assert.Equal(
+            ExternalPaymentGroupStatus1Code.AcceptedCustomerProfile,
+            message.OriginalGroupInformationAndStatus.GroupStatus
+        );
     }
 
     /// <summary>
@@ -85,8 +91,10 @@ public class Pain002ExamplesTests
         };
 
         Assert.NotNull(message);
-        Assert.Equal(ExternalPaymentGroupStatus1Code.AcceptedTechnicalValidation,
-            message.OriginalGroupInformationAndStatus.GroupStatus);
+        Assert.Equal(
+            ExternalPaymentGroupStatus1Code.AcceptedTechnicalValidation,
+            message.OriginalGroupInformationAndStatus.GroupStatus
+        );
     }
 
     /// <summary>
@@ -102,7 +110,8 @@ public class Pain002ExamplesTests
             GroupHeader = CreateGroupHeader("DEUTDEFF/240315/PAI002/00003"),
             OriginalGroupInformationAndStatus = CreateOriginalGroupInfo(),
             OriginalPaymentInformationAndStatus = CreateOriginalPaymentInfo(
-                ExternalPaymentGroupStatus1Code.Rejected) with
+                ExternalPaymentGroupStatus1Code.Rejected
+            ) with
             {
                 TransactionInformationAndStatus = new PaymentTransaction144
                 {
@@ -117,18 +126,25 @@ public class Pain002ExamplesTests
                         {
                             Value = ExternalStatusReason1Code.ClosedAccountNumber,
                         },
-                        AdditionalInformation = "Creditor account FR7630006000011234567890189 was closed on 2024-01-31.",
+                        AdditionalInformation =
+                            "Creditor account FR7630006000011234567890189 was closed on 2024-01-31.",
                     },
                 },
             },
         };
 
         Assert.NotNull(message);
-        Assert.Equal(ExternalPaymentGroupStatus1Code.Rejected,
-            message.OriginalPaymentInformationAndStatus!.PaymentInformationStatus);
+        Assert.Equal(
+            ExternalPaymentGroupStatus1Code.Rejected,
+            message.OriginalPaymentInformationAndStatus!.PaymentInformationStatus
+        );
         Assert.IsType<Code>(
-            message.OriginalPaymentInformationAndStatus.TransactionInformationAndStatus!
-                .StatusReasonInformation!.Reason);
+            message
+                .OriginalPaymentInformationAndStatus
+                .TransactionInformationAndStatus!
+                .StatusReasonInformation!
+                .Reason
+        );
     }
 
     /// <summary>
@@ -144,7 +160,8 @@ public class Pain002ExamplesTests
             GroupHeader = CreateGroupHeader("DEUTDEFF/240315/PAI002/00004"),
             OriginalGroupInformationAndStatus = CreateOriginalGroupInfo(),
             OriginalPaymentInformationAndStatus = CreateOriginalPaymentInfo(
-                ExternalPaymentGroupStatus1Code.Rejected) with
+                ExternalPaymentGroupStatus1Code.Rejected
+            ) with
             {
                 TransactionInformationAndStatus = new PaymentTransaction144
                 {
@@ -153,11 +170,9 @@ public class Pain002ExamplesTests
                     TransactionStatus = ExternalPaymentTransactionStatus1Code.Rejected,
                     StatusReasonInformation = new StatusReasonInformation12
                     {
-                        Reason = new Proprietary
-                        {
-                            Value = "DEUTDE-DAILY-LIMIT-EXCEEDED",
-                        },
-                        AdditionalInformation = "Single-payment limit EUR 50,000 exceeded. Contact your relationship manager.",
+                        Reason = new Proprietary { Value = "DEUTDE-DAILY-LIMIT-EXCEEDED", },
+                        AdditionalInformation =
+                            "Single-payment limit EUR 50,000 exceeded. Contact your relationship manager.",
                     },
                 },
             },
@@ -165,8 +180,12 @@ public class Pain002ExamplesTests
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
-            message.OriginalPaymentInformationAndStatus!.TransactionInformationAndStatus!
-                .StatusReasonInformation!.Reason);
+            message
+                .OriginalPaymentInformationAndStatus!
+                .TransactionInformationAndStatus!
+                .StatusReasonInformation!
+                .Reason
+        );
     }
 
     /// <summary>
@@ -198,7 +217,12 @@ public class Pain002ExamplesTests
         };
 
         Assert.NotNull(message);
-        Assert.Equal(ExternalPaymentTransactionStatus1Code.Pending,
-            message.OriginalPaymentInformationAndStatus!.TransactionInformationAndStatus!.TransactionStatus);
+        Assert.Equal(
+            ExternalPaymentTransactionStatus1Code.Pending,
+            message
+                .OriginalPaymentInformationAndStatus!
+                .TransactionInformationAndStatus!
+                .TransactionStatus
+        );
     }
 }

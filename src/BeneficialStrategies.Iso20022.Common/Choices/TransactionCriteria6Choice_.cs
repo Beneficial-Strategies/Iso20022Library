@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TransactionCriteria6Choice.QueryName))]
     [KnownType(typeof(TransactionCriteria6Choice.NewCriteria))]
-    [JsonDerivedType(typeof(TransactionCriteria6Choice.QueryName),nameof(TransactionCriteria6Choice.QueryName))]
-    [JsonDerivedType(typeof(TransactionCriteria6Choice.NewCriteria),nameof(TransactionCriteria6Choice.NewCriteria))]
+    [JsonDerivedType(
+        typeof(TransactionCriteria6Choice.QueryName),
+        nameof(TransactionCriteria6Choice.QueryName)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionCriteria6Choice.NewCriteria),
+        nameof(TransactionCriteria6Choice.NewCriteria)
+    )]
     [IsoId("_gSybxdcZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction Criteria 6 Choice")]
-    public abstract partial record TransactionCriteria6Choice_
-    {
-    }
+    public abstract record TransactionCriteria6Choice_ { }
 }

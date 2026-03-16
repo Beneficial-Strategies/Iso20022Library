@@ -23,7 +23,7 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZcV2VEeekzJIz1JxYSQ")]
     [Description(@"Application key download protected by a share symmetric key.")]
     ApplicationRemoteKeyLoading = ATMSecuritySchemeCode.ApplicationRemoteKeyLoading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key download protected by asymmetric keys authenticated by a certificate.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
@@ -32,7 +32,7 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZc12VEeekzJIz1JxYSQ")]
     [Description(@"Key download protected by asymmetric keys authenticated by a certificate.")]
     CertificateRemoteKeyLoading = ATMSecuritySchemeCode.CertificateRemoteKeyLoading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key download conform to the French ATM key download security scheme.
     /// Encoded/decoded by serializers as &quot;FRAN&quot;.
@@ -41,7 +41,7 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZdV2VEeekzJIz1JxYSQ")]
     [Description(@"Key download conform to the French ATM key download security scheme.")]
     FrenchRemoteKeyLoading = ATMSecuritySchemeCode.FrenchRemoteKeyLoading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key download conform to the German ATM key download security scheme.
     /// Encoded/decoded by serializers as &quot;DTCH&quot;.
@@ -50,7 +50,7 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZd12VEeekzJIz1JxYSQ")]
     [Description(@"Key download conform to the German ATM key download security scheme.")]
     GermanRemoteKeyLoading = ATMSecuritySchemeCode.GermanRemoteKeyLoading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key download conform to the Luxemburg ATM key download security scheme.
     /// Encoded/decoded by serializers as &quot;LUXG&quot;.
@@ -59,7 +59,7 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZeV2VEeekzJIz1JxYSQ")]
     [Description(@"Key download conform to the Luxemburg ATM key download security scheme.")]
     LuxemburgRemoteKeyLoading = ATMSecuritySchemeCode.LuxemburgRemoteKeyLoading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Manual key entry on the ATM.
     /// Encoded/decoded by serializers as &quot;MANU&quot;.
@@ -68,25 +68,29 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZe12VEeekzJIz1JxYSQ")]
     [Description(@"Manual key entry on the ATM.")]
     ManualKeyEntry = ATMSecuritySchemeCode.ManualKeyEntry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key download protected by asymmetric keys authenticated by a PKI (Public Key Infrastructure).
     /// Encoded/decoded by serializers as &quot;PKIP&quot;.
     /// </summary>
     [EnumMember(Value = "PKIP")]
     [IsoId("_P2UZfV2VEeekzJIz1JxYSQ")]
-    [Description(@"Key download protected by asymmetric keys authenticated by a PKI (Public Key Infrastructure).")]
+    [Description(
+        @"Key download protected by asymmetric keys authenticated by a PKI (Public Key Infrastructure)."
+    )]
     PKIKeyDownload = ATMSecuritySchemeCode.PKIKeyDownload, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key download protected by asymmetric keys authenticated by a digital signature.
     /// Encoded/decoded by serializers as &quot;SIGN&quot;.
     /// </summary>
     [EnumMember(Value = "SIGN")]
     [IsoId("_P2UZf12VEeekzJIz1JxYSQ")]
-    [Description(@"Key download protected by asymmetric keys authenticated by a digital signature.")]
+    [Description(
+        @"Key download protected by asymmetric keys authenticated by a digital signature."
+    )]
     SignatureRemoteKeyLoading = ATMSecuritySchemeCode.SignatureRemoteKeyLoading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No key exchange performed, no security scheme defined.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -95,14 +99,15 @@ public enum ATMSecurityScheme3Code
     [IsoId("_P2UZgV2VEeekzJIz1JxYSQ")]
     [Description(@"No key exchange performed, no security scheme defined.")]
     Unitialised = ATMSecuritySchemeCode.Unitialised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ANSI X9 TR34 2012 scheme for the distribution of the symmetric public keys and the initial master key.
     /// Encoded/decoded by serializers as &quot;TR34&quot;.
     /// </summary>
     [EnumMember(Value = "TR34")]
     [IsoId("_RJAJUV2VEeekzJIz1JxYSQ")]
-    [Description(@"ANSI X9 TR34 2012 scheme for the distribution of the symmetric public keys and the initial master key.")]
+    [Description(
+        @"ANSI X9 TR34 2012 scheme for the distribution of the symmetric public keys and the initial master key."
+    )]
     TR34 = ATMSecuritySchemeCode.TR34, // same ordinal as derivation source for type conversions
-    
 }

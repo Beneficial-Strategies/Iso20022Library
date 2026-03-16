@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,42 +14,40 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G-NuISStEeWEdM0tuoNJdg")]
 [DisplayName("Receiving Parties And Account")]
-public partial record ReceivingPartiesAndAccount14
+public record ReceivingPartiesAndAccount14
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that acts on behalf of the buyer of securities when the buyer does not have a direct relationship with the receiving agent.
     /// </summary>
     [IsoId("_HbFQVyStEeWEdM0tuoNJdg")]
     [DisplayName("Receivers Custodian Details")]
     [IsoXmlTag("RcvrsCtdnDtls")]
-    public PartyIdentificationAndAccount124? ReceiversCustodianDetails { get; init; } 
-    
+    public PartyIdentificationAndAccount124? ReceiversCustodianDetails { get; init; }
+
     /// <summary>
     /// Party that the receiver&apos;s custodian uses to effect the receipt of a security, when the receiver&apos;s custodian does not have a direct relationship with the receiving agent.
     /// </summary>
     [IsoId("_HbFQWSStEeWEdM0tuoNJdg")]
     [DisplayName("Receivers Intermediary 1 Details")]
     [IsoXmlTag("RcvrsIntrmy1Dtls")]
-    public PartyIdentificationAndAccount124? ReceiversIntermediary1Details { get; init; } 
-    
+    public PartyIdentificationAndAccount124? ReceiversIntermediary1Details { get; init; }
+
     /// <summary>
     /// Party that interacts with the receiver’s intermediary.
     /// </summary>
     [IsoId("_HbFQWyStEeWEdM0tuoNJdg")]
     [DisplayName("Receivers Intermediary 2 Details")]
     [IsoXmlTag("RcvrsIntrmy2Dtls")]
-    public PartyIdentificationAndAccount124? ReceiversIntermediary2Details { get; init; } 
-    
+    public PartyIdentificationAndAccount124? ReceiversIntermediary2Details { get; init; }
+
     /// <summary>
     /// Party that receives securities from the delivering agent via the place of settlement, for example, securities central depository.
     /// </summary>
     [IsoId("_HbFQXSStEeWEdM0tuoNJdg")]
     [DisplayName("Receiving Agent Details")]
     [IsoXmlTag("RcvgAgtDtls")]
-    public required PartyIdentificationAndAccount123 ReceivingAgentDetails { get; init; } 
-    
+    public required PartyIdentificationAndAccount123 ReceivingAgentDetails { get; init; }
+
     /// <summary>
     /// Identifies the securities settlement system to be used.
     /// </summary>
@@ -57,18 +55,14 @@ public partial record ReceivingPartiesAndAccount14
     [DisplayName("Securities Settlement System")]
     [IsoXmlTag("SctiesSttlmSys")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesSettlementSystem { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SecuritiesSettlementSystem { get; init; }
+
     /// <summary>
     /// Place where settlement of the securities takes place.
     /// </summary>
     [IsoId("_HbFQYSStEeWEdM0tuoNJdg")]
     [DisplayName("Place Of Settlement Details")]
     [IsoXmlTag("PlcOfSttlmDtls")]
-    public PartyIdentification97? PlaceOfSettlementDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification97? PlaceOfSettlementDetails { get; init; }
 }

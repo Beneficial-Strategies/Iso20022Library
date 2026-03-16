@@ -23,5 +23,4 @@ public enum RejectionReason19Code
     [IsoId("_Zi1mMNp-Ed-ak6NoX_4Aeg_-856637114")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
 }

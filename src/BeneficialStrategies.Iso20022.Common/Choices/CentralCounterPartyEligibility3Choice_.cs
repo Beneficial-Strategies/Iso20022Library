@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CentralCounterPartyEligibility3Choice.Indicator))]
     [KnownType(typeof(CentralCounterPartyEligibility3Choice.Proprietary))]
-    [JsonDerivedType(typeof(CentralCounterPartyEligibility3Choice.Indicator),nameof(CentralCounterPartyEligibility3Choice.Indicator))]
-    [JsonDerivedType(typeof(CentralCounterPartyEligibility3Choice.Proprietary),nameof(CentralCounterPartyEligibility3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CentralCounterPartyEligibility3Choice.Indicator),
+        nameof(CentralCounterPartyEligibility3Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(CentralCounterPartyEligibility3Choice.Proprietary),
+        nameof(CentralCounterPartyEligibility3Choice.Proprietary)
+    )]
     [IsoId("_Aa5owdokEeC60axPepSq7g_-259379707")]
     [DisplayName("Central Counter Party Eligibility 3 Choice")]
-    public abstract partial record CentralCounterPartyEligibility3Choice_
-    {
-    }
+    public abstract record CentralCounterPartyEligibility3Choice_ { }
 }

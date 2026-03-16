@@ -22,6 +22,6 @@ public enum CorporateActionFrequencyType4Code
     [EnumMember(Value = "SPRE")]
     [IsoId("_udHZoaFUEeSK_vfd3NHBGg")]
     [Description(@"Special Dividend with reinvestment component.")]
-    SpecialDividendWithReinvestment = CorporateActionFrequencyTypeV2Code.SpecialDividendWithReinvestment, // same ordinal as derivation source for type conversions
-    
+    SpecialDividendWithReinvestment =
+        CorporateActionFrequencyTypeV2Code.SpecialDividendWithReinvestment, // same ordinal as derivation source for type conversions
 }

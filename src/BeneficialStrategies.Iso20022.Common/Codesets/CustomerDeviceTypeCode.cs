@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_Q1arsEesEee9r7QjOdsbFw")]
 [Description(@"Type of customer device used for a card payment transaction.")]
-[Derivations(typeof(CustomerDeviceType1Code),typeof(CustomerDeviceType2Code))]
+[Derivations(typeof(CustomerDeviceType1Code), typeof(CustomerDeviceType2Code))]
 public enum CustomerDeviceTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_YSJjAEesEee9r7QjOdsbFw")]
     [Description(@"Secure card reader attached to the customer device")]
     SecureCardReader,
-    
+
     /// <summary>
     /// Non-secure card reader attached to the customer device.
     /// Encoded/decoded by serializers as &quot;NSCR&quot;.
@@ -32,7 +32,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_e-35sEesEee9r7QjOdsbFw")]
     [Description(@"Non-secure card reader attached to the customer device.")]
     NonSecureCardReader,
-    
+
     /// <summary>
     /// Mobile phone
     /// Encoded/decoded by serializers as &quot;MOBL&quot;.
@@ -41,7 +41,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_kG6xkEesEee9r7QjOdsbFw")]
     [Description(@"Mobile phone")]
     Mobile,
-    
+
     /// <summary>
     /// Tablet
     /// Encoded/decoded by serializers as &quot;TBLT&quot;.
@@ -50,7 +50,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_nML5YEesEee9r7QjOdsbFw")]
     [Description(@"Tablet")]
     Tablet,
-    
+
     /// <summary>
     /// Personal computer
     /// Encoded/decoded by serializers as &quot;PECR&quot;.
@@ -59,7 +59,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_rk-ekEesEee9r7QjOdsbFw")]
     [Description(@"Personal computer")]
     PersonalComputer,
-    
+
     /// <summary>
     /// Other device defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +68,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_yf-h0EesEee9r7QjOdsbFw")]
     [Description(@"Other device defined at national level")]
     OtherNational,
-    
+
     /// <summary>
     /// Other device defined in a private way.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,7 +77,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_4LcP0EesEee9r7QjOdsbFw")]
     [Description(@"Other device defined in a private way.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Wearable device.
     /// Encoded/decoded by serializers as &quot;WRBL&quot;.
@@ -86,7 +86,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_X8VvAJfIEeuqNYk2TG3bTg")]
     [Description(@"Wearable device.")]
     Wearable,
-    
+
     /// <summary>
     /// Vehicle.
     /// Encoded/decoded by serializers as &quot;VHCL&quot;.
@@ -95,7 +95,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_jNyOEJfIEeuqNYk2TG3bTg")]
     [Description(@"Vehicle.")]
     Vehicle,
-    
+
     /// <summary>
     /// Embedded in a device.
     /// Encoded/decoded by serializers as &quot;EMBD&quot;.
@@ -104,7 +104,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_sYPygJfIEeuqNYk2TG3bTg")]
     [Description(@"Embedded in a device.")]
     Embedded,
-    
+
     /// <summary>
     /// Key Fob
     /// Encoded/decoded by serializers as &quot;KFOB&quot;.
@@ -113,7 +113,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_waLSYCbMEeyhZIgCcGlTyA")]
     [Description(@"Key Fob")]
     KeyFob,
-    
+
     /// <summary>
     /// Jewellery
     /// Encoded/decoded by serializers as &quot;JEWL&quot;.
@@ -122,7 +122,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_C5CaYCbNEeyhZIgCcGlTyA")]
     [Description(@"Jewellery")]
     Jewellery,
-    
+
     /// <summary>
     /// Sticker
     /// Encoded/decoded by serializers as &quot;STIC&quot;.
@@ -131,7 +131,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_GzW64CbNEeyhZIgCcGlTyA")]
     [Description(@"Sticker")]
     Sticker,
-    
+
     /// <summary>
     /// Gaming Device
     /// Encoded/decoded by serializers as &quot;GAMB&quot;.
@@ -140,7 +140,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_JRYcgCbNEeyhZIgCcGlTyA")]
     [Description(@"Gaming Device")]
     GamingDevice,
-    
+
     /// <summary>
     /// Watch
     /// Encoded/decoded by serializers as &quot;WATC&quot;.
@@ -149,7 +149,7 @@ public enum CustomerDeviceTypeCode
     [IsoId("_MH0eICbNEeyhZIgCcGlTyA")]
     [Description(@"Watch")]
     Watch,
-    
+
     /// <summary>
     /// Device type unknown
     /// Encoded/decoded by serializers as &quot;UNKW&quot;.
@@ -158,5 +158,4 @@ public enum CustomerDeviceTypeCode
     [IsoId("_Qai8wEQHEeyANrrBvBlqVg")]
     [Description(@"Device type unknown")]
     Unknown,
-    
 }

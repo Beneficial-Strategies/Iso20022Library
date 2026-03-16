@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IW78ATkrEequeo9XmZe9AQ")]
 [DisplayName("Notification General Information")]
-public partial record NotificationGeneralInformation2
+public record NotificationGeneralInformation2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of notification.
     /// </summary>
     [IsoId("_IvMD8TkrEequeo9XmZe9AQ")]
     [DisplayName("Notification Type")]
     [IsoXmlTag("NtfctnTp")]
-    public required NotificationType3Code NotificationType { get; init; } 
-    
+    public required NotificationType3Code NotificationType { get; init; }
+
     /// <summary>
     /// Status of the details of the event.
     /// </summary>
     [IsoId("_IvMD-TkrEequeo9XmZe9AQ")]
     [DisplayName("Notification Status")]
     [IsoXmlTag("NtfctnSts")]
-    public required EventStatus1 NotificationStatus { get; init; } 
-    
+    public required EventStatus1 NotificationStatus { get; init; }
+
     /// <summary>
     /// Indicates whether the announcement was initiated by the first intermediary in the custody chain in accordance with SRD II.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record NotificationGeneralInformation2
     [DisplayName("Shareholder Rights Directive Indicator")]
     [IsoXmlTag("ShrhldrRghtsDrctvInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? ShareholderRightsDirectiveIndicator { get; init; }
 }

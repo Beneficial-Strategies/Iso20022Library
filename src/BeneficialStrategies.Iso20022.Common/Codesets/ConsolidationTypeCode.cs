@@ -23,7 +23,7 @@ public enum ConsolidationTypeCode
     [IsoId("_mJEkwCDVEeWCLu74WLgP4w")]
     [Description(@"Consolidation is general.")]
     General,
-    
+
     /// <summary>
     /// Consolidation is at the level of the participant.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,5 +32,4 @@ public enum ConsolidationTypeCode
     [IsoId("_pNTx0CDVEeWCLu74WLgP4w")]
     [Description(@"Consolidation is at the level of the participant.")]
     Participation,
-    
 }

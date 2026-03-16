@@ -18,18 +18,43 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus37Choice.Proprietary))]
     [KnownType(typeof(ProcessingStatus37Choice.CancellationRequested))]
     [KnownType(typeof(ProcessingStatus37Choice.ModificationRequested))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.AcknowledgedAccepted),nameof(ProcessingStatus37Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.PendingProcessing),nameof(ProcessingStatus37Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.Rejected),nameof(ProcessingStatus37Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.Repair),nameof(ProcessingStatus37Choice.Repair))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.Cancelled),nameof(ProcessingStatus37Choice.Cancelled))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.PendingCancellation),nameof(ProcessingStatus37Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.Proprietary),nameof(ProcessingStatus37Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.CancellationRequested),nameof(ProcessingStatus37Choice.CancellationRequested))]
-    [JsonDerivedType(typeof(ProcessingStatus37Choice.ModificationRequested),nameof(ProcessingStatus37Choice.ModificationRequested))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus37Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.PendingProcessing),
+        nameof(ProcessingStatus37Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.Rejected),
+        nameof(ProcessingStatus37Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.Repair),
+        nameof(ProcessingStatus37Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.Cancelled),
+        nameof(ProcessingStatus37Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.PendingCancellation),
+        nameof(ProcessingStatus37Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.Proprietary),
+        nameof(ProcessingStatus37Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.CancellationRequested),
+        nameof(ProcessingStatus37Choice.CancellationRequested)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus37Choice.ModificationRequested),
+        nameof(ProcessingStatus37Choice.ModificationRequested)
+    )]
     [IsoId("_F0ajsSwuEeOEV5XHD-BKpw")]
     [DisplayName("Processing Status 37 Choice")]
-    public abstract partial record ProcessingStatus37Choice_
-    {
-    }
+    public abstract record ProcessingStatus37Choice_ { }
 }

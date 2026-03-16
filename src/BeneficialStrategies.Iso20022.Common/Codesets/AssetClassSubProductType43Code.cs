@@ -23,5 +23,4 @@ public enum AssetClassSubProductType43Code
     [IsoId("_pK4MiVr3EeWN79Bl6BUd3g")]
     [Description(@"Commodity of type urea.")]
     Urea = AssetClassSubProductTypeCode.Urea, // same ordinal as derivation source for type conversions
-    
 }

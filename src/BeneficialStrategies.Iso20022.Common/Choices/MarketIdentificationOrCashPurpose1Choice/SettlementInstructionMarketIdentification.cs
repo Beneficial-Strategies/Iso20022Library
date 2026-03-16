@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpose1Choice
 {
     /// <summary>
@@ -13,36 +13,31 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketIdentificationOrCashPurpos
     /// </summary>
     [IsoId("_kz-v4EiNEeOdL6nMHefDgg")]
     [DisplayName("Settlement Instruction Market Identification")]
-    public partial record SettlementInstructionMarketIdentification : MarketIdentificationOrCashPurpose1Choice_
+    public record SettlementInstructionMarketIdentification
+        : MarketIdentificationOrCashPurpose1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Country in which the financial instrument is to be settled.
         /// </summary>
         [IsoId("_hzs3oNTPEeKvJeoOII0e7w")]
         [DisplayName("Country")]
         [IsoXmlTag("Ctry")]
-        public required CountryCode Country { get; init; } 
-        
+        public required CountryCode Country { get; init; }
+
         /// <summary>
         /// Type of instrument covered by the SSI instruction.
         /// </summary>
         [IsoId("_rmMscNTPEeKvJeoOII0e7w")]
         [DisplayName("Classification Type")]
         [IsoXmlTag("ClssfctnTp")]
-        public required ClassificationType1Choice_ ClassificationType { get; init; } 
-        
+        public required ClassificationType1Choice_ ClassificationType { get; init; }
+
         /// <summary>
         /// Purpose of the instruction, for example, whether for regular payments, margin payments related to a collateral movement, securities settlements, securities lending.
         /// </summary>
         [IsoId("_FcKBEtQQEeKSSosHwGnjNw")]
         [DisplayName("Settlement Purpose")]
         [IsoXmlTag("SttlmPurp")]
-        public Purpose3Choice_? SettlementPurpose { get; init; } 
-        
-        
-        #nullable disable
-        
+        public Purpose3Choice_? SettlementPurpose { get; init; }
     }
 }

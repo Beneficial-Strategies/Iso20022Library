@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aDBiINp-Ed-ak6NoX_4Aeg_649445219")]
-[Description(@"Specifies the reason why a cancellation request sent for the related instruction is pending.")]
+[Description(
+    @"Specifies the reason why a cancellation request sent for the related instruction is pending."
+)]
 [DerivedFrom(typeof(PendingFailingReasonCode))]
 public enum PendingReason6Code
 {
@@ -21,9 +23,11 @@ public enum PendingReason6Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_aDBiIdp-Ed-ak6NoX_4Aeg_-2000254642")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Awaiting confirmation from the counterparty.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -32,7 +36,7 @@ public enum PendingReason6Code
     [IsoId("_aDBiItp-Ed-ak6NoX_4Aeg_-347627134")]
     [Description(@"Awaiting confirmation from the counterparty.")]
     AwaitingConfirmation = PendingFailingReasonCode.AwaitingConfirmation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +45,7 @@ public enum PendingReason6Code
     [IsoId("_aDBiI9p-Ed-ak6NoX_4Aeg_1188062474")]
     [Description(@"Other. See Narrative.")]
     Other = PendingFailingReasonCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Execution is conditional to the execution of a process at the registrar.
     /// Encoded/decoded by serializers as &quot;CDRG&quot;.
@@ -50,23 +54,26 @@ public enum PendingReason6Code
     [IsoId("_aDBiJNp-Ed-ak6NoX_4Aeg_-251565728")]
     [Description(@"Execution is conditional to the execution of a process at the registrar.")]
     ConditionalRegistrar = PendingFailingReasonCode.ConditionalRegistrar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Execution is conditional to the execution of a process linked to the currency of the transaction.
     /// Encoded/decoded by serializers as &quot;CDCY&quot;.
     /// </summary>
     [EnumMember(Value = "CDCY")]
     [IsoId("_aDBiJdp-Ed-ak6NoX_4Aeg_-543523466")]
-    [Description(@"Execution is conditional to the execution of a process linked to the currency of the transaction.")]
+    [Description(
+        @"Execution is conditional to the execution of a process linked to the currency of the transaction."
+    )]
     ConditionalCurrency = PendingFailingReasonCode.ConditionalCurrency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Execution is conditional to the execution of a process of realignment at the issuer CSD.
     /// Encoded/decoded by serializers as &quot;CDRE&quot;.
     /// </summary>
     [EnumMember(Value = "CDRE")]
     [IsoId("_aDBiJtp-Ed-ak6NoX_4Aeg_-365404794")]
-    [Description(@"Execution is conditional to the execution of a process of realignment at the issuer CSD.")]
+    [Description(
+        @"Execution is conditional to the execution of a process of realignment at the issuer CSD."
+    )]
     ConditionalRealignement = PendingFailingReasonCode.ConditionalRealignement, // same ordinal as derivation source for type conversions
-    
 }

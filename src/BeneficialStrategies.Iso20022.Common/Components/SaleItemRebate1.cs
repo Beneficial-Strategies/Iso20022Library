@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ifYlkNxOEeioifFt1dhnJA")]
 [DisplayName("Sale Item Rebate")]
-public partial record SaleItemRebate1
+public record SaleItemRebate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Data of the Sale item.
     /// </summary>
     [IsoId("_qEsKENxOEeioifFt1dhnJA")]
     [DisplayName("Sale Item")]
     [IsoXmlTag("SaleItm")]
-    public required Product6 SaleItem { get; init; } 
-    
+    public required Product6 SaleItem { get; init; }
+
     /// <summary>
     /// Short text to qualify a rebate on an line item.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record SaleItemRebate1
     [DisplayName("Rebate Label")]
     [IsoXmlTag("RbtLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RebateLabel { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RebateLabel { get; init; }
 }

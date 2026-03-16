@@ -23,7 +23,7 @@ public enum Status6Code
     [IsoId("_kpxjkO5NEeCisYr99QEiWA_-61748503")]
     [Description(@"Instruction has been rejected.")]
     Rejected = StatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Processing has been completed.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -32,7 +32,7 @@ public enum Status6Code
     [IsoId("_kpxjke5NEeCisYr99QEiWA_203121317")]
     [Description(@"Processing has been completed.")]
     Completed = StatusCode.Completed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is queued.
     /// Encoded/decoded by serializers as &quot;QUED&quot;.
@@ -41,5 +41,4 @@ public enum Status6Code
     [IsoId("_kpxjku5NEeCisYr99QEiWA_-1861474063")]
     [Description(@"Instruction is queued.")]
     Queued = StatusCode.Queued, // same ordinal as derivation source for type conversions
-    
 }

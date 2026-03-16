@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QlXxgEbQEeeIjf8aP9KbJA")]
 [DisplayName("Additional Risk Data")]
-public partial record AdditionalRiskData1
+public record AdditionalRiskData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the additional risk data type related to the transaction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AdditionalRiskData1
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Type { get; init; }
+
     /// <summary>
     /// Data value of the additional risk data associated with the transaction.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record AdditionalRiskData1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max10KText)]
-    [StringLength(maximumLength: 10000 ,MinimumLength = 1)]
-    public required IsoMax10KText Value { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 10000, MinimumLength = 1)]
+    public required IsoMax10KText Value { get; init; }
 }

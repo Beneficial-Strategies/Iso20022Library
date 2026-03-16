@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aI1PNtp-Ed-ak6NoX_4Aeg_413321420")]
 [Description(@"Defines the type of price protection the customer requires on their order.")]
-[Derivations(typeof(PriceProtectionScope1Code),typeof(PriceProtectionScope2Code))]
+[Derivations(typeof(PriceProtectionScope1Code), typeof(PriceProtectionScope2Code))]
 public enum PriceProtectionScopeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum PriceProtectionScopeCode
     [IsoId("_aI1PN9p-Ed-ak6NoX_4Aeg_1048703534")]
     [Description(@"Price protection is local (for example, Exchange, ECN, ATS).")]
     Local,
-    
+
     /// <summary>
     /// Price protection is national (across all national markets).
     /// Encoded/decoded by serializers as &quot;NATI&quot;.
@@ -32,7 +32,7 @@ public enum PriceProtectionScopeCode
     [IsoId("_aI_AMNp-Ed-ak6NoX_4Aeg_-936209086")]
     [Description(@"Price protection is national (across all national markets).")]
     National,
-    
+
     /// <summary>
     /// Price protection is global (across all markets).
     /// Encoded/decoded by serializers as &quot;GLOB&quot;.
@@ -41,14 +41,15 @@ public enum PriceProtectionScopeCode
     [IsoId("_aI_AMdp-Ed-ak6NoX_4Aeg_-861403951")]
     [Description(@"Price protection is global (across all markets).")]
     Global,
-    
+
     /// <summary>
     /// Price protection is national (across all national markets) excluding local price protection.
     /// Encoded/decoded by serializers as &quot;NAEL&quot;.
     /// </summary>
     [EnumMember(Value = "NAEL")]
     [IsoId("_aI_AMtp-Ed-ak6NoX_4Aeg_-442386317")]
-    [Description(@"Price protection is national (across all national markets) excluding local price protection.")]
+    [Description(
+        @"Price protection is national (across all national markets) excluding local price protection."
+    )]
     NationalExcludingLocal,
-    
 }

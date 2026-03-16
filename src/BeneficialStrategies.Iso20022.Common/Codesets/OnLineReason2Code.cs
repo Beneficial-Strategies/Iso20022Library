@@ -23,7 +23,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7UU4LEey_VecAUE-C9Q")]
     [Description(@"Transaction random selection to go online.")]
     RandomSelection = OnLineReasonCode.RandomSelection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment application in the Integrated Circuit Card forces to go on-line.
     /// Encoded/decoded by serializers as &quot;ICCF&quot;.
@@ -32,7 +32,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7U04LEey_VecAUE-C9Q")]
     [Description(@"Payment application in the Integrated Circuit Card forces to go on-line.")]
     ICCForced = OnLineReasonCode.ICCForced, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// On line forced by card acceptor.
     /// Encoded/decoded by serializers as &quot;MERF&quot;.
@@ -41,7 +41,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7VU4LEey_VecAUE-C9Q")]
     [Description(@"On line forced by card acceptor.")]
     MerchantForced = OnLineReasonCode.MerchantForced, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal random selection to go online.
     /// Encoded/decoded by serializers as &quot;TRMF&quot;.
@@ -50,7 +50,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7V04LEey_VecAUE-C9Q")]
     [Description(@"Terminal random selection to go online.")]
     TerminalForced = OnLineReasonCode.TerminalForced, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// On line forced by card issuer.
     /// Encoded/decoded by serializers as &quot;ISSF&quot;.
@@ -59,7 +59,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7WU4LEey_VecAUE-C9Q")]
     [Description(@"On line forced by card issuer.")]
     IssuerForced = OnLineReasonCode.IssuerForced, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Over floor limit.
     /// Encoded/decoded by serializers as &quot;FRLT&quot;.
@@ -68,7 +68,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7W04LEey_VecAUE-C9Q")]
     [Description(@"Over floor limit.")]
     FloorLimit = OnLineReasonCode.FloorLimit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card appears on terminal exception file.
     /// Encoded/decoded by serializers as &quot;EXFL&quot;.
@@ -77,16 +77,18 @@ public enum OnLineReason2Code
     [IsoId("_3vH7XU4LEey_VecAUE-C9Q")]
     [Description(@"Card appears on terminal exception file.")]
     ExceptionFile = OnLineReasonCode.ExceptionFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Total amount of purchases per cardholder and per application above floor limit.
     /// Encoded/decoded by serializers as &quot;TAMT&quot;.
     /// </summary>
     [EnumMember(Value = "TAMT")]
     [IsoId("_3vH7X04LEey_VecAUE-C9Q")]
-    [Description(@"Total amount of purchases per cardholder and per application above floor limit.")]
+    [Description(
+        @"Total amount of purchases per cardholder and per application above floor limit."
+    )]
     TotalAmount = OnLineReasonCode.TotalAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bank Identification Number under control.
     /// Encoded/decoded by serializers as &quot;CBIN&quot;.
@@ -95,7 +97,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7YU4LEey_VecAUE-C9Q")]
     [Description(@"Bank Identification Number under control.")]
     ControlledBIN = OnLineReasonCode.ControlledBIN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unknown Bank Identification Number.
     /// Encoded/decoded by serializers as &quot;UBIN&quot;.
@@ -104,7 +106,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7Y04LEey_VecAUE-C9Q")]
     [Description(@"Unknown Bank Identification Number.")]
     UnknownBIN = OnLineReasonCode.UnknownBIN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Primary account number (card number) under control.
     /// Encoded/decoded by serializers as &quot;CPAN&quot;.
@@ -113,7 +115,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7ZU4LEey_VecAUE-C9Q")]
     [Description(@"Primary account number (card number) under control.")]
     ControlledPAN = OnLineReasonCode.ControlledPAN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Flow control.
     /// Encoded/decoded by serializers as &quot;FLOW&quot;.
@@ -122,7 +124,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7Z04LEey_VecAUE-C9Q")]
     [Description(@"Flow control.")]
     FlowControl = OnLineReasonCode.FlowControl, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unknown currency code or foreign currency.
     /// Encoded/decoded by serializers as &quot;CRCY&quot;.
@@ -131,7 +133,7 @@ public enum OnLineReason2Code
     [IsoId("_3vH7aU4LEey_VecAUE-C9Q")]
     [Description(@"Unknown currency code or foreign currency.")]
     UnavailableCurrency = OnLineReasonCode.UnavailableCurrency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request Cardholder Authentication througth PIN insertion
     /// Encoded/decoded by serializers as &quot;IFPR&quot;.
@@ -140,5 +142,4 @@ public enum OnLineReason2Code
     [IsoId("_9wKQsE4LEey_VecAUE-C9Q")]
     [Description(@"Request Cardholder Authentication througth PIN insertion")]
     IssuerForcedPINRequest = OnLineReasonCode.IssuerForcedPINRequest, // same ordinal as derivation source for type conversions
-    
 }

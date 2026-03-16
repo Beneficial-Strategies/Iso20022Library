@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.PensionSchemeType1Choice
     /// </summary>
     [IsoId("_JZwpYE4OEeiQHa-q1Uephw")]
     [DisplayName("Code")]
-    public partial record Code : PensionSchemeType1Choice_
+    public record Code : PensionSchemeType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies a type of pension scheme.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required PensionSchemeType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PensionSchemeType1Code Value { get; init; }
     }
 }

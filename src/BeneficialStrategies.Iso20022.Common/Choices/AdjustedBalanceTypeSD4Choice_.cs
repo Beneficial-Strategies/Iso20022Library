@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AdjustedBalanceTypeSD4Choice.StockLoan))]
     [KnownType(typeof(AdjustedBalanceTypeSD4Choice.Repo))]
-    [JsonDerivedType(typeof(AdjustedBalanceTypeSD4Choice.StockLoan),nameof(AdjustedBalanceTypeSD4Choice.StockLoan))]
-    [JsonDerivedType(typeof(AdjustedBalanceTypeSD4Choice.Repo),nameof(AdjustedBalanceTypeSD4Choice.Repo))]
+    [JsonDerivedType(
+        typeof(AdjustedBalanceTypeSD4Choice.StockLoan),
+        nameof(AdjustedBalanceTypeSD4Choice.StockLoan)
+    )]
+    [JsonDerivedType(
+        typeof(AdjustedBalanceTypeSD4Choice.Repo),
+        nameof(AdjustedBalanceTypeSD4Choice.Repo)
+    )]
     [IsoId("_RWpyEcSTEeeRJJtE9TSlkw")]
     [DisplayName("Adjusted Balance Type SD 4 Choice")]
-    public abstract partial record AdjustedBalanceTypeSD4Choice_
-    {
-    }
+    public abstract record AdjustedBalanceTypeSD4Choice_ { }
 }

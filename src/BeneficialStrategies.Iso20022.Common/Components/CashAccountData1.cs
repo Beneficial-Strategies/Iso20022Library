@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3340ZTEyEe6g-ffJsqGiSA")]
 [DisplayName("Cash Account Data1")]
-public partial record CashAccountData1
+public record CashAccountData1
 {
-    #nullable enable
-
     /// <summary>
     /// Currency.
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveOrHistoricCurrencyCode? Currency { get; init; } 
+    public ActiveOrHistoricCurrencyCode? Currency { get; init; }
 
     /// <summary>
     /// Current Bilateral Limit.
@@ -37,7 +35,7 @@ public partial record CashAccountData1
     /// </summary>
     [DisplayName("Current Multilateral Limit")]
     [IsoXmlTag("CurMulLmt")]
-    public Limit5? CurrentMultilateralLimit { get; init; } 
+    public Limit5? CurrentMultilateralLimit { get; init; }
 
     /// <summary>
     /// Multilateral Balance.
@@ -51,28 +49,28 @@ public partial record CashAccountData1
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax70Text? Name { get; init; } 
+    public IsoMax70Text? Name { get; init; }
 
     /// <summary>
     /// Owner.
     /// </summary>
     [DisplayName("Owner")]
     [IsoXmlTag("Ownr")]
-    public PartyIdentification272? Owner { get; init; } 
+    public PartyIdentification272? Owner { get; init; }
 
     /// <summary>
     /// Proxy.
     /// </summary>
     [DisplayName("Proxy")]
     [IsoXmlTag("Prxy")]
-    public ProxyAccountIdentification1? Proxy { get; init; } 
+    public ProxyAccountIdentification1? Proxy { get; init; }
 
     /// <summary>
     /// Servicer.
     /// </summary>
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
-    public BranchAndFinancialInstitutionIdentification8? Servicer { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? Servicer { get; init; }
 
     /// <summary>
     /// Standing Order.
@@ -86,9 +84,5 @@ public partial record CashAccountData1
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public CashAccountType2Choice_? Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public CashAccountType2Choice_? Type { get; init; }
 }

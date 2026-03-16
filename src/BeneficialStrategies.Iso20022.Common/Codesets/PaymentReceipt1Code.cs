@@ -23,7 +23,7 @@ public enum PaymentReceipt1Code
     [IsoId("__uhuoQ5EEeenr-7g_0TYag")]
     [Description(@"Operation is a payment.")]
     Payment = PaymentReceiptCode.Payment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Operation is a receipt.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,7 +32,7 @@ public enum PaymentReceipt1Code
     [IsoId("__0B5sQ5EEeenr-7g_0TYag")]
     [Description(@"Operation is a receipt.")]
     Receipt = PaymentReceiptCode.Receipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Operation is null.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,5 +41,4 @@ public enum PaymentReceipt1Code
     [IsoId("__51mwQ5EEeenr-7g_0TYag")]
     [Description(@"Operation is null.")]
     None = PaymentReceiptCode.None, // same ordinal as derivation source for type conversions
-    
 }

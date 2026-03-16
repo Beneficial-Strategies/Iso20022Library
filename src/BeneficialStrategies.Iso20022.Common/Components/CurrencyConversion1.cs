@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WaxKUEerEeODR7vDcYOqmg")]
 [DisplayName("Currency Conversion")]
-public partial record CurrencyConversion1
+public record CurrencyConversion1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the currency conversion operation for the service provider.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record CurrencyConversion1
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CurrencyConversionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CurrencyConversionIdentification { get; init; }
+
     /// <summary>
     /// Result of a requested currency conversion.
     /// </summary>
     [IsoId("_7B4bsEesEeODR7vDcYOqmg")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public required CurrencyConversionResponse1Code Result { get; init; } 
-    
+    public required CurrencyConversionResponse1Code Result { get; init; }
+
     /// <summary>
     /// Plain text explaining the result of the currency conversion request.
     /// </summary>
@@ -43,17 +41,17 @@ public partial record CurrencyConversion1
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ResponseReason { get; init; }
+
     /// <summary>
     /// Currency into which the amount is converted (ISO 4217, 3 alphanumeric characters).
     /// </summary>
     [IsoId("_HGQMgEetEeODR7vDcYOqmg")]
     [DisplayName("Target Currency")]
     [IsoXmlTag("TrgtCcy")]
-    public required CurrencyCode TargetCurrency { get; init; } 
-    
+    public required CurrencyCode TargetCurrency { get; init; }
+
     /// <summary>
     /// Currency into which the amount is converted (ISO 4217, 3 numeric characters).
     /// </summary>
@@ -61,8 +59,8 @@ public partial record CurrencyConversion1
     [DisplayName("Target Currency Numeric")]
     [IsoXmlTag("TrgtCcyNmrc")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public required IsoExact3NumericText TargetCurrencyNumeric { get; init; } 
-    
+    public required IsoExact3NumericText TargetCurrencyNumeric { get; init; }
+
     /// <summary>
     /// Maximal number of digits after the decimal separator for target currency.
     /// </summary>
@@ -70,8 +68,8 @@ public partial record CurrencyConversion1
     [DisplayName("Target Currency Decimal")]
     [IsoXmlTag("TrgtCcyDcml")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TargetCurrencyDecimal { get; init; } 
-    
+    public required IsoNumber TargetCurrencyDecimal { get; init; }
+
     /// <summary>
     /// Full name of the target currency.
     /// </summary>
@@ -79,17 +77,17 @@ public partial record CurrencyConversion1
     [DisplayName("Target Currency Name")]
     [IsoXmlTag("TrgtCcyNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TargetCurrencyName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TargetCurrencyName { get; init; }
+
     /// <summary>
     /// Amount converted in the target currency, including additional charges.
     /// </summary>
     [IsoId("_l_aSAEetEeODR7vDcYOqmg")]
     [DisplayName("Resulting Amount")]
     [IsoXmlTag("RsltgAmt")]
-    public required ImpliedCurrencyAndAmount ResultingAmount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount ResultingAmount { get; init; }
+
     /// <summary>
     /// Exchange rate, expressed as a percentage, applied to convert the original amount into the resulting amount.
     /// </summary>
@@ -97,8 +95,8 @@ public partial record CurrencyConversion1
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate ExchangeRate { get; init; } 
-    
+    public required IsoPercentageRate ExchangeRate { get; init; }
+
     /// <summary>
     /// Exchange rate, expressed as a percentage, applied to convert the resulting amount into the original amount.
     /// </summary>
@@ -106,8 +104,8 @@ public partial record CurrencyConversion1
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InvertedExchangeRate { get; init; } 
-    
+    public IsoPercentageRate? InvertedExchangeRate { get; init; }
+
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
     /// </summary>
@@ -115,8 +113,8 @@ public partial record CurrencyConversion1
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; } 
-    
+    public IsoISODateTime? QuotationDate { get; init; }
+
     /// <summary>
     /// Validity limit of the exchange rate.
     /// </summary>
@@ -124,24 +122,24 @@ public partial record CurrencyConversion1
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ValidUntil { get; init; } 
-    
+    public IsoISODateTime? ValidUntil { get; init; }
+
     /// <summary>
     /// Currency from which the amount is converted (ISO 4217, 3 alphanumeric characters).
     /// </summary>
     [IsoId("_GMGb8EeuEeODR7vDcYOqmg")]
     [DisplayName("Source Currency")]
     [IsoXmlTag("SrcCcy")]
-    public required CurrencyCode SourceCurrency { get; init; } 
-    
+    public required CurrencyCode SourceCurrency { get; init; }
+
     /// <summary>
     /// Currency from which the amount is converted (ISO 4217, 3 numeric characters).
     /// </summary>
     [IsoId("_KxOM8EeuEeODR7vDcYOqmg")]
     [DisplayName("Source Currency Numeric")]
     [IsoXmlTag("SrcCcyNmrc")]
-    public CurrencyCode? SourceCurrencyNumeric { get; init; } 
-    
+    public CurrencyCode? SourceCurrencyNumeric { get; init; }
+
     /// <summary>
     /// Maximal number of digits after the decimal separator for source currency.
     /// </summary>
@@ -149,8 +147,8 @@ public partial record CurrencyConversion1
     [DisplayName("Source Currency Decimal")]
     [IsoXmlTag("SrcCcyDcml")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber SourceCurrencyDecimal { get; init; } 
-    
+    public required IsoNumber SourceCurrencyDecimal { get; init; }
+
     /// <summary>
     /// Full name of the source currency.
     /// </summary>
@@ -158,33 +156,33 @@ public partial record CurrencyConversion1
     [DisplayName("Source Currency Name")]
     [IsoXmlTag("SrcCcyNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SourceCurrencyName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SourceCurrencyName { get; init; }
+
     /// <summary>
     /// Original amount in the source currency.
     /// </summary>
     [IsoId("_cvM1cEeuEeODR7vDcYOqmg")]
     [DisplayName("Original Amount")]
     [IsoXmlTag("OrgnlAmt")]
-    public required ImpliedCurrencyAndAmount OriginalAmount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount OriginalAmount { get; init; }
+
     /// <summary>
     /// Commission or additional charges made as part of a currency conversion.
     /// </summary>
     [IsoId("_jvGxYEevEeODR7vDcYOqmg")]
     [DisplayName("Commission Details")]
     [IsoXmlTag("ComssnDtls")]
-    public Commission19? CommissionDetails { get; init; } 
-    
+    public Commission19? CommissionDetails { get; init; }
+
     /// <summary>
     /// Markup made as part of a currency conversion.
     /// </summary>
     [IsoId("_WkHhUEewEeODR7vDcYOqmg")]
     [DisplayName("Mark Up Details")]
     [IsoXmlTag("MrkUpDtls")]
-    public Commission18? MarkUpDetails { get; init; } 
-    
+    public Commission18? MarkUpDetails { get; init; }
+
     /// <summary>
     /// Card scheme declaration (disclaimer) to present to the cardholder.
     /// </summary>
@@ -192,10 +190,6 @@ public partial record CurrencyConversion1
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    public IsoMax2048Text? DeclarationDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 2048, MinimumLength = 1)]
+    public IsoMax2048Text? DeclarationDetails { get; init; }
 }

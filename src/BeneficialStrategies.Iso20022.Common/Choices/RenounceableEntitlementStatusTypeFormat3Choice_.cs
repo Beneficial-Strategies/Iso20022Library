@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RenounceableEntitlementStatusTypeFormat3Choice.Code))]
     [KnownType(typeof(RenounceableEntitlementStatusTypeFormat3Choice.Proprietary))]
-    [JsonDerivedType(typeof(RenounceableEntitlementStatusTypeFormat3Choice.Code),nameof(RenounceableEntitlementStatusTypeFormat3Choice.Code))]
-    [JsonDerivedType(typeof(RenounceableEntitlementStatusTypeFormat3Choice.Proprietary),nameof(RenounceableEntitlementStatusTypeFormat3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RenounceableEntitlementStatusTypeFormat3Choice.Code),
+        nameof(RenounceableEntitlementStatusTypeFormat3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(RenounceableEntitlementStatusTypeFormat3Choice.Proprietary),
+        nameof(RenounceableEntitlementStatusTypeFormat3Choice.Proprietary)
+    )]
     [IsoId("_63QroUEBEeWVgfuHGaKtRQ")]
     [DisplayName("Renounceable Entitlement Status Type Format 3 Choice")]
-    public abstract partial record RenounceableEntitlementStatusTypeFormat3Choice_
-    {
-    }
+    public abstract record RenounceableEntitlementStatusTypeFormat3Choice_ { }
 }

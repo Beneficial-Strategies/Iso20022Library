@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_UrZRYCjoEeK1Sbo8NpBROA")]
-[Description(@"Specifies whether the trade is a pre-allocation or a post-allocation trade, or whether the trade is unallocated.")]
+[Description(
+    @"Specifies whether the trade is a pre-allocation or a post-allocation trade, or whether the trade is unallocated."
+)]
 [DerivedFrom(typeof(AllocationIndicatorCode))]
 public enum AllocationIndicator1Code
 {
@@ -23,7 +25,7 @@ public enum AllocationIndicator1Code
     [IsoId("_kPSY4SjvEeK1Sbo8NpBROA")]
     [Description(@"Trade is a post-allocation trade.")]
     Post_allocation = AllocationIndicatorCode.Post_allocation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade is a pre-allocation trade.
     /// Encoded/decoded by serializers as &quot;PREA&quot;.
@@ -32,7 +34,7 @@ public enum AllocationIndicator1Code
     [IsoId("_kUnk0SjvEeK1Sbo8NpBROA")]
     [Description(@"Trade is a pre-allocation trade.")]
     Pre_allocation = AllocationIndicatorCode.Pre_allocation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade is unallocated.
     /// Encoded/decoded by serializers as &quot;UNAL&quot;.
@@ -41,5 +43,4 @@ public enum AllocationIndicator1Code
     [IsoId("_kZ_NASjvEeK1Sbo8NpBROA")]
     [Description(@"Trade is unallocated.")]
     Unallocated = AllocationIndicatorCode.Unallocated, // same ordinal as derivation source for type conversions
-    
 }

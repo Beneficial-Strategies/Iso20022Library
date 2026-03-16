@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZSJe2Np-Ed-ak6NoX_4Aeg_-2111038385")]
 [Description(@"Specifies the status of a system.")]
-[Derivations(typeof(SystemStatus2Code),typeof(SystemStatus3Code))]
+[Derivations(typeof(SystemStatus2Code), typeof(SystemStatus3Code))]
 public enum SystemStatusCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum SystemStatusCode
     [IsoId("_ZSSowNp-Ed-ak6NoX_4Aeg_1625331815")]
     [Description(@"System is suspended, that is, not operational.")]
     Suspended,
-    
+
     /// <summary>
     /// System is functioning normally, that is, operational.
     /// Encoded/decoded by serializers as &quot;ACTV&quot;.
@@ -32,7 +32,7 @@ public enum SystemStatusCode
     [IsoId("_ZSSowdp-Ed-ak6NoX_4Aeg_1625331816")]
     [Description(@"System is functioning normally, that is, operational.")]
     Active,
-    
+
     /// <summary>
     /// System is closed (eg. normal closure of an RTGS).
     /// Encoded/decoded by serializers as &quot;CLSD&quot;.
@@ -41,16 +41,18 @@ public enum SystemStatusCode
     [IsoId("_ZSSowtp-Ed-ak6NoX_4Aeg_1391489559")]
     [Description(@"System is closed (eg. normal closure of an RTGS).")]
     Closed,
-    
+
     /// <summary>
     /// System needs to wait for completion of intermediate internal activities before going to a status Closed.
     /// Encoded/decoded by serializers as &quot;CLSG&quot;.
     /// </summary>
     [EnumMember(Value = "CLSG")]
     [IsoId("_ZSSow9p-Ed-ak6NoX_4Aeg_1391489836")]
-    [Description(@"System needs to wait for completion of intermediate internal activities before going to a status Closed.")]
+    [Description(
+        @"System needs to wait for completion of intermediate internal activities before going to a status Closed."
+    )]
     Closing,
-    
+
     /// <summary>
     /// System is starting a new maintenance period.
     /// Encoded/decoded by serializers as &quot;RMPS&quot;.
@@ -59,5 +61,4 @@ public enum SystemStatusCode
     [IsoId("_JXo-AIpdEeiaB-4Hjqs8aw")]
     [Description(@"System is starting a new maintenance period.")]
     ReserveMaintenancePeriodStart,
-    
 }

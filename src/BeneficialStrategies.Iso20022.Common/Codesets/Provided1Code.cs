@@ -23,7 +23,7 @@ public enum Provided1Code
     [IsoId("_ba2ZIRKFEeKj15WxqwlXPw")]
     [Description(@"Not provided.")]
     NotProvided = ProvidedCode.NotProvided, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Provided.
     /// Encoded/decoded by serializers as &quot;PROV&quot;.
@@ -32,5 +32,4 @@ public enum Provided1Code
     [IsoId("_bllCcRKFEeKj15WxqwlXPw")]
     [Description(@"Provided.")]
     Provided = ProvidedCode.Provided, // same ordinal as derivation source for type conversions
-    
 }

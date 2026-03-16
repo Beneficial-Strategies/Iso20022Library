@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_8prHcSYDEeym0KcvJF9aDQ")]
 [DisplayName("Verification Result")]
-public partial record VerificationResult2
+public record VerificationResult2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of the verification or authentication.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record VerificationResult2
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Type { get; init; }
+
     /// <summary>
     /// Entity who actually performed the verification.
     /// ISO 8583:93 bit 22-9
@@ -35,8 +33,8 @@ public partial record VerificationResult2
     [IsoId("_8uxp4yYDEeym0KcvJF9aDQ")]
     [DisplayName("Entity")]
     [IsoXmlTag("Ntty")]
-    public VerificationEntity2Code? Entity { get; init; } 
-    
+    public VerificationEntity2Code? Entity { get; init; }
+
     /// <summary>
     /// Other national or private entity in charge of the verification.
     /// </summary>
@@ -44,17 +42,17 @@ public partial record VerificationResult2
     [DisplayName("Other Entity")]
     [IsoXmlTag("OthrNtty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherEntity { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherEntity { get; init; }
+
     /// <summary>
     /// Result of the verification.
     /// </summary>
     [IsoId("_8uxp5yYDEeym0KcvJF9aDQ")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public Verification3Code? Result { get; init; } 
-    
+    public Verification3Code? Result { get; init; }
+
     /// <summary>
     /// Additional result of the verification, for instance for electronic commerce.
     /// </summary>
@@ -62,18 +60,14 @@ public partial record VerificationResult2
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
-    [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    public IsoMax500Text? OtherResult { get; init; } 
-    
+    [StringLength(maximumLength: 500, MinimumLength = 1)]
+    public IsoMax500Text? OtherResult { get; init; }
+
     /// <summary>
     /// Details of the result.
     /// </summary>
     [IsoId("_8uxp6yYDEeym0KcvJF9aDQ")]
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
-    public AdditionalData1? ResultDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? ResultDetails { get; init; }
 }

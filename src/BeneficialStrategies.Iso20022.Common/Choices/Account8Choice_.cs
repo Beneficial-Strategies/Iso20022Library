@@ -12,12 +12,10 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Account8Choice.CashAccount))]
     [KnownType(typeof(Account8Choice.ChargesAccount))]
     [KnownType(typeof(Account8Choice.TaxAccount))]
-    [JsonDerivedType(typeof(Account8Choice.CashAccount),nameof(Account8Choice.CashAccount))]
-    [JsonDerivedType(typeof(Account8Choice.ChargesAccount),nameof(Account8Choice.ChargesAccount))]
-    [JsonDerivedType(typeof(Account8Choice.TaxAccount),nameof(Account8Choice.TaxAccount))]
+    [JsonDerivedType(typeof(Account8Choice.CashAccount), nameof(Account8Choice.CashAccount))]
+    [JsonDerivedType(typeof(Account8Choice.ChargesAccount), nameof(Account8Choice.ChargesAccount))]
+    [JsonDerivedType(typeof(Account8Choice.TaxAccount), nameof(Account8Choice.TaxAccount))]
     [IsoId("_Q4z1Udp-Ed-ak6NoX_4Aeg_-2028069382")]
     [DisplayName("Account 8 Choice")]
-    public abstract partial record Account8Choice_
-    {
-    }
+    public abstract record Account8Choice_ { }
 }

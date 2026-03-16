@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CWY182k3Eeanu6HLe77Rkg")]
 [DisplayName("Frequency And Moment")]
-public partial record FrequencyAndMoment1
+public record FrequencyAndMoment1
 {
-    #nullable enable
-    
     /// <summary>
     /// Period for which the number of instructions are to be created and processed.
     /// </summary>
     [IsoId("_CWY19Wk3Eeanu6HLe77Rkg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required Frequency6Code Type { get; init; } 
-    
+    public required Frequency6Code Type { get; init; }
+
     /// <summary>
     /// Further information on the exact point in time the event should take place.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record FrequencyAndMoment1
     [DisplayName("Point In Time")]
     [IsoXmlTag("PtInTm")]
     [IsoSimpleType(IsoSimpleType.Exact2NumericText)]
-    public required IsoExact2NumericText PointInTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoExact2NumericText PointInTime { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,53 +14,47 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gtJRcZB8Ee6FLLjWp95ntQ")]
 [DisplayName("Data Set Request5")]
-public partial record DataSetRequest5
+public record DataSetRequest5
 {
-    #nullable enable
-
     /// <summary>
     /// Delegation Proof.
     /// </summary>
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
-    public IsoMax5000Binary? DelegationProof { get; init; } 
+    public IsoMax5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required DataSetIdentification10 Identification { get; init; } 
+    public required DataSetIdentification10 Identification { get; init; }
 
     /// <summary>
     /// POI Challenge.
     /// </summary>
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
-    public IsoMax140Binary? POIChallenge { get; init; } 
+    public IsoMax140Binary? POIChallenge { get; init; }
 
     /// <summary>
     /// Protected Delegation Proof.
     /// </summary>
     [DisplayName("Protected Delegation Proof")]
     [IsoXmlTag("PrtctdDlgtnProof")]
-    public ContentInformationType39? ProtectedDelegationProof { get; init; } 
+    public ContentInformationType39? ProtectedDelegationProof { get; init; }
 
     /// <summary>
     /// Session Key.
     /// </summary>
     [DisplayName("Session Key")]
     [IsoXmlTag("SsnKey")]
-    public CryptographicKey18? SessionKey { get; init; } 
+    public CryptographicKey18? SessionKey { get; init; }
 
     /// <summary>
     /// TM Challenge.
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax140Binary? TMChallenge { get; init; }
 }

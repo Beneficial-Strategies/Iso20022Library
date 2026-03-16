@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MrKAG7iEeKo25nLKvGr8w_264081623")]
-[Description(@"Specifies the external charge type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external charge type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalUndertakingChargeType1Code))]
 public enum ExternalUndertakingChargeTypeCode
 {
@@ -24,7 +26,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uQ7a8_RYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the issuance of an amendment.")]
     Amendment,
-    
+
     /// <summary>
     /// Charge related to the processing of a claim.
     /// Encoded/decoded by serializers as &quot;CLAM&quot;.
@@ -33,7 +35,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uQ7a9vRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the processing of a claim.")]
     Claim,
-    
+
     /// <summary>
     /// Commission charge.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -42,7 +44,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uQ7a-fRYEeuLhpyIdtJzwg")]
     [Description(@"Commission charge.")]
     Commission,
-    
+
     /// <summary>
     /// Charge for confirmation.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -51,7 +53,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uREk4PRYEeuLhpyIdtJzwg")]
     [Description(@"Charge for confirmation.")]
     Confirmation,
-    
+
     /// <summary>
     /// Courier charge.
     /// Encoded/decoded by serializers as &quot;COUR&quot;.
@@ -60,7 +62,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uREk4_RYEeuLhpyIdtJzwg")]
     [Description(@"Courier charge.")]
     Courier,
-    
+
     /// <summary>
     /// Charge related to the issuance of an undertaking.
     /// Encoded/decoded by serializers as &quot;ISSU&quot;.
@@ -69,7 +71,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uROV4PRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the issuance of an undertaking.")]
     IssuanceCharge,
-    
+
     /// <summary>
     /// Miscellaneous charge.
     /// Encoded/decoded by serializers as &quot;MISC&quot;.
@@ -78,7 +80,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uROV4_RYEeuLhpyIdtJzwg")]
     [Description(@"Miscellaneous charge.")]
     Miscellaneous,
-    
+
     /// <summary>
     /// Charge related to the payment processing.
     /// Encoded/decoded by serializers as &quot;PAYM&quot;.
@@ -87,7 +89,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uROV5vRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the payment processing.")]
     Payment,
-    
+
     /// <summary>
     /// Postage charge.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -96,7 +98,7 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uROV6fRYEeuLhpyIdtJzwg")]
     [Description(@"Postage charge.")]
     Postage,
-    
+
     /// <summary>
     /// Telecommunication charge.
     /// Encoded/decoded by serializers as &quot;TELE&quot;.
@@ -105,5 +107,4 @@ public enum ExternalUndertakingChargeTypeCode
     [IsoId("_uROV7PRYEeuLhpyIdtJzwg")]
     [Description(@"Telecommunication charge.")]
     Telecommunication,
-    
 }

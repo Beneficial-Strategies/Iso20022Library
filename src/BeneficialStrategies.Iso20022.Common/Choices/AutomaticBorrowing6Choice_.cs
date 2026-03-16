@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AutomaticBorrowing6Choice.Code))]
     [KnownType(typeof(AutomaticBorrowing6Choice.Proprietary))]
-    [JsonDerivedType(typeof(AutomaticBorrowing6Choice.Code),nameof(AutomaticBorrowing6Choice.Code))]
-    [JsonDerivedType(typeof(AutomaticBorrowing6Choice.Proprietary),nameof(AutomaticBorrowing6Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(AutomaticBorrowing6Choice.Code),
+        nameof(AutomaticBorrowing6Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(AutomaticBorrowing6Choice.Proprietary),
+        nameof(AutomaticBorrowing6Choice.Proprietary)
+    )]
     [IsoId("_lL50gTtFEeWRTLSN0i0tng")]
     [DisplayName("Automatic Borrowing 6 Choice")]
-    public abstract partial record AutomaticBorrowing6Choice_
-    {
-    }
+    public abstract record AutomaticBorrowing6Choice_ { }
 }

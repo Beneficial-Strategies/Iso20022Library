@@ -23,7 +23,7 @@ public enum MandateCancellationReason1Code
     [IsoId("_afxvlNp-Ed-ak6NoX_4Aeg_1808299688")]
     [Description(@"Agent details are incorrect or have changed.")]
     IncorrectAgent = MandateReasonCode.IncorrectAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Currency for the mandate is incorrect or has changed.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -32,7 +32,7 @@ public enum MandateCancellationReason1Code
     [IsoId("_afxvldp-Ed-ak6NoX_4Aeg_1808299933")]
     [Description(@"Currency for the mandate is incorrect or has changed.")]
     IncorrectCurrency = MandateReasonCode.IncorrectCurrency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer requested the change.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -41,7 +41,7 @@ public enum MandateCancellationReason1Code
     [IsoId("_afxvltp-Ed-ak6NoX_4Aeg_1808299934")]
     [Description(@"Customer requested the change.")]
     RequestedByCustomer = MandateReasonCode.RequestedByCustomer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient or incoherent details about the debtor.
     /// Encoded/decoded by serializers as &quot;DBTR&quot;.
@@ -50,7 +50,7 @@ public enum MandateCancellationReason1Code
     [IsoId("_afxvl9p-Ed-ak6NoX_4Aeg_1808299964")]
     [Description(@"Insufficient or incoherent details about the debtor.")]
     InsufficientDebtorDetails = MandateReasonCode.InsufficientDebtorDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient or incoherent details about the creditor.
     /// Encoded/decoded by serializers as &quot;CDTR&quot;.
@@ -59,5 +59,4 @@ public enum MandateCancellationReason1Code
     [IsoId("_afxvmNp-Ed-ak6NoX_4Aeg_1808299965")]
     [Description(@"Insufficient or incoherent details about the creditor.")]
     InsufficientCreditorDetails = MandateReasonCode.InsufficientCreditorDetails, // same ordinal as derivation source for type conversions
-    
 }

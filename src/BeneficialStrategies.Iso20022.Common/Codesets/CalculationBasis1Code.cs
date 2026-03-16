@@ -23,7 +23,7 @@ public enum CalculationBasis1Code
     [IsoId("_VjbKV9p-Ed-ak6NoX_4Aeg_-1571364153")]
     [Description(@"Average basis.")]
     Average = CalculationBasisCode.Average, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Daily basis.
     /// Encoded/decoded by serializers as &quot;DAIL&quot;.
@@ -32,7 +32,7 @@ public enum CalculationBasis1Code
     [IsoId("_VjbKWNp-Ed-ak6NoX_4Aeg_-1568592785")]
     [Description(@"Daily basis.")]
     Daily = CalculationBasisCode.Daily, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Another type of calculation basis.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum CalculationBasis1Code
     [IsoId("_Vjk7UNp-Ed-ak6NoX_4Aeg_-855201061")]
     [Description(@"Another type of calculation basis.")]
     Other = CalculationBasisCode.Other, // same ordinal as derivation source for type conversions
-    
 }

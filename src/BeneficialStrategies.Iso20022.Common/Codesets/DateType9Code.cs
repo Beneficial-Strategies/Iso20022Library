@@ -21,9 +21,11 @@ public enum DateType9Code
     /// </summary>
     [EnumMember(Value = "PWAL")]
     [IsoId("_fv2X0e4EEeqc-LCjwLsUVg")]
-    [Description(@"Blocking occurs until and inclusive of the end of the election period of the option.")]
+    [Description(
+        @"Blocking occurs until and inclusive of the end of the election period of the option."
+    )]
     BlockingTillEndOfElectionPeriod = DateTypeCode.BlockingTillEndOfElectionPeriod, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Blocking occurs until and inclusive of the market deadline of the option.
     /// Encoded/decoded by serializers as &quot;MKDT&quot;.
@@ -32,7 +34,7 @@ public enum DateType9Code
     [IsoId("_f1gT4e4EEeqc-LCjwLsUVg")]
     [Description(@"Blocking occurs until and inclusive of the market deadline of the option.")]
     BlockingTillMarketDeadline = DateTypeCode.BlockingTillMarketDeadline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Blocking occurs until and inclusive of the meeting date.
     /// Encoded/decoded by serializers as &quot;MEET&quot;.
@@ -41,7 +43,7 @@ public enum DateType9Code
     [IsoId("_f7Ae8e4EEeqc-LCjwLsUVg")]
     [Description(@"Blocking occurs until and inclusive of the meeting date.")]
     BlockingTillMeetingDate = DateTypeCode.BlockingTillMeetingDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unblocking will occur on payment date of the option.
     /// Encoded/decoded by serializers as &quot;PAYD&quot;.
@@ -50,7 +52,7 @@ public enum DateType9Code
     [IsoId("_gAqbAe4EEeqc-LCjwLsUVg")]
     [Description(@"Unblocking will occur on payment date of the option.")]
     BlockingTillPaymentDate = DateTypeCode.BlockingTillPaymentDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Blocking occurs until and inclusive of the record date of the event.
     /// Encoded/decoded by serializers as &quot;RDTE&quot;.
@@ -59,25 +61,29 @@ public enum DateType9Code
     [IsoId("_gGKmEe4EEeqc-LCjwLsUVg")]
     [Description(@"Blocking occurs until and inclusive of the record date of the event.")]
     BlockingTillRecordDate = DateTypeCode.BlockingTillRecordDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Blocking occurs until and inclusive of the account servicer deadline for the option.
     /// Encoded/decoded by serializers as &quot;RDDT&quot;.
     /// </summary>
     [EnumMember(Value = "RDDT")]
     [IsoId("_gMROEe4EEeqc-LCjwLsUVg")]
-    [Description(@"Blocking occurs until and inclusive of the account servicer deadline for the option.")]
+    [Description(
+        @"Blocking occurs until and inclusive of the account servicer deadline for the option."
+    )]
     BlockingTillResponseDeadline = DateTypeCode.BlockingTillResponseDeadline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refer to additional information element for the date until when the securities are blocked.
     /// Encoded/decoded by serializers as &quot;NARR&quot;.
     /// </summary>
     [EnumMember(Value = "NARR")]
     [IsoId("_gUv0oe4EEeqc-LCjwLsUVg")]
-    [Description(@"Refer to additional information element for the date until when the securities are blocked.")]
+    [Description(
+        @"Refer to additional information element for the date until when the securities are blocked."
+    )]
     NarrativeUnblockingDate = DateTypeCode.NarrativeUnblockingDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Date is unknown by the sender or has not been established.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -86,5 +92,4 @@ public enum DateType9Code
     [IsoId("_gordQe4EEeqc-LCjwLsUVg")]
     [Description(@"Date is unknown by the sender or has not been established.")]
     Unknown = DateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TypeOfDateCode
     [IsoId("_Oxs3zm-BEeKuY41pq1-dog")]
     [Description(@"Date/date and time is estimated.")]
     Estimated,
-    
+
     /// <summary>
     /// Date / date and time is the actual date / date and time.
     /// Encoded/decoded by serializers as &quot;ACTL&quot;.
@@ -32,5 +32,4 @@ public enum TypeOfDateCode
     [IsoId("_Oxs31W-BEeKuY41pq1-dog")]
     [Description(@"Date / date and time is the actual date / date and time.")]
     Actual,
-    
 }

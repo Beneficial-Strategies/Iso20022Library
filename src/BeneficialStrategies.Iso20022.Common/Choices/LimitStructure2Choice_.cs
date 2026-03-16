@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LimitStructure2Choice.CurrentLimitIdentification))]
     [KnownType(typeof(LimitStructure2Choice.AllCurrentLimits))]
-    [JsonDerivedType(typeof(LimitStructure2Choice.CurrentLimitIdentification),nameof(LimitStructure2Choice.CurrentLimitIdentification))]
-    [JsonDerivedType(typeof(LimitStructure2Choice.AllCurrentLimits),nameof(LimitStructure2Choice.AllCurrentLimits))]
+    [JsonDerivedType(
+        typeof(LimitStructure2Choice.CurrentLimitIdentification),
+        nameof(LimitStructure2Choice.CurrentLimitIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(LimitStructure2Choice.AllCurrentLimits),
+        nameof(LimitStructure2Choice.AllCurrentLimits)
+    )]
     [IsoId("__lXa7249EeiU9cctagi5ow")]
     [DisplayName("Limit Structure 2 Choice")]
-    public abstract partial record LimitStructure2Choice_
-    {
-    }
+    public abstract record LimitStructure2Choice_ { }
 }

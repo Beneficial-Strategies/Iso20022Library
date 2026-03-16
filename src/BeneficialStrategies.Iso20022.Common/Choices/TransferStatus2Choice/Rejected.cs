@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice
     /// </summary>
     [IsoId("_aQ-GOSY3EeW_ZNn8gbfY7Q")]
     [DisplayName("Rejected")]
-    public partial record Rejected : TransferStatus2Choice_
+    public record Rejected : TransferStatus2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Reason for the rejected status.
         /// </summary>
         [IsoId("_AMuhMSY3EeW_ZNn8gbfY7Q")]
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
-        public required RejectedReason15Choice_ Reason { get; init; } 
-        
+        public required RejectedReason15Choice_ Reason { get; init; }
+
         /// <summary>
         /// Additional information about the rejected status reason.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus2Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? AdditionalReasonInformation { get; init; }
     }
 }

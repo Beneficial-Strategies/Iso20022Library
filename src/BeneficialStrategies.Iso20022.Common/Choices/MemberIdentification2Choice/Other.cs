@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice
     /// </summary>
     [IsoId("_8Hq3WaMgEeCJ6YNENx4h-w_-1497387865")]
     [DisplayName("Other")]
-    public partial record Other : MemberIdentification2Choice_
+    public record Other : MemberIdentification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identification of a person.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
+
         /// <summary>
         /// Name of the identification scheme.
         /// </summary>
         [IsoId("_QALkNdp-Ed-ak6NoX_4Aeg_-2141717054")]
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
-        public FinancialIdentificationSchemeName1Choice_? SchemeName { get; init; } 
-        
+        public FinancialIdentificationSchemeName1Choice_? SchemeName { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -42,11 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.MemberIdentification2Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Issuer { get; init; }
     }
 }

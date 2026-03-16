@@ -23,7 +23,7 @@ public enum Trading1MethodCode
     [IsoId("_YqgQA9p-Ed-ak6NoX_4Aeg_2750610")]
     [Description(@"Trade executed through an electronic trading system.")]
     Electronic = TradingMethodCode.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade executed over the phone.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -32,7 +32,7 @@ public enum Trading1MethodCode
     [IsoId("_YqgQBNp-Ed-ak6NoX_4Aeg_32300524")]
     [Description(@"Trade executed over the phone.")]
     Phone = TradingMethodCode.Phone, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade executed through a broker.
     /// Encoded/decoded by serializers as &quot;BROK&quot;.
@@ -41,5 +41,4 @@ public enum Trading1MethodCode
     [IsoId("_YqgQBdp-Ed-ak6NoX_4Aeg_48002593")]
     [Description(@"Trade executed through a broker.")]
     Broker = TradingMethodCode.Broker, // same ordinal as derivation source for type conversions
-    
 }

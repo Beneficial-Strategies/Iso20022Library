@@ -23,7 +23,7 @@ public enum AssetClassSubProductEnergyType1Code
     [IsoId("_flKPkc5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type coal.")]
     Coal = AssetClassSubProductTypeCode.Coal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type electricity.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassSubProductEnergyType1Code
     [IsoId("_fuNd4c5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type electricity.")]
     Electricity = AssetClassSubProductTypeCode.Electricity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type oil.
     /// Encoded/decoded by serializers as &quot;OILP&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassSubProductEnergyType1Code
     [IsoId("_gLvucc5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type oil.")]
     Oil = AssetClassSubProductTypeCode.Oil, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type inter energy.
     /// Encoded/decoded by serializers as &quot;INRG&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassSubProductEnergyType1Code
     [IsoId("_gzJFoc5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type inter energy.")]
     InterEnergy = AssetClassSubProductTypeCode.InterEnergy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type natural gas.
     /// Encoded/decoded by serializers as &quot;NGAS&quot;.
@@ -59,7 +59,7 @@ public enum AssetClassSubProductEnergyType1Code
     [IsoId("_USGZAUDbEeWOL-OsSq2h6w")]
     [Description(@"Commodity of type natural gas.")]
     NaturalGas = AssetClassSubProductTypeCode.NaturalGas, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,5 +68,4 @@ public enum AssetClassSubProductEnergyType1Code
     [IsoId("_UhRdcUDbEeWOL-OsSq2h6w")]
     [Description(@"Commodity of other type.")]
     Other = AssetClassSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

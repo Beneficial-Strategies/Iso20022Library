@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity22Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentQuantity22Cho
     /// </summary>
     [IsoId("_N-fhUQU-EeGZxNLgzisRtw")]
     [DisplayName("Unit")]
-    public partial record Unit : FinancialInstrumentQuantity22Choice_
+    public record Unit : FinancialInstrumentQuantity22Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Number of objects represented as a decimal number, for example, 0.75 or 45.6.
         /// </summary>
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoRestrictedFINDecimalNumber Value { get; init; }
     }
 }

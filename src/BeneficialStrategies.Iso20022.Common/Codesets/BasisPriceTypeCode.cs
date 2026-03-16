@@ -23,7 +23,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV4Np-Ed-ak6NoX_4Aeg_335335189")]
     [Description(@"Closing price at morning session.")]
     MorningSessionClosePrice,
-    
+
     /// <summary>
     /// Closing price.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -32,7 +32,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV4dp-Ed-ak6NoX_4Aeg_335335446")]
     [Description(@"Closing price.")]
     ClosingPrice,
-    
+
     /// <summary>
     /// Current price.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -41,7 +41,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV4tp-Ed-ak6NoX_4Aeg_335335447")]
     [Description(@"Current price.")]
     CurrentPrice,
-    
+
     /// <summary>
     /// Price computed after a trading halt.
     /// Encoded/decoded by serializers as &quot;SPQO&quot;.
@@ -50,7 +50,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV49p-Ed-ak6NoX_4Aeg_335335448")]
     [Description(@"Price computed after a trading halt.")]
     SpecialQuotation,
-    
+
     /// <summary>
     /// Value weighted average price through the day.
     /// Encoded/decoded by serializers as &quot;VWPD&quot;.
@@ -59,7 +59,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV5Np-Ed-ak6NoX_4Aeg_335335449")]
     [Description(@"Value weighted average price through the day.")]
     VWAPDay,
-    
+
     /// <summary>
     /// Value weighted average price through a morning session.
     /// Encoded/decoded by serializers as &quot;VWPM&quot;.
@@ -68,7 +68,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV5dp-Ed-ak6NoX_4Aeg_335335450")]
     [Description(@"Value weighted average price through a morning session.")]
     VWAPMorning,
-    
+
     /// <summary>
     /// Value weighted average price through an afternoon session.
     /// Encoded/decoded by serializers as &quot;VWPA&quot;.
@@ -77,7 +77,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV5tp-Ed-ak6NoX_4Aeg_335335451")]
     [Description(@"Value weighted average price through an afternoon session.")]
     VWAPAfternoon,
-    
+
     /// <summary>
     /// Exercise price defined on a derivative product.
     /// Encoded/decoded by serializers as &quot;STIK&quot;.
@@ -86,7 +86,7 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV59p-Ed-ak6NoX_4Aeg_335335452")]
     [Description(@"Exercise price defined on a derivative product.")]
     StrikePrice,
-    
+
     /// <summary>
     /// Price of a trade opening session.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -95,5 +95,4 @@ public enum BasisPriceTypeCode
     [IsoId("_bdUV6Np-Ed-ak6NoX_4Aeg_335335453")]
     [Description(@"Price of a trade opening session.")]
     OpenPrice,
-    
 }

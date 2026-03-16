@@ -23,7 +23,7 @@ public enum CustomerOrderCapacityCode
     [IsoId("_axz6xdp-Ed-ak6NoX_4Aeg_335336024")]
     [Description(@"Member trading for their own account.")]
     MemberOwnAccount,
-    
+
     /// <summary>
     /// Clearing firm trading for its proprietary account.
     /// Encoded/decoded by serializers as &quot;CLAR&quot;.
@@ -32,7 +32,7 @@ public enum CustomerOrderCapacityCode
     [IsoId("_axz6xtp-Ed-ak6NoX_4Aeg_335336025")]
     [Description(@"Clearing firm trading for its proprietary account.")]
     ClearingProprietary,
-    
+
     /// <summary>
     /// Member trading for another member.
     /// Encoded/decoded by serializers as &quot;OTHM&quot;.
@@ -41,5 +41,4 @@ public enum CustomerOrderCapacityCode
     [IsoId("_axz6x9p-Ed-ak6NoX_4Aeg_335336026")]
     [Description(@"Member trading for another member.")]
     MemberOtherMember,
-    
 }

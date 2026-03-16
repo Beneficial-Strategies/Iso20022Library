@@ -12,7 +12,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_FkyZgMYzEeesocHIuVGr7g")]
 [Description(@"Specifies the type of withdrawal reorganisation transaction.")]
-[Derivations(typeof(ReorganisationWithdrawalTransactionType1Code),typeof(ReorganisationWithdrawalTransactionType2Code))]
+[Derivations(
+    typeof(ReorganisationWithdrawalTransactionType1Code),
+    typeof(ReorganisationWithdrawalTransactionType2Code)
+)]
 public enum ReorganisationWithdrawalTransactionTypeCode
 {
     /// <summary>
@@ -21,25 +24,30 @@ public enum ReorganisationWithdrawalTransactionTypeCode
     /// </summary>
     [EnumMember(Value = "PROW")]
     [IsoId("_P7H7MMYzEeesocHIuVGr7g")]
-    [Description(@"The reorganisation instruction cancellation is a protect withdrawal transaction.")]
+    [Description(
+        @"The reorganisation instruction cancellation is a protect withdrawal transaction."
+    )]
     ProtectWithdrawalTransaction,
-    
+
     /// <summary>
     /// The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant.
     /// Encoded/decoded by serializers as &quot;PRPW&quot;.
     /// </summary>
     [EnumMember(Value = "PRPW")]
     [IsoId("_yM7-kMYzEeesocHIuVGr7g")]
-    [Description(@"The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant.")]
+    [Description(
+        @"The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant."
+    )]
     WithdrawalProtectOnBehalfOfAnotherParticipant,
-    
+
     /// <summary>
     /// The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction.
     /// Encoded/decoded by serializers as &quot;VOIW&quot;.
     /// </summary>
     [EnumMember(Value = "VOIW")]
     [IsoId("_D0o1EMY0EeesocHIuVGr7g")]
-    [Description(@"The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction.")]
+    [Description(
+        @"The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction."
+    )]
     VoluntaryOfferInstructionWithdrawal,
-    
 }

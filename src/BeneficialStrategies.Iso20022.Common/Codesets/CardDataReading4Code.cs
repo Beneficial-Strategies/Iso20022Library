@@ -21,18 +21,22 @@ public enum CardDataReading4Code
     /// </summary>
     [EnumMember(Value = "ECTL")]
     [IsoId("_KJE4wYn7EeShMpas3885ww")]
-    [Description(@"Contactless proximity reader, with application conform to the standard EMV (standard initiated by Europay, Mastercard and Visa).")]
+    [Description(
+        @"Contactless proximity reader, with application conform to the standard EMV (standard initiated by Europay, Mastercard and Visa)."
+    )]
     EMVProximityReader = CardDataReadingCode.EMVProximityReader, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ICC (Integrated Circuit Card) with contact containing software applications conform to ISO 7816.
     /// Encoded/decoded by serializers as &quot;CICC&quot;.
     /// </summary>
     [EnumMember(Value = "CICC")]
     [IsoId("_KP7HoYn7EeShMpas3885ww")]
-    [Description(@"ICC (Integrated Circuit Card) with contact containing software applications conform to ISO 7816.")]
+    [Description(
+        @"ICC (Integrated Circuit Card) with contact containing software applications conform to ISO 7816."
+    )]
     ICC = CardDataReadingCode.ICC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Magnetic stripe.
     /// Encoded/decoded by serializers as &quot;MGST&quot;.
@@ -41,7 +45,7 @@ public enum CardDataReading4Code
     [IsoId("_KX-QYYn7EeShMpas3885ww")]
     [Description(@"Magnetic stripe.")]
     MagneticStripe = CardDataReadingCode.MagneticStripe, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contactless proximity reader.
     /// Encoded/decoded by serializers as &quot;CTLS&quot;.
@@ -50,5 +54,4 @@ public enum CardDataReading4Code
     [IsoId("_LaEmkYn7EeShMpas3885ww")]
     [Description(@"Contactless proximity reader.")]
     ProximityReader = CardDataReadingCode.ProximityReader, // same ordinal as derivation source for type conversions
-    
 }

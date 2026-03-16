@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ayWne-mrEemUgrefIx730g")]
 [DisplayName("Intra Position Details")]
-public partial record IntraPositionDetails51
+public record IntraPositionDetails51
 {
-    #nullable enable
-    
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
     /// </summary>
     [IsoId("_bcAoY-mrEemUgrefIx730g")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat29Choice_? SafekeepingPlace { get; init; } 
-    
+    public SafekeepingPlaceFormat29Choice_? SafekeepingPlace { get; init; }
+
     /// <summary>
     /// Balance from which the securities were moved.
     /// </summary>
     [IsoId("_bcAoZemrEemUgrefIx730g")]
     [DisplayName("Balance From")]
     [IsoXmlTag("BalFr")]
-    public required SecuritiesBalanceType6Choice_ BalanceFrom { get; init; } 
-    
+    public required SecuritiesBalanceType6Choice_ BalanceFrom { get; init; }
+
     /// <summary>
     /// Intra-position movement(s) having been performed.
     /// </summary>
@@ -42,8 +40,4 @@ public partial record IntraPositionDetails51
     [IsoXmlTag("IntraPosMvmnt")]
     public ValueList<IntraPositionMovementDetails17> IntraPositionMovement { get; init; } = [];
     // ID for the above is _bcAoZ-mrEemUgrefIx730g
-    
-    
-    #nullable disable
-    
 }

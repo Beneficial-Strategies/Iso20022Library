@@ -23,7 +23,7 @@ public enum NetworkType2Code
     [IsoId("_BAFFsY3-EeWRwov1g9WL_A")]
     [Description(@"Sock5 proxy.")]
     Sock5 = NetworkTypeCode.Sock5, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sock4 proxy.
     /// Encoded/decoded by serializers as &quot;SCK4&quot;.
@@ -32,7 +32,7 @@ public enum NetworkType2Code
     [IsoId("_BLtG4Y3-EeWRwov1g9WL_A")]
     [Description(@"Sock4 proxy.")]
     Sock4 = NetworkTypeCode.Sock4, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// HTTP proxy.
     /// Encoded/decoded by serializers as &quot;HTTP&quot;.
@@ -41,5 +41,4 @@ public enum NetworkType2Code
     [IsoId("_BYqk0Y3-EeWRwov1g9WL_A")]
     [Description(@"HTTP proxy.")]
     HTTP = NetworkTypeCode.HTTP, // same ordinal as derivation source for type conversions
-    
 }

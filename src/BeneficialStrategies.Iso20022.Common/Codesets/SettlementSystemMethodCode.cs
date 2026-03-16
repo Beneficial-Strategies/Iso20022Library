@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZMx2otp-Ed-ak6NoX_4Aeg_-1474296543")]
-[Description(@"Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system.")]
+[Description(
+    @"Specifies whether the settlement instruction is to be settled through the default or the alternate settlement system."
+)]
 [Derivations(typeof(SettlementSystemMethod1Code))]
 public enum SettlementSystemMethodCode
 {
@@ -21,16 +23,19 @@ public enum SettlementSystemMethodCode
     /// </summary>
     [EnumMember(Value = "NSET")]
     [IsoId("_ZMx2o9p-Ed-ak6NoX_4Aeg_-1474296533")]
-    [Description(@"Settle through the default settlement system/method. If there is a standing instruction in place for settlement through the alternate settlement system/method, then this standing instruction is to be ignored.")]
+    [Description(
+        @"Settle through the default settlement system/method. If there is a standing instruction in place for settlement through the alternate settlement system/method, then this standing instruction is to be ignored."
+    )]
     Default,
-    
+
     /// <summary>
     /// Settle through the alternate settlement system/method. If there is a standing instruction in place for settlement through the default settlement system/method, then this standing instruction is to be ignored.
     /// Encoded/decoded by serializers as &quot;YSET&quot;.
     /// </summary>
     [EnumMember(Value = "YSET")]
     [IsoId("_ZMx2pNp-Ed-ak6NoX_4Aeg_-1474296525")]
-    [Description(@"Settle through the alternate settlement system/method. If there is a standing instruction in place for settlement through the default settlement system/method, then this standing instruction is to be ignored.")]
+    [Description(
+        @"Settle through the alternate settlement system/method. If there is a standing instruction in place for settlement through the default settlement system/method, then this standing instruction is to be ignored."
+    )]
     Alternative,
-    
 }

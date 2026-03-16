@@ -23,7 +23,7 @@ public enum PairedReconciled1Code
     [IsoId("_NFpVIGJuEeiVRNxFJ2pSfQ")]
     [Description(@"Paired.")]
     Paired = PairedReconciledCode.Paired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reconciled.
     /// Encoded/decoded by serializers as &quot;RECO&quot;.
@@ -32,5 +32,4 @@ public enum PairedReconciled1Code
     [IsoId("_NWlUIWJuEeiVRNxFJ2pSfQ")]
     [Description(@"Reconciled.")]
     Reconciled = PairedReconciledCode.Reconciled, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CreditorEnrolmentStatusReason2Choice.Code))]
     [KnownType(typeof(CreditorEnrolmentStatusReason2Choice.Proprietary))]
-    [JsonDerivedType(typeof(CreditorEnrolmentStatusReason2Choice.Code),nameof(CreditorEnrolmentStatusReason2Choice.Code))]
-    [JsonDerivedType(typeof(CreditorEnrolmentStatusReason2Choice.Proprietary),nameof(CreditorEnrolmentStatusReason2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CreditorEnrolmentStatusReason2Choice.Code),
+        nameof(CreditorEnrolmentStatusReason2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CreditorEnrolmentStatusReason2Choice.Proprietary),
+        nameof(CreditorEnrolmentStatusReason2Choice.Proprietary)
+    )]
     [IsoId("_fW_fY-IxEeqbls7Gk4-ckA")]
     [DisplayName("Creditor Enrolment Status Reason 2 Choice")]
-    public abstract partial record CreditorEnrolmentStatusReason2Choice_
-    {
-    }
+    public abstract record CreditorEnrolmentStatusReason2Choice_ { }
 }

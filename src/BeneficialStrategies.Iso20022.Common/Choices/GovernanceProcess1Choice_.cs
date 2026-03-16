@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(GovernanceProcess1Choice.Code))]
     [KnownType(typeof(GovernanceProcess1Choice.Proprietary))]
-    [JsonDerivedType(typeof(GovernanceProcess1Choice.Code),nameof(GovernanceProcess1Choice.Code))]
-    [JsonDerivedType(typeof(GovernanceProcess1Choice.Proprietary),nameof(GovernanceProcess1Choice.Proprietary))]
+    [JsonDerivedType(typeof(GovernanceProcess1Choice.Code), nameof(GovernanceProcess1Choice.Code))]
+    [JsonDerivedType(
+        typeof(GovernanceProcess1Choice.Proprietary),
+        nameof(GovernanceProcess1Choice.Proprietary)
+    )]
     [IsoId("_f3PLYID4Eeiw-daIkkmMqQ")]
     [DisplayName("Governance Process 1 Choice")]
-    public abstract partial record GovernanceProcess1Choice_
-    {
-    }
+    public abstract record GovernanceProcess1Choice_ { }
 }

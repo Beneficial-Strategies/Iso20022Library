@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_62RW65NLEeWGlc8L7oPDIg")]
 [DisplayName("Quantity And Account")]
-public partial record QuantityAndAccount55
+public record QuantityAndAccount55
 {
-    #nullable enable
-    
     /// <summary>
     /// Total quantity of securities to be settled.
     /// </summary>
     [IsoId("_62RW85NLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public Quantity10Choice_? SettlementQuantity { get; init; } 
-    
+    public Quantity10Choice_? SettlementQuantity { get; init; }
+
     /// <summary>
     /// Denomination of the security to be received or delivered.
     /// </summary>
@@ -33,50 +31,46 @@ public partial record QuantityAndAccount55
     [DisplayName("Denomination Choice")]
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax210Text)]
-    [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax210Text? DenominationChoice { get; init; } 
-    
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoRestrictedFINXMax210Text? DenominationChoice { get; init; }
+
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_62RW95NLEeWGlc8L7oPDIg")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification109? AccountOwner { get; init; } 
-    
+    public PartyIdentification109? AccountOwner { get; init; }
+
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_62RW-ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public SecuritiesAccount30? SafekeepingAccount { get; init; } 
-    
+    public SecuritiesAccount30? SafekeepingAccount { get; init; }
+
     /// <summary>
     /// Account to or from which a cash entry is made.
     /// </summary>
     [IsoId("_62RW-5NLEeWGlc8L7oPDIg")]
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public CashAccountIdentification6Choice_? CashAccount { get; init; } 
-    
+    public CashAccountIdentification6Choice_? CashAccount { get; init; }
+
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
     /// </summary>
     [IsoId("_62RW_ZNLEeWGlc8L7oPDIg")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafeKeepingPlace2? SafekeepingPlace { get; init; } 
-    
+    public SafeKeepingPlace2? SafekeepingPlace { get; init; }
+
     /// <summary>
     /// Breakdown of a quantity into lots such as tax lots, instrument series, etc.
     /// </summary>
     [IsoId("_62RW_5NLEeWGlc8L7oPDIg")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown38? QuantityBreakdown { get; init; } 
-    
-    
-    #nullable disable
-    
+    public QuantityBreakdown38? QuantityBreakdown { get; init; }
 }

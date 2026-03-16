@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity17Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity17Choice
     /// </summary>
     [IsoId("_csW4DTi8Eeydid5dcNPKvg")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : BalanceQuantity17Choice_
+    public record Proprietary : BalanceQuantity17Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity17Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Identification { get; init; } 
-        
+        public required IsoExact4AlphaNumericText Identification { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -33,9 +31,9 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity17Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public required IsoMax4AlphaNumericText Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public required IsoMax4AlphaNumericText Issuer { get; init; }
+
         /// <summary>
         /// Short textual description of the scheme.
         /// </summary>
@@ -43,9 +41,9 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity17Choice
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public IsoMax4AlphaNumericText? SchemeName { get; init; }
+
         /// <summary>
         /// Value of the balance.
         /// </summary>
@@ -53,10 +51,6 @@ namespace BeneficialStrategies.Iso20022.Choices.BalanceQuantity17Choice
         [DisplayName("Balance")]
         [IsoXmlTag("Bal")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Balance { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoRestrictedFINDecimalNumber Balance { get; init; }
     }
 }

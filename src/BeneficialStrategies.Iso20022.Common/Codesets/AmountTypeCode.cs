@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_be0KtNp-Ed-ak6NoX_4Aeg_-1456928482")]
 [Description(@"Specifies the reason why an amount is not specified.")]
-[Derivations(typeof(AmountType2Code),typeof(AmountType1Code))]
+[Derivations(typeof(AmountType2Code), typeof(AmountType1Code))]
 public enum AmountTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum AmountTypeCode
     [IsoId("_be0Ktdp-Ed-ak6NoX_4Aeg_-1173408141")]
     [Description(@"The amount is open.")]
     Open,
-    
+
     /// <summary>
     /// The amount is unkown.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,7 +32,7 @@ public enum AmountTypeCode
     [IsoId("_be0Kttp-Ed-ak6NoX_4Aeg_-1173408110")]
     [Description(@"The amount is unkown.")]
     Unknown,
-    
+
     /// <summary>
     /// The amount represents a fixed value.
     /// Encoded/decoded by serializers as &quot;FIXD&quot;.
@@ -41,7 +41,7 @@ public enum AmountTypeCode
     [IsoId("_T2GUUHySEeGAm6xykg3ebQ")]
     [Description(@"The amount represents a fixed value.")]
     FixedAmount,
-    
+
     /// <summary>
     /// The amount represents the minimum value.
     /// Encoded/decoded by serializers as &quot;MINI&quot;.
@@ -50,7 +50,7 @@ public enum AmountTypeCode
     [IsoId("_pR68sHySEeGAm6xykg3ebQ")]
     [Description(@"The amount represents the minimum value.")]
     MinimumAmount,
-    
+
     /// <summary>
     /// The amount represents the maximum value.
     /// Encoded/decoded by serializers as &quot;MAXI&quot;.
@@ -59,5 +59,4 @@ public enum AmountTypeCode
     [IsoId("_yv5TAHySEeGAm6xykg3ebQ")]
     [Description(@"The amount represents the maximum value.")]
     MaximumAmount,
-    
 }

@@ -21,16 +21,19 @@ public enum SecuritiesSettlementStatus1Code
     /// </summary>
     [EnumMember(Value = "PEND")]
     [IsoId("_ZFx2xtp-Ed-ak6NoX_4Aeg_1558336292")]
-    [Description(@"Instruction is pending. Settlement at the instructed settlement date is still possible.")]
+    [Description(
+        @"Instruction is pending. Settlement at the instructed settlement date is still possible."
+    )]
     Pending = SecuritiesSettlementStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is failing. Settlement at the instructed settlement date is no longer possible.
     /// Encoded/decoded by serializers as &quot;PENF&quot;.
     /// </summary>
     [EnumMember(Value = "PENF")]
     [IsoId("_ZFx2x9p-Ed-ak6NoX_4Aeg_1570340511")]
-    [Description(@"Instruction is failing. Settlement at the instructed settlement date is no longer possible.")]
+    [Description(
+        @"Instruction is failing. Settlement at the instructed settlement date is no longer possible."
+    )]
     Failing = SecuritiesSettlementStatusCode.Failing, // same ordinal as derivation source for type conversions
-    
 }

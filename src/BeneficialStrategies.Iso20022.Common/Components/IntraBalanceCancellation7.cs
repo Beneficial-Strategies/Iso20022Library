@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3fKyZTEyEe6g-ffJsqGiSA")]
 [DisplayName("Intra Balance Cancellation7")]
-public partial record IntraBalanceCancellation7
+public record IntraBalanceCancellation7
 {
-    #nullable enable
-
     /// <summary>
     /// Cancellation.
     /// </summary>
@@ -30,30 +28,26 @@ public partial record IntraBalanceCancellation7
     /// </summary>
     [DisplayName("Cash Account")]
     [IsoXmlTag("CshAcct")]
-    public CashAccount40? CashAccount { get; init; } 
+    public CashAccount40? CashAccount { get; init; }
 
     /// <summary>
     /// Cash Account Owner.
     /// </summary>
     [DisplayName("Cash Account Owner")]
     [IsoXmlTag("CshAcctOwnr")]
-    public SystemPartyIdentification8? CashAccountOwner { get; init; } 
+    public SystemPartyIdentification8? CashAccountOwner { get; init; }
 
     /// <summary>
     /// Cash Account Servicer.
     /// </summary>
     [DisplayName("Cash Account Servicer")]
     [IsoXmlTag("CshAcctSvcr")]
-    public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
     /// Processing Status.
     /// </summary>
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public ProcessingStatus69Choice_? ProcessingStatus { get; init; } 
-
-    
-    #nullable disable
-    
+    public ProcessingStatus69Choice_? ProcessingStatus { get; init; }
 }

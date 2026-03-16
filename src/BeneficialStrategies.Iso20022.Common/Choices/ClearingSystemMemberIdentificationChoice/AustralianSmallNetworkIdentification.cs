@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificationChoice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TDinhtp-Ed-ak6NoX_4Aeg_-896562573")]
     [DisplayName("Australian Small Network Identification")]
-    public partial record AustralianSmallNetworkIdentification : ClearingSystemMemberIdentificationChoice_
+    public record AustralianSmallNetworkIdentification : ClearingSystemMemberIdentificationChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// The small network list of the Australian Bank State Branch (BSB) Code. The codes are used for identifying Australian financial institutions, as assigned by the Australian Payments Clearing Association (APCA).
         /// </summary>
         [IsoXmlTag("AUBSBs")]
         [IsoSimpleType(IsoSimpleType.SmallNetworkIdentifier)]
-        public required IsoSmallNetworkIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoSmallNetworkIdentifier Value { get; init; }
     }
 }

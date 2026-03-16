@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VCWdkNp-Ed-ak6NoX_4Aeg_-2123095495")]
 [DisplayName("Cash Out Forecast")]
-public partial record CashOutForecast2
+public record CashOutForecast2
 {
-    #nullable enable
-    
     /// <summary>
     /// Date on which cash is available.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record CashOutForecast2
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; } 
-    
+    public required IsoISODate SettlementDate { get; init; }
+
     /// <summary>
     /// Sub-total amount of the cash flow out, expressed as an amount of money.
     /// </summary>
     [IsoId("_VCWdktp-Ed-ak6NoX_4Aeg_-2051984856")]
     [DisplayName("Sub Total Amount")]
     [IsoXmlTag("SubTtlAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? SubTotalAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? SubTotalAmount { get; init; }
+
     /// <summary>
     /// Sub-total amount of the cash flow out, expressed as a number of units.
     /// </summary>
     [IsoId("_VCWdk9p-Ed-ak6NoX_4Aeg_-2051984838")]
     [DisplayName("Sub Total Units Number")]
     [IsoXmlTag("SubTtlUnitsNb")]
-    public FinancialInstrumentQuantity1? SubTotalUnitsNumber { get; init; } 
-    
+    public FinancialInstrumentQuantity1? SubTotalUnitsNumber { get; init; }
+
     /// <summary>
     /// Indicates whether the cash flow out is exceptional.
     /// </summary>
@@ -50,9 +48,5 @@ public partial record CashOutForecast2
     [DisplayName("Exceptional Cash Flow Indicator")]
     [IsoXmlTag("XcptnlCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExceptionalCashFlowIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? ExceptionalCashFlowIndicator { get; init; }
 }

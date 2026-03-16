@@ -12,7 +12,12 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_QcVdoMU9EeeWeZMpNX1JUQ")]
 [Description(@"Specifies the type of reorganisation transaction.")]
-[Derivations(typeof(ReorganisationTransactionType1Code),typeof(ProtectTransactionType2Code),typeof(ProtectTransactionType3Code),typeof(ReorganisationTransactionType2Code))]
+[Derivations(
+    typeof(ReorganisationTransactionType1Code),
+    typeof(ProtectTransactionType2Code),
+    typeof(ProtectTransactionType3Code),
+    typeof(ReorganisationTransactionType2Code)
+)]
 public enum ReorganisationTransactionTypeCode
 {
     /// <summary>
@@ -23,7 +28,7 @@ public enum ReorganisationTransactionTypeCode
     [IsoId("_iUhnMMU9EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a protect transaction type.")]
     ProtectTransaction,
-    
+
     /// <summary>
     /// Reorganisation is a cover protect transaction type.
     /// Encoded/decoded by serializers as &quot;COVR&quot;.
@@ -32,7 +37,7 @@ public enum ReorganisationTransactionTypeCode
     [IsoId("_nAV2EMU9EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a cover protect transaction type.")]
     CoverProtectTransaction,
-    
+
     /// <summary>
     /// Reorganisation is a cover protect directly to agent transaction type.
     /// Encoded/decoded by serializers as &quot;COVA&quot;.
@@ -41,7 +46,7 @@ public enum ReorganisationTransactionTypeCode
     [IsoId("_6pVO4MU9EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a cover protect directly to agent transaction type.")]
     CoverProtectDirectlyToAgentHeaderTransaction,
-    
+
     /// <summary>
     /// Reorganisation is a protect on behalf of another participant transaction type.
     /// Encoded/decoded by serializers as &quot;PROP&quot;.
@@ -50,7 +55,7 @@ public enum ReorganisationTransactionTypeCode
     [IsoId("_D2Ui4MU-EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a protect on behalf of another participant transaction type.")]
     ProtectOnBehalfOfAnotherParticipantTransaction,
-    
+
     /// <summary>
     /// Reorganisation is a voluntary offer instruction transaction type.
     /// Encoded/decoded by serializers as &quot;VOIT&quot;.
@@ -59,7 +64,7 @@ public enum ReorganisationTransactionTypeCode
     [IsoId("_MsG30MU-EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a voluntary offer instruction transaction type.")]
     VoluntaryOfferInstructionTransaction,
-    
+
     /// <summary>
     /// Reorganisation is a cover on behalf of another participant transaction type.
     /// Encoded/decoded by serializers as &quot;COVP&quot;.
@@ -68,5 +73,4 @@ public enum ReorganisationTransactionTypeCode
     [IsoId("_WluoUMU-EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a cover on behalf of another participant transaction type.")]
     CoverOnBehalfOfAnotherParticipantTransaction,
-    
 }

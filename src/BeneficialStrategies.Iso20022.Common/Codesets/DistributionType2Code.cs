@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_hyWl0QCpEeGbSb1IG15gpQ")]
-[Description(@"Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date.")]
+[Description(
+    @"Specifies whether the proceeds of the event will be distributed on a rolling basis rather than on a specific date."
+)]
 [DerivedFrom(typeof(DistributionTypeCode))]
 public enum DistributionType2Code
 {
@@ -21,9 +23,11 @@ public enum DistributionType2Code
     /// </summary>
     [EnumMember(Value = "ROLL")]
     [IsoId("_hyWl1wCpEeGbSb1IG15gpQ")]
-    [Description(@"Event will have a number of acceptance and payment dates until further announcement by the Issuer or its agent.")]
+    [Description(
+        @"Event will have a number of acceptance and payment dates until further announcement by the Issuer or its agent."
+    )]
     RollingBasis = DistributionTypeCode.RollingBasis, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Interim payment.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,7 +36,7 @@ public enum DistributionType2Code
     [IsoId("_iKy7BgCpEeGbSb1IG15gpQ")]
     [Description(@"Interim payment.")]
     Interim = DistributionTypeCode.Interim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Final payment.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -41,5 +45,4 @@ public enum DistributionType2Code
     [IsoId("_iN7HhgCpEeGbSb1IG15gpQ")]
     [Description(@"Final payment.")]
     Final = DistributionTypeCode.Final, // same ordinal as derivation source for type conversions
-    
 }

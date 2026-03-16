@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DividendTypeFormat3Choice.Code))]
     [KnownType(typeof(DividendTypeFormat3Choice.Proprietary))]
-    [JsonDerivedType(typeof(DividendTypeFormat3Choice.Code),nameof(DividendTypeFormat3Choice.Code))]
-    [JsonDerivedType(typeof(DividendTypeFormat3Choice.Proprietary),nameof(DividendTypeFormat3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(DividendTypeFormat3Choice.Code),
+        nameof(DividendTypeFormat3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(DividendTypeFormat3Choice.Proprietary),
+        nameof(DividendTypeFormat3Choice.Proprietary)
+    )]
     [IsoId("_KsR2Md3iEd-KAqAOGQOnnw")]
     [DisplayName("Dividend Type Format 3 Choice")]
-    public abstract partial record DividendTypeFormat3Choice_
-    {
-    }
+    public abstract record DividendTypeFormat3Choice_ { }
 }

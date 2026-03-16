@@ -23,7 +23,7 @@ public enum TradeTransactionCondition5Code
     [IsoId("_iNUDEV-mEeavlvCtut5bgg")]
     [Description(@"Indicates whether the trade is executed ex coupon.")]
     ExCoupon = TradeTransactionConditionCode.ExCoupon, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates whether the trade is executed cum coupon.
     /// Encoded/decoded by serializers as &quot;CCPN&quot;.
@@ -32,5 +32,4 @@ public enum TradeTransactionCondition5Code
     [IsoId("_iYxsMV-mEeavlvCtut5bgg")]
     [Description(@"Indicates whether the trade is executed cum coupon.")]
     CumCoupon = TradeTransactionConditionCode.CumCoupon, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
     /// </summary>
     [IsoId("_RCDQ5tp-Ed-ak6NoX_4Aeg_1174932111")]
     [DisplayName("Place As DSS")]
-    public partial record PlaceAsDSS : PriceSourceFormatChoice_
+    public record PlaceAsDSS : PriceSourceFormatChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
-        [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-        public required IsoMax8Text Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 8, MinimumLength = 1)]
+        public required IsoMax8Text Issuer { get; init; }
+
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
         /// </summary>
@@ -34,8 +32,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
         [DisplayName("Information")]
         [IsoXmlTag("Inf")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Information { get; init; } 
-        
+        public required IsoExact4AlphaNumericText Information { get; init; }
+
         /// <summary>
         /// Additional information.
         /// </summary>
@@ -43,11 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceSourceFormatChoice
         [DisplayName("Narrative")]
         [IsoXmlTag("Nrrtv")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Narrative { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Narrative { get; init; }
     }
 }

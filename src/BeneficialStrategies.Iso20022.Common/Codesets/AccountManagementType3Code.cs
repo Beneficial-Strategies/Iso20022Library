@@ -23,7 +23,7 @@ public enum AccountManagementType3Code
     [IsoId("_Bak_kVSfEeatgN-VQ0eFlQ")]
     [Description(@"Refers to an account modification instruction message.")]
     AccountModification = AccountManagementTypeCode.AccountModification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refers to an account opening instruction message.
     /// Encoded/decoded by serializers as &quot;ACCO&quot;.
@@ -32,7 +32,7 @@ public enum AccountManagementType3Code
     [IsoId("_BxC-0VSfEeatgN-VQ0eFlQ")]
     [Description(@"Refers to an account opening instruction message.")]
     AccountOpening = AccountManagementTypeCode.AccountOpening, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refers to a get account details message.
     /// Encoded/decoded by serializers as &quot;GACC&quot;.
@@ -41,7 +41,7 @@ public enum AccountManagementType3Code
     [IsoId("_jN7kUVSqEeatgN-VQ0eFlQ")]
     [Description(@"Refers to a get account details message.")]
     GetAccountDetails = AccountManagementTypeCode.GetAccountDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refers to the account status.
     /// Encoded/decoded by serializers as &quot;ACST&quot;.
@@ -50,5 +50,4 @@ public enum AccountManagementType3Code
     [IsoId("_w6yBQaZsEea-RdGKJ0RADA")]
     [Description(@"Refers to the account status.")]
     AccountStatus = AccountManagementTypeCode.AccountStatus, // same ordinal as derivation source for type conversions
-    
 }

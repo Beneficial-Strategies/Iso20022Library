@@ -23,7 +23,7 @@ public enum ExPostCostCalculationBasisCode
     [IsoId("_sQ4xkJ9XEeqxTNfi5y7ywQ")]
     [Description(@"Basis for cost calculation is rolling, that is, the last twelve months.")]
     RollingBasis,
-    
+
     /// <summary>
     /// Basic for cost calculation is fixed, that is calendar year.
     /// Encoded/decoded by serializers as &quot;FIXB&quot;.
@@ -32,5 +32,4 @@ public enum ExPostCostCalculationBasisCode
     [IsoId("_xs4gMJ9XEeqxTNfi5y7ywQ")]
     [Description(@"Basic for cost calculation is fixed, that is calendar year.")]
     FixedBasis,
-    
 }

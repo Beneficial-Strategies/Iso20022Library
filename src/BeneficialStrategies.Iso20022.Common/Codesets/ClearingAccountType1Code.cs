@@ -21,25 +21,30 @@ public enum ClearingAccountType1Code
     /// </summary>
     [EnumMember(Value = "HOUS")]
     [IsoId("_YZXcvNp-Ed-ak6NoX_4Aeg_-1776867324")]
-    [Description(@"Specifies that the account is used to register trades executed for either the clearing member or its subsidiaries.")]
+    [Description(
+        @"Specifies that the account is used to register trades executed for either the clearing member or its subsidiaries."
+    )]
     House = ClearingAccountTypeCode.House, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the account is used to register trades executed for the clearing member&apos;s customers.
     /// Encoded/decoded by serializers as &quot;CLIE&quot;.
     /// </summary>
     [EnumMember(Value = "CLIE")]
     [IsoId("_YZhNsNp-Ed-ak6NoX_4Aeg_-2094643985")]
-    [Description(@"Specifies that the account is used to register trades executed for the clearing member's customers.")]
+    [Description(
+        @"Specifies that the account is used to register trades executed for the clearing member's customers."
+    )]
     Client = ClearingAccountTypeCode.Client, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the account is used to register trades executed for liquidity providers (also known as market maker) activities.
     /// Encoded/decoded by serializers as &quot;LIPR&quot;.
     /// </summary>
     [EnumMember(Value = "LIPR")]
     [IsoId("_YZhNsdp-Ed-ak6NoX_4Aeg_2086484245")]
-    [Description(@"Specifies that the account is used to register trades executed for liquidity providers (also known as market maker) activities.")]
+    [Description(
+        @"Specifies that the account is used to register trades executed for liquidity providers (also known as market maker) activities."
+    )]
     LiquidityProvider = ClearingAccountTypeCode.LiquidityProvider, // same ordinal as derivation source for type conversions
-    
 }

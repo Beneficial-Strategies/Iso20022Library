@@ -23,7 +23,7 @@ public enum InterimFinalPaymentCode
     [IsoId("_1orVsjL3EeKU9IrkkToqcw_241333812")]
     [Description(@"Interim payment. Pending possible future payments.")]
     Interim,
-    
+
     /// <summary>
     /// Final payment positions will be debited.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -32,5 +32,4 @@ public enum InterimFinalPaymentCode
     [IsoId("_1orVszL3EeKU9IrkkToqcw_731384259")]
     [Description(@"Final payment positions will be debited.")]
     Final,
-    
 }

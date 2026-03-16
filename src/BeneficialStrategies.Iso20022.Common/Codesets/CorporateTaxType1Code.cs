@@ -23,7 +23,7 @@ public enum CorporateTaxType1Code
     [IsoId("_aEAucS7REemIy6A-26wnAg")]
     [Description(@"Small Business")]
     SmallBusiness = CorporateTaxTypeCode.SmallBusiness, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,7 +32,7 @@ public enum CorporateTaxType1Code
     [IsoId("_aIZfMS7REemIy6A-26wnAg")]
     [Description(@"Other")]
     Other = CorporateTaxTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Corporate
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
@@ -41,5 +41,4 @@ public enum CorporateTaxType1Code
     [IsoId("_aMSgsS7REemIy6A-26wnAg")]
     [Description(@"Corporate")]
     Corporate = CorporateTaxTypeCode.Corporate, // same ordinal as derivation source for type conversions
-    
 }

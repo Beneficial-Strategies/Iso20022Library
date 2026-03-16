@@ -23,5 +23,4 @@ public enum AssetClassProductType3Code
     [IsoId("_hLbbYQnyEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type environmental.")]
     Environmental = AssetClassProductTypeCode.Environmental, // same ordinal as derivation source for type conversions
-    
 }

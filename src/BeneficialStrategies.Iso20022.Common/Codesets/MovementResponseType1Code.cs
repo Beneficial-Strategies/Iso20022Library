@@ -23,14 +23,15 @@ public enum MovementResponseType1Code
     [IsoId("_jQ9WgO5NEeCisYr99QEiWA_-739401767")]
     [Description(@"Response will include full details on the movements reported.")]
     Full = MovementResponseTypeCode.Full, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Response will include limited details including the status on the movements reported.
     /// Encoded/decoded by serializers as &quot;STTS&quot;.
     /// </summary>
     [EnumMember(Value = "STTS")]
     [IsoId("_jQ9Wge5NEeCisYr99QEiWA_424690481")]
-    [Description(@"Response will include limited details including the status on the movements reported.")]
+    [Description(
+        @"Response will include limited details including the status on the movements reported."
+    )]
     Status = MovementResponseTypeCode.Status, // same ordinal as derivation source for type conversions
-    
 }

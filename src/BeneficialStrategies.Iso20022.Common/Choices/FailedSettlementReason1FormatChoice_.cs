@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FailedSettlementReason1FormatChoice.Code))]
     [KnownType(typeof(FailedSettlementReason1FormatChoice.Proprietary))]
-    [JsonDerivedType(typeof(FailedSettlementReason1FormatChoice.Code),nameof(FailedSettlementReason1FormatChoice.Code))]
-    [JsonDerivedType(typeof(FailedSettlementReason1FormatChoice.Proprietary),nameof(FailedSettlementReason1FormatChoice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FailedSettlementReason1FormatChoice.Code),
+        nameof(FailedSettlementReason1FormatChoice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FailedSettlementReason1FormatChoice.Proprietary),
+        nameof(FailedSettlementReason1FormatChoice.Proprietary)
+    )]
     [IsoId("_RmjsItp-Ed-ak6NoX_4Aeg_220367712")]
     [DisplayName("Failed Settlement Reason 1 Format Choice")]
-    public abstract partial record FailedSettlementReason1FormatChoice_
-    {
-    }
+    public abstract record FailedSettlementReason1FormatChoice_ { }
 }

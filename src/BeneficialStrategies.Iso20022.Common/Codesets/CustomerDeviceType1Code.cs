@@ -23,7 +23,7 @@ public enum CustomerDeviceType1Code
     [IsoId("_LGwDQUetEee9r7QjOdsbFw")]
     [Description(@"Mobile phone")]
     Mobile = CustomerDeviceTypeCode.Mobile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other device defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum CustomerDeviceType1Code
     [IsoId("_LfTtMketEee9r7QjOdsbFw")]
     [Description(@"Other device defined at national level")]
     OtherNational = CustomerDeviceTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other device defined in a private way.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum CustomerDeviceType1Code
     [IsoId("_LtiWcketEee9r7QjOdsbFw")]
     [Description(@"Other device defined in a private way.")]
     OtherPrivate = CustomerDeviceTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Personal computer
     /// Encoded/decoded by serializers as &quot;PECR&quot;.
@@ -50,7 +50,7 @@ public enum CustomerDeviceType1Code
     [IsoId("_L6nwMketEee9r7QjOdsbFw")]
     [Description(@"Personal computer")]
     PersonalComputer = CustomerDeviceTypeCode.PersonalComputer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tablet
     /// Encoded/decoded by serializers as &quot;TBLT&quot;.
@@ -59,7 +59,7 @@ public enum CustomerDeviceType1Code
     [IsoId("_MSSpUketEee9r7QjOdsbFw")]
     [Description(@"Tablet")]
     Tablet = CustomerDeviceTypeCode.Tablet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Non-secure card reader attached to the customer device.
     /// Encoded/decoded by serializers as &quot;NSCR&quot;.
@@ -68,7 +68,7 @@ public enum CustomerDeviceType1Code
     [IsoId("_MieKIS7TEemIy6A-26wnAg")]
     [Description(@"Non-secure card reader attached to the customer device.")]
     NonSecureCardReader = CustomerDeviceTypeCode.NonSecureCardReader, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Secure card reader attached to the customer device
     /// Encoded/decoded by serializers as &quot;SECR&quot;.
@@ -77,5 +77,4 @@ public enum CustomerDeviceType1Code
     [IsoId("_Mw-gMS7TEemIy6A-26wnAg")]
     [Description(@"Secure card reader attached to the customer device")]
     SecureCardReader = CustomerDeviceTypeCode.SecureCardReader, // same ordinal as derivation source for type conversions
-    
 }

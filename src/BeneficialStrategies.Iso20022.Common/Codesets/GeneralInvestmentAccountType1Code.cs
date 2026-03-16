@@ -23,5 +23,4 @@ public enum GeneralInvestmentAccountType1Code
     [IsoId("_dqv2cV2dEeiFXdiLi_Nf4A")]
     [Description(@"General shares or equity savings account.")]
     ShareSavingsAccount = GeneralInvestmentAccountTypeCode.ShareSavingsAccount, // same ordinal as derivation source for type conversions
-    
 }

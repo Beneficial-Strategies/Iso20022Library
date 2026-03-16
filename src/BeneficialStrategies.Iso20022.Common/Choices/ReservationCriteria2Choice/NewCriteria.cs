@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria2Choice
     /// </summary>
     [IsoId("_kmHRhZlaEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
-    public partial record NewCriteria : ReservationCriteria2Choice_
+    public record NewCriteria : ReservationCriteria2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.
         /// </summary>
@@ -24,27 +22,23 @@ namespace BeneficialStrategies.Iso20022.Choices.ReservationCriteria2Choice
         [DisplayName("New Query Name")]
         [IsoXmlTag("NewQryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? NewQueryName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? NewQueryName { get; init; }
+
         /// <summary>
         /// Defines the criteria to extract the reservation information.
         /// </summary>
         [IsoId("_kuH-B5laEeeE1Ya-LgRsuQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public ReservationSearchCriteria2? SearchCriteria { get; init; } 
-        
+        public ReservationSearchCriteria2? SearchCriteria { get; init; }
+
         /// <summary>
         /// Defines the expected reservation report.
         /// </summary>
         [IsoId("_kuH-CZlaEeeE1Ya-LgRsuQ")]
         [DisplayName("Return Criteria")]
         [IsoXmlTag("RtrCrit")]
-        public ReservationReturnCriteria1? ReturnCriteria { get; init; } 
-        
-        
-        #nullable disable
-        
+        public ReservationReturnCriteria1? ReturnCriteria { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentification5Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
     /// </summary>
     [IsoId("_HQWTw35aEea2k7EBUopqxw")]
     [DisplayName("Basket")]
-    public partial record Basket : FinancialInstrumentIdentification5Choice_
+    public record Basket : FinancialInstrumentIdentification5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identifies the financial instrument using an ISIN.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public IsoISINOct2015Identifier? ISIN { get; init; } 
-        
+        public IsoISINOct2015Identifier? ISIN { get; init; }
+
         /// <summary>
         /// The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstrumentIdentificatio
         [DisplayName("LEI")]
         [IsoXmlTag("LEI")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LEI { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoLEIIdentifier? LEI { get; init; }
     }
 }

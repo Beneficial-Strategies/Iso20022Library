@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClosingDate1Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.ClosingDate1Choice
     /// </summary>
     [IsoId("_j2-tktopEeCWg-hsBVGrDA_113927397")]
     [DisplayName("Code")]
-    public partial record Code : ClosingDate1Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record Code : ClosingDate1Choice_ { }
 }

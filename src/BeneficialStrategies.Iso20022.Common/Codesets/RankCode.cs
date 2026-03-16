@@ -23,7 +23,7 @@ public enum RankCode
     [IsoId("_vYs0wC1hEeGp2Zpvgj9Dtw_-405919000")]
     [Description(@"Element is the primary one.")]
     Primary,
-    
+
     /// <summary>
     /// Element is the primary one.
     /// Encoded/decoded by serializers as &quot;SECO&quot;.
@@ -32,5 +32,4 @@ public enum RankCode
     [IsoId("_vYs0wS1hEeGp2Zpvgj9Dtw_-1963655238")]
     [Description(@"Element is the primary one.")]
     Secondary,
-    
 }

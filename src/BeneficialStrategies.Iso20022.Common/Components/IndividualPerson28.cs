@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NJNNUUKUEeWuG5hmkcJWSQ")]
 [DisplayName("Individual Person")]
-public partial record IndividualPerson28
+public record IndividualPerson28
 {
-    #nullable enable
-    
     /// <summary>
     /// Term used to address the person.
     /// </summary>
     [IsoId("_Nk4cs0KUEeWuG5hmkcJWSQ")]
     [DisplayName("Name Prefix")]
     [IsoXmlTag("NmPrfx")]
-    public NamePrefix1Choice_? NamePrefix { get; init; } 
-    
+    public NamePrefix1Choice_? NamePrefix { get; init; }
+
     /// <summary>
     /// First name of the person.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record IndividualPerson28
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? GivenName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? GivenName { get; init; }
+
     /// <summary>
     /// Second name of the person.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record IndividualPerson28
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MiddleName { get; init; }
+
     /// <summary>
     /// Name by which the party is known and which is usually used to identify that person.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record IndividualPerson28
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Name { get; init; }
+
     /// <summary>
     /// Additional information about the person that follows a person&apos;s name, for example, qualification such as Doctor of Philosophy (PhD).
     /// </summary>
@@ -63,17 +61,17 @@ public partial record IndividualPerson28
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? NameSuffix { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? NameSuffix { get; init; }
+
     /// <summary>
     /// Gender of the person.
     /// </summary>
     [IsoId("_Nk4cvUKUEeWuG5hmkcJWSQ")]
     [DisplayName("Gender")]
     [IsoXmlTag("Gndr")]
-    public GenderCode? Gender { get; init; } 
-    
+    public GenderCode? Gender { get; init; }
+
     /// <summary>
     /// Date on which the person was born.
     /// </summary>
@@ -81,16 +79,16 @@ public partial record IndividualPerson28
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; } 
-    
+    public IsoISODate? BirthDate { get; init; }
+
     /// <summary>
     /// Country where the person was born.
     /// </summary>
     [IsoId("_Nk4cwUKUEeWuG5hmkcJWSQ")]
     [DisplayName("Country Of Birth")]
     [IsoXmlTag("CtryOfBirth")]
-    public CountryCode? CountryOfBirth { get; init; } 
-    
+    public CountryCode? CountryOfBirth { get; init; }
+
     /// <summary>
     /// Province where the person was born.
     /// </summary>
@@ -98,9 +96,9 @@ public partial record IndividualPerson28
     [DisplayName("Province Of Birth")]
     [IsoXmlTag("PrvcOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ProvinceOfBirth { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ProvinceOfBirth { get; init; }
+
     /// <summary>
     /// City where the person was born.
     /// </summary>
@@ -108,9 +106,9 @@ public partial record IndividualPerson28
     [DisplayName("City Of Birth")]
     [IsoXmlTag("CityOfBirth")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CityOfBirth { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CityOfBirth { get; init; }
+
     /// <summary>
     /// Name of the occupation or job of the person.
     /// </summary>
@@ -118,9 +116,9 @@ public partial record IndividualPerson28
     [DisplayName("Profession")]
     [IsoXmlTag("Prfssn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Profession { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Profession { get; init; }
+
     /// <summary>
     /// Information related to an address to be inserted, updated or deleted.
     /// </summary>
@@ -130,7 +128,7 @@ public partial record IndividualPerson28
     [MinLength(0)]
     [MaxLength(5)]
     public ValueList<ModificationScope34> ModifiedPostalAddress { get; init; } = [];
-    
+
     /// <summary>
     /// Citizenship information to be inserted or deleted.
     /// </summary>
@@ -140,7 +138,7 @@ public partial record IndividualPerson28
     [MinLength(0)]
     [MaxLength(3)]
     public ValueList<ModificationScope3> ModifiedCitizenship { get; init; } = [];
-    
+
     /// <summary>
     /// Organisation represented by a person, or for which a person works.
     /// </summary>
@@ -148,9 +146,9 @@ public partial record IndividualPerson28
     [DisplayName("Employing Company")]
     [IsoXmlTag("EmplngCpny")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? EmployingCompany { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? EmployingCompany { get; init; }
+
     /// <summary>
     /// Title of the function.
     /// </summary>
@@ -158,17 +156,17 @@ public partial record IndividualPerson28
     [DisplayName("Business Function")]
     [IsoXmlTag("BizFctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? BusinessFunction { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? BusinessFunction { get; init; }
+
     /// <summary>
     /// Specifies if due diligence checks on the political exposure of the investor or account servicer have been carried out and whether these checks are national or foreign. (A politically exposed person is someone who has been entrusted with a prominent public function, or an individual who is closely related to such a person.).
     /// </summary>
     [IsoId("_Nk4c2UKUEeWuG5hmkcJWSQ")]
     [DisplayName("Politically Exposed Person Type")]
     [IsoXmlTag("PltclyXpsdPrsnTp")]
-    public PoliticalExposureType1Choice_? PoliticallyExposedPersonType { get; init; } 
-    
+    public PoliticalExposureType1Choice_? PoliticallyExposedPersonType { get; init; }
+
     /// <summary>
     /// Date of death.
     /// </summary>
@@ -176,16 +174,16 @@ public partial record IndividualPerson28
     [DisplayName("Death Date")]
     [IsoXmlTag("DthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DeathDate { get; init; } 
-    
+    public IsoISODate? DeathDate { get; init; }
+
     /// <summary>
     /// Civil status of the individual person.
     /// </summary>
     [IsoId("_Nk4c3UKUEeWuG5hmkcJWSQ")]
     [DisplayName("Civil Status")]
     [IsoXmlTag("CvlSts")]
-    public CivilStatus1Choice_? CivilStatus { get; init; } 
-    
+    public CivilStatus1Choice_? CivilStatus { get; init; }
+
     /// <summary>
     /// Highest level of education reached by the individual person.
     /// </summary>
@@ -193,18 +191,14 @@ public partial record IndividualPerson28
     [DisplayName("Education Level")]
     [IsoXmlTag("EdctnLvl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? EducationLevel { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? EducationLevel { get; init; }
+
     /// <summary>
     /// Information related to the person.
     /// </summary>
     [IsoId("_Nk4c4UKUEeWuG5hmkcJWSQ")]
     [DisplayName("Family Information")]
     [IsoXmlTag("FmlyInf")]
-    public PersonalInformation1? FamilyInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PersonalInformation1? FamilyInformation { get; init; }
 }

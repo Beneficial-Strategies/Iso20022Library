@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZOtwVdp-Ed-ak6NoX_4Aeg_-300293738")]
-[Description(@"Specifies whether the securities position is short or long, that is, whether the balance is a negative or positive balance.")]
+[Description(
+    @"Specifies whether the securities position is short or long, that is, whether the balance is a negative or positive balance."
+)]
 [Derivations(typeof(ShortLong1Code))]
 public enum ShortLongCode
 {
@@ -23,7 +25,7 @@ public enum ShortLongCode
     [IsoId("_ZOtwVtp-Ed-ak6NoX_4Aeg_39564477")]
     [Description(@"Position is short, that is, the balance is negative.")]
     Short,
-    
+
     /// <summary>
     /// Position is long, that is, the balance is positive.
     /// Encoded/decoded by serializers as &quot;LONG&quot;.
@@ -32,5 +34,4 @@ public enum ShortLongCode
     [IsoId("_ZOtwV9p-Ed-ak6NoX_4Aeg_92203158")]
     [Description(@"Position is long, that is, the balance is positive.")]
     Long,
-    
 }

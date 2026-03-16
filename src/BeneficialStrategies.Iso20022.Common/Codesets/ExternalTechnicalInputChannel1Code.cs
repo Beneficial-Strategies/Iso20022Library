@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_amolh9p-Ed-ak6NoX_4Aeg_-614400071")]
-[Description(@"Specifies the technical input channel, as published in an external technical input channel code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the technical input channel, as published in an external technical input channel code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalTechnicalInputChannelCode))]
 public enum ExternalTechnicalInputChannel1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalTechnicalInputChannel1Code
     [IsoId("_uG8YgvRYEeuLhpyIdtJzwg")]
     [Description(@"Technical Input Channel is fax or facsimile")]
     Fax = ExternalTechnicalInputChannelCode.Fax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Technical Input Channel is paper
     /// Encoded/decoded by serializers as &quot;PAPR&quot;.
@@ -33,7 +35,7 @@ public enum ExternalTechnicalInputChannel1Code
     [IsoId("_uG8YhfRYEeuLhpyIdtJzwg")]
     [Description(@"Technical Input Channel is paper")]
     Paper = ExternalTechnicalInputChannelCode.Paper, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Technical Input Channel is tape
     /// Encoded/decoded by serializers as &quot;TAPE&quot;.
@@ -42,7 +44,7 @@ public enum ExternalTechnicalInputChannel1Code
     [IsoId("_uG8YiPRYEeuLhpyIdtJzwg")]
     [Description(@"Technical Input Channel is tape")]
     Tape = ExternalTechnicalInputChannelCode.Tape, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Technical Input Channel is internet
     /// Encoded/decoded by serializers as &quot;WEBI&quot;.
@@ -51,5 +53,4 @@ public enum ExternalTechnicalInputChannel1Code
     [IsoId("_uG8Yi_RYEeuLhpyIdtJzwg")]
     [Description(@"Technical Input Channel is internet")]
     Internet = ExternalTechnicalInputChannelCode.Internet, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum ConductClassification1Code
     [IsoId("_rUP-0RjoEeKxeog5DTmtgg")]
     [Description(@"Non standard or unusual.")]
     NonStandard = ConductClassificationCode.NonStandard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reluctant.
     /// Encoded/decoded by serializers as &quot;RCLT&quot;.
@@ -32,7 +32,7 @@ public enum ConductClassification1Code
     [IsoId("_rfkeARjoEeKxeog5DTmtgg")]
     [Description(@"Reluctant.")]
     Reluctant = ConductClassificationCode.Reluctant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Standard.
     /// Encoded/decoded by serializers as &quot;STAN&quot;.
@@ -41,5 +41,4 @@ public enum ConductClassification1Code
     [IsoId("_roqIkRjoEeKxeog5DTmtgg")]
     [Description(@"Standard.")]
     Standard = ConductClassificationCode.Standard, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum OpeningClosingCode
     [IsoId("_aO8eQdp-Ed-ak6NoX_4Aeg_-1120350445")]
     [Description(@"Indicates that the trade is to close a position.")]
     ClosePosition,
-    
+
     /// <summary>
     /// Indicates that the trade is to open a position.
     /// Encoded/decoded by serializers as &quot;OPEP&quot;.
@@ -32,5 +32,4 @@ public enum OpeningClosingCode
     [IsoId("_aO8eQtp-Ed-ak6NoX_4Aeg_-724160897")]
     [Description(@"Indicates that the trade is to open a position.")]
     OpenPosition,
-    
 }

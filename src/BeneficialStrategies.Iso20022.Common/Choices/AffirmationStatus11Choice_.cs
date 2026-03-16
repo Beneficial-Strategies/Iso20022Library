@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AffirmationStatus11Choice.Affirmed))]
     [KnownType(typeof(AffirmationStatus11Choice.Unaffirmed))]
     [KnownType(typeof(AffirmationStatus11Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(AffirmationStatus11Choice.Affirmed),nameof(AffirmationStatus11Choice.Affirmed))]
-    [JsonDerivedType(typeof(AffirmationStatus11Choice.Unaffirmed),nameof(AffirmationStatus11Choice.Unaffirmed))]
-    [JsonDerivedType(typeof(AffirmationStatus11Choice.ProprietaryStatus),nameof(AffirmationStatus11Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(AffirmationStatus11Choice.Affirmed),
+        nameof(AffirmationStatus11Choice.Affirmed)
+    )]
+    [JsonDerivedType(
+        typeof(AffirmationStatus11Choice.Unaffirmed),
+        nameof(AffirmationStatus11Choice.Unaffirmed)
+    )]
+    [JsonDerivedType(
+        typeof(AffirmationStatus11Choice.ProprietaryStatus),
+        nameof(AffirmationStatus11Choice.ProprietaryStatus)
+    )]
     [IsoId("_XiELhQd3Ee2fOITqoTnSLQ")]
     [DisplayName("Affirmation Status 11 Choice")]
-    public abstract partial record AffirmationStatus11Choice_
-    {
-    }
+    public abstract record AffirmationStatus11Choice_ { }
 }

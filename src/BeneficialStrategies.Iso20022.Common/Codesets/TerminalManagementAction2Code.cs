@@ -23,7 +23,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZEY3hEeW32YMP0mBeyw")]
     [Description(@"Request to activate the element identified inside the message exchange.")]
     Activate = TerminalManagementActionCode.Activate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to deactivate the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;DCTV&quot;.
@@ -32,7 +32,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZE43hEeW32YMP0mBeyw")]
     [Description(@"Request to deactivate the element identified inside the message exchange.")]
     Deactivate = TerminalManagementActionCode.Deactivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to delete the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -41,7 +41,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZFY3hEeW32YMP0mBeyw")]
     [Description(@"Request to delete the element identified inside the message exchange.")]
     Delete = TerminalManagementActionCode.Delete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to download the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;DWNL&quot;.
@@ -50,7 +50,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZF43hEeW32YMP0mBeyw")]
     [Description(@"Request to download the element identified inside the message exchange.")]
     Download = TerminalManagementActionCode.Download, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to install the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -59,7 +59,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZGY3hEeW32YMP0mBeyw")]
     [Description(@"Request to install the element identified inside the message exchange.")]
     Install = TerminalManagementActionCode.Install, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to restart the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;RSTR&quot;.
@@ -68,7 +68,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZG43hEeW32YMP0mBeyw")]
     [Description(@"Request to restart the element identified inside the message exchange.")]
     Restart = TerminalManagementActionCode.Restart, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to upload the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;UPLD&quot;.
@@ -77,7 +77,7 @@ public enum TerminalManagementAction2Code
     [IsoId("_9yfZHY3hEeW32YMP0mBeyw")]
     [Description(@"Request to upload the element identified inside the message exchange.")]
     Upload = TerminalManagementActionCode.Upload, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to update the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -86,5 +86,4 @@ public enum TerminalManagementAction2Code
     [IsoId("_GKkeUY3iEeW32YMP0mBeyw")]
     [Description(@"Request to update the element identified inside the message exchange.")]
     Update = TerminalManagementActionCode.Update, // same ordinal as derivation source for type conversions
-    
 }

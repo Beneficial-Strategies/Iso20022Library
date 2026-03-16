@@ -23,7 +23,7 @@ public enum Status5Code
     [IsoId("_Yaalk9p-Ed-ak6NoX_4Aeg_1715573718")]
     [Description(@"Instruction has been rejected.")]
     Rejected = StatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been accepted and is validated for further processing.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
@@ -32,7 +32,7 @@ public enum Status5Code
     [IsoId("_YaallNp-Ed-ak6NoX_4Aeg_832340431")]
     [Description(@"Instruction has been accepted and is validated for further processing.")]
     Accepted = StatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is pending.
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
@@ -41,5 +41,4 @@ public enum Status5Code
     [IsoId("_Yaalldp-Ed-ak6NoX_4Aeg_-1533344004")]
     [Description(@"Instruction is pending.")]
     Pending = StatusCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

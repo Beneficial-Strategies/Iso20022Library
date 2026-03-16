@@ -23,7 +23,7 @@ public enum PendingCancellationReason4Code
     [IsoId("_Z-QW4dp-Ed-ak6NoX_4Aeg_-2080565714")]
     [Description(@"Instruction received after the account servicers specified deadline.")]
     AccountServicerDeadlineMissed = RejectionReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed quantity.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -32,7 +32,7 @@ public enum PendingCancellationReason4Code
     [IsoId("_Z-QW4tp-Ed-ak6NoX_4Aeg_-2052858643")]
     [Description(@"Unrecognised or invalid instructed quantity.")]
     QuantityRejection = RejectionReasonCode.QuantityRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -41,7 +41,7 @@ public enum PendingCancellationReason4Code
     [IsoId("_Z-QW49p-Ed-ak6NoX_4Aeg_-1791501706")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonCode.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other reason.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,5 +50,4 @@ public enum PendingCancellationReason4Code
     [IsoId("_Z-QW5Np-Ed-ak6NoX_4Aeg_-1763795962")]
     [Description(@"Other reason.")]
     Other = RejectionReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

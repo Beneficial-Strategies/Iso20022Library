@@ -23,7 +23,7 @@ public enum Unrealised1Code
     [IsoId("_m59_YfNBEeCuA5Tr22BnwA_1098512688")]
     [Description(@"Unrealised gain.")]
     Gain = UnrealisedCode.Gain, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrealised loss.
     /// Encoded/decoded by serializers as &quot;LOSS&quot;.
@@ -32,5 +32,4 @@ public enum Unrealised1Code
     [IsoId("_m59_YvNBEeCuA5Tr22BnwA_-1551187173")]
     [Description(@"Unrealised loss.")]
     Loss = UnrealisedCode.Loss, // same ordinal as derivation source for type conversions
-    
 }

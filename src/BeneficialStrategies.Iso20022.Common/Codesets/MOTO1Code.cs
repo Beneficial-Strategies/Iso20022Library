@@ -23,7 +23,7 @@ public enum MOTO1Code
     [IsoId("_V2gisTxSEeyuG4d2lhAp-w")]
     [Description(@"Mail order.")]
     MailOrder = MOTOCode.MailOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mail order or telephone order.
     /// Encoded/decoded by serializers as &quot;MOTO&quot;.
@@ -32,7 +32,7 @@ public enum MOTO1Code
     [IsoId("_V6r4ETxSEeyuG4d2lhAp-w")]
     [Description(@"Mail order or telephone order.|")]
     MailOrderOrTelephoneOrder = MOTOCode.MailOrderOrTelephoneOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Telephone order
     /// Encoded/decoded by serializers as &quot;TPOR&quot;.
@@ -41,5 +41,4 @@ public enum MOTO1Code
     [IsoId("_V-eL4TxSEeyuG4d2lhAp-w")]
     [Description(@"Telephone order")]
     TelephoneOrder = MOTOCode.TelephoneOrder, // same ordinal as derivation source for type conversions
-    
 }

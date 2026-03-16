@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity1Choice.Unit))]
     [KnownType(typeof(FinancialInstrumentQuantity1Choice.FaceAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity1Choice.AmortisedValue))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity1Choice.Unit),nameof(FinancialInstrumentQuantity1Choice.Unit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity1Choice.FaceAmount),nameof(FinancialInstrumentQuantity1Choice.FaceAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity1Choice.AmortisedValue),nameof(FinancialInstrumentQuantity1Choice.AmortisedValue))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity1Choice.Unit),
+        nameof(FinancialInstrumentQuantity1Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity1Choice.FaceAmount),
+        nameof(FinancialInstrumentQuantity1Choice.FaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity1Choice.AmortisedValue),
+        nameof(FinancialInstrumentQuantity1Choice.AmortisedValue)
+    )]
     [IsoId("_SokiyNp-Ed-ak6NoX_4Aeg_-1672157653")]
     [DisplayName("Financial Instrument Quantity 1 Choice")]
-    public abstract partial record FinancialInstrumentQuantity1Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity1Choice_ { }
 }

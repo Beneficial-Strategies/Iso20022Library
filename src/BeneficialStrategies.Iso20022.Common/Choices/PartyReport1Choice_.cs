@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PartyReport1Choice.Update))]
     [KnownType(typeof(PartyReport1Choice.Cancellation))]
-    [JsonDerivedType(typeof(PartyReport1Choice.Update),nameof(PartyReport1Choice.Update))]
-    [JsonDerivedType(typeof(PartyReport1Choice.Cancellation),nameof(PartyReport1Choice.Cancellation))]
+    [JsonDerivedType(typeof(PartyReport1Choice.Update), nameof(PartyReport1Choice.Update))]
+    [JsonDerivedType(
+        typeof(PartyReport1Choice.Cancellation),
+        nameof(PartyReport1Choice.Cancellation)
+    )]
     [IsoId("_77i8YDbtEeeYhaZ6bvG1Xg")]
     [DisplayName("Party Report 1 Choice")]
-    public abstract partial record PartyReport1Choice_
-    {
-    }
+    public abstract record PartyReport1Choice_ { }
 }

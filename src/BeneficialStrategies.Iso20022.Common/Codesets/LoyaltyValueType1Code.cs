@@ -23,7 +23,7 @@ public enum LoyaltyValueType1Code
     [IsoId("_NAqL0V_CEee_oqB7UglxLw")]
     [Description(@"Value expressed in miles.")]
     Miles = LoyaltyValueTypeCode.Miles, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Value expressed in monetary units.
     /// Encoded/decoded by serializers as &quot;MONE&quot;.
@@ -32,7 +32,7 @@ public enum LoyaltyValueType1Code
     [IsoId("_NUmbgV_CEee_oqB7UglxLw")]
     [Description(@"Value expressed in monetary units.")]
     Monetary = LoyaltyValueTypeCode.Monetary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Value expressed in any other type of loyalty value.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +41,7 @@ public enum LoyaltyValueType1Code
     [IsoId("_Nk0BwV_CEee_oqB7UglxLw")]
     [Description(@"Value expressed in any other type of loyalty value.")]
     Other = LoyaltyValueTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Value expressed in points.
     /// Encoded/decoded by serializers as &quot;POIN&quot;.
@@ -50,7 +50,7 @@ public enum LoyaltyValueType1Code
     [IsoId("_NzPfUV_CEee_oqB7UglxLw")]
     [Description(@"Value expressed in points.")]
     Points = LoyaltyValueTypeCode.Points, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Value expressed in a private currency.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -59,5 +59,4 @@ public enum LoyaltyValueType1Code
     [IsoId("_OBhy8V_CEee_oqB7UglxLw")]
     [Description(@"Value expressed in a private currency.")]
     PrivateCurrency = LoyaltyValueTypeCode.PrivateCurrency, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OFF3oaEwEe-MRKYsaX6JDg")]
 [DisplayName("Acceptor Authorisation Response14")]
-public partial record AcceptorAuthorisationResponse14
+public record AcceptorAuthorisationResponse14
 {
-    #nullable enable
-
     /// <summary>
     /// Environment.
     /// </summary>
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment81 Environment { get; init; } 
+    public required CardPaymentEnvironment81 Environment { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -37,16 +35,12 @@ public partial record AcceptorAuthorisationResponse14
     /// </summary>
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required CardPaymentTransaction137 Transaction { get; init; } 
+    public required CardPaymentTransaction137 Transaction { get; init; }
 
     /// <summary>
     /// Transaction Response.
     /// </summary>
     [DisplayName("Transaction Response")]
     [IsoXmlTag("TxRspn")]
-    public required CardPaymentTransaction144 TransactionResponse { get; init; } 
-
-    
-    #nullable disable
-    
+    public required CardPaymentTransaction144 TransactionResponse { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PriceType2Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceType2Choice
     /// </summary>
     [IsoId("_XLcRBtp-Ed-ak6NoX_4Aeg_1948831831")]
     [DisplayName("Market")]
-    public partial record Market : PriceType2Choice_
+    public record Market : PriceType2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specification of the price type.
         /// </summary>
         [IsoId("_WimvZdp-Ed-ak6NoX_4Aeg_-1813914755")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public required YieldedOrValueType1Choice_ Type { get; init; } 
-        
+        public required YieldedOrValueType1Choice_ Type { get; init; }
+
         /// <summary>
         /// Value of the price, for example, as a currency and value.
         /// </summary>
         [IsoId("_WimvZtp-Ed-ak6NoX_4Aeg_373068769")]
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
-        public required PriceRateOrAmount1Choice_ Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PriceRateOrAmount1Choice_ Value { get; init; }
     }
 }

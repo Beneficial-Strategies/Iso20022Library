@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(OrganisationIdentification15Choice.LEI))]
     [KnownType(typeof(OrganisationIdentification15Choice.Other))]
     [KnownType(typeof(OrganisationIdentification15Choice.AnyBIC))]
-    [JsonDerivedType(typeof(OrganisationIdentification15Choice.LEI),nameof(OrganisationIdentification15Choice.LEI))]
-    [JsonDerivedType(typeof(OrganisationIdentification15Choice.Other),nameof(OrganisationIdentification15Choice.Other))]
-    [JsonDerivedType(typeof(OrganisationIdentification15Choice.AnyBIC),nameof(OrganisationIdentification15Choice.AnyBIC))]
+    [JsonDerivedType(
+        typeof(OrganisationIdentification15Choice.LEI),
+        nameof(OrganisationIdentification15Choice.LEI)
+    )]
+    [JsonDerivedType(
+        typeof(OrganisationIdentification15Choice.Other),
+        nameof(OrganisationIdentification15Choice.Other)
+    )]
+    [JsonDerivedType(
+        typeof(OrganisationIdentification15Choice.AnyBIC),
+        nameof(OrganisationIdentification15Choice.AnyBIC)
+    )]
     [IsoId("_7J1bIMgmEeuGrNSsxk3B0A")]
     [DisplayName("Organisation Identification 15 Choice")]
-    public abstract partial record OrganisationIdentification15Choice_
-    {
-    }
+    public abstract record OrganisationIdentification15Choice_ { }
 }

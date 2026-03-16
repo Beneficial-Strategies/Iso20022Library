@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_97bkJnltEeG7BsjMvd1mEw_1224258578")]
 [DisplayName("Presentation")]
-public partial record Presentation2
+public record Presentation2
 {
-    #nullable enable
-    
     /// <summary>
     /// Party, other than beneficiary, forwarding the documents.
     /// </summary>
     [IsoId("_97kuEHltEeG7BsjMvd1mEw_2057434773")]
     [DisplayName("Presenter")]
     [IsoXmlTag("Presntr")]
-    public PartyIdentification43? Presenter { get; init; } 
-    
+    public PartyIdentification43? Presenter { get; init; }
+
     /// <summary>
     /// Date on which the beneficiary presented the demand.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record Presentation2
     [DisplayName("Beneficiary Presentation Date")]
     [IsoXmlTag("BnfcryPresntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BeneficiaryPresentationDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? BeneficiaryPresentationDate { get; init; }
 }

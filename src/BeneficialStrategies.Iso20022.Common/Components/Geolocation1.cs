@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4ORaINj8EeiojJsa6FYyew")]
 [DisplayName("Geolocation")]
-public partial record Geolocation1
+public record Geolocation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Geographic location specified by geographic coordinates.
     /// </summary>
     [IsoId("_A7PU0Nj-EeiojJsa6FYyew")]
     [DisplayName("Geographic Coordinates")]
     [IsoXmlTag("GeogcCordints")]
-    public GeolocationGeographicCoordinates1? GeographicCoordinates { get; init; } 
-    
+    public GeolocationGeographicCoordinates1? GeographicCoordinates { get; init; }
+
     /// <summary>
     /// Geographic location specified by UTM coordinates.
     /// </summary>
     [IsoId("_wMXuUNj-EeiojJsa6FYyew")]
     [DisplayName("UTM Coordinates")]
     [IsoXmlTag("UTMCordints")]
-    public GeolocationUTMCoordinates1? UTMCoordinates { get; init; } 
-    
-    
-    #nullable disable
-    
+    public GeolocationUTMCoordinates1? UTMCoordinates { get; init; }
 }

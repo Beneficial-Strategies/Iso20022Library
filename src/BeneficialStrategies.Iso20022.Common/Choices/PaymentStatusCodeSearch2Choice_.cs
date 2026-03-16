@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentStatusCodeSearch2Choice.PendingStatus))]
     [KnownType(typeof(PaymentStatusCodeSearch2Choice.FinalStatus))]
     [KnownType(typeof(PaymentStatusCodeSearch2Choice.PendingAndFinalStatus))]
-    [JsonDerivedType(typeof(PaymentStatusCodeSearch2Choice.PendingStatus),nameof(PaymentStatusCodeSearch2Choice.PendingStatus))]
-    [JsonDerivedType(typeof(PaymentStatusCodeSearch2Choice.FinalStatus),nameof(PaymentStatusCodeSearch2Choice.FinalStatus))]
-    [JsonDerivedType(typeof(PaymentStatusCodeSearch2Choice.PendingAndFinalStatus),nameof(PaymentStatusCodeSearch2Choice.PendingAndFinalStatus))]
+    [JsonDerivedType(
+        typeof(PaymentStatusCodeSearch2Choice.PendingStatus),
+        nameof(PaymentStatusCodeSearch2Choice.PendingStatus)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusCodeSearch2Choice.FinalStatus),
+        nameof(PaymentStatusCodeSearch2Choice.FinalStatus)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusCodeSearch2Choice.PendingAndFinalStatus),
+        nameof(PaymentStatusCodeSearch2Choice.PendingAndFinalStatus)
+    )]
     [IsoId("_RGEOMNp-Ed-ak6NoX_4Aeg_396814061")]
     [DisplayName("Payment Status Code Search 2 Choice")]
-    public abstract partial record PaymentStatusCodeSearch2Choice_
-    {
-    }
+    public abstract record PaymentStatusCodeSearch2Choice_ { }
 }

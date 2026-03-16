@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DistributionPolicy2Choice.Code))]
     [KnownType(typeof(DistributionPolicy2Choice.Proprietary))]
-    [JsonDerivedType(typeof(DistributionPolicy2Choice.Code),nameof(DistributionPolicy2Choice.Code))]
-    [JsonDerivedType(typeof(DistributionPolicy2Choice.Proprietary),nameof(DistributionPolicy2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(DistributionPolicy2Choice.Code),
+        nameof(DistributionPolicy2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(DistributionPolicy2Choice.Proprietary),
+        nameof(DistributionPolicy2Choice.Proprietary)
+    )]
     [IsoId("_HolxYeLaEeWFtOV72FbX9w")]
     [DisplayName("Distribution Policy 2 Choice")]
-    public abstract partial record DistributionPolicy2Choice_
-    {
-    }
+    public abstract record DistributionPolicy2Choice_ { }
 }

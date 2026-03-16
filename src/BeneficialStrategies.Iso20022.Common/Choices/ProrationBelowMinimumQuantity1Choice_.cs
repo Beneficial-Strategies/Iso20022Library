@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ProrationBelowMinimumQuantity1Choice.Code))]
     [KnownType(typeof(ProrationBelowMinimumQuantity1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProrationBelowMinimumQuantity1Choice.Code),nameof(ProrationBelowMinimumQuantity1Choice.Code))]
-    [JsonDerivedType(typeof(ProrationBelowMinimumQuantity1Choice.Proprietary),nameof(ProrationBelowMinimumQuantity1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProrationBelowMinimumQuantity1Choice.Code),
+        nameof(ProrationBelowMinimumQuantity1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ProrationBelowMinimumQuantity1Choice.Proprietary),
+        nameof(ProrationBelowMinimumQuantity1Choice.Proprietary)
+    )]
     [IsoId("_ETpRI4DCEe-eGe8fbP3Zug")]
     [DisplayName("Proration Below Minimum Quantity1Choice")]
-    public abstract partial record ProrationBelowMinimumQuantity1Choice_
-    {
-    }
+    public abstract record ProrationBelowMinimumQuantity1Choice_ { }
 }

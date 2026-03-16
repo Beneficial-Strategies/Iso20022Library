@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DovC8UlNEeiZP-CimVE7Hg")]
 [DisplayName("Valuation Dealing Processing Characteristics")]
-public partial record ValuationDealingProcessingCharacteristics3
+public record ValuationDealingProcessingCharacteristics3
 {
-    #nullable enable
-    
     /// <summary>
     /// Frequency of the valuation.
     /// </summary>
     [IsoId("_D4puQ0lNEeiZP-CimVE7Hg")]
     [DisplayName("Valuation Frequency")]
     [IsoXmlTag("ValtnFrqcy")]
-    public EventFrequency5Code? ValuationFrequency { get; init; } 
-    
+    public EventFrequency5Code? ValuationFrequency { get; init; }
+
     /// <summary>
     /// Further details regarding the dealing frequency, for example, Tuesday (for weekly dealing) or last business day of the month.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record ValuationDealingProcessingCharacteristics3
     [DisplayName("Valuation Frequency Description")]
     [IsoXmlTag("ValtnFrqcyDesc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? ValuationFrequencyDescription { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? ValuationFrequencyDescription { get; init; }
+
     /// <summary>
     /// Valuation time of the fund.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record ValuationDealingProcessingCharacteristics3
     [DisplayName("Valuation Time")]
     [IsoXmlTag("ValtnTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? ValuationTime { get; init; } 
-    
+    public IsoISOTime? ValuationTime { get; init; }
+
     /// <summary>
     /// Number of decimal places to which quantities of units/shares are rounded.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record ValuationDealingProcessingCharacteristics3
     [DisplayName("Decimalisation Units")]
     [IsoXmlTag("DcmlstnUnits")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DecimalisationUnits { get; init; } 
-    
+    public IsoNumber? DecimalisationUnits { get; init; }
+
     /// <summary>
     /// Number of decimal places to which the price is rounded.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record ValuationDealingProcessingCharacteristics3
     [DisplayName("Decimalisation Price")]
     [IsoXmlTag("DcmlstnPric")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? DecimalisationPrice { get; init; } 
-    
+    public IsoNumber? DecimalisationPrice { get; init; }
+
     /// <summary>
     /// Indicates whether the fund has two prices.
     /// </summary>
@@ -70,33 +68,29 @@ public partial record ValuationDealingProcessingCharacteristics3
     [DisplayName("Dual Fund Indicator")]
     [IsoXmlTag("DualFndInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? DualFundIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? DualFundIndicator { get; init; }
+
     /// <summary>
     /// Type of pricing calculation method.
     /// </summary>
     [IsoId("_D4puTUlNEeiZP-CimVE7Hg")]
     [DisplayName("Price Method")]
     [IsoXmlTag("PricMtd")]
-    public PriceMethod1Code? PriceMethod { get; init; } 
-    
+    public PriceMethod1Code? PriceMethod { get; init; }
+
     /// <summary>
     /// Currencies in which the prices for the investment fund class are published by the fund management company.
     /// </summary>
     [IsoId("_D4puT0lNEeiZP-CimVE7Hg")]
     [DisplayName("Price Currency")]
     [IsoXmlTag("PricCcy")]
-    public ActiveCurrencyCode? PriceCurrency { get; init; } 
-    
+    public ActiveCurrencyCode? PriceCurrency { get; init; }
+
     /// <summary>
     /// Additional information about the valuation dealing characteristics.
     /// </summary>
     [IsoId("_TaV6cWAKEeiNMJ262H2pWg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

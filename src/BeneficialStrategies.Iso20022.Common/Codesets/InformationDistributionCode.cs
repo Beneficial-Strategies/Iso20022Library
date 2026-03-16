@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_-jTPExOBEeKjmvxNCObNeQ")]
 [Description(@"Specifies how information is to be distributed.")]
-[Derivations(typeof(InformationDistribution1Code),typeof(InformationDistribution2Code))]
+[Derivations(typeof(InformationDistribution1Code), typeof(InformationDistribution2Code))]
 public enum InformationDistributionCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum InformationDistributionCode
     [IsoId("_LZJgIBOCEeKjmvxNCObNeQ")]
     [Description(@"Paper distribution.")]
     Paper,
-    
+
     /// <summary>
     /// Electronic distribution.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +32,7 @@ public enum InformationDistributionCode
     [IsoId("_LjIikBOCEeKjmvxNCObNeQ")]
     [Description(@"Electronic distribution.")]
     Electronic,
-    
+
     /// <summary>
     /// No distribution.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,5 +41,4 @@ public enum InformationDistributionCode
     [IsoId("_s8JEkCCUEeWJd9HF2tO7BA")]
     [Description(@"No distribution.")]
     NoDistribution,
-    
 }

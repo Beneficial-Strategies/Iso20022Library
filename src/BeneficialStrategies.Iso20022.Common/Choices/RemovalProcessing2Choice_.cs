@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RemovalProcessing2Choice.FinancialInstrumentIdentification))]
     [KnownType(typeof(RemovalProcessing2Choice.IndexIdentification))]
     [KnownType(typeof(RemovalProcessing2Choice.IssuerCountry))]
-    [JsonDerivedType(typeof(RemovalProcessing2Choice.FinancialInstrumentIdentification),nameof(RemovalProcessing2Choice.FinancialInstrumentIdentification))]
-    [JsonDerivedType(typeof(RemovalProcessing2Choice.IndexIdentification),nameof(RemovalProcessing2Choice.IndexIdentification))]
-    [JsonDerivedType(typeof(RemovalProcessing2Choice.IssuerCountry),nameof(RemovalProcessing2Choice.IssuerCountry))]
+    [JsonDerivedType(
+        typeof(RemovalProcessing2Choice.FinancialInstrumentIdentification),
+        nameof(RemovalProcessing2Choice.FinancialInstrumentIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(RemovalProcessing2Choice.IndexIdentification),
+        nameof(RemovalProcessing2Choice.IndexIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(RemovalProcessing2Choice.IssuerCountry),
+        nameof(RemovalProcessing2Choice.IssuerCountry)
+    )]
     [IsoId("__MbGwRIoEeyZaPkaPAzTvQ")]
     [DisplayName("Removal Processing 2 Choice")]
-    public abstract partial record RemovalProcessing2Choice_
-    {
-    }
+    public abstract record RemovalProcessing2Choice_ { }
 }

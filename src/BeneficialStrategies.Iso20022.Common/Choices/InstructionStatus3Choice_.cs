@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InstructionStatus3Choice.GlobalInstructionStatus))]
     [KnownType(typeof(InstructionStatus3Choice.DetailedInstructionStatus))]
-    [JsonDerivedType(typeof(InstructionStatus3Choice.GlobalInstructionStatus),nameof(InstructionStatus3Choice.GlobalInstructionStatus))]
-    [JsonDerivedType(typeof(InstructionStatus3Choice.DetailedInstructionStatus),nameof(InstructionStatus3Choice.DetailedInstructionStatus))]
+    [JsonDerivedType(
+        typeof(InstructionStatus3Choice.GlobalInstructionStatus),
+        nameof(InstructionStatus3Choice.GlobalInstructionStatus)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionStatus3Choice.DetailedInstructionStatus),
+        nameof(InstructionStatus3Choice.DetailedInstructionStatus)
+    )]
     [IsoId("_RCpGwtp-Ed-ak6NoX_4Aeg_1720173069")]
     [DisplayName("Instruction Status 3 Choice")]
-    public abstract partial record InstructionStatus3Choice_
-    {
-    }
+    public abstract record InstructionStatus3Choice_ { }
 }

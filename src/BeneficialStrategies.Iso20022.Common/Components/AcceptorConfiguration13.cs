@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-nCRQZO8Ee65Pr8tnKxNQA")]
 [DisplayName("Acceptor Configuration13")]
-public partial record AcceptorConfiguration13
+public record AcceptorConfiguration13
 {
-    #nullable enable
-
     /// <summary>
     /// Data Set.
     /// </summary>
@@ -37,9 +35,5 @@ public partial record AcceptorConfiguration13
     /// </summary>
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
-    public required GenericIdentification176 TerminalManagerIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required GenericIdentification176 TerminalManagerIdentification { get; init; }
 }

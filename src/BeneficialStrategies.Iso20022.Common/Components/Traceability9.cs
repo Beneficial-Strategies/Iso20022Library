@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QcNAwRvSEey2RdTw-AkXzg")]
 [DisplayName("Traceability")]
-public partial record Traceability9
+public record Traceability9
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a partner of a message exchange.
     /// </summary>
     [IsoId("_QjAMURvSEey2RdTw-AkXzg")]
     [DisplayName("Relay Identification")]
     [IsoXmlTag("RlayId")]
-    public required GenericIdentification183 RelayIdentification { get; init; } 
-    
+    public required GenericIdentification183 RelayIdentification { get; init; }
+
     /// <summary>
     /// Date and time of incoming data exchange for relaying or processing.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record Traceability9
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TraceDateTimeIn { get; init; } 
-    
+    public IsoISODateTime? TraceDateTimeIn { get; init; }
+
     /// <summary>
     /// Date and time of the outgoing exchange for relaying or processing.
     /// </summary>
@@ -42,9 +40,5 @@ public partial record Traceability9
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TraceDateTimeOut { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODateTime? TraceDateTimeOut { get; init; }
 }

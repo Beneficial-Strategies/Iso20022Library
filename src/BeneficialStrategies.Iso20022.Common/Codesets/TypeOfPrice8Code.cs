@@ -23,5 +23,4 @@ public enum TypeOfPrice8Code
     [IsoId("_Vgl4xdp-Ed-ak6NoX_4Aeg_-1170213422")]
     [Description(@"True offer price.")]
     Actual = TypeOfPriceCode.Actual, // same ordinal as derivation source for type conversions
-    
 }

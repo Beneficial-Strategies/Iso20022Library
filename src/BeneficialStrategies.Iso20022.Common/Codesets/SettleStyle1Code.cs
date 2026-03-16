@@ -23,7 +23,7 @@ public enum SettleStyle1Code
     [IsoId("_ZOa1YNp-Ed-ak6NoX_4Aeg_-1439531144")]
     [Description(@"Settlement is only allowed on the closing of the future contract.")]
     SettleOnClose = SettleStyleCode.SettleOnClose, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement is only allowed on the opening of the future contract.
     /// Encoded/decoded by serializers as &quot;SETO&quot;.
@@ -32,5 +32,4 @@ public enum SettleStyle1Code
     [IsoId("_ZOa1Ydp-Ed-ak6NoX_4Aeg_-1439531109")]
     [Description(@"Settlement is only allowed on the opening of the future contract.")]
     SettleOnOpen = SettleStyleCode.SettleOnOpen, // same ordinal as derivation source for type conversions
-    
 }

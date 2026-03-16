@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_UdiH4DANEeOqioR9srQH1g")]
 [Description(@"Specifies the options supported for a payment transaction.")]
-[Derivations(typeof(SupportedPaymentOption1Code),typeof(SupportedPaymentOption2Code))]
+[Derivations(typeof(SupportedPaymentOption1Code), typeof(SupportedPaymentOption2Code))]
 public enum SupportedPaymentOptionCode
 {
     /// <summary>
@@ -23,16 +23,18 @@ public enum SupportedPaymentOptionCode
     [IsoId("_mVwtsDANEeOqioR9srQH1g")]
     [Description(@"The entity supports a partial approval of the payment transaction.")]
     PartialApproval,
-    
+
     /// <summary>
     /// The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back).
     /// Encoded/decoded by serializers as &quot;MSRV&quot;.
     /// </summary>
     [EnumMember(Value = "MSRV")]
     [IsoId("_s2B8wDANEeOqioR9srQH1g")]
-    [Description(@"The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back).")]
+    [Description(
+        @"The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back)."
+    )]
     PaymentApprovalOnly,
-    
+
     /// <summary>
     /// The sender support IssuerInstalment proposals to the Cardholder.
     /// Encoded/decoded by serializers as &quot;INSI&quot;.
@@ -41,7 +43,7 @@ public enum SupportedPaymentOptionCode
     [IsoId("_PfI_YE7GEeyGi9JAv6wq7Q")]
     [Description(@"The sender support IssuerInstalment proposals to the Cardholder.")]
     IssuerInstalment,
-    
+
     /// <summary>
     /// The sender is able to support Single Tap transaction.
     /// Encoded/decoded by serializers as &quot;PINQ&quot;.
@@ -50,5 +52,4 @@ public enum SupportedPaymentOptionCode
     [IsoId("_UM9ZYE7GEeyGi9JAv6wq7Q")]
     [Description(@"The sender is able to support Single Tap transaction.")]
     PINRequest,
-    
 }

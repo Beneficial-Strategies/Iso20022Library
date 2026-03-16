@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_5ApoQ7twEeq_cfXrH83Rcw")]
-[Description(@"Specifies the external cheque cancellation reason code in the format of character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the external cheque cancellation reason code in the format of character string with a maximum length of 4 characters."
+)]
 [Derivations(typeof(ExternalChequeCancellationReason1Code))]
 public enum ExternalChequeCancellationReasonCode
 {
@@ -58,7 +60,8 @@ public enum ExternalChequeCancellationReasonCode
     /// </summary>
     [EnumMember(Value = "NARR")]
     [IsoId("")]
-    [Description(@"Reason is provided as narrative information in the additional reason information field.")]
+    [Description(
+        @"Reason is provided as narrative information in the additional reason information field."
+    )]
     Narrative,
-
 }

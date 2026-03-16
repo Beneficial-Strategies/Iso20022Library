@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1ePnUzL3EeKU9IrkkToqcw_1659480407")]
 [DisplayName("Corporate Action Date SD")]
-public partial record CorporateActionDateSD4
+public record CorporateActionDateSD4
 {
-    #nullable enable
-    
     /// <summary>
     /// xPath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionDateSD4
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text PlaceAndName { get; init; }
+
     /// <summary>
     /// Date on which accounting for due bills starts and associated tracking begins.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record CorporateActionDateSD4
     [DisplayName("Interim Accounting Start Date")]
     [IsoXmlTag("IntrmAcctgStartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? InterimAccountingStartDate { get; init; } 
-    
+    public IsoISODate? InterimAccountingStartDate { get; init; }
+
     /// <summary>
     /// Date on which the event security is no longer listed on the exchange.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record CorporateActionDateSD4
     [DisplayName("Delisting Date")]
     [IsoXmlTag("DlistgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DelistingDate { get; init; } 
-    
+    public IsoISODate? DelistingDate { get; init; }
+
     /// <summary>
     /// Date by which a holder can exercise warrants.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record CorporateActionDateSD4
     [DisplayName("Exercise Period Begin Date")]
     [IsoXmlTag("ExrcPrdBegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExercisePeriodBeginDate { get; init; } 
-    
+    public IsoISODate? ExercisePeriodBeginDate { get; init; }
+
     /// <summary>
     /// Date by which a holder listed as a member of the claimant group in a lawsuit may object to the proposed solution.
     /// </summary>
@@ -62,8 +60,8 @@ public partial record CorporateActionDateSD4
     [DisplayName("Objection Date")]
     [IsoXmlTag("ObjctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ObjectionDate { get; init; } 
-    
+    public IsoISODate? ObjectionDate { get; init; }
+
     /// <summary>
     /// Date by which claimants may exclude themselves from an ongoing class action lawsuit.
     /// </summary>
@@ -71,8 +69,8 @@ public partial record CorporateActionDateSD4
     [DisplayName("Exclusion Date")]
     [IsoXmlTag("ExclsnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExclusionDate { get; init; } 
-    
+    public IsoISODate? ExclusionDate { get; init; }
+
     /// <summary>
     /// Date by which a holder must file claim forms to become a member of the claimant group in a lawsuit.
     /// </summary>
@@ -80,9 +78,5 @@ public partial record CorporateActionDateSD4
     [DisplayName("Proof Of Claim Filing Date")]
     [IsoXmlTag("ProofOfClmFilgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProofOfClaimFilingDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? ProofOfClaimFilingDate { get; init; }
 }

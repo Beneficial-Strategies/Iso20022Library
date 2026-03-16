@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V4zFAXDdEe2MCaKO5AtGsA")]
 [DisplayName("Mobile Data")]
-public partial record MobileData5
+public record MobileData5
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the country of a mobile phone operator.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record MobileData5
     [DisplayName("Mobile Country Code")]
     [IsoXmlTag("MobCtryCd")]
     [IsoSimpleType(IsoSimpleType.Min2Max3AlphaText)]
-    public IsoMin2Max3AlphaText? MobileCountryCode { get; init; } 
-    
+    public IsoMin2Max3AlphaText? MobileCountryCode { get; init; }
+
     /// <summary>
     /// Identifies the mobile phone operator inside a country.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record MobileData5
     [DisplayName("Mobile Network Code")]
     [IsoXmlTag("MobNtwkCd")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public IsoMin2Max3NumericText? MobileNetworkCode { get; init; } 
-    
+    public IsoMin2Max3NumericText? MobileNetworkCode { get; init; }
+
     /// <summary>
     /// Masked Mobile Subscriber Integrated Service Digital Network.
     /// </summary>
@@ -43,34 +41,30 @@ public partial record MobileData5
     [DisplayName("Mobile Masked MSISDN")]
     [IsoXmlTag("MobMskdMSISDN")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MobileMaskedMSISDN { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MobileMaskedMSISDN { get; init; }
+
     /// <summary>
     /// Geographic location specified by geographic or UTM coordinates.
     /// </summary>
     [IsoId("_V_ZcR3DdEe2MCaKO5AtGsA")]
     [DisplayName("Geolocation")]
     [IsoXmlTag("Glctn")]
-    public Geolocation1? Geolocation { get; init; } 
-    
+    public Geolocation1? Geolocation { get; init; }
+
     /// <summary>
     /// Sensitive information related to the mobile phone.
     /// </summary>
     [IsoId("_V_ZcSXDdEe2MCaKO5AtGsA")]
     [DisplayName("Sensitive Mobile Data")]
     [IsoXmlTag("SnstvMobData")]
-    public SensitiveMobileData1? SensitiveMobileData { get; init; } 
-    
+    public SensitiveMobileData1? SensitiveMobileData { get; init; }
+
     /// <summary>
     /// Sensitive information related to the mobile phone, protected by CMS.
     /// </summary>
     [IsoId("_V_ZcS3DdEe2MCaKO5AtGsA")]
     [DisplayName("Protected Mobile Data")]
     [IsoXmlTag("PrtctdMobData")]
-    public ContentInformationType35? ProtectedMobileData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ContentInformationType35? ProtectedMobileData { get; init; }
 }

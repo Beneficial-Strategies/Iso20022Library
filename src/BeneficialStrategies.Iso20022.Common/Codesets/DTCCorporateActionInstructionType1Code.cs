@@ -23,7 +23,7 @@ public enum DTCCorporateActionInstructionType1Code
     [IsoId("_12iLhDL3EeKU9IrkkToqcw_2002789136")]
     [Description(@"Instruction on a option in corporate action.")]
     ElectionInstruction = DTCCorporateActionInstructionTypeCode.ElectionInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction for a protect on a corporate action.
     /// Encoded/decoded by serializers as &quot;PRTC&quot;.
@@ -32,7 +32,7 @@ public enum DTCCorporateActionInstructionType1Code
     [IsoId("_12iLhTL3EeKU9IrkkToqcw_1976970213")]
     [Description(@"Instruction for a protect on a corporate action.")]
     ProtectInstruction = DTCCorporateActionInstructionTypeCode.ProtectInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction on covering a protect at the service provider.
     /// Encoded/decoded by serializers as &quot;CPSY&quot;.
@@ -41,7 +41,7 @@ public enum DTCCorporateActionInstructionType1Code
     [IsoId("_12iLhjL3EeKU9IrkkToqcw_738877285")]
     [Description(@"Instruction on covering a protect at the service provider.")]
     CoverProtectSystem = DTCCorporateActionInstructionTypeCode.CoverProtectSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction on covering a protect at the agent.
     /// Encoded/decoded by serializers as &quot;CPAG&quot;.
@@ -50,5 +50,4 @@ public enum DTCCorporateActionInstructionType1Code
     [IsoId("_12r8gDL3EeKU9IrkkToqcw_727778508")]
     [Description(@"Instruction on covering a protect at the agent.")]
     CoverProtectAgent = DTCCorporateActionInstructionTypeCode.CoverProtectAgent, // same ordinal as derivation source for type conversions
-    
 }

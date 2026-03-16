@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WjNMUNp-Ed-ak6NoX_4Aeg_511377656")]
 [DisplayName("Quantity To Quantity Ratio")]
-public partial record QuantityToQuantityRatio2
+public record QuantityToQuantityRatio2
 {
-    #nullable enable
-    
     /// <summary>
     /// Numerator of the quotient of quantities.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record QuantityToQuantityRatio2
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty1")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-    public required IsoRestrictedFINDecimalNumber Quantity1 { get; init; } 
-    
+    public required IsoRestrictedFINDecimalNumber Quantity1 { get; init; }
+
     /// <summary>
     /// Denominator of the quotient of quantities.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record QuantityToQuantityRatio2
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty2")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-    public required IsoRestrictedFINDecimalNumber Quantity2 { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoRestrictedFINDecimalNumber Quantity2 { get; init; }
 }

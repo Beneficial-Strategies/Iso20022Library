@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l21NhfreEe2mU4Wi2q3MzQ")]
 [DisplayName("Detailed Statistics Per Counterparty19")]
-public partial record DetailedStatisticsPerCounterparty19
+public record DetailedStatisticsPerCounterparty19
 {
-    #nullable enable
-
     /// <summary>
     /// Reference Date.
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public required IsoISODate ReferenceDate { get; init; } 
+    public required IsoISODate ReferenceDate { get; init; }
 
     /// <summary>
     /// Rejection Statistics.
@@ -37,51 +35,47 @@ public partial record DetailedStatisticsPerCounterparty19
     /// </summary>
     [DisplayName("Total Corrected Rejections")]
     [IsoXmlTag("TtlCrrctdRjctns")]
-    public IsoMax20PositiveNumber? TotalCorrectedRejections { get; init; } 
+    public IsoMax20PositiveNumber? TotalCorrectedRejections { get; init; }
 
     /// <summary>
     /// Total Number Of Reports.
     /// </summary>
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
-    public required IsoMax20PositiveNumber TotalNumberOfReports { get; init; } 
+    public required IsoMax20PositiveNumber TotalNumberOfReports { get; init; }
 
     /// <summary>
     /// Total Number Of Reports Accepted.
     /// </summary>
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
-    public required IsoMax20PositiveNumber TotalNumberOfReportsAccepted { get; init; } 
+    public required IsoMax20PositiveNumber TotalNumberOfReportsAccepted { get; init; }
 
     /// <summary>
     /// Total Number Of Reports Rejected.
     /// </summary>
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
-    public required IsoMax20PositiveNumber TotalNumberOfReportsRejected { get; init; } 
+    public required IsoMax20PositiveNumber TotalNumberOfReportsRejected { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions.
     /// </summary>
     [DisplayName("Total Number Of Transactions")]
     [IsoXmlTag("TtlNbOfTxs")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactions { get; init; } 
+    public required IsoMax20PositiveNumber TotalNumberOfTransactions { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions Accepted.
     /// </summary>
     [DisplayName("Total Number Of Transactions Accepted")]
     [IsoXmlTag("TtlNbOfTxsAccptd")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactionsAccepted { get; init; } 
+    public required IsoMax20PositiveNumber TotalNumberOfTransactionsAccepted { get; init; }
 
     /// <summary>
     /// Total Number Of Transactions Rejected.
     /// </summary>
     [DisplayName("Total Number Of Transactions Rejected")]
     [IsoXmlTag("TtlNbOfTxsRjctd")]
-    public required IsoMax20PositiveNumber TotalNumberOfTransactionsRejected { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax20PositiveNumber TotalNumberOfTransactionsRejected { get; init; }
 }

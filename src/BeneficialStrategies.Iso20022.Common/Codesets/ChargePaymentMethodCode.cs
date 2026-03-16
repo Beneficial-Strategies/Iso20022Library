@@ -23,7 +23,7 @@ public enum ChargePaymentMethodCode
     [IsoId("_N9CzIBXyEeOBE-jZfcm4KQ")]
     [Description(@"Payment is with cash.")]
     Cash,
-    
+
     /// <summary>
     /// Units are redeemed to cover payment.
     /// Encoded/decoded by serializers as &quot;UNIT&quot;.
@@ -32,5 +32,4 @@ public enum ChargePaymentMethodCode
     [IsoId("_OOJxQBXyEeOBE-jZfcm4KQ")]
     [Description(@"Units are redeemed to cover payment.")]
     Unit,
-    
 }

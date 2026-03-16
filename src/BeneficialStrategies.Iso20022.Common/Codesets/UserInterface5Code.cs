@@ -23,7 +23,7 @@ public enum UserInterface5Code
     [IsoId("_7SQisa13EeWMg5rOByfExw")]
     [Description(@"Cardholder display or interface.")]
     CardholderDisplay = UserInterfaceCode.CardholderDisplay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cardholder receipt.
     /// Encoded/decoded by serializers as &quot;CRCP&quot;.
@@ -32,7 +32,7 @@ public enum UserInterface5Code
     [IsoId("_7SQis613EeWMg5rOByfExw")]
     [Description(@"Cardholder receipt.")]
     CardholderReceipt = UserInterfaceCode.CardholderReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other interface of the cardholder, for instance e-mail or smartphone message.
     /// Encoded/decoded by serializers as &quot;CRDO&quot;.
@@ -41,5 +41,4 @@ public enum UserInterface5Code
     [IsoId("_7SQiua13EeWMg5rOByfExw")]
     [Description(@"Other interface of the cardholder, for instance e-mail or smartphone message.")]
     OtherCardholderInterface = UserInterfaceCode.OtherCardholderInterface, // same ordinal as derivation source for type conversions
-    
 }

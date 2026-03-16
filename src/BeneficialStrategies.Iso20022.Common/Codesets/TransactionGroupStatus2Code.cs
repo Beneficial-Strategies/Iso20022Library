@@ -21,16 +21,19 @@ public enum TransactionGroupStatus2Code
     /// </summary>
     [EnumMember(Value = "PART")]
     [IsoId("_YrjY5tp-Ed-ak6NoX_4Aeg_14174990")]
-    [Description(@"A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status.")]
+    [Description(
+        @"A number of transactions have been accepted, whereas another number of transactions have not yet achieved 'accepted' status."
+    )]
     PartiallyAccepted = PaymentStatusCode.PartiallyAccepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment initiation or individual transaction included in the payment initiation has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
     /// </summary>
     [EnumMember(Value = "RJCT")]
     [IsoId("_YrjY59p-Ed-ak6NoX_4Aeg_14175042")]
-    [Description(@"Payment initiation or individual transaction included in the payment initiation has been rejected.")]
+    [Description(
+        @"Payment initiation or individual transaction included in the payment initiation has been rejected."
+    )]
     Rejected = PaymentStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

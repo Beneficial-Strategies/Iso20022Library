@@ -23,7 +23,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_3zXEgHygEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an undertaking issuance.")]
     UndertakingIssuance,
-    
+
     /// <summary>
     /// Settlement advice related to a claim for payment.
     /// Encoded/decoded by serializers as &quot;CLAM&quot;.
@@ -32,7 +32,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_4cpSEHygEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to a claim for payment.")]
     PaymentClaim,
-    
+
     /// <summary>
     /// Settlement advice related to an undertaking amendment.
     /// Encoded/decoded by serializers as &quot;AMND&quot;.
@@ -41,7 +41,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_KKCg4HyhEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an undertaking amendment.")]
     UndertakingAmendment,
-    
+
     /// <summary>
     /// Settlement advice related to an undertaking termination.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -50,7 +50,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_R6UmUHyhEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an undertaking termination.")]
     Termination,
-    
+
     /// <summary>
     /// Settlement advice related to a manual booking of charges.
     /// Encoded/decoded by serializers as &quot;MCHG&quot;.
@@ -59,7 +59,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_cCLAEHyhEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to a manual booking of charges.")]
     ManualChargesBooking,
-    
+
     /// <summary>
     /// Settlement advice related to an automatic booking of charges.
     /// Encoded/decoded by serializers as &quot;ACHG&quot;.
@@ -68,7 +68,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_j1SXEHyhEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to an automatic booking of charges.")]
     AutomaticChargesBooking,
-    
+
     /// <summary>
     /// Settlement advice related to a refund.
     /// Encoded/decoded by serializers as &quot;REFD&quot;.
@@ -77,7 +77,7 @@ public enum SettlementAdviceTypeCode
     [IsoId("_sgvEQHyhEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to a refund.")]
     Refund,
-    
+
     /// <summary>
     /// Settlement advice related to correspondent bank charges.
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
@@ -86,5 +86,4 @@ public enum SettlementAdviceTypeCode
     [IsoId("_yKlosHyhEeGWJuGCfvwOsQ")]
     [Description(@"Settlement advice related to correspondent bank charges.")]
     CorrespondentBankCharges,
-    
 }

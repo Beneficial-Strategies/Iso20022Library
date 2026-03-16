@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1tTXBDL3EeKU9IrkkToqcw_-228468236")]
-[Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice type.")]
+[Description(
+    @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined notice type."
+)]
 [DerivedFrom(typeof(NoticeTypeCode))]
 public enum NoticeType1Code
 {
@@ -23,14 +25,15 @@ public enum NoticeType1Code
     [IsoId("_1tTXBTL3EeKU9IrkkToqcw_1909543367")]
     [Description(@"Notice is universal.")]
     Universal = NoticeTypeCode.Universal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notice is specific to the securities registered in DTC&apos;s (The Depository Trust Company) nominee name.
     /// Encoded/decoded by serializers as &quot;CEDE&quot;.
     /// </summary>
     [EnumMember(Value = "CEDE")]
     [IsoId("_1tcg8DL3EeKU9IrkkToqcw_-2060306422")]
-    [Description(@"Notice is specific to the securities registered in DTC's (The Depository Trust Company) nominee name.")]
+    [Description(
+        @"Notice is specific to the securities registered in DTC's (The Depository Trust Company) nominee name."
+    )]
     CedeAndCo = NoticeTypeCode.CedeAndCo, // same ordinal as derivation source for type conversions
-    
 }

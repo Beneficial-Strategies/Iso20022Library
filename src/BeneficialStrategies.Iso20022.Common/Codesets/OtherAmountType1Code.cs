@@ -23,7 +23,7 @@ public enum OtherAmountType1Code
     [IsoId("_19nc0a53Eee6Q7mFsDuJBA")]
     [Description(@"Interest that was pre-paid.")]
     PrepaidInterest = OtherAmountTypeCode.PrepaidInterest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Interest on the interest.
     /// Encoded/decoded by serializers as &quot;SINT&quot;.
@@ -32,5 +32,4 @@ public enum OtherAmountType1Code
     [IsoId("_2CFGEa53Eee6Q7mFsDuJBA")]
     [Description(@"Interest on the interest.")]
     SettlementInterest = OtherAmountTypeCode.SettlementInterest, // same ordinal as derivation source for type conversions
-    
 }

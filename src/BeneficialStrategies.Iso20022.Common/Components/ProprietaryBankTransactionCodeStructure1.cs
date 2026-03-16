@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TVRQtdp-Ed-ak6NoX_4Aeg_1519549154")]
 [DisplayName("Proprietary Bank Transaction Code Structure")]
-public partial record ProprietaryBankTransactionCodeStructure1
+public record ProprietaryBankTransactionCodeStructure1
 {
-    #nullable enable
-    
     /// <summary>
     /// Proprietary bank transaction code to identify the underlying transaction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ProprietaryBankTransactionCodeStructure1
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Code { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Code { get; init; }
+
     /// <summary>
     /// Identification of the issuer of the proprietary bank transaction code.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record ProprietaryBankTransactionCodeStructure1
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Issuer { get; init; }
 }

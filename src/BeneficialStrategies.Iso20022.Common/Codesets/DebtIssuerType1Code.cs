@@ -39,7 +39,9 @@ public enum DebtIssuerType1Code
     /// </summary>
     [EnumMember(Value = "SPVS")]
     [IsoId("_DebtIssuerType1Code_SpecialProjectsAndSpecialPurposeVehicles")]
-    [Description(@"Firms or governments may issue bonds for special projects or through special purpose vehicles.")]
+    [Description(
+        @"Firms or governments may issue bonds for special projects or through special purpose vehicles."
+    )]
     SpecialProjectsAndSpecialPurposeVehicles,
 
     /// <summary>
@@ -48,7 +50,9 @@ public enum DebtIssuerType1Code
     /// </summary>
     [EnumMember(Value = "SUPR")]
     [IsoId("_DebtIssuerType1Code_SupranationalEntities")]
-    [Description(@"Supranational entities refer to global entities that are not based in a specific nation.")]
+    [Description(
+        @"Supranational entities refer to global entities that are not based in a specific nation."
+    )]
     SupranationalEntities,
 
     /// <summary>
@@ -59,5 +63,4 @@ public enum DebtIssuerType1Code
     [IsoId("_DebtIssuerType1Code_Sovereign")]
     [Description(@"Asset type is sovereign.")]
     Sovereign = ProductTypeV2Code.Sovereign,
-
 }

@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ContractTerm7Choice.Open))]
     [KnownType(typeof(ContractTerm7Choice.Fixed))]
-    [JsonDerivedType(typeof(ContractTerm7Choice.Open),nameof(ContractTerm7Choice.Open))]
-    [JsonDerivedType(typeof(ContractTerm7Choice.Fixed),nameof(ContractTerm7Choice.Fixed))]
+    [JsonDerivedType(typeof(ContractTerm7Choice.Open), nameof(ContractTerm7Choice.Open))]
+    [JsonDerivedType(typeof(ContractTerm7Choice.Fixed), nameof(ContractTerm7Choice.Fixed))]
     [IsoId("_xcgx0a5qEeuo-IflVgGqiA")]
     [DisplayName("Contract Term 7 Choice")]
-    public abstract partial record ContractTerm7Choice_
-    {
-    }
+    public abstract record ContractTerm7Choice_ { }
 }

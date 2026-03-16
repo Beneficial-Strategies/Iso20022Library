@@ -23,7 +23,7 @@ public enum UndertakingNameCode
     [IsoId("_nL0jIHyjEeGWJuGCfvwOsQ")]
     [Description(@"Undertaking is a demand guarantee.")]
     DemandGuarantee,
-    
+
     /// <summary>
     /// Undertaking is a standby letter of credit.
     /// Encoded/decoded by serializers as &quot;STBY&quot;.
@@ -32,5 +32,4 @@ public enum UndertakingNameCode
     [IsoId("_tZls8HyjEeGWJuGCfvwOsQ")]
     [Description(@"Undertaking is a standby letter of credit.")]
     StandbyLetterOfCredit,
-    
 }

@@ -23,7 +23,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_uI4vAYn7EeShMpas3885ww")]
     [Description(@"Online PIN (Personal Identification Number).")]
     OnLinePIN = CardholderVerificationCapabilityCode.OnLinePIN, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Offline PIN in clear (Personal Identification Number).
     /// Encoded/decoded by serializers as &quot;FCPN&quot;.
@@ -32,7 +32,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_v1O8EYn7EeShMpas3885ww")]
     [Description(@"Offline PIN in clear (Personal Identification Number).")]
     OfflinePINClear = CardholderVerificationCapabilityCode.OfflinePINClear, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Offline PIN encrypted (Personal Identification Number).
     /// Encoded/decoded by serializers as &quot;FEPN&quot;.
@@ -41,7 +41,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_v7pGEYn7EeShMpas3885ww")]
     [Description(@"Offline PIN encrypted (Personal Identification Number).")]
     OfflinePINEncrypted = CardholderVerificationCapabilityCode.OfflinePINEncrypted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Offline digital signature analysis.
     /// Encoded/decoded by serializers as &quot;FDSG&quot;.
@@ -50,7 +50,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_xFjUcYn7EeShMpas3885ww")]
     [Description(@"Offline digital signature analysis.")]
     OfflineDigitalSignature = CardholderVerificationCapabilityCode.OfflineDigitalSignature, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Offline biometrics.
     /// Encoded/decoded by serializers as &quot;FBIO&quot;.
@@ -59,7 +59,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_x1FT8Yn7EeShMpas3885ww")]
     [Description(@"Offline biometrics.")]
     OfflineBiometrics = CardholderVerificationCapabilityCode.OfflineBiometrics, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Offline biographics.
     /// Encoded/decoded by serializers as &quot;FBIG&quot;.
@@ -68,7 +68,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_x6xsQYn7EeShMpas3885ww")]
     [Description(@"Offline biographics.")]
     OfflineBiographics = CardholderVerificationCapabilityCode.OfflineBiographics, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PKI (Public Key Infrastructure) based digital signature.
     /// Encoded/decoded by serializers as &quot;PKIS&quot;.
@@ -77,7 +77,7 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_ylWTQYn7EeShMpas3885ww")]
     [Description(@"PKI (Public Key Infrastructure) based digital signature.")]
     PKISignature = CardholderVerificationCapabilityCode.PKISignature, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Personal code of the customer for banking services.
     /// Encoded/decoded by serializers as &quot;PCOD&quot;.
@@ -86,5 +86,4 @@ public enum CardholderVerificationCapability3Code
     [IsoId("_zQIVoYn7EeShMpas3885ww")]
     [Description(@"Personal code of the customer for banking services.")]
     PersonalCode = CardholderVerificationCapabilityCode.PersonalCode, // same ordinal as derivation source for type conversions
-    
 }

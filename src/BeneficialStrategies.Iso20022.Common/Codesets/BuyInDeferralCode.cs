@@ -23,7 +23,7 @@ public enum BuyInDeferralCode
     [IsoId("_4hbCEJwVEeqtp-LOti013g")]
     [Description(@"Buy-in is not deferred.")]
     BuyInNotDeferred,
-    
+
     /// <summary>
     /// Buy-in is deferred.
     /// Encoded/decoded by serializers as &quot;DEFY&quot;.
@@ -32,5 +32,4 @@ public enum BuyInDeferralCode
     [IsoId("_4llwYJwVEeqtp-LOti013g")]
     [Description(@"Buy-in is deferred.|")]
     BuyInDeferred,
-    
 }

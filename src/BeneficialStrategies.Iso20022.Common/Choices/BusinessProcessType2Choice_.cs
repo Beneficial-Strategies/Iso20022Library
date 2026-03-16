@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BusinessProcessType2Choice.Code))]
     [KnownType(typeof(BusinessProcessType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(BusinessProcessType2Choice.Code),nameof(BusinessProcessType2Choice.Code))]
-    [JsonDerivedType(typeof(BusinessProcessType2Choice.Proprietary),nameof(BusinessProcessType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(BusinessProcessType2Choice.Code),
+        nameof(BusinessProcessType2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(BusinessProcessType2Choice.Proprietary),
+        nameof(BusinessProcessType2Choice.Proprietary)
+    )]
     [IsoId("_0hNQAZBgEeakHoV5BVecAQ")]
     [DisplayName("Business Process Type 2 Choice")]
-    public abstract partial record BusinessProcessType2Choice_
-    {
-    }
+    public abstract record BusinessProcessType2Choice_ { }
 }

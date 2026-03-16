@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZgdAlNp-Ed-ak6NoX_4Aeg_1761795494")]
-[Description(@"Specifies the reason of a rejection of a standing instruction cancellation request.")]
+[Description(
+    @"Specifies the reason of a rejection of a standing instruction cancellation request."
+)]
 [DerivedFrom(typeof(RejectionReasonCode))]
 public enum RejectionReason10Code
 {
@@ -23,5 +25,4 @@ public enum RejectionReason10Code
     [IsoId("_ZgdAldp-Ed-ak6NoX_4Aeg_-611576163")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
 }

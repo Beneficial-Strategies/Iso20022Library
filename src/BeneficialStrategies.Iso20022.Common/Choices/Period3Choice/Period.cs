@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Period3Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.Period3Choice
     /// </summary>
     [IsoId("_Nt3jc-ENEd-qUMZtd_eZuQ")]
     [DisplayName("Period")]
-    public partial record Period : Period3Choice_
+    public record Period : Period3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date and time at which the range starts.
         /// </summary>
         [IsoId("_Nt3jeeENEd-qUMZtd_eZuQ")]
         [DisplayName("Start Date")]
         [IsoXmlTag("StartDt")]
-        public required DateFormat18Choice_ StartDate { get; init; } 
-        
+        public required DateFormat18Choice_ StartDate { get; init; }
+
         /// <summary>
         /// Date and time at which the range ends.
         /// </summary>
         [IsoId("_Nt3je-ENEd-qUMZtd_eZuQ")]
         [DisplayName("End Date")]
         [IsoXmlTag("EndDt")]
-        public required DateFormat18Choice_ EndDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required DateFormat18Choice_ EndDate { get; init; }
     }
 }

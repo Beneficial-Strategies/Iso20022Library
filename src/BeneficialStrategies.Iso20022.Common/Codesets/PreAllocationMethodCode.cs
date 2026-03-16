@@ -23,7 +23,7 @@ public enum PreAllocationMethodCode
     [IsoId("_aIFoUNp-Ed-ak6NoX_4Aeg_643714948")]
     [Description(@"Preallocation is proratised.")]
     Prorata,
-    
+
     /// <summary>
     /// No prorata, discuss first.
     /// Encoded/decoded by serializers as &quot;TALK&quot;.
@@ -32,5 +32,4 @@ public enum PreAllocationMethodCode
     [IsoId("_aIFoUdp-Ed-ak6NoX_4Aeg_1099009423")]
     [Description(@"No prorata, discuss first.")]
     SpeakFirst,
-    
 }

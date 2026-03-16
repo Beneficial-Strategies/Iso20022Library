@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodityEnvironmental1Choice.Emissions))]
     [KnownType(typeof(AssetClassCommodityEnvironmental1Choice.Weather))]
     [KnownType(typeof(AssetClassCommodityEnvironmental1Choice.CarbonRelated))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental1Choice.Emissions),nameof(AssetClassCommodityEnvironmental1Choice.Emissions))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental1Choice.Weather),nameof(AssetClassCommodityEnvironmental1Choice.Weather))]
-    [JsonDerivedType(typeof(AssetClassCommodityEnvironmental1Choice.CarbonRelated),nameof(AssetClassCommodityEnvironmental1Choice.CarbonRelated))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental1Choice.Emissions),
+        nameof(AssetClassCommodityEnvironmental1Choice.Emissions)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental1Choice.Weather),
+        nameof(AssetClassCommodityEnvironmental1Choice.Weather)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityEnvironmental1Choice.CarbonRelated),
+        nameof(AssetClassCommodityEnvironmental1Choice.CarbonRelated)
+    )]
     [IsoId("_aQGG1Q2pEeW72qLtWESimw")]
     [DisplayName("Asset Class Commodity Environmental 1 Choice")]
-    public abstract partial record AssetClassCommodityEnvironmental1Choice_
-    {
-    }
+    public abstract record AssetClassCommodityEnvironmental1Choice_ { }
 }

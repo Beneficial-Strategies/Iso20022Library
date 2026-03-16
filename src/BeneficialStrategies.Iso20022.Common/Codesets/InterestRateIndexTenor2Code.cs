@@ -10,7 +10,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_mDriYI9GEeqMo4JxiuZGSw")]
-[Description(@"Specifies the tenor of the interest rate index (when the interest rate is paid out).")]
+[Description(
+    @"Specifies the tenor of the interest rate index (when the interest rate is paid out)."
+)]
 public enum InterestRateIndexTenor2Code
 {
     /// <summary>
@@ -102,5 +104,4 @@ public enum InterestRateIndexTenor2Code
     [IsoId("_g5Ok0Y9IEeqMo4JxiuZGSw")]
     [Description(@"Tenor is 2 weeks.")]
     Week2 = 9,
-
 }

@@ -23,7 +23,7 @@ public enum AmountPriceType3Code
     [IsoId("_i3gHgZbREee8S7xwGG7Veg")]
     [Description(@"Price expressed as a currency and amount per unit or per share.")]
     ActualAmount = AmountPriceTypeCode.ActualAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price expressed as an amount of money per lot.
     /// Encoded/decoded by serializers as &quot;PLOT&quot;.
@@ -32,5 +32,4 @@ public enum AmountPriceType3Code
     [IsoId("_i9wggZbREee8S7xwGG7Veg")]
     [Description(@"Price expressed as an amount of money per lot.")]
     Lot = AmountPriceTypeCode.Lot, // same ordinal as derivation source for type conversions
-    
 }

@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecurityIdentification34Choice.BasketConstituents))]
     [KnownType(typeof(SecurityIdentification34Choice.Index))]
     [KnownType(typeof(SecurityIdentification34Choice.IdentificationNotAvailable))]
-    [JsonDerivedType(typeof(SecurityIdentification34Choice.ISIN),nameof(SecurityIdentification34Choice.ISIN))]
-    [JsonDerivedType(typeof(SecurityIdentification34Choice.AlternativeInstrumentIdentification),nameof(SecurityIdentification34Choice.AlternativeInstrumentIdentification))]
-    [JsonDerivedType(typeof(SecurityIdentification34Choice.UniqueProductIdentifier),nameof(SecurityIdentification34Choice.UniqueProductIdentifier))]
-    [JsonDerivedType(typeof(SecurityIdentification34Choice.BasketConstituents),nameof(SecurityIdentification34Choice.BasketConstituents))]
-    [JsonDerivedType(typeof(SecurityIdentification34Choice.Index),nameof(SecurityIdentification34Choice.Index))]
-    [JsonDerivedType(typeof(SecurityIdentification34Choice.IdentificationNotAvailable),nameof(SecurityIdentification34Choice.IdentificationNotAvailable))]
+    [JsonDerivedType(
+        typeof(SecurityIdentification34Choice.ISIN),
+        nameof(SecurityIdentification34Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification34Choice.AlternativeInstrumentIdentification),
+        nameof(SecurityIdentification34Choice.AlternativeInstrumentIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification34Choice.UniqueProductIdentifier),
+        nameof(SecurityIdentification34Choice.UniqueProductIdentifier)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification34Choice.BasketConstituents),
+        nameof(SecurityIdentification34Choice.BasketConstituents)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification34Choice.Index),
+        nameof(SecurityIdentification34Choice.Index)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification34Choice.IdentificationNotAvailable),
+        nameof(SecurityIdentification34Choice.IdentificationNotAvailable)
+    )]
     [IsoId("_Zkpc3w1HEeqV4s5SpzR1dQ")]
     [DisplayName("Security Identification 34 Choice")]
-    public abstract partial record SecurityIdentification34Choice_
-    {
-    }
+    public abstract record SecurityIdentification34Choice_ { }
 }

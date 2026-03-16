@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Recipient4Choice.KeyTransport))]
     [KnownType(typeof(Recipient4Choice.KEK))]
     [KnownType(typeof(Recipient4Choice.KeyIdentifier))]
-    [JsonDerivedType(typeof(Recipient4Choice.KeyTransport),nameof(Recipient4Choice.KeyTransport))]
-    [JsonDerivedType(typeof(Recipient4Choice.KEK),nameof(Recipient4Choice.KEK))]
-    [JsonDerivedType(typeof(Recipient4Choice.KeyIdentifier),nameof(Recipient4Choice.KeyIdentifier))]
+    [JsonDerivedType(typeof(Recipient4Choice.KeyTransport), nameof(Recipient4Choice.KeyTransport))]
+    [JsonDerivedType(typeof(Recipient4Choice.KEK), nameof(Recipient4Choice.KEK))]
+    [JsonDerivedType(
+        typeof(Recipient4Choice.KeyIdentifier),
+        nameof(Recipient4Choice.KeyIdentifier)
+    )]
     [IsoId("_NoPZUWi0EeS87LmvcA55sg")]
     [DisplayName("Recipient 4 Choice")]
-    public abstract partial record Recipient4Choice_
-    {
-    }
+    public abstract record Recipient4Choice_ { }
 }

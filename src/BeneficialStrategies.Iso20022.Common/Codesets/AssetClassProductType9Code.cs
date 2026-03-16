@@ -23,5 +23,4 @@ public enum AssetClassProductType9Code
     [IsoId("_sc03IQnyEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type polypropylene.")]
     Polypropylene = AssetClassProductTypeCode.Polypropylene, // same ordinal as derivation source for type conversions
-    
 }

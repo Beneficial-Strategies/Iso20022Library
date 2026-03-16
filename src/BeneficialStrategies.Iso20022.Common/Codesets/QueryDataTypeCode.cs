@@ -23,7 +23,7 @@ public enum QueryDataTypeCode
     [IsoId("_n6_AkKa-EeSxuMLA5o46jQ")]
     [Description(@"Query for tading data of foreign exchange.")]
     QueryForeignExchangeTradingData,
-    
+
     /// <summary>
     /// Query for tading data of option.
     /// Encoded/decoded by serializers as &quot;QOTD&quot;.
@@ -32,5 +32,4 @@ public enum QueryDataTypeCode
     [IsoId("_oEHucKa-EeSxuMLA5o46jQ")]
     [Description(@"Query for tading data of option.")]
     QueryOptionTradingData,
-    
 }

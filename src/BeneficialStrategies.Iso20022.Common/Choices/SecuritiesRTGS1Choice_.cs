@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecuritiesRTGS1Choice.Indicator))]
     [KnownType(typeof(SecuritiesRTGS1Choice.Proprietary))]
-    [JsonDerivedType(typeof(SecuritiesRTGS1Choice.Indicator),nameof(SecuritiesRTGS1Choice.Indicator))]
-    [JsonDerivedType(typeof(SecuritiesRTGS1Choice.Proprietary),nameof(SecuritiesRTGS1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SecuritiesRTGS1Choice.Indicator),
+        nameof(SecuritiesRTGS1Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesRTGS1Choice.Proprietary),
+        nameof(SecuritiesRTGS1Choice.Proprietary)
+    )]
     [IsoId("_QwBFt9p-Ed-ak6NoX_4Aeg_-613904769")]
     [DisplayName("Securities RTGS 1 Choice")]
-    public abstract partial record SecuritiesRTGS1Choice_
-    {
-    }
+    public abstract record SecuritiesRTGS1Choice_ { }
 }

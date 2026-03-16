@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice
 {
     /// <summary>
@@ -17,19 +17,13 @@ namespace BeneficialStrategies.Iso20022.Choices.GarnishmentType1Choice
     /// </summary>
     [IsoId("_lG0rQ4nnEeOORMXOfBk1Bw")]
     [DisplayName("Code")]
-    public partial record Code : GarnishmentType1Choice_
+    public record Code : GarnishmentType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the garnishment type as published in an external document type code list.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required ExternalGarnishmentType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ExternalGarnishmentType1Code Value { get; init; }
     }
 }

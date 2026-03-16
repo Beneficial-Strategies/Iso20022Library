@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CounterpartyTradeNature7Choice.FinancialInstitution))]
     [KnownType(typeof(CounterpartyTradeNature7Choice.NonFinancialInstitution))]
-    [JsonDerivedType(typeof(CounterpartyTradeNature7Choice.FinancialInstitution),nameof(CounterpartyTradeNature7Choice.FinancialInstitution))]
-    [JsonDerivedType(typeof(CounterpartyTradeNature7Choice.NonFinancialInstitution),nameof(CounterpartyTradeNature7Choice.NonFinancialInstitution))]
+    [JsonDerivedType(
+        typeof(CounterpartyTradeNature7Choice.FinancialInstitution),
+        nameof(CounterpartyTradeNature7Choice.FinancialInstitution)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyTradeNature7Choice.NonFinancialInstitution),
+        nameof(CounterpartyTradeNature7Choice.NonFinancialInstitution)
+    )]
     [IsoId("_-N5Qman9EemdLtwzt4CWxg")]
     [DisplayName("Counterparty Trade Nature 7 Choice")]
-    public abstract partial record CounterpartyTradeNature7Choice_
-    {
-    }
+    public abstract record CounterpartyTradeNature7Choice_ { }
 }

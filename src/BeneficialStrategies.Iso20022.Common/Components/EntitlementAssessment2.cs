@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TkeKUtp-Ed-ak6NoX_4Aeg_-271063564")]
 [DisplayName("Entitlement Assessment")]
-public partial record EntitlementAssessment2
+public record EntitlementAssessment2
 {
-    #nullable enable
-    
     /// <summary>
     /// Date by which the securities should be blocked. This deadline is set by an intermediary.
     /// </summary>
     [IsoId("_TkeKU9p-Ed-ak6NoX_4Aeg_-271063533")]
     [DisplayName("Securities Blocking Deadline")]
     [IsoXmlTag("SctiesBlckgDdln")]
-    public DateFormat2Choice_? SecuritiesBlockingDeadline { get; init; } 
-    
+    public DateFormat2Choice_? SecuritiesBlockingDeadline { get; init; }
+
     /// <summary>
     /// Date by which the securities should be blocked. This deadline is set by the issuer. (STP mode).
     /// </summary>
     [IsoId("_TkeKVNp-Ed-ak6NoX_4Aeg_-271063010")]
     [DisplayName("Securities Blocking STP Deadline")]
     [IsoXmlTag("SctiesBlckgSTPDdln")]
-    public DateFormat2Choice_? SecuritiesBlockingSTPDeadline { get; init; } 
-    
+    public DateFormat2Choice_? SecuritiesBlockingSTPDeadline { get; init; }
+
     /// <summary>
     /// Date by which the securities should be blocked. This deadline is set by the issuer.
     /// </summary>
     [IsoId("_TkeKVdp-Ed-ak6NoX_4Aeg_-271063503")]
     [DisplayName("Securities Blocking Market Deadline")]
     [IsoXmlTag("SctiesBlckgMktDdln")]
-    public DateFormat2Choice_? SecuritiesBlockingMarketDeadline { get; init; } 
-    
+    public DateFormat2Choice_? SecuritiesBlockingMarketDeadline { get; init; }
+
     /// <summary>
     /// Date by which the blocking period for the securities should end.
     /// </summary>
@@ -49,73 +47,69 @@ public partial record EntitlementAssessment2
     [DisplayName("Securities Blocking Period End Date")]
     [IsoXmlTag("SctiesBlckgPrdEndDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SecuritiesBlockingPeriodEndDate { get; init; } 
-    
+    public IsoISODateTime? SecuritiesBlockingPeriodEndDate { get; init; }
+
     /// <summary>
     /// Date at which the positions are struck to note which parties will receive the entitlement, e.g. record date, book close date.
     /// </summary>
     [IsoId("_TkeKV9p-Ed-ak6NoX_4Aeg_-271063132")]
     [DisplayName("Entitlement Fixing Date")]
     [IsoXmlTag("EntitlmntFxgDt")]
-    public DateFormat3Choice_? EntitlementFixingDate { get; init; } 
-    
+    public DateFormat3Choice_? EntitlementFixingDate { get; init; }
+
     /// <summary>
     /// Date by which the securities have to be registered. This deadline is specified by an intermediary.
     /// </summary>
     [IsoId("_TkeKWNp-Ed-ak6NoX_4Aeg_-271062979")]
     [DisplayName("Registration Securities Deadline")]
     [IsoXmlTag("RegnSctiesDdln")]
-    public DateFormat2Choice_? RegistrationSecuritiesDeadline { get; init; } 
-    
+    public DateFormat2Choice_? RegistrationSecuritiesDeadline { get; init; }
+
     /// <summary>
     /// Date by which the securities have to be registered. This deadline is specified by an intermediary (STP mode).
     /// </summary>
     [IsoId("_TkeKWdp-Ed-ak6NoX_4Aeg_-271062957")]
     [DisplayName("Registration Securities STP Deadline")]
     [IsoXmlTag("RegnSctiesSTPDdln")]
-    public DateFormat2Choice_? RegistrationSecuritiesSTPDeadline { get; init; } 
-    
+    public DateFormat2Choice_? RegistrationSecuritiesSTPDeadline { get; init; }
+
     /// <summary>
     /// Date by which the securities have to be registered. This deadline is set by the issuer.
     /// </summary>
     [IsoId("_TknUQNp-Ed-ak6NoX_4Aeg_-271062948")]
     [DisplayName("Registration Securities Market Deadline")]
     [IsoXmlTag("RegnSctiesMktDdln")]
-    public DateFormat2Choice_? RegistrationSecuritiesMarketDeadline { get; init; } 
-    
+    public DateFormat2Choice_? RegistrationSecuritiesMarketDeadline { get; init; }
+
     /// <summary>
     /// Date by which the holder needs to register its intention to participate in the meeting process in order to be allowed to participate in the meeting event. This deadline is specified by an intermediary.
     /// </summary>
     [IsoId("_TknUQdp-Ed-ak6NoX_4Aeg_-271062926")]
     [DisplayName("Registration Participation Deadline")]
     [IsoXmlTag("RegnPrtcptnDdln")]
-    public DateFormat2Choice_? RegistrationParticipationDeadline { get; init; } 
-    
+    public DateFormat2Choice_? RegistrationParticipationDeadline { get; init; }
+
     /// <summary>
     /// Date by which the holder needs to register its intention to participate in the meeting process in order to be allowed to participate in the meeting event. This deadline is specified by an intermediary (STP mode).
     /// </summary>
     [IsoId("_TknUQtp-Ed-ak6NoX_4Aeg_-271062678")]
     [DisplayName("Registration Participation STP Deadline")]
     [IsoXmlTag("RegnPrtcptnSTPDdln")]
-    public DateFormat2Choice_? RegistrationParticipationSTPDeadline { get; init; } 
-    
+    public DateFormat2Choice_? RegistrationParticipationSTPDeadline { get; init; }
+
     /// <summary>
     /// Date by which the holder needs to register its intention to participate in the meeting process in order to be allowed to participate in the meeting event. This deadline is set by the issuer.
     /// </summary>
     [IsoId("_TknUQ9p-Ed-ak6NoX_4Aeg_-271062648")]
     [DisplayName("Registration Participation Market Deadline")]
     [IsoXmlTag("RegnPrtcptnMktDdln")]
-    public DateFormat2Choice_? RegistrationParticipationMarketDeadline { get; init; } 
-    
+    public DateFormat2Choice_? RegistrationParticipationMarketDeadline { get; init; }
+
     /// <summary>
     /// Number of votes assigned to one security.
     /// </summary>
     [IsoId("_TknURNp-Ed-ak6NoX_4Aeg_-271063071")]
     [DisplayName("Entitlement")]
     [IsoXmlTag("Entitlmnt")]
-    public Entitlement1Choice_? Entitlement { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Entitlement1Choice_? Entitlement { get; init; }
 }

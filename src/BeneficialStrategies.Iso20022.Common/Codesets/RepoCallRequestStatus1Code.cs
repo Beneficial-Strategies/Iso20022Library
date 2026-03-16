@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZS5Ftdp-Ed-ak6NoX_4Aeg_-1000214572")]
-[Description(@"Specifies additional information about the status of the repurchase agreement call processed instruction.")]
+[Description(
+    @"Specifies additional information about the status of the repurchase agreement call processed instruction."
+)]
 [DerivedFrom(typeof(RepoCallRequestStatusCode))]
 public enum RepoCallRequestStatus1Code
 {
@@ -23,7 +25,7 @@ public enum RepoCallRequestStatus1Code
     [IsoId("_ZS5Fttp-Ed-ak6NoX_4Aeg_-1000214541")]
     [Description(@"Repurchase agreement call request is acknowledged/accepted.")]
     AcknowledgedAccepted = RepoCallRequestStatusCode.AcknowledgedAccepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Repuchase agreement call request is denied.
     /// Encoded/decoded by serializers as &quot;DEND&quot;.
@@ -32,5 +34,4 @@ public enum RepoCallRequestStatus1Code
     [IsoId("_ZS5Ft9p-Ed-ak6NoX_4Aeg_-1000214284")]
     [Description(@"Repuchase agreement call request is denied.")]
     Denied = RepoCallRequestStatusCode.Denied, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TransactionRequestType1Code
     [IsoId("_X0PrNmKDEeGByYwyG-c4ow")]
     [Description(@"Request is the date and time related to the original transaction numlber.")]
     DateTimeTransaction = TransactionRequestTypeCode.DateTimeTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request is the original receipt.
     /// Encoded/decoded by serializers as &quot;OREC&quot;.
@@ -32,5 +32,4 @@ public enum TransactionRequestType1Code
     [IsoId("_X43shmKDEeGByYwyG-c4ow")]
     [Description(@"Request is the original receipt.")]
     OriginalReceipt = TransactionRequestTypeCode.OriginalReceipt, // same ordinal as derivation source for type conversions
-    
 }

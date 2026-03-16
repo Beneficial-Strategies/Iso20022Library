@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
     /// </summary>
     [IsoId("_xfbL0X5eEea2k7EBUopqxw")]
     [DisplayName("Single Name Credit Default Swap")]
-    public partial record SingleNameCreditDefaultSwap : CreditDefaultSwapsDerivative3Choice_
+    public record SingleNameCreditDefaultSwap : CreditDefaultSwapsDerivative3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Reference entity of a single name credit default swap (CDS) or a derivative on single name CDS.
         /// </summary>
@@ -24,26 +22,22 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditDefaultSwapsDerivative3Cho
         [DisplayName("Sovereign Issuer")]
         [IsoXmlTag("SvrgnIssr")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator SovereignIssuer { get; init; } 
-        
+        public required IsoTrueFalseIndicator SovereignIssuer { get; init; }
+
         /// <summary>
         /// Reference entity of a single name credit default swap (CDS) or a derivative on single name credit default swap (CDS).
         /// </summary>
         [IsoId("_NvBOE35fEea2k7EBUopqxw")]
         [DisplayName("Reference Party")]
         [IsoXmlTag("RefPty")]
-        public DerivativePartyIdentification1Choice_? ReferenceParty { get; init; } 
-        
+        public DerivativePartyIdentification1Choice_? ReferenceParty { get; init; }
+
         /// <summary>
         /// Currency in which the notional is denominated.
         /// </summary>
         [IsoId("_NvBOFX5fEea2k7EBUopqxw")]
         [DisplayName("Notional Currency")]
         [IsoXmlTag("NtnlCcy")]
-        public required ActiveOrHistoricCurrencyCode NotionalCurrency { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ActiveOrHistoricCurrencyCode NotionalCurrency { get; init; }
     }
 }

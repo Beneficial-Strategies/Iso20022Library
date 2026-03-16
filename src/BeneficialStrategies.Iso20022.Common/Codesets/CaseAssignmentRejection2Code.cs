@@ -23,16 +23,18 @@ public enum CaseAssignmentRejection2Code
     [IsoId("_a2IaEtp-Ed-ak6NoX_4Aeg_-2044862916")]
     [Description(@"Underlying instruction can not be found.")]
     UnderlyingPaymentNotFound = CaseAssignmentRejectionCode.UnderlyingPaymentNotFound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).
     /// Encoded/decoded by serializers as &quot;NAUT&quot;.
     /// </summary>
     [EnumMember(Value = "NAUT")]
     [IsoId("_a2IaE9p-Ed-ak6NoX_4Aeg_-2044862899")]
-    [Description(@"Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain).")]
+    [Description(
+        @"Case Assignee is not allowed to investigate on this instruction (eg. Case Assignee is not the next party in the payment chain)."
+    )]
     NotAuthorisedToInvestigate = CaseAssignmentRejectionCode.NotAuthorisedToInvestigate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case has never been assigned before.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
@@ -41,7 +43,7 @@ public enum CaseAssignmentRejection2Code
     [IsoId("_a2IaFNp-Ed-ak6NoX_4Aeg_-2044862857")]
     [Description(@"Case has never been assigned before.")]
     UnknownCase = CaseAssignmentRejectionCode.UnknownCase, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Used when the payment instruction has previously been cancelled or rejected.
     /// Encoded/decoded by serializers as &quot;PCOR&quot;.
@@ -49,6 +51,6 @@ public enum CaseAssignmentRejection2Code
     [EnumMember(Value = "PCOR")]
     [IsoId("_a2IaFdp-Ed-ak6NoX_4Aeg_-2044862530")]
     [Description(@"Used when the payment instruction has previously been cancelled or rejected.")]
-    PaymentPreviouslyCancelledOrRejected = CaseAssignmentRejectionCode.PaymentPreviouslyCancelledOrRejected, // same ordinal as derivation source for type conversions
-    
+    PaymentPreviouslyCancelledOrRejected =
+        CaseAssignmentRejectionCode.PaymentPreviouslyCancelledOrRejected, // same ordinal as derivation source for type conversions
 }

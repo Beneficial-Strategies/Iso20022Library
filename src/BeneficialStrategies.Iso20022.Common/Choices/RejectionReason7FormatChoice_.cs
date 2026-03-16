@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RejectionReason7FormatChoice.Code))]
     [KnownType(typeof(RejectionReason7FormatChoice.Proprietary))]
-    [JsonDerivedType(typeof(RejectionReason7FormatChoice.Code),nameof(RejectionReason7FormatChoice.Code))]
-    [JsonDerivedType(typeof(RejectionReason7FormatChoice.Proprietary),nameof(RejectionReason7FormatChoice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RejectionReason7FormatChoice.Code),
+        nameof(RejectionReason7FormatChoice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(RejectionReason7FormatChoice.Proprietary),
+        nameof(RejectionReason7FormatChoice.Proprietary)
+    )]
     [IsoId("_Rofl2Np-Ed-ak6NoX_4Aeg_-1503733328")]
     [DisplayName("Rejection Reason 7 Format Choice")]
-    public abstract partial record RejectionReason7FormatChoice_
-    {
-    }
+    public abstract record RejectionReason7FormatChoice_ { }
 }

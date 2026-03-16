@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TENctgEcEeCQm6a_G2yO_w_1841833853")]
 [DisplayName("Card Payment Transaction Details")]
-public partial record CardPaymentTransactionDetails5
+public record CardPaymentTransactionDetails5
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency associated with the transaction.
     /// </summary>
     [IsoId("_TENctwEcEeCQm6a_G2yO_w_-2035136")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public required CurrencyCode Currency { get; init; } 
-    
+    public required CurrencyCode Currency { get; init; }
+
     /// <summary>
     /// Total amount of the transaction.
     /// </summary>
     [IsoId("_TENcuAEcEeCQm6a_G2yO_w_758730017")]
     [DisplayName("Total Amount")]
     [IsoXmlTag("TtlAmt")]
-    public required ImpliedCurrencyAndAmount TotalAmount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount TotalAmount { get; init; }
+
     /// <summary>
     /// Transaction authorisation deadline to complete the related payment.
     /// </summary>
@@ -41,8 +39,8 @@ public partial record CardPaymentTransactionDetails5
     [DisplayName("Validity Date")]
     [IsoXmlTag("VldtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidityDate { get; init; } 
-    
+    public IsoISODate? ValidityDate { get; init; }
+
     /// <summary>
     /// Data related to an integrated circuit card application.
     /// </summary>
@@ -50,9 +48,5 @@ public partial record CardPaymentTransactionDetails5
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max10000Binary)]
-    public IsoMax10000Binary? ICCRelatedData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax10000Binary? ICCRelatedData { get; init; }
 }

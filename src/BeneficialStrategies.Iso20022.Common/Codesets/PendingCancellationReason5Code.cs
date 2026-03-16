@@ -21,9 +21,11 @@ public enum PendingCancellationReason5Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_amb5AYluEeavwKddCbm3hg")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV3Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed quantity.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -32,7 +34,7 @@ public enum PendingCancellationReason5Code
     [IsoId("_dkbUIYluEeavwKddCbm3hg")]
     [Description(@"Unrecognised or invalid instructed quantity.")]
     QuantityRejection = RejectionReasonV3Code.QuantityRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed cash amount.
     /// Encoded/decoded by serializers as &quot;DQCS&quot;.
@@ -41,7 +43,7 @@ public enum PendingCancellationReason5Code
     [IsoId("_jurP4YluEeavwKddCbm3hg")]
     [Description(@"Unrecognised or invalid instructed cash amount.")]
     AmountRejection = RejectionReasonV3Code.AmountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -50,7 +52,7 @@ public enum PendingCancellationReason5Code
     [IsoId("_lj66QYluEeavwKddCbm3hg")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonV3Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +61,4 @@ public enum PendingCancellationReason5Code
     [IsoId("_sLLiIYluEeavwKddCbm3hg")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV3Code.Other, // same ordinal as derivation source for type conversions
-    
 }

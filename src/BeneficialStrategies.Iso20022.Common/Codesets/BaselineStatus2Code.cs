@@ -21,9 +21,11 @@ public enum BaselineStatus2Code
     /// </summary>
     [EnumMember(Value = "COMP")]
     [IsoId("_bckvBtp-Ed-ak6NoX_4Aeg_-492223407")]
-    [Description(@"State of a baseline, after establishment, when all match instructions have been processed, and no such instruction is allowed anymore.")]
+    [Description(
+        @"State of a baseline, after establishment, when all match instructions have been processed, and no such instruction is allowed anymore."
+    )]
     Complete = BaselineStatusCode.Complete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Final state of a baseline, in which only reporting is allowed.
     /// Encoded/decoded by serializers as &quot;CLSD&quot;.
@@ -32,14 +34,15 @@ public enum BaselineStatus2Code
     [IsoId("_bcugANp-Ed-ak6NoX_4Aeg_-492223372")]
     [Description(@"Final state of a baseline, in which only reporting is allowed.")]
     Closed = BaselineStatusCode.Closed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// State of a baseline, after establishment, when one or more instructions (eg, amendment request, data set submission) have been processed.
     /// Encoded/decoded by serializers as &quot;ACTV&quot;.
     /// </summary>
     [EnumMember(Value = "ACTV")]
     [IsoId("_bcugAdp-Ed-ak6NoX_4Aeg_-1284169111")]
-    [Description(@"State of a baseline, after establishment, when one or more instructions (eg, amendment request, data set submission) have been processed.")]
+    [Description(
+        @"State of a baseline, after establishment, when one or more instructions (eg, amendment request, data set submission) have been processed."
+    )]
     Active = BaselineStatusCode.Active, // same ordinal as derivation source for type conversions
-    
 }

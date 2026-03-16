@@ -23,7 +23,7 @@ public enum PriceStatus1Code
     [IsoId("_O0HaIezYEeSBf_ghFpb9rQ")]
     [Description(@"Price is pending.")]
     Pending = PriceStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No price for transaction (e.g. transfer between accounts).
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -32,5 +32,4 @@ public enum PriceStatus1Code
     [IsoId("_Cc6kEI-TEeWtN7rsKJRs8Q")]
     [Description(@"No price for transaction (e.g. transfer between accounts).")]
     NotApplicable = PriceStatusCode.NotApplicable, // same ordinal as derivation source for type conversions
-    
 }

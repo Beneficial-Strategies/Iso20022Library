@@ -21,16 +21,19 @@ public enum PartialSettlement2Code
     /// </summary>
     [EnumMember(Value = "PAIN")]
     [IsoId("_POj5gUAuEeGeCKosDOIVvQ_-493303667")]
-    [Description(@"Confirmation is for partial settlement. Part of the transaction remains unsettled.")]
+    [Description(
+        @"Confirmation is for partial settlement. Part of the transaction remains unsettled."
+    )]
     PartialSettlement = PartialSettlementV2Code.PartialSettlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Confirmation is for partial settlement. No additional settlement will take place.
     /// Encoded/decoded by serializers as &quot;PARC&quot;.
     /// </summary>
     [EnumMember(Value = "PARC")]
     [IsoId("_POtDcEAuEeGeCKosDOIVvQ_-607142733")]
-    [Description(@"Confirmation is for partial settlement. No additional settlement will take place.")]
+    [Description(
+        @"Confirmation is for partial settlement. No additional settlement will take place."
+    )]
     PartiallyConfirmed = PartialSettlementV2Code.PartiallyConfirmed, // same ordinal as derivation source for type conversions
-    
 }

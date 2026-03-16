@@ -23,7 +23,7 @@ public enum CollateralEntryType1Code
     [IsoId("_Qe13kXvLEemW9qhOy0scyg")]
     [Description(@"Financial Instruments or amount are to be delivered out of Party A's account.|")]
     Delivered = EntryTypeCode.Delivered, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial Instruments  or amount are to be received in Party A&apos;s account.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,5 +32,4 @@ public enum CollateralEntryType1Code
     [IsoId("_QjH6oXvLEemW9qhOy0scyg")]
     [Description(@"Financial Instruments  or amount are to be received in Party A's account.|")]
     Received = EntryTypeCode.Received, // same ordinal as derivation source for type conversions
-    
 }

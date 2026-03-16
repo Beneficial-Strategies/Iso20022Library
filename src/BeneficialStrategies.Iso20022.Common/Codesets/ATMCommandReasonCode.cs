@@ -23,7 +23,7 @@ public enum ATMCommandReasonCode
     [IsoId("_vsp7cItGEeSxlKlAGYErFg")]
     [Description(@"Request the status of or action from the ATM to perform a diagnostic.")]
     Diagnostic,
-    
+
     /// <summary>
     /// Supervise the ATM.
     /// Encoded/decoded by serializers as &quot;MONI&quot;.
@@ -32,7 +32,7 @@ public enum ATMCommandReasonCode
     [IsoId("_yRyxsItGEeSxlKlAGYErFg")]
     [Description(@"Supervise the ATM.")]
     Monitoring,
-    
+
     /// <summary>
     /// Security error.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -41,7 +41,7 @@ public enum ATMCommandReasonCode
     [IsoId("_02Aa4ItGEeSxlKlAGYErFg")]
     [Description(@"Security error.")]
     SecurityError,
-    
+
     /// <summary>
     /// Desynchronisation of dialogue between entities.
     /// Encoded/decoded by serializers as &quot;SYNC&quot;.
@@ -50,7 +50,7 @@ public enum ATMCommandReasonCode
     [IsoId("_3S6iMItGEeSxlKlAGYErFg")]
     [Description(@"Desynchronisation of dialogue between entities.")]
     Synchronisation,
-    
+
     /// <summary>
     /// Update the ATM.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -59,5 +59,4 @@ public enum ATMCommandReasonCode
     [IsoId("_5ZxhAItGEeSxlKlAGYErFg")]
     [Description(@"Update the ATM.")]
     Update,
-    
 }

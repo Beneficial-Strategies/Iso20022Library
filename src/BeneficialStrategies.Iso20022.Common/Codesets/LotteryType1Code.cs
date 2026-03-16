@@ -23,14 +23,15 @@ public enum LotteryType1Code
     [IsoId("_afolotp-Ed-ak6NoX_4Aeg_-1740647868")]
     [Description(@"Original lottery that has been announced for a specific amount and date.")]
     OriginalLotteryNotification = LotteryTypeCode.OriginalLotteryNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Supplemental or additional quantity called on a previously announced original lottery.
     /// Encoded/decoded by serializers as &quot;SUPP&quot;.
     /// </summary>
     [EnumMember(Value = "SUPP")]
     [IsoId("_afolo9p-Ed-ak6NoX_4Aeg_-1740647840")]
-    [Description(@"Supplemental or additional quantity called on a previously announced original lottery.")]
+    [Description(
+        @"Supplemental or additional quantity called on a previously announced original lottery."
+    )]
     SupplementalLotteryNotification = LotteryTypeCode.SupplementalLotteryNotification, // same ordinal as derivation source for type conversions
-    
 }

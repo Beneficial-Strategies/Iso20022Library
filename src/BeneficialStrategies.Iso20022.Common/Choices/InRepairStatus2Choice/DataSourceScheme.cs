@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus2Choice
     /// </summary>
     [IsoId("_Ut7sxdp-Ed-ak6NoX_4Aeg_1808008088")]
     [DisplayName("Data Source Scheme")]
-    public partial record DataSourceScheme : InRepairStatus2Choice_
+    public record DataSourceScheme : InRepairStatus2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification assigned by an institution.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus2Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
+
         /// <summary>
         /// Name of the identification scheme.
         /// </summary>
@@ -34,9 +32,9 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus2Choice
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? SchemeName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? SchemeName { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -44,11 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InRepairStatus2Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Issuer { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Issuer { get; init; }
     }
 }

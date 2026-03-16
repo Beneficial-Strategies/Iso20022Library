@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SfeRI9p-Ed-ak6NoX_4Aeg_-587624791")]
 [DisplayName("Safekeeping Place Type And Text")]
-public partial record SafekeepingPlaceTypeAndText3
+public record SafekeepingPlaceTypeAndText3
 {
-    #nullable enable
-    
     /// <summary>
     /// Place of safekeeping as a code.
     /// </summary>
     [IsoId("_SfeRJNp-Ed-ak6NoX_4Aeg_-587624774")]
     [DisplayName("Safekeeping Place Type")]
     [IsoXmlTag("SfkpgPlcTp")]
-    public required SafekeepingPlace3Code SafekeepingPlaceType { get; init; } 
-    
+    public required SafekeepingPlace3Code SafekeepingPlaceType { get; init; }
+
     /// <summary>
     /// Additional information about the place of safekeeping.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record SafekeepingPlaceTypeAndText3
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Identification { get; init; }
 }

@@ -23,5 +23,4 @@ public enum ValidationRuleNarrative1Code
     [IsoId("_MEQ0kR-1EeuxStysDTgLiw")]
     [Description(@"Narrative.")]
     Narrative = ValidationRuleCode.Narrative, // same ordinal as derivation source for type conversions
-    
 }

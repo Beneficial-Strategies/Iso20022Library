@@ -21,9 +21,11 @@ public enum TransactionAction1Code
     /// </summary>
     [EnumMember(Value = "STAR")]
     [IsoId("__DTjAduTEeiB5uLfkg9ZJA")]
-    [Description(@"Start a transaction by a swipe ahead mechanism, with the services which are enabled.")]
+    [Description(
+        @"Start a transaction by a swipe ahead mechanism, with the services which are enabled."
+    )]
     StartTransaction = TransactionActionCode.StartTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Keep quite after a swipe ahead mechanism.
     /// Encoded/decoded by serializers as &quot;STOP&quot;.
@@ -32,5 +34,4 @@ public enum TransactionAction1Code
     [IsoId("_L9kT0ezIEeiojesOXOKoug")]
     [Description(@"Keep quite after a swipe ahead mechanism.")]
     Stop = TransactionActionCode.Stop, // same ordinal as derivation source for type conversions
-    
 }

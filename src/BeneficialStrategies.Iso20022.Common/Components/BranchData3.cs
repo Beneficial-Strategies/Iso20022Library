@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-2V8QW4-EeiU9cctagi5ow")]
 [DisplayName("Branch Data")]
-public partial record BranchData3
+public record BranchData3
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identification of a branch of a financial institution.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record BranchData3
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Identification { get; init; }
+
     /// <summary>
     /// Legal entity identification for the branch of the financial institution.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record BranchData3
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
+    public IsoLEIIdentifier? LEI { get; init; }
+
     /// <summary>
     /// Name by which an agent is known and which is usually used to identify that agent.
     /// </summary>
@@ -44,18 +42,14 @@ public partial record BranchData3
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Name { get; init; }
+
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services.
     /// </summary>
     [IsoId("__CsWN24-EeiU9cctagi5ow")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
-    public PostalAddress24? PostalAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PostalAddress24? PostalAddress { get; init; }
 }

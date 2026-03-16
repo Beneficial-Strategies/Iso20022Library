@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_CjsMwIqgEeS4a4abTJTSSw")]
 [Description(@"Type of items the cash-in cassette.")]
-[Derivations(typeof(ATMNoteType1Code),typeof(ATMNoteType2Code))]
+[Derivations(typeof(ATMNoteType1Code), typeof(ATMNoteType2Code))]
 public enum ATMNoteTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ATMNoteTypeCode
     [IsoId("_GGMqMIqgEeS4a4abTJTSSw")]
     [Description(@"All fit bank note types.")]
     All,
-    
+
     /// <summary>
     /// Detected counterfeit notes.
     /// Encoded/decoded by serializers as &quot;CNTR&quot;.
@@ -32,7 +32,7 @@ public enum ATMNoteTypeCode
     [IsoId("_IqGxYIqgEeS4a4abTJTSSw")]
     [Description(@"Detected counterfeit notes.")]
     Counterfeit,
-    
+
     /// <summary>
     /// All types of fit bank notes specified in an individual list.
     /// Encoded/decoded by serializers as &quot;IDVD&quot;.
@@ -41,7 +41,7 @@ public enum ATMNoteTypeCode
     [IsoId("_LepVkIqgEeS4a4abTJTSSw")]
     [Description(@"All types of fit bank notes specified in an individual list.")]
     Individual,
-    
+
     /// <summary>
     /// Suspected counterfeit notes.
     /// Encoded/decoded by serializers as &quot;SCNT&quot;.
@@ -50,7 +50,7 @@ public enum ATMNoteTypeCode
     [IsoId("_N3-kcIqgEeS4a4abTJTSSw")]
     [Description(@"Suspected counterfeit notes.")]
     SuspectedCounterfeit,
-    
+
     /// <summary>
     /// Unfit bank notes (unacceptable quality).
     /// Encoded/decoded by serializers as &quot;UNFT&quot;.
@@ -59,7 +59,7 @@ public enum ATMNoteTypeCode
     [IsoId("_Q3BIcIqgEeS4a4abTJTSSw")]
     [Description(@"Unfit bank notes (unacceptable quality).")]
     Unfit,
-    
+
     /// <summary>
     /// Fit bank notes.
     /// Encoded/decoded by serializers as &quot;FITN&quot;.
@@ -68,7 +68,7 @@ public enum ATMNoteTypeCode
     [IsoId("_K5jPAIqhEeS4a4abTJTSSw")]
     [Description(@"Fit bank notes.")]
     Fit,
-    
+
     /// <summary>
     /// Fit and unfit bank notes, if fitness cannot be determined.
     /// Encoded/decoded by serializers as &quot;FITU&quot;.
@@ -77,7 +77,7 @@ public enum ATMNoteTypeCode
     [IsoId("_OmVCwIqhEeS4a4abTJTSSw")]
     [Description(@"Fit and unfit bank notes, if fitness cannot be determined.")]
     FitAndUnfit,
-    
+
     /// <summary>
     /// Notes stained by dye pack.
     /// Encoded/decoded by serializers as &quot;NTRL&quot;.
@@ -86,7 +86,7 @@ public enum ATMNoteTypeCode
     [IsoId("_RZ4vgIqhEeS4a4abTJTSSw")]
     [Description(@"Notes stained by dye pack.")]
     Neutralised,
-    
+
     /// <summary>
     /// Suspect notes.
     /// Encoded/decoded by serializers as &quot;SPCT&quot;.
@@ -95,7 +95,7 @@ public enum ATMNoteTypeCode
     [IsoId("_T9gi0IqhEeS4a4abTJTSSw")]
     [Description(@"Suspect notes.")]
     Suspect,
-    
+
     /// <summary>
     /// Unrecognised notes.
     /// Encoded/decoded by serializers as &quot;UNRG&quot;.
@@ -104,5 +104,4 @@ public enum ATMNoteTypeCode
     [IsoId("_XNiJIIqhEeS4a4abTJTSSw")]
     [Description(@"Unrecognised notes.")]
     Unrecognised,
-    
 }

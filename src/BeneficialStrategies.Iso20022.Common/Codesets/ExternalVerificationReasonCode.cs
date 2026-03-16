@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_jcPvQBLeEeumtumXS98aGg")]
-[Description(@"Specifies the external verification reason code, as published in an external verification code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external verification reason code, as published in an external verification code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalVerificationReason1Code))]
 public enum ExternalVerificationReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalVerificationReasonCode
     [IsoId("_uG8YjPRYEeuLhpyIdtJzwg")]
     [Description(@"Account number provided in the request is invalid or missing.")]
     IncorrectAccountNumber,
-    
+
     /// <summary>
     /// Agent identification provided in the request is incorrect
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
@@ -33,7 +35,7 @@ public enum ExternalVerificationReasonCode
     [IsoId("_uHFicPRYEeuLhpyIdtJzwg")]
     [Description(@"Agent identification provided in the request is incorrect")]
     IncorrectAgent,
-    
+
     /// <summary>
     /// Request is a duplicate of another request
     /// Encoded/decoded by serializers as &quot;DUPL&quot;.
@@ -42,5 +44,4 @@ public enum ExternalVerificationReasonCode
     [IsoId("_uHFic_RYEeuLhpyIdtJzwg")]
     [Description(@"Request is a duplicate of another request")]
     DuplicateRequest,
-    
 }

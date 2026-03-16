@@ -23,7 +23,7 @@ public enum ClearingMethod2Code
     [IsoId("_CO0dUX0lEemfrNOe0zHQyg")]
     [Description(@"Day clearing.")]
     Day = ClearingMethodCode.Day, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing to be deferred in time.
     /// Encoded/decoded by serializers as &quot;DFRD&quot;.
@@ -32,7 +32,7 @@ public enum ClearingMethod2Code
     [IsoId("_CO0dU30lEemfrNOe0zHQyg")]
     [Description(@"Clearing to be deferred in time.")]
     Deferred = ClearingMethodCode.Deferred, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing for instant payments and transfers.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -41,7 +41,7 @@ public enum ClearingMethod2Code
     [IsoId("_CO0dVX0lEemfrNOe0zHQyg")]
     [Description(@"Clearing for instant payments and transfers.")]
     Instant = ClearingMethodCode.Instant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of clearing method defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum ClearingMethod2Code
     [IsoId("_CO0dV30lEemfrNOe0zHQyg")]
     [Description(@"Other type of clearing method defined at national level.")]
     OtherNational = ClearingMethodCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of clearing method defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum ClearingMethod2Code
     [IsoId("_CO0dWX0lEemfrNOe0zHQyg")]
     [Description(@"Other type of clearing method defined at private level.")]
     OtherPrivate = ClearingMethodCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing done in real time.
     /// Encoded/decoded by serializers as &quot;RLTM&quot;.
@@ -68,5 +68,4 @@ public enum ClearingMethod2Code
     [IsoId("_CO0dW30lEemfrNOe0zHQyg")]
     [Description(@"Clearing done in real time.")]
     RealTime = ClearingMethodCode.RealTime, // same ordinal as derivation source for type conversions
-    
 }

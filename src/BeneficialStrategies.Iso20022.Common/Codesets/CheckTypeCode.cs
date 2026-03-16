@@ -23,7 +23,7 @@ public enum CheckTypeCode
     [IsoId("_OZCGwNtbEeipuvJHTHIw9A")]
     [Description(@"The check belongs to an individual.")]
     PersonalCheck,
-    
+
     /// <summary>
     /// The check belongs to a Company or a professional entity.
     /// Encoded/decoded by serializers as &quot;BUSI&quot;.
@@ -32,7 +32,7 @@ public enum CheckTypeCode
     [IsoId("_RSSy4NtbEeipuvJHTHIw9A")]
     [Description(@"The check belongs to a Company or a professional entity.")]
     BusinessCheck,
-    
+
     /// <summary>
     /// The check is guaranteed by a bank.
     /// Encoded/decoded by serializers as &quot;BANK&quot;.
@@ -41,7 +41,7 @@ public enum CheckTypeCode
     [IsoId("_UmnDUNtbEeipuvJHTHIw9A")]
     [Description(@"The check is guaranteed by a bank.")]
     BankCheck,
-    
+
     /// <summary>
     /// Check issued by a company for the employees.
     /// Encoded/decoded by serializers as &quot;PAYR&quot;.
@@ -50,7 +50,7 @@ public enum CheckTypeCode
     [IsoId("_YQXYQNtbEeipuvJHTHIw9A")]
     [Description(@"Check issued by a company for the employees.")]
     PayrollCheck,
-    
+
     /// <summary>
     /// Check issued by Government.
     /// Encoded/decoded by serializers as &quot;GOVC&quot;.
@@ -59,5 +59,4 @@ public enum CheckTypeCode
     [IsoId("_bkxIQNtbEeipuvJHTHIw9A")]
     [Description(@"Check issued by Government.")]
     GovernmentCheck,
-    
 }

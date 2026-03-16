@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_vnuScBZZEeiwvuY-sPnsNg")]
 [Description(@"Type of additional service")]
-[Derivations(typeof(AdditionalServiceType1Code),typeof(AdditionalServiceType2Code))]
+[Derivations(typeof(AdditionalServiceType1Code), typeof(AdditionalServiceType2Code))]
 public enum AdditionalServiceTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg0BZZEeiwvuY-sPnsNg")]
     [Description(@"Card activation")]
     CardActivation,
-    
+
     /// <summary>
     /// Purchase of goods or services with cashback
     /// Encoded/decoded by serializers as &quot;CSHB&quot;.
@@ -32,7 +32,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg0RZZEeiwvuY-sPnsNg")]
     [Description(@"Purchase of goods or services with cashback")]
     CashBack,
-    
+
     /// <summary>
     /// Amount and notes values are chosen by the customer
     /// Encoded/decoded by serializers as &quot;CSWD&quot;.
@@ -41,7 +41,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg0xZZEeiwvuY-sPnsNg")]
     [Description(@"Amount and notes values are chosen by the customer")]
     ChosenWithdrawal,
-    
+
     /// <summary>
     /// Dynamic Currency Conversion (DCC)
     /// Encoded/decoded by serializers as &quot;DCCV&quot;.
@@ -50,7 +50,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg1BZZEeiwvuY-sPnsNg")]
     [Description(@"Dynamic Currency Conversion (DCC)")]
     DCC,
-    
+
     /// <summary>
     /// Instant payment from a cardholder&apos;s account to an acceptor&apos;s account
     /// Encoded/decoded by serializers as &quot;INTP&quot;.
@@ -59,7 +59,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg2BZZEeiwvuY-sPnsNg")]
     [Description(@"Instant payment from a cardholder's account to an acceptor's account")]
     InstantPayment,
-    
+
     /// <summary>
     /// Instant transfer of funds from a payer&apos;s account to a payee&apos;s account.
     /// Encoded/decoded by serializers as &quot;INTT&quot;.
@@ -68,7 +68,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg2RZZEeiwvuY-sPnsNg")]
     [Description(@"Instant transfer of funds from a payer's account to a payee's account.")]
     InstantTransfer,
-    
+
     /// <summary>
     /// Loyalty services
     /// Encoded/decoded by serializers as &quot;LOYT&quot;.
@@ -77,7 +77,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg2xZZEeiwvuY-sPnsNg")]
     [Description(@"Loyalty services")]
     Loyalty,
-    
+
     /// <summary>
     /// Other type of additional service at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -86,7 +86,7 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg3hZZEeiwvuY-sPnsNg")]
     [Description(@"Other type of additional service at national level")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of additional service at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -95,16 +95,18 @@ public enum AdditionalServiceTypeCode
     [IsoId("_3fUg3xZZEeiwvuY-sPnsNg")]
     [Description(@"Other type of additional service at private level")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Withdrawal transaction was pre-authorised by another channel (amount could be absent).
     /// Encoded/decoded by serializers as &quot;PRST&quot;.
     /// </summary>
     [EnumMember(Value = "PRST")]
     [IsoId("_3fUg4RZZEeiwvuY-sPnsNg")]
-    [Description(@"Withdrawal transaction was pre-authorised by another channel (amount could be absent).")]
+    [Description(
+        @"Withdrawal transaction was pre-authorised by another channel (amount could be absent)."
+    )]
     PreStagedTransaction,
-    
+
     /// <summary>
     /// Return the account balance with the transaction.
     /// Encoded/decoded by serializers as &quot;BALC&quot;.
@@ -113,5 +115,4 @@ public enum AdditionalServiceTypeCode
     [IsoId("_mxsHgJ1LEeublrfU-wN95w")]
     [Description(@"Return the account balance with the transaction.")]
     AccountBalance,
-    
 }

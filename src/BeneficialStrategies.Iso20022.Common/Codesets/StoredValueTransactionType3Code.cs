@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_b2Sp0Y8UEe6r6f2NSkdeiA")]
-[Description(@"Identification of operation to proceed on the stored value account or the stored value card.")]
+[Description(
+    @"Identification of operation to proceed on the stored value account or the stored value card."
+)]
 [DerivedFrom(typeof(StoredValueTransactionTypeCode))]
 public enum StoredValueTransactionType3Code
 {
@@ -104,5 +106,4 @@ public enum StoredValueTransactionType3Code
     [IsoId("")]
     [Description(@"Unload the account.")]
     Unload = StoredValueTransactionTypeCode.Unload, // same ordinal as derivation source for type conversions
-
 }

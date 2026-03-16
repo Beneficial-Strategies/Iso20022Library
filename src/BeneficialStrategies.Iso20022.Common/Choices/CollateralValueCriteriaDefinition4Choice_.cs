@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CollateralValueCriteriaDefinition4Choice.NewCriteria))]
     [KnownType(typeof(CollateralValueCriteriaDefinition4Choice.QueryName))]
-    [JsonDerivedType(typeof(CollateralValueCriteriaDefinition4Choice.NewCriteria),nameof(CollateralValueCriteriaDefinition4Choice.NewCriteria))]
-    [JsonDerivedType(typeof(CollateralValueCriteriaDefinition4Choice.QueryName),nameof(CollateralValueCriteriaDefinition4Choice.QueryName))]
+    [JsonDerivedType(
+        typeof(CollateralValueCriteriaDefinition4Choice.NewCriteria),
+        nameof(CollateralValueCriteriaDefinition4Choice.NewCriteria)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralValueCriteriaDefinition4Choice.QueryName),
+        nameof(CollateralValueCriteriaDefinition4Choice.QueryName)
+    )]
     [IsoId("_x0dSUTEyEe6g-ffJsqGiSA")]
     [DisplayName("Collateral Value Criteria Definition4Choice")]
-    public abstract partial record CollateralValueCriteriaDefinition4Choice_
-    {
-    }
+    public abstract record CollateralValueCriteriaDefinition4Choice_ { }
 }

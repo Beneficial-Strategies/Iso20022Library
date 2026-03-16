@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bqlV2Np-Ed-ak6NoX_4Aeg_1424424749")]
-[Description(@"Refer to an account management instruction ie, either an account opening instruction or an account modification instruction.")]
+[Description(
+    @"Refer to an account management instruction ie, either an account opening instruction or an account modification instruction."
+)]
 [DerivedFrom(typeof(AccountManagementTypeCode))]
 public enum AccountManagementType1Code
 {
@@ -23,7 +25,7 @@ public enum AccountManagementType1Code
     [IsoId("_bqvG0Np-Ed-ak6NoX_4Aeg_1776286854")]
     [Description(@"Refers to an account opening instruction message.")]
     AccountOpening = AccountManagementTypeCode.AccountOpening, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refers to an account modification instruction message.
     /// Encoded/decoded by serializers as &quot;ACCM&quot;.
@@ -32,5 +34,4 @@ public enum AccountManagementType1Code
     [IsoId("_bqvG0dp-Ed-ak6NoX_4Aeg_1776286907")]
     [Description(@"Refers to an account modification instruction message.")]
     AccountModification = AccountManagementTypeCode.AccountModification, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NumberOrPercentage1Choice.ThresholdPercentage))]
     [KnownType(typeof(NumberOrPercentage1Choice.ThresholdNumber))]
-    [JsonDerivedType(typeof(NumberOrPercentage1Choice.ThresholdPercentage),nameof(NumberOrPercentage1Choice.ThresholdPercentage))]
-    [JsonDerivedType(typeof(NumberOrPercentage1Choice.ThresholdNumber),nameof(NumberOrPercentage1Choice.ThresholdNumber))]
+    [JsonDerivedType(
+        typeof(NumberOrPercentage1Choice.ThresholdPercentage),
+        nameof(NumberOrPercentage1Choice.ThresholdPercentage)
+    )]
+    [JsonDerivedType(
+        typeof(NumberOrPercentage1Choice.ThresholdNumber),
+        nameof(NumberOrPercentage1Choice.ThresholdNumber)
+    )]
     [IsoId("_U1n_kK4pEemG7MmivSuE5g")]
     [DisplayName("Number Or Percentage 1 Choice")]
-    public abstract partial record NumberOrPercentage1Choice_
-    {
-    }
+    public abstract record NumberOrPercentage1Choice_ { }
 }

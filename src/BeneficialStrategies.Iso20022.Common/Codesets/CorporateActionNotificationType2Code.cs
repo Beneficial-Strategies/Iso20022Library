@@ -21,9 +21,11 @@ public enum CorporateActionNotificationType2Code
     /// </summary>
     [EnumMember(Value = "WITH")]
     [IsoId("_bLJAwdp-Ed-ak6NoX_4Aeg_746682216")]
-    [Description(@"Notification sent to void a previously sent notification due to the withdrawal of the event by the issuer.")]
+    [Description(
+        @"Notification sent to void a previously sent notification due to the withdrawal of the event by the issuer."
+    )]
     Withrawal = CorporateActionNotificationTypeCode.Withrawal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification requesting the cancellation of a previously sent notification.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -32,5 +34,4 @@ public enum CorporateActionNotificationType2Code
     [IsoId("_bLJAwtp-Ed-ak6NoX_4Aeg_746682237")]
     [Description(@"Notification requesting the cancellation of a previously sent notification.")]
     Cancellation = CorporateActionNotificationTypeCode.Cancellation, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(IntermediateSecuritiesDistributionTypeFormat1Choice.Code))]
     [KnownType(typeof(IntermediateSecuritiesDistributionTypeFormat1Choice.Proprietary))]
-    [JsonDerivedType(typeof(IntermediateSecuritiesDistributionTypeFormat1Choice.Code),nameof(IntermediateSecuritiesDistributionTypeFormat1Choice.Code))]
-    [JsonDerivedType(typeof(IntermediateSecuritiesDistributionTypeFormat1Choice.Proprietary),nameof(IntermediateSecuritiesDistributionTypeFormat1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(IntermediateSecuritiesDistributionTypeFormat1Choice.Code),
+        nameof(IntermediateSecuritiesDistributionTypeFormat1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(IntermediateSecuritiesDistributionTypeFormat1Choice.Proprietary),
+        nameof(IntermediateSecuritiesDistributionTypeFormat1Choice.Proprietary)
+    )]
     [IsoId("_Q3Unktp-Ed-ak6NoX_4Aeg_1110084007")]
     [DisplayName("Intermediate Securities Distribution Type Format 1 Choice")]
-    public abstract partial record IntermediateSecuritiesDistributionTypeFormat1Choice_
-    {
-    }
+    public abstract record IntermediateSecuritiesDistributionTypeFormat1Choice_ { }
 }

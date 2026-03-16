@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_beXewNp-Ed-ak6NoX_4Aeg_-83762235")]
-[Description(@"Specifies whether best execution rules as defined in the EU MiFID directive were followed for a transaction.")]
+[Description(
+    @"Specifies whether best execution rules as defined in the EU MiFID directive were followed for a transaction."
+)]
 [DerivedFrom(typeof(BestExecutionCode))]
 public enum BestExecution1Code
 {
@@ -23,5 +25,4 @@ public enum BestExecution1Code
     [IsoId("_beXewdp-Ed-ak6NoX_4Aeg_47375840")]
     [Description(@"Best execution rules were followed.")]
     Best = BestExecutionCode.Best, // same ordinal as derivation source for type conversions
-    
 }

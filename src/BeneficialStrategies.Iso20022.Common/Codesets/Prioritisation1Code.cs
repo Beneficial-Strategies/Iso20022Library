@@ -23,7 +23,7 @@ public enum Prioritisation1Code
     [IsoId("_aKBiAdp-Ed-ak6NoX_4Aeg_1628857705")]
     [Description(@"None of the sides should be prioritised.")]
     None = PrioritisationCode.None, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buy side is prioritized.
     /// Encoded/decoded by serializers as &quot;BSPR&quot;.
@@ -32,7 +32,7 @@ public enum Prioritisation1Code
     [IsoId("_aKBiAtp-Ed-ak6NoX_4Aeg_1628857765")]
     [Description(@"Buy side is prioritized.")]
     BuySide = PrioritisationCode.BuySide, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sell side is prioritised.
     /// Encoded/decoded by serializers as &quot;SSPR&quot;.
@@ -41,5 +41,4 @@ public enum Prioritisation1Code
     [IsoId("_aKBiA9p-Ed-ak6NoX_4Aeg_1628858017")]
     [Description(@"Sell side is prioritised.")]
     SellSide = PrioritisationCode.SellSide, // same ordinal as derivation source for type conversions
-    
 }

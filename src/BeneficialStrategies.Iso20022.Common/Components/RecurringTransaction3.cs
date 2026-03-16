@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hH4hcK4wEeWpsoxRhdX-8A")]
 [DisplayName("Recurring Transaction")]
-public partial record RecurringTransaction3
+public record RecurringTransaction3
 {
-    #nullable enable
-    
     /// <summary>
     /// Date of first transfer.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record RecurringTransaction3
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate StartDate { get; init; } 
-    
+    public required IsoISODate StartDate { get; init; }
+
     /// <summary>
     /// Number of transfers to perform.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record RecurringTransaction3
     [DisplayName("Number Of Occurrences")]
     [IsoXmlTag("NbOfOcrncs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfOccurrences { get; init; } 
-    
+    public IsoNumber? NumberOfOccurrences { get; init; }
+
     /// <summary>
     /// Date of last transfer.
     /// </summary>
@@ -43,16 +41,16 @@ public partial record RecurringTransaction3
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EndDate { get; init; } 
-    
+    public required IsoISODate EndDate { get; init; }
+
     /// <summary>
     /// Period of the recurring transfer.
     /// </summary>
     [IsoId("_hUsOZ64wEeWpsoxRhdX-8A")]
     [DisplayName("Period Unit")]
     [IsoXmlTag("PrdUnit")]
-    public Frequency3Code? PeriodUnit { get; init; } 
-    
+    public Frequency3Code? PeriodUnit { get; init; }
+
     /// <summary>
     /// Day of the period when the transfer will be performed.
     /// </summary>
@@ -60,9 +58,5 @@ public partial record RecurringTransaction3
     [DisplayName("Interval Day")]
     [IsoXmlTag("IntrvlDay")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? IntervalDay { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoNumber? IntervalDay { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TXznW9p-Ed-ak6NoX_4Aeg_-1470635815")]
 [DisplayName("Corporate Action Rate")]
-public partial record CorporateActionRate8
+public record CorporateActionRate8
 {
-    #nullable enable
-    
     /// <summary>
     /// Rate proposed in a remarketing of variable rate notes.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record CorporateActionRate8
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ProposedRate { get; init; } 
-    
+    public IsoPercentageRate? ProposedRate { get; init; }
+
     /// <summary>
     /// Rate of allowed over-subscription.
     /// </summary>
     [IsoId("_TX8xQNp-Ed-ak6NoX_4Aeg_-856494647")]
     [DisplayName("Oversubscription Rate")]
     [IsoXmlTag("OvrsbcptRate")]
-    public RateAndAmountFormat12Choice_? OversubscriptionRate { get; init; } 
-    
+    public RateAndAmountFormat12Choice_? OversubscriptionRate { get; init; }
+
     /// <summary>
     /// Requested tax rate in case of breakdown of tax rate, for example, used for adjustment of tax rate. This is the new requested applicable rate.
     /// </summary>
@@ -42,9 +40,5 @@ public partial record CorporateActionRate8
     [DisplayName("Requested Taxation Rate")]
     [IsoXmlTag("ReqdTaxtnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? RequestedTaxationRate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? RequestedTaxationRate { get; init; }
 }

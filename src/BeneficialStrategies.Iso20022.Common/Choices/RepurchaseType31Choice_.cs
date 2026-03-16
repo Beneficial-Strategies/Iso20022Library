@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RepurchaseType31Choice.Code))]
     [KnownType(typeof(RepurchaseType31Choice.Proprietary))]
-    [JsonDerivedType(typeof(RepurchaseType31Choice.Code),nameof(RepurchaseType31Choice.Code))]
-    [JsonDerivedType(typeof(RepurchaseType31Choice.Proprietary),nameof(RepurchaseType31Choice.Proprietary))]
+    [JsonDerivedType(typeof(RepurchaseType31Choice.Code), nameof(RepurchaseType31Choice.Code))]
+    [JsonDerivedType(
+        typeof(RepurchaseType31Choice.Proprietary),
+        nameof(RepurchaseType31Choice.Proprietary)
+    )]
     [IsoId("_yYMhnZw2EeazcsnODTksnQ")]
     [DisplayName("Repurchase Type 31 Choice")]
-    public abstract partial record RepurchaseType31Choice_
-    {
-    }
+    public abstract record RepurchaseType31Choice_ { }
 }

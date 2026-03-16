@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage5Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage5Choice
     /// </summary>
     [IsoId("_rY0jx5TPEemqYPWMBuVawg")]
     [DisplayName("Other Reference")]
-    public partial record OtherReference : LinkedMessage5Choice_
+    public record OtherReference : LinkedMessage5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Message identification of a message. This reference was assigned by the party issuing the message.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage5Choice
         [DisplayName("Reference")]
         [IsoXmlTag("Ref")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Reference { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Reference { get; init; }
+
         /// <summary>
         /// Issuer of the reference.
         /// </summary>
         [IsoId("_IOb-05S9EemqYPWMBuVawg")]
         [DisplayName("Reference Issuer")]
         [IsoXmlTag("RefIssr")]
-        public PartyIdentification125Choice_? ReferenceIssuer { get; init; } 
-        
+        public PartyIdentification125Choice_? ReferenceIssuer { get; init; }
+
         /// <summary>
         /// Name of the message.
         /// </summary>
@@ -42,11 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.LinkedMessage5Choice
         [DisplayName("Message Name")]
         [IsoXmlTag("MsgNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? MessageName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MessageName { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum PendingStatusReasonCode
     [IsoId("_kceGYGBjEeaR1OOiVxm3Gg")]
     [Description(@"Know Your Customer (KYC) document is missing.")]
     KnowYourCustomerDocumentMissing,
-    
+
     /// <summary>
     /// FATCA reporting date is missing.
     /// Encoded/decoded by serializers as &quot;FRDM&quot;.
@@ -32,7 +32,7 @@ public enum PendingStatusReasonCode
     [IsoId("_kh1HgGBjEeaR1OOiVxm3Gg")]
     [Description(@"FATCA reporting date is missing.")]
     FATCAReportingDateMissing,
-    
+
     /// <summary>
     /// Rights holder information is missing.
     /// Encoded/decoded by serializers as &quot;RIGH&quot;.
@@ -41,7 +41,7 @@ public enum PendingStatusReasonCode
     [IsoId("_kmvcsGBjEeaR1OOiVxm3Gg")]
     [Description(@"Rights holder information is missing.")]
     RightsHolderMissing,
-    
+
     /// <summary>
     /// Modification to the account data is in process.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -50,7 +50,7 @@ public enum PendingStatusReasonCode
     [IsoId("_CXskMGCJEeabZtzjEVWYCQ")]
     [Description(@"Modification to the account data is in process.")]
     ModificationInProcess,
-    
+
     /// <summary>
     /// Authorisation is required.
     /// Encoded/decoded by serializers as &quot;ATHR&quot;.
@@ -59,7 +59,7 @@ public enum PendingStatusReasonCode
     [IsoId("_GOhEwGCJEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is required.")]
     Authorisation,
-    
+
     /// <summary>
     /// Authorisation is provided but the account change is still pending.
     /// Encoded/decoded by serializers as &quot;ATHP&quot;.
@@ -68,5 +68,4 @@ public enum PendingStatusReasonCode
     [IsoId("_IzzE8GCJEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is provided but the account change is still pending.")]
     AuthorisedButPending,
-    
 }

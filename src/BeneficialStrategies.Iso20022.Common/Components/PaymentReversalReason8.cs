@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mvoC0bTREeeyuKckOGlwuA")]
 [DisplayName("Payment Reversal Reason")]
-public partial record PaymentReversalReason8
+public record PaymentReversalReason8
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that issues the reversal.
     /// </summary>
     [IsoId("_m3YQo7TREeeyuKckOGlwuA")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification125? Originator { get; init; } 
-    
+    public PartyIdentification125? Originator { get; init; }
+
     /// <summary>
     /// Specifies the reason for the reversal.
     /// </summary>
     [IsoId("_m3YQpbTREeeyuKckOGlwuA")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ReversalReason4Choice_? Reason { get; init; } 
-    
+    public ReversalReason4Choice_? Reason { get; init; }
+
     /// <summary>
     /// Further details on the reversal reason.
     /// </summary>
@@ -41,10 +39,6 @@ public partial record PaymentReversalReason8
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? AdditionalInformation { get; init; }
 }

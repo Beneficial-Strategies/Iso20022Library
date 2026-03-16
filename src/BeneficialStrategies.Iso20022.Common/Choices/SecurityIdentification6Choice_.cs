@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecurityIdentification6Choice.ISIN))]
     [KnownType(typeof(SecurityIdentification6Choice.OtherIdentification))]
     [KnownType(typeof(SecurityIdentification6Choice.InstrumentDescription))]
-    [JsonDerivedType(typeof(SecurityIdentification6Choice.ISIN),nameof(SecurityIdentification6Choice.ISIN))]
-    [JsonDerivedType(typeof(SecurityIdentification6Choice.OtherIdentification),nameof(SecurityIdentification6Choice.OtherIdentification))]
-    [JsonDerivedType(typeof(SecurityIdentification6Choice.InstrumentDescription),nameof(SecurityIdentification6Choice.InstrumentDescription))]
+    [JsonDerivedType(
+        typeof(SecurityIdentification6Choice.ISIN),
+        nameof(SecurityIdentification6Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification6Choice.OtherIdentification),
+        nameof(SecurityIdentification6Choice.OtherIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification6Choice.InstrumentDescription),
+        nameof(SecurityIdentification6Choice.InstrumentDescription)
+    )]
     [IsoId("_TBKB79p-Ed-ak6NoX_4Aeg_-1421894985")]
     [DisplayName("Security Identification 6 Choice")]
-    public abstract partial record SecurityIdentification6Choice_
-    {
-    }
+    public abstract record SecurityIdentification6Choice_ { }
 }

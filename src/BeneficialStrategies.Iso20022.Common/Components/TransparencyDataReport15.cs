@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_hLn-cX5kEeaGiOUFl5b1oQ")]
 [DisplayName("Transparency Data Report")]
-public partial record TransparencyDataReport15
+public record TransparencyDataReport15
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identifier of a record in a message used as part of error management and status advice messages.
     /// Usage:
@@ -27,9 +25,9 @@ public partial record TransparencyDataReport15
     [DisplayName("Technical Record Identification")]
     [IsoXmlTag("TechRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TechnicalRecordIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TechnicalRecordIdentification { get; init; }
+
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
     /// </summary>
@@ -37,8 +35,8 @@ public partial record TransparencyDataReport15
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; } 
-    
+    public required IsoISINOct2015Identifier Identification { get; init; }
+
     /// <summary>
     /// Date to which the quantitative data fields below relate.
     /// </summary>
@@ -46,8 +44,8 @@ public partial record TransparencyDataReport15
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ReportingDate { get; init; } 
-    
+    public IsoISODate? ReportingDate { get; init; }
+
     /// <summary>
     /// Segment MIC for the trading venue where applicable, otherwise the operational MIC.
     /// </summary>
@@ -55,8 +53,8 @@ public partial record TransparencyDataReport15
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; } 
-    
+    public IsoMICIdentifier? TradingVenue { get; init; }
+
     /// <summary>
     /// Indicates whether the instrument was suspended for trading on that trading venue on the reporting day.
     /// </summary>
@@ -64,8 +62,8 @@ public partial record TransparencyDataReport15
     [DisplayName("Suspension")]
     [IsoXmlTag("Sspnsn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Suspension { get; init; } 
-    
+    public required IsoTrueFalseIndicator Suspension { get; init; }
+
     /// <summary>
     /// Total number of transactions executed on the reporting day for the instrument.
     /// </summary>
@@ -73,17 +71,13 @@ public partial record TransparencyDataReport15
     [DisplayName("Number Transactions")]
     [IsoXmlTag("NbTxs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberTransactions { get; init; } 
-    
+    public IsoNumber? NumberTransactions { get; init; }
+
     /// <summary>
     /// Aggregated quantitative data on the non-equity instrument being reported. Details aggregated against the specific range that is defined. Transactions that have been cancelled should be excluded from the reported figure.
     /// </summary>
     [IsoId("_hWyFoX5kEeaGiOUFl5b1oQ")]
     [DisplayName("Aggregated Quantitative Data")]
     [IsoXmlTag("AggtdQttvData")]
-    public TransactionsBin2? AggregatedQuantitativeData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransactionsBin2? AggregatedQuantitativeData { get; init; }
 }

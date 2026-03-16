@@ -23,5 +23,4 @@ public enum AssetClassProductType14Code
     [IsoId("_Zkr-xVrLEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type official economic statistic.")]
     OfficialEconomicStatistic = AssetClassProductTypeCode.OfficialEconomicStatistic, // same ordinal as derivation source for type conversions
-    
 }

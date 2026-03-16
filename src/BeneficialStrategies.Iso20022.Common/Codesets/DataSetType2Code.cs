@@ -23,7 +23,7 @@ public enum DataSetType2Code
     [IsoId("_ayG1s9p-Ed-ak6NoX_4Aeg_597609124")]
     [Description(@"Data set is a baseline.")]
     Baseline = DataSetTypeCode.Baseline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is a transport data set.
     /// Encoded/decoded by serializers as &quot;TRDS&quot;.
@@ -32,7 +32,7 @@ public enum DataSetType2Code
     [IsoId("_ayG1tNp-Ed-ak6NoX_4Aeg_597609125")]
     [Description(@"Data set is a transport data set.")]
     TransportDataSet = DataSetTypeCode.TransportDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is a commercial data set.
     /// Encoded/decoded by serializers as &quot;CODS&quot;.
@@ -41,7 +41,7 @@ public enum DataSetType2Code
     [IsoId("_ayG1tdp-Ed-ak6NoX_4Aeg_597609154")]
     [Description(@"Data set is a commercial data set.")]
     CommercialDataSet = DataSetTypeCode.CommercialDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is an insurance data set.
     /// Encoded/decoded by serializers as &quot;INDS&quot;.
@@ -50,7 +50,7 @@ public enum DataSetType2Code
     [IsoId("_ayG1ttp-Ed-ak6NoX_4Aeg_672416869")]
     [Description(@"Data set is an insurance data set.")]
     InsuranceDataSet = DataSetTypeCode.InsuranceDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is a certificate data set.
     /// Encoded/decoded by serializers as &quot;CEDS&quot;.
@@ -59,7 +59,7 @@ public enum DataSetType2Code
     [IsoId("_ayG1t9p-Ed-ak6NoX_4Aeg_925458258")]
     [Description(@"Data set is a certificate data set.")]
     CertificateDataSet = DataSetTypeCode.CertificateDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data set is an other special certificate data set.
     /// Encoded/decoded by serializers as &quot;OCDS&quot;.
@@ -68,5 +68,4 @@ public enum DataSetType2Code
     [IsoId("_ayG1uNp-Ed-ak6NoX_4Aeg_940237322")]
     [Description(@"Data set is an other special certificate data set.")]
     OtherCertificateDataSet = DataSetTypeCode.OtherCertificateDataSet, // same ordinal as derivation source for type conversions
-    
 }

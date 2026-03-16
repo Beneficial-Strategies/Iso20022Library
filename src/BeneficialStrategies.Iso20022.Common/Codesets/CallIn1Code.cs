@@ -23,7 +23,7 @@ public enum CallIn1Code
     [IsoId("_bXNt6dp-Ed-ak6NoX_4Aeg_556310168")]
     [Description(@"Pay-in call is for account value.")]
     CallForAccountValue = CallInCode.CallForAccountValue, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pay-in call is for settlement.
     /// Encoded/decoded by serializers as &quot;CFST&quot;.
@@ -32,7 +32,7 @@ public enum CallIn1Code
     [IsoId("_bXW30Np-Ed-ak6NoX_4Aeg_600636833")]
     [Description(@"Pay-in call is for settlement.")]
     CallForSettlement = CallInCode.CallForSettlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pay-in call is for currency close.
     /// Encoded/decoded by serializers as &quot;CFCC&quot;.
@@ -41,5 +41,4 @@ public enum CallIn1Code
     [IsoId("_bXW30dp-Ed-ak6NoX_4Aeg_628342105")]
     [Description(@"Pay-in call is for currency close.")]
     CallForCurrencyClose = CallInCode.CallForCurrencyClose, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3WHcEOaPEei5aPS232E3Mw")]
 [DisplayName("Tax Category")]
-public partial record TaxCategory1
+public record TaxCategory1
 {
-    #nullable enable
-    
     /// <summary>
     /// Tax category identification.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record TaxCategory1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? Identification { get; init; } 
-    
+    public IsoMax2NumericText? Identification { get; init; }
+
     /// <summary>
     /// Description of the tax category.
     /// </summary>
@@ -34,18 +32,14 @@ public partial record TaxCategory1
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Description { get; init; }
+
     /// <summary>
     /// Identification of the country in which the tax is withheld.
     /// </summary>
     [IsoId("_6rctIOgkEei5aPS232E3Mw")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public CountryCode? Country { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CountryCode? Country { get; init; }
 }

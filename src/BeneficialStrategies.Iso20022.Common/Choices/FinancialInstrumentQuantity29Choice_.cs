@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity29Choice.NetAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity29Choice.GrossAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity29Choice.UnitsNumber),nameof(FinancialInstrumentQuantity29Choice.UnitsNumber))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity29Choice.PercentageOfTotalSubscriptionAmount),nameof(FinancialInstrumentQuantity29Choice.PercentageOfTotalSubscriptionAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity29Choice.NetAmount),nameof(FinancialInstrumentQuantity29Choice.NetAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity29Choice.GrossAmount),nameof(FinancialInstrumentQuantity29Choice.GrossAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate),nameof(FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity29Choice.UnitsNumber),
+        nameof(FinancialInstrumentQuantity29Choice.UnitsNumber)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity29Choice.PercentageOfTotalSubscriptionAmount),
+        nameof(FinancialInstrumentQuantity29Choice.PercentageOfTotalSubscriptionAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity29Choice.NetAmount),
+        nameof(FinancialInstrumentQuantity29Choice.NetAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity29Choice.GrossAmount),
+        nameof(FinancialInstrumentQuantity29Choice.GrossAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate),
+        nameof(FinancialInstrumentQuantity29Choice.HoldingsRedemptionRate)
+    )]
     [IsoId("_5dOFoU_3Eea1ZIrmU5dI3w")]
     [DisplayName("Financial Instrument Quantity 29 Choice")]
-    public abstract partial record FinancialInstrumentQuantity29Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity29Choice_ { }
 }

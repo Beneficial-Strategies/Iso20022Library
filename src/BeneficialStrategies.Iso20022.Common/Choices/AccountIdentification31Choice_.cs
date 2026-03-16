@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AccountIdentification31Choice.BBAN))]
     [KnownType(typeof(AccountIdentification31Choice.UPIC))]
     [KnownType(typeof(AccountIdentification31Choice.DomesticAccount))]
-    [JsonDerivedType(typeof(AccountIdentification31Choice.IBAN),nameof(AccountIdentification31Choice.IBAN))]
-    [JsonDerivedType(typeof(AccountIdentification31Choice.BBAN),nameof(AccountIdentification31Choice.BBAN))]
-    [JsonDerivedType(typeof(AccountIdentification31Choice.UPIC),nameof(AccountIdentification31Choice.UPIC))]
-    [JsonDerivedType(typeof(AccountIdentification31Choice.DomesticAccount),nameof(AccountIdentification31Choice.DomesticAccount))]
+    [JsonDerivedType(
+        typeof(AccountIdentification31Choice.IBAN),
+        nameof(AccountIdentification31Choice.IBAN)
+    )]
+    [JsonDerivedType(
+        typeof(AccountIdentification31Choice.BBAN),
+        nameof(AccountIdentification31Choice.BBAN)
+    )]
+    [JsonDerivedType(
+        typeof(AccountIdentification31Choice.UPIC),
+        nameof(AccountIdentification31Choice.UPIC)
+    )]
+    [JsonDerivedType(
+        typeof(AccountIdentification31Choice.DomesticAccount),
+        nameof(AccountIdentification31Choice.DomesticAccount)
+    )]
     [IsoId("_sg7o4PSaEeSfzLT5J5kvFg")]
     [DisplayName("Account Identification 31 Choice")]
-    public abstract partial record AccountIdentification31Choice_
-    {
-    }
+    public abstract record AccountIdentification31Choice_ { }
 }

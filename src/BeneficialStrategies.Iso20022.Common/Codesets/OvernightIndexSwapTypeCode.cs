@@ -23,7 +23,7 @@ public enum OvernightIndexSwapTypeCode
     [IsoId("_82nLALu8EeSXxOgurgHGgw")]
     [Description(@"Fixed interest rate is paid by the reporting agent.")]
     Paid,
-    
+
     /// <summary>
     /// Fixed interest rate is received by the reporting agent.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,5 +32,4 @@ public enum OvernightIndexSwapTypeCode
     [IsoId("_9D2VwLu8EeSXxOgurgHGgw")]
     [Description(@"Fixed interest rate is received by the reporting agent.")]
     Received,
-    
 }

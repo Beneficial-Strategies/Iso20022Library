@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_JdeN8PeZEee0h5ZXun0VTA")]
-[Description(@"Specifies the packaging type as published in an external packaging type code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the packaging type as published in an external packaging type code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalPackagingType1Code))]
 public enum ExternalPackagingTypeCode
 {
@@ -24,7 +26,7 @@ public enum ExternalPackagingTypeCode
     [IsoId("_uIlXSfRYEeuLhpyIdtJzwg")]
     [Description(@"Packaging is high density polyethylene.")]
     HighDensityPolyethylene,
-    
+
     /// <summary>
     /// Packaging is low density polyethylene.
     /// Encoded/decoded by serializers as &quot;LDPE&quot;.
@@ -33,7 +35,7 @@ public enum ExternalPackagingTypeCode
     [IsoId("_uIlXTPRYEeuLhpyIdtJzwg")]
     [Description(@"Packaging is low density polyethylene.")]
     LowDensityPolyethylene,
-    
+
     /// <summary>
     /// Packaging is linear low density polyethylene.
     /// Encoded/decoded by serializers as &quot;LLDP&quot;.
@@ -42,7 +44,7 @@ public enum ExternalPackagingTypeCode
     [IsoId("_uIvIQPRYEeuLhpyIdtJzwg")]
     [Description(@"Packaging is linear low density polyethylene.")]
     LinearLowDensityPolyethylene,
-    
+
     /// <summary>
     /// Other packaging type not otherwise specified.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -51,5 +53,4 @@ public enum ExternalPackagingTypeCode
     [IsoId("_uIvIQ_RYEeuLhpyIdtJzwg")]
     [Description(@"Other packaging type not otherwise specified.")]
     OtherPackagingType,
-    
 }

@@ -23,7 +23,7 @@ public enum BeneficiaryType1Code
     [IsoId("_Opuc0VNhEeijdq8ilaxyOA")]
     [Description(@"Beneficiary is a dependent.")]
     Dependent = BeneficiaryTypeCode.Dependent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Beneficiary is a nominee.
     /// Encoded/decoded by serializers as &quot;NOMI&quot;.
@@ -32,7 +32,7 @@ public enum BeneficiaryType1Code
     [IsoId("_OtcfMVNhEeijdq8ilaxyOA")]
     [Description(@"Beneficiary is a nominee.")]
     Nominee = BeneficiaryTypeCode.Nominee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Beneficiary is a successor.
     /// Encoded/decoded by serializers as &quot;SUCC&quot;.
@@ -41,5 +41,4 @@ public enum BeneficiaryType1Code
     [IsoId("_OxnNgVNhEeijdq8ilaxyOA")]
     [Description(@"Beneficiary is a successor.")]
     Successor = BeneficiaryTypeCode.Successor, // same ordinal as derivation source for type conversions
-    
 }

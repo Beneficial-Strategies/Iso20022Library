@@ -23,7 +23,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_OwYzuvffEei89sMSHxl1ew")]
     [Description(@"Holiday")]
     Holiday,
-    
+
     /// <summary>
     /// On call
     /// Encoded/decoded by serializers as &quot;ONCL&quot;.
@@ -32,7 +32,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_OwZawvffEei89sMSHxl1ew")]
     [Description(@"On call")]
     OnCall,
-    
+
     /// <summary>
     /// Hazard
     /// Encoded/decoded by serializers as &quot;HAZD&quot;.
@@ -41,7 +41,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_OwZawfffEei89sMSHxl1ew")]
     [Description(@"Hazard")]
     Hazard,
-    
+
     /// <summary>
     /// Other National
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_OwYzufffEei89sMSHxl1ew")]
     [Description(@"Other National")]
     OtherNational,
-    
+
     /// <summary>
     /// Other Private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_OwZawPffEei89sMSHxl1ew")]
     [Description(@"Other Private")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Overtime
     /// Encoded/decoded by serializers as &quot;OVRT&quot;.
@@ -68,7 +68,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_5B_YIPffEei89sMSHxl1ew")]
     [Description(@"Overtime")]
     Overtime,
-    
+
     /// <summary>
     /// Night
     /// Encoded/decoded by serializers as &quot;NITE&quot;.
@@ -77,7 +77,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_8YVB0PffEei89sMSHxl1ew")]
     [Description(@"Night")]
     Night,
-    
+
     /// <summary>
     /// Regular
     /// Encoded/decoded by serializers as &quot;REGL&quot;.
@@ -86,7 +86,7 @@ public enum TemporaryServicesChargeCode
     [IsoId("_8a9fEPffEei89sMSHxl1ew")]
     [Description(@"Regular")]
     Regular,
-    
+
     /// <summary>
     /// Weekend
     /// Encoded/decoded by serializers as &quot;WKND&quot;.
@@ -95,5 +95,4 @@ public enum TemporaryServicesChargeCode
     [IsoId("_8dnxgPffEei89sMSHxl1ew")]
     [Description(@"Weekend")]
     Weekend,
-    
 }

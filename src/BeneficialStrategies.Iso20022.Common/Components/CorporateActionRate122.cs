@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,95 +14,89 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oTdycYV4Ee-oeNhl-Tk6YQ")]
 [DisplayName("Corporate Action Rate122")]
-public partial record CorporateActionRate122
+public record CorporateActionRate122
 {
-    #nullable enable
-
     /// <summary>
     /// Bid Interval.
     /// </summary>
     [DisplayName("Bid Interval")]
     [IsoXmlTag("BidIntrvl")]
-    public RateAndAmountFormat58Choice_? BidInterval { get; init; } 
+    public RateAndAmountFormat58Choice_? BidInterval { get; init; }
 
     /// <summary>
     /// Declared Rate.
     /// </summary>
     [DisplayName("Declared Rate")]
     [IsoXmlTag("DclrdRate")]
-    public RateAndAmountFormat59Choice_? DeclaredRate { get; init; } 
+    public RateAndAmountFormat59Choice_? DeclaredRate { get; init; }
 
     /// <summary>
     /// Index Factor.
     /// </summary>
     [DisplayName("Index Factor")]
     [IsoXmlTag("IndxFctr")]
-    public RateAndAmountFormat57Choice_? IndexFactor { get; init; } 
+    public RateAndAmountFormat57Choice_? IndexFactor { get; init; }
 
     /// <summary>
     /// Interest Rate.
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public RateAndAmountFormat57Choice_? InterestRate { get; init; } 
+    public RateAndAmountFormat57Choice_? InterestRate { get; init; }
 
     /// <summary>
     /// Interest Shortfall.
     /// </summary>
     [DisplayName("Interest Shortfall")]
     [IsoXmlTag("IntrstShrtfll")]
-    public RateAndAmountFormat59Choice_? InterestShortfall { get; init; } 
+    public RateAndAmountFormat59Choice_? InterestShortfall { get; init; }
 
     /// <summary>
     /// Next Factor.
     /// </summary>
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
-    public RateFormat12Choice_? NextFactor { get; init; } 
+    public RateFormat12Choice_? NextFactor { get; init; }
 
     /// <summary>
     /// Percentage Sought.
     /// </summary>
     [DisplayName("Percentage Sought")]
     [IsoXmlTag("PctgSght")]
-    public RateFormat25Choice_? PercentageSought { get; init; } 
+    public RateFormat25Choice_? PercentageSought { get; init; }
 
     /// <summary>
     /// Previous Factor.
     /// </summary>
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
-    public RateFormat12Choice_? PreviousFactor { get; init; } 
+    public RateFormat12Choice_? PreviousFactor { get; init; }
 
     /// <summary>
     /// Realised Loss.
     /// </summary>
     [DisplayName("Realised Loss")]
     [IsoXmlTag("RealsdLoss")]
-    public RateAndAmountFormat59Choice_? RealisedLoss { get; init; } 
+    public RateAndAmountFormat59Choice_? RealisedLoss { get; init; }
 
     /// <summary>
     /// Reinvestment Discount Rate To Market.
     /// </summary>
     [DisplayName("Reinvestment Discount Rate To Market")]
     [IsoXmlTag("RinvstmtDscntRateToMkt")]
-    public RateFormat24Choice_? ReinvestmentDiscountRateToMarket { get; init; } 
+    public RateFormat24Choice_? ReinvestmentDiscountRateToMarket { get; init; }
 
     /// <summary>
     /// Related Index.
     /// </summary>
     [DisplayName("Related Index")]
     [IsoXmlTag("RltdIndx")]
-    public RateFormat24Choice_? RelatedIndex { get; init; } 
+    public RateFormat24Choice_? RelatedIndex { get; init; }
 
     /// <summary>
     /// Spread.
     /// </summary>
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
-    public RateFormat24Choice_? Spread { get; init; } 
-
-    
-    #nullable disable
-    
+    public RateFormat24Choice_? Spread { get; init; }
 }

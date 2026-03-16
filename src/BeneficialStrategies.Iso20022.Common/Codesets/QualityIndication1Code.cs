@@ -23,7 +23,7 @@ public enum QualityIndication1Code
     [IsoId("_ZXNlB9p-Ed-ak6NoX_4Aeg_-1478752289")]
     [Description(@"Low quality.")]
     Low = QualityIndicationCode.Low, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Medium quality.
     /// Encoded/decoded by serializers as &quot;MEDI&quot;.
@@ -32,7 +32,7 @@ public enum QualityIndication1Code
     [IsoId("_ZXNlCNp-Ed-ak6NoX_4Aeg_-1478752246")]
     [Description(@"Medium quality.")]
     Medium = QualityIndicationCode.Medium, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// High quality.
     /// Encoded/decoded by serializers as &quot;HIGH&quot;.
@@ -41,5 +41,4 @@ public enum QualityIndication1Code
     [IsoId("_ZXNlCdp-Ed-ak6NoX_4Aeg_-1478752210")]
     [Description(@"High quality.")]
     High = QualityIndicationCode.High, // same ordinal as derivation source for type conversions
-    
 }

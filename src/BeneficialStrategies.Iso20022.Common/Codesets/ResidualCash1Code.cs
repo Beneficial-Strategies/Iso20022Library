@@ -23,7 +23,7 @@ public enum ResidualCash1Code
     [IsoId("_WcfODv8uEeC87tbx-VXRVA")]
     [Description(@"Residual Cash not to be transferred.")]
     NotResidualCashTransfer = ResidualCashCode.NotResidualCashTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Residual cash to be transferred.
     /// Encoded/decoded by serializers as &quot;RCTR&quot;.
@@ -32,5 +32,4 @@ public enum ResidualCash1Code
     [IsoId("_WgN3fv8uEeC87tbx-VXRVA")]
     [Description(@"Residual cash to be transferred.")]
     ResidualCashTransfer = ResidualCashCode.ResidualCashTransfer, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NUoVYB5REeWc9bJOIIhUUw")]
 [DisplayName("Record Technical Data")]
-public partial record RecordTechnicalData1
+public record RecordTechnicalData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Defines the date and time when the report was originally received by the national competent authority.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record RecordTechnicalData1
     [DisplayName("Receipt Date Time")]
     [IsoXmlTag("RctDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ReceiptDateTime { get; init; } 
-    
+    public required IsoISODateTime ReceiptDateTime { get; init; }
+
     /// <summary>
     /// Describes the reason for the exchange of the transaction report between the competent authorities.
     /// </summary>
@@ -35,8 +33,4 @@ public partial record RecordTechnicalData1
     [IsoXmlTag("XchgRsn")]
     public SimpleValueList<AuthorityExchangeReason1Code> ExchangeReason { get; init; } = [];
     // ID for the above is _TaRd8B5REeWc9bJOIIhUUw
-    
-    
-    #nullable disable
-    
 }

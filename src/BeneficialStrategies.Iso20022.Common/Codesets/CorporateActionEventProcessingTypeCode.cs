@@ -23,23 +23,26 @@ public enum CorporateActionEventProcessingTypeCode
     [IsoId("_bDij9tp-Ed-ak6NoX_4Aeg_-1333902672")]
     [Description(@"No debit or credit of resources.")]
     General,
-    
+
     /// <summary>
     /// Holder of the relevant security on a certain date, for example, the record date, will receive a benefit without giving up the underlying security.
     /// Encoded/decoded by serializers as &quot;DISN&quot;.
     /// </summary>
     [EnumMember(Value = "DISN")]
     [IsoId("_bDij99p-Ed-ak6NoX_4Aeg_-1333902641")]
-    [Description(@"Holder of the relevant security on a certain date, for example, the record date, will receive a benefit without giving up the underlying security.")]
+    [Description(
+        @"Holder of the relevant security on a certain date, for example, the record date, will receive a benefit without giving up the underlying security."
+    )]
     Distribution,
-    
+
     /// <summary>
     /// Underlying security will be debited and may be replaced by another resource (or resources).
     /// Encoded/decoded by serializers as &quot;REOR&quot;.
     /// </summary>
     [EnumMember(Value = "REOR")]
     [IsoId("_bDij-Np-Ed-ak6NoX_4Aeg_-1333902640")]
-    [Description(@"Underlying security will be debited and may be replaced by another resource (or resources).")]
+    [Description(
+        @"Underlying security will be debited and may be replaced by another resource (or resources)."
+    )]
     Reorganisation,
-    
 }

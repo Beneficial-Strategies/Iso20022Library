@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PzOGRNp-Ed-ak6NoX_4Aeg_1490280398")]
 [DisplayName("Payment Terms")]
-public partial record PaymentTerms2
+public record PaymentTerms2
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies payment terms not present in a code list.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record PaymentTerms2
     [DisplayName("Other Payment Terms")]
     [IsoXmlTag("OthrPmtTerms")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text OtherPaymentTerms { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text OtherPaymentTerms { get; init; }
+
     /// <summary>
     /// Specifies the payment period in coded form and a number of days.
     /// </summary>
     [IsoId("_PzOGRtp-Ed-ak6NoX_4Aeg_1490280884")]
     [DisplayName("Payment Code")]
     [IsoXmlTag("PmtCd")]
-    public required PaymentPeriod2 PaymentCode { get; init; } 
-    
+    public required PaymentPeriod2 PaymentCode { get; init; }
+
     /// <summary>
     /// Specifies that the payment conditions apply to a percentage of the amount due.
     /// </summary>
@@ -43,17 +41,13 @@ public partial record PaymentTerms2
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Percentage { get; init; } 
-    
+    public required IsoPercentageRate Percentage { get; init; }
+
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
     /// </summary>
     [IsoId("_PzOGSNp-Ed-ak6NoX_4Aeg_1490280512")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required CurrencyAndAmount Amount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CurrencyAndAmount Amount { get; init; }
 }

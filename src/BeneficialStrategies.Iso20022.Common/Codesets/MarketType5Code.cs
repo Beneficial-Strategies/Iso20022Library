@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aUwLUNp-Ed-ak6NoX_4Aeg_270418666")]
-[Description(@"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.")]
+[Description(
+    @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
+)]
 [DerivedFrom(typeof(MarketTypeCode))]
 public enum MarketType5Code
 {
@@ -23,7 +25,7 @@ public enum MarketType5Code
     [IsoId("_aUwLUdp-Ed-ak6NoX_4Aeg_1589066038")]
     [Description(@"The place is over the counter.")]
     OverTheCounter = MarketTypeCode.OverTheCounter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a stock exchange.
     /// Encoded/decoded by serializers as &quot;EXCH&quot;.
@@ -32,5 +34,4 @@ public enum MarketType5Code
     [IsoId("_aUwLUtp-Ed-ak6NoX_4Aeg_-1956234882")]
     [Description(@"The place is a stock exchange.")]
     StockExchange = MarketTypeCode.StockExchange, // same ordinal as derivation source for type conversions
-    
 }

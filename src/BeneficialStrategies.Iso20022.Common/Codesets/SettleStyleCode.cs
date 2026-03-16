@@ -23,7 +23,7 @@ public enum SettleStyleCode
     [IsoId("_ZOa1Y9p-Ed-ak6NoX_4Aeg_1626303304")]
     [Description(@"Settlement is only allowed on the opening of the future contract.")]
     SettleOnOpen,
-    
+
     /// <summary>
     /// Settlement is only allowed on the closing of the future contract.
     /// Encoded/decoded by serializers as &quot;SETC&quot;.
@@ -32,5 +32,4 @@ public enum SettleStyleCode
     [IsoId("_ZOa1ZNp-Ed-ak6NoX_4Aeg_1627226825")]
     [Description(@"Settlement is only allowed on the closing of the future contract.")]
     SettleOnClose,
-    
 }

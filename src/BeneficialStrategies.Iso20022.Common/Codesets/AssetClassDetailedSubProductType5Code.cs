@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType5Code
     [IsoId("_q8_4EQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type base load.")]
     BaseLoad = AssetClassDetailedSubProductTypeCode.BaseLoad, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type financial transmission rights.
     /// Encoded/decoded by serializers as &quot;FITR&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassDetailedSubProductType5Code
     [IsoId("_sAsJsQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type financial transmission rights.")]
     FinancialTransmissionRights = AssetClassDetailedSubProductTypeCode.FinancialTransmissionRights, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type peak load.
     /// Encoded/decoded by serializers as &quot;PKLD&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassDetailedSubProductType5Code
     [IsoId("_ueY7MQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type peak load.")]
     PeakLoad = AssetClassDetailedSubProductTypeCode.PeakLoad, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type off-peak.
     /// Encoded/decoded by serializers as &quot;OFFP&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassDetailedSubProductType5Code
     [IsoId("_Vb9FgWs3EeW9oI9ZdgWHPQ")]
     [Description(@"Commodity attribute of type off-peak.")]
     OffPeak = AssetClassDetailedSubProductTypeCode.OffPeak, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +59,4 @@ public enum AssetClassDetailedSubProductType5Code
     [IsoId("_WDhb0ms3EeW9oI9ZdgWHPQ")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

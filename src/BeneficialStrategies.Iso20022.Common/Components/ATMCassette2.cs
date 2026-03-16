@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UgWjka4MEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Cassette")]
-public partial record ATMCassette2
+public record ATMCassette2
 {
-    #nullable enable
-    
     /// <summary>
     /// Physical identification of the cassette for the ATM.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ATMCassette2
     [DisplayName("Physical Identification")]
     [IsoXmlTag("PhysId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PhysicalIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PhysicalIdentification { get; init; }
+
     /// <summary>
     /// Logical identification of the cassette for the ATM.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ATMCassette2
     [DisplayName("Logical Identification")]
     [IsoXmlTag("LogclId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text LogicalIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text LogicalIdentification { get; init; }
+
     /// <summary>
     /// Serial number or unique identification of the cassette hardware.
     /// </summary>
@@ -45,42 +43,38 @@ public partial record ATMCassette2
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SerialNumber { get; init; }
+
     /// <summary>
     /// Type of cassette.
     /// </summary>
     [IsoId("_UrYH1a4MEeWZgJQOa6iKCQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ATMCassetteType1Code Type { get; init; } 
-    
+    public required ATMCassetteType1Code Type { get; init; }
+
     /// <summary>
     /// Type of items the cash-in takes.
     /// </summary>
     [IsoId("_UrYH164MEeWZgJQOa6iKCQ")]
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
-    public ATMNoteType1Code? SubType { get; init; } 
-    
+    public ATMNoteType1Code? SubType { get; init; }
+
     /// <summary>
     /// Type of media inside the cassette.
     /// </summary>
     [IsoId("_UrYH2a4MEeWZgJQOa6iKCQ")]
     [DisplayName("Media Type")]
     [IsoXmlTag("MdiaTp")]
-    public ATMMediaType1Code? MediaType { get; init; } 
-    
+    public ATMMediaType1Code? MediaType { get; init; }
+
     /// <summary>
     /// Counter per unit value or globally.
     /// </summary>
     [IsoId("_UrYH264MEeWZgJQOa6iKCQ")]
     [DisplayName("Media Counters")]
     [IsoXmlTag("MdiaCntrs")]
-    public ATMCassetteCounters3? MediaCounters { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ATMCassetteCounters3? MediaCounters { get; init; }
 }

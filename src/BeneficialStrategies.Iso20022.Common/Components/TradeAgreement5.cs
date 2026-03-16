@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S8KUAQEcEeCQm6a_G2yO_w_1878007297")]
 [DisplayName("Trade Agreement")]
-public partial record TradeAgreement5
+public record TradeAgreement5
 {
-    #nullable enable
-    
     /// <summary>
     /// Date on which the trading parties agree on the trade.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record TradeAgreement5
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate TradeDate { get; init; } 
-    
+    public required IsoISODate TradeDate { get; init; }
+
     /// <summary>
     /// Reference to the identification of the notification for which the status is given, as assigned by the participant that submitted the foreign exchange trade.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record TradeAgreement5
     [DisplayName("Notification Identification")]
     [IsoXmlTag("NtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text NotificationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text NotificationIdentification { get; init; }
+
     /// <summary>
     /// Reference common to both parties of the trade.
     /// </summary>
@@ -44,9 +42,9 @@ public partial record TradeAgreement5
     [DisplayName("Common Reference")]
     [IsoXmlTag("CmonRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CommonReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CommonReference { get; init; }
+
     /// <summary>
     /// Specifies the reason for the cancellation or the amendment.
     /// </summary>
@@ -54,9 +52,9 @@ public partial record TradeAgreement5
     [DisplayName("Amend Or Cancel Reason")]
     [IsoXmlTag("AmdOrCclRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AmendOrCancelReason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AmendOrCancelReason { get; init; }
+
     /// <summary>
     /// Reference to the identification of a previous event in the life of a trade which is amended or cancelled.
     /// </summary>
@@ -64,9 +62,9 @@ public partial record TradeAgreement5
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RelatedReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RelatedReference { get; init; }
+
     /// <summary>
     /// Specifies the type of underlying transaction, for example, option.
     /// </summary>
@@ -74,9 +72,9 @@ public partial record TradeAgreement5
     [DisplayName("Operation Type")]
     [IsoXmlTag("OprTp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4Text? OperationType { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4Text? OperationType { get; init; }
+
     /// <summary>
     /// Specifies the business role between the submitter and the trade party, for example, agent (AGNT).
     /// </summary>
@@ -84,10 +82,6 @@ public partial record TradeAgreement5
     [DisplayName("Operation Scope")]
     [IsoXmlTag("OprScp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4Text? OperationScope { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4Text? OperationScope { get; init; }
 }

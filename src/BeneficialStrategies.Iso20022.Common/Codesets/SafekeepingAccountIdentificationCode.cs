@@ -21,7 +21,8 @@ public enum SafekeepingAccountIdentificationCode
     /// </summary>
     [EnumMember(Value = "GENR")]
     [IsoId("_Y-eU5tp-Ed-ak6NoX_4Aeg_1301070404")]
-    [Description(@"Announcement applies to all safekeeping accounts that own underlying financial instrument. (Used for general or preliminary announcements.).")]
+    [Description(
+        @"Announcement applies to all safekeeping accounts that own underlying financial instrument. (Used for general or preliminary announcements.)."
+    )]
     General,
-    
 }

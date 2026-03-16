@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LetterOfGuarantee3Choice.Indicator))]
     [KnownType(typeof(LetterOfGuarantee3Choice.Proprietary))]
-    [JsonDerivedType(typeof(LetterOfGuarantee3Choice.Indicator),nameof(LetterOfGuarantee3Choice.Indicator))]
-    [JsonDerivedType(typeof(LetterOfGuarantee3Choice.Proprietary),nameof(LetterOfGuarantee3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(LetterOfGuarantee3Choice.Indicator),
+        nameof(LetterOfGuarantee3Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(LetterOfGuarantee3Choice.Proprietary),
+        nameof(LetterOfGuarantee3Choice.Proprietary)
+    )]
     [IsoId("_AY9vEdokEeC60axPepSq7g_-1666647769")]
     [DisplayName("Letter Of Guarantee 3 Choice")]
-    public abstract partial record LetterOfGuarantee3Choice_
-    {
-    }
+    public abstract record LetterOfGuarantee3Choice_ { }
 }

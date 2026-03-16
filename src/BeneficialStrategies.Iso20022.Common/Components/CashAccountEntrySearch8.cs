@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,37 +14,36 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3RossTEyEe6g-ffJsqGiSA")]
 [DisplayName("Cash Account Entry Search8")]
-public partial record CashAccountEntrySearch8
+public record CashAccountEntrySearch8
 {
-    #nullable enable
-
     /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public ValueList<AccountIdentificationSearchCriteria2Choice_> AccountIdentification { get; init; } = [];
+    public ValueList<AccountIdentificationSearchCriteria2Choice_> AccountIdentification { get; init; } =
+        [];
 
     /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification272? AccountOwner { get; init; } 
+    public PartyIdentification272? AccountOwner { get; init; }
 
     /// <summary>
     /// Account Servicer.
     /// </summary>
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
-    public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? AccountServicer { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; } 
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// Entry Amount.
@@ -73,8 +72,4 @@ public partial record CashAccountEntrySearch8
     [DisplayName("Entry Status")]
     [IsoXmlTag("NtrySts")]
     public ValueList<EntryStatus1Code> EntryStatus { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

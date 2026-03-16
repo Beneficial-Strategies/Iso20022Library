@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZCkIIPKNEeaz_YGUGLjP6A")]
 [DisplayName("Benchmark Detail")]
-public partial record BenchmarkDetail1
+public record BenchmarkDetail1
 {
-    #nullable enable
-    
     /// <summary>
     /// Full name of the benchmark.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record BenchmarkDetail1
     [DisplayName("Full Name")]
     [IsoXmlTag("FullNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text FullName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text FullName { get; init; }
+
     /// <summary>
     /// Index name of the benchmark.
     /// </summary>
     [IsoId("_QgI5oBnVEee-a6ThOKLTug")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
-    public BenchmarkCurveName2Code? Index { get; init; } 
-    
+    public BenchmarkCurveName2Code? Index { get; init; }
+
     /// <summary>
     /// Any other additional information about the benchmark.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record BenchmarkDetail1
     [DisplayName("Comment")]
     [IsoXmlTag("Cmnt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
-    [StringLength(maximumLength: 20000 ,MinimumLength = 1)]
-    public IsoMax20000Text? Comment { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 20000, MinimumLength = 1)]
+    public IsoMax20000Text? Comment { get; init; }
 }

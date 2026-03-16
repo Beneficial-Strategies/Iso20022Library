@@ -23,7 +23,7 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_Qr7pYGCKEeabZtzjEVWYCQ")]
     [Description(@"Know Your Customer (KYC) document is missing.")]
     KnowYourCustomerDocumentMissing,
-    
+
     /// <summary>
     /// FATCA reporting date is missing.
     /// Encoded/decoded by serializers as &quot;FRDM&quot;.
@@ -32,7 +32,7 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_WX-mMGCKEeabZtzjEVWYCQ")]
     [Description(@"FATCA reporting date is missing.")]
     FATCAReportingDateMissing,
-    
+
     /// <summary>
     /// Rights holder information is missing.
     /// Encoded/decoded by serializers as &quot;RIGH&quot;.
@@ -41,7 +41,7 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_Y_DWIGCKEeabZtzjEVWYCQ")]
     [Description(@"Rights holder information is missing.")]
     RightsHolderMissing,
-    
+
     /// <summary>
     /// Authorisation is required.
     /// Encoded/decoded by serializers as &quot;ATHR&quot;.
@@ -50,7 +50,7 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_b7QokGCKEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is required.")]
     Authorisation,
-    
+
     /// <summary>
     /// Authorisation is provided but account opening is still pending.
     /// Encoded/decoded by serializers as &quot;ATHP&quot;.
@@ -59,7 +59,7 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_ej9wMGCKEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is provided but account opening is still pending.")]
     AuthorisedButPending,
-    
+
     /// <summary>
     /// Account is not yet open, even for partial use.
     /// Encoded/decoded by serializers as &quot;NOTO&quot;.
@@ -68,7 +68,7 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_h9epsGCKEeabZtzjEVWYCQ")]
     [Description(@"Account is not yet open, even for partial use.")]
     NotOpened,
-    
+
     /// <summary>
     /// Account will be opened when restrictions are addressed.
     /// Encoded/decoded by serializers as &quot;REST&quot;.
@@ -77,5 +77,4 @@ public enum PendingOpeningStatusReasonCode
     [IsoId("_mxl48GCKEeabZtzjEVWYCQ")]
     [Description(@"Account will be opened when restrictions are addressed.")]
     Restrictions,
-    
 }

@@ -23,14 +23,15 @@ public enum InterestMethod1Code
     [IsoId("_YbAbdNp-Ed-ak6NoX_4Aeg_-1896247899")]
     [Description(@"Indicates that the interest is intended to be settled in cash.")]
     PhysicalSettlement = InterestMethodCode.PhysicalSettlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the interest is intended to be rolled in to existing collateral balances.
     /// Encoded/decoded by serializers as &quot;ROLL&quot;.
     /// </summary>
     [EnumMember(Value = "ROLL")]
     [IsoId("_YbAbddp-Ed-ak6NoX_4Aeg_40977274")]
-    [Description(@"Indicates that the interest is intended to be rolled in to existing collateral balances.")]
+    [Description(
+        @"Indicates that the interest is intended to be rolled in to existing collateral balances."
+    )]
     RollIn = InterestMethodCode.RollIn, // same ordinal as derivation source for type conversions
-    
 }

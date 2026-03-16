@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MYPE27iEeKo25nLKvGr8w_-1433191435")]
-[Description(@"Specifies the external relative to code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external relative to code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalRelativeTo1Code))]
 public enum ExternalRelativeToCode
 {
@@ -24,7 +26,7 @@ public enum ExternalRelativeToCode
     [IsoId("_uQCDEPRYEeuLhpyIdtJzwg")]
     [Description(@"Percentage rate expressed relative to the value of goods.")]
     ValueOfGoods,
-    
+
     /// <summary>
     /// Percentage rate expressed relative to the payment amount.
     /// Encoded/decoded by serializers as &quot;PAYM&quot;.
@@ -33,7 +35,7 @@ public enum ExternalRelativeToCode
     [IsoId("_uQCDE_RYEeuLhpyIdtJzwg")]
     [Description(@"Percentage rate expressed relative to the payment amount.")]
     PaymentAmount,
-    
+
     /// <summary>
     /// Percentage rate expressed relative to the undertaking amount.
     /// Encoded/decoded by serializers as &quot;UNDG&quot;.
@@ -42,5 +44,4 @@ public enum ExternalRelativeToCode
     [IsoId("_uQCDFvRYEeuLhpyIdtJzwg")]
     [Description(@"Percentage rate expressed relative to the undertaking amount.")]
     UndertakingAmount,
-    
 }

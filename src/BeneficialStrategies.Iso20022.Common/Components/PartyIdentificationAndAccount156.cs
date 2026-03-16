@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_9DljPYftEeevKP8c-ilVhA")]
 [DisplayName("Party Identification And Account")]
-public partial record PartyIdentificationAndAccount156
+public record PartyIdentificationAndAccount156
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_9UshMYftEeevKP8c-ilVhA")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public PartyIdentification113? PartyIdentification { get; init; } 
-    
+    public PartyIdentification113? PartyIdentification { get; init; }
+
     /// <summary>
     /// Identification of the account owned by the party.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record PartyIdentificationAndAccount156
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountIdentification { get; init; }
+
     /// <summary>
     /// Place where settlement of the securities takes place.
     /// </summary>
     [IsoId("_9UshNYftEeevKP8c-ilVhA")]
     [DisplayName("Place Of Settlement")]
     [IsoXmlTag("PlcOfSttlm")]
-    public required PartyIdentification113 PlaceOfSettlement { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PartyIdentification113 PlaceOfSettlement { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xEREgbOYEemDE9K-I5TT8Q")]
 [DisplayName("Loan Data")]
-public partial record LoanData94
+public record LoanData94
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique Trade Identifier (UTI) as agreed with the other counterparty.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record LoanData94
     [DisplayName("Unique Trade Identifier")]
     [IsoXmlTag("UnqTradIdr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-    public required IsoMax52Text UniqueTradeIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public required IsoMax52Text UniqueTradeIdentifier { get; init; }
+
     /// <summary>
     /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record LoanData94
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate EventDate { get; init; } 
-    
+    public required IsoISODate EventDate { get; init; }
+
     /// <summary>
     /// Indicates the date and time when the contract was executed.
     /// </summary>
@@ -44,16 +42,16 @@ public partial record LoanData94
     [DisplayName("Execution Date Time")]
     [IsoXmlTag("ExctnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ExecutionDateTime { get; init; } 
-    
+    public required IsoISODateTime ExecutionDateTime { get; init; }
+
     /// <summary>
     /// Indicates whether clearing of contract has taken place.
     /// </summary>
     [IsoId("_xJWY17OYEemDE9K-I5TT8Q")]
     [DisplayName("Clearing Status")]
     [IsoXmlTag("ClrSts")]
-    public Cleared10Choice_? ClearingStatus { get; init; } 
-    
+    public Cleared10Choice_? ClearingStatus { get; init; }
+
     /// <summary>
     /// Identification of the trading venue where the transaction was executed.
     /// </summary>
@@ -61,16 +59,16 @@ public partial record LoanData94
     [DisplayName("Trading Venue")]
     [IsoXmlTag("TradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? TradingVenue { get; init; } 
-    
+    public IsoMICIdentifier? TradingVenue { get; init; }
+
     /// <summary>
     /// Reference to master agreement under which the counterparties concluded a documented transaction.
     /// </summary>
     [IsoId("_xJWY27OYEemDE9K-I5TT8Q")]
     [DisplayName("Master Agreement")]
     [IsoXmlTag("MstrAgrmt")]
-    public MasterAgreement6? MasterAgreement { get; init; } 
-    
+    public MasterAgreement6? MasterAgreement { get; init; }
+
     /// <summary>
     /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the opening leg (spot leg) of the secured financing transaction. In the case of rollover of transaction open term, this is the date on which the rollover settles, even if no exchange of cash takes place.
     /// </summary>
@@ -78,8 +76,8 @@ public partial record LoanData94
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; } 
-    
+    public IsoISODate? ValueDate { get; init; }
+
     /// <summary>
     /// Minimum number of business days that one of the counterparties has to inform about the termination of the transaction.
     /// </summary>
@@ -87,8 +85,8 @@ public partial record LoanData94
     [DisplayName("Minimum Notice Period")]
     [IsoXmlTag("MinNtcePrd")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public IsoMax20PositiveNumber? MinimumNoticePeriod { get; init; } 
-    
+    public IsoMax20PositiveNumber? MinimumNoticePeriod { get; init; }
+
     /// <summary>
     /// Earliest date that the cash lender has the right to call back a portion of the amount of money or to terminate the transaction.
     /// </summary>
@@ -96,16 +94,16 @@ public partial record LoanData94
     [DisplayName("Earliest Call Back Date")]
     [IsoXmlTag("EarlstCallBckDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EarliestCallBackDate { get; init; } 
-    
+    public IsoISODate? EarliestCallBackDate { get; init; }
+
     /// <summary>
     /// Indication whether the secured financing transaction is subject to a general or special collateral arrangement.
     /// </summary>
     [IsoId("_xJWY47OYEemDE9K-I5TT8Q")]
     [DisplayName("General Collateral")]
     [IsoXmlTag("GnlColl")]
-    public SpecialCollateral1Code? GeneralCollateral { get; init; } 
-    
+    public SpecialCollateral1Code? GeneralCollateral { get; init; }
+
     /// <summary>
     /// Indicates whether the transaction was settled using the Delivery-by-Value (DBV) mechanism.
     /// </summary>
@@ -113,40 +111,40 @@ public partial record LoanData94
     [DisplayName("Delivery By Value")]
     [IsoXmlTag("DlvryByVal")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DeliveryByValue { get; init; } 
-    
+    public IsoTrueFalseIndicator? DeliveryByValue { get; init; }
+
     /// <summary>
     /// Delivery method of the collateral.
     /// </summary>
     [IsoId("_xJWY57OYEemDE9K-I5TT8Q")]
     [DisplayName("Collateral Delivery Method")]
     [IsoXmlTag("CollDlvryMtd")]
-    public CollateralDeliveryMethod1Code? CollateralDeliveryMethod { get; init; } 
-    
+    public CollateralDeliveryMethod1Code? CollateralDeliveryMethod { get; init; }
+
     /// <summary>
-    /// Period before or at the end of which the loan should be repaid or renegotiated for another term. 
+    /// Period before or at the end of which the loan should be repaid or renegotiated for another term.
     /// </summary>
     [IsoId("_xJWY67OYEemDE9K-I5TT8Q")]
     [DisplayName("Term")]
     [IsoXmlTag("Term")]
-    public ContractTerm3Choice_? Term { get; init; } 
-    
+    public ContractTerm3Choice_? Term { get; init; }
+
     /// <summary>
     /// Interest rate of the loan.
     /// </summary>
     [IsoId("_xJWY6bOYEemDE9K-I5TT8Q")]
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public InterestRate20Choice_? InterestRate { get; init; } 
-    
+    public InterestRate20Choice_? InterestRate { get; init; }
+
     /// <summary>
     /// Amount of money to be settled as of the start date and maturity date of the transaction.
     /// </summary>
     [IsoId("_xJWY7bOYEemDE9K-I5TT8Q")]
     [DisplayName("Principal Amount")]
     [IsoXmlTag("PrncplAmt")]
-    public PrincipalAmount2? PrincipalAmount { get; init; } 
-    
+    public PrincipalAmount2? PrincipalAmount { get; init; }
+
     /// <summary>
     /// Termination date in the case of a full early termination of the SFT.
     /// </summary>
@@ -154,9 +152,5 @@ public partial record LoanData94
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? TerminationDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? TerminationDate { get; init; }
 }

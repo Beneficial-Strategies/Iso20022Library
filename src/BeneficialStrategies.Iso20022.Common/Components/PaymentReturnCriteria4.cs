@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yV4-y5lbEeeE1Ya-LgRsuQ")]
 [DisplayName("Payment Return Criteria")]
-public partial record PaymentReturnCriteria4
+public record PaymentReturnCriteria4
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the original payment transaction message identification is requested.|Usage: this is the former TransactionReference.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Message Identification Indicator")]
     [IsoXmlTag("MsgIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MessageIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? MessageIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the requested execution date is requested.|Usage: this is the former TransferValueDate.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Requested Execution Date Indicator")]
     [IsoXmlTag("ReqdExctnDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? RequestedExecutionDateIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? RequestedExecutionDateIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the instruction is requested.
     /// </summary>
@@ -43,16 +41,16 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Instruction Indicator")]
     [IsoXmlTag("InstrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InstructionIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InstructionIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the instruction status is requested.
     /// </summary>
     [IsoId("_ydzkp5lbEeeE1Ya-LgRsuQ")]
     [DisplayName("Instruction Status Return Criteria")]
     [IsoXmlTag("InstrStsRtrCrit")]
-    public InstructionStatusReturnCriteria1? InstructionStatusReturnCriteria { get; init; } 
-    
+    public InstructionStatusReturnCriteria1? InstructionStatusReturnCriteria { get; init; }
+
     /// <summary>
     /// Indicates whether the instructed amount is requested.
     /// </summary>
@@ -60,8 +58,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Instructed Amount Indicator")]
     [IsoXmlTag("InstdAmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InstructedAmountIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InstructedAmountIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the credit debit indicator is requested.
     /// </summary>
@@ -69,8 +67,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CreditDebitIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? CreditDebitIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the interbank settlement amount is requested.
     /// </summary>
@@ -78,8 +76,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Interbank Settlement Amount Indicator")]
     [IsoXmlTag("IntrBkSttlmAmtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InterbankSettlementAmountIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InterbankSettlementAmountIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the payment priority is requested.
     /// </summary>
@@ -87,8 +85,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Priority Indicator")]
     [IsoXmlTag("PrtyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PriorityIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? PriorityIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the processing validity time is requested.
     /// </summary>
@@ -96,8 +94,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Processing Validity Time Indicator")]
     [IsoXmlTag("PrcgVldtyTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ProcessingValidityTimeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? ProcessingValidityTimeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the transfer reason is requested.
     /// </summary>
@@ -105,8 +103,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Purpose Indicator")]
     [IsoXmlTag("PurpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PurposeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? PurposeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the instruction copy is requested.
     /// </summary>
@@ -114,8 +112,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Instruction Copy Indicator")]
     [IsoXmlTag("InstrCpyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InstructionCopyIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InstructionCopyIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the payment message type is requested.
     /// </summary>
@@ -123,8 +121,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Payment Message Type Indicator")]
     [IsoXmlTag("PmtMTInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentMessageTypeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? PaymentMessageTypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the payment type is requested.
     /// </summary>
@@ -132,8 +130,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Payment Type Indicator")]
     [IsoXmlTag("PmtTpInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentTypeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? PaymentTypeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the transaction identification is requested.|Usage: this is the former PaymentInstructionReference.
     /// </summary>
@@ -141,8 +139,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Transaction Identification Indicator")]
     [IsoXmlTag("TxIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TransactionIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? TransactionIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the interbank settlement date is requested.|Usage: this is the former InterbankValueDate.
     /// </summary>
@@ -150,8 +148,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Interbank Settlement Date Indicator")]
     [IsoXmlTag("IntrBkSttlmDtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InterbankSettlementDateIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InterbankSettlementDateIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the end-to-end identification is requested.|Usage: this is the former RelatedReference.
     /// </summary>
@@ -159,8 +157,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("End To End Identification Indicator")]
     [IsoXmlTag("EndToEndIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? EndToEndIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? EndToEndIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the payment method is requested.
     /// </summary>
@@ -168,8 +166,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Payment Method Indicator")]
     [IsoXmlTag("PmtMtdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentMethodIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? PaymentMethodIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the debtor is requested.
     /// </summary>
@@ -177,8 +175,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Debtor Indicator")]
     [IsoXmlTag("DbtrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? DebtorIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? DebtorIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the debtor agent is requested.|Usage: this is the former FirstAgent.
     /// </summary>
@@ -186,8 +184,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Debtor Agent Indicator")]
     [IsoXmlTag("DbtrAgtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? DebtorAgentIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? DebtorAgentIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the instructing reimbursement agent is requested.
     /// Usage: this is the former InstructingAgentCorrespondent.
@@ -196,8 +194,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Instructing Reimbursement Agent Indicator")]
     [IsoXmlTag("InstgRmbrsmntAgtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InstructingReimbursementAgentIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InstructingReimbursementAgentIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the instructed reimbursement agent is requested.
     /// Usage: this is the former InstructedAgentCorrespondent.
@@ -206,8 +204,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Instructed Reimbursement Agent Indicator")]
     [IsoXmlTag("InstdRmbrsmntAgtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? InstructedReimbursementAgentIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? InstructedReimbursementAgentIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the intermediary is requested.
     /// </summary>
@@ -215,8 +213,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Intermediary Indicator")]
     [IsoXmlTag("IntrmyInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? IntermediaryIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? IntermediaryIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the creditor agent is requested.|Usage: this is the former FinalAgent.
     /// </summary>
@@ -224,8 +222,8 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Creditor Agent Indicator")]
     [IsoXmlTag("CdtrAgtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CreditorAgentIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? CreditorAgentIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the creditor is requested.
     /// </summary>
@@ -233,9 +231,5 @@ public partial record PaymentReturnCriteria4
     [DisplayName("Creditor Indicator")]
     [IsoXmlTag("CdtrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CreditorIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? CreditorIndicator { get; init; }
 }

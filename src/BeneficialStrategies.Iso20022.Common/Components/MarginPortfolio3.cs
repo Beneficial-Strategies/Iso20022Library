@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tm21gTICEe2fXedS_ucFOA")]
 [DisplayName("Margin Portfolio")]
-public partial record MarginPortfolio3
+public record MarginPortfolio3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.
     /// Usage:
@@ -26,8 +24,8 @@ public partial record MarginPortfolio3
     [IsoId("_tnypoTICEe2fXedS_ucFOA")]
     [DisplayName("Initial Margin Portfolio Code")]
     [IsoXmlTag("InitlMrgnPrtflCd")]
-    public required PortfolioCode5Choice_ InitialMarginPortfolioCode { get; init; } 
-    
+    public required PortfolioCode5Choice_ InitialMarginPortfolioCode { get; init; }
+
     /// <summary>
     /// Specifies the unique code assigned by the reporting counterparty to the portfolio if the collateral is posted on a portfolio basis.
     /// Usage:
@@ -36,9 +34,5 @@ public partial record MarginPortfolio3
     [IsoId("_tnypozICEe2fXedS_ucFOA")]
     [DisplayName("Variation Margin Portfolio Code")]
     [IsoXmlTag("VartnMrgnPrtflCd")]
-    public PortfolioCode5Choice_? VariationMarginPortfolioCode { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PortfolioCode5Choice_? VariationMarginPortfolioCode { get; init; }
 }

@@ -23,7 +23,7 @@ public enum PairedReconciledV2Code
     [IsoId("_YsCg2Zh8EeumhIk_Pv20Lg")]
     [Description(@"Both loan and collateral matched.")]
     Reconciled,
-    
+
     /// <summary>
     /// Loan is paired, but not reconciled.
     /// Encoded/decoded by serializers as &quot;PARD&quot;.
@@ -32,7 +32,7 @@ public enum PairedReconciledV2Code
     [IsoId("_YsCg2Jh8EeumhIk_Pv20Lg")]
     [Description(@"Loan is paired, but not reconciled.")]
     Paired,
-    
+
     /// <summary>
     /// Loan is unpaired.
     /// Encoded/decoded by serializers as &quot;UNPR&quot;.
@@ -41,7 +41,7 @@ public enum PairedReconciledV2Code
     [IsoId("_YsCg25h8EeumhIk_Pv20Lg")]
     [Description(@"Loan is unpaired.")]
     Unpaired,
-    
+
     /// <summary>
     /// Loan paired and matched.
     /// Encoded/decoded by serializers as &quot;LNRC&quot;.
@@ -50,7 +50,7 @@ public enum PairedReconciledV2Code
     [IsoId("_YsCg2ph8EeumhIk_Pv20Lg")]
     [Description(@"Loan paired and matched.")]
     LoanReconciled,
-    
+
     /// <summary>
     /// Collateral associated with the loan(s) matched.
     /// Encoded/decoded by serializers as &quot;CLRC&quot;.
@@ -59,5 +59,4 @@ public enum PairedReconciledV2Code
     [IsoId("_YsCg15h8EeumhIk_Pv20Lg")]
     [Description(@"Collateral associated with the loan(s) matched.")]
     CollateralReconciled,
-    
 }

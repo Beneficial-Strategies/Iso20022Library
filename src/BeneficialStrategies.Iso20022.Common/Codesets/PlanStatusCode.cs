@@ -23,7 +23,7 @@ public enum PlanStatusCode
     [IsoId("_F5AH4AjcEeS5F6qHcKOrew")]
     [Description(@"Plan is active.")]
     Active,
-    
+
     /// <summary>
     /// Plan is suspended.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
@@ -32,7 +32,7 @@ public enum PlanStatusCode
     [IsoId("_Illp8AjcEeS5F6qHcKOrew")]
     [Description(@"Plan is suspended.")]
     Suspended,
-    
+
     /// <summary>
     /// Plan is closed.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -41,5 +41,4 @@ public enum PlanStatusCode
     [IsoId("_MFzBUAjcEeS5F6qHcKOrew")]
     [Description(@"Plan is closed.")]
     Closed,
-    
 }

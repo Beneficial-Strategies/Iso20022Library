@@ -23,7 +23,7 @@ public enum TransferInFunction2Code
     [IsoId("_ukgQsSVOEeWI0orciOKunQ")]
     [Description(@"The transfer-in is a confirmation (rather than an advice).")]
     Confirmation = TransferInFunctionCode.Confirmation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The transfer-in provides advice about account information for a transfer.
     /// Encoded/decoded by serializers as &quot;ADVI&quot;.
@@ -32,5 +32,4 @@ public enum TransferInFunction2Code
     [IsoId("_uw_0kSVOEeWI0orciOKunQ")]
     [Description(@"The transfer-in provides advice about account information for a transfer.")]
     Advice = TransferInFunctionCode.Advice, // same ordinal as derivation source for type conversions
-    
 }

@@ -13,13 +13,17 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TradeReport31Choice.MarginUpdate))]
     [KnownType(typeof(TradeReport31Choice.Error))]
     [KnownType(typeof(TradeReport31Choice.Correction))]
-    [JsonDerivedType(typeof(TradeReport31Choice.New),nameof(TradeReport31Choice.New))]
-    [JsonDerivedType(typeof(TradeReport31Choice.MarginUpdate),nameof(TradeReport31Choice.MarginUpdate))]
-    [JsonDerivedType(typeof(TradeReport31Choice.Error),nameof(TradeReport31Choice.Error))]
-    [JsonDerivedType(typeof(TradeReport31Choice.Correction),nameof(TradeReport31Choice.Correction))]
+    [JsonDerivedType(typeof(TradeReport31Choice.New), nameof(TradeReport31Choice.New))]
+    [JsonDerivedType(
+        typeof(TradeReport31Choice.MarginUpdate),
+        nameof(TradeReport31Choice.MarginUpdate)
+    )]
+    [JsonDerivedType(typeof(TradeReport31Choice.Error), nameof(TradeReport31Choice.Error))]
+    [JsonDerivedType(
+        typeof(TradeReport31Choice.Correction),
+        nameof(TradeReport31Choice.Correction)
+    )]
     [IsoId("_oyOyxVosEe23K4GXSpBSeg")]
     [DisplayName("Trade Report 31 Choice")]
-    public abstract partial record TradeReport31Choice_
-    {
-    }
+    public abstract record TradeReport31Choice_ { }
 }

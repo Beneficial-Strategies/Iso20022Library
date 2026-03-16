@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_4aB4cFvBEe6gDOpEK7Q4ig")]
-[Description(@"Specifies the reason why the corporate actio notification advice has a rejected status.")]
+[Description(
+    @"Specifies the reason why the corporate actio notification advice has a rejected status."
+)]
 [DerivedFrom(typeof(RejectionReasonV3Code))]
 public enum RejectionReason80Code
 {
@@ -76,7 +78,8 @@ public enum RejectionReason80Code
     [EnumMember(Value = "COND")]
     [IsoId("")]
     [Description(@"Conditional tenders accepted flag is missing.")]
-    MissingConditionalTendersAcceptedFlag = RejectionReasonV3Code.MissingConditionalTendersAcceptedFlag, // same ordinal as derivation source for type conversions
+    MissingConditionalTendersAcceptedFlag =
+        RejectionReasonV3Code.MissingConditionalTendersAcceptedFlag, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Cash rate is missing.
@@ -166,7 +169,8 @@ public enum RejectionReason80Code
     [EnumMember(Value = "IDIS")]
     [IsoId("")]
     [Description(@"Disbursed security identification is missing.")]
-    InvalidDisbursedSecurityIdentification = RejectionReasonV3Code.InvalidDisbursedSecurityIdentification, // same ordinal as derivation source for type conversions
+    InvalidDisbursedSecurityIdentification =
+        RejectionReasonV3Code.InvalidDisbursedSecurityIdentification, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Issuer agent contact information is invalid or missing.
@@ -175,7 +179,8 @@ public enum RejectionReason80Code
     [EnumMember(Value = "ISSC")]
     [IsoId("")]
     [Description(@"Issuer agent contact information is invalid or missing.")]
-    InvalidOrMissingIssuerAgentContactInformation = RejectionReasonV3Code.InvalidOrMissingIssuerAgentContactInformation, // same ordinal as derivation source for type conversions
+    InvalidOrMissingIssuerAgentContactInformation =
+        RejectionReasonV3Code.InvalidOrMissingIssuerAgentContactInformation, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Issuer agent is missing.
@@ -220,7 +225,8 @@ public enum RejectionReason80Code
     [EnumMember(Value = "MDIS")]
     [IsoId("")]
     [Description(@"Disbursed security identification is missing.")]
-    MissingDisbursedSecurityIdentification = RejectionReasonV3Code.MissingDisbursedSecurityIdentification, // same ordinal as derivation source for type conversions
+    MissingDisbursedSecurityIdentification =
+        RejectionReasonV3Code.MissingDisbursedSecurityIdentification, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Full conditional flag is missing.
@@ -482,5 +488,4 @@ public enum RejectionReason80Code
     [IsoId("")]
     [Description(@"Resulting amount is not allowed without an exchange rate.")]
     MissingExchangeRate = RejectionReasonV3Code.MissingExchangeRate, // same ordinal as derivation source for type conversions
-
 }

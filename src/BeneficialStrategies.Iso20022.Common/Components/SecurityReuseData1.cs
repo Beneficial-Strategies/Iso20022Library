@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__pEK0IxmEeap1-whlAlpOw")]
 [DisplayName("Security Reuse Data")]
-public partial record SecurityReuseData1
+public record SecurityReuseData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifier of the security used as collateral.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record SecurityReuseData1
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ISIN { get; init; } 
-    
+    public required IsoISINOct2015Identifier ISIN { get; init; }
+
     /// <summary>
     /// Indication whether reused value is actual or estimated.
     /// </summary>
     [IsoId("_JXFIQIxnEeap1-whlAlpOw")]
     [DisplayName("Reuse Value")]
     [IsoXmlTag("ReuseVal")]
-    public required ReuseValue1Choice_ ReuseValue { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ReuseValue1Choice_ ReuseValue { get; init; }
 }

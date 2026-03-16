@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ChequeCancellationReason1Choice.Code))]
     [KnownType(typeof(ChequeCancellationReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ChequeCancellationReason1Choice.Code),nameof(ChequeCancellationReason1Choice.Code))]
-    [JsonDerivedType(typeof(ChequeCancellationReason1Choice.Proprietary),nameof(ChequeCancellationReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ChequeCancellationReason1Choice.Code),
+        nameof(ChequeCancellationReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ChequeCancellationReason1Choice.Proprietary),
+        nameof(ChequeCancellationReason1Choice.Proprietary)
+    )]
     [IsoId("_kwwc-7tvEeq_cfXrH83Rcw")]
     [DisplayName("Cheque Cancellation Reason 1 Choice")]
-    public abstract partial record ChequeCancellationReason1Choice_
-    {
-    }
+    public abstract record ChequeCancellationReason1Choice_ { }
 }

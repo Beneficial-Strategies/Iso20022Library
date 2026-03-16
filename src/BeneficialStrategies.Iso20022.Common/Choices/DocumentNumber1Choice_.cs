@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(DocumentNumber1Choice.ShortNumber))]
     [KnownType(typeof(DocumentNumber1Choice.LongNumber))]
     [KnownType(typeof(DocumentNumber1Choice.ProprietaryNumber))]
-    [JsonDerivedType(typeof(DocumentNumber1Choice.ShortNumber),nameof(DocumentNumber1Choice.ShortNumber))]
-    [JsonDerivedType(typeof(DocumentNumber1Choice.LongNumber),nameof(DocumentNumber1Choice.LongNumber))]
-    [JsonDerivedType(typeof(DocumentNumber1Choice.ProprietaryNumber),nameof(DocumentNumber1Choice.ProprietaryNumber))]
+    [JsonDerivedType(
+        typeof(DocumentNumber1Choice.ShortNumber),
+        nameof(DocumentNumber1Choice.ShortNumber)
+    )]
+    [JsonDerivedType(
+        typeof(DocumentNumber1Choice.LongNumber),
+        nameof(DocumentNumber1Choice.LongNumber)
+    )]
+    [JsonDerivedType(
+        typeof(DocumentNumber1Choice.ProprietaryNumber),
+        nameof(DocumentNumber1Choice.ProprietaryNumber)
+    )]
     [IsoId("_QzcNJtp-Ed-ak6NoX_4Aeg_-2100056613")]
     [DisplayName("Document Number 1 Choice")]
-    public abstract partial record DocumentNumber1Choice_
-    {
-    }
+    public abstract record DocumentNumber1Choice_ { }
 }

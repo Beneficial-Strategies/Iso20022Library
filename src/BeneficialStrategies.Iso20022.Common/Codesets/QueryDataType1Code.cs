@@ -23,7 +23,7 @@ public enum QueryDataType1Code
     [IsoId("__WMRUaa_EeSxuMLA5o46jQ")]
     [Description(@"Query for tading data of foreign exchange.")]
     QueryForeignExchangeTradingData = QueryDataTypeCode.QueryForeignExchangeTradingData, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for tading data of option.
     /// Encoded/decoded by serializers as &quot;QOTD&quot;.
@@ -32,5 +32,4 @@ public enum QueryDataType1Code
     [IsoId("__bscYaa_EeSxuMLA5o46jQ")]
     [Description(@"Query for tading data of option.")]
     QueryOptionTradingData = QueryDataTypeCode.QueryOptionTradingData, // same ordinal as derivation source for type conversions
-    
 }

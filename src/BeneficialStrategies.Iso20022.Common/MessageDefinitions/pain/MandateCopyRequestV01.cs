@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.pain;
 
@@ -26,72 +24,65 @@ namespace BeneficialStrategies.Iso20022.pain;
 /// The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.
 /// The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.
 /// The MandateCopyRequest message can be used in domestic and cross-border scenarios.
-/// 
+///
 /// </summary>
-[Description(@"Scope|The MandateCopyRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateCopyRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateCopyRequest message is used to request a copy of an existing mandate. If accepted, the mandate copy can be sent using the MandateAcceptanceReport message.|Usage|The MandateCopyRequest message can contain one or more copy requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateCopyRequest message can be used in domestic and cross-border scenarios.|")]
+[Description(
+    @"Scope|The MandateCopyRequest message is sent by the initiator of the request to his agent. The initiator can either be the debtor or the creditor.|The MandateCopyRequest message is forwarded by the agent of the initiator to the agent of the counterparty.|A MandateCopyRequest message is used to request a copy of an existing mandate. If accepted, the mandate copy can be sent using the MandateAcceptanceReport message.|Usage|The MandateCopyRequest message can contain one or more copy requests.|The messages can be exchanged between creditor and creditor agent or debtor and debtor agent and between creditor agent and debtor agent.|The message can also be used by an initiating party that has authority to send the message on behalf of the creditor or debtor.|The MandateCopyRequest message can be used in domestic and cross-border scenarios.|"
+)]
 [IsoId("_fptHIG6qEeaUkthD_kt0tA")]
 [DisplayName("Mandate Copy Request V")]
-public partial record MandateCopyRequestV01 : IOuterRecord
+public record MandateCopyRequestV01 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "pain.017.001.01";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "MndtCpyReq";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:pain.017.001.01";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Set of characteristics to identify the message and parties playing a role in the mandate copy request, but which are not part of the mandate.
     /// </summary>
     [IsoId("_9EgQ4G6tEeaUkthD_kt0tA")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
-    public required GroupHeader47 GroupHeader { get; init; } 
-    
+    public required GroupHeader47 GroupHeader { get; init; }
+
     /// <summary>
     /// Set of information used to identify the mandate for which a copy is requested.
     /// </summary>
     [IsoId("_WQnekG6vEeaUkthD_kt0tA")]
     [DisplayName("Underlying Copy Request Details")]
     [IsoXmlTag("UndrlygCpyReqDtls")]
-    public required MandateCopy1 UnderlyingCopyRequestDetails { get; init; } 
-    
+    public required MandateCopy1 UnderlyingCopyRequestDetails { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_eHtPQW6yEeaUkthD_kt0tA")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since MandateCopyRequestV01Document is not really part of the logical business domain model, 
+// Since MandateCopyRequestV01Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to MandateCopyRequestV01.
-

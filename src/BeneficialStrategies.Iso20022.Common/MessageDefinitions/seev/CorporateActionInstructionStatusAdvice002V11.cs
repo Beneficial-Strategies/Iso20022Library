@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
@@ -26,110 +24,103 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - provide a third party with a copy of a message for information (the sub-function of the message is Copy),
 /// - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).
 /// </summary>
-[Description(@"Scope|The CorporateActionInstructionStatusAdvice message is sent by an account servicer to an account owner or its designated agent, to report status of a received corporate action election instruction.||This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[Description(
+    @"Scope|The CorporateActionInstructionStatusAdvice message is sent by an account servicer to an account owner or its designated agent, to report status of a received corporate action election instruction.||This message is used to advise the status, or a change in status, of a corporate action-related transaction previously instructed by, or executed on behalf of, the account owner. This will include the acknowledgement/rejection of a corporate action instruction.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH)."
+)]
 [IsoId("_Pl7RgwVSEeqjd8n6wD9JVw")]
 [DisplayName("Corporate Action Instruction Status Advice 002 V")]
-public partial record CorporateActionInstructionStatusAdvice002V11 : IOuterRecord
+public record CorporateActionInstructionStatusAdvice002V11 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "seev.034.002.11";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "CorpActnInstrStsAdvc";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:seev.034.002.11";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Identification of a related instruction document.
     /// </summary>
     [IsoId("_Pl7RigVSEeqjd8n6wD9JVw")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public DocumentIdentification17? InstructionIdentification { get; init; } 
-    
+    public DocumentIdentification17? InstructionIdentification { get; init; }
+
     /// <summary>
     /// Identification of other documents as well as the document number.
     /// </summary>
     [IsoId("_Pl7RjAVSEeqjd8n6wD9JVw")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification34? OtherDocumentIdentification { get; init; } 
-    
+    public DocumentIdentification34? OtherDocumentIdentification { get; init; }
+
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_Pl7RjgVSEeqjd8n6wD9JVw")]
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation144 CorporateActionGeneralInformation { get; init; } 
-    
+    public required CorporateActionGeneralInformation144 CorporateActionGeneralInformation { get; init; }
+
     /// <summary>
     /// Provides information about the processing status of the instruction.
     /// </summary>
     [IsoId("_Pl7RkAVSEeqjd8n6wD9JVw")]
     [DisplayName("Instruction Processing Status")]
     [IsoXmlTag("InstrPrcgSts")]
-    public required InstructionProcessingStatus39Choice_ InstructionProcessingStatus { get; init; } 
-    
+    public required InstructionProcessingStatus39Choice_ InstructionProcessingStatus { get; init; }
+
     /// <summary>
     /// Information about the corporate action instruction.
     /// </summary>
     [IsoId("_Pl7RkgVSEeqjd8n6wD9JVw")]
     [DisplayName("Corporate Action Instruction")]
     [IsoXmlTag("CorpActnInstr")]
-    public CorporateActionOption169? CorporateActionInstruction { get; init; } 
-    
+    public CorporateActionOption169? CorporateActionInstruction { get; init; }
+
     /// <summary>
     /// Provides detailed information on protect and cover protect instructions.
     /// </summary>
     [IsoId("_Pl7RlAVSEeqjd8n6wD9JVw")]
     [DisplayName("Protect Instruction")]
     [IsoXmlTag("PrtctInstr")]
-    public ProtectInstruction6? ProtectInstruction { get; init; } 
-    
+    public ProtectInstruction6? ProtectInstruction { get; init; }
+
     /// <summary>
     /// Provides additional information.
     /// </summary>
     [IsoId("_Pl7RlgVSEeqjd8n6wD9JVw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative19? AdditionalInformation { get; init; } 
-    
+    public CorporateActionNarrative19? AdditionalInformation { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_Pl7RmAVSEeqjd8n6wD9JVw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since CorporateActionInstructionStatusAdvice002V11Document is not really part of the logical business domain model, 
+// Since CorporateActionInstructionStatusAdvice002V11Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to CorporateActionInstructionStatusAdvice002V11.
-

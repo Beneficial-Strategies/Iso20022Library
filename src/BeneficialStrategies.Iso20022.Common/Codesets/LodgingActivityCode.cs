@@ -23,7 +23,7 @@ public enum LodgingActivityCode
     [IsoId("_ZdiY0GMbEeexSYCBvAp_qA")]
     [Description(@"Apartment residence.")]
     Apartment,
-    
+
     /// <summary>
     /// Bed and breakfast or related lodging.
     /// Encoded/decoded by serializers as &quot;BEBR&quot;.
@@ -32,7 +32,7 @@ public enum LodgingActivityCode
     [IsoId("_e4lFMGMbEeexSYCBvAp_qA")]
     [Description(@"Bed and breakfast or related lodging.")]
     BedAndBreakfast,
-    
+
     /// <summary>
     /// Cruise line lodging.
     /// Encoded/decoded by serializers as &quot;CRUI&quot;.
@@ -41,7 +41,7 @@ public enum LodgingActivityCode
     [IsoId("_ngUXEGMbEeexSYCBvAp_qA")]
     [Description(@"Cruise line lodging.")]
     Cruise,
-    
+
     /// <summary>
     /// Hotel or related lodging.
     /// Encoded/decoded by serializers as &quot;HOTL&quot;.
@@ -50,7 +50,7 @@ public enum LodgingActivityCode
     [IsoId("_twxogGMbEeexSYCBvAp_qA")]
     [Description(@"Hotel or related lodging.")]
     Hotel,
-    
+
     /// <summary>
     /// Motel or related lodging.
     /// Encoded/decoded by serializers as &quot;MOTL&quot;.
@@ -59,7 +59,7 @@ public enum LodgingActivityCode
     [IsoId("_xJkJQGMbEeexSYCBvAp_qA")]
     [Description(@"Motel or related lodging.")]
     Motel,
-    
+
     /// <summary>
     /// Hostel or related lodging.
     /// Encoded/decoded by serializers as &quot;HOST&quot;.
@@ -68,7 +68,7 @@ public enum LodgingActivityCode
     [IsoId("_05ILQGMbEeexSYCBvAp_qA")]
     [Description(@"Hostel or related lodging.")]
     Hostel,
-    
+
     /// <summary>
     /// Cottage and related lodging.
     /// Encoded/decoded by serializers as &quot;COTT&quot;.
@@ -77,7 +77,7 @@ public enum LodgingActivityCode
     [IsoId("_NBeEQGMcEeexSYCBvAp_qA")]
     [Description(@"Cottage and related lodging.")]
     Cottage,
-    
+
     /// <summary>
     /// Lodge or related lodging.
     /// Encoded/decoded by serializers as &quot;LODG&quot;.
@@ -86,7 +86,7 @@ public enum LodgingActivityCode
     [IsoId("_P_ulIGMcEeexSYCBvAp_qA")]
     [Description(@"Lodge or related lodging.")]
     Lodge,
-    
+
     /// <summary>
     /// Room and board or related lodging.
     /// Encoded/decoded by serializers as &quot;ROAB&quot;.
@@ -95,7 +95,7 @@ public enum LodgingActivityCode
     [IsoId("_TzZEAGMcEeexSYCBvAp_qA")]
     [Description(@"Room and board or related lodging.")]
     RoomAndBoard,
-    
+
     /// <summary>
     /// Tourist shelter and related lodging.
     /// Encoded/decoded by serializers as &quot;TOSH&quot;.
@@ -104,7 +104,7 @@ public enum LodgingActivityCode
     [IsoId("_bDIBIGMcEeexSYCBvAp_qA")]
     [Description(@"Tourist shelter and related lodging.")]
     TouristShelter,
-    
+
     /// <summary>
     /// An individual offering lodging facilities.
     /// Encoded/decoded by serializers as &quot;HOME&quot;.
@@ -113,7 +113,7 @@ public enum LodgingActivityCode
     [IsoId("_hN3sIGMcEeexSYCBvAp_qA")]
     [Description(@"An individual offering lodging facilities.")]
     Home,
-    
+
     /// <summary>
     /// Other type of lodging defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -122,7 +122,7 @@ public enum LodgingActivityCode
     [IsoId("_oDoDAGMcEeexSYCBvAp_qA")]
     [Description(@"Other type of lodging defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of lodging defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -131,7 +131,7 @@ public enum LodgingActivityCode
     [IsoId("_vHtJwGMcEeexSYCBvAp_qA")]
     [Description(@"Other type of lodging defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Resort or related lodging.
     /// Encoded/decoded by serializers as &quot;RESO&quot;.
@@ -140,5 +140,4 @@ public enum LodgingActivityCode
     [IsoId("_1laNAGMcEeexSYCBvAp_qA")]
     [Description(@"Resort or related lodging.")]
     Resort,
-    
 }

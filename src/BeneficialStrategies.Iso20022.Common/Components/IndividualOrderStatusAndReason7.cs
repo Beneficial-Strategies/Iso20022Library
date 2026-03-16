@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_I4LC7zbtEead9bDRE_1DAQ")]
 [DisplayName("Individual Order Status And Reason")]
-public partial record IndividualOrderStatusAndReason7
+public record IndividualOrderStatusAndReason7
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference assigned to a set of orders or trades in order to link them together.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record IndividualOrderStatusAndReason7
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MasterReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MasterReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record IndividualOrderStatusAndReason7
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text OrderReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record IndividualOrderStatusAndReason7
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ClientReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record IndividualOrderStatusAndReason7
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DealReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DealReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for the order cancellation, as assigned by the instructing party.
     /// </summary>
@@ -65,17 +63,17 @@ public partial record IndividualOrderStatusAndReason7
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CancellationReference { get; init; }
+
     /// <summary>
     /// Status of the individual order.
     /// </summary>
     [IsoId("_Sop2EEHQEeazV4RAqPV71g")]
     [DisplayName("Order Status")]
     [IsoXmlTag("OrdrSts")]
-    public required OrderStatus5Choice_ OrderStatus { get; init; } 
-    
+    public required OrderStatus5Choice_ OrderStatus { get; init; }
+
     /// <summary>
     /// Elements from the original individual order that have been repaired so that the order can be accepted.
     /// </summary>
@@ -85,40 +83,36 @@ public partial record IndividualOrderStatusAndReason7
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<Fee3> RepairedFee { get; init; } = [];
-    
+
     /// <summary>
     /// Party that initiates the status of the order.
     /// </summary>
     [IsoId("_xvSL8UjYEeaUN5TdQqhvNQ")]
     [DisplayName("Status Initiator")]
     [IsoXmlTag("StsInitr")]
-    public PartyIdentification113? StatusInitiator { get; init; } 
-    
+    public PartyIdentification113? StatusInitiator { get; init; }
+
     /// <summary>
     /// Order data.
     /// </summary>
     [IsoId("_JSDioTbtEead9bDRE_1DAQ")]
     [DisplayName("Order Data")]
     [IsoXmlTag("OrdrData")]
-    public FundOrderData5? OrderData { get; init; } 
-    
+    public FundOrderData5? OrderData { get; init; }
+
     /// <summary>
     /// Expected execution information.
     /// </summary>
     [IsoId("_JSDiozbtEead9bDRE_1DAQ")]
     [DisplayName("New Details")]
     [IsoXmlTag("NewDtls")]
-    public ExpectedExecutionDetails4? NewDetails { get; init; } 
-    
+    public ExpectedExecutionDetails4? NewDetails { get; init; }
+
     /// <summary>
     /// Information about gating and hold back of redemption proceeds.
     /// </summary>
     [IsoId("_gd_YcUgWEea9YuSvQGoi-w")]
     [DisplayName("Gating Or Hold Back Details")]
     [IsoXmlTag("GtgOrHldBckDtls")]
-    public HoldBackInformation3? GatingOrHoldBackDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public HoldBackInformation3? GatingOrHoldBackDetails { get; init; }
 }

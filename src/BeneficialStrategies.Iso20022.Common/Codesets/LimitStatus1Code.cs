@@ -23,7 +23,7 @@ public enum LimitStatus1Code
     [IsoId("_zdviUg93EeGeV5vP7Mvdig_372741033")]
     [Description(@"Limit is currently in effect.")]
     Enabled = LimitStatusCode.Enabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Limit is not currently in effect.
     /// Encoded/decoded by serializers as &quot;DISA&quot;.
@@ -32,7 +32,7 @@ public enum LimitStatus1Code
     [IsoId("_zdviUw93EeGeV5vP7Mvdig_815729525")]
     [Description(@"Limit is not currently in effect.")]
     Disabled = LimitStatusCode.Disabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Limit has been deleted or suspended.
     /// Encoded/decoded by serializers as &quot;DELD&quot;.
@@ -41,7 +41,7 @@ public enum LimitStatus1Code
     [IsoId("_zdviVA93EeGeV5vP7Mvdig_1401676551")]
     [Description(@"Limit has been deleted or suspended.")]
     Deleted = LimitStatusCode.Deleted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Limit has been asked for and is not yet enabled.
     /// Encoded/decoded by serializers as &quot;REQD&quot;.
@@ -50,5 +50,4 @@ public enum LimitStatus1Code
     [IsoId("_zdviVQ93EeGeV5vP7Mvdig_348111115")]
     [Description(@"Limit has been asked for and is not yet enabled.")]
     Requested = LimitStatusCode.Requested, // same ordinal as derivation source for type conversions
-    
 }

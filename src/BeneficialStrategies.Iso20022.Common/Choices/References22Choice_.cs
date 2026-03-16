@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References22Choice.SecuritiesFinancingTransactionIdentification))]
     [KnownType(typeof(References22Choice.SecuritiesSettlementTransactionIdentification))]
     [KnownType(typeof(References22Choice.IntraPositionMovementIdentification))]
-    [JsonDerivedType(typeof(References22Choice.OtherTransactionIdentification),nameof(References22Choice.OtherTransactionIdentification))]
-    [JsonDerivedType(typeof(References22Choice.SecuritiesFinancingTransactionIdentification),nameof(References22Choice.SecuritiesFinancingTransactionIdentification))]
-    [JsonDerivedType(typeof(References22Choice.SecuritiesSettlementTransactionIdentification),nameof(References22Choice.SecuritiesSettlementTransactionIdentification))]
-    [JsonDerivedType(typeof(References22Choice.IntraPositionMovementIdentification),nameof(References22Choice.IntraPositionMovementIdentification))]
+    [JsonDerivedType(
+        typeof(References22Choice.OtherTransactionIdentification),
+        nameof(References22Choice.OtherTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References22Choice.SecuritiesFinancingTransactionIdentification),
+        nameof(References22Choice.SecuritiesFinancingTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References22Choice.SecuritiesSettlementTransactionIdentification),
+        nameof(References22Choice.SecuritiesSettlementTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References22Choice.IntraPositionMovementIdentification),
+        nameof(References22Choice.IntraPositionMovementIdentification)
+    )]
     [IsoId("_H4smNk-2EeCKyoyCaiI0rw")]
     [DisplayName("References 22 Choice")]
-    public abstract partial record References22Choice_
-    {
-    }
+    public abstract record References22Choice_ { }
 }

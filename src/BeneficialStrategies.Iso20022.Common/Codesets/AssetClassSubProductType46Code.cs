@@ -23,5 +23,4 @@ public enum AssetClassSubProductType46Code
     [IsoId("_9F9MIfwfEeW4Wthd0Ze_kA")]
     [Description(@"Commodity of type container ships.")]
     ContainerShip = AssetClassSubProductTypeCode.ContainerShip, // same ordinal as derivation source for type conversions
-    
 }

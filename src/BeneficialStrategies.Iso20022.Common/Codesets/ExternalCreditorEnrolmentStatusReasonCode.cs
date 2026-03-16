@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_tareMeazEeqynejxNiO9NQ")]
-[Description(@"Specifies the creditor enrolment status reason code, as published in an external creditor enrolment status reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the creditor enrolment status reason code, as published in an external creditor enrolment status reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalCreditorEnrolmentStatusReason1Code))]
 public enum ExternalCreditorEnrolmentStatusReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uvUnI_RYEeuLhpyIdtJzwg")]
     [Description(@"Already existing creditor.")]
     AlreadyExistingCreditor,
-    
+
     /// <summary>
     /// Duplication.
     /// Encoded/decoded by serializers as &quot;AM05&quot;.
@@ -33,7 +35,7 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uvUnJvRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication,
-    
+
     /// <summary>
     /// Invalid file format.
     /// Encoded/decoded by serializers as &quot;FF01&quot;.
@@ -42,7 +44,7 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uvUnKfRYEeuLhpyIdtJzwg")]
     [Description(@"Invalid file format.")]
     InvalidFileFormat,
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -51,7 +53,7 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uveYIPRYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference,
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -60,7 +62,7 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uveYI_RYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason,
-    
+
     /// <summary>
     /// Invalid character set.
     /// Encoded/decoded by serializers as &quot;RR10&quot;.
@@ -69,7 +71,7 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uvoJIPRYEeuLhpyIdtJzwg")]
     [Description(@"Invalid character set.")]
     InvalidCharacterSet,
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -78,5 +80,4 @@ public enum ExternalCreditorEnrolmentStatusReasonCode
     [IsoId("_uvoJI_RYEeuLhpyIdtJzwg")]
     [Description(@"Technical rejection.")]
     TechnicalRejection,
-    
 }

@@ -21,9 +21,11 @@ public enum TypeTransactionTotals3Code
     /// </summary>
     [EnumMember(Value = "CRDT")]
     [IsoId("_56GB4dxhEeioifFt1dhnJA")]
-    [Description(@"Credit transactions (refund, account, cash service, as defined in the transaction service type).")]
+    [Description(
+        @"Credit transactions (refund, account, cash service, as defined in the transaction service type)."
+    )]
     Credit = TypeTransactionTotalsCode.Credit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reversal of credit transactions (cancellation).
     /// Encoded/decoded by serializers as &quot;CRDR&quot;.
@@ -32,7 +34,7 @@ public enum TypeTransactionTotals3Code
     [IsoId("_59X_YdxhEeioifFt1dhnJA")]
     [Description(@"Reversal of credit transactions (cancellation).")]
     CreditReverse = TypeTransactionTotalsCode.CreditReverse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Debit transactions on the cardholder account.
     /// Encoded/decoded by serializers as &quot;DEBT&quot;.
@@ -41,7 +43,7 @@ public enum TypeTransactionTotals3Code
     [IsoId("_6ApV0dxhEeioifFt1dhnJA")]
     [Description(@"Debit transactions on the cardholder account.")]
     Debit = TypeTransactionTotalsCode.Debit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reversal of debit transactions (cancellation).
     /// Encoded/decoded by serializers as &quot;DBTR&quot;.
@@ -50,7 +52,7 @@ public enum TypeTransactionTotals3Code
     [IsoId("_6EFEUdxhEeioifFt1dhnJA")]
     [Description(@"Reversal of debit transactions (cancellation).")]
     DebitReverse = TypeTransactionTotalsCode.DebitReverse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Declined transactions.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
@@ -59,7 +61,7 @@ public enum TypeTransactionTotals3Code
     [IsoId("_6HIYUdxhEeioifFt1dhnJA")]
     [Description(@"Declined transactions.")]
     Declined = TypeTransactionTotalsCode.Declined, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Failed transactions.
     /// Encoded/decoded by serializers as &quot;FAIL&quot;.
@@ -68,7 +70,7 @@ public enum TypeTransactionTotals3Code
     [IsoId("_6KQk0dxhEeioifFt1dhnJA")]
     [Description(@"Failed transactions.")]
     Failed = TypeTransactionTotalsCode.Failed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Outstanding Reservation transactions.
     /// Encoded/decoded by serializers as &quot;RESV&quot;.
@@ -77,5 +79,4 @@ public enum TypeTransactionTotals3Code
     [IsoId("_6NjwcdxhEeioifFt1dhnJA")]
     [Description(@"Outstanding Reservation transactions.")]
     Reservation = TypeTransactionTotalsCode.Reservation, // same ordinal as derivation source for type conversions
-    
 }

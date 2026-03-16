@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sLE8ETGaEeiNp7s-9BkwiQ")]
 [DisplayName("Credit Default Swap Derivative")]
-public partial record CreditDefaultSwapDerivative6
+public record CreditDefaultSwapDerivative6
 {
-    #nullable enable
-    
     /// <summary>
     /// Derivative on a credit default swap with the ISIN code of the underlying swap.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record CreditDefaultSwapDerivative6
     [DisplayName("Underlying Credit Default Swap Identification")]
     [IsoXmlTag("UndrlygCdtDfltSwpId")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? UnderlyingCreditDefaultSwapIdentification { get; init; } 
-    
+    public IsoISINOct2015Identifier? UnderlyingCreditDefaultSwapIdentification { get; init; }
+
     /// <summary>
     /// Identification of the reference obligation for a derivative on a credit default swap.
     /// </summary>
@@ -34,17 +32,13 @@ public partial record CreditDefaultSwapDerivative6
     [DisplayName("Obligation Identification")]
     [IsoXmlTag("OblgtnId")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ObligationIdentification { get; init; } 
-    
+    public required IsoISINOct2015Identifier ObligationIdentification { get; init; }
+
     /// <summary>
     /// Describes the single name specific details the derivative is being made on.
     /// </summary>
     [IsoId("_sdY0FjGaEeiNp7s-9BkwiQ")]
     [DisplayName("Single Name")]
     [IsoXmlTag("SnglNm")]
-    public required CreditDefaultSwapSingleName2 SingleName { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CreditDefaultSwapSingleName2 SingleName { get; init; }
 }

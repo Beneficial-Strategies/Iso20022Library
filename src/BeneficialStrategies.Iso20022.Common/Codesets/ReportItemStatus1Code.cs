@@ -23,7 +23,7 @@ public enum ReportItemStatus1Code
     [IsoId("_VMcTwUi5EeSlHoYg_EudVQ")]
     [Description(@"Entry has been accepted by the receiver of the report.")]
     Accepted = ReportItemStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entry has been rejected by the receiver of the report.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,5 +32,4 @@ public enum ReportItemStatus1Code
     [IsoId("_VbdnMUi5EeSlHoYg_EudVQ")]
     [Description(@"Entry has been rejected by the receiver of the report.")]
     Rejected = ReportItemStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodityPaper4Choice.Pulp))]
     [KnownType(typeof(AssetClassCommodityPaper4Choice.RecoveredPaper))]
     [KnownType(typeof(AssetClassCommodityPaper4Choice.Other))]
-    [JsonDerivedType(typeof(AssetClassCommodityPaper4Choice.ContainerBoard),nameof(AssetClassCommodityPaper4Choice.ContainerBoard))]
-    [JsonDerivedType(typeof(AssetClassCommodityPaper4Choice.Newsprint),nameof(AssetClassCommodityPaper4Choice.Newsprint))]
-    [JsonDerivedType(typeof(AssetClassCommodityPaper4Choice.Pulp),nameof(AssetClassCommodityPaper4Choice.Pulp))]
-    [JsonDerivedType(typeof(AssetClassCommodityPaper4Choice.RecoveredPaper),nameof(AssetClassCommodityPaper4Choice.RecoveredPaper))]
-    [JsonDerivedType(typeof(AssetClassCommodityPaper4Choice.Other),nameof(AssetClassCommodityPaper4Choice.Other))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPaper4Choice.ContainerBoard),
+        nameof(AssetClassCommodityPaper4Choice.ContainerBoard)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPaper4Choice.Newsprint),
+        nameof(AssetClassCommodityPaper4Choice.Newsprint)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPaper4Choice.Pulp),
+        nameof(AssetClassCommodityPaper4Choice.Pulp)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPaper4Choice.RecoveredPaper),
+        nameof(AssetClassCommodityPaper4Choice.RecoveredPaper)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPaper4Choice.Other),
+        nameof(AssetClassCommodityPaper4Choice.Other)
+    )]
     [IsoId("_Frp24RZaEe2QNcZTDeoKnQ")]
     [DisplayName("Asset Class Commodity Paper 4 Choice")]
-    public abstract partial record AssetClassCommodityPaper4Choice_
-    {
-    }
+    public abstract record AssetClassCommodityPaper4Choice_ { }
 }

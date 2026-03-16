@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RateOrName2Choice.Rate))]
     [KnownType(typeof(RateOrName2Choice.RateName))]
-    [JsonDerivedType(typeof(RateOrName2Choice.Rate),nameof(RateOrName2Choice.Rate))]
-    [JsonDerivedType(typeof(RateOrName2Choice.RateName),nameof(RateOrName2Choice.RateName))]
+    [JsonDerivedType(typeof(RateOrName2Choice.Rate), nameof(RateOrName2Choice.Rate))]
+    [JsonDerivedType(typeof(RateOrName2Choice.RateName), nameof(RateOrName2Choice.RateName))]
     [IsoId("_XO3Ydtp-Ed-ak6NoX_4Aeg_-1773453138")]
     [DisplayName("Rate Or Name 2 Choice")]
-    public abstract partial record RateOrName2Choice_
-    {
-    }
+    public abstract record RateOrName2Choice_ { }
 }

@@ -21,18 +21,22 @@ public enum DataSetCategory3Code
     /// </summary>
     [EnumMember(Value = "AQPR")]
     [IsoId("_a6DocSmrEeKIjpr--01h3Q")]
-    [Description(@"Acquirer specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Acquirer specific configuration parameters for the point of interaction (POI) system."
+    )]
     AcquirerParameters = DataSetCategoryCode.AcquirerParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment application specific configuration parameters for the point of interaction (POI) system.
     /// Encoded/decoded by serializers as &quot;APPR&quot;.
     /// </summary>
     [EnumMember(Value = "APPR")]
     [IsoId("_bNilISmrEeKIjpr--01h3Q")]
-    [Description(@"Payment application specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Payment application specific configuration parameters for the point of interaction (POI) system."
+    )]
     ApplicationParameters = DataSetCategoryCode.ApplicationParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch upload of transaction data (data capture of a group of transactions).
     /// Encoded/decoded by serializers as &quot;TXCP&quot;.
@@ -41,7 +45,7 @@ public enum DataSetCategory3Code
     [IsoId("_bYssQymrEeKIjpr--01h3Q")]
     [Description(@"Batch upload of transaction data (data capture of a group of transactions).")]
     BatchCapture = DataSetCategoryCode.BatchCapture, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch download response for the batch capture of transactions.
     /// Encoded/decoded by serializers as &quot;AKCP&quot;.
@@ -50,7 +54,7 @@ public enum DataSetCategory3Code
     [IsoId("_bepjQSmrEeKIjpr--01h3Q")]
     [Description(@"Batch download response for the batch capture of transactions.")]
     CaptureResponse = DataSetCategoryCode.CaptureResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data needed to create a terminal management sub-domain.
     /// Encoded/decoded by serializers as &quot;DLGT&quot;.
@@ -59,7 +63,7 @@ public enum DataSetCategory3Code
     [IsoId("_bo65kymrEeKIjpr--01h3Q")]
     [Description(@"Data needed to create a terminal management sub-domain.")]
     DelegationData = DataSetCategoryCode.DelegationData, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Configuration of management plan in the point of interaction.
     /// Encoded/decoded by serializers as &quot;MGTP&quot;.
@@ -68,7 +72,7 @@ public enum DataSetCategory3Code
     [IsoId("_bwgIQSmrEeKIjpr--01h3Q")]
     [Description(@"Configuration of management plan in the point of interaction.")]
     ManagementPlan = DataSetCategoryCode.ManagementPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Merchant configuration parameters for the point of interaction (POI).
     /// Encoded/decoded by serializers as &quot;MRPR&quot;.
@@ -77,16 +81,18 @@ public enum DataSetCategory3Code
     [IsoId("_b6UyoSmrEeKIjpr--01h3Q")]
     [Description(@"Merchant configuration parameters for the point of interaction (POI).")]
     MerchantParameters = DataSetCategoryCode.MerchantParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Point of interaction parameters related to the security of software application and application protocol.
     /// Encoded/decoded by serializers as &quot;SCPR&quot;.
     /// </summary>
     [EnumMember(Value = "SCPR")]
     [IsoId("_cBw3YSmrEeKIjpr--01h3Q")]
-    [Description(@"Point of interaction parameters related to the security of software application and application protocol.")]
+    [Description(
+        @"Point of interaction parameters related to the security of software application and application protocol."
+    )]
     SecurityParameters = DataSetCategoryCode.SecurityParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Software module.
     /// Encoded/decoded by serializers as &quot;SWPK&quot;.
@@ -95,7 +101,7 @@ public enum DataSetCategory3Code
     [IsoId("_cK164ymrEeKIjpr--01h3Q")]
     [Description(@"Software module.")]
     SoftwareModule = DataSetCategoryCode.SoftwareModule, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Report of software configuration and parameter status.
     /// Encoded/decoded by serializers as &quot;STRP&quot;.
@@ -104,23 +110,26 @@ public enum DataSetCategory3Code
     [IsoId("_cSR_oSmrEeKIjpr--01h3Q")]
     [Description(@"Report of software configuration and parameter status.")]
     StatusReport = DataSetCategoryCode.StatusReport, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Point of interaction parameters attached to the terminal as serial number or physical capabilities.
     /// Encoded/decoded by serializers as &quot;TRPR&quot;.
     /// </summary>
     [EnumMember(Value = "TRPR")]
     [IsoId("_cY-dgymrEeKIjpr--01h3Q")]
-    [Description(@"Point of interaction parameters attached to the terminal as serial number or physical capabilities.")]
+    [Description(
+        @"Point of interaction parameters attached to the terminal as serial number or physical capabilities."
+    )]
     TerminalParameters = DataSetCategoryCode.TerminalParameters, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.
     /// Encoded/decoded by serializers as &quot;VDPR&quot;.
     /// </summary>
     [EnumMember(Value = "VDPR")]
     [IsoId("_cgtdMymrEeKIjpr--01h3Q")]
-    [Description(@"Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.")]
+    [Description(
+        @"Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities."
+    )]
     VendorParameters = DataSetCategoryCode.VendorParameters, // same ordinal as derivation source for type conversions
-    
 }

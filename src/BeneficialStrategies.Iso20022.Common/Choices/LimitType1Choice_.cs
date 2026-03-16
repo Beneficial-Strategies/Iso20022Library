@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LimitType1Choice.Code))]
     [KnownType(typeof(LimitType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(LimitType1Choice.Code),nameof(LimitType1Choice.Code))]
-    [JsonDerivedType(typeof(LimitType1Choice.Proprietary),nameof(LimitType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(LimitType1Choice.Code), nameof(LimitType1Choice.Code))]
+    [JsonDerivedType(typeof(LimitType1Choice.Proprietary), nameof(LimitType1Choice.Proprietary))]
     [IsoId("_79FX8KMgEeCJ6YNENx4h-w_1397757128")]
     [DisplayName("Limit Type 1 Choice")]
-    public abstract partial record LimitType1Choice_
-    {
-    }
+    public abstract record LimitType1Choice_ { }
 }

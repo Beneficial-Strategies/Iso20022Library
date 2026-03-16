@@ -23,7 +23,7 @@ public enum RejectionReason20Code
     [IsoId("_Zi-wKNp-Ed-ak6NoX_4Aeg_-482612999")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unable to identify cash account.
     /// Encoded/decoded by serializers as &quot;CASA&quot;.
@@ -32,7 +32,7 @@ public enum RejectionReason20Code
     [IsoId("_ZjIhINp-Ed-ak6NoX_4Aeg_-482612969")]
     [Description(@"Unable to identify cash account.")]
     NotIdentifiedCashAccount = RejectionReasonCode.NotIdentifiedCashAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unable to identify correspondent bank.
     /// Encoded/decoded by serializers as &quot;CORR&quot;.
@@ -41,7 +41,7 @@ public enum RejectionReason20Code
     [IsoId("_ZjIhIdp-Ed-ak6NoX_4Aeg_-482612938")]
     [Description(@"Unable to identify correspondent bank.")]
     NotIdentifiedCorrespondentBank = RejectionReasonCode.NotIdentifiedCorrespondentBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid standing instruction type for the specified underlying security.
     /// Encoded/decoded by serializers as &quot;STAN&quot;.
@@ -50,7 +50,7 @@ public enum RejectionReason20Code
     [IsoId("_ZjIhItp-Ed-ak6NoX_4Aeg_-482612937")]
     [Description(@"Invalid standing instruction type for the specified underlying security.")]
     InvalidStandingInstructionType = RejectionReasonCode.InvalidStandingInstructionType, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No holding for the specified underlying security.
     /// Encoded/decoded by serializers as &quot;NOHO&quot;.
@@ -59,5 +59,4 @@ public enum RejectionReason20Code
     [IsoId("_ZjIhI9p-Ed-ak6NoX_4Aeg_-482612907")]
     [Description(@"No holding for the specified underlying security.")]
     NoHolding = RejectionReasonCode.NoHolding, // same ordinal as derivation source for type conversions
-    
 }

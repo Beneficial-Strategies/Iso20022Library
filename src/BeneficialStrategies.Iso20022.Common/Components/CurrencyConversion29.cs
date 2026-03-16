@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MKqkcZFDEe6reqfAp4CunQ")]
 [DisplayName("Currency Conversion29")]
-public partial record CurrencyConversion29
+public record CurrencyConversion29
 {
-    #nullable enable
-
     /// <summary>
     /// Applicable Bin Range.
     /// </summary>
@@ -37,7 +35,7 @@ public partial record CurrencyConversion29
     /// </summary>
     [DisplayName("Currency Conversion Identification")]
     [IsoXmlTag("CcyConvsId")]
-    public IsoMax35Text? CurrencyConversionIdentification { get; init; } 
+    public IsoMax35Text? CurrencyConversionIdentification { get; init; }
 
     /// <summary>
     /// Declaration Details.
@@ -51,14 +49,14 @@ public partial record CurrencyConversion29
     /// </summary>
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
-    public required IsoPercentageRate ExchangeRate { get; init; } 
+    public required IsoPercentageRate ExchangeRate { get; init; }
 
     /// <summary>
     /// Inverted Exchange Rate.
     /// </summary>
     [DisplayName("Inverted Exchange Rate")]
     [IsoXmlTag("NvrtdXchgRate")]
-    public IsoPercentageRate? InvertedExchangeRate { get; init; } 
+    public IsoPercentageRate? InvertedExchangeRate { get; init; }
 
     /// <summary>
     /// Mark Up Details.
@@ -72,51 +70,47 @@ public partial record CurrencyConversion29
     /// </summary>
     [DisplayName("Original Amount")]
     [IsoXmlTag("OrgnlAmt")]
-    public OriginalAmountDetails1? OriginalAmount { get; init; } 
+    public OriginalAmountDetails1? OriginalAmount { get; init; }
 
     /// <summary>
     /// Quotation Date.
     /// </summary>
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public IsoISODateTime? QuotationDate { get; init; } 
+    public IsoISODateTime? QuotationDate { get; init; }
 
     /// <summary>
     /// Resulting Amount.
     /// </summary>
     [DisplayName("Resulting Amount")]
     [IsoXmlTag("RsltgAmt")]
-    public ImpliedCurrencyAndAmount? ResultingAmount { get; init; } 
+    public ImpliedCurrencyAndAmount? ResultingAmount { get; init; }
 
     /// <summary>
     /// Source Currency.
     /// </summary>
     [DisplayName("Source Currency")]
     [IsoXmlTag("SrcCcy")]
-    public required CurrencyDetails2 SourceCurrency { get; init; } 
+    public required CurrencyDetails2 SourceCurrency { get; init; }
 
     /// <summary>
     /// Target Currency.
     /// </summary>
     [DisplayName("Target Currency")]
     [IsoXmlTag("TrgtCcy")]
-    public required CurrencyDetails3 TargetCurrency { get; init; } 
+    public required CurrencyDetails3 TargetCurrency { get; init; }
 
     /// <summary>
     /// Valid From.
     /// </summary>
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
-    public IsoISODateTime? ValidFrom { get; init; } 
+    public IsoISODateTime? ValidFrom { get; init; }
 
     /// <summary>
     /// Valid Until.
     /// </summary>
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public IsoISODateTime? ValidUntil { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoISODateTime? ValidUntil { get; init; }
 }

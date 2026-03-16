@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification34Choice.BIC))]
     [KnownType(typeof(PartyIdentification34Choice.NameAndAddress))]
     [KnownType(typeof(PartyIdentification34Choice.Country))]
-    [JsonDerivedType(typeof(PartyIdentification34Choice.BIC),nameof(PartyIdentification34Choice.BIC))]
-    [JsonDerivedType(typeof(PartyIdentification34Choice.NameAndAddress),nameof(PartyIdentification34Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(PartyIdentification34Choice.Country),nameof(PartyIdentification34Choice.Country))]
+    [JsonDerivedType(
+        typeof(PartyIdentification34Choice.BIC),
+        nameof(PartyIdentification34Choice.BIC)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification34Choice.NameAndAddress),
+        nameof(PartyIdentification34Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification34Choice.Country),
+        nameof(PartyIdentification34Choice.Country)
+    )]
     [IsoId("_QPiO0Np-Ed-ak6NoX_4Aeg_1306764655")]
     [DisplayName("Party Identification 34 Choice")]
-    public abstract partial record PartyIdentification34Choice_
-    {
-    }
+    public abstract record PartyIdentification34Choice_ { }
 }

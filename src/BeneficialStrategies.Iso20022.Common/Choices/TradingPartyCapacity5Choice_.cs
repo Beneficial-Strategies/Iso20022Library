@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradingPartyCapacity5Choice.Code))]
     [KnownType(typeof(TradingPartyCapacity5Choice.Proprietary))]
-    [JsonDerivedType(typeof(TradingPartyCapacity5Choice.Code),nameof(TradingPartyCapacity5Choice.Code))]
-    [JsonDerivedType(typeof(TradingPartyCapacity5Choice.Proprietary),nameof(TradingPartyCapacity5Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TradingPartyCapacity5Choice.Code),
+        nameof(TradingPartyCapacity5Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(TradingPartyCapacity5Choice.Proprietary),
+        nameof(TradingPartyCapacity5Choice.Proprietary)
+    )]
     [IsoId("_r22iEMGxEeivTd4NUfCi2g")]
     [DisplayName("Trading Party Capacity 5 Choice")]
-    public abstract partial record TradingPartyCapacity5Choice_
-    {
-    }
+    public abstract record TradingPartyCapacity5Choice_ { }
 }

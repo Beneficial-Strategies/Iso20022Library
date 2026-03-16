@@ -23,7 +23,7 @@ public enum CollateralType2Code
     [IsoId("_YZhNt9p-Ed-ak6NoX_4Aeg_-490160893")]
     [Description(@"Collateral type is cash.")]
     Cash = CollateralTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral type is securities.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,5 +32,4 @@ public enum CollateralType2Code
     [IsoId("_YZhNuNp-Ed-ak6NoX_4Aeg_-2046528295")]
     [Description(@"Collateral type is securities.")]
     Securities = CollateralTypeCode.Securities, // same ordinal as derivation source for type conversions
-    
 }

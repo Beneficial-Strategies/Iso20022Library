@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PairedOrTurnedQuantity3Choice.PairedOffQuantity))]
     [KnownType(typeof(PairedOrTurnedQuantity3Choice.TurnedQuantity))]
-    [JsonDerivedType(typeof(PairedOrTurnedQuantity3Choice.PairedOffQuantity),nameof(PairedOrTurnedQuantity3Choice.PairedOffQuantity))]
-    [JsonDerivedType(typeof(PairedOrTurnedQuantity3Choice.TurnedQuantity),nameof(PairedOrTurnedQuantity3Choice.TurnedQuantity))]
+    [JsonDerivedType(
+        typeof(PairedOrTurnedQuantity3Choice.PairedOffQuantity),
+        nameof(PairedOrTurnedQuantity3Choice.PairedOffQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PairedOrTurnedQuantity3Choice.TurnedQuantity),
+        nameof(PairedOrTurnedQuantity3Choice.TurnedQuantity)
+    )]
     [IsoId("_DSejUTtCEeWRTLSN0i0tng")]
     [DisplayName("Paired Or Turned Quantity 3 Choice")]
-    public abstract partial record PairedOrTurnedQuantity3Choice_
-    {
-    }
+    public abstract record PairedOrTurnedQuantity3Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum Referred1Code
     [IsoId("_Zaosddp-Ed-ak6NoX_4Aeg_59379446")]
     [Description(@"The investor was referred to the fund by a placement agent.")]
     Referred = ReferredCode.Referred, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The investor was not referred to the fund by a placement agent.
     /// Encoded/decoded by serializers as &quot;NRFR&quot;.
@@ -32,14 +32,15 @@ public enum Referred1Code
     [IsoId("_Zaosdtp-Ed-ak6NoX_4Aeg_59379471")]
     [Description(@"The investor was not referred to the fund by a placement agent.")]
     NotReferred = ReferredCode.NotReferred, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// It is not known whether the investor was referred to the fund by a placement agent.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
     /// </summary>
     [EnumMember(Value = "UKNW")]
     [IsoId("_Zaosd9p-Ed-ak6NoX_4Aeg_59379506")]
-    [Description(@"It is not known whether the investor was referred to the fund by a placement agent.")]
+    [Description(
+        @"It is not known whether the investor was referred to the fund by a placement agent."
+    )]
     NotKnown = ReferredCode.NotKnown, // same ordinal as derivation source for type conversions
-    
 }

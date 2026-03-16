@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice
     /// </summary>
     [IsoId("_fCkacfM7EeqRfth943bvEA")]
     [DisplayName("Proxy")]
-    public partial record Proxy : Proxy4Choice_
+    public record Proxy : Proxy4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies how to register the proxy.
         /// </summary>
@@ -24,25 +22,25 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice
         [DisplayName("Registration Method")]
         [IsoXmlTag("RegnMtd")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? RegistrationMethod { get; init; } 
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? RegistrationMethod { get; init; }
+
         /// <summary>
         /// Date by which the information on the proxy assignment must be received by the intermediary.
         /// </summary>
         [IsoId("_fWW5JfM7EeqRfth943bvEA")]
         [DisplayName("Deadline")]
         [IsoXmlTag("Ddln")]
-        public DateFormat58Choice_? Deadline { get; init; } 
-        
+        public DateFormat58Choice_? Deadline { get; init; }
+
         /// <summary>
         /// Date by which the information on the proxy assignment must be received by the issuer.
         /// </summary>
         [IsoId("_fWW5J_M7EeqRfth943bvEA")]
         [DisplayName("Market Deadline")]
         [IsoXmlTag("MktDdln")]
-        public DateFormat58Choice_? MarketDeadline { get; init; } 
-        
+        public DateFormat58Choice_? MarketDeadline { get; init; }
+
         /// <summary>
         /// Proxy person that is authorised by the issuer.
         /// </summary>
@@ -52,9 +50,5 @@ namespace BeneficialStrategies.Iso20022.Choices.Proxy4Choice
         [MinLength(0)]
         [MaxLength(10)]
         public ValueList<Proxy9> AuthorisedProxy { get; init; } = [];
-        
-        
-        #nullable disable
-        
     }
 }

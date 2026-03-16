@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_uQQC4y5SEeK7-OZOLIksSw")]
-[Description(@"To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction.")]
+[Description(
+    @"To indicate either the reference for the Central Counterparty (CCP) leg or the reference for the client leg of the transaction."
+)]
 [Derivations(typeof(SideIndicator1Code))]
 public enum SideIndicatorCode
 {
@@ -23,7 +25,7 @@ public enum SideIndicatorCode
     [IsoId("_7nCd0C5SEeK7-OZOLIksSw")]
     [Description(@"Clearing broker identification is for the client leg.")]
     ClientLeg,
-    
+
     /// <summary>
     /// Clearing broker identification is for the Central Counterparty (CCP) leg.
     /// Encoded/decoded by serializers as &quot;CCPL&quot;.
@@ -32,5 +34,4 @@ public enum SideIndicatorCode
     [IsoId("_DcQGkC5TEeK7-OZOLIksSw")]
     [Description(@"Clearing broker identification is for the Central Counterparty (CCP) leg.")]
     CCPLeg,
-    
 }

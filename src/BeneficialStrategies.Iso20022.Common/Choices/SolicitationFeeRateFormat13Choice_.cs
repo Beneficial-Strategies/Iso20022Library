@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SolicitationFeeRateFormat13Choice.Amount))]
     [KnownType(typeof(SolicitationFeeRateFormat13Choice.AmountToQuantity))]
     [KnownType(typeof(SolicitationFeeRateFormat13Choice.Rate))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat13Choice.Amount),nameof(SolicitationFeeRateFormat13Choice.Amount))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat13Choice.AmountToQuantity),nameof(SolicitationFeeRateFormat13Choice.AmountToQuantity))]
-    [JsonDerivedType(typeof(SolicitationFeeRateFormat13Choice.Rate),nameof(SolicitationFeeRateFormat13Choice.Rate))]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat13Choice.Amount),
+        nameof(SolicitationFeeRateFormat13Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat13Choice.AmountToQuantity),
+        nameof(SolicitationFeeRateFormat13Choice.AmountToQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(SolicitationFeeRateFormat13Choice.Rate),
+        nameof(SolicitationFeeRateFormat13Choice.Rate)
+    )]
     [IsoId("_kv_dq5t3Ee-wQIOX0djF2w")]
     [DisplayName("Solicitation Fee Rate Format13Choice")]
-    public abstract partial record SolicitationFeeRateFormat13Choice_
-    {
-    }
+    public abstract record SolicitationFeeRateFormat13Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentification5Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
     /// </summary>
     [IsoId("_TFnrINp-Ed-ak6NoX_4Aeg_426657982")]
     [DisplayName("Name And Address")]
-    public partial record NameAndAddress : FinancialInstitutionIdentification5Choice_
+    public record NameAndAddress : FinancialInstitutionIdentification5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -24,19 +22,15 @@ namespace BeneficialStrategies.Iso20022.Choices.FinancialInstitutionIdentificati
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public required IsoMax70Text Name { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public required IsoMax70Text Name { get; init; }
+
         /// <summary>
         /// Information that locates and identifies a specific address, as defined by postal services.
         /// </summary>
         [IsoId("_PZleQ9p-Ed-ak6NoX_4Aeg_1385275042")]
         [DisplayName("Postal Address")]
         [IsoXmlTag("PstlAdr")]
-        public required PostalAddress1 PostalAddress { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PostalAddress1 PostalAddress { get; init; }
     }
 }

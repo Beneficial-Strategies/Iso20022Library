@@ -12,12 +12,16 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InRepairStatus4Choice.Reason))]
     [KnownType(typeof(InRepairStatus4Choice.DataSourceScheme))]
     [KnownType(typeof(InRepairStatus4Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(InRepairStatus4Choice.Reason),nameof(InRepairStatus4Choice.Reason))]
-    [JsonDerivedType(typeof(InRepairStatus4Choice.DataSourceScheme),nameof(InRepairStatus4Choice.DataSourceScheme))]
-    [JsonDerivedType(typeof(InRepairStatus4Choice.NoSpecifiedReason),nameof(InRepairStatus4Choice.NoSpecifiedReason))]
+    [JsonDerivedType(typeof(InRepairStatus4Choice.Reason), nameof(InRepairStatus4Choice.Reason))]
+    [JsonDerivedType(
+        typeof(InRepairStatus4Choice.DataSourceScheme),
+        nameof(InRepairStatus4Choice.DataSourceScheme)
+    )]
+    [JsonDerivedType(
+        typeof(InRepairStatus4Choice.NoSpecifiedReason),
+        nameof(InRepairStatus4Choice.NoSpecifiedReason)
+    )]
     [IsoId("_xydlISY4EeW_ZNn8gbfY7Q")]
     [DisplayName("In Repair Status 4 Choice")]
-    public abstract partial record InRepairStatus4Choice_
-    {
-    }
+    public abstract record InRepairStatus4Choice_ { }
 }

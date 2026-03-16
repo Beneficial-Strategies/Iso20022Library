@@ -23,7 +23,7 @@ public enum PINEntrySecurityCharacteristic1Code
     [IsoId("_V-zMMaH4EeuiuNcvKhXmNQ")]
     [Description(@"Other nationally assigned code.")]
     OtherNational = PINEntrySecurityCharacteristicCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other privately assigned code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum PINEntrySecurityCharacteristic1Code
     [IsoId("_WHtQkaH4EeuiuNcvKhXmNQ")]
     [Description(@"Other privately assigned code.")]
     OtherPrivate = PINEntrySecurityCharacteristicCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN entry is protected via an approved software solution.
     /// Encoded/decoded by serializers as &quot;SECS&quot;.
@@ -41,7 +41,7 @@ public enum PINEntrySecurityCharacteristic1Code
     [IsoId("_WvNVcaH4EeuiuNcvKhXmNQ")]
     [Description(@"PIN entry is protected via an approved software solution.")]
     SecureSoftware = PINEntrySecurityCharacteristicCode.SecureSoftware, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN entry is protected via a secure hardware solution.
     /// Encoded/decoded by serializers as &quot;SECH&quot;.
@@ -50,5 +50,4 @@ public enum PINEntrySecurityCharacteristic1Code
     [IsoId("_W4tPsaH4EeuiuNcvKhXmNQ")]
     [Description(@"PIN entry is protected via a secure hardware solution.")]
     SecureHardware = PINEntrySecurityCharacteristicCode.SecureHardware, // same ordinal as derivation source for type conversions
-    
 }

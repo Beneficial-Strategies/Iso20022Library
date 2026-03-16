@@ -23,41 +23,48 @@ public enum BalanceStatusCode
     [IsoId("_bkLL09p-Ed-ak6NoX_4Aeg_1047073637")]
     [Description(@"Balance corresponding to the pending transactions.")]
     Pending,
-    
+
     /// <summary>
     /// Final status of a transaction when the associated transfer of cash has been successfully processed.
     /// Encoded/decoded by serializers as &quot;STLD&quot;.
     /// </summary>
     [EnumMember(Value = "STLD")]
     [IsoId("_bkLL1Np-Ed-ak6NoX_4Aeg_1047073638")]
-    [Description(@"Final status of a transaction when the associated transfer of cash has been successfully processed.")]
+    [Description(
+        @"Final status of a transaction when the associated transfer of cash has been successfully processed."
+    )]
     Settled,
-    
+
     /// <summary>
     /// Balance corresponding to transactions that have been executed, but not yet settled.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
     /// </summary>
     [EnumMember(Value = "SUSP")]
     [IsoId("_bkLL1dp-Ed-ak6NoX_4Aeg_1423587994")]
-    [Description(@"Balance corresponding to transactions that have been executed, but not yet settled.")]
+    [Description(
+        @"Balance corresponding to transactions that have been executed, but not yet settled."
+    )]
     Suspended,
-    
+
     /// <summary>
     /// Balance corresponding to transactions that have been executed and settled, but not yet fully registered on the books of the registrar.
     /// Encoded/decoded by serializers as &quot;SETU&quot;.
     /// </summary>
     [EnumMember(Value = "SETU")]
     [IsoId("_bkLL1tp-Ed-ak6NoX_4Aeg_1423588002")]
-    [Description(@"Balance corresponding to transactions that have been executed and settled, but not yet fully registered on the books of the registrar.")]
+    [Description(
+        @"Balance corresponding to transactions that have been executed and settled, but not yet fully registered on the books of the registrar."
+    )]
     SettledUnregistered,
-    
+
     /// <summary>
     /// Balance corresponding to transactions that have been executed, settled and fully registered.
     /// Encoded/decoded by serializers as &quot;SETR&quot;.
     /// </summary>
     [EnumMember(Value = "SETR")]
     [IsoId("_bkLL19p-Ed-ak6NoX_4Aeg_1423588003")]
-    [Description(@"Balance corresponding to transactions that have been executed, settled and fully registered.")]
+    [Description(
+        @"Balance corresponding to transactions that have been executed, settled and fully registered."
+    )]
     SettledRegistered,
-    
 }

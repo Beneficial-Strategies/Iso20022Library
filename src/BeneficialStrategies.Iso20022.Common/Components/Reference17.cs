@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QnOWE9p-Ed-ak6NoX_4Aeg_-1322304897")]
 [DisplayName("Reference")]
-public partial record Reference17
+public record Reference17
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the collateral substitution request.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Reference17
     [DisplayName("Collateral Substitution Request Identification")]
     [IsoXmlTag("CollSbstitnReqId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text CollateralSubstitutionRequestIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text CollateralSubstitutionRequestIdentification { get; init; }
+
     /// <summary>
     /// Identification of the collateral substitution response.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record Reference17
     [DisplayName("Collateral Substitution Response Identification")]
     [IsoXmlTag("CollSbstitnRspnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CollateralSubstitutionResponseIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CollateralSubstitutionResponseIdentification { get; init; }
 }

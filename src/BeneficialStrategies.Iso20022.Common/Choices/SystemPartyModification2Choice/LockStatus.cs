@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("__edeA4v_Eei289CGNqs21g")]
     [DisplayName("Lock Status")]
-    public partial record LockStatus : SystemPartyModification2Choice_
+    public record LockStatus : SystemPartyModification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the date from which the lock status is valid.
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; } 
-        
+        public IsoISODate? ValidFrom { get; init; }
+
         /// <summary>
         /// Lock status of the party.
         /// </summary>
         [IsoId("_JfT982jMEeiRg5NzP0jkQg")]
         [DisplayName("Status")]
         [IsoXmlTag("Sts")]
-        public required LockStatus1Code Status { get; init; } 
-        
+        public required LockStatus1Code Status { get; init; }
+
         /// <summary>
         /// Specifies the underlying reason for the locking of the party.
         /// </summary>
@@ -41,11 +39,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Lock Reason")]
         [IsoXmlTag("LckRsn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? LockReason { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? LockReason { get; init; }
     }
 }

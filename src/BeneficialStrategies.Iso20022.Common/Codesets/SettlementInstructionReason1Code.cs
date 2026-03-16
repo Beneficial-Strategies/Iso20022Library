@@ -23,7 +23,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("_-R0NkSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of all credit amounts.")]
     AllCredits = SettlementInstructionReasonCode.AllCredits, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of all credit and debit amounts.
     /// Encoded/decoded by serializers as &quot;ALLL&quot;.
@@ -32,7 +32,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("_-ZjNQSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of all credit and debit amounts.")]
     AllCreditsAndDebits = SettlementInstructionReasonCode.AllCreditsAndDebits, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of all debit amounts.
     /// Encoded/decoded by serializers as &quot;CSHO&quot;.
@@ -41,7 +41,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("_-hlu8SCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of all debit amounts.")]
     AllDebits = SettlementInstructionReasonCode.AllDebits, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of charges.
     /// Encoded/decoded by serializers as &quot;CHAR&quot;.
@@ -50,7 +50,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("_-pnpkSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of charges.")]
     Charges = SettlementInstructionReasonCode.Charges, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of dividends.
     /// Encoded/decoded by serializers as &quot;DIVI&quot;.
@@ -59,7 +59,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("_-xDuUSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of dividends.")]
     Dividend = SettlementInstructionReasonCode.Dividend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of interest.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -68,7 +68,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("_-5PZ8SCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of interest.")]
     Interest = SettlementInstructionReasonCode.Interest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of investments to a savings plan.
     /// Encoded/decoded by serializers as &quot;SAVP&quot;.
@@ -77,7 +77,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("__A1PsSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of investments to a savings plan.")]
     InvestmentSavingsPlan = SettlementInstructionReasonCode.InvestmentSavingsPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of redemptions or redemption legs of a switch transaction.
     /// Encoded/decoded by serializers as &quot;REDM&quot;.
@@ -86,16 +86,18 @@ public enum SettlementInstructionReason1Code
     [IsoId("__IaeYSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of redemptions or redemption legs of a switch transaction.")]
     Redemption = SettlementInstructionReasonCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of investments to a savings plan and withdrawals from a savings plan.
     /// Encoded/decoded by serializers as &quot;SAVE&quot;.
     /// </summary>
     [EnumMember(Value = "SAVE")]
     [IsoId("__P2jISCtEeWJd9HF2tO7BA")]
-    [Description(@"Settlement of investments to a savings plan and withdrawals from a savings plan.")]
+    [Description(
+        @"Settlement of investments to a savings plan and withdrawals from a savings plan."
+    )]
     SavingsPlan = SettlementInstructionReasonCode.SavingsPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of securities purchases.
     /// Encoded/decoded by serializers as &quot;BUYI&quot;.
@@ -104,7 +106,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("__XcY4SCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of securities purchases.")]
     SecuritiesPurchase = SettlementInstructionReasonCode.SecuritiesPurchase, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of securities sales.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -113,7 +115,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("__fVJkSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of securities sales.")]
     SecuritiesSale = SettlementInstructionReasonCode.SecuritiesSale, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of subscriptions or subscription legs of a switch transaction.
     /// Encoded/decoded by serializers as &quot;SUBS&quot;.
@@ -122,7 +124,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("__mxOUSCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of subscriptions or subscription legs of a switch transaction.")]
     Subscription = SettlementInstructionReasonCode.Subscription, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of withdrawals from a savings plan.
     /// Encoded/decoded by serializers as &quot;WTHP&quot;.
@@ -131,7 +133,7 @@ public enum SettlementInstructionReason1Code
     [IsoId("__up_ASCtEeWJd9HF2tO7BA")]
     [Description(@"Settlement of withdrawals from a savings plan.")]
     WithdrawalSavingsPlan = SettlementInstructionReasonCode.WithdrawalSavingsPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement of corporate actions.
     /// Encoded/decoded by serializers as &quot;CORP&quot;.
@@ -140,5 +142,4 @@ public enum SettlementInstructionReason1Code
     [IsoId("_AuSyMVxmEeW0RaYpOo325g")]
     [Description(@"Settlement of corporate actions.")]
     CorporateAction = SettlementInstructionReasonCode.CorporateAction, // same ordinal as derivation source for type conversions
-    
 }

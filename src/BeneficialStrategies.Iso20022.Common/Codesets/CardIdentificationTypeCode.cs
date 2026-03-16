@@ -23,7 +23,7 @@ public enum CardIdentificationTypeCode
     [IsoId("_hi4dwNthEeipuvJHTHIw9A")]
     [Description(@"Standard card identification (card number).")]
     PrimaryAccountNumber,
-    
+
     /// <summary>
     /// ISO Track 2 including identification.
     /// Encoded/decoded by serializers as &quot;ISO2&quot;.
@@ -32,7 +32,7 @@ public enum CardIdentificationTypeCode
     [IsoId("_l8QRwNthEeipuvJHTHIw9A")]
     [Description(@"ISO Track 2 including identification.")]
     ISOTrack2,
-    
+
     /// <summary>
     /// Bar-code with a specific form of identification.
     /// Encoded/decoded by serializers as &quot;BARC&quot;.
@@ -41,7 +41,7 @@ public enum CardIdentificationTypeCode
     [IsoId("_pbMd0NthEeipuvJHTHIw9A")]
     [Description(@"Bar-code with a specific form of identification.")]
     BarCode,
-    
+
     /// <summary>
     /// Account identification.
     /// Encoded/decoded by serializers as &quot;ACCT&quot;.
@@ -50,7 +50,7 @@ public enum CardIdentificationTypeCode
     [IsoId("_sVH4UNthEeipuvJHTHIw9A")]
     [Description(@"Account identification.")]
     AccountNumber,
-    
+
     /// <summary>
     /// A phone number identifies the account on which the phone card is assigned.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -59,7 +59,7 @@ public enum CardIdentificationTypeCode
     [IsoId("_vOcO0NthEeipuvJHTHIw9A")]
     [Description(@"A phone number identifies the account on which the phone card is assigned.")]
     PhoneNumber,
-    
+
     /// <summary>
     /// A Universal Unique Identification code is set for identification.
     /// Encoded/decoded by serializers as &quot;UUID&quot;.
@@ -68,7 +68,7 @@ public enum CardIdentificationTypeCode
     [IsoId("_yacQwNthEeipuvJHTHIw9A")]
     [Description(@"A Universal Unique Identification code is set for identification.")]
     UniversalUniqueIdentification,
-    
+
     /// <summary>
     /// An identification set by a privative application.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -77,5 +77,4 @@ public enum CardIdentificationTypeCode
     [IsoId("_9ra1wNthEeipuvJHTHIw9A")]
     [Description(@"An identification set by a privative application.")]
     PrivativeNumbering,
-    
 }

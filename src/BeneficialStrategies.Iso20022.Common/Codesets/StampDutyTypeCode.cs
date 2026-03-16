@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZPdXN9p-Ed-ak6NoX_4Aeg_930727871")]
 [Description(@"Specifies if the stamp duty is applicable.")]
-[Derivations(typeof(StampDutyType2Code),typeof(StampDutyType1Code))]
+[Derivations(typeof(StampDutyType2Code), typeof(StampDutyType1Code))]
 public enum StampDutyTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum StampDutyTypeCode
     [IsoId("_ZPdXONp-Ed-ak6NoX_4Aeg_999066501")]
     [Description(@"SDRT paid outside of CSD on corporate action.")]
     OutsideCSD,
-    
+
     /// <summary>
     /// SDRT paid on another transaction.
     /// Encoded/decoded by serializers as &quot;SDRT&quot;.
@@ -32,7 +32,7 @@ public enum StampDutyTypeCode
     [IsoId("_ZPnIMNp-Ed-ak6NoX_4Aeg_999066531")]
     [Description(@"SDRT paid on another transaction.")]
     Paid,
-    
+
     /// <summary>
     /// Stamp duty not applicable.
     /// Encoded/decoded by serializers as &quot;SDRN&quot;.
@@ -41,7 +41,7 @@ public enum StampDutyTypeCode
     [IsoId("_ZPnIMdp-Ed-ak6NoX_4Aeg_999066562")]
     [Description(@"Stamp duty not applicable.")]
     NotApplicable,
-    
+
     /// <summary>
     /// Exempt, for any other reason.
     /// Encoded/decoded by serializers as &quot;SDRQ&quot;.
@@ -50,7 +50,7 @@ public enum StampDutyTypeCode
     [IsoId("_ZPnIMtp-Ed-ak6NoX_4Aeg_999066810")]
     [Description(@"Exempt, for any other reason.")]
     Exemption,
-    
+
     /// <summary>
     /// Stamps duty is applicable.
     /// Encoded/decoded by serializers as &quot;ASTD&quot;.
@@ -59,5 +59,4 @@ public enum StampDutyTypeCode
     [IsoId("_oTfCx_piEeCG_oUHBFcYXA")]
     [Description(@"Stamps duty is applicable.")]
     Applicable,
-    
 }

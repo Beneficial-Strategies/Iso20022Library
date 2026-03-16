@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
     /// </summary>
     [IsoId("_lod1J8zsEeux2uvSBFU54Q")]
     [DisplayName("Margin Lending")]
-    public partial record MarginLending : TransactionLoanData31Choice_
+    public record MarginLending : TransactionLoanData31Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique trade Identifier (UTI) as agreed with the other counterparty.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
         [DisplayName("Unique Trade Identifier")]
         [IsoXmlTag("UnqTradIdr")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
-        [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-        public IsoMax52Text? UniqueTradeIdentifier { get; init; } 
-        
+        [StringLength(maximumLength: 52, MinimumLength = 1)]
+        public IsoMax52Text? UniqueTradeIdentifier { get; init; }
+
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
         /// </summary>
@@ -34,8 +32,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate EventDate { get; init; } 
-        
+        public required IsoISODate EventDate { get; init; }
+
         /// <summary>
         /// Indicates the date and time when the contract was executed.
         /// </summary>
@@ -43,8 +41,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
         [DisplayName("Execution Date Time")]
         [IsoXmlTag("ExctnDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ExecutionDateTime { get; init; } 
-        
+        public IsoISODateTime? ExecutionDateTime { get; init; }
+
         /// <summary>
         /// Identification of the trading venue where the transaction was executed.
         /// </summary>
@@ -52,40 +50,40 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
         [DisplayName("Trading Venue")]
         [IsoXmlTag("TradgVn")]
         [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-        public IsoMICIdentifier? TradingVenue { get; init; } 
-        
+        public IsoMICIdentifier? TradingVenue { get; init; }
+
         /// <summary>
         /// Specifies whether the collateral is subject to a title transfer collateral arrangement, a securities interest collateral arrangement, or a securities interest with the right of use.
         /// </summary>
         [IsoId("_IXw-aczwEeux2uvSBFU54Q")]
         [DisplayName("Collateral Delivery Method")]
         [IsoXmlTag("CollDlvryMtd")]
-        public CollateralDeliveryMethod1Code? CollateralDeliveryMethod { get; init; } 
-        
+        public CollateralDeliveryMethod1Code? CollateralDeliveryMethod { get; init; }
+
         /// <summary>
         /// Total amount of margin loans in base currency.
         /// </summary>
         [IsoId("_IXw-a8zwEeux2uvSBFU54Q")]
         [DisplayName("Outstanding Margin Loan Amount")]
         [IsoXmlTag("OutsdngMrgnLnAmt")]
-        public ActiveOrHistoricCurrencyAndAmount? OutstandingMarginLoanAmount { get; init; } 
-        
+        public ActiveOrHistoricCurrencyAndAmount? OutstandingMarginLoanAmount { get; init; }
+
         /// <summary>
         /// Market value of short position in base currency.
         /// </summary>
         [IsoId("_IXw-bczwEeux2uvSBFU54Q")]
         [DisplayName("Short Market Value Amount")]
         [IsoXmlTag("ShrtMktValAmt")]
-        public ActiveOrHistoricCurrencyAndAmount? ShortMarketValueAmount { get; init; } 
-        
+        public ActiveOrHistoricCurrencyAndAmount? ShortMarketValueAmount { get; init; }
+
         /// <summary>
         /// Data on amount and interest rates of the transaction.
         /// </summary>
         [IsoId("_IXw-b8zwEeux2uvSBFU54Q")]
         [DisplayName("Margin Loan Attribute")]
         [IsoXmlTag("MrgnLnAttr")]
-        public InterestRate6? MarginLoanAttribute { get; init; } 
-        
+        public InterestRate6? MarginLoanAttribute { get; init; }
+
         /// <summary>
         /// Termination date in the case of a full early termination of the SFT.
         /// </summary>
@@ -93,10 +91,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionLoanData31Choice
         [DisplayName("Termination Date")]
         [IsoXmlTag("TermntnDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? TerminationDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? TerminationDate { get; init; }
     }
 }

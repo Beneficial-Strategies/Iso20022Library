@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InterestRateDerivative2Choice.SwapRelated))]
     [KnownType(typeof(InterestRateDerivative2Choice.Other))]
-    [JsonDerivedType(typeof(InterestRateDerivative2Choice.SwapRelated),nameof(InterestRateDerivative2Choice.SwapRelated))]
-    [JsonDerivedType(typeof(InterestRateDerivative2Choice.Other),nameof(InterestRateDerivative2Choice.Other))]
+    [JsonDerivedType(
+        typeof(InterestRateDerivative2Choice.SwapRelated),
+        nameof(InterestRateDerivative2Choice.SwapRelated)
+    )]
+    [JsonDerivedType(
+        typeof(InterestRateDerivative2Choice.Other),
+        nameof(InterestRateDerivative2Choice.Other)
+    )]
     [IsoId("_xSfx_WlIEeaLAKoEUNsD9g")]
     [DisplayName("Interest Rate Derivative 2 Choice")]
-    public abstract partial record InterestRateDerivative2Choice_
-    {
-    }
+    public abstract record InterestRateDerivative2Choice_ { }
 }

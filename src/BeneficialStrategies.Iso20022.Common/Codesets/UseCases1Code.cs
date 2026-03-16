@@ -23,7 +23,7 @@ public enum UseCases1Code
     [IsoId("_Yatgh9p-Ed-ak6NoX_4Aeg_-2048866565")]
     [Description(@"Code indicating the opening of an account.")]
     Opening = UseCasesCode.Opening, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code indicating the maintenance of an account.
     /// Encoded/decoded by serializers as &quot;MNTN&quot;.
@@ -32,7 +32,7 @@ public enum UseCases1Code
     [IsoId("_YatgiNp-Ed-ak6NoX_4Aeg_-2048866534")]
     [Description(@"Code indicating the maintenance of an account.")]
     Maintenance = UseCasesCode.Maintenance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code indicating the closing of an account.
     /// Encoded/decoded by serializers as &quot;CLSG&quot;.
@@ -41,7 +41,7 @@ public enum UseCases1Code
     [IsoId("_Yatgidp-Ed-ak6NoX_4Aeg_-2048866503")]
     [Description(@"Code indicating the closing of an account.")]
     Closing = UseCasesCode.Closing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Code indicating the view of an account.
     /// Encoded/decoded by serializers as &quot;VIEW&quot;.
@@ -50,5 +50,4 @@ public enum UseCases1Code
     [IsoId("_Ya3RgNp-Ed-ak6NoX_4Aeg_-2048866473")]
     [Description(@"Code indicating the view of an account.")]
     View = UseCasesCode.View, // same ordinal as derivation source for type conversions
-    
 }

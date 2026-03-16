@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sP44sVEAEee94_dUz-hvgw")]
 [DisplayName("Result Data")]
-public partial record ResultData4
+public record ResultData4
 {
-    #nullable enable
-    
     /// <summary>
     /// Generic result of the processing.
     /// </summary>
     [IsoId("_sbGDIVEAEee94_dUz-hvgw")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public FileActionResult1Code? Result { get; init; } 
-    
+    public FileActionResult1Code? Result { get; init; }
+
     /// <summary>
     /// Other type of result of the processing.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record ResultData4
     [DisplayName("Other Result")]
     [IsoXmlTag("OthrRslt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherResult { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherResult { get; init; }
+
     /// <summary>
     /// Detailed results of the processing.
     /// ISO 8583:1987 bit 39, response code list
@@ -44,9 +42,5 @@ public partial record ResultData4
     [DisplayName("Result Details")]
     [IsoXmlTag("RsltDtls")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public required IsoExact2AlphaNumericText ResultDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoExact2AlphaNumericText ResultDetails { get; init; }
 }

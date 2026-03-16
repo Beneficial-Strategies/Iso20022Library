@@ -23,7 +23,7 @@ public enum DrawdownStatusCode
     [IsoId("_0F5KIFKiEeiSDqv62fL07g")]
     [Description(@"Pension is not in drawdown.")]
     None,
-    
+
     /// <summary>
     /// Pension is in partial drawdown.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,7 +32,7 @@ public enum DrawdownStatusCode
     [IsoId("_3fsXgFKiEeiSDqv62fL07g")]
     [Description(@"Pension is in partial drawdown.")]
     Partial,
-    
+
     /// <summary>
     /// Pension is fully in drawdown.
     /// Encoded/decoded by serializers as &quot;FULL&quot;.
@@ -41,5 +41,4 @@ public enum DrawdownStatusCode
     [IsoId("_5jNucFKiEeiSDqv62fL07g")]
     [Description(@"Pension is fully in drawdown.")]
     Full,
-    
 }

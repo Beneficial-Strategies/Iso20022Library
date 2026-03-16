@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HSGqsGVVEeacpJ-gG9kyUQ")]
 [DisplayName("Mandate Authentication")]
-public partial record MandateAuthentication1
+public record MandateAuthentication1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies a piece of information used to authenticate a message, that is to confirm that the message came from the stated sender (its authenticity) and has not been changed in transit (its integrity).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MandateAuthentication1
     [DisplayName("Message Authentication Code")]
     [IsoXmlTag("MsgAuthntcnCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? MessageAuthenticationCode { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? MessageAuthenticationCode { get; init; }
+
     /// <summary>
     /// Date when the authentication was conducted.
     /// </summary>
@@ -35,17 +33,13 @@ public partial record MandateAuthentication1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// Channel used to transmit the authentication information.
     /// </summary>
     [IsoId("_zsoqgGVVEeacpJ-gG9kyUQ")]
     [DisplayName("Channel")]
     [IsoXmlTag("Chanl")]
-    public AuthenticationChannel1Choice_? Channel { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AuthenticationChannel1Choice_? Channel { get; init; }
 }

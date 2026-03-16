@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_vfkPYLf7Eee9KIDjEHK7ZQ")]
-[Description(@"Specifies the garnishment type as published in an external document type code list.")]
+[Description(
+    @"Specifies the garnishment type as published in an external document type code list."
+)]
 [Derivations(typeof(ExternalGarnishmentType1Code))]
 public enum ExternalGarnishmentTypeCode
 {
@@ -23,7 +25,7 @@ public enum ExternalGarnishmentTypeCode
     [IsoId("_uTKPk_RYEeuLhpyIdtJzwg")]
     [Description(@"Garnishment from a third party payer for Child Support")]
     GarnishmentForChildSupport,
-    
+
     /// <summary>
     /// Garnishment from a direct payer for Child Support
     /// Encoded/decoded by serializers as &quot;GNDP&quot;.
@@ -32,7 +34,7 @@ public enum ExternalGarnishmentTypeCode
     [IsoId("_uTUAkPRYEeuLhpyIdtJzwg")]
     [Description(@"Garnishment from a direct payer for Child Support")]
     GarnishmentForChildSupportFromDirectPayer,
-    
+
     /// <summary>
     /// Garnishment from a third party payer to taxing agency
     /// Encoded/decoded by serializers as &quot;GTPP&quot;.
@@ -41,5 +43,4 @@ public enum ExternalGarnishmentTypeCode
     [IsoId("_uTUAk_RYEeuLhpyIdtJzwg")]
     [Description(@"Garnishment from a third party payer to taxing agency")]
     GarnishmentToTaxingAgency,
-    
 }

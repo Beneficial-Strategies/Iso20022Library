@@ -23,7 +23,7 @@ public enum Frequency18Code
     [IsoId("_01vXwR1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every year or once a year.")]
     Annual = FrequencyCode.Annual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every day.
     /// Encoded/decoded by serializers as &quot;DAIL&quot;.
@@ -32,7 +32,7 @@ public enum Frequency18Code
     [IsoId("_01vXzx1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every day.")]
     Daily = FrequencyCode.Daily, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every two weeks.
     /// Encoded/decoded by serializers as &quot;FRTN&quot;.
@@ -41,7 +41,7 @@ public enum Frequency18Code
     [IsoId("_01v-0R1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every two weeks.")]
     Fortnightly = FrequencyCode.Fortnightly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every month or once a month.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -50,7 +50,7 @@ public enum Frequency18Code
     [IsoId("_01v-0x1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every month or once a month.")]
     Monthly = FrequencyCode.Monthly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every three months or four times a year.
     /// Encoded/decoded by serializers as &quot;QURT&quot;.
@@ -59,7 +59,7 @@ public enum Frequency18Code
     [IsoId("_01v-4R1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every three months or four times a year.")]
     Quarterly = FrequencyCode.Quarterly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every six months or two times a year.
     /// Encoded/decoded by serializers as &quot;MIAN&quot;.
@@ -68,7 +68,7 @@ public enum Frequency18Code
     [IsoId("_01v-7x1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every six months or two times a year.")]
     SemiAnnual = FrequencyCode.SemiAnnual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every ten business days.
     /// Encoded/decoded by serializers as &quot;TEND&quot;.
@@ -77,7 +77,7 @@ public enum Frequency18Code
     [IsoId("_01v-9x1VEey8XKHwKquEQw")]
     [Description(@"Event takes place every ten business days.")]
     TenDays = FrequencyCode.TenDays, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place once a week.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -86,7 +86,7 @@ public enum Frequency18Code
     [IsoId("_01v--R1VEey8XKHwKquEQw")]
     [Description(@"Event takes place once a week.")]
     Weekly = FrequencyCode.Weekly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Two times a week
     /// Encoded/decoded by serializers as &quot;TWWK&quot;.
@@ -95,5 +95,4 @@ public enum Frequency18Code
     [IsoId("_Dk4swR1WEey8XKHwKquEQw")]
     [Description(@"Two times a week")]
     TwiceAWeek = FrequencyCode.TwiceAWeek, // same ordinal as derivation source for type conversions
-    
 }

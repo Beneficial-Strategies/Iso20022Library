@@ -23,7 +23,7 @@ public enum NotionalOrUnitBasedCode
     [IsoId("_gfcZQJ9WEeqxTNfi5y7ywQ")]
     [Description(@"Basis of a financial instrument is unit.")]
     Unit,
-    
+
     /// <summary>
     /// Basis of a financial instrument is notional.
     /// Encoded/decoded by serializers as &quot;NOTI&quot;.
@@ -32,5 +32,4 @@ public enum NotionalOrUnitBasedCode
     [IsoId("_nVu7oJ9WEeqxTNfi5y7ywQ")]
     [Description(@"Basis of a financial instrument is notional.")]
     Notional,
-    
 }

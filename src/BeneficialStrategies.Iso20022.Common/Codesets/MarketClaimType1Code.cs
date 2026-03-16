@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1y3xAC2oEeuVt5XRmyhHiA")]
-[Description(@"Specifies the type of market claim in the context of a corporate action distribution event.")]
+[Description(
+    @"Specifies the type of market claim in the context of a corporate action distribution event."
+)]
 [DerivedFrom(typeof(MarketClaimTypeCode))]
 public enum MarketClaimType1Code
 {
@@ -21,16 +23,19 @@ public enum MarketClaimType1Code
     /// </summary>
     [EnumMember(Value = "MKTC")]
     [IsoId("_vZwygS2rEeuVt5XRmyhHiA")]
-    [Description(@"Market claim that has been created due to a pending/failing settlement transaction, to ensure the event proceeds are delivered from the seller to the buyer.")]
+    [Description(
+        @"Market claim that has been created due to a pending/failing settlement transaction, to ensure the event proceeds are delivered from the seller to the buyer."
+    )]
     MarketClaim = MarketClaimTypeCode.MarketClaim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Market claim that has been created due to a settled settlement transaction, to ensure the event proceeds are delivered from the buyer to the seller.
     /// Encoded/decoded by serializers as &quot;RVMC&quot;.
     /// </summary>
     [EnumMember(Value = "RVMC")]
     [IsoId("_vgJuYS2rEeuVt5XRmyhHiA")]
-    [Description(@"Market claim that has been created due to a settled settlement transaction, to ensure the event proceeds are delivered from the buyer to the seller.")]
+    [Description(
+        @"Market claim that has been created due to a settled settlement transaction, to ensure the event proceeds are delivered from the buyer to the seller."
+    )]
     ReverseMarketClaim = MarketClaimTypeCode.ReverseMarketClaim, // same ordinal as derivation source for type conversions
-    
 }

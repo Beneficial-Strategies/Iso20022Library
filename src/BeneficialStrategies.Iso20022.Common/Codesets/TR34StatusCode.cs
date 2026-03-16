@@ -23,7 +23,7 @@ public enum TR34StatusCode
     [IsoId("_uee8MLTiEeeQy4o2AayYHg")]
     [Description(@"The device is bound.")]
     Bound,
-    
+
     /// <summary>
     /// The device is unbound.
     /// Encoded/decoded by serializers as &quot;UBND&quot;.
@@ -32,5 +32,4 @@ public enum TR34StatusCode
     [IsoId("_1_-XsLTiEeeQy4o2AayYHg")]
     [Description(@"The device is unbound.")]
     Unbound,
-    
 }

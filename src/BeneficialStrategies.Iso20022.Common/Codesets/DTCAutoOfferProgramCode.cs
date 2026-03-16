@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1oFf0DL3EeKU9IrkkToqcw_-1688796996")]
-[Description(@"Indicates what type of interface an agent has with DTC (The Depository Trust Corporation).")]
+[Description(
+    @"Indicates what type of interface an agent has with DTC (The Depository Trust Corporation)."
+)]
 [Derivations(typeof(DTCAutoOfferProgram1Code))]
 public enum DTCAutoOfferProgramCode
 {
@@ -23,7 +25,7 @@ public enum DTCAutoOfferProgramCode
     [IsoId("_1oFf0TL3EeKU9IrkkToqcw_413864714")]
     [Description(@"No automated interface. Hardcopy reporting required.")]
     Offine,
-    
+
     /// <summary>
     /// Automated interface for instruction processing is present.
     /// Encoded/decoded by serializers as &quot;ONLN&quot;.
@@ -32,5 +34,4 @@ public enum DTCAutoOfferProgramCode
     [IsoId("_1oFf0jL3EeKU9IrkkToqcw_-1859526812")]
     [Description(@"Automated interface for instruction processing is present.")]
     Online,
-    
 }

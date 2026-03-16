@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCorporateActionEventType1Code")]
-[Description(@"Specifies the corporate action event type, as published in an external corporate action event type code set.")]
+[Description(
+    @"Specifies the corporate action event type, as published in an external corporate action event type code set."
+)]
 [DerivedFrom(typeof(ExternalCorporateActionEventTypeCode))]
 public enum ExternalCorporateActionEventType1Code
 {
@@ -21,7 +23,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "ACCU")]
     [IsoId("_ExternalCorporateActionEventType1Code_Accumulation")]
-    [Description(@"Funds related event in which the income that accrues during an accounting period is retained within the fund instead of being paid away to investors.")]
+    [Description(
+        @"Funds related event in which the income that accrues during an accounting period is retained within the fund instead of being paid away to investors."
+    )]
     Accumulation = ExternalCorporateActionEventTypeCode.Accumulation,
 
     /// <summary>
@@ -30,7 +34,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "ACTV")]
     [IsoId("_ExternalCorporateActionEventType1Code_ActiveTradingStatus")]
-    [Description(@"Trading in the security has commenced or security has been re-activated after a suspension in trading.")]
+    [Description(
+        @"Trading in the security has commenced or security has been re-activated after a suspension in trading."
+    )]
     ActiveTradingStatus = ExternalCorporateActionEventTypeCode.ActiveTradingStatus,
 
     /// <summary>
@@ -48,7 +54,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "BIDS")]
     [IsoId("_ExternalCorporateActionEventType1Code_RepurchaseOffer")]
-    [Description(@"Repurchase offer / issuer bid / reverse rights. Offer to existing holders by the issuing company to repurchase its own securities.")]
+    [Description(
+        @"Repurchase offer / issuer bid / reverse rights. Offer to existing holders by the issuing company to repurchase its own securities."
+    )]
     RepurchaseOffer = ExternalCorporateActionEventTypeCode.RepurchaseOffer,
 
     /// <summary>
@@ -57,7 +65,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "BONU")]
     [IsoId("_ExternalCorporateActionEventType1Code_BonusIssue")]
-    [Description(@"Bonus or capitalisation issue. Security holders receive additional assets free of payment from the issuer, in proportion to their holding.")]
+    [Description(
+        @"Bonus or capitalisation issue. Security holders receive additional assets free of payment from the issuer, in proportion to their holding."
+    )]
     BonusIssue = ExternalCorporateActionEventTypeCode.BonusIssue,
 
     /// <summary>
@@ -66,7 +76,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "BPUT")]
     [IsoId("_ExternalCorporateActionEventType1Code_PutRedemption")]
-    [Description(@"Early redemption of a security at the election of the holder subject to the terms and condition of the issue with no reduction in nominal value.")]
+    [Description(
+        @"Early redemption of a security at the election of the holder subject to the terms and condition of the issue with no reduction in nominal value."
+    )]
     PutRedemption = ExternalCorporateActionEventTypeCode.PutRedemption,
 
     /// <summary>
@@ -75,7 +87,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "BRUP")]
     [IsoId("_ExternalCorporateActionEventType1Code_Bankruptcy")]
-    [Description(@"Legal status of a company unable to pay creditors. Bankruptcy usually involves a formal court ruling. Securities may become valueless.")]
+    [Description(
+        @"Legal status of a company unable to pay creditors. Bankruptcy usually involves a formal court ruling. Securities may become valueless."
+    )]
     Bankruptcy = ExternalCorporateActionEventTypeCode.Bankruptcy,
 
     /// <summary>
@@ -84,7 +98,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CAPD")]
     [IsoId("_ExternalCorporateActionEventType1Code_CapitalDistribution")]
-    [Description(@"Corporate event pays shareholders an amount in cash issued from the capital account.")]
+    [Description(
+        @"Corporate event pays shareholders an amount in cash issued from the capital account."
+    )]
     CapitalDistribution = ExternalCorporateActionEventTypeCode.CapitalDistribution,
 
     /// <summary>
@@ -102,7 +118,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CAPI")]
     [IsoId("_ExternalCorporateActionEventType1Code_Capitalisation")]
-    [Description(@"Increase of the current principal of a debt instrument without increasing the nominal value.")]
+    [Description(
+        @"Increase of the current principal of a debt instrument without increasing the nominal value."
+    )]
     Capitalisation = ExternalCorporateActionEventTypeCode.Capitalisation,
 
     /// <summary>
@@ -111,7 +129,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CERT")]
     [IsoId("_ExternalCorporateActionEventType1Code_NonUSTEFRADCertification")]
-    [Description(@"Non-US beneficial owner certification requirement for exchange of temporary to permanent notes.")]
+    [Description(
+        @"Non-US beneficial owner certification requirement for exchange of temporary to permanent notes."
+    )]
     NonUSTEFRADCertification = ExternalCorporateActionEventTypeCode.NonUSTEFRADCertification,
 
     /// <summary>
@@ -120,7 +140,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CHAN")]
     [IsoId("_ExternalCorporateActionEventType1Code_Change")]
-    [Description(@"Information regarding a change further described in the corporate action details.")]
+    [Description(
+        @"Information regarding a change further described in the corporate action details."
+    )]
     Change = ExternalCorporateActionEventTypeCode.Change,
 
     /// <summary>
@@ -130,7 +152,8 @@ public enum ExternalCorporateActionEventType1Code
     [EnumMember(Value = "CLSA")]
     [IsoId("_ExternalCorporateActionEventType1Code_ClassActionProposedSettlement")]
     [Description(@"Situation where interested parties seek restitution for financial loss.")]
-    ClassActionProposedSettlement = ExternalCorporateActionEventTypeCode.ClassActionProposedSettlement,
+    ClassActionProposedSettlement =
+        ExternalCorporateActionEventTypeCode.ClassActionProposedSettlement,
 
     /// <summary>
     /// Procedure that aims to obtain consent of holder to a proposal by the issuer or a third party without convening a meeting.
@@ -138,7 +161,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CONS")]
     [IsoId("_ExternalCorporateActionEventType1Code_Consent")]
-    [Description(@"Procedure that aims to obtain consent of holder to a proposal by the issuer or a third party without convening a meeting.")]
+    [Description(
+        @"Procedure that aims to obtain consent of holder to a proposal by the issuer or a third party without convening a meeting."
+    )]
     Consent = ExternalCorporateActionEventTypeCode.Consent,
 
     /// <summary>
@@ -147,7 +172,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CONV")]
     [IsoId("_ExternalCorporateActionEventType1Code_Conversion")]
-    [Description(@"Conversion of securities (generally convertible bonds or preferred shares) into another form of securities.")]
+    [Description(
+        @"Conversion of securities (generally convertible bonds or preferred shares) into another form of securities."
+    )]
     Conversion = ExternalCorporateActionEventTypeCode.Conversion,
 
     /// <summary>
@@ -156,7 +183,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "COOP")]
     [IsoId("_ExternalCorporateActionEventType1Code_CompanyOption")]
-    [Description(@"Company option may be granted by the company, allowing the holder to take up shares at some future date(s) at a pre arranged price in the company.")]
+    [Description(
+        @"Company option may be granted by the company, allowing the holder to take up shares at some future date(s) at a pre arranged price in the company."
+    )]
     CompanyOption = ExternalCorporateActionEventTypeCode.CompanyOption,
 
     /// <summary>
@@ -165,7 +194,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "CREV")]
     [IsoId("_ExternalCorporateActionEventType1Code_CreditEvent")]
-    [Description(@"Occurrence of credit derivative for which the issuer of one or several underlying securities is unable to fulfill its financial obligations.")]
+    [Description(
+        @"Occurrence of credit derivative for which the issuer of one or several underlying securities is unable to fulfill its financial obligations."
+    )]
     CreditEvent = ExternalCorporateActionEventTypeCode.CreditEvent,
 
     /// <summary>
@@ -192,7 +223,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DFLT")]
     [IsoId("_ExternalCorporateActionEventType1Code_BondDefault")]
-    [Description(@"Failure by the company to perform obligations defined as default events under the bond agreement and that have not been remedied.")]
+    [Description(
+        @"Failure by the company to perform obligations defined as default events under the bond agreement and that have not been remedied."
+    )]
     BondDefault = ExternalCorporateActionEventTypeCode.BondDefault,
 
     /// <summary>
@@ -201,7 +234,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DLST")]
     [IsoId("_ExternalCorporateActionEventType1Code_TradingStatusDelisted")]
-    [Description(@"Security is no longer able to comply with the listing requirements of a stock exchange and is removed from official board quotation.")]
+    [Description(
+        @"Security is no longer able to comply with the listing requirements of a stock exchange and is removed from official board quotation."
+    )]
     TradingStatusDelisted = ExternalCorporateActionEventTypeCode.TradingStatusDelisted,
 
     /// <summary>
@@ -210,7 +245,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DRAW")]
     [IsoId("_ExternalCorporateActionEventType1Code_Drawing")]
-    [Description(@"Securities are redeemed in part before the scheduled final maturity date without any pool factor reduction.")]
+    [Description(
+        @"Securities are redeemed in part before the scheduled final maturity date without any pool factor reduction."
+    )]
     Drawing = ExternalCorporateActionEventTypeCode.Drawing,
 
     /// <summary>
@@ -219,8 +256,11 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DRCA")]
     [IsoId("_ExternalCorporateActionEventType1Code_CashDistributionFromNonEligibleSecuritiesSales")]
-    [Description(@"Distribution to shareholders of cash resulting from the selling of non-eligible securities.")]
-    CashDistributionFromNonEligibleSecuritiesSales = ExternalCorporateActionEventTypeCode.CashDistributionFromNonEligibleSecuritiesSales,
+    [Description(
+        @"Distribution to shareholders of cash resulting from the selling of non-eligible securities."
+    )]
+    CashDistributionFromNonEligibleSecuritiesSales =
+        ExternalCorporateActionEventTypeCode.CashDistributionFromNonEligibleSecuritiesSales,
 
     /// <summary>
     /// Dividend payment where holders can keep cash or have the cash reinvested in the market by the issuer into additional shares.
@@ -228,7 +268,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DRIP")]
     [IsoId("_ExternalCorporateActionEventType1Code_DividendReinvestment")]
-    [Description(@"Dividend payment where holders can keep cash or have the cash reinvested in the market by the issuer into additional shares.")]
+    [Description(
+        @"Dividend payment where holders can keep cash or have the cash reinvested in the market by the issuer into additional shares."
+    )]
     DividendReinvestment = ExternalCorporateActionEventTypeCode.DividendReinvestment,
 
     /// <summary>
@@ -237,7 +279,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DSCL")]
     [IsoId("_ExternalCorporateActionEventType1Code_Disclosure")]
-    [Description(@"Requirement for holders or beneficial owners to disclose their name, location and holdings of any issue to the issuer.")]
+    [Description(
+        @"Requirement for holders or beneficial owners to disclose their name, location and holdings of any issue to the issuer."
+    )]
     Disclosure = ExternalCorporateActionEventTypeCode.Disclosure,
 
     /// <summary>
@@ -246,7 +290,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DTCH")]
     [IsoId("_ExternalCorporateActionEventType1Code_DutchAuction")]
-    [Description(@"Action by a party wishing to acquire a security. Holders of the security are invited to make an offer to sell, within a specific price range.")]
+    [Description(
+        @"Action by a party wishing to acquire a security. Holders of the security are invited to make an offer to sell, within a specific price range."
+    )]
     DutchAuction = ExternalCorporateActionEventTypeCode.DutchAuction,
 
     /// <summary>
@@ -264,7 +310,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DVOP")]
     [IsoId("_ExternalCorporateActionEventType1Code_DividendOption")]
-    [Description(@"Distribution of a dividend to shareholders with a choice of benefit to receive.")]
+    [Description(
+        @"Distribution of a dividend to shareholders with a choice of benefit to receive."
+    )]
     DividendOption = ExternalCorporateActionEventTypeCode.DividendOption,
 
     /// <summary>
@@ -282,7 +330,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "DVSE")]
     [IsoId("_ExternalCorporateActionEventType1Code_StockDividend")]
-    [Description(@"Dividend paid to shareholders in the form of equities of the issuing corporation.")]
+    [Description(
+        @"Dividend paid to shareholders in the form of equities of the issuing corporation."
+    )]
     StockDividend = ExternalCorporateActionEventTypeCode.StockDividend,
 
     /// <summary>
@@ -300,8 +350,11 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "EXRI")]
     [IsoId("_ExternalCorporateActionEventType1Code_CallOnIntermediateSecurities")]
-    [Description(@"Call or exercise on nil paid securities or intermediate securities resulting from an intermediate securities distribution.")]
-    CallOnIntermediateSecurities = ExternalCorporateActionEventTypeCode.CallOnIntermediateSecurities,
+    [Description(
+        @"Call or exercise on nil paid securities or intermediate securities resulting from an intermediate securities distribution."
+    )]
+    CallOnIntermediateSecurities =
+        ExternalCorporateActionEventTypeCode.CallOnIntermediateSecurities,
 
     /// <summary>
     /// The issuer or the holder may prolong the maturity date of a security.
@@ -318,7 +371,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "EXWA")]
     [IsoId("_ExternalCorporateActionEventType1Code_WarrantExercise")]
-    [Description(@"Option offered to holders to buy (call warrant) or to sell (put warrant) a specific amount of stock, cash, or commodity.")]
+    [Description(
+        @"Option offered to holders to buy (call warrant) or to sell (put warrant) a specific amount of stock, cash, or commodity."
+    )]
     WarrantExercise = ExternalCorporateActionEventTypeCode.WarrantExercise,
 
     /// <summary>
@@ -327,7 +382,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "INCR")]
     [IsoId("_ExternalCorporateActionEventType1Code_IncreaseInValue")]
-    [Description(@"Increase in the face value of a single security. The number of circulating securities remains unchanged.")]
+    [Description(
+        @"Increase in the face value of a single security. The number of circulating securities remains unchanged."
+    )]
     IncreaseInValue = ExternalCorporateActionEventTypeCode.IncreaseInValue,
 
     /// <summary>
@@ -336,7 +393,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "INFO")]
     [IsoId("_ExternalCorporateActionEventType1Code_Information")]
-    [Description(@"Information provided by the issuer having no accounting/financial impact on the holder.")]
+    [Description(
+        @"Information provided by the issuer having no accounting/financial impact on the holder."
+    )]
     Information = ExternalCorporateActionEventTypeCode.Information,
 
     /// <summary>
@@ -354,7 +413,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "LIQU")]
     [IsoId("_ExternalCorporateActionEventType1Code_LiquidationDividend")]
-    [Description(@"Distribution of cash, assets or both. Debt may be paid in order of priority based on preferred claims to assets specified by the security.")]
+    [Description(
+        @"Distribution of cash, assets or both. Debt may be paid in order of priority based on preferred claims to assets specified by the security."
+    )]
     LiquidationDividend = ExternalCorporateActionEventTypeCode.LiquidationDividend,
 
     /// <summary>
@@ -363,7 +424,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "MCAL")]
     [IsoId("_ExternalCorporateActionEventType1Code_FullCall")]
-    [Description(@"Redemption of an entire issue outstanding of securities by the issuer or its agent before final maturity.")]
+    [Description(
+        @"Redemption of an entire issue outstanding of securities by the issuer or its agent before final maturity."
+    )]
     FullCall = ExternalCorporateActionEventTypeCode.FullCall,
 
     /// <summary>
@@ -372,7 +435,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "MRGR")]
     [IsoId("_ExternalCorporateActionEventType1Code_Merger")]
-    [Description(@"Exchange of outstanding securities, initiated by the issuer, as the result of two or more companies combining assets.")]
+    [Description(
+        @"Exchange of outstanding securities, initiated by the issuer, as the result of two or more companies combining assets."
+    )]
     Merger = ExternalCorporateActionEventTypeCode.Merger,
 
     /// <summary>
@@ -381,7 +446,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "NOOF")]
     [IsoId("_ExternalCorporateActionEventType1Code_NonOfficialOffer")]
-    [Description(@"Offers that are not supervised or regulated by an official entity and being offered by a party usually at a discount price.")]
+    [Description(
+        @"Offers that are not supervised or regulated by an official entity and being offered by a party usually at a discount price."
+    )]
     NonOfficialOffer = ExternalCorporateActionEventTypeCode.NonOfficialOffer,
 
     /// <summary>
@@ -399,7 +466,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "OTHR")]
     [IsoId("_ExternalCorporateActionEventType1Code_OtherEvent")]
-    [Description(@"Other event, use only when no other event type applies, for example, a new event type.")]
+    [Description(
+        @"Other event, use only when no other event type applies, for example, a new event type."
+    )]
     OtherEvent = ExternalCorporateActionEventTypeCode.OtherEvent,
 
     /// <summary>
@@ -408,7 +477,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PARI")]
     [IsoId("_ExternalCorporateActionEventType1Code_PariPassu")]
-    [Description(@"Occurs when securities with different characteristics become identical in all respects.")]
+    [Description(
+        @"Occurs when securities with different characteristics become identical in all respects."
+    )]
     PariPassu = ExternalCorporateActionEventTypeCode.PariPassu,
 
     /// <summary>
@@ -417,8 +488,11 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PCAL")]
     [IsoId("_ExternalCorporateActionEventType1Code_PartialRedemptionWithoutPoolFactorReduction")]
-    [Description(@"Securities are redeemed in part before their scheduled final maturity date without any pool factor reduction.")]
-    PartialRedemptionWithoutPoolFactorReduction = ExternalCorporateActionEventTypeCode.PartialRedemptionWithoutPoolFactorReduction,
+    [Description(
+        @"Securities are redeemed in part before their scheduled final maturity date without any pool factor reduction."
+    )]
+    PartialRedemptionWithoutPoolFactorReduction =
+        ExternalCorporateActionEventTypeCode.PartialRedemptionWithoutPoolFactorReduction,
 
     /// <summary>
     /// Also called partial defeasance. Issuer has money set aside to redeem a portion of an issue.
@@ -426,7 +500,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PDEF")]
     [IsoId("_ExternalCorporateActionEventType1Code_Prefunding")]
-    [Description(@"Also called partial defeasance. Issuer has money set aside to redeem a portion of an issue.")]
+    [Description(
+        @"Also called partial defeasance. Issuer has money set aside to redeem a portion of an issue."
+    )]
     Prefunding = ExternalCorporateActionEventTypeCode.Prefunding,
 
     /// <summary>
@@ -435,7 +511,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PINK")]
     [IsoId("_ExternalCorporateActionEventType1Code_PayInKind")]
-    [Description(@"Interest payment, in any kind except cash, distributed to holders of an interest bearing asset.")]
+    [Description(
+        @"Interest payment, in any kind except cash, distributed to holders of an interest bearing asset."
+    )]
     PayInKind = ExternalCorporateActionEventTypeCode.PayInKind,
 
     /// <summary>
@@ -444,7 +522,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PLAC")]
     [IsoId("_ExternalCorporateActionEventType1Code_PlaceOfIncorporation")]
-    [Description(@"Changes in the state of incorporation for US companies and changes in the place of incorporation for foreign companies.")]
+    [Description(
+        @"Changes in the state of incorporation for US companies and changes in the place of incorporation for foreign companies."
+    )]
     PlaceOfIncorporation = ExternalCorporateActionEventTypeCode.PlaceOfIncorporation,
 
     /// <summary>
@@ -453,7 +533,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PPMT")]
     [IsoId("_ExternalCorporateActionEventType1Code_InstalmentCall")]
-    [Description(@"Instalment towards the purchase of equity capital, subject to an agreement between an issuer and a purchaser.")]
+    [Description(
+        @"Instalment towards the purchase of equity capital, subject to an agreement between an issuer and a purchaser."
+    )]
     InstalmentCall = ExternalCorporateActionEventTypeCode.InstalmentCall,
 
     /// <summary>
@@ -462,8 +544,11 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PRED")]
     [IsoId("_ExternalCorporateActionEventType1Code_PartialRedemptionWithPoolFactorReduction")]
-    [Description(@"Securities are redeemed in part before their scheduled final maturity date. The redemption is reflected in a pool factor reduction.")]
-    PartialRedemptionWithPoolFactorReduction = ExternalCorporateActionEventTypeCode.PartialRedemptionWithPoolFactorReduction,
+    [Description(
+        @"Securities are redeemed in part before their scheduled final maturity date. The redemption is reflected in a pool factor reduction."
+    )]
+    PartialRedemptionWithPoolFactorReduction =
+        ExternalCorporateActionEventTypeCode.PartialRedemptionWithPoolFactorReduction,
 
     /// <summary>
     /// Form of open or public offer where, due to a limited amount of securities available, priority is given to existing shareholders.
@@ -471,7 +556,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "PRIO")]
     [IsoId("_ExternalCorporateActionEventType1Code_PriorityIssue")]
-    [Description(@"Form of open or public offer where, due to a limited amount of securities available, priority is given to existing shareholders.")]
+    [Description(
+        @"Form of open or public offer where, due to a limited amount of securities available, priority is given to existing shareholders."
+    )]
     PriorityIssue = ExternalCorporateActionEventTypeCode.PriorityIssue,
 
     /// <summary>
@@ -480,7 +567,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "REDM")]
     [IsoId("_ExternalCorporateActionEventType1Code_FinalMaturity")]
-    [Description(@"Redemption of an entire issue outstanding of securities by the issuer or its agent at final maturity.")]
+    [Description(
+        @"Redemption of an entire issue outstanding of securities by the issuer or its agent at final maturity."
+    )]
     FinalMaturity = ExternalCorporateActionEventTypeCode.FinalMaturity,
 
     /// <summary>
@@ -498,7 +587,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "REMK")]
     [IsoId("_ExternalCorporateActionEventType1Code_RemarketingAgreement")]
-    [Description(@"Purchase and sale of remarketed preferred equities/bonds through the negotiation of interest rate between the issuers and the holders.")]
+    [Description(
+        @"Purchase and sale of remarketed preferred equities/bonds through the negotiation of interest rate between the issuers and the holders."
+    )]
     RemarketingAgreement = ExternalCorporateActionEventTypeCode.RemarketingAgreement,
 
     /// <summary>
@@ -507,8 +598,11 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "RHDI")]
     [IsoId("_ExternalCorporateActionEventType1Code_IntermediateSecuritiesDistribution")]
-    [Description(@"Distribution of intermediate securities that gives the holder the right to take part in a future event.")]
-    IntermediateSecuritiesDistribution = ExternalCorporateActionEventTypeCode.IntermediateSecuritiesDistribution,
+    [Description(
+        @"Distribution of intermediate securities that gives the holder the right to take part in a future event."
+    )]
+    IntermediateSecuritiesDistribution =
+        ExternalCorporateActionEventTypeCode.IntermediateSecuritiesDistribution,
 
     /// <summary>
     /// Offer to holders of a security to subscribe for additional securities via the distribution of an intermediate security.
@@ -516,7 +610,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "RHTS")]
     [IsoId("_ExternalCorporateActionEventType1Code_RightsIssue")]
-    [Description(@"Offer to holders of a security to subscribe for additional securities via the distribution of an intermediate security.")]
+    [Description(
+        @"Offer to holders of a security to subscribe for additional securities via the distribution of an intermediate security."
+    )]
     RightsIssue = ExternalCorporateActionEventTypeCode.RightsIssue,
 
     /// <summary>
@@ -525,7 +621,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "SHPR")]
     [IsoId("_ExternalCorporateActionEventType1Code_SharesPremiumDividend")]
-    [Description(@"Corporate event pays shareholders an amount in cash issued from the shares premium reserve.")]
+    [Description(
+        @"Corporate event pays shareholders an amount in cash issued from the shares premium reserve."
+    )]
     SharesPremiumDividend = ExternalCorporateActionEventTypeCode.SharesPremiumDividend,
 
     /// <summary>
@@ -534,7 +632,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "SMAL")]
     [IsoId("_ExternalCorporateActionEventType1Code_SmallestNegotiableUnit")]
-    [Description(@"Modification of the smallest negotiable unit of shares in order to obtain a new negotiable unit.")]
+    [Description(
+        @"Modification of the smallest negotiable unit of shares in order to obtain a new negotiable unit."
+    )]
     SmallestNegotiableUnit = ExternalCorporateActionEventTypeCode.SmallestNegotiableUnit,
 
     /// <summary>
@@ -543,7 +643,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "SOFF")]
     [IsoId("_ExternalCorporateActionEventType1Code_SpinOff")]
-    [Description(@"Distribution of securities issued by another company. For example, spin-off, demerger, unbundling, divestment.")]
+    [Description(
+        @"Distribution of securities issued by another company. For example, spin-off, demerger, unbundling, divestment."
+    )]
     SpinOff = ExternalCorporateActionEventTypeCode.SpinOff,
 
     /// <summary>
@@ -552,7 +654,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "SPLF")]
     [IsoId("_ExternalCorporateActionEventType1Code_StockSplit")]
-    [Description(@"Increase in a corporation’s number of outstanding equities without any change in the shareholder’s equity or the aggregate market value at the time of the split.")]
+    [Description(
+        @"Increase in a corporation’s number of outstanding equities without any change in the shareholder’s equity or the aggregate market value at the time of the split."
+    )]
     StockSplit = ExternalCorporateActionEventTypeCode.StockSplit,
 
     /// <summary>
@@ -561,7 +665,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "SPLR")]
     [IsoId("_ExternalCorporateActionEventType1Code_ReverseStockSplit")]
-    [Description(@"Decrease in a company’s number of outstanding equities without any change in the shareholder’s equity or the aggregate market value at the time of the split.")]
+    [Description(
+        @"Decrease in a company’s number of outstanding equities without any change in the shareholder’s equity or the aggregate market value at the time of the split."
+    )]
     ReverseStockSplit = ExternalCorporateActionEventTypeCode.ReverseStockSplit,
 
     /// <summary>
@@ -579,7 +685,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "TEND")]
     [IsoId("_ExternalCorporateActionEventType1Code_Tender")]
-    [Description(@"Offer made to holders by a third party, requesting them to sell (tender) or exchange their securities.")]
+    [Description(
+        @"Offer made to holders by a third party, requesting them to sell (tender) or exchange their securities."
+    )]
     Tender = ExternalCorporateActionEventTypeCode.Tender,
 
     /// <summary>
@@ -588,7 +696,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "TNDP")]
     [IsoId("_ExternalCorporateActionEventType1Code_TaxOnNonDistributedProceeds")]
-    [Description(@"Taxable component on non-distributed proceeds, for example, Australian deemed income or US 871m income regulation.")]
+    [Description(
+        @"Taxable component on non-distributed proceeds, for example, Australian deemed income or US 871m income regulation."
+    )]
     TaxOnNonDistributedProceeds = ExternalCorporateActionEventTypeCode.TaxOnNonDistributedProceeds,
 
     /// <summary>
@@ -615,7 +725,9 @@ public enum ExternalCorporateActionEventType1Code
     /// </summary>
     [EnumMember(Value = "WTRC")]
     [IsoId("_ExternalCorporateActionEventType1Code_WithholdingTaxReliefCertification")]
-    [Description(@"Certification process for withholding tax reduction or exemption based on the tax status of the holder.")]
-    WithholdingTaxReliefCertification = ExternalCorporateActionEventTypeCode.WithholdingTaxReliefCertification,
-
+    [Description(
+        @"Certification process for withholding tax reduction or exemption based on the tax status of the holder."
+    )]
+    WithholdingTaxReliefCertification =
+        ExternalCorporateActionEventTypeCode.WithholdingTaxReliefCertification,
 }

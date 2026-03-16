@@ -23,7 +23,7 @@ public enum StatementSourceCode
     [IsoId("_m5hTcPNBEeCuA5Tr22BnwA_699577492")]
     [Description(@"Accounting.")]
     Accounting,
-    
+
     /// <summary>
     /// Custody.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -32,5 +32,4 @@ public enum StatementSourceCode
     [IsoId("_m5hTcfNBEeCuA5Tr22BnwA_710657512")]
     [Description(@"Custody.")]
     Custody,
-    
 }

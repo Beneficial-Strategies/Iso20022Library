@@ -23,7 +23,7 @@ public enum GoodAndServiceDeliverySchedule1Code
     [IsoId("_XHWOAT5LEeyHI64WSlzTlg")]
     [Description(@"Other delivery schedule defined at national level.|")]
     OtherNational = GoodAndServiceDeliveryScheduleCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other delivery schedule defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum GoodAndServiceDeliverySchedule1Code
     [IsoId("_XMX38T5LEeyHI64WSlzTlg")]
     [Description(@"Other delivery schedule defined at private level.")]
     OtherPrivate = GoodAndServiceDeliveryScheduleCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Overnight delivery.
     /// Encoded/decoded by serializers as &quot;ONDL&quot;.
@@ -41,7 +41,7 @@ public enum GoodAndServiceDeliverySchedule1Code
     [IsoId("_XQlpkT5LEeyHI64WSlzTlg")]
     [Description(@"Overnight delivery.")]
     OvernightDelivery = GoodAndServiceDeliveryScheduleCode.OvernightDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Same day delivery.
     /// Encoded/decoded by serializers as &quot;SDDL&quot;.
@@ -50,7 +50,7 @@ public enum GoodAndServiceDeliverySchedule1Code
     [IsoId("_XW6UAT5LEeyHI64WSlzTlg")]
     [Description(@"Same day delivery.|")]
     SameDayDelivery = GoodAndServiceDeliveryScheduleCode.SameDayDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Two days or more delivery.
     /// Encoded/decoded by serializers as &quot;TDDL&quot;.
@@ -59,5 +59,4 @@ public enum GoodAndServiceDeliverySchedule1Code
     [IsoId("_XalTET5LEeyHI64WSlzTlg")]
     [Description(@"Two days or more delivery.")]
     TwoDaysOrMoreDelivery = GoodAndServiceDeliveryScheduleCode.TwoDaysOrMoreDelivery, // same ordinal as derivation source for type conversions
-    
 }

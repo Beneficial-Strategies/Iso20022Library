@@ -23,7 +23,7 @@ public enum StandingInstructionTypeCode
     [IsoId("_ZP6DIdp-Ed-ak6NoX_4Aeg_1046801721")]
     [Description(@"Standing instruction for a cash distribution.")]
     CashDistribution,
-    
+
     /// <summary>
     /// Standing instruction for the payment modality, gross or net.
     /// Encoded/decoded by serializers as &quot;PAYM&quot;.
@@ -32,7 +32,7 @@ public enum StandingInstructionTypeCode
     [IsoId("_ZP6DItp-Ed-ak6NoX_4Aeg_1046801722")]
     [Description(@"Standing instruction for the payment modality, gross or net.")]
     GrossNet,
-    
+
     /// <summary>
     /// Standing instruction for a securities distribution.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -41,5 +41,4 @@ public enum StandingInstructionTypeCode
     [IsoId("_ZP6DI9p-Ed-ak6NoX_4Aeg_1046801751")]
     [Description(@"Standing instruction for a securities distribution.")]
     SecuritiesDistribution,
-    
 }

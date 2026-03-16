@@ -23,7 +23,7 @@ public enum RepurchaseType3Code
     [IsoId("_ZTosltp-Ed-ak6NoX_4Aeg_561015301")]
     [Description(@"Relates to a Swap/Substitution.")]
     Swap = RepurchaseTypeCode.Swap, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a change in the closing or maturity date.
     /// Encoded/decoded by serializers as &quot;CALL&quot;.
@@ -32,16 +32,18 @@ public enum RepurchaseType3Code
     [IsoId("_ZTosl9p-Ed-ak6NoX_4Aeg_561015330")]
     [Description(@"Relates to a change in the closing or maturity date.")]
     RepurchaseCall = RepurchaseTypeCode.RepurchaseCall, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a pair-off: the transaction is paired off and netted against one or more previous transactions.
     /// Encoded/decoded by serializers as &quot;PAIR&quot;.
     /// </summary>
     [EnumMember(Value = "PAIR")]
     [IsoId("_ZTosmNp-Ed-ak6NoX_4Aeg_561015331")]
-    [Description(@"Relates to a pair-off: the transaction is paired off and netted against one or more previous transactions.")]
+    [Description(
+        @"Relates to a pair-off: the transaction is paired off and netted against one or more previous transactions."
+    )]
     Pairoff = RepurchaseTypeCode.Pairoff, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Is part of a pair-off.
     /// Encoded/decoded by serializers as &quot;RATE&quot;.
@@ -50,34 +52,40 @@ public enum RepurchaseType3Code
     [IsoId("_ZTosmdp-Ed-ak6NoX_4Aeg_561015360")]
     [Description(@"Is part of a pair-off.")]
     RepoRate = RepurchaseTypeCode.RepoRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a repo rollover of a position extending the closing or maturity date.
     /// Encoded/decoded by serializers as &quot;ROLP&quot;.
     /// </summary>
     [EnumMember(Value = "ROLP")]
     [IsoId("_ZTx2gNp-Ed-ak6NoX_4Aeg_561015361")]
-    [Description(@"Relates to a repo rollover of a position extending the closing or maturity date.")]
+    [Description(
+        @"Relates to a repo rollover of a position extending the closing or maturity date."
+    )]
     Rollover = RepurchaseTypeCode.Rollover, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a repo rollover of a position extending the closing or maturity date.
     /// Encoded/decoded by serializers as &quot;TOPU&quot;.
     /// </summary>
     [EnumMember(Value = "TOPU")]
     [IsoId("_ZTx2gdp-Ed-ak6NoX_4Aeg_561015362")]
-    [Description(@"Relates to a repo rollover of a position extending the closing or maturity date.")]
+    [Description(
+        @"Relates to a repo rollover of a position extending the closing or maturity date."
+    )]
     TopUp = RepurchaseTypeCode.TopUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a repo rollover of a position extending the closing or maturity date.
     /// Encoded/decoded by serializers as &quot;WTHD&quot;.
     /// </summary>
     [EnumMember(Value = "WTHD")]
     [IsoId("_ZTx2gtp-Ed-ak6NoX_4Aeg_561015608")]
-    [Description(@"Relates to a repo rollover of a position extending the closing or maturity date.")]
+    [Description(
+        @"Relates to a repo rollover of a position extending the closing or maturity date."
+    )]
     Withdrawal = RepurchaseTypeCode.Withdrawal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a principal adjustment.
     /// Encoded/decoded by serializers as &quot;PADJ&quot;.
@@ -86,5 +94,4 @@ public enum RepurchaseType3Code
     [IsoId("_ZTx2g9p-Ed-ak6NoX_4Aeg_777121086")]
     [Description(@"Relates to a principal adjustment.")]
     PrincipalExposureAdjustment = RepurchaseTypeCode.PrincipalExposureAdjustment, // same ordinal as derivation source for type conversions
-    
 }

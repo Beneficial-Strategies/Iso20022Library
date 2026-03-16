@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZQM-F9p-Ed-ak6NoX_4Aeg_1112854815")]
-[Description(@"Specifies the nature of a statement update, for example, it is a complete statement.")]
+[Description(
+    @"Specifies the nature of a statement update, for example, it is a complete statement."
+)]
 [DerivedFrom(typeof(StatementUpdateTypeV2Code))]
 public enum StatementUpdateType1Code
 {
@@ -23,7 +25,7 @@ public enum StatementUpdateType1Code
     [IsoId("_ZQM-GNp-Ed-ak6NoX_4Aeg_1368668707")]
     [Description(@"Statement is complete.")]
     Complete = StatementUpdateTypeV2Code.Complete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement contains changes only.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -32,5 +34,4 @@ public enum StatementUpdateType1Code
     [IsoId("_ZQWvENp-Ed-ak6NoX_4Aeg_1368668708")]
     [Description(@"Statement contains changes only.")]
     Delta = StatementUpdateTypeV2Code.Delta, // same ordinal as derivation source for type conversions
-    
 }

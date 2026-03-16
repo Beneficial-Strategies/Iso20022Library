@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
     /// </summary>
     [IsoId("_JFyZAANiEe2-vqzwMUAewg")]
     [DisplayName("Digital Token Amount")]
-    public partial record DigitalTokenAmount : CurrencyOrDigitalTokenAmount1Choice_
+    public record DigitalTokenAmount : CurrencyOrDigitalTokenAmount1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the digital token identifier (DTI).
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
         [DisplayName("Identifier")]
         [IsoXmlTag("Idr")]
         [IsoSimpleType(IsoSimpleType.DTI2021Identifier)]
-        public IsoDTI2021Identifier? Identifier { get; init; } 
-        
+        public IsoDTI2021Identifier? Identifier { get; init; }
+
         /// <summary>
         /// Quantity of digital tokens expressed as a number, for example, a number of blockchain tokens.
         /// </summary>
@@ -33,8 +31,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
         [DisplayName("Unit")]
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.Max30DecimalNumber)]
-        public required IsoMax30DecimalNumber Unit { get; init; } 
-        
+        public required IsoMax30DecimalNumber Unit { get; init; }
+
         /// <summary>
         /// Provides a description of the digital token identifier.
         /// </summary>
@@ -42,10 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyOrDigitalTokenAmount1Cho
         [DisplayName("Description")]
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max30Text)]
-        public IsoMax30Text? Description { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoMax30Text? Description { get; init; }
     }
 }

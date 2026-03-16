@@ -50,5 +50,4 @@ public enum ExternalDateType1Code
     [IsoId("_ExternalDateType1Code_PaymentDueDate")]
     [Description(@"Relates to the payment due date.")]
     PaymentDueDate = ExternalDateTypeCode.PaymentDueDate,
-
 }

@@ -93,7 +93,9 @@ public enum CardPaymentServiceType16Code
     /// </summary>
     [EnumMember(Value = "CSHW")]
     [IsoId("")]
-    [Description(@"Cash advance or withdrawals on a POI (Point Of Interaction), or at a bank counter.")]
+    [Description(
+        @"Cash advance or withdrawals on a POI (Point Of Interaction), or at a bank counter."
+    )]
     CashAdvance = CardPaymentServiceTypeCode.CashAdvance, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -138,7 +140,9 @@ public enum CardPaymentServiceType16Code
     /// </summary>
     [EnumMember(Value = "PPMS")]
     [IsoId("")]
-    [Description(@"Used to inform the POI that it could select the payment instrument type to use.")]
+    [Description(
+        @"Used to inform the POI that it could select the payment instrument type to use."
+    )]
     POIPaymentMethodSelection = CardPaymentServiceTypeCode.POIPaymentMethodSelection, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -185,5 +189,4 @@ public enum CardPaymentServiceType16Code
     [IsoId("")]
     [Description(@"Card validity check.")]
     ValidityCheck = CardPaymentServiceTypeCode.ValidityCheck, // same ordinal as derivation source for type conversions
-
 }

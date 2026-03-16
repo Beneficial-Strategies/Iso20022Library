@@ -23,7 +23,7 @@ public enum AssuredType1Code
     [IsoId("_bjRz8Np-Ed-ak6NoX_4Aeg_1342444833")]
     [Description(@"The buyer should be the assured.")]
     Buyer = AssuredTypeCode.Buyer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The seller should be the assured.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -32,7 +32,7 @@ public enum AssuredType1Code
     [IsoId("_bjRz8dp-Ed-ak6NoX_4Aeg_1345214881")]
     [Description(@"The seller should be the assured.")]
     Seller = AssuredTypeCode.Seller, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The buyer&apos;s bank should be the assured.
     /// Encoded/decoded by serializers as &quot;BUBA&quot;.
@@ -41,7 +41,7 @@ public enum AssuredType1Code
     [IsoId("_bjRz8tp-Ed-ak6NoX_4Aeg_1370148507")]
     [Description(@"The buyer's bank should be the assured.")]
     BuyerBank = AssuredTypeCode.BuyerBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The seller&apos;s bank should be the assured.
     /// Encoded/decoded by serializers as &quot;SEBA&quot;.
@@ -50,5 +50,4 @@ public enum AssuredType1Code
     [IsoId("_bjRz89p-Ed-ak6NoX_4Aeg_1384000890")]
     [Description(@"The seller's bank should be the assured.")]
     SellerBank = AssuredTypeCode.SellerBank, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice
     /// </summary>
     [IsoId("_BXmqswN1Ee2-vqzwMUAewg")]
     [DisplayName("Name And Address")]
-    public partial record NameAndAddress : PartyIdentification242Choice_
+    public record NameAndAddress : PartyIdentification242Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public required IsoMax350Text Name { get; init; } 
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public required IsoMax350Text Name { get; init; }
+
         /// <summary>
         /// Postal address of a party.
         /// </summary>
         [IsoId("_PZvPQtp-Ed-ak6NoX_4Aeg_-611452322")]
         [DisplayName("Address")]
         [IsoXmlTag("Adr")]
-        public PostalAddress1? Address { get; init; } 
-        
+        public PostalAddress1? Address { get; init; }
+
         /// <summary>
         /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
         /// </summary>
@@ -44,11 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification242Choice
         [IsoSimpleType(IsoSimpleType.Max35Text)]
         [MinLength(0)]
         [MaxLength(10)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
         public SimpleValueList<System.String> AlternativeIdentifier { get; init; } = [];
-        
-        
-        #nullable disable
-        
     }
 }

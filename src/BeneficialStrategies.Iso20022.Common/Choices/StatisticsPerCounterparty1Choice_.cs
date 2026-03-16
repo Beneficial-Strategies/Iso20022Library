@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(StatisticsPerCounterparty1Choice.DataSetAction))]
     [KnownType(typeof(StatisticsPerCounterparty1Choice.Report))]
-    [JsonDerivedType(typeof(StatisticsPerCounterparty1Choice.DataSetAction),nameof(StatisticsPerCounterparty1Choice.DataSetAction))]
-    [JsonDerivedType(typeof(StatisticsPerCounterparty1Choice.Report),nameof(StatisticsPerCounterparty1Choice.Report))]
+    [JsonDerivedType(
+        typeof(StatisticsPerCounterparty1Choice.DataSetAction),
+        nameof(StatisticsPerCounterparty1Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(StatisticsPerCounterparty1Choice.Report),
+        nameof(StatisticsPerCounterparty1Choice.Report)
+    )]
     [IsoId("_98o1tEwVEeqwfMIOLcNxbw")]
     [DisplayName("Statistics Per Counterparty 1 Choice")]
-    public abstract partial record StatisticsPerCounterparty1Choice_
-    {
-    }
+    public abstract record StatisticsPerCounterparty1Choice_ { }
 }

@@ -23,16 +23,16 @@ public enum AccountOwnershipType5Code
     [IsoId("_WUASAZNiEem9mu_a5rvrBw")]
     [Description(@"The person is ...")]
     Usufructuary = AccountOwnershipTypeCode.Usufructuary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// A person has full ownership on the asset. 
+    /// A person has full ownership on the asset.
     /// Encoded/decoded by serializers as &quot;OWNR&quot;.
     /// </summary>
     [EnumMember(Value = "OWNR")]
     [IsoId("_YKOz0ZNiEem9mu_a5rvrBw")]
     [Description(@"A person has full ownership on the asset. ")]
     Owner = AccountOwnershipTypeCode.Owner, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// A person has bare ownership on the asset.
     /// Encoded/decoded by serializers as &quot;BOWN&quot;.
@@ -41,5 +41,4 @@ public enum AccountOwnershipType5Code
     [IsoId("_Yr5WcZNiEem9mu_a5rvrBw")]
     [Description(@"A person has bare ownership on the asset.")]
     BareOwner = AccountOwnershipTypeCode.BareOwner, // same ordinal as derivation source for type conversions
-    
 }

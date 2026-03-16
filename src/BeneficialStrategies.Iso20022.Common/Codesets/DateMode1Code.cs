@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_f_Z6kFuSEeSmO6RkXg92Lg")]
-[Description(@"Specifies, for a date, when the event or operation is to take place, for example at the beginning or end of the day.")]
+[Description(
+    @"Specifies, for a date, when the event or operation is to take place, for example at the beginning or end of the day."
+)]
 [DerivedFrom(typeof(DateModeCode))]
 public enum DateMode1Code
 {
@@ -23,7 +25,7 @@ public enum DateMode1Code
     [IsoId("_jKunEVuSEeSmO6RkXg92Lg")]
     [Description(@"Beginning of day.")]
     BODY = DateModeCode.BODY, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// End of day.
     /// Encoded/decoded by serializers as &quot;EODY&quot;.
@@ -32,5 +34,4 @@ public enum DateMode1Code
     [IsoId("_jT6_UVuSEeSmO6RkXg92Lg")]
     [Description(@"End of day.")]
     EODY = DateModeCode.EODY, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_a08HRtp-Ed-ak6NoX_4Aeg_566867564")]
-[Description(@"Specifies the underlying reason for the cancellation of the associated transaction.")]
+[Description(
+    @"Specifies the underlying reason for the cancellation of the associated transaction."
+)]
 [DerivedFrom(typeof(CancelledStatusReasonV2Code))]
 public enum CancelledStatusReason5Code
 {
@@ -23,7 +25,7 @@ public enum CancelledStatusReason5Code
     [IsoId("_a08HR9p-Ed-ak6NoX_4Aeg_-2082832297")]
     [Description(@"Transaction is cancelled by yourself.")]
     CancelledByYourself = CancelledStatusReasonV2Code.CancelledByYourself, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +34,4 @@ public enum CancelledStatusReason5Code
     [IsoId("_a08HSNp-Ed-ak6NoX_4Aeg_1266449994")]
     [Description(@"Other. See Narrative.")]
     Other = CancelledStatusReasonV2Code.Other, // same ordinal as derivation source for type conversions
-    
 }

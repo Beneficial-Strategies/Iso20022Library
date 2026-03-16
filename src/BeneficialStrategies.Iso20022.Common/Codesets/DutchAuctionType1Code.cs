@@ -32,5 +32,4 @@ public enum DutchAuctionType1Code
     [IsoId("_DutchAuctionType1Code_Unmodified")]
     [Description(@"All instructions are accepted at the instructed price (offering bid).")]
     Unmodified = DutchAuctionTypeCode.Unmodified,
-
 }

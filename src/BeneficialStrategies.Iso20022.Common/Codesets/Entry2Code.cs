@@ -23,7 +23,7 @@ public enum Entry2Code
     [IsoId("_ahQ9Vdp-Ed-ak6NoX_4Aeg_-218020347")]
     [Description(@"Trial pay-in schedule.")]
     Trial = EntryCode.Trial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Official pay-in schedule.
     /// Encoded/decoded by serializers as &quot;OFFI&quot;.
@@ -32,7 +32,7 @@ public enum Entry2Code
     [IsoId("_ahQ9Vtp-Ed-ak6NoX_4Aeg_-214324853")]
     [Description(@"Official pay-in schedule.")]
     Official = EntryCode.Official, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pay-in schedule on request.
     /// Encoded/decoded by serializers as &quot;REQU&quot;.
@@ -41,5 +41,4 @@ public enum Entry2Code
     [IsoId("_ahQ9V9p-Ed-ak6NoX_4Aeg_-203241624")]
     [Description(@"Pay-in schedule on request.")]
     Requested = EntryCode.Requested, // same ordinal as derivation source for type conversions
-    
 }

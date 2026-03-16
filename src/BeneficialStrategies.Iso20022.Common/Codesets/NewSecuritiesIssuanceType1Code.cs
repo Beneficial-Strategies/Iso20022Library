@@ -23,7 +23,7 @@ public enum NewSecuritiesIssuanceType1Code
     [IsoId("_hPR4URH1EeKKuerhIbkpig")]
     [Description(@"Securities proceeds are not new issues.")]
     ExistingIssue = NewSecuritiesIssuanceTypeCode.ExistingIssue, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Securities proceeds are newly issued.
     /// Encoded/decoded by serializers as &quot;NEIS&quot;.
@@ -32,7 +32,7 @@ public enum NewSecuritiesIssuanceType1Code
     [IsoId("_hXeLARH1EeKKuerhIbkpig")]
     [Description(@"Securities proceeds are newly issued.")]
     NewIssue = NewSecuritiesIssuanceTypeCode.NewIssue, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not known whether the securities proceeds are newly issued or not.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -41,5 +41,4 @@ public enum NewSecuritiesIssuanceType1Code
     [IsoId("_hlxswxH1EeKKuerhIbkpig")]
     [Description(@"Not known whether the securities proceeds are newly issued or not.")]
     Unknown = NewSecuritiesIssuanceTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

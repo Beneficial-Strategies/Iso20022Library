@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x7Ud0RirEeiNm9ItaZcR2A")]
 [DisplayName("System Party Identification")]
-public partial record SystemPartyIdentification9
+public record SystemPartyIdentification9
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of the party.
     /// </summary>
     [IsoId("_yN6psRirEeiNm9ItaZcR2A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required PartyIdentification136 Identification { get; init; } 
-    
+    public required PartyIdentification136 Identification { get; init; }
+
     /// <summary>
     /// Unique identification of the responsible party.
     /// </summary>
     [IsoId("_vUry8VhKEeih3fUfzR38Ig")]
     [DisplayName("Responsible Party Identification")]
     [IsoXmlTag("RspnsblPtyId")]
-    public PartyIdentification136? ResponsiblePartyIdentification { get; init; } 
-    
+    public PartyIdentification136? ResponsiblePartyIdentification { get; init; }
+
     /// <summary>
     /// Starting date from which the identification is valid.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record SystemPartyIdentification9
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? ValidFrom { get; init; }
 }

@@ -23,7 +23,7 @@ public enum ClosurePendingStatusReasonCode
     [IsoId("_OTSsIGCMEeabZtzjEVWYCQ")]
     [Description(@"Account will be closed when conditions are met.")]
     PendingConditions,
-    
+
     /// <summary>
     /// Account closing is in process.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -32,5 +32,4 @@ public enum ClosurePendingStatusReasonCode
     [IsoId("_SQzDgGCMEeabZtzjEVWYCQ")]
     [Description(@"Account closing is in process.")]
     AccountClosingInProcess,
-    
 }

@@ -21,7 +21,8 @@ public enum StatusSubType2Code
     /// </summary>
     [EnumMember(Value = "SMDY")]
     [IsoId("_EmxXpZU-EeaYkf5FCqYMeA")]
-    [Description(@"Same day flag has been set to true for the sub status of the trade notification.")]
+    [Description(
+        @"Same day flag has been set to true for the sub status of the trade notification."
+    )]
     OnlySameDayFlagTrue = StatusSubTypeCode.OnlySameDayFlagTrue, // same ordinal as derivation source for type conversions
-    
 }

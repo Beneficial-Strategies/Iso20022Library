@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat49Choice.AmountPricePerFinancialInstrumentQuantity))]
     [KnownType(typeof(PriceFormat49Choice.AmountPricePerAmount))]
     [KnownType(typeof(PriceFormat49Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat49Choice.PercentagePrice),nameof(PriceFormat49Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat49Choice.AmountPrice),nameof(PriceFormat49Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat49Choice.NotSpecifiedPrice),nameof(PriceFormat49Choice.NotSpecifiedPrice))]
-    [JsonDerivedType(typeof(PriceFormat49Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat49Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat49Choice.AmountPricePerAmount),nameof(PriceFormat49Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat49Choice.IndexPoints),nameof(PriceFormat49Choice.IndexPoints))]
+    [JsonDerivedType(
+        typeof(PriceFormat49Choice.PercentagePrice),
+        nameof(PriceFormat49Choice.PercentagePrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat49Choice.AmountPrice),
+        nameof(PriceFormat49Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat49Choice.NotSpecifiedPrice),
+        nameof(PriceFormat49Choice.NotSpecifiedPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat49Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat49Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat49Choice.AmountPricePerAmount),
+        nameof(PriceFormat49Choice.AmountPricePerAmount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat49Choice.IndexPoints),
+        nameof(PriceFormat49Choice.IndexPoints)
+    )]
     [IsoId("_qHKnJUELEeWVgfuHGaKtRQ")]
     [DisplayName("Price Format 49 Choice")]
-    public abstract partial record PriceFormat49Choice_
-    {
-    }
+    public abstract record PriceFormat49Choice_ { }
 }

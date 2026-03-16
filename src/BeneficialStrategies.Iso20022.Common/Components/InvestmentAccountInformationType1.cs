@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RR2AZNp-Ed-ak6NoX_4Aeg_1677189755")]
 [DisplayName("Investment Account Information Type")]
-public partial record InvestmentAccountInformationType1
+public record InvestmentAccountInformationType1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates if the core investment account information must be selected.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record InvestmentAccountInformationType1
     [DisplayName("Investment Account")]
     [IsoXmlTag("InvstmtAcct")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator InvestmentAccount { get; init; } 
-    
+    public required IsoYesNoIndicator InvestmentAccount { get; init; }
+
     /// <summary>
     /// Indicates if the information about account parties must be selected.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record InvestmentAccountInformationType1
     [DisplayName("Account Parties")]
     [IsoXmlTag("AcctPties")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AccountParties { get; init; } 
-    
+    public required IsoYesNoIndicator AccountParties { get; init; }
+
     /// <summary>
     /// Indicates if the information about the intermediaries must be selected.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record InvestmentAccountInformationType1
     [DisplayName("Intermediaries")]
     [IsoXmlTag("Intrmies")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Intermediaries { get; init; } 
-    
+    public required IsoYesNoIndicator Intermediaries { get; init; }
+
     /// <summary>
     /// Indicates if the information about the investment plan(s) must be selected.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record InvestmentAccountInformationType1
     [DisplayName("Investment Plan")]
     [IsoXmlTag("InvstmtPlan")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator InvestmentPlan { get; init; } 
-    
+    public required IsoYesNoIndicator InvestmentPlan { get; init; }
+
     /// <summary>
     /// Indicates if the cash settlement information must be selected.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record InvestmentAccountInformationType1
     [DisplayName("Cash Settlement")]
     [IsoXmlTag("CshSttlm")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CashSettlement { get; init; } 
-    
+    public required IsoYesNoIndicator CashSettlement { get; init; }
+
     /// <summary>
     /// Indicates if the Service Level Agreement information must be selected.
     /// </summary>
@@ -70,9 +68,5 @@ public partial record InvestmentAccountInformationType1
     [DisplayName("Service Level Agreement")]
     [IsoXmlTag("SvcLvlAgrmt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ServiceLevelAgreement { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator ServiceLevelAgreement { get; init; }
 }

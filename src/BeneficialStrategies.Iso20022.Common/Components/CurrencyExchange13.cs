@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M5wl0IW7EeiDBOVr6AJAFA")]
 [DisplayName("Currency Exchange")]
-public partial record CurrencyExchange13
+public record CurrencyExchange13
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency from which an amount is to be converted in a currency conversion.
     /// </summary>
     [IsoId("_NF4WQYW7EeiDBOVr6AJAFA")]
     [DisplayName("Source Currency")]
     [IsoXmlTag("SrcCcy")]
-    public required ActiveCurrencyCode SourceCurrency { get; init; } 
-    
+    public required ActiveCurrencyCode SourceCurrency { get; init; }
+
     /// <summary>
     /// Currency into which an amount is to be converted in a currency conversion.
     /// </summary>
     [IsoId("_NF4WQ4W7EeiDBOVr6AJAFA")]
     [DisplayName("Target Currency")]
     [IsoXmlTag("TrgtCcy")]
-    public required ActiveCurrencyCode TargetCurrency { get; init; } 
-    
+    public required ActiveCurrencyCode TargetCurrency { get; init; }
+
     /// <summary>
     /// Factor used to convert an amount from one currency into another. This reflects the price at which one currency was bought with another currency.
     /// </summary>
@@ -41,17 +39,13 @@ public partial record CurrencyExchange13
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; } 
-    
+    public required IsoBaseOneRate ExchangeRate { get; init; }
+
     /// <summary>
     /// Currency in which the rate of exchange is expressed in a currency exchange. In the example 1GBP = xxxCUR, the unit currency is GBP.
     /// </summary>
     [IsoId("_NF4WSYW7EeiDBOVr6AJAFA")]
     [DisplayName("Unit Currency")]
     [IsoXmlTag("UnitCcy")]
-    public ActiveCurrencyCode? UnitCurrency { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActiveCurrencyCode? UnitCurrency { get; init; }
 }

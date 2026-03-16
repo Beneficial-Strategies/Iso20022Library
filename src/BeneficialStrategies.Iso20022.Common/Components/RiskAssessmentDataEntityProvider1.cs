@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sMaVcNv-EeeOusYHZbyj7w")]
 [DisplayName("Risk Assessment Data Entity Provider")]
-public partial record RiskAssessmentDataEntityProvider1
+public record RiskAssessmentDataEntityProvider1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of entity providing data for risk assessment.
     /// </summary>
     [IsoId("_YLgWcNv_EeeOusYHZbyj7w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public PartyType28Code? Type { get; init; } 
-    
+    public PartyType28Code? Type { get; init; }
+
     /// <summary>
     /// Other type of entity providing risk assessment data.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record RiskAssessmentDataEntityProvider1
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
 }

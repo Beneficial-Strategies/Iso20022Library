@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_USEQI9p-Ed-ak6NoX_4Aeg_2081535346")]
 [DisplayName("Transaction")]
-public partial record Transaction7
+public record Transaction7
 {
-    #nullable enable
-    
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Transaction7
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text AccountOwnerTransactionIdentification { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record Transaction7
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record Transaction7
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+
     /// <summary>
     /// Reference assigned to the trade by the investor or the trading party. This reference will be used throughout the trade life cycle to access/update the trade details.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record Transaction7
     [DisplayName("Trade Identification")]
     [IsoXmlTag("TradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TradeIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TradeIdentification { get; init; }
+
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record Transaction7
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PoolIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PoolIdentification { get; init; }
+
     /// <summary>
     /// Unique reference agreed upon by the two trade counterparties to identify the trade.
     /// </summary>
@@ -75,9 +73,9 @@ public partial record Transaction7
     [DisplayName("Common Identification")]
     [IsoXmlTag("CmonId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CommonIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CommonIdentification { get; init; }
+
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
     /// </summary>
@@ -85,9 +83,9 @@ public partial record Transaction7
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the triparty agent&apos;s point of view.
     /// </summary>
@@ -95,9 +93,9 @@ public partial record Transaction7
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
     /// </summary>
@@ -105,18 +103,14 @@ public partial record Transaction7
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+
     /// <summary>
     /// Identifies the details of the transaction.
     /// </summary>
     [IsoId("_USOBIdp-Ed-ak6NoX_4Aeg_2081535502")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public TransactionDetails7? TransactionDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransactionDetails7? TransactionDetails { get; init; }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LimitCriteria6Choice.QueryName))]
     [KnownType(typeof(LimitCriteria6Choice.NewCriteria))]
-    [JsonDerivedType(typeof(LimitCriteria6Choice.QueryName),nameof(LimitCriteria6Choice.QueryName))]
-    [JsonDerivedType(typeof(LimitCriteria6Choice.NewCriteria),nameof(LimitCriteria6Choice.NewCriteria))]
+    [JsonDerivedType(
+        typeof(LimitCriteria6Choice.QueryName),
+        nameof(LimitCriteria6Choice.QueryName)
+    )]
+    [JsonDerivedType(
+        typeof(LimitCriteria6Choice.NewCriteria),
+        nameof(LimitCriteria6Choice.NewCriteria)
+    )]
     [IsoId("_FDP_524-EeiU9cctagi5ow")]
     [DisplayName("Limit Criteria 6 Choice")]
-    public abstract partial record LimitCriteria6Choice_
-    {
-    }
+    public abstract record LimitCriteria6Choice_ { }
 }

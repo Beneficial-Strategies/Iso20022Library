@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus5Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.ResponseStatus5Choice
     /// </summary>
     [IsoId("_klDTUTqqEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public partial record Code : ResponseStatus5Choice_
+    public record Code : ResponseStatus5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the status of the received collateral message (collateral claim, a collateral proposal or a proposal/request for collateral substitution) from a collateral management perspective.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required ResponseStatus1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ResponseStatus1Code Value { get; init; }
     }
 }

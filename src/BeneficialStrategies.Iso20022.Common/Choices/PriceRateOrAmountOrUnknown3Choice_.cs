@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceRateOrAmountOrUnknown3Choice.Rate))]
     [KnownType(typeof(PriceRateOrAmountOrUnknown3Choice.Amount))]
     [KnownType(typeof(PriceRateOrAmountOrUnknown3Choice.UnknownIndicator))]
-    [JsonDerivedType(typeof(PriceRateOrAmountOrUnknown3Choice.Rate),nameof(PriceRateOrAmountOrUnknown3Choice.Rate))]
-    [JsonDerivedType(typeof(PriceRateOrAmountOrUnknown3Choice.Amount),nameof(PriceRateOrAmountOrUnknown3Choice.Amount))]
-    [JsonDerivedType(typeof(PriceRateOrAmountOrUnknown3Choice.UnknownIndicator),nameof(PriceRateOrAmountOrUnknown3Choice.UnknownIndicator))]
+    [JsonDerivedType(
+        typeof(PriceRateOrAmountOrUnknown3Choice.Rate),
+        nameof(PriceRateOrAmountOrUnknown3Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(PriceRateOrAmountOrUnknown3Choice.Amount),
+        nameof(PriceRateOrAmountOrUnknown3Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceRateOrAmountOrUnknown3Choice.UnknownIndicator),
+        nameof(PriceRateOrAmountOrUnknown3Choice.UnknownIndicator)
+    )]
     [IsoId("_gdOxl833Eee5nJBZsW8MFQ")]
     [DisplayName("Price Rate Or Amount Or Unknown 3 Choice")]
-    public abstract partial record PriceRateOrAmountOrUnknown3Choice_
-    {
-    }
+    public abstract record PriceRateOrAmountOrUnknown3Choice_ { }
 }

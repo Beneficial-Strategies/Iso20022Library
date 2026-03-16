@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentInstrument9Choice.DirectDebitDetails))]
     [KnownType(typeof(PaymentInstrument9Choice.ChequeDetails))]
     [KnownType(typeof(PaymentInstrument9Choice.AccountDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument9Choice.PaymentCardDetails),nameof(PaymentInstrument9Choice.PaymentCardDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument9Choice.CreditTransferDetails),nameof(PaymentInstrument9Choice.CreditTransferDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument9Choice.DirectDebitDetails),nameof(PaymentInstrument9Choice.DirectDebitDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument9Choice.ChequeDetails),nameof(PaymentInstrument9Choice.ChequeDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument9Choice.AccountDetails),nameof(PaymentInstrument9Choice.AccountDetails))]
+    [JsonDerivedType(
+        typeof(PaymentInstrument9Choice.PaymentCardDetails),
+        nameof(PaymentInstrument9Choice.PaymentCardDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument9Choice.CreditTransferDetails),
+        nameof(PaymentInstrument9Choice.CreditTransferDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument9Choice.DirectDebitDetails),
+        nameof(PaymentInstrument9Choice.DirectDebitDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument9Choice.ChequeDetails),
+        nameof(PaymentInstrument9Choice.ChequeDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument9Choice.AccountDetails),
+        nameof(PaymentInstrument9Choice.AccountDetails)
+    )]
     [IsoId("_VKshR9p-Ed-ak6NoX_4Aeg_852770854")]
     [DisplayName("Payment Instrument 9 Choice")]
-    public abstract partial record PaymentInstrument9Choice_
-    {
-    }
+    public abstract record PaymentInstrument9Choice_ { }
 }

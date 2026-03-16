@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2nNkpAJBEe-BSY_bts84pg")]
 [DisplayName("Organisation Identification43")]
-public partial record OrganisationIdentification43
+public record OrganisationIdentification43
 {
-    #nullable enable
-
     /// <summary>
     /// Any BIC.
     /// </summary>
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; } 
+    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
 
     /// <summary>
     /// LEI.
     /// </summary>
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
-    public IsoLEIIdentifier? LEI { get; init; } 
+    public IsoLEIIdentifier? LEI { get; init; }
 
     /// <summary>
     /// Other.
@@ -38,8 +36,4 @@ public partial record OrganisationIdentification43
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
     public ValueList<GenericOrganisationIdentification1> Other { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

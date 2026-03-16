@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -15,18 +15,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VujxkfmsEeuM-bZFEQa_yw")]
 [DisplayName("Business Application Header")]
-public partial record BusinessApplicationHeader7
+public record BusinessApplicationHeader7
 {
-    #nullable enable
-    
     /// <summary>
     /// Contains the character set of the text-based elements used in the Business Message.
     /// </summary>
     [IsoId("_V2dJUfmsEeuM-bZFEQa_yw")]
     [DisplayName("Character Set")]
     [IsoXmlTag("CharSet")]
-    public UnicodeChartsCode? CharacterSet { get; init; } 
-    
+    public UnicodeChartsCode? CharacterSet { get; init; }
+
     /// <summary>
     /// The sending MessagingEndpoint that has created this Business Message for the receiving MessagingEndpoint that will process this Business Message.
     /// Note	the sending MessagingEndpoint might be different from the sending address potentially contained in the transport header (as defined in the transport layer).
@@ -34,8 +32,8 @@ public partial record BusinessApplicationHeader7
     [IsoId("_V2dJU_msEeuM-bZFEQa_yw")]
     [DisplayName("From")]
     [IsoXmlTag("Fr")]
-    public required Party44Choice_ From { get; init; } 
-    
+    public required Party44Choice_ From { get; init; }
+
     /// <summary>
     /// The MessagingEndpoint designated by the sending MessagingEndpoint to be the recipient who will ultimately process this Business Message.
     /// Note the receiving MessagingEndpoint might be different from the receiving address potentially contained in the transport header (as defined in the transport layer).
@@ -43,8 +41,8 @@ public partial record BusinessApplicationHeader7
     [IsoId("_V2dJVfmsEeuM-bZFEQa_yw")]
     [DisplayName("To")]
     [IsoXmlTag("To")]
-    public required Party44Choice_ To { get; init; } 
-    
+    public required Party44Choice_ To { get; init; }
+
     /// <summary>
     /// Unambiguously identifies the Business Message to the MessagingEndpoint that has created the Business Message.
     /// </summary>
@@ -52,9 +50,9 @@ public partial record BusinessApplicationHeader7
     [DisplayName("Business Message Identifier")]
     [IsoXmlTag("BizMsgIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text BusinessMessageIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text BusinessMessageIdentifier { get; init; }
+
     /// <summary>
     /// The Message Definition Identifier of the Business Message instance with which this Business Application Header instance is associated.
     /// </summary>
@@ -62,22 +60,22 @@ public partial record BusinessApplicationHeader7
     [DisplayName("Message Definition Identifier")]
     [IsoXmlTag("MsgDefIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MessageDefinitionIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageDefinitionIdentifier { get; init; }
+
     /// <summary>
     /// Specifies the business service agreed between the two MessagingEndpoints under which rules this Business Message is exchanged.
     /// To be used when there is a choice of processing services or processing service levels.
-    /// Example: 
+    /// Example:
     /// “marketx.hvps.01” and “marketx.xbdr.01” might be used to indicate that the associated messages are subject to different processing levels for domestic high value payments versus cross-border payments  within the same market practice.
     /// </summary>
     [IsoId("_V2dJW_msEeuM-bZFEQa_yw")]
     [DisplayName("Business Service")]
     [IsoXmlTag("BizSvc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? BusinessService { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? BusinessService { get; init; }
+
     /// <summary>
     /// Specifies the market practice to which the message conforms. The market practices are a set of rules agreed between parties that restricts the usage of the messages in order to achieve better STP (Straight Through Processing) rates.
     /// A market practice specification may also extend the underlying message specification by using extensions or supplementary data of this underlying message.
@@ -85,8 +83,8 @@ public partial record BusinessApplicationHeader7
     [IsoId("_fw9DkfmsEeuM-bZFEQa_yw")]
     [DisplayName("Market Practice")]
     [IsoXmlTag("MktPrctc")]
-    public ImplementationSpecification1? MarketPractice { get; init; } 
-    
+    public ImplementationSpecification1? MarketPractice { get; init; }
+
     /// <summary>
     /// Date and time when this Business Message (header) was created.
     /// Note Times must be normalized, using the &quot;Z&quot; annotation.
@@ -95,8 +93,8 @@ public partial record BusinessApplicationHeader7
     [DisplayName("Creation Date")]
     [IsoXmlTag("CreDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDate { get; init; } 
-    
+    public required IsoISODateTime CreationDate { get; init; }
+
     /// <summary>
     /// Processing date and time indicated by the sender for the receiver of the business message. This date may be different from the date and time provided in the CreationDate.
     /// Usage: Market practice or bilateral agreement should specify how this element should be used.
@@ -105,19 +103,19 @@ public partial record BusinessApplicationHeader7
     [DisplayName("Business Processing Date")]
     [IsoXmlTag("BizPrcgDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? BusinessProcessingDate { get; init; } 
-    
+    public IsoISODateTime? BusinessProcessingDate { get; init; }
+
     /// <summary>
     /// Indicates whether the message is a Copy, a Duplicate or a copy of a duplicate of a previously sent ISO 20022 Message.
     /// </summary>
     [IsoId("_V2dJX_msEeuM-bZFEQa_yw")]
     [DisplayName("Copy Duplicate")]
     [IsoXmlTag("CpyDplct")]
-    public CopyDuplicate1Code? CopyDuplicate { get; init; } 
-    
+    public CopyDuplicate1Code? CopyDuplicate { get; init; }
+
     /// <summary>
-    /// Flag indicating if the Business Message exchanged between the MessagingEndpoints is possibly a duplicate. 
-    /// If the receiving MessagingEndpoint did not receive the original, then this Business Message should be processed as if it were the original. 
+    /// Flag indicating if the Business Message exchanged between the MessagingEndpoints is possibly a duplicate.
+    /// If the receiving MessagingEndpoint did not receive the original, then this Business Message should be processed as if it were the original.
     /// If the receiving MessagingEndpoint did receive the original, then it should perform necessary actions to avoid processing this Business Message again.
     /// This will guarantee business idempotent behaviour.
     /// NOTE: this is named &quot;PossResend&quot; in FIX - this is an application level resend not a network level retransmission.
@@ -126,25 +124,21 @@ public partial record BusinessApplicationHeader7
     [DisplayName("Possible Duplicate")]
     [IsoXmlTag("PssblDplct")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PossibleDuplicate { get; init; } 
-    
+    public IsoYesNoIndicator? PossibleDuplicate { get; init; }
+
     /// <summary>
     /// Relative indication of the processing precedence of the message over a (set of) Business Messages with assigned priorities.
     /// </summary>
     [IsoId("_V2dJY_msEeuM-bZFEQa_yw")]
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public BusinessMessagePriorityCode? Priority { get; init; } 
-    
+    public BusinessMessagePriorityCode? Priority { get; init; }
+
     /// <summary>
     /// Contains the digital signature of the Business Entity authorised to sign this Business Message.
     /// </summary>
     [IsoId("_V2dJZfmsEeuM-bZFEQa_yw")]
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public SignatureEnvelope? Signature { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SignatureEnvelope? Signature { get; init; }
 }

@@ -23,7 +23,7 @@ public enum ExchangeRateType2Code
     [IsoId("_cstTEYZ3Eeufof77RM8ObQ")]
     [Description(@"Exchange rate is the Sell rate.")]
     Sell = ExchangeRateTypeCode.Sell, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate type is privately defined.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum ExchangeRateType2Code
     [IsoId("_dMtBwYZ3Eeufof77RM8ObQ")]
     [Description(@"Exchange rate type is privately defined.")]
     OtherPrivate = ExchangeRateTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate type that is defined at the National level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum ExchangeRateType2Code
     [IsoId("_dsjmgYZ3Eeufof77RM8ObQ")]
     [Description(@"Exchange rate type that is defined at the National level.")]
     OtherNational = ExchangeRateTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate is the Middle rate.
     /// Encoded/decoded by serializers as &quot;MIDL&quot;.
@@ -50,7 +50,7 @@ public enum ExchangeRateType2Code
     [IsoId("_eNdUIYZ3Eeufof77RM8ObQ")]
     [Description(@"Exchange rate is the Middle rate.")]
     Middle = ExchangeRateTypeCode.Middle, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate is the Buy rate.
     /// Encoded/decoded by serializers as &quot;BUYR&quot;.
@@ -59,7 +59,7 @@ public enum ExchangeRateType2Code
     [IsoId("_eNfJUYZ3Eeufof77RM8ObQ")]
     [Description(@"Exchange rate is the Buy rate.")]
     Buy = ExchangeRateTypeCode.Buy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate applied is the rate agreed between the parties.
     /// Encoded/decoded by serializers as &quot;AGRD&quot;.
@@ -68,5 +68,4 @@ public enum ExchangeRateType2Code
     [IsoId("_ewAnkYZ3Eeufof77RM8ObQ")]
     [Description(@"Exchange rate applied is the rate agreed between the parties.")]
     Agreed = ExchangeRateTypeCode.Agreed, // same ordinal as derivation source for type conversions
-    
 }

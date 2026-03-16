@@ -21,16 +21,19 @@ public enum CancellationStatus2Code
     /// </summary>
     [EnumMember(Value = "STNP")]
     [IsoId("_bYs7qNp-Ed-ak6NoX_4Aeg_-1024226245")]
-    [Description(@"Cancellation instruction/request has been sent to the next party, that is, the next intermediary.")]
+    [Description(
+        @"Cancellation instruction/request has been sent to the next party, that is, the next intermediary."
+    )]
     SentToNextParty = CancellationStatusCode.SentToNextParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation instruction / request has been received and has been acknowledged / accepted for further processing.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_bY2soNp-Ed-ak6NoX_4Aeg_-1024226221")]
-    [Description(@"Cancellation instruction / request has been received and has been acknowledged / accepted for further processing.")]
+    [Description(
+        @"Cancellation instruction / request has been received and has been acknowledged / accepted for further processing."
+    )]
     Accepted = CancellationStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
 }

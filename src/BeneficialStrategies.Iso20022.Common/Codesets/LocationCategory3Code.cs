@@ -23,7 +23,7 @@ public enum LocationCategory3Code
     [IsoId("_3wtnUZX5EeWMQt4mOczoDw")]
     [Description(@"Indoor terminal.")]
     Indoor = LocationCategoryCode.Indoor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal incorporated in the pump dispensing petrol.
     /// Encoded/decoded by serializers as &quot;IPMP&quot;.
@@ -32,7 +32,7 @@ public enum LocationCategory3Code
     [IsoId("_34m_EZX5EeWMQt4mOczoDw")]
     [Description(@"Terminal incorporated in the pump dispensing petrol.")]
     InsidePump = LocationCategoryCode.InsidePump, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Multiple terminals linked to a unique sale terminal.
     /// Encoded/decoded by serializers as &quot;MPOI&quot;.
@@ -41,7 +41,7 @@ public enum LocationCategory3Code
     [IsoId("_4HaQEZX5EeWMQt4mOczoDw")]
     [Description(@"Multiple terminals linked to a unique sale terminal.")]
     MultiplePOITerminal = LocationCategoryCode.MultiplePOITerminal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Outdoor terminal serving several petrol pumps.
     /// Encoded/decoded by serializers as &quot;MPMP&quot;.
@@ -50,7 +50,7 @@ public enum LocationCategory3Code
     [IsoId("_4QWwsZX5EeWMQt4mOczoDw")]
     [Description(@"Outdoor terminal serving several petrol pumps.")]
     MultiplePump = LocationCategoryCode.MultiplePump, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal serving multiple sale terminals.
     /// Encoded/decoded by serializers as &quot;MSLE&quot;.
@@ -59,7 +59,7 @@ public enum LocationCategory3Code
     [IsoId("_4ZllMZX5EeWMQt4mOczoDw")]
     [Description(@"Terminal serving multiple sale terminals.")]
     MultipleSaleTerminal = LocationCategoryCode.MultipleSaleTerminal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal linked to a unique sale terminal.
     /// Encoded/decoded by serializers as &quot;SSLE&quot;.
@@ -68,7 +68,7 @@ public enum LocationCategory3Code
     [IsoId("_4oC38ZX5EeWMQt4mOczoDw")]
     [Description(@"Terminal linked to a unique sale terminal.")]
     SingleSaleTerminal = LocationCategoryCode.SingleSaleTerminal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal integrated in a vending machine.
     /// Encoded/decoded by serializers as &quot;VNDG&quot;.
@@ -77,5 +77,4 @@ public enum LocationCategory3Code
     [IsoId("_4up2QZX5EeWMQt4mOczoDw")]
     [Description(@"Terminal integrated in a vending machine.")]
     VendingMachine = LocationCategoryCode.VendingMachine, // same ordinal as derivation source for type conversions
-    
 }

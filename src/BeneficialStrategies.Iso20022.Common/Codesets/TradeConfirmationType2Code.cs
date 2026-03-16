@@ -23,5 +23,4 @@ public enum TradeConfirmationType2Code
     [IsoId("_HQSTQQ28EeWmAKKPnqYEVQ")]
     [Description(@"Non-confirmed.")]
     NonConfirmed = TradeConfirmationTypeCode.NonConfirmed, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HcshEXNVEe6Y1uOeeiF_Eg")]
 [DisplayName("Plain Card Data23")]
-public partial record PlainCardData23
+public record PlainCardData23
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -30,9 +28,5 @@ public partial record PlainCardData23
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public IsoMax20Text? Identification { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax20Text? Identification { get; init; }
 }

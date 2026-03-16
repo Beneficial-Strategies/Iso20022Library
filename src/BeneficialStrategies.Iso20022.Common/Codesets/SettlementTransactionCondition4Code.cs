@@ -23,7 +23,7 @@ public enum SettlementTransactionCondition4Code
     [IsoId("_q6UcFWtdEeCY4-KZ9JEyUQ_-1025495293")]
     [Description(@"Tax-exempt financial instruments are to be settled.")]
     Clean = SettlementTransactionConditionCode.Clean, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Taxable financial instruments are to be settled.
     /// Encoded/decoded by serializers as &quot;DIRT&quot;.
@@ -32,16 +32,18 @@ public enum SettlementTransactionCondition4Code
     [IsoId("_q6UcFmtdEeCY4-KZ9JEyUQ_-2022567646")]
     [Description(@"Taxable financial instruments are to be settled.")]
     Dirty = SettlementTransactionConditionCode.Dirty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Matching receipt instruction not required (only for concerned international or national central securities depositories).
     /// Encoded/decoded by serializers as &quot;DLWM&quot;.
     /// </summary>
     [EnumMember(Value = "DLWM")]
     [IsoId("_q6dmAGtdEeCY4-KZ9JEyUQ_25637779")]
-    [Description(@"Matching receipt instruction not required (only for concerned international or national central securities depositories).")]
+    [Description(
+        @"Matching receipt instruction not required (only for concerned international or national central securities depositories)."
+    )]
     DeliveryWithoutMatching = SettlementTransactionConditionCode.DeliveryWithoutMatching, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Securities are to be physically settled.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -50,7 +52,7 @@ public enum SettlementTransactionCondition4Code
     [IsoId("_q6dmAWtdEeCY4-KZ9JEyUQ_-971434574")]
     [Description(@"Securities are to be physically settled.")]
     Physical = SettlementTransactionConditionCode.Physical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement transactions to be settled with special delivery.
     /// Encoded/decoded by serializers as &quot;SPDL&quot;.
@@ -59,7 +61,7 @@ public enum SettlementTransactionCondition4Code
     [IsoId("_q6dmAmtdEeCY4-KZ9JEyUQ_-2110188948")]
     [Description(@"Settlement transactions to be settled with special delivery.")]
     SpecialDelivery = SettlementTransactionConditionCode.SpecialDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Money and financial instruments settle in different locations.
     /// Encoded/decoded by serializers as &quot;SPST&quot;.
@@ -68,7 +70,7 @@ public enum SettlementTransactionCondition4Code
     [IsoId("_q6dmA2tdEeCY4-KZ9JEyUQ_-403994588")]
     [Description(@"Money and financial instruments settle in different locations.")]
     SplitSettlement = SettlementTransactionConditionCode.SplitSettlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No market claim should be automatically generated.
     /// Encoded/decoded by serializers as &quot;NOMC&quot;.
@@ -77,5 +79,4 @@ public enum SettlementTransactionCondition4Code
     [IsoId("_q6dmBGtdEeCY4-KZ9JEyUQ_763183726")]
     [Description(@"No market claim should be automatically generated.")]
     NoAutomaticMarketClaim = SettlementTransactionConditionCode.NoAutomaticMarketClaim, // same ordinal as derivation source for type conversions
-    
 }

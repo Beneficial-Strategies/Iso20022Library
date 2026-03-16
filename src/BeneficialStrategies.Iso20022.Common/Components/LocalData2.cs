@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wC-R4cWpEeuhguwJmlgagQ")]
 [DisplayName("Local Data")]
-public partial record LocalData2
+public record LocalData2
 {
-    #nullable enable
-    
     /// <summary>
     /// The language code conforming to ISO 639-1 that identifies the language in which the fields are expressed in this component.
     /// </summary>
     [IsoId("_wHgzocWpEeuhguwJmlgagQ")]
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public required ISOMax3ALanguageCode Language { get; init; } 
-    
+    public required ISOMax3ALanguageCode Language { get; init; }
+
     /// <summary>
     /// Name of the financial institution in the local language.
     /// </summary>
@@ -33,17 +31,17 @@ public partial record LocalData2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Name { get; init; }
+
     /// <summary>
     /// Structured postal address in the local language.
     /// </summary>
     [IsoId("_p2qrMMWqEeuhguwJmlgagQ")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public Address3? Address { get; init; } 
-    
+    public Address3? Address { get; init; }
+
     /// <summary>
     /// Additional information, in the local language, used to facilitate contact with the financial institution, for instance dispute manager name.
     /// </summary>
@@ -51,18 +49,14 @@ public partial record LocalData2
     [DisplayName("Additional Contact Information")]
     [IsoXmlTag("AddtlCtctInf")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
-    [StringLength(maximumLength: 512 ,MinimumLength = 1)]
-    public IsoMax512Text? AdditionalContactInformation { get; init; } 
-    
+    [StringLength(maximumLength: 512, MinimumLength = 1)]
+    public IsoMax512Text? AdditionalContactInformation { get; init; }
+
     /// <summary>
     /// Additional local language data
     /// </summary>
     [IsoId("_v5cqAcXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalData { get; init; }
 }

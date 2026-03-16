@@ -23,14 +23,15 @@ public enum MessageFunction9Code
     [IsoId("_XdFiUY0OEeWRYffwL7E13A")]
     [Description(@"Reject of a request or an advice message by an acquirer or an agent.")]
     AcceptorRequestReject = MessageFunctionCode.AcceptorRequestReject, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reject of a response or an advice response message by a card acceptor or an agent.
     /// Encoded/decoded by serializers as &quot;RJCP&quot;.
     /// </summary>
     [EnumMember(Value = "RJCP")]
     [IsoId("_XmBb4Y0OEeWRYffwL7E13A")]
-    [Description(@"Reject of a response or an advice response message by a card acceptor or an agent.")]
+    [Description(
+        @"Reject of a response or an advice response message by a card acceptor or an agent."
+    )]
     AcceptorResponseReject = MessageFunctionCode.AcceptorResponseReject, // same ordinal as derivation source for type conversions
-    
 }

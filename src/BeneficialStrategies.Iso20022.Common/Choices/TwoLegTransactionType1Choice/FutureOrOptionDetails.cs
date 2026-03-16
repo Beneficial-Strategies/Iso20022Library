@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
     /// </summary>
     [IsoId("_AYOINtokEeC60axPepSq7g_921777527")]
     [DisplayName("Future Or Option Details")]
-    public partial record FutureOrOptionDetails : TwoLegTransactionType1Choice_
+    public record FutureOrOptionDetails : TwoLegTransactionType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the type of the contract for futures and options.
         /// </summary>
         [IsoId("_AvBeodokEeC60axPepSq7g_2030935240")]
         [DisplayName("Future And Option Contract Type")]
         [IsoXmlTag("FutrAndOptnCtrctTp")]
-        public FutureAndOptionContractType1Code? FutureAndOptionContractType { get; init; } 
-        
+        public FutureAndOptionContractType1Code? FutureAndOptionContractType { get; init; }
+
         /// <summary>
         /// Last date/time by which the option for physical delivery may still be exercised.
         /// </summary>
@@ -32,16 +30,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Last Delivery Date")]
         [IsoXmlTag("LastDlvryDt")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? LastDeliveryDate { get; init; } 
-        
+        public IsoISODateTime? LastDeliveryDate { get; init; }
+
         /// <summary>
         /// Used to indicate the size of the underlying commodity on which the contract is based (e.g., 2500 lbs of lean cattle, 1000 barrels of crude oil, 1000 bushels of corn, etc.).
         /// </summary>
         [IsoId("_AvBeo9okEeC60axPepSq7g_365772849")]
         [DisplayName("Unit Of Measure")]
         [IsoXmlTag("UnitOfMeasr")]
-        public UnitOfMeasure1Code? UnitOfMeasure { get; init; } 
-        
+        public UnitOfMeasure1Code? UnitOfMeasure { get; init; }
+
         /// <summary>
         /// Date on which future contracts settle.
         /// </summary>
@@ -49,16 +47,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Future Date")]
         [IsoXmlTag("FutrDt")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? FutureDate { get; init; } 
-        
+        public IsoISODateTime? FutureDate { get; init; }
+
         /// <summary>
         /// Specifies the minimum ratio or multiply factor used to convert from contracts to shares.
         /// </summary>
         [IsoId("_AvBepdokEeC60axPepSq7g_-1243311832")]
         [DisplayName("Minimum Size")]
         [IsoXmlTag("MinSz")]
-        public ActiveCurrencyAndAmount? MinimumSize { get; init; } 
-        
+        public ActiveCurrencyAndAmount? MinimumSize { get; init; }
+
         /// <summary>
         /// Date/time, as announced by the issuer, at which the securities will be issued.
         /// </summary>
@@ -66,16 +64,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Announcement Date")]
         [IsoXmlTag("AnncmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? AnnouncementDate { get; init; } 
-        
+        public IsoISODateTime? AnnouncementDate { get; init; }
+
         /// <summary>
         /// Specifies the deliverability of a security.
         /// </summary>
         [IsoId("_AvKokdokEeC60axPepSq7g_2021219608")]
         [DisplayName("Appearance")]
         [IsoXmlTag("Apprnc")]
-        public Appearance1Code? Appearance { get; init; } 
-        
+        public Appearance1Code? Appearance { get; init; }
+
         /// <summary>
         /// Indicates whether the interest is separable from the principal.
         /// </summary>
@@ -83,8 +81,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Strippable Indicator")]
         [IsoXmlTag("StrpblInd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? StrippableIndicator { get; init; } 
-        
+        public IsoYesNoIndicator? StrippableIndicator { get; init; }
+
         /// <summary>
         /// Indicates the maximum number of listed option contracts on a single security which can be held by an investor or group of investors acting jointly.
         /// </summary>
@@ -92,8 +90,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Position Limit")]
         [IsoXmlTag("PosLmt")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? PositionLimit { get; init; } 
-        
+        public IsoNumber? PositionLimit { get; init; }
+
         /// <summary>
         /// Position limit in the near-term contract for a given exchange-traded product.
         /// </summary>
@@ -101,8 +99,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Near Term Position Limit")]
         [IsoXmlTag("NearTermPosLmt")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? NearTermPositionLimit { get; init; } 
-        
+        public IsoNumber? NearTermPositionLimit { get; init; }
+
         /// <summary>
         /// Minimum price increase for a given exchange-traded Instrument.
         /// </summary>
@@ -110,8 +108,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Minimum Trading Pricing Increment")]
         [IsoXmlTag("MinTradgPricgIncrmt")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? MinimumTradingPricingIncrement { get; init; } 
-        
+        public IsoNumber? MinimumTradingPricingIncrement { get; init; }
+
         /// <summary>
         /// Reason for which money is raised through the issuance of a security.
         /// </summary>
@@ -119,9 +117,9 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Purpose")]
         [IsoXmlTag("Purp")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
-        [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-        public IsoMax256Text? Purpose { get; init; } 
-        
+        [StringLength(maximumLength: 256, MinimumLength = 1)]
+        public IsoMax256Text? Purpose { get; init; }
+
         /// <summary>
         /// Specifies when the contract (i.e. MBS/TBA) will settle.
         /// </summary>
@@ -129,48 +127,48 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Contract Settlement Month")]
         [IsoXmlTag("CtrctSttlmMnth")]
         [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-        public IsoISOYearMonth? ContractSettlementMonth { get; init; } 
-        
+        public IsoISOYearMonth? ContractSettlementMonth { get; init; }
+
         /// <summary>
         /// Date on which new securities begin trading.
         /// </summary>
         [IsoId("_AvUZkdokEeC60axPepSq7g_-1495565773")]
         [DisplayName("First Dealing Date")]
         [IsoXmlTag("FrstDealgDt")]
-        public DateAndDateTime1Choice_? FirstDealingDate { get; init; } 
-        
+        public DateAndDateTime1Choice_? FirstDealingDate { get; init; }
+
         /// <summary>
         /// Ratio applied to convert the related security.
         /// </summary>
         [IsoId("_AvUZktokEeC60axPepSq7g_1965979375")]
         [DisplayName("Ratio")]
         [IsoXmlTag("Ratio")]
-        public UnderlyingRatio1? Ratio { get; init; } 
-        
+        public UnderlyingRatio1? Ratio { get; init; }
+
         /// <summary>
         /// Rating(s) of the security.
         /// </summary>
         [IsoId("_AvUZk9okEeC60axPepSq7g_-1389041298")]
         [DisplayName("Rating")]
         [IsoXmlTag("Ratg")]
-        public Rating1? Rating { get; init; } 
-        
+        public Rating1? Rating { get; init; }
+
         /// <summary>
         /// Initial issue price of a financial instrument.
         /// </summary>
         [IsoId("_AvUZlNokEeC60axPepSq7g_-1424901255")]
         [DisplayName("Issue Price")]
         [IsoXmlTag("IssePric")]
-        public Price4? IssuePrice { get; init; } 
-        
+        public Price4? IssuePrice { get; init; }
+
         /// <summary>
         /// Rights to exercise the privilege to purchase or to sell the assets specified at a predetermined price or formula at or within a time in the future.
         /// </summary>
         [IsoId("_AvUZldokEeC60axPepSq7g_-305341311")]
         [DisplayName("Option Rights")]
         [IsoXmlTag("OptnRghts")]
-        public OptionRight1Choice_? OptionRights { get; init; } 
-        
+        public OptionRight1Choice_? OptionRights { get; init; }
+
         /// <summary>
         /// Indicates whether or not this is the last transaction.
         /// </summary>
@@ -178,8 +176,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Last Transaction")]
         [IsoXmlTag("LastTx")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? LastTransaction { get; init; } 
-        
+        public IsoYesNoIndicator? LastTransaction { get; init; }
+
         /// <summary>
         /// Specifies that there will be one price and one transaction when two contracts are carried out simultaneously, one to buy and the other one to sell with two different expiration dates.
         /// </summary>
@@ -187,10 +185,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TwoLegTransactionType1Choice
         [DisplayName("Spread Transaction")]
         [IsoXmlTag("SprdTx")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? SpreadTransaction { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoYesNoIndicator? SpreadTransaction { get; init; }
     }
 }

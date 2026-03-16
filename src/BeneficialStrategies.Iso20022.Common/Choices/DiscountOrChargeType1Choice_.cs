@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DiscountOrChargeType1Choice.ChargeType))]
     [KnownType(typeof(DiscountOrChargeType1Choice.DiscountType))]
-    [JsonDerivedType(typeof(DiscountOrChargeType1Choice.ChargeType),nameof(DiscountOrChargeType1Choice.ChargeType))]
-    [JsonDerivedType(typeof(DiscountOrChargeType1Choice.DiscountType),nameof(DiscountOrChargeType1Choice.DiscountType))]
+    [JsonDerivedType(
+        typeof(DiscountOrChargeType1Choice.ChargeType),
+        nameof(DiscountOrChargeType1Choice.ChargeType)
+    )]
+    [JsonDerivedType(
+        typeof(DiscountOrChargeType1Choice.DiscountType),
+        nameof(DiscountOrChargeType1Choice.DiscountType)
+    )]
     [IsoId("_St2yMAEcEeCQm6a_G2yO_w_-1902647807")]
     [DisplayName("Discount Or Charge Type 1 Choice")]
-    public abstract partial record DiscountOrChargeType1Choice_
-    {
-    }
+    public abstract record DiscountOrChargeType1Choice_ { }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_71JA8ECGEeeXpbqDpLawug")]
-[Description(@"Type of terminal under the control of the card acceptor used for the card transaction.")]
+[Description(
+    @"Type of terminal under the control of the card acceptor used for the card transaction."
+)]
 [Derivations(typeof(TerminalType1Code))]
 public enum TerminalTypeCode
 {
@@ -23,7 +25,7 @@ public enum TerminalTypeCode
     [IsoId("_CyLEgECHEeeXpbqDpLawug")]
     [Description(@"Automated Teller Machine")]
     ATM,
-    
+
     /// <summary>
     /// Point of Sale terminal.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -32,7 +34,7 @@ public enum TerminalTypeCode
     [IsoId("_GY-zIECHEeeXpbqDpLawug")]
     [Description(@"Point of Sale terminal.")]
     POS,
-    
+
     /// <summary>
     /// Mobile or tablet used as a Point of Sale terminal
     /// Encoded/decoded by serializers as &quot;MPOS&quot;.
@@ -41,7 +43,7 @@ public enum TerminalTypeCode
     [IsoId("_K_CYQECHEeeXpbqDpLawug")]
     [Description(@"Mobile or tablet used as a Point of Sale terminal")]
     mPOS,
-    
+
     /// <summary>
     /// Other type defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +52,7 @@ public enum TerminalTypeCode
     [IsoId("_QkQ7YECHEeeXpbqDpLawug")]
     [Description(@"Other type defined at national level")]
     OtherNational,
-    
+
     /// <summary>
     /// Other private type of terminal.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +61,4 @@ public enum TerminalTypeCode
     [IsoId("_VOi5MECHEeeXpbqDpLawug")]
     [Description(@"Other private type of terminal.")]
     OtherPrivate,
-    
 }

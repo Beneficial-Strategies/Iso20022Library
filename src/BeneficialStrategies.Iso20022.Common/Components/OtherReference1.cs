@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6VGSwMeTEeysUoBKYz1Ytw")]
 [DisplayName("Other Reference")]
-public partial record OtherReference1
+public record OtherReference1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of reference
     /// </summary>
     [IsoId("_GZsGAMeUEeysUoBKYz1Ytw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ReferenceType1Choice_ Type { get; init; } 
-    
+    public required ReferenceType1Choice_ Type { get; init; }
+
     /// <summary>
     /// Value of the reference
     /// </summary>
@@ -33,10 +31,6 @@ public partial record OtherReference1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public required IsoMax256Text Value { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public required IsoMax256Text Value { get; init; }
 }

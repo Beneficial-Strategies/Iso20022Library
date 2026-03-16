@@ -23,7 +23,7 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWgNp-Ed-ak6NoX_4Aeg_-641474163")]
     [Description(@"Credit account is not eligible.")]
     CreditAccountNotEligible = FailedSettlementReasonCode.CreditAccountNotEligible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Credit account is disabled.
     /// Encoded/decoded by serializers as &quot;CADI&quot;.
@@ -32,7 +32,7 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWgdp-Ed-ak6NoX_4Aeg_-641474133")]
     [Description(@"Credit account is disabled.")]
     CreditAccountDisabled = FailedSettlementReasonCode.CreditAccountDisabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Debit account is not eligible.
     /// Encoded/decoded by serializers as &quot;DANE&quot;.
@@ -41,7 +41,7 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWgtp-Ed-ak6NoX_4Aeg_-641474102")]
     [Description(@"Debit account is not eligible.")]
     DebitAccountNotEligible = FailedSettlementReasonCode.DebitAccountNotEligible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Debit account is disabled.
     /// Encoded/decoded by serializers as &quot;AADI&quot;.
@@ -50,7 +50,7 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWg9p-Ed-ak6NoX_4Aeg_-641474101")]
     [Description(@"Debit account is disabled.")]
     DebitAccountDisabled = FailedSettlementReasonCode.DebitAccountDisabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient securities on the account to settle.
     /// Encoded/decoded by serializers as &quot;INSE&quot;.
@@ -59,7 +59,7 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWhNp-Ed-ak6NoX_4Aeg_-641474072")]
     [Description(@"Insufficient securities on the account to settle.")]
     InsufficientSecurities = FailedSettlementReasonCode.InsufficientSecurities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The distribution is incomplete.
     /// Encoded/decoded by serializers as &quot;INDI&quot;.
@@ -68,7 +68,7 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWhdp-Ed-ak6NoX_4Aeg_-641473762")]
     [Description(@"The distribution is incomplete.")]
     IncompleteDistribution = FailedSettlementReasonCode.IncompleteDistribution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient cash on the account to settle.
     /// Encoded/decoded by serializers as &quot;INCA&quot;.
@@ -77,5 +77,4 @@ public enum FailedSettlementReason1Code
     [IsoId("_amyWhtp-Ed-ak6NoX_4Aeg_-641473739")]
     [Description(@"Insufficient cash on the account to settle.")]
     InsufficientCash = FailedSettlementReasonCode.InsufficientCash, // same ordinal as derivation source for type conversions
-    
 }

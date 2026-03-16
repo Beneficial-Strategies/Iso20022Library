@@ -11,17 +11,17 @@
 // Scenario: single message with two Rpt elements (two bank accounts), demonstrating
 // that deserialization correctly populates independent sub-collections per report.
 
+using System.Reflection;
+using System.Xml.Linq;
 using BeneficialStrategies.Iso20022.Amounts;
+using BeneficialStrategies.Iso20022.camt;
+using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Codesets;
 using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.Choices;
 using BalTypeCode = BeneficialStrategies.Iso20022.Choices.BalanceType10Choice.Code;
 using DateChoice = BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice.Date;
 using EntryStatusCode = BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice.Code;
 using IbanChoice = BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice.IBAN;
-using BeneficialStrategies.Iso20022.camt;
-using System.Reflection;
-using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -43,21 +43,23 @@ public class BankToCustomerAccountReportV08XmlTests
 
     // ── Expected values ────────────────────────────────────────────────────────
 
-    private const string ExpectedMsgId      = "DEUTDEFF/240316/CAMT052/00001";
-    private const string ExpectedRpt1Id     = "RPT-DEUTDEFF-20240316-001";
-    private const string ExpectedRpt1Iban   = "DE89370400440532013000";
-    private const string ExpectedRpt2Id     = "RPT-DEUTDEFF-20240316-002";
-    private const string ExpectedRpt2Iban   = "DE75512108001245126199";
+    private const string ExpectedMsgId = "DEUTDEFF/240316/CAMT052/00001";
+    private const string ExpectedRpt1Id = "RPT-DEUTDEFF-20240316-001";
+    private const string ExpectedRpt1Iban = "DE89370400440532013000";
+    private const string ExpectedRpt2Id = "RPT-DEUTDEFF-20240316-002";
+    private const string ExpectedRpt2Iban = "DE75512108001245126199";
 
     // ── Helper ─────────────────────────────────────────────────────────────────
 
     private static XDocument LoadEmbeddedXml()
     {
         var asm = Assembly.GetExecutingAssembly();
-        using var stream = asm.GetManifestResourceStream(ResourceName)
+        using var stream =
+            asm.GetManifestResourceStream(ResourceName)
             ?? throw new InvalidOperationException(
-                $"Embedded resource '{ResourceName}' not found. " +
-                $"Available: {string.Join(", ", asm.GetManifestResourceNames())}");
+                $"Embedded resource '{ResourceName}' not found. "
+                    + $"Available: {string.Join(", ", asm.GetManifestResourceNames())}"
+            );
         return XDocument.Load(stream);
     }
 
@@ -72,7 +74,8 @@ public class BankToCustomerAccountReportV08XmlTests
     public void Deserialize_TwoReports_BothPresent()
     {
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerAccountReportV08>(
-            LoadEmbeddedXml());
+            LoadEmbeddedXml()
+        );
 
         Assert.Equal(ExpectedMsgId, result.GroupHeader.MessageIdentification);
         Assert.Equal(2, result.Report.Count);
@@ -88,7 +91,8 @@ public class BankToCustomerAccountReportV08XmlTests
     public void Deserialize_Report1_TwoBalances_WithCorrectAmountsAndCodes()
     {
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerAccountReportV08>(
-            LoadEmbeddedXml());
+            LoadEmbeddedXml()
+        );
 
         var rpt1 = result.Report[0];
         Assert.Equal(2, rpt1.Balance.Count);
@@ -118,7 +122,8 @@ public class BankToCustomerAccountReportV08XmlTests
     public void Deserialize_Report1_TwoEntries_WithCorrectAmountsAndStatus()
     {
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerAccountReportV08>(
-            LoadEmbeddedXml());
+            LoadEmbeddedXml()
+        );
 
         var rpt1 = result.Report[0];
         Assert.Equal(2, rpt1.Entry.Count);
@@ -143,7 +148,8 @@ public class BankToCustomerAccountReportV08XmlTests
     public void Deserialize_Report2_OneBalance_OneDebitEntry_IndependentOfReport1()
     {
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerAccountReportV08>(
-            LoadEmbeddedXml());
+            LoadEmbeddedXml()
+        );
 
         var rpt2 = result.Report[1];
 
@@ -172,9 +178,10 @@ public class BankToCustomerAccountReportV08XmlTests
     public void RoundTrip_MultipleReports_AllCollectionsSurvive()
     {
         var original = Iso20022XmlSerializer.Deserialize<BankToCustomerAccountReportV08>(
-            LoadEmbeddedXml());
+            LoadEmbeddedXml()
+        );
 
-        var xml    = Iso20022XmlSerializer.SerializeToString(original);
+        var xml = Iso20022XmlSerializer.SerializeToString(original);
         var result = Iso20022XmlSerializer.Deserialize<BankToCustomerAccountReportV08>(xml);
 
         // Top-level structure
@@ -186,8 +193,8 @@ public class BankToCustomerAccountReportV08XmlTests
         Assert.Equal(2, result.Report[0].Entry.Count);
         Assert.Equal(500_000.00m, result.Report[0].Balance[0].Amount.Amount);
         Assert.Equal(547_250.00m, result.Report[0].Balance[1].Amount.Amount);
-        Assert.Equal(32_750.00m,  result.Report[0].Entry[0].Amount.Amount);
-        Assert.Equal(14_500.00m,  result.Report[0].Entry[1].Amount.Amount);
+        Assert.Equal(32_750.00m, result.Report[0].Entry[0].Amount.Amount);
+        Assert.Equal(14_500.00m, result.Report[0].Entry[1].Amount.Amount);
 
         // Report 2 sub-collections
         Assert.Single(result.Report[1].Balance);

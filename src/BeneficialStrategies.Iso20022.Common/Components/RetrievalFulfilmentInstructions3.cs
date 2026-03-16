@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NRcA0YVyEe6odei_lsRKtw")]
 [DisplayName("Retrieval Fulfilment Instructions3")]
-public partial record RetrievalFulfilmentInstructions3
+public record RetrievalFulfilmentInstructions3
 {
-    #nullable enable
-
     /// <summary>
     /// Actual Delivery Method.
     /// </summary>
     [DisplayName("Actual Delivery Method")]
     [IsoXmlTag("ActlDlvryMtd")]
-    public IsoMax35Text? ActualDeliveryMethod { get; init; } 
+    public IsoMax35Text? ActualDeliveryMethod { get; init; }
 
     /// <summary>
     /// Contact.
     /// </summary>
     [DisplayName("Contact")]
     [IsoXmlTag("Ctct")]
-    public ContactBusiness1? Contact { get; init; } 
+    public ContactBusiness1? Contact { get; init; }
 
     /// <summary>
     /// Established Method.
@@ -44,21 +42,21 @@ public partial record RetrievalFulfilmentInstructions3
     /// </summary>
     [DisplayName("Format")]
     [IsoXmlTag("Frmt")]
-    public OutputFormat4Code? Format { get; init; } 
+    public OutputFormat4Code? Format { get; init; }
 
     /// <summary>
     /// Postal Address.
     /// </summary>
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
-    public Address2? PostalAddress { get; init; } 
+    public Address2? PostalAddress { get; init; }
 
     /// <summary>
     /// Recipient.
     /// </summary>
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
-    public PartyType19Code? Recipient { get; init; } 
+    public PartyType19Code? Recipient { get; init; }
 
     /// <summary>
     /// Requested Method.
@@ -79,16 +77,12 @@ public partial record RetrievalFulfilmentInstructions3
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public IsoMax35Text? Type { get; init; } 
+    public IsoMax35Text? Type { get; init; }
 
     /// <summary>
     /// Value.
     /// </summary>
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required IsoMax20KText Value { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax20KText Value { get; init; }
 }

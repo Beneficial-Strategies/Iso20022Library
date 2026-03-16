@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ty7h0M3AEeuAE-cYsQdwHQ")]
-[Description(@"Specifies the approach of the Autorite des Marches Financiers (AMF) recommendation 2020-03 to which the fund complies.")]
+[Description(
+    @"Specifies the approach of the Autorite des Marches Financiers (AMF) recommendation 2020-03 to which the fund complies."
+)]
 [Derivations(typeof(AMFDoctrine1Code))]
 public enum AMFDoctrineCode
 {
@@ -23,7 +25,7 @@ public enum AMFDoctrineCode
     [IsoId("_16WU4M3AEeuAE-cYsQdwHQ")]
     [Description(@"Approach based on a significantly engaging methodology.")]
     SignificantlyEngagingMethodology,
-    
+
     /// <summary>
     /// Approach based on a non-significantly engaging methodology.
     /// Encoded/decoded by serializers as &quot;AMF2&quot;.
@@ -32,14 +34,15 @@ public enum AMFDoctrineCode
     [IsoId("_5VtBcM3AEeuAE-cYsQdwHQ")]
     [Description(@"Approach based on a non-significantly engaging methodology.")]
     NonSignificantlyEngagingMethodology,
-    
+
     /// <summary>
     /// Approach not meeting central communication standards or based on limited communication standards.
     /// Encoded/decoded by serializers as &quot;AMF3&quot;.
     /// </summary>
     [EnumMember(Value = "AMF3")]
     [IsoId("_-MfxQM3AEeuAE-cYsQdwHQ")]
-    [Description(@"Approach not meeting central communication standards or based on limited communication standards.")]
+    [Description(
+        @"Approach not meeting central communication standards or based on limited communication standards."
+    )]
     NotMeetingCentralCommunicationStandards,
-    
 }

@@ -23,7 +23,7 @@ public enum ReceiveDelivery1Code
     [IsoId("_Zafihdp-Ed-ak6NoX_4Aeg_-99264763")]
     [Description(@"Financial instruments will be debited from the safekeeping account.")]
     Delivery = ReceiveDeliveryCode.Delivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial instruments will be credited to the safekeeping account.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,5 +32,4 @@ public enum ReceiveDelivery1Code
     [IsoId("_Zafihtp-Ed-ak6NoX_4Aeg_-69712465")]
     [Description(@"Financial instruments will be credited to the safekeeping account.")]
     Receive = ReceiveDeliveryCode.Receive, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_11fpsTL3EeKU9IrkkToqcw_1222518114")]
-[Description(@"Specifies the state of the agreement of the custodian record when compared to composite record.")]
+[Description(
+    @"Specifies the state of the agreement of the custodian record when compared to composite record."
+)]
 [DerivedFrom(typeof(CustodianRecordAgreementTypeCode))]
 public enum CustodianRecordAgreementType1Code
 {
@@ -23,7 +25,7 @@ public enum CustodianRecordAgreementType1Code
     [IsoId("_11fpsjL3EeKU9IrkkToqcw_-291543411")]
     [Description(@"Custodian record agrees with the composite record.")]
     Agree = CustodianRecordAgreementTypeCode.Agree, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Custodian record disagrees with the composite record.
     /// Encoded/decoded by serializers as &quot;DAGR&quot;.
@@ -32,7 +34,7 @@ public enum CustodianRecordAgreementType1Code
     [IsoId("_11fpszL3EeKU9IrkkToqcw_151445081")]
     [Description(@"Custodian record disagrees with the composite record.")]
     Disagree = CustodianRecordAgreementTypeCode.Disagree, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No composite record available.
     /// Encoded/decoded by serializers as &quot;NCOP&quot;.
@@ -41,5 +43,4 @@ public enum CustodianRecordAgreementType1Code
     [IsoId("_11fptDL3EeKU9IrkkToqcw_1073608391")]
     [Description(@"No composite record available.")]
     NoComposite = CustodianRecordAgreementTypeCode.NoComposite, // same ordinal as derivation source for type conversions
-    
 }

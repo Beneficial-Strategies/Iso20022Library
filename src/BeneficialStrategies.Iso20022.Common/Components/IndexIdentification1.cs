@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bs7zADN1Ee2gE4h-lpiUxQ")]
 [DisplayName("Index Identification")]
-public partial record IndexIdentification1
+public record IndexIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record IndexIdentification1
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? ISIN { get; init; } 
-    
+    public IsoISINOct2015Identifier? ISIN { get; init; }
+
     /// <summary>
     /// Proprietary identification of the index on which the financial instrument is based.
     /// </summary>
@@ -34,18 +32,14 @@ public partial record IndexIdentification1
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Name { get; init; }
+
     /// <summary>
     /// Index name where the underlying is an index.
     /// </summary>
     [IsoId("_bs7zAjN1Ee2gE4h-lpiUxQ")]
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
-    public ExternalBenchmarkCurveName1Code? Index { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ExternalBenchmarkCurveName1Code? Index { get; init; }
 }

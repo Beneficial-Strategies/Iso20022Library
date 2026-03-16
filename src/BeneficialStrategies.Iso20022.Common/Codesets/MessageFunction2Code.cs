@@ -23,7 +23,7 @@ public enum MessageFunction2Code
     [IsoId("_TRnmlgEcEeCQm6a_G2yO_w_-162813602")]
     [Description(@"Message function is a request.")]
     Request = MessageFunctionCode.Request, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message function is a response.
     /// Encoded/decoded by serializers as &quot;RESP&quot;.
@@ -32,5 +32,4 @@ public enum MessageFunction2Code
     [IsoId("_TRnmlwEcEeCQm6a_G2yO_w_218407664")]
     [Description(@"Message function is a response.")]
     Response = MessageFunctionCode.Response, // same ordinal as derivation source for type conversions
-    
 }

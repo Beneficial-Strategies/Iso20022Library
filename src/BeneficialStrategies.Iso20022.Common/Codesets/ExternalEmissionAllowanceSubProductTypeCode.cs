@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_cXVzaW8wEe6_0L6gLGEkbA")]
-[Description(@"Specifies the detailed sub products types allowed for emission allowances and associated derivatives.")]
+[Description(
+    @"Specifies the detailed sub products types allowed for emission allowances and associated derivatives."
+)]
 [Derivations(typeof(ExternalEmissionAllowanceSubProductType1Code))]
 public enum ExternalEmissionAllowanceSubProductTypeCode
 {
@@ -21,7 +23,9 @@ public enum ExternalEmissionAllowanceSubProductTypeCode
     /// </summary>
     [EnumMember(Value = "CERE")]
     [IsoId("")]
-    [Description(@"Commodity attribute of type emissions allowance CER (Certified Emission Reduction).")]
+    [Description(
+        @"Commodity attribute of type emissions allowance CER (Certified Emission Reduction)."
+    )]
     CER,
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum ExternalEmissionAllowanceSubProductTypeCode
     /// </summary>
     [EnumMember(Value = "EUAA")]
     [IsoId("")]
-    [Description(@"Commodity attribute of type emissions allowance EUAA (European Union Aviation Allowance).")]
+    [Description(
+        @"Commodity attribute of type emissions allowance EUAA (European Union Aviation Allowance)."
+    )]
     EUAA,
 
     /// <summary>
@@ -48,7 +54,9 @@ public enum ExternalEmissionAllowanceSubProductTypeCode
     /// </summary>
     [EnumMember(Value = "EUAE")]
     [IsoId("")]
-    [Description(@"Commodity attribute of type emissions allowance EUA (European Union Allowance).")]
+    [Description(
+        @"Commodity attribute of type emissions allowance EUA (European Union Allowance)."
+    )]
     EUA,
 
     /// <summary>
@@ -59,5 +67,4 @@ public enum ExternalEmissionAllowanceSubProductTypeCode
     [IsoId("")]
     [Description(@"Commodity attribute of other type.")]
     Other,
-
 }

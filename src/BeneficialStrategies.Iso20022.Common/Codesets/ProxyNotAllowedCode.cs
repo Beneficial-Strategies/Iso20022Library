@@ -23,5 +23,4 @@ public enum ProxyNotAllowedCode
     [IsoId("_ZWd-Jtp-Ed-ak6NoX_4Aeg_-1195919766")]
     [Description(@"Proxy not allowed.")]
     NotAllowed,
-    
 }

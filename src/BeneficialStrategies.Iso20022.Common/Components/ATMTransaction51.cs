@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-8zlsaE2Ee-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction51")]
-public partial record ATMTransaction51
+public record ATMTransaction51
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Charge.
     /// </summary>
@@ -37,7 +35,7 @@ public partial record ATMTransaction51
     /// </summary>
     [DisplayName("Authorisation Result")]
     [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; } 
+    public AuthorisationResult20? AuthorisationResult { get; init; }
 
     /// <summary>
     /// Cassette.
@@ -51,14 +49,14 @@ public partial record ATMTransaction51
     /// </summary>
     [DisplayName("Detailed Requested Amount")]
     [IsoXmlTag("DtldReqdAmt")]
-    public DetailedAmount16? DetailedRequestedAmount { get; init; } 
+    public DetailedAmount16? DetailedRequestedAmount { get; init; }
 
     /// <summary>
     /// ICC Related Data.
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; } 
+    public IsoMax10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Incident.
@@ -79,21 +77,21 @@ public partial record ATMTransaction51
     /// </summary>
     [DisplayName("Receipt Printed")]
     [IsoXmlTag("RctPrtd")]
-    public IsoTrueFalseIndicator? ReceiptPrinted { get; init; } 
+    public IsoTrueFalseIndicator? ReceiptPrinted { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; } 
+    public IsoMax35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Requested Receipt.
     /// </summary>
     [DisplayName("Requested Receipt")]
     [IsoXmlTag("ReqdRct")]
-    public IsoTrueFalseIndicator? RequestedReceipt { get; init; } 
+    public IsoTrueFalseIndicator? RequestedReceipt { get; init; }
 
     /// <summary>
     /// Sub Deposit.
@@ -135,16 +133,12 @@ public partial record ATMTransaction51
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; } 
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Status.
     /// </summary>
     [DisplayName("Transaction Status")]
     [IsoXmlTag("TxSts")]
-    public required ATMTransactionStatus1Code TransactionStatus { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ATMTransactionStatus1Code TransactionStatus { get; init; }
 }

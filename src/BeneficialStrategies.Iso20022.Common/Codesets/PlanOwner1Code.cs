@@ -23,7 +23,7 @@ public enum PlanOwner1Code
     [IsoId("_WpL9cTEuEemzCpWiCwK4aQ")]
     [Description(@"Plan owner is an acceptor.")]
     Acceptor = PlanOwnerCode.Acceptor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Plan owner is an acquirer.
     /// Encoded/decoded by serializers as &quot;ACQR&quot;.
@@ -32,7 +32,7 @@ public enum PlanOwner1Code
     [IsoId("_XMzn4TEuEemzCpWiCwK4aQ")]
     [Description(@"Plan owner is an acquirer.")]
     Acquirer = PlanOwnerCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Plan owner is an issuer.
     /// Encoded/decoded by serializers as &quot;ISSR&quot;.
@@ -41,7 +41,7 @@ public enum PlanOwner1Code
     [IsoId("_XNs_wTEuEemzCpWiCwK4aQ")]
     [Description(@"Plan owner is an issuer.")]
     Issuer = PlanOwnerCode.Issuer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// plan owner type is other national.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum PlanOwner1Code
     [IsoId("_Xc55YTEuEemzCpWiCwK4aQ")]
     [Description(@"plan owner type is other national.")]
     OtherNational = PlanOwnerCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// plan owner type is other private.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum PlanOwner1Code
     [IsoId("_v8IiMTFLEemqWbBf8xprQQ")]
     [Description(@"plan owner type is other private.")]
     OtherPrivate = PlanOwnerCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DeliveryReturn3Choice.Code))]
     [KnownType(typeof(DeliveryReturn3Choice.Proprietary))]
-    [JsonDerivedType(typeof(DeliveryReturn3Choice.Code),nameof(DeliveryReturn3Choice.Code))]
-    [JsonDerivedType(typeof(DeliveryReturn3Choice.Proprietary),nameof(DeliveryReturn3Choice.Proprietary))]
+    [JsonDerivedType(typeof(DeliveryReturn3Choice.Code), nameof(DeliveryReturn3Choice.Code))]
+    [JsonDerivedType(
+        typeof(DeliveryReturn3Choice.Proprietary),
+        nameof(DeliveryReturn3Choice.Proprietary)
+    )]
     [IsoId("_LtShkTtEEeWRTLSN0i0tng")]
     [DisplayName("Delivery Return 3 Choice")]
-    public abstract partial record DeliveryReturn3Choice_
-    {
-    }
+    public abstract record DeliveryReturn3Choice_ { }
 }

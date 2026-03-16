@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_p3DcEVxiEeWvPv3PXpS3fw")]
 [DisplayName("Individual Person")]
-public partial record IndividualPerson29
+public record IndividualPerson29
 {
-    #nullable enable
-    
     /// <summary>
     /// Term used to address the person.
     /// </summary>
     [IsoId("_qTeSU1xiEeWvPv3PXpS3fw")]
     [DisplayName("Name Prefix")]
     [IsoXmlTag("NmPrfx")]
-    public NamePrefix1Choice_? NamePrefix { get; init; } 
-    
+    public NamePrefix1Choice_? NamePrefix { get; init; }
+
     /// <summary>
     /// First name of the person.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record IndividualPerson29
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? GivenName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? GivenName { get; init; }
+
     /// <summary>
     /// Second name of the person.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record IndividualPerson29
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MiddleName { get; init; }
+
     /// <summary>
     /// Name by which the party is known and which is usually used to identify that person.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record IndividualPerson29
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Name { get; init; }
+
     /// <summary>
     /// Address of the person.
     /// </summary>
@@ -65,8 +63,4 @@ public partial record IndividualPerson29
     [MinLength(1)]
     [MaxLength(5)]
     public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

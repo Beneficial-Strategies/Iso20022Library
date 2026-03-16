@@ -23,7 +23,7 @@ public enum FlowDirectionTypeCode
     [IsoId("_aq9E1tp-Ed-ak6NoX_4Aeg_124504889")]
     [Description(@"Amount of money received.")]
     Incoming,
-    
+
     /// <summary>
     /// Amount of money paid out.
     /// Encoded/decoded by serializers as &quot;OUTG&quot;.
@@ -32,5 +32,4 @@ public enum FlowDirectionTypeCode
     [IsoId("_aq9E19p-Ed-ak6NoX_4Aeg_124504890")]
     [Description(@"Amount of money paid out.")]
     Outgoing,
-    
 }

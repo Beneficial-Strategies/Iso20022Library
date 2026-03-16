@@ -23,16 +23,18 @@ public enum RequestStatus1Code
     [IsoId("_ZUFYgNp-Ed-ak6NoX_4Aeg_783372870")]
     [Description(@"Single Invoice/Instalment financing request has been financed.")]
     Financed = RequestStatusCode.Financed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Single Invoice/Instalment financing request is in a pending status and more checks are ongoing.
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
     /// </summary>
     [EnumMember(Value = "PDNG")]
     [IsoId("_ZUFYgdp-Ed-ak6NoX_4Aeg_783372871")]
-    [Description(@"Single Invoice/Instalment financing request is in a pending status and more checks are ongoing.")]
+    [Description(
+        @"Single Invoice/Instalment financing request is in a pending status and more checks are ongoing."
+    )]
     Pending = RequestStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Single Invoice/Instalment financing request has not been financed.
     /// Encoded/decoded by serializers as &quot;NTFD&quot;.
@@ -41,5 +43,4 @@ public enum RequestStatus1Code
     [IsoId("_ZUFYgtp-Ed-ak6NoX_4Aeg_783372900")]
     [Description(@"Single Invoice/Instalment financing request has not been financed.")]
     NotFinanced = RequestStatusCode.NotFinanced, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TypeOfAmount18Code
     [IsoId("_8FG_cfPwEeihCvvpsmGI2w")]
     [Description(@"Transaction amount that has been authorised.")]
     AuthorisedAmount = TypeOfAmountCode.AuthorisedAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Baggage related fees
     /// Encoded/decoded by serializers as &quot;BAGG&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfAmount18Code
     [IsoId("_8RmjUfPwEeihCvvpsmGI2w")]
     [Description(@"Baggage related fees")]
     Baggage = TypeOfAmountCode.Baggage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount that has been charged to card account
     /// Encoded/decoded by serializers as &quot;CHTC&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfAmount18Code
     [IsoId("_8oTzIfPwEeihCvvpsmGI2w")]
     [Description(@"Amount that has been charged to card account")]
     ChargedToCard = TypeOfAmountCode.ChargedToCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data communication related charges
     /// Encoded/decoded by serializers as &quot;DATA&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfAmount18Code
     [IsoId("_9OOjofPwEeihCvvpsmGI2w")]
     [Description(@"Data communication related charges")]
     Data = TypeOfAmountCode.Data, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee for exchanging a ticket (modifying an itinerary)
     /// Encoded/decoded by serializers as &quot;EXTK&quot;.
@@ -59,7 +59,7 @@ public enum TypeOfAmount18Code
     [IsoId("__EVwsfPwEeihCvvpsmGI2w")]
     [Description(@"Fee for exchanging a ticket (modifying an itinerary)")]
     ExchangeTicket = TypeOfAmountCode.ExchangeTicket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Extra charges (for example,  minibar, etc.)
     /// Encoded/decoded by serializers as &quot;EXTR&quot;.
@@ -68,7 +68,7 @@ public enum TypeOfAmount18Code
     [IsoId("__Oi1kfPwEeihCvvpsmGI2w")]
     [Description(@"Extra charges (for example,  minibar, etc.)")]
     Extra = TypeOfAmountCode.Extra, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount of fare
     /// Encoded/decoded by serializers as &quot;FARE&quot;.
@@ -77,16 +77,16 @@ public enum TypeOfAmount18Code
     [IsoId("__Wt6IfPwEeihCvvpsmGI2w")]
     [Description(@"Amount of fare")]
     Fare = TypeOfAmountCode.Fare, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Insurance charges 
+    /// Insurance charges
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
     /// </summary>
     [EnumMember(Value = "INSU")]
     [IsoId("_AQ64kfPxEeihCvvpsmGI2w")]
     [Description(@"Insurance charges ")]
     Insurance = TypeOfAmountCode.Insurance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount of food and beverages
     /// Encoded/decoded by serializers as &quot;FDBV&quot;.
@@ -95,7 +95,7 @@ public enum TypeOfAmount18Code
     [IsoId("_BhvnQfPxEeihCvvpsmGI2w")]
     [Description(@"Amount of food and beverages")]
     FoodBeverage = TypeOfAmountCode.FoodBeverage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Miscellaneous charges not elsewhere defined
     /// Encoded/decoded by serializers as &quot;MISC&quot;.
@@ -104,7 +104,7 @@ public enum TypeOfAmount18Code
     [IsoId("_CUJUkfPxEeihCvvpsmGI2w")]
     [Description(@"Miscellaneous charges not elsewhere defined")]
     Miscellaneous = TypeOfAmountCode.Miscellaneous, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of amount defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -113,7 +113,7 @@ public enum TypeOfAmount18Code
     [IsoId("_CbM-0fPxEeihCvvpsmGI2w")]
     [Description(@"Other type of amount defined at national level.")]
     OtherNational = TypeOfAmountCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of amount defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -122,7 +122,7 @@ public enum TypeOfAmount18Code
     [IsoId("_CgfugfPxEeihCvvpsmGI2w")]
     [Description(@"Other type of amount defined at private level.")]
     OtherPrivate = TypeOfAmountCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Phone charges
     /// Encoded/decoded by serializers as &quot;PHNE&quot;.
@@ -131,7 +131,7 @@ public enum TypeOfAmount18Code
     [IsoId("_C5LUQfPxEeihCvvpsmGI2w")]
     [Description(@"Phone charges")]
     Phone = TypeOfAmountCode.Phone, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount of prepayment
     /// Encoded/decoded by serializers as &quot;PRPY&quot;.
@@ -140,7 +140,7 @@ public enum TypeOfAmount18Code
     [IsoId("_DBx2ofPxEeihCvvpsmGI2w")]
     [Description(@"Amount of prepayment")]
     Prepayment = TypeOfAmountCode.Prepayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Total amount of charges
     /// Encoded/decoded by serializers as &quot;TOTL&quot;.
@@ -149,7 +149,7 @@ public enum TypeOfAmount18Code
     [IsoId("_Eu6t4fPxEeihCvvpsmGI2w")]
     [Description(@"Total amount of charges")]
     Total = TypeOfAmountCode.Total, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee for exchanging a ticket (modifying an itinerary)
     /// Encoded/decoded by serializers as &quot;EXTF&quot;.
@@ -158,5 +158,4 @@ public enum TypeOfAmount18Code
     [IsoId("_ep3jof4bEei1HdXMz5f0FQ")]
     [Description(@"Fee for exchanging a ticket (modifying an itinerary)")]
     ExchangeTicketFee = TypeOfAmountCode.ExchangeTicketFee, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TelephonyCallType1Code
     [IsoId("_caQHsTEvEemzCpWiCwK4aQ")]
     [Description(@"Voice mail")]
     VoiceMail = TelephonyCallTypeCode.VoiceMail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Toll free phone call
     /// Encoded/decoded by serializers as &quot;TFPC&quot;.
@@ -32,7 +32,7 @@ public enum TelephonyCallType1Code
     [IsoId("_cuX9kTEvEemzCpWiCwK4aQ")]
     [Description(@"Toll free phone call")]
     TollFreeCall = TelephonyCallTypeCode.TollFreeCall, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Page
     /// Encoded/decoded by serializers as &quot;PAGE&quot;.
@@ -41,7 +41,7 @@ public enum TelephonyCallType1Code
     [IsoId("_c1-aYTEvEemzCpWiCwK4aQ")]
     [Description(@"Page")]
     Page = TelephonyCallTypeCode.Page, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Outgoing phone call
     /// Encoded/decoded by serializers as &quot;OGPC&quot;.
@@ -50,7 +50,7 @@ public enum TelephonyCallType1Code
     [IsoId("_dFeO8TEvEemzCpWiCwK4aQ")]
     [Description(@"Outgoing phone call")]
     OutgoingCall = TelephonyCallTypeCode.OutgoingCall, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum TelephonyCallType1Code
     [IsoId("_dGXm0TEvEemzCpWiCwK4aQ")]
     [Description(@"Other private")]
     OtherPrivate = TelephonyCallTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other national
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,16 +68,16 @@ public enum TelephonyCallType1Code
     [IsoId("_degaATEvEemzCpWiCwK4aQ")]
     [Description(@"Other national")]
     OtherNational = TelephonyCallTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Other type of call not elsewhere classified. 
+    /// Other type of call not elsewhere classified.
     /// Encoded/decoded by serializers as &quot;OTCL&quot;.
     /// </summary>
     [EnumMember(Value = "OTCL")]
     [IsoId("_dhMhoTEvEemzCpWiCwK4aQ")]
     [Description(@"Other type of call not elsewhere classified. ")]
     Other = TelephonyCallTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Incoming phone call
     /// Encoded/decoded by serializers as &quot;ICPC&quot;.
@@ -86,5 +86,4 @@ public enum TelephonyCallType1Code
     [IsoId("_d28vMTEvEemzCpWiCwK4aQ")]
     [Description(@"Incoming phone call")]
     IncomingCall = TelephonyCallTypeCode.IncomingCall, // same ordinal as derivation source for type conversions
-    
 }

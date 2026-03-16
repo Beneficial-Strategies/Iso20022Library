@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -15,10 +15,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 [IsoId("_T-ZtStp-Ed-ak6NoX_4Aeg_-1840697394")]
 [DisplayName("Missing Or Incorrect Information")]
-public partial record MissingOrIncorrectInformation1
+public record MissingOrIncorrectInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the missing information.
     /// </summary>
@@ -28,7 +26,7 @@ public partial record MissingOrIncorrectInformation1
     [MinLength(0)]
     [MaxLength(10)]
     public SimpleValueList<UnableToApplyMissingInfo1Code> MissingInformation { get; init; } = [];
-    
+
     /// <summary>
     /// Indicates the incorrect information.
     /// </summary>
@@ -37,9 +35,6 @@ public partial record MissingOrIncorrectInformation1
     [IsoXmlTag("IncrrctInf")]
     [MinLength(0)]
     [MaxLength(10)]
-    public SimpleValueList<UnableToApplyIncorrectInfo2Code> IncorrectInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
+    public SimpleValueList<UnableToApplyIncorrectInfo2Code> IncorrectInformation { get; init; } =
+        [];
 }

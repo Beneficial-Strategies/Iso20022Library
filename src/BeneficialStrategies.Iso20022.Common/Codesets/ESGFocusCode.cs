@@ -23,7 +23,7 @@ public enum ESGFocusCode
     [IsoId("_3oVl4M2uEeuAE-cYsQdwHQ")]
     [Description(@"Main focus will be environmental.")]
     Environmental,
-    
+
     /// <summary>
     /// Main focus will be social.
     /// Encoded/decoded by serializers as &quot;SOCL&quot;.
@@ -32,7 +32,7 @@ public enum ESGFocusCode
     [IsoId("_7WLJkM2uEeuAE-cYsQdwHQ")]
     [Description(@"Main focus will be social.")]
     Social,
-    
+
     /// <summary>
     /// Main focus will be governance.
     /// Encoded/decoded by serializers as &quot;GOVR&quot;.
@@ -41,5 +41,4 @@ public enum ESGFocusCode
     [IsoId("_-n9DYM2uEeuAE-cYsQdwHQ")]
     [Description(@"Main focus will be governance.")]
     Governance,
-    
 }

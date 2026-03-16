@@ -22,8 +22,9 @@ public enum RetailerService4Code
     [EnumMember(Value = "SMIQ")]
     [IsoId("_vHX7Qd6HEeiwsev40qZGEQ")]
     [Description(@"The Sale System requests a login to the POI System.")]
-    AdministrativeSessionManagementLoginRequest = RetailerServiceCode.AdministrativeSessionManagementLoginRequest, // same ordinal as derivation source for type conversions
-    
+    AdministrativeSessionManagementLoginRequest =
+        RetailerServiceCode.AdministrativeSessionManagementLoginRequest, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The Sale System requests a logout to the POI System.
     /// Encoded/decoded by serializers as &quot;SMOQ&quot;.
@@ -31,8 +32,9 @@ public enum RetailerService4Code
     [EnumMember(Value = "SMOQ")]
     [IsoId("_vWt-0d6HEeiwsev40qZGEQ")]
     [Description(@"The Sale System requests a logout to the POI System.")]
-    AdministrativeSessionManagementLogoutRequest = RetailerServiceCode.AdministrativeSessionManagementLogoutRequest, // same ordinal as derivation source for type conversions
-    
+    AdministrativeSessionManagementLogoutRequest =
+        RetailerServiceCode.AdministrativeSessionManagementLogoutRequest, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The Sale System requests a session diagnosis to the POI System.
     /// Encoded/decoded by serializers as &quot;SMDQ&quot;.
@@ -40,6 +42,6 @@ public enum RetailerService4Code
     [EnumMember(Value = "SMDQ")]
     [IsoId("_vzpycd6HEeiwsev40qZGEQ")]
     [Description(@"The Sale System requests a session diagnosis to the POI System.")]
-    AdministrativeSessionManagementDiagnosisRequest = RetailerServiceCode.AdministrativeSessionManagementDiagnosisRequest, // same ordinal as derivation source for type conversions
-    
+    AdministrativeSessionManagementDiagnosisRequest =
+        RetailerServiceCode.AdministrativeSessionManagementDiagnosisRequest, // same ordinal as derivation source for type conversions
 }

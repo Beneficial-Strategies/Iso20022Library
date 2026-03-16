@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LimitOrError3Choice.Limit))]
     [KnownType(typeof(LimitOrError3Choice.BusinessError))]
-    [JsonDerivedType(typeof(LimitOrError3Choice.Limit),nameof(LimitOrError3Choice.Limit))]
-    [JsonDerivedType(typeof(LimitOrError3Choice.BusinessError),nameof(LimitOrError3Choice.BusinessError))]
+    [JsonDerivedType(typeof(LimitOrError3Choice.Limit), nameof(LimitOrError3Choice.Limit))]
+    [JsonDerivedType(
+        typeof(LimitOrError3Choice.BusinessError),
+        nameof(LimitOrError3Choice.BusinessError)
+    )]
     [IsoId("_RRErR5lhEeeE1Ya-LgRsuQ")]
     [DisplayName("Limit Or Error 3 Choice")]
-    public abstract partial record LimitOrError3Choice_
-    {
-    }
+    public abstract record LimitOrError3Choice_ { }
 }

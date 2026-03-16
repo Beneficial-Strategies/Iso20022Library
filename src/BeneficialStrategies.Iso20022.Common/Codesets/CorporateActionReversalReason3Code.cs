@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_CorporateActionReversalReason3Code")]
-[Description(@"Specifies the reason why a reversal of payment is taking place in corporate action processing.")]
+[Description(
+    @"Specifies the reason why a reversal of payment is taking place in corporate action processing."
+)]
 [DerivedFrom(typeof(CorporateActionReversalReasonV2Code))]
 public enum CorporateActionReversalReason3Code
 {
@@ -95,5 +97,4 @@ public enum CorporateActionReversalReason3Code
     [IsoId("_CorporateActionReversalReason3Code_UnduePayment")]
     [Description(@"Payment is not due.")]
     UnduePayment = CorporateActionReversalReasonV2Code.UnduePayment,
-
 }

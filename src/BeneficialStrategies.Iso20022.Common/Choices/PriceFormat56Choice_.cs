@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat56Choice.AmountPricePerFinancialInstrumentQuantity))]
     [KnownType(typeof(PriceFormat56Choice.AmountPricePerAmount))]
     [KnownType(typeof(PriceFormat56Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat56Choice.PercentagePrice),nameof(PriceFormat56Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat56Choice.AmountPrice),nameof(PriceFormat56Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat56Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat56Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat56Choice.AmountPricePerAmount),nameof(PriceFormat56Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat56Choice.IndexPoints),nameof(PriceFormat56Choice.IndexPoints))]
+    [JsonDerivedType(
+        typeof(PriceFormat56Choice.PercentagePrice),
+        nameof(PriceFormat56Choice.PercentagePrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat56Choice.AmountPrice),
+        nameof(PriceFormat56Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat56Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat56Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat56Choice.AmountPricePerAmount),
+        nameof(PriceFormat56Choice.AmountPricePerAmount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat56Choice.IndexPoints),
+        nameof(PriceFormat56Choice.IndexPoints)
+    )]
     [IsoId("_ckDmwZKQEeWHWpTQn1FFVg")]
     [DisplayName("Price Format 56 Choice")]
-    public abstract partial record PriceFormat56Choice_
-    {
-    }
+    public abstract record PriceFormat56Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,66 +14,64 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-5awV248EeiU9cctagi5ow")]
 [DisplayName("Structured Remittance Information")]
-public partial record StructuredRemittanceInformation16
+public record StructuredRemittanceInformation16
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the identification and the content of the referred document.
     /// </summary>
     [IsoId("__Cz84248EeiU9cctagi5ow")]
     [DisplayName("Referred Document Information")]
     [IsoXmlTag("RfrdDocInf")]
-    public ReferredDocumentInformation7? ReferredDocumentInformation { get; init; } 
-    
+    public ReferredDocumentInformation7? ReferredDocumentInformation { get; init; }
+
     /// <summary>
     /// Provides details on the amounts of the referred document.
     /// </summary>
     [IsoId("__Cz85W48EeiU9cctagi5ow")]
     [DisplayName("Referred Document Amount")]
     [IsoXmlTag("RfrdDocAmt")]
-    public RemittanceAmount2? ReferredDocumentAmount { get; init; } 
-    
+    public RemittanceAmount2? ReferredDocumentAmount { get; init; }
+
     /// <summary>
     /// Reference information provided by the creditor to allow the identification of the underlying documents.
     /// </summary>
     [IsoId("__Cz85248EeiU9cctagi5ow")]
     [DisplayName("Creditor Reference Information")]
     [IsoXmlTag("CdtrRefInf")]
-    public CreditorReferenceInformation2? CreditorReferenceInformation { get; init; } 
-    
+    public CreditorReferenceInformation2? CreditorReferenceInformation { get; init; }
+
     /// <summary>
     /// Identification of the organisation issuing the invoice, when it is different from the creditor or ultimate creditor.
     /// </summary>
     [IsoId("__Cz86W48EeiU9cctagi5ow")]
     [DisplayName("Invoicer")]
     [IsoXmlTag("Invcr")]
-    public PartyIdentification135? Invoicer { get; init; } 
-    
+    public PartyIdentification135? Invoicer { get; init; }
+
     /// <summary>
     /// Identification of the party to whom an invoice is issued, when it is different from the debtor or ultimate debtor.
     /// </summary>
     [IsoId("__Cz86248EeiU9cctagi5ow")]
     [DisplayName("Invoicee")]
     [IsoXmlTag("Invcee")]
-    public PartyIdentification135? Invoicee { get; init; } 
-    
+    public PartyIdentification135? Invoicee { get; init; }
+
     /// <summary>
     /// Provides remittance information about a payment made for tax-related purposes.
     /// </summary>
     [IsoId("__Cz87W48EeiU9cctagi5ow")]
     [DisplayName("Tax Remittance")]
     [IsoXmlTag("TaxRmt")]
-    public TaxInformation7? TaxRemittance { get; init; } 
-    
+    public TaxInformation7? TaxRemittance { get; init; }
+
     /// <summary>
     /// Provides remittance information about a payment for garnishment-related purposes.
     /// </summary>
     [IsoId("__Cz87248EeiU9cctagi5ow")]
     [DisplayName("Garnishment Remittance")]
     [IsoXmlTag("GrnshmtRmt")]
-    public Garnishment3? GarnishmentRemittance { get; init; } 
-    
+    public Garnishment3? GarnishmentRemittance { get; init; }
+
     /// <summary>
     /// Additional information, in free text form, to complement the structured remittance information.
     /// </summary>
@@ -84,8 +82,4 @@ public partial record StructuredRemittanceInformation16
     [MinLength(0)]
     [MaxLength(3)]
     public SimpleValueList<System.String> AdditionalRemittanceInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

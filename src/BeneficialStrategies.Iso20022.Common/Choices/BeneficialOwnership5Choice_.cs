@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BeneficialOwnership5Choice.Indicator))]
     [KnownType(typeof(BeneficialOwnership5Choice.Proprietary))]
-    [JsonDerivedType(typeof(BeneficialOwnership5Choice.Indicator),nameof(BeneficialOwnership5Choice.Indicator))]
-    [JsonDerivedType(typeof(BeneficialOwnership5Choice.Proprietary),nameof(BeneficialOwnership5Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(BeneficialOwnership5Choice.Indicator),
+        nameof(BeneficialOwnership5Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(BeneficialOwnership5Choice.Proprietary),
+        nameof(BeneficialOwnership5Choice.Proprietary)
+    )]
     [IsoId("_5m6A45NLEeWGlc8L7oPDIg")]
     [DisplayName("Beneficial Ownership 5 Choice")]
-    public abstract partial record BeneficialOwnership5Choice_
-    {
-    }
+    public abstract record BeneficialOwnership5Choice_ { }
 }

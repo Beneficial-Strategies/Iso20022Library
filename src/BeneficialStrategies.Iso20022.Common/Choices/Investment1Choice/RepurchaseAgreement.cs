@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     /// </summary>
     [IsoId("_AIsK8LJXEeaYqc4G3TTwhA")]
     [DisplayName("Repurchase Agreement")]
-    public partial record RepurchaseAgreement : Investment1Choice_
+    public record RepurchaseAgreement : Investment1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date on which the repurchase agreement matures.
         /// </summary>
@@ -24,24 +22,24 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate MaturityDate { get; init; } 
-        
+        public required IsoISODate MaturityDate { get; init; }
+
         /// <summary>
         /// Specifies the repurchase price at maturity of the repo.
         /// </summary>
         [IsoId("_oxf3g7JVEeaYqc4G3TTwhA")]
         [DisplayName("Second Leg Price")]
         [IsoXmlTag("ScndLegPric")]
-        public required ActiveCurrencyAndAmount SecondLegPrice { get; init; } 
-        
+        public required ActiveCurrencyAndAmount SecondLegPrice { get; init; }
+
         /// <summary>
         /// Specifies the dirty price of the underlying security or securities in repo.
         /// </summary>
         [IsoId("_-lqgULboEeaqL_M7XFD7PQ")]
         [DisplayName("Collateral Market Value")]
         [IsoXmlTag("CollMktVal")]
-        public required ActiveCurrencyAndAmount CollateralMarketValue { get; init; } 
-        
+        public required ActiveCurrencyAndAmount CollateralMarketValue { get; init; }
+
         /// <summary>
         /// Identifies the counterparty to the repurchase agreement.
         /// </summary>
@@ -49,16 +47,16 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Counterparty")]
         [IsoXmlTag("CtrPty")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Counterparty { get; init; } 
-        
+        public required IsoLEIIdentifier Counterparty { get; init; }
+
         /// <summary>
         /// Specifies the type of repurchase agreement.
         /// </summary>
         [IsoId("_3JXU8LJVEeaYqc4G3TTwhA")]
         [DisplayName("Repurchase Agreement Type")]
         [IsoXmlTag("RpAgrmtTp")]
-        public required RepurchaseAgreementType3Choice_ RepurchaseAgreementType { get; init; } 
-        
+        public required RepurchaseAgreementType3Choice_ RepurchaseAgreementType { get; init; }
+
         /// <summary>
         /// Identifies the triparty repurchase agent.
         /// </summary>
@@ -66,10 +64,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Triparty Agent Identification")]
         [IsoXmlTag("TrptyAgtId")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? TripartyAgentIdentification { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoLEIIdentifier? TripartyAgentIdentification { get; init; }
     }
 }

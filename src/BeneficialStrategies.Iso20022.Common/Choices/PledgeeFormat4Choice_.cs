@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PledgeeFormat4Choice.TypeAndIdentification))]
     [KnownType(typeof(PledgeeFormat4Choice.Identification))]
     [KnownType(typeof(PledgeeFormat4Choice.Proprietary))]
-    [JsonDerivedType(typeof(PledgeeFormat4Choice.TypeAndIdentification),nameof(PledgeeFormat4Choice.TypeAndIdentification))]
-    [JsonDerivedType(typeof(PledgeeFormat4Choice.Identification),nameof(PledgeeFormat4Choice.Identification))]
-    [JsonDerivedType(typeof(PledgeeFormat4Choice.Proprietary),nameof(PledgeeFormat4Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PledgeeFormat4Choice.TypeAndIdentification),
+        nameof(PledgeeFormat4Choice.TypeAndIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PledgeeFormat4Choice.Identification),
+        nameof(PledgeeFormat4Choice.Identification)
+    )]
+    [JsonDerivedType(
+        typeof(PledgeeFormat4Choice.Proprietary),
+        nameof(PledgeeFormat4Choice.Proprietary)
+    )]
     [IsoId("_W1AgMZj3EeWn2ur3BXxtdg")]
     [DisplayName("Pledgee Format 4 Choice")]
-    public abstract partial record PledgeeFormat4Choice_
-    {
-    }
+    public abstract record PledgeeFormat4Choice_ { }
 }

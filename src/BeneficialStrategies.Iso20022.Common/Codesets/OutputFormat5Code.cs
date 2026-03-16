@@ -23,7 +23,7 @@ public enum OutputFormat5Code
     [IsoId("_bKsXwclUEeuJ35KoBRZFOg")]
     [Description(@"Other type of output of message defined at national level.")]
     OtherNational = OutputFormatCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of output format defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum OutputFormat5Code
     [IsoId("_btaqUclUEeuJ35KoBRZFOg")]
     [Description(@"Other type of output format defined at private level.")]
     OtherPrivate = OutputFormatCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Text without format attributes.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -41,7 +41,7 @@ public enum OutputFormat5Code
     [IsoId("_hhloYslUEeuJ35KoBRZFOg")]
     [Description(@"Text without format attributes.")]
     SimpleText = OutputFormatCode.SimpleText, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Uniform Resource Locator (URL) reference for the message.
     /// Encoded/decoded by serializers as &quot;URLI&quot;.
@@ -50,7 +50,7 @@ public enum OutputFormat5Code
     [IsoId("_iCEfQclUEeuJ35KoBRZFOg")]
     [Description(@"Uniform Resource Locator (URL) reference for the message.")]
     UniformResourceLocator = OutputFormatCode.UniformResourceLocator, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// XHTML document which includes a subset of the XHTML output tag.
     /// Encoded/decoded by serializers as &quot;HTML&quot;.
@@ -59,7 +59,7 @@ public enum OutputFormat5Code
     [IsoId("_qSpOUslUEeuJ35KoBRZFOg")]
     [Description(@"XHTML document which includes a subset of the XHTML output tag.")]
     XHTML = OutputFormatCode.XHTML, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// A formatted print line.
     /// Encoded/decoded by serializers as &quot;PLIN&quot;.
@@ -68,7 +68,7 @@ public enum OutputFormat5Code
     [IsoId("_rjgZQslUEeuJ35KoBRZFOg")]
     [Description(@"A formatted print line.")]
     PrintLine = OutputFormatCode.PrintLine, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Java Syntax Object Notation format.
     /// Encoded/decoded by serializers as &quot;JSON&quot;.
@@ -77,7 +77,7 @@ public enum OutputFormat5Code
     [IsoId("_uDqB0slUEeuJ35KoBRZFOg")]
     [Description(@"Java Syntax Object Notation format.")]
     JSON = OutputFormatCode.JSON, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// eXtensible Markup Language format.
     /// Encoded/decoded by serializers as &quot;XMLF&quot;.
@@ -86,7 +86,7 @@ public enum OutputFormat5Code
     [IsoId("_ulcgQclUEeuJ35KoBRZFOg")]
     [Description(@"eXtensible Markup Language format.")]
     XML = OutputFormatCode.XML, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic data interchange for administration, commerce and transport.
     /// Encoded/decoded by serializers as &quot;EDIF&quot;.
@@ -95,7 +95,7 @@ public enum OutputFormat5Code
     [IsoId("_viTKEslUEeuJ35KoBRZFOg")]
     [Description(@"Electronic data interchange for administration, commerce and transport.")]
     EDIFACT = OutputFormatCode.EDIFACT, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Comma separated value format.
     /// Encoded/decoded by serializers as &quot;CSVF&quot;.
@@ -104,7 +104,7 @@ public enum OutputFormat5Code
     [IsoId("_wd9hEslUEeuJ35KoBRZFOg")]
     [Description(@"Comma separated value format.")]
     CSV = OutputFormatCode.CSV, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Joint Photographic Experts Group format.
     /// Encoded/decoded by serializers as &quot;JPEG&quot;.
@@ -113,7 +113,7 @@ public enum OutputFormat5Code
     [IsoId("_w_v_gMlUEeuJ35KoBRZFOg")]
     [Description(@"Joint Photographic Experts Group format.")]
     JPEG = OutputFormatCode.JPEG, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Portable Document Format.
     /// Encoded/decoded by serializers as &quot;PDFF&quot;.
@@ -122,7 +122,7 @@ public enum OutputFormat5Code
     [IsoId("_x23NsslUEeuJ35KoBRZFOg")]
     [Description(@"Portable Document Format.")]
     PDF = OutputFormatCode.PDF, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Portable Network Graphics format.
     /// Encoded/decoded by serializers as &quot;PNGF&quot;.
@@ -131,7 +131,7 @@ public enum OutputFormat5Code
     [IsoId("_yYLLAclUEeuJ35KoBRZFOg")]
     [Description(@"Portable Network Graphics format.")]
     PNG = OutputFormatCode.PNG, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Scalable vector graphic format.
     /// Encoded/decoded by serializers as &quot;SVGF&quot;.
@@ -140,5 +140,4 @@ public enum OutputFormat5Code
     [IsoId("_0G8Z8slUEeuJ35KoBRZFOg")]
     [Description(@"Scalable vector graphic format.")]
     SVG = OutputFormatCode.SVG, // same ordinal as derivation source for type conversions
-    
 }

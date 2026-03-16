@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_KUh0kn1DEeCF8NjrBemJWQ_-888899515")]
-[Description(@"Additional process to perform before starting or after completing a terminal management action.")]
+[Description(
+    @"Additional process to perform before starting or after completing a terminal management action."
+)]
 [Derivations(typeof(TerminalManagementAdditionalProcess1Code))]
 public enum TerminalManagementAdditionalProcessCode
 {
@@ -23,7 +25,7 @@ public enum TerminalManagementAdditionalProcessCode
     [IsoId("_KUh0k31DEeCF8NjrBemJWQ_1927674034")]
     [Description(@"Manual confirmation of the merchant before the terminal management action.")]
     ManualConfirmation,
-    
+
     /// <summary>
     /// Acquirer reconciliation to be performed before the terminal management action.
     /// Encoded/decoded by serializers as &quot;RCNC&quot;.
@@ -32,7 +34,7 @@ public enum TerminalManagementAdditionalProcessCode
     [IsoId("_KUh0lH1DEeCF8NjrBemJWQ_-2075335524")]
     [Description(@"Acquirer reconciliation to be performed before the terminal management action.")]
     Reconciliation,
-    
+
     /// <summary>
     /// Restart the system after performing the terminal management action.
     /// Encoded/decoded by serializers as &quot;RSRT&quot;.
@@ -41,5 +43,4 @@ public enum TerminalManagementAdditionalProcessCode
     [IsoId("_KUh0lX1DEeCF8NjrBemJWQ_-765156131")]
     [Description(@"Restart the system after performing the terminal management action.")]
     RestartSystem,
-    
 }

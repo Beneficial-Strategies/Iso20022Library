@@ -23,7 +23,7 @@ public enum CorporateActionPreliminaryAdviceTypeCode
     [IsoId("_bR2Fsdp-Ed-ak6NoX_4Aeg_456561091")]
     [Description(@"New movement preliminary advice.")]
     New,
-    
+
     /// <summary>
     /// Movement preliminary advice replacing a previously sent preliminary advice.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
@@ -32,5 +32,4 @@ public enum CorporateActionPreliminaryAdviceTypeCode
     [IsoId("_bR2Fstp-Ed-ak6NoX_4Aeg_-248553524")]
     [Description(@"Movement preliminary advice replacing a previously sent preliminary advice.")]
     Replacement,
-    
 }

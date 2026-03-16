@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vBAHGxrmEeyhRdHRjakS2w")]
 [DisplayName("Communication Address")]
-public partial record CommunicationAddress12
+public record CommunicationAddress12
 {
-    #nullable enable
-    
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example used over the www (HTTP) service.
     /// </summary>
@@ -25,10 +23,6 @@ public partial record CommunicationAddress12
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 2048, MinimumLength = 1)]
+    public IsoMax2048Text? URLAddress { get; init; }
 }

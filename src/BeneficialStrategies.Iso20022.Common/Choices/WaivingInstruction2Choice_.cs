@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(WaivingInstruction2Choice.Code))]
     [KnownType(typeof(WaivingInstruction2Choice.Proprietary))]
-    [JsonDerivedType(typeof(WaivingInstruction2Choice.Code),nameof(WaivingInstruction2Choice.Code))]
-    [JsonDerivedType(typeof(WaivingInstruction2Choice.Proprietary),nameof(WaivingInstruction2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(WaivingInstruction2Choice.Code),
+        nameof(WaivingInstruction2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(WaivingInstruction2Choice.Proprietary),
+        nameof(WaivingInstruction2Choice.Proprietary)
+    )]
     [IsoId("_Ox8_UViPEeaMNZxYNthMeA")]
     [DisplayName("Waiving Instruction 2 Choice")]
-    public abstract partial record WaivingInstruction2Choice_
-    {
-    }
+    public abstract record WaivingInstruction2Choice_ { }
 }

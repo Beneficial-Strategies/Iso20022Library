@@ -23,5 +23,4 @@ public enum AssetClassProductType2Code
     [IsoId("_fVAFQQnyEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type energy.")]
     Energy = AssetClassProductTypeCode.Energy, // same ordinal as derivation source for type conversions
-    
 }

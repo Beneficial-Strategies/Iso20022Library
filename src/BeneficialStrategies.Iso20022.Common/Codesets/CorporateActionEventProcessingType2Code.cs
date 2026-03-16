@@ -21,7 +21,9 @@ public enum CorporateActionEventProcessingType2Code
     /// </summary>
     [EnumMember(Value = "DISN")]
     [IsoId("_CorporateActionEventProcessingType2Code_Distribution")]
-    [Description(@"Holder of the relevant security on a certain date, for example, the record date, will receive a benefit without giving up the underlying security.")]
+    [Description(
+        @"Holder of the relevant security on a certain date, for example, the record date, will receive a benefit without giving up the underlying security."
+    )]
     Distribution = CorporateActionEventProcessingTypeCode.Distribution,
 
     /// <summary>
@@ -39,7 +41,9 @@ public enum CorporateActionEventProcessingType2Code
     /// </summary>
     [EnumMember(Value = "REDM")]
     [IsoId("_CorporateActionEventProcessingType2Code_Redemption")]
-    [Description(@"Indicates that the announcement is for a redemption of securities for events including full and partial calls, maturities partial prerefunding and partial defeasance events.")]
+    [Description(
+        @"Indicates that the announcement is for a redemption of securities for events including full and partial calls, maturities partial prerefunding and partial defeasance events."
+    )]
     Redemption,
 
     /// <summary>
@@ -48,7 +52,8 @@ public enum CorporateActionEventProcessingType2Code
     /// </summary>
     [EnumMember(Value = "REOR")]
     [IsoId("_CorporateActionEventProcessingType2Code_Reorganisation")]
-    [Description(@"Underlying security will be debited and may be replaced by another resource (or resources).")]
+    [Description(
+        @"Underlying security will be debited and may be replaced by another resource (or resources)."
+    )]
     Reorganisation = CorporateActionEventProcessingTypeCode.Reorganisation,
-
 }

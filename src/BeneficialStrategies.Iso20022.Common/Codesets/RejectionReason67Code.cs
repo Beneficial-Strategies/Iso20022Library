@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_xqxxIBnzEeyroI8qKgB7Mg")]
-[Description(@"Specifies the reason why the instruction/cancellation request has a rejected status.")]
+[Description(
+    @"Specifies the reason why the instruction/cancellation request has a rejected status."
+)]
 [DerivedFrom(typeof(RejectionReasonV3Code))]
 public enum RejectionReason67Code
 {
@@ -21,9 +23,11 @@ public enum RejectionReason67Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_GAiwYRn0EeyroI8qKgB7Mg")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV3Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is irrevocable.
     /// Encoded/decoded by serializers as &quot;INIR&quot;.
@@ -32,7 +36,7 @@ public enum RejectionReason67Code
     [IsoId("_JxboERn0EeyroI8qKgB7Mg")]
     [Description(@"Instruction is irrevocable.")]
     InstructionIrrevocable = RejectionReasonV3Code.InstructionIrrevocable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Linked reference is unknown.
     /// Encoded/decoded by serializers as &quot;ULNK&quot;.
@@ -41,7 +45,7 @@ public enum RejectionReason67Code
     [IsoId("_LLzUURn0EeyroI8qKgB7Mg")]
     [Description(@"Linked reference is unknown.")]
     InvalidReference = RejectionReasonV3Code.InvalidReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -50,7 +54,7 @@ public enum RejectionReason67Code
     [IsoId("_MoMZ0Rn0EeyroI8qKgB7Mg")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonV3Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,25 +63,29 @@ public enum RejectionReason67Code
     [IsoId("_Nr1oIRn0EeyroI8qKgB7Mg")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV3Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was rejected since the instruction has already been cancelled.
     /// Encoded/decoded by serializers as &quot;DCAN&quot;.
     /// </summary>
     [EnumMember(Value = "DCAN")]
     [IsoId("_PEkVoRn0EeyroI8qKgB7Mg")]
-    [Description(@"Cancellation request was rejected since the instruction has already been cancelled.")]
+    [Description(
+        @"Cancellation request was rejected since the instruction has already been cancelled."
+    )]
     RejectedSinceAlreadyCancelled = RejectionReasonV3Code.RejectedSinceAlreadyCancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request has been rejected because the instruction process is in progress or has been processed.
     /// Encoded/decoded by serializers as &quot;DPRG&quot;.
     /// </summary>
     [EnumMember(Value = "DPRG")]
     [IsoId("_RBhxkRn0EeyroI8qKgB7Mg")]
-    [Description(@"Cancellation request has been rejected because the instruction process is in progress or has been processed.")]
+    [Description(
+        @"Cancellation request has been rejected because the instruction process is in progress or has been processed."
+    )]
     RejectedSinceInProgress = RejectionReasonV3Code.RejectedSinceInProgress, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction rejected by the issuer agent.
     /// Encoded/decoded by serializers as &quot;REJA&quot;.
@@ -86,5 +94,4 @@ public enum RejectionReason67Code
     [IsoId("_RxDxERn0EeyroI8qKgB7Mg")]
     [Description(@"Instruction rejected by the issuer agent.")]
     RejectedByIssuerAgent = RejectionReasonV3Code.RejectedByIssuerAgent, // same ordinal as derivation source for type conversions
-    
 }

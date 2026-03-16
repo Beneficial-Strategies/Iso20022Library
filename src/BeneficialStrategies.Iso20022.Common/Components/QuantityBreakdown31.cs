@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7nor8TnrEeWfSKvvZlhRKg")]
 [DisplayName("Quantity Breakdown")]
-public partial record QuantityBreakdown31
+public record QuantityBreakdown31
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification, for tax purposes, of a lot of identical securities that are bought at a certain date and at a certain price.
     /// </summary>
     [IsoId("_8IEfgznrEeWfSKvvZlhRKg")]
     [DisplayName("Lot Number")]
     [IsoXmlTag("LotNb")]
-    public required GenericIdentification37 LotNumber { get; init; } 
-    
+    public required GenericIdentification37 LotNumber { get; init; }
+
     /// <summary>
     /// Quantity of financial instruments that is part of the lot described.
     /// </summary>
     [IsoId("_8IEfiznrEeWfSKvvZlhRKg")]
     [DisplayName("Lot Quantity")]
     [IsoXmlTag("LotQty")]
-    public FinancialInstrumentQuantity1Choice_? LotQuantity { get; init; } 
-    
-    
-    #nullable disable
-    
+    public FinancialInstrumentQuantity1Choice_? LotQuantity { get; init; }
 }

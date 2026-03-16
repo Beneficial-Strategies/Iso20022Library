@@ -23,7 +23,7 @@ public enum BidType1Code
     [IsoId("_beXexdp-Ed-ak6NoX_4Aeg_943753955")]
     [Description(@"Bid type is non disclosed.")]
     NonDisclosed = BidTypeCode.NonDisclosed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bid type is disclosed.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,7 +32,7 @@ public enum BidType1Code
     [IsoId("_beXextp-Ed-ak6NoX_4Aeg_943753997")]
     [Description(@"Bid type is disclosed.")]
     Disclosed = BidTypeCode.Disclosed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// List order is not related to a bid.
     /// Encoded/decoded by serializers as &quot;NOBI&quot;.
@@ -41,5 +41,4 @@ public enum BidType1Code
     [IsoId("_beXex9p-Ed-ak6NoX_4Aeg_943754015")]
     [Description(@"List order is not related to a bid.")]
     NoBid = BidTypeCode.NoBid, // same ordinal as derivation source for type conversions
-    
 }

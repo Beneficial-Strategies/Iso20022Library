@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UniqueTransactionIdentifier3Choice.UniqueTransactionIdentifier))]
     [KnownType(typeof(UniqueTransactionIdentifier3Choice.Proprietary))]
     [KnownType(typeof(UniqueTransactionIdentifier3Choice.NotAvailable))]
-    [JsonDerivedType(typeof(UniqueTransactionIdentifier3Choice.UniqueTransactionIdentifier),nameof(UniqueTransactionIdentifier3Choice.UniqueTransactionIdentifier))]
-    [JsonDerivedType(typeof(UniqueTransactionIdentifier3Choice.Proprietary),nameof(UniqueTransactionIdentifier3Choice.Proprietary))]
-    [JsonDerivedType(typeof(UniqueTransactionIdentifier3Choice.NotAvailable),nameof(UniqueTransactionIdentifier3Choice.NotAvailable))]
+    [JsonDerivedType(
+        typeof(UniqueTransactionIdentifier3Choice.UniqueTransactionIdentifier),
+        nameof(UniqueTransactionIdentifier3Choice.UniqueTransactionIdentifier)
+    )]
+    [JsonDerivedType(
+        typeof(UniqueTransactionIdentifier3Choice.Proprietary),
+        nameof(UniqueTransactionIdentifier3Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(UniqueTransactionIdentifier3Choice.NotAvailable),
+        nameof(UniqueTransactionIdentifier3Choice.NotAvailable)
+    )]
     [IsoId("__mtEsU7qEe2PGo0mhYCh1g")]
     [DisplayName("Unique Transaction Identifier 3 Choice")]
-    public abstract partial record UniqueTransactionIdentifier3Choice_
-    {
-    }
+    public abstract record UniqueTransactionIdentifier3Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__--R4W3bEe6dwbOqHXrHWg")]
 [DisplayName("Programme Mode4")]
-public partial record ProgrammeMode4
+public record ProgrammeMode4
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Identification.
     /// </summary>
@@ -30,14 +28,14 @@ public partial record ProgrammeMode4
     /// </summary>
     [DisplayName("Applied Identification")]
     [IsoXmlTag("ApldId")]
-    public IsoMax35Text? AppliedIdentification { get; init; } 
+    public IsoMax35Text? AppliedIdentification { get; init; }
 
     /// <summary>
     /// Identification Selected By.
     /// </summary>
     [DisplayName("Identification Selected By")]
     [IsoXmlTag("IdSelctdBy")]
-    public PartyType20Code? IdentificationSelectedBy { get; init; } 
+    public PartyType20Code? IdentificationSelectedBy { get; init; }
 
     /// <summary>
     /// Proposed Identification.
@@ -45,8 +43,4 @@ public partial record ProgrammeMode4
     [DisplayName("Proposed Identification")]
     [IsoXmlTag("PropsdId")]
     public ValueList<IsoMax35Text> ProposedIdentification { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

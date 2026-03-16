@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BillingSubServiceQualifier1Choice.Code))]
     [KnownType(typeof(BillingSubServiceQualifier1Choice.Proprietary))]
-    [JsonDerivedType(typeof(BillingSubServiceQualifier1Choice.Code),nameof(BillingSubServiceQualifier1Choice.Code))]
-    [JsonDerivedType(typeof(BillingSubServiceQualifier1Choice.Proprietary),nameof(BillingSubServiceQualifier1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(BillingSubServiceQualifier1Choice.Code),
+        nameof(BillingSubServiceQualifier1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(BillingSubServiceQualifier1Choice.Proprietary),
+        nameof(BillingSubServiceQualifier1Choice.Proprietary)
+    )]
     [IsoId("_6PphwJqlEeGSON8vddiWzQ_1042088657")]
     [DisplayName("Billing Sub Service Qualifier 1 Choice")]
-    public abstract partial record BillingSubServiceQualifier1Choice_
-    {
-    }
+    public abstract record BillingSubServiceQualifier1Choice_ { }
 }

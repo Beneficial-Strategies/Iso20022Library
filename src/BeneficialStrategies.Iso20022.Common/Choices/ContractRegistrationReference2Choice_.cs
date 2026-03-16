@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ContractRegistrationReference2Choice.RegisteredContractIdentification))]
     [KnownType(typeof(ContractRegistrationReference2Choice.Contract))]
-    [JsonDerivedType(typeof(ContractRegistrationReference2Choice.RegisteredContractIdentification),nameof(ContractRegistrationReference2Choice.RegisteredContractIdentification))]
-    [JsonDerivedType(typeof(ContractRegistrationReference2Choice.Contract),nameof(ContractRegistrationReference2Choice.Contract))]
+    [JsonDerivedType(
+        typeof(ContractRegistrationReference2Choice.RegisteredContractIdentification),
+        nameof(ContractRegistrationReference2Choice.RegisteredContractIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(ContractRegistrationReference2Choice.Contract),
+        nameof(ContractRegistrationReference2Choice.Contract)
+    )]
     [IsoId("_KUfpwbMmEeueudaIbClZbQ")]
     [DisplayName("Contract Registration Reference 2 Choice")]
-    public abstract partial record ContractRegistrationReference2Choice_
-    {
-    }
+    public abstract record ContractRegistrationReference2Choice_ { }
 }

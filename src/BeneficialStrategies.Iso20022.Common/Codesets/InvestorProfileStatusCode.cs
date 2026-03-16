@@ -23,7 +23,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_ibDNICDQEeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in analysis.")]
     InAnalysis,
-    
+
     /// <summary>
     /// Status of the investor profile is pending approval.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,7 +32,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_r8u-wCDQEeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is pending approval.")]
     PendingApproval,
-    
+
     /// <summary>
     /// Status of the investor profile is not approved.
     /// Encoded/decoded by serializers as &quot;NAPP&quot;.
@@ -41,7 +41,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_xjS-oCDQEeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is not approved.")]
     NotApproved,
-    
+
     /// <summary>
     /// Status of the investor profile is in admission.
     /// Encoded/decoded by serializers as &quot;ADMI&quot;.
@@ -50,7 +50,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_2_lBICDQEeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in admission.")]
     InAdmission,
-    
+
     /// <summary>
     /// Status of the investor profile is in the process of being enabled.
     /// Encoded/decoded by serializers as &quot;ENBG&quot;.
@@ -59,7 +59,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_7Rx2ICDQEeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in the process of being enabled.")]
     Enabling,
-    
+
     /// <summary>
     /// Status of the investor profile is enabled.
     /// Encoded/decoded by serializers as &quot;ENAB&quot;.
@@ -68,7 +68,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_-6UqICDQEeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is enabled.")]
     Enabled,
-    
+
     /// <summary>
     /// Status of the investor profile is partially suspended.
     /// Encoded/decoded by serializers as &quot;PSUS&quot;.
@@ -77,7 +77,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_Fkk7oCDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is partially suspended.")]
     PartiallySuspended,
-    
+
     /// <summary>
     /// Status of the investor profile is suspended.
     /// Encoded/decoded by serializers as &quot;SUPS&quot;.
@@ -86,7 +86,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_JiF6ECDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is suspended.")]
     Suspended,
-    
+
     /// <summary>
     /// Status of the investor profile is in the process of being disabled.
     /// Encoded/decoded by serializers as &quot;DISG&quot;.
@@ -95,7 +95,7 @@ public enum InvestorProfileStatusCode
     [IsoId("_NgzLUCDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in the process of being disabled.")]
     Disabling,
-    
+
     /// <summary>
     /// Status of the investor profile is disabled.
     /// Encoded/decoded by serializers as &quot;DISA&quot;.
@@ -104,5 +104,4 @@ public enum InvestorProfileStatusCode
     [IsoId("_jjAeQCDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is disabled.")]
     Disabled,
-    
 }

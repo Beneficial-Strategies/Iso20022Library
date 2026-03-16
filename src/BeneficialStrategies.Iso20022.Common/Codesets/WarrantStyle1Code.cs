@@ -23,7 +23,7 @@ public enum WarrantStyle1Code
     [IsoId("_Yg0vldp-Ed-ak6NoX_4Aeg_1980293018")]
     [Description(@"Option can be exercised before or on expiry date.")]
     American = WarrantStyleCode.American, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option that can be exercised on expiry date only.
     /// Encoded/decoded by serializers as &quot;EURO&quot;.
@@ -32,14 +32,15 @@ public enum WarrantStyle1Code
     [IsoId("_Yg0vltp-Ed-ak6NoX_4Aeg_-1236653940")]
     [Description(@"Option that can be exercised on expiry date only.")]
     European = WarrantStyleCode.European, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option that can be exercised on multiple discrete dates prior to, or on expiry date.
     /// Encoded/decoded by serializers as &quot;BERM&quot;.
     /// </summary>
     [EnumMember(Value = "BERM")]
     [IsoId("_Yg0vl9p-Ed-ak6NoX_4Aeg_230494823")]
-    [Description(@"Option that can be exercised on multiple discrete dates prior to, or on expiry date.")]
+    [Description(
+        @"Option that can be exercised on multiple discrete dates prior to, or on expiry date."
+    )]
     Bermudan = WarrantStyleCode.Bermudan, // same ordinal as derivation source for type conversions
-    
 }

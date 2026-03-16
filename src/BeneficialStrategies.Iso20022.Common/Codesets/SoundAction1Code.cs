@@ -23,7 +23,7 @@ public enum SoundAction1Code
     [IsoId("_qbO3Qd6-Eeiwsev40qZGEQ")]
     [Description(@"Set the default volume of sounds.")]
     SetDefaultVolume = SoundActionCode.SetDefaultVolume, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Start the sound as specified in the message.
     /// Encoded/decoded by serializers as &quot;STAS&quot;.
@@ -32,7 +32,7 @@ public enum SoundAction1Code
     [IsoId("_qhPYoN6-Eeiwsev40qZGEQ")]
     [Description(@"Start the sound as specified in the message.")]
     StartSound = SoundActionCode.StartSound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Stop the sound in progress.
     /// Encoded/decoded by serializers as &quot;STOS&quot;.
@@ -41,5 +41,4 @@ public enum SoundAction1Code
     [IsoId("_qkcdod6-Eeiwsev40qZGEQ")]
     [Description(@"Stop the sound in progress.")]
     StopSound = SoundActionCode.StopSound, // same ordinal as derivation source for type conversions
-    
 }

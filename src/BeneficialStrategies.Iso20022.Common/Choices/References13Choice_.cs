@@ -18,18 +18,43 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References13Choice.CommonIdentification))]
     [KnownType(typeof(References13Choice.TradeIdentification))]
     [KnownType(typeof(References13Choice.OtherTransactionIdentification))]
-    [JsonDerivedType(typeof(References13Choice.SecuritiesSettlementTransactionIdentification),nameof(References13Choice.SecuritiesSettlementTransactionIdentification))]
-    [JsonDerivedType(typeof(References13Choice.IntraPositionMovementIdentification),nameof(References13Choice.IntraPositionMovementIdentification))]
-    [JsonDerivedType(typeof(References13Choice.IntraBalanceMovementIdentification),nameof(References13Choice.IntraBalanceMovementIdentification))]
-    [JsonDerivedType(typeof(References13Choice.AccountServicerTransactionIdentification),nameof(References13Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References13Choice.MarketInfrastructureTransactionIdentification),nameof(References13Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References13Choice.PoolIdentification),nameof(References13Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References13Choice.CommonIdentification),nameof(References13Choice.CommonIdentification))]
-    [JsonDerivedType(typeof(References13Choice.TradeIdentification),nameof(References13Choice.TradeIdentification))]
-    [JsonDerivedType(typeof(References13Choice.OtherTransactionIdentification),nameof(References13Choice.OtherTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References13Choice.SecuritiesSettlementTransactionIdentification),
+        nameof(References13Choice.SecuritiesSettlementTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.IntraPositionMovementIdentification),
+        nameof(References13Choice.IntraPositionMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.IntraBalanceMovementIdentification),
+        nameof(References13Choice.IntraBalanceMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.AccountServicerTransactionIdentification),
+        nameof(References13Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References13Choice.MarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.PoolIdentification),
+        nameof(References13Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.CommonIdentification),
+        nameof(References13Choice.CommonIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.TradeIdentification),
+        nameof(References13Choice.TradeIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References13Choice.OtherTransactionIdentification),
+        nameof(References13Choice.OtherTransactionIdentification)
+    )]
     [IsoId("_-1br8fuZEd-Qm92hXFsDlA")]
     [DisplayName("References 13 Choice")]
-    public abstract partial record References13Choice_
-    {
-    }
+    public abstract record References13Choice_ { }
 }

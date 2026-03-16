@@ -23,5 +23,4 @@ public enum AssetClassSubProductType45Code
     [IsoId("_Kl9U0fwdEeW4Wthd0Ze_kA")]
     [Description(@"Commodity of type potato.")]
     Potato = AssetClassSubProductTypeCode.Potato, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum AuthenticationResult1Code
     [IsoId("_vwOIcfm3EeaYndR2y_Ep9g")]
     [Description(@"The authentication didn’t succeed.")]
     Denial = AuthenticationResultCode.Denial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Merchant not enrolled in the authentication programme.
     /// Encoded/decoded by serializers as &quot;MRCH&quot;.
@@ -32,7 +32,7 @@ public enum AuthenticationResult1Code
     [IsoId("_v3DwQfm3EeaYndR2y_Ep9g")]
     [Description(@"Merchant not enrolled in the authentication programme.")]
     MerchantNotEnroled = AuthenticationResultCode.MerchantNotEnroled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The card does not participate in the authentication programme.
     /// Encoded/decoded by serializers as &quot;CARD&quot;.
@@ -41,7 +41,7 @@ public enum AuthenticationResult1Code
     [IsoId("_v9wOIfm3EeaYndR2y_Ep9g")]
     [Description(@"The card does not participate in the authentication programme.")]
     NonParticipation = AuthenticationResultCode.NonParticipation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The authentication couldn’t be carried out.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -50,7 +50,7 @@ public enum AuthenticationResult1Code
     [IsoId("_wHR9kfm3EeaYndR2y_Ep9g")]
     [Description(@"The authentication couldn’t be carried out.")]
     UnableToAuthenticate = AuthenticationResultCode.UnableToAuthenticate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authentication succeeded with a cryptogram.
     /// Encoded/decoded by serializers as &quot;CRPT&quot;.
@@ -59,7 +59,7 @@ public enum AuthenticationResult1Code
     [IsoId("_wMfNsfm3EeaYndR2y_Ep9g")]
     [Description(@"Authentication succeeded with a cryptogram.")]
     WithCryptogram = AuthenticationResultCode.WithCryptogram, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authentication succeeded without a cryptogram.
     /// Encoded/decoded by serializers as &quot;UCRP&quot;.
@@ -68,5 +68,4 @@ public enum AuthenticationResult1Code
     [IsoId("_wR_Ywfm3EeaYndR2y_Ep9g")]
     [Description(@"Authentication succeeded without a cryptogram.")]
     WithoutCryptogram = AuthenticationResultCode.WithoutCryptogram, // same ordinal as derivation source for type conversions
-    
 }

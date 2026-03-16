@@ -23,5 +23,4 @@ public enum ReferToFundOrderDesk1Code
     [IsoId("_ZayddNp-Ed-ak6NoX_4Aeg_-805146800")]
     [Description(@"Indicates that the operation is only possible in restricted circumstances.")]
     ReferToFundOrderDesk = HoldingTransferableCode.ReferToFundOrderDesk, // same ordinal as derivation source for type conversions
-    
 }

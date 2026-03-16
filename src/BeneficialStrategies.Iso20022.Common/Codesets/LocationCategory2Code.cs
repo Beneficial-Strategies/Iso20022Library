@@ -6,13 +6,15 @@ using System.Runtime.Serialization;
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Location category of the place where the transaction is actually performed. 
+/// Location category of the place where the transaction is actually performed.
 /// It correspond partially to the ISO 8583: 1993, field number 22-4.
 /// </summary>
 [DataContract]
 [Serializable]
 [IsoId("_H30HwHsIEeSR68OJvMfxJQ")]
-[Description(@"Location category of the place where the transaction is actually performed. |It correspond partially to the ISO 8583: 1993, field number 22-4.")]
+[Description(
+    @"Location category of the place where the transaction is actually performed. |It correspond partially to the ISO 8583: 1993, field number 22-4."
+)]
 [DerivedFrom(typeof(LocationCategoryCode))]
 public enum LocationCategory2Code
 {
@@ -24,7 +26,7 @@ public enum LocationCategory2Code
     [IsoId("_KdgXoXsIEeSR68OJvMfxJQ")]
     [Description(@"Customer home.")]
     Home = LocationCategoryCode.Home, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Aboard a bus, train, ship, airplane, taxi, etc.
     /// Encoded/decoded by serializers as &quot;ABRD&quot;.
@@ -33,7 +35,7 @@ public enum LocationCategory2Code
     [IsoId("_w3820VDhEeuJG-g6zrGRtg")]
     [Description(@"Aboard a bus, train, ship, airplane, taxi, etc.")]
     Aboard = LocationCategoryCode.Aboard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fixed location, for example in a shop.
     /// Encoded/decoded by serializers as &quot;FIXD&quot;.
@@ -42,7 +44,7 @@ public enum LocationCategory2Code
     [IsoId("_w-zswVDhEeuJG-g6zrGRtg")]
     [Description(@"Fixed location, for example in a shop.")]
     Fixed = LocationCategoryCode.Fixed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Nomadic location.
     /// Encoded/decoded by serializers as &quot;NMDC&quot;.
@@ -51,5 +53,4 @@ public enum LocationCategory2Code
     [IsoId("_0crh0VDhEeuJG-g6zrGRtg")]
     [Description(@"Nomadic location.")]
     Nomadic = LocationCategoryCode.Nomadic, // same ordinal as derivation source for type conversions
-    
 }

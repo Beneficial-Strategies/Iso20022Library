@@ -23,7 +23,7 @@ public enum SoundFormat1Code
     [IsoId("_OeHPod6_Eeiwsev40qZGEQ")]
     [Description(@"Reference of a preloaded text to play.")]
     MessageRef = SoundFormatCode.MessageRef, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Preloaded sound File.
     /// Encoded/decoded by serializers as &quot;SNDR&quot;.
@@ -32,7 +32,7 @@ public enum SoundFormat1Code
     [IsoId("_OhkMQd6_Eeiwsev40qZGEQ")]
     [Description(@"Preloaded sound File.")]
     SoundRef = SoundFormatCode.SoundRef, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Text to play.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -41,5 +41,4 @@ public enum SoundFormat1Code
     [IsoId("_OlZjYd6_Eeiwsev40qZGEQ")]
     [Description(@"Text to play.")]
     Text = SoundFormatCode.Text, // same ordinal as derivation source for type conversions
-    
 }

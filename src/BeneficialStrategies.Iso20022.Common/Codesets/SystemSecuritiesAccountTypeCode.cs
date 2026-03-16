@@ -23,7 +23,7 @@ public enum SystemSecuritiesAccountTypeCode
     [IsoId("_hjeiU2liEeGaMcKyqKNRfQ_1872191376")]
     [Description(@"Account owned by a CSD Participant|.")]
     CSDParticipantAccount,
-    
+
     /// <summary>
     /// Account operated by CSD for mirroring positions|.
     /// Encoded/decoded by serializers as &quot;CSDM&quot;.
@@ -32,16 +32,18 @@ public enum SystemSecuritiesAccountTypeCode
     [IsoId("_hjeiVGliEeGaMcKyqKNRfQ_1890782340")]
     [Description(@"Account operated by CSD for mirroring positions|.")]
     CSDMirrorAccount,
-    
+
     /// <summary>
     /// Account operated by CSD for settlement of securities legs for instructions involving internal CSD s.
     /// Encoded/decoded by serializers as &quot;ICSA&quot;.
     /// </summary>
     [EnumMember(Value = "ICSA")]
     [IsoId("_hjeiVWliEeGaMcKyqKNRfQ_1290945656")]
-    [Description(@"Account operated by CSD for settlement of securities legs for instructions involving internal CSD s.")]
+    [Description(
+        @"Account operated by CSD for settlement of securities legs for instructions involving internal CSD s."
+    )]
     InterCSDAccount,
-    
+
     /// <summary>
     /// Account operated by CSDs in a direct holding market context.
     /// Encoded/decoded by serializers as &quot;TOFF&quot;.
@@ -50,7 +52,7 @@ public enum SystemSecuritiesAccountTypeCode
     [IsoId("_hjeiVmliEeGaMcKyqKNRfQ_1254906660")]
     [Description(@"Account operated by CSDs in a direct holding market context.")]
     TechnicalOffsetAccount,
-    
+
     /// <summary>
     /// Account operated by CSD in cross-CSD settlement context.
     /// Encoded/decoded by serializers as &quot;CSDO&quot;.
@@ -59,14 +61,15 @@ public enum SystemSecuritiesAccountTypeCode
     [IsoId("_hjeiV2liEeGaMcKyqKNRfQ_1755887588")]
     [Description(@"Account operated by CSD in cross-CSD settlement context.")]
     CSDOmnibusAccount,
-    
+
     /// <summary>
     /// Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument.
     /// Encoded/decoded by serializers as &quot;ISSA&quot;.
     /// </summary>
     [EnumMember(Value = "ISSA")]
     [IsoId("_hjeiWGliEeGaMcKyqKNRfQ_2050946548")]
-    [Description(@"Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument.")]
+    [Description(
+        @"Account reflecting the holdings of the participants of the issuer CSD for a given financial instrument."
+    )]
     IssuanceAccount,
-    
 }

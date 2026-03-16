@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NHRMYX5xEeasY4u9QTizPQ")]
 [DisplayName("Securities Instrument Classification")]
-public partial record SecuritiesInstrumentClassification2
+public record SecuritiesInstrumentClassification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifier of the financial instrument classification type code.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record SecuritiesInstrumentClassification2
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.CFIOct2015Identifier)]
-    public required IsoCFIOct2015Identifier Identifier { get; init; } 
-    
+    public required IsoCFIOct2015Identifier Identifier { get; init; }
+
     /// <summary>
     /// Modification status for the record compared to the previous report.
     /// </summary>
     [IsoId("_NP5j835xEeasY4u9QTizPQ")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public Modification1Code? Modification { get; init; } 
-    
+    public Modification1Code? Modification { get; init; }
+
     /// <summary>
     /// Details the validity of the specific record.
     /// Usage:
@@ -43,8 +41,8 @@ public partial record SecuritiesInstrumentClassification2
     [IsoId("_NP5j9X5xEeasY4u9QTizPQ")]
     [DisplayName("Validity Period")]
     [IsoXmlTag("VldtyPrd")]
-    public required Period4Choice_ ValidityPeriod { get; init; } 
-    
+    public required Period4Choice_ ValidityPeriod { get; init; }
+
     /// <summary>
     /// Date when this record was last modified.
     /// </summary>
@@ -52,9 +50,5 @@ public partial record SecuritiesInstrumentClassification2
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastUpdated { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? LastUpdated { get; init; }
 }

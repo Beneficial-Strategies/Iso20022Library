@@ -221,5 +221,4 @@ public enum TypeOfAmount23Code
     [IsoId("")]
     [Description(@"Amount for an upgrade.")]
     Upgrade = TypeOfAmountCode.Upgrade, // same ordinal as derivation source for type conversions
-
 }

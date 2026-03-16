@@ -23,7 +23,7 @@ public enum CashAssetTypeCode
     [IsoId("_ikEq8EyIEeir2sRRVd9XhA")]
     [Description(@"Cash is attributed to a cash investment.")]
     CashInvestment,
-    
+
     /// <summary>
     /// Cash is cash in the holding not yet invested.
     /// Encoded/decoded by serializers as &quot;CSH2&quot;.
@@ -32,5 +32,4 @@ public enum CashAssetTypeCode
     [IsoId("_lv5GsEyIEeir2sRRVd9XhA")]
     [Description(@"Cash is cash in the holding not yet invested.")]
     CashInHolding,
-    
 }

@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus89Choice.AcknowledgedAccepted))]
     [KnownType(typeof(ProcessingStatus89Choice.Rejected))]
     [KnownType(typeof(ProcessingStatus89Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus89Choice.AcknowledgedAccepted),nameof(ProcessingStatus89Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus89Choice.Rejected),nameof(ProcessingStatus89Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus89Choice.Proprietary),nameof(ProcessingStatus89Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus89Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus89Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus89Choice.Rejected),
+        nameof(ProcessingStatus89Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus89Choice.Proprietary),
+        nameof(ProcessingStatus89Choice.Proprietary)
+    )]
     [IsoId("_SF8U8StYEeyhipY4f42fZQ")]
     [DisplayName("Processing Status 89 Choice")]
-    public abstract partial record ProcessingStatus89Choice_
-    {
-    }
+    public abstract record ProcessingStatus89Choice_ { }
 }

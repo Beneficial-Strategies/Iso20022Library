@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bwbnYYwXEei289CGNqs21g")]
 [DisplayName("Party Data Return Criteria")]
-public partial record PartyDataReturnCriteria2
+public record PartyDataReturnCriteria2
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the opening date of the party is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Opening Date")]
     [IsoXmlTag("OpngDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? OpeningDate { get; init; } 
-    
+    public IsoRequestedIndicator? OpeningDate { get; init; }
+
     /// <summary>
     /// Indicates whether the closing date of the party is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Closing Date")]
     [IsoXmlTag("ClsgDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ClosingDate { get; init; } 
-    
+    public IsoRequestedIndicator? ClosingDate { get; init; }
+
     /// <summary>
     /// Indicates whether the type is requested.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? Type { get; init; } 
-    
+    public IsoRequestedIndicator? Type { get; init; }
+
     /// <summary>
     /// Indicates whether the unique identification to unambiguously identify the party within the system is requested.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PartyIdentification { get; init; } 
-    
+    public IsoRequestedIndicator? PartyIdentification { get; init; }
+
     /// <summary>
     /// Indicates whether the responsible party who initially created the party reference data is requested.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Responsible Party Identification")]
     [IsoXmlTag("RspnsblPtyId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ResponsiblePartyIdentification { get; init; } 
-    
+    public IsoRequestedIndicator? ResponsiblePartyIdentification { get; init; }
+
     /// <summary>
     /// Indicates whether the identification of the restriction is requested.
     /// </summary>
@@ -70,8 +68,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Restriction Identification")]
     [IsoXmlTag("RstrctnId")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? RestrictionIdentification { get; init; } 
-    
+    public IsoRequestedIndicator? RestrictionIdentification { get; init; }
+
     /// <summary>
     /// Indicates whether the date at which a restriction for party has been issued is requested.
     /// </summary>
@@ -79,8 +77,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Restricted On Date")]
     [IsoXmlTag("RstrctdOnDt")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? RestrictedOnDate { get; init; } 
-    
+    public IsoRequestedIndicator? RestrictedOnDate { get; init; }
+
     /// <summary>
     /// Indicates whether the name for the party is requested.
     /// </summary>
@@ -88,8 +86,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? Name { get; init; } 
-    
+    public IsoRequestedIndicator? Name { get; init; }
+
     /// <summary>
     /// Indicates whether the short name for the party is requested.
     /// </summary>
@@ -97,8 +95,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ShortName { get; init; } 
-    
+    public IsoRequestedIndicator? ShortName { get; init; }
+
     /// <summary>
     /// Indicates whether the address for the party is requested.
     /// </summary>
@@ -106,8 +104,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? Address { get; init; } 
-    
+    public IsoRequestedIndicator? Address { get; init; }
+
     /// <summary>
     /// Indicates whether the technical addresses for the party are requested.
     /// </summary>
@@ -115,8 +113,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Technical Address")]
     [IsoXmlTag("TechAdr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? TechnicalAddress { get; init; } 
-    
+    public IsoRequestedIndicator? TechnicalAddress { get; init; }
+
     /// <summary>
     /// Indicates whether the party contact details are requested.
     /// </summary>
@@ -124,8 +122,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Contact Details")]
     [IsoXmlTag("CtctDtls")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ContactDetails { get; init; } 
-    
+    public IsoRequestedIndicator? ContactDetails { get; init; }
+
     /// <summary>
     /// Indicates whether the residence type is requested.
     /// </summary>
@@ -133,8 +131,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Residence Type")]
     [IsoXmlTag("ResTp")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? ResidenceType { get; init; } 
-    
+    public IsoRequestedIndicator? ResidenceType { get; init; }
+
     /// <summary>
     /// Indicates whether the lock status is requested.
     /// </summary>
@@ -142,8 +140,8 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Lock Status")]
     [IsoXmlTag("LckSts")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? LockStatus { get; init; } 
-    
+    public IsoRequestedIndicator? LockStatus { get; init; }
+
     /// <summary>
     /// Indicates whether the market specific attributes for the party are requested.
     /// </summary>
@@ -151,9 +149,5 @@ public partial record PartyDataReturnCriteria2
     [DisplayName("Market Specific Attribute")]
     [IsoXmlTag("MktSpcfcAttr")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MarketSpecificAttribute { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? MarketSpecificAttribute { get; init; }
 }

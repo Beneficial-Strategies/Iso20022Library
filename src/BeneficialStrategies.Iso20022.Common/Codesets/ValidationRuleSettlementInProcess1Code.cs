@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_4kxdQiE5EeuIZ4Hf6difAw")]
-[Description(@"Specifies the settlement in process status code for the cross-element validation rules.")]
+[Description(
+    @"Specifies the settlement in process status code for the cross-element validation rules."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleSettlementInProcess1Code
 {
@@ -23,5 +25,4 @@ public enum ValidationRuleSettlementInProcess1Code
     [IsoId("_C55eASE6EeuIZ4Hf6difAw")]
     [Description(@"Accepted settlement in process.")]
     AcceptedSettlementInProcess = ValidationRuleCode.AcceptedSettlementInProcess, // same ordinal as derivation source for type conversions
-    
 }

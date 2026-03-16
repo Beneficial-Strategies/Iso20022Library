@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_yG5lsEU8EeSGWeX3z5zSZQ")]
-[Description(@"Specifies an alternative identification of a trading party, for example, trader code, trader name, short legal name of firm and so on.")]
+[Description(
+    @"Specifies an alternative identification of a trading party, for example, trader code, trader name, short legal name of firm and so on."
+)]
 [Derivations(typeof(PartyIdentificationType1Code))]
 public enum PartyIdentificationTypeCode
 {
@@ -23,7 +25,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_c_-Z0EU9EeSGWeX3z5zSZQ")]
     [Description(@"Specifies the traders.")]
     TraderCode,
-    
+
     /// <summary>
     /// Legal full title of the trading members.
     /// Encoded/decoded by serializers as &quot;FLNF&quot;.
@@ -32,7 +34,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_R2Fe0EU-EeSGWeX3z5zSZQ")]
     [Description(@"Legal full title of the trading members.")]
     FullLegalNameOfFirm,
-    
+
     /// <summary>
     /// Postal address of the trading members.
     /// Encoded/decoded by serializers as &quot;POAD&quot;.
@@ -41,7 +43,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_6tzfMEU-EeSGWeX3z5zSZQ")]
     [Description(@"Postal address of the trading members.")]
     PostalAddress,
-    
+
     /// <summary>
     /// Phone number of the trading members.
     /// Encoded/decoded by serializers as &quot;PONU&quot;.
@@ -50,7 +52,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_-ho9MEU-EeSGWeX3z5zSZQ")]
     [Description(@"Phone number of the trading members.")]
     PhoneNumber,
-    
+
     /// <summary>
     /// Contact name of the trading members.
     /// Encoded/decoded by serializers as &quot;CONU&quot;.
@@ -59,7 +61,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_C3RgsEU_EeSGWeX3z5zSZQ")]
     [Description(@"Contact name of the trading members.")]
     ContactName,
-    
+
     /// <summary>
     /// Department of the trading members.
     /// Encoded/decoded by serializers as &quot;DEPA&quot;.
@@ -68,7 +70,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_G7gLIEU_EeSGWeX3z5zSZQ")]
     [Description(@"Department of the trading members.")]
     Department,
-    
+
     /// <summary>
     /// Specifies the maket makers.
     /// Encoded/decoded by serializers as &quot;MAMA&quot;.
@@ -77,7 +79,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_yh28AEU_EeSGWeX3z5zSZQ")]
     [Description(@"Specifies the maket makers.")]
     MarketMaker,
-    
+
     /// <summary>
     /// Names for the traders.
     /// Encoded/decoded by serializers as &quot;TANA&quot;.
@@ -86,7 +88,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_BYLQAEVAEeSGWeX3z5zSZQ")]
     [Description(@"Names for the traders.")]
     TraderName,
-    
+
     /// <summary>
     /// Legal short title of the trading members.
     /// Encoded/decoded by serializers as &quot;SLNF&quot;.
@@ -95,7 +97,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_LTis8EVAEeSGWeX3z5zSZQ")]
     [Description(@"Legal short title of the trading members.")]
     ShortLegalNameOfFirm,
-    
+
     /// <summary>
     /// Contact method of the traders.
     /// Encoded/decoded by serializers as &quot;CMOT&quot;.
@@ -104,7 +106,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_ZGam8EVAEeSGWeX3z5zSZQ")]
     [Description(@"Contact method of the traders.")]
     ContactMethodOfTrader,
-    
+
     /// <summary>
     /// Identify members or clients.
     /// Encoded/decoded by serializers as &quot;MEOC&quot;.
@@ -113,7 +115,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_iAZfYEVAEeSGWeX3z5zSZQ")]
     [Description(@"Identify members or clients.")]
     MembersOrClients,
-    
+
     /// <summary>
     /// Specifies the non maket makers.
     /// Encoded/decoded by serializers as &quot;NOMM&quot;.
@@ -122,7 +124,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_rzw24EVAEeSGWeX3z5zSZQ")]
     [Description(@"Specifies the non maket makers.")]
     NonMarketMaker,
-    
+
     /// <summary>
     /// Legal chinese full title of the trading members.
     /// Encoded/decoded by serializers as &quot;FLCN&quot;.
@@ -131,7 +133,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_xyrFUEVAEeSGWeX3z5zSZQ")]
     [Description(@"Legal chinese full title of the trading members.")]
     FullLegalChineseNameOfFirm,
-    
+
     /// <summary>
     /// Legal chinese short title of the trading members.
     /// Encoded/decoded by serializers as &quot;SLCN&quot;.
@@ -140,7 +142,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_MoWHQEVBEeSGWeX3z5zSZQ")]
     [Description(@"Legal chinese short title of the trading members.")]
     ShortLegalChineseNameOfFirm,
-    
+
     /// <summary>
     /// Chinese names for the traders.
     /// Encoded/decoded by serializers as &quot;TACN&quot;.
@@ -149,7 +151,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_enAFMEVBEeSGWeX3z5zSZQ")]
     [Description(@"Chinese names for the traders.")]
     TraderChineseName,
-    
+
     /// <summary>
     /// Zip code of the trading members.
     /// Encoded/decoded by serializers as &quot;ZICO&quot;.
@@ -158,7 +160,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_ndzGwEVBEeSGWeX3z5zSZQ")]
     [Description(@"Zip code of the trading members.")]
     ZipCode,
-    
+
     /// <summary>
     /// Specifies the firm.
     /// Encoded/decoded by serializers as &quot;FICO&quot;.
@@ -167,7 +169,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_sGkosEVBEeSGWeX3z5zSZQ")]
     [Description(@"Specifies the firm.")]
     FirmCode,
-    
+
     /// <summary>
     /// Identification of the collateral management institution.
     /// Encoded/decoded by serializers as &quot;CMID&quot;.
@@ -176,7 +178,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_fGoLAEVCEeSGWeX3z5zSZQ")]
     [Description(@"Identification of the collateral management institution.")]
     CollateralManagementInstitution,
-    
+
     /// <summary>
     /// Name of the collateral management institution.
     /// Encoded/decoded by serializers as &quot;COIN&quot;.
@@ -185,7 +187,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_tZxggEVCEeSGWeX3z5zSZQ")]
     [Description(@"Name of the collateral management institution.")]
     CollateralManagementInstitutionName,
-    
+
     /// <summary>
     /// Name of the firm group.
     /// Encoded/decoded by serializers as &quot;INGN&quot;.
@@ -194,7 +196,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_0KHy8EVCEeSGWeX3z5zSZQ")]
     [Description(@"Name of the firm group.")]
     InstitutionGroupName,
-    
+
     /// <summary>
     /// Identification of the firm.
     /// Encoded/decoded by serializers as &quot;FIID&quot;.
@@ -203,7 +205,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_E1s_cEVDEeSGWeX3z5zSZQ")]
     [Description(@"Identification of the firm.")]
     FirmIdentification,
-    
+
     /// <summary>
     /// Specifies clearing institution.
     /// Encoded/decoded by serializers as &quot;CLIN&quot;.
@@ -212,7 +214,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_N1aFYEVDEeSGWeX3z5zSZQ")]
     [Description(@"Specifies clearing institution.")]
     ClearingInstitution,
-    
+
     /// <summary>
     /// Internal team that traders belong.
     /// Encoded/decoded by serializers as &quot;IGBT&quot;.
@@ -221,7 +223,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_qPaA0EVDEeSGWeX3z5zSZQ")]
     [Description(@"Internal team that traders belong.|")]
     InternalGroupTheTraderBelongedTo,
-    
+
     /// <summary>
     /// Trade confimation person name.
     /// Encoded/decoded by serializers as &quot;DECN&quot;.
@@ -230,7 +232,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_2ylYEEVEEeSGWeX3z5zSZQ")]
     [Description(@"Trade confimation person name.")]
     DealConfirmContactName,
-    
+
     /// <summary>
     /// Member identification of the RMB trading system
     /// Encoded/decoded by serializers as &quot;RMID&quot;.
@@ -239,7 +241,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_hsAKcEVFEeSGWeX3z5zSZQ")]
     [Description(@"Member identification of the RMB trading system|")]
     RMBMemberIdentification,
-    
+
     /// <summary>
     /// Member identification of the FX trading system.
     /// Encoded/decoded by serializers as &quot;FXID&quot;.
@@ -248,7 +250,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_zHB24EVFEeSGWeX3z5zSZQ")]
     [Description(@"Member identification of the FX trading system.")]
     FXMemberID,
-    
+
     /// <summary>
     /// English short name of FX system.
     /// Encoded/decoded by serializers as &quot;FXSN&quot;.
@@ -257,7 +259,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_8KBhYEVFEeSGWeX3z5zSZQ")]
     [Description(@"English short name of FX system.")]
     FXSystemEnglishShortName,
-    
+
     /// <summary>
     /// Specifies other system.
     /// Encoded/decoded by serializers as &quot;OSCO&quot;.
@@ -266,7 +268,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_VZYFwEVGEeSGWeX3z5zSZQ")]
     [Description(@"Specifies other system.")]
     OtherSystemCode,
-    
+
     /// <summary>
     /// Institution of custody management.
     /// Encoded/decoded by serializers as &quot;CMIN&quot;.
@@ -275,7 +277,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_bTCAwEVGEeSGWeX3z5zSZQ")]
     [Description(@"Institution of custody management.")]
     CustodyManagementInstitution,
-    
+
     /// <summary>
     /// Institution identification in com star system.
     /// Encoded/decoded by serializers as &quot;IICS&quot;.
@@ -284,7 +286,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_m9omsEVGEeSGWeX3z5zSZQ")]
     [Description(@"Institution identification in com star system.")]
     InstitutionIdentificationInComStarSystem,
-    
+
     /// <summary>
     /// User name of the trading system.
     /// Encoded/decoded by serializers as &quot;USNA&quot;.
@@ -293,7 +295,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_1Du-sEVGEeSGWeX3z5zSZQ")]
     [Description(@"User name of the trading system.")]
     UserName,
-    
+
     /// <summary>
     /// Password of the trading system.
     /// Encoded/decoded by serializers as &quot;PASS&quot;.
@@ -302,7 +304,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_68UisEVGEeSGWeX3z5zSZQ")]
     [Description(@"Password of the trading system.")]
     Password,
-    
+
     /// <summary>
     /// Type of the trading members.
     /// Encoded/decoded by serializers as &quot;METY&quot;.
@@ -311,7 +313,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_CQJ8sEVHEeSGWeX3z5zSZQ")]
     [Description(@"Type of the trading members.")]
     MemberType,
-    
+
     /// <summary>
     /// Input the user of trading system.
     /// Encoded/decoded by serializers as &quot;USIT&quot;.
@@ -320,7 +322,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_ISujIEVHEeSGWeX3z5zSZQ")]
     [Description(@"Input the user of trading system.")]
     UserInputTrades,
-    
+
     /// <summary>
     /// Agent input the user of the trading system.
     /// Encoded/decoded by serializers as &quot;AUIT&quot;.
@@ -329,7 +331,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_aT-iEEVHEeSGWeX3z5zSZQ")]
     [Description(@"Agent input the user of the trading system.")]
     AgentUserInputTrades,
-    
+
     /// <summary>
     /// Place of execution.
     /// Encoded/decoded by serializers as &quot;EXVE&quot;.
@@ -338,7 +340,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_ocgjAEVHEeSGWeX3z5zSZQ")]
     [Description(@"Place of execution.")]
     ExecutionVenue,
-    
+
     /// <summary>
     /// Specifies eligible of counterparty.
     /// Encoded/decoded by serializers as &quot;ELCO&quot;.
@@ -347,7 +349,7 @@ public enum PartyIdentificationTypeCode
     [IsoId("_xeDcAEVHEeSGWeX3z5zSZQ")]
     [Description(@"Specifies eligible of counterparty.")]
     EligibleCounterparty,
-    
+
     /// <summary>
     /// Identification of the branch.
     /// Encoded/decoded by serializers as &quot;BRID&quot;.
@@ -356,5 +358,4 @@ public enum PartyIdentificationTypeCode
     [IsoId("_nF528Ea8EeSm2psHh_KSCw")]
     [Description(@"Identification of the branch.")]
     BranchIdentification,
-    
 }

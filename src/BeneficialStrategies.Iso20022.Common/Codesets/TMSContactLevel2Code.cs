@@ -21,9 +21,11 @@ public enum TMSContactLevel2Code
     /// </summary>
     [EnumMember(Value = "ASAP")]
     [IsoId("_fZ92gYqKEeSRT5rEzcAHEw")]
-    [Description(@"Terminal management system has to be contacted as soon as possible (for example after reconciliation).")]
+    [Description(
+        @"Terminal management system has to be contacted as soon as possible (for example after reconciliation)."
+    )]
     AsSoonAsPossible = TMSContactLevelCode.AsSoonAsPossible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal management system has to be contacted before the next transaction.
     /// Encoded/decoded by serializers as &quot;CRIT&quot;.
@@ -32,7 +34,7 @@ public enum TMSContactLevel2Code
     [IsoId("_feJL4YqKEeSRT5rEzcAHEw")]
     [Description(@"Terminal management system has to be contacted before the next transaction.")]
     Critical = TMSContactLevelCode.Critical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Terminal management system has to be contacted at the date and time provided.
     /// Encoded/decoded by serializers as &quot;DTIM&quot;.
@@ -41,7 +43,7 @@ public enum TMSContactLevel2Code
     [IsoId("_fidrMYqKEeSRT5rEzcAHEw")]
     [Description(@"Terminal management system has to be contacted at the date and time provided.")]
     DateTime = TMSContactLevelCode.DateTime, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// After the end of the customer session.
     /// Encoded/decoded by serializers as &quot;ENCS&quot;.
@@ -50,5 +52,4 @@ public enum TMSContactLevel2Code
     [IsoId("_fn1TYYqKEeSRT5rEzcAHEw")]
     [Description(@"After the end of the customer session.")]
     EndCustomerSession = TMSContactLevelCode.EndCustomerSession, // same ordinal as derivation source for type conversions
-    
 }

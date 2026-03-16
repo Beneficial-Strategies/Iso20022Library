@@ -1,10 +1,10 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.ReturnReason5Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.pacs;
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -23,34 +23,37 @@ public class Pacs004ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader99 CreateGroupHeader(string msgId = "BNPAFRPP/240316/PAC004/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddDays(1),
-        NumberOfTransactions = "1",
-        SettlementInformation = Iso20022TestData.ClearingSettlement,
-        InstructingAgent = Iso20022TestData.CreditorAgent,
-        InstructedAgent = Iso20022TestData.DebtorAgent,
-    };
+    public static GroupHeader99 CreateGroupHeader(string msgId = "BNPAFRPP/240316/PAC004/00001") =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddDays(1),
+            NumberOfTransactions = "1",
+            SettlementInformation = Iso20022TestData.ClearingSettlement,
+            InstructingAgent = Iso20022TestData.CreditorAgent,
+            InstructedAgent = Iso20022TestData.DebtorAgent,
+        };
 
     public static PaymentTransaction146 CreateReturnTransaction(
-        ActiveCurrencyAndAmount? returnAmount = null) => new()
-    {
-        ReturnIdentification = "BNPAFRPP/240316/RET/00001",
-        OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
-        OriginalUETR = Iso20022TestData.Uetr,
-        OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount
+        ActiveCurrencyAndAmount? returnAmount = null
+    ) =>
+        new()
         {
-            Currency = Iso20022TestData.Currency,
-            Amount = Iso20022TestData.Amount,
-        },
-        OriginalInterbankSettlementDate = Iso20022TestData.SettlementDate,
-        ReturnedInterbankSettlementAmount = returnAmount ?? Iso20022TestData.InvoiceAmount,
-        InterbankSettlementDate = Iso20022TestData.SettlementDate.AddDays(1),
-        ChargeBearer = ChargeBearerType1Code.Shared,
-        InstructingAgent = Iso20022TestData.CreditorAgent,
-        InstructedAgent = Iso20022TestData.DebtorAgent,
-    };
+            ReturnIdentification = "BNPAFRPP/240316/RET/00001",
+            OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
+            OriginalUETR = Iso20022TestData.Uetr,
+            OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount
+            {
+                Currency = Iso20022TestData.Currency,
+                Amount = Iso20022TestData.Amount,
+            },
+            OriginalInterbankSettlementDate = Iso20022TestData.SettlementDate,
+            ReturnedInterbankSettlementAmount = returnAmount ?? Iso20022TestData.InvoiceAmount,
+            InterbankSettlementDate = Iso20022TestData.SettlementDate.AddDays(1),
+            ChargeBearer = ChargeBearerType1Code.Shared,
+            InstructingAgent = Iso20022TestData.CreditorAgent,
+            InstructedAgent = Iso20022TestData.DebtorAgent,
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -70,11 +73,9 @@ public class Pacs004ExamplesTests
                 ReturnReasonInformation = new PaymentReturnReason6
                 {
                     Originator = Iso20022TestData.Creditor,
-                    Reason = new Code
-                    {
-                        Value = ExternalReturnReason1Code.ClosedAccountNumber,
-                    },
-                    AdditionalInformation = "Account FR7630006000011234567890189 closed 2024-01-31. Return per SEPA SCT rulebook section 4.3.",
+                    Reason = new Code { Value = ExternalReturnReason1Code.ClosedAccountNumber, },
+                    AdditionalInformation =
+                        "Account FR7630006000011234567890189 closed 2024-01-31. Return per SEPA SCT rulebook section 4.3.",
                 },
             },
         };
@@ -106,11 +107,9 @@ public class Pacs004ExamplesTests
                 ReturnReasonInformation = new PaymentReturnReason6
                 {
                     Originator = Iso20022TestData.Creditor,
-                    Reason = new Code
-                    {
-                        Value = ExternalReturnReason1Code.RequestedByCustomer,
-                    },
-                    AdditionalInformation = "Return per recall request CAMT056-DEUTDEFF-240316-001 accepted by beneficiary.",
+                    Reason = new Code { Value = ExternalReturnReason1Code.RequestedByCustomer, },
+                    AdditionalInformation =
+                        "Return per recall request CAMT056-DEUTDEFF-240316-001 accepted by beneficiary.",
                 },
             },
         };
@@ -134,11 +133,9 @@ public class Pacs004ExamplesTests
             {
                 ReturnReasonInformation = new PaymentReturnReason6
                 {
-                    Reason = new Proprietary
-                    {
-                        Value = "BNPFR-EXCEED-DAILY-LIMIT",
-                    },
-                    AdditionalInformation = "Beneficiary single-day receipt limit exceeded. Contact relationship manager.",
+                    Reason = new Proprietary { Value = "BNPFR-EXCEED-DAILY-LIMIT", },
+                    AdditionalInformation =
+                        "Beneficiary single-day receipt limit exceeded. Contact relationship manager.",
                 },
             },
         };

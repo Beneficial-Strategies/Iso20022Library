@@ -23,7 +23,7 @@ public enum StandingInstructionGrossNetCode
     [IsoId("_ZPw5Mtp-Ed-ak6NoX_4Aeg_-42230364")]
     [Description(@"Gross payment.")]
     Gross,
-    
+
     /// <summary>
     /// Net payment.
     /// Encoded/decoded by serializers as &quot;NETT&quot;.
@@ -32,5 +32,4 @@ public enum StandingInstructionGrossNetCode
     [IsoId("_ZPw5M9p-Ed-ak6NoX_4Aeg_-42230333")]
     [Description(@"Net payment.")]
     Net,
-    
 }

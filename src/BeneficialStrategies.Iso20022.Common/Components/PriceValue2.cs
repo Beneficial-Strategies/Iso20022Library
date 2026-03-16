@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Vb-eh9p-Ed-ak6NoX_4Aeg_390890355")]
 [DisplayName("Price Value")]
-public partial record PriceValue2
+public record PriceValue2
 {
-    #nullable enable
-    
     /// <summary>
     /// Price expressed as a currency and value.
     /// </summary>
     [IsoId("_Vb-eiNp-Ed-ak6NoX_4Aeg_-1145201803")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveOrHistoricCurrencyAnd13DecimalAmount? Amount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd13DecimalAmount? Amount { get; init; }
+
     /// <summary>
     /// Price expressed as a rate, ie, percentage.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record PriceValue2
     [DisplayName("Rate")]
     [IsoXmlTag("Rt")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? Rate { get; init; }
 }

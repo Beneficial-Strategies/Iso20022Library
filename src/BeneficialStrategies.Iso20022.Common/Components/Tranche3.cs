@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d9OP8Q06EeuJ1fOEB4bQXA")]
 [DisplayName("Tranche")]
-public partial record Tranche3
+public record Tranche3
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the lower point at which the level of losses in the underlying portfolio reduces the notional of the tranche.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record Tranche3
     [DisplayName("Attachment Point")]
     [IsoXmlTag("AttchmntPt")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? AttachmentPoint { get; init; } 
-    
+    public IsoBaseOneRate? AttachmentPoint { get; init; }
+
     /// <summary>
     /// Indicates the point beyond which the losses in the underlying portfolio no longer reduce the notional of the tranche.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record Tranche3
     [DisplayName("Detachment Point")]
     [IsoXmlTag("DtchmntPt")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? DetachmentPoint { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoBaseOneRate? DetachmentPoint { get; init; }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(IndustrySector3Choice.NACETaxonomySector))]
     [KnownType(typeof(IndustrySector3Choice.RegulatoryTaxonomySector))]
-    [JsonDerivedType(typeof(IndustrySector3Choice.NACETaxonomySector),nameof(IndustrySector3Choice.NACETaxonomySector))]
-    [JsonDerivedType(typeof(IndustrySector3Choice.RegulatoryTaxonomySector),nameof(IndustrySector3Choice.RegulatoryTaxonomySector))]
+    [JsonDerivedType(
+        typeof(IndustrySector3Choice.NACETaxonomySector),
+        nameof(IndustrySector3Choice.NACETaxonomySector)
+    )]
+    [JsonDerivedType(
+        typeof(IndustrySector3Choice.RegulatoryTaxonomySector),
+        nameof(IndustrySector3Choice.RegulatoryTaxonomySector)
+    )]
     [IsoId("_ZFrYoeJJEe-5wchdE0oJYw")]
     [DisplayName("Industry Sector3Choice")]
-    public abstract partial record IndustrySector3Choice_
-    {
-    }
+    public abstract record IndustrySector3Choice_ { }
 }

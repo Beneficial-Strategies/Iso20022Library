@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Period5Choice.FromDateTimeToDateTime))]
     [KnownType(typeof(Period5Choice.FromDateToDate))]
-    [JsonDerivedType(typeof(Period5Choice.FromDateTimeToDateTime),nameof(Period5Choice.FromDateTimeToDateTime))]
-    [JsonDerivedType(typeof(Period5Choice.FromDateToDate),nameof(Period5Choice.FromDateToDate))]
+    [JsonDerivedType(
+        typeof(Period5Choice.FromDateTimeToDateTime),
+        nameof(Period5Choice.FromDateTimeToDateTime)
+    )]
+    [JsonDerivedType(typeof(Period5Choice.FromDateToDate), nameof(Period5Choice.FromDateToDate))]
     [IsoId("_W6N3ca3NEeey8N0JWnVPUw")]
     [DisplayName("Period 5 Choice")]
-    public abstract partial record Period5Choice_
-    {
-    }
+    public abstract record Period5Choice_ { }
 }

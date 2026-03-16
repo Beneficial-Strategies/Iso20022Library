@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BenchmarkCurveName13Choice.Code))]
     [KnownType(typeof(BenchmarkCurveName13Choice.Proprietary))]
-    [JsonDerivedType(typeof(BenchmarkCurveName13Choice.Code),nameof(BenchmarkCurveName13Choice.Code))]
-    [JsonDerivedType(typeof(BenchmarkCurveName13Choice.Proprietary),nameof(BenchmarkCurveName13Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(BenchmarkCurveName13Choice.Code),
+        nameof(BenchmarkCurveName13Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(BenchmarkCurveName13Choice.Proprietary),
+        nameof(BenchmarkCurveName13Choice.Proprietary)
+    )]
     [IsoId("_g9r0ERIkEeyLzJfz3xPQNA")]
     [DisplayName("Benchmark Curve Name 13 Choice")]
-    public abstract partial record BenchmarkCurveName13Choice_
-    {
-    }
+    public abstract record BenchmarkCurveName13Choice_ { }
 }

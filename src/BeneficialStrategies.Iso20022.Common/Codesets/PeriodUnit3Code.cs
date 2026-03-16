@@ -23,7 +23,7 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06QXyYEemfrNOe0zHQyg")]
     [Description(@"Other Private")]
     OtherPrivate = PeriodUnitCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other National
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06Q3yYEemfrNOe0zHQyg")]
     [Description(@"Other National")]
     OtherNational = PeriodUnitCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in months.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -41,7 +41,7 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06RXyYEemfrNOe0zHQyg")]
     [Description(@"Counted in months.")]
     Months = PeriodUnitCode.Months, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in weeks.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -50,7 +50,7 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06R3yYEemfrNOe0zHQyg")]
     [Description(@"Counted in weeks.")]
     Weeks = PeriodUnitCode.Weeks, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in years.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -59,7 +59,7 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06SXyYEemfrNOe0zHQyg")]
     [Description(@"Counted in years.")]
     Years = PeriodUnitCode.Years, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in days.
     /// Encoded/decoded by serializers as &quot;DAYS&quot;.
@@ -68,7 +68,7 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06S3yYEemfrNOe0zHQyg")]
     [Description(@"Counted in days.")]
     Days = PeriodUnitCode.Days, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Extra Days
     /// Encoded/decoded by serializers as &quot;EXDY&quot;.
@@ -77,5 +77,4 @@ public enum PeriodUnit3Code
     [IsoId("_Lp06TXyYEemfrNOe0zHQyg")]
     [Description(@"Extra Days")]
     ExtraDays = PeriodUnitCode.ExtraDays, // same ordinal as derivation source for type conversions
-    
 }

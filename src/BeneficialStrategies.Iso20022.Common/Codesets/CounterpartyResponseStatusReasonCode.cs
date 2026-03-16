@@ -23,23 +23,26 @@ public enum CounterpartyResponseStatusReasonCode
     [IsoId("_0lnHoAlIEeGATtfOBToyew_-1081107811")]
     [Description(@"Specifies that the response is related to an allegement from the counterparty.")]
     CounterpartyTransaction,
-    
+
     /// <summary>
     /// Specifies that the response is related to the cancellation request of the counterparty.
     /// Encoded/decoded by serializers as &quot;CPCX&quot;.
     /// </summary>
     [EnumMember(Value = "CPCX")]
     [IsoId("_0lnHoQlIEeGATtfOBToyew_-952865823")]
-    [Description(@"Specifies that the response is related to the cancellation request of the counterparty.")]
+    [Description(
+        @"Specifies that the response is related to the cancellation request of the counterparty."
+    )]
     CounterpartyCancellation,
-    
+
     /// <summary>
     /// Specifies that the response is related to the modification request of the counterparty.
     /// Encoded/decoded by serializers as &quot;CPMD&quot;.
     /// </summary>
     [EnumMember(Value = "CPMD")]
     [IsoId("_0lnHoglIEeGATtfOBToyew_-1126679400")]
-    [Description(@"Specifies that the response is related to the modification request of the counterparty.")]
+    [Description(
+        @"Specifies that the response is related to the modification request of the counterparty."
+    )]
     CounterpartyModification,
-    
 }

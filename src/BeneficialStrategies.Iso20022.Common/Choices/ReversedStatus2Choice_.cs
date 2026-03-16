@@ -12,12 +12,16 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ReversedStatus2Choice.Reason))]
     [KnownType(typeof(ReversedStatus2Choice.DataSourceScheme))]
     [KnownType(typeof(ReversedStatus2Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(ReversedStatus2Choice.Reason),nameof(ReversedStatus2Choice.Reason))]
-    [JsonDerivedType(typeof(ReversedStatus2Choice.DataSourceScheme),nameof(ReversedStatus2Choice.DataSourceScheme))]
-    [JsonDerivedType(typeof(ReversedStatus2Choice.NoSpecifiedReason),nameof(ReversedStatus2Choice.NoSpecifiedReason))]
+    [JsonDerivedType(typeof(ReversedStatus2Choice.Reason), nameof(ReversedStatus2Choice.Reason))]
+    [JsonDerivedType(
+        typeof(ReversedStatus2Choice.DataSourceScheme),
+        nameof(ReversedStatus2Choice.DataSourceScheme)
+    )]
+    [JsonDerivedType(
+        typeof(ReversedStatus2Choice.NoSpecifiedReason),
+        nameof(ReversedStatus2Choice.NoSpecifiedReason)
+    )]
     [IsoId("_a4QdwSY5EeW_ZNn8gbfY7Q")]
     [DisplayName("Reversed Status 2 Choice")]
-    public abstract partial record ReversedStatus2Choice_
-    {
-    }
+    public abstract record ReversedStatus2Choice_ { }
 }

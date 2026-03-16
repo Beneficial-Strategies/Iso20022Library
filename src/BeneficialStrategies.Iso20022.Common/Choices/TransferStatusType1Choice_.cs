@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TransferStatusType1Choice.Code))]
     [KnownType(typeof(TransferStatusType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TransferStatusType1Choice.Code),nameof(TransferStatusType1Choice.Code))]
-    [JsonDerivedType(typeof(TransferStatusType1Choice.Proprietary),nameof(TransferStatusType1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TransferStatusType1Choice.Code),
+        nameof(TransferStatusType1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(TransferStatusType1Choice.Proprietary),
+        nameof(TransferStatusType1Choice.Proprietary)
+    )]
     [IsoId("_BjiYwFNYEeijdq8ilaxyOA")]
     [DisplayName("Transfer Status Type 1 Choice")]
-    public abstract partial record TransferStatusType1Choice_
-    {
-    }
+    public abstract record TransferStatusType1Choice_ { }
 }

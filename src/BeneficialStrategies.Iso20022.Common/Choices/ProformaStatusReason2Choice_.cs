@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ProformaStatusReason2Choice.Code))]
     [KnownType(typeof(ProformaStatusReason2Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProformaStatusReason2Choice.Code),nameof(ProformaStatusReason2Choice.Code))]
-    [JsonDerivedType(typeof(ProformaStatusReason2Choice.Proprietary),nameof(ProformaStatusReason2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProformaStatusReason2Choice.Code),
+        nameof(ProformaStatusReason2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ProformaStatusReason2Choice.Proprietary),
+        nameof(ProformaStatusReason2Choice.Proprietary)
+    )]
     [IsoId("_MFm9IUzDEeafiMTDrtSnyw")]
     [DisplayName("Proforma Status Reason 2 Choice")]
-    public abstract partial record ProformaStatusReason2Choice_
-    {
-    }
+    public abstract record ProformaStatusReason2Choice_ { }
 }

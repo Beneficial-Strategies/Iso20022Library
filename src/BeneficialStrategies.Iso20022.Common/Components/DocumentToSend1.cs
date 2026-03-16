@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RTCTPtp-Ed-ak6NoX_4Aeg_436078909")]
 [DisplayName("Document To Send")]
-public partial record DocumentToSend1
+public record DocumentToSend1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of document.
     /// </summary>
@@ -25,25 +23,25 @@ public partial record DocumentToSend1
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text Type { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text Type { get; init; }
+
     /// <summary>
     /// Party that should receive the document.
     /// </summary>
     [IsoId("_RTCTQNp-Ed-ak6NoX_4Aeg_1020668296")]
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
-    public required PartyIdentification2Choice_ Recipient { get; init; } 
-    
+    public required PartyIdentification2Choice_ Recipient { get; init; }
+
     /// <summary>
     /// Communication method to be used.
     /// </summary>
     [IsoId("_RTCTQdp-Ed-ak6NoX_4Aeg_1018819949")]
     [DisplayName("Method Of Transmission")]
     [IsoXmlTag("MtdOfTrnsmssn")]
-    public required CommunicationMethod1Code MethodOfTransmission { get; init; } 
-    
+    public required CommunicationMethod1Code MethodOfTransmission { get; init; }
+
     /// <summary>
     /// Communication means used to send information.
     /// </summary>
@@ -51,10 +49,6 @@ public partial record DocumentToSend1
     [DisplayName("Extended Method Of Transmission")]
     [IsoXmlTag("XtndedMtdOfTrnsmssn")]
     [IsoSimpleType(IsoSimpleType.Extended350Code)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoExtended350Code ExtendedMethodOfTransmission { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoExtended350Code ExtendedMethodOfTransmission { get; init; }
 }

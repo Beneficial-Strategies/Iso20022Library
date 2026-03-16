@@ -23,7 +23,7 @@ public enum ResidualCashCode
     [IsoId("_rpeD8fpeEeCLMa5EIHtDrg")]
     [Description(@"Residual cash to be transferred.")]
     ResidualCashTransfer,
-    
+
     /// <summary>
     /// Residual Cash not to be transferred.
     /// Encoded/decoded by serializers as &quot;NRCT&quot;.
@@ -32,5 +32,4 @@ public enum ResidualCashCode
     [IsoId("_2wSAV_peEeCLMa5EIHtDrg")]
     [Description(@"Residual Cash not to be transferred.")]
     NotResidualCashTransfer,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3ACQ0a19EeWMg5rOByfExw")]
 [DisplayName("ATM Transaction Amounts")]
-public partial record ATMTransactionAmounts7
+public record ATMTransactionAmounts7
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of amount.
     /// </summary>
@@ -25,25 +23,25 @@ public partial record ATMTransactionAmounts7
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Type { get; init; }
+
     /// <summary>
     /// Amount value.
     /// </summary>
     [IsoId("_3L9M9619EeWMg5rOByfExw")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Currency of the amount.
     /// </summary>
     [IsoId("_3L9M9a19EeWMg5rOByfExw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Description of the amount that may be provided to the customer.
     /// </summary>
@@ -51,10 +49,6 @@ public partial record ATMTransactionAmounts7
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Label { get; init; }
 }

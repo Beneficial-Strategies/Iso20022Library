@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cfAuu5KQEeWHWpTQn1FFVg")]
 [DisplayName("Proprietary Quantity")]
-public partial record ProprietaryQuantity9
+public record ProprietaryQuantity9
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the proprietary quantity with a decimal number.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ProprietaryQuantity9
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-    public required IsoRestrictedFINDecimalNumber Quantity { get; init; } 
-    
+    public required IsoRestrictedFINDecimalNumber Quantity { get; init; }
+
     /// <summary>
     /// Identifies the type of proprietary quantity reported.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record ProprietaryQuantity9
     [DisplayName("Quantity Type")]
     [IsoXmlTag("QtyTp")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText QuantityType { get; init; } 
-    
+    public required IsoExact4AlphaNumericText QuantityType { get; init; }
+
     /// <summary>
     /// Provides information related to issuer in free format.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record ProprietaryQuantity9
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText Issuer { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public required IsoMax4AlphaNumericText Issuer { get; init; }
+
     /// <summary>
     /// Name of the identification scheme.
     /// </summary>
@@ -53,10 +51,6 @@ public partial record ProprietaryQuantity9
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4AlphaNumericText? SchemeName { get; init; }
 }

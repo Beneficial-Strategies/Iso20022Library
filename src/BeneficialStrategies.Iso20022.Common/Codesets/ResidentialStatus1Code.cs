@@ -23,7 +23,7 @@ public enum ResidentialStatus1Code
     [IsoId("_ZUrOZ9p-Ed-ak6NoX_4Aeg_-1024642437")]
     [Description(@"Resident.")]
     Resident = ResidentialStatusCode.Resident, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Permanent resident.
     /// Encoded/decoded by serializers as &quot;PRES&quot;.
@@ -32,7 +32,7 @@ public enum ResidentialStatus1Code
     [IsoId("_ZUrOaNp-Ed-ak6NoX_4Aeg_-1024642164")]
     [Description(@"Permanent resident.")]
     PermanentResident = ResidentialStatusCode.PermanentResident, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Non-resident.
     /// Encoded/decoded by serializers as &quot;NRES&quot;.
@@ -41,5 +41,4 @@ public enum ResidentialStatus1Code
     [IsoId("_ZU0_YNp-Ed-ak6NoX_4Aeg_-1024642147")]
     [Description(@"Non-resident.")]
     NonResident = ResidentialStatusCode.NonResident, // same ordinal as derivation source for type conversions
-    
 }

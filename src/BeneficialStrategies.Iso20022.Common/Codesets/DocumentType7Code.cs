@@ -21,9 +21,11 @@ public enum DocumentType7Code
     /// </summary>
     [EnumMember(Value = "JNRL")]
     [IsoId("_nHof4NxKEeioifFt1dhnJA")]
-    [Description(@"When the POI or the Sale System wants to store a message on the journal printer or electronic journal of the Sale Terminal (it is sometimes a Sale Logging/Journal Printer).")]
+    [Description(
+        @"When the POI or the Sale System wants to store a message on the journal printer or electronic journal of the Sale Terminal (it is sometimes a Sale Logging/Journal Printer)."
+    )]
     Journal = DocumentTypeCode.Journal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// When the Sale System requires	the POI system to print the Customer receipt.
     /// Encoded/decoded by serializers as &quot;CRCP&quot;.
@@ -32,7 +34,7 @@ public enum DocumentType7Code
     [IsoId("_nQrHIdxKEeioifFt1dhnJA")]
     [Description(@"When the Sale System requires	the POI system to print the Customer receipt.")]
     CustomerReceipt = DocumentTypeCode.CustomerReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// When the Sale system print the Cashier copy of the Payment receipt.
     /// Encoded/decoded by serializers as &quot;HRCP&quot;.
@@ -41,7 +43,7 @@ public enum DocumentType7Code
     [IsoId("_nXT6oNxKEeioifFt1dhnJA")]
     [Description(@"When the Sale system print the Cashier copy of the Payment receipt.")]
     CashierReceipt = DocumentTypeCode.CashierReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// When the Sale System requires the POI system to print the Sale receipt.
     /// Encoded/decoded by serializers as &quot;SRCP&quot;.
@@ -50,16 +52,18 @@ public enum DocumentType7Code
     [IsoId("_ndpzMdxKEeioifFt1dhnJA")]
     [Description(@"When the Sale System requires the POI system to print the Sale receipt.")]
     SaleReceipt = DocumentTypeCode.SaleReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.
     /// Encoded/decoded by serializers as &quot;RPIN&quot;.
     /// </summary>
     [EnumMember(Value = "RPIN")]
     [IsoId("_pANyIdxKEeioifFt1dhnJA")]
-    [Description(@"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.")]
+    [Description(
+        @"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario."
+    )]
     RelatedPaymentInstruction = DocumentTypeCode.RelatedPaymentInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document is an electronic payment document.
     /// Encoded/decoded by serializers as &quot;VCHR&quot;.
@@ -68,5 +72,4 @@ public enum DocumentType7Code
     [IsoId("_qXypEdxKEeioifFt1dhnJA")]
     [Description(@"Document is an electronic payment document.")]
     Voucher = DocumentTypeCode.Voucher, // same ordinal as derivation source for type conversions
-    
 }

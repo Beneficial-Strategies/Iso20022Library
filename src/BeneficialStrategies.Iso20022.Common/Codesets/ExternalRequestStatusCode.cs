@@ -60,5 +60,4 @@ public enum ExternalRequestStatusCode
     [IsoId("")]
     [Description(@"Message has been rejected.")]
     Rejected,
-
 }

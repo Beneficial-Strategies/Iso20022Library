@@ -23,7 +23,7 @@ public enum POIComponentStatus1Code
     [IsoId("_LHVRYQxxEeKa_56Jbsi1RQ")]
     [Description(@"Component not yet activated.")]
     WaitingActivation = POIComponentStatusCode.WaitingActivation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Component not working properly.
     /// Encoded/decoded by serializers as &quot;OUTD&quot;.
@@ -32,7 +32,7 @@ public enum POIComponentStatus1Code
     [IsoId("_LO6gEQxxEeKa_56Jbsi1RQ")]
     [Description(@"Component not working properly.")]
     OutOfOrder = POIComponentStatusCode.OutOfOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Component activated and in operation.
     /// Encoded/decoded by serializers as &quot;OPER&quot;.
@@ -41,7 +41,7 @@ public enum POIComponentStatus1Code
     [IsoId("_LUHwMwxxEeKa_56Jbsi1RQ")]
     [Description(@"Component activated and in operation.")]
     InOperation = POIComponentStatusCode.InOperation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Component has been deactivated.
     /// Encoded/decoded by serializers as &quot;DACT&quot;.
@@ -50,5 +50,4 @@ public enum POIComponentStatus1Code
     [IsoId("_Lbj08QxxEeKa_56Jbsi1RQ")]
     [Description(@"Component has been deactivated.")]
     Deactivated = POIComponentStatusCode.Deactivated, // same ordinal as derivation source for type conversions
-    
 }

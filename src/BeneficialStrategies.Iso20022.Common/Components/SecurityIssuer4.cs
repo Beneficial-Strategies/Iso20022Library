@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F_G3Z8guEeuGrNSsxk3B0A")]
 [DisplayName("Security Issuer")]
-public partial record SecurityIssuer4
+public record SecurityIssuer4
 {
-    #nullable enable
-    
     /// <summary>
     /// Legal entity identification of the issuer of the security.
     /// </summary>
     [IsoId("_GAfXccguEeuGrNSsxk3B0A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public OrganisationIdentification15Choice_? Identification { get; init; } 
-    
+    public OrganisationIdentification15Choice_? Identification { get; init; }
+
     /// <summary>
     /// Jurisdiction of the issuer of the security used as collateral. In case of securities issued by a foreign subsidiary, the jurisdiction of the ultimate parent company shall be reported or, if not known, jurisdiction of the subsidiary.
     /// </summary>
     [IsoId("_GAfXc8guEeuGrNSsxk3B0A")]
     [DisplayName("Jurisdiction Country")]
     [IsoXmlTag("JursdctnCtry")]
-    public required CountryCode JurisdictionCountry { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CountryCode JurisdictionCountry { get; init; }
 }

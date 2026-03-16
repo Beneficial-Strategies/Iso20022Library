@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Disclosure2Choice.NoDisclosure))]
     [KnownType(typeof(Disclosure2Choice.SafekeepingAccountAndHoldings))]
-    [JsonDerivedType(typeof(Disclosure2Choice.NoDisclosure),nameof(Disclosure2Choice.NoDisclosure))]
-    [JsonDerivedType(typeof(Disclosure2Choice.SafekeepingAccountAndHoldings),nameof(Disclosure2Choice.SafekeepingAccountAndHoldings))]
+    [JsonDerivedType(
+        typeof(Disclosure2Choice.NoDisclosure),
+        nameof(Disclosure2Choice.NoDisclosure)
+    )]
+    [JsonDerivedType(
+        typeof(Disclosure2Choice.SafekeepingAccountAndHoldings),
+        nameof(Disclosure2Choice.SafekeepingAccountAndHoldings)
+    )]
     [IsoId("_L3-v4fNyEeqRfth943bvEA")]
     [DisplayName("Disclosure 2 Choice")]
-    public abstract partial record Disclosure2Choice_
-    {
-    }
+    public abstract record Disclosure2Choice_ { }
 }

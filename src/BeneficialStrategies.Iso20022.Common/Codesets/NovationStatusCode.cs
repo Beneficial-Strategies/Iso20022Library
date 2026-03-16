@@ -23,7 +23,7 @@ public enum NovationStatusCode
     [IsoId("_Zd1zUMETEea7jLfvGi1PDw")]
     [Description(@"Transaction is a novation.")]
     Novation,
-    
+
     /// <summary>
     /// Transaction is not a novation.
     /// Encoded/decoded by serializers as &quot;NONO&quot;.
@@ -32,5 +32,4 @@ public enum NovationStatusCode
     [IsoId("_Z1DZcMETEea7jLfvGi1PDw")]
     [Description(@"Transaction is not a novation.")]
     NoNovation,
-    
 }

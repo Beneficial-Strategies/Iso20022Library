@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FHEpEZQTEeiok48Eh9lW9Q")]
 [DisplayName("Trade Party Identification Query")]
-public partial record TradePartyIdentificationQuery8
+public record TradePartyIdentificationQuery8
 {
-    #nullable enable
-    
     /// <summary>
     /// Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record TradePartyIdentificationQuery8
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
+    public IsoLEIIdentifier? LEI { get; init; }
+
     /// <summary>
     /// Business identifier code used to identify the trade party.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record TradePartyIdentificationQuery8
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; } 
-    
+    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identification of the client counterparty.
     /// </summary>
@@ -43,18 +41,14 @@ public partial record TradePartyIdentificationQuery8
     [DisplayName("Client Identification")]
     [IsoXmlTag("ClntId")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? ClientIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? ClientIdentification { get; init; }
+
     /// <summary>
     /// Field can be queried for not reported value.
     /// </summary>
     [IsoId("_FS0mF5QTEeiok48Eh9lW9Q")]
     [DisplayName("Not Reported")]
     [IsoXmlTag("NotRptd")]
-    public NotReported1Code? NotReported { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NotReported1Code? NotReported { get; init; }
 }

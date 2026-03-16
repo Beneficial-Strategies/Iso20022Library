@@ -23,7 +23,7 @@ public enum CardSecurityCapability1Code
     [IsoId("_19rGYZiuEeefZKJHxQTztg")]
     [Description(@"Card contains an integrated circuit card.")]
     ICC = CardSecurityCapabilityCode.ICC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card does not contain a card security code in the magstripe
     /// Encoded/decoded by serializers as &quot;MWOS&quot;.
@@ -31,8 +31,9 @@ public enum CardSecurityCapability1Code
     [EnumMember(Value = "MWOS")]
     [IsoId("_2MaF8piuEeefZKJHxQTztg")]
     [Description(@"Card does not contain a card security code in the magstripe")]
-    MagneticStripeWithoutSecurityCode = CardSecurityCapabilityCode.MagneticStripeWithoutSecurityCode, // same ordinal as derivation source for type conversions
-    
+    MagneticStripeWithoutSecurityCode =
+        CardSecurityCapabilityCode.MagneticStripeWithoutSecurityCode, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Card contains a card security code in the magstripe
     /// Encoded/decoded by serializers as &quot;MSWS&quot;.
@@ -41,7 +42,7 @@ public enum CardSecurityCapability1Code
     [IsoId("_2ZZZEpiuEeefZKJHxQTztg")]
     [Description(@"Card contains a card security code in the magstripe")]
     MagneticStripeWithSecurityCode = CardSecurityCapabilityCode.MagneticStripeWithSecurityCode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of card defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +51,7 @@ public enum CardSecurityCapability1Code
     [IsoId("_2mahYpiuEeefZKJHxQTztg")]
     [Description(@"Other type of card defined at national level.")]
     OtherNational = CardSecurityCapabilityCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of card defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +60,7 @@ public enum CardSecurityCapability1Code
     [IsoId("_24fI0piuEeefZKJHxQTztg")]
     [Description(@"Other type of card defined at private level.")]
     OtherPrivate = CardSecurityCapabilityCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Off line PIN card
     /// Encoded/decoded by serializers as &quot;OLPN&quot;.
@@ -68,5 +69,4 @@ public enum CardSecurityCapability1Code
     [IsoId("_5L7VoZivEeefZKJHxQTztg")]
     [Description(@"Off line PIN card")]
     OffLinePIN = CardSecurityCapabilityCode.OffLinePIN, // same ordinal as derivation source for type conversions
-    
 }

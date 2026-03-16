@@ -23,7 +23,7 @@ public enum ATMStatus3Code
     [IsoId("_EcoHQYtDEeSxlKlAGYErFg")]
     [Description(@"Component is activated and in operation.")]
     InOperation = ATMStatusCode.InOperation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Component has been stopped.
     /// Encoded/decoded by serializers as &quot;STOP&quot;.
@@ -32,7 +32,7 @@ public enum ATMStatus3Code
     [IsoId("_Esa2wYtDEeSxlKlAGYErFg")]
     [Description(@"Component has been stopped.")]
     Stopped = ATMStatusCode.Stopped, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Component has been loaded, but not yet activated.
     /// Encoded/decoded by serializers as &quot;WACT&quot;.
@@ -41,5 +41,4 @@ public enum ATMStatus3Code
     [IsoId("_Ey1AwYtDEeSxlKlAGYErFg")]
     [Description(@"Component has been loaded, but not yet activated.")]
     WaitingActivation = ATMStatusCode.WaitingActivation, // same ordinal as derivation source for type conversions
-    
 }

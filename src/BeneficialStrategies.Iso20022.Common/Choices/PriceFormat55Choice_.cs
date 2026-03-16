@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat55Choice.PercentagePrice))]
     [KnownType(typeof(PriceFormat55Choice.AmountPrice))]
     [KnownType(typeof(PriceFormat55Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat55Choice.PercentagePrice),nameof(PriceFormat55Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat55Choice.AmountPrice),nameof(PriceFormat55Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat55Choice.IndexPoints),nameof(PriceFormat55Choice.IndexPoints))]
+    [JsonDerivedType(
+        typeof(PriceFormat55Choice.PercentagePrice),
+        nameof(PriceFormat55Choice.PercentagePrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat55Choice.AmountPrice),
+        nameof(PriceFormat55Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat55Choice.IndexPoints),
+        nameof(PriceFormat55Choice.IndexPoints)
+    )]
     [IsoId("_ckDmi5KQEeWHWpTQn1FFVg")]
     [DisplayName("Price Format 55 Choice")]
-    public abstract partial record PriceFormat55Choice_
-    {
-    }
+    public abstract record PriceFormat55Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum Direction1Code
     [IsoId("_awK8Atp-Ed-ak6NoX_4Aeg_1520758160")]
     [Description(@"Down.")]
     Down = DirectionCode.Down, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Up.
     /// Encoded/decoded by serializers as &quot;DRUP&quot;.
@@ -32,5 +32,4 @@ public enum Direction1Code
     [IsoId("_awK8A9p-Ed-ak6NoX_4Aeg_1752561964")]
     [Description(@"Up.")]
     Up = DirectionCode.Up, // same ordinal as derivation source for type conversions
-    
 }

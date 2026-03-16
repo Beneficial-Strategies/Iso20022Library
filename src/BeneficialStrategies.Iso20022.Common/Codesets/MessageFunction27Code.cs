@@ -24,5 +24,4 @@ public enum MessageFunction27Code
     [IsoId("_oPgJAemrEemNVKPwszFC-A")]
     [Description(@"Information about the transaction.")]
     Notification = MessageFunctionCode.Notification, // same ordinal as derivation source for type conversions
-    
 }

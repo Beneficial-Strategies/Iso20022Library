@@ -23,7 +23,7 @@ public enum CallTypeCode
     [IsoId("_ha1juGliEeGaMcKyqKNRfQ_-1311622256")]
     [Description(@"Type of execution of the call feature is a lottery.")]
     Lottery,
-    
+
     /// <summary>
     /// Type of execution of the call feature is pro-rata.
     /// Encoded/decoded by serializers as &quot;PRTA&quot;.
@@ -32,5 +32,4 @@ public enum CallTypeCode
     [IsoId("_ha1juWliEeGaMcKyqKNRfQ_253023576")]
     [Description(@"Type of execution of the call feature is pro-rata.")]
     ProRata,
-    
 }

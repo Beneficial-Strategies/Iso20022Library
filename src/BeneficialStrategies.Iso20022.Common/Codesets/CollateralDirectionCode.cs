@@ -23,7 +23,7 @@ public enum CollateralDirectionCode
     [IsoId("_9_rGIAMxEeutW5-TpeYJhA")]
     [Description(@"Collateral is due to party A.|")]
     CollateralDueToPartyA,
-    
+
     /// <summary>
     /// Collateral is due to party B.
     /// Encoded/decoded by serializers as &quot;CDPB&quot;.
@@ -32,5 +32,4 @@ public enum CollateralDirectionCode
     [IsoId("_Pfo88QMyEeutW5-TpeYJhA")]
     [Description(@"Collateral is due to party B.")]
     CollateralDueToPartyB,
-    
 }

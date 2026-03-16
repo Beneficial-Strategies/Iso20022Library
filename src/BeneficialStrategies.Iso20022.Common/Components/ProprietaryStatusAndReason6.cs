@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yRcdkTp4EeWVrPy0StzzSg")]
 [DisplayName("Proprietary Status And Reason")]
-public partial record ProprietaryStatusAndReason6
+public record ProprietaryStatusAndReason6
 {
-    #nullable enable
-    
     /// <summary>
     /// Proprietary identification of the status related to an instruction.
     /// </summary>
     [IsoId("_y0NzcTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary Status")]
     [IsoXmlTag("PrtrySts")]
-    public required GenericIdentification30 ProprietaryStatus { get; init; } 
-    
+    public required GenericIdentification30 ProprietaryStatus { get; init; }
+
     /// <summary>
     /// Proprietary identification of the reason related to a proprietary status.
     /// </summary>
     [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
     [DisplayName("Proprietary Reason")]
     [IsoXmlTag("PrtryRsn")]
-    public ProprietaryReason4? ProprietaryReason { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ProprietaryReason4? ProprietaryReason { get; init; }
 }

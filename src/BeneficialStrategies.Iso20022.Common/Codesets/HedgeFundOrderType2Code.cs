@@ -23,7 +23,7 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avIaNtp-Ed-ak6NoX_4Aeg_1497408498")]
     [Description(@"Investment fund order is for a limited partnership instrument.")]
     NonUnitized = FundOrderTypeCode.NonUnitized, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order contains a side pocket component.
     /// Encoded/decoded by serializers as &quot;SPCM&quot;.
@@ -32,7 +32,7 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avIaN9p-Ed-ak6NoX_4Aeg_1497408529")]
     [Description(@"Investment fund order contains a side pocket component.")]
     SidePocketComponent = FundOrderTypeCode.SidePocketComponent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is part of a bed and breakfast transaction.
     /// Encoded/decoded by serializers as &quot;BEDB&quot;.
@@ -41,7 +41,7 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avIaONp-Ed-ak6NoX_4Aeg_1497408560")]
     [Description(@"Investment fund order is part of a bed and breakfast transaction.")]
     BedAndBreakfast = FundOrderTypeCode.BedAndBreakfast, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is a side pocket order.
     /// Encoded/decoded by serializers as &quot;SPOR&quot;.
@@ -50,7 +50,7 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avIaOdp-Ed-ak6NoX_4Aeg_1497408561")]
     [Description(@"Investment fund order is a side pocket order.")]
     SidePocketOrder = FundOrderTypeCode.SidePocketOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is for a unitized instrument.
     /// Encoded/decoded by serializers as &quot;UNIT&quot;.
@@ -59,7 +59,7 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avRkINp-Ed-ak6NoX_4Aeg_1497408590")]
     [Description(@"Investment fund order is for a unitized instrument.")]
     Unitized = FundOrderTypeCode.Unitized, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order specifies a top up.
     /// Encoded/decoded by serializers as &quot;TOPU&quot;.
@@ -68,7 +68,7 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avRkIdp-Ed-ak6NoX_4Aeg_1497408591")]
     [Description(@"Investment fund order specifies a top up.")]
     TopUp = FundOrderTypeCode.TopUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order specifies a hold back.
     /// Encoded/decoded by serializers as &quot;HOLD&quot;.
@@ -77,5 +77,4 @@ public enum HedgeFundOrderType2Code
     [IsoId("_avRkItp-Ed-ak6NoX_4Aeg_-1544341372")]
     [Description(@"Investment fund order specifies a hold back.")]
     HoldBack = FundOrderTypeCode.HoldBack, // same ordinal as derivation source for type conversions
-    
 }

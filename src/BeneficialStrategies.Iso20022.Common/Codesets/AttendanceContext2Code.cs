@@ -23,7 +23,7 @@ public enum AttendanceContext2Code
     [IsoId("_f2LJwZVJEeWu36UkS2TkoQ")]
     [Description(@"Delivery by an attendant.")]
     AttendantDelivery = AttendanceContextCode.AttendantDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delivery by a carrier.
     /// Encoded/decoded by serializers as &quot;CARR&quot;.
@@ -32,7 +32,7 @@ public enum AttendanceContext2Code
     [IsoId("_f-q-cZVJEeWu36UkS2TkoQ")]
     [Description(@"Delivery by a carrier.")]
     CarrierDelivery = AttendanceContextCode.CarrierDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delivery by the customer.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -41,7 +41,7 @@ public enum AttendanceContext2Code
     [IsoId("_gRMR0ZVJEeWu36UkS2TkoQ")]
     [Description(@"Delivery by the customer.")]
     CustomerDelivery = AttendanceContextCode.CustomerDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Full service for fuel distribution.
     /// Encoded/decoded by serializers as &quot;FULL&quot;.
@@ -50,7 +50,7 @@ public enum AttendanceContext2Code
     [IsoId("_gcBo0ZVJEeWu36UkS2TkoQ")]
     [Description(@"Full service for fuel distribution.")]
     FullServe = AttendanceContextCode.FullServe, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Self service for fuel distribution.
     /// Encoded/decoded by serializers as &quot;SELF&quot;.
@@ -59,5 +59,4 @@ public enum AttendanceContext2Code
     [IsoId("_gpQMgZVJEeWu36UkS2TkoQ")]
     [Description(@"Self service for fuel distribution.")]
     SelfServe = AttendanceContextCode.SelfServe, // same ordinal as derivation source for type conversions
-    
 }

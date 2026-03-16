@@ -23,7 +23,7 @@ public enum InformationDistribution1Code
     [IsoId("_jzUI8ROCEeKjmvxNCObNeQ")]
     [Description(@"Electronic distribution.")]
     Electronic = InformationDistributionCode.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Paper distribution.
     /// Encoded/decoded by serializers as &quot;PAPR&quot;.
@@ -32,5 +32,4 @@ public enum InformationDistribution1Code
     [IsoId("_j7gboROCEeKjmvxNCObNeQ")]
     [Description(@"Paper distribution.")]
     Paper = InformationDistributionCode.Paper, // same ordinal as derivation source for type conversions
-    
 }

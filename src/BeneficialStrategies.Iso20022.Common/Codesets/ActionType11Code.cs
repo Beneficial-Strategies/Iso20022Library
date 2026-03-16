@@ -23,7 +23,7 @@ public enum ActionType11Code
     [IsoId("_nHJlYZ1AEeeuzZPGP9QqVw")]
     [Description(@"Contact card issuer.")]
     ContactIssuer = ActionTypeCode.ContactIssuer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refer to card issuer&apos;s special conditions.
     /// Encoded/decoded by serializers as &quot;CNIS&quot;.
@@ -32,7 +32,7 @@ public enum ActionType11Code
     [IsoId("_nR3AkZ1AEeeuzZPGP9QqVw")]
     [Description(@"Refer to card issuer's special conditions.")]
     ContactIssuerSpecialConditions = ActionTypeCode.ContactIssuerSpecialConditions, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contact acquirer.
     /// Encoded/decoded by serializers as &quot;CNTA&quot;.
@@ -41,7 +41,7 @@ public enum ActionType11Code
     [IsoId("_oM7hsZ1AEeeuzZPGP9QqVw")]
     [Description(@"Contact acquirer.")]
     ContactAcquirer = ActionTypeCode.ContactAcquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card acceptor to call acquirer&apos;s security department.
     /// Encoded/decoded by serializers as &quot;CNAS&quot;.
@@ -50,7 +50,7 @@ public enum ActionType11Code
     [IsoId("_oZbFkZ1AEeeuzZPGP9QqVw")]
     [Description(@"Card acceptor to call acquirer's security department.")]
     ContactAcquirerSecurity = ActionTypeCode.ContactAcquirerSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Capture the card.
     /// Encoded/decoded by serializers as &quot;CPTR&quot;.
@@ -59,7 +59,7 @@ public enum ActionType11Code
     [IsoId("_pwdJ8Z1AEeeuzZPGP9QqVw")]
     [Description(@"Capture the card.")]
     CaptureCard = ActionTypeCode.CaptureCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional verification of cardholder required.
     /// Encoded/decoded by serializers as &quot;CHDV&quot;.
@@ -68,7 +68,7 @@ public enum ActionType11Code
     [IsoId("_qebDMZ1AEeeuzZPGP9QqVw")]
     [Description(@"Additional verification of cardholder required.")]
     CardholderVerification = ActionTypeCode.CardholderVerification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Manage account as a VIP one.
     /// Encoded/decoded by serializers as &quot;VIPM&quot;.
@@ -77,7 +77,7 @@ public enum ActionType11Code
     [IsoId("_sG3nsZ1AEeeuzZPGP9QqVw")]
     [Description(@"Manage account as a VIP one.")]
     VIPAccountManagement = ActionTypeCode.VIPAccountManagement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Track provided in the response must be updated on the card.
     /// Encoded/decoded by serializers as &quot;TRCK&quot;.
@@ -86,7 +86,7 @@ public enum ActionType11Code
     [IsoId("_tVHjgZ1AEeeuzZPGP9QqVw")]
     [Description(@"Track provided in the response must be updated on the card.")]
     UpdateTrack = ActionTypeCode.UpdateTrack, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction to be re-entered.
     /// Encoded/decoded by serializers as &quot;TRXR&quot;.
@@ -95,7 +95,7 @@ public enum ActionType11Code
     [IsoId("_uWb2kZ1AEeeuzZPGP9QqVw")]
     [Description(@"Transaction to be re-entered.")]
     ReEnterTransaction = ActionTypeCode.ReEnterTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other action defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -104,7 +104,7 @@ public enum ActionType11Code
     [IsoId("_2qgToZ1CEeeuzZPGP9QqVw")]
     [Description(@"Other action defined at national level.")]
     OtherNational = ActionTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other action defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -113,7 +113,7 @@ public enum ActionType11Code
     [IsoId("_21Nu0Z1CEeeuzZPGP9QqVw")]
     [Description(@"Other action defined at private level")]
     OtherPrivate = ActionTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Signature required.
     /// Encoded/decoded by serializers as &quot;SIGN&quot;.
@@ -122,5 +122,4 @@ public enum ActionType11Code
     [IsoId("_q7b14J54EeqkBIJTZMHl2Q")]
     [Description(@"Signature required.")]
     Signature = ActionTypeCode.Signature, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_vl8EoSDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is disabled.")]
     Disabled = InvestorProfileStatusCode.Disabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is in the process of being disabled.
     /// Encoded/decoded by serializers as &quot;DISG&quot;.
@@ -32,7 +32,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_vt9_QSDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in the process of being disabled.")]
     Disabling = InvestorProfileStatusCode.Disabling, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is enabled.
     /// Encoded/decoded by serializers as &quot;ENAB&quot;.
@@ -41,7 +41,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_v2cl0SDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is enabled.")]
     Enabled = InvestorProfileStatusCode.Enabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is in the process of being enabled.
     /// Encoded/decoded by serializers as &quot;ENBG&quot;.
@@ -50,7 +50,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_v-yCcSDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in the process of being enabled.")]
     Enabling = InvestorProfileStatusCode.Enabling, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is in admission.
     /// Encoded/decoded by serializers as &quot;ADMI&quot;.
@@ -59,7 +59,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_wBms8SDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in admission.")]
     InAdmission = InvestorProfileStatusCode.InAdmission, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is in analysis.
     /// Encoded/decoded by serializers as &quot;ANLY&quot;.
@@ -68,7 +68,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_wJ8JkSDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is in analysis.")]
     InAnalysis = InvestorProfileStatusCode.InAnalysis, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is not approved.
     /// Encoded/decoded by serializers as &quot;NAPP&quot;.
@@ -77,7 +77,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_wTBNESDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is not approved.")]
     NotApproved = InvestorProfileStatusCode.NotApproved, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is partially suspended.
     /// Encoded/decoded by serializers as &quot;PSUS&quot;.
@@ -86,7 +86,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_wV13kSDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is partially suspended.")]
     PartiallySuspended = InvestorProfileStatusCode.PartiallySuspended, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is pending approval.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -95,7 +95,7 @@ public enum InvestorProfileStatus1Code
     [IsoId("_wd3yMSDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is pending approval.")]
     PendingApproval = InvestorProfileStatusCode.PendingApproval, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the investor profile is suspended.
     /// Encoded/decoded by serializers as &quot;SUPS&quot;.
@@ -104,5 +104,4 @@ public enum InvestorProfileStatus1Code
     [IsoId("_wl6T4SDREeWCLu74WLgP4w")]
     [Description(@"Status of the investor profile is suspended.")]
     Suspended = InvestorProfileStatusCode.Suspended, // same ordinal as derivation source for type conversions
-    
 }

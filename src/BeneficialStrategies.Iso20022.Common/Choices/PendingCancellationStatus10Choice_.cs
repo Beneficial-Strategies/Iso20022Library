@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PendingCancellationStatus10Choice.NotSpecifiedReason))]
     [KnownType(typeof(PendingCancellationStatus10Choice.Reason))]
-    [JsonDerivedType(typeof(PendingCancellationStatus10Choice.NotSpecifiedReason),nameof(PendingCancellationStatus10Choice.NotSpecifiedReason))]
-    [JsonDerivedType(typeof(PendingCancellationStatus10Choice.Reason),nameof(PendingCancellationStatus10Choice.Reason))]
+    [JsonDerivedType(
+        typeof(PendingCancellationStatus10Choice.NotSpecifiedReason),
+        nameof(PendingCancellationStatus10Choice.NotSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(PendingCancellationStatus10Choice.Reason),
+        nameof(PendingCancellationStatus10Choice.Reason)
+    )]
     [IsoId("__KUE-bKiEemux5trsZcCpw")]
     [DisplayName("Pending Cancellation Status 10 Choice")]
-    public abstract partial record PendingCancellationStatus10Choice_
-    {
-    }
+    public abstract record PendingCancellationStatus10Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum MarketClientSideCode
     [IsoId("_aUTfYtp-Ed-ak6NoX_4Aeg_263219665")]
     [Description(@"Instruction is for a market side transaction.")]
     MarketSide,
-    
+
     /// <summary>
     /// Instruction is for a client side transaction.
     /// Encoded/decoded by serializers as &quot;CLNT&quot;.
@@ -32,5 +32,4 @@ public enum MarketClientSideCode
     [IsoId("_aUTfY9p-Ed-ak6NoX_4Aeg_550432167")]
     [Description(@"Instruction is for a client side transaction.")]
     ClientSide,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UKK4Ytp-Ed-ak6NoX_4Aeg_237834559")]
 [DisplayName("Corporate Action Cancellation")]
-public partial record CorporateActionCancellation1
+public record CorporateActionCancellation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies reasons for cancellation of a corporate action event.
     /// </summary>
     [IsoId("_UKK4Y9p-Ed-ak6NoX_4Aeg_564761395")]
     [DisplayName("Cancellation Reason Code")]
     [IsoXmlTag("CxlRsnCd")]
-    public required CorporateActionCancellationReason1Code CancellationReasonCode { get; init; } 
-    
+    public required CorporateActionCancellationReason1Code CancellationReasonCode { get; init; }
+
     /// <summary>
     /// Additional information about cancellation of a corporate action event.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record CorporateActionCancellation1
     [DisplayName("Cancellation Reason")]
     [IsoXmlTag("CxlRsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? CancellationReason { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? CancellationReason { get; init; }
+
     /// <summary>
     /// Specifies the status of the details of the event.
     /// </summary>
     [IsoId("_UKK4Zdp-Ed-ak6NoX_4Aeg_176414226")]
     [DisplayName("Processing Status")]
     [IsoXmlTag("PrcgSts")]
-    public required CorporateActionProcessingStatus1Choice_ ProcessingStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CorporateActionProcessingStatus1Choice_ ProcessingStatus { get; init; }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(QuantityOrTerm1Choice.SchedulePeriod))]
     [KnownType(typeof(QuantityOrTerm1Choice.Term))]
-    [JsonDerivedType(typeof(QuantityOrTerm1Choice.SchedulePeriod),nameof(QuantityOrTerm1Choice.SchedulePeriod))]
-    [JsonDerivedType(typeof(QuantityOrTerm1Choice.Term),nameof(QuantityOrTerm1Choice.Term))]
+    [JsonDerivedType(
+        typeof(QuantityOrTerm1Choice.SchedulePeriod),
+        nameof(QuantityOrTerm1Choice.SchedulePeriod)
+    )]
+    [JsonDerivedType(typeof(QuantityOrTerm1Choice.Term), nameof(QuantityOrTerm1Choice.Term))]
     [IsoId("_VVI-wCJDEe2zWP9pqvmqdw")]
     [DisplayName("Quantity Or Term 1 Choice")]
-    public abstract partial record QuantityOrTerm1Choice_
-    {
-    }
+    public abstract record QuantityOrTerm1Choice_ { }
 }

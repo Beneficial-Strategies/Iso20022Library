@@ -23,23 +23,63 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodity3Choice.MultiCommodityExotic))]
     [KnownType(typeof(AssetClassCommodity3Choice.OfficialEconomicStatistics))]
     [KnownType(typeof(AssetClassCommodity3Choice.Other))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Agricultural),nameof(AssetClassCommodity3Choice.Agricultural))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Energy),nameof(AssetClassCommodity3Choice.Energy))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Environmental),nameof(AssetClassCommodity3Choice.Environmental))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Fertilizer),nameof(AssetClassCommodity3Choice.Fertilizer))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Freight),nameof(AssetClassCommodity3Choice.Freight))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.IndustrialProduct),nameof(AssetClassCommodity3Choice.IndustrialProduct))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Metal),nameof(AssetClassCommodity3Choice.Metal))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.OtherC10),nameof(AssetClassCommodity3Choice.OtherC10))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Paper),nameof(AssetClassCommodity3Choice.Paper))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Polypropylene),nameof(AssetClassCommodity3Choice.Polypropylene))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Inflation),nameof(AssetClassCommodity3Choice.Inflation))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.MultiCommodityExotic),nameof(AssetClassCommodity3Choice.MultiCommodityExotic))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.OfficialEconomicStatistics),nameof(AssetClassCommodity3Choice.OfficialEconomicStatistics))]
-    [JsonDerivedType(typeof(AssetClassCommodity3Choice.Other),nameof(AssetClassCommodity3Choice.Other))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Agricultural),
+        nameof(AssetClassCommodity3Choice.Agricultural)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Energy),
+        nameof(AssetClassCommodity3Choice.Energy)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Environmental),
+        nameof(AssetClassCommodity3Choice.Environmental)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Fertilizer),
+        nameof(AssetClassCommodity3Choice.Fertilizer)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Freight),
+        nameof(AssetClassCommodity3Choice.Freight)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.IndustrialProduct),
+        nameof(AssetClassCommodity3Choice.IndustrialProduct)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Metal),
+        nameof(AssetClassCommodity3Choice.Metal)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.OtherC10),
+        nameof(AssetClassCommodity3Choice.OtherC10)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Paper),
+        nameof(AssetClassCommodity3Choice.Paper)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Polypropylene),
+        nameof(AssetClassCommodity3Choice.Polypropylene)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Inflation),
+        nameof(AssetClassCommodity3Choice.Inflation)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.MultiCommodityExotic),
+        nameof(AssetClassCommodity3Choice.MultiCommodityExotic)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.OfficialEconomicStatistics),
+        nameof(AssetClassCommodity3Choice.OfficialEconomicStatistics)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity3Choice.Other),
+        nameof(AssetClassCommodity3Choice.Other)
+    )]
     [IsoId("_lKiggXvyEeanCNPcMT7sSg")]
     [DisplayName("Asset Class Commodity 3 Choice")]
-    public abstract partial record AssetClassCommodity3Choice_
-    {
-    }
+    public abstract record AssetClassCommodity3Choice_ { }
 }

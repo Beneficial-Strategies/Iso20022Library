@@ -23,7 +23,7 @@ public enum EventCompletenessStatusCode
     [IsoId("_ajDtGNp-Ed-ak6NoX_4Aeg_1323729253")]
     [Description(@"Event details are complete.")]
     Complete,
-    
+
     /// <summary>
     /// Event details are not complete.
     /// Encoded/decoded by serializers as &quot;INCO&quot;.
@@ -32,5 +32,4 @@ public enum EventCompletenessStatusCode
     [IsoId("_ajNeENp-Ed-ak6NoX_4Aeg_1340352229")]
     [Description(@"Event details are not complete.")]
     Incomplete,
-    
 }

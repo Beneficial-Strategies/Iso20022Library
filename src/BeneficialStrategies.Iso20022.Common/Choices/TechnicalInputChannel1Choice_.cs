@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TechnicalInputChannel1Choice.Code))]
     [KnownType(typeof(TechnicalInputChannel1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TechnicalInputChannel1Choice.Code),nameof(TechnicalInputChannel1Choice.Code))]
-    [JsonDerivedType(typeof(TechnicalInputChannel1Choice.Proprietary),nameof(TechnicalInputChannel1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TechnicalInputChannel1Choice.Code),
+        nameof(TechnicalInputChannel1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(TechnicalInputChannel1Choice.Proprietary),
+        nameof(TechnicalInputChannel1Choice.Proprietary)
+    )]
     [IsoId("_Rpr4odp-Ed-ak6NoX_4Aeg_-1373581543")]
     [DisplayName("Technical Input Channel 1 Choice")]
-    public abstract partial record TechnicalInputChannel1Choice_
-    {
-    }
+    public abstract record TechnicalInputChannel1Choice_ { }
 }

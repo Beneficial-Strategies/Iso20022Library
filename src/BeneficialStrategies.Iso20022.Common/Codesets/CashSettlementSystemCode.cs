@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_a7WRRtp-Ed-ak6NoX_4Aeg_-901576222")]
 [Description(@"Specifies the cash settlement system used.")]
-[Derivations(typeof(CashSettlementSystem2Code),typeof(CashSettlementSystem1Code))]
+[Derivations(typeof(CashSettlementSystem2Code), typeof(CashSettlementSystem1Code))]
 public enum CashSettlementSystemCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum CashSettlementSystemCode
     [IsoId("_a7WRR9p-Ed-ak6NoX_4Aeg_-901576197")]
     [Description(@"Settle money through Bank of Korea Wire.")]
     BankOfKoreaWire,
-    
+
     /// <summary>
     /// Settle money through cheque.
     /// Encoded/decoded by serializers as &quot;CHEC&quot;.
@@ -32,7 +32,7 @@ public enum CashSettlementSystemCode
     [IsoId("_a7WRSNp-Ed-ak6NoX_4Aeg_-901576196")]
     [Description(@"Settle money through cheque.")]
     Cheque,
-    
+
     /// <summary>
     /// Settle money through UK domestic.
     /// Encoded/decoded by serializers as &quot;GBSC&quot;.
@@ -41,7 +41,7 @@ public enum CashSettlementSystemCode
     [IsoId("_a7fbMNp-Ed-ak6NoX_4Aeg_-901576180")]
     [Description(@"Settle money through UK domestic.")]
     UKDomestic,
-    
+
     /// <summary>
     /// Settle money through gross settlement system.
     /// Encoded/decoded by serializers as &quot;GROS&quot;.
@@ -50,7 +50,7 @@ public enum CashSettlementSystemCode
     [IsoId("_a7fbMdp-Ed-ak6NoX_4Aeg_-901576179")]
     [Description(@"Settle money through gross settlement system.")]
     GrossSettlementSystem,
-    
+
     /// <summary>
     /// Settle money through net settlement system.
     /// Encoded/decoded by serializers as &quot;NETS&quot;.
@@ -59,7 +59,7 @@ public enum CashSettlementSystemCode
     [IsoId("_a7fbMtp-Ed-ak6NoX_4Aeg_-901576162")]
     [Description(@"Settle money through net settlement system.")]
     NetSettlementSystem,
-    
+
     /// <summary>
     /// Settle money through CHIPS (US).
     /// Encoded/decoded by serializers as &quot;USCH&quot;.
@@ -68,7 +68,7 @@ public enum CashSettlementSystemCode
     [IsoId("_a7fbM9p-Ed-ak6NoX_4Aeg_-901576137")]
     [Description(@"Settle money through CHIPS (US).")]
     USChips,
-    
+
     /// <summary>
     /// Settle money through Fedwire (US).
     /// Encoded/decoded by serializers as &quot;USFW&quot;.
@@ -77,5 +77,4 @@ public enum CashSettlementSystemCode
     [IsoId("_a7fbNNp-Ed-ak6NoX_4Aeg_-901576136")]
     [Description(@"Settle money through Fedwire (US).")]
     FedWireUS,
-    
 }

@@ -23,5 +23,4 @@ public enum ReportPeriodActivity1Code
     [IsoId("_Lbu1sZfsEeSfnc-VXAEapg")]
     [Description(@"No transaction has been identified during the period.")]
     NoTransaction = ReportPeriodActivityCode.NoTransaction, // same ordinal as derivation source for type conversions
-    
 }

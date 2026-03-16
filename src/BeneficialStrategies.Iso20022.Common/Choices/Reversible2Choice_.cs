@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Reversible2Choice.Code))]
     [KnownType(typeof(Reversible2Choice.Proprietary))]
-    [JsonDerivedType(typeof(Reversible2Choice.Code),nameof(Reversible2Choice.Code))]
-    [JsonDerivedType(typeof(Reversible2Choice.Proprietary),nameof(Reversible2Choice.Proprietary))]
+    [JsonDerivedType(typeof(Reversible2Choice.Code), nameof(Reversible2Choice.Code))]
+    [JsonDerivedType(typeof(Reversible2Choice.Proprietary), nameof(Reversible2Choice.Proprietary))]
     [IsoId("_PFD-kZEkEeakHoV5BVecAQ")]
     [DisplayName("Reversible 2 Choice")]
-    public abstract partial record Reversible2Choice_
-    {
-    }
+    public abstract record Reversible2Choice_ { }
 }

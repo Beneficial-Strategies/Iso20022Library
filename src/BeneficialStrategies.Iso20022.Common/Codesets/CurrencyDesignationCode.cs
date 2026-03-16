@@ -23,7 +23,7 @@ public enum CurrencyDesignationCode
     [IsoId("_6C154Ad1EeSPHJIdUs1USg")]
     [Description(@"Onshore.")]
     Onshore,
-    
+
     /// <summary>
     /// Offshore.
     /// Encoded/decoded by serializers as &quot;OFFS&quot;.
@@ -32,5 +32,4 @@ public enum CurrencyDesignationCode
     [IsoId("_80VxIAd1EeSPHJIdUs1USg")]
     [Description(@"Offshore.")]
     Offshore,
-    
 }

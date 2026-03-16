@@ -21,9 +21,11 @@ public enum LoyaltyTypeTransactionTotals1Code
     /// </summary>
     [EnumMember(Value = "AWRD")]
     [IsoId("_PsWX0dxjEeioifFt1dhnJA")]
-    [Description(@"Direct or payment related award on a loyalty account. Award alone, award associated to a payment (may be with an additional award alone), award because of a payment resulting on rebates.")]
+    [Description(
+        @"Direct or payment related award on a loyalty account. Award alone, award associated to a payment (may be with an additional award alone), award because of a payment resulting on rebates."
+    )]
     Award = LoyaltyTypeTransactionTotalsCode.Award, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rebate on a total amount, sale item amount, or sale items.
     /// Encoded/decoded by serializers as &quot;REBA&quot;.
@@ -32,7 +34,7 @@ public enum LoyaltyTypeTransactionTotals1Code
     [IsoId("_PybxsdxjEeioifFt1dhnJA")]
     [Description(@"Rebate on a total amount, sale item amount, or sale items.")]
     Rebate = LoyaltyTypeTransactionTotalsCode.Rebate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Redemption on a loyalty account.
     /// Encoded/decoded by serializers as &quot;REDE&quot;.
@@ -41,7 +43,7 @@ public enum LoyaltyTypeTransactionTotals1Code
     [IsoId("_P1z10dxjEeioifFt1dhnJA")]
     [Description(@"Redemption on a loyalty account.")]
     Redemption = LoyaltyTypeTransactionTotalsCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refund of a loyalty award transaction.
     /// Encoded/decoded by serializers as &quot;AWRR&quot;.
@@ -50,7 +52,7 @@ public enum LoyaltyTypeTransactionTotals1Code
     [IsoId("_P5Vq8dxjEeioifFt1dhnJA")]
     [Description(@"Refund of a loyalty award transaction.")]
     ReverseAward = LoyaltyTypeTransactionTotalsCode.ReverseAward, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refund of a loyalty rebate transaction.
     /// Encoded/decoded by serializers as &quot;REBR&quot;.
@@ -59,7 +61,7 @@ public enum LoyaltyTypeTransactionTotals1Code
     [IsoId("_P8sg8dxjEeioifFt1dhnJA")]
     [Description(@"Refund of a loyalty rebate transaction.")]
     ReverseRebate = LoyaltyTypeTransactionTotalsCode.ReverseRebate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refund of a loyalty redemption transaction.
     /// Encoded/decoded by serializers as &quot;REDR&quot;.
@@ -68,5 +70,4 @@ public enum LoyaltyTypeTransactionTotals1Code
     [IsoId("_QAElEdxjEeioifFt1dhnJA")]
     [Description(@"Refund of a loyalty redemption transaction.")]
     ReverseRedemption = LoyaltyTypeTransactionTotalsCode.ReverseRedemption, // same ordinal as derivation source for type conversions
-    
 }

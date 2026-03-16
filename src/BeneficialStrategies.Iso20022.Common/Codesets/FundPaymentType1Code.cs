@@ -23,7 +23,7 @@ public enum FundPaymentType1Code
     [IsoId("_wli18V8xEeicg40_9gK9vQ")]
     [Description(@"Payment instrument is a bankers draft.")]
     BankersDraft = FundPaymentTypeCode.BankersDraft, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment instrument is a cash account.
     /// Encoded/decoded by serializers as &quot;CACC&quot;.
@@ -32,7 +32,7 @@ public enum FundPaymentType1Code
     [IsoId("_wqTaIV8xEeicg40_9gK9vQ")]
     [Description(@"Payment instrument is a cash account.")]
     CashAccount = FundPaymentTypeCode.CashAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment instrument is a cheque.
     /// Encoded/decoded by serializers as &quot;CHEQ&quot;.
@@ -41,7 +41,7 @@ public enum FundPaymentType1Code
     [IsoId("_w1dhQV8xEeicg40_9gK9vQ")]
     [Description(@"Payment instrument is a cheque.")]
     Cheque = FundPaymentTypeCode.Cheque, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment instrument is a credit transfer.
     /// Encoded/decoded by serializers as &quot;CRDT&quot;.
@@ -50,7 +50,7 @@ public enum FundPaymentType1Code
     [IsoId("_w9Cv8V8xEeicg40_9gK9vQ")]
     [Description(@"Payment instrument is a credit transfer.")]
     CreditTransfer = FundPaymentTypeCode.CreditTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment instrument is a direct debit.
     /// Encoded/decoded by serializers as &quot;DDEB&quot;.
@@ -59,7 +59,7 @@ public enum FundPaymentType1Code
     [IsoId("_xC2dAV8xEeicg40_9gK9vQ")]
     [Description(@"Payment instrument is a direct debit.")]
     DirectDebit = FundPaymentTypeCode.DirectDebit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment instrument is a payment card.
     /// Encoded/decoded by serializers as &quot;CARD&quot;.
@@ -68,5 +68,4 @@ public enum FundPaymentType1Code
     [IsoId("_xIzUAV8xEeicg40_9gK9vQ")]
     [Description(@"Payment instrument is a payment card.")]
     PaymentCard = FundPaymentTypeCode.PaymentCard, // same ordinal as derivation source for type conversions
-    
 }

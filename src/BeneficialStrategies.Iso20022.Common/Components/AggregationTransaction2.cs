@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f-ARIY0nEeWzoK7sd7oTyw")]
 [DisplayName("Aggregation Transaction")]
-public partial record AggregationTransaction2
+public record AggregationTransaction2
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and time of the first payment.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record AggregationTransaction2
     [DisplayName("First Payment Date Time")]
     [IsoXmlTag("FrstPmtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? FirstPaymentDateTime { get; init; } 
-    
+    public IsoISODateTime? FirstPaymentDateTime { get; init; }
+
     /// <summary>
     /// Date and time of the last payment.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record AggregationTransaction2
     [DisplayName("Last Payment Date Time")]
     [IsoXmlTag("LastPmtDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastPaymentDateTime { get; init; } 
-    
+    public IsoISODateTime? LastPaymentDateTime { get; init; }
+
     /// <summary>
     /// Total number of payments that has been aggregated.
     /// </summary>
@@ -43,17 +41,13 @@ public partial record AggregationTransaction2
     [DisplayName("Number Of Payments")]
     [IsoXmlTag("NbOfPmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfPayments { get; init; } 
-    
+    public IsoNumber? NumberOfPayments { get; init; }
+
     /// <summary>
     /// Individual payment that has been aggregated.
     /// </summary>
     [IsoId("_gJ7NR40nEeWzoK7sd7oTyw")]
     [DisplayName("Individual Payment")]
     [IsoXmlTag("IndvPmt")]
-    public DetailedAmount14? IndividualPayment { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DetailedAmount14? IndividualPayment { get; init; }
 }

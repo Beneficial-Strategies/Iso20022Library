@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T4lZI9p-Ed-ak6NoX_4Aeg_1996983846")]
 [DisplayName("Proxy")]
-public partial record Proxy1
+public record Proxy1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of proxy.
     /// </summary>
@@ -27,16 +25,12 @@ public partial record Proxy1
     [MinLength(1)]
     [MaxLength(2)]
     public SimpleValueList<ProxyType2Code> ProxyType { get; init; } = [];
-    
+
     /// <summary>
     /// Identifies an authorized proxy which has been assigned by the issuer of the meeting.
     /// </summary>
     [IsoId("_T4lZJdp-Ed-ak6NoX_4Aeg_-1010516715")]
     [DisplayName("Preassigned Proxy")]
     [IsoXmlTag("PrssgndPrxy")]
-    public IndividualPerson14? PreassignedProxy { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IndividualPerson14? PreassignedProxy { get; init; }
 }

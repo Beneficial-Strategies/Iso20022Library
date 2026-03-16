@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iobOIYtcEeST3ocKVc8_qA")]
 [DisplayName("Security Parameters")]
-public partial record SecurityParameters5
+public record SecurityParameters5
 {
-    #nullable enable
-    
     /// <summary>
     /// Random value from the host.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record SecurityParameters5
     [DisplayName("Host Challenge")]
     [IsoXmlTag("HstChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? HostChallenge { get; init; } 
-    
+    public IsoMax140Binary? HostChallenge { get; init; }
+
     /// <summary>
     /// Cryptographic key used to store in the ATM.
     /// </summary>
     [IsoId("_i2b08YtcEeST3ocKVc8_qA")]
     [DisplayName("Key")]
     [IsoXmlTag("Key")]
-    public CryptographicKey8? Key { get; init; } 
-    
+    public CryptographicKey8? Key { get; init; }
+
     /// <summary>
     /// Digital signature of implicit data depending on the security scheme download procedure.
     /// </summary>
     [IsoId("_i2b084tcEeST3ocKVc8_qA")]
     [DisplayName("Digital Signature")]
     [IsoXmlTag("DgtlSgntr")]
-    public ContentInformationType14? DigitalSignature { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ContentInformationType14? DigitalSignature { get; init; }
 }

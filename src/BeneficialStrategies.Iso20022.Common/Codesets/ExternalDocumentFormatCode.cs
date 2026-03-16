@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-M07BG7iEeKo25nLKvGr8w_1805570785")]
-[Description(@"Specifies the external document format code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external document format code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalDocumentFormat1Code))]
 public enum ExternalDocumentFormatCode
 {
@@ -24,7 +26,7 @@ public enum ExternalDocumentFormatCode
     [IsoId("_uPIrM_RYEeuLhpyIdtJzwg")]
     [Description(@"Document format is PDF.")]
     PDF,
-    
+
     /// <summary>
     /// Document format is XML.
     /// Encoded/decoded by serializers as &quot;DXML&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDocumentFormatCode
     [IsoId("_uPIrNvRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is XML.")]
     XML,
-    
+
     /// <summary>
     /// Document format is a spreadsheet.
     /// Encoded/decoded by serializers as &quot;SDSH&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDocumentFormatCode
     [IsoId("_uPIrOfRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is a spreadsheet.")]
     Spreadsheet,
-    
+
     /// <summary>
     /// Document format is Word.
     /// Encoded/decoded by serializers as &quot;WORD&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDocumentFormatCode
     [IsoId("_uPIrPPRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is Word.")]
     Word,
-    
+
     /// <summary>
     /// Document format is XSLT.
     /// Encoded/decoded by serializers as &quot;XSLT&quot;.
@@ -60,5 +62,4 @@ public enum ExternalDocumentFormatCode
     [IsoId("_uPScMPRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is XSLT.")]
     XSLT,
-    
 }

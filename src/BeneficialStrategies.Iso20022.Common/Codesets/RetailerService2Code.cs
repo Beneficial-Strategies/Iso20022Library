@@ -21,54 +21,66 @@ public enum RetailerService2Code
     /// </summary>
     [EnumMember(Value = "FSPQ")]
     [IsoId("_O3O2IduREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System requests to the POI System to perform a payment(Purchase/Refund/PWCB/MOTO Payment/...).")]
+    [Description(
+        @"The Sale System requests to the POI System to perform a payment(Purchase/Refund/PWCB/MOTO Payment/...)."
+    )]
     FinancialPaymentRequest = RetailerServiceCode.FinancialPaymentRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System requests to the POI System to perform a reversal partial or complete to cancel a former payment service.
     /// Encoded/decoded by serializers as &quot;FSRQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSRQ")]
     [IsoId("_PqSqwduREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System requests to the POI System to perform a reversal partial or complete to cancel a former payment service.")]
+    [Description(
+        @"The Sale System requests to the POI System to perform a reversal partial or complete to cancel a former payment service."
+    )]
     FinancialReversalRequest = RetailerServiceCode.FinancialReversalRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System requests to the POI System to perform balance inquiry on the main account.
     /// Encoded/decoded by serializers as &quot;FSIQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSIQ")]
     [IsoId("_RAOi8duREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System requests to the POI System to perform balance inquiry on the main account.")]
+    [Description(
+        @"The Sale System requests to the POI System to perform balance inquiry on the main account."
+    )]
     FinancialBalanceInquiryRequest = RetailerServiceCode.FinancialBalanceInquiryRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Batch message pair is used to request or get the result of transactions (payment, loyalty and reversal) performed without connection to the Sale system (Payment delivery).
     /// Encoded/decoded by serializers as &quot;FSBQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSBQ")]
     [IsoId("_R-MnEduREeiB5uLfkg9ZJA")]
-    [Description(@"The Batch message pair is used to request or get the result of transactions (payment, loyalty and reversal) performed without connection to the Sale system (Payment delivery).")]
+    [Description(
+        @"The Batch message pair is used to request or get the result of transactions (payment, loyalty and reversal) performed without connection to the Sale system (Payment delivery)."
+    )]
     FinancialBatchRequest = RetailerServiceCode.FinancialBatchRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System requests to the POI System a loyalty service like loading or redeem.
     /// Encoded/decoded by serializers as &quot;FSLQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSLQ")]
     [IsoId("_TB44sduREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System requests to the POI System a loyalty service like loading or redeem.")]
+    [Description(
+        @"The Sale System requests to the POI System a loyalty service like loading or redeem."
+    )]
     FinancialLoyaltyRequest = RetailerServiceCode.FinancialLoyaltyRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System requests to the POI System to manage a stored value card or account (eg. Load, Payment, Reimbursement).
     /// Encoded/decoded by serializers as &quot;FSVQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSVQ")]
     [IsoId("_TuL-AduREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System requests to the POI System to manage a stored value card or account (eg. Load, Payment, Reimbursement).")]
+    [Description(
+        @"The Sale System requests to the POI System to manage a stored value card or account (eg. Load, Payment, Reimbursement)."
+    )]
     FinancialStoredValueRequest = RetailerServiceCode.FinancialStoredValueRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System requests to the POI System to enable a service on its side.
     /// Encoded/decoded by serializers as &quot;FSEQ&quot;.
@@ -77,23 +89,26 @@ public enum RetailerService2Code
     [IsoId("_UMlKMduREeiB5uLfkg9ZJA")]
     [Description(@"The Sale System requests to the POI System to enable a service on its side.")]
     FinancialEnableServiceRequest = RetailerServiceCode.FinancialEnableServiceRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sale System requests to the POI System to handle a card data acquisition on the card reader.
     /// Encoded/decoded by serializers as &quot;FSAQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSAQ")]
     [IsoId("_UsbH4duREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System requests to the POI System to handle a card data acquisition on the card reader.")]
+    [Description(
+        @"The Sale System requests to the POI System to handle a card data acquisition on the card reader."
+    )]
     FinancialCardAcquisitionRequest = RetailerServiceCode.FinancialCardAcquisitionRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// The Sale System request to the POI System different kinds of transaction reconciliation. 
+    /// The Sale System request to the POI System different kinds of transaction reconciliation.
     /// Encoded/decoded by serializers as &quot;FSCQ&quot;.
     /// </summary>
     [EnumMember(Value = "FSCQ")]
     [IsoId("_Va1tEduREeiB5uLfkg9ZJA")]
-    [Description(@"The Sale System request to the POI System different kinds of transaction reconciliation. ")]
+    [Description(
+        @"The Sale System request to the POI System different kinds of transaction reconciliation. "
+    )]
     FinancialReconciliationRequest = RetailerServiceCode.FinancialReconciliationRequest, // same ordinal as derivation source for type conversions
-    
 }

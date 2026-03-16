@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x29aEVyGEe24CqbZJK5XxA")]
 [DisplayName("Missing Valuations Transaction Data")]
-public partial record MissingValuationsTransactionData2
+public record MissingValuationsTransactionData2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a transaction.
     /// </summary>
     [IsoId("_x3tA8VyGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TradeTransactionIdentification24 TransactionIdentification { get; init; } 
-    
+    public required TradeTransactionIdentification24 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Mark-to-market valuation of the contract, or mark-to-model valuation
     /// </summary>
     [IsoId("_x3tA81yGEe24CqbZJK5XxA")]
     [DisplayName("Valuation Amount")]
     [IsoXmlTag("ValtnAmt")]
-    public AmountAndDirection106? ValuationAmount { get; init; } 
-    
+    public AmountAndDirection106? ValuationAmount { get; init; }
+
     /// <summary>
     /// Date and time of the valuation.
     /// </summary>
     [IsoId("_x3tA9VyGEe24CqbZJK5XxA")]
     [DisplayName("Valuation Time Stamp")]
     [IsoXmlTag("ValtnTmStmp")]
-    public DateAndDateTime2Choice_? ValuationTimeStamp { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateAndDateTime2Choice_? ValuationTimeStamp { get; init; }
 }

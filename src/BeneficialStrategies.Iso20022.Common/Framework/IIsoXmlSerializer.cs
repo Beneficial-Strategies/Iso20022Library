@@ -1,4 +1,1 @@
-﻿namespace BeneficialStrategies.Iso20022.Framework
-{
-
-}
+﻿namespace BeneficialStrategies.Iso20022.Framework { }

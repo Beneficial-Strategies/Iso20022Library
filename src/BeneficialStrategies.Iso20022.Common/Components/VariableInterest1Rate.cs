@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qkr_dtp-Ed-ak6NoX_4Aeg_1444401531")]
 [DisplayName("Variable Interest 1 Rate")]
-public partial record VariableInterest1Rate
+public record VariableInterest1Rate
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the index taken into account to calculate the variable interest rate.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record VariableInterest1Rate
     [DisplayName("Index")]
     [IsoXmlTag("Indx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Index { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Index { get; init; }
+
     /// <summary>
     /// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
     /// </summary>
@@ -35,9 +33,5 @@ public partial record VariableInterest1Rate
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? BasisPointSpread { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoNumber? BasisPointSpread { get; init; }
 }

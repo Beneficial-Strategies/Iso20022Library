@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cLJsVK7REemG7MmivSuE5g")]
 [DisplayName("Notification Update")]
-public partial record NotificationUpdate1
+public record NotificationUpdate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a previously sent meeting notification message.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record NotificationUpdate1
     [DisplayName("Previous Notification Identification")]
     [IsoXmlTag("PrvsNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PreviousNotificationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PreviousNotificationIdentification { get; init; }
+
     /// <summary>
     /// Indicates whether a meeting instruction must be resent in case the parameters of the meeting are changed and the meeting instruction has already been sent.
     /// </summary>
@@ -35,9 +33,5 @@ public partial record NotificationUpdate1
     [DisplayName("Reconfirm Instructions")]
     [IsoXmlTag("RcnfrmInstrs")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ReconfirmInstructions { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator ReconfirmInstructions { get; init; }
 }

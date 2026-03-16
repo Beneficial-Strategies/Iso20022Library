@@ -23,5 +23,4 @@ public enum AllegementReasonCode
     [IsoId("__0Jx0tojEeC60axPepSq7g_1199081548")]
     [Description(@"Allegement has been received and no match could be found.")]
     AllegementReceived,
-    
 }

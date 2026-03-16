@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ErrorHandling2Choice.Code))]
     [KnownType(typeof(ErrorHandling2Choice.Proprietary))]
-    [JsonDerivedType(typeof(ErrorHandling2Choice.Code),nameof(ErrorHandling2Choice.Code))]
-    [JsonDerivedType(typeof(ErrorHandling2Choice.Proprietary),nameof(ErrorHandling2Choice.Proprietary))]
+    [JsonDerivedType(typeof(ErrorHandling2Choice.Code), nameof(ErrorHandling2Choice.Code))]
+    [JsonDerivedType(
+        typeof(ErrorHandling2Choice.Proprietary),
+        nameof(ErrorHandling2Choice.Proprietary)
+    )]
     [IsoId("_jXcINxbvEeOy-PlRuFSUzQ")]
     [DisplayName("Error Handling 2 Choice")]
-    public abstract partial record ErrorHandling2Choice_
-    {
-    }
+    public abstract record ErrorHandling2Choice_ { }
 }

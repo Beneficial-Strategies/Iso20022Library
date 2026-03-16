@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_08BmYcZdEeiCDcGzDHI_9Q")]
 [DisplayName("Fraud Case Details")]
-public partial record FraudCaseDetails1
+public record FraudCaseDetails1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of market segment of confirmed fraud.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record FraudCaseDetails1
     [DisplayName("Market Segment")]
     [IsoXmlTag("MktSgmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MarketSegment { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MarketSegment { get; init; }
+
     /// <summary>
     /// Locator reference.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record FraudCaseDetails1
     [DisplayName("Locator Number")]
     [IsoXmlTag("LctrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? LocatorNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? LocatorNumber { get; init; }
+
     /// <summary>
     /// Reference to fraudulent case.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record FraudCaseDetails1
     [DisplayName("Case Reference")]
     [IsoXmlTag("CaseRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CaseReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CaseReference { get; init; }
+
     /// <summary>
     /// Indicates whether the party that committed fraud was arrested or not.
     /// False: the party was not arrested
@@ -58,9 +56,5 @@ public partial record FraudCaseDetails1
     [DisplayName("Arrest Indicator")]
     [IsoXmlTag("ArrstInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ArrestIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? ArrestIndicator { get; init; }
 }

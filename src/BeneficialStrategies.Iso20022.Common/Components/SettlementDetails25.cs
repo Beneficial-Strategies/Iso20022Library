@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W7BPt9zvEd-a791rB7tZXQ")]
 [DisplayName("Settlement Details")]
-public partial record SettlementDetails25
+public record SettlementDetails25
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies whether the transaction is on hold/blocked/frozen.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record SettlementDetails25
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? HoldIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? HoldIndicator { get; init; }
+
     /// <summary>
     /// Identifies the type of securities transaction.
     /// </summary>
     [IsoId("_W7BPvdzvEd-a791rB7tZXQ")]
     [DisplayName("Securities Transaction Type")]
     [IsoXmlTag("SctiesTxTp")]
-    public required SecuritiesTransactionType7Choice_ SecuritiesTransactionType { get; init; } 
-    
+    public required SecuritiesTransactionType7Choice_ SecuritiesTransactionType { get; init; }
+
     /// <summary>
     /// Conditions under which the order/trade is to be settled.
     /// </summary>
     [IsoId("_W7BPv9zvEd-a791rB7tZXQ")]
     [DisplayName("Settlement Transaction Condition")]
     [IsoXmlTag("SttlmTxCond")]
-    public SettlementTransactionCondition5Choice_? SettlementTransactionCondition { get; init; } 
-    
+    public SettlementTransactionCondition5Choice_? SettlementTransactionCondition { get; init; }
+
     /// <summary>
     /// Specifies whether partial settlement is allowed.
     /// </summary>
@@ -50,65 +48,61 @@ public partial record SettlementDetails25
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? PartialSettlementIndicator { get; init; }
+
     /// <summary>
     /// Specifies whether there is change of beneficial ownership.
     /// </summary>
     [IsoId("_W7BPw9zvEd-a791rB7tZXQ")]
     [DisplayName("Beneficial Ownership")]
     [IsoXmlTag("BnfclOwnrsh")]
-    public BeneficialOwnership1Choice_? BeneficialOwnership { get; init; } 
-    
+    public BeneficialOwnership1Choice_? BeneficialOwnership { get; init; }
+
     /// <summary>
     /// Specifies the category of cash clearing system, for example, cheque clearing.
     /// </summary>
     [IsoId("_W7BPx9zvEd-a791rB7tZXQ")]
     [DisplayName("Cash Clearing System")]
     [IsoXmlTag("CshClrSys")]
-    public CashSettlementSystem1Choice_? CashClearingSystem { get; init; } 
-    
+    public CashSettlementSystem1Choice_? CashClearingSystem { get; init; }
+
     /// <summary>
     /// Specifies if an instruction is for a market side or a client side transaction.
     /// </summary>
     [IsoId("_W7BPydzvEd-a791rB7tZXQ")]
     [DisplayName("Market Client Side")]
     [IsoXmlTag("MktClntSd")]
-    public MarketClientSide1Choice_? MarketClientSide { get; init; } 
-    
+    public MarketClientSide1Choice_? MarketClientSide { get; init; }
+
     /// <summary>
     /// Specifies whether registration should occur upon receipt.
     /// </summary>
     [IsoId("_W7BPzdzvEd-a791rB7tZXQ")]
     [DisplayName("Registration")]
     [IsoXmlTag("Regn")]
-    public Registration1Choice_? Registration { get; init; } 
-    
+    public Registration1Choice_? Registration { get; init; }
+
     /// <summary>
     /// Specifies whether the rate is fixed, variable or a forfeit.
     /// </summary>
     [IsoId("_W7BPz9zvEd-a791rB7tZXQ")]
     [DisplayName("Repurchase Type")]
     [IsoXmlTag("RpTp")]
-    public RepurchaseType8Choice_? RepurchaseType { get; init; } 
-    
+    public RepurchaseType8Choice_? RepurchaseType { get; init; }
+
     /// <summary>
     /// Specifies whether the settlement transaction is to be settled through an RTGS or a non RTGS system.
     /// </summary>
     [IsoId("_W7BP09zvEd-a791rB7tZXQ")]
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS1Choice_? SecuritiesRTGS { get; init; } 
-    
+    public SecuritiesRTGS1Choice_? SecuritiesRTGS { get; init; }
+
     /// <summary>
     /// Specifies the stamp duty type or exemption reason applicable to the settlement transaction.
     /// </summary>
     [IsoId("_W7BP29zvEd-a791rB7tZXQ")]
     [DisplayName("Stamp Duty Tax Basis")]
     [IsoXmlTag("StmpDtyTaxBsis")]
-    public GenericIdentification20? StampDutyTaxBasis { get; init; } 
-    
-    
-    #nullable disable
-    
+    public GenericIdentification20? StampDutyTaxBasis { get; init; }
 }

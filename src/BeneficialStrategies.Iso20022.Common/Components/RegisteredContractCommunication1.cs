@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oDuGMdL6EeSDLevdaFPXHw")]
 [DisplayName("Registered Contract Communication")]
-public partial record RegisteredContractCommunication1
+public record RegisteredContractCommunication1
 {
-    #nullable enable
-    
     /// <summary>
     /// Method by which the registered contract document is exchanged.
     /// </summary>
     [IsoId("_t3zksNL6EeSDLevdaFPXHw")]
     [DisplayName("Method")]
     [IsoXmlTag("Mtd")]
-    public required CommunicationMethod4Code Method { get; init; } 
-    
+    public required CommunicationMethod4Code Method { get; init; }
+
     /// <summary>
     /// Date of the exchange.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record RegisteredContractCommunication1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate Date { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODate Date { get; init; }
 }

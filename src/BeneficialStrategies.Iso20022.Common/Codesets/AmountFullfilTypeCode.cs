@@ -22,7 +22,7 @@ public enum AmountFullfilTypeCode
     [IsoId("_bo8XEtp-Ed-ak6NoX_4Aeg_-525318706")]
     [Description(@"Full redemption.")]
     Completely,
-    
+
     /// <summary>
     /// Partial redemption.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -31,7 +31,7 @@ public enum AmountFullfilTypeCode
     [IsoId("_bo8XE9p-Ed-ak6NoX_4Aeg_-525315741")]
     [Description(@"Partial redemption.")]
     Partial,
-    
+
     /// <summary>
     /// Full or partial redemption.
     /// Encoded/decoded by serializers as &quot;TOPA&quot;.
@@ -40,5 +40,4 @@ public enum AmountFullfilTypeCode
     [IsoId("_bo8XFNp-Ed-ak6NoX_4Aeg_-524392767")]
     [Description(@"Full or partial redemption.")]
     TotalOrPartial,
-    
 }

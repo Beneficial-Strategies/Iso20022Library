@@ -12,7 +12,12 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_TVWQBgEcEeCQm6a_G2yO_w_644173117")]
 [Description(@"Specifies the type of communication channel.")]
-[Derivations(typeof(TransactionChannel1Code),typeof(TransactionChannel2Code),typeof(TransactionChannel3Code),typeof(TransactionChannel5Code))]
+[Derivations(
+    typeof(TransactionChannel1Code),
+    typeof(TransactionChannel2Code),
+    typeof(TransactionChannel3Code),
+    typeof(TransactionChannel5Code)
+)]
 public enum TransactionChannelCode
 {
     /// <summary>
@@ -23,7 +28,7 @@ public enum TransactionChannelCode
     [IsoId("_TVWQBwEcEeCQm6a_G2yO_w_977545378")]
     [Description(@"Mail order.")]
     MailOrder,
-    
+
     /// <summary>
     /// Telephone order.
     /// Encoded/decoded by serializers as &quot;TLPH&quot;.
@@ -32,7 +37,7 @@ public enum TransactionChannelCode
     [IsoId("_TVWQCAEcEeCQm6a_G2yO_w_1632008527")]
     [Description(@"Telephone order.")]
     TelephoneOrder,
-    
+
     /// <summary>
     /// Electronic commerce.
     /// Encoded/decoded by serializers as &quot;ECOM&quot;.
@@ -41,7 +46,7 @@ public enum TransactionChannelCode
     [IsoId("_TVWQCQEcEeCQm6a_G2yO_w_-1433707025")]
     [Description(@"Electronic commerce.")]
     ElectronicCommerce,
-    
+
     /// <summary>
     /// Payment on television.
     /// Encoded/decoded by serializers as &quot;TVPY&quot;.
@@ -50,7 +55,7 @@ public enum TransactionChannelCode
     [IsoId("_TVWQCgEcEeCQm6a_G2yO_w_-2041458064")]
     [Description(@"Payment on television.")]
     TelevisionPayment,
-    
+
     /// <summary>
     /// Office or branch.
     /// Encoded/decoded by serializers as &quot;BRAN&quot;.
@@ -59,7 +64,7 @@ public enum TransactionChannelCode
     [IsoId("_TaM_UBRFEeOKWo1NF21OVw")]
     [Description(@"Office or branch.")]
     OfficeOrBranch,
-    
+
     /// <summary>
     /// Home banking.
     /// Encoded/decoded by serializers as &quot;HOBA&quot;.
@@ -68,7 +73,7 @@ public enum TransactionChannelCode
     [IsoId("_TwXckBRFEeOKWo1NF21OVw")]
     [Description(@"Home banking.")]
     HomeBanking,
-    
+
     /// <summary>
     /// Financial advisor.
     /// Encoded/decoded by serializers as &quot;FIAD&quot;.
@@ -77,7 +82,7 @@ public enum TransactionChannelCode
     [IsoId("_UBVQwBRFEeOKWo1NF21OVw")]
     [Description(@"Financial advisor.")]
     FinancialAdvisor,
-    
+
     /// <summary>
     /// Payment performed through a cardholder mobile device.
     /// Encoded/decoded by serializers as &quot;MOBL&quot;.
@@ -86,7 +91,7 @@ public enum TransactionChannelCode
     [IsoId("_0EyQwGkBEeS7zPBpvm732w")]
     [Description(@"Payment performed through a cardholder mobile device.")]
     MobilePayment,
-    
+
     /// <summary>
     /// Electronic commerce with cardholder authentication.
     /// Encoded/decoded by serializers as &quot;SECM&quot;.
@@ -95,7 +100,7 @@ public enum TransactionChannelCode
     [IsoId("_3fSowGkBEeS7zPBpvm732w")]
     [Description(@"Electronic commerce with cardholder authentication.")]
     SecuredElectronicCommerce,
-    
+
     /// <summary>
     /// Payment performed through a merchant mobile device.
     /// Encoded/decoded by serializers as &quot;MPOS&quot;.
@@ -104,5 +109,4 @@ public enum TransactionChannelCode
     [IsoId("_BAAuQLDHEeaW-9Sj0pzN5A")]
     [Description(@"Payment performed through a merchant mobile device.")]
     MobilePOS,
-    
 }

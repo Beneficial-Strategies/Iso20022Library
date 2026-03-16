@@ -19,18 +19,22 @@ public sealed class ValueList<T> : ImmutableValueList<T>
     public ValueList() { }
 
     /// <summary>Creates a list by copying elements from <paramref name="items"/>.</summary>
-    public ValueList(ReadOnlySpan<T> items) : base(items) { }
+    public ValueList(ReadOnlySpan<T> items)
+        : base(items) { }
 
     /// <summary>Creates a list by copying elements from <paramref name="items"/>.</summary>
-    public ValueList(IEnumerable<T> items) : base(items) { }
+    public ValueList(IEnumerable<T> items)
+        : base(items) { }
 
     /// <summary>
     /// Not supported — <see cref="ValueList{T}"/> is immutable.
     /// Use collection expressions (<c>[ item1, item2 ]</c>) to construct instances.
     /// </summary>
     /// <exception cref="NotSupportedException">Always thrown.</exception>
-    public void Add(T item) => throw new NotSupportedException(
-        $"{nameof(ValueList<T>)} is immutable. Use collection expressions [] to construct.");
+    public void Add(T item) =>
+        throw new NotSupportedException(
+            $"{nameof(ValueList<T>)} is immutable. Use collection expressions [] to construct."
+        );
 }
 
 /// <summary>Factory required by <see cref="CollectionBuilderAttribute"/> on <see cref="ValueList{T}"/>.</summary>

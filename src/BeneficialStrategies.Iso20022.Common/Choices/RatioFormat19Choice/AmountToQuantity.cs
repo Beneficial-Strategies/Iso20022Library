@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RatioFormat19Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat19Choice
     /// </summary>
     [IsoId("_gCEKtIlWEeWPSZi0kAOXhg")]
     [DisplayName("Amount To Quantity")]
-    public partial record AmountToQuantity : RatioFormat19Choice_
+    public record AmountToQuantity : RatioFormat19Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Cash amount.
         /// </summary>
         [IsoId("_7y0l5UEKEeWVgfuHGaKtRQ")]
         [DisplayName("Amount")]
         [IsoXmlTag("Amt")]
-        public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-        
+        public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
         /// <summary>
         /// Quantity expressed as number.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat19Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Quantity { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoDecimalNumber Quantity { get; init; }
     }
 }

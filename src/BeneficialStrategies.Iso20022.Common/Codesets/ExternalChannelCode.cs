@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-M07AW7iEeKo25nLKvGr8w_1800475441")]
-[Description(@"Specifies the external submission or presentation channel code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external submission or presentation channel code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalChannel1Code))]
 public enum ExternalChannelCode
 {
@@ -24,7 +26,7 @@ public enum ExternalChannelCode
     [IsoId("_uOZEXPRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by courier.")]
     Courier,
-    
+
     /// <summary>
     /// Transmission by e-mail.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -33,7 +35,7 @@ public enum ExternalChannelCode
     [IsoId("_uOi1UPRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by e-mail.")]
     Email,
-    
+
     /// <summary>
     /// Transmission by fax.
     /// Encoded/decoded by serializers as &quot;FAXI&quot;.
@@ -42,7 +44,7 @@ public enum ExternalChannelCode
     [IsoId("_uOi1U_RYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by fax.")]
     Fax,
-    
+
     /// <summary>
     /// Delivery by messenger.
     /// Encoded/decoded by serializers as &quot;MESS&quot;.
@@ -51,7 +53,7 @@ public enum ExternalChannelCode
     [IsoId("_uOi1VvRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by messenger.")]
     Messenger,
-    
+
     /// <summary>
     /// Delivery by postal service.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -60,7 +62,7 @@ public enum ExternalChannelCode
     [IsoId("_uOi1WfRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by postal service.")]
     Post,
-    
+
     /// <summary>
     /// Delivery by registered mail services.
     /// Encoded/decoded by serializers as &quot;REGM&quot;.
@@ -69,7 +71,7 @@ public enum ExternalChannelCode
     [IsoId("_uOi1XPRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by registered mail services.")]
     RegisteredMail,
-    
+
     /// <summary>
     /// Transfer via secure e-mail.
     /// Encoded/decoded by serializers as &quot;SEMA&quot;.
@@ -78,7 +80,7 @@ public enum ExternalChannelCode
     [IsoId("_uOsmUPRYEeuLhpyIdtJzwg")]
     [Description(@"Transfer via secure e-mail.")]
     SecureEmail,
-    
+
     /// <summary>
     /// Transmission by SWIFTNet FileAct.
     /// Encoded/decoded by serializers as &quot;SWFA&quot;.
@@ -87,16 +89,16 @@ public enum ExternalChannelCode
     [IsoId("_uOsmU_RYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFTNet FileAct.")]
     SWIFTNetFileAct,
-    
+
     /// <summary>
-    /// Transmission by SWIFTNet InterAct. 
+    /// Transmission by SWIFTNet InterAct.
     /// Encoded/decoded by serializers as &quot;SWIA&quot;.
     /// </summary>
     [EnumMember(Value = "SWIA")]
     [IsoId("_uOsmVvRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFTNet InterAct. ")]
     SWIFTNetInterAct,
-    
+
     /// <summary>
     /// Transmission by SWIFT (FIN).
     /// Encoded/decoded by serializers as &quot;SWMT&quot;.
@@ -105,7 +107,7 @@ public enum ExternalChannelCode
     [IsoId("_uOsmWfRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFT (FIN).")]
     SWIFTMT,
-    
+
     /// <summary>
     /// Transmission by SWIFTNet.
     /// Encoded/decoded by serializers as &quot;SWMX&quot;.
@@ -114,7 +116,7 @@ public enum ExternalChannelCode
     [IsoId("_uO1wQPRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFTNet.")]
     SWIFTMX,
-    
+
     /// <summary>
     /// Transmission by telecommunications service.
     /// Encoded/decoded by serializers as &quot;TELE&quot;.
@@ -123,7 +125,7 @@ public enum ExternalChannelCode
     [IsoId("_uO1wQ_RYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by telecommunications service.")]
     Telecommunication,
-    
+
     /// <summary>
     /// Available via Web upload/download
     /// Encoded/decoded by serializers as &quot;WEBM&quot;.
@@ -132,5 +134,4 @@ public enum ExternalChannelCode
     [IsoId("_uO_hQPRYEeuLhpyIdtJzwg")]
     [Description(@"Available via Web upload/download")]
     WebUploadDownload,
-    
 }

@@ -23,7 +23,7 @@ public enum BrokeredDealCode
     [IsoId("_WQ54UHvREeWrWYBng3OpVw")]
     [Description(@"Transaction was arranged by a third party broking agent.||")]
     BrokeredTransaction,
-    
+
     /// <summary>
     /// Transaction was arranged directly by the reporting agent.
     /// Encoded/decoded by serializers as &quot;BILA&quot;.
@@ -32,5 +32,4 @@ public enum BrokeredDealCode
     [IsoId("_WXrOsHvREeWrWYBng3OpVw")]
     [Description(@"Transaction was arranged directly by the reporting agent.")]
     BilateralTransaction,
-    
 }

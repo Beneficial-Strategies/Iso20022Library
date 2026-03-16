@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AccountIdentification6Choice.ForAllAccounts))]
     [KnownType(typeof(AccountIdentification6Choice.AccountsList))]
-    [JsonDerivedType(typeof(AccountIdentification6Choice.ForAllAccounts),nameof(AccountIdentification6Choice.ForAllAccounts))]
-    [JsonDerivedType(typeof(AccountIdentification6Choice.AccountsList),nameof(AccountIdentification6Choice.AccountsList))]
+    [JsonDerivedType(
+        typeof(AccountIdentification6Choice.ForAllAccounts),
+        nameof(AccountIdentification6Choice.ForAllAccounts)
+    )]
+    [JsonDerivedType(
+        typeof(AccountIdentification6Choice.AccountsList),
+        nameof(AccountIdentification6Choice.AccountsList)
+    )]
     [IsoId("_QSgqVdp-Ed-ak6NoX_4Aeg_-131069357")]
     [DisplayName("Account Identification 6 Choice")]
-    public abstract partial record AccountIdentification6Choice_
-    {
-    }
+    public abstract record AccountIdentification6Choice_ { }
 }

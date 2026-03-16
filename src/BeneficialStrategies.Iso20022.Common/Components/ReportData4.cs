@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7xjgAS43EeK7-OZOLIksSw")]
 [DisplayName("Report Data")]
-public partial record ReportData4
+public record ReportData4
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the report as assigned by the sender.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ReportData4
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
     /// <summary>
     /// Value date for which the pay-in schedule is generated.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record ReportData4
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; } 
-    
+    public required IsoISODate ValueDate { get; init; }
+
     /// <summary>
     /// Date and time on which the report is generated. The offset with UTC may also be specified.
     /// </summary>
@@ -44,16 +42,16 @@ public partial record ReportData4
     [DisplayName("Date And Time Stamp")]
     [IsoXmlTag("DtAndTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DateAndTimeStamp { get; init; } 
-    
+    public required IsoISODateTime DateAndTimeStamp { get; init; }
+
     /// <summary>
     /// Type of pay-in schedule.
     /// </summary>
     [IsoId("_8AsvUS43EeK7-OZOLIksSw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required Entry2Code Type { get; init; } 
-    
+    public required Entry2Code Type { get; init; }
+
     /// <summary>
     /// Defines the schedule timing that is, whether it is an initial or a revised schedule.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record ReportData4
     [DisplayName("Schedule Type")]
     [IsoXmlTag("SchdlTp")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText ScheduleType { get; init; } 
-    
+    public required IsoExact4AlphaNumericText ScheduleType { get; init; }
+
     /// <summary>
     /// To indicate the requested CLS Settlement Session that the related trade is part of.
     /// </summary>
@@ -70,9 +68,5 @@ public partial record ReportData4
     [DisplayName("Settlement Session Identifier")]
     [IsoXmlTag("SttlmSsnIdr")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoExact4AlphaNumericText? SettlementSessionIdentifier { get; init; }
 }

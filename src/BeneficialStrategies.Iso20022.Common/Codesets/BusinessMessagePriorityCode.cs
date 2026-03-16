@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_BusinessMessagePriorityCode")]
-[Description(@"Specifies the priority levels for the BusinessMessage. The different priorities are typically user / service / implementation dependent. The semantics of the different values for a Mesage (Set) need to be defined by the relevant user community (SEG.).")]
-public enum BusinessMessagePriorityCode
-{
-}
+[Description(
+    @"Specifies the priority levels for the BusinessMessage. The different priorities are typically user / service / implementation dependent. The semantics of the different values for a Mesage (Set) need to be defined by the relevant user community (SEG.)."
+)]
+public enum BusinessMessagePriorityCode { }

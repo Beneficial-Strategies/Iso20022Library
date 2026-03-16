@@ -21,16 +21,19 @@ public enum CollateralAppliedExcessCode
     /// </summary>
     [EnumMember(Value = "APLD")]
     [IsoId("_MaRvcAF6EeutW5-TpeYJhA")]
-    [Description(@"Collateral used by the collateral receiver to discharge liabilities owed to it by the collateral provider.|")]
+    [Description(
+        @"Collateral used by the collateral receiver to discharge liabilities owed to it by the collateral provider.|"
+    )]
     Applied,
-    
+
     /// <summary>
     /// Collateral held by the collateral receiver either in anticipation of future liabilities or towards previously liabilities no longer owed to it.
     /// Encoded/decoded by serializers as &quot;EXCS&quot;.
     /// </summary>
     [EnumMember(Value = "EXCS")]
     [IsoId("_WGhLQAF6EeutW5-TpeYJhA")]
-    [Description(@"Collateral held by the collateral receiver either in anticipation of future liabilities or towards previously liabilities no longer owed to it.|")]
+    [Description(
+        @"Collateral held by the collateral receiver either in anticipation of future liabilities or towards previously liabilities no longer owed to it.|"
+    )]
     Excess,
-    
 }

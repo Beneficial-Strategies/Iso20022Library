@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_2SRssiBpEeugLNJneiyzbA")]
-[Description(@"Specifies the confirmation for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets.")]
+[Description(
+    @"Specifies the confirmation for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleSpecifiedAddress1Code
 {
@@ -24,5 +26,4 @@ public enum ValidationRuleSpecifiedAddress1Code
     [IsoId("_D9RdESBqEeugLNJneiyzbA")]
     [Description(@"Specified address.")]
     SpecifiedAddress = ValidationRuleCode.SpecifiedAddress, // same ordinal as derivation source for type conversions
-    
 }

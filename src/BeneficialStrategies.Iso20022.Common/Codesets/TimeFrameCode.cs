@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_EKEEgDccEeidBoT_PugKiA")]
 [Description(@"Specifies a time frame.")]
-[Derivations(typeof(TimeFrame1Code),typeof(TimeFrame2Code))]
+[Derivations(typeof(TimeFrame1Code), typeof(TimeFrame2Code))]
 public enum TimeFrameCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum TimeFrameCode
     [IsoId("_M-z3oDccEeidBoT_PugKiA")]
     [Description(@"Less than one year.")]
     VeryShortTerm,
-    
+
     /// <summary>
     /// Greater than or equal to one year.
     /// Encoded/decoded by serializers as &quot;SHOR&quot;.
@@ -32,7 +32,7 @@ public enum TimeFrameCode
     [IsoId("_REf6oDccEeidBoT_PugKiA")]
     [Description(@"Greater than or equal to one year.")]
     ShortTerm,
-    
+
     /// <summary>
     /// Greater than or equal to three years.
     /// Encoded/decoded by serializers as &quot;MEDM&quot;.
@@ -41,7 +41,7 @@ public enum TimeFrameCode
     [IsoId("_WWEh8DccEeidBoT_PugKiA")]
     [Description(@"Greater than or equal to three years.")]
     MediumTerm,
-    
+
     /// <summary>
     /// Greater than five years.
     /// Encoded/decoded by serializers as &quot;LONG&quot;.
@@ -50,7 +50,7 @@ public enum TimeFrameCode
     [IsoId("_ZR0hYDccEeidBoT_PugKiA")]
     [Description(@"Greater than five years.")]
     LongTerm,
-    
+
     /// <summary>
     /// Time frame is neutral.
     /// Encoded/decoded by serializers as &quot;NEUT&quot;.
@@ -59,7 +59,7 @@ public enum TimeFrameCode
     [IsoId("_bgDTgDccEeidBoT_PugKiA")]
     [Description(@"Time frame is neutral.")]
     Neutral,
-    
+
     /// <summary>
     /// Hold to maturity.
     /// Encoded/decoded by serializers as &quot;HOLD&quot;.
@@ -68,5 +68,4 @@ public enum TimeFrameCode
     [IsoId("_3DJ9wIELEeiw-daIkkmMqQ")]
     [Description(@"Hold to maturity.")]
     Hold,
-    
 }

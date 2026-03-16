@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CurrencyOrDigitalTokenAmount2Choice.Amount))]
     [KnownType(typeof(CurrencyOrDigitalTokenAmount2Choice.DigitalTokenAmount))]
-    [JsonDerivedType(typeof(CurrencyOrDigitalTokenAmount2Choice.Amount),nameof(CurrencyOrDigitalTokenAmount2Choice.Amount))]
-    [JsonDerivedType(typeof(CurrencyOrDigitalTokenAmount2Choice.DigitalTokenAmount),nameof(CurrencyOrDigitalTokenAmount2Choice.DigitalTokenAmount))]
+    [JsonDerivedType(
+        typeof(CurrencyOrDigitalTokenAmount2Choice.Amount),
+        nameof(CurrencyOrDigitalTokenAmount2Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(CurrencyOrDigitalTokenAmount2Choice.DigitalTokenAmount),
+        nameof(CurrencyOrDigitalTokenAmount2Choice.DigitalTokenAmount)
+    )]
     [IsoId("_jqWwgUj3Ee-KhcStGV4xTg")]
     [DisplayName("Currency Or Digital Token Amount2Choice")]
-    public abstract partial record CurrencyOrDigitalTokenAmount2Choice_
-    {
-    }
+    public abstract record CurrencyOrDigitalTokenAmount2Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V7AH8Ax0EeKa_56Jbsi1RQ")]
 [DisplayName("Memory Characteristics")]
-public partial record MemoryCharacteristics1
+public record MemoryCharacteristics1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification or name of the memory.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MemoryCharacteristics1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Total size of the memory unit.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record MemoryCharacteristics1
     [DisplayName("Total Size")]
     [IsoXmlTag("TtlSz")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber TotalSize { get; init; } 
-    
+    public required IsoDecimalNumber TotalSize { get; init; }
+
     /// <summary>
     /// Total size of the available memory.
     /// </summary>
@@ -44,17 +42,13 @@ public partial record MemoryCharacteristics1
     [DisplayName("Free Size")]
     [IsoXmlTag("FreeSz")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber FreeSize { get; init; } 
-    
+    public required IsoDecimalNumber FreeSize { get; init; }
+
     /// <summary>
     /// Memory unit of the sizes.
     /// </summary>
     [IsoId("_344isAx0EeKa_56Jbsi1RQ")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public required MemoryUnit1Code Unit { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required MemoryUnit1Code Unit { get; init; }
 }

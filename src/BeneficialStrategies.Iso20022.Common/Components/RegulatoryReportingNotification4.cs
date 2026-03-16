@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5zPGwTEyEe6g-ffJsqGiSA")]
 [DisplayName("Regulatory Reporting Notification4")]
-public partial record RegulatoryReportingNotification4
+public record RegulatoryReportingNotification4
 {
-    #nullable enable
-
     /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public required PartyIdentification272 AccountOwner { get; init; } 
+    public required PartyIdentification272 AccountOwner { get; init; }
 
     /// <summary>
     /// Account Servicer.
     /// </summary>
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
-    public required BranchAndFinancialInstitutionIdentification8 AccountServicer { get; init; } 
+    public required BranchAndFinancialInstitutionIdentification8 AccountServicer { get; init; }
 
     /// <summary>
     /// Transaction Certificate.
@@ -44,9 +42,5 @@ public partial record RegulatoryReportingNotification4
     /// </summary>
     [DisplayName("Transaction Notification Identification")]
     [IsoXmlTag("TxNtfctnId")]
-    public required IsoMax35Text TransactionNotificationIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax35Text TransactionNotificationIdentification { get; init; }
 }

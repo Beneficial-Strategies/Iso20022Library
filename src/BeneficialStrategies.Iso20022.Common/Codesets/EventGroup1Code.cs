@@ -23,5 +23,4 @@ public enum EventGroup1Code
     [IsoId("_1tTXAzL3EeKU9IrkkToqcw_-766484011")]
     [Description(@"Redemption domain events.")]
     Redemption = EventGroupCode.Redemption, // same ordinal as derivation source for type conversions
-    
 }

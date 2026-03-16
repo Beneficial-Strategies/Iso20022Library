@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LwvhYBIgEeamBoux7a_UUg")]
 [DisplayName("Country Code And Name")]
-public partial record CountryCodeAndName3
+public record CountryCodeAndName3
 {
-    #nullable enable
-    
     /// <summary>
     /// Country is specified by its code.
     /// </summary>
     [IsoId("_LwvhYhIgEeamBoux7a_UUg")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required CountryCode Code { get; init; } 
-    
+    public required CountryCode Code { get; init; }
+
     /// <summary>
     /// Country is specified by its name.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record CountryCodeAndName3
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text Name { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text Name { get; init; }
 }

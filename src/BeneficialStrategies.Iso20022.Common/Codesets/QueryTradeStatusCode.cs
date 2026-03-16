@@ -23,7 +23,7 @@ public enum QueryTradeStatusCode
     [IsoId("_kHkRwKacEeSR8qifggAitQ")]
     [Description(@"Query for all trades.")]
     QueryAllStatus,
-    
+
     /// <summary>
     /// Query for new trades.
     /// Encoded/decoded by serializers as &quot;QNTR&quot;.
@@ -32,7 +32,7 @@ public enum QueryTradeStatusCode
     [IsoId("_kRQZQKacEeSR8qifggAitQ")]
     [Description(@"Query for new trades.")]
     QueryNewTrade,
-    
+
     /// <summary>
     /// Query for trades have been canceled.
     /// Encoded/decoded by serializers as &quot;QCTR&quot;.
@@ -41,7 +41,7 @@ public enum QueryTradeStatusCode
     [IsoId("_kVkRgKacEeSR8qifggAitQ")]
     [Description(@"Query for trades have been canceled.")]
     QueryCanceledTrade,
-    
+
     /// <summary>
     /// Query for trades have been replaced.
     /// Encoded/decoded by serializers as &quot;QRTR&quot;.
@@ -50,7 +50,7 @@ public enum QueryTradeStatusCode
     [IsoId("_kXgLMKacEeSR8qifggAitQ")]
     [Description(@"Query for trades have been replaced.")]
     QueryReplacedTrade,
-    
+
     /// <summary>
     /// Query for emergency trades.
     /// Encoded/decoded by serializers as &quot;QETR&quot;.
@@ -59,7 +59,7 @@ public enum QueryTradeStatusCode
     [IsoId("_yRy70KacEeSR8qifggAitQ")]
     [Description(@"Query for emergency trades.")]
     QueryEmergencyTrade,
-    
+
     /// <summary>
     /// Query for cancelling trades.
     /// Encoded/decoded by serializers as &quot;QCIR&quot;.
@@ -68,5 +68,4 @@ public enum QueryTradeStatusCode
     [IsoId("_8K2roKacEeSR8qifggAitQ")]
     [Description(@"Query for cancelling trades.")]
     QueryCancellingTrade,
-    
 }

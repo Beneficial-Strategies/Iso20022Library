@@ -23,7 +23,7 @@ public enum Reporting2Code
     [IsoId("_ZTMAo9p-Ed-ak6NoX_4Aeg_-495638960")]
     [Description(@"Trade details are to be reported to a stock exchange.")]
     StockExchange = ReportingCode.StockExchange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade details are to be reported to a regulatory organisation.
     /// Encoded/decoded by serializers as &quot;REGU&quot;.
@@ -32,14 +32,15 @@ public enum Reporting2Code
     [IsoId("_ZTMApNp-Ed-ak6NoX_4Aeg_-255523631")]
     [Description(@"Trade details are to be reported to a regulatory organisation.")]
     RegulatoryOrganisation = ReportingCode.RegulatoryOrganisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Report is deferred, for example, because the order was executed in partial fills.
     /// Encoded/decoded by serializers as &quot;DEFR&quot;.
     /// </summary>
     [EnumMember(Value = "DEFR")]
     [IsoId("_ZTMApdp-Ed-ak6NoX_4Aeg_-210271843")]
-    [Description(@"Report is deferred, for example, because the order was executed in partial fills.")]
+    [Description(
+        @"Report is deferred, for example, because the order was executed in partial fills."
+    )]
     DeferredReport = ReportingCode.DeferredReport, // same ordinal as derivation source for type conversions
-    
 }

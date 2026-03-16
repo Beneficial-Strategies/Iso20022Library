@@ -23,7 +23,7 @@ public enum UndertakingStatus1Code
     [IsoId("_gYwzlnymEeGWJuGCfvwOsQ")]
     [Description(@"Accepted in accordance with technical validation.")]
     AcceptedTechnicalValidation = UndertakingStatusCode.AcceptedTechnicalValidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pending further processing.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,7 +32,7 @@ public enum UndertakingStatus1Code
     [IsoId("_i6nFRnymEeGWJuGCfvwOsQ")]
     [Description(@"Pending further processing.")]
     Pending = UndertakingStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received.
     /// Encoded/decoded by serializers as &quot;RCVD&quot;.
@@ -41,7 +41,7 @@ public enum UndertakingStatus1Code
     [IsoId("_kDL25nymEeGWJuGCfvwOsQ")]
     [Description(@"Received.")]
     Received = UndertakingStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -50,5 +50,4 @@ public enum UndertakingStatus1Code
     [IsoId("_kTSIZnymEeGWJuGCfvwOsQ")]
     [Description(@"Rejected.")]
     Rejected = UndertakingStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

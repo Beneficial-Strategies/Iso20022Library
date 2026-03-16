@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RepoCallRequestStatus1Choice.Code))]
     [KnownType(typeof(RepoCallRequestStatus1Choice.Proprietary))]
-    [JsonDerivedType(typeof(RepoCallRequestStatus1Choice.Code),nameof(RepoCallRequestStatus1Choice.Code))]
-    [JsonDerivedType(typeof(RepoCallRequestStatus1Choice.Proprietary),nameof(RepoCallRequestStatus1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RepoCallRequestStatus1Choice.Code),
+        nameof(RepoCallRequestStatus1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(RepoCallRequestStatus1Choice.Proprietary),
+        nameof(RepoCallRequestStatus1Choice.Proprietary)
+    )]
     [IsoId("_UXIWVdp-Ed-ak6NoX_4Aeg_-695454227")]
     [DisplayName("Repo Call Request Status 1 Choice")]
-    public abstract partial record RepoCallRequestStatus1Choice_
-    {
-    }
+    public abstract record RepoCallRequestStatus1Choice_ { }
 }

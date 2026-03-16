@@ -23,7 +23,7 @@ public enum FleetPurchaseType1Code
     [IsoId("_knUwcTEnEemzCpWiCwK4aQ")]
     [Description(@"Fuel")]
     Fuel = FleetPurchaseTypeCode.Fuel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Non fuel
     /// Encoded/decoded by serializers as &quot;NONF&quot;.
@@ -32,7 +32,7 @@ public enum FleetPurchaseType1Code
     [IsoId("_lSZGsTEnEemzCpWiCwK4aQ")]
     [Description(@"Non fuel")]
     NonFuel = FleetPurchaseTypeCode.NonFuel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fuel and non fuel
     /// Encoded/decoded by serializers as &quot;FANF&quot;.
@@ -41,5 +41,4 @@ public enum FleetPurchaseType1Code
     [IsoId("_lomAMTEnEemzCpWiCwK4aQ")]
     [Description(@"Fuel and non fuel")]
     FuelAndNonFuel = FleetPurchaseTypeCode.FuelAndNonFuel, // same ordinal as derivation source for type conversions
-    
 }

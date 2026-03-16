@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QhajIK9aEeyk7opzt6Qlaw")]
 [DisplayName("Reference")]
-public partial record Reference22
+public record Reference22
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of the reference.
     /// </summary>
@@ -25,34 +23,30 @@ public partial record Reference22
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Name { get; init; }
+
     /// <summary>
     /// Issuer of the reference.
     /// </summary>
     [IsoId("_nS5W4K9aEeyk7opzt6Qlaw")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public required PartyIdentification135 Issuer { get; init; } 
-    
+    public required PartyIdentification135 Issuer { get; init; }
+
     /// <summary>
     /// Value of the reference.
     /// </summary>
     [IsoId("_1H4JsK9aEeyk7opzt6Qlaw")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required ReferenceValue1Choice_ Value { get; init; } 
-    
+    public required ReferenceValue1Choice_ Value { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_SQnacK9bEeyk7opzt6Qlaw")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

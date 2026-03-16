@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TpFkm9p-Ed-ak6NoX_4Aeg_1645643941")]
 [DisplayName("Securities Financing Transaction Details")]
-public partial record SecuritiesFinancingTransactionDetails2
+public record SecuritiesFinancingTransactionDetails2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unambiguous identification of the underlying securities financing trade as assigned by the instructing party. The identification is common to all collateral pieces (one or many).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Securities Financing Trade Identification")]
     [IsoXmlTag("SctiesFincgTradId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesFinancingTradeIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SecuritiesFinancingTradeIdentification { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the second leg of the transaction as known by the account owner (or the instructing party acting on its behalf).
     /// </summary>
@@ -35,9 +33,9 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Closing Leg Identification")]
     [IsoXmlTag("ClsgLegId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ClosingLegIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ClosingLegIdentification { get; init; }
+
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Pool Identification")]
     [IsoXmlTag("PoolId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PoolIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PoolIdentification { get; init; }
+
     /// <summary>
     /// Identification assigned by the account servicer to unambiguously identify a corporate action event.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Corporate Action Event Identification")]
     [IsoXmlTag("CorpActnEvtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CorporateActionEventIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CorporateActionEventIdentification { get; init; }
+
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the triparty agent&apos;s point of view.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Triparty Agent Collateral Transaction Identification")]
     [IsoXmlTag("TrptyAgtCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TripartyAgentCollateralTransactionIdentification { get; init; }
+
     /// <summary>
     /// Unique reference identifying the triparty collateral management transaction from the client&apos;s point of view.
     /// </summary>
@@ -75,241 +73,241 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Client Triparty Collateral Transaction Identification")]
     [IsoXmlTag("ClntTrptyCollTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ClientTripartyCollateralTransactionIdentification { get; init; }
+
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_TpPVltp-Ed-ak6NoX_4Aeg_-960302470")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification13Choice_? AccountOwner { get; init; } 
-    
+    public PartyIdentification13Choice_? AccountOwner { get; init; }
+
     /// <summary>
     /// Account to or from which a securities entry is made.
     /// </summary>
     [IsoId("_TpPVl9p-Ed-ak6NoX_4Aeg_-947373145")]
     [DisplayName("Safekeeping Account")]
     [IsoXmlTag("SfkpgAcct")]
-    public required SecuritiesAccount13 SafekeepingAccount { get; init; } 
-    
+    public required SecuritiesAccount13 SafekeepingAccount { get; init; }
+
     /// <summary>
     /// Place where the securities are safe-kept, physically or notionally. This place can be, for example, a local custodian, a Central Securities Depository (CSD) or an International Central Securities Depository (ICSD).
     /// </summary>
     [IsoId("_TpYfgNp-Ed-ak6NoX_4Aeg_-205718269")]
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; init; } 
-    
+    public SafekeepingPlaceFormat3Choice_? SafekeepingPlace { get; init; }
+
     /// <summary>
     /// Context, or geographic environment, in which trading parties may meet in order to negotiate and execute trades among themselves.
     /// </summary>
     [IsoId("_TpYfgdp-Ed-ak6NoX_4Aeg_-1576603783")]
     [DisplayName("Place Of Trade")]
     [IsoXmlTag("PlcOfTrad")]
-    public MarketIdentification4? PlaceOfTrade { get; init; } 
-    
+    public MarketIdentification4? PlaceOfTrade { get; init; }
+
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
     [IsoId("_TpYfgtp-Ed-ak6NoX_4Aeg_-1219420280")]
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification11 FinancialInstrumentIdentification { get; init; } 
-    
+    public required SecurityIdentification11 FinancialInstrumentIdentification { get; init; }
+
     /// <summary>
     /// Total quantity of securities to be settled.
     /// </summary>
     [IsoId("_TpYfg9p-Ed-ak6NoX_4Aeg_-1449971763")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required Quantity6Choice_ SettlementQuantity { get; init; } 
-    
+    public required Quantity6Choice_ SettlementQuantity { get; init; }
+
     /// <summary>
     /// Total amount of money to be paid or received in exchange for the securities at the opening of a securities financing transaction.
     /// </summary>
     [IsoId("_TpYfhNp-Ed-ak6NoX_4Aeg_-2051182071")]
     [DisplayName("Opening Settlement Amount")]
     [IsoXmlTag("OpngSttlmAmt")]
-    public AmountAndDirection8? OpeningSettlementAmount { get; init; } 
-    
+    public AmountAndDirection8? OpeningSettlementAmount { get; init; }
+
     /// <summary>
     /// Total amount of money to be settled to terminate the transaction.
     /// </summary>
     [IsoId("_TpYfhdp-Ed-ak6NoX_4Aeg_1645645381")]
     [DisplayName("Termination Transaction Amount")]
     [IsoXmlTag("TermntnTxAmt")]
-    public AmountAndDirection4? TerminationTransactionAmount { get; init; } 
-    
+    public AmountAndDirection4? TerminationTransactionAmount { get; init; }
+
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
     /// </summary>
     [IsoId("_TpYfhtp-Ed-ak6NoX_4Aeg_-134855136")]
     [DisplayName("Opening Settlement Date")]
     [IsoXmlTag("OpngSttlmDt")]
-    public required SettlementDate2Choice_ OpeningSettlementDate { get; init; } 
-    
+    public required SettlementDate2Choice_ OpeningSettlementDate { get; init; }
+
     /// <summary>
     /// Closing date/time or maturity date/time of the transaction.
     /// </summary>
     [IsoId("_TpYfh9p-Ed-ak6NoX_4Aeg_1645645722")]
     [DisplayName("Termination Date")]
     [IsoXmlTag("TermntnDt")]
-    public TerminationDate2Choice_? TerminationDate { get; init; } 
-    
+    public TerminationDate2Choice_? TerminationDate { get; init; }
+
     /// <summary>
     /// Specifies the date/time on which the trade was executed.
     /// </summary>
     [IsoId("_TpYfiNp-Ed-ak6NoX_4Aeg_-425749503")]
     [DisplayName("Trade Date")]
     [IsoXmlTag("TradDt")]
-    public TradeDate1Choice_? TradeDate { get; init; } 
-    
+    public TradeDate1Choice_? TradeDate { get; init; }
+
     /// <summary>
     /// Date and time at which the securities are to be delivered or received.
     /// </summary>
     [IsoId("_TpYfidp-Ed-ak6NoX_4Aeg_-884608896")]
     [DisplayName("Expected Settlement Date")]
     [IsoXmlTag("XpctdSttlmDt")]
-    public DateAndDateTimeChoice_? ExpectedSettlementDate { get; init; } 
-    
+    public DateAndDateTimeChoice_? ExpectedSettlementDate { get; init; }
+
     /// <summary>
     /// For against payment transactions, the value date/time at which the account servicer expects the settlement amount to be credited or debited.
     /// </summary>
     [IsoId("_TpiQgNp-Ed-ak6NoX_4Aeg_-998447962")]
     [DisplayName("Expected Value Date")]
     [IsoXmlTag("XpctdValDt")]
-    public DateAndDateTimeChoice_? ExpectedValueDate { get; init; } 
-    
+    public DateAndDateTimeChoice_? ExpectedValueDate { get; init; }
+
     /// <summary>
     /// Date and time after the settlement date specified in the trade, used for pool trades resulting from the original To Be Assigned (TBA) securities.
     /// </summary>
     [IsoId("_TpiQgdp-Ed-ak6NoX_4Aeg_-1881681249")]
     [DisplayName("Late Delivery Date")]
     [IsoXmlTag("LateDlvryDt")]
-    public DateAndDateTimeChoice_? LateDeliveryDate { get; init; } 
-    
+    public DateAndDateTimeChoice_? LateDeliveryDate { get; init; }
+
     /// <summary>
     /// Date/Time at which rate change has taken place.
     /// </summary>
     [IsoId("_TpiQgtp-Ed-ak6NoX_4Aeg_1645644056")]
     [DisplayName("Rate Change Date")]
     [IsoXmlTag("RateChngDt")]
-    public DateAndDateTimeChoice_? RateChangeDate { get; init; } 
-    
+    public DateAndDateTimeChoice_? RateChangeDate { get; init; }
+
     /// <summary>
     /// Specifies the type of securities financing transaction, that is, repurchase agreement, reverse repurchase agreement, securities lending or securities borrowing.
     /// </summary>
     [IsoId("_TpiQg9p-Ed-ak6NoX_4Aeg_-1622076787")]
     [DisplayName("Securities Financing Transaction Type")]
     [IsoXmlTag("SctiesFincgTxTp")]
-    public required SecuritiesFinancingTransactionType1Code SecuritiesFinancingTransactionType { get; init; } 
-    
+    public required SecuritiesFinancingTransactionType1Code SecuritiesFinancingTransactionType { get; init; }
+
     /// <summary>
     /// Specifies if the movement on a securities account results from a deliver or a receive instruction.
     /// </summary>
     [IsoId("_TpiQhNp-Ed-ak6NoX_4Aeg_-1059913188")]
     [DisplayName("Securities Movement Type")]
     [IsoXmlTag("SctiesMvmntTp")]
-    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; } 
-    
+    public required ReceiveDelivery1Code SecuritiesMovementType { get; init; }
+
     /// <summary>
     /// Specifies how the transaction is to be settled, for example, against payment.
     /// </summary>
     [IsoId("_TpiQhdp-Ed-ak6NoX_4Aeg_1589786673")]
     [DisplayName("Payment")]
     [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; } 
-    
+    public required DeliveryReceiptType2Code Payment { get; init; }
+
     /// <summary>
     /// Parameters applied to the settlement of a security transfer.
     /// </summary>
     [IsoId("_TpiQhtp-Ed-ak6NoX_4Aeg_752973076")]
     [DisplayName("Settlement Parameters")]
     [IsoXmlTag("SttlmParams")]
-    public SettlementDetails10? SettlementParameters { get; init; } 
-    
+    public SettlementDetails10? SettlementParameters { get; init; }
+
     /// <summary>
     /// Specifies whether the rate is fixed or variable.
     /// </summary>
     [IsoId("_TpiQh9p-Ed-ak6NoX_4Aeg_1645644334")]
     [DisplayName("Rate Type")]
     [IsoXmlTag("RateTp")]
-    public RateType5Choice_? RateType { get; init; } 
-    
+    public RateType5Choice_? RateType { get; init; }
+
     /// <summary>
     /// Index or support rate used together with the spread to calculate the|repurchase rate.
     /// </summary>
     [IsoId("_TpiQiNp-Ed-ak6NoX_4Aeg_1645644766")]
     [DisplayName("Variable Rate Support")]
     [IsoXmlTag("VarblRateSpprt")]
-    public RateName1? VariableRateSupport { get; init; } 
-    
+    public RateName1? VariableRateSupport { get; init; }
+
     /// <summary>
     /// Rate to be used to recalculate the repurchase amount.
     /// </summary>
     [IsoId("_TpiQidp-Ed-ak6NoX_4Aeg_1645644797")]
     [DisplayName("Repurchase Rate")]
     [IsoXmlTag("RpRate")]
-    public Rate2? RepurchaseRate { get; init; } 
-    
+    public Rate2? RepurchaseRate { get; init; }
+
     /// <summary>
     /// Percentage mark-up on a loan consideration used to reflect the lender&apos;s risk.
     /// </summary>
     [IsoId("_TpsBgNp-Ed-ak6NoX_4Aeg_1645644827")]
     [DisplayName("Stock Loan Margin")]
     [IsoXmlTag("StockLnMrgn")]
-    public Rate2? StockLoanMargin { get; init; } 
-    
+    public Rate2? StockLoanMargin { get; init; }
+
     /// <summary>
     /// Haircut or valuation factor on the security expressed as a percentage.
     /// </summary>
     [IsoId("_TpsBgdp-Ed-ak6NoX_4Aeg_1645644858")]
     [DisplayName("Securities Haircut")]
     [IsoXmlTag("SctiesHrcut")]
-    public Rate2? SecuritiesHaircut { get; init; } 
-    
+    public Rate2? SecuritiesHaircut { get; init; }
+
     /// <summary>
     /// Interest rate to be paid on the transaction amount, as agreed between the counterparties.
     /// </summary>
     [IsoId("_TpsBgtp-Ed-ak6NoX_4Aeg_1645644889")]
     [DisplayName("Pricing Rate")]
     [IsoXmlTag("PricgRate")]
-    public RateOrName1Choice_? PricingRate { get; init; } 
-    
+    public RateOrName1Choice_? PricingRate { get; init; }
+
     /// <summary>
     /// Repurchase spread expressed as a rate; margin over or under an index that determines the repurchase rate.
     /// </summary>
     [IsoId("_TpsBg9p-Ed-ak6NoX_4Aeg_1645644919")]
     [DisplayName("Spread")]
     [IsoXmlTag("Sprd")]
-    public Rate2? Spread { get; init; } 
-    
+    public Rate2? Spread { get; init; }
+
     /// <summary>
     /// Identifies the chain of delivering settlement parties.
     /// </summary>
     [IsoId("_TpsBhNp-Ed-ak6NoX_4Aeg_-1935149034")]
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties5? DeliveringSettlementParties { get; init; } 
-    
+    public SettlementParties5? DeliveringSettlementParties { get; init; }
+
     /// <summary>
     /// Identifies the chain of receiving settlement parties.
     /// </summary>
     [IsoId("_TpsBhdp-Ed-ak6NoX_4Aeg_-1681180873")]
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties5? ReceivingSettlementParties { get; init; } 
-    
+    public SettlementParties5? ReceivingSettlementParties { get; init; }
+
     /// <summary>
     /// Party, either an individual or organisation, whose assets are being invested.
     /// </summary>
     [IsoId("_TpsBhtp-Ed-ak6NoX_4Aeg_478644276")]
     [DisplayName("Investor")]
     [IsoXmlTag("Invstr")]
-    public PartyIdentification14Choice_? Investor { get; init; } 
-    
+    public PartyIdentification14Choice_? Investor { get; init; }
+
     /// <summary>
     /// Provides additional settlement processing information which can not be included within the structured fields of the message.
     /// </summary>
@@ -317,10 +315,6 @@ public partial record SecuritiesFinancingTransactionDetails2
     [DisplayName("Settlement Instruction Processing Additional Details")]
     [IsoXmlTag("SttlmInstrPrcgAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? SettlementInstructionProcessingAdditionalDetails { get; init; }
 }

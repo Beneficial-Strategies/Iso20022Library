@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1OAyUWNqEe6rDI7BtgptxA")]
 [DisplayName("Investigation Reason2")]
-public partial record InvestigationReason2
+public record InvestigationReason2
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Request Data.
     /// </summary>
     [DisplayName("Additional Request Data")]
     [IsoXmlTag("AddtlReqData")]
-    public AdditionalRequestData1Choice_? AdditionalRequestData { get; init; } 
+    public AdditionalRequestData1Choice_? AdditionalRequestData { get; init; }
 
     /// <summary>
     /// Enclosed File.
@@ -37,14 +35,14 @@ public partial record InvestigationReason2
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public required InvestigationReason1Choice_ Reason { get; init; } 
+    public required InvestigationReason1Choice_ Reason { get; init; }
 
     /// <summary>
     /// Reason Sub Type.
     /// </summary>
     [DisplayName("Reason Sub Type")]
     [IsoXmlTag("RsnSubTp")]
-    public InvestigationReasonSubType1Choice_? ReasonSubType { get; init; } 
+    public InvestigationReasonSubType1Choice_? ReasonSubType { get; init; }
 
     /// <summary>
     /// Related File Data.
@@ -58,16 +56,12 @@ public partial record InvestigationReason2
     /// </summary>
     [DisplayName("Related Investigation Data")]
     [IsoXmlTag("RltdInvstgtnData")]
-    public RelatedInvestigationData1? RelatedInvestigationData { get; init; } 
+    public RelatedInvestigationData1? RelatedInvestigationData { get; init; }
 
     /// <summary>
     /// Sequence.
     /// </summary>
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
-    public IsoMax3Number? Sequence { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax3Number? Sequence { get; init; }
 }

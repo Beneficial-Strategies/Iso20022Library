@@ -23,7 +23,7 @@ public enum CheckCodeLine1Code
     [IsoId("_jJnMoa4EEeWL1uap3dNhCQ")]
     [Description(@"Magnetic ink character digitally encoded with 7 sticks.")]
     CMC7 = CheckCodeLineCode.CMC7, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Magnetic ink character recognition., conform to ISO 1004.
     /// Encoded/decoded by serializers as &quot;E13B&quot;.
@@ -32,7 +32,7 @@ public enum CheckCodeLine1Code
     [IsoId("_jRgkY64EEeWL1uap3dNhCQ")]
     [Description(@"Magnetic ink character recognition., conform to ISO 1004.")]
     E13B = CheckCodeLineCode.E13B, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Optical character recognition font A, conform to ANSI X3.17: 1981.
     /// Encoded/decoded by serializers as &quot;OCRA&quot;.
@@ -41,7 +41,7 @@ public enum CheckCodeLine1Code
     [IsoId("_jTceEa4EEeWL1uap3dNhCQ")]
     [Description(@"Optical character recognition font A, conform to ANSI X3.17: 1981.")]
     OCRA = CheckCodeLineCode.OCRA, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Optical character recognition font B, conform to ANSI X3.49: 1975.
     /// Encoded/decoded by serializers as &quot;OCRB&quot;.
@@ -50,7 +50,7 @@ public enum CheckCodeLine1Code
     [IsoId("_jYqVQa4EEeWL1uap3dNhCQ")]
     [Description(@"Optical character recognition font B, conform to ANSI X3.49: 1975.")]
     OCRB = CheckCodeLineCode.OCRB, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Default optical character recognition used.
     /// Encoded/decoded by serializers as &quot;OCRF&quot;.
@@ -59,5 +59,4 @@ public enum CheckCodeLine1Code
     [IsoId("_jjGDo64EEeWL1uap3dNhCQ")]
     [Description(@"Default optical character recognition used.")]
     OCRDefault = CheckCodeLineCode.OCRDefault, // same ordinal as derivation source for type conversions
-    
 }

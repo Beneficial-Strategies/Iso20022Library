@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClosurePendingStatusReason1Choice.NoSpecifiedReason))]
     [KnownType(typeof(ClosurePendingStatusReason1Choice.Reason))]
-    [JsonDerivedType(typeof(ClosurePendingStatusReason1Choice.NoSpecifiedReason),nameof(ClosurePendingStatusReason1Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(ClosurePendingStatusReason1Choice.Reason),nameof(ClosurePendingStatusReason1Choice.Reason))]
+    [JsonDerivedType(
+        typeof(ClosurePendingStatusReason1Choice.NoSpecifiedReason),
+        nameof(ClosurePendingStatusReason1Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(
+        typeof(ClosurePendingStatusReason1Choice.Reason),
+        nameof(ClosurePendingStatusReason1Choice.Reason)
+    )]
     [IsoId("_UW638WCLEeabZtzjEVWYCQ")]
     [DisplayName("Closure Pending Status Reason 1 Choice")]
-    public abstract partial record ClosurePendingStatusReason1Choice_
-    {
-    }
+    public abstract record ClosurePendingStatusReason1Choice_ { }
 }

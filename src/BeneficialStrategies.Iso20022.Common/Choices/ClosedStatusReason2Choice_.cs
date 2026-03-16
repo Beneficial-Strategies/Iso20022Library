@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClosedStatusReason2Choice.Code))]
     [KnownType(typeof(ClosedStatusReason2Choice.Proprietary))]
-    [JsonDerivedType(typeof(ClosedStatusReason2Choice.Code),nameof(ClosedStatusReason2Choice.Code))]
-    [JsonDerivedType(typeof(ClosedStatusReason2Choice.Proprietary),nameof(ClosedStatusReason2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ClosedStatusReason2Choice.Code),
+        nameof(ClosedStatusReason2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ClosedStatusReason2Choice.Proprietary),
+        nameof(ClosedStatusReason2Choice.Proprietary)
+    )]
     [IsoId("_k4eZ0UzDEeafiMTDrtSnyw")]
     [DisplayName("Closed Status Reason 2 Choice")]
-    public abstract partial record ClosedStatusReason2Choice_
-    {
-    }
+    public abstract record ClosedStatusReason2Choice_ { }
 }

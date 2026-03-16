@@ -23,7 +23,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IGu7cS7PEemIy6A-26wnAg")]
     [Description(@"Batch Transfer Response")]
     BatchTransferResponse = ReconciliationMessageTypeCode.BatchTransferResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card Management Initiation
     /// Encoded/decoded by serializers as &quot;CAMI&quot;.
@@ -32,7 +32,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IXD2cS7PEemIy6A-26wnAg")]
     [Description(@"Card Management Initiation")]
     CardManagementInitiation = ReconciliationMessageTypeCode.CardManagementInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card Management Response
     /// Encoded/decoded by serializers as &quot;CAMR&quot;.
@@ -41,7 +41,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IagMAS7PEemIy6A-26wnAg")]
     [Description(@"Card Management Response")]
     CardManagementResponse = ReconciliationMessageTypeCode.CardManagementResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Chargeback Initiation
     /// Encoded/decoded by serializers as &quot;CGBI&quot;.
@@ -50,7 +50,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Id-WwS7PEemIy6A-26wnAg")]
     [Description(@"Chargeback Initiation")]
     ChargebackInitiation = ReconciliationMessageTypeCode.ChargebackInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Chargeback Response
     /// Encoded/decoded by serializers as &quot;CGBR&quot;.
@@ -59,7 +59,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IhZeMS7PEemIy6A-26wnAg")]
     [Description(@"Chargeback Response")]
     ChargebackResponse = ReconciliationMessageTypeCode.ChargebackResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Error
     /// Encoded/decoded by serializers as &quot;EROR&quot;.
@@ -68,7 +68,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Ik3o8S7PEemIy6A-26wnAg")]
     [Description(@"Error")]
     Error = ReconciliationMessageTypeCode.Error, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee Collection Initiation
     /// Encoded/decoded by serializers as &quot;FECI&quot;.
@@ -77,7 +77,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IowDYS7PEemIy6A-26wnAg")]
     [Description(@"Fee Collection Initiation")]
     FeeCollectionInitiation = ReconciliationMessageTypeCode.FeeCollectionInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee Collection Response
     /// Encoded/decoded by serializers as &quot;FECR&quot;.
@@ -86,7 +86,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IsQDUS7PEemIy6A-26wnAg")]
     [Description(@"Fee Collection Response")]
     FeeCollectionResponse = ReconciliationMessageTypeCode.FeeCollectionResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File Action Initiation
     /// Encoded/decoded by serializers as &quot;FIAI&quot;.
@@ -95,7 +95,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IvwDQS7PEemIy6A-26wnAg")]
     [Description(@"File Action Initiation")]
     FileActionInitiation = ReconciliationMessageTypeCode.FileActionInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File Action Response
     /// Encoded/decoded by serializers as &quot;FIAR&quot;.
@@ -104,7 +104,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IzfTwS7PEemIy6A-26wnAg")]
     [Description(@"File Action Response")]
     FileActionResponse = ReconciliationMessageTypeCode.FileActionResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial Response
     /// Encoded/decoded by serializers as &quot;FINR&quot;.
@@ -113,7 +113,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_I9QTwS7PEemIy6A-26wnAg")]
     [Description(@"Financial Response")]
     FinancialResponse = ReconciliationMessageTypeCode.FinancialResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial Initiation
     /// Encoded/decoded by serializers as &quot;FINI&quot;.
@@ -122,7 +122,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_JOZuIS7PEemIy6A-26wnAg")]
     [Description(@"Financial Initiation")]
     FinancialInitiation = ReconciliationMessageTypeCode.FinancialInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fraud Disposition Initiation
     /// Encoded/decoded by serializers as &quot;FRDI&quot;.
@@ -131,7 +131,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_JeeKcS7PEemIy6A-26wnAg")]
     [Description(@"Fraud Disposition Initiation")]
     FraudDispositionInitiation = ReconciliationMessageTypeCode.FraudDispositionInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fraud Disposition Response
     /// Encoded/decoded by serializers as &quot;FRDR&quot;.
@@ -140,7 +140,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_JkbogS7PEemIy6A-26wnAg")]
     [Description(@"Fraud Disposition Response")]
     FraudDispositionResponse = ReconciliationMessageTypeCode.FraudDispositionResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fraud Reporting Initiation
     /// Encoded/decoded by serializers as &quot;FRRI&quot;.
@@ -149,7 +149,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Jn-EsS7PEemIy6A-26wnAg")]
     [Description(@"Fraud Reporting Initiation")]
     FraudReportingInitiation = ReconciliationMessageTypeCode.FraudReportingInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fraud Reporting Response
     /// Encoded/decoded by serializers as &quot;FRRR&quot;.
@@ -158,7 +158,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Jrw_kS7PEemIy6A-26wnAg")]
     [Description(@"Fraud Reporting Response")]
     FraudReportingResponse = ReconciliationMessageTypeCode.FraudReportingResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Inquiry Initiation
     /// Encoded/decoded by serializers as &quot;INQI&quot;.
@@ -167,7 +167,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_JvV4AS7PEemIy6A-26wnAg")]
     [Description(@"Inquiry Initiation")]
     InquiryInitiation = ReconciliationMessageTypeCode.InquiryInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Inquiry Response
     /// Encoded/decoded by serializers as &quot;INQR&quot;.
@@ -176,7 +176,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Jy3tIS7PEemIy6A-26wnAg")]
     [Description(@"Inquiry Response")]
     InquiryResponse = ReconciliationMessageTypeCode.InquiryResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key Exchange Initiation
     /// Encoded/decoded by serializers as &quot;KYEI&quot;.
@@ -185,7 +185,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_J9dMgS7PEemIy6A-26wnAg")]
     [Description(@"Key Exchange Initiation")]
     KeyExchangeInitiation = ReconciliationMessageTypeCode.KeyExchangeInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key Exchange Response
     /// Encoded/decoded by serializers as &quot;KYER&quot;.
@@ -194,7 +194,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KBTKsS7PEemIy6A-26wnAg")]
     [Description(@"Key Exchange Response")]
     KeyExchangeResponse = ReconciliationMessageTypeCode.KeyExchangeResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Network Management Initiation.
     /// Encoded/decoded by serializers as &quot;NWMI&quot;.
@@ -203,7 +203,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KEzKoS7PEemIy6A-26wnAg")]
     [Description(@"Network Management Initiation.")]
     NetworkManagementInitiation = ReconciliationMessageTypeCode.NetworkManagementInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Network Management Response
     /// Encoded/decoded by serializers as &quot;NWMR&quot;.
@@ -212,7 +212,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KKgxES7PEemIy6A-26wnAg")]
     [Description(@"Network Management Response")]
     NetworkManagementResponse = ReconciliationMessageTypeCode.NetworkManagementResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reconciliation Initiation
     /// Encoded/decoded by serializers as &quot;RECI&quot;.
@@ -221,7 +221,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KOB_IS7PEemIy6A-26wnAg")]
     [Description(@"Reconciliation Initiation")]
     ReconciliationInitiation = ReconciliationMessageTypeCode.ReconciliationInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reconciliation Response
     /// Encoded/decoded by serializers as &quot;RECR&quot;.
@@ -230,7 +230,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KRoswS7PEemIy6A-26wnAg")]
     [Description(@"Reconciliation Response")]
     ReconciliationResponse = ReconciliationMessageTypeCode.ReconciliationResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Retrieval Fulfilment Initiation
     /// Encoded/decoded by serializers as &quot;RTFI&quot;.
@@ -239,7 +239,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KZKRES7PEemIy6A-26wnAg")]
     [Description(@"Retrieval Fulfilment Initiation")]
     RetrievalFulfilmentInitiation = ReconciliationMessageTypeCode.RetrievalFulfilmentInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Retrieval Fulfilment Response
     /// Encoded/decoded by serializers as &quot;RTFR&quot;.
@@ -248,7 +248,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Kcyz4S7PEemIy6A-26wnAg")]
     [Description(@"Retrieval Fulfilment Response")]
     RetrievalFulfilmentResponse = ReconciliationMessageTypeCode.RetrievalFulfilmentResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Retrieval Request
     /// Encoded/decoded by serializers as &quot;RTRR&quot;.
@@ -257,7 +257,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KgUpAS7PEemIy6A-26wnAg")]
     [Description(@"Retrieval Request")]
     RetrievalRequest = ReconciliationMessageTypeCode.RetrievalRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Retrieval Response
     /// Encoded/decoded by serializers as &quot;RTRI&quot;.
@@ -266,7 +266,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Kjw-kS7PEemIy6A-26wnAg")]
     [Description(@"Retrieval Response")]
     RetrievalResponse = ReconciliationMessageTypeCode.RetrievalResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reversal Initiation
     /// Encoded/decoded by serializers as &quot;REVI&quot;.
@@ -275,7 +275,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KnPJUS7PEemIy6A-26wnAg")]
     [Description(@"Reversal Initiation")]
     ReversalInitiation = ReconciliationMessageTypeCode.ReversalInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reversal Response
     /// Encoded/decoded by serializers as &quot;REVR&quot;.
@@ -284,7 +284,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KrDSUS7PEemIy6A-26wnAg")]
     [Description(@"Reversal Response")]
     ReversalResponse = ReconciliationMessageTypeCode.ReversalResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement Reporting Initiation
     /// Encoded/decoded by serializers as &quot;SERI&quot;.
@@ -293,7 +293,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_KujSQS7PEemIy6A-26wnAg")]
     [Description(@"Settlement Reporting Initiation")]
     SettlementReportingInitiation = ReconciliationMessageTypeCode.SettlementReportingInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement Reporting Response
     /// Encoded/decoded by serializers as &quot;SERR&quot;.
@@ -302,7 +302,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_Kx_AwS7PEemIy6A-26wnAg")]
     [Description(@"Settlement Reporting Response")]
     SettlementReportingResponse = ReconciliationMessageTypeCode.SettlementReportingResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification Initiation.
     /// Encoded/decoded by serializers as &quot;VERI&quot;.
@@ -311,7 +311,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_K1dLgS7PEemIy6A-26wnAg")]
     [Description(@"Verification Initiation.")]
     VerificationInitiation = ReconciliationMessageTypeCode.VerificationInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification Response
     /// Encoded/decoded by serializers as &quot;VERR&quot;.
@@ -320,7 +320,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_LGM9QS7PEemIy6A-26wnAg")]
     [Description(@"Verification Response")]
     VerificationResponse = ReconciliationMessageTypeCode.VerificationResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amendment
     /// Encoded/decoded by serializers as &quot;AMDT&quot;.
@@ -329,7 +329,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_HQVeoRqSEeqH1IQNpbVpEw")]
     [Description(@"Amendment")]
     Amendment = ReconciliationMessageTypeCode.Amendment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authorisation Initiation
     /// Encoded/decoded by serializers as &quot;ATHI&quot;.
@@ -338,7 +338,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_HXxjYRqSEeqH1IQNpbVpEw")]
     [Description(@"Authorisation Initiation")]
     AuthorisationInitiation = ReconciliationMessageTypeCode.AuthorisationInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authorisation Response
     /// Encoded/decoded by serializers as &quot;ATHR&quot;.
@@ -347,7 +347,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_HiovkRqSEeqH1IQNpbVpEw")]
     [Description(@"Authorisation Response")]
     AuthorisationResponse = ReconciliationMessageTypeCode.AuthorisationResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch Management Initiation
     /// Encoded/decoded by serializers as &quot;BAMI&quot;.
@@ -356,7 +356,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_HxN-IRqSEeqH1IQNpbVpEw")]
     [Description(@"Batch Management Initiation")]
     BatchManagementInitiation = ReconciliationMessageTypeCode.BatchManagementInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch Management Response
     /// Encoded/decoded by serializers as &quot;BAMR&quot;.
@@ -365,7 +365,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_H-T-8RqSEeqH1IQNpbVpEw")]
     [Description(@"Batch Management Response")]
     BatchManagementResponse = ReconciliationMessageTypeCode.BatchManagementResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Batch Transfer Initiation
     /// Encoded/decoded by serializers as &quot;BATI&quot;.
@@ -374,7 +374,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_IJeGERqSEeqH1IQNpbVpEw")]
     [Description(@"Batch Transfer Initiation")]
     BatchTransferInitiation = ReconciliationMessageTypeCode.BatchTransferInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Addendum initiation
     /// Encoded/decoded by serializers as &quot;ADDI&quot;.
@@ -383,7 +383,7 @@ public enum ReconciliationMessageType1Code
     [IsoId("_mkVGARqSEeqH1IQNpbVpEw")]
     [Description(@"Addendum initiation")]
     AddendumInitiation = ReconciliationMessageTypeCode.AddendumInitiation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Addendum response
     /// Encoded/decoded by serializers as &quot;ADDR&quot;.
@@ -392,5 +392,4 @@ public enum ReconciliationMessageType1Code
     [IsoId("_mtZicRqSEeqH1IQNpbVpEw")]
     [Description(@"Addendum response")]
     AddendumResponse = ReconciliationMessageTypeCode.AddendumResponse, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_14z4PRfMEeyPHpqpKwtFdw")]
 [DisplayName("Trade Type Query Criteria")]
-public partial record TradeTypeQueryCriteria2
+public record TradeTypeQueryCriteria2
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the AND/OR operators as query criteria.
     /// </summary>
     [IsoId("_2PddoRfMEeyPHpqpKwtFdw")]
     [DisplayName("Operator")]
     [IsoXmlTag("Oprtr")]
-    public required Operation3Code Operator { get; init; } 
-    
+    public required Operation3Code Operator { get; init; }
+
     /// <summary>
     /// Query criteria related to the type of the securities financing transaction.
     /// </summary>
     [IsoId("_2PddoxfMEeyPHpqpKwtFdw")]
     [DisplayName("Securities Financing Transaction Type")]
     [IsoXmlTag("SctiesFincgTxTp")]
-    public ExposureType10Code? SecuritiesFinancingTransactionType { get; init; } 
-    
+    public ExposureType10Code? SecuritiesFinancingTransactionType { get; init; }
+
     /// <summary>
     /// Query criteria related to the type of the collateral component.
     /// </summary>
     [IsoId("_2PddpRfMEeyPHpqpKwtFdw")]
     [DisplayName("Collateral Component Type")]
     [IsoXmlTag("CollCmpntTp")]
-    public CollateralType6Code? CollateralComponentType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CollateralType6Code? CollateralComponentType { get; init; }
 }

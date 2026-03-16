@@ -23,7 +23,7 @@ public enum MoveType1Code
     [IsoId("_aMtCl9p-Ed-ak6NoX_4Aeg_-1360046424")]
     [Description(@"Indicates that the peg is static/fixed.")]
     Static = MoveTypeCode.Static, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that peg floats.
     /// Encoded/decoded by serializers as &quot;FLOA&quot;.
@@ -32,5 +32,4 @@ public enum MoveType1Code
     [IsoId("_aM2zkNp-Ed-ak6NoX_4Aeg_-1360046141")]
     [Description(@"Indicates that peg floats.")]
     Float = MoveTypeCode.Float, // same ordinal as derivation source for type conversions
-    
 }

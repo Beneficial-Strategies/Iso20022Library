@@ -23,14 +23,15 @@ public enum VoteChannelCode
     [IsoId("_KyqDEDT9Ee2tRf29bleifQ")]
     [Description(@"Vote is via the chain of intermediaries.")]
     VoteThroughChain,
-    
+
     /// <summary>
     /// Vote is as per described in the processing text for next intermediary information field.
     /// Encoded/decoded by serializers as &quot;VOPI&quot;.
     /// </summary>
     [EnumMember(Value = "VOPI")]
     [IsoId("_TzLoYDT9Ee2tRf29bleifQ")]
-    [Description(@"Vote is as per described in the processing text for next intermediary information field.")]
+    [Description(
+        @"Vote is as per described in the processing text for next intermediary information field."
+    )]
     VoteAsPerIntermediaryInformation,
-    
 }

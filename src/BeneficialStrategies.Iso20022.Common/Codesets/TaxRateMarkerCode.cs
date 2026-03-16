@@ -23,7 +23,7 @@ public enum TaxRateMarkerCode
     [IsoId("_bBcL8A2XEeStB9HSJRk0Qw")]
     [Description(@"Specifies an amount before the deduction of tax.")]
     GrossAmount,
-    
+
     /// <summary>
     /// Specifies the amount quoted less standard rate income tax.
     /// Encoded/decoded by serializers as &quot;ALIT&quot;.
@@ -32,7 +32,7 @@ public enum TaxRateMarkerCode
     [IsoId("_c7SpgA2XEeStB9HSJRk0Qw")]
     [Description(@"Specifies the amount quoted less standard rate income tax.")]
     AmountQuotedLessStandardRate,
-    
+
     /// <summary>
     /// Specifies the amount quoted less life assurance premium rate income tax.
     /// Encoded/decoded by serializers as &quot;ALPR&quot;.
@@ -41,5 +41,4 @@ public enum TaxRateMarkerCode
     [IsoId("_exjnkA2XEeStB9HSJRk0Qw")]
     [Description(@"Specifies the amount quoted less life assurance premium rate income tax.")]
     AmountQuotedLessLifeAssurance,
-    
 }

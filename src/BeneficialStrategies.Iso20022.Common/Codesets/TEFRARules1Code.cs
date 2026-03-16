@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Yg95g9p-Ed-ak6NoX_4Aeg_126958885")]
-[Description(@"Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the IRS under which the security is issued.")]
+[Description(
+    @"Indicates the Tax Equity and Fiscal Responsibility Act (TEFRA) rule levied by the IRS under which the security is issued."
+)]
 [DerivedFrom(typeof(TEFRARulesCode))]
 public enum TEFRARules1Code
 {
@@ -23,7 +25,7 @@ public enum TEFRARules1Code
     [IsoId("_Yg95hNp-Ed-ak6NoX_4Aeg_-1859434425")]
     [Description(@"Indicates that the security is issued under the TEFRA rule C.")]
     C = TEFRARulesCode.C, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the security is issued under the TEFRA rule D.
     /// Encoded/decoded by serializers as &quot;RULD&quot;.
@@ -32,5 +34,4 @@ public enum TEFRARules1Code
     [IsoId("_Yg95hdp-Ed-ak6NoX_4Aeg_1396824143")]
     [Description(@"Indicates that the security is issued under the TEFRA rule D.")]
     D = TEFRARulesCode.D, // same ordinal as derivation source for type conversions
-    
 }

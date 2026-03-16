@@ -66,7 +66,9 @@ public enum ATMCommand7Code
     /// </summary>
     [EnumMember(Value = "HKCG")]
     [IsoId("_ATMCommand7Code_HLAKeyReplace")]
-    [Description(@"Replace an existing key using a Higher Level Authority (HLA) key. In the TR34 scheme this would be used to implement a HLA Rebind operation.")]
+    [Description(
+        @"Replace an existing key using a Higher Level Authority (HLA) key. In the TR34 scheme this would be used to implement a HLA Rebind operation."
+    )]
     HLAKeyReplace = ATMCommandCode.HLAKeyReplace,
 
     /// <summary>
@@ -75,7 +77,9 @@ public enum ATMCommand7Code
     /// </summary>
     [EnumMember(Value = "HKRV")]
     [IsoId("_ATMCommand7Code_HLAKeyRemove")]
-    [Description(@"Remove a cryptographic key using a Higher Level Authority key (HLA). In the TR34 scheme this would be used to implement a HLA Unbind operation.")]
+    [Description(
+        @"Remove a cryptographic key using a Higher Level Authority key (HLA). In the TR34 scheme this would be used to implement a HLA Unbind operation."
+    )]
     HLAKeyRemove = ATMCommandCode.HLAKeyRemove,
 
     /// <summary>
@@ -93,7 +97,9 @@ public enum ATMCommand7Code
     /// </summary>
     [EnumMember(Value = "KCHG")]
     [IsoId("_ATMCommand7Code_KeyReplace")]
-    [Description(@"Replaces an existing cryptographic key. In a TR34 scheme this would be used to implement a Rebind operation.")]
+    [Description(
+        @"Replaces an existing cryptographic key. In a TR34 scheme this would be used to implement a Rebind operation."
+    )]
     KeyReplace = ATMCommandCode.KeyReplace,
 
     /// <summary>
@@ -167,5 +173,4 @@ public enum ATMCommand7Code
     [IsoId("_ATMCommand7Code_SecurityDeviceStatusUpdate")]
     [Description(@"Update the status of the hardware security module on the ATM.")]
     SecurityDeviceStatusUpdate = ATMCommandCode.SecurityDeviceStatusUpdate,
-
 }

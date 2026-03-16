@@ -23,7 +23,7 @@ public enum FundIntentionCode
     [IsoId("_4WlzMCDXEeWCLu74WLgP4w")]
     [Description(@"Qualified.")]
     Qualified,
-    
+
     /// <summary>
     /// Not qualified.
     /// Encoded/decoded by serializers as &quot;NQUA&quot;.
@@ -32,5 +32,4 @@ public enum FundIntentionCode
     [IsoId("_8clYMCDXEeWCLu74WLgP4w")]
     [Description(@"Not qualified.")]
     NotQualified,
-    
 }

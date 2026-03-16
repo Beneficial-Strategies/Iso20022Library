@@ -12,12 +12,10 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(BillingMethod1Choice.MethodA))]
     [KnownType(typeof(BillingMethod1Choice.MethodB))]
     [KnownType(typeof(BillingMethod1Choice.MethodD))]
-    [JsonDerivedType(typeof(BillingMethod1Choice.MethodA),nameof(BillingMethod1Choice.MethodA))]
-    [JsonDerivedType(typeof(BillingMethod1Choice.MethodB),nameof(BillingMethod1Choice.MethodB))]
-    [JsonDerivedType(typeof(BillingMethod1Choice.MethodD),nameof(BillingMethod1Choice.MethodD))]
+    [JsonDerivedType(typeof(BillingMethod1Choice.MethodA), nameof(BillingMethod1Choice.MethodA))]
+    [JsonDerivedType(typeof(BillingMethod1Choice.MethodB), nameof(BillingMethod1Choice.MethodB))]
+    [JsonDerivedType(typeof(BillingMethod1Choice.MethodD), nameof(BillingMethod1Choice.MethodD))]
     [IsoId("_6P9DsZqlEeGSON8vddiWzQ_-904396180")]
     [DisplayName("Billing Method 1 Choice")]
-    public abstract partial record BillingMethod1Choice_
-    {
-    }
+    public abstract record BillingMethod1Choice_ { }
 }

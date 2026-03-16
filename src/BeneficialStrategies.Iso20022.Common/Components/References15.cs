@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LJFy4RX0EeOBE-jZfcm4KQ")]
 [DisplayName("References")]
-public partial record References15
+public record References15
 {
-    #nullable enable
-    
     /// <summary>
     /// Collective reference identifying a set of messages.
     /// </summary>
     [IsoId("_Lh7wsxX0EeOBE-jZfcm4KQ")]
     [DisplayName("Pool Reference")]
     [IsoXmlTag("PoolRef")]
-    public AdditionalReference2? PoolReference { get; init; } 
-    
+    public AdditionalReference2? PoolReference { get; init; }
+
     /// <summary>
     /// Reference of the linked message that was previously sent.
     /// </summary>
     [IsoId("_Lh7wtRX0EeOBE-jZfcm4KQ")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public AdditionalReference2? PreviousReference { get; init; } 
-    
+    public AdditionalReference2? PreviousReference { get; init; }
+
     /// <summary>
     /// Reference to a linked message that was previously received.
     /// </summary>
     [IsoId("_Lh7wtxX0EeOBE-jZfcm4KQ")]
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
-    public AdditionalReference2? RelatedReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalReference2? RelatedReference { get; init; }
 }

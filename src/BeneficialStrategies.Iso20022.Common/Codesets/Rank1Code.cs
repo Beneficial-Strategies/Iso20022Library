@@ -23,7 +23,7 @@ public enum Rank1Code
     [IsoId("_8Vcd8ZNgEeWSf8tCOKY7Ug")]
     [Description(@"Element is the primary one.")]
     Primary = RankCode.Primary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Element is the primary one.
     /// Encoded/decoded by serializers as &quot;SECO&quot;.
@@ -32,5 +32,4 @@ public enum Rank1Code
     [IsoId("_8dx6kZNgEeWSf8tCOKY7Ug")]
     [Description(@"Element is the primary one.")]
     Secondary = RankCode.Secondary, // same ordinal as derivation source for type conversions
-    
 }

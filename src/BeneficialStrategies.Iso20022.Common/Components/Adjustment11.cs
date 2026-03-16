@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wd8wXPNGEei4qfiLgRIZBA")]
 [DisplayName("Adjustment")]
-public partial record Adjustment11
+public record Adjustment11
 {
-    #nullable enable
-    
     /// <summary>
     /// Contains the adjusted amount (for example, discounts).
     /// </summary>
     [IsoId("_wd8wZPNGEei4qfiLgRIZBA")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Indicates whether or not the line item is a credit amount.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record Adjustment11
     [DisplayName("Credit Indicator")]
     [IsoXmlTag("CdtInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CreditIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? CreditIndicator { get; init; }
+
     /// <summary>
     /// Reason for the adjustment.
     /// </summary>
@@ -42,10 +40,6 @@ public partial record Adjustment11
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Reason { get; init; }
 }

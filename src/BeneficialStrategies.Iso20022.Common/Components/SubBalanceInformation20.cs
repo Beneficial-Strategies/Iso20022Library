@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jNUrhSp6EeyR9JrVGfaMKw")]
 [DisplayName("Sub Balance Information")]
-public partial record SubBalanceInformation20
+public record SubBalanceInformation20
 {
-    #nullable enable
-    
     /// <summary>
     /// Reason for the sub-balance.
     /// </summary>
     [IsoId("_jkHa5Sp6EeyR9JrVGfaMKw")]
     [DisplayName("Sub Balance Type")]
     [IsoXmlTag("SubBalTp")]
-    public required SubBalanceType11Choice_ SubBalanceType { get; init; } 
-    
+    public required SubBalanceType11Choice_ SubBalanceType { get; init; }
+
     /// <summary>
     /// Quantity of securities in the sub-balance.
     /// </summary>
     [IsoId("_jkHa7Sp6EeyR9JrVGfaMKw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required Balance21 Quantity { get; init; } 
-    
+    public required Balance21 Quantity { get; init; }
+
     /// <summary>
     /// Provides additional subbalance information.
     /// </summary>
@@ -41,26 +39,22 @@ public partial record SubBalanceInformation20
     [DisplayName("Sub Balance Additional Details")]
     [IsoXmlTag("SubBalAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? SubBalanceAdditionalDetails { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? SubBalanceAdditionalDetails { get; init; }
+
     /// <summary>
     /// Breakdown of the aggregate quantity reported into significant lots, for example, tax lots.
     /// </summary>
     [IsoId("_jkHa_Sp6EeyR9JrVGfaMKw")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown57? QuantityBreakdown { get; init; } 
-    
+    public QuantityBreakdown57? QuantityBreakdown { get; init; }
+
     /// <summary>
     /// Provides additional instrument sub-balance information on all or parts of the reported financial instrument (unregistered, tax exempt, etc.).
     /// </summary>
     [IsoId("_jkHbBSp6EeyR9JrVGfaMKw")]
     [DisplayName("Additional Balance Breakdown Details")]
     [IsoXmlTag("AddtlBalBrkdwnDtls")]
-    public AdditionalBalanceInformation20? AdditionalBalanceBreakdownDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalBalanceInformation20? AdditionalBalanceBreakdownDetails { get; init; }
 }

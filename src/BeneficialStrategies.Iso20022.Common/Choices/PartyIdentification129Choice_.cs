@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification129Choice.ProprietaryIdentification))]
     [KnownType(typeof(PartyIdentification129Choice.NameAndAddress))]
     [KnownType(typeof(PartyIdentification129Choice.LEI))]
-    [JsonDerivedType(typeof(PartyIdentification129Choice.AnyBIC),nameof(PartyIdentification129Choice.AnyBIC))]
-    [JsonDerivedType(typeof(PartyIdentification129Choice.ProprietaryIdentification),nameof(PartyIdentification129Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(PartyIdentification129Choice.NameAndAddress),nameof(PartyIdentification129Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(PartyIdentification129Choice.LEI),nameof(PartyIdentification129Choice.LEI))]
+    [JsonDerivedType(
+        typeof(PartyIdentification129Choice.AnyBIC),
+        nameof(PartyIdentification129Choice.AnyBIC)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification129Choice.ProprietaryIdentification),
+        nameof(PartyIdentification129Choice.ProprietaryIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification129Choice.NameAndAddress),
+        nameof(PartyIdentification129Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification129Choice.LEI),
+        nameof(PartyIdentification129Choice.LEI)
+    )]
     [IsoId("_CIhQ4bXLEeiTob_PrFFUxA")]
     [DisplayName("Party Identification 129 Choice")]
-    public abstract partial record PartyIdentification129Choice_
-    {
-    }
+    public abstract record PartyIdentification129Choice_ { }
 }

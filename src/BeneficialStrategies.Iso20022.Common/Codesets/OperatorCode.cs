@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aPPZMNp-Ed-ak6NoX_4Aeg_336257296")]
-[Description(@"Code containing the operator used to indicate the relationship between a variable and a fixed value.")]
+[Description(
+    @"Code containing the operator used to indicate the relationship between a variable and a fixed value."
+)]
 [Derivations(typeof(Operator1Code))]
 public enum OperatorCode
 {
@@ -23,7 +25,7 @@ public enum OperatorCode
     [IsoId("_aPPZMdp-Ed-ak6NoX_4Aeg_336257297")]
     [Description(@"Smaller than.")]
     SmallerThan,
-    
+
     /// <summary>
     /// Smaller or equal to.
     /// Encoded/decoded by serializers as &quot;SMEQ&quot;.
@@ -32,7 +34,7 @@ public enum OperatorCode
     [IsoId("_aPPZMtp-Ed-ak6NoX_4Aeg_336257298")]
     [Description(@"Smaller or equal to.")]
     SmallerOrEqualTo,
-    
+
     /// <summary>
     /// Greater than.
     /// Encoded/decoded by serializers as &quot;GREA&quot;.
@@ -41,7 +43,7 @@ public enum OperatorCode
     [IsoId("_aPPZM9p-Ed-ak6NoX_4Aeg_336257299")]
     [Description(@"Greater than.")]
     GreaterThan,
-    
+
     /// <summary>
     /// Greater or equal to.
     /// Encoded/decoded by serializers as &quot;GREQ&quot;.
@@ -50,7 +52,7 @@ public enum OperatorCode
     [IsoId("_aPPZNNp-Ed-ak6NoX_4Aeg_336257300")]
     [Description(@"Greater or equal to.")]
     GreaterOrEqualTo,
-    
+
     /// <summary>
     /// Equal to.
     /// Encoded/decoded by serializers as &quot;EQAL&quot;.
@@ -59,5 +61,4 @@ public enum OperatorCode
     [IsoId("_aPPZNdp-Ed-ak6NoX_4Aeg_336257301")]
     [Description(@"Equal to.")]
     EqualTo,
-    
 }

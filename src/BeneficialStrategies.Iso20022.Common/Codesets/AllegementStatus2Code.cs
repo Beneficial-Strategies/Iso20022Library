@@ -23,7 +23,7 @@ public enum AllegementStatus2Code
     [IsoId("_75fyMa3DEeeBVbuVcoH9Nw")]
     [Description(@"Allegement has been accepted.")]
     Accepted = AllegementStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Allegement is pending.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,7 +32,7 @@ public enum AllegementStatus2Code
     [IsoId("_7_5VIa3DEeeBVbuVcoH9Nw")]
     [Description(@"Allegement is pending.")]
     Pending = AllegementStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction or report has been rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -41,5 +41,4 @@ public enum AllegementStatus2Code
     [IsoId("_8LgIMa3DEeeBVbuVcoH9Nw")]
     [Description(@"Transaction or report has been rejected.")]
     Rejected = AllegementStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

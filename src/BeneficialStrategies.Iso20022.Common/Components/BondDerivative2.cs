@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s736gWlJEeaLAKoEUNsD9g")]
 [DisplayName("Bond Derivative")]
-public partial record BondDerivative2
+public record BondDerivative2
 {
-    #nullable enable
-    
     /// <summary>
     /// Legal Entity Identifier (LEI) code of the issuer of the direct or ultimate underlying bond.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record BondDerivative2
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Issuer { get; init; } 
-    
+    public required IsoLEIIdentifier Issuer { get; init; }
+
     /// <summary>
     /// Date of maturity of the underlying bond. This field applies to debt instruments with defined maturity.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record BondDerivative2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; } 
-    
+    public IsoISODate? MaturityDate { get; init; }
+
     /// <summary>
     /// Populated with the issuance date of the underlying bond.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record BondDerivative2
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? IssuanceDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? IssuanceDate { get; init; }
 }

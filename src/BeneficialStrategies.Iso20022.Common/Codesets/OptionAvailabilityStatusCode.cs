@@ -21,16 +21,19 @@ public enum OptionAvailabilityStatusCode
     /// </summary>
     [EnumMember(Value = "INTV")]
     [IsoId("_aPYjIdp-Ed-ak6NoX_4Aeg_-1403888943")]
-    [Description(@"Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option.")]
+    [Description(
+        @"Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option."
+    )]
     Inactive,
-    
+
     /// <summary>
     /// Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
     /// </summary>
     [EnumMember(Value = "CANC")]
     [IsoId("_aPYjItp-Ed-ak6NoX_4Aeg_-1374336318")]
-    [Description(@"Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required.")]
+    [Description(
+        @"Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required."
+    )]
     Cancelled,
-    
 }

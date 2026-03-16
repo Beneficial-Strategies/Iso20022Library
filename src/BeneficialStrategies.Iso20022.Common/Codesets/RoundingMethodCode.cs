@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YgFIsNp-Ed-ak6NoX_4Aeg_757152502")]
-[Description(@"Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded.")]
+[Description(
+    @"Defines how the rounding amount was applied in the calculation. For example, should the amount of collateral required be rounded up, down, to the closer integral multiple specified or not rounded."
+)]
 [Derivations(typeof(RoundingMethod1Code))]
 public enum RoundingMethodCode
 {
@@ -23,7 +25,7 @@ public enum RoundingMethodCode
     [IsoId("_YgFIsdp-Ed-ak6NoX_4Aeg_643313436")]
     [Description(@"Rounds the amount down.")]
     Down,
-    
+
     /// <summary>
     /// Rounds the amount up.
     /// Encoded/decoded by serializers as &quot;DRUP&quot;.
@@ -32,7 +34,7 @@ public enum RoundingMethodCode
     [IsoId("_YgFIstp-Ed-ak6NoX_4Aeg_-239919851")]
     [Description(@"Rounds the amount up.")]
     Up,
-    
+
     /// <summary>
     /// Do not round.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,7 +43,7 @@ public enum RoundingMethodCode
     [IsoId("_YgFIs9p-Ed-ak6NoX_4Aeg_-1503003469")]
     [Description(@"Do not round.")]
     None,
-    
+
     /// <summary>
     /// Rounds the amount to the closer integral multiple specified.
     /// Encoded/decoded by serializers as &quot;CLSR&quot;.
@@ -50,5 +52,4 @@ public enum RoundingMethodCode
     [IsoId("_YgFItNp-Ed-ak6NoX_4Aeg_-1640204487")]
     [Description(@"Rounds the amount to the closer integral multiple specified.")]
     Closer,
-    
 }

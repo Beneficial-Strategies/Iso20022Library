@@ -21,7 +21,8 @@ public enum ValidationRuleRequestObjection1Code
     /// </summary>
     [EnumMember(Value = "RQOB")]
     [IsoId("")]
-    [Description(@"Responder is requested to review an earlier response as the requestor objects to it.")]
+    [Description(
+        @"Responder is requested to review an earlier response as the requestor objects to it."
+    )]
     RequestObjection = ValidationRuleCode.RequestObjection, // same ordinal as derivation source for type conversions
-
 }

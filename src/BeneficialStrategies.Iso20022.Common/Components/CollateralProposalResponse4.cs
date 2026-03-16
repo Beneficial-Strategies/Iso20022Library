@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xPxG_StIEeyOa655cLd-DQ")]
 [DisplayName("Collateral Proposal Response")]
-public partial record CollateralProposalResponse4
+public record CollateralProposalResponse4
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the collateral proposal response for the variation margin.
     /// </summary>
     [IsoId("_xophAStIEeyOa655cLd-DQ")]
     [DisplayName("Variation Margin")]
     [IsoXmlTag("VartnMrgn")]
-    public required CollateralProposalResponseType4 VariationMargin { get; init; } 
-    
+    public required CollateralProposalResponseType4 VariationMargin { get; init; }
+
     /// <summary>
     /// Provides the collateral proposal response for the segregated independent amount.
     /// </summary>
     [IsoId("_xophAytIEeyOa655cLd-DQ")]
     [DisplayName("Segregated Independent Amount")]
     [IsoXmlTag("SgrtdIndpdntAmt")]
-    public CollateralProposalResponseType4? SegregatedIndependentAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CollateralProposalResponseType4? SegregatedIndependentAmount { get; init; }
 }

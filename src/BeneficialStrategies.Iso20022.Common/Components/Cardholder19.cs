@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__kNqIZ1EEeublrfU-wN95w")]
 [DisplayName("Cardholder")]
-public partial record Cardholder19
+public record Cardholder19
 {
-    #nullable enable
-    
     /// <summary>
     /// Contains the registered cardholder name that issuer knows to be correct.
     /// </summary>
     [IsoId("__o_ccZ1EEeublrfU-wN95w")]
     [DisplayName("Cardholder Name")]
     [IsoXmlTag("CrdhldrNm")]
-    public CardholderName3? CardholderName { get; init; } 
-    
+    public CardholderName3? CardholderName { get; init; }
+
     /// <summary>
     /// Identification of the cardholder.
     /// ISO 8583:87 bit 56 (TLV tag 03/dataset 73)
@@ -35,16 +33,16 @@ public partial record Cardholder19
     [IsoId("__o_cc51EEeublrfU-wN95w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public Credentials2? Identification { get; init; } 
-    
+    public Credentials2? Identification { get; init; }
+
     /// <summary>
     /// Complete address of the cardholder.
     /// </summary>
     [IsoId("__o_cdZ1EEeublrfU-wN95w")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; } 
-    
+    public Address2? Address { get; init; }
+
     /// <summary>
     /// Contact information.
     /// ISO 8583:87 bit 56 (TLV tag 02/dataset 72)
@@ -54,8 +52,8 @@ public partial record Cardholder19
     [IsoId("__o_cd51EEeublrfU-wN95w")]
     [DisplayName("Contact Information")]
     [IsoXmlTag("CtctInf")]
-    public Contact1? ContactInformation { get; init; } 
-    
+    public Contact1? ContactInformation { get; init; }
+
     /// <summary>
     /// Date of birth of the party.
     /// </summary>
@@ -63,8 +61,8 @@ public partial record Cardholder19
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; } 
-    
+    public IsoISODate? DateOfBirth { get; init; }
+
     /// <summary>
     /// Identifies a cardholder that is a highly valued individual (e.g., Very Important Person).
     /// </summary>
@@ -72,25 +70,21 @@ public partial record Cardholder19
     [DisplayName("High Value Customer Indicator")]
     [IsoXmlTag("HghValCstmrInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? HighValueCustomerIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? HighValueCustomerIndicator { get; init; }
+
     /// <summary>
     /// Additional cardholder data.
     /// </summary>
     [IsoId("_GL2qMMXOEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
+    public AdditionalData1? AdditionalData { get; init; }
+
     /// <summary>
     /// Contains text fields in the local language.
     /// </summary>
     [IsoId("_zCvrUcXNEeumGdYElfgmbw")]
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
-    public LocalData7? LocalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public LocalData7? LocalData { get; init; }
 }

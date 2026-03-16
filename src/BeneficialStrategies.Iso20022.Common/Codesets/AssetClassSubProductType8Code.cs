@@ -23,5 +23,4 @@ public enum AssetClassSubProductType8Code
     [IsoId("_913xIQnzEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type oil.")]
     Oil = AssetClassSubProductTypeCode.Oil, // same ordinal as derivation source for type conversions
-    
 }

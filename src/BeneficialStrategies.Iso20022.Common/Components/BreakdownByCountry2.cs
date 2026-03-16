@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K78-cQatEeS3lpTattq7hg")]
 [DisplayName("Breakdown By Country")]
-public partial record BreakdownByCountry2
+public record BreakdownByCountry2
 {
-    #nullable enable
-    
     /// <summary>
     /// Country for which the cash flow is being reported.
     /// </summary>
     [IsoId("_LVijEQatEeS3lpTattq7hg")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public required CountryCode Country { get; init; } 
-    
+    public required CountryCode Country { get; init; }
+
     /// <summary>
     /// Cash movement into the fund as a result of transactions in shares in an investment fund, for example, subscriptions or switch-ins.
     /// </summary>
     [IsoId("_LVijEwatEeS3lpTattq7hg")]
     [DisplayName("Cash In Forecast")]
     [IsoXmlTag("CshInFcst")]
-    public CashInForecast5? CashInForecast { get; init; } 
-    
+    public CashInForecast5? CashInForecast { get; init; }
+
     /// <summary>
     /// Cash movement out of the fund as a result of transactions in shares in an investment fund, for example, redemptions or switch-outs.
     /// </summary>
     [IsoId("_LVijFQatEeS3lpTattq7hg")]
     [DisplayName("Cash Out Forecast")]
     [IsoXmlTag("CshOutFcst")]
-    public CashOutForecast5? CashOutForecast { get; init; } 
-    
+    public CashOutForecast5? CashOutForecast { get; init; }
+
     /// <summary>
     /// Net cash as a result of the cash-in and cash-out flows specified for the country.
     /// </summary>
     [IsoId("_LVijFwatEeS3lpTattq7hg")]
     [DisplayName("Net Cash Forecast")]
     [IsoXmlTag("NetCshFcst")]
-    public NetCashForecast4? NetCashForecast { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NetCashForecast4? NetCashForecast { get; init; }
 }

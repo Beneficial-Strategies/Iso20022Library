@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_OuAlgNuNEeiB5uLfkg9ZJA")]
-[Description(@"Identification of operation to proceed on the stored value account or the stored value card.")]
-[Derivations(typeof(StoredValueTransactionType2Code),typeof(StoredValueTransactionType3Code))]
+[Description(
+    @"Identification of operation to proceed on the stored value account or the stored value card."
+)]
+[Derivations(typeof(StoredValueTransactionType2Code), typeof(StoredValueTransactionType3Code))]
 public enum StoredValueTransactionTypeCode
 {
     /// <summary>
@@ -23,7 +25,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_UaaHoNuNEeiB5uLfkg9ZJA")]
     [Description(@"Reserve the account (e.g. get an activation code).")]
     Reserve,
-    
+
     /// <summary>
     /// Activate the account or the card.
     /// Encoded/decoded by serializers as &quot;ACTV&quot;.
@@ -32,7 +34,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_WxeFoNuNEeiB5uLfkg9ZJA")]
     [Description(@"Activate the account or the card.")]
     Activate,
-    
+
     /// <summary>
     /// Load the account or the card with money.
     /// Encoded/decoded by serializers as &quot;LOAD&quot;.
@@ -41,7 +43,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_ZIiDoNuNEeiB5uLfkg9ZJA")]
     [Description(@"Load the account or the card with money.")]
     Load,
-    
+
     /// <summary>
     /// Unload the account.
     /// Encoded/decoded by serializers as &quot;ULOA&quot;.
@@ -50,7 +52,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_bS8FsNuNEeiB5uLfkg9ZJA")]
     [Description(@"Unload the account.")]
     Unload,
-    
+
     /// <summary>
     /// Reverse an activation or loading.
     /// Encoded/decoded by serializers as &quot;REVS&quot;.
@@ -59,7 +61,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_dsDSINuNEeiB5uLfkg9ZJA")]
     [Description(@"Reverse an activation or loading.")]
     Reverse,
-    
+
     /// <summary>
     /// Duplicate the code or number provided by the loading or activation.
     /// Encoded/decoded by serializers as &quot;DUPL&quot;.
@@ -68,7 +70,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_hbKBINuNEeiB5uLfkg9ZJA")]
     [Description(@"Duplicate the code or number provided by the loading or activation.")]
     Duplicate,
-    
+
     /// <summary>
     /// Deactivate the account or the card.
     /// Encoded/decoded by serializers as &quot;DCTV&quot;.
@@ -77,7 +79,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_OzYHsIa1EemfPtKsRXC1Ag")]
     [Description(@"Deactivate the account or the card.")]
     Deactivate,
-    
+
     /// <summary>
     /// Open the account.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -86,7 +88,7 @@ public enum StoredValueTransactionTypeCode
     [IsoId("_TNdGUIa1EemfPtKsRXC1Ag")]
     [Description(@"Open the account.")]
     OpenAccount,
-    
+
     /// <summary>
     /// Close the account.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -104,5 +106,4 @@ public enum StoredValueTransactionTypeCode
     [IsoId("")]
     [Description(@"Balance enquiry.")]
     Balance,
-
 }

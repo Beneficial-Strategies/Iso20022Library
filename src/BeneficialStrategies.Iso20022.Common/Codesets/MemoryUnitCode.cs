@@ -23,7 +23,7 @@ public enum MemoryUnitCode
     [IsoId("_Hr9EwAxzEeKa_56Jbsi1RQ")]
     [Description(@"Exa byte.")]
     ExaByte,
-    
+
     /// <summary>
     /// Peta byte.
     /// Encoded/decoded by serializers as &quot;PETA&quot;.
@@ -32,7 +32,7 @@ public enum MemoryUnitCode
     [IsoId("_R05qsAxzEeKa_56Jbsi1RQ")]
     [Description(@"Peta byte.")]
     PetaByte,
-    
+
     /// <summary>
     /// Tera byte.
     /// Encoded/decoded by serializers as &quot;TERA&quot;.
@@ -41,7 +41,7 @@ public enum MemoryUnitCode
     [IsoId("_cCdq4AxzEeKa_56Jbsi1RQ")]
     [Description(@"Tera byte.")]
     TeraByte,
-    
+
     /// <summary>
     /// Giga byte.
     /// Encoded/decoded by serializers as &quot;GIGA&quot;.
@@ -50,7 +50,7 @@ public enum MemoryUnitCode
     [IsoId("_hkizYAxzEeKa_56Jbsi1RQ")]
     [Description(@"Giga byte.")]
     GigaByte,
-    
+
     /// <summary>
     /// Mega byte.
     /// Encoded/decoded by serializers as &quot;MEGA&quot;.
@@ -59,7 +59,7 @@ public enum MemoryUnitCode
     [IsoId("_lTyFQAxzEeKa_56Jbsi1RQ")]
     [Description(@"Mega byte.")]
     MegaByte,
-    
+
     /// <summary>
     /// Kilo byte.
     /// Encoded/decoded by serializers as &quot;KILO&quot;.
@@ -68,7 +68,7 @@ public enum MemoryUnitCode
     [IsoId("_qWw28AxzEeKa_56Jbsi1RQ")]
     [Description(@"Kilo byte.")]
     KiloByte,
-    
+
     /// <summary>
     /// Byte.
     /// Encoded/decoded by serializers as &quot;BYTE&quot;.
@@ -77,5 +77,4 @@ public enum MemoryUnitCode
     [IsoId("_up_msAxzEeKa_56Jbsi1RQ")]
     [Description(@"Byte.")]
     Byte,
-    
 }

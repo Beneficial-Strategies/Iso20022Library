@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_x-wWwFvEEe6gDOpEK7Q4ig")]
-[Description(@"Specifies the reason why the corporate action notification cancellation request has a rejected status.")]
+[Description(
+    @"Specifies the reason why the corporate action notification cancellation request has a rejected status."
+)]
 [DerivedFrom(typeof(RejectionReasonV3Code))]
 public enum RejectionReason81Code
 {
@@ -21,7 +23,9 @@ public enum RejectionReason81Code
     /// </summary>
     [EnumMember(Value = "DCAN")]
     [IsoId("")]
-    [Description(@"Cancellation request was rejected since the instruction has already been cancelled.")]
+    [Description(
+        @"Cancellation request was rejected since the instruction has already been cancelled."
+    )]
     RejectedSinceAlreadyCancelled = RejectionReasonV3Code.RejectedSinceAlreadyCancelled, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -30,7 +34,9 @@ public enum RejectionReason81Code
     /// </summary>
     [EnumMember(Value = "DPRG")]
     [IsoId("")]
-    [Description(@"Cancellation request has been rejected because the instruction process is in progress or has been processed.")]
+    [Description(
+        @"Cancellation request has been rejected because the instruction process is in progress or has been processed."
+    )]
     RejectedSinceInProgress = RejectionReasonV3Code.RejectedSinceInProgress, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -50,5 +56,4 @@ public enum RejectionReason81Code
     [IsoId("")]
     [Description(@"Invalid corporate action identification supplied.")]
     InvalidCAIdentification = RejectionReasonV3Code.InvalidCAIdentification, // same ordinal as derivation source for type conversions
-
 }

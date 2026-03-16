@@ -23,7 +23,7 @@ public enum TaxIdentificationNumberTypeCode
     [IsoId("_WVR24AhJEeSUPbC7DbLJpQ")]
     [Description(@"Tax identification number.")]
     TaxIdentificationNumber,
-    
+
     /// <summary>
     /// Global intermediary tax identification number.
     /// Encoded/decoded by serializers as &quot;GIIN&quot;.
@@ -32,5 +32,4 @@ public enum TaxIdentificationNumberTypeCode
     [IsoId("_abk94AhJEeSUPbC7DbLJpQ")]
     [Description(@"Global intermediary tax identification number.")]
     GlobalIntermediaryIdentificationNumber,
-    
 }

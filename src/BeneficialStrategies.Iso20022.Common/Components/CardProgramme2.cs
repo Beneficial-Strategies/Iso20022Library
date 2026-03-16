@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h6JQ4SuBEeyg-aG5nXcnfg")]
 [DisplayName("Card Programme")]
-public partial record CardProgramme2
+public record CardProgramme2
 {
-    #nullable enable
-    
     /// <summary>
     /// Card programme or brand proposed for the transaction.
     /// </summary>
     [IsoId("_h_TdsSuBEeyg-aG5nXcnfg")]
     [DisplayName("Card Programme Proposed")]
     [IsoXmlTag("CardPrgrmmPropsd")]
-    public CardProgrammeMode2? CardProgrammeProposed { get; init; } 
-    
+    public CardProgrammeMode2? CardProgrammeProposed { get; init; }
+
     /// <summary>
     /// Card programme or brand actually applied to the transaction.
     /// ISO 8583:87 bit 24
@@ -33,9 +31,5 @@ public partial record CardProgramme2
     [IsoId("_h_TdsyuBEeyg-aG5nXcnfg")]
     [DisplayName("Card Programme Applied")]
     [IsoXmlTag("CardPrgrmmApld")]
-    public CardProgrammeMode3? CardProgrammeApplied { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CardProgrammeMode3? CardProgrammeApplied { get; init; }
 }

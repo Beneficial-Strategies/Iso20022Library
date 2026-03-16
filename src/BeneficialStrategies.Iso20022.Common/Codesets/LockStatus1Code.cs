@@ -23,7 +23,7 @@ public enum LockStatus1Code
     [IsoId("_oSkPwWjMEeiRg5NzP0jkQg")]
     [Description(@"Party has been locked for operations.")]
     Locked = LockStatusCode.Locked, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Party is ready for operations.
     /// Encoded/decoded by serializers as &quot;ULCK&quot;.
@@ -32,5 +32,4 @@ public enum LockStatus1Code
     [IsoId("_oYLIgWjMEeiRg5NzP0jkQg")]
     [Description(@"Party is ready for operations.")]
     Unlocked = LockStatusCode.Unlocked, // same ordinal as derivation source for type conversions
-    
 }

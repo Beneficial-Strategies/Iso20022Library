@@ -23,7 +23,7 @@ public enum DepositaryReceiptProcessingStatus1Code
     [IsoId("_av4BFdp-Ed-ak6NoX_4Aeg_-1629994249")]
     [Description(@"No record of the transaction for which a status is requested.")]
     NoRecordFound = DepositaryReceiptProcessingStatusCode.NoRecordFound, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Depositary receipt is pending completion.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,5 +32,4 @@ public enum DepositaryReceiptProcessingStatus1Code
     [IsoId("_av4BFtp-Ed-ak6NoX_4Aeg_-1629994248")]
     [Description(@"Depositary receipt is pending completion.")]
     Pending = DepositaryReceiptProcessingStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VCC7kdp-Ed-ak6NoX_4Aeg_542558277")]
 [DisplayName("Cash In Forecast")]
-public partial record CashInForecast1
+public record CashInForecast1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date on which cash is available.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record CashInForecast1
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SettlementDate { get; init; } 
-    
+    public required IsoISODate SettlementDate { get; init; }
+
     /// <summary>
     /// Sub-total amount of the cash flow in, expressed as an amount of money.
     /// </summary>
     [IsoId("_VCC7k9p-Ed-ak6NoX_4Aeg_542558620")]
     [DisplayName("Sub Total Amount")]
     [IsoXmlTag("SubTtlAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? SubTotalAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? SubTotalAmount { get; init; }
+
     /// <summary>
     /// Sub-total amount of the cash flow in, expressed as a number of units.
     /// </summary>
     [IsoId("_VCC7lNp-Ed-ak6NoX_4Aeg_542558578")]
     [DisplayName("Sub Total Units Number")]
     [IsoXmlTag("SubTtlUnitsNb")]
-    public FinancialInstrumentQuantity1? SubTotalUnitsNumber { get; init; } 
-    
+    public FinancialInstrumentQuantity1? SubTotalUnitsNumber { get; init; }
+
     /// <summary>
     /// Indicates whether the estimated cash flow in is exceptional.
     /// </summary>
@@ -50,17 +48,13 @@ public partial record CashInForecast1
     [DisplayName("Exceptional Cash Flow Indicator")]
     [IsoXmlTag("XcptnlCshFlowInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ExceptionalCashFlowIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? ExceptionalCashFlowIndicator { get; init; }
+
     /// <summary>
     /// Breakdown of cash in amounts, eg, by transaction and order type.
     /// </summary>
     [IsoId("_VCC7ltp-Ed-ak6NoX_4Aeg_-455150453")]
     [DisplayName("Cash In Breakdown Details")]
     [IsoXmlTag("CshInBrkdwnDtls")]
-    public FundCashInBreakdown1? CashInBreakdownDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public FundCashInBreakdown1? CashInBreakdownDetails { get; init; }
 }

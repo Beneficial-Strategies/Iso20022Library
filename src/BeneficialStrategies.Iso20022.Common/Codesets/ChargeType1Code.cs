@@ -23,7 +23,7 @@ public enum ChargeType1Code
     [IsoId("_a9SK8tp-Ed-ak6NoX_4Aeg_1912147156")]
     [Description(@"Fee paid to a broker for services provided.")]
     BrokerageFee = ChargeTypeCode.BrokerageFee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee paid for services provided.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -32,5 +32,4 @@ public enum ChargeType1Code
     [IsoId("_a9SK89p-Ed-ak6NoX_4Aeg_1922304879")]
     [Description(@"Fee paid for services provided.")]
     Commission = ChargeTypeCode.Commission, // same ordinal as derivation source for type conversions
-    
 }

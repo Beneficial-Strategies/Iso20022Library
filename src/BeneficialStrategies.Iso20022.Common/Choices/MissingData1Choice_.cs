@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MissingData1Choice.Code))]
     [KnownType(typeof(MissingData1Choice.Proprietary))]
-    [JsonDerivedType(typeof(MissingData1Choice.Code),nameof(MissingData1Choice.Code))]
-    [JsonDerivedType(typeof(MissingData1Choice.Proprietary),nameof(MissingData1Choice.Proprietary))]
+    [JsonDerivedType(typeof(MissingData1Choice.Code), nameof(MissingData1Choice.Code))]
+    [JsonDerivedType(
+        typeof(MissingData1Choice.Proprietary),
+        nameof(MissingData1Choice.Proprietary)
+    )]
     [IsoId("_MN6wk9jMEeq5MfBBxQig1Q")]
     [DisplayName("Missing Data 1 Choice")]
-    public abstract partial record MissingData1Choice_
-    {
-    }
+    public abstract record MissingData1Choice_ { }
 }

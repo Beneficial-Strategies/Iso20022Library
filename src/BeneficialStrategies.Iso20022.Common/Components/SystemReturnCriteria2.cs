@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RD_KlNp-Ed-ak6NoX_4Aeg_5460592")]
 [DisplayName("System Return Criteria")]
-public partial record SystemReturnCriteria2
+public record SystemReturnCriteria2
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the system identification is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SystemReturnCriteria2
     [DisplayName("System Identification Indicator")]
     [IsoXmlTag("SysIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SystemIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? SystemIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the member identification is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record SystemReturnCriteria2
     [DisplayName("Member Identification Indicator")]
     [IsoXmlTag("MmbIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? MemberIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? MemberIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the country identification is requested.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record SystemReturnCriteria2
     [DisplayName("Country Identification Indicator")]
     [IsoXmlTag("CtryIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? CountryIdentificationIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? CountryIdentificationIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the account identification is requested.
     /// </summary>
@@ -52,9 +50,5 @@ public partial record SystemReturnCriteria2
     [DisplayName("Account Identification Indicator")]
     [IsoXmlTag("AcctIdInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? AccountIdentificationIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? AccountIdentificationIndicator { get; init; }
 }

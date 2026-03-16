@@ -1,23 +1,21 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Specifies parameters of the report 
+/// Specifies parameters of the report
 /// </summary>
 [IsoId("_rJ-pkO3kEeaWjpoyrnG6Rw")]
 [DisplayName("Settlement Internaliser Report Header")]
-public partial record SettlementInternaliserReportHeader1
+public record SettlementInternaliserReportHeader1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the reporting timestamp, when the report was submitted from the Settlement Internaliser to the Competent Authority.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SettlementInternaliserReportHeader1
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
+
     /// <summary>
     /// Last day of the reporting period.
     /// </summary>
@@ -34,25 +32,21 @@ public partial record SettlementInternaliserReportHeader1
     [DisplayName("Reporting Date")]
     [IsoXmlTag("RptgDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ReportingDate { get; init; } 
-    
+    public required IsoISODate ReportingDate { get; init; }
+
     /// <summary>
     /// Specifies the currency of the reported transactions.
     /// </summary>
     [IsoId("_641IEO3kEeaWjpoyrnG6Rw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public required ActiveCurrencyCode Currency { get; init; } 
-    
+    public required ActiveCurrencyCode Currency { get; init; }
+
     /// <summary>
     /// Provides the status of the report.
     /// </summary>
     [IsoId("_eVMmQHBLEeeD5_FeE1GEtw")]
     [DisplayName("Report Status")]
     [IsoXmlTag("RptSts")]
-    public required TransactionOperationType4Code ReportStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required TransactionOperationType4Code ReportStatus { get; init; }
 }

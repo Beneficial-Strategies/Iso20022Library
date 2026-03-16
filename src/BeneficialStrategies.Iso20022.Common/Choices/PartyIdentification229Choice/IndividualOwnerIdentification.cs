@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification229Choice
 {
     /// <summary>
@@ -13,26 +13,24 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification229Choice
     /// </summary>
     [IsoId("_0DC2IO4CEeqc-LCjwLsUVg")]
     [DisplayName("Individual Owner Identification")]
-    public partial record IndividualOwnerIdentification : PartyIdentification229Choice_
+    public record IndividualOwnerIdentification : PartyIdentification229Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the type of alternate identification of the party identified.
         /// </summary>
         [IsoId("_BbMrdR5gEeWE3PufGMdJ3w")]
         [DisplayName("Identification Type")]
         [IsoXmlTag("IdTp")]
-        public required IdentificationType42Choice_ IdentificationType { get; init; } 
-        
+        public required IdentificationType42Choice_ IdentificationType { get; init; }
+
         /// <summary>
         /// Country in which a person resides (the place of a person&apos;s home). In the case of a company, it is the country from which the affairs of that company are directed.
         /// </summary>
         [IsoId("_BbMrfR5gEeWE3PufGMdJ3w")]
         [DisplayName("Country")]
         [IsoXmlTag("Ctry")]
-        public required CountryCode Country { get; init; } 
-        
+        public required CountryCode Country { get; init; }
+
         /// <summary>
         /// Alternate identification for a party.
         /// </summary>
@@ -40,11 +38,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyIdentification229Choice
         [DisplayName("Alternate Identification")]
         [IsoXmlTag("AltrnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text AlternateIdentification { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text AlternateIdentification { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum CollateralPool1Code
     [IsoId("_CvAqQd7GEeSaBeqd_btViQ")]
     [Description(@"Collateral is not of pool type.")]
     NoPool = CollateralPoolCode.NoPool, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral is of pool type.
     /// Encoded/decoded by serializers as &quot;POOL&quot;.
@@ -32,5 +32,4 @@ public enum CollateralPool1Code
     [IsoId("_Czndcd7GEeSaBeqd_btViQ")]
     [Description(@"Collateral is of pool type.")]
     Pool = CollateralPoolCode.Pool, // same ordinal as derivation source for type conversions
-    
 }

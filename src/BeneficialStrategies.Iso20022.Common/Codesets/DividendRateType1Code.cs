@@ -23,5 +23,4 @@ public enum DividendRateType1Code
     [IsoId("_q3yFdGtdEeCY4-KZ9JEyUQ_-747091417")]
     [Description(@"Rate relating to the underlying security for which tax is charged.")]
     TaxablePortion = DividendRateTypeCode.TaxablePortion, // same ordinal as derivation source for type conversions
-    
 }

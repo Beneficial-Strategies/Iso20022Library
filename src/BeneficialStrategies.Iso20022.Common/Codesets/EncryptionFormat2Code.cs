@@ -23,7 +23,7 @@ public enum EncryptionFormat2Code
     [IsoId("_-pI2EdtnEee9e6xduATmQg")]
     [Description(@"Format of a cryptographic key specified by the ANSI X9 TR-31 standard.")]
     TR31 = EncryptionFormatCode.TR31, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Format of a cryptographic key specified by the ANSI X9 TR-34 standard.
     /// Encoded/decoded by serializers as &quot;TR34&quot;.
@@ -32,7 +32,7 @@ public enum EncryptionFormat2Code
     [IsoId("_-pI2E9tnEee9e6xduATmQg")]
     [Description(@"Format of a cryptographic key specified by the ANSI X9 TR-34 standard.")]
     TR34 = EncryptionFormatCode.TR34, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Format of a cryptographic key specified by the ISO20038 standard.
     /// Encoded/decoded by serializers as &quot;I238&quot;.
@@ -41,5 +41,4 @@ public enum EncryptionFormat2Code
     [IsoId("__uLLgdtnEee9e6xduATmQg")]
     [Description(@"Format of a cryptographic key specified by the ISO20038 standard.")]
     ISO20038KeyWrap = EncryptionFormatCode.ISO20038KeyWrap, // same ordinal as derivation source for type conversions
-    
 }

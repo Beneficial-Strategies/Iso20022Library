@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ylymkZlcEeeE1Ya-LgRsuQ")]
 [DisplayName("Cash Balance")]
-public partial record CashBalance9
+public record CashBalance9
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the nature of a balance.
     /// </summary>
     [IsoId("_yttMZ5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public BalanceType8Choice_? Type { get; init; } 
-    
+    public BalanceType8Choice_? Type { get; init; }
+
     /// <summary>
     /// Specifies the type of counterparty for which the balance is calculated.
     /// </summary>
     [IsoId("_yttMaZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Counterparty Type")]
     [IsoXmlTag("CtrPtyTp")]
-    public required BalanceCounterparty1Code CounterpartyType { get; init; } 
-    
+    public required BalanceCounterparty1Code CounterpartyType { get; init; }
+
     /// <summary>
     /// Specifies the counterparty for which the balance is calculated.
     /// </summary>
     [IsoId("_yttMa5lcEeeE1Ya-LgRsuQ")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
-    public BranchAndFinancialInstitutionIdentification5? CounterpartyIdentification { get; init; } 
-    
+    public BranchAndFinancialInstitutionIdentification5? CounterpartyIdentification { get; init; }
+
     /// <summary>
     /// Date and time at which the balance is or will be available.
     /// </summary>
     [IsoId("_yttMbZlcEeeE1Ya-LgRsuQ")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTimeSearch3Choice_? ValueDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateAndDateTimeSearch3Choice_? ValueDate { get; init; }
 }

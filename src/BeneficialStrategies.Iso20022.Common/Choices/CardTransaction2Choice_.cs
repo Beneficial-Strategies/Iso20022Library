@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CardTransaction2Choice.Aggregated))]
     [KnownType(typeof(CardTransaction2Choice.Individual))]
-    [JsonDerivedType(typeof(CardTransaction2Choice.Aggregated),nameof(CardTransaction2Choice.Aggregated))]
-    [JsonDerivedType(typeof(CardTransaction2Choice.Individual),nameof(CardTransaction2Choice.Individual))]
+    [JsonDerivedType(
+        typeof(CardTransaction2Choice.Aggregated),
+        nameof(CardTransaction2Choice.Aggregated)
+    )]
+    [JsonDerivedType(
+        typeof(CardTransaction2Choice.Individual),
+        nameof(CardTransaction2Choice.Individual)
+    )]
     [IsoId("_0UR2gTj3EeSz-s1QOUJaOg")]
     [DisplayName("Card Transaction 2 Choice")]
-    public abstract partial record CardTransaction2Choice_
-    {
-    }
+    public abstract record CardTransaction2Choice_ { }
 }

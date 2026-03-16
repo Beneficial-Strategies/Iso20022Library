@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstructionProcessingStatus34Choice.DefaultAction))]
     [KnownType(typeof(InstructionProcessingStatus34Choice.StandingInstruction))]
     [KnownType(typeof(InstructionProcessingStatus34Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.Cancelled),nameof(InstructionProcessingStatus34Choice.Cancelled))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.AcceptedForFurtherProcessing),nameof(InstructionProcessingStatus34Choice.AcceptedForFurtherProcessing))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.Rejected),nameof(InstructionProcessingStatus34Choice.Rejected))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.Pending),nameof(InstructionProcessingStatus34Choice.Pending))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.DefaultAction),nameof(InstructionProcessingStatus34Choice.DefaultAction))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.StandingInstruction),nameof(InstructionProcessingStatus34Choice.StandingInstruction))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus34Choice.ProprietaryStatus),nameof(InstructionProcessingStatus34Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.Cancelled),
+        nameof(InstructionProcessingStatus34Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.AcceptedForFurtherProcessing),
+        nameof(InstructionProcessingStatus34Choice.AcceptedForFurtherProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.Rejected),
+        nameof(InstructionProcessingStatus34Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.Pending),
+        nameof(InstructionProcessingStatus34Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.DefaultAction),
+        nameof(InstructionProcessingStatus34Choice.DefaultAction)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.StandingInstruction),
+        nameof(InstructionProcessingStatus34Choice.StandingInstruction)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus34Choice.ProprietaryStatus),
+        nameof(InstructionProcessingStatus34Choice.ProprietaryStatus)
+    )]
     [IsoId("_bzVOrffREeiNZp_PtLohLw")]
     [DisplayName("Instruction Processing Status 34 Choice")]
-    public abstract partial record InstructionProcessingStatus34Choice_
-    {
-    }
+    public abstract record InstructionProcessingStatus34Choice_ { }
 }

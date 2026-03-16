@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType2Code
     [IsoId("_PV51sQ2fEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type robusta coffee.")]
     RobustaCoffee = AssetClassDetailedSubProductTypeCode.RobustaCoffee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type cocoa.
     /// Encoded/decoded by serializers as &quot;CCOA&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassDetailedSubProductType2Code
     [IsoId("_P_aswQ2fEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type cocoa.")]
     Cocoa = AssetClassDetailedSubProductTypeCode.Cocoa, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type raw sugar.
     /// Encoded/decoded by serializers as &quot;BRWN&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassDetailedSubProductType2Code
     [IsoId("_RqOowQ2fEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type raw sugar.")]
     RawSugar = AssetClassDetailedSubProductTypeCode.RawSugar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type white sugar.
     /// Encoded/decoded by serializers as &quot;WHSG&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassDetailedSubProductType2Code
     [IsoId("_S_xfYQ2fEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type white sugar.")]
     WhiteSugar = AssetClassDetailedSubProductTypeCode.WhiteSugar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +59,4 @@ public enum AssetClassDetailedSubProductType2Code
     [IsoId("_iQv5oQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

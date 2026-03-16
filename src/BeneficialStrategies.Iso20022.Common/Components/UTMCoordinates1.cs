@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wETkwIn5EeShMpas3885ww")]
 [DisplayName("UTM Coordinates")]
-public partial record UTMCoordinates1
+public record UTMCoordinates1
 {
-    #nullable enable
-    
     /// <summary>
     /// UTM grid zone combination of the longitude zone (1 to 60) and the latitude band, C to X, excluding I and O (for example Eiffel tower UTM zone is 31U).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record UTMCoordinates1
     [DisplayName("UTM Zone")]
     [IsoXmlTag("UTMZone")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public required IsoMax16Text UTMZone { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public required IsoMax16Text UTMZone { get; init; }
+
     /// <summary>
     /// X-coordinate of the Universal Transverse Mercator coordinate system in meters (for example 448 265m for Eiffel Tower X-coordinate).
     /// </summary>
@@ -35,8 +33,8 @@ public partial record UTMCoordinates1
     [DisplayName("UTM Eastward")]
     [IsoXmlTag("UTMEstwrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber UTMEastward { get; init; } 
-    
+    public required IsoNumber UTMEastward { get; init; }
+
     /// <summary>
     /// Y-coordinate of the Universal Transverse Mercator coordinate system (for example 5 411 920m for Eiffel Tower Y-coordinate).
     /// </summary>
@@ -44,9 +42,5 @@ public partial record UTMCoordinates1
     [DisplayName("UTM Northward")]
     [IsoXmlTag("UTMNrthwrd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber UTMNorthward { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoNumber UTMNorthward { get; init; }
 }

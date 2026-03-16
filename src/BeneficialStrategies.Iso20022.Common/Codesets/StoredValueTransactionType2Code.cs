@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_o7PfIYYKEemxIqbaFEE8-w")]
-[Description(@"Identification of operation to proceed on the stored value account or the stored value card.")]
+[Description(
+    @"Identification of operation to proceed on the stored value account or the stored value card."
+)]
 [DerivedFrom(typeof(StoredValueTransactionTypeCode))]
 public enum StoredValueTransactionType2Code
 {
@@ -23,7 +25,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_pFpYUYYKEemxIqbaFEE8-w")]
     [Description(@"Activate the account or the card.")]
     Activate = StoredValueTransactionTypeCode.Activate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duplicate the code or number provided by the loading or activation.
     /// Encoded/decoded by serializers as &quot;DUPL&quot;.
@@ -32,7 +34,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_pFpYU4YKEemxIqbaFEE8-w")]
     [Description(@"Duplicate the code or number provided by the loading or activation.")]
     Duplicate = StoredValueTransactionTypeCode.Duplicate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Load the account or the card with money.
     /// Encoded/decoded by serializers as &quot;LOAD&quot;.
@@ -41,7 +43,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_pFpYVYYKEemxIqbaFEE8-w")]
     [Description(@"Load the account or the card with money.")]
     Load = StoredValueTransactionTypeCode.Load, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reserve the account (e.g. get an activation code).
     /// Encoded/decoded by serializers as &quot;RESV&quot;.
@@ -50,7 +52,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_pFpYV4YKEemxIqbaFEE8-w")]
     [Description(@"Reserve the account (e.g. get an activation code).")]
     Reserve = StoredValueTransactionTypeCode.Reserve, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reverse an activation or loading.
     /// Encoded/decoded by serializers as &quot;REVS&quot;.
@@ -59,7 +61,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_pFpYWYYKEemxIqbaFEE8-w")]
     [Description(@"Reverse an activation or loading.")]
     Reverse = StoredValueTransactionTypeCode.Reverse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unload the account.
     /// Encoded/decoded by serializers as &quot;ULOA&quot;.
@@ -68,7 +70,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_pFpYW4YKEemxIqbaFEE8-w")]
     [Description(@"Unload the account.")]
     Unload = StoredValueTransactionTypeCode.Unload, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Close the account.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -77,7 +79,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_ezGTwYa1EemfPtKsRXC1Ag")]
     [Description(@"Close the account.")]
     CloseAccount = StoredValueTransactionTypeCode.CloseAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deactivate the account or the card.
     /// Encoded/decoded by serializers as &quot;DCTV&quot;.
@@ -86,7 +88,7 @@ public enum StoredValueTransactionType2Code
     [IsoId("_e6GToYa1EemfPtKsRXC1Ag")]
     [Description(@"Deactivate the account or the card.")]
     Deactivate = StoredValueTransactionTypeCode.Deactivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Open the account.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -95,5 +97,4 @@ public enum StoredValueTransactionType2Code
     [IsoId("_fEp90Ya1EemfPtKsRXC1Ag")]
     [Description(@"Open the account.")]
     OpenAccount = StoredValueTransactionTypeCode.OpenAccount, // same ordinal as derivation source for type conversions
-    
 }

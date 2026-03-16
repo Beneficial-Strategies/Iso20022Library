@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification1Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.OwnerIdentification1Choice
     /// </summary>
     [IsoId("_qe1hwggrEeSqp5OpJ0aMmw")]
     [DisplayName("Individual Owner Identification")]
-    public partial record IndividualOwnerIdentification : OwnerIdentification1Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record IndividualOwnerIdentification : OwnerIdentification1Choice_ { }
 }

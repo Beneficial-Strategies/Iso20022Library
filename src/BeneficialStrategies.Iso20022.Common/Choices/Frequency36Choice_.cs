@@ -12,12 +12,10 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Frequency36Choice.Type))]
     [KnownType(typeof(Frequency36Choice.Period))]
     [KnownType(typeof(Frequency36Choice.PointInTime))]
-    [JsonDerivedType(typeof(Frequency36Choice.Type),nameof(Frequency36Choice.Type))]
-    [JsonDerivedType(typeof(Frequency36Choice.Period),nameof(Frequency36Choice.Period))]
-    [JsonDerivedType(typeof(Frequency36Choice.PointInTime),nameof(Frequency36Choice.PointInTime))]
+    [JsonDerivedType(typeof(Frequency36Choice.Type), nameof(Frequency36Choice.Type))]
+    [JsonDerivedType(typeof(Frequency36Choice.Period), nameof(Frequency36Choice.Period))]
+    [JsonDerivedType(typeof(Frequency36Choice.PointInTime), nameof(Frequency36Choice.PointInTime))]
     [IsoId("_sVM2vWk2Eeanu6HLe77Rkg")]
     [DisplayName("Frequency 36 Choice")]
-    public abstract partial record Frequency36Choice_
-    {
-    }
+    public abstract record Frequency36Choice_ { }
 }

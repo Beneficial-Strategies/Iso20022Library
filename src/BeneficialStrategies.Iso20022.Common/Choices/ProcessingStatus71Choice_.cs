@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus71Choice.Denied))]
     [KnownType(typeof(ProcessingStatus71Choice.Completed))]
     [KnownType(typeof(ProcessingStatus71Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.AcknowledgedAccepted),nameof(ProcessingStatus71Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.Pending),nameof(ProcessingStatus71Choice.Pending))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.Rejected),nameof(ProcessingStatus71Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.Repair),nameof(ProcessingStatus71Choice.Repair))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.Denied),nameof(ProcessingStatus71Choice.Denied))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.Completed),nameof(ProcessingStatus71Choice.Completed))]
-    [JsonDerivedType(typeof(ProcessingStatus71Choice.Proprietary),nameof(ProcessingStatus71Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus71Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.Pending),
+        nameof(ProcessingStatus71Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.Rejected),
+        nameof(ProcessingStatus71Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.Repair),
+        nameof(ProcessingStatus71Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.Denied),
+        nameof(ProcessingStatus71Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.Completed),
+        nameof(ProcessingStatus71Choice.Completed)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus71Choice.Proprietary),
+        nameof(ProcessingStatus71Choice.Proprietary)
+    )]
     [IsoId("_mZpJceGKEeWCAvUNsZ5u6g")]
     [DisplayName("Processing Status 71 Choice")]
-    public abstract partial record ProcessingStatus71Choice_
-    {
-    }
+    public abstract record ProcessingStatus71Choice_ { }
 }

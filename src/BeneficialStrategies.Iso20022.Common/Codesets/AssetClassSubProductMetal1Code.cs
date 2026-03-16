@@ -23,7 +23,7 @@ public enum AssetClassSubProductMetal1Code
     [IsoId("_aFAcEdDrEeS8V88MH4oPOQ")]
     [Description(@"Commodity of type non precious metals.")]
     NonPrecious = AssetClassSubProductTypeCode.NonPrecious, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type precious metals.
     /// Encoded/decoded by serializers as &quot;PRME&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassSubProductMetal1Code
     [IsoId("_aSQN4dDrEeS8V88MH4oPOQ")]
     [Description(@"Commodity of type precious metals.")]
     Precious = AssetClassSubProductTypeCode.Precious, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum AssetClassSubProductMetal1Code
     [IsoId("_IOVEkAFLEeaDfK-zDSyB6A")]
     [Description(@"Commodity of other type.")]
     Other = AssetClassSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,16 +23,18 @@ public enum CancellationProcessingStatus2Code
     [IsoId("_bXqZ1dp-Ed-ak6NoX_4Aeg_-827273380")]
     [Description(@"Cancellation has been completed.")]
     CancellationCompleted = CancellationProcessingStatusCode.CancellationCompleted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation is pending. It is not known at this time whether cancellation can be affected.
     /// Encoded/decoded by serializers as &quot;CANP&quot;.
     /// </summary>
     [EnumMember(Value = "CANP")]
     [IsoId("_bXqZ1tp-Ed-ak6NoX_4Aeg_-827273349")]
-    [Description(@"Cancellation is pending. It is not known at this time whether cancellation can be affected.")]
+    [Description(
+        @"Cancellation is pending. It is not known at this time whether cancellation can be affected."
+    )]
     PendingCancellation = CancellationProcessingStatusCode.PendingCancellation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation will not be executed.
     /// Encoded/decoded by serializers as &quot;DEND&quot;.
@@ -41,16 +43,18 @@ public enum CancellationProcessingStatus2Code
     [IsoId("_bXqZ19p-Ed-ak6NoX_4Aeg_-827273319")]
     [Description(@"Cancellation will not be executed.")]
     Denied = CancellationProcessingStatusCode.Denied, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request has been acknowledged for further processing by the account servicer.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_bXqZ2Np-Ed-ak6NoX_4Aeg_-827273257")]
-    [Description(@"Cancellation request has been acknowledged for further processing by the account servicer.")]
+    [Description(
+        @"Cancellation request has been acknowledged for further processing by the account servicer."
+    )]
     Accepted = CancellationProcessingStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation has been rejected for further processing.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -59,5 +63,4 @@ public enum CancellationProcessingStatus2Code
     [IsoId("_bXqZ2dp-Ed-ak6NoX_4Aeg_-827272979")]
     [Description(@"Cancellation has been rejected for further processing.")]
     Rejected = CancellationProcessingStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

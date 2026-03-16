@@ -23,7 +23,7 @@ public enum RateType3Code
     [IsoId("_ZZcZqdp-Ed-ak6NoX_4Aeg_-1424495955")]
     [Description(@"Imputed tax.")]
     Imputed = RateTypeCode.Imputed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is a precompte.
     /// Encoded/decoded by serializers as &quot;PREC&quot;.
@@ -32,7 +32,7 @@ public enum RateType3Code
     [IsoId("_ZZmKoNp-Ed-ak6NoX_4Aeg_-1424495946")]
     [Description(@"Rate is a precompte.")]
     Precompte = RateTypeCode.Precompte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is a one tier tax.
     /// Encoded/decoded by serializers as &quot;TIER&quot;.
@@ -41,5 +41,4 @@ public enum RateType3Code
     [IsoId("_ZZmKodp-Ed-ak6NoX_4Aeg_-1424495927")]
     [Description(@"Rate is a one tier tax.")]
     OneTierTax = RateTypeCode.OneTierTax, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum ResponseModeCode
     [IsoId("_BRnwQN6rEeiwsev40qZGEQ")]
     [Description(@"The Message Response is not required, except in case of error.")]
     NotRequired,
-    
+
     /// <summary>
     /// The Message Response is immediate, after taking into account the request.
     /// Encoded/decoded by serializers as &quot;IMMD&quot;.
@@ -32,7 +32,7 @@ public enum ResponseModeCode
     [IsoId("_DhWXMN6rEeiwsev40qZGEQ")]
     [Description(@"The Message Response is immediate, after taking into account the request.")]
     Immediate,
-    
+
     /// <summary>
     /// The Print Response is required at the end of print.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -41,7 +41,7 @@ public enum ResponseModeCode
     [IsoId("_I-7aMN6rEeiwsev40qZGEQ")]
     [Description(@"The Print Response is required at the end of print.")]
     PrintEnd,
-    
+
     /// <summary>
     /// The Sound Response is required at the end of play.
     /// Encoded/decoded by serializers as &quot;SEND&quot;.
@@ -50,5 +50,4 @@ public enum ResponseModeCode
     [IsoId("_LY_o4N6rEeiwsev40qZGEQ")]
     [Description(@"The Sound Response is required at the end of play.")]
     SoundEnd,
-    
 }

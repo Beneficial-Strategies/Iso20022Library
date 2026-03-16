@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Branch5Choice.Identification))]
     [KnownType(typeof(Branch5Choice.Country))]
-    [JsonDerivedType(typeof(Branch5Choice.Identification),nameof(Branch5Choice.Identification))]
-    [JsonDerivedType(typeof(Branch5Choice.Country),nameof(Branch5Choice.Country))]
+    [JsonDerivedType(typeof(Branch5Choice.Identification), nameof(Branch5Choice.Identification))]
+    [JsonDerivedType(typeof(Branch5Choice.Country), nameof(Branch5Choice.Country))]
     [IsoId("_BpDRkMg4Eeu4ecZgAYuz5w")]
     [DisplayName("Branch 5 Choice")]
-    public abstract partial record Branch5Choice_
-    {
-    }
+    public abstract record Branch5Choice_ { }
 }

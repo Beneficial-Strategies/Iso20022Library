@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZGiv0INlEeuHqfO1LgkE9Q")]
 [DisplayName("Exchange Rate Information")]
-public partial record ExchangeRateInformation2
+public record ExchangeRateInformation2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the source of the rate information.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ExchangeRateInformation2
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Provider { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Provider { get; init; }
+
     /// <summary>
     /// Identification of the specific rate, table or file that contains the rate information.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ExchangeRateInformation2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Identification { get; init; }
+
     /// <summary>
     /// The date the exchange rate data is effective.
     /// </summary>
@@ -45,8 +43,8 @@ public partial record ExchangeRateInformation2
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// The time the exchange rate data is effective.
     /// </summary>
@@ -54,25 +52,21 @@ public partial record ExchangeRateInformation2
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; } 
-    
+    public IsoISOTime? Time { get; init; }
+
     /// <summary>
     /// Details of a specific exchange rate
     /// </summary>
     [IsoId("_VjbfUINuEeuHqfO1LgkE9Q")]
     [DisplayName("Exchange Rate Detail")]
     [IsoXmlTag("XchgRateDtl")]
-    public ExchangeRateDetail1? ExchangeRateDetail { get; init; } 
-    
+    public ExchangeRateDetail1? ExchangeRateDetail { get; init; }
+
     /// <summary>
     /// Rate lock details.
     /// </summary>
     [IsoId("_wmRsQIZ8EeuSbct6WWD-Ng")]
     [DisplayName("Rate Lock")]
     [IsoXmlTag("RateLck")]
-    public RateLock1? RateLock { get; init; } 
-    
-    
-    #nullable disable
-    
+    public RateLock1? RateLock { get; init; }
 }

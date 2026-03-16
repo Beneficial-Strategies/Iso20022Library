@@ -23,7 +23,7 @@ public enum SecuritiesFinancingTransactionType2Code
     [IsoId("_MNulQY7YEeaa5_S8lsRKCQ")]
     [Description(@"Relates to a repurchase agreement transaction.")]
     Repo = SecuritiesTransactionTypeV2Code.Repo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a reverse repurchase agreement transaction.
     /// Encoded/decoded by serializers as &quot;RVPO&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesFinancingTransactionType2Code
     [IsoId("_MNulQ47YEeaa5_S8lsRKCQ")]
     [Description(@"Relates to a reverse repurchase agreement transaction.")]
     ReverseRepo = SecuritiesTransactionTypeV2Code.ReverseRepo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a securities borrowing operation.
     /// Encoded/decoded by serializers as &quot;SECB&quot;.
@@ -41,7 +41,7 @@ public enum SecuritiesFinancingTransactionType2Code
     [IsoId("_MNulRY7YEeaa5_S8lsRKCQ")]
     [Description(@"Relates to a securities borrowing operation.")]
     SecuritiesBorrowing = SecuritiesTransactionTypeV2Code.SecuritiesBorrowing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a securities lending operation.
     /// Encoded/decoded by serializers as &quot;SECL&quot;.
@@ -50,7 +50,7 @@ public enum SecuritiesFinancingTransactionType2Code
     [IsoId("_MNulR47YEeaa5_S8lsRKCQ")]
     [Description(@"Relates to a securities lending operation.")]
     SecuritiesLending = SecuritiesTransactionTypeV2Code.SecuritiesLending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a buy sell back transaction.
     /// Encoded/decoded by serializers as &quot;BSBK&quot;.
@@ -59,7 +59,7 @@ public enum SecuritiesFinancingTransactionType2Code
     [IsoId("_NiYrEY7YEeaa5_S8lsRKCQ")]
     [Description(@"Relates to a buy sell back transaction.")]
     BuySellBack = SecuritiesTransactionTypeV2Code.BuySellBack, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a sell buy back transaction.
     /// Encoded/decoded by serializers as &quot;SBBK&quot;.
@@ -68,5 +68,4 @@ public enum SecuritiesFinancingTransactionType2Code
     [IsoId("_O0WpQY7YEeaa5_S8lsRKCQ")]
     [Description(@"Relates to a sell buy back transaction.")]
     SellBuyBack = SecuritiesTransactionTypeV2Code.SellBuyBack, // same ordinal as derivation source for type conversions
-    
 }

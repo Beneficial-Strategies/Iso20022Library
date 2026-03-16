@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pm0bkb5XEeexmbB7KsjCwA")]
 [DisplayName("Corporate Action Cancellation SD")]
-public partial record CorporateActionCancellationSD3
+public record CorporateActionCancellationSD3
 {
-    #nullable enable
-    
     /// <summary>
     /// Xpath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionCancellationSD3
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? PlaceAndName { get; init; }
+
     /// <summary>
     /// Reference assigned by the account servicer to unambiguously identify a related corporate action event.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record CorporateActionCancellationSD3
     [DisplayName("Linked Corporate Action Identification")]
     [IsoXmlTag("LkdCorpActnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text LinkedCorporateActionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text LinkedCorporateActionIdentification { get; init; }
+
     /// <summary>
     /// Indicates the reason why two or more events are related.
     /// </summary>
     [IsoId("_p4rAoL5XEeexmbB7KsjCwA")]
     [DisplayName("Linkage Type")]
     [IsoXmlTag("LkgTp")]
-    public required DTCCLinkType1Code LinkageType { get; init; } 
-    
+    public required DTCCLinkType1Code LinkageType { get; init; }
+
     /// <summary>
     /// Events can be linked together. This date represents the date on which the link was established.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record CorporateActionCancellationSD3
     [DisplayName("Link Added Date")]
     [IsoXmlTag("LkAddedDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate LinkAddedDate { get; init; } 
-    
+    public required IsoISODate LinkAddedDate { get; init; }
+
     /// <summary>
     /// Events can be linked together. This date represents the date on which the link was modified.
     /// </summary>
@@ -62,9 +60,5 @@ public partial record CorporateActionCancellationSD3
     [DisplayName("Link Modified Date")]
     [IsoXmlTag("LkModfdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LinkModifiedDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? LinkModifiedDate { get; init; }
 }

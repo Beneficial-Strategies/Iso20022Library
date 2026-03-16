@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y8Q3kJ2qEe-4seDr3Li2Ew")]
 [DisplayName("ATM Deposit Component1")]
-public partial record ATMDepositComponent1
+public record ATMDepositComponent1
 {
-    #nullable enable
-
     /// <summary>
     /// Account Data.
     /// </summary>
@@ -51,9 +49,5 @@ public partial record ATMDepositComponent1
     /// </summary>
     [DisplayName("Sub Deposit Identification")]
     [IsoXmlTag("SubDpstId")]
-    public IsoMax70Text? SubDepositIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax70Text? SubDepositIdentification { get; init; }
 }

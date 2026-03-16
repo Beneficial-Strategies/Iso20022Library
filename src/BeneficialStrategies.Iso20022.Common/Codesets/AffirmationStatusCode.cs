@@ -23,7 +23,7 @@ public enum AffirmationStatusCode
     [IsoId("_bndJU9p-Ed-ak6NoX_4Aeg_693549919")]
     [Description(@"Status of the transaction is affirmed.")]
     Affirmed,
-    
+
     /// <summary>
     /// Status of the transaction is unaffirmed.
     /// Encoded/decoded by serializers as &quot;NAFI&quot;.
@@ -32,5 +32,4 @@ public enum AffirmationStatusCode
     [IsoId("_bndJVNp-Ed-ak6NoX_4Aeg_693549937")]
     [Description(@"Status of the transaction is unaffirmed.")]
     Unaffirmed,
-    
 }

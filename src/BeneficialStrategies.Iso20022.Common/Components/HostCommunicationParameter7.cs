@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,44 +14,42 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PufjgZ9xEe-nbM0aSPcoiQ")]
 [DisplayName("Host Communication Parameter7")]
-public partial record HostCommunicationParameter7
+public record HostCommunicationParameter7
 {
-    #nullable enable
-
     /// <summary>
     /// Action Type.
     /// </summary>
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
-    public required TerminalManagementAction3Code ActionType { get; init; } 
+    public required TerminalManagementAction3Code ActionType { get; init; }
 
     /// <summary>
     /// Address.
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public NetworkParameters7? Address { get; init; } 
+    public NetworkParameters7? Address { get; init; }
 
     /// <summary>
     /// Encoding Mode.
     /// </summary>
     [DisplayName("Encoding Mode")]
     [IsoXmlTag("NcodgMd")]
-    public CAPEEncodingMode1Code? EncodingMode { get; init; } 
+    public CAPEEncodingMode1Code? EncodingMode { get; init; }
 
     /// <summary>
     /// Exchange Mode.
     /// </summary>
     [DisplayName("Exchange Mode")]
     [IsoXmlTag("XchgMd")]
-    public CAPEExchangeMode1Code? ExchangeMode { get; init; } 
+    public CAPEExchangeMode1Code? ExchangeMode { get; init; }
 
     /// <summary>
     /// Host Identification.
     /// </summary>
     [DisplayName("Host Identification")]
     [IsoXmlTag("HstId")]
-    public required IsoMax35Text HostIdentification { get; init; } 
+    public required IsoMax35Text HostIdentification { get; init; }
 
     /// <summary>
     /// Key.
@@ -65,16 +63,12 @@ public partial record HostCommunicationParameter7
     /// </summary>
     [DisplayName("Network Service Provider")]
     [IsoXmlTag("NtwkSvcPrvdr")]
-    public NetworkParameters7? NetworkServiceProvider { get; init; } 
+    public NetworkParameters7? NetworkServiceProvider { get; init; }
 
     /// <summary>
     /// Physical Interface.
     /// </summary>
     [DisplayName("Physical Interface")]
     [IsoXmlTag("PhysIntrfc")]
-    public PhysicalInterfaceParameter1? PhysicalInterface { get; init; } 
-
-    
-    #nullable disable
-    
+    public PhysicalInterfaceParameter1? PhysicalInterface { get; init; }
 }

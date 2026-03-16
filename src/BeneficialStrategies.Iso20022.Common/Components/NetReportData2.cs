@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CWAzsQN1Ee2-vqzwMUAewg")]
 [DisplayName("Net Report Data")]
-public partial record NetReportData2
+public record NetReportData2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier for a message, as assigned by the Sender. This unique identifier can be used for cross-referencing purposes in subsequent messages.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record NetReportData2
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
     /// <summary>
     /// Date and time at which the net report was generated.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record NetReportData2
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
+
     /// <summary>
     /// Provides the cut off time that has been passed, resulting in the generation of the net report.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record NetReportData2
     [DisplayName("Netting Cut Off Time")]
     [IsoXmlTag("NetgCutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime NettingCutOffTime { get; init; } 
-    
+    public required IsoISOTime NettingCutOffTime { get; init; }
+
     /// <summary>
     /// Specifies the value date on which the net report was generated.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record NetReportData2
     [DisplayName("Report Date")]
     [IsoXmlTag("RptDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ReportDate { get; init; } 
-    
+    public required IsoISODate ReportDate { get; init; }
+
     /// <summary>
     /// Specifies the value date of the trades used in the generation of the net report.
     /// </summary>
@@ -62,8 +60,8 @@ public partial record NetReportData2
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ValueDate { get; init; } 
-    
+    public required IsoISODate ValueDate { get; init; }
+
     /// <summary>
     /// Specifies the type of net report, indicating how the obligations have been calculated.
     /// </summary>
@@ -71,17 +69,17 @@ public partial record NetReportData2
     [DisplayName("Report Type")]
     [IsoXmlTag("RptTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ReportType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ReportType { get; init; }
+
     /// <summary>
     /// Describes the central system responsible for generating the net report.
     /// </summary>
     [IsoId("_Cb9qvQN1Ee2-vqzwMUAewg")]
     [DisplayName("Net Report Servicer")]
     [IsoXmlTag("NetRptSvcr")]
-    public PartyIdentification242Choice_? NetReportServicer { get; init; } 
-    
+    public PartyIdentification242Choice_? NetReportServicer { get; init; }
+
     /// <summary>
     /// Describes the type of netting service supporting the net report.
     /// </summary>
@@ -89,18 +87,14 @@ public partial record NetReportData2
     [DisplayName("Net Service Type")]
     [IsoXmlTag("NetSvcTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? NetServiceType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? NetServiceType { get; init; }
+
     /// <summary>
     /// Page number of the message (within the net report) and continuation indicator to indicate that the report is to continue or that the message is the last page of the report.
     /// </summary>
     [IsoId("_Cb9qwQN1Ee2-vqzwMUAewg")]
     [DisplayName("Message Pagination")]
     [IsoXmlTag("MsgPgntn")]
-    public Pagination1? MessagePagination { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Pagination1? MessagePagination { get; init; }
 }

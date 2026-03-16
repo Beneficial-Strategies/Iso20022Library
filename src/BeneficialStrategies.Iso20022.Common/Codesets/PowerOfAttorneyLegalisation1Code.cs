@@ -23,7 +23,7 @@ public enum PowerOfAttorneyLegalisation1Code
     [IsoId("_aHo8ZNp-Ed-ak6NoX_4Aeg_-267216404")]
     [Description(@"Indicates that the power of attorney must be legalised by a notary.")]
     Notary = PowerOfAttorneyLegalisationCode.Notary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the power of attorney must be legalised by a local authority.
     /// Encoded/decoded by serializers as &quot;LOCA&quot;.
@@ -32,7 +32,7 @@ public enum PowerOfAttorneyLegalisation1Code
     [IsoId("_aHo8Zdp-Ed-ak6NoX_4Aeg_-254286026")]
     [Description(@"Indicates that the power of attorney must be legalised by a local authority.")]
     LocalAuthority = PowerOfAttorneyLegalisationCode.LocalAuthority, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the power of attorney must be legalised by a legal officer.
     /// Encoded/decoded by serializers as &quot;APOS&quot;.
@@ -41,7 +41,7 @@ public enum PowerOfAttorneyLegalisation1Code
     [IsoId("_aHo8Ztp-Ed-ak6NoX_4Aeg_-239508247")]
     [Description(@"Indicates that the power of attorney must be legalised by a legal officer.")]
     Apostilled = PowerOfAttorneyLegalisationCode.Apostilled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the power of attorney must be legalised by a consular officer.
     /// Encoded/decoded by serializers as &quot;COUN&quot;.
@@ -50,5 +50,4 @@ public enum PowerOfAttorneyLegalisation1Code
     [IsoId("_aHytYNp-Ed-ak6NoX_4Aeg_-224734417")]
     [Description(@"Indicates that the power of attorney must be legalised by a consular officer.")]
     Consularized = PowerOfAttorneyLegalisationCode.Consularized, // same ordinal as derivation source for type conversions
-    
 }

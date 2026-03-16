@@ -23,7 +23,7 @@ public enum BlockTradeCode
     [IsoId("_bU1IQ9p-Ed-ak6NoX_4Aeg_-1631812715")]
     [Description(@"Transaction is a block trade parent.")]
     Parent,
-    
+
     /// <summary>
     /// Transaction is a block trade child.
     /// Encoded/decoded by serializers as &quot;BLCH&quot;.
@@ -32,5 +32,4 @@ public enum BlockTradeCode
     [IsoId("_bU1IRNp-Ed-ak6NoX_4Aeg_-1631812714")]
     [Description(@"Transaction is a block trade child.")]
     Child,
-    
 }

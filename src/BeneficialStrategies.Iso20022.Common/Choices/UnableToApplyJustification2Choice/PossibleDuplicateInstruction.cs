@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification2Choic
     /// </summary>
     [IsoId("_T-i3Ntp-Ed-ak6NoX_4Aeg_1279007626")]
     [DisplayName("Possible Duplicate Instruction")]
-    public partial record PossibleDuplicateInstruction : UnableToApplyJustification2Choice_
+    public record PossibleDuplicateInstruction : UnableToApplyJustification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// A flag indicating a True or False value.
         /// </summary>
         [IsoXmlTag("PssblDplctInstr")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public required IsoTrueFalseIndicator Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoTrueFalseIndicator Value { get; init; }
     }
 }

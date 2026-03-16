@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RejectedStatus32Choice.NoSpecifiedReason))]
     [KnownType(typeof(RejectedStatus32Choice.Reason))]
-    [JsonDerivedType(typeof(RejectedStatus32Choice.NoSpecifiedReason),nameof(RejectedStatus32Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(RejectedStatus32Choice.Reason),nameof(RejectedStatus32Choice.Reason))]
+    [JsonDerivedType(
+        typeof(RejectedStatus32Choice.NoSpecifiedReason),
+        nameof(RejectedStatus32Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(typeof(RejectedStatus32Choice.Reason), nameof(RejectedStatus32Choice.Reason))]
     [IsoId("_lrrtq-XyEemEj48jhmlA0Q")]
     [DisplayName("Rejected Status 32 Choice")]
-    public abstract partial record RejectedStatus32Choice_
-    {
-    }
+    public abstract record RejectedStatus32Choice_ { }
 }

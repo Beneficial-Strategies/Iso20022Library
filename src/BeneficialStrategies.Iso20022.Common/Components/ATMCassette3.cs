@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5Q4ogaDlEe-MRKYsaX6JDg")]
 [DisplayName("ATM Cassette3")]
-public partial record ATMCassette3
+public record ATMCassette3
 {
-    #nullable enable
-
     /// <summary>
     /// Cassette Status.
     /// </summary>
     [DisplayName("Cassette Status")]
     [IsoXmlTag("CssttSts")]
-    public ATMCassetteStatus1Code? CassetteStatus { get; init; } 
+    public ATMCassetteStatus1Code? CassetteStatus { get; init; }
 
     /// <summary>
     /// Logical Identification.
     /// </summary>
     [DisplayName("Logical Identification")]
     [IsoXmlTag("LogclId")]
-    public required IsoMax35Text LogicalIdentification { get; init; } 
+    public required IsoMax35Text LogicalIdentification { get; init; }
 
     /// <summary>
     /// Media Counters.
@@ -44,21 +42,21 @@ public partial record ATMCassette3
     /// </summary>
     [DisplayName("Media Type")]
     [IsoXmlTag("MdiaTp")]
-    public ATMMediaType4Code? MediaType { get; init; } 
+    public ATMMediaType4Code? MediaType { get; init; }
 
     /// <summary>
     /// Physical Identification.
     /// </summary>
     [DisplayName("Physical Identification")]
     [IsoXmlTag("PhysId")]
-    public IsoMax35Text? PhysicalIdentification { get; init; } 
+    public IsoMax35Text? PhysicalIdentification { get; init; }
 
     /// <summary>
     /// Serial Number.
     /// </summary>
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
-    public IsoMax35Text? SerialNumber { get; init; } 
+    public IsoMax35Text? SerialNumber { get; init; }
 
     /// <summary>
     /// Sub Type.
@@ -72,9 +70,5 @@ public partial record ATMCassette3
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ATMCassetteType1Code Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ATMCassetteType1Code Type { get; init; }
 }

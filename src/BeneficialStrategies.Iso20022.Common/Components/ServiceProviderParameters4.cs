@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KiXH8Z-UEe-nbM0aSPcoiQ")]
 [DisplayName("Service Provider Parameters4")]
-public partial record ServiceProviderParameters4
+public record ServiceProviderParameters4
 {
-    #nullable enable
-
     /// <summary>
     /// Action Type.
     /// </summary>
     [DisplayName("Action Type")]
     [IsoXmlTag("ActnTp")]
-    public required TerminalManagementAction3Code ActionType { get; init; } 
+    public required TerminalManagementAction3Code ActionType { get; init; }
 
     /// <summary>
     /// Application Identification.
@@ -58,9 +56,5 @@ public partial record ServiceProviderParameters4
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax256Text Version { get; init; }
 }

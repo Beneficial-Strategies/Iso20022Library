@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P_b9Wdp-Ed-ak6NoX_4Aeg_652282211")]
 [DisplayName("Generic Identification")]
-public partial record GenericIdentification5
+public record GenericIdentification5
 {
-    #nullable enable
-    
     /// <summary>
     /// Entity that assigns the identification.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record GenericIdentification5
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
-    [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-    public required IsoMax8Text Issuer { get; init; } 
-    
+    [StringLength(maximumLength: 8, MinimumLength = 1)]
+    public required IsoMax8Text Issuer { get; init; }
+
     /// <summary>
     /// Proprietary information, often a code, issued by the data source scheme issuer.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record GenericIdentification5
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText Information { get; init; } 
-    
+    public required IsoExact4AlphaNumericText Information { get; init; }
+
     /// <summary>
     /// Additional information.
     /// </summary>
@@ -44,10 +42,6 @@ public partial record GenericIdentification5
     [DisplayName("Narrative")]
     [IsoXmlTag("Nrrtv")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Narrative { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Narrative { get; init; }
 }

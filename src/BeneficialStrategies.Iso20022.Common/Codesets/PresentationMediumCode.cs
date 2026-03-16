@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_oH14wHyeEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the presentation medium.")]
-[Derivations(typeof(PresentationMedium1Code),typeof(PresentationMedium2Code))]
+[Derivations(typeof(PresentationMedium1Code), typeof(PresentationMedium2Code))]
 public enum PresentationMediumCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum PresentationMediumCode
     [IsoId("_FoZMkHyfEeGWJuGCfvwOsQ")]
     [Description(@"Presentation is made on paper.")]
     Paper,
-    
+
     /// <summary>
     /// Presentation is made electronically.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +32,7 @@ public enum PresentationMediumCode
     [IsoId("_M637sHyfEeGWJuGCfvwOsQ")]
     [Description(@"Presentation is made electronically.")]
     Electronic,
-    
+
     /// <summary>
     /// Presentation is made on paper and/or electronically.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,7 +41,7 @@ public enum PresentationMediumCode
     [IsoId("_TXGYQHyfEeGWJuGCfvwOsQ")]
     [Description(@"Presentation is made on paper and/or electronically.")]
     PaperElectronic,
-    
+
     /// <summary>
     /// Biometric medium.
     /// Encoded/decoded by serializers as &quot;BIOM&quot;.
@@ -50,5 +50,4 @@ public enum PresentationMediumCode
     [IsoId("_NnSYYXyLEemHsOqJOzMVfg")]
     [Description(@"Biometric medium.")]
     Biometric,
-    
 }

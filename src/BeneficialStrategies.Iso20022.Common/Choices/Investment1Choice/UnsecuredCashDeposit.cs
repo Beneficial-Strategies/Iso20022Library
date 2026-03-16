@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
     /// </summary>
     [IsoId("_8csFMLJUEeaYqc4G3TTwhA")]
     [DisplayName("Unsecured Cash Deposit")]
-    public partial record UnsecuredCashDeposit : Investment1Choice_
+    public record UnsecuredCashDeposit : Investment1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date on which the deposit matures.
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate MaturityDate { get; init; } 
-        
+        public required IsoISODate MaturityDate { get; init; }
+
         /// <summary>
         /// Specifies the value of the deposit.
         /// </summary>
         [IsoId("_LYG7oLJVEeaYqc4G3TTwhA")]
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
-        public required ActiveCurrencyAndAmount Value { get; init; } 
-        
+        public required ActiveCurrencyAndAmount Value { get; init; }
+
         /// <summary>
         /// Identifies the legal entity that takes the deposit.
         /// </summary>
@@ -41,10 +39,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Investment1Choice
         [DisplayName("Counterparty Identification")]
         [IsoXmlTag("CtrPtyId")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier CounterpartyIdentification { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoLEIIdentifier CounterpartyIdentification { get; init; }
     }
 }

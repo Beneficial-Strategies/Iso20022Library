@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType31Code
     [IsoId("_sTWoAbv3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type GASPOOL.")]
     GasPool = AssetClassDetailedSubProductTypeCode.GasPool, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type liquid natural gas.
     /// Encoded/decoded by serializers as &quot;LNGG&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassDetailedSubProductType31Code
     [IsoId("_sTWoA7v3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type liquid natural gas.")]
     LNG = AssetClassDetailedSubProductTypeCode.LNG, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type NCG (NetConnect Germany).
     /// Encoded/decoded by serializers as &quot;NCGG&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassDetailedSubProductType31Code
     [IsoId("_sTWoBbv3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type NCG (NetConnect Germany).")]
     NCG = AssetClassDetailedSubProductTypeCode.NCG, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type TTF (Dutch Title Transfer Facility).
     /// Encoded/decoded by serializers as &quot;TTFG&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassDetailedSubProductType31Code
     [IsoId("_sTWoB7v3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type TTF (Dutch Title Transfer Facility).")]
     TTF = AssetClassDetailedSubProductTypeCode.TTF, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type NBP (National Balancing Point).
     /// Encoded/decoded by serializers as &quot;NBPG&quot;.
@@ -59,7 +59,7 @@ public enum AssetClassDetailedSubProductType31Code
     [IsoId("_sTWoCbv3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type NBP (National Balancing Point).")]
     NBP = AssetClassDetailedSubProductTypeCode.NBP, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,5 +68,4 @@ public enum AssetClassDetailedSubProductType31Code
     [IsoId("_ubxtEbv3EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

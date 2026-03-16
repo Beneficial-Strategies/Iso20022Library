@@ -23,7 +23,7 @@ public enum OperationalStatus1Code
     [IsoId("_G4T6wSDZEeWCLu74WLgP4w")]
     [Description(@"Enabled.")]
     Enabled = OperationalStatusCode.Enabled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Special circumstances.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
@@ -32,5 +32,4 @@ public enum OperationalStatus1Code
     [IsoId("_G_dEkSDZEeWCLu74WLgP4w")]
     [Description(@"Special circumstances.")]
     SpecialCircumstances = OperationalStatusCode.SpecialCircumstances, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
     /// </summary>
     [IsoId("_RJ8oodp-Ed-ak6NoX_4Aeg_1042217735")]
     [DisplayName("Global Rejection Reason")]
-    public partial record GlobalRejectionReason : RejectionReason1Choice_
+    public record GlobalRejectionReason : RejectionReason1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Detailed description of the rejection.
         /// </summary>
@@ -24,11 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionReason1Choice
         [DisplayName("Description")]
         [IsoXmlTag("Desc")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public required IsoMax140Text Description { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public required IsoMax140Text Description { get; init; }
     }
 }

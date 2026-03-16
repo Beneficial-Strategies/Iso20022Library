@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument6Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument6Choice
     /// </summary>
     [IsoId("_VKiwQtp-Ed-ak6NoX_4Aeg_-620434636")]
     [DisplayName("Credit Transfer Details")]
-    public partial record CreditTransferDetails : PaymentInstrument6Choice_
+    public record CreditTransferDetails : PaymentInstrument6Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Information supplied to enable the matching of an entry with the items that the transfer is intended to settle, such as commercial invoices in an accounts&apos; receivable system.
         /// </summary>
@@ -24,27 +22,23 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument6Choice
         [DisplayName("Reference")]
         [IsoXmlTag("Ref")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Reference { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Reference { get; init; }
+
         /// <summary>
         /// Party that receives an amount of money from the debtor. The creditor is also the credit account owner.
         /// </summary>
         [IsoId("_VRiwJtp-Ed-ak6NoX_4Aeg_-1711379576")]
         [DisplayName("Creditor Details")]
         [IsoXmlTag("CdtrDtls")]
-        public required Creditor2 CreditorDetails { get; init; } 
-        
+        public required Creditor2 CreditorDetails { get; init; }
+
         /// <summary>
         /// Party that owes an amount of money to the creditor. The debtor is also the debit account owner.
         /// </summary>
         [IsoId("_VRiwJ9p-Ed-ak6NoX_4Aeg_-1711379585")]
         [DisplayName("Debtor Details")]
         [IsoXmlTag("DbtrDtls")]
-        public Debtor2? DebtorDetails { get; init; } 
-        
-        
-        #nullable disable
-        
+        public Debtor2? DebtorDetails { get; init; }
     }
 }

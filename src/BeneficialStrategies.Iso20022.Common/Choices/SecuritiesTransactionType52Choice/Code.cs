@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType52Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionType52Choic
     /// </summary>
     [IsoId("_J4CyzffYEeiNZp_PtLohLw")]
     [DisplayName("Code")]
-    public partial record Code : SecuritiesTransactionType52Choice_
+    public record Code : SecuritiesTransactionType52Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies underlying information regarding the type of settlement transaction.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required SecuritiesTransactionType26Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SecuritiesTransactionType26Code Value { get; init; }
     }
 }

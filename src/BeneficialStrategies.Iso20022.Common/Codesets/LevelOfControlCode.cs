@@ -23,7 +23,7 @@ public enum LevelOfControlCode
     [IsoId("_dyic0CDDEeWPMvNwVtiMsA")]
     [Description(@"Account may be viewed only.")]
     View,
-    
+
     /// <summary>
     /// Transactions are permitted on the account.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -32,5 +32,4 @@ public enum LevelOfControlCode
     [IsoId("_gcSGQCDDEeWPMvNwVtiMsA")]
     [Description(@"Transactions are permitted on the account.")]
     Transactions,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,39 +14,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4lkZwTEyEe6g-ffJsqGiSA")]
 [DisplayName("Registered Contract Journal3")]
-public partial record RegisteredContractJournal3
+public record RegisteredContractJournal3
 {
-    #nullable enable
-
     /// <summary>
     /// Closure Date.
     /// </summary>
     [DisplayName("Closure Date")]
     [IsoXmlTag("ClsrDt")]
-    public required IsoISODate ClosureDate { get; init; } 
+    public required IsoISODate ClosureDate { get; init; }
 
     /// <summary>
     /// Closure Reason.
     /// </summary>
     [DisplayName("Closure Reason")]
     [IsoXmlTag("ClsrRsn")]
-    public required ContractClosureReason1Choice_ ClosureReason { get; init; } 
+    public required ContractClosureReason1Choice_ ClosureReason { get; init; }
 
     /// <summary>
     /// Registration Agent.
     /// </summary>
     [DisplayName("Registration Agent")]
     [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; } 
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
     /// Unique Identification.
     /// </summary>
     [DisplayName("Unique Identification")]
     [IsoXmlTag("UnqId")]
-    public DocumentIdentification28? UniqueIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public DocumentIdentification28? UniqueIdentification { get; init; }
 }

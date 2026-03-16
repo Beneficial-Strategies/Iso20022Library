@@ -23,7 +23,7 @@ public enum PresentationParty1Code
     [IsoId("_cu64tnyeEeGWJuGCfvwOsQ")]
     [Description(@"Presentation made either to the issuer or other nominated party.")]
     IssuerOrOtherNominatatedParty = PresentationPartyCode.IssuerOrOtherNominatatedParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Presentation made exclusively to the confirmer.
     /// Encoded/decoded by serializers as &quot;EXCN&quot;.
@@ -32,7 +32,7 @@ public enum PresentationParty1Code
     [IsoId("_c1xupnyeEeGWJuGCfvwOsQ")]
     [Description(@"Presentation made exclusively to the confirmer.")]
     ExclusiveConfirmer = PresentationPartyCode.ExclusiveConfirmer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Presentation made exclusively to the issuer.
     /// Encoded/decoded by serializers as &quot;EXIS&quot;.
@@ -41,5 +41,4 @@ public enum PresentationParty1Code
     [IsoId("_c-toNnyeEeGWJuGCfvwOsQ")]
     [Description(@"Presentation made exclusively to the issuer.")]
     ExclusiveIssuer = PresentationPartyCode.ExclusiveIssuer, // same ordinal as derivation source for type conversions
-    
 }

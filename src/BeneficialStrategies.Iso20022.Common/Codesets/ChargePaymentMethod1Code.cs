@@ -23,7 +23,7 @@ public enum ChargePaymentMethod1Code
     [IsoId("_T2UeMRXzEeOBE-jZfcm4KQ")]
     [Description(@"Payment is with cash.")]
     Cash = ChargePaymentMethodCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Units are redeemed to cover payment.
     /// Encoded/decoded by serializers as &quot;UNIT&quot;.
@@ -32,5 +32,4 @@ public enum ChargePaymentMethod1Code
     [IsoId("_UAJIkRXzEeOBE-jZfcm4KQ")]
     [Description(@"Units are redeemed to cover payment.")]
     Unit = ChargePaymentMethodCode.Unit, // same ordinal as derivation source for type conversions
-    
 }

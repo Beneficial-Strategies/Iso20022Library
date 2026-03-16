@@ -21,9 +21,11 @@ public enum OrderStatus2Code
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_Veg1J9p-Ed-ak6NoX_4Aeg_1339886390")]
-    [Description(@"Order is accepted and is ready for execution (execution is the moment when pricing is applied).")]
+    [Description(
+        @"Order is accepted and is ready for execution (execution is the moment when pricing is applied)."
+    )]
     Accepted = OrderStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order is already executed and confirmation has been sent.
     /// Encoded/decoded by serializers as &quot;COSE&quot;.
@@ -32,7 +34,7 @@ public enum OrderStatus2Code
     [IsoId("_Veg1KNp-Ed-ak6NoX_4Aeg_222160179")]
     [Description(@"Order is already executed and confirmation has been sent.")]
     AlreadyExecuted = OrderStatusCode.AlreadyExecuted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order has been sent to the next party, eg, the next intermediary.
     /// Encoded/decoded by serializers as &quot;STNP&quot;.
@@ -41,14 +43,15 @@ public enum OrderStatus2Code
     [IsoId("_Vep_ENp-Ed-ak6NoX_4Aeg_1015729936")]
     [Description(@"Order has been sent to the next party, eg, the next intermediary.")]
     SentToNextParty = OrderStatusCode.SentToNextParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order has been received, ie, technical validation of the message is ok, and the message is now at the receiving side.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
     /// </summary>
     [EnumMember(Value = "RECE")]
     [IsoId("_Vep_Edp-Ed-ak6NoX_4Aeg_1045282174")]
-    [Description(@"Order has been received, ie, technical validation of the message is ok, and the message is now at the receiving side.")]
+    [Description(
+        @"Order has been received, ie, technical validation of the message is ok, and the message is now at the receiving side."
+    )]
     Received = OrderStatusCode.Received, // same ordinal as derivation source for type conversions
-    
 }

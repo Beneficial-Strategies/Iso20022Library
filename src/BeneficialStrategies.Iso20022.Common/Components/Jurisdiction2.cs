@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uh9kAMVaEeuips4fuphvoQ")]
 [DisplayName("Jurisdiction")]
-public partial record Jurisdiction2
+public record Jurisdiction2
 {
-    #nullable enable
-    
     /// <summary>
     /// When true, indicates the transaction is considered to be domestic.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record Jurisdiction2
     [DisplayName("Domestic Indicator")]
     [IsoXmlTag("DmstInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DomesticIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? DomesticIndicator { get; init; }
+
     /// <summary>
     /// Identifies the reason the transaction is considered to be domestic or non-domestic.
     /// </summary>
@@ -34,10 +32,6 @@ public partial record Jurisdiction2
     [DisplayName("Domestic Qualification")]
     [IsoXmlTag("DmstQlfctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DomesticQualification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DomesticQualification { get; init; }
 }

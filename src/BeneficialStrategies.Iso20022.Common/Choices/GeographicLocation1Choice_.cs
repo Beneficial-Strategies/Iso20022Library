@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(GeographicLocation1Choice.GeographicCoordinates))]
     [KnownType(typeof(GeographicLocation1Choice.UTMCoordinates))]
-    [JsonDerivedType(typeof(GeographicLocation1Choice.GeographicCoordinates),nameof(GeographicLocation1Choice.GeographicCoordinates))]
-    [JsonDerivedType(typeof(GeographicLocation1Choice.UTMCoordinates),nameof(GeographicLocation1Choice.UTMCoordinates))]
+    [JsonDerivedType(
+        typeof(GeographicLocation1Choice.GeographicCoordinates),
+        nameof(GeographicLocation1Choice.GeographicCoordinates)
+    )]
+    [JsonDerivedType(
+        typeof(GeographicLocation1Choice.UTMCoordinates),
+        nameof(GeographicLocation1Choice.UTMCoordinates)
+    )]
     [IsoId("_4klZMIn4EeShMpas3885ww")]
     [DisplayName("Geographic Location 1 Choice")]
-    public abstract partial record GeographicLocation1Choice_
-    {
-    }
+    public abstract record GeographicLocation1Choice_ { }
 }

@@ -24,7 +24,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_xhPBsFWOEeeiG_nL4vgKnQ")]
     [Description(@"Disable receipt of store and forward advice and notification messages.")]
     DisableStoreAndForward,
-    
+
     /// <summary>
     /// Detects whether communication at application level is still active.
     /// Encoded/decoded by serializers as &quot;ECTS&quot;.
@@ -33,7 +33,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_8HWEwFWOEeeiG_nL4vgKnQ")]
     [Description(@"Detects whether communication at application level is still active.")]
     EchoTest,
-    
+
     /// <summary>
     /// Enable receipt of store and forward advice and notification messages.
     /// Encoded/decoded by serializers as &quot;ESFW&quot;.
@@ -42,7 +42,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_IAxJ0FWPEeeiG_nL4vgKnQ")]
     [Description(@"Enable receipt of store and forward advice and notification messages.")]
     EnableStoreAndForward,
-    
+
     /// <summary>
     /// Establish communication at application level.
     /// Encoded/decoded by serializers as &quot;SGNN&quot;.
@@ -51,7 +51,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_RrN14FWPEeeiG_nL4vgKnQ")]
     [Description(@"Establish communication at application level.")]
     SignOn,
-    
+
     /// <summary>
     /// Terminate communication at application level.
     /// Encoded/decoded by serializers as &quot;SGNF&quot;.
@@ -60,7 +60,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_aDGG0FWPEeeiG_nL4vgKnQ")]
     [Description(@"Terminate communication at application level.")]
     SignOff,
-    
+
     /// <summary>
     /// Other type of communication management service defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -69,7 +69,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_hQJjYFWPEeeiG_nL4vgKnQ")]
     [Description(@"Other type of communication management service defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of network management service defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -78,7 +78,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_mJURwFWPEeeiG_nL4vgKnQ")]
     [Description(@"Other type of network management service defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// System condition/target system unavailable
     /// Encoded/decoded by serializers as &quot;TSUN&quot;.
@@ -87,7 +87,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_jZ4pkMWSEeiCfKAZkk6ZAQ")]
     [Description(@"System condition/target system unavailable|")]
     TargetSystemUnavailable,
-    
+
     /// <summary>
     /// System condition/message originator&apos;s system in backup.
     /// Encoded/decoded by serializers as &quot;MOSB&quot;.
@@ -96,7 +96,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_7XAxEMWSEeiCfKAZkk6ZAQ")]
     [Description(@"System condition/message originator's system in backup.")]
     MessageOriginatorSystemInBackup,
-    
+
     /// <summary>
     /// System condition/special instruction
     /// Encoded/decoded by serializers as &quot;SPIN&quot;.
@@ -105,7 +105,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_B_vYkMWTEeiCfKAZkk6ZAQ")]
     [Description(@"System condition/special instruction")]
     SpecialInstruction,
-    
+
     /// <summary>
     /// System condition/initiate alternate routing
     /// Encoded/decoded by serializers as &quot;IART&quot;.
@@ -114,7 +114,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_GYQQ8MWTEeiCfKAZkk6ZAQ")]
     [Description(@"System condition/initiate alternate routing")]
     InitiateAlternateRouting,
-    
+
     /// <summary>
     /// Clock synchronization
     /// Encoded/decoded by serializers as &quot;SYCL&quot;.
@@ -123,7 +123,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_t9eusMWTEeiCfKAZkk6ZAQ")]
     [Description(@"Clock synchronization")]
     SynchronizeClock,
-    
+
     /// <summary>
     /// Enable the receipt of recurring billing.
     /// Encoded/decoded by serializers as &quot;ERBI&quot;.
@@ -132,7 +132,7 @@ public enum NetworkManagementTypeCode
     [IsoId("_N_pjcOkHEemeDPHh-U9b6w")]
     [Description(@"Enable the receipt of recurring billing.")]
     EnableRecurringBilling,
-    
+
     /// <summary>
     /// Disable the receipt of recurring billing.
     /// Encoded/decoded by serializers as &quot;DRBI&quot;.
@@ -141,5 +141,4 @@ public enum NetworkManagementTypeCode
     [IsoId("_ZWuJYOkHEemeDPHh-U9b6w")]
     [Description(@"Disable the receipt of recurring billing.")]
     DisableRecurringBilling,
-    
 }

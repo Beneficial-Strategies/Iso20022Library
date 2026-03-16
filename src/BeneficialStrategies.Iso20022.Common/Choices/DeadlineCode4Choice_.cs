@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DeadlineCode4Choice.Code))]
     [KnownType(typeof(DeadlineCode4Choice.Proprietary))]
-    [JsonDerivedType(typeof(DeadlineCode4Choice.Code),nameof(DeadlineCode4Choice.Code))]
-    [JsonDerivedType(typeof(DeadlineCode4Choice.Proprietary),nameof(DeadlineCode4Choice.Proprietary))]
+    [JsonDerivedType(typeof(DeadlineCode4Choice.Code), nameof(DeadlineCode4Choice.Code))]
+    [JsonDerivedType(
+        typeof(DeadlineCode4Choice.Proprietary),
+        nameof(DeadlineCode4Choice.Proprietary)
+    )]
     [IsoId("_cfssk5KQEeWHWpTQn1FFVg")]
     [DisplayName("Deadline Code 4 Choice")]
-    public abstract partial record DeadlineCode4Choice_
-    {
-    }
+    public abstract record DeadlineCode4Choice_ { }
 }

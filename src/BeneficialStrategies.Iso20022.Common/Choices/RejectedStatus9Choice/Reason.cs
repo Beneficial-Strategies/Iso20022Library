@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus9Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus9Choice
     /// </summary>
     [IsoId("_PlnQ2Sd0EeOXAt_43VmZGw")]
     [DisplayName("Reason")]
-    public partial record Reason : RejectedStatus9Choice_
+    public record Reason : RejectedStatus9Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why the instruction or instruction cancellation has been rejected.
         /// </summary>
         [IsoId("_P9as0yd0EeOXAt_43VmZGw")]
         [DisplayName("Reason Code")]
         [IsoXmlTag("RsnCd")]
-        public required RejectedReason5Choice_ ReasonCode { get; init; } 
-        
+        public required RejectedReason5Choice_ ReasonCode { get; init; }
+
         /// <summary>
         /// Provides additional information about the processed instruction.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectedStatus9Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

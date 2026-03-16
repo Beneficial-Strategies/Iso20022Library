@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_077-4Yn1EeS9F4Qrq_eaVA")]
 [DisplayName("Acquirer")]
-public partial record Acquirer7
+public record Acquirer7
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the acquirer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Acquirer7
     [DisplayName("Acquiring Institution")]
     [IsoXmlTag("AcqrgInstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AcquiringInstitution { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AcquiringInstitution { get; init; }
+
     /// <summary>
     /// Identification of the acquirer branch.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record Acquirer7
     [DisplayName("Branch")]
     [IsoXmlTag("Brnch")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Branch { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Branch { get; init; }
 }

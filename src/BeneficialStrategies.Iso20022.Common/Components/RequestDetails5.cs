@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SumZGwEcEeCQm6a_G2yO_w_1103821784")]
 [DisplayName("Request Details")]
-public partial record RequestDetails5
+public record RequestDetails5
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of data requested, for example, a sub-member BIC.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record RequestDetails5
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Type { get; init; }
+
     /// <summary>
     /// Reference to the request for which the report is sent.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record RequestDetails5
     [DisplayName("Request Reference")]
     [IsoXmlTag("ReqRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text RequestReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text RequestReference { get; init; }
+
     /// <summary>
     /// Report key and returned data.
     /// </summary>
@@ -46,8 +44,4 @@ public partial record RequestDetails5
     [IsoXmlTag("RptKey")]
     public ValueList<RequestDetails4> ReportKey { get; init; } = [];
     // ID for the above is _SuwKEgEcEeCQm6a_G2yO_w_1731831000
-    
-    
-    #nullable disable
-    
 }

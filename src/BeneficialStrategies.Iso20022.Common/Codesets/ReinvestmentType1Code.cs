@@ -23,7 +23,7 @@ public enum ReinvestmentType1Code
     [IsoId("_U2eIgckgEeeiAIB1i4AlQw")]
     [Description(@"Other type of reinvestment.")]
     Other = ReinvestmentTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reinvestment type is a pool of commingled assets.
     /// Encoded/decoded by serializers as &quot;OCMP&quot;.
@@ -32,25 +32,27 @@ public enum ReinvestmentType1Code
     [IsoId("_U8uhgskgEeeiAIB1i4AlQw")]
     [Description(@"Reinvestment type is a pool of commingled assets.")]
     OtherCommingledPool = ReinvestmentTypeCode.OtherCommingledPool, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reinvestment type is registered money market fund that is a public debt constant net asset value money market fund, low volatility net asset value money market fund or variable net asset value money market fund.
     /// Encoded/decoded by serializers as &quot;MMFT&quot;.
     /// </summary>
     [EnumMember(Value = "MMFT")]
     [IsoId("_VAKQAckgEeeiAIB1i4AlQw")]
-    [Description(@"Reinvestment type is registered money market fund that is a public debt constant net asset value money market fund, low volatility net asset value money market fund or variable net asset value money market fund.")]
+    [Description(
+        @"Reinvestment type is registered money market fund that is a public debt constant net asset value money market fund, low volatility net asset value money market fund or variable net asset value money market fund."
+    )]
     RegisteredMoneyMarketFund = ReinvestmentTypeCode.RegisteredMoneyMarketFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Reinvestment type is market where repurchase agreements are traded. 
+    /// Reinvestment type is market where repurchase agreements are traded.
     /// Encoded/decoded by serializers as &quot;REPM&quot;.
     /// </summary>
     [EnumMember(Value = "REPM")]
     [IsoId("_VIzOoskgEeeiAIB1i4AlQw")]
     [Description(@"Reinvestment type is market where repurchase agreements are traded. ")]
     RepurchaseAgreementMarket = ReinvestmentTypeCode.RepurchaseAgreementMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reinvestment type is direct purchase of securities.
     /// Encoded/decoded by serializers as &quot;SDPU&quot;.
@@ -59,5 +61,4 @@ public enum ReinvestmentType1Code
     [IsoId("_VPz1kskgEeeiAIB1i4AlQw")]
     [Description(@"Reinvestment type is direct purchase of securities.")]
     SecuritiesDirectPurchase = ReinvestmentTypeCode.SecuritiesDirectPurchase, // same ordinal as derivation source for type conversions
-    
 }

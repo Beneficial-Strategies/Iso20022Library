@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
 {
     /// <summary>
@@ -13,16 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
     /// </summary>
     [IsoId("_fmnCcZM5EemKz5EOjv82iQ")]
     [DisplayName("Status")]
-    public partial record Status : TransferStatus4Choice_
+    public record Status : TransferStatus4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Status code.
         /// </summary>
         [IsoXmlTag("Sts")]
-        public required TransferStatus6Code Value { get; init; } 
-        
+        public required TransferStatus6Code Value { get; init; }
+
         /// <summary>
         /// Reason for the status.
         /// </summary>
@@ -30,11 +28,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransferStatus4Choice
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? Reason { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? Reason { get; init; }
     }
 }

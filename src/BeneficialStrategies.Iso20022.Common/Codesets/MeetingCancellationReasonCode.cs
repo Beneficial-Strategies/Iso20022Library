@@ -23,7 +23,7 @@ public enum MeetingCancellationReasonCode
     [IsoId("_aVM3Rdp-Ed-ak6NoX_4Aeg_1851096275")]
     [Description(@"Cancellation due to insufficient participation to the vote.")]
     Quorum,
-    
+
     /// <summary>
     /// Cancellation due to a processing error.
     /// Encoded/decoded by serializers as &quot;PROC&quot;.
@@ -32,7 +32,7 @@ public enum MeetingCancellationReasonCode
     [IsoId("_aVM3Rtp-Ed-ak6NoX_4Aeg_-2055992756")]
     [Description(@"Cancellation due to a processing error.")]
     Processing,
-    
+
     /// <summary>
     /// Cancellation due to another reason.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +41,7 @@ public enum MeetingCancellationReasonCode
     [IsoId("_aVM3R9p-Ed-ak6NoX_4Aeg_-1646853934")]
     [Description(@"Cancellation due to another reason.")]
     Other,
-    
+
     /// <summary>
     /// Cancellation due to the meeting being cancelled by the issuer.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
@@ -50,5 +50,4 @@ public enum MeetingCancellationReasonCode
     [IsoId("_aVWBMNp-Ed-ak6NoX_4Aeg_-2132220464")]
     [Description(@"Cancellation due to the meeting being cancelled by the issuer.")]
     Withdrawal,
-    
 }

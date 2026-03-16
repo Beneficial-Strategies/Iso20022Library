@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -15,10 +15,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_IRYb8Nj-EeiojJsa6FYyew")]
 [DisplayName("Geolocation UTM Coordinates")]
-public partial record GeolocationUTMCoordinates1
+public record GeolocationUTMCoordinates1
 {
-    #nullable enable
-    
     /// <summary>
     /// UTM grid zone combination of the longitude zone (1 to 60) and the latitude band (C to X, excluding I and O).
     /// </summary>
@@ -26,32 +24,28 @@ public partial record GeolocationUTMCoordinates1
     [DisplayName("UTM Zone")]
     [IsoXmlTag("UTMZone")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text UTMZone { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text UTMZone { get; init; }
+
     /// <summary>
-    /// X-coordinate of the Universal Transverse Mercator 
+    /// X-coordinate of the Universal Transverse Mercator
     /// coordinate system.
     /// </summary>
     [IsoId("_bxdJUNj-EeiojJsa6FYyew")]
     [DisplayName("UTM Eastward")]
     [IsoXmlTag("UTMEstwrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text UTMEastward { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text UTMEastward { get; init; }
+
     /// <summary>
-    /// Y-coordinate of the Universal Transverse Mercator 
+    /// Y-coordinate of the Universal Transverse Mercator
     /// coordinate system.
     /// </summary>
     [IsoId("_iqNJ0Nj-EeiojJsa6FYyew")]
     [DisplayName("UTM Northward")]
     [IsoXmlTag("UTMNrthwrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text UTMNorthward { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text UTMNorthward { get; init; }
 }

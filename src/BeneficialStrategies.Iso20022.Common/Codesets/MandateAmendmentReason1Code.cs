@@ -23,7 +23,7 @@ public enum MandateAmendmentReason1Code
     [IsoId("_afolqNp-Ed-ak6NoX_4Aeg_-1007530300")]
     [Description(@"Agent details are incorrect or have changed.")]
     IncorrectAgent = MandateReasonCode.IncorrectAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Currency for the mandate is incorrect or has changed.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -32,7 +32,7 @@ public enum MandateAmendmentReason1Code
     [IsoId("_afxvkNp-Ed-ak6NoX_4Aeg_-909639032")]
     [Description(@"Currency for the mandate is incorrect or has changed.")]
     IncorrectCurrency = MandateReasonCode.IncorrectCurrency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Customer requested the change.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -41,7 +41,7 @@ public enum MandateAmendmentReason1Code
     [IsoId("_afxvkdp-Ed-ak6NoX_4Aeg_-883779837")]
     [Description(@"Customer requested the change.")]
     RequestedByCustomer = MandateReasonCode.RequestedByCustomer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account details are not correct.
     /// Encoded/decoded by serializers as &quot;ACCT&quot;.
@@ -50,5 +50,4 @@ public enum MandateAmendmentReason1Code
     [IsoId("_afxvktp-Ed-ak6NoX_4Aeg_-639046895")]
     [Description(@"Account details are not correct.")]
     IncorrectAccount = MandateReasonCode.IncorrectAccount, // same ordinal as derivation source for type conversions
-    
 }

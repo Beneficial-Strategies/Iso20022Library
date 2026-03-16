@@ -23,5 +23,4 @@ public enum DemandStatus2Code
     [IsoId("_kDeoRnyaEeGWJuGCfvwOsQ")]
     [Description(@"Demand refused.")]
     Refused = DemandStatusCode.Refused, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(WarrantStyle3Choice.Code))]
     [KnownType(typeof(WarrantStyle3Choice.Proprietary))]
-    [JsonDerivedType(typeof(WarrantStyle3Choice.Code),nameof(WarrantStyle3Choice.Code))]
-    [JsonDerivedType(typeof(WarrantStyle3Choice.Proprietary),nameof(WarrantStyle3Choice.Proprietary))]
+    [JsonDerivedType(typeof(WarrantStyle3Choice.Code), nameof(WarrantStyle3Choice.Code))]
+    [JsonDerivedType(
+        typeof(WarrantStyle3Choice.Proprietary),
+        nameof(WarrantStyle3Choice.Proprietary)
+    )]
     [IsoId("_qwaaSeLbEeWFtOV72FbX9w")]
     [DisplayName("Warrant Style 3 Choice")]
-    public abstract partial record WarrantStyle3Choice_
-    {
-    }
+    public abstract record WarrantStyle3Choice_ { }
 }

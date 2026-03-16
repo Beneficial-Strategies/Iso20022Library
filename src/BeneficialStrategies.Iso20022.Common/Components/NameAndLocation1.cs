@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZxnU2cEcEea7jLfvGi1PDw")]
 [DisplayName("Name And Location")]
-public partial record NameAndLocation1
+public record NameAndLocation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Internal name of the counterparty of the reporting agent used by the reporting agent.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record NameAndLocation1
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text Name { get; init; }
+
     /// <summary>
     /// Location of the country in which the counterparty is incorporated.
     /// </summary>
     [IsoId("_Z6PFU8EcEea7jLfvGi1PDw")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
-    public required CountryCode Location { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CountryCode Location { get; init; }
 }

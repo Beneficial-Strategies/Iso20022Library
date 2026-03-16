@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentification2Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_TC8KkNp-Ed-ak6NoX_4Aeg_1989939487")]
     [DisplayName("New Zealand NCC Identification")]
-    public partial record NewZealandNCCIdentification : ClearingSystemMemberIdentification2Choice_
+    public record NewZealandNCCIdentification : ClearingSystemMemberIdentification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// New Zealand Bank/Branch Code. Identifies New Zealand institutions on the New Zealand national clearing system. The code is assigned by the New Zealand Bankers&apos; Association (NZBA).
         /// </summary>
         [IsoXmlTag("NZNCC")]
         [IsoSimpleType(IsoSimpleType.NewZealandNCCIdentifier)]
-        public required IsoNewZealandNCCIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoNewZealandNCCIdentifier Value { get; init; }
     }
 }

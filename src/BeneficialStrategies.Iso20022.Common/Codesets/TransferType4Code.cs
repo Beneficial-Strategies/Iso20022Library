@@ -23,7 +23,7 @@ public enum TransferType4Code
     [IsoId("_y8KKgaxWEemRcYBAkJyjkg")]
     [Description(@"Transfer as cash.")]
     Cash = TransferTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ISIN is converted to another ISIN and then transferred.
     /// Encoded/decoded by serializers as &quot;CONV&quot;.
@@ -32,7 +32,7 @@ public enum TransferType4Code
     [IsoId("_zABW0axWEemRcYBAkJyjkg")]
     [Description(@"ISIN is converted to another ISIN and then transferred.")]
     Conversion = TransferTypeCode.Conversion, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Asset excluded from transfer.
     /// Encoded/decoded by serializers as &quot;EXCL&quot;.
@@ -41,7 +41,7 @@ public enum TransferType4Code
     [IsoId("_zE7sAaxWEemRcYBAkJyjkg")]
     [Description(@"Asset excluded from transfer.")]
     Excluded = TransferTypeCode.Excluded, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer the security as an asset in specie, that is, &apos;in its actual form&apos;.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -50,5 +50,4 @@ public enum TransferType4Code
     [IsoId("_zJGaUaxWEemRcYBAkJyjkg")]
     [Description(@"Transfer the security as an asset in specie, that is, 'in its actual form'.")]
     InSpecie = TransferTypeCode.InSpecie, // same ordinal as derivation source for type conversions
-    
 }

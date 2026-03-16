@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZKPgB9p-Ed-ak6NoX_4Aeg_868377274")]
-[Description(@"Specifies whether a once off transaction is covered or whether recurring transactions are covered.")]
+[Description(
+    @"Specifies whether a once off transaction is covered or whether recurring transactions are covered."
+)]
 [DerivedFrom(typeof(SequenceTypeCode))]
 public enum SequenceType2Code
 {
@@ -21,16 +23,19 @@ public enum SequenceType2Code
     /// </summary>
     [EnumMember(Value = "RCUR")]
     [IsoId("_ZKPgCNp-Ed-ak6NoX_4Aeg_868377522")]
-    [Description(@"Direct debit instruction where the debtor's authorisation is used for regular direct debit transactions initiated by the creditor.")]
+    [Description(
+        @"Direct debit instruction where the debtor's authorisation is used for regular direct debit transactions initiated by the creditor."
+    )]
     Recurring = SequenceTypeCode.Recurring, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Direct debit instruction where the debtor&apos;s authorisation is used to initiate one single direct debit transaction.
     /// Encoded/decoded by serializers as &quot;OOFF&quot;.
     /// </summary>
     [EnumMember(Value = "OOFF")]
     [IsoId("_ZKZRANp-Ed-ak6NoX_4Aeg_868377553")]
-    [Description(@"Direct debit instruction where the debtor's authorisation is used to initiate one single direct debit transaction.")]
+    [Description(
+        @"Direct debit instruction where the debtor's authorisation is used to initiate one single direct debit transaction."
+    )]
     OneOff = SequenceTypeCode.OneOff, // same ordinal as derivation source for type conversions
-    
 }

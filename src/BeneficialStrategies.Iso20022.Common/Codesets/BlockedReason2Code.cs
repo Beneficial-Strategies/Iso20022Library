@@ -23,7 +23,7 @@ public enum BlockedReason2Code
     [IsoId("_pAggcFsMEeaY86V9afpFqA")]
     [Description(@"Bankruptcy.")]
     Bankruptcy = BlockedReasonCode.Bankruptcy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commitment.
     /// Encoded/decoded by serializers as &quot;CMMT&quot;.
@@ -32,7 +32,7 @@ public enum BlockedReason2Code
     [IsoId("_pFkmoVsMEeaY86V9afpFqA")]
     [Description(@"Commitment.")]
     Commitment = BlockedReasonCode.Commitment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Confiscation.
     /// Encoded/decoded by serializers as &quot;CNFS&quot;.
@@ -41,7 +41,7 @@ public enum BlockedReason2Code
     [IsoId("_pMHTgVsMEeaY86V9afpFqA")]
     [Description(@"Confiscation.")]
     Confiscation = BlockedReasonCode.Confiscation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reserved in contemplation of death.
     /// Encoded/decoded by serializers as &quot;MORT&quot;.
@@ -50,7 +50,7 @@ public enum BlockedReason2Code
     [IsoId("_pSXFcVsMEeaY86V9afpFqA")]
     [Description(@"Reserved in contemplation of death.")]
     MortisCausa = BlockedReasonCode.MortisCausa, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pending compliance verification.
     /// Encoded/decoded by serializers as &quot;PCOM&quot;.
@@ -59,7 +59,7 @@ public enum BlockedReason2Code
     [IsoId("_pZNUUVsMEeaY86V9afpFqA")]
     [Description(@"Pending compliance verification.")]
     PendingComplianceVerification = BlockedReasonCode.PendingComplianceVerification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pledged.
     /// Encoded/decoded by serializers as &quot;PLDG&quot;.
@@ -68,7 +68,7 @@ public enum BlockedReason2Code
     [IsoId("_pfdGQVsMEeaY86V9afpFqA")]
     [Description(@"Pledged.")]
     Pledged = BlockedReasonCode.Pledged, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reregistration.
     /// Encoded/decoded by serializers as &quot;TRPE&quot;.
@@ -77,7 +77,7 @@ public enum BlockedReason2Code
     [IsoId("_pjxlkVsMEeaY86V9afpFqA")]
     [Description(@"Reregistration.")]
     Reregistration = BlockedReasonCode.Reregistration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sanctions are in place.
     /// Encoded/decoded by serializers as &quot;SANC&quot;.
@@ -86,7 +86,7 @@ public enum BlockedReason2Code
     [IsoId("_poiJwVsMEeaY86V9afpFqA")]
     [Description(@"Sanctions are in place.")]
     Sanctions = BlockedReasonCode.Sanctions, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -95,5 +95,4 @@ public enum BlockedReason2Code
     [IsoId("_pvhikVsMEeaY86V9afpFqA")]
     [Description(@"Transfer.")]
     Transfer = BlockedReasonCode.Transfer, // same ordinal as derivation source for type conversions
-    
 }

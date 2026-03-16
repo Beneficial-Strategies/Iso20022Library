@@ -23,7 +23,7 @@ public enum AccountType1Code
     [IsoId("_brn3p9p-Ed-ak6NoX_4Aeg_-1349793499")]
     [Description(@"Cash account.")]
     Cash = AccountTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Securities account.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,5 +32,4 @@ public enum AccountType1Code
     [IsoId("_brn3qNp-Ed-ak6NoX_4Aeg_-1327628324")]
     [Description(@"Securities account.")]
     Securities = AccountTypeCode.Securities, // same ordinal as derivation source for type conversions
-    
 }

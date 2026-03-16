@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,32 +14,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zMxJGTEyEe6g-ffJsqGiSA")]
 [DisplayName("Identification Information5")]
-public partial record IdentificationInformation5
+public record IdentificationInformation5
 {
-    #nullable enable
-
     /// <summary>
     /// Account.
     /// </summary>
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public CashAccount40? Account { get; init; } 
+    public CashAccount40? Account { get; init; }
 
     /// <summary>
     /// Agent.
     /// </summary>
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public BranchAndFinancialInstitutionIdentification8? Agent { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? Agent { get; init; }
 
     /// <summary>
     /// Party.
     /// </summary>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public PartyIdentification272? Party { get; init; } 
-
-    
-    #nullable disable
-    
+    public PartyIdentification272? Party { get; init; }
 }

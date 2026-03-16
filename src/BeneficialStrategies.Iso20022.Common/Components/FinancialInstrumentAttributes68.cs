@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lgkitTq5EeWQ1Y7f8kds2A")]
 [DisplayName("Financial Instrument Attributes")]
-public partial record FinancialInstrumentAttributes68
+public record FinancialInstrumentAttributes68
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the financial instrument.
     /// </summary>
     [IsoId("_lsoBlTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Security Identification")]
     [IsoXmlTag("SctyId")]
-    public required SecurityIdentification19 SecurityIdentification { get; init; } 
-    
+    public required SecurityIdentification19 SecurityIdentification { get; init; }
+
     /// <summary>
     /// Quantity of entitled intermediate securities based on the balance of underlying securities.
     /// </summary>
@@ -33,81 +31,77 @@ public partial record FinancialInstrumentAttributes68
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Quantity { get; init; } 
-    
+    public IsoDecimalNumber? Quantity { get; init; }
+
     /// <summary>
     /// Specifies whether terms of the event allow resale of the rights.
     /// </summary>
     [IsoId("_lsoBpTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Renounceable Entitlement Status Type")]
     [IsoXmlTag("RnncblEntitlmntStsTp")]
-    public RenounceableEntitlementStatusTypeFormat3Choice_? RenounceableEntitlementStatusType { get; init; } 
-    
+    public RenounceableEntitlementStatusTypeFormat3Choice_? RenounceableEntitlementStatusType { get; init; }
+
     /// <summary>
     /// Specifies how fractions resulting from derived securities will be processed or how prorated decisions will be rounding, if provided with a pro ration rate.
     /// </summary>
     [IsoId("_lsoBrTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType25Choice_? FractionDisposition { get; init; } 
-    
+    public FractionDispositionType25Choice_? FractionDisposition { get; init; }
+
     /// <summary>
     /// Quantity of intermediate securities awarded for a given quantity of underlying security.
     /// </summary>
     [IsoId("_lsoBtTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Intermediate Securities To Underlying Ratio")]
     [IsoXmlTag("IntrmdtSctiesToUndrlygRatio")]
-    public QuantityToQuantityRatio1? IntermediateSecuritiesToUnderlyingRatio { get; init; } 
-    
+    public QuantityToQuantityRatio1? IntermediateSecuritiesToUnderlyingRatio { get; init; }
+
     /// <summary>
     /// Last reported/known price of a financial instrument in a market.
     /// </summary>
     [IsoId("_lsoBvTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Market Price")]
     [IsoXmlTag("MktPric")]
-    public AmountPrice2? MarketPrice { get; init; } 
-    
+    public AmountPrice2? MarketPrice { get; init; }
+
     /// <summary>
     /// Date on which an order expires or at which a privilege or offer terminates.
     /// </summary>
     [IsoId("_lsoBxTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
-    public required DateFormat30Choice_ ExpiryDate { get; init; } 
-    
+    public required DateFormat30Choice_ ExpiryDate { get; init; }
+
     /// <summary>
     /// Date of the posting (credit or debit) to the account.
     /// </summary>
     [IsoId("_lsoBzTq5EeWQ1Y7f8kds2A")]
     [DisplayName("Posting Date")]
     [IsoXmlTag("PstngDt")]
-    public required DateFormat30Choice_ PostingDate { get; init; } 
-    
+    public required DateFormat30Choice_ PostingDate { get; init; }
+
     /// <summary>
     /// Period during which intermediate or outturn securities are tradable in a secondary market.
     /// </summary>
     [IsoId("_lsoB1Tq5EeWQ1Y7f8kds2A")]
     [DisplayName("Trading Period")]
     [IsoXmlTag("TradgPrd")]
-    public Period4? TradingPeriod { get; init; } 
-    
+    public Period4? TradingPeriod { get; init; }
+
     /// <summary>
     /// Balance of uninstructed position.
     /// </summary>
     [IsoId("_lsoB3Tq5EeWQ1Y7f8kds2A")]
     [DisplayName("Uninstructed Balance")]
     [IsoXmlTag("UinstdBal")]
-    public BalanceFormat5Choice_? UninstructedBalance { get; init; } 
-    
+    public BalanceFormat5Choice_? UninstructedBalance { get; init; }
+
     /// <summary>
     /// Balance of instructed position.
     /// </summary>
     [IsoId("_lsoB5Tq5EeWQ1Y7f8kds2A")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
-    public BalanceFormat5Choice_? InstructedBalance { get; init; } 
-    
-    
-    #nullable disable
-    
+    public BalanceFormat5Choice_? InstructedBalance { get; init; }
 }

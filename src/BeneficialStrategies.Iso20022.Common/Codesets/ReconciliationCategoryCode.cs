@@ -23,7 +23,7 @@ public enum ReconciliationCategoryCode
     [IsoId("_tJKXpcyrEeiqqJhU2tqK8A")]
     [Description(@"Reconciliation category is financial.")]
     Financial,
-    
+
     /// <summary>
     /// Reconciliation category is reversal.
     /// Encoded/decoded by serializers as &quot;RVSL&quot;.
@@ -32,7 +32,7 @@ public enum ReconciliationCategoryCode
     [IsoId("_tJKXpMyrEeiqqJhU2tqK8A")]
     [Description(@"Reconciliation category is reversal.")]
     Reversal,
-    
+
     /// <summary>
     /// Reconciliation category is a chargeback.
     /// Encoded/decoded by serializers as &quot;CGBK&quot;.
@@ -41,7 +41,7 @@ public enum ReconciliationCategoryCode
     [IsoId("_RAve8MysEeiqqJhU2tqK8A")]
     [Description(@"Reconciliation category is a chargeback.")]
     Chargeback,
-    
+
     /// <summary>
     /// Reconciliation category is other national.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum ReconciliationCategoryCode
     [IsoId("_Zq06MMysEeiqqJhU2tqK8A")]
     [Description(@"Reconciliation category is other national.")]
     OtherNational,
-    
+
     /// <summary>
     /// Reconciliation category is other private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum ReconciliationCategoryCode
     [IsoId("_cd3CgMysEeiqqJhU2tqK8A")]
     [Description(@"Reconciliation category is other private")]
     OtherPrivate,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pt6_8Y0PEeWRYffwL7E13A")]
 [DisplayName("Network Parameters")]
-public partial record NetworkParameters5
+public record NetworkParameters5
 {
-    #nullable enable
-    
     /// <summary>
     /// Network addresses of the host.
     /// </summary>
@@ -25,8 +23,9 @@ public partial record NetworkParameters5
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
     public ValueList<NetworkParameters4> Address { get; init; } = [];
+
     // ID for the above is _p5GVMY0PEeWRYffwL7E13A
-    
+
     /// <summary>
     /// User name identifying the client.
     /// </summary>
@@ -34,9 +33,9 @@ public partial record NetworkParameters5
     [DisplayName("User Name")]
     [IsoXmlTag("UsrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? UserName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? UserName { get; init; }
+
     /// <summary>
     /// Password authenticating the client.
     /// </summary>
@@ -44,8 +43,8 @@ public partial record NetworkParameters5
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? AccessCode { get; init; } 
-    
+    public IsoMax35Binary? AccessCode { get; init; }
+
     /// <summary>
     /// X.509 Certificate required to authenticate the server.
     /// </summary>
@@ -53,8 +52,8 @@ public partial record NetworkParameters5
     [DisplayName("Server Certificate")]
     [IsoXmlTag("SvrCert")]
     [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ServerCertificate { get; init; } 
-    
+    public IsoMax10KBinary? ServerCertificate { get; init; }
+
     /// <summary>
     /// Identification of the X.509 Certificates required to authenticate the server, for instance a digest of the certificate.
     /// </summary>
@@ -62,8 +61,8 @@ public partial record NetworkParameters5
     [DisplayName("Server Certificate Identifier")]
     [IsoXmlTag("SvrCertIdr")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? ServerCertificateIdentifier { get; init; } 
-    
+    public IsoMax140Binary? ServerCertificateIdentifier { get; init; }
+
     /// <summary>
     /// X.509 Certificate required to authenticate the client.
     /// </summary>
@@ -71,8 +70,8 @@ public partial record NetworkParameters5
     [DisplayName("Client Certificate")]
     [IsoXmlTag("ClntCert")]
     [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-    public IsoMax10KBinary? ClientCertificate { get; init; } 
-    
+    public IsoMax10KBinary? ClientCertificate { get; init; }
+
     /// <summary>
     /// Identification of the set of security elements to access the host.
     /// </summary>
@@ -80,10 +79,6 @@ public partial record NetworkParameters5
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SecurityProfile { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SecurityProfile { get; init; }
 }

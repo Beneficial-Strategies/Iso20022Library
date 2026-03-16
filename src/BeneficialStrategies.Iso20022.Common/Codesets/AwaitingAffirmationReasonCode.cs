@@ -23,5 +23,4 @@ public enum AwaitingAffirmationReasonCode
     [IsoId("__0Ti0NojEeC60axPepSq7g_-909160463")]
     [Description(@"Affirmation has not been received yet.")]
     AwaitingAffirmation,
-    
 }

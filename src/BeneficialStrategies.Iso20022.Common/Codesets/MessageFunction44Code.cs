@@ -16,14 +16,16 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 public enum MessageFunction44Code
 {
     /// <summary>
-    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. 
+    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response.
     /// Encoded/decoded by serializers as &quot;ADVC&quot;.
     /// </summary>
     [EnumMember(Value = "ADVC")]
     [IsoId("_idxkkUGJEeyZG7AU5fJYtQ")]
-    [Description(@"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. ")]
+    [Description(
+        @"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. "
+    )]
     Advice = MessageFunctionCode.Advice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Information about the transaction.
     /// Encoded/decoded by serializers as &quot;NOTI&quot;.
@@ -32,7 +34,7 @@ public enum MessageFunction44Code
     [IsoId("_j4yKAUGJEeyZG7AU5fJYtQ")]
     [Description(@"Information about the transaction.")]
     Notification = MessageFunctionCode.Notification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Informs of an action to be taken.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -41,7 +43,7 @@ public enum MessageFunction44Code
     [IsoId("_kUU2gUGJEeyZG7AU5fJYtQ")]
     [Description(@"Informs of an action to be taken.")]
     Instructure = MessageFunctionCode.Instructure, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message function is a request.
     /// Encoded/decoded by serializers as &quot;REQU&quot;.
@@ -50,5 +52,4 @@ public enum MessageFunction44Code
     [IsoId("_lxafkUGJEeyZG7AU5fJYtQ")]
     [Description(@"Message function is a request.")]
     Request = MessageFunctionCode.Request, // same ordinal as derivation source for type conversions
-    
 }

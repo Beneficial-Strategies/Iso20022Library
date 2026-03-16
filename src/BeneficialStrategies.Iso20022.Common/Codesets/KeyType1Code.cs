@@ -23,7 +23,7 @@ public enum KeyType1Code
     [IsoId("_EnKX4TEtEemzCpWiCwK4aQ")]
     [Description(@"Other national")]
     OtherNational = KeyTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum KeyType1Code
     [IsoId("_E7SNwTEtEemzCpWiCwK4aQ")]
     [Description(@"Other private")]
     OtherPrivate = KeyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN translation key applicable to the acquirer
     /// Encoded/decoded by serializers as &quot;PTKA&quot;.
@@ -41,7 +41,7 @@ public enum KeyType1Code
     [IsoId("_FP-EUTEtEemzCpWiCwK4aQ")]
     [Description(@"PIN translation key applicable to the acquirer")]
     PINTranslationKeyAcquirer = KeyTypeCode.PINTranslationKeyAcquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN translation key applicable to the issuer
     /// Encoded/decoded by serializers as &quot;PTKI&quot;.
@@ -50,5 +50,4 @@ public enum KeyType1Code
     [IsoId("_FluR4TEtEemzCpWiCwK4aQ")]
     [Description(@"PIN translation key applicable to the issuer")]
     PINTranslationKeyIssuer = KeyTypeCode.PINTranslationKeyIssuer, // same ordinal as derivation source for type conversions
-    
 }

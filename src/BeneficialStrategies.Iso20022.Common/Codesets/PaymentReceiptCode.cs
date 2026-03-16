@@ -23,7 +23,7 @@ public enum PaymentReceiptCode
     [IsoId("_t7Wn8A5EEeenr-7g_0TYag")]
     [Description(@"Operation is a payment.")]
     Payment,
-    
+
     /// <summary>
     /// Operation is a receipt.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
@@ -32,7 +32,7 @@ public enum PaymentReceiptCode
     [IsoId("_yRapQA5EEeenr-7g_0TYag")]
     [Description(@"Operation is a receipt.")]
     Receipt,
-    
+
     /// <summary>
     /// Operation is null.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,5 +41,4 @@ public enum PaymentReceiptCode
     [IsoId("_2kqAEA5EEeenr-7g_0TYag")]
     [Description(@"Operation is null.")]
     None,
-    
 }

@@ -21,9 +21,11 @@ public enum PartyType28Code
     /// </summary>
     [EnumMember(Value = "ACCP")]
     [IsoId("_GNPvMdwBEeeOusYHZbyj7w")]
-    [Description(@"Card acceptor, party accepting the card and presenting transaction data to the acquirer.")]
+    [Description(
+        @"Card acceptor, party accepting the card and presenting transaction data to the acquirer."
+    )]
     Acceptor = PartyTypeCode.Acceptor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity acquiring card transactions.
     /// Encoded/decoded by serializers as &quot;ACQR&quot;.
@@ -32,16 +34,18 @@ public enum PartyType28Code
     [IsoId("_GNPvM9wBEeeOusYHZbyj7w")]
     [Description(@"Entity acquiring card transactions.")]
     Acquirer = PartyTypeCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
     /// </summary>
     [EnumMember(Value = "AGNT")]
     [IsoId("_GNPvO9wBEeeOusYHZbyj7w")]
-    [Description(@"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.")]
+    [Description(
+        @"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer."
+    )]
     Agent = PartyTypeCode.Agent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +54,7 @@ public enum PartyType28Code
     [IsoId("_GNPvPdwBEeeOusYHZbyj7w")]
     [Description(@"Other card payment entity type defined at national level")]
     OtherNational = PartyTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +63,7 @@ public enum PartyType28Code
     [IsoId("_GNPvP9wBEeeOusYHZbyj7w")]
     [Description(@"Other card payment entity type defined at private level")]
     OtherPrivate = PartyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Provider of an electronic wallet
     /// Encoded/decoded by serializers as &quot;WLPR&quot;.
@@ -68,7 +72,7 @@ public enum PartyType28Code
     [IsoId("_KYSzUdwBEeeOusYHZbyj7w")]
     [Description(@"Provider of an electronic wallet")]
     WalletProvider = PartyTypeCode.WalletProvider, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer is the entitled party.
     /// Encoded/decoded by serializers as &quot;ISUR&quot;.
@@ -77,5 +81,4 @@ public enum PartyType28Code
     [IsoId("_0Hsb0UNKEeiut6dbx3wnBg")]
     [Description(@"Issuer is the entitled party.")]
     Issuer = PartyTypeCode.Issuer, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_HlWPQMUcEeiF-qqyf1JQhg")]
-[Description(@"Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message as a code")]
+[Description(
+    @"Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message as a code"
+)]
 [DerivedFrom(typeof(CollateralStatusCode))]
 public enum CollateralStatus1Code
 {
@@ -23,7 +25,7 @@ public enum CollateralStatus1Code
     [IsoId("_JpYjkcUcEeiF-qqyf1JQhg")]
     [Description(@"Excess of collateral.")]
     CollateralExcess = CollateralStatusCode.CollateralExcess, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Shortage of collateral.
     /// Encoded/decoded by serializers as &quot;DEFI&quot;.
@@ -32,7 +34,7 @@ public enum CollateralStatus1Code
     [IsoId("_JuqsMcUcEeiF-qqyf1JQhg")]
     [Description(@"Shortage of collateral.")]
     CollateralShortage = CollateralStatusCode.CollateralShortage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral covers the exposure and there is no excess.
     /// Encoded/decoded by serializers as &quot;FLAT&quot;.
@@ -41,5 +43,4 @@ public enum CollateralStatus1Code
     [IsoId("_J0VPUcUcEeiF-qqyf1JQhg")]
     [Description(@"Collateral covers the exposure and there is no excess.")]
     NoExcessCollateral = CollateralStatusCode.NoExcessCollateral, // same ordinal as derivation source for type conversions
-    
 }

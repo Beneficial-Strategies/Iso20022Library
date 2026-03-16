@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CommissionType6Choice.Code))]
     [KnownType(typeof(CommissionType6Choice.Proprietary))]
-    [JsonDerivedType(typeof(CommissionType6Choice.Code),nameof(CommissionType6Choice.Code))]
-    [JsonDerivedType(typeof(CommissionType6Choice.Proprietary),nameof(CommissionType6Choice.Proprietary))]
+    [JsonDerivedType(typeof(CommissionType6Choice.Code), nameof(CommissionType6Choice.Code))]
+    [JsonDerivedType(
+        typeof(CommissionType6Choice.Proprietary),
+        nameof(CommissionType6Choice.Proprietary)
+    )]
     [IsoId("_SU7-gZBhEeakHoV5BVecAQ")]
     [DisplayName("Commission Type 6 Choice")]
-    public abstract partial record CommissionType6Choice_
-    {
-    }
+    public abstract record CommissionType6Choice_ { }
 }

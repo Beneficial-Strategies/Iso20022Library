@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TOHf1Np-Ed-ak6NoX_4Aeg_1659539851")]
 [DisplayName("Instruction For Creditor Agent")]
-public partial record InstructionForCreditorAgent2
+public record InstructionForCreditorAgent2
 {
-    #nullable enable
-    
     /// <summary>
     /// Coded information related to the processing of the payment instruction, provided by the initiating party, and intended for the creditor&apos;s agent.
     /// </summary>
     [IsoId("_TOHf1dp-Ed-ak6NoX_4Aeg_1659540378")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public Instruction5Code? Code { get; init; } 
-    
+    public Instruction5Code? Code { get; init; }
+
     /// <summary>
     /// Further information complementing the coded instruction or instruction to the creditor&apos;s agent that is bilaterally agreed or specific to a user community.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record InstructionForCreditorAgent2
     [DisplayName("Instruction Information")]
     [IsoXmlTag("InstrInf")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? InstructionInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? InstructionInformation { get; init; }
 }

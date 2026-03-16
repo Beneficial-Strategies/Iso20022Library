@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JLYF8ZjwEeWn2ur3BXxtdg")]
 [DisplayName("Safe Keeping Place")]
-public partial record SafeKeepingPlace2
+public record SafeKeepingPlace2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of the party.
     /// </summary>
     [IsoId("_JaaAc5jwEeWn2ur3BXxtdg")]
     [DisplayName("Safekeeping Place Format")]
     [IsoXmlTag("SfkpgPlcFrmt")]
-    public SafekeepingPlaceFormat17Choice_? SafekeepingPlaceFormat { get; init; } 
-    
+    public SafekeepingPlaceFormat17Choice_? SafekeepingPlaceFormat { get; init; }
+
     /// <summary>
     /// Legal entity identification as an alternate identification for a place of safekeeping.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record SafeKeepingPlace2
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLEIIdentifier? LEI { get; init; }
 }

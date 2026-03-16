@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S-xcR9p-Ed-ak6NoX_4Aeg_946629114")]
 [DisplayName("Transaction Details")]
-public partial record TransactionDetails2
+public record TransactionDetails2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification assigned to a trade once it is received or matched by an executing system.
     /// </summary>
@@ -25,10 +23,6 @@ public partial record TransactionDetails2
     [DisplayName("Trade Reference")]
     [IsoXmlTag("TradRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text TradeReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text TradeReference { get; init; }
 }

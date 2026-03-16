@@ -12,7 +12,12 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_bLJAw9p-Ed-ak6NoX_4Aeg_-765647150")]
 [Description(@"Type of notification.")]
-[Derivations(typeof(CorporateActionNotificationType1Code),typeof(CorporateActionNotificationType2Code),typeof(NotificationType3Code),typeof(NotificationType2Code))]
+[Derivations(
+    typeof(CorporateActionNotificationType1Code),
+    typeof(CorporateActionNotificationType2Code),
+    typeof(NotificationType3Code),
+    typeof(NotificationType2Code)
+)]
 public enum CorporateActionNotificationTypeCode
 {
     /// <summary>
@@ -23,7 +28,7 @@ public enum CorporateActionNotificationTypeCode
     [IsoId("_bLJAxNp-Ed-ak6NoX_4Aeg_-464577409")]
     [Description(@"New notification.")]
     New,
-    
+
     /// <summary>
     /// Notification replacing a previously sent notification.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
@@ -32,7 +37,7 @@ public enum CorporateActionNotificationTypeCode
     [IsoId("_bLJAxdp-Ed-ak6NoX_4Aeg_-379615464")]
     [Description(@"Notification replacing a previously sent notification.")]
     Replacement,
-    
+
     /// <summary>
     /// Notification sent as a reminder of an event taking place.
     /// Encoded/decoded by serializers as &quot;RMDR&quot;.
@@ -41,16 +46,18 @@ public enum CorporateActionNotificationTypeCode
     [IsoId("_bLJAxtp-Ed-ak6NoX_4Aeg_-278951583")]
     [Description(@"Notification sent as a reminder of an event taking place.")]
     Reminder,
-    
+
     /// <summary>
     /// Notification sent to void a previously sent notification due to the withdrawal of the event by the issuer.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
     /// </summary>
     [EnumMember(Value = "WITH")]
     [IsoId("_bLJAx9p-Ed-ak6NoX_4Aeg_53517418")]
-    [Description(@"Notification sent to void a previously sent notification due to the withdrawal of the event by the issuer.")]
+    [Description(
+        @"Notification sent to void a previously sent notification due to the withdrawal of the event by the issuer."
+    )]
     Withrawal,
-    
+
     /// <summary>
     /// Notification requesting the cancellation of a previously sent notification.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -59,7 +66,7 @@ public enum CorporateActionNotificationTypeCode
     [IsoId("_bLJAyNp-Ed-ak6NoX_4Aeg_1834128888")]
     [Description(@"Notification requesting the cancellation of a previously sent notification.")]
     Cancellation,
-    
+
     /// <summary>
     /// Cancellation due to a processing error.
     /// Encoded/decoded by serializers as &quot;PROC&quot;.
@@ -68,5 +75,4 @@ public enum CorporateActionNotificationTypeCode
     [IsoId("_bLSxwNp-Ed-ak6NoX_4Aeg_168776981")]
     [Description(@"Cancellation due to a processing error.")]
     Processing,
-    
 }

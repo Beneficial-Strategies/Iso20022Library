@@ -23,7 +23,7 @@ public enum DTCMultiplyDivide1Code
     [IsoId("_1p3ogzL3EeKU9IrkkToqcw_1860873575")]
     [Description(@"Positions multiplied by rate.")]
     Multiply = DTCMultiplyDivideCode.Multiply, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Positions divided by rate.
     /// Encoded/decoded by serializers as &quot;DVDE&quot;.
@@ -32,5 +32,4 @@ public enum DTCMultiplyDivide1Code
     [IsoId("_1p3ohDL3EeKU9IrkkToqcw_-935145883")]
     [Description(@"Positions divided by rate.")]
     Divide = DTCMultiplyDivideCode.Divide, // same ordinal as derivation source for type conversions
-    
 }

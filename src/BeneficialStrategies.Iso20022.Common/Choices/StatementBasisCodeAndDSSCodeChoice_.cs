@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode))]
     [KnownType(typeof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS))]
-    [JsonDerivedType(typeof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode),nameof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode))]
-    [JsonDerivedType(typeof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS),nameof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS))]
+    [JsonDerivedType(
+        typeof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode),
+        nameof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsCode)
+    )]
+    [JsonDerivedType(
+        typeof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS),
+        nameof(StatementBasisCodeAndDSSCodeChoice.StatementBasisAsDSS)
+    )]
     [IsoId("_Q7Cp8Np-Ed-ak6NoX_4Aeg_-1357896034")]
     [DisplayName("Statement Basis Code And DSS Code Choice")]
-    public abstract partial record StatementBasisCodeAndDSSCodeChoice_
-    {
-    }
+    public abstract record StatementBasisCodeAndDSSCodeChoice_ { }
 }

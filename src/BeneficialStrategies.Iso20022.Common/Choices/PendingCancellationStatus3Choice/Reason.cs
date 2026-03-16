@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus3Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus3Choice
     /// </summary>
     [IsoId("_lFW2nQFnEeG2HcWTGfYeDQ")]
     [DisplayName("Reason")]
-    public partial record Reason : PendingCancellationStatus3Choice_
+    public record Reason : PendingCancellationStatus3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why the cancellation request is pending.
         /// </summary>
         [IsoId("_lFgAQQFnEeG2HcWTGfYeDQ")]
         [DisplayName("Reason Code")]
         [IsoXmlTag("RsnCd")]
-        public required PendingCancellationReason1Choice_ ReasonCode { get; init; } 
-        
+        public required PendingCancellationReason1Choice_ ReasonCode { get; init; }
+
         /// <summary>
         /// Provides additional information about the processed instruction.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingCancellationStatus3Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

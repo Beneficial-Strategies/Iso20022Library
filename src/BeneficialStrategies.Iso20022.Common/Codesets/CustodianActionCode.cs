@@ -23,7 +23,7 @@ public enum CustodianActionCode
     [IsoId("_14eFMjL3EeKU9IrkkToqcw_-1836075387")]
     [Description(@"Custodian is researching pending issues raised by the validation service.")]
     Research,
-    
+
     /// <summary>
     /// Custodian is expected to send updated information.
     /// Encoded/decoded by serializers as &quot;SEND&quot;.
@@ -32,16 +32,18 @@ public enum CustodianActionCode
     [IsoId("_14eFMzL3EeKU9IrkkToqcw_2034977918")]
     [Description(@"Custodian is expected to send updated information.")]
     SendInfo,
-    
+
     /// <summary>
     /// Custodian disagrees with the validation service and will take no further action.
     /// Encoded/decoded by serializers as &quot;DISS&quot;.
     /// </summary>
     [EnumMember(Value = "DISS")]
     [IsoId("_14eFNDL3EeKU9IrkkToqcw_1016644254")]
-    [Description(@"Custodian disagrees with the validation service and will take no further action.")]
+    [Description(
+        @"Custodian disagrees with the validation service and will take no further action."
+    )]
     Disagrees,
-    
+
     /// <summary>
     /// No action required by the custodian.
     /// Encoded/decoded by serializers as &quot;NOAC&quot;.
@@ -50,5 +52,4 @@ public enum CustodianActionCode
     [IsoId("_14eFNTL3EeKU9IrkkToqcw_-878516849")]
     [Description(@"No action required by the custodian.")]
     NoAction,
-    
 }

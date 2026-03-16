@@ -23,7 +23,7 @@ public enum MessageFunction8Code
     [IsoId("_qGK2cSycEeWT0qwwEKj7sA")]
     [Description(@"Provide the ATM counters resettting those that are applicable.")]
     ATMBalance = MessageFunctionCode.ATMBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Global status of the ATM.
     /// Encoded/decoded by serializers as &quot;GSTS&quot;.
@@ -32,7 +32,7 @@ public enum MessageFunction8Code
     [IsoId("_rsG5gSycEeWT0qwwEKj7sA")]
     [Description(@"Global status of the ATM.")]
     ATMGlobalStatus = MessageFunctionCode.ATMGlobalStatus, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security detailed report.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
@@ -41,7 +41,7 @@ public enum MessageFunction8Code
     [IsoId("_uCydASycEeWT0qwwEKj7sA")]
     [Description(@"Security detailed report.")]
     SecurityDetails = MessageFunctionCode.SecurityDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request the value of the ATM counters.
     /// Encoded/decoded by serializers as &quot;INQC&quot;.
@@ -50,7 +50,7 @@ public enum MessageFunction8Code
     [IsoId("_vAyWUSycEeWT0qwwEKj7sA")]
     [Description(@"Request the value of the ATM counters.")]
     CountersInquiry = MessageFunctionCode.CountersInquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request of a key exchange.
     /// Encoded/decoded by serializers as &quot;KEYQ&quot;.
@@ -59,7 +59,7 @@ public enum MessageFunction8Code
     [IsoId("_xK0k8SycEeWT0qwwEKj7sA")]
     [Description(@"Request of a key exchange.")]
     KeyExchangeRequest = MessageFunctionCode.KeyExchangeRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of cryptographic keys.
     /// Encoded/decoded by serializers as &quot;SSTS&quot;.
@@ -68,5 +68,4 @@ public enum MessageFunction8Code
     [IsoId("_yriw0SycEeWT0qwwEKj7sA")]
     [Description(@"Status of cryptographic keys.")]
     SecurityKeyStatus = MessageFunctionCode.SecurityKeyStatus, // same ordinal as derivation source for type conversions
-    
 }

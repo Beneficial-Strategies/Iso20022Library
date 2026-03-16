@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CancellationStatus30Choice.Pending))]
     [KnownType(typeof(CancellationStatus30Choice.Rejected))]
     [KnownType(typeof(CancellationStatus30Choice.Proprietary))]
-    [JsonDerivedType(typeof(CancellationStatus30Choice.Cancelled),nameof(CancellationStatus30Choice.Cancelled))]
-    [JsonDerivedType(typeof(CancellationStatus30Choice.Processed),nameof(CancellationStatus30Choice.Processed))]
-    [JsonDerivedType(typeof(CancellationStatus30Choice.Pending),nameof(CancellationStatus30Choice.Pending))]
-    [JsonDerivedType(typeof(CancellationStatus30Choice.Rejected),nameof(CancellationStatus30Choice.Rejected))]
-    [JsonDerivedType(typeof(CancellationStatus30Choice.Proprietary),nameof(CancellationStatus30Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CancellationStatus30Choice.Cancelled),
+        nameof(CancellationStatus30Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus30Choice.Processed),
+        nameof(CancellationStatus30Choice.Processed)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus30Choice.Pending),
+        nameof(CancellationStatus30Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus30Choice.Rejected),
+        nameof(CancellationStatus30Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus30Choice.Proprietary),
+        nameof(CancellationStatus30Choice.Proprietary)
+    )]
     [IsoId("_TpwpcRIwEeydmIVkS03esw")]
     [DisplayName("Cancellation Status 30 Choice")]
-    public abstract partial record CancellationStatus30Choice_
-    {
-    }
+    public abstract record CancellationStatus30Choice_ { }
 }

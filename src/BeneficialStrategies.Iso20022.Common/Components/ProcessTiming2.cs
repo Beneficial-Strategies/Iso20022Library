@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_iZSpcR3fEeKWfegf-2AeBQ")]
 [DisplayName("Process Timing")]
-public partial record ProcessTiming2
+public record ProcessTiming2
 {
-    #nullable enable
-    
     /// <summary>
     /// Waiting time after the previous action in months, days, hours and minutes, leading zeros could be omitted.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ProcessTiming2
     [DisplayName("Waiting Time")]
     [IsoXmlTag("WtgTm")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? WaitingTime { get; init; } 
-    
+    public IsoMax9NumericText? WaitingTime { get; init; }
+
     /// <summary>
     /// Date and time to start the action.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record ProcessTiming2
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartTime { get; init; } 
-    
+    public IsoISODateTime? StartTime { get; init; }
+
     /// <summary>
     /// Date and time after which the action cannot be processed.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record ProcessTiming2
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? EndTime { get; init; } 
-    
+    public IsoISODateTime? EndTime { get; init; }
+
     /// <summary>
     /// Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record ProcessTiming2
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? Period { get; init; } 
-    
+    public IsoMax9NumericText? Period { get; init; }
+
     /// <summary>
     /// Maximum number of cyclic calls.
     /// </summary>
@@ -61,17 +59,13 @@ public partial record ProcessTiming2
     [DisplayName("Maximum Number")]
     [IsoXmlTag("MaxNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumNumber { get; init; } 
-    
+    public IsoNumber? MaximumNumber { get; init; }
+
     /// <summary>
     /// Definition of retry process if activation of the action fails.
     /// </summary>
     [IsoId("_ikvrlR3fEeKWfegf-2AeBQ")]
     [DisplayName("Re Try")]
     [IsoXmlTag("ReTry")]
-    public ProcessRetry2? ReTry { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ProcessRetry2? ReTry { get; init; }
 }

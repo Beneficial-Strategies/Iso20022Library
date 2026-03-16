@@ -23,7 +23,7 @@ public enum PendingStatusReason1Code
     [IsoId("_A7j9MWBkEeaR1OOiVxm3Gg")]
     [Description(@"Know Your Customer (KYC) document is missing.")]
     KnowYourCustomerDocumentMissing = PendingStatusReasonCode.KnowYourCustomerDocumentMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// FATCA reporting date is missing.
     /// Encoded/decoded by serializers as &quot;FRDM&quot;.
@@ -32,7 +32,7 @@ public enum PendingStatusReason1Code
     [IsoId("_BLoZgWBkEeaR1OOiVxm3Gg")]
     [Description(@"FATCA reporting date is missing.")]
     FATCAReportingDateMissing = PendingStatusReasonCode.FATCAReportingDateMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rights holder information is missing.
     /// Encoded/decoded by serializers as &quot;RIGH&quot;.
@@ -41,7 +41,7 @@ public enum PendingStatusReason1Code
     [IsoId("_BXiHgWBkEeaR1OOiVxm3Gg")]
     [Description(@"Rights holder information is missing.")]
     RightsHolderMissing = PendingStatusReasonCode.RightsHolderMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authorisation is required.
     /// Encoded/decoded by serializers as &quot;ATHR&quot;.
@@ -50,7 +50,7 @@ public enum PendingStatusReason1Code
     [IsoId("_P9cBIWCJEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is required.")]
     Authorisation = PendingStatusReasonCode.Authorisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authorisation is provided but the account change is still pending.
     /// Encoded/decoded by serializers as &quot;ATHP&quot;.
@@ -59,7 +59,7 @@ public enum PendingStatusReason1Code
     [IsoId("_QHG6gWCJEeabZtzjEVWYCQ")]
     [Description(@"Authorisation is provided but the account change is still pending.")]
     AuthorisedButPending = PendingStatusReasonCode.AuthorisedButPending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modification to the account data is in process.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -68,5 +68,4 @@ public enum PendingStatusReason1Code
     [IsoId("_QVFsIWCJEeabZtzjEVWYCQ")]
     [Description(@"Modification to the account data is in process.")]
     ModificationInProcess = PendingStatusReasonCode.ModificationInProcess, // same ordinal as derivation source for type conversions
-    
 }

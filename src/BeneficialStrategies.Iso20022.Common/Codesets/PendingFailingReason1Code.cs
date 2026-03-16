@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_4P-VgOkHEemm4qhb2yFPOw")]
-[Description(@"Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing.")]
+[Description(
+    @"Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing."
+)]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
 public enum PendingFailingReason1Code
 {
@@ -23,5 +25,4 @@ public enum PendingFailingReason1Code
     [IsoId("_jpvb4ekIEemm4qhb2yFPOw")]
     [Description(@"Other. See Narrative.")]
     Other = PendingFailingReasonV2Code.Other, // same ordinal as derivation source for type conversions
-    
 }

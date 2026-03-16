@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZgWEUOFIEeStTblywAGIyA")]
 [DisplayName("Contract Registration Statement Criteria")]
-public partial record ContractRegistrationStatementCriteria1
+public record ContractRegistrationStatementCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the journal of the transactions recorded under the registered currency control contract must be returned or not.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ContractRegistrationStatementCriteria1
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TransactionJournal { get; init; } 
-    
+    public IsoTrueFalseIndicator? TransactionJournal { get; init; }
+
     /// <summary>
     /// Indicates whether the journal of the supporting documents recorded under the registered currency control contract must be returned or not.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record ContractRegistrationStatementCriteria1
     [DisplayName("Supporting Document Journal")]
     [IsoXmlTag("SpprtgDocJrnl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? SupportingDocumentJournal { get; init; } 
-    
+    public IsoTrueFalseIndicator? SupportingDocumentJournal { get; init; }
+
     /// <summary>
     /// Indicates whether the journal of additional supporting documents recorded under the registered currency control contract must be returned or not.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record ContractRegistrationStatementCriteria1
     [DisplayName("Additional Supporting Document Journal")]
     [IsoXmlTag("AddtlSpprtgDocJrnl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AdditionalSupportingDocumentJournal { get; init; } 
-    
+    public IsoTrueFalseIndicator? AdditionalSupportingDocumentJournal { get; init; }
+
     /// <summary>
     /// Indicates whether the details on the currency control rule against which has been violated must be returned or not.
     /// </summary>
@@ -52,9 +50,5 @@ public partial record ContractRegistrationStatementCriteria1
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RegulatoryRuleValidation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? RegulatoryRuleValidation { get; init; }
 }

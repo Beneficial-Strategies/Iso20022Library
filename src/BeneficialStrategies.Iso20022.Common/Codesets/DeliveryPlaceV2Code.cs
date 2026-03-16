@@ -23,7 +23,7 @@ public enum DeliveryPlaceV2Code
     [IsoId("_iSfctw1eEeu_4e16J8D_UA")]
     [Description(@"Card needs to be mailed to employer's address.")]
     Employer,
-    
+
     /// <summary>
     /// Card needs to be mailed to the individual specified in PersonDetail.
     /// Encoded/decoded by serializers as &quot;INDI&quot;.
@@ -32,7 +32,7 @@ public enum DeliveryPlaceV2Code
     [IsoId("_iSfcuQ1eEeu_4e16J8D_UA")]
     [Description(@"Card needs to be mailed to the individual specified in PersonDetail.")]
     Individual,
-    
+
     /// <summary>
     /// Card needs to be available at the entrance of the meeting.
     /// Encoded/decoded by serializers as &quot;ENTR&quot;.
@@ -41,7 +41,7 @@ public enum DeliveryPlaceV2Code
     [IsoId("_iSfcuA1eEeu_4e16J8D_UA")]
     [Description(@"Card needs to be available at the entrance of the meeting.")]
     MeetingEntrance,
-    
+
     /// <summary>
     /// Cards needs to be send to another specified address.
     /// Encoded/decoded by serializers as &quot;OADR&quot;.
@@ -50,7 +50,7 @@ public enum DeliveryPlaceV2Code
     [IsoId("_iSfcuw1eEeu_4e16J8D_UA")]
     [Description(@"Cards needs to be send to another specified address.")]
     OtherAddress,
-    
+
     /// <summary>
     /// Card needs to be sent via e-mail.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -59,5 +59,4 @@ public enum DeliveryPlaceV2Code
     [IsoId("_iSfcug1eEeu_4e16J8D_UA")]
     [Description(@"Card needs to be sent via e-mail.")]
     Email,
-    
 }

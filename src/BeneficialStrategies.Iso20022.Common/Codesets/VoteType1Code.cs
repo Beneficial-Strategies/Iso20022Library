@@ -23,7 +23,7 @@ public enum VoteType1Code
     [IsoId("_5URc0a37EemG7MmivSuE5g")]
     [Description(@"Results of a vote on a proposal is for advice only.")]
     Advisory = VoteTypeCode.Advisory, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Results of a vote on a proposal is binding.
     /// Encoded/decoded by serializers as &quot;BNDG&quot;.
@@ -32,5 +32,4 @@ public enum VoteType1Code
     [IsoId("_5fbj8q37EemG7MmivSuE5g")]
     [Description(@"Results of a vote on a proposal is binding.")]
     Binding = VoteTypeCode.Binding, // same ordinal as derivation source for type conversions
-    
 }

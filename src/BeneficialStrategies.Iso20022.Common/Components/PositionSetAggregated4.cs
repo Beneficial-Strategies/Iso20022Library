@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jQT8dRTjEe61h9tfoUrWyw")]
 [DisplayName("Position Set Aggregated4")]
-public partial record PositionSetAggregated4
+public record PositionSetAggregated4
 {
-    #nullable enable
-
     /// <summary>
     /// Collateral Position Set.
     /// </summary>
@@ -51,9 +49,5 @@ public partial record PositionSetAggregated4
     /// </summary>
     [DisplayName("Reference Date")]
     [IsoXmlTag("RefDt")]
-    public required IsoISODate ReferenceDate { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoISODate ReferenceDate { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mPKjUJNeEeytjZlcgApf6A")]
 [DisplayName("Basket Query")]
-public partial record BasketQuery1
+public record BasketQuery1
 {
-    #nullable enable
-    
     /// <summary>
     /// Legal entity identifier code used to recognise the counterparty of the reporting agent for the reported transaction.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record BasketQuery1
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? Structurer { get; init; } 
-    
+    public IsoLEIIdentifier? Structurer { get; init; }
+
     /// <summary>
     /// Identifier of the custom basket assigned by the structurer allowing to link the constituents of the basket of indexes.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record BasketQuery1
     [DisplayName("Identifier")]
     [IsoXmlTag("Idr")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-    public IsoMax52Text? Identifier { get; init; } 
-    
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public IsoMax52Text? Identifier { get; init; }
+
     /// <summary>
     /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record BasketQuery1
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? ISIN { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISINOct2015Identifier? ISIN { get; init; }
 }

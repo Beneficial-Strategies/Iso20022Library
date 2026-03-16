@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3b6DFZb6Eee4htziCyV8eA")]
 [DisplayName("Report Query Search Criteria")]
-public partial record ReportQuerySearchCriteria2
+public record ReportQuerySearchCriteria2
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.
     /// </summary>
     [IsoId("_3pS-0Zb6Eee4htziCyV8eA")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentificationSearchCriteria2Choice_? AccountIdentification { get; init; } 
-    
+    public AccountIdentificationSearchCriteria2Choice_? AccountIdentification { get; init; }
+
     /// <summary>
     /// Numerical representation of the net increases and decreases in an account at a specific point in time. A cash balance is calculated from a sum of cash credits minus a sum of cash debits.
     /// </summary>
     [IsoId("_3pS-05b6Eee4htziCyV8eA")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public CashBalance12? Balance { get; init; } 
-    
+    public CashBalance12? Balance { get; init; }
+
     /// <summary>
     /// Values of possible reports.
     /// </summary>
@@ -41,9 +39,9 @@ public partial record ReportQuerySearchCriteria2
     [DisplayName("Report Name")]
     [IsoXmlTag("RptNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? ReportName { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4AlphaNumericText? ReportName { get; init; }
+
     /// <summary>
     /// Specifies the query message name identifier to which the message refers.
     /// </summary>
@@ -51,50 +49,46 @@ public partial record ReportQuerySearchCriteria2
     [DisplayName("Message Name Identification")]
     [IsoXmlTag("MsgNmId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MessageNameIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MessageNameIdentification { get; init; }
+
     /// <summary>
     /// Report owning party.
     /// </summary>
     [IsoId("_3pS-15b6Eee4htziCyV8eA")]
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
-    public required PartyIdentification136 PartyIdentification { get; init; } 
-    
+    public required PartyIdentification136 PartyIdentification { get; init; }
+
     /// <summary>
     /// Responsible Party of the report owning party.
     /// </summary>
     [IsoId("_3pS-2Zb6Eee4htziCyV8eA")]
     [DisplayName("Responsible Party Identification")]
     [IsoXmlTag("RspnsblPtyId")]
-    public PartyIdentification136? ResponsiblePartyIdentification { get; init; } 
-    
+    public PartyIdentification136? ResponsiblePartyIdentification { get; init; }
+
     /// <summary>
     /// Date and time when the report was created.
     /// </summary>
     [IsoId("_3pS-25b6Eee4htziCyV8eA")]
     [DisplayName("Date Search")]
     [IsoXmlTag("DtSch")]
-    public DatePeriodSearch1Choice_? DateSearch { get; init; } 
-    
+    public DatePeriodSearch1Choice_? DateSearch { get; init; }
+
     /// <summary>
     /// Time when the (business) event, which triggered the report, was scheduled.
     /// </summary>
     [IsoId("_3pS-3Zb6Eee4htziCyV8eA")]
     [DisplayName("Scheduled Time")]
     [IsoXmlTag("SchdldTm")]
-    public DateTimePeriod1Choice_? ScheduledTime { get; init; } 
-    
+    public DateTimePeriod1Choice_? ScheduledTime { get; init; }
+
     /// <summary>
     /// Execution type is executed based on an event driven trigger.
     /// </summary>
     [IsoId("_mEwyoVg9Eeiv7OYKCzUSAg")]
     [DisplayName("Event")]
     [IsoXmlTag("Evt")]
-    public EventType1Choice_? Event { get; init; } 
-    
-    
-    #nullable disable
-    
+    public EventType1Choice_? Event { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5HATgN6PEeiwsev40qZGEQ")]
 [DisplayName("Search Criteria")]
-public partial record SearchCriteria1
+public record SearchCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// List of criteria following the OR logic.
     /// </summary>
@@ -26,8 +24,4 @@ public partial record SearchCriteria1
     [IsoXmlTag("SchOr")]
     public ValueList<SearchOr1> SearchOr { get; init; } = [];
     // ID for the above is _APMeMN6QEeiwsev40qZGEQ
-    
-    
-    #nullable disable
-    
 }

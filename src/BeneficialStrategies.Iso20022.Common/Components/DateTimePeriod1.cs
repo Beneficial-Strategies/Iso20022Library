@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aeAZM_hvEeSLI7Du5Hk4iw")]
 [DisplayName("Date Time Period")]
-public partial record DateTimePeriod1
+public record DateTimePeriod1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and time at which the period starts.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DateTimePeriod1
     [DisplayName("From Date Time")]
     [IsoXmlTag("FrDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime FromDateTime { get; init; } 
-    
+    public required IsoISODateTime FromDateTime { get; init; }
+
     /// <summary>
     /// Date and time at which the period ends.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record DateTimePeriod1
     [DisplayName("To Date Time")]
     [IsoXmlTag("ToDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ToDateTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime ToDateTime { get; init; }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AcceptedStatus10Choice.NoSpecifiedReason))]
     [KnownType(typeof(AcceptedStatus10Choice.Reason))]
-    [JsonDerivedType(typeof(AcceptedStatus10Choice.NoSpecifiedReason),nameof(AcceptedStatus10Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(AcceptedStatus10Choice.Reason),nameof(AcceptedStatus10Choice.Reason))]
+    [JsonDerivedType(
+        typeof(AcceptedStatus10Choice.NoSpecifiedReason),
+        nameof(AcceptedStatus10Choice.NoSpecifiedReason)
+    )]
+    [JsonDerivedType(typeof(AcceptedStatus10Choice.Reason), nameof(AcceptedStatus10Choice.Reason))]
     [IsoId("_6HWbjZNLEeWGlc8L7oPDIg")]
     [DisplayName("Accepted Status 10 Choice")]
-    public abstract partial record AcceptedStatus10Choice_
-    {
-    }
+    public abstract record AcceptedStatus10Choice_ { }
 }

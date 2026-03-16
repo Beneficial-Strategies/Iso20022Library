@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aP_AFdp-Ed-ak6NoX_4Aeg_1203136897")]
 [Description(@"Specifies if a trade party is a buyer or a seller.")]
-[Derivations(typeof(OptionParty1Code),typeof(OptionParty3Code))]
+[Derivations(typeof(OptionParty1Code), typeof(OptionParty3Code))]
 public enum OptionPartyCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum OptionPartyCode
     [IsoId("_aP_AFtp-Ed-ak6NoX_4Aeg_1933638709")]
     [Description(@"Seller in a trade.")]
     Seller,
-    
+
     /// <summary>
     /// Buyer in a trade.
     /// Encoded/decoded by serializers as &quot;BYER&quot;.
@@ -32,7 +32,7 @@ public enum OptionPartyCode
     [IsoId("_aP_AF9p-Ed-ak6NoX_4Aeg_1865301081")]
     [Description(@"Buyer in a trade.")]
     Buyer,
-    
+
     /// <summary>
     /// Indicates the initiator of the trade.
     /// Encoded/decoded by serializers as &quot;TAKE&quot;.
@@ -41,7 +41,7 @@ public enum OptionPartyCode
     [IsoId("_GvogoDxIEeWZTovCemTvqg")]
     [Description(@"Indicates the initiator of the trade.")]
     Taker,
-    
+
     /// <summary>
     /// Indicates the receiver of the trade.
     /// Encoded/decoded by serializers as &quot;MAKE&quot;.
@@ -50,5 +50,4 @@ public enum OptionPartyCode
     [IsoId("_KBoc4DxIEeWZTovCemTvqg")]
     [Description(@"Indicates the receiver of the trade.")]
     Maker,
-    
 }

@@ -23,7 +23,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-sXyYEemfrNOe0zHQyg")]
     [Description(@"Period unit expressed in hours.")]
     Hours = PeriodUnitCode.Hours, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Half days
     /// Encoded/decoded by serializers as &quot;HFDA&quot;.
@@ -32,7 +32,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-s3yYEemfrNOe0zHQyg")]
     [Description(@"Half days")]
     HalfDays = PeriodUnitCode.HalfDays, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in days.
     /// Encoded/decoded by serializers as &quot;DAYS&quot;.
@@ -41,7 +41,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-tXyYEemfrNOe0zHQyg")]
     [Description(@"Counted in days.")]
     Days = PeriodUnitCode.Days, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in weeks.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -50,7 +50,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-t3yYEemfrNOe0zHQyg")]
     [Description(@"Counted in weeks.")]
     Weeks = PeriodUnitCode.Weeks, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in months.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -59,7 +59,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-uXyYEemfrNOe0zHQyg")]
     [Description(@"Counted in months.")]
     Months = PeriodUnitCode.Months, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in years.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -68,7 +68,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-u3yYEemfrNOe0zHQyg")]
     [Description(@"Counted in years.")]
     Years = PeriodUnitCode.Years, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Period unit expressed in minutes
     /// Encoded/decoded by serializers as &quot;MINU&quot;.
@@ -77,7 +77,7 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-vXyYEemfrNOe0zHQyg")]
     [Description(@"Period unit expressed in minutes")]
     Minutes = PeriodUnitCode.Minutes, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Counted in some other unit.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -86,5 +86,4 @@ public enum PeriodUnit2Code
     [IsoId("_I1r-v3yYEemfrNOe0zHQyg")]
     [Description(@"Counted in some other unit.")]
     Other = PeriodUnitCode.Other, // same ordinal as derivation source for type conversions
-    
 }

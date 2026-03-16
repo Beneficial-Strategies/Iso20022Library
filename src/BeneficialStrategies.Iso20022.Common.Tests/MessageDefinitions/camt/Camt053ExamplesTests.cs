@@ -1,13 +1,13 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.camt;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
 using BeneficialStrategies.Iso20022.Choices.DateAndDateTime2Choice;
 using BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice;
-using BeneficialStrategies.Iso20022.camt;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -26,83 +26,95 @@ public class Camt053ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader81 CreateGroupHeader(string msgId = "DEUTDEFF/240315/CAM053/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddHours(18),
-    };
+    public static GroupHeader81 CreateGroupHeader(string msgId = "DEUTDEFF/240315/CAM053/00001") =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddHours(18),
+        };
 
-    public static CashAccount41 CreateStatementAccount() => new()
-    {
-        Identification = new IBAN { Value = "DE89370400440532013000" },
-        Currency = Iso20022TestData.Currency,
-        Name = "Acme Manufacturing GmbH Operating Account",
-        Owner = Iso20022TestData.Debtor,
-        Servicer = Iso20022TestData.DebtorAgent,
-    };
+    public static CashAccount41 CreateStatementAccount() =>
+        new()
+        {
+            Identification = new IBAN { Value = "DE89370400440532013000" },
+            Currency = Iso20022TestData.Currency,
+            Name = "Acme Manufacturing GmbH Operating Account",
+            Owner = Iso20022TestData.Debtor,
+            Servicer = Iso20022TestData.DebtorAgent,
+        };
 
     public static CashBalance8 CreateClosingBookedBalance(
-        decimal amount = 952_750.00m, CreditDebitCode indicator = CreditDebitCode.Credit) => new()
-    {
-        Type = new BalanceType13
+        decimal amount = 952_750.00m,
+        CreditDebitCode indicator = CreditDebitCode.Credit
+    ) =>
+        new()
         {
-            CodeOrProprietary = new Choices.BalanceType10Choice.Code
+            Type = new BalanceType13
             {
-                Value = ExternalBalanceType1Code.ClosingBooked,
+                CodeOrProprietary = new Choices.BalanceType10Choice.Code
+                {
+                    Value = ExternalBalanceType1Code.ClosingBooked,
+                },
             },
-        },
-        Amount = new ActiveOrHistoricCurrencyAndAmount
-        {
-            Currency = Iso20022TestData.Currency,
-            Amount = amount,
-        },
-        CreditDebitIndicator = indicator,
-        Date = new Date { Value = Iso20022TestData.SettlementDate },
-    };
+            Amount = new ActiveOrHistoricCurrencyAndAmount
+            {
+                Currency = Iso20022TestData.Currency,
+                Amount = amount,
+            },
+            CreditDebitIndicator = indicator,
+            Date = new Date { Value = Iso20022TestData.SettlementDate },
+        };
 
-    public static ReportEntry13 CreateCreditEntry(
-        EntryStatus1Choice_? status = null) => new()
-    {
-        Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = Iso20022TestData.Currency, Amount = Iso20022TestData.Amount },
-        CreditDebitIndicator = CreditDebitCode.Credit,
-        Status = status ?? new Code { Value = ExternalEntryStatus1Code.Booked },
-        BookingDate = new Date { Value = Iso20022TestData.SettlementDate },
-        ValueDate = new Date { Value = Iso20022TestData.SettlementDate },
-        AccountServicerReference = "BNPAFRPP20240315001234",
-        BankTransactionCode = new BankTransactionCodeStructure4
+    public static ReportEntry13 CreateCreditEntry(EntryStatus1Choice_? status = null) =>
+        new()
         {
-            Domain = new BankTransactionCodeStructure5
+            Amount = new ActiveOrHistoricCurrencyAndAmount
             {
-                Code = "PMNT",
-                Family = new BankTransactionCodeStructure6
+                Currency = Iso20022TestData.Currency,
+                Amount = Iso20022TestData.Amount
+            },
+            CreditDebitIndicator = CreditDebitCode.Credit,
+            Status = status ?? new Code { Value = ExternalEntryStatus1Code.Booked },
+            BookingDate = new Date { Value = Iso20022TestData.SettlementDate },
+            ValueDate = new Date { Value = Iso20022TestData.SettlementDate },
+            AccountServicerReference = "BNPAFRPP20240315001234",
+            BankTransactionCode = new BankTransactionCodeStructure4
+            {
+                Domain = new BankTransactionCodeStructure5
                 {
-                    Code = "RCDT",        // Received Credit Transfer
-                    SubFamilyCode = "ESCT", // SEPA Credit Transfer
+                    Code = "PMNT",
+                    Family = new BankTransactionCodeStructure6
+                    {
+                        Code = "RCDT", // Received Credit Transfer
+                        SubFamilyCode = "ESCT", // SEPA Credit Transfer
+                    },
                 },
             },
-        },
-        EntryDetails = new EntryDetails12
-        {
-            TransactionDetails = new EntryTransaction13
+            EntryDetails = new EntryDetails12
             {
-                References = new TransactionReferences6
+                TransactionDetails = new EntryTransaction13
                 {
-                    EndToEndIdentification = Iso20022TestData.EndToEndId,
-                    UETR = Iso20022TestData.Uetr,
-                    InstructionIdentification = Iso20022TestData.InstructionId,
-                },
-                RemittanceInformation = new RemittanceInformation21
-                {
-                    Unstructured = "INV-2024-847 EUR 47250.00",
-                },
-                RelatedParties = new TransactionParties9
-                {
-                    Debtor = new Choices.Party40Choice.Party { Name = Iso20022TestData.Debtor.Name },
-                    DebtorAccount = Iso20022TestData.DebtorAccount,
+                    References = new TransactionReferences6
+                    {
+                        EndToEndIdentification = Iso20022TestData.EndToEndId,
+                        UETR = Iso20022TestData.Uetr,
+                        InstructionIdentification = Iso20022TestData.InstructionId,
+                    },
+                    RemittanceInformation = new RemittanceInformation21
+                    {
+                        Unstructured = "INV-2024-847 EUR 47250.00",
+                    },
+                    RelatedParties = new TransactionParties9
+                    {
+                        Debtor = new Choices.Party40Choice.Party
+                        {
+                            Name = Iso20022TestData.Debtor.Name
+                        },
+                        DebtorAccount = Iso20022TestData.DebtorAccount,
+                    },
                 },
             },
-        },
-    };
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -171,7 +183,7 @@ public class Camt053ExamplesTests
                     Owner = Iso20022TestData.Creditor,
                     Servicer = Iso20022TestData.CreditorAgent,
                 },
-                Balance = [ CreateClosingBookedBalance() ],
+                Balance = [CreateClosingBookedBalance()],
                 Entry = CreateCreditEntry(),
             },
         };
@@ -246,7 +258,11 @@ public class Camt053ExamplesTests
     {
         var debitEntry = new ReportEntry13
         {
-            Amount = new ActiveOrHistoricCurrencyAndAmount { Currency = Iso20022TestData.Currency, Amount = Iso20022TestData.Amount },
+            Amount = new ActiveOrHistoricCurrencyAndAmount
+            {
+                Currency = Iso20022TestData.Currency,
+                Amount = Iso20022TestData.Amount
+            },
             CreditDebitIndicator = CreditDebitCode.Debit,
             Status = new Code { Value = ExternalEntryStatus1Code.Booked },
             BookingDate = new Date { Value = Iso20022TestData.SettlementDate },
@@ -259,7 +275,7 @@ public class Camt053ExamplesTests
                     Code = "PMNT",
                     Family = new BankTransactionCodeStructure6
                     {
-                        Code = "ICDT",        // Issued Credit Transfer
+                        Code = "ICDT", // Issued Credit Transfer
                         SubFamilyCode = "ESCT", // SEPA Credit Transfer
                     },
                 },
@@ -273,7 +289,7 @@ public class Camt053ExamplesTests
             {
                 Identification = "DEUTDEFF-ACME-STMT-20240315-DEBIT",
                 Account = CreateStatementAccount(),
-                Balance = [ CreateClosingBookedBalance() ],
+                Balance = [CreateClosingBookedBalance()],
                 Entry = debitEntry,
             },
         };

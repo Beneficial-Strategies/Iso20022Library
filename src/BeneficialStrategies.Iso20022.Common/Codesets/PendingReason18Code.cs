@@ -21,9 +21,11 @@ public enum PendingReason18Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_U_0-v-XzEemEj48jhmlA0Q")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonV2Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,7 +34,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-xOXzEemEj48jhmlA0Q")]
     [Description(@"Other. See Narrative.")]
     Other = PendingFailingReasonV2Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pending receipt of beneficiary owner details.
     /// Encoded/decoded by serializers as &quot;FULL&quot;.
@@ -41,7 +43,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-weXzEemEj48jhmlA0Q")]
     [Description(@"Pending receipt of beneficiary owner details.")]
     PendingBeneficiaryOwnerDetails = PendingFailingReasonV2Code.PendingBeneficiaryOwnerDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Awaiting receipt of adequate certification.
     /// Encoded/decoded by serializers as &quot;MCER&quot;.
@@ -50,7 +52,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-xeXzEemEj48jhmlA0Q")]
     [Description(@"Awaiting receipt of adequate certification.")]
     MissingCertification = PendingFailingReasonV2Code.MissingCertification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient money in your account.
     /// Encoded/decoded by serializers as &quot;MONY&quot;.
@@ -59,7 +61,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-veXzEemEj48jhmlA0Q")]
     [Description(@"Insufficient money in your account.")]
     InsufficientMoney = PendingFailingReasonV2Code.InsufficientMoney, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient financial instruments in your account.
     /// Encoded/decoded by serializers as &quot;LACK&quot;.
@@ -68,7 +70,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-xuXzEemEj48jhmlA0Q")]
     [Description(@"Insufficient financial instruments in your account.")]
     LackOfSecurities = PendingFailingReasonV2Code.LackOfSecurities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction was received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -77,7 +79,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-x-XzEemEj48jhmlA0Q")]
     [Description(@"Instruction was received after market deadline.")]
     MarketDeadlineMissed = PendingFailingReasonV2Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity of financial instruments does not match.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -86,16 +88,18 @@ public enum PendingReason18Code
     [IsoId("_U_0-vuXzEemEj48jhmlA0Q")]
     [Description(@"Quantity of financial instruments does not match.")]
     QuantityDisagreement = PendingFailingReasonV2Code.QuantityDisagreement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The instruction is pending receipt of securities, for example, from a purchase or loan.
     /// Encoded/decoded by serializers as &quot;PENR&quot;.
     /// </summary>
     [EnumMember(Value = "PENR")]
     [IsoId("_U_0-wOXzEemEj48jhmlA0Q")]
-    [Description(@"The instruction is pending receipt of securities, for example, from a purchase or loan.")]
+    [Description(
+        @"The instruction is pending receipt of securities, for example, from a purchase or loan."
+    )]
     PendingReceipt = PendingFailingReasonV2Code.PendingReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certificate number error.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
@@ -104,7 +108,7 @@ public enum PendingReason18Code
     [IsoId("_U_0-w-XzEemEj48jhmlA0Q")]
     [Description(@"Certificate number error.")]
     WrongCertificatesNumbers = PendingFailingReasonV2Code.WrongCertificatesNumbers, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed cash amount.
     /// Encoded/decoded by serializers as &quot;DQCS&quot;.
@@ -113,16 +117,18 @@ public enum PendingReason18Code
     [IsoId("_U_0-wuXzEemEj48jhmlA0Q")]
     [Description(@"Unrecognised or invalid instructed cash amount.")]
     DisagreementOnCashAmount = PendingFailingReasonV2Code.DisagreementOnCashAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.
     /// Encoded/decoded by serializers as &quot;ITAX&quot;.
     /// </summary>
     [EnumMember(Value = "ITAX")]
     [IsoId("_aCN6geXzEemEj48jhmlA0Q")]
-    [Description(@"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.")]
+    [Description(
+        @"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country."
+    )]
     IncorrectTaxRate = PendingFailingReasonV2Code.IncorrectTaxRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax rate is not consistent with the documentation in place.
     /// Encoded/decoded by serializers as &quot;NTAX&quot;.
@@ -131,7 +137,7 @@ public enum PendingReason18Code
     [IsoId("_bEa-YeXzEemEj48jhmlA0Q")]
     [Description(@"Tax rate is not consistent with the documentation in place.")]
     InconsistentTaxRate = PendingFailingReasonV2Code.InconsistentTaxRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax rate is missing.
     /// Encoded/decoded by serializers as &quot;MTAX&quot;.
@@ -140,5 +146,4 @@ public enum PendingReason18Code
     [IsoId("_bxNL4eXzEemEj48jhmlA0Q")]
     [Description(@"Tax rate is missing.")]
     MissingTaxRate = PendingFailingReasonV2Code.MissingTaxRate, // same ordinal as derivation source for type conversions
-    
 }

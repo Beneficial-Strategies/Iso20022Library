@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_URSdLyqSEeyR9JrVGfaMKw")]
 [DisplayName("Delivering Parties And Account")]
-public partial record DeliveringPartiesAndAccount19
+public record DeliveringPartiesAndAccount19
 {
-    #nullable enable
-    
     /// <summary>
     /// First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.
     /// </summary>
     [IsoId("_UpuLRyqSEeyR9JrVGfaMKw")]
     [DisplayName("Depository")]
     [IsoXmlTag("Dpstry")]
-    public required PartyIdentification239Choice_ Depository { get; init; } 
-    
+    public required PartyIdentification239Choice_ Depository { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the depository.
     /// </summary>
     [IsoId("_UpuLSSqSEeyR9JrVGfaMKw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty1")]
-    public required PartyIdentificationAndAccount200 Party1 { get; init; } 
-    
+    public required PartyIdentificationAndAccount200 Party1 { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 1.
     /// </summary>
     [IsoId("_UpuLSyqSEeyR9JrVGfaMKw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty2")]
-    public PartyIdentificationAndAccount201? Party2 { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentificationAndAccount201? Party2 { get; init; }
 }

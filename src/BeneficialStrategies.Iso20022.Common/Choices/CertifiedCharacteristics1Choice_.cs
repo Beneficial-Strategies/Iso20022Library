@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CertifiedCharacteristics1Choice.Quantity))]
     [KnownType(typeof(CertifiedCharacteristics1Choice.HealthIndication))]
     [KnownType(typeof(CertifiedCharacteristics1Choice.PhytosanitaryIndication))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.Origin),nameof(CertifiedCharacteristics1Choice.Origin))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.Quality),nameof(CertifiedCharacteristics1Choice.Quality))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.Analysis),nameof(CertifiedCharacteristics1Choice.Analysis))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.Weight),nameof(CertifiedCharacteristics1Choice.Weight))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.Quantity),nameof(CertifiedCharacteristics1Choice.Quantity))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.HealthIndication),nameof(CertifiedCharacteristics1Choice.HealthIndication))]
-    [JsonDerivedType(typeof(CertifiedCharacteristics1Choice.PhytosanitaryIndication),nameof(CertifiedCharacteristics1Choice.PhytosanitaryIndication))]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.Origin),
+        nameof(CertifiedCharacteristics1Choice.Origin)
+    )]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.Quality),
+        nameof(CertifiedCharacteristics1Choice.Quality)
+    )]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.Analysis),
+        nameof(CertifiedCharacteristics1Choice.Analysis)
+    )]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.Weight),
+        nameof(CertifiedCharacteristics1Choice.Weight)
+    )]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.Quantity),
+        nameof(CertifiedCharacteristics1Choice.Quantity)
+    )]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.HealthIndication),
+        nameof(CertifiedCharacteristics1Choice.HealthIndication)
+    )]
+    [JsonDerivedType(
+        typeof(CertifiedCharacteristics1Choice.PhytosanitaryIndication),
+        nameof(CertifiedCharacteristics1Choice.PhytosanitaryIndication)
+    )]
     [IsoId("_TnJq6Np-Ed-ak6NoX_4Aeg_524312074")]
     [DisplayName("Certified Characteristics 1 Choice")]
-    public abstract partial record CertifiedCharacteristics1Choice_
-    {
-    }
+    public abstract record CertifiedCharacteristics1Choice_ { }
 }

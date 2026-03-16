@@ -23,7 +23,7 @@ public enum SecuritiesLendingTypeCode
     [IsoId("__wR-cNojEeC60axPepSq7g_-1240739325")]
     [Description(@"Securities lending contract is new and registered.")]
     NewRegistration,
-    
+
     /// <summary>
     /// Securities lending contract is renewed.
     /// Encoded/decoded by serializers as &quot;RENW&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesLendingTypeCode
     [IsoId("__wR-cdojEeC60axPepSq7g_1485509445")]
     [Description(@"Securities lending contract is renewed.")]
     RollOverRenewal,
-    
+
     /// <summary>
     /// Securities lending contract is called back.
     /// Encoded/decoded by serializers as &quot;CABK&quot;.
@@ -41,5 +41,4 @@ public enum SecuritiesLendingTypeCode
     [IsoId("__wR-ctojEeC60axPepSq7g_-1557239976")]
     [Description(@"Securities lending contract is called back.")]
     CallBack,
-    
 }

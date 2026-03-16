@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_itJLUAJ-EeS2H9l84F_isg")]
 [DisplayName("Confirmation")]
-public partial record Confirmation1
+public record Confirmation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the status of the confirmation.
     /// </summary>
     [IsoId("_B6YGkAKDEeS2H9l84F_isg")]
     [DisplayName("Confirmation Status")]
     [IsoXmlTag("ConfSts")]
-    public required TradeConfirmationStatus1Code ConfirmationStatus { get; init; } 
-    
+    public required TradeConfirmationStatus1Code ConfirmationStatus { get; init; }
+
     /// <summary>
     /// Time that both of parties confirm the trade.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record Confirmation1
     [DisplayName("Confirmation Time")]
     [IsoXmlTag("ConfTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ConfirmationTime { get; init; } 
-    
+    public IsoISODateTime? ConfirmationTime { get; init; }
+
     /// <summary>
     /// Time that the trade party confirms the trade.
     /// </summary>
@@ -42,8 +40,8 @@ public partial record Confirmation1
     [DisplayName("Trade Party Confirmation Time")]
     [IsoXmlTag("TradPtyConfTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TradePartyConfirmationTime { get; init; } 
-    
+    public IsoISODateTime? TradePartyConfirmationTime { get; init; }
+
     /// <summary>
     /// Time that the initiating party confirms the trade.
     /// </summary>
@@ -51,24 +49,24 @@ public partial record Confirmation1
     [DisplayName("Initiating Party Confirmation Time")]
     [IsoXmlTag("InitgPtyConfTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? InitiatingPartyConfirmationTime { get; init; } 
-    
+    public IsoISODateTime? InitiatingPartyConfirmationTime { get; init; }
+
     /// <summary>
     /// Identifies the type of confirmation message being sent.
     /// </summary>
     [IsoId("_5a5sUIHYEeSY3ulMDfpmvA")]
     [DisplayName("Confirmation Type")]
     [IsoXmlTag("ConfTp")]
-    public required ConfirmationRequest1Code ConfirmationType { get; init; } 
-    
+    public required ConfirmationRequest1Code ConfirmationType { get; init; }
+
     /// <summary>
     /// Identifies the confirm request messge.
     /// </summary>
     [IsoId("_8SUZAKaxEeSxuMLA5o46jQ")]
     [DisplayName("Request Identification")]
     [IsoXmlTag("ReqId")]
-    public required MessageIdentification1 RequestIdentification { get; init; } 
-    
+    public required MessageIdentification1 RequestIdentification { get; init; }
+
     /// <summary>
     /// Start number in request result.
     /// </summary>
@@ -76,8 +74,8 @@ public partial record Confirmation1
     [DisplayName("Query Start Number")]
     [IsoXmlTag("QryStartNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText QueryStartNumber { get; init; } 
-    
+    public required IsoMax35NumericText QueryStartNumber { get; init; }
+
     /// <summary>
     /// Total number of reports returned in response to a request.
     /// </summary>
@@ -85,8 +83,8 @@ public partial record Confirmation1
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumberOfReports { get; init; } 
-    
+    public required IsoNumber TotalNumberOfReports { get; init; }
+
     /// <summary>
     /// Query results will be grouped with fixed number. The field indicates that the total number of groups.
     /// </summary>
@@ -94,8 +92,8 @@ public partial record Confirmation1
     [DisplayName("Page Number")]
     [IsoXmlTag("PgNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText PageNumber { get; init; } 
-    
+    public required IsoMax35NumericText PageNumber { get; init; }
+
     /// <summary>
     /// Page number in request result.
     /// </summary>
@@ -103,8 +101,8 @@ public partial record Confirmation1
     [DisplayName("Query Page Number")]
     [IsoXmlTag("QryPgNb")]
     [IsoSimpleType(IsoSimpleType.Max35NumericText)]
-    public required IsoMax35NumericText QueryPageNumber { get; init; } 
-    
+    public required IsoMax35NumericText QueryPageNumber { get; init; }
+
     /// <summary>
     /// Number of messages in current page.
     /// </summary>
@@ -112,8 +110,8 @@ public partial record Confirmation1
     [DisplayName("Message Number Of Current Page")]
     [IsoXmlTag("MsgNbOfCurPg")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber MessageNumberOfCurrentPage { get; init; } 
-    
+    public required IsoNumber MessageNumberOfCurrentPage { get; init; }
+
     /// <summary>
     /// Number of reports at current page.
     /// </summary>
@@ -121,8 +119,8 @@ public partial record Confirmation1
     [DisplayName("List Order Number")]
     [IsoXmlTag("ListOrdrNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ListOrderNumber { get; init; } 
-    
+    public required IsoNumber ListOrderNumber { get; init; }
+
     /// <summary>
     /// Indicate whether the current message is the last one of the current page or not.
     /// </summary>
@@ -130,8 +128,8 @@ public partial record Confirmation1
     [DisplayName("Last Page Indicator")]
     [IsoXmlTag("LastPgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator LastPageIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator LastPageIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether this message is that last report message in response to a request.
     /// </summary>
@@ -139,9 +137,5 @@ public partial record Confirmation1
     [DisplayName("Last Report Requested")]
     [IsoXmlTag("LastRptReqd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator LastReportRequested { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator LastReportRequested { get; init; }
 }

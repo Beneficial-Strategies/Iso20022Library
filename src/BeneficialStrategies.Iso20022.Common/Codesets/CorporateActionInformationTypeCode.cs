@@ -21,7 +21,8 @@ public enum CorporateActionInformationTypeCode
     /// </summary>
     [EnumMember(Value = "CONF")]
     [IsoId("_axnpoCXcEeOFIcNWlDEvdQ")]
-    [Description(@"Information is about an informal call when an issuer, trustee, agent wishes to talk to note holders to discuss a certain issue or potential change to the notes; nothing said being binding.")]
+    [Description(
+        @"Information is about an informal call when an issuer, trustee, agent wishes to talk to note holders to discuss a certain issue or potential change to the notes; nothing said being binding."
+    )]
     ConferenceCall,
-    
 }

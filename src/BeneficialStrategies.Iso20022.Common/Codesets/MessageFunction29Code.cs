@@ -13,19 +13,23 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_T3DTEFaGEeeFltjJxERUxw")]
-[Description(@"Identifies the type of process related to the message.|Fee collection header.|ISO 8583 MTI")]
+[Description(
+    @"Identifies the type of process related to the message.|Fee collection header.|ISO 8583 MTI"
+)]
 [DerivedFrom(typeof(MessageFunctionCode))]
 public enum MessageFunction29Code
 {
     /// <summary>
-    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. 
+    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response.
     /// Encoded/decoded by serializers as &quot;ADVC&quot;.
     /// </summary>
     [EnumMember(Value = "ADVC")]
     [IsoId("_fhDAkemqEemNVKPwszFC-A")]
-    [Description(@"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. ")]
+    [Description(
+        @"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. "
+    )]
     Advice = MessageFunctionCode.Advice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Information about the transaction.
     /// Encoded/decoded by serializers as &quot;NOTI&quot;.
@@ -34,5 +38,4 @@ public enum MessageFunction29Code
     [IsoId("_geC0UemqEemNVKPwszFC-A")]
     [Description(@"Information about the transaction.")]
     Notification = MessageFunctionCode.Notification, // same ordinal as derivation source for type conversions
-    
 }

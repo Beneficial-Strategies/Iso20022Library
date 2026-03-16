@@ -23,5 +23,4 @@ public enum AwaitingAffirmationReason1Code
     [IsoId("__0Jx1NojEeC60axPepSq7g_684115329")]
     [Description(@"Affirmation has not been received yet.")]
     AwaitingAffirmation = AwaitingAffirmationReasonCode.AwaitingAffirmation, // same ordinal as derivation source for type conversions
-    
 }

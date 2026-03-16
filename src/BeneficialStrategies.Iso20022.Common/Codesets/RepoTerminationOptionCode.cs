@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_tHaf4CyzEea35M2x2c9PXw")]
 [Description(@"Indicates the termination option for a repurchase agreement.")]
-[Derivations(typeof(RepoTerminationOption1Code),typeof(RepoTerminationOption2Code))]
+[Derivations(typeof(RepoTerminationOption1Code), typeof(RepoTerminationOption2Code))]
 public enum RepoTerminationOptionCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum RepoTerminationOptionCode
     [IsoId("_4WluECyzEea35M2x2c9PXw")]
     [Description(@"Evergreen termination option.")]
     Evergreen,
-    
+
     /// <summary>
     /// Extendable termination option.
     /// Encoded/decoded by serializers as &quot;ETSB&quot;.
@@ -32,16 +32,16 @@ public enum RepoTerminationOptionCode
     [IsoId("_4raukCyzEea35M2x2c9PXw")]
     [Description(@"Extendable termination option.")]
     Extendable,
-    
+
     /// <summary>
-    /// Evergreen and extendable termination option. 
+    /// Evergreen and extendable termination option.
     /// Encoded/decoded by serializers as &quot;EGAE&quot;.
     /// </summary>
     [EnumMember(Value = "EGAE")]
     [IsoId("_5AF-ECyzEea35M2x2c9PXw")]
     [Description(@"Evergreen and extendable termination option. ")]
     EvergreenAndExtendable,
-    
+
     /// <summary>
     /// Search for requested data not complete yet.
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -50,5 +50,4 @@ public enum RepoTerminationOptionCode
     [IsoId("_vuqPINX_EeiqhpuDZKadPg")]
     [Description(@"Search for requested data not complete yet.")]
     NotApplicable,
-    
 }

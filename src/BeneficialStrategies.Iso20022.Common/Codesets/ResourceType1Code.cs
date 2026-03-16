@@ -23,7 +23,7 @@ public enum ResourceType1Code
     [IsoId("_-HF_wS8CEeu125Ip9zFcsQ")]
     [Description(@"Voice synthesis.")]
     TextToSpeech = ResourceTypeCode.TextToSpeech, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// String of characters that unambiguously identifies a particular resource.
     /// Encoded/decoded by serializers as &quot;URLI&quot;.
@@ -32,5 +32,4 @@ public enum ResourceType1Code
     [IsoId("_-K6v0S8CEeu125Ip9zFcsQ")]
     [Description(@"String of characters that unambiguously identifies a particular resource.")]
     UniformResourceIdentifier = ResourceTypeCode.UniformResourceIdentifier, // same ordinal as derivation source for type conversions
-    
 }

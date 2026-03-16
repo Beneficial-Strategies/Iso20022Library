@@ -23,7 +23,7 @@ public enum ATMCommand1Code
     [IsoId("_LkXlEYqKEeSRT5rEzcAHEw")]
     [Description(@"Provide the ATM counters, resetting those that are applicable.")]
     ATMBalance = ATMCommandCode.ATMBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the ATM required by the ATM manager.
     /// Encoded/decoded by serializers as &quot;ASTS&quot;.
@@ -32,7 +32,7 @@ public enum ATMCommand1Code
     [IsoId("_LpbrQYqKEeSRT5rEzcAHEw")]
     [Description(@"Status of the ATM required by the ATM manager.")]
     ATMStatusUpdate = ATMCommandCode.ATMStatusUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the ATM configuration parameters.
     /// Encoded/decoded by serializers as &quot;CFGT&quot;.
@@ -41,7 +41,7 @@ public enum ATMCommand1Code
     [IsoId("_LuM2gYqKEeSRT5rEzcAHEw")]
     [Description(@"Update the ATM configuration parameters.")]
     ConfigurationUpdate = ATMCommandCode.ConfigurationUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request the value of the ATM counters.
     /// Encoded/decoded by serializers as &quot;CCNT&quot;.
@@ -50,7 +50,7 @@ public enum ATMCommand1Code
     [IsoId("_L0KUkYqKEeSRT5rEzcAHEw")]
     [Description(@"Request the value of the ATM counters.")]
     CountersInquiry = ATMCommandCode.CountersInquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Perform a disconnection followed by a reconnection.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -59,7 +59,7 @@ public enum ATMCommand1Code
     [IsoId("_L47f0YqKEeSRT5rEzcAHEw")]
     [Description(@"Perform a disconnection followed by a reconnection.")]
     Disconnect = ATMCommandCode.Disconnect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Send a specific message to initiate a process.
     /// Encoded/decoded by serializers as &quot;SNDM&quot;.
@@ -68,5 +68,4 @@ public enum ATMCommand1Code
     [IsoId("_L9_mAYqKEeSRT5rEzcAHEw")]
     [Description(@"Send a specific message to initiate a process.")]
     SendMessage = ATMCommandCode.SendMessage, // same ordinal as derivation source for type conversions
-    
 }

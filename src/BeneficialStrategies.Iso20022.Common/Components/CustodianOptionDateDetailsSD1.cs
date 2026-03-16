@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1TqvATL3EeKU9IrkkToqcw_1383220652")]
 [DisplayName("Custodian Option Date Details SD")]
-public partial record CustodianOptionDateDetailsSD1
+public record CustodianOptionDateDetailsSD1
 {
-    #nullable enable
-    
     /// <summary>
     /// xPath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CustodianOptionDateDetailsSD1
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text PlaceAndName { get; init; }
+
     /// <summary>
     /// Custodian deadline date for the option instructions. Applicable to custodian service only.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record CustodianOptionDateDetailsSD1
     [DisplayName("Agent Deadline Date")]
     [IsoXmlTag("AgtDdlnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? AgentDeadlineDate { get; init; } 
-    
+    public IsoISODate? AgentDeadlineDate { get; init; }
+
     /// <summary>
     /// Custodian deadline time for the option instructions. Applicable to custodian service only.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record CustodianOptionDateDetailsSD1
     [DisplayName("Agent Deadline Time")]
     [IsoXmlTag("AgtDdlnTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? AgentDeadlineTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISOTime? AgentDeadlineTime { get; init; }
 }

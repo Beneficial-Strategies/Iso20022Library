@@ -23,7 +23,7 @@ public enum DateType4Code
     [IsoId("_ayZwpdp-Ed-ak6NoX_4Aeg_-753628532")]
     [Description(@"Open-dated, which indicates that the date has not been established.")]
     Open = DateTypeCode.Open, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Date is unknown by the sender or has not been established.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,5 +32,4 @@ public enum DateType4Code
     [IsoId("_ayZwptp-Ed-ak6NoX_4Aeg_-739775519")]
     [Description(@"Date is unknown by the sender or has not been established.")]
     Unknown = DateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

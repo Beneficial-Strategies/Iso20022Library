@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification33Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification33Choice
     /// </summary>
     [IsoId("_xKO_Qzq3EeWQ1Y7f8kds2A")]
     [DisplayName("For All Accounts")]
-    public partial record ForAllAccounts : AccountIdentification33Choice_
+    public record ForAllAccounts : AccountIdentification33Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Standard code to specify that announcement applies to all safekeeping accounts that own underlying financial instrument.
         /// </summary>
         [IsoId("_QSgqVNp-Ed-ak6NoX_4Aeg_-758816150")]
         [DisplayName("Identification Code")]
         [IsoXmlTag("IdCd")]
-        public required SafekeepingAccountIdentification1Code IdentificationCode { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SafekeepingAccountIdentification1Code IdentificationCode { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum SourceOfCashCode
     [IsoId("_LMUZIDlFEealR6-8aQ15BA")]
     [Description(@"Income from a retirement policy.")]
     RetirementPolicy,
-    
+
     /// <summary>
     /// Income from self-employment.
     /// Encoded/decoded by serializers as &quot;SELF&quot;.
@@ -32,7 +32,7 @@ public enum SourceOfCashCode
     [IsoId("_LSIGMDlFEealR6-8aQ15BA")]
     [Description(@"Income from self-employment.")]
     SelfEmploymentIncome,
-    
+
     /// <summary>
     /// Employee income.
     /// Encoded/decoded by serializers as &quot;EMIN&quot;.
@@ -41,7 +41,7 @@ public enum SourceOfCashCode
     [IsoId("_LWu5YDlFEealR6-8aQ15BA")]
     [Description(@"Employee income.")]
     EmployeeIncome,
-    
+
     /// <summary>
     /// Income from a savings plan.
     /// Encoded/decoded by serializers as &quot;SVGS&quot;.
@@ -50,7 +50,7 @@ public enum SourceOfCashCode
     [IsoId("_La5nsDlFEealR6-8aQ15BA")]
     [Description(@"Income from a savings plan.")]
     Savings,
-    
+
     /// <summary>
     /// Income was a cash gift.
     /// Encoded/decoded by serializers as &quot;GIFT&quot;.
@@ -59,7 +59,7 @@ public enum SourceOfCashCode
     [IsoId("_R35gUDlFEealR6-8aQ15BA")]
     [Description(@"Income was a cash gift.")]
     Gift,
-    
+
     /// <summary>
     /// Cash from an inheritance.
     /// Encoded/decoded by serializers as &quot;INHE&quot;.
@@ -68,7 +68,7 @@ public enum SourceOfCashCode
     [IsoId("_R-J5UDlFEealR6-8aQ15BA")]
     [Description(@"Cash from an inheritance.")]
     Inheritance,
-    
+
     /// <summary>
     /// Redemption of an investment fund.
     /// Encoded/decoded by serializers as &quot;REDM&quot;.
@@ -77,7 +77,7 @@ public enum SourceOfCashCode
     [IsoId("_UxIXQDlFEealR6-8aQ15BA")]
     [Description(@"Redemption of an investment fund.")]
     Redemption,
-    
+
     /// <summary>
     /// Income from a cash win.
     /// Encoded/decoded by serializers as &quot;WINS&quot;.
@@ -86,7 +86,7 @@ public enum SourceOfCashCode
     [IsoId("_U5UC4DlFEealR6-8aQ15BA")]
     [Description(@"Income from a cash win.")]
     Winnings,
-    
+
     /// <summary>
     /// Income from the liquidation of an insurance premium.
     /// Encoded/decoded by serializers as &quot;INLQ&quot;.
@@ -95,7 +95,7 @@ public enum SourceOfCashCode
     [IsoId("_XwwKEDlFEealR6-8aQ15BA")]
     [Description(@"Income from the liquidation of an insurance premium.")]
     InsurancePremiumLiquidation,
-    
+
     /// <summary>
     /// Sale of goods.
     /// Encoded/decoded by serializers as &quot;SALE&quot;.
@@ -104,7 +104,7 @@ public enum SourceOfCashCode
     [IsoId("_azpTUDlFEealR6-8aQ15BA")]
     [Description(@"Sale of goods.")]
     SaleOfGoods,
-    
+
     /// <summary>
     /// Income from the sale of real estate.
     /// Encoded/decoded by serializers as &quot;REST&quot;.
@@ -113,7 +113,7 @@ public enum SourceOfCashCode
     [IsoId("_fy6psDlFEealR6-8aQ15BA")]
     [Description(@"Income from the sale of real estate.")]
     RealEstateSale,
-    
+
     /// <summary>
     /// Sale and acquisition of a corporation.
     /// Encoded/decoded by serializers as &quot;SEAQ&quot;.
@@ -122,7 +122,7 @@ public enum SourceOfCashCode
     [IsoId("_heCHsDlFEealR6-8aQ15BA")]
     [Description(@"Sale and acquisition of a corporation.")]
     SaleAquisitionCorporation,
-    
+
     /// <summary>
     /// Income is cash proceeds from customers.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -131,7 +131,7 @@ public enum SourceOfCashCode
     [IsoId("_nWlPcDlFEealR6-8aQ15BA")]
     [Description(@"Income is cash proceeds from customers.")]
     CashProceeds,
-    
+
     /// <summary>
     /// Income as a result of alimony.
     /// Encoded/decoded by serializers as &quot;ALMY&quot;.
@@ -140,7 +140,7 @@ public enum SourceOfCashCode
     [IsoId("_poFYADlFEealR6-8aQ15BA")]
     [Description(@"Income as a result of alimony.")]
     Alimony,
-    
+
     /// <summary>
     /// Income is from compensation received.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -149,5 +149,4 @@ public enum SourceOfCashCode
     [IsoId("_puor8DlFEealR6-8aQ15BA")]
     [Description(@"Income is from compensation received.")]
     Compensation,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSpYv-Eei289CGNqs21g")]
     [DisplayName("Party Name")]
-    public partial record PartyName : SystemPartyModification2Choice_
+    public record PartyName : SystemPartyModification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the date from which the party name is valid.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; } 
-        
+        public IsoISODate? ValidFrom { get; init; }
+
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -33,9 +31,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? Name { get; init; } 
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? Name { get; init; }
+
         /// <summary>
         /// Specifies the short name of the organisation.
         /// </summary>
@@ -43,11 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Short Name")]
         [IsoXmlTag("ShrtNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? ShortName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? ShortName { get; init; }
     }
 }

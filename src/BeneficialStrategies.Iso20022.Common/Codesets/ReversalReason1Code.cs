@@ -23,7 +23,7 @@ public enum ReversalReason1Code
     [IsoId("_FHV08duHEeiB5uLfkg9ZJA")]
     [Description(@"Customer cancels the transaction.")]
     CustomerCancellation = ReversalReasonCode.CustomerCancellation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reversal after a suspection of malfunction of the POI system.
     /// Encoded/decoded by serializers as &quot;MALF&quot;.
@@ -32,7 +32,7 @@ public enum ReversalReason1Code
     [IsoId("_FMy8sduHEeiB5uLfkg9ZJA")]
     [Description(@"Reversal after a suspection of malfunction of the POI system.")]
     Malfuntion = ReversalReasonCode.Malfuntion, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Merchant or Cashier cancels the transaction.
     /// Encoded/decoded by serializers as &quot;MERC&quot;.
@@ -41,7 +41,7 @@ public enum ReversalReason1Code
     [IsoId("_FQaRYduHEeiB5uLfkg9ZJA")]
     [Description(@"Merchant or Cashier cancels the transaction.")]
     MerchantCancellation = ReversalReasonCode.MerchantCancellation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// POI System unable to complete transaction.
     /// Encoded/decoded by serializers as &quot;UNAB&quot;.
@@ -50,5 +50,4 @@ public enum ReversalReason1Code
     [IsoId("_FWSP4duHEeiB5uLfkg9ZJA")]
     [Description(@"POI System unable to complete transaction.")]
     UnableToComplete = ReversalReasonCode.UnableToComplete, // same ordinal as derivation source for type conversions
-    
 }

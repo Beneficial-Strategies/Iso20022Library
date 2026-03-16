@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LYLC4H1DEeCF8NjrBemJWQ_1913950683")]
 [DisplayName("Point Of Interaction Component")]
-public partial record PointOfInteractionComponent2
+public record PointOfInteractionComponent2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of component belonging to a POI Terminal.
     /// </summary>
     [IsoId("_LYLC4X1DEeCF8NjrBemJWQ_1800111617")]
     [DisplayName("POI Component Type")]
     [IsoXmlTag("POICmpntTp")]
-    public required POIComponentType2Code POIComponentType { get; init; } 
-    
+    public required POIComponentType2Code POIComponentType { get; init; }
+
     /// <summary>
     /// Identification of the software, hardware or system provider of the POI component.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record PointOfInteractionComponent2
     [DisplayName("Manufacturer Identification")]
     [IsoXmlTag("ManfctrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ManufacturerIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ManufacturerIdentification { get; init; }
+
     /// <summary>
     /// Identification of a model of POI component for a given manufacturer.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record PointOfInteractionComponent2
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Model { get; init; }
+
     /// <summary>
     /// Version of component belonging to a given model.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record PointOfInteractionComponent2
     [DisplayName("Version Number")]
     [IsoXmlTag("VrsnNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? VersionNumber { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? VersionNumber { get; init; }
+
     /// <summary>
     /// Serial number of a component.
     /// </summary>
@@ -63,9 +61,9 @@ public partial record PointOfInteractionComponent2
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SerialNumber { get; init; }
+
     /// <summary>
     /// Unique approval number for a component, delivered by a certification body.
     /// Usage: More than one approval number could be present, when assigned by different bodies. The certification body identification must be provided within the approval number (for example at the beginning of the value).
@@ -74,10 +72,6 @@ public partial record PointOfInteractionComponent2
     [DisplayName("Approval Number")]
     [IsoXmlTag("ApprvlNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? ApprovalNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? ApprovalNumber { get; init; }
 }

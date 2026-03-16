@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ATMSignature2Choice.DigitalSignature))]
     [KnownType(typeof(ATMSignature2Choice.TRRelatedData))]
-    [JsonDerivedType(typeof(ATMSignature2Choice.DigitalSignature),nameof(ATMSignature2Choice.DigitalSignature))]
-    [JsonDerivedType(typeof(ATMSignature2Choice.TRRelatedData),nameof(ATMSignature2Choice.TRRelatedData))]
+    [JsonDerivedType(
+        typeof(ATMSignature2Choice.DigitalSignature),
+        nameof(ATMSignature2Choice.DigitalSignature)
+    )]
+    [JsonDerivedType(
+        typeof(ATMSignature2Choice.TRRelatedData),
+        nameof(ATMSignature2Choice.TRRelatedData)
+    )]
     [IsoId("_h8fS4bTwEeeQy4o2AayYHg")]
     [DisplayName("ATM Signature 2 Choice")]
-    public abstract partial record ATMSignature2Choice_
-    {
-    }
+    public abstract record ATMSignature2Choice_ { }
 }

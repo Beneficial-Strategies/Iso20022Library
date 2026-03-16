@@ -23,7 +23,7 @@ public enum QRCodeErrorCorrection1Code
     [IsoId("_EgtQwdudEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction 15%")]
     ErrorCorrection15Percent = QRCodeErrorCorrectionCode.ErrorCorrection15Percent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reed-Solomon error correction 25%
     /// Encoded/decoded by serializers as &quot;Q025&quot;.
@@ -32,7 +32,7 @@ public enum QRCodeErrorCorrection1Code
     [IsoId("_Ek7pcdudEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction 25%")]
     ErrorCorrection25Percent = QRCodeErrorCorrectionCode.ErrorCorrection25Percent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reed-Solomon error correction 30%
     /// Encoded/decoded by serializers as &quot;H030&quot;.
@@ -41,7 +41,7 @@ public enum QRCodeErrorCorrection1Code
     [IsoId("_Eo48YdudEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction 30%")]
     ErrorCorrection30Percent = QRCodeErrorCorrectionCode.ErrorCorrection30Percent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reed-Solomon error correction  7%
     /// Encoded/decoded by serializers as &quot;L007&quot;.
@@ -50,5 +50,4 @@ public enum QRCodeErrorCorrection1Code
     [IsoId("_Es55sdudEeiB5uLfkg9ZJA")]
     [Description(@"Reed-Solomon error correction  7%")]
     ErrorCorrection7Percent = QRCodeErrorCorrectionCode.ErrorCorrection7Percent, // same ordinal as derivation source for type conversions
-    
 }

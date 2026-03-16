@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_yJhSqYv-Eei289CGNqs21g")]
     [DisplayName("Party Address")]
-    public partial record PartyAddress : SystemPartyModification2Choice_
+    public record PartyAddress : SystemPartyModification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identifies the nature of the postal address.
         /// </summary>
         [IsoId("__Coc4RisEeiNm9ItaZcR2A")]
         [DisplayName("Address Type")]
         [IsoXmlTag("AdrTp")]
-        public AddressType3Choice_? AddressType { get; init; } 
-        
+        public AddressType3Choice_? AddressType { get; init; }
+
         /// <summary>
         /// Identification of a division of a large organisation or building.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Department")]
         [IsoXmlTag("Dept")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public IsoMax70Text? Department { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public IsoMax70Text? Department { get; init; }
+
         /// <summary>
         /// Identification of a sub-division of a large organisation or building.
         /// </summary>
@@ -42,9 +40,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Sub Department")]
         [IsoXmlTag("SubDept")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public IsoMax70Text? SubDepartment { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public IsoMax70Text? SubDepartment { get; init; }
+
         /// <summary>
         /// Name of a street or thoroughfare.
         /// </summary>
@@ -52,9 +50,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Street Name")]
         [IsoXmlTag("StrtNm")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public IsoMax70Text? StreetName { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public IsoMax70Text? StreetName { get; init; }
+
         /// <summary>
         /// Number that identifies the position of a building on a street.
         /// </summary>
@@ -62,9 +60,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Building Number")]
         [IsoXmlTag("BldgNb")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
-        [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-        public IsoMax16Text? BuildingNumber { get; init; } 
-        
+        [StringLength(maximumLength: 16, MinimumLength = 1)]
+        public IsoMax16Text? BuildingNumber { get; init; }
+
         /// <summary>
         /// Name of the building or house.
         /// </summary>
@@ -72,9 +70,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Building Name")]
         [IsoXmlTag("BldgNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? BuildingName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? BuildingName { get; init; }
+
         /// <summary>
         /// Floor or storey within a building.
         /// </summary>
@@ -82,9 +80,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Floor")]
         [IsoXmlTag("Flr")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public IsoMax70Text? Floor { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public IsoMax70Text? Floor { get; init; }
+
         /// <summary>
         /// Numbered box in a post office, assigned to a person or organisation, where letters are kept until called for.
         /// </summary>
@@ -92,9 +90,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Post Box")]
         [IsoXmlTag("PstBx")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
-        [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-        public IsoMax16Text? PostBox { get; init; } 
-        
+        [StringLength(maximumLength: 16, MinimumLength = 1)]
+        public IsoMax16Text? PostBox { get; init; }
+
         /// <summary>
         /// Building room number.
         /// </summary>
@@ -102,9 +100,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Room")]
         [IsoXmlTag("Room")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public IsoMax70Text? Room { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public IsoMax70Text? Room { get; init; }
+
         /// <summary>
         /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
         /// </summary>
@@ -112,9 +110,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Post Code")]
         [IsoXmlTag("PstCd")]
         [IsoSimpleType(IsoSimpleType.Max16Text)]
-        [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-        public IsoMax16Text? PostCode { get; init; } 
-        
+        [StringLength(maximumLength: 16, MinimumLength = 1)]
+        public IsoMax16Text? PostCode { get; init; }
+
         /// <summary>
         /// Name of a built-up area, with defined boundaries, and a local government.
         /// </summary>
@@ -122,9 +120,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Town Name")]
         [IsoXmlTag("TwnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? TownName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? TownName { get; init; }
+
         /// <summary>
         /// Specific location name within the town.
         /// </summary>
@@ -132,9 +130,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Town Location Name")]
         [IsoXmlTag("TwnLctnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? TownLocationName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? TownLocationName { get; init; }
+
         /// <summary>
         /// Identifies a subdivision within a country sub-division.
         /// </summary>
@@ -142,9 +140,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("District Name")]
         [IsoXmlTag("DstrctNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? DistrictName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? DistrictName { get; init; }
+
         /// <summary>
         /// Identifies a subdivision of a country such as state, region, county.
         /// </summary>
@@ -152,17 +150,17 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Country Sub Division")]
         [IsoXmlTag("CtrySubDvsn")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? CountrySubDivision { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? CountrySubDivision { get; init; }
+
         /// <summary>
         /// Nation with its own government.
         /// </summary>
         [IsoId("__Coc7xisEeiNm9ItaZcR2A")]
         [DisplayName("Country")]
         [IsoXmlTag("Ctry")]
-        public CountryCode? Country { get; init; } 
-        
+        public CountryCode? Country { get; init; }
+
         /// <summary>
         /// Information that locates and identifies a specific address, as defined by postal services, presented in free format text.
         /// </summary>
@@ -172,9 +170,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [IsoSimpleType(IsoSimpleType.Max70Text)]
         [MinLength(0)]
         [MaxLength(7)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
         public SimpleValueList<System.String> AddressLine { get; init; } = [];
-        
+
         /// <summary>
         /// Specifies the date from which the address is valid.
         /// </summary>
@@ -182,10 +180,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? ValidFrom { get; init; }
     }
 }

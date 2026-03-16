@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity45Choice.Unit))]
     [KnownType(typeof(FinancialInstrumentQuantity45Choice.FaceAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity45Choice.DigitalTokenUnit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity45Choice.Unit),nameof(FinancialInstrumentQuantity45Choice.Unit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity45Choice.FaceAmount),nameof(FinancialInstrumentQuantity45Choice.FaceAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity45Choice.DigitalTokenUnit),nameof(FinancialInstrumentQuantity45Choice.DigitalTokenUnit))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity45Choice.Unit),
+        nameof(FinancialInstrumentQuantity45Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity45Choice.FaceAmount),
+        nameof(FinancialInstrumentQuantity45Choice.FaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity45Choice.DigitalTokenUnit),
+        nameof(FinancialInstrumentQuantity45Choice.DigitalTokenUnit)
+    )]
     [IsoId("_wn3tETQ_Ee2id-MjcNoBdw")]
     [DisplayName("Financial Instrument Quantity 45 Choice")]
-    public abstract partial record FinancialInstrumentQuantity45Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity45Choice_ { }
 }

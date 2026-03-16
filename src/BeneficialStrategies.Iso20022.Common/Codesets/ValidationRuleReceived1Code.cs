@@ -23,5 +23,4 @@ public enum ValidationRuleReceived1Code
     [IsoId("_Eth3kR-1EeuxStysDTgLiw")]
     [Description(@"Received.")]
     Received = ValidationRuleCode.Received, // same ordinal as derivation source for type conversions
-    
 }

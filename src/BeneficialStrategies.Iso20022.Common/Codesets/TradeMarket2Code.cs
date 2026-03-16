@@ -21,16 +21,19 @@ public enum TradeMarket2Code
     /// </summary>
     [EnumMember(Value = "DMST")]
     [IsoId("_pKLSwZhyEeumhIk_Pv20Lg")]
-    [Description(@"Transaction has an origin and a destination in the same country and is made in the currency of that country.")]
+    [Description(
+        @"Transaction has an origin and a destination in the same country and is made in the currency of that country."
+    )]
     Domestic = TradeMarketCode.Domestic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has an origin in one country and a destination in another and is made in the currency of either the origin or destination country.
     /// Encoded/decoded by serializers as &quot;FRGN&quot;.
     /// </summary>
     [EnumMember(Value = "FRGN")]
     [IsoId("_pRn-kZhyEeumhIk_Pv20Lg")]
-    [Description(@"Transaction has an origin in one country and a destination in another and is made in the currency of either the origin or destination country.")]
+    [Description(
+        @"Transaction has an origin in one country and a destination in another and is made in the currency of either the origin or destination country."
+    )]
     Foreign = TradeMarketCode.Foreign, // same ordinal as derivation source for type conversions
-    
 }

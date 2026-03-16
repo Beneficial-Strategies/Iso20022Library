@@ -14,14 +14,21 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AccountParties4Choice.CustodianForMinor))]
     [KnownType(typeof(AccountParties4Choice.Nominee))]
     [KnownType(typeof(AccountParties4Choice.JointOwner))]
-    [JsonDerivedType(typeof(AccountParties4Choice.PrimaryOwner),nameof(AccountParties4Choice.PrimaryOwner))]
-    [JsonDerivedType(typeof(AccountParties4Choice.Trustee),nameof(AccountParties4Choice.Trustee))]
-    [JsonDerivedType(typeof(AccountParties4Choice.CustodianForMinor),nameof(AccountParties4Choice.CustodianForMinor))]
-    [JsonDerivedType(typeof(AccountParties4Choice.Nominee),nameof(AccountParties4Choice.Nominee))]
-    [JsonDerivedType(typeof(AccountParties4Choice.JointOwner),nameof(AccountParties4Choice.JointOwner))]
+    [JsonDerivedType(
+        typeof(AccountParties4Choice.PrimaryOwner),
+        nameof(AccountParties4Choice.PrimaryOwner)
+    )]
+    [JsonDerivedType(typeof(AccountParties4Choice.Trustee), nameof(AccountParties4Choice.Trustee))]
+    [JsonDerivedType(
+        typeof(AccountParties4Choice.CustodianForMinor),
+        nameof(AccountParties4Choice.CustodianForMinor)
+    )]
+    [JsonDerivedType(typeof(AccountParties4Choice.Nominee), nameof(AccountParties4Choice.Nominee))]
+    [JsonDerivedType(
+        typeof(AccountParties4Choice.JointOwner),
+        nameof(AccountParties4Choice.JointOwner)
+    )]
     [IsoId("_sv2SwRRiEeOKWo1NF21OVw")]
     [DisplayName("Account Parties 4 Choice")]
-    public abstract partial record AccountParties4Choice_
-    {
-    }
+    public abstract record AccountParties4Choice_ { }
 }

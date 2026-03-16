@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_63apwLbkEeaqL_M7XFD7PQ")]
 [DisplayName("Derivative")]
-public partial record Derivative3
+public record Derivative3
 {
-    #nullable enable
-    
     /// <summary>
     /// Hierarchy of classification of a derivative.
     /// </summary>
     [IsoId("_hUAMALcHEeabfchHYoktpA")]
     [DisplayName("Derivative Classification")]
     [IsoXmlTag("DerivClssfctn")]
-    public required DerivativeClassification1 DerivativeClassification { get; init; } 
-    
+    public required DerivativeClassification1 DerivativeClassification { get; init; }
+
     /// <summary>
     /// Rate(s) that determine(s)) the value of the swap during the lifetime of the trade. Where both rates are fixed this does not need to be reported.
     /// </summary>
@@ -35,16 +33,12 @@ public partial record Derivative3
     [MinLength(1)]
     [MaxLength(2)]
     public ValueList<DerivativeUnderlyingLeg1> DerivativeUnderlyingLeg { get; init; } = [];
-    
+
     /// <summary>
     /// Option specific attributes.
     /// </summary>
     [IsoId("_a8zBcMhiEeadgvwNGwK05w")]
     [DisplayName("Option Attributes")]
     [IsoXmlTag("OptnAttrbts")]
-    public Option14? OptionAttributes { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Option14? OptionAttributes { get; init; }
 }

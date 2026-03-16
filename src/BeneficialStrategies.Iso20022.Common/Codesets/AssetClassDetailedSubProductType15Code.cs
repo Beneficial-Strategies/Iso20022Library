@@ -23,5 +23,4 @@ public enum AssetClassDetailedSubProductType15Code
     [IsoId("_2a6FYWX-EeWIGZvepIG8Mg")]
     [Description(@"Commodity attribute of type milled wheat.")]
     MillingWheat = AssetClassDetailedSubProductTypeCode.MillingWheat, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum Response2Code
     [IsoId("_-2kqIWqHEeS8RZDTbvnB_A")]
     [Description(@"Service has been successfuly provided.")]
     Approved = ResponseCode.Approved, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service is declined.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
@@ -32,5 +32,4 @@ public enum Response2Code
     [IsoId("__G0Fk2qHEeS8RZDTbvnB_A")]
     [Description(@"Service is declined.")]
     Declined = ResponseCode.Declined, // same ordinal as derivation source for type conversions
-    
 }

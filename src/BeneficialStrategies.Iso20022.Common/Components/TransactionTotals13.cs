@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,42 +14,40 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QtX6MZMjEeuleeHpFMMhmQ")]
 [DisplayName("Transaction Totals")]
-public partial record TransactionTotals13
+public record TransactionTotals13
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and identification of reconciliation.
     /// </summary>
     [IsoId("_Q0DxAZMjEeuleeHpFMMhmQ")]
     [DisplayName("Reconciliation")]
     [IsoXmlTag("Rcncltn")]
-    public Reconciliation3? Reconciliation { get; init; } 
-    
+    public Reconciliation3? Reconciliation { get; init; }
+
     /// <summary>
     /// Total of credit transactions.
     /// </summary>
     [IsoId("_Q0DxA5MjEeuleeHpFMMhmQ")]
     [DisplayName("Financial Reconciliation")]
     [IsoXmlTag("FinRcncltn")]
-    public FinancialReconciliation2? FinancialReconciliation { get; init; } 
-    
+    public FinancialReconciliation2? FinancialReconciliation { get; init; }
+
     /// <summary>
     /// Contains total message count.
     /// </summary>
     [IsoId("_Q0DxBZMjEeuleeHpFMMhmQ")]
     [DisplayName("Message Reconciliation")]
     [IsoXmlTag("MsgRcncltn")]
-    public MessageReconciliation3? MessageReconciliation { get; init; } 
-    
+    public MessageReconciliation3? MessageReconciliation { get; init; }
+
     /// <summary>
     /// Contains additional fee reconciliation data.
     /// </summary>
     [IsoId("_Q0DxB5MjEeuleeHpFMMhmQ")]
     [DisplayName("Additional Fee Reconciliation")]
     [IsoXmlTag("AddtlFeeRcncltn")]
-    public AdditionalFeeReconciliation2? AdditionalFeeReconciliation { get; init; } 
-    
+    public AdditionalFeeReconciliation2? AdditionalFeeReconciliation { get; init; }
+
     /// <summary>
     /// Currency of the transaction.
     /// </summary>
@@ -57,8 +55,8 @@ public partial record TransactionTotals13
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
     [IsoSimpleType(IsoSimpleType.Min2Max3NumericText)]
-    public required IsoMin2Max3NumericText Currency { get; init; } 
-    
+    public required IsoMin2Max3NumericText Currency { get; init; }
+
     /// <summary>
     /// Net amount of reconciliation.
     /// ISO 8583:87/93 bit 97
@@ -66,9 +64,5 @@ public partial record TransactionTotals13
     [IsoId("_Q0DxC5MjEeuleeHpFMMhmQ")]
     [DisplayName("Net Amount Reconciliation")]
     [IsoXmlTag("NetAmtRcncltn")]
-    public Amount16? NetAmountReconciliation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Amount16? NetAmountReconciliation { get; init; }
 }

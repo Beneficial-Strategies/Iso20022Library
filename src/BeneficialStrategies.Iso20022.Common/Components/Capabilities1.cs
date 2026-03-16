@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HjX5sEYZEeegp_DADCe7HQ")]
 [DisplayName("Capabilities")]
-public partial record Capabilities1
+public record Capabilities1
 {
-    #nullable enable
-    
     /// <summary>
     /// Card reading capabilities of the terminal performing the transaction.
     /// ISO 8583:93 bit 22-2; ISO 8583:2003 bit 27-1
@@ -25,8 +23,8 @@ public partial record Capabilities1
     [IsoId("_f4hfoEYZEeegp_DADCe7HQ")]
     [DisplayName("Card Reading Capability")]
     [IsoXmlTag("CardRdngCpblty")]
-    public CardDataReading7Code? CardReadingCapability { get; init; } 
-    
+    public CardDataReading7Code? CardReadingCapability { get; init; }
+
     /// <summary>
     /// Other types of card reading capabilities.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record Capabilities1
     [DisplayName("Other Card Reading Capabilities")]
     [IsoXmlTag("OthrCardRdngCpblties")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherCardReadingCapabilities { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherCardReadingCapabilities { get; init; }
+
     /// <summary>
     /// Card writing or output capabilities of the terminal performing the transaction.
     /// ISO 8583:93 bit 22-10, ISO 8583:2003 bit 27-8_9.
@@ -44,8 +42,8 @@ public partial record Capabilities1
     [IsoId("_5zlTcEYZEeegp_DADCe7HQ")]
     [DisplayName("Card Writing Capabilities")]
     [IsoXmlTag("CardWrtgCpblties")]
-    public CardDataWriting1Code? CardWritingCapabilities { get; init; } 
-    
+    public CardDataWriting1Code? CardWritingCapabilities { get; init; }
+
     /// <summary>
     /// Other card writing or output capabilities of the terminal performing the transaction.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record Capabilities1
     [DisplayName("Other Card Writing Capabilities")]
     [IsoXmlTag("OthrCardWrtgCpblties")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherCardWritingCapabilities { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherCardWritingCapabilities { get; init; }
+
     /// <summary>
     /// Maximum number of digits that the Point of Interaction is able to accept when the cardholder enters its PIN.
     /// ISO 8583:87 bit 26, ISO 8583:93 bit 22-12, ISO 8583:2003 bit 27-11.
@@ -64,8 +62,8 @@ public partial record Capabilities1
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PINLengthCapabilities { get; init; } 
-    
+    public IsoNumber? PINLengthCapabilities { get; init; }
+
     /// <summary>
     /// Maximum number of characters of the approval code that the acquirer is able to manage.
     /// ISO 8583:87 &amp; 93 bit 27,  ISO 8583:2003-1 bit 27-3
@@ -74,8 +72,8 @@ public partial record Capabilities1
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? ApprovalCodeLength { get; init; } 
-    
+    public IsoNumber? ApprovalCodeLength { get; init; }
+
     /// <summary>
     /// Maximum data length in bytes that a card issuer can return to the ICC at the terminal.
     /// ISO 8583:2003 bit 27-8
@@ -84,8 +82,8 @@ public partial record Capabilities1
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaxScriptLength { get; init; } 
-    
+    public IsoNumber? MaxScriptLength { get; init; }
+
     /// <summary>
     /// PIN pad is inoperative.
     /// Default: False - PIN pad is operative or not applicable.
@@ -95,8 +93,8 @@ public partial record Capabilities1
     [DisplayName("PIN Pad Inoperative")]
     [IsoXmlTag("PINPadInprtv")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PINPadInoperative { get; init; } 
-    
+    public IsoTrueFalseIndicator? PINPadInoperative { get; init; }
+
     /// <summary>
     /// Indicates whether the terminal can capture cards or not.
     /// True: The terminal is able to capture cards
@@ -107,16 +105,16 @@ public partial record Capabilities1
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; } 
-    
+    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
+
     /// <summary>
     /// Capability of the terminal to go online.
     /// </summary>
     [IsoId("_GkEt8EYbEeegp_DADCe7HQ")]
     [DisplayName("On Line Capabilities")]
     [IsoXmlTag("OnLineCpblties")]
-    public OnLineCapability2Code? OnLineCapabilities { get; init; } 
-    
+    public OnLineCapability2Code? OnLineCapabilities { get; init; }
+
     /// <summary>
     /// Capability of the terminal to display or print messages to the cardholder or the merchant.
     /// ISO 8583:93 bit 22-11, ISO 8583:2003-1 bit 27-4,5, 6, 7
@@ -124,8 +122,8 @@ public partial record Capabilities1
     [IsoId("_Im3aMEYdEeegp_DADCe7HQ")]
     [DisplayName("Message Capabilities")]
     [IsoXmlTag("MsgCpblties")]
-    public DisplayCapabilities6? MessageCapabilities { get; init; } 
-    
+    public DisplayCapabilities6? MessageCapabilities { get; init; }
+
     /// <summary>
     /// Cardholder verification capabilities performing the transaction at the point of service.
     /// ISO 8583:93 bit 22-2, ISO 8583:2003 bit 27-2
@@ -133,9 +131,5 @@ public partial record Capabilities1
     [IsoId("_25q4kRqZEeqH1IQNpbVpEw")]
     [DisplayName("Cardholder Verification Capability")]
     [IsoXmlTag("CrdhldrVrfctnCpblty")]
-    public CardholderVerificationCapabilities1? CardholderVerificationCapability { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CardholderVerificationCapabilities1? CardholderVerificationCapability { get; init; }
 }

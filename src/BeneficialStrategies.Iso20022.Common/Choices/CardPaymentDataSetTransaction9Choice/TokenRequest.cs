@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction9Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction9Ch
     /// </summary>
     [IsoId("_Qd_6MC_2EeugIJ3Gvoevmg")]
     [DisplayName("Token Request")]
-    public partial record TokenRequest : CardPaymentDataSetTransaction9Choice_
+    public record TokenRequest : CardPaymentDataSetTransaction9Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of an element in a sequence.
         /// </summary>
@@ -24,18 +22,14 @@ namespace BeneficialStrategies.Iso20022.Choices.CardPaymentDataSetTransaction9Ch
         [DisplayName("Transaction Sequence Counter")]
         [IsoXmlTag("TxSeqCntr")]
         [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-        public required IsoMax9NumericText TransactionSequenceCounter { get; init; } 
-        
+        public required IsoMax9NumericText TransactionSequenceCounter { get; init; }
+
         /// <summary>
         /// Environment of the transaction.
         /// </summary>
         [IsoId("_-Is94S_1EeugIJ3Gvoevmg")]
         [DisplayName("Environment")]
         [IsoXmlTag("Envt")]
-        public required CardPaymentEnvironment77 Environment { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required CardPaymentEnvironment77 Environment { get; init; }
     }
 }

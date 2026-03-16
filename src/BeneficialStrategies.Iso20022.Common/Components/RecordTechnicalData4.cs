@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OwQysSX7EeigZbhgJcrASA")]
 [DisplayName("Record Technical Data")]
-public partial record RecordTechnicalData4
+public record RecordTechnicalData4
 {
-    #nullable enable
-    
     /// <summary>
     /// Flag to say if there is an inconsistency across all submitting entities records.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record RecordTechnicalData4
     [DisplayName("Inconsistency Indicator")]
     [IsoXmlTag("IncnsstncyInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? InconsistencyIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? InconsistencyIndicator { get; init; }
+
     /// <summary>
     /// Last date for which data was received for this instrument.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record RecordTechnicalData4
     [DisplayName("Last Update")]
     [IsoXmlTag("LastUpd")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? LastUpdate { get; init; } 
-    
+    public IsoISODateTime? LastUpdate { get; init; }
+
     /// <summary>
     /// Defines the date and time when this instrument was originally received at the submission destination.
     /// </summary>
@@ -43,24 +41,24 @@ public partial record RecordTechnicalData4
     [DisplayName("Submission Date Time")]
     [IsoXmlTag("SubmissnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SubmissionDateTime { get; init; } 
-    
+    public IsoISODateTime? SubmissionDateTime { get; init; }
+
     /// <summary>
     /// Country code of the relevant competent authority of the instrument.
     /// </summary>
     [IsoId("_O7vp-SX7EeigZbhgJcrASA")]
     [DisplayName("Relevant Competent Authority")]
     [IsoXmlTag("RlvntCmptntAuthrty")]
-    public CountryCode? RelevantCompetentAuthority { get; init; } 
-    
+    public CountryCode? RelevantCompetentAuthority { get; init; }
+
     /// <summary>
     /// Period for which the associated instrument has been publically available.
     /// </summary>
     [IsoId("_O7vp-yX7EeigZbhgJcrASA")]
     [DisplayName("Publication Period")]
     [IsoXmlTag("PblctnPrd")]
-    public Period4Choice_? PublicationPeriod { get; init; } 
-    
+    public Period4Choice_? PublicationPeriod { get; init; }
+
     /// <summary>
     /// Flag to say if the record has ever been published.
     /// </summary>
@@ -68,8 +66,8 @@ public partial record RecordTechnicalData4
     [DisplayName("Never Published")]
     [IsoXmlTag("NvrPblshd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? NeverPublished { get; init; } 
-    
+    public IsoTrueFalseIndicator? NeverPublished { get; init; }
+
     /// <summary>
     /// Trading venue of the record used by the relevant competent authority to determine the reference data for the instrument.
     /// </summary>
@@ -77,9 +75,5 @@ public partial record RecordTechnicalData4
     [DisplayName("Relevant Trading Venue")]
     [IsoXmlTag("RlvntTradgVn")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? RelevantTradingVenue { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMICIdentifier? RelevantTradingVenue { get; init; }
 }

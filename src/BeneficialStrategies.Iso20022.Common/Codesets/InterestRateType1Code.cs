@@ -23,7 +23,7 @@ public enum InterestRateType1Code
     [IsoId("_y3adwbtKEeSmENFdxjMqzQ")]
     [Description(@"Rate is fixed.")]
     Fixed = InterestRateTypeCode.Fixed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is variable.
     /// Encoded/decoded by serializers as &quot;VARI&quot;.
@@ -32,5 +32,4 @@ public enum InterestRateType1Code
     [IsoId("_zCH48btKEeSmENFdxjMqzQ")]
     [Description(@"Rate is variable.")]
     Variable = InterestRateTypeCode.Variable, // same ordinal as derivation source for type conversions
-    
 }

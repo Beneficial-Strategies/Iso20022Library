@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_10dH4jL3EeKU9IrkkToqcw_-75321880")]
-[Description(@"Indicates whether the cash debit for the subscription charge is made immediately or accumulated.")]
+[Description(
+    @"Indicates whether the cash debit for the subscription charge is made immediately or accumulated."
+)]
 [Derivations(typeof(SubscriptionChargeApplicationType1Code))]
 public enum SubscriptionChargeApplicationTypeCode
 {
@@ -23,7 +25,7 @@ public enum SubscriptionChargeApplicationTypeCode
     [IsoId("_10dH4zL3EeKU9IrkkToqcw_147562620")]
     [Description(@"Charges are accumulated and charged later.")]
     Accumulated,
-    
+
     /// <summary>
     /// Charges are charged when instructed.
     /// Encoded/decoded by serializers as &quot;IMDT&quot;.
@@ -32,5 +34,4 @@ public enum SubscriptionChargeApplicationTypeCode
     [IsoId("_10dH5DL3EeKU9IrkkToqcw_-484988111")]
     [Description(@"Charges are charged when instructed.")]
     Immediate,
-    
 }

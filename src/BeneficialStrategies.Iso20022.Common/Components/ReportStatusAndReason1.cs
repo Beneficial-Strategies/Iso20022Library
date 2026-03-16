@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RXWygNp-Ed-ak6NoX_4Aeg_-1224288491")]
 [DisplayName("Report Status And Reason")]
-public partial record ReportStatusAndReason1
+public record ReportStatusAndReason1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the identification of the RegulatoryTransactionReport document that was previously sent by the reporting institution.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record ReportStatusAndReason1
     [DisplayName("Related Reference")]
     [IsoXmlTag("RltdRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text RelatedReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text RelatedReference { get; init; }
+
     /// <summary>
     /// Indicates the status of a report message.
     /// </summary>
     [IsoId("_RXWygtp-Ed-ak6NoX_4Aeg_-1224288118")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required Status2Code Status { get; init; } 
-    
+    public required Status2Code Status { get; init; }
+
     /// <summary>
     /// Indicates that the report is rejected and provides a reason why.
     /// </summary>
@@ -45,8 +43,4 @@ public partial record ReportStatusAndReason1
     [MinLength(1)]
     [MaxLength(100)]
     public ValueList<RejectedStatusReason9Choice_> Rejected { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

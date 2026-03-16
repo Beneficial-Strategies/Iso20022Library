@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PendingReason61Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingReason61Choice
     /// </summary>
     [IsoId("_9FBNCx9QEeuFz_FaCzCLgQ")]
     [DisplayName("Code")]
-    public partial record Code : PendingReason61Choice_
+    public record Code : PendingReason61Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the reason why the instruction has a pending status.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required PendingReason20Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PendingReason20Code Value { get; init; }
     }
 }

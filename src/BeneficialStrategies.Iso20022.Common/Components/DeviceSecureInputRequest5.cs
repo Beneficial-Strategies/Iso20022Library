@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GLMrAXGeEe2TbaNWBpRZpQ")]
 [DisplayName("Device Secure Input Request")]
-public partial record DeviceSecureInputRequest5
+public record DeviceSecureInputRequest5
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of PIN Service.
     /// </summary>
     [IsoId("_GRb14XGeEe2TbaNWBpRZpQ")]
     [DisplayName("PIN Request Type")]
     [IsoXmlTag("PINReqTp")]
-    public required PINRequestType1Code PINRequestType { get; init; } 
-    
+    public required PINRequestType1Code PINRequestType { get; init; }
+
     /// <summary>
     /// Identify the PIN verification method and keys.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record DeviceSecureInputRequest5
     [DisplayName("PIN Verification Method")]
     [IsoXmlTag("PINVrfctnMtd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PINVerificationMethod { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PINVerificationMethod { get; init; }
+
     /// <summary>
     /// Maximum time to wait for the request processing in seconds.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record DeviceSecureInputRequest5
     [DisplayName("Maximum Waiting Time")]
     [IsoXmlTag("MaxWtgTm")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumWaitingTime { get; init; } 
-    
+    public IsoNumber? MaximumWaitingTime { get; init; }
+
     /// <summary>
     /// Indicates, when the user press a key, if a beep has to be generated.
     /// </summary>
@@ -52,17 +50,13 @@ public partial record DeviceSecureInputRequest5
     [DisplayName("Beep Key Flag")]
     [IsoXmlTag("BeepKeyFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? BeepKeyFlag { get; init; }
+
     /// <summary>
     /// Enciphered PIN and related information.
     /// </summary>
     [IsoId("_GRb16XGeEe2TbaNWBpRZpQ")]
     [DisplayName("Cardholder PIN")]
     [IsoXmlTag("CrdhldrPIN")]
-    public OnLinePIN10? CardholderPIN { get; init; } 
-    
-    
-    #nullable disable
-    
+    public OnLinePIN10? CardholderPIN { get; init; }
 }

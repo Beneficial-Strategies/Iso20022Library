@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tdeaEZ9fEe-nbM0aSPcoiQ")]
 [DisplayName("Point Of Interaction Capabilities10")]
-public partial record PointOfInteractionCapabilities10
+public record PointOfInteractionCapabilities10
 {
-    #nullable enable
-
     /// <summary>
     /// Approval Code Length.
     /// </summary>
     [DisplayName("Approval Code Length")]
     [IsoXmlTag("ApprvlCdLngth")]
-    public IsoNumber? ApprovalCodeLength { get; init; } 
+    public IsoNumber? ApprovalCodeLength { get; init; }
 
     /// <summary>
     /// Authentication.
@@ -37,7 +35,7 @@ public partial record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("Card Capture Capable")]
     [IsoXmlTag("CardCaptrCpbl")]
-    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; } 
+    public IsoTrueFalseIndicator? CardCaptureCapable { get; init; }
 
     /// <summary>
     /// Card Read Data.
@@ -72,7 +70,7 @@ public partial record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("Max Script Length")]
     [IsoXmlTag("MxScrptLngth")]
-    public IsoNumber? MaxScriptLength { get; init; } 
+    public IsoNumber? MaxScriptLength { get; init; }
 
     /// <summary>
     /// Message Capabilities.
@@ -86,14 +84,14 @@ public partial record PointOfInteractionCapabilities10
     /// </summary>
     [DisplayName("PIN Length Capabilities")]
     [IsoXmlTag("PINLngthCpblties")]
-    public IsoNumber? PINLengthCapabilities { get; init; } 
+    public IsoNumber? PINLengthCapabilities { get; init; }
 
     /// <summary>
     /// Receipt Printing.
     /// </summary>
     [DisplayName("Receipt Printing")]
     [IsoXmlTag("RctPrtg")]
-    public IsoTrueFalseIndicator? ReceiptPrinting { get; init; } 
+    public IsoTrueFalseIndicator? ReceiptPrinting { get; init; }
 
     /// <summary>
     /// Withdrawal Media.
@@ -101,8 +99,4 @@ public partial record PointOfInteractionCapabilities10
     [DisplayName("Withdrawal Media")]
     [IsoXmlTag("WdrwlMdia")]
     public ValueList<ATMMediaType1Code> WithdrawalMedia { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

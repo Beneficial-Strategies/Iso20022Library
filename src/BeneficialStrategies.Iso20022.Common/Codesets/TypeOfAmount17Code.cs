@@ -23,7 +23,7 @@ public enum TypeOfAmount17Code
     [IsoId("_mpFfEVjqEeiTlKUpxxSxEw")]
     [Description(@"Other type of amount defined at national level.")]
     OtherNational = TypeOfAmountCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of amount defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfAmount17Code
     [IsoId("_m0EnEVjqEeiTlKUpxxSxEw")]
     [Description(@"Other type of amount defined at private level.")]
     OtherPrivate = TypeOfAmountCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee applied by the card issuer to the cardholder.
     /// Encoded/decoded by serializers as &quot;ISCF&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfAmount17Code
     [IsoId("_nw0jMVjqEeiTlKUpxxSxEw")]
     [Description(@"Fee applied by the card issuer to the cardholder.")]
     IssuerCardholderFee = TypeOfAmountCode.IssuerCardholderFee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount anticipated for the transaction
     /// Encoded/decoded by serializers as &quot;ANTA&quot;.
@@ -50,5 +50,4 @@ public enum TypeOfAmount17Code
     [IsoId("_7nV2oa0pEeiBP5PZ97xcEA")]
     [Description(@"Amount anticipated for the transaction")]
     Anticipated = TypeOfAmountCode.Anticipated, // same ordinal as derivation source for type conversions
-    
 }

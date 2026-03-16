@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MandateSuspensionReason1Choice.Code))]
     [KnownType(typeof(MandateSuspensionReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(MandateSuspensionReason1Choice.Code),nameof(MandateSuspensionReason1Choice.Code))]
-    [JsonDerivedType(typeof(MandateSuspensionReason1Choice.Proprietary),nameof(MandateSuspensionReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(MandateSuspensionReason1Choice.Code),
+        nameof(MandateSuspensionReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(MandateSuspensionReason1Choice.Proprietary),
+        nameof(MandateSuspensionReason1Choice.Proprietary)
+    )]
     [IsoId("_gW_7w4PDEeahmOIR_zFG6A")]
     [DisplayName("Mandate Suspension Reason 1 Choice")]
-    public abstract partial record MandateSuspensionReason1Choice_
-    {
-    }
+    public abstract record MandateSuspensionReason1Choice_ { }
 }

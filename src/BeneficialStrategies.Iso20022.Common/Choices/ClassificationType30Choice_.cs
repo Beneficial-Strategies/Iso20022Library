@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClassificationType30Choice.ClassificationFinancialInstrument))]
     [KnownType(typeof(ClassificationType30Choice.AlternateClassification))]
-    [JsonDerivedType(typeof(ClassificationType30Choice.ClassificationFinancialInstrument),nameof(ClassificationType30Choice.ClassificationFinancialInstrument))]
-    [JsonDerivedType(typeof(ClassificationType30Choice.AlternateClassification),nameof(ClassificationType30Choice.AlternateClassification))]
+    [JsonDerivedType(
+        typeof(ClassificationType30Choice.ClassificationFinancialInstrument),
+        nameof(ClassificationType30Choice.ClassificationFinancialInstrument)
+    )]
+    [JsonDerivedType(
+        typeof(ClassificationType30Choice.AlternateClassification),
+        nameof(ClassificationType30Choice.AlternateClassification)
+    )]
     [IsoId("_AbpPotokEeC60axPepSq7g_371267189")]
     [DisplayName("Classification Type 30 Choice")]
-    public abstract partial record ClassificationType30Choice_
-    {
-    }
+    public abstract record ClassificationType30Choice_ { }
 }

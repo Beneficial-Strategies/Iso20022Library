@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kx49oTSKEeK8M6X9iBRU5A")]
 [DisplayName("Cardholder")]
-public partial record Cardholder4
+public record Cardholder4
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the cardholder involved in a transaction.
     /// </summary>
     [IsoId("_k72x8TSKEeK8M6X9iBRU5A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public CardholderIdentification1? Identification { get; init; } 
-    
+    public CardholderIdentification1? Identification { get; init; }
+
     /// <summary>
     /// Cardholder name associated with the card.
     /// </summary>
@@ -33,25 +31,25 @@ public partial record Cardholder4
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
-    [StringLength(maximumLength: 45 ,MinimumLength = 1)]
-    public IsoMax45Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 45, MinimumLength = 1)]
+    public IsoMax45Text? Name { get; init; }
+
     /// <summary>
     /// Data related to the authentication of the cardholder.
     /// </summary>
     [IsoId("_k72x-TSKEeK8M6X9iBRU5A")]
     [DisplayName("Authentication")]
     [IsoXmlTag("Authntcn")]
-    public CardholderAuthentication4? Authentication { get; init; } 
-    
+    public CardholderAuthentication4? Authentication { get; init; }
+
     /// <summary>
     /// Numeric characters of the cardholder&apos;s address for verification.
     /// </summary>
     [IsoId("_k72x_TSKEeK8M6X9iBRU5A")]
     [DisplayName("Address Verification")]
     [IsoXmlTag("AdrVrfctn")]
-    public AddressVerification1? AddressVerification { get; init; } 
-    
+    public AddressVerification1? AddressVerification { get; init; }
+
     /// <summary>
     /// Identifies personal data related to the cardholder.
     /// </summary>
@@ -59,10 +57,6 @@ public partial record Cardholder4
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? PersonalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? PersonalData { get; init; }
 }

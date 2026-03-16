@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VLidYYq7EeSHjtO_wHA7PQ")]
 [DisplayName("ATM Transaction Amounts")]
-public partial record ATMTransactionAmounts5
+public record ATMTransactionAmounts5
 {
-    #nullable enable
-    
     /// <summary>
     /// True if limits may be displayed on the ATM to the customer.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record ATMTransactionAmounts5
     [DisplayName("Display Flag")]
     [IsoXmlTag("DispFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DisplayFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? DisplayFlag { get; init; }
+
     /// <summary>
     /// Maximum amount allowed for deposit on the account.
     /// </summary>
     [IsoId("_VYWxY4q7EeSHjtO_wHA7PQ")]
     [DisplayName("Maximum Amount")]
     [IsoXmlTag("MaxAmt")]
-    public ImpliedCurrencyAndAmount? MaximumAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ImpliedCurrencyAndAmount? MaximumAmount { get; init; }
 }

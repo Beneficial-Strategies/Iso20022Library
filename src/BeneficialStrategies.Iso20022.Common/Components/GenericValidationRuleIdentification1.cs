@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BWCfJdjGEeSD0e0ybx5L5Q")]
 [DisplayName("Generic Validation Rule Identification")]
-public partial record GenericValidationRuleIdentification1
+public record GenericValidationRuleIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identification of a validation rule.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record GenericValidationRuleIdentification1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Further information on the validation rule as identified in the Identification.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record GenericValidationRuleIdentification1
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Description { get; init; }
+
     /// <summary>
     /// Name of the identification scheme.
     /// </summary>
     [IsoId("_BWCfJ9jGEeSD0e0ybx5L5Q")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
-    public ValidationRuleSchemeName1Choice_? SchemeName { get; init; } 
-    
+    public ValidationRuleSchemeName1Choice_? SchemeName { get; init; }
+
     /// <summary>
     /// Entity that assigns the identification.
     /// </summary>
@@ -53,10 +51,6 @@ public partial record GenericValidationRuleIdentification1
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Issuer { get; init; }
 }

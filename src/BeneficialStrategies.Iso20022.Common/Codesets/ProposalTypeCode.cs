@@ -23,7 +23,7 @@ public enum ProposalTypeCode
     [IsoId("_YdGGJ9p-Ed-ak6NoX_4Aeg_1552099762")]
     [Description(@"Specifies this is an initial proposal.")]
     Initial,
-    
+
     /// <summary>
     /// Specifies this is a counter proposal.
     /// Encoded/decoded by serializers as &quot;COUN&quot;.
@@ -32,5 +32,4 @@ public enum ProposalTypeCode
     [IsoId("_YdGGKNp-Ed-ak6NoX_4Aeg_917818427")]
     [Description(@"Specifies this is a counter proposal.")]
     Counter,
-    
 }

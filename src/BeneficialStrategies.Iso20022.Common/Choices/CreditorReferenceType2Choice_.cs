@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CreditorReferenceType2Choice.Code))]
     [KnownType(typeof(CreditorReferenceType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(CreditorReferenceType2Choice.Code),nameof(CreditorReferenceType2Choice.Code))]
-    [JsonDerivedType(typeof(CreditorReferenceType2Choice.Proprietary),nameof(CreditorReferenceType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CreditorReferenceType2Choice.Code),
+        nameof(CreditorReferenceType2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CreditorReferenceType2Choice.Proprietary),
+        nameof(CreditorReferenceType2Choice.Proprietary)
+    )]
     [IsoId("_7zR6pTEsEe6GxLzpkVnWYg")]
     [DisplayName("Creditor Reference Type2Choice")]
-    public abstract partial record CreditorReferenceType2Choice_
-    {
-    }
+    public abstract record CreditorReferenceType2Choice_ { }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PlaceOfTradeIdentification2Choice.MarketIdentification))]
     [KnownType(typeof(PlaceOfTradeIdentification2Choice.OffMarket))]
-    [JsonDerivedType(typeof(PlaceOfTradeIdentification2Choice.MarketIdentification),nameof(PlaceOfTradeIdentification2Choice.MarketIdentification))]
-    [JsonDerivedType(typeof(PlaceOfTradeIdentification2Choice.OffMarket),nameof(PlaceOfTradeIdentification2Choice.OffMarket))]
+    [JsonDerivedType(
+        typeof(PlaceOfTradeIdentification2Choice.MarketIdentification),
+        nameof(PlaceOfTradeIdentification2Choice.MarketIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PlaceOfTradeIdentification2Choice.OffMarket),
+        nameof(PlaceOfTradeIdentification2Choice.OffMarket)
+    )]
     [IsoId("_TCfepNp-Ed-ak6NoX_4Aeg_2102299149")]
     [DisplayName("Place Of Trade Identification 2 Choice")]
-    public abstract partial record PlaceOfTradeIdentification2Choice_
-    {
-    }
+    public abstract record PlaceOfTradeIdentification2Choice_ { }
 }

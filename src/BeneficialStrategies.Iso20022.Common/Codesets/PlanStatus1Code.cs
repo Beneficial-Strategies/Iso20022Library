@@ -23,7 +23,7 @@ public enum PlanStatus1Code
     [IsoId("_RvyIoQjcEeS5F6qHcKOrew")]
     [Description(@"Plan is active.")]
     Active = PlanStatusCode.Active, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Plan is closed.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -32,7 +32,7 @@ public enum PlanStatus1Code
     [IsoId("_R4tbIQjcEeS5F6qHcKOrew")]
     [Description(@"Plan is closed.")]
     Closed = PlanStatusCode.Closed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Plan is suspended.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
@@ -41,5 +41,4 @@ public enum PlanStatus1Code
     [IsoId("_SBC3wQjcEeS5F6qHcKOrew")]
     [Description(@"Plan is suspended.")]
     Suspended = PlanStatusCode.Suspended, // same ordinal as derivation source for type conversions
-    
 }

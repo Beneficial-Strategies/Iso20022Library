@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vwwpAZRKEe6mHLZGMDWxvg")]
 [DisplayName("Maintenance Delegation Request10")]
-public partial record MaintenanceDelegationRequest10
+public record MaintenanceDelegationRequest10
 {
-    #nullable enable
-
     /// <summary>
     /// Master TM Identification.
     /// </summary>
     [DisplayName("Master TM Identification")]
     [IsoXmlTag("MstrTMId")]
-    public GenericIdentification176? MasterTMIdentification { get; init; } 
+    public GenericIdentification176? MasterTMIdentification { get; init; }
 
     /// <summary>
     /// Requested Delegation.
@@ -37,23 +35,19 @@ public partial record MaintenanceDelegationRequest10
     /// </summary>
     [DisplayName("TM Challenge Value")]
     [IsoXmlTag("TMChllngVal")]
-    public required IsoMax140Binary TMChallengeValue { get; init; } 
+    public required IsoMax140Binary TMChallengeValue { get; init; }
 
     /// <summary>
     /// TM Date Time.
     /// </summary>
     [DisplayName("TM Date Time")]
     [IsoXmlTag("TMDtTm")]
-    public required IsoISODateTime TMDateTime { get; init; } 
+    public required IsoISODateTime TMDateTime { get; init; }
 
     /// <summary>
     /// TM Identification.
     /// </summary>
     [DisplayName("TM Identification")]
     [IsoXmlTag("TMId")]
-    public required GenericIdentification176 TMIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required GenericIdentification176 TMIdentification { get; init; }
 }

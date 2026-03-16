@@ -23,7 +23,7 @@ public enum EmbeddedTypeCode
     [IsoId("_2RrmEIcPEeu4rpsqTt37Pg")]
     [Description(@"Option must be early terminated.")]
     MandatoryEarlyTermination,
-    
+
     /// <summary>
     /// Option can be early terminated.
     /// Encoded/decoded by serializers as &quot;OPET&quot;.
@@ -32,7 +32,7 @@ public enum EmbeddedTypeCode
     [IsoId("_5nedMIcPEeu4rpsqTt37Pg")]
     [Description(@"Option can be early terminated.")]
     OptionalEarlyTermination,
-    
+
     /// <summary>
     /// Option can be cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,7 +41,7 @@ public enum EmbeddedTypeCode
     [IsoId("_9zaSIIcPEeu4rpsqTt37Pg")]
     [Description(@"Option can be cancelled.")]
     Cancellable,
-    
+
     /// <summary>
     /// Option can be extended.
     /// Encoded/decoded by serializers as &quot;EXTD&quot;.
@@ -50,7 +50,7 @@ public enum EmbeddedTypeCode
     [IsoId("_BeLTsIcQEeu4rpsqTt37Pg")]
     [Description(@"Option can be extended.")]
     Extendible,
-    
+
     /// <summary>
     /// Option type is other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +59,4 @@ public enum EmbeddedTypeCode
     [IsoId("_DZqI8IcQEeu4rpsqTt37Pg")]
     [Description(@"Option type is other.")]
     Other,
-    
 }

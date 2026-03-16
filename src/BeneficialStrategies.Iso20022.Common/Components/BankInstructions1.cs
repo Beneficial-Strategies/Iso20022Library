@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-E96onltEeG7BsjMvd1mEw_-1962266357")]
 [DisplayName("Bank Instructions")]
-public partial record BankInstructions1
+public record BankInstructions1
 {
-    #nullable enable
-    
     /// <summary>
     /// Instructions from the bank.
     /// </summary>
@@ -28,7 +26,7 @@ public partial record BankInstructions1
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> Text { get; init; } = [];
-    
+
     /// <summary>
     /// Last date for a response to the bank instructions.
     /// </summary>
@@ -36,9 +34,5 @@ public partial record BankInstructions1
     [DisplayName("Last Date For Response")]
     [IsoXmlTag("LastDtForRspn")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastDateForResponse { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? LastDateForResponse { get; init; }
 }

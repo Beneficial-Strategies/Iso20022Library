@@ -23,7 +23,7 @@ public enum EligibleCode
     [IsoId("_iJlkUCC9EeWPMvNwVtiMsA")]
     [Description(@"Item is eligible.")]
     Eligible,
-    
+
     /// <summary>
     /// Item is not eligible.
     /// Encoded/decoded by serializers as &quot;NELI&quot;.
@@ -32,5 +32,4 @@ public enum EligibleCode
     [IsoId("_lRvoECC9EeWPMvNwVtiMsA")]
     [Description(@"Item is not eligible.")]
     NotEligible,
-    
 }

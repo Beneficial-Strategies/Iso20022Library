@@ -23,7 +23,7 @@ public enum BeneficiaryCertificationCompletion1Code
     [IsoId("_bdn35Np-Ed-ak6NoX_4Aeg_-737437594")]
     [Description(@"Certification is not required for this fund.")]
     CertificationNotRequired = BeneficiaryCertificationCompletionCode.CertificationNotRequired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic certification is acceptable.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +32,7 @@ public enum BeneficiaryCertificationCompletion1Code
     [IsoId("_bdn35dp-Ed-ak6NoX_4Aeg_-737437577")]
     [Description(@"Electronic certification is acceptable.")]
     ElectronicCertification = BeneficiaryCertificationCompletionCode.ElectronicCertification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic certification is not acceptable and is required in physical form.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -41,5 +41,4 @@ public enum BeneficiaryCertificationCompletion1Code
     [IsoId("_bdn35tp-Ed-ak6NoX_4Aeg_-737437559")]
     [Description(@"Electronic certification is not acceptable and is required in physical form.")]
     PhysicalCertification = BeneficiaryCertificationCompletionCode.PhysicalCertification, // same ordinal as derivation source for type conversions
-    
 }

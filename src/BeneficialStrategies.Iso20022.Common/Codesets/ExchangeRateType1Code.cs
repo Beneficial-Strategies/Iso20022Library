@@ -23,7 +23,7 @@ public enum ExchangeRateType1Code
     [IsoId("_ak11wNp-Ed-ak6NoX_4Aeg_-75535808")]
     [Description(@"Exchange rate applied is the spot rate.")]
     Spot = ExchangeRateTypeCode.Spot, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate applied is the market rate at the time of the sale.
     /// Encoded/decoded by serializers as &quot;SALE&quot;.
@@ -32,7 +32,7 @@ public enum ExchangeRateType1Code
     [IsoId("_ak11wdp-Ed-ak6NoX_4Aeg_-75535501")]
     [Description(@"Exchange rate applied is the market rate at the time of the sale.")]
     Sale = ExchangeRateTypeCode.Sale, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rate applied is the rate agreed between the parties.
     /// Encoded/decoded by serializers as &quot;AGRD&quot;.
@@ -41,5 +41,4 @@ public enum ExchangeRateType1Code
     [IsoId("_ak11wtp-Ed-ak6NoX_4Aeg_-75535484")]
     [Description(@"Exchange rate applied is the rate agreed between the parties.")]
     Agreed = ExchangeRateTypeCode.Agreed, // same ordinal as derivation source for type conversions
-    
 }

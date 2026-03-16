@@ -23,7 +23,7 @@ public enum FailureReason6Code
     [IsoId("_6MpPwYtDEeSxlKlAGYErFg")]
     [Description(@"Key is compromised.")]
     Compromised = FailureReasonCode.Compromised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key has expired.
     /// Encoded/decoded by serializers as &quot;EXPR&quot;.
@@ -32,7 +32,7 @@ public enum FailureReason6Code
     [IsoId("_6XX5EYtDEeSxlKlAGYErFg")]
     [Description(@"Key has expired.")]
     Expired = FailureReasonCode.Expired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Key check value is incorrect.
     /// Encoded/decoded by serializers as &quot;KCVE&quot;.
@@ -41,7 +41,7 @@ public enum FailureReason6Code
     [IsoId("_7HWkgYtDEeSxlKlAGYErFg")]
     [Description(@"Key check value is incorrect.")]
     InvalidKCV = FailureReasonCode.InvalidKCV, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Error during the key download in the security device.
     /// Encoded/decoded by serializers as &quot;KLOD&quot;.
@@ -50,5 +50,4 @@ public enum FailureReason6Code
     [IsoId("_7N6fgYtDEeSxlKlAGYErFg")]
     [Description(@"Error during the key download in the security device.")]
     KeyLoadError = FailureReasonCode.KeyLoadError, // same ordinal as derivation source for type conversions
-    
 }

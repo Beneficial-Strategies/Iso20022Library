@@ -23,14 +23,15 @@ public enum AccountStatusUpdateInstruction1Code
     [IsoId("_SuwCEXi6EeaRm5xIK6nGuQ")]
     [Description(@"Account is to be closed.")]
     Close = AccountStatusUpdateInstructionCode.Close, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account is to be reactivated, any previous instruction to close the account is rescinded.
     /// Encoded/decoded by serializers as &quot;REAC&quot;.
     /// </summary>
     [EnumMember(Value = "REAC")]
     [IsoId("_S6f_EXi6EeaRm5xIK6nGuQ")]
-    [Description(@"Account is to be reactivated, any previous instruction to close the account is rescinded.")]
+    [Description(
+        @"Account is to be reactivated, any previous instruction to close the account is rescinded."
+    )]
     Reactive = AccountStatusUpdateInstructionCode.Reactive, // same ordinal as derivation source for type conversions
-    
 }

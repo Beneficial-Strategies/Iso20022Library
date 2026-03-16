@@ -23,7 +23,7 @@ public enum CashPaymentStatusCode
     [IsoId("_a7MgQdp-Ed-ak6NoX_4Aeg_1461915359")]
     [Description(@"The payment is awaiting settlement.")]
     Pending,
-    
+
     /// <summary>
     /// The payment has been settled or stopped.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -32,7 +32,7 @@ public enum CashPaymentStatusCode
     [IsoId("_a7MgQtp-Ed-ak6NoX_4Aeg_1461915360")]
     [Description(@"The payment has been settled or stopped.")]
     Final,
-    
+
     /// <summary>
     /// The payment is cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,5 +41,4 @@ public enum CashPaymentStatusCode
     [IsoId("_a7MgQ9p-Ed-ak6NoX_4Aeg_-167740139")]
     [Description(@"The payment is cancelled.")]
     Cancelled,
-    
 }

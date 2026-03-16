@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xtcK0WnzEea5EcY2TpG1mw")]
 [DisplayName("Tax Report Header")]
-public partial record TaxReportHeader1
+public record TaxReportHeader1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique message identification.
     /// </summary>
     [IsoId("_FdwToGn0Eea5EcY2TpG1mw")]
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
-    public required MessageIdentification1 MessageIdentification { get; init; } 
-    
+    public required MessageIdentification1 MessageIdentification { get; init; }
+
     /// <summary>
     /// Number of TaxReports in this message. Seller can send all TaxReports in the same file.
     /// </summary>
@@ -33,17 +31,13 @@ public partial record TaxReportHeader1
     [DisplayName("Number Of Tax Reports")]
     [IsoXmlTag("NbOfTaxRpts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NumberOfTaxReports { get; init; } 
-    
+    public IsoNumber? NumberOfTaxReports { get; init; }
+
     /// <summary>
     /// Party to which the TaxReport is delivered. This message block contains party details for a specific tax authority.
     /// </summary>
     [IsoId("_VbSuYGn0Eea5EcY2TpG1mw")]
     [DisplayName("Tax Authority")]
     [IsoXmlTag("TaxAuthrty")]
-    public TaxOrganisationIdentification1? TaxAuthority { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TaxOrganisationIdentification1? TaxAuthority { get; init; }
 }

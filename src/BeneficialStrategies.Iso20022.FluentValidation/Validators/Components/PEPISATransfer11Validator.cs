@@ -84,25 +84,33 @@ public sealed class PEPISATransfer11Validator : AbstractValidator<PEPISATransfer
         // ProductTransfer is 1..∞ but the C# model allows empty (model defect — see XML doc).
         RuleFor(x => x.ProductTransfer)
             .NotEmpty()
-                .WithMessage("PEPISATransfer11.ProductTransfer must contain at least one element (1..∞).");
+            .WithMessage(
+                "PEPISATransfer11.ProductTransfer must contain at least one element (1..∞)."
+            );
 
         // ── InvestorRule ─────────────────────────────────────────────────────────────
         RuleFor(x => x)
-            .Must(x => x.PrimaryIndividualInvestor is not null
-                    || (x.SecondaryIndividualInvestor is null && x.OtherIndividualInvestor is null))
-                .WithName("InvestorRule")
-                .WithMessage(
-                    "If PrimaryIndividualInvestor is not present, SecondaryIndividualInvestor and " +
-                    "OtherIndividualInvestor must also be absent (InvestorRule).");
+            .Must(x =>
+                x.PrimaryIndividualInvestor is not null
+                || (x.SecondaryIndividualInvestor is null && x.OtherIndividualInvestor is null)
+            )
+            .WithName("InvestorRule")
+            .WithMessage(
+                "If PrimaryIndividualInvestor is not present, SecondaryIndividualInvestor and "
+                    + "OtherIndividualInvestor must also be absent (InvestorRule)."
+            );
 
         // ── CorporateRule ─────────────────────────────────────────────────────────────
         RuleFor(x => x)
-            .Must(x => x.PrimaryCorporateInvestor is not null
-                    || (x.SecondaryCorporateInvestor is null && x.OtherCorporateInvestor is null))
-                .WithName("CorporateRule")
-                .WithMessage(
-                    "If PrimaryCorporateInvestor is not present, SecondaryCorporateInvestor and " +
-                    "OtherCorporateInvestor must also be absent (CorporateRule).");
+            .Must(x =>
+                x.PrimaryCorporateInvestor is not null
+                || (x.SecondaryCorporateInvestor is null && x.OtherCorporateInvestor is null)
+            )
+            .WithName("CorporateRule")
+            .WithMessage(
+                "If PrimaryCorporateInvestor is not present, SecondaryCorporateInvestor and "
+                    + "OtherCorporateInvestor must also be absent (CorporateRule)."
+            );
 
         // ISARule, PorfolioRule, DesignationRule, NomineeAccountServicerRule: business-context only —
         // cannot be enforced structurally. See XML doc on this class for the full constraint text.

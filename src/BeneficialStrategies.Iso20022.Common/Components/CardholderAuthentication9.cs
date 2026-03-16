@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Wt_7YZdZEeWhUvuI1bSHSA")]
 [DisplayName("Cardholder Authentication")]
-public partial record CardholderAuthentication9
+public record CardholderAuthentication9
 {
-    #nullable enable
-    
     /// <summary>
     /// Method and data intended to be used for this transaction to authenticate the cardholder or its card.
     /// </summary>
     [IsoId("_W5BfoZdZEeWhUvuI1bSHSA")]
     [DisplayName("Authentication Method")]
     [IsoXmlTag("AuthntcnMtd")]
-    public required AuthenticationMethod5Code AuthenticationMethod { get; init; } 
-    
+    public required AuthenticationMethod5Code AuthenticationMethod { get; init; }
+
     /// <summary>
     /// Value used to authenticate the cardholder.
     /// </summary>
@@ -33,41 +31,37 @@ public partial record CardholderAuthentication9
     [DisplayName("Authentication Value")]
     [IsoXmlTag("AuthntcnVal")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? AuthenticationValue { get; init; } 
-    
+    public IsoMax5000Binary? AuthenticationValue { get; init; }
+
     /// <summary>
     /// Protection of the authentication value.
     /// </summary>
     [IsoId("_W5BfpZdZEeWhUvuI1bSHSA")]
     [DisplayName("Protected Authentication Value")]
     [IsoXmlTag("PrtctdAuthntcnVal")]
-    public ContentInformationType10? ProtectedAuthenticationValue { get; init; } 
-    
+    public ContentInformationType10? ProtectedAuthenticationValue { get; init; }
+
     /// <summary>
     /// Encrypted personal identification number (PIN) and related information.
     /// </summary>
     [IsoId("_W5Bfp5dZEeWhUvuI1bSHSA")]
     [DisplayName("Cardholder On Line PIN")]
     [IsoXmlTag("CrdhldrOnLinePIN")]
-    public OnLinePIN4? CardholderOnLinePIN { get; init; } 
-    
+    public OnLinePIN4? CardholderOnLinePIN { get; init; }
+
     /// <summary>
     /// Identification of the cardholder to verify.
     /// </summary>
     [IsoId("_W5BfqZdZEeWhUvuI1bSHSA")]
     [DisplayName("Cardholder Identification")]
     [IsoXmlTag("CrdhldrId")]
-    public PersonIdentification11? CardholderIdentification { get; init; } 
-    
+    public PersonIdentification11? CardholderIdentification { get; init; }
+
     /// <summary>
     /// Numeric characters of the cardholder&apos;s billing or shipping address for verification.
     /// </summary>
     [IsoId("_W5Bfq5dZEeWhUvuI1bSHSA")]
     [DisplayName("Address Verification")]
     [IsoXmlTag("AdrVrfctn")]
-    public AddressVerification1? AddressVerification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AddressVerification1? AddressVerification { get; init; }
 }

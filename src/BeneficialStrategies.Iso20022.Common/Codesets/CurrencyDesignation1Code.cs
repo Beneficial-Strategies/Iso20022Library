@@ -23,7 +23,7 @@ public enum CurrencyDesignation1Code
     [IsoId("_D0dk8Qd2EeSPHJIdUs1USg")]
     [Description(@"Onshore.")]
     Onshore = CurrencyDesignationCode.Onshore, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Offshore.
     /// Encoded/decoded by serializers as &quot;OFFS&quot;.
@@ -32,5 +32,4 @@ public enum CurrencyDesignation1Code
     [IsoId("_D8gGoQd2EeSPHJIdUs1USg")]
     [Description(@"Offshore.")]
     Offshore = CurrencyDesignationCode.Offshore, // same ordinal as derivation source for type conversions
-    
 }

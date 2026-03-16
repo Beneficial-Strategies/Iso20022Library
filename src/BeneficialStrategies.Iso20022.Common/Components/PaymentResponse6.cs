@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WM49QZQ2Ee6HYLAajyhWIQ")]
 [DisplayName("Payment Response6")]
-public partial record PaymentResponse6
+public record PaymentResponse6
 {
-    #nullable enable
-
     /// <summary>
     /// Customer Order.
     /// </summary>
@@ -30,7 +28,7 @@ public partial record PaymentResponse6
     /// </summary>
     [DisplayName("Issuer Reference Data")]
     [IsoXmlTag("IssrRefData")]
-    public IsoMax140Text? IssuerReferenceData { get; init; } 
+    public IsoMax140Text? IssuerReferenceData { get; init; }
 
     /// <summary>
     /// Loyalty Result.
@@ -51,37 +49,33 @@ public partial record PaymentResponse6
     /// </summary>
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; } 
+    public IsoMax35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// POI Transaction Identification.
     /// </summary>
     [DisplayName("POI Transaction Identification")]
     [IsoXmlTag("POITxId")]
-    public required TransactionIdentifier1 POITransactionIdentification { get; init; } 
+    public required TransactionIdentifier1 POITransactionIdentification { get; init; }
 
     /// <summary>
     /// Retailer Payment Result.
     /// </summary>
     [DisplayName("Retailer Payment Result")]
     [IsoXmlTag("RtlrPmtRslt")]
-    public required RetailerPaymentResult6 RetailerPaymentResult { get; init; } 
+    public required RetailerPaymentResult6 RetailerPaymentResult { get; init; }
 
     /// <summary>
     /// Sale Reference Identification.
     /// </summary>
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; } 
+    public IsoMax35Text? SaleReferenceIdentification { get; init; }
 
     /// <summary>
     /// Sale Transaction Identification.
     /// </summary>
     [DisplayName("Sale Transaction Identification")]
     [IsoXmlTag("SaleTxId")]
-    public required TransactionIdentifier1 SaleTransactionIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required TransactionIdentifier1 SaleTransactionIdentification { get; init; }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_a2lGB9p-Ed-ak6NoX_4Aeg_-286578843")]
-[Description(@"Specifies the status of an investigation case.||Note: |The cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown.")]
+[Description(
+    @"Specifies the status of an investigation case.||Note: |The cases that have been rejected (not accepted) are unknown to the Party reporting the status of cases. They will be reported with the CaseStatusCode = Unknown."
+)]
 [DerivedFrom(typeof(CaseStatusCode))]
 public enum CaseStatus2Code
 {
@@ -23,7 +25,7 @@ public enum CaseStatus2Code
     [IsoId("_a2lGCNp-Ed-ak6NoX_4Aeg_-286578825")]
     [Description(@"Case has been closed.")]
     Closed = CaseStatusCode.Closed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case has been assigned to another party.
     /// Encoded/decoded by serializers as &quot;ASGN&quot;.
@@ -32,7 +34,7 @@ public enum CaseStatus2Code
     [IsoId("_a2uP8Np-Ed-ak6NoX_4Aeg_-286578808")]
     [Description(@"Case has been assigned to another party.")]
     Assigned = CaseStatusCode.Assigned, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case is currently under investigation.
     /// Encoded/decoded by serializers as &quot;INVE&quot;.
@@ -41,7 +43,7 @@ public enum CaseStatus2Code
     [IsoId("_a2uP8dp-Ed-ak6NoX_4Aeg_-286578566")]
     [Description(@"Case is currently under investigation.")]
     UnderInvestigation = CaseStatusCode.UnderInvestigation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Case has never been assigned before.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
@@ -50,7 +52,7 @@ public enum CaseStatus2Code
     [IsoId("_a2uP8tp-Ed-ak6NoX_4Aeg_-286578549")]
     [Description(@"Case has never been assigned before.")]
     Unknown = CaseStatusCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investigation is taking too long.
     /// Encoded/decoded by serializers as &quot;ODUE&quot;.
@@ -59,5 +61,4 @@ public enum CaseStatus2Code
     [IsoId("_a2uP89p-Ed-ak6NoX_4Aeg_-286578548")]
     [Description(@"Investigation is taking too long.")]
     Overdue = CaseStatusCode.Overdue, // same ordinal as derivation source for type conversions
-    
 }

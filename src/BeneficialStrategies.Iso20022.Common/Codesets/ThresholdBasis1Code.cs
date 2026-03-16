@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_IRxt4BuOEeyhRdHRjakS2w")]
-[Description(@"Nature of the quantity used as a basis to set a threshold for voting on resolutions at general meetings.")]
+[Description(
+    @"Nature of the quantity used as a basis to set a threshold for voting on resolutions at general meetings."
+)]
 [DerivedFrom(typeof(ThresholdBasisCode))]
 public enum ThresholdBasis1Code
 {
@@ -23,16 +25,16 @@ public enum ThresholdBasis1Code
     [IsoId("_KOf5QRuOEeyhRdHRjakS2w")]
     [Description(@"Basis is the total number of shares issued.")]
     AllIssuedShares = ThresholdBasisCode.AllIssuedShares, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Basis is the total number of shares represented at the meeting by attendees. 
+    /// Basis is the total number of shares represented at the meeting by attendees.
     /// Encoded/decoded by serializers as &quot;ALSM&quot;.
     /// </summary>
     [EnumMember(Value = "ALSM")]
     [IsoId("_KUwSQRuOEeyhRdHRjakS2w")]
     [Description(@"Basis is the total number of shares represented at the meeting by attendees. ")]
     AllSharesRepresentedAtMeeting = ThresholdBasisCode.AllSharesRepresentedAtMeeting, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Basis is the total number of vote cast for a resolution.
     /// Encoded/decoded by serializers as &quot;ALVO&quot;.
@@ -41,5 +43,4 @@ public enum ThresholdBasis1Code
     [IsoId("_KbArQRuOEeyhRdHRjakS2w")]
     [Description(@"Basis is the total number of vote cast for a resolution.")]
     AllVoteCast = ThresholdBasisCode.AllVoteCast, // same ordinal as derivation source for type conversions
-    
 }

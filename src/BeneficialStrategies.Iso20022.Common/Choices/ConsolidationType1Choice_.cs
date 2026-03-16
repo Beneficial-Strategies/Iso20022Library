@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ConsolidationType1Choice.Code))]
     [KnownType(typeof(ConsolidationType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ConsolidationType1Choice.Code),nameof(ConsolidationType1Choice.Code))]
-    [JsonDerivedType(typeof(ConsolidationType1Choice.Proprietary),nameof(ConsolidationType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(ConsolidationType1Choice.Code), nameof(ConsolidationType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(ConsolidationType1Choice.Proprietary),
+        nameof(ConsolidationType1Choice.Proprietary)
+    )]
     [IsoId("_NJKKkCDVEeWCLu74WLgP4w")]
     [DisplayName("Consolidation Type 1 Choice")]
-    public abstract partial record ConsolidationType1Choice_
-    {
-    }
+    public abstract record ConsolidationType1Choice_ { }
 }

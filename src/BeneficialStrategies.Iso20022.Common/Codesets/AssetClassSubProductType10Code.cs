@@ -23,5 +23,4 @@ public enum AssetClassSubProductType10Code
     [IsoId("_XZ6MEQn0EeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type emission.")]
     Emission = AssetClassSubProductTypeCode.Emission, // same ordinal as derivation source for type conversions
-    
 }

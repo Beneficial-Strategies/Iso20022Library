@@ -30,7 +30,9 @@ public enum PendingReason25Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonV2Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -67,7 +69,8 @@ public enum PendingReason25Code
     [EnumMember(Value = "IPED")]
     [IsoId("")]
     [Description(@"Instruction was received prior to entitlement date.")]
-    InstructionPriorToEntitlementDate = PendingFailingReasonV2Code.InstructionPriorToEntitlementDate, // same ordinal as derivation source for type conversions
+    InstructionPriorToEntitlementDate =
+        PendingFailingReasonV2Code.InstructionPriorToEntitlementDate, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Missing or invalid power of attorney.
@@ -138,7 +141,9 @@ public enum PendingReason25Code
     /// </summary>
     [EnumMember(Value = "PENR")]
     [IsoId("")]
-    [Description(@"The instruction is pending receipt of securities, for example, from a purchase or loan.")]
+    [Description(
+        @"The instruction is pending receipt of securities, for example, from a purchase or loan."
+    )]
     PendingReceipt = PendingFailingReasonV2Code.PendingReceipt, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -149,5 +154,4 @@ public enum PendingReason25Code
     [IsoId("")]
     [Description(@"Invalid Proxy Information.")]
     ProxyCardDiscrepancy = PendingFailingReasonV2Code.ProxyCardDiscrepancy, // same ordinal as derivation source for type conversions
-
 }

@@ -23,7 +23,7 @@ public enum ProxyType3Code
     [IsoId("_cpOisRrfEeyhRdHRjakS2w")]
     [Description(@"Chairman of the meeting is the proxy.")]
     Chairman = ProxyTypeCode.Chairman, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Any type of proxy is allowed.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,16 +32,18 @@ public enum ProxyType3Code
     [IsoId("_ctjCARrfEeyhRdHRjakS2w")]
     [Description(@"Any type of proxy is allowed.")]
     Discretionary = ProxyTypeCode.Discretionary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Neutral proxy nominated by the issuer to execute votes on behalf of investors at the meeting.
     /// Encoded/decoded by serializers as &quot;NEPR&quot;.
     /// </summary>
     [EnumMember(Value = "NEPR")]
     [IsoId("_cyUNQRrfEeyhRdHRjakS2w")]
-    [Description(@"Neutral proxy nominated by the issuer to execute votes on behalf of investors at the meeting.")]
+    [Description(
+        @"Neutral proxy nominated by the issuer to execute votes on behalf of investors at the meeting."
+    )]
     NeutralProxy = ProxyTypeCode.NeutralProxy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Proxy can only be a security holder.
     /// Encoded/decoded by serializers as &quot;HLDR&quot;.
@@ -50,5 +52,4 @@ public enum ProxyType3Code
     [IsoId("_c2ydkRrfEeyhRdHRjakS2w")]
     [Description(@"Proxy can only be a security holder.")]
     SecurityHolder = ProxyTypeCode.SecurityHolder, // same ordinal as derivation source for type conversions
-    
 }

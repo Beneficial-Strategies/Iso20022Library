@@ -23,7 +23,7 @@ public enum TriggerActionCode
     [IsoId("_Yv34M9p-Ed-ak6NoX_4Aeg_-556071238")]
     [Description(@"Trigger action is activate.")]
     Activate,
-    
+
     /// <summary>
     /// Trigger action is modify.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -32,7 +32,7 @@ public enum TriggerActionCode
     [IsoId("_Yv34NNp-Ed-ak6NoX_4Aeg_-531138136")]
     [Description(@"Trigger action is modify.")]
     Modify,
-    
+
     /// <summary>
     /// Trigger action is cancel.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,5 +41,4 @@ public enum TriggerActionCode
     [IsoId("_Yv34Ndp-Ed-ak6NoX_4Aeg_-527443091")]
     [Description(@"Trigger action is cancel.")]
     Cancel,
-    
 }

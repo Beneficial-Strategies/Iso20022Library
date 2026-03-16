@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ObligationType1Choice.Code))]
     [KnownType(typeof(ObligationType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ObligationType1Choice.Code),nameof(ObligationType1Choice.Code))]
-    [JsonDerivedType(typeof(ObligationType1Choice.Proprietary),nameof(ObligationType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(ObligationType1Choice.Code), nameof(ObligationType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(ObligationType1Choice.Proprietary),
+        nameof(ObligationType1Choice.Proprietary)
+    )]
     [IsoId("_Ql4SSNp-Ed-ak6NoX_4Aeg_-44053834")]
     [DisplayName("Obligation Type 1 Choice")]
-    public abstract partial record ObligationType1Choice_
-    {
-    }
+    public abstract record ObligationType1Choice_ { }
 }

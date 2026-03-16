@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HTr8wdB7EeihG9bKfarOOA")]
 [DisplayName("Cancellation Reason")]
-public partial record CancellationReason22
+public record CancellationReason22
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the reason why the instruction is cancelled.
     /// </summary>
     [IsoId("_HkfY4dB7EeihG9bKfarOOA")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required CancellationReason36Choice_ Code { get; init; } 
-    
+    public required CancellationReason36Choice_ Code { get; init; }
+
     /// <summary>
     /// Provides additional reason information that cannot be provided in a structured field.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record CancellationReason22
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
-    [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoMax210Text? AdditionalReasonInformation { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jPEg4YdIEeuBS50MFjViNw")]
 [DisplayName("Transaction")]
-public partial record Transaction148
+public record Transaction148
 {
-    #nullable enable
-    
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record Transaction148
     [DisplayName("Associated Data Reference")]
     [IsoXmlTag("AssoctdDataRef")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AssociatedDataReference { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AssociatedDataReference { get; init; }
+
     /// <summary>
     /// Identification of the transaction.
     /// </summary>
     [IsoId("_jUNfk4dIEeuBS50MFjViNw")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentification20 TransactionIdentification { get; init; } 
-    
+    public required TransactionIdentification20 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Indicates the source of enhanced data.
     /// </summary>
@@ -43,17 +41,17 @@ public partial record Transaction148
     [DisplayName("Data Source")]
     [IsoXmlTag("DataSrc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? DataSource { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? DataSource { get; init; }
+
     /// <summary>
     /// Contains additional fees for the AddendumMessage.
     /// </summary>
     [IsoId("_jUNfl4dIEeuBS50MFjViNw")]
     [DisplayName("Additional Fee")]
     [IsoXmlTag("AddtlFee")]
-    public AdditionalFee2? AdditionalFee { get; init; } 
-    
+    public AdditionalFee2? AdditionalFee { get; init; }
+
     /// <summary>
     /// Transaction data related to programmes and services, content and format based on bilateral agreements.
     /// </summary>
@@ -61,18 +59,14 @@ public partial record Transaction148
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
     [IsoSimpleType(IsoSimpleType.Max1000Text)]
-    [StringLength(maximumLength: 1000 ,MinimumLength = 1)]
-    public IsoMax1000Text? TransactionDescription { get; init; } 
-    
+    [StringLength(maximumLength: 1000, MinimumLength = 1)]
+    public IsoMax1000Text? TransactionDescription { get; init; }
+
     /// <summary>
     /// Contains additional data.
     /// </summary>
     [IsoId("_jUNfm4dIEeuBS50MFjViNw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalData { get; init; }
 }

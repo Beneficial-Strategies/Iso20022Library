@@ -23,7 +23,7 @@ public enum TaxationBasis4Code
     [IsoId("_ZScZyNp-Ed-ak6NoX_4Aeg_752961378")]
     [Description(@"Charge/tax basis is a lump sum.")]
     Flat = TaxationBasisCode.Flat, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charges/tax basis is per unit of financial instrument.
     /// Encoded/decoded by serializers as &quot;PERU&quot;.
@@ -32,7 +32,7 @@ public enum TaxationBasis4Code
     [IsoId("_ZSljsNp-Ed-ak6NoX_4Aeg_752961403")]
     [Description(@"Charges/tax basis is per unit of financial instrument.")]
     PerUnit = TaxationBasisCode.PerUnit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge/Commission/tax basis is based on the gross amount.
     /// Encoded/decoded by serializers as &quot;GRAM&quot;.
@@ -41,7 +41,7 @@ public enum TaxationBasis4Code
     [IsoId("_ZSljsdp-Ed-ak6NoX_4Aeg_771431735")]
     [Description(@"Charge/Commission/tax basis is based on the gross amount.")]
     GrossAmount = TaxationBasisCode.GrossAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge/commission/tax basis is based on the net amount.
     /// Encoded/decoded by serializers as &quot;NEAM&quot;.
@@ -50,5 +50,4 @@ public enum TaxationBasis4Code
     [IsoId("_ZSljstp-Ed-ak6NoX_4Aeg_771431777")]
     [Description(@"Charge/commission/tax basis is based on the net amount.")]
     NetAmount = TaxationBasisCode.NetAmount, // same ordinal as derivation source for type conversions
-    
 }

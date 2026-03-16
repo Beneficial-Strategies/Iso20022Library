@@ -23,7 +23,7 @@ public enum ActionType10Code
     [IsoId("_MS5GAU0uEeea0Mdu1TOzDQ")]
     [Description(@"Activate device or service.")]
     Activate = ActionTypeCode.Activate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deactivate device or service.
     /// Encoded/decoded by serializers as &quot;DEAC&quot;.
@@ -32,7 +32,7 @@ public enum ActionType10Code
     [IsoId("_NWZxck0uEeea0Mdu1TOzDQ")]
     [Description(@"Deactivate device or service.")]
     Deactivate = ActionTypeCode.Deactivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message to display, print or log.
     /// Encoded/decoded by serializers as &quot;DISP&quot;.
@@ -41,7 +41,7 @@ public enum ActionType10Code
     [IsoId("_OQieck0uEeea0Mdu1TOzDQ")]
     [Description(@"Message to display, print or log.")]
     DisplayMessage = ActionTypeCode.DisplayMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update a data file.
     /// Encoded/decoded by serializers as &quot;FUPD&quot;.
@@ -50,7 +50,7 @@ public enum ActionType10Code
     [IsoId("_PDBEQk0uEeea0Mdu1TOzDQ")]
     [Description(@"Update a data file.")]
     FileUpdate = ActionTypeCode.FileUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Print a message.
     /// Encoded/decoded by serializers as &quot;PRNT&quot;.
@@ -59,7 +59,7 @@ public enum ActionType10Code
     [IsoId("_QG8mck0uEeea0Mdu1TOzDQ")]
     [Description(@"Print a message.")]
     PrintMessage = ActionTypeCode.PrintMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Send a message.
     /// Encoded/decoded by serializers as &quot;SNDM&quot;.
@@ -68,5 +68,4 @@ public enum ActionType10Code
     [IsoId("_QxFvok0uEeea0Mdu1TOzDQ")]
     [Description(@"Send a message.")]
     SendMessage = ActionTypeCode.SendMessage, // same ordinal as derivation source for type conversions
-    
 }

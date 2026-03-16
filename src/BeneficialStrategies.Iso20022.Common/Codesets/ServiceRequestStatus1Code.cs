@@ -23,7 +23,7 @@ public enum ServiceRequestStatus1Code
     [IsoId("_PZY4sfF6EemQ7oqCO5NTQw")]
     [Description(@"Service request is accepted.")]
     Accepted = ServiceRequestStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service request has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -32,5 +32,4 @@ public enum ServiceRequestStatus1Code
     [IsoId("_PtECofF6EemQ7oqCO5NTQw")]
     [Description(@"Service request has been rejected.")]
     Rejected = ServiceRequestStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

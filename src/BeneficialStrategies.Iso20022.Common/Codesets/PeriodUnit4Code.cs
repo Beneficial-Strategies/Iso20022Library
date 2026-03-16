@@ -113,5 +113,4 @@ public enum PeriodUnit4Code
     [IsoId("")]
     [Description(@"Counted in years.")]
     Years = PeriodUnitCode.Years, // same ordinal as derivation source for type conversions
-
 }

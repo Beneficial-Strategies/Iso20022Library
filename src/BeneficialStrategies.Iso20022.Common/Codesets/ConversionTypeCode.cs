@@ -23,7 +23,7 @@ public enum ConversionTypeCode
     [IsoId("_bCWRIdp-Ed-ak6NoX_4Aeg_1809241362")]
     [Description(@"This is a final conversion.")]
     Final,
-    
+
     /// <summary>
     /// This is an interim conversion.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,5 +32,4 @@ public enum ConversionTypeCode
     [IsoId("_bCWRItp-Ed-ak6NoX_4Aeg_1809241370")]
     [Description(@"This is an interim conversion.")]
     Interim,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,30 +14,28 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ISKowZ9ZEe-nbM0aSPcoiQ")]
 [DisplayName("ATM Service25")]
-public partial record ATMService25
+public record ATMService25
 {
-    #nullable enable
-
     /// <summary>
     /// ATM Service Code.
     /// </summary>
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
-    public IsoMax35Text? ATMServiceCode { get; init; } 
+    public IsoMax35Text? ATMServiceCode { get; init; }
 
     /// <summary>
     /// Service Reference.
     /// </summary>
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
-    public IsoMax35Text? ServiceReference { get; init; } 
+    public IsoMax35Text? ServiceReference { get; init; }
 
     /// <summary>
     /// Service Type.
     /// </summary>
     [DisplayName("Service Type")]
     [IsoXmlTag("SvcTp")]
-    public required ATMServiceType12Code ServiceType { get; init; } 
+    public required ATMServiceType12Code ServiceType { get; init; }
 
     /// <summary>
     /// Service Variant Identification.
@@ -45,8 +43,4 @@ public partial record ATMService25
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
     public ValueList<IsoMax35Text> ServiceVariantIdentification { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

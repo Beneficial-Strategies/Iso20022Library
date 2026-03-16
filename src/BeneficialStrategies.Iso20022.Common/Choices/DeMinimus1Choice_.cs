@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DeMinimus1Choice.DeMinimusApplicable))]
     [KnownType(typeof(DeMinimus1Choice.DeMinimusNotApplicable))]
-    [JsonDerivedType(typeof(DeMinimus1Choice.DeMinimusApplicable),nameof(DeMinimus1Choice.DeMinimusApplicable))]
-    [JsonDerivedType(typeof(DeMinimus1Choice.DeMinimusNotApplicable),nameof(DeMinimus1Choice.DeMinimusNotApplicable))]
+    [JsonDerivedType(
+        typeof(DeMinimus1Choice.DeMinimusApplicable),
+        nameof(DeMinimus1Choice.DeMinimusApplicable)
+    )]
+    [JsonDerivedType(
+        typeof(DeMinimus1Choice.DeMinimusNotApplicable),
+        nameof(DeMinimus1Choice.DeMinimusNotApplicable)
+    )]
     [IsoId("_8saXYAgpEeSUG-8hqXsVMQ")]
     [DisplayName("De Minimus 1 Choice")]
-    public abstract partial record DeMinimus1Choice_
-    {
-    }
+    public abstract record DeMinimus1Choice_ { }
 }

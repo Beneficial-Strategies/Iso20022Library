@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(VerificationReason1Choice.Code))]
     [KnownType(typeof(VerificationReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(VerificationReason1Choice.Code),nameof(VerificationReason1Choice.Code))]
-    [JsonDerivedType(typeof(VerificationReason1Choice.Proprietary),nameof(VerificationReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(VerificationReason1Choice.Code),
+        nameof(VerificationReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(VerificationReason1Choice.Proprietary),
+        nameof(VerificationReason1Choice.Proprietary)
+    )]
     [IsoId("_Qo3U1Np-Ed-ak6NoX_4Aeg_-449981895")]
     [DisplayName("Verification Reason 1 Choice")]
-    public abstract partial record VerificationReason1Choice_
-    {
-    }
+    public abstract record VerificationReason1Choice_ { }
 }

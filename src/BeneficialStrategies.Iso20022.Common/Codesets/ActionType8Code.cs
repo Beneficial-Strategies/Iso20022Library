@@ -23,7 +23,7 @@ public enum ActionType8Code
     [IsoId("_MHVkAUrCEeenp6hmNprBHg")]
     [Description(@"Approve the transaction.")]
     Approve = ActionTypeCode.Approve, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Block the card.
     /// Encoded/decoded by serializers as &quot;BLCK&quot;.
@@ -32,7 +32,7 @@ public enum ActionType8Code
     [IsoId("_M_48okrCEeenp6hmNprBHg")]
     [Description(@"Block the card.")]
     BlockCard = ActionTypeCode.BlockCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Capture the card.
     /// Encoded/decoded by serializers as &quot;CPTR&quot;.
@@ -41,7 +41,7 @@ public enum ActionType8Code
     [IsoId("_NkoockrCEeenp6hmNprBHg")]
     [Description(@"Capture the card.")]
     CaptureCard = ActionTypeCode.CaptureCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Decline the transaction.
     /// Encoded/decoded by serializers as &quot;DCLN&quot;.
@@ -50,7 +50,7 @@ public enum ActionType8Code
     [IsoId("_OFsHEkrCEeenp6hmNprBHg")]
     [Description(@"Decline the transaction.")]
     Decline = ActionTypeCode.Decline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional identification required (passport, ID card, etc.).
     /// Encoded/decoded by serializers as &quot;RQID&quot;.
@@ -59,7 +59,7 @@ public enum ActionType8Code
     [IsoId("_Orj0QkrCEeenp6hmNprBHg")]
     [Description(@"Additional identification required (passport, ID card, etc.).")]
     IdentificationRequired = ActionTypeCode.IdentificationRequired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No reason for declining the transaction.
     /// Encoded/decoded by serializers as &quot;NDCL&quot;.
@@ -68,7 +68,7 @@ public enum ActionType8Code
     [IsoId("_PjFSIkrCEeenp6hmNprBHg")]
     [Description(@"No reason for declining the transaction.")]
     NoReasonForDecline = ActionTypeCode.NoReasonForDecline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Referral has to be performed.
     /// Encoded/decoded by serializers as &quot;RFRL&quot;.
@@ -77,7 +77,7 @@ public enum ActionType8Code
     [IsoId("_QmCj8krCEeenp6hmNprBHg")]
     [Description(@"Referral has to be performed.")]
     Referral = ActionTypeCode.Referral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other action defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -86,7 +86,7 @@ public enum ActionType8Code
     [IsoId("_RLezUkrCEeenp6hmNprBHg")]
     [Description(@"Other action defined at national level.")]
     OtherNational = ActionTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other action defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -95,7 +95,7 @@ public enum ActionType8Code
     [IsoId("_RWsk0krCEeenp6hmNprBHg")]
     [Description(@"Other action defined at private level")]
     OtherPrivate = ActionTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Further authentication required (e.g. one-time password)
     /// Encoded/decoded by serializers as &quot;STUA&quot;.
@@ -104,5 +104,4 @@ public enum ActionType8Code
     [IsoId("_3eqrceChEee9RadpHmUgYw")]
     [Description(@"Further authentication required (e.g. one-time password)")]
     StepUpAuthentication = ActionTypeCode.StepUpAuthentication, // same ordinal as derivation source for type conversions
-    
 }

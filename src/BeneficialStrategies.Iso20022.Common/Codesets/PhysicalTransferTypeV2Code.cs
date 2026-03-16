@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_jiYPJYBAEeall68-KLgmUw")]
-[Description(@"Specifies whether the financial instrument is to be physically delivered or is a dematerilized transfer.")]
+[Description(
+    @"Specifies whether the financial instrument is to be physically delivered or is a dematerilized transfer."
+)]
 [Derivations(typeof(PhysicalTransferType4Code))]
 public enum PhysicalTransferTypeV2Code
 {
@@ -23,7 +25,7 @@ public enum PhysicalTransferTypeV2Code
     [IsoId("_jiYPKYBAEeall68-KLgmUw")]
     [Description(@"Physical transfer.")]
     Physical,
-    
+
     /// <summary>
     /// Dematerialised transfer.
     /// Encoded/decoded by serializers as &quot;DEMT&quot;.
@@ -32,7 +34,7 @@ public enum PhysicalTransferTypeV2Code
     [IsoId("_jiYPKIBAEeall68-KLgmUw")]
     [Description(@"Dematerialised transfer.")]
     Dematerialised,
-    
+
     /// <summary>
     /// Cash transfer.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -41,7 +43,7 @@ public enum PhysicalTransferTypeV2Code
     [IsoId("_jiYPJ4BAEeall68-KLgmUw")]
     [Description(@"Cash transfer.")]
     Cash,
-    
+
     /// <summary>
     /// Determined by a third party or optional for counterparty.
     /// Encoded/decoded by serializers as &quot;OPTL&quot;.
@@ -50,5 +52,4 @@ public enum PhysicalTransferTypeV2Code
     [IsoId("_jiYPJoBAEeall68-KLgmUw")]
     [Description(@"Determined by a third party or optional for counterparty.")]
     Optional,
-    
 }

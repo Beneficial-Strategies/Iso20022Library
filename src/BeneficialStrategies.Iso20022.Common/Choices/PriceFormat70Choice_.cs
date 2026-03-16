@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat70Choice.AmountPricePerFinancialInstrumentQuantity))]
     [KnownType(typeof(PriceFormat70Choice.AmountPricePerAmount))]
     [KnownType(typeof(PriceFormat70Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat70Choice.PercentagePrice),nameof(PriceFormat70Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat70Choice.AmountPrice),nameof(PriceFormat70Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat70Choice.NotSpecifiedPrice),nameof(PriceFormat70Choice.NotSpecifiedPrice))]
-    [JsonDerivedType(typeof(PriceFormat70Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat70Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat70Choice.AmountPricePerAmount),nameof(PriceFormat70Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat70Choice.IndexPoints),nameof(PriceFormat70Choice.IndexPoints))]
+    [JsonDerivedType(
+        typeof(PriceFormat70Choice.PercentagePrice),
+        nameof(PriceFormat70Choice.PercentagePrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat70Choice.AmountPrice),
+        nameof(PriceFormat70Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat70Choice.NotSpecifiedPrice),
+        nameof(PriceFormat70Choice.NotSpecifiedPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat70Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat70Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat70Choice.AmountPricePerAmount),
+        nameof(PriceFormat70Choice.AmountPricePerAmount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat70Choice.IndexPoints),
+        nameof(PriceFormat70Choice.IndexPoints)
+    )]
     [IsoId("_p4jBXTi7Eeydid5dcNPKvg")]
     [DisplayName("Price Format 70 Choice")]
-    public abstract partial record PriceFormat70Choice_
-    {
-    }
+    public abstract record PriceFormat70Choice_ { }
 }

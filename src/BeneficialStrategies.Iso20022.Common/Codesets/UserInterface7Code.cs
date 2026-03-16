@@ -23,7 +23,7 @@ public enum UserInterface7Code
     [IsoId("_cwZIEVBAEeedyPuM0kK2EQ")]
     [Description(@"Data dedicated to another interface maintained by the clearing agent.")]
     OtherClearingAgentInterface = UserInterfaceCode.OtherClearingAgentInterface, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data dedicated to a log maintained by the clearing agent.
     /// Encoded/decoded by serializers as &quot;CLRL&quot;.
@@ -32,7 +32,7 @@ public enum UserInterface7Code
     [IsoId("_dHTzQlBAEeedyPuM0kK2EQ")]
     [Description(@"Data dedicated to a log maintained by the clearing agent.")]
     ClearingAgentLog = UserInterfaceCode.ClearingAgentLog, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data dedicated to an application maintained by a clearing agent.
     /// Encoded/decoded by serializers as &quot;CLRA&quot;.
@@ -41,5 +41,4 @@ public enum UserInterface7Code
     [IsoId("_dRH2klBAEeedyPuM0kK2EQ")]
     [Description(@"Data dedicated to an application maintained by a clearing agent.")]
     ClearingAgentApplication = UserInterfaceCode.ClearingAgentApplication, // same ordinal as derivation source for type conversions
-    
 }

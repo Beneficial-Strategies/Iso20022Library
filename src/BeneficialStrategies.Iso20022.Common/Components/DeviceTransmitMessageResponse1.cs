@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_EFdOMN7JEeiwsev40qZGEQ")]
 [DisplayName("Device Transmit Message Response")]
-public partial record DeviceTransmitMessageResponse1
+public record DeviceTransmitMessageResponse1
 {
-    #nullable enable
-    
     /// <summary>
     /// Content of a transmitted message.
     /// </summary>
@@ -25,9 +23,5 @@ public partial record DeviceTransmitMessageResponse1
     [DisplayName("Received Message")]
     [IsoXmlTag("RcvdMsg")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? ReceivedMessage { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax100KBinary? ReceivedMessage { get; init; }
 }

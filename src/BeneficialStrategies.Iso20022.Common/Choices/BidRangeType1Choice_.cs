@@ -7,15 +7,16 @@ using System.Xml.Linq;
 namespace BeneficialStrategies.Iso20022.Choices
 {
     /// <summary>
-    /// Bid range type as a choice of a defined coded value or a proprietary value. 
+    /// Bid range type as a choice of a defined coded value or a proprietary value.
     /// </summary>
     [KnownType(typeof(BidRangeType1Choice.Code))]
     [KnownType(typeof(BidRangeType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(BidRangeType1Choice.Code),nameof(BidRangeType1Choice.Code))]
-    [JsonDerivedType(typeof(BidRangeType1Choice.Proprietary),nameof(BidRangeType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(BidRangeType1Choice.Code), nameof(BidRangeType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(BidRangeType1Choice.Proprietary),
+        nameof(BidRangeType1Choice.Proprietary)
+    )]
     [IsoId("_TIIuYO3NEeqc-LCjwLsUVg")]
     [DisplayName("Bid Range Type 1 Choice")]
-    public abstract partial record BidRangeType1Choice_
-    {
-    }
+    public abstract record BidRangeType1Choice_ { }
 }

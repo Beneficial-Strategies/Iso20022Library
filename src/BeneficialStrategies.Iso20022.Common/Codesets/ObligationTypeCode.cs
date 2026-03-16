@@ -23,7 +23,7 @@ public enum ObligationTypeCode
     [IsoId("_YZ95pdp-Ed-ak6NoX_4Aeg_2016902374")]
     [Description(@"Specifies that the obligation is related to a failed trade.")]
     Fails,
-    
+
     /// <summary>
     /// Specifies that the obligation is related to new a trade.
     /// Encoded/decoded by serializers as &quot;NEW1&quot;.
@@ -32,7 +32,7 @@ public enum ObligationTypeCode
     [IsoId("_YZ95ptp-Ed-ak6NoX_4Aeg_-692422985")]
     [Description(@"Specifies that the obligation is related to new a trade.")]
     New,
-    
+
     /// <summary>
     /// Specifies that the obligation is related to a corporate event.
     /// Encoded/decoded by serializers as &quot;COEV&quot;.
@@ -41,5 +41,4 @@ public enum ObligationTypeCode
     [IsoId("_YZ95p9p-Ed-ak6NoX_4Aeg_1882565158")]
     [Description(@"Specifies that the obligation is related to a corporate event.")]
     CorporateEvent,
-    
 }

@@ -11,8 +11,18 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aG5VhNp-Ed-ak6NoX_4Aeg_1157186363")]
-[Description(@"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number.")]
-[Derivations(typeof(PersonIdentificationType2Code),typeof(PersonIdentificationType6Code),typeof(PartyIdentificationType7Code),typeof(PersonIdentificationType7Code),typeof(PersonIdentificationType4Code),typeof(PersonIdentificationType1Code),typeof(PersonIdentificationType5Code))]
+[Description(
+    @"Specifies an alternative identification of an individual person, for example, national registration identification number, passport number."
+)]
+[Derivations(
+    typeof(PersonIdentificationType2Code),
+    typeof(PersonIdentificationType6Code),
+    typeof(PartyIdentificationType7Code),
+    typeof(PersonIdentificationType7Code),
+    typeof(PersonIdentificationType4Code),
+    typeof(PersonIdentificationType1Code),
+    typeof(PersonIdentificationType5Code)
+)]
 public enum PersonIdentificationTypeCode
 {
     /// <summary>
@@ -23,7 +33,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aG5Vhdp-Ed-ak6NoX_4Aeg_1218140653")]
     [Description(@"Number assigned by a passport authority to a passport.")]
     PassportNumber,
-    
+
     /// <summary>
     /// Account issued by the Central Provident Fund Board (Singapore).
     /// Encoded/decoded by serializers as &quot;CPFA&quot;.
@@ -32,7 +42,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aG5Vhtp-Ed-ak6NoX_4Aeg_1230147055")]
     [Description(@"Account issued by the Central Provident Fund Board (Singapore).")]
     CPFAccountNumber,
-    
+
     /// <summary>
     /// Supplementary retirement scheme account number.
     /// Encoded/decoded by serializers as &quot;SRSA&quot;.
@@ -41,16 +51,18 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aG5Vh9p-Ed-ak6NoX_4Aeg_1248616162")]
     [Description(@"Supplementary retirement scheme account number.")]
     SRSAccountNumber,
-    
+
     /// <summary>
     /// National registration identification number. In Singapore this is known as the NRIC.
     /// Encoded/decoded by serializers as &quot;NRIN&quot;.
     /// </summary>
     [EnumMember(Value = "NRIN")]
     [IsoId("_aG5ViNp-Ed-ak6NoX_4Aeg_1273549056")]
-    [Description(@"National registration identification number. In Singapore this is known as the NRIC.")]
+    [Description(
+        @"National registration identification number. In Singapore this is known as the NRIC."
+    )]
     NationalRegistrationIdentificationNumber,
-    
+
     /// <summary>
     /// Another type of identification type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,7 +71,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aHCfcNp-Ed-ak6NoX_4Aeg_1286479435")]
     [Description(@"Another type of identification type.")]
     Other,
-    
+
     /// <summary>
     /// Number assigned by a license authority to a driver&apos;s license.
     /// Encoded/decoded by serializers as &quot;DRLC&quot;.
@@ -68,7 +80,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aHCfcdp-Ed-ak6NoX_4Aeg_89548299")]
     [Description(@"Number assigned by a license authority to a driver's license.")]
     DriversLicenseNumber,
-    
+
     /// <summary>
     /// Number assigned by a social security agency.
     /// Encoded/decoded by serializers as &quot;SOCS&quot;.
@@ -77,7 +89,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aHCfctp-Ed-ak6NoX_4Aeg_89548317")]
     [Description(@"Number assigned by a social security agency.")]
     SocialSecurityNumber,
-    
+
     /// <summary>
     /// Number assigned by a government agency to identify foreign nationals.
     /// Encoded/decoded by serializers as &quot;AREG&quot;.
@@ -86,7 +98,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aHCfc9p-Ed-ak6NoX_4Aeg_89548334")]
     [Description(@"Number assigned by a government agency to identify foreign nationals.")]
     AlienRegistrationNumber,
-    
+
     /// <summary>
     /// Number assigned by a national authority to an identity card.
     /// Encoded/decoded by serializers as &quot;IDCD&quot;.
@@ -95,7 +107,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aHCfdNp-Ed-ak6NoX_4Aeg_95089905")]
     [Description(@"Number assigned by a national authority to an identity card.")]
     IdentityCardNumber,
-    
+
     /// <summary>
     /// Number assigned to an employer by a registration authority.
     /// Encoded/decoded by serializers as &quot;EMID&quot;.
@@ -104,7 +116,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_aHCfddp-Ed-ak6NoX_4Aeg_95089922")]
     [Description(@"Number assigned to an employer by a registration authority.")]
     EmployerIdentificationNumber,
-    
+
     /// <summary>
     /// Driver number, assigned by the fleet manager.
     /// Encoded/decoded by serializers as &quot;DRVR&quot;.
@@ -113,7 +125,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_TZESYAEcEeCQm6a_G2yO_w_883476316")]
     [Description(@"Driver number, assigned by the fleet manager.")]
     DriverNumber,
-    
+
     /// <summary>
     /// Employee number assigned by the company.
     /// Encoded/decoded by serializers as &quot;EEID&quot;.
@@ -122,7 +134,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_TZESYQEcEeCQm6a_G2yO_w_1815250358")]
     [Description(@"Employee number assigned by the company.")]
     EmployeeNumber,
-    
+
     /// <summary>
     /// Gun license number as assigned by a gun licensing authority.
     /// Encoded/decoded by serializers as &quot;GUNL&quot;.
@@ -131,7 +143,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_dhJyUFASEeKdE_ZuDLMHLA_1124149451")]
     [Description(@"Gun license number as assigned by a gun licensing authority.")]
     GunLicenseNumber,
-    
+
     /// <summary>
     /// Post office card number as assigned by a national post office.
     /// Encoded/decoded by serializers as &quot;POCD&quot;.
@@ -140,7 +152,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_dhTjUFASEeKdE_ZuDLMHLA_-2120692470")]
     [Description(@"Post office card number as assigned by a national post office.")]
     PostOfficeCardNumber,
-    
+
     /// <summary>
     /// Temporary tax processing number (used in the domestic adoption of a child).
     /// Encoded/decoded by serializers as &quot;ATIN&quot;.
@@ -149,7 +161,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_xpyHoGXEEeSrv8256XoCZg")]
     [Description(@"Temporary tax processing number (used in the domestic adoption of a child).")]
     AdoptionTaxpayerIdentificationNumber,
-    
+
     /// <summary>
     /// Tax processing number.
     /// Encoded/decoded by serializers as &quot;ITIN&quot;.
@@ -158,7 +170,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_x1FYsGXEEeSrv8256XoCZg")]
     [Description(@"Tax processing number.")]
     IndividualTaxpayerIdentificationNumber,
-    
+
     /// <summary>
     /// Generic tax identification number.
     /// Encoded/decoded by serializers as &quot;GTIN&quot;.
@@ -167,7 +179,7 @@ public enum PersonIdentificationTypeCode
     [IsoId("_x6ljwGXEEeSrv8256XoCZg")]
     [Description(@"Generic tax identification number.")]
     GenericTaxIdentificationNumber,
-    
+
     /// <summary>
     /// Global intermediary tax identification number.
     /// Encoded/decoded by serializers as &quot;GIIN&quot;.
@@ -176,23 +188,26 @@ public enum PersonIdentificationTypeCode
     [IsoId("_IyzkQCCnEeWJd9HF2tO7BA")]
     [Description(@"Global intermediary tax identification number.")]
     GlobalIntermediaryIdentificationNumber,
-    
+
     /// <summary>
     /// Number that identifies the type of investor registered at a securities and exchange commission.
     /// Encoded/decoded by serializers as &quot;NINV&quot;.
     /// </summary>
     [EnumMember(Value = "NINV")]
     [IsoId("_a3p-ECDZEeWCLu74WLgP4w")]
-    [Description(@"Number that identifies the type of investor registered at a securities and exchange commission.")]
+    [Description(
+        @"Number that identifies the type of investor registered at a securities and exchange commission."
+    )]
     NonResidentInvestor,
-    
+
     /// <summary>
     /// Number, typically assigned by a government to describe ownership, administrative and authoritative relations.
     /// Encoded/decoded by serializers as &quot;INCL&quot;.
     /// </summary>
     [EnumMember(Value = "INCL")]
     [IsoId("_kfymsCMuEeWw25nezi_B1g")]
-    [Description(@"Number, typically assigned by a government to describe ownership, administrative and authoritative relations.")]
+    [Description(
+        @"Number, typically assigned by a government to describe ownership, administrative and authoritative relations."
+    )]
     IndustryClassification,
-    
 }

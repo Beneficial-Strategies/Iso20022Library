@@ -23,7 +23,7 @@ public enum PartyNatureTypeCode
     [IsoId("_gkuAcM2IEeS6sY79p-9Zxw")]
     [Description(@"Issuer is a financial institution.")]
     FinancialInstitution,
-    
+
     /// <summary>
     /// Issuer is a non-financial institution.
     /// Encoded/decoded by serializers as &quot;NFIN&quot;.
@@ -32,7 +32,7 @@ public enum PartyNatureTypeCode
     [IsoId("_oiP3sM2IEeS6sY79p-9Zxw")]
     [Description(@"Issuer is a non-financial institution.")]
     NonFinancialInstitution,
-    
+
     /// <summary>
     /// Issuer is a central counterparty.
     /// Encoded/decoded by serializers as &quot;CCPS&quot;.
@@ -41,7 +41,7 @@ public enum PartyNatureTypeCode
     [IsoId("_X_ZnsB3dEeWTa7N6lo4ufA")]
     [Description(@"Issuer is a central counterparty.")]
     CentralCounterparty,
-    
+
     /// <summary>
     /// Other type of issuer.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,5 +50,4 @@ public enum PartyNatureTypeCode
     [IsoId("_bZM1EB3dEeWTa7N6lo4ufA")]
     [Description(@"Other type of issuer.")]
     Other,
-    
 }

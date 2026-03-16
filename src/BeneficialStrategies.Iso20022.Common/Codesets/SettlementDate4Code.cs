@@ -23,5 +23,4 @@ public enum SettlementDate4Code
     [IsoId("_ZLby1tp-Ed-ak6NoX_4Aeg_1853523100")]
     [Description(@"Settlement is to be done when the security is issued.")]
     WhenIssued = SettlementDateCode.WhenIssued, // same ordinal as derivation source for type conversions
-    
 }

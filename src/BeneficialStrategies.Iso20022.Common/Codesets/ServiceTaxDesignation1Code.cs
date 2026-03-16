@@ -23,7 +23,7 @@ public enum ServiceTaxDesignation1Code
     [IsoId("_6WNcs5qlEeGSON8vddiWzQ_476426734")]
     [Description(@"No taxes are due.")]
     Exempt = ServiceTaxDesignationCode.Exempt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is due but at zero percent and a zero charge.
     /// Encoded/decoded by serializers as &quot;ZERO&quot;.
@@ -32,7 +32,7 @@ public enum ServiceTaxDesignation1Code
     [IsoId("_6WNctJqlEeGSON8vddiWzQ_-303620587")]
     [Description(@"Tax is due but at zero percent and a zero charge.")]
     ZeroRate = ServiceTaxDesignationCode.ZeroRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// One or more taxes are due on this service.
     /// Encoded/decoded by serializers as &quot;TAXE&quot;.
@@ -41,5 +41,4 @@ public enum ServiceTaxDesignation1Code
     [IsoId("_6WNctZqlEeGSON8vddiWzQ_-314719364")]
     [Description(@"One or more taxes are due on this service.")]
     Taxable = ServiceTaxDesignationCode.Taxable, // same ordinal as derivation source for type conversions
-    
 }

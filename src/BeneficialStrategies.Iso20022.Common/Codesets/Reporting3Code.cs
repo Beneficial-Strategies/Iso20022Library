@@ -23,16 +23,18 @@ public enum Reporting3Code
     [IsoId("_7EMzAdB4EeihG9bKfarOOA")]
     [Description(@"Relates to a buy-in by the market following a delivery transaction failure.")]
     BuyIn = ReportingCode.BuyIn, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Report is deferred, for example, because the order was executed in partial fills.
     /// Encoded/decoded by serializers as &quot;DEFR&quot;.
     /// </summary>
     [EnumMember(Value = "DEFR")]
     [IsoId("_7Nt7YdB4EeihG9bKfarOOA")]
-    [Description(@"Report is deferred, for example, because the order was executed in partial fills.")]
+    [Description(
+        @"Report is deferred, for example, because the order was executed in partial fills."
+    )]
     DeferredReport = ReportingCode.DeferredReport, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade details are to be reported to a regulatory organisation.
     /// Encoded/decoded by serializers as &quot;REGU&quot;.
@@ -41,7 +43,7 @@ public enum Reporting3Code
     [IsoId("_7UkKQdB4EeihG9bKfarOOA")]
     [Description(@"Trade details are to be reported to a regulatory organisation.")]
     RegulatoryOrganisation = ReportingCode.RegulatoryOrganisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade details are to be reported to a stock exchange.
     /// Encoded/decoded by serializers as &quot;STEX&quot;.
@@ -50,5 +52,4 @@ public enum Reporting3Code
     [IsoId("_7a9GIdB4EeihG9bKfarOOA")]
     [Description(@"Trade details are to be reported to a stock exchange.")]
     StockExchange = ReportingCode.StockExchange, // same ordinal as derivation source for type conversions
-    
 }

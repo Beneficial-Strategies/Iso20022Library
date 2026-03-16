@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ConsentOrRejectionReason5Choice.Code))]
     [KnownType(typeof(ConsentOrRejectionReason5Choice.Proprietary))]
-    [JsonDerivedType(typeof(ConsentOrRejectionReason5Choice.Code),nameof(ConsentOrRejectionReason5Choice.Code))]
-    [JsonDerivedType(typeof(ConsentOrRejectionReason5Choice.Proprietary),nameof(ConsentOrRejectionReason5Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ConsentOrRejectionReason5Choice.Code),
+        nameof(ConsentOrRejectionReason5Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ConsentOrRejectionReason5Choice.Proprietary),
+        nameof(ConsentOrRejectionReason5Choice.Proprietary)
+    )]
     [IsoId("_Vl2wTZNSEeWGlc8L7oPDIg")]
     [DisplayName("Consent Or Rejection Reason 5 Choice")]
-    public abstract partial record ConsentOrRejectionReason5Choice_
-    {
-    }
+    public abstract record ConsentOrRejectionReason5Choice_ { }
 }

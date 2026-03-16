@@ -23,7 +23,7 @@ public enum TransactionChannel2Code
     [IsoId("_5TAXgRRFEeOKWo1NF21OVw")]
     [Description(@"Financial advisor.")]
     FinancialAdvisor = TransactionChannelCode.FinancialAdvisor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Home banking.
     /// Encoded/decoded by serializers as &quot;HOBA&quot;.
@@ -32,7 +32,7 @@ public enum TransactionChannel2Code
     [IsoId("_5fNAcRRFEeOKWo1NF21OVw")]
     [Description(@"Home banking.")]
     HomeBanking = TransactionChannelCode.HomeBanking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Office or branch.
     /// Encoded/decoded by serializers as &quot;BRAN&quot;.
@@ -41,5 +41,4 @@ public enum TransactionChannel2Code
     [IsoId("_7iH6cRRFEeOKWo1NF21OVw")]
     [Description(@"Office or branch.")]
     OfficeOrBranch = TransactionChannelCode.OfficeOrBranch, // same ordinal as derivation source for type conversions
-    
 }

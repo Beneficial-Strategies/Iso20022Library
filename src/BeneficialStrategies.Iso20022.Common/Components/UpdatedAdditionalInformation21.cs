@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GU0M0WwfEe63sZVIFPCkbw")]
 [DisplayName("Updated Additional Information21")]
-public partial record UpdatedAdditionalInformation21
+public record UpdatedAdditionalInformation21
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Information.
     /// </summary>
@@ -30,9 +28,5 @@ public partial record UpdatedAdditionalInformation21
     /// </summary>
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public required ISO2ALanguageCode Language { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ISO2ALanguageCode Language { get; init; }
 }

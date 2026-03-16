@@ -23,7 +23,7 @@ public enum TaxRateMarker1Code
     [IsoId("_z5l70Q2YEeSNWNtJlXOAhg")]
     [Description(@"Specifies the amount quoted less life assurance premium rate income tax.")]
     AmountQuotedLessLifeAssurance = TaxRateMarkerCode.AmountQuotedLessLifeAssurance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the amount quoted less standard rate income tax.
     /// Encoded/decoded by serializers as &quot;ALIT&quot;.
@@ -32,7 +32,7 @@ public enum TaxRateMarker1Code
     [IsoId("_z-DlEQ2YEeSNWNtJlXOAhg")]
     [Description(@"Specifies the amount quoted less standard rate income tax.")]
     AmountQuotedLessStandardRate = TaxRateMarkerCode.AmountQuotedLessStandardRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies an amount before the deduction of tax.
     /// Encoded/decoded by serializers as &quot;GRSS&quot;.
@@ -41,5 +41,4 @@ public enum TaxRateMarker1Code
     [IsoId("_0Cq_UQ2YEeSNWNtJlXOAhg")]
     [Description(@"Specifies an amount before the deduction of tax.")]
     GrossAmount = TaxRateMarkerCode.GrossAmount, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,5 +23,4 @@ public enum NoCriteriaCode
     [IsoId("_aNcpddp-Ed-ak6NoX_4Aeg_-365356859")]
     [Description(@"No criteria.")]
     NoCriteria,
-    
 }

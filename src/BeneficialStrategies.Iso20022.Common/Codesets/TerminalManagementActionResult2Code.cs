@@ -23,7 +23,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_wh7IcYr3EeSvuOJS0mmL0g")]
     [Description(@"Problem to connect while performing the action.")]
     ConnectionError = TerminalManagementActionResultCode.ConnectionError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data transferred has a wrong format.
     /// Encoded/decoded by serializers as &quot;FMTE&quot;.
@@ -32,7 +32,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_ws0w44r3EeSvuOJS0mmL0g")]
     [Description(@"Data transferred has a wrong format.")]
     FormatError = TerminalManagementActionResultCode.FormatError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hardware error.
     /// Encoded/decoded by serializers as &quot;HRDW&quot;.
@@ -41,7 +41,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_w1T-g4r3EeSvuOJS0mmL0g")]
     [Description(@"Hardware error.")]
     Hardware = TerminalManagementActionResultCode.Hardware, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Action is not supported.
     /// Encoded/decoded by serializers as &quot;NSUP&quot;.
@@ -50,7 +50,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_x7CQcor3EeSvuOJS0mmL0g")]
     [Description(@"Action is not supported.")]
     NotSupported = TerminalManagementActionResultCode.NotSupported, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security error.
     /// Encoded/decoded by serializers as &quot;SECR&quot;.
@@ -59,7 +59,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_yF5co4r3EeSvuOJS0mmL0g")]
     [Description(@"Security error.")]
     Security = TerminalManagementActionResultCode.Security, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Action was successfully performed.
     /// Encoded/decoded by serializers as &quot;SUCC&quot;.
@@ -68,7 +68,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_yNUTQYr3EeSvuOJS0mmL0g")]
     [Description(@"Action was successfully performed.")]
     Success = TerminalManagementActionResultCode.Success, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Data transferred has a wrong syntax.
     /// Encoded/decoded by serializers as &quot;SYNE&quot;.
@@ -77,7 +77,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_zAQME4r3EeSvuOJS0mmL0g")]
     [Description(@"Data transferred has a wrong syntax.")]
     SyntaxError = TerminalManagementActionResultCode.SyntaxError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Timeout expired during the data transfer.
     /// Encoded/decoded by serializers as &quot;TIMO&quot;.
@@ -86,7 +86,7 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_zG0HE4r3EeSvuOJS0mmL0g")]
     [Description(@"Timeout expired during the data transfer.")]
     Timeout = TerminalManagementActionResultCode.Timeout, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cryptographic key reference used for the data signature is not valid.
     /// Encoded/decoded by serializers as &quot;UKRF&quot;.
@@ -95,5 +95,4 @@ public enum TerminalManagementActionResult2Code
     [IsoId("_zbnSY4r3EeSvuOJS0mmL0g")]
     [Description(@"Cryptographic key reference used for the data signature is not valid.")]
     UnknownKeyReference = TerminalManagementActionResultCode.UnknownKeyReference, // same ordinal as derivation source for type conversions
-    
 }

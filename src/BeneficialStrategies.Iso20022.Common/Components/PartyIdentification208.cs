@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZiWFF_PnEeihCvvpsmGI2w")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification208
+public record PartyIdentification208
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of identification.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PartyIdentification208
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public required IsoMax4Text Type { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public required IsoMax4Text Type { get; init; }
+
     /// <summary>
     /// Other type of identification.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record PartyIdentification208
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
     /// Identification of the party.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record PartyIdentification208
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text Identification { get; init; }
+
     /// <summary>
     /// Entity in charge of assigning an identification to a party.
     /// </summary>
@@ -55,10 +53,6 @@ public partial record PartyIdentification208
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Assigner { get; init; }
 }

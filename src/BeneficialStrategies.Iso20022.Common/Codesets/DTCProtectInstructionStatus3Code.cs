@@ -23,7 +23,7 @@ public enum DTCProtectInstructionStatus3Code
     [IsoId("_DAg5Me2MEeiWtrflKsFqHg")]
     [Description(@"Instruction pending release or delete from approval function.")]
     PendingApproval = DTCInstructionStatusCode.PendingApproval, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Client instruction withdrawn for events with withdrawal privilege.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
@@ -32,5 +32,4 @@ public enum DTCProtectInstructionStatus3Code
     [IsoId("_DAg5M-2MEeiWtrflKsFqHg")]
     [Description(@"Client instruction withdrawn for events with withdrawal privilege.")]
     Withdrawn = DTCInstructionStatusCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
 }

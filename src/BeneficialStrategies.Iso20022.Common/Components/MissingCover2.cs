@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T9zQW9p-Ed-ak6NoX_4Aeg_-1690835638")]
 [DisplayName("Missing Cover")]
-public partial record MissingCover2
+public record MissingCover2
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether or not the claim is related to a missing cover.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record MissingCover2
     [DisplayName("Missing Cover Indicator")]
     [IsoXmlTag("MssngCoverInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MissingCoverIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator MissingCoverIndicator { get; init; }
+
     /// <summary>
     /// Set of elements provided to update incorrect settlement information for the cover related to the received payment instruction.
     /// </summary>
     [IsoId("_T99BUNp-Ed-ak6NoX_4Aeg_-1317732569")]
     [DisplayName("Cover Correction")]
     [IsoXmlTag("CoverCrrctn")]
-    public SettlementInformation15? CoverCorrection { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SettlementInformation15? CoverCorrection { get; init; }
 }

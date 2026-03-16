@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Uzce5dp-Ed-ak6NoX_4Aeg_-1152969325")]
 [DisplayName("Suspended Status Reason")]
-public partial record SuspendedStatusReason1
+public record SuspendedStatusReason1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reason for a suspended status in structured form.
     /// </summary>
@@ -27,7 +25,7 @@ public partial record SuspendedStatusReason1
     [MinLength(1)]
     [MaxLength(3)]
     public SimpleValueList<SuspendedStatusReason2Code> Structured { get; init; } = [];
-    
+
     /// <summary>
     /// Reason for a suspended status in free format text.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record SuspendedStatusReason1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? AdditionalInformation { get; init; }
 }

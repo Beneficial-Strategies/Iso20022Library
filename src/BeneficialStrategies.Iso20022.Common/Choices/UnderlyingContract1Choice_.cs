@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnderlyingContract1Choice.Loan))]
     [KnownType(typeof(UnderlyingContract1Choice.Trade))]
-    [JsonDerivedType(typeof(UnderlyingContract1Choice.Loan),nameof(UnderlyingContract1Choice.Loan))]
-    [JsonDerivedType(typeof(UnderlyingContract1Choice.Trade),nameof(UnderlyingContract1Choice.Trade))]
+    [JsonDerivedType(
+        typeof(UnderlyingContract1Choice.Loan),
+        nameof(UnderlyingContract1Choice.Loan)
+    )]
+    [JsonDerivedType(
+        typeof(UnderlyingContract1Choice.Trade),
+        nameof(UnderlyingContract1Choice.Trade)
+    )]
     [IsoId("_opBo8NLJEeSdq5yU2aaSNw")]
     [DisplayName("Underlying Contract 1 Choice")]
-    public abstract partial record UnderlyingContract1Choice_
-    {
-    }
+    public abstract record UnderlyingContract1Choice_ { }
 }

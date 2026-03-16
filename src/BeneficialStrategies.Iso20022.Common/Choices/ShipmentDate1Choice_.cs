@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ShipmentDate1Choice.ProposedShipmentDate))]
     [KnownType(typeof(ShipmentDate1Choice.ActualShipmentDate))]
-    [JsonDerivedType(typeof(ShipmentDate1Choice.ProposedShipmentDate),nameof(ShipmentDate1Choice.ProposedShipmentDate))]
-    [JsonDerivedType(typeof(ShipmentDate1Choice.ActualShipmentDate),nameof(ShipmentDate1Choice.ActualShipmentDate))]
+    [JsonDerivedType(
+        typeof(ShipmentDate1Choice.ProposedShipmentDate),
+        nameof(ShipmentDate1Choice.ProposedShipmentDate)
+    )]
+    [JsonDerivedType(
+        typeof(ShipmentDate1Choice.ActualShipmentDate),
+        nameof(ShipmentDate1Choice.ActualShipmentDate)
+    )]
     [IsoId("_qi4msDATEeOKib24wnHaFg")]
     [DisplayName("Shipment Date 1 Choice")]
-    public abstract partial record ShipmentDate1Choice_
-    {
-    }
+    public abstract record ShipmentDate1Choice_ { }
 }

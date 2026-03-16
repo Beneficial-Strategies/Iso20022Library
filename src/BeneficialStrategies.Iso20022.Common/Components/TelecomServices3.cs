@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_05CBYXTwEe6h-4AZRg9sVg")]
 [DisplayName("Telecom Services3")]
-public partial record TelecomServices3
+public record TelecomServices3
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -30,7 +28,7 @@ public partial record TelecomServices3
     /// </summary>
     [DisplayName("Billing End")]
     [IsoXmlTag("BllgEnd")]
-    public IsoISODate? BillingEnd { get; init; } 
+    public IsoISODate? BillingEnd { get; init; }
 
     /// <summary>
     /// Billing Event.
@@ -44,28 +42,28 @@ public partial record TelecomServices3
     /// </summary>
     [DisplayName("Billing Start")]
     [IsoXmlTag("BllgStart")]
-    public IsoISODate? BillingStart { get; init; } 
+    public IsoISODate? BillingStart { get; init; }
 
     /// <summary>
     /// Customer Account Number.
     /// </summary>
     [DisplayName("Customer Account Number")]
     [IsoXmlTag("CstmrAcctNb")]
-    public IsoMax35Text? CustomerAccountNumber { get; init; } 
+    public IsoMax35Text? CustomerAccountNumber { get; init; }
 
     /// <summary>
     /// Customer Name.
     /// </summary>
     [DisplayName("Customer Name")]
     [IsoXmlTag("CstmrNm")]
-    public IsoMax70Text? CustomerName { get; init; } 
+    public IsoMax70Text? CustomerName { get; init; }
 
     /// <summary>
     /// Customer Phone.
     /// </summary>
     [DisplayName("Customer Phone")]
     [IsoXmlTag("CstmrPhne")]
-    public IsoPhoneNumber? CustomerPhone { get; init; } 
+    public IsoPhoneNumber? CustomerPhone { get; init; }
 
     /// <summary>
     /// Line Item.
@@ -80,8 +78,4 @@ public partial record TelecomServices3
     [DisplayName("Total Tax")]
     [IsoXmlTag("TtlTax")]
     public ValueList<Tax41> TotalTax { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

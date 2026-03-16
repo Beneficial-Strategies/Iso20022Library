@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_el78sCE5EeuIZ4Hf6difAw")]
-[Description(@"Specifies the accepted credit settlement completed status code for the cross-element validation rules.")]
+[Description(
+    @"Specifies the accepted credit settlement completed status code for the cross-element validation rules."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleCreditSettlement1Code
 {
@@ -23,5 +25,4 @@ public enum ValidationRuleCreditSettlement1Code
     [IsoId("_yFd3gSE5EeuIZ4Hf6difAw")]
     [Description(@"AcceptedCreditSettlementCompleted")]
     AcceptedCreditSettlementCompleted = ValidationRuleCode.AcceptedCreditSettlementCompleted, // same ordinal as derivation source for type conversions
-    
 }

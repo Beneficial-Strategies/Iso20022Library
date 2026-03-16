@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NettingEligibility4Choice.Indicator))]
     [KnownType(typeof(NettingEligibility4Choice.Proprietary))]
-    [JsonDerivedType(typeof(NettingEligibility4Choice.Indicator),nameof(NettingEligibility4Choice.Indicator))]
-    [JsonDerivedType(typeof(NettingEligibility4Choice.Proprietary),nameof(NettingEligibility4Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(NettingEligibility4Choice.Indicator),
+        nameof(NettingEligibility4Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(NettingEligibility4Choice.Proprietary),
+        nameof(NettingEligibility4Choice.Proprietary)
+    )]
     [IsoId("_0h_JkTqIEeWVrPy0StzzSg")]
     [DisplayName("Netting Eligibility 4 Choice")]
-    public abstract partial record NettingEligibility4Choice_
-    {
-    }
+    public abstract record NettingEligibility4Choice_ { }
 }

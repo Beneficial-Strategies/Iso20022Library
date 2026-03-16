@@ -23,5 +23,4 @@ public enum AwaitingCancellationReasonCode
     [IsoId("__0Ti1NojEeC60axPepSq7g_-1396712883")]
     [Description(@"Cancellation has not been received yet.")]
     AwaitingCancellation,
-    
 }

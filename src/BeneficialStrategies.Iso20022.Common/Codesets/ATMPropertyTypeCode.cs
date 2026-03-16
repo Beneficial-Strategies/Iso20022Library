@@ -58,5 +58,4 @@ public enum ATMPropertyTypeCode
     [IsoId("_ATMPropertyTypeCode_String")]
     [Description(@"The property is encoded as a String.")]
     String,
-
 }

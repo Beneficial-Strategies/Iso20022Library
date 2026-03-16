@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TaxableIncomePerShareCalculatedFormat1Choice.Code))]
     [KnownType(typeof(TaxableIncomePerShareCalculatedFormat1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TaxableIncomePerShareCalculatedFormat1Choice.Code),nameof(TaxableIncomePerShareCalculatedFormat1Choice.Code))]
-    [JsonDerivedType(typeof(TaxableIncomePerShareCalculatedFormat1Choice.Proprietary),nameof(TaxableIncomePerShareCalculatedFormat1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TaxableIncomePerShareCalculatedFormat1Choice.Code),
+        nameof(TaxableIncomePerShareCalculatedFormat1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(TaxableIncomePerShareCalculatedFormat1Choice.Proprietary),
+        nameof(TaxableIncomePerShareCalculatedFormat1Choice.Proprietary)
+    )]
     [IsoId("_Q3K2ldp-Ed-ak6NoX_4Aeg_-1453152737")]
     [DisplayName("Taxable Income Per Share Calculated Format 1 Choice")]
-    public abstract partial record TaxableIncomePerShareCalculatedFormat1Choice_
-    {
-    }
+    public abstract record TaxableIncomePerShareCalculatedFormat1Choice_ { }
 }

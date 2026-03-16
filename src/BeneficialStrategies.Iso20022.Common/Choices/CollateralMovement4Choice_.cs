@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CollateralMovement4Choice.CollateralMovementDirection))]
     [KnownType(typeof(CollateralMovement4Choice.Return))]
-    [JsonDerivedType(typeof(CollateralMovement4Choice.CollateralMovementDirection),nameof(CollateralMovement4Choice.CollateralMovementDirection))]
-    [JsonDerivedType(typeof(CollateralMovement4Choice.Return),nameof(CollateralMovement4Choice.Return))]
+    [JsonDerivedType(
+        typeof(CollateralMovement4Choice.CollateralMovementDirection),
+        nameof(CollateralMovement4Choice.CollateralMovementDirection)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralMovement4Choice.Return),
+        nameof(CollateralMovement4Choice.Return)
+    )]
     [IsoId("_yGZ5JYFvEeWtPe6Crjmeug")]
     [DisplayName("Collateral Movement 4 Choice")]
-    public abstract partial record CollateralMovement4Choice_
-    {
-    }
+    public abstract record CollateralMovement4Choice_ { }
 }

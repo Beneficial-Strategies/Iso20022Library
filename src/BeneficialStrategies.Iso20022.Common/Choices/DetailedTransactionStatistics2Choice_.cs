@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DetailedTransactionStatistics2Choice.DataSetAction))]
     [KnownType(typeof(DetailedTransactionStatistics2Choice.DetailedStatistics))]
-    [JsonDerivedType(typeof(DetailedTransactionStatistics2Choice.DataSetAction),nameof(DetailedTransactionStatistics2Choice.DataSetAction))]
-    [JsonDerivedType(typeof(DetailedTransactionStatistics2Choice.DetailedStatistics),nameof(DetailedTransactionStatistics2Choice.DetailedStatistics))]
+    [JsonDerivedType(
+        typeof(DetailedTransactionStatistics2Choice.DataSetAction),
+        nameof(DetailedTransactionStatistics2Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(DetailedTransactionStatistics2Choice.DetailedStatistics),
+        nameof(DetailedTransactionStatistics2Choice.DetailedStatistics)
+    )]
     [IsoId("_hTXSB8K4EeuFNp8LZAnorg")]
     [DisplayName("Detailed Transaction Statistics 2 Choice")]
-    public abstract partial record DetailedTransactionStatistics2Choice_
-    {
-    }
+    public abstract record DetailedTransactionStatistics2Choice_ { }
 }

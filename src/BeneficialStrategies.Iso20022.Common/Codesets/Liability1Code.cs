@@ -23,7 +23,7 @@ public enum Liability1Code
     [IsoId("_Bm3FsSDNEeWPMvNwVtiMsA")]
     [Description(@"Investor is responsible.")]
     Investor = LiabilityCode.Investor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Broker is responsible.
     /// Encoded/decoded by serializers as &quot;BROK&quot;.
@@ -32,5 +32,4 @@ public enum Liability1Code
     [IsoId("_D6Zo4Ta2EeWxoIK_IhudJg")]
     [Description(@"Broker is responsible.")]
     Broker = LiabilityCode.Broker, // same ordinal as derivation source for type conversions
-    
 }

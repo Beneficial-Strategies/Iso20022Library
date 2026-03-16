@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-JlwMU4SEeORpcABTQJgwA")]
 [DisplayName("Card Payment Transaction Advice Response")]
-public partial record CardPaymentTransactionAdviceResponse4
+public record CardPaymentTransactionAdviceResponse4
 {
-    #nullable enable
-    
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record CardPaymentTransactionAdviceResponse4
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+
     /// <summary>
     /// Unique identification of the transaction by the POI (Point Of Interaction).
     /// </summary>
     [IsoId("_-UKogU4SEeORpcABTQJgwA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier1 TransactionIdentification { get; init; } 
-    
+    public required TransactionIdentifier1 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.
     /// </summary>
@@ -43,18 +41,14 @@ public partial record CardPaymentTransactionAdviceResponse4
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ReconciliationIdentification { get; init; }
+
     /// <summary>
     /// Result of a requested service.
     /// </summary>
     [IsoId("_-UKohU4SEeORpcABTQJgwA")]
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public required Response1Code Response { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required Response1Code Response { get; init; }
 }

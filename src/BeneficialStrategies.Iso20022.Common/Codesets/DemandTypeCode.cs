@@ -23,7 +23,7 @@ public enum DemandTypeCode
     [IsoId("_vHYM0HyVEeGWJuGCfvwOsQ")]
     [Description(@"Pay only.")]
     PayOnly,
-    
+
     /// <summary>
     /// Pay or extend.
     /// Encoded/decoded by serializers as &quot;PAEX&quot;.
@@ -32,5 +32,4 @@ public enum DemandTypeCode
     [IsoId("_qaP54HyWEeGWJuGCfvwOsQ")]
     [Description(@"Pay or extend.")]
     PayOrExtend,
-    
 }

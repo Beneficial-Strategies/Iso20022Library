@@ -11,8 +11,13 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("__esiMPPQEeS_qLctCs2aRQ")]
-[Description(@"Specifies the financial instrument reporting classification for both equity and non-equity.")]
-[Derivations(typeof(NonEquityInstrumentReportingClassification1Code),typeof(EquityInstrumentReportingClassification1Code))]
+[Description(
+    @"Specifies the financial instrument reporting classification for both equity and non-equity."
+)]
+[Derivations(
+    typeof(NonEquityInstrumentReportingClassification1Code),
+    typeof(EquityInstrumentReportingClassification1Code)
+)]
 public enum FinancialInstrumentReportingClassificationCode
 {
     /// <summary>
@@ -23,7 +28,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_DSY2QPPREeS_qLctCs2aRQ")]
     [Description(@"Contract is of type securitised derivatives.")]
     SecuritisedDerivative,
-    
+
     /// <summary>
     /// Contract is of type structured finance products (SFPs).
     /// Encoded/decoded by serializers as &quot;SFPS&quot;.
@@ -32,7 +37,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_HLvGYfPREeS_qLctCs2aRQ")]
     [Description(@"Contract is of type structured finance products (SFPs).")]
     StructuredFinanceProduct,
-    
+
     /// <summary>
     /// Contract is of type bonds.
     /// Encoded/decoded by serializers as &quot;BOND&quot;.
@@ -41,7 +46,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_IBJEYfPREeS_qLctCs2aRQ")]
     [Description(@"Contract is of type bonds.|")]
     Bond,
-    
+
     /// <summary>
     /// Contract is of type emission allowances.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -50,7 +55,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_IYM5gfPREeS_qLctCs2aRQ")]
     [Description(@"Contract is of type emission allowances.")]
     EmissionAllowance,
-    
+
     /// <summary>
     /// Contract is of type contract for difference (CFD).
     /// Encoded/decoded by serializers as &quot;CFDS&quot;.
@@ -59,7 +64,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_K1KEIfPREeS_qLctCs2aRQ")]
     [Description(@"Contract is of type contract for difference (CFD).|")]
     ContractForDifference,
-    
+
     /// <summary>
     /// Contract is of type derivative.
     /// Encoded/decoded by serializers as &quot;DERV&quot;.
@@ -68,7 +73,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_LLeSYfPREeS_qLctCs2aRQ")]
     [Description(@"Contract is of type derivative.|")]
     Derivative,
-    
+
     /// <summary>
     /// Contract is of type shares.
     /// Encoded/decoded by serializers as &quot;SHRS&quot;.
@@ -77,7 +82,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_cna1oAjqEeW36pGcc5RpFw")]
     [Description(@"Contract is of type shares.")]
     Share,
-    
+
     /// <summary>
     /// Contract is of type electronic traded funds.
     /// Encoded/decoded by serializers as &quot;ETFS&quot;.
@@ -86,7 +91,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_hr5cIAjqEeW36pGcc5RpFw")]
     [Description(@"Contract is of type electronic traded funds.")]
     ElectronicTradedFund,
-    
+
     /// <summary>
     /// Contract is of type depositary receipt.
     /// Encoded/decoded by serializers as &quot;DPRS&quot;.
@@ -95,7 +100,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_oxp94AjqEeW36pGcc5RpFw")]
     [Description(@"Contract is of type depositary receipt.")]
     DepositaryReceipt,
-    
+
     /// <summary>
     /// Contract is of type other equity-like financial instrument.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -104,7 +109,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_zYziwAjqEeW36pGcc5RpFw")]
     [Description(@"Contract is of type other equity-like financial instrument.")]
     Other,
-    
+
     /// <summary>
     /// Contract is of type certificates.
     /// Encoded/decoded by serializers as &quot;CRFT&quot;.
@@ -113,7 +118,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_zY9TwAjqEeW36pGcc5RpFw")]
     [Description(@"Contract is of type certificates.")]
     Certificate,
-    
+
     /// <summary>
     /// Contract is of type exchange traded note.
     /// Encoded/decoded by serializers as &quot;ETNS&quot;.
@@ -122,7 +127,7 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_2_VMYAnNEeW1sbwBDSZgiA")]
     [Description(@"Contract is of type exchange traded note.")]
     ExchangeTradedNote,
-    
+
     /// <summary>
     /// Contract is of type exchange traded commodities.
     /// Encoded/decoded by serializers as &quot;ETCS&quot;.
@@ -131,5 +136,4 @@ public enum FinancialInstrumentReportingClassificationCode
     [IsoId("_6zeMYAnNEeW1sbwBDSZgiA")]
     [Description(@"Contract is of type exchange traded commodities.")]
     ExchangeTradedCommodities,
-    
 }

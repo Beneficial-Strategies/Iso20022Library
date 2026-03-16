@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rKvJEdppEeearpaEPXv9UA")]
 [DisplayName("Mandate Related Information")]
-public partial record MandateRelatedInformation13
+public record MandateRelatedInformation13
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification, as assigned by the creditor, to unambiguously identify the mandate.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MandateRelatedInformation13
     [DisplayName("Mandate Identification")]
     [IsoXmlTag("MndtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MandateIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MandateIdentification { get; init; }
+
     /// <summary>
     /// Date on which the direct debit mandate has been signed by the debtor.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record MandateRelatedInformation13
     [DisplayName("Date Of Signature")]
     [IsoXmlTag("DtOfSgntr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfSignature { get; init; } 
-    
+    public IsoISODate? DateOfSignature { get; init; }
+
     /// <summary>
     /// Image of scanned signed mandate.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record MandateRelatedInformation13
     [DisplayName("Mandate Image")]
     [IsoXmlTag("MndtImg")]
     [IsoSimpleType(IsoSimpleType.Max2MBBinary)]
-    public IsoMax2MBBinary? MandateImage { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax2MBBinary? MandateImage { get; init; }
 }

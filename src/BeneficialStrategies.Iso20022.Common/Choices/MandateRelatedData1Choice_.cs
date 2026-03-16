@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MandateRelatedData1Choice.DirectDebitMandate))]
     [KnownType(typeof(MandateRelatedData1Choice.CreditTransferMandate))]
-    [JsonDerivedType(typeof(MandateRelatedData1Choice.DirectDebitMandate),nameof(MandateRelatedData1Choice.DirectDebitMandate))]
-    [JsonDerivedType(typeof(MandateRelatedData1Choice.CreditTransferMandate),nameof(MandateRelatedData1Choice.CreditTransferMandate))]
+    [JsonDerivedType(
+        typeof(MandateRelatedData1Choice.DirectDebitMandate),
+        nameof(MandateRelatedData1Choice.DirectDebitMandate)
+    )]
+    [JsonDerivedType(
+        typeof(MandateRelatedData1Choice.CreditTransferMandate),
+        nameof(MandateRelatedData1Choice.CreditTransferMandate)
+    )]
     [IsoId("_su3YJ8lxEem0vqvvoqYsqQ")]
     [DisplayName("Mandate Related Data 1 Choice")]
-    public abstract partial record MandateRelatedData1Choice_
-    {
-    }
+    public abstract record MandateRelatedData1Choice_ { }
 }

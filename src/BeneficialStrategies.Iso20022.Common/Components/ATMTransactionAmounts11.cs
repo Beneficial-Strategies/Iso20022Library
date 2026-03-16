@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LyqdcaDtEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction Amounts11")]
-public partial record ATMTransactionAmounts11
+public record ATMTransactionAmounts11
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Amount.
     /// </summary>
@@ -30,7 +28,7 @@ public partial record ATMTransactionAmounts11
     /// </summary>
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
+    public ActiveCurrencyCode? Currency { get; init; }
 
     /// <summary>
     /// Deposit Limits.
@@ -44,16 +42,12 @@ public partial record ATMTransactionAmounts11
     /// </summary>
     [DisplayName("Maximum Possible Amount")]
     [IsoXmlTag("MaxPssblAmt")]
-    public ImpliedCurrencyAndAmount? MaximumPossibleAmount { get; init; } 
+    public ImpliedCurrencyAndAmount? MaximumPossibleAmount { get; init; }
 
     /// <summary>
     /// Minimum Possible Amount.
     /// </summary>
     [DisplayName("Minimum Possible Amount")]
     [IsoXmlTag("MinPssblAmt")]
-    public ImpliedCurrencyAndAmount? MinimumPossibleAmount { get; init; } 
-
-    
-    #nullable disable
-    
+    public ImpliedCurrencyAndAmount? MinimumPossibleAmount { get; init; }
 }

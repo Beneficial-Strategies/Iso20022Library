@@ -23,7 +23,7 @@ public enum ReferredCode
     [IsoId("_ZaydcNp-Ed-ak6NoX_4Aeg_-1409726701")]
     [Description(@"The investor was referred to the fund by a placement agent.")]
     Referred,
-    
+
     /// <summary>
     /// The investor was not referred to the fund by a placement agent.
     /// Encoded/decoded by serializers as &quot;NRFR&quot;.
@@ -32,14 +32,15 @@ public enum ReferredCode
     [IsoId("_Zaydcdp-Ed-ak6NoX_4Aeg_-1401417523")]
     [Description(@"The investor was not referred to the fund by a placement agent.")]
     NotReferred,
-    
+
     /// <summary>
     /// It is not known whether the investor was referred to the fund by a placement agent.
     /// Encoded/decoded by serializers as &quot;UKNW&quot;.
     /// </summary>
     [EnumMember(Value = "UKNW")]
     [IsoId("_Zaydctp-Ed-ak6NoX_4Aeg_-1400492958")]
-    [Description(@"It is not known whether the investor was referred to the fund by a placement agent.")]
+    [Description(
+        @"It is not known whether the investor was referred to the fund by a placement agent."
+    )]
     NotKnown,
-    
 }

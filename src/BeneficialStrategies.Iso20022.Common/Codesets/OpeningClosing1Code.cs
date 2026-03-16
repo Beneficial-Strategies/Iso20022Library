@@ -23,7 +23,7 @@ public enum OpeningClosing1Code
     [IsoId("_aOytR9p-Ed-ak6NoX_4Aeg_1340458350")]
     [Description(@"Indicates that the trade is to close a position.")]
     ClosePosition = OpeningClosingCode.ClosePosition, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the trade is to open a position.
     /// Encoded/decoded by serializers as &quot;OPEP&quot;.
@@ -32,5 +32,4 @@ public enum OpeningClosing1Code
     [IsoId("_aOytSNp-Ed-ak6NoX_4Aeg_1926405376")]
     [Description(@"Indicates that the trade is to open a position.")]
     OpenPosition = OpeningClosingCode.OpenPosition, // same ordinal as derivation source for type conversions
-    
 }

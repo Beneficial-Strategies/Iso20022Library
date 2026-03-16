@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t5o4wVkyEeGeoaLUQk__nA_-981636366")]
 [DisplayName("Card Sequence Number Range")]
-public partial record CardSequenceNumberRange1
+public record CardSequenceNumberRange1
 {
-    #nullable enable
-    
     /// <summary>
     /// CardSequenceNumberRange1: FirstTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CardSequenceNumberRange1
     [DisplayName("First Transaction")]
     [IsoXmlTag("FrstTx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirstTransaction { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirstTransaction { get; init; }
+
     /// <summary>
     /// CardSequenceNumberRange1: LastTransactionSequenceNumberMessage element to be finalised once feedback from Card SEG has been received.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record CardSequenceNumberRange1
     [DisplayName("Last Transaction")]
     [IsoXmlTag("LastTx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? LastTransaction { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? LastTransaction { get; init; }
 }

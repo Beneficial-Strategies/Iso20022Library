@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FloatingRateIdentification8Choice.Code))]
     [KnownType(typeof(FloatingRateIdentification8Choice.Proprietary))]
-    [JsonDerivedType(typeof(FloatingRateIdentification8Choice.Code),nameof(FloatingRateIdentification8Choice.Code))]
-    [JsonDerivedType(typeof(FloatingRateIdentification8Choice.Proprietary),nameof(FloatingRateIdentification8Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FloatingRateIdentification8Choice.Code),
+        nameof(FloatingRateIdentification8Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FloatingRateIdentification8Choice.Proprietary),
+        nameof(FloatingRateIdentification8Choice.Proprietary)
+    )]
     [IsoId("_IrIB4TNoEe2UWZuK9pqFtg")]
     [DisplayName("Floating Rate Identification 8 Choice")]
-    public abstract partial record FloatingRateIdentification8Choice_
-    {
-    }
+    public abstract record FloatingRateIdentification8Choice_ { }
 }

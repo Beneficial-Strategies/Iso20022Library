@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZTe7kNp-Ed-ak6NoX_4Aeg_448071852")]
 [Description(@"Specifies the purpose of the report.")]
-[Derivations(typeof(ReportType2Code),typeof(ReportType1Code))]
+[Derivations(typeof(ReportType2Code), typeof(ReportType1Code))]
 public enum ReportTypeCode
 {
     /// <summary>
@@ -21,9 +21,11 @@ public enum ReportTypeCode
     /// </summary>
     [EnumMember(Value = "PREC")]
     [IsoId("_ZTe7kdp-Ed-ak6NoX_4Aeg_882128178")]
-    [Description(@"The report is precalculated. This type of report is sent when an amendment is proposed.")]
+    [Description(
+        @"The report is precalculated. This type of report is sent when an amendment is proposed."
+    )]
     Precalculated,
-    
+
     /// <summary>
     /// The report is calculated on the basis of a dataset matched with a baseline.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -32,7 +34,7 @@ public enum ReportTypeCode
     [IsoId("_ZTe7ktp-Ed-ak6NoX_4Aeg_919991130")]
     [Description(@"The report is calculated on the basis of a dataset matched with a baseline.")]
     Current,
-    
+
     /// <summary>
     /// The report contains a baseline submitted for the first time.
     /// Encoded/decoded by serializers as &quot;FWIS&quot;.
@@ -41,7 +43,7 @@ public enum ReportTypeCode
     [IsoId("_ZTe7k9p-Ed-ak6NoX_4Aeg_2058968655")]
     [Description(@"The report contains a baseline submitted for the first time.")]
     ForwardInitialSubmission,
-    
+
     /// <summary>
     /// The report contains a baseline that is resubmitted.
     /// Encoded/decoded by serializers as &quot;FWRE&quot;.
@@ -50,7 +52,7 @@ public enum ReportTypeCode
     [IsoId("_ZTe7lNp-Ed-ak6NoX_4Aeg_2058970671")]
     [Description(@"The report contains a baseline that is resubmitted.")]
     ForwardReSubmission,
-    
+
     /// <summary>
     /// The report contains a baseline that is amended.
     /// Encoded/decoded by serializers as &quot;FWAM&quot;.
@@ -59,5 +61,4 @@ public enum ReportTypeCode
     [IsoId("_ZTe7ldp-Ed-ak6NoX_4Aeg_2058971008")]
     [Description(@"The report contains a baseline that is amended.")]
     ForwardAmend,
-    
 }

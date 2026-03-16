@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k720LJMsEey8cNcx3imo5Q")]
 [DisplayName("Remittance1")]
-public partial record Remittance1
+public record Remittance1
 {
-    #nullable enable
-
     /// <summary>
     /// Related.
     /// </summary>
     [DisplayName("Related")]
     [IsoXmlTag("Rltd")]
-    public RemittanceLocation7? Related { get; init; } 
+    public RemittanceLocation7? Related { get; init; }
 
     /// <summary>
     /// Structured.
@@ -38,8 +36,4 @@ public partial record Remittance1
     [DisplayName("Unstructured")]
     [IsoXmlTag("Ustrd")]
     public ValueList<IsoMax140Text> Unstructured { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_67OOka4uEeWLdt0vLARX2Q")]
 [DisplayName("Detailed Amount")]
-public partial record DetailedAmount18
+public record DetailedAmount18
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount value.
     /// </summary>
     [IsoId("_7HvAka4uEeWLdt0vLARX2Q")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Currency of the amount.
     /// </summary>
     [IsoId("_7HvAk64uEeWLdt0vLARX2Q")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// True if amount charged to the source account.
     /// </summary>
@@ -41,8 +39,8 @@ public partial record DetailedAmount18
     [DisplayName("Charge Account To")]
     [IsoXmlTag("ChrgAcctTo")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ChargeAccountTo { get; init; } 
-    
+    public IsoTrueFalseIndicator? ChargeAccountTo { get; init; }
+
     /// <summary>
     /// Short description of the amount to display or print.
     /// </summary>
@@ -50,10 +48,6 @@ public partial record DetailedAmount18
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Label { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Label { get; init; }
 }

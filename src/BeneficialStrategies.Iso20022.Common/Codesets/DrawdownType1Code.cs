@@ -23,7 +23,7 @@ public enum DrawdownType1Code
     [IsoId("_uQaTgVNdEeijdq8ilaxyOA")]
     [Description(@"Drawdown type is capped.")]
     CappedIncomeDrawdown = DrawdownTypeCode.CappedIncomeDrawdown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Drawdown type is flexi-access.
     /// Encoded/decoded by serializers as &quot;FLEX&quot;.
@@ -32,5 +32,4 @@ public enum DrawdownType1Code
     [IsoId("_uVnjoVNdEeijdq8ilaxyOA")]
     [Description(@"Drawdown type is flexi-access.")]
     FlexibleAccessDrawdown = DrawdownTypeCode.FlexibleAccessDrawdown, // same ordinal as derivation source for type conversions
-    
 }

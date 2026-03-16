@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zQlJ8U2UEe2bQ-Ksk8mwQg")]
 [DisplayName("Detailed Report Statistics")]
-public partial record DetailedReportStatistics6
+public record DetailedReportStatistics6
 {
-    #nullable enable
-    
     /// <summary>
     /// Total number of reports sent or received.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DetailedReportStatistics6
     [DisplayName("Total Number Of Reports")]
     [IsoXmlTag("TtlNbOfRpts")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfReports { get; init; } 
-    
+    public required IsoMax15NumericText TotalNumberOfReports { get; init; }
+
     /// <summary>
     /// Total number of reports accepted.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record DetailedReportStatistics6
     [DisplayName("Total Number Of Reports Accepted")]
     [IsoXmlTag("TtlNbOfRptsAccptd")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfReportsAccepted { get; init; } 
-    
+    public required IsoMax15NumericText TotalNumberOfReportsAccepted { get; init; }
+
     /// <summary>
     /// Total number of reports rejected.
     /// </summary>
@@ -43,17 +41,13 @@ public partial record DetailedReportStatistics6
     [DisplayName("Total Number Of Reports Rejected")]
     [IsoXmlTag("TtlNbOfRptsRjctd")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText TotalNumberOfReportsRejected { get; init; } 
-    
+    public required IsoMax15NumericText TotalNumberOfReportsRejected { get; init; }
+
     /// <summary>
     /// Number of reports rejected per error code.
     /// </summary>
     [IsoId("_zRV-902UEe2bQ-Ksk8mwQg")]
     [DisplayName("Number Of Reports Rejected Per Error")]
     [IsoXmlTag("NbOfRptsRjctdPerErr")]
-    public NumberOfTransactionsPerValidationRule6? NumberOfReportsRejectedPerError { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NumberOfTransactionsPerValidationRule6? NumberOfReportsRejectedPerError { get; init; }
 }

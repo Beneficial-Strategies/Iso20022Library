@@ -23,5 +23,4 @@ public enum EnabledStatusReasonCode
     [IsoId("_Cny84GBhEeaR1OOiVxm3Gg")]
     [Description(@"Modification to the account data is in process.")]
     Modified,
-    
 }

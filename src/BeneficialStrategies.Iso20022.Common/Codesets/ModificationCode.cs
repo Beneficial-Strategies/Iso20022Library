@@ -23,7 +23,7 @@ public enum ModificationCode
     [IsoId("_m-gDEA4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is added.")]
     Addition,
-    
+
     /// <summary>
     /// Specifies that the item is deleted.
     /// Encoded/decoded by serializers as &quot;DELE&quot;.
@@ -32,7 +32,7 @@ public enum ModificationCode
     [IsoId("_sspRoA4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is deleted.")]
     Deletion,
-    
+
     /// <summary>
     /// Specifies that the item is modified.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -41,7 +41,7 @@ public enum ModificationCode
     [IsoId("_xaHGUA4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is modified.")]
     Modification,
-    
+
     /// <summary>
     /// Specifies that the item is not changed.
     /// Encoded/decoded by serializers as &quot;NOCH&quot;.
@@ -50,5 +50,4 @@ public enum ModificationCode
     [IsoId("_0_AwcA4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is not changed.")]
     NoChange,
-    
 }

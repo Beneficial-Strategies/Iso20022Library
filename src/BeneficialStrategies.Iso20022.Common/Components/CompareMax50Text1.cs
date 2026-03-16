@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K3ilUExZEeywvc16MwOPfw")]
 [DisplayName("Compare Max 50 Text")]
-public partial record CompareMax50Text1
+public record CompareMax50Text1
 {
-    #nullable enable
-    
     /// <summary>
     /// Information for the first side of the transaction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CompareMax50Text1
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? Value1 { get; init; } 
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? Value1 { get; init; }
+
     /// <summary>
     /// Information for the second side of the transaction.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record CompareMax50Text1
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? Value2 { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? Value2 { get; init; }
 }

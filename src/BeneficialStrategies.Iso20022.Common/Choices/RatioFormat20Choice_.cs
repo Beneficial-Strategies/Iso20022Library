@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RatioFormat20Choice.QuantityToQuantity))]
     [KnownType(typeof(RatioFormat20Choice.AmountToAmount))]
-    [JsonDerivedType(typeof(RatioFormat20Choice.QuantityToQuantity),nameof(RatioFormat20Choice.QuantityToQuantity))]
-    [JsonDerivedType(typeof(RatioFormat20Choice.AmountToAmount),nameof(RatioFormat20Choice.AmountToAmount))]
+    [JsonDerivedType(
+        typeof(RatioFormat20Choice.QuantityToQuantity),
+        nameof(RatioFormat20Choice.QuantityToQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(RatioFormat20Choice.AmountToAmount),
+        nameof(RatioFormat20Choice.AmountToAmount)
+    )]
     [IsoId("_DHUNIUGNEeWqy4niLuXETA")]
     [DisplayName("Ratio Format 20 Choice")]
-    public abstract partial record RatioFormat20Choice_
-    {
-    }
+    public abstract record RatioFormat20Choice_ { }
 }

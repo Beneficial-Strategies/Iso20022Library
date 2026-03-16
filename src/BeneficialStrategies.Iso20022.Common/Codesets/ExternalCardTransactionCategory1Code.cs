@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCardTransactionCategory1Code")]
-[Description(@"Specifies the category of card transaction in the format of character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the category of card transaction in the format of character string with a maximum length of 4 characters."
+)]
 [DerivedFrom(typeof(ExternalCardTransactionCategoryCode))]
-public enum ExternalCardTransactionCategory1Code
-{
-}
+public enum ExternalCardTransactionCategory1Code { }

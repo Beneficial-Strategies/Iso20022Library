@@ -23,7 +23,7 @@ public enum InstalmentPlan1Code
     [IsoId("_VzJcoTDhEeO9waS4ina8CA")]
     [Description(@"The payment is split in several instalments of equal amounts.")]
     EqualPayment = InstalmentPlanCode.EqualPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The payment is split in several instalments of different amounts.
     /// Encoded/decoded by serializers as &quot;NQPM&quot;.
@@ -32,7 +32,7 @@ public enum InstalmentPlan1Code
     [IsoId("_V4pnsTDhEeO9waS4ina8CA")]
     [Description(@"The payment is split in several instalments of different amounts.")]
     InequalPayment = InstalmentPlanCode.InequalPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The first instalment is deferred.
     /// Encoded/decoded by serializers as &quot;DFRI&quot;.
@@ -41,5 +41,4 @@ public enum InstalmentPlan1Code
     [IsoId("_31iVITGrEeOVuYdyXoFwuA")]
     [Description(@"The first instalment is deferred.")]
     DeferredInstalment = InstalmentPlanCode.DeferredInstalment, // same ordinal as derivation source for type conversions
-    
 }

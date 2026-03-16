@@ -23,7 +23,7 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_Kg6EMD5GEeyHI64WSlzTlg")]
     [Description(@"Pick up locally")]
     LocalPickUp,
-    
+
     /// <summary>
     /// Shipping to cardholder billing address
     /// Encoded/decoded by serializers as &quot;SCBA&quot;.
@@ -32,7 +32,7 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_C-OgcD5HEeyHI64WSlzTlg")]
     [Description(@"Shipping to cardholder billing address")]
     ShippingToCardholderBillingAddress,
-    
+
     /// <summary>
     /// Shipping to consumer specified shipping address
     /// Encoded/decoded by serializers as &quot;SCSA&quot;.
@@ -41,7 +41,7 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_vkZ6ID5IEeyHI64WSlzTlg")]
     [Description(@"Shipping to consumer specified shipping address")]
     ShippingToConsumerSpecifiedShippingAddress,
-    
+
     /// <summary>
     /// Other delivery channel defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_AlgDoD5JEeyHI64WSlzTlg")]
     [Description(@"Other delivery channel defined at national level.|")]
     OtherNational,
-    
+
     /// <summary>
     /// Other delivery channel defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_AtNOID5JEeyHI64WSlzTlg")]
     [Description(@"Other delivery channel defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// No delivery.
     /// Encoded/decoded by serializers as &quot;NDEL&quot;.
@@ -68,7 +68,7 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_A6LTID5JEeyHI64WSlzTlg")]
     [Description(@"No delivery.|")]
     NoDelivery,
-    
+
     /// <summary>
     /// Electronic delivery.
     /// Encoded/decoded by serializers as &quot;EDEL&quot;.
@@ -77,5 +77,4 @@ public enum GoodAndServiceDeliveryChannelCode
     [IsoId("_BnV7ID5JEeyHI64WSlzTlg")]
     [Description(@"Electronic delivery.")]
     ElectronicDelivery,
-    
 }

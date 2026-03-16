@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClearingPartyAndTime21Choice.Reason))]
     [KnownType(typeof(ClearingPartyAndTime21Choice.Details))]
-    [JsonDerivedType(typeof(ClearingPartyAndTime21Choice.Reason),nameof(ClearingPartyAndTime21Choice.Reason))]
-    [JsonDerivedType(typeof(ClearingPartyAndTime21Choice.Details),nameof(ClearingPartyAndTime21Choice.Details))]
+    [JsonDerivedType(
+        typeof(ClearingPartyAndTime21Choice.Reason),
+        nameof(ClearingPartyAndTime21Choice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(ClearingPartyAndTime21Choice.Details),
+        nameof(ClearingPartyAndTime21Choice.Details)
+    )]
     [IsoId("_9znFoQtuEe2eQ-C-GTDpFA")]
     [DisplayName("Clearing Party And Time 21 Choice")]
-    public abstract partial record ClearingPartyAndTime21Choice_
-    {
-    }
+    public abstract record ClearingPartyAndTime21Choice_ { }
 }

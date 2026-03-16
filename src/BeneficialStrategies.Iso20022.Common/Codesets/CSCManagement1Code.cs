@@ -23,7 +23,7 @@ public enum CSCManagement1Code
     [IsoId("_TS9qYgEcEeCQm6a_G2yO_w_-1905065506")]
     [Description(@"Card security code present.")]
     CSCPresent = CSCManagementCode.CSCPresent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card security code by-passed or not provided by the merchant.
     /// Encoded/decoded by serializers as &quot;BYPS&quot;.
@@ -32,7 +32,7 @@ public enum CSCManagement1Code
     [IsoId("_TS9qYwEcEeCQm6a_G2yO_w_-1032051106")]
     [Description(@"Card security code by-passed or not provided by the merchant.")]
     CSCByPass = CSCManagementCode.CSCByPass, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card security code unreadable.
     /// Encoded/decoded by serializers as &quot;UNRD&quot;.
@@ -41,7 +41,7 @@ public enum CSCManagement1Code
     [IsoId("_TS9qZAEcEeCQm6a_G2yO_w_905174067")]
     [Description(@"Card security code unreadable.")]
     CSCUnread = CSCManagementCode.CSCUnread, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No card security code imprint.
     /// Encoded/decoded by serializers as &quot;NCSC&quot;.
@@ -50,5 +50,4 @@ public enum CSCManagement1Code
     [IsoId("_TS9qZQEcEeCQm6a_G2yO_w_1419047201")]
     [Description(@"No card security code imprint.")]
     NoCSC = CSCManagementCode.NoCSC, // same ordinal as derivation source for type conversions
-    
 }

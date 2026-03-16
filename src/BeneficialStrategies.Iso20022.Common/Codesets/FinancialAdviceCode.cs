@@ -23,7 +23,7 @@ public enum FinancialAdviceCode
     [IsoId("_an-pVdp-Ed-ak6NoX_4Aeg_610878726")]
     [Description(@"Advice has been received from an independent financial advisor.")]
     Received,
-    
+
     /// <summary>
     /// Advice has not been received from an independent financial advisor.
     /// Encoded/decoded by serializers as &quot;NREC&quot;.
@@ -32,14 +32,15 @@ public enum FinancialAdviceCode
     [IsoId("_an-pVtp-Ed-ak6NoX_4Aeg_610878727")]
     [Description(@"Advice has not been received from an independent financial advisor.")]
     NotReceived,
-    
+
     /// <summary>
     /// It is not known whether or not advice has been received from an independent financial advisor.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
     /// </summary>
     [EnumMember(Value = "UKWN")]
     [IsoId("_an-pV9p-Ed-ak6NoX_4Aeg_610878743")]
-    [Description(@"It is not known whether or not advice has been received from an independent financial advisor.")]
+    [Description(
+        @"It is not known whether or not advice has been received from an independent financial advisor."
+    )]
     Unknown,
-    
 }

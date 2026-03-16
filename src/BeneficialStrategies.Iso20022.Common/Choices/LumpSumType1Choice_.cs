@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LumpSumType1Choice.Code))]
     [KnownType(typeof(LumpSumType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(LumpSumType1Choice.Code),nameof(LumpSumType1Choice.Code))]
-    [JsonDerivedType(typeof(LumpSumType1Choice.Proprietary),nameof(LumpSumType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(LumpSumType1Choice.Code), nameof(LumpSumType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(LumpSumType1Choice.Proprietary),
+        nameof(LumpSumType1Choice.Proprietary)
+    )]
     [IsoId("_AB4QYLKdEeiXL6Ccd-oU8g")]
     [DisplayName("Lump Sum Type 1 Choice")]
-    public abstract partial record LumpSumType1Choice_
-    {
-    }
+    public abstract record LumpSumType1Choice_ { }
 }

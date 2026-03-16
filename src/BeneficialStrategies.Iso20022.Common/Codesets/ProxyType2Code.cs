@@ -23,7 +23,7 @@ public enum ProxyType2Code
     [IsoId("_ZWd-KNp-Ed-ak6NoX_4Aeg_-885468111")]
     [Description(@"Chairman of the meeting is the proxy.")]
     Chairman = ProxyTypeCode.Chairman, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Any type of proxy is allowed.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,7 +32,7 @@ public enum ProxyType2Code
     [IsoId("_ZWnIENp-Ed-ak6NoX_4Aeg_-885468041")]
     [Description(@"Any type of proxy is allowed.")]
     Discretionary = ProxyTypeCode.Discretionary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Proxy can only be a security holder.
     /// Encoded/decoded by serializers as &quot;HLDR&quot;.
@@ -41,5 +41,4 @@ public enum ProxyType2Code
     [IsoId("_ZWnIEdp-Ed-ak6NoX_4Aeg_-1812267007")]
     [Description(@"Proxy can only be a security holder.")]
     SecurityHolder = ProxyTypeCode.SecurityHolder, // same ordinal as derivation source for type conversions
-    
 }

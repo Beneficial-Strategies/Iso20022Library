@@ -23,7 +23,7 @@ public enum MarketIdentification1Code
     [IsoId("_AoDUIcOcEeWiEtRBUJSIaA")]
     [Description(@"Market segment code.")]
     Segment = MarketIdentificationCode.Segment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Market operating code.
     /// Encoded/decoded by serializers as &quot;OPRT&quot;.
@@ -32,5 +32,4 @@ public enum MarketIdentification1Code
     [IsoId("_Aq3-ocOcEeWiEtRBUJSIaA")]
     [Description(@"Market operating code.")]
     Operating = MarketIdentificationCode.Operating, // same ordinal as derivation source for type conversions
-    
 }

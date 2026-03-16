@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JSd9kU7NEeyGi9JAv6wq7Q")]
 [DisplayName("Loyalty Account")]
-public partial record LoyaltyAccount3
+public record LoyaltyAccount3
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of Loyalty Account.
     /// </summary>
@@ -25,25 +23,25 @@ public partial record LoyaltyAccount3
     [DisplayName("Loyalty Identification")]
     [IsoXmlTag("LltyId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text LoyaltyIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text LoyaltyIdentification { get; init; }
+
     /// <summary>
     /// Standard or last entry mode to access the Loyalty account or card.
     /// </summary>
     [IsoId("_JY9AE07NEeyGi9JAv6wq7Q")]
     [DisplayName("Entry Mode")]
     [IsoXmlTag("NtryMd")]
-    public CardDataReading8Code? EntryMode { get; init; } 
-    
+    public CardDataReading8Code? EntryMode { get; init; }
+
     /// <summary>
     /// Type of identification for this Loyalty Account.
     /// </summary>
     [IsoId("_JY9AFU7NEeyGi9JAv6wq7Q")]
     [DisplayName("Identification Type")]
     [IsoXmlTag("IdTp")]
-    public CardIdentificationType1Code? IdentificationType { get; init; } 
-    
+    public CardIdentificationType1Code? IdentificationType { get; init; }
+
     /// <summary>
     /// Brand to which belong the account.
     /// </summary>
@@ -51,9 +49,9 @@ public partial record LoyaltyAccount3
     [DisplayName("Brand")]
     [IsoXmlTag("Brnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Brand { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Brand { get; init; }
+
     /// <summary>
     /// Provider of the Loyalty Account.
     /// </summary>
@@ -61,9 +59,9 @@ public partial record LoyaltyAccount3
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Provider { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Provider { get; init; }
+
     /// <summary>
     /// Owner name of an account.
     /// </summary>
@@ -71,34 +69,30 @@ public partial record LoyaltyAccount3
     [DisplayName("Owner Name")]
     [IsoXmlTag("OwnrNm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
-    [StringLength(maximumLength: 45 ,MinimumLength = 1)]
-    public IsoMax45Text? OwnerName { get; init; } 
-    
+    [StringLength(maximumLength: 45, MinimumLength = 1)]
+    public IsoMax45Text? OwnerName { get; init; }
+
     /// <summary>
     /// Unit of a Loyalty Account (Point or Currency).
     /// </summary>
     [IsoId("_JY9AHU7NEeyGi9JAv6wq7Q")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public AmountUnit1Code? Unit { get; init; } 
-    
+    public AmountUnit1Code? Unit { get; init; }
+
     /// <summary>
     /// Currency of a Loyalty Account if any.
     /// </summary>
     [IsoId("_JY9AH07NEeyGi9JAv6wq7Q")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Balance of a Loyalty Account.
     /// </summary>
     [IsoId("_JY9AIU7NEeyGi9JAv6wq7Q")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public ImpliedCurrencyAndAmount? Balance { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ImpliedCurrencyAndAmount? Balance { get; init; }
 }

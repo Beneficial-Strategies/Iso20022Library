@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MaturityRedemptionType3Choice.Code))]
     [KnownType(typeof(MaturityRedemptionType3Choice.Proprietary))]
-    [JsonDerivedType(typeof(MaturityRedemptionType3Choice.Code),nameof(MaturityRedemptionType3Choice.Code))]
-    [JsonDerivedType(typeof(MaturityRedemptionType3Choice.Proprietary),nameof(MaturityRedemptionType3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(MaturityRedemptionType3Choice.Code),
+        nameof(MaturityRedemptionType3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(MaturityRedemptionType3Choice.Proprietary),
+        nameof(MaturityRedemptionType3Choice.Proprietary)
+    )]
     [IsoId("_d8mHheLxEeWOD7aAy2fAcA")]
     [DisplayName("Maturity Redemption Type 3 Choice")]
-    public abstract partial record MaturityRedemptionType3Choice_
-    {
-    }
+    public abstract record MaturityRedemptionType3Choice_ { }
 }

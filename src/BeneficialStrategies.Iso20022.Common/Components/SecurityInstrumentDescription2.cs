@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S07jzNp-Ed-ak6NoX_4Aeg_1287302982")]
 [DisplayName("Security Instrument Description")]
-public partial record SecurityInstrumentDescription2
+public record SecurityInstrumentDescription2
 {
-    #nullable enable
-    
     /// <summary>
     /// Description of the security.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record SecurityInstrumentDescription2
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Description { get; init; }
+
     /// <summary>
     /// Classification type of the financial instrument, as per the ISO Classification of Financial Instrument (CFI) codification, eg, common share with voting rights, fully paid, or registered.
     /// </summary>
     [IsoId("_S1FUwdp-Ed-ak6NoX_4Aeg_1023322278")]
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
-    public SecurityClassificationType1Choice_? ClassificationType { get; init; } 
-    
+    public SecurityClassificationType1Choice_? ClassificationType { get; init; }
+
     /// <summary>
     /// Provides the place of listing using a market identifier code (MIC).
     /// </summary>
@@ -43,8 +41,8 @@ public partial record SecurityInstrumentDescription2
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
     [IsoSimpleType(IsoSimpleType.MICIdentifier)]
-    public IsoMICIdentifier? PlaceOfListing { get; init; } 
-    
+    public IsoMICIdentifier? PlaceOfListing { get; init; }
+
     /// <summary>
     /// Exercise date/time of a derivative contract.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record SecurityInstrumentDescription2
     [DisplayName("Exercise Date")]
     [IsoXmlTag("ExrcDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExerciseDate { get; init; } 
-    
+    public IsoISODate? ExerciseDate { get; init; }
+
     /// <summary>
     /// Maturity date/time at which an interest bearing security becomes due.
     /// </summary>
@@ -61,24 +59,24 @@ public partial record SecurityInstrumentDescription2
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDate { get; init; } 
-    
+    public IsoISODate? MaturityDate { get; init; }
+
     /// <summary>
     /// Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).
     /// </summary>
     [IsoId("_S1FUxdp-Ed-ak6NoX_4Aeg_1288223048")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public OptionTypeCode? OptionType { get; init; } 
-    
+    public OptionTypeCode? OptionType { get; init; }
+
     /// <summary>
     /// Predetermined price at which the holder will have to buy or sell the underlying instrument.
     /// </summary>
     [IsoId("_S1FUxtp-Ed-ak6NoX_4Aeg_1288223066")]
     [DisplayName("Strike Price")]
     [IsoXmlTag("StrkPric")]
-    public PriceRateOrAmountChoice_? StrikePrice { get; init; } 
-    
+    public PriceRateOrAmountChoice_? StrikePrice { get; init; }
+
     /// <summary>
     /// Indicates the ratio or multiplying factor used to convert one contract into a quantity. In the case of an equity or a bond, the price multiplier is 1.
     /// </summary>
@@ -86,9 +84,5 @@ public partial record SecurityInstrumentDescription2
     [DisplayName("Multiplier")]
     [IsoXmlTag("Mltplr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? Multiplier { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoBaseOneRate? Multiplier { get; init; }
 }

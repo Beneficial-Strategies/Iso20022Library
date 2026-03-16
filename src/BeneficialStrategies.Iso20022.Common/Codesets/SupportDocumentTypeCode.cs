@@ -23,7 +23,7 @@ public enum SupportDocumentTypeCode
     [IsoId("_5BhhANnSEeS--7IJLPC9lw")]
     [Description(@"Document is a supporting document.")]
     SupportingDocument,
-    
+
     /// <summary>
     /// Document is a letter from the bank.
     /// Encoded/decoded by serializers as &quot;LFBK&quot;.
@@ -32,7 +32,7 @@ public enum SupportDocumentTypeCode
     [IsoId("_-KQVYNnSEeS--7IJLPC9lw")]
     [Description(@"Document is a letter from the bank.")]
     LetterFromBank,
-    
+
     /// <summary>
     /// Document is a letter to the bank.
     /// Encoded/decoded by serializers as &quot;LTBK&quot;.
@@ -41,5 +41,4 @@ public enum SupportDocumentTypeCode
     [IsoId("_C6ACAdnTEeS--7IJLPC9lw")]
     [Description(@"Document is a letter to the bank.")]
     LetterToBank,
-    
 }

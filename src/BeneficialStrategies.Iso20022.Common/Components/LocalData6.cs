@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cqCrUcXKEeumGdYElfgmbw")]
 [DisplayName("Local Data")]
-public partial record LocalData6
+public record LocalData6
 {
-    #nullable enable
-    
     /// <summary>
     /// The language code conforming to ISO 639-1 that identifies the language in which the fields are expressed in this component.
     /// </summary>
     [IsoId("_cuxaUcXKEeumGdYElfgmbw")]
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public required ISOMax3ALanguageCode Language { get; init; } 
-    
+    public required ISOMax3ALanguageCode Language { get; init; }
+
     /// <summary>
     /// For cases where the card was not received, contains the local language equivalent of where the card was mailed to.
     /// </summary>
     [IsoId("_xj0VwcrcEeuQjLd-KKZrCg")]
     [DisplayName("Mailing Address")]
     [IsoXmlTag("MlngAdr")]
-    public Address3? MailingAddress { get; init; } 
-    
+    public Address3? MailingAddress { get; init; }
+
     /// <summary>
     /// For cases where the card was not received, contains the local language equivalent of the Unstructured mailing address where the card was mailed to.
     /// </summary>
@@ -41,9 +39,9 @@ public partial record LocalData6
     [DisplayName("Mailing Address Unstructured")]
     [IsoXmlTag("MlngAdrUstrd")]
     [IsoSimpleType(IsoSimpleType.Max512Text)]
-    [StringLength(maximumLength: 512 ,MinimumLength = 1)]
-    public IsoMax512Text? MailingAddressUnstructured { get; init; } 
-    
+    [StringLength(maximumLength: 512, MinimumLength = 1)]
+    public IsoMax512Text? MailingAddressUnstructured { get; init; }
+
     /// <summary>
     /// For cases where the card was not received, contains the local language equivalent of the postal code where the card was mailed from.
     /// </summary>
@@ -51,34 +49,30 @@ public partial record LocalData6
     [DisplayName("Mailed From Postal Code")]
     [IsoXmlTag("MldFrPstlCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MailedFromPostalCode { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MailedFromPostalCode { get; init; }
+
     /// <summary>
     /// Local language equivalent of the Cardholder name.
     /// </summary>
     [IsoId("_cuxaU8XKEeumGdYElfgmbw")]
     [DisplayName("Cardholder Name")]
     [IsoXmlTag("CrdhldrNm")]
-    public CardholderName2? CardholderName { get; init; } 
-    
+    public CardholderName2? CardholderName { get; init; }
+
     /// <summary>
     /// Additional information relevant for the settlement report.
     /// </summary>
     [IsoId("_6Mr10cooEeuuJ571wNLKkA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation22? AdditionalInformation { get; init; } 
-    
+    public AdditionalInformation22? AdditionalInformation { get; init; }
+
     /// <summary>
     /// Additional local language data
     /// </summary>
     [IsoId("_ojr9YMXLEeumGdYElfgmbw")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalData { get; init; }
 }

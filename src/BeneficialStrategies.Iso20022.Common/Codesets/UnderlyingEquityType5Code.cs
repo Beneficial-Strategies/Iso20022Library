@@ -23,7 +23,7 @@ public enum UnderlyingEquityType5Code
     [IsoId("_Q7CIIYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is of other type.")]
     Other = UnderlyingTypeV3Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is an exchange traded fund.
     /// Encoded/decoded by serializers as &quot;ETFS&quot;.
@@ -32,7 +32,7 @@ public enum UnderlyingEquityType5Code
     [IsoId("_RTu8AYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is an exchange traded fund.")]
     ExchangeTradedFund = UnderlyingTypeV3Code.ExchangeTradedFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a share.
     /// Encoded/decoded by serializers as &quot;SHRS&quot;.
@@ -41,7 +41,7 @@ public enum UnderlyingEquityType5Code
     [IsoId("_SPsN8YHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a share.")]
     Share = UnderlyingTypeV3Code.Share, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a stock dividend.
     /// Encoded/decoded by serializers as &quot;DVSE&quot;.
@@ -50,5 +50,4 @@ public enum UnderlyingEquityType5Code
     [IsoId("_Ta0kUYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a stock dividend.")]
     StockDividend = UnderlyingTypeV3Code.StockDividend, // same ordinal as derivation source for type conversions
-    
 }

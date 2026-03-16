@@ -23,7 +23,7 @@ public enum Modification1Code
     [IsoId("_7OFh0Q4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is not changed.")]
     NoChange = ModificationCode.NoChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the item is modified.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -32,7 +32,7 @@ public enum Modification1Code
     [IsoId("_7V-5kQ4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is modified.")]
     Modification = ModificationCode.Modification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the item is deleted.
     /// Encoded/decoded by serializers as &quot;DELE&quot;.
@@ -41,7 +41,7 @@ public enum Modification1Code
     [IsoId("_7eCCUQ4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is deleted.")]
     Deletion = ModificationCode.Deletion, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the item is added.
     /// Encoded/decoded by serializers as &quot;ADDD&quot;.
@@ -50,5 +50,4 @@ public enum Modification1Code
     [IsoId("_7gjx4Q4SEeKGXqvMN6jpiw")]
     [Description(@"Specifies that the item is added.")]
     Addition = ModificationCode.Addition, // same ordinal as derivation source for type conversions
-    
 }

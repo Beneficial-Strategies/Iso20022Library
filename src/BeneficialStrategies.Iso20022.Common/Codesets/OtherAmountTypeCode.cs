@@ -23,7 +23,7 @@ public enum OtherAmountTypeCode
     [IsoId("_r-7mIK53Eee6Q7mFsDuJBA")]
     [Description(@"Interest on the interest.")]
     SettlementInterest,
-    
+
     /// <summary>
     /// Interest that was pre-paid.
     /// Encoded/decoded by serializers as &quot;PINT&quot;.
@@ -32,5 +32,4 @@ public enum OtherAmountTypeCode
     [IsoId("_sD17UK53Eee6Q7mFsDuJBA")]
     [Description(@"Interest that was pre-paid.")]
     PrepaidInterest,
-    
 }

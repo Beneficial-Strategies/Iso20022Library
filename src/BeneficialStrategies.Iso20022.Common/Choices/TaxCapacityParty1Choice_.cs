@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TaxCapacityParty1Choice.Code))]
     [KnownType(typeof(TaxCapacityParty1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TaxCapacityParty1Choice.Code),nameof(TaxCapacityParty1Choice.Code))]
-    [JsonDerivedType(typeof(TaxCapacityParty1Choice.Proprietary),nameof(TaxCapacityParty1Choice.Proprietary))]
+    [JsonDerivedType(typeof(TaxCapacityParty1Choice.Code), nameof(TaxCapacityParty1Choice.Code))]
+    [JsonDerivedType(
+        typeof(TaxCapacityParty1Choice.Proprietary),
+        nameof(TaxCapacityParty1Choice.Proprietary)
+    )]
     [IsoId("_Qv3UtNp-Ed-ak6NoX_4Aeg_948349513")]
     [DisplayName("Tax Capacity Party 1 Choice")]
-    public abstract partial record TaxCapacityParty1Choice_
-    {
-    }
+    public abstract record TaxCapacityParty1Choice_ { }
 }

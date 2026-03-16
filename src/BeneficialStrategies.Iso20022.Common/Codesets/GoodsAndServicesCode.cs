@@ -23,7 +23,7 @@ public enum GoodsAndServicesCode
     [IsoId("_49iw0FHhEeeJoafcMZup1w")]
     [Description(@"Physical goods or services.")]
     Physical,
-    
+
     /// <summary>
     /// Electronic goods and services.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +32,7 @@ public enum GoodsAndServicesCode
     [IsoId("_9rGsIFHhEeeJoafcMZup1w")]
     [Description(@"Electronic goods and services.")]
     Electronic,
-    
+
     /// <summary>
     /// Electronic and physical goods and services.
     /// Encoded/decoded by serializers as &quot;ELPH&quot;.
@@ -41,5 +41,4 @@ public enum GoodsAndServicesCode
     [IsoId("_GAAhkFHiEeeJoafcMZup1w")]
     [Description(@"Electronic and physical goods and services.")]
     ElectronicAndPhysical,
-    
 }

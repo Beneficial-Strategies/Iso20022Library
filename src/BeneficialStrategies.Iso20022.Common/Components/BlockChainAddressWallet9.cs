@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HdKMsUfFEey6Is2iMqV8fg")]
 [DisplayName("Block Chain Address Wallet")]
-public partial record BlockChainAddressWallet9
+public record BlockChainAddressWallet9
 {
-    #nullable enable
-    
     /// <summary>
     /// Unambiguous identification for the account between the account owner and the account servicer.”.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record BlockChainAddressWallet9
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoRestrictedFINXMax140Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoRestrictedFINXMax140Text Identification { get; init; }
+
     /// <summary>
     /// Specifies the type of securities account.
     /// </summary>
     [IsoId("_HszLR0fFEey6Is2iMqV8fg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public PurposeCode8Choice_? Type { get; init; } 
-    
+    public PurposeCode8Choice_? Type { get; init; }
+
     /// <summary>
     /// Description of the account.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record BlockChainAddressWallet9
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax70Text? Name { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoRestrictedFINXMax70Text? Name { get; init; }
 }

@@ -23,7 +23,7 @@ public enum EntryTypeCode
     [IsoId("_B6l14HvJEemW9qhOy0scyg")]
     [Description(@"Financial Instruments  or amount are to be received in Party A's account.|")]
     Received,
-    
+
     /// <summary>
     /// Financial Instruments or amount are to be delivered out of Party A&apos;s account.
     /// Encoded/decoded by serializers as &quot;DELI&quot;.
@@ -32,5 +32,4 @@ public enum EntryTypeCode
     [IsoId("_QhB60HvJEemW9qhOy0scyg")]
     [Description(@"Financial Instruments or amount are to be delivered out of Party A's account.|")]
     Delivered,
-    
 }

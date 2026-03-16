@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReportingRequirement3Choice.NoReportingRequirement))]
     [KnownType(typeof(ReportingRequirement3Choice.ReportingRequirement))]
-    [JsonDerivedType(typeof(ReportingRequirement3Choice.NoReportingRequirement),nameof(ReportingRequirement3Choice.NoReportingRequirement))]
-    [JsonDerivedType(typeof(ReportingRequirement3Choice.ReportingRequirement),nameof(ReportingRequirement3Choice.ReportingRequirement))]
+    [JsonDerivedType(
+        typeof(ReportingRequirement3Choice.NoReportingRequirement),
+        nameof(ReportingRequirement3Choice.NoReportingRequirement)
+    )]
+    [JsonDerivedType(
+        typeof(ReportingRequirement3Choice.ReportingRequirement),
+        nameof(ReportingRequirement3Choice.ReportingRequirement)
+    )]
     [IsoId("_x7R5Ma-8Ee69JssYImngCA")]
     [DisplayName("Reporting Requirement3Choice")]
-    public abstract partial record ReportingRequirement3Choice_
-    {
-    }
+    public abstract record ReportingRequirement3Choice_ { }
 }

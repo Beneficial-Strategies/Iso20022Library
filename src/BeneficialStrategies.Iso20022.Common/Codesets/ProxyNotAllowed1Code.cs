@@ -23,5 +23,4 @@ public enum ProxyNotAllowed1Code
     [IsoId("_jssAccjCEem7mOT-LZ2mYQ")]
     [Description(@"Proxy not allowed.")]
     NotAllowed = ProxyNotAllowedCode.NotAllowed, // same ordinal as derivation source for type conversions
-    
 }

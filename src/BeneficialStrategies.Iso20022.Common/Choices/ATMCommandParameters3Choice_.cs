@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ATMCommandParameters3Choice.RequiredSecurityScheme))]
     [KnownType(typeof(ATMCommandParameters3Choice.SecurityDevice))]
     [KnownType(typeof(ATMCommandParameters3Choice.Key))]
-    [JsonDerivedType(typeof(ATMCommandParameters3Choice.ATMRequiredGlobalStatus),nameof(ATMCommandParameters3Choice.ATMRequiredGlobalStatus))]
-    [JsonDerivedType(typeof(ATMCommandParameters3Choice.ExpectedMessageFunction),nameof(ATMCommandParameters3Choice.ExpectedMessageFunction))]
-    [JsonDerivedType(typeof(ATMCommandParameters3Choice.RequiredConfigurationParameter),nameof(ATMCommandParameters3Choice.RequiredConfigurationParameter))]
-    [JsonDerivedType(typeof(ATMCommandParameters3Choice.RequiredSecurityScheme),nameof(ATMCommandParameters3Choice.RequiredSecurityScheme))]
-    [JsonDerivedType(typeof(ATMCommandParameters3Choice.SecurityDevice),nameof(ATMCommandParameters3Choice.SecurityDevice))]
-    [JsonDerivedType(typeof(ATMCommandParameters3Choice.Key),nameof(ATMCommandParameters3Choice.Key))]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters3Choice.ATMRequiredGlobalStatus),
+        nameof(ATMCommandParameters3Choice.ATMRequiredGlobalStatus)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters3Choice.ExpectedMessageFunction),
+        nameof(ATMCommandParameters3Choice.ExpectedMessageFunction)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters3Choice.RequiredConfigurationParameter),
+        nameof(ATMCommandParameters3Choice.RequiredConfigurationParameter)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters3Choice.RequiredSecurityScheme),
+        nameof(ATMCommandParameters3Choice.RequiredSecurityScheme)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters3Choice.SecurityDevice),
+        nameof(ATMCommandParameters3Choice.SecurityDevice)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters3Choice.Key),
+        nameof(ATMCommandParameters3Choice.Key)
+    )]
     [IsoId("_hk_BUV2aEeekzJIz1JxYSQ")]
     [DisplayName("ATM Command Parameters 3 Choice")]
-    public abstract partial record ATMCommandParameters3Choice_
-    {
-    }
+    public abstract record ATMCommandParameters3Choice_ { }
 }

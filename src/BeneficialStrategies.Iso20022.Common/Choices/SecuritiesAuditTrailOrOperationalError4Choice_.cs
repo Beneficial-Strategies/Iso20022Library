@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecuritiesAuditTrailOrOperationalError4Choice.SecuritiesAuditTrailReport))]
     [KnownType(typeof(SecuritiesAuditTrailOrOperationalError4Choice.OperationalError))]
-    [JsonDerivedType(typeof(SecuritiesAuditTrailOrOperationalError4Choice.SecuritiesAuditTrailReport),nameof(SecuritiesAuditTrailOrOperationalError4Choice.SecuritiesAuditTrailReport))]
-    [JsonDerivedType(typeof(SecuritiesAuditTrailOrOperationalError4Choice.OperationalError),nameof(SecuritiesAuditTrailOrOperationalError4Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(SecuritiesAuditTrailOrOperationalError4Choice.SecuritiesAuditTrailReport),
+        nameof(SecuritiesAuditTrailOrOperationalError4Choice.SecuritiesAuditTrailReport)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesAuditTrailOrOperationalError4Choice.OperationalError),
+        nameof(SecuritiesAuditTrailOrOperationalError4Choice.OperationalError)
+    )]
     [IsoId("_PrBR8ZJKEeuAlLVx8pyt3w")]
     [DisplayName("Securities Audit Trail Or Operational Error 4 Choice")]
-    public abstract partial record SecuritiesAuditTrailOrOperationalError4Choice_
-    {
-    }
+    public abstract record SecuritiesAuditTrailOrOperationalError4Choice_ { }
 }

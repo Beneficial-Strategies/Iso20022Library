@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Cleared16Choice.Cleared))]
     [KnownType(typeof(Cleared16Choice.NonCleared))]
-    [JsonDerivedType(typeof(Cleared16Choice.Cleared),nameof(Cleared16Choice.Cleared))]
-    [JsonDerivedType(typeof(Cleared16Choice.NonCleared),nameof(Cleared16Choice.NonCleared))]
+    [JsonDerivedType(typeof(Cleared16Choice.Cleared), nameof(Cleared16Choice.Cleared))]
+    [JsonDerivedType(typeof(Cleared16Choice.NonCleared), nameof(Cleared16Choice.NonCleared))]
     [IsoId("_gJAM4cg4Eeu4ecZgAYuz5w")]
     [DisplayName("Cleared 16 Choice")]
-    public abstract partial record Cleared16Choice_
-    {
-    }
+    public abstract record Cleared16Choice_ { }
 }

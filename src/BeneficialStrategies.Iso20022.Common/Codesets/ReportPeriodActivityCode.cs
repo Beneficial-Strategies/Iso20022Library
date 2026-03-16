@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_NgO2UZfnEeSfnc-VXAEapg")]
 [Description(@"Specifies the type of report activity for a specific period.")]
-[Derivations(typeof(ReportPeriodActivity1Code),typeof(ReportPeriodActivity3Code))]
+[Derivations(typeof(ReportPeriodActivity1Code), typeof(ReportPeriodActivity3Code))]
 public enum ReportPeriodActivityCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ReportPeriodActivityCode
     [IsoId("_hNRosJfnEeSfnc-VXAEapg")]
     [Description(@"No transaction has been identified during the period.")]
     NoTransaction,
-    
+
     /// <summary>
     /// No report has been received from reporting agent.
     /// Encoded/decoded by serializers as &quot;NORA&quot;.
@@ -32,7 +32,7 @@ public enum ReportPeriodActivityCode
     [IsoId("_ypfn8JfnEeSfnc-VXAEapg")]
     [Description(@"No report has been received from reporting agent.")]
     NoReportFromAgent,
-    
+
     /// <summary>
     /// Report has been received but was corrupted.
     /// Encoded/decoded by serializers as &quot;CRPT&quot;.
@@ -41,5 +41,4 @@ public enum ReportPeriodActivityCode
     [IsoId("_csIZkJyZEeSBzu9qI1PCRQ")]
     [Description(@"Report has been received but was corrupted.")]
     CorruptedReport,
-    
 }

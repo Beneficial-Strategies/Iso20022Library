@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_j41iduaEEemtTOaHuc_63w")]
-[Description(@"Standard code to specify the reason why the instruction/event has a pending status.")]
+[Description(
+    @"Standard code to specify the reason why the instruction/event has a pending status."
+)]
 [DerivedFrom(typeof(PendingFailingReasonCode))]
 public enum PendingReason19Code
 {
@@ -23,7 +25,7 @@ public enum PendingReason19Code
     [IsoId("_j41ie-aEEemtTOaHuc_63w")]
     [Description(@"Financial instruments have not been delivered by the issuer.")]
     NotDelivered = PendingFailingReasonCode.NotDelivered, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment has not been made by issuer.
     /// Encoded/decoded by serializers as &quot;NPAY&quot;.
@@ -32,7 +34,7 @@ public enum PendingReason19Code
     [IsoId("_j41ieeaEEemtTOaHuc_63w")]
     [Description(@"Payment has not been made by issuer.")]
     NoPayment = PendingFailingReasonCode.NoPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +43,7 @@ public enum PendingReason19Code
     [IsoId("_j41id-aEEemtTOaHuc_63w")]
     [Description(@"Other. See Narrative.")]
     Other = PendingFailingReasonCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax reclaim has been sent to the tax authorities.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -50,16 +52,18 @@ public enum PendingReason19Code
     [IsoId("_j41ieOaEEemtTOaHuc_63w")]
     [Description(@"Tax reclaim has been sent to the tax authorities.")]
     SentToTaxAuthorities = PendingFailingReasonCode.SentToTaxAuthorities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities.
     /// Encoded/decoded by serializers as &quot;VLDA&quot;.
     /// </summary>
     [EnumMember(Value = "VLDA")]
     [IsoId("_j41ieuaEEemtTOaHuc_63w")]
-    [Description(@"For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities.")]
+    [Description(
+        @"For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities."
+    )]
     ValidForTaxAuthorities = PendingFailingReasonCode.ValidForTaxAuthorities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Awaiting receipt of adequate certification.
     /// Encoded/decoded by serializers as &quot;MCER&quot;.
@@ -68,5 +72,4 @@ public enum PendingReason19Code
     [IsoId("_pqsMUeaEEemtTOaHuc_63w")]
     [Description(@"Awaiting receipt of adequate certification.")]
     MissingCertification = PendingFailingReasonCode.MissingCertification, // same ordinal as derivation source for type conversions
-    
 }

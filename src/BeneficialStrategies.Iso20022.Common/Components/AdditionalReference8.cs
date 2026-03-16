@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_udnPoTbsEead9bDRE_1DAQ")]
 [DisplayName("Additional Reference")]
-public partial record AdditionalReference8
+public record AdditionalReference8
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference issued by a party to identify an instruction, transaction or a message.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record AdditionalReference8
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Reference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Reference { get; init; }
+
     /// <summary>
     /// Issuer of the reference.
     /// </summary>
     [IsoId("_u5IuBTbsEead9bDRE_1DAQ")]
     [DisplayName("Reference Issuer")]
     [IsoXmlTag("RefIssr")]
-    public PartyIdentification113? ReferenceIssuer { get; init; } 
-    
+    public PartyIdentification113? ReferenceIssuer { get; init; }
+
     /// <summary>
     /// Name of the message.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record AdditionalReference8
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MessageName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MessageName { get; init; }
 }

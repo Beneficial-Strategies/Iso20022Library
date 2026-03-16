@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6PAcxTEyEe6g-ffJsqGiSA")]
 [DisplayName("Account Criteria8")]
-public partial record AccountCriteria8
+public record AccountCriteria8
 {
-    #nullable enable
-
     /// <summary>
     /// New Query Name.
     /// </summary>
     [DisplayName("New Query Name")]
     [IsoXmlTag("NewQryNm")]
-    public IsoMax35Text? NewQueryName { get; init; } 
+    public IsoMax35Text? NewQueryName { get; init; }
 
     /// <summary>
     /// Return Criteria.
     /// </summary>
     [DisplayName("Return Criteria")]
     [IsoXmlTag("RtrCrit")]
-    public CashAccountReturnCriteria5? ReturnCriteria { get; init; } 
+    public CashAccountReturnCriteria5? ReturnCriteria { get; init; }
 
     /// <summary>
     /// Search Criteria.
@@ -38,8 +36,4 @@ public partial record AccountCriteria8
     [DisplayName("Search Criteria")]
     [IsoXmlTag("SchCrit")]
     public ValueList<CashAccountSearchCriteria8> SearchCriteria { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("__qxMUtojEeC60axPepSq7g_-749392575")]
-[Description(@"Specifies the reason the transaction, transfer or settlement instruction is unaffirmed.")]
+[Description(
+    @"Specifies the reason the transaction, transfer or settlement instruction is unaffirmed."
+)]
 [DerivedFrom(typeof(UnaffirmedReasonCode))]
 public enum UnaffirmedReason1Code
 {
@@ -23,5 +25,4 @@ public enum UnaffirmedReason1Code
     [IsoId("__qxMU9ojEeC60axPepSq7g_2031513196")]
     [Description(@"Specifies the reason the counterparty has not affirmed.")]
     CounterpartyNotAffirmed = UnaffirmedReasonCode.CounterpartyNotAffirmed, // same ordinal as derivation source for type conversions
-    
 }

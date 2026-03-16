@@ -24,7 +24,7 @@ public enum MessageFunction18Code
     [IsoId("_cAK-IVAWEeedyPuM0kK2EQ")]
     [Description(@"Request to initiate the transfer of a batch (response expected).")]
     BatchRequest = MessageFunctionCode.BatchRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification to initiate the transfer of a batch (no response expected).
     /// Encoded/decoded by serializers as &quot;BTNF&quot;.
@@ -33,7 +33,7 @@ public enum MessageFunction18Code
     [IsoId("_cOdRwlAWEeedyPuM0kK2EQ")]
     [Description(@"Notification to initiate the transfer of a batch (no response expected).")]
     BatchNotification = MessageFunctionCode.BatchNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification to initiate the transfer of a collection (no response expected).
     /// Encoded/decoded by serializers as &quot;CLNF&quot;.
@@ -42,7 +42,7 @@ public enum MessageFunction18Code
     [IsoId("_cgdAslAWEeedyPuM0kK2EQ")]
     [Description(@"Notification to initiate the transfer of a collection (no response expected).")]
     CollectionNotification = MessageFunctionCode.CollectionNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to initiate the transfer of a collection (response expected).
     /// Encoded/decoded by serializers as &quot;CLRQ&quot;.
@@ -51,5 +51,4 @@ public enum MessageFunction18Code
     [IsoId("_cyAqwlAWEeedyPuM0kK2EQ")]
     [Description(@"Request to initiate the transfer of a collection (response expected).")]
     CollectionRequest = MessageFunctionCode.CollectionRequest, // same ordinal as derivation source for type conversions
-    
 }

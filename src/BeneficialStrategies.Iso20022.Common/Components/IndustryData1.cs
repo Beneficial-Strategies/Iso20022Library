@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3neKIOzXEeiojesOXOKoug")]
 [DisplayName("Industry Data")]
-public partial record IndustryData1
+public record IndustryData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the set of data to exchange.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record IndustryData1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025 ,MinimumLength = 1)]
-    public required IsoMax1025Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 1025, MinimumLength = 1)]
+    public required IsoMax1025Text Identification { get; init; }
+
     /// <summary>
     /// Data to exchange according to an external standard.
     /// </summary>
@@ -35,16 +33,16 @@ public partial record IndustryData1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? Value { get; init; } 
-    
+    public IsoMax100KBinary? Value { get; init; }
+
     /// <summary>
     /// Protection of the values to exchange.
     /// </summary>
     [IsoId("_BFBNMOzZEeiojesOXOKoug")]
     [DisplayName("Protected Value")]
     [IsoXmlTag("PrtctdVal")]
-    public ContentInformationType19? ProtectedValue { get; init; } 
-    
+    public ContentInformationType19? ProtectedValue { get; init; }
+
     /// <summary>
     /// Identification of the standard used to encode the values to exchange.
     /// </summary>
@@ -52,10 +50,6 @@ public partial record IndustryData1
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025 ,MinimumLength = 1)]
-    public IsoMax1025Text? Type { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 1025, MinimumLength = 1)]
+    public IsoMax1025Text? Type { get; init; }
 }

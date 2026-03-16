@@ -23,7 +23,7 @@ public enum CashAssetType1Code
     [IsoId("_z92S0UyLEeiepssxrmRw1A")]
     [Description(@"Cash is cash in the holding not yet invested.")]
     CashInHolding = CashAssetTypeCode.CashInHolding, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash is attributed to a cash investment.
     /// Encoded/decoded by serializers as &quot;CSH1&quot;.
@@ -32,5 +32,4 @@ public enum CashAssetType1Code
     [IsoId("_0EGEwUyLEeiepssxrmRw1A")]
     [Description(@"Cash is attributed to a cash investment.")]
     CashInvestment = CashAssetTypeCode.CashInvestment, // same ordinal as derivation source for type conversions
-    
 }

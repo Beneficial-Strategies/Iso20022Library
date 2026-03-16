@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KEpmwXJ4Ee299ZbWCkdR_w")]
 [DisplayName("Acceptor Diagnostic Response")]
-public partial record AcceptorDiagnosticResponse9
+public record AcceptorDiagnosticResponse9
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the transaction.
     /// </summary>
     [IsoId("_KK-4QXJ4Ee299ZbWCkdR_w")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment79 Environment { get; init; } 
-    
+    public required CardPaymentEnvironment79 Environment { get; init; }
+
     /// <summary>
     /// Instructions for contacting the terminal management host.
     /// </summary>
     [IsoId("_KK-4Q3J4Ee299ZbWCkdR_w")]
     [DisplayName("TMS Trigger")]
     [IsoXmlTag("TMSTrggr")]
-    public TMSTrigger1? TMSTrigger { get; init; } 
-    
+    public TMSTrigger1? TMSTrigger { get; init; }
+
     /// <summary>
     /// Indicates if the acquirer is available.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record AcceptorDiagnosticResponse9
     [DisplayName("Acquirer Available")]
     [IsoXmlTag("AcqrrAvlbl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? AcquirerAvailable { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? AcquirerAvailable { get; init; }
 }

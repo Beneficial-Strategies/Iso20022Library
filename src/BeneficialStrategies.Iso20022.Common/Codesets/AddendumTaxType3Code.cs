@@ -39,7 +39,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "BPTX")]
     [IsoId("_AddendumTaxType3Code_BusinessPrivilegeTax")]
-    [Description(@"Tax imposed on non-American Indian businesses for the privilege of conducting business on an American Indian Reservation")]
+    [Description(
+        @"Tax imposed on non-American Indian businesses for the privilege of conducting business on an American Indian Reservation"
+    )]
     BusinessPrivilegeTax = AddendumTaxTypeCode.BusinessPrivilegeTax,
 
     /// <summary>
@@ -57,7 +59,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "COAX")]
     [IsoId("_AddendumTaxType3Code_ConsumptionTax")]
-    [Description(@"Tax that is levied on goods and services purchased by customers, and is added to the retail price.")]
+    [Description(
+        @"Tax that is levied on goods and services purchased by customers, and is added to the retail price."
+    )]
     ConsumptionTax = AddendumTaxTypeCode.ConsumptionTax,
 
     /// <summary>
@@ -66,7 +70,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "CORT")]
     [IsoId("_AddendumTaxType3Code_CountyRentalTax")]
-    [Description(@"Levied by a county government against the periodic fee paid by a customer in return for the right to use the property of another party.")]
+    [Description(
+        @"Levied by a county government against the periodic fee paid by a customer in return for the right to use the property of another party."
+    )]
     CountyRentalTax = AddendumTaxTypeCode.CountyRentalTax,
 
     /// <summary>
@@ -102,7 +108,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "CRTX")]
     [IsoId("_AddendumTaxType3Code_CityRentalTax")]
-    [Description(@"Levied by a city government against the periodic fee paid by a customer in return for the right to use the property of another party.")]
+    [Description(
+        @"Levied by a city government against the periodic fee paid by a customer in return for the right to use the property of another party."
+    )]
     CityRentalTax = AddendumTaxTypeCode.CityRentalTax,
 
     /// <summary>
@@ -156,7 +164,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "DUTY")]
     [IsoId("_AddendumTaxType3Code_Duty")]
-    [Description(@"A tax levied on goods that typically though not exclusively transit across a geographic border.")]
+    [Description(
+        @"A tax levied on goods that typically though not exclusively transit across a geographic border."
+    )]
     Duty = AddendumTaxTypeCode.Duty,
 
     /// <summary>
@@ -165,7 +175,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EMET")]
     [IsoId("_AddendumTaxType3Code_EmergencyAssistanceExciseTax")]
-    [Description(@"Usage tax levied to recover the cost of telephone emergency assistance service (for example, 112, 911, 999).")]
+    [Description(
+        @"Usage tax levied to recover the cost of telephone emergency assistance service (for example, 112, 911, 999)."
+    )]
     EmergencyAssistanceExciseTax = AddendumTaxTypeCode.EmergencyAssistanceExciseTax,
 
     /// <summary>
@@ -174,7 +186,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EMIT")]
     [IsoId("_AddendumTaxType3Code_EmergencyAssistanceCityTax")]
-    [Description(@"Tax levied by a city to recover the cost of providing telephone emergency assistance service (for example, 112, 911, 999).")]
+    [Description(
+        @"Tax levied by a city to recover the cost of providing telephone emergency assistance service (for example, 112, 911, 999)."
+    )]
     EmergencyAssistanceCityTax = AddendumTaxTypeCode.EmergencyAssistanceCityTax,
 
     /// <summary>
@@ -183,7 +197,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EMRT")]
     [IsoId("_AddendumTaxType3Code_EmergencyAssistanceTax")]
-    [Description(@"Tax levied to recover the cost of providing telephone emergency assistance service (for example,112, 911, 999).")]
+    [Description(
+        @"Tax levied to recover the cost of providing telephone emergency assistance service (for example,112, 911, 999)."
+    )]
     EmergencyAssistanceTax = AddendumTaxTypeCode.EmergencyAssistanceTax,
 
     /// <summary>
@@ -192,7 +208,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EMST")]
     [IsoId("_AddendumTaxType3Code_EmergencyAssistanceStateTax")]
-    [Description(@"Tax levied by a state to recover the cost of providing telephone emergency assistance service (for example, 112, 911, 999).")]
+    [Description(
+        @"Tax levied by a state to recover the cost of providing telephone emergency assistance service (for example, 112, 911, 999)."
+    )]
     EmergencyAssistanceStateTax = AddendumTaxTypeCode.EmergencyAssistanceStateTax,
 
     /// <summary>
@@ -201,7 +219,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EMUT")]
     [IsoId("_AddendumTaxType3Code_EmergencyAssistanceCountyTax")]
-    [Description(@"Tax levied by a county to recover the cost of providing telephone emergency assistance service (for example, 112, 911, 999).")]
+    [Description(
+        @"Tax levied by a county to recover the cost of providing telephone emergency assistance service (for example, 112, 911, 999)."
+    )]
     EmergencyAssistanceCountyTax = AddendumTaxTypeCode.EmergencyAssistanceCountyTax,
 
     /// <summary>
@@ -219,7 +239,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "ENVT")]
     [IsoId("_AddendumTaxType3Code_EnvironmentalTax")]
-    [Description(@"Tax levied on activities which are considered to have negative impacts on an environment.")]
+    [Description(
+        @"Tax levied on activities which are considered to have negative impacts on an environment."
+    )]
     EnvironmentalTax = AddendumTaxTypeCode.EnvironmentalTax,
 
     /// <summary>
@@ -237,7 +259,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EQUL")]
     [IsoId("_AddendumTaxType3Code_Equalisation")]
-    [Description(@"Part of an investor’s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.")]
+    [Description(
+        @"Part of an investor’s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year."
+    )]
     Equalisation = AddendumTaxTypeCode.Equalisation,
 
     /// <summary>
@@ -246,8 +270,11 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "ESET")]
     [IsoId("_AddendumTaxType3Code_EnhancedEmergencyAssistanceStateExciseTax")]
-    [Description(@"Tax levied by a state to recover the cost of providing enhanced telephone emergency assistance services (for example, 112, 911, 999) such as automatic call identification.")]
-    EnhancedEmergencyAssistanceStateExciseTax = AddendumTaxTypeCode.EnhancedEmergencyAssistanceStateExciseTax,
+    [Description(
+        @"Tax levied by a state to recover the cost of providing enhanced telephone emergency assistance services (for example, 112, 911, 999) such as automatic call identification."
+    )]
+    EnhancedEmergencyAssistanceStateExciseTax =
+        AddendumTaxTypeCode.EnhancedEmergencyAssistanceStateExciseTax,
 
     /// <summary>
     /// Tax withheld at source in the framework of the European Directive on taxation of savings in the form of interest payments.
@@ -255,7 +282,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "EUTR")]
     [IsoId("_AddendumTaxType3Code_EUTaxRetention")]
-    [Description(@"Tax withheld at source in the framework of the European Directive on taxation of savings in the form of interest payments.")]
+    [Description(
+        @"Tax withheld at source in the framework of the European Directive on taxation of savings in the form of interest payments."
+    )]
     EUTaxRetention = AddendumTaxTypeCode.EUTaxRetention,
 
     /// <summary>
@@ -300,7 +329,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "FIMT")]
     [IsoId("_AddendumTaxType3Code_FICAMedicareTax")]
-    [Description(@"USA Federal Insurance Contributions Act tax levied to assist in the funding of Medicare.")]
+    [Description(
+        @"USA Federal Insurance Contributions Act tax levied to assist in the funding of Medicare."
+    )]
     FICAMedicareTax = AddendumTaxTypeCode.FICAMedicareTax,
 
     /// <summary>
@@ -309,7 +340,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "FLST")]
     [IsoId("_AddendumTaxType3Code_LeakyUndergroundStorageTankTax")]
-    [Description(@"Federal tax levied in the USA to fund the clean-up activities associated with leaking underground storage tanks.")]
+    [Description(
+        @"Federal tax levied in the USA to fund the clean-up activities associated with leaking underground storage tanks."
+    )]
     LeakyUndergroundStorageTankTax = AddendumTaxTypeCode.LeakyUndergroundStorageTankTax,
 
     /// <summary>
@@ -327,7 +360,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "FRTX")]
     [IsoId("_AddendumTaxType3Code_FranchiseTax")]
-    [Description(@"Tax levied by a municipality, on certain types of businesses for the right to exist as a legal entity and conduct business in a particular jurisdiction.")]
+    [Description(
+        @"Tax levied by a municipality, on certain types of businesses for the right to exist as a legal entity and conduct business in a particular jurisdiction."
+    )]
     FranchiseTax = AddendumTaxTypeCode.FranchiseTax,
 
     /// <summary>
@@ -336,7 +371,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "FSFT")]
     [IsoId("_AddendumTaxType3Code_FuelSuperFundTax")]
-    [Description(@"USA federal tax levied on certain types of businesses to provide funding for cleanup of hazardous waste sites.")]
+    [Description(
+        @"USA federal tax levied on certain types of businesses to provide funding for cleanup of hazardous waste sites."
+    )]
     FuelSuperFundTax = AddendumTaxTypeCode.FuelSuperFundTax,
 
     /// <summary>
@@ -345,7 +382,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "FSST")]
     [IsoId("_AddendumTaxType3Code_FICASocialSecurityTax")]
-    [Description(@"USA Federal Insurance Contributions Act tax levied to assist in the funding of social security.")]
+    [Description(
+        @"USA Federal Insurance Contributions Act tax levied to assist in the funding of social security."
+    )]
     FICASocialSecurityTax = AddendumTaxTypeCode.FICASocialSecurityTax,
 
     /// <summary>
@@ -399,7 +438,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "GIFT")]
     [IsoId("_AddendumTaxType3Code_GiftTax")]
-    [Description(@"Tax that is levied on assets given to individuals prior to the death of the donor. Gift tax is designed to ensure the integrity of the inheritance tax, preventing the pre-death transfer of wealth.")]
+    [Description(
+        @"Tax that is levied on assets given to individuals prior to the death of the donor. Gift tax is designed to ensure the integrity of the inheritance tax, preventing the pre-death transfer of wealth."
+    )]
     GiftTax = AddendumTaxTypeCode.GiftTax,
 
     /// <summary>
@@ -444,7 +485,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "HWTX")]
     [IsoId("_AddendumTaxType3Code_HazardousWasteTax")]
-    [Description(@"Tax levied on entities that produce, store, treat, transport or otherwise manage hazardous wastes and materials.")]
+    [Description(
+        @"Tax levied on entities that produce, store, treat, transport or otherwise manage hazardous wastes and materials."
+    )]
     HazardousWasteTax = AddendumTaxTypeCode.HazardousWasteTax,
 
     /// <summary>
@@ -453,7 +496,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "INHT")]
     [IsoId("_AddendumTaxType3Code_InheritanceTax")]
-    [Description(@"Tax that is payable at the time of death on any items (money or otherwise), where ownership changes either upon death or within a legally specified number of years before death.")]
+    [Description(
+        @"Tax that is payable at the time of death on any items (money or otherwise), where ownership changes either upon death or within a legally specified number of years before death."
+    )]
     InheritanceTax = AddendumTaxTypeCode.InheritanceTax,
 
     /// <summary>
@@ -462,7 +507,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "INPO")]
     [IsoId("_AddendumTaxType3Code_InterimProfitTax")]
-    [Description(@"Tax levied on the sum of all earnings/revenues accrued since the last dividend distribution.")]
+    [Description(
+        @"Tax levied on the sum of all earnings/revenues accrued since the last dividend distribution."
+    )]
     InterimProfitTax = AddendumTaxTypeCode.InterimProfitTax,
 
     /// <summary>
@@ -471,7 +518,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "KAPA")]
     [IsoId("_AddendumTaxType3Code_CapitalGainTax")]
-    [Description(@"Tax is on a capital gain (realised and unrealised), that is, the profit that is gained from the sale of a financial instrument.")]
+    [Description(
+        @"Tax is on a capital gain (realised and unrealised), that is, the profit that is gained from the sale of a financial instrument."
+    )]
     CapitalGainTax = AddendumTaxTypeCode.CapitalGainTax,
 
     /// <summary>
@@ -489,7 +538,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "LITX")]
     [IsoId("_AddendumTaxType3Code_LicenseTax")]
-    [Description(@"Tax levied by a government agency for the granting of a license to conduct an activity, such as driving a car, operating a business, selling liquor, hunting, or practicing certain vocations.")]
+    [Description(
+        @"Tax levied by a government agency for the granting of a license to conduct an activity, such as driving a car, operating a business, selling liquor, hunting, or practicing certain vocations."
+    )]
     LicenseTax = AddendumTaxTypeCode.LicenseTax,
 
     /// <summary>
@@ -516,7 +567,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "LSTX")]
     [IsoId("_AddendumTaxType3Code_LocalSalesTax")]
-    [Description(@"All applicable sales taxes levied by taxing authorities below the state level. Used only for sales tax.")]
+    [Description(
+        @"All applicable sales taxes levied by taxing authorities below the state level. Used only for sales tax."
+    )]
     LocalSalesTax = AddendumTaxTypeCode.LocalSalesTax,
 
     /// <summary>
@@ -534,7 +587,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "LUTX")]
     [IsoId("_AddendumTaxType3Code_LuxuryTax")]
-    [Description(@"Ad valorem tax levied on products or services that are deemed to be non-essential or unneeded.")]
+    [Description(
+        @"Ad valorem tax levied on products or services that are deemed to be non-essential or unneeded."
+    )]
     LuxuryTax = AddendumTaxTypeCode.LuxuryTax,
 
     /// <summary>
@@ -606,7 +661,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "OCTX")]
     [IsoId("_AddendumTaxType3Code_OccupancyTax")]
-    [Description(@"Tax levied for the privelage of occupying space for home or rental for a fixed period of time, as determined by a taxing authority.")]
+    [Description(
+        @"Tax levied for the privelage of occupying space for home or rental for a fixed period of time, as determined by a taxing authority."
+    )]
     OccupancyTax = AddendumTaxTypeCode.OccupancyTax,
 
     /// <summary>
@@ -615,7 +672,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "OPTX")]
     [IsoId("_AddendumTaxType3Code_OccupationalTax")]
-    [Description(@"Type of gross receipts tax imposed for the privilege of carrying on a business, trade or profession.")]
+    [Description(
+        @"Type of gross receipts tax imposed for the privilege of carrying on a business, trade or profession."
+    )]
     OccupationalTax = AddendumTaxTypeCode.OccupationalTax,
 
     /// <summary>
@@ -678,7 +737,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "PPTX")]
     [IsoId("_AddendumTaxType3Code_PropertyTax")]
-    [Description(@"Ad valorem property tax levied on real or personal property by local government units such as counties, municipalities, school districts, and special taxing districts.")]
+    [Description(
+        @"Ad valorem property tax levied on real or personal property by local government units such as counties, municipalities, school districts, and special taxing districts."
+    )]
     PropertyTax = AddendumTaxTypeCode.PropertyTax,
 
     /// <summary>
@@ -858,7 +919,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "SRTX")]
     [IsoId("_AddendumTaxType3Code_StateRentalTax")]
-    [Description(@"Tax levied by a state government against a periodic fee paid by a customer in return for the right to use the property of another party.")]
+    [Description(
+        @"Tax levied by a state government against a periodic fee paid by a customer in return for the right to use the property of another party."
+    )]
     StateRentalTax = AddendumTaxTypeCode.StateRentalTax,
 
     /// <summary>
@@ -939,7 +1002,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "TDDT")]
     [IsoId("_AddendumTaxType3Code_TDDServiceExciseTax")]
-    [Description(@"Excise tax levied to recover the cost of providing Telecommunications Device for the Deaf (TDD) Equipment.")]
+    [Description(
+        @"Excise tax levied to recover the cost of providing Telecommunications Device for the Deaf (TDD) Equipment."
+    )]
     TDDServiceExciseTax = AddendumTaxTypeCode.TDDServiceExciseTax,
 
     /// <summary>
@@ -948,7 +1013,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "TELT")]
     [IsoId("_AddendumTaxType3Code_TelecommunicationsTax")]
-    [Description(@"Tax levied on telecommunications companies for the right to provide services. May be a usage or excise tax.")]
+    [Description(
+        @"Tax levied on telecommunications companies for the right to provide services. May be a usage or excise tax."
+    )]
     TelecommunicationsTax = AddendumTaxTypeCode.TelecommunicationsTax,
 
     /// <summary>
@@ -1047,7 +1114,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "WITF")]
     [IsoId("_AddendumTaxType3Code_WithholdingOfForeignTax")]
-    [Description(@"Rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible.")]
+    [Description(
+        @"Rate at which the income will be withheld by the jurisdiction in which the income was originally paid, for which relief at source and/or reclaim may be possible."
+    )]
     WithholdingOfForeignTax = AddendumTaxTypeCode.WithholdingOfForeignTax,
 
     /// <summary>
@@ -1056,7 +1125,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "WITH")]
     [IsoId("_AddendumTaxType3Code_WithholdingTax")]
-    [Description(@"Income tax withheld or deducted from the amount due to the recipient, and paid to the government by the payer rather than the recipient. May apply to salaries, interest, and other types of proceeds.")]
+    [Description(
+        @"Income tax withheld or deducted from the amount due to the recipient, and paid to the government by the payer rather than the recipient. May apply to salaries, interest, and other types of proceeds."
+    )]
     WithholdingTax = AddendumTaxTypeCode.WithholdingTax,
 
     /// <summary>
@@ -1065,7 +1136,9 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "WITL")]
     [IsoId("_AddendumTaxType3Code_WithholdingOfLocalTax")]
-    [Description(@"Rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible.")]
+    [Description(
+        @"Rate at which the income will be withheld by the jurisdiction in which the account owner is located, for which relief at source and/or reclaim may be possible."
+    )]
     WithholdingOfLocalTax = AddendumTaxTypeCode.WithholdingOfLocalTax,
 
     /// <summary>
@@ -1074,7 +1147,8 @@ public enum AddendumTaxType3Code
     /// </summary>
     [EnumMember(Value = "WTAX")]
     [IsoId("_AddendumTaxType3Code_WealthTax")]
-    [Description(@"Tax levied only when the value of assets or categories of assets owned by an entity are above a given limit as defined by the tax authority. Wealth tax is not linked to income.")]
+    [Description(
+        @"Tax levied only when the value of assets or categories of assets owned by an entity are above a given limit as defined by the tax authority. Wealth tax is not linked to income."
+    )]
     WealthTax = AddendumTaxTypeCode.WealthTax,
-
 }

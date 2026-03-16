@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CreditorEnrolmentAmendmentReason1Choice.Code))]
     [KnownType(typeof(CreditorEnrolmentAmendmentReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(CreditorEnrolmentAmendmentReason1Choice.Code),nameof(CreditorEnrolmentAmendmentReason1Choice.Code))]
-    [JsonDerivedType(typeof(CreditorEnrolmentAmendmentReason1Choice.Proprietary),nameof(CreditorEnrolmentAmendmentReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CreditorEnrolmentAmendmentReason1Choice.Code),
+        nameof(CreditorEnrolmentAmendmentReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CreditorEnrolmentAmendmentReason1Choice.Proprietary),
+        nameof(CreditorEnrolmentAmendmentReason1Choice.Proprietary)
+    )]
     [IsoId("_yRMkLfDBEemsS_0xy2XRug")]
     [DisplayName("Creditor Enrolment Amendment Reason 1 Choice")]
-    public abstract partial record CreditorEnrolmentAmendmentReason1Choice_
-    {
-    }
+    public abstract record CreditorEnrolmentAmendmentReason1Choice_ { }
 }

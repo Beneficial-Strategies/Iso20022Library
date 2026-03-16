@@ -23,5 +23,4 @@ public enum OptionFeatures12Code
     [IsoId("_m4sssbaSEeiN--kDwanlkA")]
     [Description(@"Tender or exchange with the odd lot preference.")]
     OddLotPreference = OptionFeaturesCode.OddLotPreference, // same ordinal as derivation source for type conversions
-    
 }

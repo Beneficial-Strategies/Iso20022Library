@@ -23,7 +23,7 @@ public enum AutoBorrowing2Code
     [IsoId("_bjuf4dp-Ed-ak6NoX_4Aeg_-875280874")]
     [Description(@"Only last resort borrowing should be considered to make settlement occur.")]
     LastResort = AutoBorrowingCode.LastResort, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No automatic borrowing should take place.
     /// Encoded/decoded by serializers as &quot;NBOR&quot;.
@@ -32,7 +32,7 @@ public enum AutoBorrowing2Code
     [IsoId("_bjuf4tp-Ed-ak6NoX_4Aeg_-875280873")]
     [Description(@"No automatic borrowing should take place.")]
     NoAutomatic = AutoBorrowingCode.NoAutomatic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Automatic borrowing should take place.
     /// Encoded/decoded by serializers as &quot;YBOR&quot;.
@@ -41,7 +41,7 @@ public enum AutoBorrowing2Code
     [IsoId("_bjuf49p-Ed-ak6NoX_4Aeg_-875280857")]
     [Description(@"Automatic borrowing should take place.")]
     Automatic = AutoBorrowingCode.Automatic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Return of stocks should take place.
     /// Encoded/decoded by serializers as &quot;RTRN&quot;.
@@ -50,5 +50,4 @@ public enum AutoBorrowing2Code
     [IsoId("_bjuf5Np-Ed-ak6NoX_4Aeg_-871586494")]
     [Description(@"Return of stocks should take place.")]
     Return = AutoBorrowingCode.Return, // same ordinal as derivation source for type conversions
-    
 }

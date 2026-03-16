@@ -22,15 +22,18 @@ public enum SettlementInstructionGeneration1Code
     [EnumMember(Value = "GENS")]
     [IsoId("__wk5ZtojEeC60axPepSq7g_899535056")]
     [Description(@"Specifies if the ETC service provider is to generate a settlement instruction.")]
-    InstructionGenerationByETCProvider = SettlementInstructionGenerationCode.InstructionGenerationByETCProvider, // same ordinal as derivation source for type conversions
-    
+    InstructionGenerationByETCProvider =
+        SettlementInstructionGenerationCode.InstructionGenerationByETCProvider, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Specifies if the ETC service provider is not to generate a settlement instruction where a previous agreement to do so exists.
     /// Encoded/decoded by serializers as &quot;NOGE&quot;.
     /// </summary>
     [EnumMember(Value = "NOGE")]
     [IsoId("__wuqYNojEeC60axPepSq7g_710317607")]
-    [Description(@"Specifies if the ETC service provider is not to generate a settlement instruction where a previous agreement to do so exists.")]
-    NotInstructionGenerationByETCProvider = SettlementInstructionGenerationCode.NotInstructionGenerationByETCProvider, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Specifies if the ETC service provider is not to generate a settlement instruction where a previous agreement to do so exists."
+    )]
+    NotInstructionGenerationByETCProvider =
+        SettlementInstructionGenerationCode.NotInstructionGenerationByETCProvider, // same ordinal as derivation source for type conversions
 }

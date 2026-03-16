@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NamePrefix1Choice.Code))]
     [KnownType(typeof(NamePrefix1Choice.Proprietary))]
-    [JsonDerivedType(typeof(NamePrefix1Choice.Code),nameof(NamePrefix1Choice.Code))]
-    [JsonDerivedType(typeof(NamePrefix1Choice.Proprietary),nameof(NamePrefix1Choice.Proprietary))]
+    [JsonDerivedType(typeof(NamePrefix1Choice.Code), nameof(NamePrefix1Choice.Code))]
+    [JsonDerivedType(typeof(NamePrefix1Choice.Proprietary), nameof(NamePrefix1Choice.Proprietary))]
     [IsoId("_rzAroCiEEeKVDZ5HKjI6bg")]
     [DisplayName("Name Prefix 1 Choice")]
-    public abstract partial record NamePrefix1Choice_
-    {
-    }
+    public abstract record NamePrefix1Choice_ { }
 }

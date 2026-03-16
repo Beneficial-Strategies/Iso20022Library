@@ -23,7 +23,7 @@ public enum GoodsAndServices1Code
     [IsoId("_cGi64VHiEeeJoafcMZup1w")]
     [Description(@"Electronic goods and services.")]
     Electronic = GoodsAndServicesCode.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Physical goods or services.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -32,7 +32,7 @@ public enum GoodsAndServices1Code
     [IsoId("_cTo7sVHiEeeJoafcMZup1w")]
     [Description(@"Physical goods or services.")]
     Physical = GoodsAndServicesCode.Physical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic and physical goods and services.
     /// Encoded/decoded by serializers as &quot;ELPH&quot;.
@@ -41,5 +41,4 @@ public enum GoodsAndServices1Code
     [IsoId("_cjQsEVHiEeeJoafcMZup1w")]
     [Description(@"Electronic and physical goods and services.")]
     ElectronicAndPhysical = GoodsAndServicesCode.ElectronicAndPhysical, // same ordinal as derivation source for type conversions
-    
 }

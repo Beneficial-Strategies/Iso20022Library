@@ -23,7 +23,7 @@ public enum RenounceableStatus1Code
     [IsoId("_Zsq3oNp-Ed-ak6NoX_4Aeg_-603219863")]
     [Description(@"Intermediate securities cannot be sold.")]
     NonRenounceable = RenounceableStatusCode.NonRenounceable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Intermediate securities can be sold.
     /// Encoded/decoded by serializers as &quot;RENO&quot;.
@@ -32,5 +32,4 @@ public enum RenounceableStatus1Code
     [IsoId("_Zsq3odp-Ed-ak6NoX_4Aeg_-603219862")]
     [Description(@"Intermediate securities can be sold.")]
     Renounceable = RenounceableStatusCode.Renounceable, // same ordinal as derivation source for type conversions
-    
 }

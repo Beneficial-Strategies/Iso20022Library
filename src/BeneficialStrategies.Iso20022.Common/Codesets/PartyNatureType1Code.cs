@@ -23,7 +23,7 @@ public enum PartyNatureType1Code
     [IsoId("_ge0rER3dEeWTa7N6lo4ufA")]
     [Description(@"Other type of issuer.")]
     Other = PartyNatureTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer is a non-financial institution.
     /// Encoded/decoded by serializers as &quot;NFIN&quot;.
@@ -32,7 +32,7 @@ public enum PartyNatureType1Code
     [IsoId("_gts0kR3dEeWTa7N6lo4ufA")]
     [Description(@"Issuer is a non-financial institution.")]
     NonFinancialInstitution = PartyNatureTypeCode.NonFinancialInstitution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer is a financial institution.
     /// Encoded/decoded by serializers as &quot;FIIN&quot;.
@@ -41,7 +41,7 @@ public enum PartyNatureType1Code
     [IsoId("_gyBT4R3dEeWTa7N6lo4ufA")]
     [Description(@"Issuer is a financial institution.")]
     FinancialInstitution = PartyNatureTypeCode.FinancialInstitution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer is a central counterparty.
     /// Encoded/decoded by serializers as &quot;CCPS&quot;.
@@ -50,5 +50,4 @@ public enum PartyNatureType1Code
     [IsoId("_hBMYUR3dEeWTa7N6lo4ufA")]
     [Description(@"Issuer is a central counterparty.")]
     CentralCounterparty = PartyNatureTypeCode.CentralCounterparty, // same ordinal as derivation source for type conversions
-    
 }

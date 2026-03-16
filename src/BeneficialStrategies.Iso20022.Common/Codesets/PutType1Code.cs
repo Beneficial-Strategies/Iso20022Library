@@ -23,7 +23,7 @@ public enum PutType1Code
     [IsoId("_ha1ju2liEeGaMcKyqKNRfQ_126631193")]
     [Description(@"Type of execution of the put feature is mandatory.")]
     Mandatory = PutTypeCode.Mandatory, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of execution of the put feature is optional.
     /// Encoded/decoded by serializers as &quot;OPTI&quot;.
@@ -32,7 +32,7 @@ public enum PutType1Code
     [IsoId("_ha1jvGliEeGaMcKyqKNRfQ_-1580269150")]
     [Description(@"Type of execution of the put feature is optional.")]
     Optional = PutTypeCode.Optional, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of execution of the put feature could be optional or mandatory.
     /// Encoded/decoded by serializers as &quot;TWOS&quot;.
@@ -41,5 +41,4 @@ public enum PutType1Code
     [IsoId("_ha1jvWliEeGaMcKyqKNRfQ_-113120387")]
     [Description(@"Type of execution of the put feature could be optional or mandatory.")]
     Both = PutTypeCode.Both, // same ordinal as derivation source for type conversions
-    
 }

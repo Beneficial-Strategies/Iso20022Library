@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice
     /// </summary>
     [IsoId("_RbrR19p-Ed-ak6NoX_4Aeg_1854520026")]
     [DisplayName("Structured Product Category")]
-    public partial record StructuredProductCategory : ProductCategory1Choice_
+    public record StructuredProductCategory : ProductCategory1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the type of product category by means of a code.
         /// </summary>
         [IsoId("_T5CFHNp-Ed-ak6NoX_4Aeg_-1686636659")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public required ProductCategory1Code Type { get; init; } 
-        
+        public required ProductCategory1Code Type { get; init; }
+
         /// <summary>
         /// Specifies the category of a product.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductCategory1Choice
         [DisplayName("Category")]
         [IsoXmlTag("Ctgy")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Category { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Category { get; init; }
     }
 }

@@ -21,9 +21,11 @@ public enum LegalFrameworkCode
     /// </summary>
     [EnumMember(Value = "FRAN")]
     [IsoId("_ad115tp-Ed-ak6NoX_4Aeg_-806240527")]
-    [Description(@"Relates to the French legal framework for repos, that is, relates to a ""Pension Livrée"".")]
+    [Description(
+        @"Relates to the French legal framework for repos, that is, relates to a ""Pension Livrée""."
+    )]
     PensionLivree,
-    
+
     /// <summary>
     /// Relates to the European legal framework for alternative investment fund.
     /// Encoded/decoded by serializers as &quot;AIFD&quot;.
@@ -32,25 +34,29 @@ public enum LegalFrameworkCode
     [IsoId("_3d2MAOQvEeiDdp3LLDFTEQ")]
     [Description(@"Relates to the European legal framework for alternative investment fund.")]
     AlternativeInvestmentFund,
-    
+
     /// <summary>
     /// Relates to the European legal framework for undertakings for collective investment in transferable securities.
     /// Encoded/decoded by serializers as &quot;UCIT&quot;.
     /// </summary>
     [EnumMember(Value = "UCIT")]
     [IsoId("_PJ6YsOQwEeiDdp3LLDFTEQ")]
-    [Description(@"Relates to the European legal framework for undertakings for collective investment in transferable securities.")]
+    [Description(
+        @"Relates to the European legal framework for undertakings for collective investment in transferable securities."
+    )]
     UndertakingsForCollectiveInvestmentInTransferableSecurities,
-    
+
     /// <summary>
     /// Relates to the European legal framework for european social entrepreneurship funds.
     /// Encoded/decoded by serializers as &quot;ESEF&quot;.
     /// </summary>
     [EnumMember(Value = "ESEF")]
     [IsoId("_Z8vHcJ6BEeutguKEfOuVZA")]
-    [Description(@"Relates to the European legal framework for european social entrepreneurship funds.")]
+    [Description(
+        @"Relates to the European legal framework for european social entrepreneurship funds."
+    )]
     EuropeanSocialEntrepreneurshipFunds,
-    
+
     /// <summary>
     /// Relates to the European legal framework for european venture capital funds.
     /// Encoded/decoded by serializers as &quot;EVCA&quot;.
@@ -59,14 +65,15 @@ public enum LegalFrameworkCode
     [IsoId("_pV-iUJ6BEeutguKEfOuVZA")]
     [Description(@"Relates to the European legal framework for european venture capital funds.")]
     EuropeanVentureCapitalFunds,
-    
+
     /// <summary>
     /// Relates to the European legal framework for european long-term investment funds.
     /// Encoded/decoded by serializers as &quot;LTIF&quot;.
     /// </summary>
     [EnumMember(Value = "LTIF")]
     [IsoId("_Ev_AYJ6CEeutguKEfOuVZA")]
-    [Description(@"Relates to the European legal framework for european long-term investment funds.")]
+    [Description(
+        @"Relates to the European legal framework for european long-term investment funds."
+    )]
     EuropeanLong_termInvestmentFunds,
-    
 }

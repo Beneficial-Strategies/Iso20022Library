@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PriceType2Choice.Market))]
     [KnownType(typeof(PriceType2Choice.Indicative))]
-    [JsonDerivedType(typeof(PriceType2Choice.Market),nameof(PriceType2Choice.Market))]
-    [JsonDerivedType(typeof(PriceType2Choice.Indicative),nameof(PriceType2Choice.Indicative))]
+    [JsonDerivedType(typeof(PriceType2Choice.Market), nameof(PriceType2Choice.Market))]
+    [JsonDerivedType(typeof(PriceType2Choice.Indicative), nameof(PriceType2Choice.Indicative))]
     [IsoId("_XLcRBdp-Ed-ak6NoX_4Aeg_-173872087")]
     [DisplayName("Price Type 2 Choice")]
-    public abstract partial record PriceType2Choice_
-    {
-    }
+    public abstract record PriceType2Choice_ { }
 }

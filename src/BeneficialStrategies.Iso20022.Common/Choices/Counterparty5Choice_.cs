@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Counterparty5Choice.Seller))]
     [KnownType(typeof(Counterparty5Choice.Buyer))]
-    [JsonDerivedType(typeof(Counterparty5Choice.Seller),nameof(Counterparty5Choice.Seller))]
-    [JsonDerivedType(typeof(Counterparty5Choice.Buyer),nameof(Counterparty5Choice.Buyer))]
+    [JsonDerivedType(typeof(Counterparty5Choice.Seller), nameof(Counterparty5Choice.Seller))]
+    [JsonDerivedType(typeof(Counterparty5Choice.Buyer), nameof(Counterparty5Choice.Buyer))]
     [IsoId("_idvrweaOEd-q8fx_Zl_34A")]
     [DisplayName("Counterparty 5 Choice")]
-    public abstract partial record Counterparty5Choice_
-    {
-    }
+    public abstract record Counterparty5Choice_ { }
 }

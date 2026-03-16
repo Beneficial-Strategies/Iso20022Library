@@ -23,16 +23,18 @@ public enum TypeOfAmount5Code
     [IsoId("_JB5b0Xs1EeSTS7uHCe8FPQ")]
     [Description(@"Cash-back amount.")]
     Cashback = TypeOfAmountCode.Cashback, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Discount, rebate or voucher, related to loyalty programs. This amount is counted as a negative amount.
     /// Encoded/decoded by serializers as &quot;DCNT&quot;.
     /// </summary>
     [EnumMember(Value = "DCNT")]
     [IsoId("_JW-7A3s1EeSTS7uHCe8FPQ")]
-    [Description(@"Discount, rebate or voucher, related to loyalty programs. This amount is counted as a negative amount.")]
+    [Description(
+        @"Discount, rebate or voucher, related to loyalty programs. This amount is counted as a negative amount."
+    )]
     Discount = TypeOfAmountCode.Discount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fees.
     /// Encoded/decoded by serializers as &quot;FEES&quot;.
@@ -41,7 +43,7 @@ public enum TypeOfAmount5Code
     [IsoId("_KEPCk3s1EeSTS7uHCe8FPQ")]
     [Description(@"Fees.")]
     Fees = TypeOfAmountCode.Fees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Gratuity amount.
     /// Encoded/decoded by serializers as &quot;GRTY&quot;.
@@ -50,7 +52,7 @@ public enum TypeOfAmount5Code
     [IsoId("_KM4oQXs1EeSTS7uHCe8FPQ")]
     [Description(@"Gratuity amount.")]
     Gratuity = TypeOfAmountCode.Gratuity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Extra fee for a purchase or a withdrawal.
     /// Encoded/decoded by serializers as &quot;SRCH&quot;.
@@ -59,7 +61,7 @@ public enum TypeOfAmount5Code
     [IsoId("_KqKaI3s1EeSTS7uHCe8FPQ")]
     [Description(@"Extra fee for a purchase or a withdrawal.")]
     Surcharge = TypeOfAmountCode.Surcharge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Value added tax amount.
     /// Encoded/decoded by serializers as &quot;VATX&quot;.
@@ -68,7 +70,7 @@ public enum TypeOfAmount5Code
     [IsoId("_KxCeM3s1EeSTS7uHCe8FPQ")]
     [Description(@"Value added tax amount.")]
     ValueAddedTax = TypeOfAmountCode.ValueAddedTax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commission, for example for DCC (Dynamic Currency Conversion) transactions.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -77,7 +79,7 @@ public enum TypeOfAmount5Code
     [IsoId("_7D9GwdPHEeSFn54OzS96Iw")]
     [Description(@"Commission, for example for DCC (Dynamic Currency Conversion) transactions.")]
     Commission = TypeOfAmountCode.Commission, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Donation amount.
     /// Encoded/decoded by serializers as &quot;DONN&quot;.
@@ -86,7 +88,7 @@ public enum TypeOfAmount5Code
     [IsoId("_Zu6dgS70EeWc7f-D6ByqMg")]
     [Description(@"Donation amount.")]
     Donation = TypeOfAmountCode.Donation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Taxes applicable to the transaction.
     /// Encoded/decoded by serializers as &quot;TAXT&quot;.
@@ -95,5 +97,4 @@ public enum TypeOfAmount5Code
     [IsoId("_W5BZAS71EeWDa4uwlWChEA")]
     [Description(@"Taxes applicable to the transaction.")]
     Tax = TypeOfAmountCode.Tax, // same ordinal as derivation source for type conversions
-    
 }

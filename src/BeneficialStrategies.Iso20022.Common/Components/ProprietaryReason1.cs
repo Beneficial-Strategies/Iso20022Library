@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UatOxNp-Ed-ak6NoX_4Aeg_497607860")]
 [DisplayName("Proprietary Reason")]
-public partial record ProprietaryReason1
+public record ProprietaryReason1
 {
-    #nullable enable
-    
     /// <summary>
     /// Proprietary identification of the reason related to a status.
     /// </summary>
     [IsoId("_UatOxdp-Ed-ak6NoX_4Aeg_-1135929071")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public GenericIdentification20? Reason { get; init; } 
-    
+    public GenericIdentification20? Reason { get; init; }
+
     /// <summary>
     /// Provides additional information about the processed instruction.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record ProprietaryReason1
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
-    [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoMax210Text? AdditionalReasonInformation { get; init; }
 }

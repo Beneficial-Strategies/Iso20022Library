@@ -23,7 +23,7 @@ public enum CSCResultCode
     [IsoId("_TWrsxAEcEeCQm6a_G2yO_w_-2043310910")]
     [Description(@"Card security code match.")]
     CSCMatch,
-    
+
     /// <summary>
     /// No card security code match.
     /// Encoded/decoded by serializers as &quot;CNMH&quot;.
@@ -32,7 +32,7 @@ public enum CSCResultCode
     [IsoId("_TWrsxQEcEeCQm6a_G2yO_w_-905692296")]
     [Description(@"No card security code match.")]
     CSCNoMatch,
-    
+
     /// <summary>
     /// Card security code not processed for technical reason.
     /// Encoded/decoded by serializers as &quot;CNMT&quot;.
@@ -41,7 +41,7 @@ public enum CSCResultCode
     [IsoId("_TWrsxgEcEeCQm6a_G2yO_w_1950993781")]
     [Description(@"Card security code not processed for technical reason.")]
     CSCTechnical,
-    
+
     /// <summary>
     /// Card security code not processed for non-technical reason.
     /// Encoded/decoded by serializers as &quot;CNMO&quot;.
@@ -50,7 +50,7 @@ public enum CSCResultCode
     [IsoId("_TWrsxwEcEeCQm6a_G2yO_w_1234780389")]
     [Description(@"Card security code not processed for non-technical reason.")]
     CSCNotTechnical,
-    
+
     /// <summary>
     /// Card security code missing in request.
     /// Encoded/decoded by serializers as &quot;CMSS&quot;.
@@ -59,7 +59,7 @@ public enum CSCResultCode
     [IsoId("_TWrsyAEcEeCQm6a_G2yO_w_-764077692")]
     [Description(@"Card security code missing in request.")]
     CSCMissing,
-    
+
     /// <summary>
     /// Card security code not used by issuer.
     /// Encoded/decoded by serializers as &quot;CNUS&quot;.
@@ -68,5 +68,4 @@ public enum CSCResultCode
     [IsoId("_TWrsyQEcEeCQm6a_G2yO_w_690703299")]
     [Description(@"Card security code not used by issuer.")]
     CSCNotUsed,
-    
 }

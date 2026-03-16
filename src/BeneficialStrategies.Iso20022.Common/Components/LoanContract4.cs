@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2Q955TEyEe6g-ffJsqGiSA")]
 [DisplayName("Loan Contract4")]
-public partial record LoanContract4
+public record LoanContract4
 {
-    #nullable enable
-
     /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveCurrencyAndAmount? Amount { get; init; } 
+    public ActiveCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Attachment.
@@ -44,28 +42,28 @@ public partial record LoanContract4
     /// </summary>
     [DisplayName("Collateral")]
     [IsoXmlTag("Coll")]
-    public ContractCollateral1? Collateral { get; init; } 
+    public ContractCollateral1? Collateral { get; init; }
 
     /// <summary>
     /// Contract Document Identification.
     /// </summary>
     [DisplayName("Contract Document Identification")]
     [IsoXmlTag("CtrctDocId")]
-    public required DocumentIdentification22 ContractDocumentIdentification { get; init; } 
+    public required DocumentIdentification22 ContractDocumentIdentification { get; init; }
 
     /// <summary>
     /// Duration Code.
     /// </summary>
     [DisplayName("Duration Code")]
     [IsoXmlTag("DrtnCd")]
-    public IsoExact1NumericText? DurationCode { get; init; } 
+    public IsoExact1NumericText? DurationCode { get; init; }
 
     /// <summary>
     /// Interest Rate.
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public InterestRate2Choice_? InterestRate { get; init; } 
+    public InterestRate2Choice_? InterestRate { get; init; }
 
     /// <summary>
     /// Interest Schedule.
@@ -79,21 +77,21 @@ public partial record LoanContract4
     /// </summary>
     [DisplayName("Intra Company Loan")]
     [IsoXmlTag("IntraCpnyLn")]
-    public required IsoTrueFalseIndicator IntraCompanyLoan { get; init; } 
+    public required IsoTrueFalseIndicator IntraCompanyLoan { get; init; }
 
     /// <summary>
     /// Loan Type Identification.
     /// </summary>
     [DisplayName("Loan Type Identification")]
     [IsoXmlTag("LnTpId")]
-    public IsoMax35Text? LoanTypeIdentification { get; init; } 
+    public IsoMax35Text? LoanTypeIdentification { get; init; }
 
     /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; } 
+    public IsoISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Payment Schedule.
@@ -107,7 +105,7 @@ public partial record LoanContract4
     /// </summary>
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
-    public IsoTrueFalseIndicator? ProlongationFlag { get; init; } 
+    public IsoTrueFalseIndicator? ProlongationFlag { get; init; }
 
     /// <summary>
     /// Seller.
@@ -121,21 +119,21 @@ public partial record LoanContract4
     /// </summary>
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
-    public ActiveCurrencyCode? SettlementCurrency { get; init; } 
+    public ActiveCurrencyCode? SettlementCurrency { get; init; }
 
     /// <summary>
     /// Special Conditions.
     /// </summary>
     [DisplayName("Special Conditions")]
     [IsoXmlTag("SpclConds")]
-    public SpecialCondition1? SpecialConditions { get; init; } 
+    public SpecialCondition1? SpecialConditions { get; init; }
 
     /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISODate? StartDate { get; init; } 
+    public IsoISODate? StartDate { get; init; }
 
     /// <summary>
     /// Syndicated Loan.
@@ -150,8 +148,4 @@ public partial record LoanContract4
     [DisplayName("Tranche")]
     [IsoXmlTag("Trch")]
     public ValueList<LoanContractTranche1> Tranche { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

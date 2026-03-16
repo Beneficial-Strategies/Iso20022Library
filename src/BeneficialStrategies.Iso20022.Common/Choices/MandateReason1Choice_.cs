@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MandateReason1Choice.Code))]
     [KnownType(typeof(MandateReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(MandateReason1Choice.Code),nameof(MandateReason1Choice.Code))]
-    [JsonDerivedType(typeof(MandateReason1Choice.Proprietary),nameof(MandateReason1Choice.Proprietary))]
+    [JsonDerivedType(typeof(MandateReason1Choice.Code), nameof(MandateReason1Choice.Code))]
+    [JsonDerivedType(
+        typeof(MandateReason1Choice.Proprietary),
+        nameof(MandateReason1Choice.Proprietary)
+    )]
     [IsoId("_TOt8xdp-Ed-ak6NoX_4Aeg_-162041513")]
     [DisplayName("Mandate Reason 1 Choice")]
-    public abstract partial record MandateReason1Choice_
-    {
-    }
+    public abstract record MandateReason1Choice_ { }
 }

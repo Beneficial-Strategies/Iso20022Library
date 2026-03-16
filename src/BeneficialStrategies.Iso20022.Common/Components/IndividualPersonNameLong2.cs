@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xEB5Ic4IEeiRUq1z_PF1Sw")]
 [DisplayName("Individual Person Name Long")]
-public partial record IndividualPersonNameLong2
+public record IndividualPersonNameLong2
 {
-    #nullable enable
-    
     /// <summary>
     /// Prefix, as a title before a person&apos;s name.
     /// </summary>
     [IsoId("_xTGP4c4IEeiRUq1z_PF1Sw")]
     [DisplayName("Name Prefix")]
     [IsoXmlTag("NmPrfx")]
-    public NamePrefix2Code? NamePrefix { get; init; } 
-    
+    public NamePrefix2Code? NamePrefix { get; init; }
+
     /// <summary>
     /// Surname is a name added to a given name and is part of a personal name. In many cases, a surname is a family name.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Surname")]
     [IsoXmlTag("Srnm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Surname { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Surname { get; init; }
+
     /// <summary>
     /// Name given at birth.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? GivenName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? GivenName { get; init; }
+
     /// <summary>
     /// Second name of a person.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MiddleName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MiddleName { get; init; }
+
     /// <summary>
     /// Initial prefix for name.
     /// </summary>
@@ -63,9 +61,9 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Initials")]
     [IsoXmlTag("Initls")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
-    [StringLength(maximumLength: 6 ,MinimumLength = 1)]
-    public IsoMax6Text? Initials { get; init; } 
-    
+    [StringLength(maximumLength: 6, MinimumLength = 1)]
+    public IsoMax6Text? Initials { get; init; }
+
     /// <summary>
     /// Suffix for name.
     /// </summary>
@@ -73,9 +71,9 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? NameSuffix { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? NameSuffix { get; init; }
+
     /// <summary>
     /// Full legal name.
     /// </summary>
@@ -83,9 +81,9 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Name { get; init; }
+
     /// <summary>
     /// Date that the name was assigned.
     /// </summary>
@@ -93,8 +91,8 @@ public partial record IndividualPersonNameLong2
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; } 
-    
+    public IsoISODate? StartDate { get; init; }
+
     /// <summary>
     /// Date that name changed.
     /// </summary>
@@ -102,9 +100,5 @@ public partial record IndividualPersonNameLong2
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EndDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? EndDate { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UiQtgTOgEe2AEsHTM-bt1w")]
 [DisplayName("Contract Valuation Data")]
-public partial record ContractValuationData8
+public record ContractValuationData8
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the current value of the outstanding contract.
     /// </summary>
     [IsoId("_UjakEzOgEe2AEsHTM-bt1w")]
     [DisplayName("Contract Value")]
     [IsoXmlTag("CtrctVal")]
-    public AmountAndDirection109? ContractValue { get; init; } 
-    
+    public AmountAndDirection109? ContractValue { get; init; }
+
     /// <summary>
     /// Indicates the date and time of the last valuation marked to market provided by the central counterparty (CCP) or calculated using the current or last available market price of the inputs.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record ContractValuationData8
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? TimeStamp { get; init; } 
-    
+    public IsoISODateTime? TimeStamp { get; init; }
+
     /// <summary>
     /// Indicates the source and method used for the valuation of the transaction by the reporting counterparty.
     /// Usage:
@@ -44,8 +42,8 @@ public partial record ContractValuationData8
     [IsoId("_UjakFzOgEe2AEsHTM-bt1w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public ValuationType1Code? Type { get; init; } 
-    
+    public ValuationType1Code? Type { get; init; }
+
     /// <summary>
     /// Specifies the ratio of the absolute change in price of a derivative transaction to the change in price of the underlier, at the time a new transaction is reported or when a change in the notional amount is reported.
     /// </summary>
@@ -53,9 +51,5 @@ public partial record ContractValuationData8
     [DisplayName("Delta")]
     [IsoXmlTag("Dlta")]
     [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-    public IsoLongFraction19DecimalNumber? Delta { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLongFraction19DecimalNumber? Delta { get; init; }
 }

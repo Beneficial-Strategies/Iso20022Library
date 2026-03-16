@@ -23,7 +23,7 @@ public enum TaxRecord1Code
     [IsoId("_YiBCaNp-Ed-ak6NoX_4Aeg_278106712")]
     [Description(@"Tax record is related to the withholding tax.")]
     WithholdingTax = TaxRecordCode.WithholdingTax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax record is related to the value added tax.
     /// Encoded/decoded by serializers as &quot;VATX&quot;.
@@ -32,7 +32,7 @@ public enum TaxRecord1Code
     [IsoId("_YiKMUNp-Ed-ak6NoX_4Aeg_278106740")]
     [Description(@"Tax record is related to the value added tax.")]
     ValueAddedTax = TaxRecordCode.ValueAddedTax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax record is related to the income payment details.
     /// Encoded/decoded by serializers as &quot;INCP&quot;.
@@ -41,7 +41,7 @@ public enum TaxRecord1Code
     [IsoId("_YiKMUdp-Ed-ak6NoX_4Aeg_278106771")]
     [Description(@"Tax record is related to the income payment details.")]
     IncomePaymentDetails = TaxRecordCode.IncomePaymentDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax record is related to the total amount for income payments.
     /// Encoded/decoded by serializers as &quot;TLAI&quot;.
@@ -50,7 +50,7 @@ public enum TaxRecord1Code
     [IsoId("_YiKMUtp-Ed-ak6NoX_4Aeg_278106772")]
     [Description(@"Tax record is related to the total amount for income payments.")]
     TotalAmountForIncomePayments = TaxRecordCode.TotalAmountForIncomePayments, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax record is related to the money payments details.
     /// Encoded/decoded by serializers as &quot;MONP&quot;.
@@ -59,7 +59,7 @@ public enum TaxRecord1Code
     [IsoId("_YiKMU9p-Ed-ak6NoX_4Aeg_278106802")]
     [Description(@"Tax record is related to the money payments details.")]
     MoneyPaymentDetails = TaxRecordCode.MoneyPaymentDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax record is related to the total amount for money payments.
     /// Encoded/decoded by serializers as &quot;TLAM&quot;.
@@ -68,7 +68,7 @@ public enum TaxRecord1Code
     [IsoId("_YiKMVNp-Ed-ak6NoX_4Aeg_278107073")]
     [Description(@"Tax record is related to the total amount for money payments.")]
     TotalAmountForMoneyPayments = TaxRecordCode.TotalAmountForMoneyPayments, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other tax record type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,5 +77,4 @@ public enum TaxRecord1Code
     [IsoId("_YiKMVdp-Ed-ak6NoX_4Aeg_278107081")]
     [Description(@"Other tax record type.")]
     Other = TaxRecordCode.Other, // same ordinal as derivation source for type conversions
-    
 }

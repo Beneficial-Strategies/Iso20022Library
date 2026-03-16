@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ProcessingStatus68Choice.Code))]
     [KnownType(typeof(ProcessingStatus68Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus68Choice.Code),nameof(ProcessingStatus68Choice.Code))]
-    [JsonDerivedType(typeof(ProcessingStatus68Choice.Proprietary),nameof(ProcessingStatus68Choice.Proprietary))]
+    [JsonDerivedType(typeof(ProcessingStatus68Choice.Code), nameof(ProcessingStatus68Choice.Code))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus68Choice.Proprietary),
+        nameof(ProcessingStatus68Choice.Proprietary)
+    )]
     [IsoId("_TDntl-FWEeWIA4E9cYSxxQ")]
     [DisplayName("Processing Status 68 Choice")]
-    public abstract partial record ProcessingStatus68Choice_
-    {
-    }
+    public abstract record ProcessingStatus68Choice_ { }
 }

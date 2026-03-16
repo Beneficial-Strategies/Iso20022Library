@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AllegementStatus4Choice.Code))]
     [KnownType(typeof(AllegementStatus4Choice.Proprietary))]
-    [JsonDerivedType(typeof(AllegementStatus4Choice.Code),nameof(AllegementStatus4Choice.Code))]
-    [JsonDerivedType(typeof(AllegementStatus4Choice.Proprietary),nameof(AllegementStatus4Choice.Proprietary))]
+    [JsonDerivedType(typeof(AllegementStatus4Choice.Code), nameof(AllegementStatus4Choice.Code))]
+    [JsonDerivedType(
+        typeof(AllegementStatus4Choice.Proprietary),
+        nameof(AllegementStatus4Choice.Proprietary)
+    )]
     [IsoId("_6MjsLZNLEeWGlc8L7oPDIg")]
     [DisplayName("Allegement Status 4 Choice")]
-    public abstract partial record AllegementStatus4Choice_
-    {
-    }
+    public abstract record AllegementStatus4Choice_ { }
 }

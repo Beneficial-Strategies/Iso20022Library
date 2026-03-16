@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
     /// </summary>
     [IsoId("_J8b4wYwAEei289CGNqs21g")]
     [DisplayName("Contact Details")]
-    public partial record ContactDetails : SystemPartyModification2Choice_
+    public record ContactDetails : SystemPartyModification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the terms used to formally address a person.
         /// </summary>
         [IsoId("_rJkiI4v3Eei289CGNqs21g")]
         [DisplayName("Name Prefix")]
         [IsoXmlTag("NmPrfx")]
-        public NamePrefix2Code? NamePrefix { get; init; } 
-        
+        public NamePrefix2Code? NamePrefix { get; init; }
+
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public IsoMax140Text? Name { get; init; } 
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public IsoMax140Text? Name { get; init; }
+
         /// <summary>
         /// Collection of information that identifies a phone number, as defined by telecom services.
         /// </summary>
@@ -42,8 +40,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Phone Number")]
         [IsoXmlTag("PhneNb")]
         [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-        public IsoPhoneNumber? PhoneNumber { get; init; } 
-        
+        public IsoPhoneNumber? PhoneNumber { get; init; }
+
         /// <summary>
         /// Collection of information that identifies a mobile phone number, as defined by telecom services.
         /// </summary>
@@ -51,8 +49,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Mobile Number")]
         [IsoXmlTag("MobNb")]
         [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-        public IsoPhoneNumber? MobileNumber { get; init; } 
-        
+        public IsoPhoneNumber? MobileNumber { get; init; }
+
         /// <summary>
         /// Collection of information that identifies a FAX number, as defined by telecom services.
         /// </summary>
@@ -60,8 +58,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Fax Number")]
         [IsoXmlTag("FaxNb")]
         [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-        public IsoPhoneNumber? FaxNumber { get; init; } 
-        
+        public IsoPhoneNumber? FaxNumber { get; init; }
+
         /// <summary>
         /// Address for electronic mail (e-mail).
         /// </summary>
@@ -69,9 +67,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Email Address")]
         [IsoXmlTag("EmailAdr")]
         [IsoSimpleType(IsoSimpleType.Max2048Text)]
-        [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-        public IsoMax2048Text? EmailAddress { get; init; } 
-        
+        [StringLength(maximumLength: 2048, MinimumLength = 1)]
+        public IsoMax2048Text? EmailAddress { get; init; }
+
         /// <summary>
         /// Purpose for which an email address may be used.
         /// </summary>
@@ -79,9 +77,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Email Purpose")]
         [IsoXmlTag("EmailPurp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? EmailPurpose { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? EmailPurpose { get; init; }
+
         /// <summary>
         /// Title of the function.
         /// </summary>
@@ -89,9 +87,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Job Title")]
         [IsoXmlTag("JobTitl")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? JobTitle { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? JobTitle { get; init; }
+
         /// <summary>
         /// Role of a person in an organisation.
         /// </summary>
@@ -99,9 +97,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Responsibility")]
         [IsoXmlTag("Rspnsblty")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Responsibility { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Responsibility { get; init; }
+
         /// <summary>
         /// Identification of a division of a large organisation or building.
         /// </summary>
@@ -109,25 +107,25 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Department")]
         [IsoXmlTag("Dept")]
         [IsoSimpleType(IsoSimpleType.Max70Text)]
-        [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-        public IsoMax70Text? Department { get; init; } 
-        
+        [StringLength(maximumLength: 70, MinimumLength = 1)]
+        public IsoMax70Text? Department { get; init; }
+
         /// <summary>
         /// Contact details in another form.
         /// </summary>
         [IsoId("_rJlJOYv3Eei289CGNqs21g")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public OtherContact1? Other { get; init; } 
-        
+        public OtherContact1? Other { get; init; }
+
         /// <summary>
         /// Preferred method used to reach the technical contact.
         /// </summary>
         [IsoId("_rJlJO4v3Eei289CGNqs21g")]
         [DisplayName("Preferred Method")]
         [IsoXmlTag("PrefrdMtd")]
-        public PreferredContactMethod1Code? PreferredMethod { get; init; } 
-        
+        public PreferredContactMethod1Code? PreferredMethod { get; init; }
+
         /// <summary>
         /// Starting validity date for the contact.
         /// </summary>
@@ -135,8 +133,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid From")]
         [IsoXmlTag("VldFr")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidFrom { get; init; } 
-        
+        public IsoISODate? ValidFrom { get; init; }
+
         /// <summary>
         /// Ending validity date for the contact.
         /// </summary>
@@ -144,10 +142,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyModification2Choice
         [DisplayName("Valid To")]
         [IsoXmlTag("VldTo")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? ValidTo { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? ValidTo { get; init; }
     }
 }

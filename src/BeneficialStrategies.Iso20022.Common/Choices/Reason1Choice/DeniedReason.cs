@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Reason1Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.Reason1Choice
     /// </summary>
     [IsoId("_UXlCQtp-Ed-ak6NoX_4Aeg_-1460315991")]
     [DisplayName("Denied Reason")]
-    public partial record DeniedReason : Reason1Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record DeniedReason : Reason1Choice_ { }
 }

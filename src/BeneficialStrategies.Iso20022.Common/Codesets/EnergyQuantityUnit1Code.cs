@@ -23,7 +23,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_1m7AcRYtEeWK8am9Oj92Tg")]
     [Description(@"Therm per day.")]
     ThermPerDay = EnergyQuantityUnitCode.ThermPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mega Watt hour per hour.
     /// Encoded/decoded by serializers as &quot;MWHH&quot;.
@@ -32,7 +32,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_1zjuQRYtEeWK8am9Oj92Tg")]
     [Description(@"Mega Watt hour per hour.")]
     MWhPerHour = EnergyQuantityUnitCode.MWhPerHour, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mega Watt hour per day.
     /// Encoded/decoded by serializers as &quot;MWHD&quot;.
@@ -41,7 +41,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_13uckRYtEeWK8am9Oj92Tg")]
     [Description(@"Mega Watt hour per day.")]
     MWhPerDay = EnergyQuantityUnitCode.MWhPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mega Watt.
     /// Encoded/decoded by serializers as &quot;MWAT&quot;.
@@ -50,7 +50,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_2EXxcRYtEeWK8am9Oj92Tg")]
     [Description(@"Mega Watt.")]
     MW = EnergyQuantityUnitCode.MW, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// MTherm per day.
     /// Encoded/decoded by serializers as &quot;MTMD&quot;.
@@ -59,7 +59,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_2IifwRYtEeWK8am9Oj92Tg")]
     [Description(@"MTherm per day.")]
     MThermPerDay = EnergyQuantityUnitCode.MThermPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mcm per day.
     /// Encoded/decoded by serializers as &quot;MCMD&quot;.
@@ -68,7 +68,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_2VLNkRYtEeWK8am9Oj92Tg")]
     [Description(@"Mcm per day.")]
     MCMPerDay = EnergyQuantityUnitCode.MCMPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Kilo Watt hour per hour.
     /// Encoded/decoded by serializers as &quot;KWHH&quot;.
@@ -77,7 +77,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_2ZV74RYtEeWK8am9Oj92Tg")]
     [Description(@"Kilo Watt hour per hour.")]
     KWhPerHour = EnergyQuantityUnitCode.KWhPerHour, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Kilo Watt hour per day.
     /// Encoded/decoded by serializers as &quot;KWHD&quot;.
@@ -86,7 +86,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_2l1fwRYtEeWK8am9Oj92Tg")]
     [Description(@"Kilo Watt hour per day.")]
     KWhPerDay = EnergyQuantityUnitCode.KWhPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Kilo Watt.
     /// Encoded/decoded by serializers as &quot;KWAT&quot;.
@@ -95,7 +95,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_2yL5sRYtEeWK8am9Oj92Tg")]
     [Description(@"Kilo Watt.")]
     KW = EnergyQuantityUnitCode.KW, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// KTherm per day.
     /// Encoded/decoded by serializers as &quot;KTMD&quot;.
@@ -104,7 +104,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_22WoARYtEeWK8am9Oj92Tg")]
     [Description(@"KTherm per day.")]
     KThermPerDay = EnergyQuantityUnitCode.KThermPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Giga Watt hour per hour.
     /// Encoded/decoded by serializers as &quot;GWHH&quot;.
@@ -113,7 +113,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_3DJG0RYtEeWK8am9Oj92Tg")]
     [Description(@"Giga Watt hour per hour.")]
     GWhPerHour = EnergyQuantityUnitCode.GWhPerHour, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Giga Watt hour per day.
     /// Encoded/decoded by serializers as &quot;GWHD&quot;.
@@ -122,7 +122,7 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_3HT1IRYtEeWK8am9Oj92Tg")]
     [Description(@"Giga Watt hour per day.")]
     GWhPerDay = EnergyQuantityUnitCode.GWhPerDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Giga Watt.
     /// Encoded/decoded by serializers as &quot;GWAT&quot;.
@@ -131,5 +131,4 @@ public enum EnergyQuantityUnit1Code
     [IsoId("_3TgeERYtEeWK8am9Oj92Tg")]
     [Description(@"Giga Watt.")]
     GW = EnergyQuantityUnitCode.GW, // same ordinal as derivation source for type conversions
-    
 }

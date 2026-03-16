@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus3Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.ProcessingStatus3Choice
     /// </summary>
     [IsoId("_UVy5l9p-Ed-ak6NoX_4Aeg_-519061350")]
     [DisplayName("Pending Cancellation")]
-    public partial record PendingCancellation : ProcessingStatus3Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record PendingCancellation : ProcessingStatus3Choice_ { }
 }

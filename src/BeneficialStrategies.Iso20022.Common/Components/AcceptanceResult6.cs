@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RBvu4dp-Ed-ak6NoX_4Aeg_2046006177")]
 [DisplayName("Acceptance Result")]
-public partial record AcceptanceResult6
+public record AcceptanceResult6
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the mandate request was accepted or rejected.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record AcceptanceResult6
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Accepted { get; init; } 
-    
+    public required IsoYesNoIndicator Accepted { get; init; }
+
     /// <summary>
     /// Specifies the reason for the rejection of a mandate request.
     /// </summary>
     [IsoId("_RBvu49p-Ed-ak6NoX_4Aeg_1929136883")]
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
-    public MandateReason1Choice_? RejectReason { get; init; } 
-    
+    public MandateReason1Choice_? RejectReason { get; init; }
+
     /// <summary>
     /// Further details on the reject reason.
     /// </summary>
@@ -42,10 +40,6 @@ public partial record AcceptanceResult6
     [DisplayName("Additional Reject Reason Information")]
     [IsoXmlTag("AddtlRjctRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? AdditionalRejectReasonInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? AdditionalRejectReasonInformation { get; init; }
 }

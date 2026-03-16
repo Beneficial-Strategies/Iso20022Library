@@ -21,9 +21,11 @@ public enum RetailerMessageCode
     /// </summary>
     [EnumMember(Value = "SFSQ")]
     [IsoId("_luQYYNj4EeiojJsa6FYyew")]
-    [Description(@"Request a financial service like payment, reversal, loyalty, Balance Inquiry, etc.")]
+    [Description(
+        @"Request a financial service like payment, reversal, loyalty, Balance Inquiry, etc."
+    )]
     SaleFinancialServiceRequest,
-    
+
     /// <summary>
     /// Response to a financial service request.
     /// Encoded/decoded by serializers as &quot;SFSP&quot;.
@@ -32,7 +34,7 @@ public enum RetailerMessageCode
     [IsoId("_pY2a0Nj4EeiojJsa6FYyew")]
     [Description(@"Response to a financial service request.")]
     SaleFinancialServiceResponse,
-    
+
     /// <summary>
     /// Request a reconciliation (different types) between Sale System and POI System.
     /// Encoded/decoded by serializers as &quot;SFRQ&quot;.
@@ -41,7 +43,7 @@ public enum RetailerMessageCode
     [IsoId("_ssIJcNj4EeiojJsa6FYyew")]
     [Description(@"Request a reconciliation (different types) between Sale System and POI System.")]
     SaleFinancialReconciliationRequest,
-    
+
     /// <summary>
     /// Response to a Reconciliation Request.
     /// Encoded/decoded by serializers as &quot;SFRP&quot;.
@@ -50,16 +52,18 @@ public enum RetailerMessageCode
     [IsoId("_vKg3cNj4EeiojJsa6FYyew")]
     [Description(@"Response to a Reconciliation Request.")]
     SaleFinancialReconciliationResponse,
-    
+
     /// <summary>
     /// Request the management of a session: login, logout and diagnosis services. Initiated by the Sale system.
     /// Encoded/decoded by serializers as &quot;SASQ&quot;.
     /// </summary>
     [EnumMember(Value = "SASQ")]
     [IsoId("_yZLL0Nj4EeiojJsa6FYyew")]
-    [Description(@"Request the management of a session: login, logout and diagnosis services. Initiated by the Sale system.")]
+    [Description(
+        @"Request the management of a session: login, logout and diagnosis services. Initiated by the Sale system."
+    )]
     SessionManagementRequest,
-    
+
     /// <summary>
     /// Response to a session management request to initiate/terminate a session.
     /// Encoded/decoded by serializers as &quot;SASP&quot;.
@@ -68,16 +72,18 @@ public enum RetailerMessageCode
     [IsoId("_1kvI4Nj4EeiojJsa6FYyew")]
     [Description(@"Response to a session management request to initiate/terminate a session.")]
     SessionManagementResponse,
-    
+
     /// <summary>
     /// To select and start customised administrative services provided by the POI, using a &quot;menu&quot; for an interactive or software interface, initiated by the Sale system.
     /// Encoded/decoded by serializers as &quot;SAAQ&quot;.
     /// </summary>
     [EnumMember(Value = "SAAQ")]
     [IsoId("_6Ere8Nj4EeiojJsa6FYyew")]
-    [Description(@"To select and start customised administrative services provided by the POI, using a ""menu"" for an interactive or software interface, initiated by the Sale system.")]
+    [Description(
+        @"To select and start customised administrative services provided by the POI, using a ""menu"" for an interactive or software interface, initiated by the Sale system."
+    )]
     AdminRequest,
-    
+
     /// <summary>
     /// Response to the Admin request.
     /// Encoded/decoded by serializers as &quot;SAAP&quot;.
@@ -86,16 +92,18 @@ public enum RetailerMessageCode
     [IsoId("__kmrUNj4EeiojJsa6FYyew")]
     [Description(@"Response to the Admin request.")]
     AdminResponse,
-    
+
     /// <summary>
     /// To request, by the Sale System, a report on a list of transactions on the POI system, or the status of a transaction.
     /// Encoded/decoded by serializers as &quot;SARQ&quot;.
     /// </summary>
     [EnumMember(Value = "SARQ")]
     [IsoId("_CsCWUNj5EeiojJsa6FYyew")]
-    [Description(@"To request, by the Sale System, a report on a list of transactions on the POI system, or the status of a transaction.")]
+    [Description(
+        @"To request, by the Sale System, a report on a list of transactions on the POI system, or the status of a transaction."
+    )]
     ReportRequest,
-    
+
     /// <summary>
     /// Response to a Report request.
     /// Encoded/decoded by serializers as &quot;SARP&quot;.
@@ -104,7 +112,7 @@ public enum RetailerMessageCode
     [IsoId("_FwMq4Nj5EeiojJsa6FYyew")]
     [Description(@"Response to a Report request.")]
     ReportResponse,
-    
+
     /// <summary>
     /// Abort the current process or the last request.
     /// Encoded/decoded by serializers as &quot;SSAB&quot;.
@@ -113,7 +121,7 @@ public enum RetailerMessageCode
     [IsoId("_JLdQ0Nj5EeiojJsa6FYyew")]
     [Description(@"Abort the current process or the last request.")]
     Abort,
-    
+
     /// <summary>
     /// Notify the other party of an event that occurs on its side.
     /// Encoded/decoded by serializers as &quot;SSEN&quot;.
@@ -122,7 +130,7 @@ public enum RetailerMessageCode
     [IsoId("_MJgWUNj5EeiojJsa6FYyew")]
     [Description(@"Notify the other party of an event that occurs on its side.")]
     EventNotification,
-    
+
     /// <summary>
     /// Reject a previous received message, for technical or functional reasons.
     /// Encoded/decoded by serializers as &quot;SSRJ&quot;.
@@ -131,16 +139,18 @@ public enum RetailerMessageCode
     [IsoId("_Qd6x0Nj5EeiojJsa6FYyew")]
     [Description(@"Reject a previous received message, for technical or functional reasons.")]
     Rejection,
-    
+
     /// <summary>
     /// Request the status of a previous message for which the Sale system has no response.
     /// Encoded/decoded by serializers as &quot;SSMQ&quot;.
     /// </summary>
     [EnumMember(Value = "SSMQ")]
     [IsoId("_TBfh0Nj5EeiojJsa6FYyew")]
-    [Description(@"Request the status of a previous message for which the Sale system has no response.")]
+    [Description(
+        @"Request the status of a previous message for which the Sale system has no response."
+    )]
     MessageStatusRequest,
-    
+
     /// <summary>
     /// Response to a Message Status request.
     /// Encoded/decoded by serializers as &quot;SSMR&quot;.
@@ -149,16 +159,18 @@ public enum RetailerMessageCode
     [IsoId("_W2xxUNj5EeiojJsa6FYyew")]
     [Description(@"Response to a Message Status request.")]
     MessageStatusResponse,
-    
+
     /// <summary>
     /// Request one or several functions of the device, from user Interface or payment peripherals on the POI system or on the Sale system. Functions can be Display, Input, Print, play sound, Card reader capabilities or Transmit a message.
     /// Encoded/decoded by serializers as &quot;SDDR&quot;.
     /// </summary>
     [EnumMember(Value = "SDDR")]
     [IsoId("_baS_0Nj5EeiojJsa6FYyew")]
-    [Description(@"Request one or several functions of the device, from user Interface or payment peripherals on the POI system or on the Sale system. Functions can be Display, Input, Print, play sound, Card reader capabilities or Transmit a message.")]
+    [Description(
+        @"Request one or several functions of the device, from user Interface or payment peripherals on the POI system or on the Sale system. Functions can be Display, Input, Print, play sound, Card reader capabilities or Transmit a message."
+    )]
     DeviceRequest,
-    
+
     /// <summary>
     /// Response to a Device request.
     /// Encoded/decoded by serializers as &quot;SDDP&quot;.
@@ -167,5 +179,4 @@ public enum RetailerMessageCode
     [IsoId("_hOsAUNj5EeiojJsa6FYyew")]
     [Description(@"Response to a Device request.")]
     DeviceResponse,
-    
 }

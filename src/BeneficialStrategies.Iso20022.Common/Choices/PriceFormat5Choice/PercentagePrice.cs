@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PriceFormat5Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat5Choice
     /// </summary>
     [IsoId("_Q1-jwNp-Ed-ak6NoX_4Aeg_334581085")]
     [DisplayName("Percentage Price")]
-    public partial record PercentagePrice : PriceFormat5Choice_
+    public record PercentagePrice : PriceFormat5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the type of percentage price.
         /// </summary>
         [IsoId("_QaaCENp-Ed-ak6NoX_4Aeg_724274055")]
         [DisplayName("Percentage Price Type")]
         [IsoXmlTag("PctgPricTp")]
-        public required PriceRateType3Code PercentagePriceType { get; init; } 
-        
+        public required PriceRateType3Code PercentagePriceType { get; init; }
+
         /// <summary>
         /// Specifies the value of price.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceFormat5Choice
         [DisplayName("Price Value")]
         [IsoXmlTag("PricVal")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate PriceValue { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoPercentageRate PriceValue { get; init; }
     }
 }

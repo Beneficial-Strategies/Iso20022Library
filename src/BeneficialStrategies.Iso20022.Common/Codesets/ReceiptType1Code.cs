@@ -23,7 +23,7 @@ public enum ReceiptType1Code
     [IsoId("_SvbgEUrHEeenp6hmNprBHg")]
     [Description(@"Receipt transmitted by Email.")]
     EMail = ReceiptTypeCode.EMail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of channel to transmit receipt information to the recipient.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,7 +32,7 @@ public enum ReceiptType1Code
     [IsoId("_S7lFskrHEeenp6hmNprBHg")]
     [Description(@"Other type of channel to transmit receipt information to the recipient.")]
     Other = ReceiptTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Receipt in a paper form.
     /// Encoded/decoded by serializers as &quot;PAPR&quot;.
@@ -41,7 +41,7 @@ public enum ReceiptType1Code
     [IsoId("_TKaL4krHEeenp6hmNprBHg")]
     [Description(@"Receipt in a paper form.")]
     Paper = ReceiptTypeCode.Paper, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Receipt transmitted by SMS message.
     /// Encoded/decoded by serializers as &quot;SMSM&quot;.
@@ -50,7 +50,7 @@ public enum ReceiptType1Code
     [IsoId("_TV5DIkrHEeenp6hmNprBHg")]
     [Description(@"Receipt transmitted by SMS message.")]
     SMS = ReceiptTypeCode.SMS, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Receipt transmitted to a Uniform Resource Identifier (URI) address.
     /// Encoded/decoded by serializers as &quot;URID&quot;.
@@ -59,5 +59,4 @@ public enum ReceiptType1Code
     [IsoId("_TnSVIkrHEeenp6hmNprBHg")]
     [Description(@"Receipt transmitted to a Uniform Resource Identifier (URI) address.")]
     UniformResourceIdentifier = ReceiptTypeCode.UniformResourceIdentifier, // same ordinal as derivation source for type conversions
-    
 }

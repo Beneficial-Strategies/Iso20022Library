@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(EncryptedData1Choice.BinaryData))]
     [KnownType(typeof(EncryptedData1Choice.HexadecimalBinaryValue))]
-    [JsonDerivedType(typeof(EncryptedData1Choice.BinaryData),nameof(EncryptedData1Choice.BinaryData))]
-    [JsonDerivedType(typeof(EncryptedData1Choice.HexadecimalBinaryValue),nameof(EncryptedData1Choice.HexadecimalBinaryValue))]
+    [JsonDerivedType(
+        typeof(EncryptedData1Choice.BinaryData),
+        nameof(EncryptedData1Choice.BinaryData)
+    )]
+    [JsonDerivedType(
+        typeof(EncryptedData1Choice.HexadecimalBinaryValue),
+        nameof(EncryptedData1Choice.HexadecimalBinaryValue)
+    )]
     [IsoId("_-on80-kLEemeDPHh-U9b6w")]
     [DisplayName("Encrypted Data 1 Choice")]
-    public abstract partial record EncryptedData1Choice_
-    {
-    }
+    public abstract record EncryptedData1Choice_ { }
 }

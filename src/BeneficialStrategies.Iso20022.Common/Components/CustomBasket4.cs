@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_muRycVo2Ee23K4GXSpBSeg")]
 [DisplayName("Custom Basket")]
-public partial record CustomBasket4
+public record CustomBasket4
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the structurer of the customer basket.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record CustomBasket4
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? Structurer { get; init; } 
-    
+    public IsoLEIIdentifier? Structurer { get; init; }
+
     /// <summary>
     /// Identifier of the custom basket assigned by the structurer allowing to link the constituents of the basket of indexes.
     /// </summary>
@@ -34,18 +32,14 @@ public partial record CustomBasket4
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-    public IsoMax52Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public IsoMax52Text? Identification { get; init; }
+
     /// <summary>
     /// Identifier of the underliers that represent the constituents of a custom basket.
     /// </summary>
     [IsoId("_mv1RpVo2Ee23K4GXSpBSeg")]
     [DisplayName("Constituents")]
     [IsoXmlTag("Cnsttnts")]
-    public BasketConstituents3? Constituents { get; init; } 
-    
-    
-    #nullable disable
-    
+    public BasketConstituents3? Constituents { get; init; }
 }

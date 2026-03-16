@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DateFormat46Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.DateFormat46Choice
     /// </summary>
     [IsoId("_5RkTGbQYEeeKRKrD60ELBQ")]
     [DisplayName("Date Code")]
-    public partial record DateCode : DateFormat46Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record DateCode : DateFormat46Choice_ { }
 }

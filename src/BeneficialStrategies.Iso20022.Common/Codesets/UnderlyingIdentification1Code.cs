@@ -23,7 +23,7 @@ public enum UnderlyingIdentification1Code
     [IsoId("_wlDTEXZWEeWM6LeFwEMTgg")]
     [Description(@"Unknown (not available) underlying identification code.")]
     Unknown = UnderlyingIdentificationCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Basket of indexes identification code.
     /// Encoded/decoded by serializers as &quot;BSKT&quot;.
@@ -32,7 +32,7 @@ public enum UnderlyingIdentification1Code
     [IsoId("_5NIMEea4EeW1iL_FRZt8bg")]
     [Description(@"Basket of indexes identification code.")]
     Basket = UnderlyingIdentificationCode.Basket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Index identification code.
     /// Encoded/decoded by serializers as &quot;INDX&quot;.
@@ -41,5 +41,4 @@ public enum UnderlyingIdentification1Code
     [IsoId("_5X_YQea4EeW1iL_FRZt8bg")]
     [Description(@"Index identification code.")]
     Index = UnderlyingIdentificationCode.Index, // same ordinal as derivation source for type conversions
-    
 }

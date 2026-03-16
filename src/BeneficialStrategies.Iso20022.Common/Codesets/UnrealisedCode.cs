@@ -23,7 +23,7 @@ public enum UnrealisedCode
     [IsoId("_m50OZPNBEeCuA5Tr22BnwA_667402002")]
     [Description(@"Unrealised gain.")]
     Gain,
-    
+
     /// <summary>
     /// Unrealised loss.
     /// Encoded/decoded by serializers as &quot;LOSS&quot;.
@@ -32,5 +32,4 @@ public enum UnrealisedCode
     [IsoId("_m50OZfNBEeCuA5Tr22BnwA_-1644430516")]
     [Description(@"Unrealised loss.")]
     Loss,
-    
 }

@@ -23,7 +23,7 @@ public enum CollateralProposalResponseCode
     [IsoId("_YbwCV9p-Ed-ak6NoX_4Aeg_-605829047")]
     [Description(@"Indicates that the collateral proposal response is an initial proposal.")]
     InitialProposal,
-    
+
     /// <summary>
     /// Indicates that the collateral proposal response is a counter proposal.
     /// Encoded/decoded by serializers as &quot;COPR&quot;.
@@ -32,5 +32,4 @@ public enum CollateralProposalResponseCode
     [IsoId("_YbwCWNp-Ed-ak6NoX_4Aeg_926407591")]
     [Description(@"Indicates that the collateral proposal response is a counter proposal.")]
     CounterProposal,
-    
 }

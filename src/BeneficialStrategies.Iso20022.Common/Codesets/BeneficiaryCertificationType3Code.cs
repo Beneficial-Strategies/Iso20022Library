@@ -21,9 +21,11 @@ public enum BeneficiaryCertificationType3Code
     /// </summary>
     [EnumMember(Value = "ACCI")]
     [IsoId("_beD8wtp-Ed-ak6NoX_4Aeg_-1668344657")]
-    [Description(@"The holder of the security has to irrevocably certify that it is an Accredited Investor as defined in US Securities and Exchange Commission Regulation D.")]
+    [Description(
+        @"The holder of the security has to irrevocably certify that it is an Accredited Investor as defined in US Securities and Exchange Commission Regulation D."
+    )]
     AccreditedInvestor = BeneficiaryCertificationTypeCode.AccreditedInvestor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The holder of the security has to certify he is an Non-Company related person.
     /// Encoded/decoded by serializers as &quot;NCOM&quot;.
@@ -32,16 +34,18 @@ public enum BeneficiaryCertificationType3Code
     [IsoId("_beD8w9p-Ed-ak6NoX_4Aeg_-1667421525")]
     [Description(@"The holder of the security has to certify he is an Non-Company related person.")]
     NonCompany = BeneficiaryCertificationTypeCode.NonCompany, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A.
     /// Encoded/decoded by serializers as &quot;QIBB&quot;.
     /// </summary>
     [EnumMember(Value = "QIBB")]
     [IsoId("_beD8xNp-Ed-ak6NoX_4Aeg_-1667421153")]
-    [Description(@"The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A.")]
+    [Description(
+        @"The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A."
+    )]
     QIBCertification = BeneficiaryCertificationTypeCode.QIBCertification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// See narrative field for certification requirements.
     /// Encoded/decoded by serializers as &quot;NARR&quot;.
@@ -50,5 +54,4 @@ public enum BeneficiaryCertificationType3Code
     [IsoId("_beD8xdp-Ed-ak6NoX_4Aeg_1359889133")]
     [Description(@"See narrative field for certification requirements.")]
     NarrativeDescription = BeneficiaryCertificationTypeCode.NarrativeDescription, // same ordinal as derivation source for type conversions
-    
 }

@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RateAndAmountFormat54Choice.Amount))]
     [KnownType(typeof(RateAndAmountFormat54Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(RateAndAmountFormat54Choice.RateTypeAndRate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat54Choice.Rate),nameof(RateAndAmountFormat54Choice.Rate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat54Choice.Amount),nameof(RateAndAmountFormat54Choice.Amount))]
-    [JsonDerivedType(typeof(RateAndAmountFormat54Choice.RateTypeAndAmountAndRateStatus),nameof(RateAndAmountFormat54Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(RateAndAmountFormat54Choice.RateTypeAndRate),nameof(RateAndAmountFormat54Choice.RateTypeAndRate))]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat54Choice.Rate),
+        nameof(RateAndAmountFormat54Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat54Choice.Amount),
+        nameof(RateAndAmountFormat54Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat54Choice.RateTypeAndAmountAndRateStatus),
+        nameof(RateAndAmountFormat54Choice.RateTypeAndAmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat54Choice.RateTypeAndRate),
+        nameof(RateAndAmountFormat54Choice.RateTypeAndRate)
+    )]
     [IsoId("_TTFAsdEDEeetfps_dpxRmg")]
     [DisplayName("Rate And Amount Format 54 Choice")]
-    public abstract partial record RateAndAmountFormat54Choice_
-    {
-    }
+    public abstract record RateAndAmountFormat54Choice_ { }
 }

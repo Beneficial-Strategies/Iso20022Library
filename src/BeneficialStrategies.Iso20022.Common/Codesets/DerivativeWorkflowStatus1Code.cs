@@ -23,7 +23,7 @@ public enum DerivativeWorkflowStatus1Code
     [IsoId("_12PQkzL3EeKU9IrkkToqcw_-1279574546")]
     [Description(@"Notice is an advance warning that an adjustment may be applied.")]
     Preliminary = DerivativeWorkflowStatusCode.Preliminary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notice confirms that an adjustment will be applied.
     /// Encoded/decoded by serializers as &quot;ADJU&quot;.
@@ -32,7 +32,7 @@ public enum DerivativeWorkflowStatus1Code
     [IsoId("_12PQlDL3EeKU9IrkkToqcw_1932288914")]
     [Description(@"Notice confirms that an adjustment will be applied.")]
     Adjustment = DerivativeWorkflowStatusCode.Adjustment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notice confirms that no adjustment will be applied.
     /// Encoded/decoded by serializers as &quot;NOAC&quot;.
@@ -41,16 +41,18 @@ public enum DerivativeWorkflowStatus1Code
     [IsoId("_12PQlTL3EeKU9IrkkToqcw_-1908591113")]
     [Description(@"Notice confirms that no adjustment will be applied.")]
     NoAction = DerivativeWorkflowStatusCode.NoAction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// GCA VS (Global Corporate Actions Validation Service) is unable to confirm that there is a corporate action corresponding to this notice.
     /// Encoded/decoded by serializers as &quot;UCON&quot;.
     /// </summary>
     [EnumMember(Value = "UCON")]
     [IsoId("_12ZBkDL3EeKU9IrkkToqcw_-77667944")]
-    [Description(@"GCA VS (Global Corporate Actions Validation Service) is unable to confirm that there is a corporate action corresponding to this notice.")]
+    [Description(
+        @"GCA VS (Global Corporate Actions Validation Service) is unable to confirm that there is a corporate action corresponding to this notice."
+    )]
     Unconfirmed = DerivativeWorkflowStatusCode.Unconfirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Details were entered in error. All data should be ignored.
     /// Encoded/decoded by serializers as &quot;DLTD&quot;.
@@ -59,5 +61,4 @@ public enum DerivativeWorkflowStatus1Code
     [IsoId("_12ZBkTL3EeKU9IrkkToqcw_247449563")]
     [Description(@"Details were entered in error. All data should be ignored.")]
     Deleted = DerivativeWorkflowStatusCode.Deleted, // same ordinal as derivation source for type conversions
-    
 }

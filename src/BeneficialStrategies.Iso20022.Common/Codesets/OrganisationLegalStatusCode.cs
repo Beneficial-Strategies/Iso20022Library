@@ -23,7 +23,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_T3gXkBE4EeafpqhYGpTDnw")]
     [Description(@"Unlimited trust")]
     UnlimitedTrust,
-    
+
     /// <summary>
     /// Unlimited company
     /// Encoded/decoded by serializers as &quot;UNLC&quot;.
@@ -32,7 +32,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_WLVbYBE4EeafpqhYGpTDnw")]
     [Description(@"Unlimited company")]
     UnlimitedCompany,
-    
+
     /// <summary>
     /// Sole proprietorship/Sole trader
     /// Encoded/decoded by serializers as &quot;SOLE&quot;.
@@ -41,7 +41,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_YLFFkBE4EeafpqhYGpTDnw")]
     [Description(@"Sole proprietorship/Sole trader")]
     SoleProprietorship,
-    
+
     /// <summary>
     /// Public limited company (Plc.)
     /// Encoded/decoded by serializers as &quot;PCLC&quot;.
@@ -50,7 +50,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_bjMQ4BE4EeafpqhYGpTDnw")]
     [Description(@"Public limited company (Plc.)")]
     PublicLimitedCompany,
-    
+
     /// <summary>
     /// Private company limited by shares (Ltd.)
     /// Encoded/decoded by serializers as &quot;PCLS&quot;.
@@ -59,7 +59,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_eVINABE4EeafpqhYGpTDnw")]
     [Description(@"Private company limited by shares (Ltd.)")]
     PrivateCompanyLimitedByShares,
-    
+
     /// <summary>
     /// Private company limited by guarantee (Ltd.)
     /// Encoded/decoded by serializers as &quot;PCLG&quot;.
@@ -68,7 +68,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_gidAMBE4EeafpqhYGpTDnw")]
     [Description(@"Private company limited by guarantee (Ltd.)")]
     PrivateCompanyLimitedByGuarantee,
-    
+
     /// <summary>
     /// Limited partnership (LP)
     /// Encoded/decoded by serializers as &quot;LIMP&quot;.
@@ -77,7 +77,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_jHB1wBE4EeafpqhYGpTDnw")]
     [Description(@"Limited partnership (LP)")]
     LimitedPartnership,
-    
+
     /// <summary>
     /// Limited liability partnership (LLP)
     /// Encoded/decoded by serializers as &quot;LLPP&quot;.
@@ -86,7 +86,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_lpZr4BE4EeafpqhYGpTDnw")]
     [Description(@"Limited liability partnership (LLP)")]
     LimitedLiabilityPartnership,
-    
+
     /// <summary>
     /// For example a co-operative, which does include Ltd. or charity.
     /// Encoded/decoded by serializers as &quot;IAPS&quot;.
@@ -95,7 +95,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_uHxmYBE4EeafpqhYGpTDnw")]
     [Description(@"For example a co-operative, which does include Ltd. or charity.")]
     IndustrialAndProvidentSociety,
-    
+
     /// <summary>
     /// General partnership
     /// Encoded/decoded by serializers as &quot;GENP&quot;.
@@ -104,7 +104,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_woAHcBE4EeafpqhYGpTDnw")]
     [Description(@"General partnership")]
     GeneralPartnership,
-    
+
     /// <summary>
     /// Community Interest Company (CIC)
     /// Encoded/decoded by serializers as &quot;CICC&quot;.
@@ -113,7 +113,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_yyykABE4EeafpqhYGpTDnw")]
     [Description(@"Community Interest Company (CIC)")]
     CommunityInterestCompany,
-    
+
     /// <summary>
     /// Charity
     /// Encoded/decoded by serializers as &quot;CHAR&quot;.
@@ -122,7 +122,7 @@ public enum OrganisationLegalStatusCode
     [IsoId("_4ZcqgBE4EeafpqhYGpTDnw")]
     [Description(@"Charity")]
     Charity,
-    
+
     /// <summary>
     /// Charitable incorporated organisation (CIO)
     /// Encoded/decoded by serializers as &quot;CIOC&quot;.
@@ -131,5 +131,4 @@ public enum OrganisationLegalStatusCode
     [IsoId("_6sK7EBE4EeafpqhYGpTDnw")]
     [Description(@"Charitable incorporated organisation (CIO)")]
     CharitableIncorporatedOrganisation,
-    
 }

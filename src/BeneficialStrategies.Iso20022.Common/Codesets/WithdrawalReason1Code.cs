@@ -23,7 +23,7 @@ public enum WithdrawalReason1Code
     [IsoId("_3S_I0ZElEeKcLcxonNWTXg")]
     [Description(@"Alleged trade is rejected.")]
     Rejected = WithdrawalReasonCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Alleged trade is rescinded.
     /// Encoded/decoded by serializers as &quot;RSCD&quot;.
@@ -32,7 +32,7 @@ public enum WithdrawalReason1Code
     [IsoId("_3dH8QZElEeKcLcxonNWTXg")]
     [Description(@"Alleged trade is rescinded.")]
     Rescinded = WithdrawalReasonCode.Rescinded, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Alleged trade is withdrawn due to an amendment.
     /// Encoded/decoded by serializers as &quot;WTDN&quot;.
@@ -41,5 +41,4 @@ public enum WithdrawalReason1Code
     [IsoId("_3nQIoZElEeKcLcxonNWTXg")]
     [Description(@"Alleged trade is withdrawn due to an amendment.")]
     Withdrawn = WithdrawalReasonCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
 }

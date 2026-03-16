@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_deqTgEyMEeiepssxrmRw1A")]
 [Description(@"Specifies a type of asset.")]
-[Derivations(typeof(OtherAsset1Code),typeof(OtherAsset2Code))]
+[Derivations(typeof(OtherAsset1Code), typeof(OtherAsset2Code))]
 public enum OtherAssetCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum OtherAssetCode
     [IsoId("_fdkQMEyMEeiepssxrmRw1A")]
     [Description(@"Property that is real estate.")]
     Property,
-    
+
     /// <summary>
     /// Property that is not real estate. Also known as &apos;movable chattels&apos;.
     /// Encoded/decoded by serializers as &quot;MOVE&quot;.
@@ -32,7 +32,7 @@ public enum OtherAssetCode
     [IsoId("_j1tVIEyMEeiepssxrmRw1A")]
     [Description(@"Property that is not real estate. Also known as 'movable chattels'.")]
     MovableProperty,
-    
+
     /// <summary>
     /// Asset is an external investment account.
     /// Encoded/decoded by serializers as &quot;EXIA&quot;.
@@ -41,7 +41,7 @@ public enum OtherAssetCode
     [IsoId("_DYEaAJNCEemQB_8XA98K0Q")]
     [Description(@"Asset is an external investment account.")]
     ExternalAccount,
-    
+
     /// <summary>
     /// Asset is a discretionary investment manager account
     /// Encoded/decoded by serializers as &quot;DIMA&quot;.
@@ -50,7 +50,7 @@ public enum OtherAssetCode
     [IsoId("_OfW3gJNCEemQB_8XA98K0Q")]
     [Description(@"Asset is a discretionary investment manager account")]
     Discretionary,
-    
+
     /// <summary>
     /// Asset is a trustee investment plan (TIP).
     /// Encoded/decoded by serializers as &quot;TIPP&quot;.
@@ -59,5 +59,4 @@ public enum OtherAssetCode
     [IsoId("_XhV1YJNCEemQB_8XA98K0Q")]
     [Description(@"Asset is a trustee investment plan (TIP).")]
     TrusteeInvestmentPlan,
-    
 }

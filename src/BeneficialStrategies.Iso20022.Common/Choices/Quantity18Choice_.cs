@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Quantity18Choice.OriginalAndCurrentFaceAmount))]
     [KnownType(typeof(Quantity18Choice.SignedQuantity))]
-    [JsonDerivedType(typeof(Quantity18Choice.OriginalAndCurrentFaceAmount),nameof(Quantity18Choice.OriginalAndCurrentFaceAmount))]
-    [JsonDerivedType(typeof(Quantity18Choice.SignedQuantity),nameof(Quantity18Choice.SignedQuantity))]
+    [JsonDerivedType(
+        typeof(Quantity18Choice.OriginalAndCurrentFaceAmount),
+        nameof(Quantity18Choice.OriginalAndCurrentFaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(Quantity18Choice.SignedQuantity),
+        nameof(Quantity18Choice.SignedQuantity)
+    )]
     [IsoId("_LyFLJzq5EeWQ1Y7f8kds2A")]
     [DisplayName("Quantity 18 Choice")]
-    public abstract partial record Quantity18Choice_
-    {
-    }
+    public abstract record Quantity18Choice_ { }
 }

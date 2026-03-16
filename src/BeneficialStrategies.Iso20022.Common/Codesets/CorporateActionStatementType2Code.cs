@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_0mALAbtEEeilsanBGAzy4A")]
-[Description(@"Indicates whether the statement contains missing instructions only or all instructions.")]
+[Description(
+    @"Indicates whether the statement contains missing instructions only or all instructions."
+)]
 [DerivedFrom(typeof(CorporateActionStatementTypeCode))]
 public enum CorporateActionStatementType2Code
 {
@@ -23,7 +25,7 @@ public enum CorporateActionStatementType2Code
     [IsoId("_03aEEbtEEeilsanBGAzy4A")]
     [Description(@"Statement contains missing instructions.")]
     Missing = CorporateActionStatementTypeCode.Missing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement contains all instructions.
     /// Encoded/decoded by serializers as &quot;ALLL&quot;.
@@ -32,7 +34,7 @@ public enum CorporateActionStatementType2Code
     [IsoId("_03aEE7tEEeilsanBGAzy4A")]
     [Description(@"Statement contains all instructions.")]
     All = CorporateActionStatementTypeCode.All, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance information with no instruction details provided.
     /// Encoded/decoded by serializers as &quot;BALO&quot;.
@@ -41,7 +43,7 @@ public enum CorporateActionStatementType2Code
     [IsoId("_WIwwAbtFEeilsanBGAzy4A")]
     [Description(@"Balance information with no instruction details provided.")]
     BalanceOnlyNotification = CorporateActionStatementTypeCode.BalanceOnlyNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance information with instruction details.
     /// Encoded/decoded by serializers as &quot;BALI&quot;.
@@ -50,5 +52,4 @@ public enum CorporateActionStatementType2Code
     [IsoId("_WSKjortFEeilsanBGAzy4A")]
     [Description(@"Balance information with instruction details.")]
     BalanceInformation = CorporateActionStatementTypeCode.BalanceInformation, // same ordinal as derivation source for type conversions
-    
 }

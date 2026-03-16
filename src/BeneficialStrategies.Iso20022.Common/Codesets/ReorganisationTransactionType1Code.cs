@@ -22,8 +22,9 @@ public enum ReorganisationTransactionType1Code
     [EnumMember(Value = "COVP")]
     [IsoId("_am1Q0cU_EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a cover on behalf of another participant transaction type.")]
-    CoverOnBehalfOfAnotherParticipantTransaction = ReorganisationTransactionTypeCode.CoverOnBehalfOfAnotherParticipantTransaction, // same ordinal as derivation source for type conversions
-    
+    CoverOnBehalfOfAnotherParticipantTransaction =
+        ReorganisationTransactionTypeCode.CoverOnBehalfOfAnotherParticipantTransaction, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Reorganisation is a cover protect directly to agent transaction type.
     /// Encoded/decoded by serializers as &quot;COVA&quot;.
@@ -31,8 +32,9 @@ public enum ReorganisationTransactionType1Code
     [EnumMember(Value = "COVA")]
     [IsoId("_arcrEcU_EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a cover protect directly to agent transaction type.")]
-    CoverProtectDirectlyToAgentHeaderTransaction = ReorganisationTransactionTypeCode.CoverProtectDirectlyToAgentHeaderTransaction, // same ordinal as derivation source for type conversions
-    
+    CoverProtectDirectlyToAgentHeaderTransaction =
+        ReorganisationTransactionTypeCode.CoverProtectDirectlyToAgentHeaderTransaction, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Reorganisation is a cover protect transaction type.
     /// Encoded/decoded by serializers as &quot;COVR&quot;.
@@ -41,7 +43,7 @@ public enum ReorganisationTransactionType1Code
     [IsoId("_avnZYcU_EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a cover protect transaction type.")]
     CoverProtectTransaction = ReorganisationTransactionTypeCode.CoverProtectTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reorganisation is a protect on behalf of another participant transaction type.
     /// Encoded/decoded by serializers as &quot;PROP&quot;.
@@ -49,8 +51,9 @@ public enum ReorganisationTransactionType1Code
     [EnumMember(Value = "PROP")]
     [IsoId("_azyHscU_EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a protect on behalf of another participant transaction type.")]
-    ProtectOnBehalfOfAnotherParticipantTransaction = ReorganisationTransactionTypeCode.ProtectOnBehalfOfAnotherParticipantTransaction, // same ordinal as derivation source for type conversions
-    
+    ProtectOnBehalfOfAnotherParticipantTransaction =
+        ReorganisationTransactionTypeCode.ProtectOnBehalfOfAnotherParticipantTransaction, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Reorganisation is a protect transaction type.
     /// Encoded/decoded by serializers as &quot;PROT&quot;.
@@ -59,7 +62,7 @@ public enum ReorganisationTransactionType1Code
     [IsoId("_a3zFAcU_EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a protect transaction type.")]
     ProtectTransaction = ReorganisationTransactionTypeCode.ProtectTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reorganisation is a voluntary offer instruction transaction type.
     /// Encoded/decoded by serializers as &quot;VOIT&quot;.
@@ -67,6 +70,6 @@ public enum ReorganisationTransactionType1Code
     [EnumMember(Value = "VOIT")]
     [IsoId("_a8taMcU_EeeWeZMpNX1JUQ")]
     [Description(@"Reorganisation is a voluntary offer instruction transaction type.")]
-    VoluntaryOfferInstructionTransaction = ReorganisationTransactionTypeCode.VoluntaryOfferInstructionTransaction, // same ordinal as derivation source for type conversions
-    
+    VoluntaryOfferInstructionTransaction =
+        ReorganisationTransactionTypeCode.VoluntaryOfferInstructionTransaction, // same ordinal as derivation source for type conversions
 }

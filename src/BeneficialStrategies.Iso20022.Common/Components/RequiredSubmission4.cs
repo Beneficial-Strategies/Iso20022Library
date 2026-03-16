@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TnmW1tp-Ed-ak6NoX_4Aeg_-1858308306")]
 [DisplayName("Required Submission")]
-public partial record RequiredSubmission4
+public record RequiredSubmission4
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies with party(ies) is authorised to submit the data set as part of the transaction.
     /// </summary>
@@ -25,24 +23,25 @@ public partial record RequiredSubmission4
     [DisplayName("Submitter")]
     [IsoXmlTag("Submitr")]
     public ValueList<BICIdentification1> Submitter { get; init; } = [];
+
     // ID for the above is _TnmW19p-Ed-ak6NoX_4Aeg_-1858308280
-    
+
     /// <summary>
     /// Specifies the type of the certificate.
     /// </summary>
     [IsoId("_TnmW2Np-Ed-ak6NoX_4Aeg_-150714604")]
     [DisplayName("Certificate Type")]
     [IsoXmlTag("CertTp")]
-    public required TradeCertificateType1Code CertificateType { get; init; } 
-    
+    public required TradeCertificateType1Code CertificateType { get; init; }
+
     /// <summary>
     /// Specifies if the issuer must be matched as part of the validation of the data set.
     /// </summary>
     [IsoId("_TnwH0Np-Ed-ak6NoX_4Aeg_1034550595")]
     [DisplayName("Match Issuer")]
     [IsoXmlTag("MtchIssr")]
-    public PartyIdentification27? MatchIssuer { get; init; } 
-    
+    public PartyIdentification27? MatchIssuer { get; init; }
+
     /// <summary>
     /// Specifies if the issue date must be matched as part of the validation of the data set.
     /// </summary>
@@ -50,8 +49,8 @@ public partial record RequiredSubmission4
     [DisplayName("Match Issue Date")]
     [IsoXmlTag("MtchIsseDt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchIssueDate { get; init; } 
-    
+    public required IsoYesNoIndicator MatchIssueDate { get; init; }
+
     /// <summary>
     /// Specifies if the inspection date must be matched as part of the validation of the data set.
     /// </summary>
@@ -59,8 +58,8 @@ public partial record RequiredSubmission4
     [DisplayName("Match Inspection Date")]
     [IsoXmlTag("MtchInspctnDt")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchInspectionDate { get; init; } 
-    
+    public required IsoYesNoIndicator MatchInspectionDate { get; init; }
+
     /// <summary>
     /// Specifies if the indication of an authorised inspector must be present as part of the validation of the data set.
     /// </summary>
@@ -68,8 +67,8 @@ public partial record RequiredSubmission4
     [DisplayName("Authorised Inspector Indicator")]
     [IsoXmlTag("AuthrsdInspctrInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator AuthorisedInspectorIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator AuthorisedInspectorIndicator { get; init; }
+
     /// <summary>
     /// Specifies if the consignee must be matched as part of the validation of the data set.
     /// </summary>
@@ -77,16 +76,16 @@ public partial record RequiredSubmission4
     [DisplayName("Match Consignee")]
     [IsoXmlTag("MtchConsgn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator MatchConsignee { get; init; } 
-    
+    public required IsoYesNoIndicator MatchConsignee { get; init; }
+
     /// <summary>
     /// Specifies if the manufacturer must be matched as part of the validation of the data set.
     /// </summary>
     [IsoId("_TnwH1dp-Ed-ak6NoX_4Aeg_99351627")]
     [DisplayName("Match Manufacturer")]
     [IsoXmlTag("MtchManfctr")]
-    public PartyIdentification27? MatchManufacturer { get; init; } 
-    
+    public PartyIdentification27? MatchManufacturer { get; init; }
+
     /// <summary>
     /// Specifies if the certificate data set is required in relation to specific line items, and which line items.
     /// </summary>
@@ -94,10 +93,6 @@ public partial record RequiredSubmission4
     [DisplayName("Line Item Identification")]
     [IsoXmlTag("LineItmId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? LineItemIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? LineItemIdentification { get; init; }
 }

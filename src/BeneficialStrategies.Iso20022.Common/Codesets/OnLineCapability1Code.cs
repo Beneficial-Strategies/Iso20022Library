@@ -23,7 +23,7 @@ public enum OnLineCapability1Code
     [IsoId("_TTZvTwEcEeCQm6a_G2yO_w_-1526230168")]
     [Description(@"Off-line only capable.")]
     OffLine = OnLineCapabilityCode.OffLine, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// On-line only capable.
     /// Encoded/decoded by serializers as &quot;ONLN&quot;.
@@ -32,7 +32,7 @@ public enum OnLineCapability1Code
     [IsoId("_TTZvUAEcEeCQm6a_G2yO_w_-1586477855")]
     [Description(@"On-line only capable.")]
     OnLine = OnLineCapabilityCode.OnLine, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Off-line capable with possible on-line requests to the acquirer.
     /// Encoded/decoded by serializers as &quot;SMON&quot;.
@@ -41,5 +41,4 @@ public enum OnLineCapability1Code
     [IsoId("_TTZvUQEcEeCQm6a_G2yO_w_350747318")]
     [Description(@"Off-line capable with possible on-line requests to the acquirer.")]
     SemiOffLine = OnLineCapabilityCode.SemiOffLine, // same ordinal as derivation source for type conversions
-    
 }

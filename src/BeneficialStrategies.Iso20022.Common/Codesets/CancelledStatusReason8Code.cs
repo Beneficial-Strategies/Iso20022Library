@@ -21,7 +21,8 @@ public enum CancelledStatusReason8Code
     /// </summary>
     [EnumMember(Value = "CANO")]
     [IsoId("_WOybg9p-Ed-ak6NoX_4Aeg_-1191324296")]
-    [Description(@"Transaction is cancelled by a party other than the instructing party, eg, a market infrastructure such as a stock exchange.")]
+    [Description(
+        @"Transaction is cancelled by a party other than the instructing party, eg, a market infrastructure such as a stock exchange."
+    )]
     CancelledByOther = CancelledStatusReasonCode.CancelledByOther, // same ordinal as derivation source for type conversions
-    
 }

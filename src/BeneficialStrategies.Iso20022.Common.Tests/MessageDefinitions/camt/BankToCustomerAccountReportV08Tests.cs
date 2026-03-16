@@ -1,8 +1,8 @@
+using System.Reflection;
 using BeneficialStrategies.Iso20022.camt;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
-using System.Reflection;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -16,32 +16,27 @@ public class BankToCustomerAccountReportV08Tests
     /// <summary>
     /// Creates a minimal valid GroupHeader81 for testing purposes.
     /// </summary>
-    private static GroupHeader81 CreateGroupHeader() => new GroupHeader81
-    {
-        MessageIdentification = "MSG-001",
-        CreationDateTime = DateTime.UtcNow
-    };
+    private static GroupHeader81 CreateGroupHeader() =>
+        new GroupHeader81 { MessageIdentification = "MSG-001", CreationDateTime = DateTime.UtcNow };
 
     /// <summary>
     /// Creates a minimal valid AccountReport25 for testing purposes.
     /// </summary>
-    private static AccountReport25 CreateAccountReport(string id = "RPT-001") => new AccountReport25
-    {
-        Identification = id,
-        Account = new CashAccount39
+    private static AccountReport25 CreateAccountReport(string id = "RPT-001") =>
+        new AccountReport25
         {
-            Identification = new IBAN { Value = "DE89370400440532013000" }
-        }
-    };
+            Identification = id,
+            Account = new CashAccount39
+            {
+                Identification = new IBAN { Value = "DE89370400440532013000" }
+            }
+        };
 
     [Fact]
     public void CanInstantiate_WithRequiredProperties()
     {
         // Arrange & Act
-        var message = new BankToCustomerAccountReportV08
-        {
-            GroupHeader = CreateGroupHeader()
-        };
+        var message = new BankToCustomerAccountReportV08 { GroupHeader = CreateGroupHeader() };
 
         // Assert
         Assert.NotNull(message);
@@ -90,17 +85,17 @@ public class BankToCustomerAccountReportV08Tests
     public void SupplementaryData_IsValueListCollection_Issue1Fixed()
     {
         // Arrange
-        var message = new BankToCustomerAccountReportV08
-        {
-            GroupHeader = CreateGroupHeader()
-        };
+        var message = new BankToCustomerAccountReportV08 { GroupHeader = CreateGroupHeader() };
 
         // Assert - SupplementaryData should be a ValueList<T>, not a single value
         var propertyType = typeof(BankToCustomerAccountReportV08)
             .GetProperty(nameof(BankToCustomerAccountReportV08.SupplementaryData))!
             .PropertyType;
 
-        Assert.True(propertyType.IsGenericType, "SupplementaryData should be a generic type (ValueList<T>)");
+        Assert.True(
+            propertyType.IsGenericType,
+            "SupplementaryData should be a generic type (ValueList<T>)"
+        );
         Assert.Equal("ValueList`1", propertyType.Name);
         Assert.NotNull(message.SupplementaryData);
         Assert.Empty(message.SupplementaryData);
@@ -110,10 +105,7 @@ public class BankToCustomerAccountReportV08Tests
     public void Report_IsInitializedAsEmptyCollection()
     {
         // Arrange & Act
-        var message = new BankToCustomerAccountReportV08
-        {
-            GroupHeader = CreateGroupHeader()
-        };
+        var message = new BankToCustomerAccountReportV08 { GroupHeader = CreateGroupHeader() };
 
         // Assert - Collection is initialized and ready to use
         Assert.NotNull(message.Report);
@@ -124,10 +116,7 @@ public class BankToCustomerAccountReportV08Tests
     public void SupplementaryData_IsInitializedAsEmptyCollection()
     {
         // Arrange & Act
-        var message = new BankToCustomerAccountReportV08
-        {
-            GroupHeader = CreateGroupHeader()
-        };
+        var message = new BankToCustomerAccountReportV08 { GroupHeader = CreateGroupHeader() };
 
         // Assert - Collection is initialized and ready to use
         Assert.NotNull(message.SupplementaryData);
@@ -142,10 +131,16 @@ public class BankToCustomerAccountReportV08Tests
     public void Report_HasMinLengthAttribute_RequiringAtLeastOneReport()
     {
         // Arrange
-        var reportProperty = typeof(BankToCustomerAccountReportV08).GetProperty(nameof(BankToCustomerAccountReportV08.Report));
+        var reportProperty = typeof(BankToCustomerAccountReportV08).GetProperty(
+            nameof(BankToCustomerAccountReportV08.Report)
+        );
 
         // Act
-        var minLengthAttr = reportProperty?.GetCustomAttributes(typeof(System.ComponentModel.DataAnnotations.MinLengthAttribute), false)
+        var minLengthAttr = reportProperty
+            ?.GetCustomAttributes(
+                typeof(System.ComponentModel.DataAnnotations.MinLengthAttribute),
+                false
+            )
             .Cast<System.ComponentModel.DataAnnotations.MinLengthAttribute>()
             .FirstOrDefault();
 
@@ -162,8 +157,9 @@ public class BankToCustomerAccountReportV08Tests
     public void Report_PropertyType_IsValueList_NotSingleValue()
     {
         // Arrange
-        var reportProperty = typeof(BankToCustomerAccountReportV08)
-            .GetProperty(nameof(BankToCustomerAccountReportV08.Report));
+        var reportProperty = typeof(BankToCustomerAccountReportV08).GetProperty(
+            nameof(BankToCustomerAccountReportV08.Report)
+        );
 
         // Act
         var propertyType = reportProperty!.PropertyType;

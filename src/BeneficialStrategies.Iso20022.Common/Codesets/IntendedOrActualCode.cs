@@ -23,7 +23,7 @@ public enum IntendedOrActualCode
     [IsoId("_nCEhADcjEeidBoT_PugKiA")]
     [Description(@"Ex ante (intended).")]
     ExAnte,
-    
+
     /// <summary>
     /// Ex post (actual).
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -32,5 +32,4 @@ public enum IntendedOrActualCode
     [IsoId("_tNzqgDcjEeidBoT_PugKiA")]
     [Description(@"Ex post (actual).")]
     ExPost,
-    
 }

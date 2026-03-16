@@ -23,7 +23,7 @@ public enum SupportDocumentType1Code
     [IsoId("_NckB0dnTEeS--7IJLPC9lw")]
     [Description(@"Document is a letter from the bank.")]
     LetterFromBank = SupportDocumentTypeCode.LetterFromBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document is a letter to the bank.
     /// Encoded/decoded by serializers as &quot;LTBK&quot;.
@@ -32,7 +32,7 @@ public enum SupportDocumentType1Code
     [IsoId("_NmYsM9nTEeS--7IJLPC9lw")]
     [Description(@"Document is a letter to the bank.")]
     LetterToBank = SupportDocumentTypeCode.LetterToBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document is a supporting document.
     /// Encoded/decoded by serializers as &quot;SUPP&quot;.
@@ -41,5 +41,4 @@ public enum SupportDocumentType1Code
     [IsoId("_NsetI9nTEeS--7IJLPC9lw")]
     [Description(@"Document is a supporting document.")]
     SupportingDocument = SupportDocumentTypeCode.SupportingDocument, // same ordinal as derivation source for type conversions
-    
 }

@@ -24,7 +24,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_1596AzL3EeKU9IrkkToqcw_521941697")]
     [Description(@"Stock loan transaction.")]
     StockLoanPayment,
-    
+
     /// <summary>
     /// REPO (repurchase agreement) transaction.
     /// Encoded/decoded by serializers as &quot;REPO&quot;.
@@ -33,7 +33,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_1596BDL3EeKU9IrkkToqcw_-1610908030")]
     [Description(@"REPO (repurchase agreement) transaction.")]
     RepoPayment,
-    
+
     /// <summary>
     /// FAIL (undelivered securities) transaction.
     /// Encoded/decoded by serializers as &quot;FAIL&quot;.
@@ -42,7 +42,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_1596BTL3EeKU9IrkkToqcw_557568608")]
     [Description(@"FAIL (undelivered securities) transaction.")]
     FailPayment,
-    
+
     /// <summary>
     /// Miscellaneous (adjustment) transaction.
     /// Encoded/decoded by serializers as &quot;MISC&quot;.
@@ -51,7 +51,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_16HD8DL3EeKU9IrkkToqcw_2016520441")]
     [Description(@"Miscellaneous (adjustment) transaction.")]
     MiscellaneousPayment,
-    
+
     /// <summary>
     /// Cash in lieu related adjustment.
     /// Encoded/decoded by serializers as &quot;RCIL&quot;.
@@ -60,16 +60,18 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_mIo-gGfCEeOB5r-GpjGdRQ")]
     [Description(@"Cash in lieu related adjustment.")]
     CashInLieu,
-    
+
     /// <summary>
     /// Participant deposited a security within 10 days after a corporate action event has occurred.
     /// Encoded/decoded by serializers as &quot;RRD1&quot;.
     /// </summary>
     [EnumMember(Value = "RRD1")]
     [IsoId("_rJ2OkGfCEeOB5r-GpjGdRQ")]
-    [Description(@"Participant deposited a security within 10 days after a corporate action event has occurred.")]
+    [Description(
+        @"Participant deposited a security within 10 days after a corporate action event has occurred."
+    )]
     ReorganisationDepositPhaseOne,
-    
+
     /// <summary>
     /// Dynamic rate change related adjustment.
     /// Encoded/decoded by serializers as &quot;RRDR&quot;.
@@ -78,7 +80,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_aadqsGfDEeOB5r-GpjGdRQ")]
     [Description(@"Dynamic rate change related adjustment.")]
     DynamicRateChange,
-    
+
     /// <summary>
     /// Mandatory reorganization deposit related adjustment.
     /// Encoded/decoded by serializers as &quot;RRMD&quot;.
@@ -87,7 +89,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_eHnR4GfDEeOB5r-GpjGdRQ")]
     [Description(@"Mandatory reorganization deposit related adjustment.")]
     MandatoryReorganizationDeposit,
-    
+
     /// <summary>
     /// Mandatory legal reorganization deposit related adjustment.
     /// Encoded/decoded by serializers as &quot;RRLR&quot;.
@@ -96,16 +98,18 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_eQikYGfDEeOB5r-GpjGdRQ")]
     [Description(@"Mandatory legal reorganization deposit related adjustment.")]
     MandatoryLegalReorgDeposit,
-    
+
     /// <summary>
     /// Participant deposited a security 10 days after a corporate action event has occurred.
     /// Encoded/decoded by serializers as &quot;RRD2&quot;.
     /// </summary>
     [EnumMember(Value = "RRD2")]
     [IsoId("_ebjhkGfDEeOB5r-GpjGdRQ")]
-    [Description(@"Participant deposited a security 10 days after a corporate action event has occurred.")]
+    [Description(
+        @"Participant deposited a security 10 days after a corporate action event has occurred."
+    )]
     ReorgDepositPhaseTwo,
-    
+
     /// <summary>
     /// Claim settlement related adjustment.
     /// Encoded/decoded by serializers as &quot;RRCL&quot;.
@@ -114,7 +118,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_ehDsoGfDEeOB5r-GpjGdRQ")]
     [Description(@"Claim settlement related adjustment.")]
     ClaimSettlement,
-    
+
     /// <summary>
     /// Custody reorganization deposit related adjustment.
     /// Encoded/decoded by serializers as &quot;RRCD&quot;.
@@ -123,7 +127,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_emaGsGfDEeOB5r-GpjGdRQ")]
     [Description(@"Custody reorganization deposit related adjustment.")]
     CustodyReorganizationDeposit,
-    
+
     /// <summary>
     /// Reversal related adjustment.
     /// Encoded/decoded by serializers as &quot;REVA&quot;.
@@ -132,7 +136,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_erxH0GfDEeOB5r-GpjGdRQ")]
     [Description(@"Reversal related adjustment.")]
     Reversal,
-    
+
     /// <summary>
     /// Dividend payment on a DTC custody held security related adjustment.
     /// Encoded/decoded by serializers as &quot;RCDP&quot;.
@@ -141,7 +145,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_ew-X8GfDEeOB5r-GpjGdRQ")]
     [Description(@"Dividend payment on a DTC custody held security related adjustment.")]
     CustodyDividendPayment,
-    
+
     /// <summary>
     /// ADR issue fee reversal adjustment.
     /// Encoded/decoded by serializers as &quot;RADR&quot;.
@@ -150,7 +154,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_e2LoEGfDEeOB5r-GpjGdRQ")]
     [Description(@"ADR issue fee reversal adjustment.")]
     ADRIssueFeeReversal,
-    
+
     /// <summary>
     /// American Depository R issue fee charge adjustment.
     /// Encoded/decoded by serializers as &quot;RADC&quot;.
@@ -159,7 +163,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_e7Y4MGfDEeOB5r-GpjGdRQ")]
     [Description(@"American Depository R issue fee charge adjustment.")]
     ADRIssueFeeCharge,
-    
+
     /// <summary>
     /// Reserved for new user defined reason codes.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -168,7 +172,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_fAmIUGfDEeOB5r-GpjGdRQ")]
     [Description(@"Reserved for new user defined reason codes.")]
     Other,
-    
+
     /// <summary>
     /// Warrant rate change related adjustment.
     /// Encoded/decoded by serializers as &quot;RRWC&quot;.
@@ -177,7 +181,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_P3h6oGfHEeOB5r-GpjGdRQ")]
     [Description(@"Warrant rate change related adjustment.")]
     WarrantRateChange,
-    
+
     /// <summary>
     /// Tender offer fraction related adjustment.
     /// Encoded/decoded by serializers as &quot;RRT2&quot;.
@@ -186,7 +190,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_P-01cGfHEeOB5r-GpjGdRQ")]
     [Description(@"Tender offer fraction related adjustment.")]
     TenderOfferFraction,
-    
+
     /// <summary>
     /// Rights step up related adjustment.
     /// Encoded/decoded by serializers as &quot;RRRU&quot;.
@@ -195,7 +199,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QEeKcGfHEeOB5r-GpjGdRQ")]
     [Description(@"Rights step up related adjustment.")]
     RightsStepUp,
-    
+
     /// <summary>
     /// Rights sales related adjustment.
     /// Encoded/decoded by serializers as &quot;RRRS&quot;.
@@ -204,7 +208,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QKbBcGfHEeOB5r-GpjGdRQ")]
     [Description(@"Rights sales related adjustment.")]
     RightsSales,
-    
+
     /// <summary>
     /// Last day protect related adjustment.
     /// Encoded/decoded by serializers as &quot;RRRL&quot;.
@@ -213,7 +217,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QPyCkGfHEeOB5r-GpjGdRQ")]
     [Description(@"Last day protect related adjustment.")]
     LastDayProtect,
-    
+
     /// <summary>
     /// Rights protect related adjustment.
     /// Encoded/decoded by serializers as &quot;RRRI&quot;.
@@ -222,7 +226,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QVJDsGfHEeOB5r-GpjGdRQ")]
     [Description(@"Rights protect related adjustment.")]
     RightsProtect,
-    
+
     /// <summary>
     /// Rights subscription related adjustment.
     /// Encoded/decoded by serializers as &quot;RRRE&quot;.
@@ -231,7 +235,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QafdwGfHEeOB5r-GpjGdRQ")]
     [Description(@"Rights subscription related adjustment.")]
     RightsSubscription,
-    
+
     /// <summary>
     /// Adjusted for rights subscription related adjustment.
     /// Encoded/decoded by serializers as &quot;RRRA&quot;.
@@ -240,7 +244,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_Qf2e4GfHEeOB5r-GpjGdRQ")]
     [Description(@"Adjusted for rights subscription related adjustment.")]
     AdjustedForRightsSubscription,
-    
+
     /// <summary>
     /// Mandatory over three year reorganization deposit related adjustment.
     /// Encoded/decoded by serializers as &quot;RRR3&quot;.
@@ -249,7 +253,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QlNgAGfHEeOB5r-GpjGdRQ")]
     [Description(@"Mandatory over three year reorganization deposit related adjustment.")]
     MandatoryOverThreeYearReorganizationDeposit,
-    
+
     /// <summary>
     /// Legal reorganization deposit related adjustment.
     /// Encoded/decoded by serializers as &quot;RRML&quot;.
@@ -258,7 +262,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_QqawIGfHEeOB5r-GpjGdRQ")]
     [Description(@"Legal reorganization deposit related adjustment.")]
     LegalReorganizationDeposits,
-    
+
     /// <summary>
     /// Manual user tax adjustment.
     /// Encoded/decoded by serializers as &quot;TJXU&quot;.
@@ -267,7 +271,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("__XLRQGfHEeOB5r-GpjGdRQ")]
     [Description(@"Manual user tax adjustment.")]
     ManualUserTax,
-    
+
     /// <summary>
     /// Rate change tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXT&quot;.
@@ -276,7 +280,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_D3D88GfIEeOB5r-GpjGdRQ")]
     [Description(@"Rate change tax withholding related adjustment.")]
     RateChangeTaxWithholding,
-    
+
     /// <summary>
     /// Reversal of tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXR&quot;.
@@ -285,7 +289,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_EG-oQGfIEeOB5r-GpjGdRQ")]
     [Description(@"Reversal of tax withholding related adjustment.")]
     ReversalOfTaxWithholding,
-    
+
     /// <summary>
     /// Original (initial) tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXO&quot;.
@@ -294,7 +298,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_EMxuQGfIEeOB5r-GpjGdRQ")]
     [Description(@"Original (initial) tax withholding related adjustment.")]
     OriginalInitialTaxWithholding,
-    
+
     /// <summary>
     /// Original late tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXL&quot;.
@@ -303,7 +307,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_ESR5UGfIEeOB5r-GpjGdRQ")]
     [Description(@"Original late tax withholding related adjustment.")]
     OriginalLateTaxWithholding,
-    
+
     /// <summary>
     /// Tax instruction change related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXI&quot;.
@@ -312,7 +316,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_EXo6cGfIEeOB5r-GpjGdRQ")]
     [Description(@"Tax instruction change related adjustment.")]
     TaxInstructionChange,
-    
+
     /// <summary>
     /// Fail tracking tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXF&quot;.
@@ -321,7 +325,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_Ec_7kGfIEeOB5r-GpjGdRQ")]
     [Description(@"Fail tracking tax withholding related adjustment.")]
     FailTrackingTaxWithholding,
-    
+
     /// <summary>
     /// Reclassification tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXD&quot;.
@@ -330,7 +334,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_EiWVoGfIEeOB5r-GpjGdRQ")]
     [Description(@"Reclassification tax withholding related adjustment.")]
     ReclassificationTaxWithholding,
-    
+
     /// <summary>
     /// Warrant Participant delete related adjustment.
     /// Encoded/decoded by serializers as &quot;RRWT&quot;.
@@ -339,7 +343,7 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_EntWwGfIEeOB5r-GpjGdRQ")]
     [Description(@"Warrant Participant delete related adjustment.")]
     WarrantParticipantDelete,
-    
+
     /// <summary>
     /// Intra-day reversal of original tax withholding related adjustment.
     /// Encoded/decoded by serializers as &quot;TJXV&quot;.
@@ -348,5 +352,4 @@ public enum DTCAdjustmentPaymentTypeCode
     [IsoId("_B96NgGfJEeOB5r-GpjGdRQ")]
     [Description(@"Intra-day reversal of original tax withholding related adjustment.")]
     IntraDayReversalOfOriginalTaxWithholding,
-    
 }

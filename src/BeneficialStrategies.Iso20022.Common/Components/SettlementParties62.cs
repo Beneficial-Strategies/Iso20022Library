@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,59 +14,53 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NVmdca5YEeey8N0JWnVPUw")]
 [DisplayName("Settlement Parties")]
-public partial record SettlementParties62
+public record SettlementParties62
 {
-    #nullable enable
-    
     /// <summary>
     /// First party in the settlement chain. In a plain vanilla settlement, it is the Central Securities Depository where the counterparty requests to receive the financial instrument or from where the counterparty delivers the financial instruments.
     /// </summary>
     [IsoId("_Ngdpsa5YEeey8N0JWnVPUw")]
     [DisplayName("Depository")]
     [IsoXmlTag("Dpstry")]
-    public PartyIdentification127? Depository { get; init; } 
-    
+    public PartyIdentification127? Depository { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the depository.
     /// </summary>
     [IsoId("_Ngdpua5YEeey8N0JWnVPUw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty1")]
-    public PartyIdentificationAndAccount159? Party1 { get; init; } 
-    
+    public PartyIdentificationAndAccount159? Party1 { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 1.
     /// </summary>
     [IsoId("_Ngdpwa5YEeey8N0JWnVPUw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty2")]
-    public PartyIdentificationAndAccount159? Party2 { get; init; } 
-    
+    public PartyIdentificationAndAccount159? Party2 { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 2.
     /// </summary>
     [IsoId("_Ngdp265YEeey8N0JWnVPUw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty3")]
-    public PartyIdentificationAndAccount159? Party3 { get; init; } 
-    
+    public PartyIdentificationAndAccount159? Party3 { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 3.
     /// </summary>
     [IsoId("_Ngdp765YEeey8N0JWnVPUw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty4")]
-    public PartyIdentificationAndAccount159? Party4 { get; init; } 
-    
+    public PartyIdentificationAndAccount159? Party4 { get; init; }
+
     /// <summary>
     /// Party that, in a settlement chain interacts with the party 4.
     /// </summary>
     [IsoId("_Ngdp_a5YEeey8N0JWnVPUw")]
     [DisplayName("Party")]
     [IsoXmlTag("Pty5")]
-    public PartyIdentificationAndAccount159? Party5 { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentificationAndAccount159? Party5 { get; init; }
 }

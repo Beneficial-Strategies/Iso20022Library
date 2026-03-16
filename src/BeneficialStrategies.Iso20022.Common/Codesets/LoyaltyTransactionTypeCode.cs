@@ -21,9 +21,11 @@ public enum LoyaltyTransactionTypeCode
     /// </summary>
     [EnumMember(Value = "AWRD")]
     [IsoId("_jKy6INuKEeiB5uLfkg9ZJA")]
-    [Description(@"Direct or payment related award on a loyalty account. Award alone, award associated to a payment (may be with an additional award alone), award because of 	a payment resulting on rebates.")]
+    [Description(
+        @"Direct or payment related award on a loyalty account. Award alone, award associated to a payment (may be with an additional award alone), award because of 	a payment resulting on rebates."
+    )]
     Award,
-    
+
     /// <summary>
     /// Refund of a loyalty award transaction.
     /// Encoded/decoded by serializers as &quot;AWRR&quot;.
@@ -32,7 +34,7 @@ public enum LoyaltyTransactionTypeCode
     [IsoId("_oAuuUNuKEeiB5uLfkg9ZJA")]
     [Description(@"Refund of a loyalty award transaction.")]
     AwardRefund,
-    
+
     /// <summary>
     /// Redemption on a loyalty account.
     /// Encoded/decoded by serializers as &quot;REDE&quot;.
@@ -41,7 +43,7 @@ public enum LoyaltyTransactionTypeCode
     [IsoId("_qY1OINuKEeiB5uLfkg9ZJA")]
     [Description(@"Redemption on a loyalty account.")]
     Redemption,
-    
+
     /// <summary>
     /// Refund of a loyalty redemption transaction.
     /// Encoded/decoded by serializers as &quot;REDR&quot;.
@@ -50,7 +52,7 @@ public enum LoyaltyTransactionTypeCode
     [IsoId("_s97oINuKEeiB5uLfkg9ZJA")]
     [Description(@"Refund of a loyalty redemption transaction.")]
     RedemptionRefund,
-    
+
     /// <summary>
     /// Rebate on a total amount, sale item amount, or sale items.
     /// Encoded/decoded by serializers as &quot;REBA&quot;.
@@ -59,7 +61,7 @@ public enum LoyaltyTransactionTypeCode
     [IsoId("_wY5TINuKEeiB5uLfkg9ZJA")]
     [Description(@"Rebate on a total amount, sale item amount, or sale items.")]
     Rebate,
-    
+
     /// <summary>
     /// Refund of a loyalty rebate transaction.
     /// Encoded/decoded by serializers as &quot;REBR&quot;.
@@ -68,5 +70,4 @@ public enum LoyaltyTransactionTypeCode
     [IsoId("_y06poNuKEeiB5uLfkg9ZJA")]
     [Description(@"Refund of a loyalty rebate transaction.")]
     RebateRefund,
-    
 }

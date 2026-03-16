@@ -23,7 +23,7 @@ public enum ForeignCurrencyPaymentElectionCode
     [IsoId("_1zjwBTL3EeKU9IrkkToqcw_-225470944")]
     [Description(@"Foreign currency payment is offered.")]
     Offered,
-    
+
     /// <summary>
     /// Foreign currency payment is not offered.
     /// Encoded/decoded by serializers as &quot;NOFD&quot;.
@@ -32,7 +32,7 @@ public enum ForeignCurrencyPaymentElectionCode
     [IsoId("_1zs58DL3EeKU9IrkkToqcw_123403253")]
     [Description(@"Foreign currency payment is not offered.")]
     NotOffered,
-    
+
     /// <summary>
     /// Foreign currency payment is mandatory.
     /// Encoded/decoded by serializers as &quot;MAND&quot;.
@@ -41,5 +41,4 @@ public enum ForeignCurrencyPaymentElectionCode
     [IsoId("_1zs58TL3EeKU9IrkkToqcw_325823435")]
     [Description(@"Foreign currency payment is mandatory.")]
     Mandatory,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,30 +14,28 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a6glUYYdEe-Pv9KR9bv9IA")]
 [DisplayName("Request Details31")]
-public partial record RequestDetails31
+public record RequestDetails31
 {
-    #nullable enable
-
     /// <summary>
     /// Automatic Borrowing.
     /// </summary>
     [DisplayName("Automatic Borrowing")]
     [IsoXmlTag("AutomtcBrrwg")]
-    public AutomaticBorrowing7Choice_? AutomaticBorrowing { get; init; } 
+    public AutomaticBorrowing7Choice_? AutomaticBorrowing { get; init; }
 
     /// <summary>
     /// Hold Indicator.
     /// </summary>
     [DisplayName("Hold Indicator")]
     [IsoXmlTag("HldInd")]
-    public HoldIndicator6? HoldIndicator { get; init; } 
+    public HoldIndicator6? HoldIndicator { get; init; }
 
     /// <summary>
     /// Linkage.
     /// </summary>
     [DisplayName("Linkage")]
     [IsoXmlTag("Lkg")]
-    public LinkageType3Choice_? Linkage { get; init; } 
+    public LinkageType3Choice_? Linkage { get; init; }
 
     /// <summary>
     /// Linkages.
@@ -51,7 +49,7 @@ public partial record RequestDetails31
     /// </summary>
     [DisplayName("Matching Denial")]
     [IsoXmlTag("MtchgDnl")]
-    public MatchingDenied3Choice_? MatchingDenial { get; init; } 
+    public MatchingDenied3Choice_? MatchingDenial { get; init; }
 
     /// <summary>
     /// Other Processing.
@@ -65,21 +63,21 @@ public partial record RequestDetails31
     /// </summary>
     [DisplayName("Partial Settlement Indicator")]
     [IsoXmlTag("PrtlSttlmInd")]
-    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; } 
+    public SettlementTransactionCondition5Code? PartialSettlementIndicator { get; init; }
 
     /// <summary>
     /// Priority.
     /// </summary>
     [DisplayName("Priority")]
     [IsoXmlTag("Prty")]
-    public PriorityNumeric4Choice_? Priority { get; init; } 
+    public PriorityNumeric4Choice_? Priority { get; init; }
 
     /// <summary>
     /// Reference.
     /// </summary>
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
-    public required References29 Reference { get; init; } 
+    public required References29 Reference { get; init; }
 
     /// <summary>
     /// Restriction Reference.
@@ -93,23 +91,19 @@ public partial record RequestDetails31
     /// </summary>
     [DisplayName("Retain Indicator")]
     [IsoXmlTag("RtnInd")]
-    public IsoYesNoIndicator? RetainIndicator { get; init; } 
+    public IsoYesNoIndicator? RetainIndicator { get; init; }
 
     /// <summary>
     /// Securities RTGS.
     /// </summary>
     [DisplayName("Securities RTGS")]
     [IsoXmlTag("SctiesRTGS")]
-    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; } 
+    public SecuritiesRTGS4Choice_? SecuritiesRTGS { get; init; }
 
     /// <summary>
     /// Unilateral Split.
     /// </summary>
     [DisplayName("Unilateral Split")]
     [IsoXmlTag("UnltrlSplt")]
-    public UnilateralSplit3Choice_? UnilateralSplit { get; init; } 
-
-    
-    #nullable disable
-    
+    public UnilateralSplit3Choice_? UnilateralSplit { get; init; }
 }

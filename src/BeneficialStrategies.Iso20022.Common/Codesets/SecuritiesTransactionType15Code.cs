@@ -23,7 +23,7 @@ public enum SecuritiesTransactionType15Code
     [IsoId("_U6o2obu7EeSXxOgurgHGgw")]
     [Description(@"Transaction is a purchase of financial instrument.")]
     Buy = SecuritiesTransactionTypeV3Code.Buy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a sale of financial instrument.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -32,5 +32,4 @@ public enum SecuritiesTransactionType15Code
     [IsoId("_XDPh4bu7EeSXxOgurgHGgw")]
     [Description(@"Transaction is a sale of financial instrument.")]
     Sell = SecuritiesTransactionTypeV3Code.Sell, // same ordinal as derivation source for type conversions
-    
 }

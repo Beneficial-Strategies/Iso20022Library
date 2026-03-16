@@ -23,16 +23,16 @@ public enum FleetServiceType1Code
     [IsoId("_1wy9YTEoEemzCpWiCwK4aQ")]
     [Description(@"Self service")]
     SelfService = FleetServiceTypeCode.SelfService, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// High speed dispenser that may or may not support varying flow rates. 
+    /// High speed dispenser that may or may not support varying flow rates.
     /// Encoded/decoded by serializers as &quot;HSDI&quot;.
     /// </summary>
     [EnumMember(Value = "HSDI")]
     [IsoId("_2FW4ITEoEemzCpWiCwK4aQ")]
     [Description(@"High speed dispenser that may or may not support varying flow rates. ")]
     HighSpeedDispenser = FleetServiceTypeCode.HighSpeedDispenser, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Full service
     /// Encoded/decoded by serializers as &quot;FLSV&quot;.
@@ -41,5 +41,4 @@ public enum FleetServiceType1Code
     [IsoId("_2cwrgTEoEemzCpWiCwK4aQ")]
     [Description(@"Full service")]
     FullService = FleetServiceTypeCode.FullService, // same ordinal as derivation source for type conversions
-    
 }

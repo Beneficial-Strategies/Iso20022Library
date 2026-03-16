@@ -10,10 +10,11 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// Defines commodity attributes of a derivative where the type is polypropylene.
     /// </summary>
     [KnownType(typeof(AssetClassCommodityPolypropylene1Choice.Plastic))]
-    [JsonDerivedType(typeof(AssetClassCommodityPolypropylene1Choice.Plastic),nameof(AssetClassCommodityPolypropylene1Choice.Plastic))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPolypropylene1Choice.Plastic),
+        nameof(AssetClassCommodityPolypropylene1Choice.Plastic)
+    )]
     [IsoId("_tIe6UGs5EeW9oI9ZdgWHPQ")]
     [DisplayName("Asset Class Commodity Polypropylene 1 Choice")]
-    public abstract partial record AssetClassCommodityPolypropylene1Choice_
-    {
-    }
+    public abstract record AssetClassCommodityPolypropylene1Choice_ { }
 }

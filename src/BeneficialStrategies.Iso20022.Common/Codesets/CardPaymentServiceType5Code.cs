@@ -23,7 +23,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pM_VVTAUEeOqioR9srQH1g")]
     [Description(@"Balance enquiry.")]
     Balance = CardPaymentServiceTypeCode.Balance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card activation.
     /// Encoded/decoded by serializers as &quot;CACT&quot;.
@@ -32,7 +32,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pM_VVzAUEeOqioR9srQH1g")]
     [Description(@"Card activation.")]
     CardActivation = CardPaymentServiceTypeCode.CardActivation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card payment.
     /// Encoded/decoded by serializers as &quot;CRDP&quot;.
@@ -41,7 +41,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pM_VWTAUEeOqioR9srQH1g")]
     [Description(@"Card payment.")]
     CardPayment = CardPaymentServiceTypeCode.CardPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer of funds to a card or an account.
     /// Encoded/decoded by serializers as &quot;CAFH&quot;.
@@ -50,7 +50,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pM_VWzAUEeOqioR9srQH1g")]
     [Description(@"Transfer of funds to a card or an account.")]
     CardsFundTransferPush = CardPaymentServiceTypeCode.CardsFundTransferPush, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card verification.
     /// Encoded/decoded by serializers as &quot;CAVR&quot;.
@@ -59,16 +59,18 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfQTAUEeOqioR9srQH1g")]
     [Description(@"Card verification.")]
     CardVerification = CardPaymentServiceTypeCode.CardVerification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash advance or withdrawals on a POI (Point Of Interaction), or at a bank counter.
     /// Encoded/decoded by serializers as &quot;CSHW&quot;.
     /// </summary>
     [EnumMember(Value = "CSHW")]
     [IsoId("_pNIfQzAUEeOqioR9srQH1g")]
-    [Description(@"Cash advance or withdrawals on a POI (Point Of Interaction), or at a bank counter.")]
+    [Description(
+        @"Cash advance or withdrawals on a POI (Point Of Interaction), or at a bank counter."
+    )]
     CashAdvance = CardPaymentServiceTypeCode.CashAdvance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash deposit.
     /// Encoded/decoded by serializers as &quot;CSHD&quot;.
@@ -77,7 +79,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfRzAUEeOqioR9srQH1g")]
     [Description(@"Cash deposit.")]
     CashDeposit = CardPaymentServiceTypeCode.CashDeposit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deferred payment.
     /// Encoded/decoded by serializers as &quot;DEFR&quot;.
@@ -86,7 +88,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfSTAUEeOqioR9srQH1g")]
     [Description(@"Deferred payment.")]
     DeferredPayment = CardPaymentServiceTypeCode.DeferredPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loading or reloading non-financial account.
     /// Encoded/decoded by serializers as &quot;LOAD&quot;.
@@ -95,7 +97,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfSzAUEeOqioR9srQH1g")]
     [Description(@"Loading or reloading non-financial account.")]
     Loading = CardPaymentServiceTypeCode.Loading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Original credit.
     /// Encoded/decoded by serializers as &quot;ORCR&quot;.
@@ -104,7 +106,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfTTAUEeOqioR9srQH1g")]
     [Description(@"Original credit.")]
     OriginalCredit = CardPaymentServiceTypeCode.OriginalCredit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN (Personal Identification Number) change.
     /// Encoded/decoded by serializers as &quot;PINC&quot;.
@@ -113,7 +115,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfTzAUEeOqioR9srQH1g")]
     [Description(@"PIN (Personal Identification Number) change.")]
     PINChange = CardPaymentServiceTypeCode.PINChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quasi-cash.
     /// Encoded/decoded by serializers as &quot;QUCH&quot;.
@@ -122,7 +124,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfUTAUEeOqioR9srQH1g")]
     [Description(@"Quasi-cash.")]
     QuasiCash = CardPaymentServiceTypeCode.QuasiCash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refund transaction.
     /// Encoded/decoded by serializers as &quot;RFND&quot;.
@@ -131,7 +133,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfUzAUEeOqioR9srQH1g")]
     [Description(@"Refund transaction.")]
     Refund = CardPaymentServiceTypeCode.Refund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reservation (pre-authorisation).
     /// Encoded/decoded by serializers as &quot;RESA&quot;.
@@ -140,7 +142,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfVTAUEeOqioR9srQH1g")]
     [Description(@"Reservation (pre-authorisation).")]
     Reservation = CardPaymentServiceTypeCode.Reservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card validity check.
     /// Encoded/decoded by serializers as &quot;VALC&quot;.
@@ -149,7 +151,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_pNIfVzAUEeOqioR9srQH1g")]
     [Description(@"Card validity check.")]
     ValidityCheck = CardPaymentServiceTypeCode.ValidityCheck, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unloading non-financial account.
     /// Encoded/decoded by serializers as &quot;UNLD&quot;.
@@ -158,7 +160,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_cjJaoTGuEeOAS49rwg4CIQ")]
     [Description(@"Unloading non-financial account.")]
     Unloading = CardPaymentServiceTypeCode.Unloading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer of funds to and/or from a card account.
     /// Encoded/decoded by serializers as &quot;CAFT&quot;.
@@ -167,7 +169,7 @@ public enum CardPaymentServiceType5Code
     [IsoId("_gvYlsUuFEeOC3MFxIpMwug")]
     [Description(@"Transfer of funds to and/or from a card account.")]
     CardsFundTransfer = CardPaymentServiceTypeCode.CardsFundTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer of funds from a card or an account.
     /// Encoded/decoded by serializers as &quot;CAFL&quot;.
@@ -176,5 +178,4 @@ public enum CardPaymentServiceType5Code
     [IsoId("_hBaw4UuFEeOC3MFxIpMwug")]
     [Description(@"Transfer of funds from a card or an account.")]
     CardsFundTransferPull = CardPaymentServiceTypeCode.CardsFundTransferPull, // same ordinal as derivation source for type conversions
-    
 }

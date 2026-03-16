@@ -23,5 +23,4 @@ public enum AssetClassSubProductType47Code
     [IsoId("_kPWNAfwhEeW4Wthd0Ze_kA")]
     [Description(@"Commodity of type deliverable.")]
     Deliverable = AssetClassSubProductTypeCode.Deliverable, // same ordinal as derivation source for type conversions
-    
 }

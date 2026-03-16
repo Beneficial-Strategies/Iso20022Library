@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t5utsXvOEeSCJdwgzb6SFw")]
 [DisplayName("Cryptographic Key")]
-public partial record CryptographicKey6
+public record CryptographicKey6
 {
-    #nullable enable
-    
     /// <summary>
     /// Name or label of the key.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CryptographicKey6
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Name { get; init; }
+
     /// <summary>
     /// Name of the cryptographic key.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CryptographicKey6
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text Identification { get; init; }
+
     /// <summary>
     /// Version of the cryptographic key.
     /// </summary>
@@ -45,17 +43,17 @@ public partial record CryptographicKey6
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? Version { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? Version { get; init; }
+
     /// <summary>
     /// Type of algorithm used by the cryptographic key.
     /// </summary>
     [IsoId("_uGPft3vOEeSCJdwgzb6SFw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required CryptographicKeyType3Code Type { get; init; } 
-    
+    public required CryptographicKeyType3Code Type { get; init; }
+
     /// <summary>
     /// Allowed usage of the key.
     /// </summary>
@@ -63,8 +61,9 @@ public partial record CryptographicKey6
     [DisplayName("Function")]
     [IsoXmlTag("Fctn")]
     public SimpleValueList<KeyUsage1Code> Function { get; init; } = [];
+
     // ID for the above is _uGPfuXvOEeSCJdwgzb6SFw
-    
+
     /// <summary>
     /// Date and time on which the key must be activated.
     /// </summary>
@@ -72,8 +71,8 @@ public partial record CryptographicKey6
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ActivationDate { get; init; } 
-    
+    public IsoISODateTime? ActivationDate { get; init; }
+
     /// <summary>
     /// Date and time on which the key must be deactivated.
     /// </summary>
@@ -81,16 +80,16 @@ public partial record CryptographicKey6
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? DeactivationDate { get; init; } 
-    
+    public IsoISODateTime? DeactivationDate { get; init; }
+
     /// <summary>
     /// Encrypted value of the key present as CMS structure EnvelopedData.
     /// </summary>
     [IsoId("_NbHQ0HvPEeSCJdwgzb6SFw")]
     [DisplayName("Encrypted Key Value")]
     [IsoXmlTag("NcrptdKeyVal")]
-    public ContentInformationType10? EncryptedKeyValue { get; init; } 
-    
+    public ContentInformationType10? EncryptedKeyValue { get; init; }
+
     /// <summary>
     /// Certificate to protect the key.
     /// </summary>
@@ -98,8 +97,8 @@ public partial record CryptographicKey6
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? Certificate { get; init; } 
-    
+    public IsoMax5000Binary? Certificate { get; init; }
+
     /// <summary>
     /// Chip card protection of the key.
     /// </summary>
@@ -107,9 +106,5 @@ public partial record CryptographicKey6
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? ICCRelatedData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax5000Binary? ICCRelatedData { get; init; }
 }

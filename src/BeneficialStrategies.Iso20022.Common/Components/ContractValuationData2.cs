@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rIFrmUDWEeWOL-OsSq2h6w")]
 [DisplayName("Contract Valuation Data")]
-public partial record ContractValuationData2
+public record ContractValuationData2
 {
-    #nullable enable
-    
     /// <summary>
     /// Mark to market valuation of the contract, or mark to model valuation. The CCP’s valuation to be used for a cleared trade.
     /// </summary>
     [IsoId("_rS83wUDWEeWOL-OsSq2h6w")]
     [DisplayName("Contract Value")]
     [IsoXmlTag("CtrctVal")]
-    public required AmountAndDirection54 ContractValue { get; init; } 
-    
+    public required AmountAndDirection54 ContractValue { get; init; }
+
     /// <summary>
     /// Date and time of the last valuation.
     /// Usage: For mark-to-market valuation the date and time of publishing of reference prices shall be reported.
@@ -34,17 +32,13 @@ public partial record ContractValuationData2
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; } 
-    
+    public required IsoISODateTime TimeStamp { get; init; }
+
     /// <summary>
     /// Indicate whether valuation was performed mark to market, mark to model or provided by the CCP.
     /// </summary>
     [IsoId("_rS83xUDWEeWOL-OsSq2h6w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required ValuationType1Code Type { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ValuationType1Code Type { get; init; }
 }

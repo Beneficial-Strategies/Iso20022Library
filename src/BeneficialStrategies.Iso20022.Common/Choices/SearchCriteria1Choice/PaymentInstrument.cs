@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
     /// </summary>
     [IsoId("_FACTBkJ-EeGuetKibuqsKw")]
     [DisplayName("Payment Instrument")]
-    public partial record PaymentInstrument : SearchCriteria1Choice_
+    public record PaymentInstrument : SearchCriteria1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Provides the card number.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Card Number")]
         [IsoXmlTag("CardNb")]
         [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-        public required IsoMin8Max28NumericText CardNumber { get; init; } 
-        
+        public required IsoMin8Max28NumericText CardNumber { get; init; }
+
         /// <summary>
         /// Identifies the authority request type as a code.
         /// </summary>
@@ -33,8 +31,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Authority Request Type")]
         [IsoXmlTag("AuthrtyReqTp")]
         public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
+
         // ID for the above is _PgYUYU1KEeGAs6v-iSb2RQ
-        
+
         /// <summary>
         /// Additional information, in free text form, to complement the requested information.
         /// </summary>
@@ -42,11 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SearchCriteria1Choice
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max500Text)]
-        [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-        public IsoMax500Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 500, MinimumLength = 1)]
+        public IsoMax500Text? AdditionalInformation { get; init; }
     }
 }

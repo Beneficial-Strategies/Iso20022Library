@@ -21,16 +21,19 @@ public enum ChequeType3Code
     /// </summary>
     [EnumMember(Value = "DRFT")]
     [IsoId("_a-7Jttp-Ed-ak6NoX_4Aeg_1310151272")]
-    [Description(@"A guaranteed bank cheque with a future value date (do not pay before], which in commercial terms is a 'negotiatable instrument': the beneficiary can receive early payment from any bank under subtraction of a discount. The ordering customer's account is debited on value date.")]
+    [Description(
+        @"A guaranteed bank cheque with a future value date (do not pay before], which in commercial terms is a 'negotiatable instrument': the beneficiary can receive early payment from any bank under subtraction of a discount. The ordering customer's account is debited on value date."
+    )]
     Draft = ChequeTypeCode.Draft, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// An instrument with a future value date (do not pay before], which in commercial terms is a &apos;negotiatable instrument&apos;: the beneficiary can receive early payment from any bank under subtraction of a discount. The ordering customer&apos;s account is debited on value date.
     /// Encoded/decoded by serializers as &quot;ELDR&quot;.
     /// </summary>
     [EnumMember(Value = "ELDR")]
     [IsoId("_a-7Jt9p-Ed-ak6NoX_4Aeg_1310151519")]
-    [Description(@"An instrument with a future value date (do not pay before], which in commercial terms is a 'negotiatable instrument': the beneficiary can receive early payment from any bank under subtraction of a discount. The ordering customer's account is debited on value date.")]
+    [Description(
+        @"An instrument with a future value date (do not pay before], which in commercial terms is a 'negotiatable instrument': the beneficiary can receive early payment from any bank under subtraction of a discount. The ordering customer's account is debited on value date."
+    )]
     ElectronicDraft = ChequeTypeCode.ElectronicDraft, // same ordinal as derivation source for type conversions
-    
 }

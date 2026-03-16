@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Botp4IwSEeicrr-UkGlMQA")]
 [DisplayName("Individual Cost Or Charge")]
-public partial record IndividualCostOrCharge1
+public record IndividualCostOrCharge1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of cost or charge.
     /// </summary>
     [IsoId("_Xr07x4wSEeicrr-UkGlMQA")]
     [DisplayName("Cost Type")]
     [IsoXmlTag("CostTp")]
-    public required ChargeType7Choice_ CostType { get; init; } 
-    
+    public required ChargeType7Choice_ CostType { get; init; }
+
     /// <summary>
     /// Specifies if the cost or charge is ex ante (intended) or post ante (actual).
     /// </summary>
     [IsoId("_Xr07yIwSEeicrr-UkGlMQA")]
     [DisplayName("Ex Ante Or Ex Post")]
     [IsoXmlTag("ExAnteOrExPst")]
-    public required IntendedOrActual2Code ExAnteOrExPost { get; init; } 
-    
+    public required IntendedOrActual2Code ExAnteOrExPost { get; init; }
+
     /// <summary>
     /// Amount of the cost or charge.
     /// </summary>
     [IsoId("_Xr07yYwSEeicrr-UkGlMQA")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveCurrencyAnd13DecimalAmount? Amount { get; init; } 
-    
+    public ActiveCurrencyAnd13DecimalAmount? Amount { get; init; }
+
     /// <summary>
     /// Rate of the cost or charge.
     /// </summary>
@@ -49,25 +47,21 @@ public partial record IndividualCostOrCharge1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; } 
-    
+    public IsoPercentageRate? Rate { get; init; }
+
     /// <summary>
     /// Start date and end date of the calculation period for the ex post cost or charge. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 08090 and 08100.
     /// </summary>
     [IsoId("_Xr07y4wSEeicrr-UkGlMQA")]
     [DisplayName("Calculation Period")]
     [IsoXmlTag("ClctnPrd")]
-    public Period15? CalculationPeriod { get; init; } 
-    
+    public Period15? CalculationPeriod { get; init; }
+
     /// <summary>
     /// Additional information about the individual cost or charge.
     /// </summary>
     [IsoId("_Xr07zYwSEeicrr-UkGlMQA")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

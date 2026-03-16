@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZptbEQCmEeqouY-yI_q3qQ")]
 [DisplayName("Reorganisation Instruction SD")]
-public partial record ReorganisationInstructionSD9
+public record ReorganisationInstructionSD9
 {
-    #nullable enable
-    
     /// <summary>
     /// Xpath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ReorganisationInstructionSD9
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? PlaceAndName { get; init; }
+
     /// <summary>
     /// Unique number assigned by the depository. Transaction identification will be either the DTC instruction reference number for reorganisation instructions (VOI) or the DAM reference number for custody / reorganisation deposits.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ReorganisationInstructionSD9
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
-    [StringLength(maximumLength: 15 ,MinimumLength = 1)]
-    public IsoMax15Text? TransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 15, MinimumLength = 1)]
+    public IsoMax15Text? TransactionIdentification { get; init; }
+
     /// <summary>
     /// Enable input of multiple voluntary instructions for rights or voluntary puts events via a single instruction message through using Transaction Sequence Number.
     /// </summary>
@@ -47,23 +45,23 @@ public partial record ReorganisationInstructionSD9
     [MinLength(0)]
     [MaxLength(99)]
     public ValueList<InstructionsTransactionsSequence1> TransactionSequence { get; init; } = [];
-    
+
     /// <summary>
     /// Status of the instruction.
     /// </summary>
     [IsoId("_Z9M-1wCmEeqouY-yI_q3qQ")]
     [DisplayName("Transaction Identification Status")]
     [IsoXmlTag("TxIdSts")]
-    public DTCInstructionStatus2Code? TransactionIdentificationStatus { get; init; } 
-    
+    public DTCInstructionStatus2Code? TransactionIdentificationStatus { get; init; }
+
     /// <summary>
     /// Status of the protect instruction.
     /// </summary>
     [IsoId("_Z9M-2QCmEeqouY-yI_q3qQ")]
     [DisplayName("Protect Transaction Status")]
     [IsoXmlTag("PrtctTxSts")]
-    public DTCProtectInstructionStatus3Code? ProtectTransactionStatus { get; init; } 
-    
+    public DTCProtectInstructionStatus3Code? ProtectTransactionStatus { get; init; }
+
     /// <summary>
     /// Reason for which an inbound instruction message or a cancellation instruction message is rejected.
     /// </summary>
@@ -73,15 +71,15 @@ public partial record ReorganisationInstructionSD9
     [MinLength(0)]
     [MaxLength(6)]
     public SimpleValueList<InstructionRejectionReason2Code> RejectionReason { get; init; } = [];
-    
+
     /// <summary>
     /// Provides information about securities quantity linked to a corporate action option.
     /// </summary>
     [IsoId("_Z9M-3QCmEeqouY-yI_q3qQ")]
     [DisplayName("Securities Quantity Details")]
     [IsoXmlTag("SctiesQtyDtls")]
-    public SecuritiesQuantitySD7? SecuritiesQuantityDetails { get; init; } 
-    
+    public SecuritiesQuantitySD7? SecuritiesQuantityDetails { get; init; }
+
     /// <summary>
     /// Customer identification entered by client upon instruction submission.
     /// </summary>
@@ -89,40 +87,40 @@ public partial record ReorganisationInstructionSD9
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; } 
-    
+    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
+
     /// <summary>
     /// Acknowledgement information relative to corporate action reorganisation instructions.
     /// </summary>
     [IsoId("_Z9M-4QCmEeqouY-yI_q3qQ")]
     [DisplayName("Acknowledgement Details")]
     [IsoXmlTag("AckDtls")]
-    public CorporateActionAcknowledgementSD1? AcknowledgementDetails { get; init; } 
-    
+    public CorporateActionAcknowledgementSD1? AcknowledgementDetails { get; init; }
+
     /// <summary>
     /// Party contact information for the given instruction; required for voluntary offer instruction transaction (VOIT), protect transaction (PROT) and protect on behalf of another participant transaction (PROP); not required for cover protect instructions like cover protect transaction (COVR), cover protect directly to agent transaction (COVA) and cover protect on behalf of another participant transaction (COVP).
     /// </summary>
     [IsoId("_Z9M-4wCmEeqouY-yI_q3qQ")]
     [DisplayName("Contact Person")]
     [IsoXmlTag("CtctPrsn")]
-    public ContactIdentification5? ContactPerson { get; init; } 
-    
+    public ContactIdentification5? ContactPerson { get; init; }
+
     /// <summary>
     /// Warrant subscription amount entered by client when instructing on a warrant exercise instruction.
     /// </summary>
     [IsoId("_Z9M-5QCmEeqouY-yI_q3qQ")]
     [DisplayName("Warrant Subscription Charge Amount")]
     [IsoXmlTag("WarrtSbcptChrgAmt")]
-    public RestrictedFINActiveCurrencyAndAmount? WarrantSubscriptionChargeAmount { get; init; } 
-    
+    public RestrictedFINActiveCurrencyAndAmount? WarrantSubscriptionChargeAmount { get; init; }
+
     /// <summary>
     /// Certificate information for a given instruction.
     /// </summary>
     [IsoId("_Z9M-5wCmEeqouY-yI_q3qQ")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public CorporateActionCertificateSD1? Certificate { get; init; } 
-    
+    public CorporateActionCertificateSD1? Certificate { get; init; }
+
     /// <summary>
     /// Unique identification of the transaction used by the transmitting party.
     /// </summary>
@@ -130,17 +128,17 @@ public partial record ReorganisationInstructionSD9
     [DisplayName("User Reference Number")]
     [IsoXmlTag("UsrRefNb")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
-    [StringLength(maximumLength: 6 ,MinimumLength = 1)]
-    public IsoMax6Text? UserReferenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 6, MinimumLength = 1)]
+    public IsoMax6Text? UserReferenceNumber { get; init; }
+
     /// <summary>
     /// Beneficial owner information related to CD early redemption instructions.
     /// </summary>
     [IsoId("_Z9M-6wCmEeqouY-yI_q3qQ")]
     [DisplayName("Deceased Beneficial Owner Details")]
     [IsoXmlTag("DcsdBnfclOwnrDtls")]
-    public DeceasedStatusSD1? DeceasedBeneficialOwnerDetails { get; init; } 
-    
+    public DeceasedStatusSD1? DeceasedBeneficialOwnerDetails { get; init; }
+
     /// <summary>
     /// Transaction record number for ATAM or ART system which may be causing pending status. Corresponds to ATP RBN number.
     /// </summary>
@@ -148,17 +146,13 @@ public partial record ReorganisationInstructionSD9
     [DisplayName("Transaction Record Number")]
     [IsoXmlTag("TxRcrdNb")]
     [IsoSimpleType(IsoSimpleType.Max10NumericText)]
-    public IsoMax10NumericText? TransactionRecordNumber { get; init; } 
-    
+    public IsoMax10NumericText? TransactionRecordNumber { get; init; }
+
     /// <summary>
     /// Bid price of the instruction.
     /// </summary>
     [IsoId("_AR6TEQCrEeqouY-yI_q3qQ")]
     [DisplayName("Bid Price")]
     [IsoXmlTag("BidPric")]
-    public PriceFormat57Choice_? BidPrice { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PriceFormat57Choice_? BidPrice { get; init; }
 }

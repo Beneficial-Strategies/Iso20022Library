@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber6Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.DocumentNumber6Choice
     /// </summary>
     [IsoId("_celQ3ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Long Number")]
-    public partial record LongNumber : DocumentNumber6Choice_
+    public record LongNumber : DocumentNumber6Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// ISO 20022 Message identifier of an MX message.
         /// </summary>
         [IsoXmlTag("LngNb")]
         [IsoSimpleType(IsoSimpleType.ISO20022MessageIdentificationText)]
-        public required IsoISO20022MessageIdentificationText Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISO20022MessageIdentificationText Value { get; init; }
     }
 }

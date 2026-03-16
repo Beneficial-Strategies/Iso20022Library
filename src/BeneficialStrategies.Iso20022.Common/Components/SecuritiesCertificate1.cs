@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UbAwxdp-Ed-ak6NoX_4Aeg_2108880496")]
 [DisplayName("Securities Certificate")]
-public partial record SecuritiesCertificate1
+public record SecuritiesCertificate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier of a certificate assigned by the issuer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SecuritiesCertificate1
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Number { get; init; }
+
     /// <summary>
     /// Financial instruments representing a sum of rights of the investor vis-a-vis the issuer.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record SecuritiesCertificate1
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Issuer { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Issuer { get; init; }
+
     /// <summary>
     /// Short textual description of the scheme.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record SecuritiesCertificate1
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SchemeName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SchemeName { get; init; }
 }

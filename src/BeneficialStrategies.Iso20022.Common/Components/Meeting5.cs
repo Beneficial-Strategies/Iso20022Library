@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_l-Zlq609EemDtrWpq90Ckg")]
 [DisplayName("Meeting")]
-public partial record Meeting5
+public record Meeting5
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and time at which the meeting will take place.
     /// </summary>
     [IsoId("_mThhFa09EemDtrWpq90Ckg")]
     [DisplayName("Date And Time")]
     [IsoXmlTag("DtAndTm")]
-    public required DateFormat58Choice_ DateAndTime { get; init; } 
-    
+    public required DateFormat58Choice_ DateAndTime { get; init; }
+
     /// <summary>
     /// Status of the meeting date.
     /// </summary>
     [IsoId("_mThhF609EemDtrWpq90Ckg")]
     [DisplayName("Date Status")]
     [IsoXmlTag("DtSts")]
-    public MeetingDateStatus2Code? DateStatus { get; init; } 
-    
+    public MeetingDateStatus2Code? DateStatus { get; init; }
+
     /// <summary>
     /// Indicates whether a minimum number of security representation is required to hold a meeting.
     /// </summary>
@@ -41,8 +39,8 @@ public partial record Meeting5
     [DisplayName("Quorum Required")]
     [IsoXmlTag("QrmReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator QuorumRequired { get; init; } 
-    
+    public required IsoYesNoIndicator QuorumRequired { get; init; }
+
     /// <summary>
     /// Location at which the meeting will take place.
     /// </summary>
@@ -52,15 +50,15 @@ public partial record Meeting5
     [MinLength(1)]
     [MaxLength(5)]
     public ValueList<LocationFormat1Choice_> Location { get; init; } = [];
-    
+
     /// <summary>
     /// Minimum quantity of securities required to hold a meeting.
     /// </summary>
     [IsoId("_mThhHa09EemDtrWpq90Ckg")]
     [DisplayName("Quorum Quantity")]
     [IsoXmlTag("QrmQty")]
-    public QuorumQuantity1Choice_? QuorumQuantity { get; init; } 
-    
+    public QuorumQuantity1Choice_? QuorumQuantity { get; init; }
+
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
     /// </summary>
@@ -68,10 +66,6 @@ public partial record Meeting5
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 2048, MinimumLength = 1)]
+    public IsoMax2048Text? URLAddress { get; init; }
 }

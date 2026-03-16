@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OptionFeaturesFormat25Choice.Code))]
     [KnownType(typeof(OptionFeaturesFormat25Choice.Proprietary))]
-    [JsonDerivedType(typeof(OptionFeaturesFormat25Choice.Code),nameof(OptionFeaturesFormat25Choice.Code))]
-    [JsonDerivedType(typeof(OptionFeaturesFormat25Choice.Proprietary),nameof(OptionFeaturesFormat25Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(OptionFeaturesFormat25Choice.Code),
+        nameof(OptionFeaturesFormat25Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(OptionFeaturesFormat25Choice.Proprietary),
+        nameof(OptionFeaturesFormat25Choice.Proprietary)
+    )]
     [IsoId("_r_Y5tLaSEeiN--kDwanlkA")]
     [DisplayName("Option Features Format 25 Choice")]
-    public abstract partial record OptionFeaturesFormat25Choice_
-    {
-    }
+    public abstract record OptionFeaturesFormat25Choice_ { }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementStatus26Choice.Code))]
     [KnownType(typeof(SettlementStatus26Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlementStatus26Choice.Code),nameof(SettlementStatus26Choice.Code))]
-    [JsonDerivedType(typeof(SettlementStatus26Choice.Proprietary),nameof(SettlementStatus26Choice.Proprietary))]
+    [JsonDerivedType(typeof(SettlementStatus26Choice.Code), nameof(SettlementStatus26Choice.Code))]
+    [JsonDerivedType(
+        typeof(SettlementStatus26Choice.Proprietary),
+        nameof(SettlementStatus26Choice.Proprietary)
+    )]
     [IsoId("_Xr1O0eFWEeWIA4E9cYSxxQ")]
     [DisplayName("Settlement Status 26 Choice")]
-    public abstract partial record SettlementStatus26Choice_
-    {
-    }
+    public abstract record SettlementStatus26Choice_ { }
 }

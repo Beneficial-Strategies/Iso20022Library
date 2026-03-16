@@ -21,25 +21,33 @@ public enum ReorganisationWithdrawalTransactionType1Code
     /// </summary>
     [EnumMember(Value = "PROW")]
     [IsoId("_lB3O8cY0EeesocHIuVGr7g")]
-    [Description(@"The reorganisation instruction cancellation is a protect withdrawal transaction.")]
-    ProtectWithdrawalTransaction = ReorganisationWithdrawalTransactionTypeCode.ProtectWithdrawalTransaction, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"The reorganisation instruction cancellation is a protect withdrawal transaction."
+    )]
+    ProtectWithdrawalTransaction =
+        ReorganisationWithdrawalTransactionTypeCode.ProtectWithdrawalTransaction, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction.
     /// Encoded/decoded by serializers as &quot;VOIW&quot;.
     /// </summary>
     [EnumMember(Value = "VOIW")]
     [IsoId("_lHqU8cY0EeesocHIuVGr7g")]
-    [Description(@"The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction.")]
-    VoluntaryOfferInstructionWithdrawal = ReorganisationWithdrawalTransactionTypeCode.VoluntaryOfferInstructionWithdrawal, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"The reorganisation instruction cancellation is a voluntary offer instruction withdrawal transaction."
+    )]
+    VoluntaryOfferInstructionWithdrawal =
+        ReorganisationWithdrawalTransactionTypeCode.VoluntaryOfferInstructionWithdrawal, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant.
     /// Encoded/decoded by serializers as &quot;PRPW&quot;.
     /// </summary>
     [EnumMember(Value = "PRPW")]
     [IsoId("_lNURAcY0EeesocHIuVGr7g")]
-    [Description(@"The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant.")]
-    WithdrawalProtectOnBehalfOfAnotherParticipant = ReorganisationWithdrawalTransactionTypeCode.WithdrawalProtectOnBehalfOfAnotherParticipant, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"The reorganisation instruction cancellation is a withdrawal protect transaction on behalf of another participant."
+    )]
+    WithdrawalProtectOnBehalfOfAnotherParticipant =
+        ReorganisationWithdrawalTransactionTypeCode.WithdrawalProtectOnBehalfOfAnotherParticipant, // same ordinal as derivation source for type conversions
 }

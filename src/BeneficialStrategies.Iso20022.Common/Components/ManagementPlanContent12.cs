@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xt8rgJOnEe6NHuby77_zUQ")]
 [DisplayName("Management Plan Content12")]
-public partial record ManagementPlanContent12
+public record ManagementPlanContent12
 {
-    #nullable enable
-
     /// <summary>
     /// Action.
     /// </summary>
@@ -37,9 +35,5 @@ public partial record ManagementPlanContent12
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax140Binary? TMChallenge { get; init; }
 }

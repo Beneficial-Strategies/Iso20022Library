@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_bVa-INp-Ed-ak6NoX_4Aeg_-1889057025")]
 [Description(@"Specifies the calculation basis.")]
-[Derivations(typeof(CalculationBasis1Code),typeof(CalculationBasis2Code))]
+[Derivations(typeof(CalculationBasis1Code), typeof(CalculationBasis2Code))]
 public enum CalculationBasisCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum CalculationBasisCode
     [IsoId("_bVa-Idp-Ed-ak6NoX_4Aeg_-1432837646")]
     [Description(@"Average basis.")]
     Average,
-    
+
     /// <summary>
     /// Daily basis.
     /// Encoded/decoded by serializers as &quot;DAIL&quot;.
@@ -32,7 +32,7 @@ public enum CalculationBasisCode
     [IsoId("_bVa-Itp-Ed-ak6NoX_4Aeg_-1432837628")]
     [Description(@"Daily basis.")]
     Daily,
-    
+
     /// <summary>
     /// Another type of calculation basis.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +41,7 @@ public enum CalculationBasisCode
     [IsoId("_bVa-I9p-Ed-ak6NoX_4Aeg_-797941073")]
     [Description(@"Another type of calculation basis.")]
     Other,
-    
+
     /// <summary>
     /// Monthly basis.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -50,7 +50,7 @@ public enum CalculationBasisCode
     [IsoId("_bVa-JNp-Ed-ak6NoX_4Aeg_-1394980831")]
     [Description(@"Monthly basis.")]
     Monthly,
-    
+
     /// <summary>
     /// Yearly basis.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -59,5 +59,4 @@ public enum CalculationBasisCode
     [IsoId("_bVa-Jdp-Ed-ak6NoX_4Aeg_-1394980754")]
     [Description(@"Yearly basis.")]
     Annual,
-    
 }

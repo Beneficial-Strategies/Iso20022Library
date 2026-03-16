@@ -21,7 +21,8 @@ public enum SafekeepingPlace3Code
     /// </summary>
     [EnumMember(Value = "SHHE")]
     [IsoId("_Y-oF6Np-Ed-ak6NoX_4Aeg_-505614155")]
-    [Description(@"Used for certain financial instruments, for example, US mutual funds, where settlement is internal only, that is, there is no external movement of securities.")]
+    [Description(
+        @"Used for certain financial instruments, for example, US mutual funds, where settlement is internal only, that is, there is no external movement of securities."
+    )]
     SharesHeldElsewhere = SafekeepingPlaceCode.SharesHeldElsewhere, // same ordinal as derivation source for type conversions
-    
 }

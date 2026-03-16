@@ -23,7 +23,7 @@ public enum CardAccountType1Code
     [IsoId("_TSNcfQEcEeCQm6a_G2yO_w_-449669424")]
     [Description(@"Default account.")]
     Default = CardAccountTypeCode.Default, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Savings account.
     /// Encoded/decoded by serializers as &quot;SVNG&quot;.
@@ -32,7 +32,7 @@ public enum CardAccountType1Code
     [IsoId("_TSNcfgEcEeCQm6a_G2yO_w_1127404324")]
     [Description(@"Savings account.")]
     Savings = CardAccountTypeCode.Savings, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Checking account.
     /// Encoded/decoded by serializers as &quot;CHCK&quot;.
@@ -41,7 +41,7 @@ public enum CardAccountType1Code
     [IsoId("_TSNcfwEcEeCQm6a_G2yO_w_1944410752")]
     [Description(@"Checking account.")]
     Checking = CardAccountTypeCode.Checking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Credit card account.
     /// Encoded/decoded by serializers as &quot;CRDT&quot;.
@@ -50,7 +50,7 @@ public enum CardAccountType1Code
     [IsoId("_TSNcgAEcEeCQm6a_G2yO_w_-2082317872")]
     [Description(@"Credit card account.")]
     CreditCard = CardAccountTypeCode.CreditCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Universal account.
     /// Encoded/decoded by serializers as &quot;UVRL&quot;.
@@ -59,7 +59,7 @@ public enum CardAccountType1Code
     [IsoId("_TSNcgQEcEeCQm6a_G2yO_w_-469218526")]
     [Description(@"Universal account.")]
     Universal = CardAccountTypeCode.Universal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment account.
     /// Encoded/decoded by serializers as &quot;INVS&quot;.
@@ -68,7 +68,7 @@ public enum CardAccountType1Code
     [IsoId("_TSNcggEcEeCQm6a_G2yO_w_2114733823")]
     [Description(@"Investment account.")]
     Investment = CardAccountTypeCode.Investment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic purse card account.
     /// Encoded/decoded by serializers as &quot;EPRS&quot;.
@@ -77,5 +77,4 @@ public enum CardAccountType1Code
     [IsoId("_TSXNcAEcEeCQm6a_G2yO_w_-304672763")]
     [Description(@"Electronic purse card account.")]
     EpurseCard = CardAccountTypeCode.EpurseCard, // same ordinal as derivation source for type conversions
-    
 }

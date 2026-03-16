@@ -17,17 +17,39 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstructionProcessingStatus43Choice.PendingCancellation))]
     [KnownType(typeof(InstructionProcessingStatus43Choice.Covered))]
     [KnownType(typeof(InstructionProcessingStatus43Choice.Uncovered))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.Accepted),nameof(InstructionProcessingStatus43Choice.Accepted))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.Cancelled),nameof(InstructionProcessingStatus43Choice.Cancelled))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.AcceptedForFurtherProcessing),nameof(InstructionProcessingStatus43Choice.AcceptedForFurtherProcessing))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.Rejected),nameof(InstructionProcessingStatus43Choice.Rejected))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.Pending),nameof(InstructionProcessingStatus43Choice.Pending))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.PendingCancellation),nameof(InstructionProcessingStatus43Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.Covered),nameof(InstructionProcessingStatus43Choice.Covered))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus43Choice.Uncovered),nameof(InstructionProcessingStatus43Choice.Uncovered))]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.Accepted),
+        nameof(InstructionProcessingStatus43Choice.Accepted)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.Cancelled),
+        nameof(InstructionProcessingStatus43Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.AcceptedForFurtherProcessing),
+        nameof(InstructionProcessingStatus43Choice.AcceptedForFurtherProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.Rejected),
+        nameof(InstructionProcessingStatus43Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.Pending),
+        nameof(InstructionProcessingStatus43Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.PendingCancellation),
+        nameof(InstructionProcessingStatus43Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.Covered),
+        nameof(InstructionProcessingStatus43Choice.Covered)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus43Choice.Uncovered),
+        nameof(InstructionProcessingStatus43Choice.Uncovered)
+    )]
     [IsoId("_pUH1qR9QEeuFz_FaCzCLgQ")]
     [DisplayName("Instruction Processing Status 43 Choice")]
-    public abstract partial record InstructionProcessingStatus43Choice_
-    {
-    }
+    public abstract record InstructionProcessingStatus43Choice_ { }
 }

@@ -23,14 +23,15 @@ public enum LendingTransactionMethodCode
     [IsoId("__2_DZNojEeC60axPepSq7g_-1747965958")]
     [Description(@"Contract applies to a specific security only.")]
     OnDemandTrade,
-    
+
     /// <summary>
     /// Contract applies to a number of different securities within the same pool/fund.
     /// Encoded/decoded by serializers as &quot;EXTR&quot;.
     /// </summary>
     [EnumMember(Value = "EXTR")]
     [IsoId("__2_DZdojEeC60axPepSq7g_1202925115")]
-    [Description(@"Contract applies to a number of different securities within the same pool/fund.")]
+    [Description(
+        @"Contract applies to a number of different securities within the same pool/fund."
+    )]
     ExclusiveTrade,
-    
 }

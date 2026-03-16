@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3rZwIXuSEeivKIBRHeTQRQ")]
 [DisplayName("Corrective Payment Initiation")]
-public partial record CorrectivePaymentInitiation4
+public record CorrectivePaymentInitiation4
 {
-    #nullable enable
-    
     /// <summary>
     /// Set of elements used to provide corrective information for the group header of the message under investigation.
     /// </summary>
     [IsoId("_33nAJXuSEeivKIBRHeTQRQ")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
-    public CorrectiveGroupInformation1? GroupHeader { get; init; } 
-    
+    public CorrectiveGroupInformation1? GroupHeader { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by a sending party, to unambiguously identify the payment information group within the message.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record CorrectivePaymentInitiation4
     [DisplayName("Payment Information Identification")]
     [IsoXmlTag("PmtInfId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PaymentInformationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PaymentInformationIdentification { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by an instructing party for an instructed party, to unambiguously identify the instruction.||Usage: The instruction identification is a point to point reference that can be used between the instructing party and the instructed party to refer to the individual instruction. It can be included in several messages related to the instruction.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record CorrectivePaymentInitiation4
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? InstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? InstructionIdentification { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by the initiating party, to unambiguously identify the transaction. This identification is passed on, unchanged, throughout the entire end-to-end chain.||Usage: The end-to-end identification can be used for reconciliation or to link tasks relating to the transaction. It can be included in several messages related to the transaction.||Usage: In case there are technical limitations to pass on multiple references, the end-to-end identification must be passed on throughout the entire end-to-end chain.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record CorrectivePaymentInitiation4
     [DisplayName("End To End Identification")]
     [IsoXmlTag("EndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? EndToEndIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? EndToEndIdentification { get; init; }
+
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
     /// </summary>
@@ -63,25 +61,25 @@ public partial record CorrectivePaymentInitiation4
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    public IsoUUIDv4Identifier? UETR { get; init; } 
-    
+    public IsoUUIDv4Identifier? UETR { get; init; }
+
     /// <summary>
     /// Amount of money to be moved between the debtor and creditor, before deduction of charges, expressed in the currency as ordered by the initiating party.
     /// </summary>
     [IsoId("_33nALXuSEeivKIBRHeTQRQ")]
     [DisplayName("Instructed Amount")]
     [IsoXmlTag("InstdAmt")]
-    public required ActiveOrHistoricCurrencyAndAmount InstructedAmount { get; init; } 
-    
+    public required ActiveOrHistoricCurrencyAndAmount InstructedAmount { get; init; }
+
     /// <summary>
-    /// Date or date time at which the initiating party requests the clearing agent to process the payment. 
+    /// Date or date time at which the initiating party requests the clearing agent to process the payment.
     /// Usage: This is the date or date time on which the debtor&apos;s account is to be debited. If payment by cheque, the date when the cheque must be generated by the bank.
     /// </summary>
     [IsoId("_33nAL3uSEeivKIBRHeTQRQ")]
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
-    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; } 
-    
+    public DateAndDateTime2Choice_? RequestedExecutionDate { get; init; }
+
     /// <summary>
     /// Date at which the creditor requests the amount of money to be collected from the debtor.
     /// </summary>
@@ -89,9 +87,5 @@ public partial record CorrectivePaymentInitiation4
     [DisplayName("Requested Collection Date")]
     [IsoXmlTag("ReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedCollectionDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? RequestedCollectionDate { get; init; }
 }

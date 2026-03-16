@@ -23,7 +23,7 @@ public enum ClosurePendingStatusReason1Code
     [IsoId("_gh-qIWCMEeabZtzjEVWYCQ")]
     [Description(@"Account closing is in process.")]
     AccountClosingInProcess = ClosurePendingStatusReasonCode.AccountClosingInProcess, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account will be closed when conditions are met.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,5 +32,4 @@ public enum ClosurePendingStatusReason1Code
     [IsoId("_grWokWCMEeabZtzjEVWYCQ")]
     [Description(@"Account will be closed when conditions are met.")]
     PendingConditions = ClosurePendingStatusReasonCode.PendingConditions, // same ordinal as derivation source for type conversions
-    
 }

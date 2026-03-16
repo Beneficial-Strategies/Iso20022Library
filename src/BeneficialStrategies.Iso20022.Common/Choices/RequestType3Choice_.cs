@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RequestType3Choice.Code))]
     [KnownType(typeof(RequestType3Choice.Proprietary))]
-    [JsonDerivedType(typeof(RequestType3Choice.Code),nameof(RequestType3Choice.Code))]
-    [JsonDerivedType(typeof(RequestType3Choice.Proprietary),nameof(RequestType3Choice.Proprietary))]
+    [JsonDerivedType(typeof(RequestType3Choice.Code), nameof(RequestType3Choice.Code))]
+    [JsonDerivedType(
+        typeof(RequestType3Choice.Proprietary),
+        nameof(RequestType3Choice.Proprietary)
+    )]
     [IsoId("_72rN86MgEeCJ6YNENx4h-w_-777871353")]
     [DisplayName("Request Type 3 Choice")]
-    public abstract partial record RequestType3Choice_
-    {
-    }
+    public abstract record RequestType3Choice_ { }
 }

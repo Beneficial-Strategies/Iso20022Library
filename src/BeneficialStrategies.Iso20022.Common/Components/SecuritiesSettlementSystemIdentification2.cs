@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_h-yqwR2yEeqF2P5v-Rtejg")]
 [DisplayName("Securities Settlement System Identification")]
-public partial record SecuritiesSettlementSystemIdentification2
+public record SecuritiesSettlementSystemIdentification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the securities settlement system.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SecuritiesSettlementSystemIdentification2
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text SystemIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text SystemIdentification { get; init; }
+
     /// <summary>
     /// Name of the securities settlement system.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record SecuritiesSettlementSystemIdentification2
     [DisplayName("System Name")]
     [IsoXmlTag("SysNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? SystemName { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? SystemName { get; init; }
+
     /// <summary>
     /// Country code for the jurisdiction in which the CSD is established.
     /// </summary>
     [IsoId("_iAmBlR2yEeqF2P5v-Rtejg")]
     [DisplayName("Country Of Jurisdiction")]
     [IsoXmlTag("CtryOfJursdctn")]
-    public CountryCode? CountryOfJurisdiction { get; init; } 
-    
+    public CountryCode? CountryOfJurisdiction { get; init; }
+
     /// <summary>
     /// Corporate name of the CSD.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record SecuritiesSettlementSystemIdentification2
     [DisplayName("CSD Legal Name")]
     [IsoXmlTag("CSDLglNm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? CSDLegalName { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? CSDLegalName { get; init; }
+
     /// <summary>
     /// Legal entity identification of the CSD operating the securities settlement system.
     /// </summary>
@@ -63,17 +61,13 @@ public partial record SecuritiesSettlementSystemIdentification2
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
+    public IsoLEIIdentifier? LEI { get; init; }
+
     /// <summary>
     /// Party (such as a person or a team) responsible for the report sent by the CSD.
     /// </summary>
     [IsoId("_iAmBmx2yEeqF2P5v-Rtejg")]
     [DisplayName("Responsible Party")]
     [IsoXmlTag("RspnsblPty")]
-    public Contact9? ResponsibleParty { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Contact9? ResponsibleParty { get; init; }
 }

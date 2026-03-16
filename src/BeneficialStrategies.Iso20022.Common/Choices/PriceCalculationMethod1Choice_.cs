@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PriceCalculationMethod1Choice.Code))]
     [KnownType(typeof(PriceCalculationMethod1Choice.Proprietary))]
-    [JsonDerivedType(typeof(PriceCalculationMethod1Choice.Code),nameof(PriceCalculationMethod1Choice.Code))]
-    [JsonDerivedType(typeof(PriceCalculationMethod1Choice.Proprietary),nameof(PriceCalculationMethod1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PriceCalculationMethod1Choice.Code),
+        nameof(PriceCalculationMethod1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(PriceCalculationMethod1Choice.Proprietary),
+        nameof(PriceCalculationMethod1Choice.Proprietary)
+    )]
     [IsoId("_3E9TM4DKEe-eGe8fbP3Zug")]
     [DisplayName("Price Calculation Method1Choice")]
-    public abstract partial record PriceCalculationMethod1Choice_
-    {
-    }
+    public abstract record PriceCalculationMethod1Choice_ { }
 }

@@ -21,9 +21,11 @@ public enum AcknowledgementReason4Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_bpPSAdp-Ed-ak6NoX_4Aeg_-966580559")]
-    [Description(@"Received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = AcknowledgementReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction was received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -32,16 +34,18 @@ public enum AcknowledgementReason4Code
     [IsoId("_bpPSAtp-Ed-ak6NoX_4Aeg_-925024563")]
     [Description(@"Instruction was received after market deadline.")]
     MarketDeadlineMissed = AcknowledgementReasonCode.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction was not straight through processing and had to be processed manually.
     /// Encoded/decoded by serializers as &quot;NSTP&quot;.
     /// </summary>
     [EnumMember(Value = "NSTP")]
     [IsoId("_bpPSA9p-Ed-ak6NoX_4Aeg_-856682877")]
-    [Description(@"Instruction was not straight through processing and had to be processed manually.")]
+    [Description(
+        @"Instruction was not straight through processing and had to be processed manually."
+    )]
     NotStraightThroughProcessing = AcknowledgementReasonCode.NotStraightThroughProcessing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,5 +54,4 @@ public enum AcknowledgementReason4Code
     [IsoId("_bpPSBNp-Ed-ak6NoX_4Aeg_1167272842")]
     [Description(@"Other. See Narrative.")]
     Other = AcknowledgementReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

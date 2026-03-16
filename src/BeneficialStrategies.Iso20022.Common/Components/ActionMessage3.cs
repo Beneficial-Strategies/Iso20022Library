@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TqzxMYO6EeSWSLYdc10LRg")]
 [DisplayName("Action Message")]
-public partial record ActionMessage3
+public record ActionMessage3
 {
-    #nullable enable
-    
     /// <summary>
     /// Destination of the information.
     /// </summary>
     [IsoId("_T37AIYO6EeSWSLYdc10LRg")]
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public required UserInterface3Code Destination { get; init; } 
-    
+    public required UserInterface3Code Destination { get; init; }
+
     /// <summary>
     /// Format of the content.
     /// </summary>
     [IsoId("_T37AI4O6EeSWSLYdc10LRg")]
     [DisplayName("Format")]
     [IsoXmlTag("Frmt")]
-    public OutputFormat1Code? Format { get; init; } 
-    
+    public OutputFormat1Code? Format { get; init; }
+
     /// <summary>
     /// Content of the information.
     /// </summary>
@@ -41,10 +39,6 @@ public partial record ActionMessage3
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
     [IsoSimpleType(IsoSimpleType.Max20000Text)]
-    [StringLength(maximumLength: 20000 ,MinimumLength = 1)]
-    public required IsoMax20000Text Content { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 20000, MinimumLength = 1)]
+    public required IsoMax20000Text Content { get; init; }
 }

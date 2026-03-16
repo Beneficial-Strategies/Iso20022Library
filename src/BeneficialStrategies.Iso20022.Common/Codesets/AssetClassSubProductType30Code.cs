@@ -23,5 +23,4 @@ public enum AssetClassSubProductType30Code
     [IsoId("_f4vr41rNEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type weather.")]
     Weather = AssetClassSubProductTypeCode.Weather, // same ordinal as derivation source for type conversions
-    
 }

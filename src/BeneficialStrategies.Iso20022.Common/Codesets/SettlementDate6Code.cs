@@ -23,7 +23,7 @@ public enum SettlementDate6Code
     [IsoId("_aDXucbbwEeaqL_M7XFD7PQ")]
     [Description(@"Settlement takes place on the trade date plus five business days.")]
     TPlusFive = SettlementDateCode.TPlusFive, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus four business days.
     /// Encoded/decoded by serializers as &quot;TFOR&quot;.
@@ -32,7 +32,7 @@ public enum SettlementDate6Code
     [IsoId("_aLtLEbbwEeaqL_M7XFD7PQ")]
     [Description(@"Settlement takes place on the trade date plus four business days.")]
     TPlusFour = SettlementDateCode.TPlusFour, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus one business day.
     /// Encoded/decoded by serializers as &quot;TONE&quot;.
@@ -41,7 +41,7 @@ public enum SettlementDate6Code
     [IsoId("_aU7YgbbwEeaqL_M7XFD7PQ")]
     [Description(@"Settlement takes place on the trade date plus one business day.")]
     TPlusOne = SettlementDateCode.TPlusOne, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus three business days.
     /// Encoded/decoded by serializers as &quot;TTRE&quot;.
@@ -50,7 +50,7 @@ public enum SettlementDate6Code
     [IsoId("_ahIBcbbwEeaqL_M7XFD7PQ")]
     [Description(@"Settlement takes place on the trade date plus three business days.")]
     TPlusThree = SettlementDateCode.TPlusThree, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus two business days.
     /// Encoded/decoded by serializers as &quot;TTWO&quot;.
@@ -59,7 +59,7 @@ public enum SettlementDate6Code
     [IsoId("_apKjIbbwEeaqL_M7XFD7PQ")]
     [Description(@"Settlement takes place on the trade date plus two business days.")]
     TPlusTwo = SettlementDateCode.TPlusTwo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event occurs on the same day or at time T.
     /// Encoded/decoded by serializers as &quot;SAMD&quot;.
@@ -68,5 +68,4 @@ public enum SettlementDate6Code
     [IsoId("_nfpGUbbwEeaqL_M7XFD7PQ")]
     [Description(@"Event occurs on the same day or at time T.")]
     SameDay = SettlementDateCode.SameDay, // same ordinal as derivation source for type conversions
-    
 }

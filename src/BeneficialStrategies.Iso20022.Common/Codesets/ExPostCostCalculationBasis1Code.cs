@@ -23,7 +23,7 @@ public enum ExPostCostCalculationBasis1Code
     [IsoId("_QMy0sbVQEeqkjqDuFVh1-A")]
     [Description(@"Basic for cost calculation is fixed, that is calendar year.")]
     FixedBasis = ExPostCostCalculationBasisCode.FixedBasis, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Basis for cost calculation is rolling, that is, the last twelve months.
     /// Encoded/decoded by serializers as &quot;ROLL&quot;.
@@ -32,5 +32,4 @@ public enum ExPostCostCalculationBasis1Code
     [IsoId("_QTDNsbVQEeqkjqDuFVh1-A")]
     [Description(@"Basis for cost calculation is rolling, that is, the last twelve months.")]
     RollingBasis = ExPostCostCalculationBasisCode.RollingBasis, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TaxationBasis2Code
     [IsoId("_ZScZxdp-Ed-ak6NoX_4Aeg_986778433")]
     [Description(@"Charge/tax basis is a lump sum.")]
     Flat = TaxationBasisCode.Flat, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charges/tax basis is per unit of financial instrument.
     /// Encoded/decoded by serializers as &quot;PERU&quot;.
@@ -32,5 +32,4 @@ public enum TaxationBasis2Code
     [IsoId("_ZScZxtp-Ed-ak6NoX_4Aeg_986778434")]
     [Description(@"Charges/tax basis is per unit of financial instrument.")]
     PerUnit = TaxationBasisCode.PerUnit, // same ordinal as derivation source for type conversions
-    
 }

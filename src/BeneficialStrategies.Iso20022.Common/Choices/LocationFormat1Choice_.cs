@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LocationFormat1Choice.Address))]
     [KnownType(typeof(LocationFormat1Choice.LocationCode))]
-    [JsonDerivedType(typeof(LocationFormat1Choice.Address),nameof(LocationFormat1Choice.Address))]
-    [JsonDerivedType(typeof(LocationFormat1Choice.LocationCode),nameof(LocationFormat1Choice.LocationCode))]
+    [JsonDerivedType(typeof(LocationFormat1Choice.Address), nameof(LocationFormat1Choice.Address))]
+    [JsonDerivedType(
+        typeof(LocationFormat1Choice.LocationCode),
+        nameof(LocationFormat1Choice.LocationCode)
+    )]
     [IsoId("_RXD3l9p-Ed-ak6NoX_4Aeg_-341096000")]
     [DisplayName("Location Format 1 Choice")]
-    public abstract partial record LocationFormat1Choice_
-    {
-    }
+    public abstract record LocationFormat1Choice_ { }
 }

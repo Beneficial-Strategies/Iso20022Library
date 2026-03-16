@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o4QsYSVKEe6pm5v5rjJOgQ")]
 [DisplayName("Equalisation Methodology Type2")]
-public partial record EqualisationMethodologyType2
+public record EqualisationMethodologyType2
 {
-    #nullable enable
-
     /// <summary>
     /// Equalisation Methodology Type Code.
     /// </summary>
     [DisplayName("Equalisation Methodology Type Code")]
     [IsoXmlTag("EqulstnMthdlgyTpCd")]
-    public required EqualisationMethodologyType1Code EqualisationMethodologyTypeCode { get; init; } 
+    public required EqualisationMethodologyType1Code EqualisationMethodologyTypeCode { get; init; }
 
     /// <summary>
     /// Related Subscription.
@@ -31,8 +29,4 @@ public partial record EqualisationMethodologyType2
     [DisplayName("Related Subscription")]
     [IsoXmlTag("RltdSbcpt")]
     public ValueList<RelatedSubscription1> RelatedSubscription { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_k1GClLkiEemdEs93hOkPKA")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification231
+public record PartyIdentification231
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the party.
     /// </summary>
     [IsoId("_k1GCl7kiEemdEs93hOkPKA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required PartyIdentification228Choice_ Identification { get; init; } 
-    
+    public required PartyIdentification228Choice_ Identification { get; init; }
+
     /// <summary>
     /// Ancillary identification information about the party.
     /// </summary>
     [IsoId("_k1GClrkiEemdEs93hOkPKA")]
     [DisplayName("Additional Identification Information")]
     [IsoXmlTag("AddtlIdInf")]
-    public PartyAdditionalIdentification2Choice_? AdditionalIdentificationInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyAdditionalIdentification2Choice_? AdditionalIdentificationInformation { get; init; }
 }

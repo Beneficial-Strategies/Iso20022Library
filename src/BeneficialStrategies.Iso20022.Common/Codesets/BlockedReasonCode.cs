@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_iybhYxHaEeKVqeHljBM1MQ")]
 [Description(@"Specifies the reason an account is blocked.")]
-[Derivations(typeof(BlockedReason1Code),typeof(BlockedReason2Code),typeof(DisabledReason2Code))]
+[Derivations(typeof(BlockedReason1Code), typeof(BlockedReason2Code), typeof(DisabledReason2Code))]
 public enum BlockedReasonCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum BlockedReasonCode
     [IsoId("_qE3NMBHaEeKVqeHljBM1MQ")]
     [Description(@"Commitment.")]
     Commitment,
-    
+
     /// <summary>
     /// Pledged.
     /// Encoded/decoded by serializers as &quot;PLDG&quot;.
@@ -32,7 +32,7 @@ public enum BlockedReasonCode
     [IsoId("_qTKu8BHaEeKVqeHljBM1MQ")]
     [Description(@"Pledged.")]
     Pledged,
-    
+
     /// <summary>
     /// Confiscation.
     /// Encoded/decoded by serializers as &quot;CNFS&quot;.
@@ -41,7 +41,7 @@ public enum BlockedReasonCode
     [IsoId("_rQHfYBHaEeKVqeHljBM1MQ")]
     [Description(@"Confiscation.")]
     Confiscation,
-    
+
     /// <summary>
     /// Bankruptcy.
     /// Encoded/decoded by serializers as &quot;BKRP&quot;.
@@ -50,7 +50,7 @@ public enum BlockedReasonCode
     [IsoId("_rZgE4BHaEeKVqeHljBM1MQ")]
     [Description(@"Bankruptcy.")]
     Bankruptcy,
-    
+
     /// <summary>
     /// Reserved in contemplation of death.
     /// Encoded/decoded by serializers as &quot;MORT&quot;.
@@ -59,7 +59,7 @@ public enum BlockedReasonCode
     [IsoId("_rjV9YBHaEeKVqeHljBM1MQ")]
     [Description(@"Reserved in contemplation of death.")]
     MortisCausa,
-    
+
     /// <summary>
     /// Transfer.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -68,7 +68,7 @@ public enum BlockedReasonCode
     [IsoId("_rs4T4BHaEeKVqeHljBM1MQ")]
     [Description(@"Transfer.")]
     Transfer,
-    
+
     /// <summary>
     /// Reregistration.
     /// Encoded/decoded by serializers as &quot;TRPE&quot;.
@@ -77,7 +77,7 @@ public enum BlockedReasonCode
     [IsoId("_r1rDgBHaEeKVqeHljBM1MQ")]
     [Description(@"Reregistration.")]
     Reregistration,
-    
+
     /// <summary>
     /// Sanctions are in place.
     /// Encoded/decoded by serializers as &quot;SANC&quot;.
@@ -86,7 +86,7 @@ public enum BlockedReasonCode
     [IsoId("_ZiGRsFsMEeaY86V9afpFqA")]
     [Description(@"Sanctions are in place.")]
     Sanctions,
-    
+
     /// <summary>
     /// Pending compliance verification.
     /// Encoded/decoded by serializers as &quot;PCOM&quot;.
@@ -95,7 +95,7 @@ public enum BlockedReasonCode
     [IsoId("_ZnwNwFsMEeaY86V9afpFqA")]
     [Description(@"Pending compliance verification.")]
     PendingComplianceVerification,
-    
+
     /// <summary>
     /// Account closing is in process.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -104,7 +104,7 @@ public enum BlockedReasonCode
     [IsoId("_3ES48GBqEeaHEJD5P6-ccw")]
     [Description(@"Account closing is in process.")]
     AccountClosingInProcess,
-    
+
     /// <summary>
     /// Account was pending opening but is now rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -113,5 +113,4 @@ public enum BlockedReasonCode
     [IsoId("_nBWeIGCIEeabZtzjEVWYCQ")]
     [Description(@"Account was pending opening but is now rejected.")]
     Rejected,
-    
 }

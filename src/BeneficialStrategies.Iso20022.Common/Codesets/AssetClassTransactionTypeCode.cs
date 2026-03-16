@@ -23,7 +23,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_r5UUkNDSEeSv_Pll20DdbA")]
     [Description(@"Futures.")]
     Futures,
-    
+
     /// <summary>
     /// Options.
     /// Encoded/decoded by serializers as &quot;OPTN&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_sN_kENDSEeSv_Pll20DdbA")]
     [Description(@"Options.|")]
     Options,
-    
+
     /// <summary>
     /// TAPOS.
     /// Encoded/decoded by serializers as &quot;TAPO&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_sPoi0NDSEeSv_Pll20DdbA")]
     [Description(@"TAPOS.")]
     TAPOS,
-    
+
     /// <summary>
     /// Swaps.
     /// Encoded/decoded by serializers as &quot;SWAP&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_sRargNDSEeSv_Pll20DdbA")]
     [Description(@"Swaps.")]
     Swaps,
-    
+
     /// <summary>
     /// Minis.
     /// Encoded/decoded by serializers as &quot;MINI&quot;.
@@ -59,7 +59,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_sS55QNDSEeSv_Pll20DdbA")]
     [Description(@"Minis.")]
     Minis,
-    
+
     /// <summary>
     /// Over-The-Counter.
     /// Encoded/decoded by serializers as &quot;OTCT&quot;.
@@ -68,7 +68,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_sUiQ8NDSEeSv_Pll20DdbA")]
     [Description(@"Over-The-Counter.")]
     OTC,
-    
+
     /// <summary>
     /// Outright.
     /// Encoded/decoded by serializers as &quot;ORIT&quot;.
@@ -77,7 +77,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_DBDFINDTEeSv_Pll20DdbA")]
     [Description(@"Outright.")]
     Outright,
-    
+
     /// <summary>
     /// Crack.
     /// Encoded/decoded by serializers as &quot;CRCK&quot;.
@@ -86,7 +86,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_Kn13YNDTEeSv_Pll20DdbA")]
     [Description(@"Crack.")]
     Crack,
-    
+
     /// <summary>
     /// Differential.
     /// Encoded/decoded by serializers as &quot;DIFF&quot;.
@@ -95,7 +95,7 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_Lz_hcNDTEeSv_Pll20DdbA")]
     [Description(@"Differential.")]
     Differential,
-    
+
     /// <summary>
     /// Other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -104,5 +104,4 @@ public enum AssetClassTransactionTypeCode
     [IsoId("_Kt5UoFCOEeWchIYf-qgDzg")]
     [Description(@"Other.")]
     Other,
-    
 }

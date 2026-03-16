@@ -23,7 +23,7 @@ public enum AgentRole1Code
     [IsoId("_bnmTR9p-Ed-ak6NoX_4Aeg_1607205276")]
     [Description(@"Identification of the agent acting as main agent.")]
     PrincipalAgent = AgentRoleCode.PrincipalAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identification of the agent acting as co-domicile or sub agent.
     /// Encoded/decoded by serializers as &quot;SUBA&quot;.
@@ -32,5 +32,4 @@ public enum AgentRole1Code
     [IsoId("_bnmTSNp-Ed-ak6NoX_4Aeg_1634910933")]
     [Description(@"Identification of the agent acting as co-domicile or sub agent.")]
     SubAgent = AgentRoleCode.SubAgent, // same ordinal as derivation source for type conversions
-    
 }

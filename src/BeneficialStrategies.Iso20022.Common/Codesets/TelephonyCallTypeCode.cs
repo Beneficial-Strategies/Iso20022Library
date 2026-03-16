@@ -23,7 +23,7 @@ public enum TelephonyCallTypeCode
     [IsoId("__R_VY_fFEei89sMSHxl1ew")]
     [Description(@"Outgoing phone call")]
     OutgoingCall,
-    
+
     /// <summary>
     /// Voice mail
     /// Encoded/decoded by serializers as &quot;VCML&quot;.
@@ -32,7 +32,7 @@ public enum TelephonyCallTypeCode
     [IsoId("__R_VZvfFEei89sMSHxl1ew")]
     [Description(@"Voice mail")]
     VoiceMail,
-    
+
     /// <summary>
     /// Incoming phone call
     /// Encoded/decoded by serializers as &quot;ICPC&quot;.
@@ -41,7 +41,7 @@ public enum TelephonyCallTypeCode
     [IsoId("__R_VZffFEei89sMSHxl1ew")]
     [Description(@"Incoming phone call")]
     IncomingCall,
-    
+
     /// <summary>
     /// Page
     /// Encoded/decoded by serializers as &quot;PAGE&quot;.
@@ -50,7 +50,7 @@ public enum TelephonyCallTypeCode
     [IsoId("__R_VYffFEei89sMSHxl1ew")]
     [Description(@"Page")]
     Page,
-    
+
     /// <summary>
     /// Other national
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum TelephonyCallTypeCode
     [IsoId("__R_VYvfFEei89sMSHxl1ew")]
     [Description(@"Other national")]
     OtherNational,
-    
+
     /// <summary>
     /// Other private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +68,7 @@ public enum TelephonyCallTypeCode
     [IsoId("__R_VZPfFEei89sMSHxl1ew")]
     [Description(@"Other private")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Toll free phone call
     /// Encoded/decoded by serializers as &quot;TFPC&quot;.
@@ -77,14 +77,13 @@ public enum TelephonyCallTypeCode
     [IsoId("_g5PY0PfGEei89sMSHxl1ew")]
     [Description(@"Toll free phone call")]
     TollFreeCall,
-    
+
     /// <summary>
-    /// Other type of call not elsewhere classified. 
+    /// Other type of call not elsewhere classified.
     /// Encoded/decoded by serializers as &quot;OTCL&quot;.
     /// </summary>
     [EnumMember(Value = "OTCL")]
     [IsoId("_oUNVkPfGEei89sMSHxl1ew")]
     [Description(@"Other type of call not elsewhere classified. ")]
     Other,
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SuspendedStatusReason5Choice.Code))]
     [KnownType(typeof(SuspendedStatusReason5Choice.Proprietary))]
-    [JsonDerivedType(typeof(SuspendedStatusReason5Choice.Code),nameof(SuspendedStatusReason5Choice.Code))]
-    [JsonDerivedType(typeof(SuspendedStatusReason5Choice.Proprietary),nameof(SuspendedStatusReason5Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SuspendedStatusReason5Choice.Code),
+        nameof(SuspendedStatusReason5Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SuspendedStatusReason5Choice.Proprietary),
+        nameof(SuspendedStatusReason5Choice.Proprietary)
+    )]
     [IsoId("_ocV_UUHlEea8I67lh6qdSQ")]
     [DisplayName("Suspended Status Reason 5 Choice")]
-    public abstract partial record SuspendedStatusReason5Choice_
-    {
-    }
+    public abstract record SuspendedStatusReason5Choice_ { }
 }

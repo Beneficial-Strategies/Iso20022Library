@@ -23,7 +23,7 @@ public enum BondType1Code
     [IsoId("_z95C0XwXEeWa36CuR-uOCw")]
     [Description(@"Bond of type sovereign bond.|")]
     SovereignBond = BondTypeCode.SovereignBond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bond of type other public bond.
     /// Encoded/decoded by serializers as &quot;OEPB&quot;.
@@ -32,7 +32,7 @@ public enum BondType1Code
     [IsoId("_0jKTEXwXEeWa36CuR-uOCw")]
     [Description(@"Bond of type other public bond.")]
     OtherPublicBond = BondTypeCode.OtherPublicBond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bond of type convertible bond.
     /// Encoded/decoded by serializers as &quot;CVTB&quot;.
@@ -41,7 +41,7 @@ public enum BondType1Code
     [IsoId("_1H1tcXwXEeWa36CuR-uOCw")]
     [Description(@"Bond of type convertible bond.")]
     ConvertibleBond = BondTypeCode.ConvertibleBond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bond of type corporate Bond.
     /// Encoded/decoded by serializers as &quot;CRPB&quot;.
@@ -50,7 +50,7 @@ public enum BondType1Code
     [IsoId("_1huNEXwXEeWa36CuR-uOCw")]
     [Description(@"Bond of type corporate Bond.|")]
     CorporateBond = BondTypeCode.CorporateBond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bond of type covered Bond.
     /// Encoded/decoded by serializers as &quot;CVDB&quot;.
@@ -59,7 +59,7 @@ public enum BondType1Code
     [IsoId("_15wSkXwXEeWa36CuR-uOCw")]
     [Description(@"Bond of type covered Bond.")]
     CoveredBond = BondTypeCode.CoveredBond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other bond type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,5 +68,4 @@ public enum BondType1Code
     [IsoId("_2V1KkXwXEeWa36CuR-uOCw")]
     [Description(@"Other bond type.")]
     Other = BondTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

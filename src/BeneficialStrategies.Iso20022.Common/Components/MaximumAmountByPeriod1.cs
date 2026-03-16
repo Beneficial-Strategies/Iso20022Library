@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qotj09p-Ed-ak6NoX_4Aeg_540897")]
 [DisplayName("Maximum Amount By Period")]
-public partial record MaximumAmountByPeriod1
+public record MaximumAmountByPeriod1
 {
-    #nullable enable
-    
     /// <summary>
     /// Maximum amount allowed over a specific period of time.
     /// </summary>
     [IsoId("_Qotj1Np-Ed-ak6NoX_4Aeg_-998319567")]
     [DisplayName("Maximum Amount")]
     [IsoXmlTag("MaxAmt")]
-    public required ActiveCurrencyAndAmount MaximumAmount { get; init; } 
-    
+    public required ActiveCurrencyAndAmount MaximumAmount { get; init; }
+
     /// <summary>
     /// Period specified as a number of days.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record MaximumAmountByPeriod1
     [DisplayName("Number Of Days")]
     [IsoXmlTag("NbOfDays")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText NumberOfDays { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax3NumericText NumberOfDays { get; init; }
 }

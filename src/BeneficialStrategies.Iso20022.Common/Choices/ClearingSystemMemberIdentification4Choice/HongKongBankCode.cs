@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentification4Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.ClearingSystemMemberIdentificati
     /// </summary>
     [IsoId("_VwSCgbNIEeejueAciesPMA")]
     [DisplayName("Hong Kong Bank Code")]
-    public partial record HongKongBankCode : ClearingSystemMemberIdentification4Choice_
+    public record HongKongBankCode : ClearingSystemMemberIdentification4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Hong Kong Bank Code. Identifies Hong Kong financial institutions on the Hong Kong local clearing system.
         /// </summary>
         [IsoXmlTag("HKNCC")]
         [IsoSimpleType(IsoSimpleType.HongKongBankIdentifier)]
-        public required IsoHongKongBankIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoHongKongBankIdentifier Value { get; init; }
     }
 }

@@ -23,16 +23,16 @@ public enum ExposureType10Code
     [IsoId("_6abEMRe2EeyPHpqpKwtFdw")]
     [Description(@"Securities buy sell back.")]
     SecuritiesBuySellSellBuyBack = ExposureTypeV2Code.SecuritiesBuySellSellBuyBack, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Margin lending transaction. 
+    /// Margin lending transaction.
     /// Encoded/decoded by serializers as &quot;MGLD&quot;.
     /// </summary>
     [EnumMember(Value = "MGLD")]
     [IsoId("_6abEMxe2EeyPHpqpKwtFdw")]
     [Description(@"Margin lending transaction. ")]
     MarginLending = ExposureTypeV2Code.MarginLending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exposure is linked to a securities lending or borrowing activity.
     /// Encoded/decoded by serializers as &quot;SLEB&quot;.
@@ -41,7 +41,7 @@ public enum ExposureType10Code
     [IsoId("_6abENRe2EeyPHpqpKwtFdw")]
     [Description(@"Exposure is linked to a securities lending or borrowing activity.")]
     SecuritiesLendingAndBorrowing = ExposureTypeV2Code.SecuritiesLendingAndBorrowing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to repurchase agreement trading.
     /// Encoded/decoded by serializers as &quot;REPO&quot;.
@@ -50,5 +50,4 @@ public enum ExposureType10Code
     [IsoId("__sPjIRe2EeyPHpqpKwtFdw")]
     [Description(@"Relates to repurchase agreement trading.")]
     Repo = ExposureTypeV2Code.Repo, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TechnicalIdentification2Choice.BICFI))]
     [KnownType(typeof(TechnicalIdentification2Choice.TechnicalAddress))]
-    [JsonDerivedType(typeof(TechnicalIdentification2Choice.BICFI),nameof(TechnicalIdentification2Choice.BICFI))]
-    [JsonDerivedType(typeof(TechnicalIdentification2Choice.TechnicalAddress),nameof(TechnicalIdentification2Choice.TechnicalAddress))]
+    [JsonDerivedType(
+        typeof(TechnicalIdentification2Choice.BICFI),
+        nameof(TechnicalIdentification2Choice.BICFI)
+    )]
+    [JsonDerivedType(
+        typeof(TechnicalIdentification2Choice.TechnicalAddress),
+        nameof(TechnicalIdentification2Choice.TechnicalAddress)
+    )]
     [IsoId("_X5McYb11Eeiut6mmSKzDFQ")]
     [DisplayName("Technical Identification 2 Choice")]
-    public abstract partial record TechnicalIdentification2Choice_
-    {
-    }
+    public abstract record TechnicalIdentification2Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum BuyInDeferral1Code
     [IsoId("_L555sZwWEeqtp-LOti013g")]
     [Description(@"Buy-in is deferred.|")]
     BuyInDeferred = BuyInDeferralCode.BuyInDeferred, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buy-in is not deferred.
     /// Encoded/decoded by serializers as &quot;DEFN&quot;.
@@ -32,5 +32,4 @@ public enum BuyInDeferral1Code
     [IsoId("_L-gs4ZwWEeqtp-LOti013g")]
     [Description(@"Buy-in is not deferred.")]
     BuyInNotDeferred = BuyInDeferralCode.BuyInNotDeferred, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum SourceOfCash1Code
     [IsoId("_ml8KwTlHEealR6-8aQ15BA")]
     [Description(@"Income as a result of alimony.")]
     Alimony = SourceOfCashCode.Alimony, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income is cash proceeds from customers.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,7 +32,7 @@ public enum SourceOfCash1Code
     [IsoId("_mwDwETlHEealR6-8aQ15BA")]
     [Description(@"Income is cash proceeds from customers.")]
     CashProceeds = SourceOfCashCode.CashProceeds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income is from compensation received.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -41,7 +41,7 @@ public enum SourceOfCash1Code
     [IsoId("_mzLVgTlHEealR6-8aQ15BA")]
     [Description(@"Income is from compensation received.")]
     Compensation = SourceOfCashCode.Compensation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Employee income.
     /// Encoded/decoded by serializers as &quot;EMIN&quot;.
@@ -50,7 +50,7 @@ public enum SourceOfCash1Code
     [IsoId("_m9S60TlHEealR6-8aQ15BA")]
     [Description(@"Employee income.")]
     EmployeeIncome = SourceOfCashCode.EmployeeIncome, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income was a cash gift.
     /// Encoded/decoded by serializers as &quot;GIFT&quot;.
@@ -59,7 +59,7 @@ public enum SourceOfCash1Code
     [IsoId("_nAbHUTlHEealR6-8aQ15BA")]
     [Description(@"Income was a cash gift.")]
     Gift = SourceOfCashCode.Gift, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash from an inheritance.
     /// Encoded/decoded by serializers as &quot;INHE&quot;.
@@ -68,7 +68,7 @@ public enum SourceOfCash1Code
     [IsoId("_nKPKoTlHEealR6-8aQ15BA")]
     [Description(@"Cash from an inheritance.")]
     Inheritance = SourceOfCashCode.Inheritance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income from the liquidation of an insurance premium.
     /// Encoded/decoded by serializers as &quot;INLQ&quot;.
@@ -77,7 +77,7 @@ public enum SourceOfCash1Code
     [IsoId("_nNXXITlHEealR6-8aQ15BA")]
     [Description(@"Income from the liquidation of an insurance premium.")]
     InsurancePremiumLiquidation = SourceOfCashCode.InsurancePremiumLiquidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income from the sale of real estate.
     /// Encoded/decoded by serializers as &quot;REST&quot;.
@@ -86,7 +86,7 @@ public enum SourceOfCash1Code
     [IsoId("_nXe8cTlHEealR6-8aQ15BA")]
     [Description(@"Income from the sale of real estate.")]
     RealEstateSale = SourceOfCashCode.RealEstateSale, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Redemption of an investment fund.
     /// Encoded/decoded by serializers as &quot;REDM&quot;.
@@ -95,7 +95,7 @@ public enum SourceOfCash1Code
     [IsoId("_ngtJ4TlHEealR6-8aQ15BA")]
     [Description(@"Redemption of an investment fund.")]
     Redemption = SourceOfCashCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income from a retirement policy.
     /// Encoded/decoded by serializers as &quot;REPY&quot;.
@@ -104,7 +104,7 @@ public enum SourceOfCash1Code
     [IsoId("_np7XUTlHEealR6-8aQ15BA")]
     [Description(@"Income from a retirement policy.")]
     RetirementPolicy = SourceOfCashCode.RetirementPolicy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sale and acquisition of a corporation.
     /// Encoded/decoded by serializers as &quot;SEAQ&quot;.
@@ -113,7 +113,7 @@ public enum SourceOfCash1Code
     [IsoId("_nzJkwTlHEealR6-8aQ15BA")]
     [Description(@"Sale and acquisition of a corporation.")]
     SaleAquisitionCorporation = SourceOfCashCode.SaleAquisitionCorporation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sale of goods.
     /// Encoded/decoded by serializers as &quot;SALE&quot;.
@@ -122,7 +122,7 @@ public enum SourceOfCash1Code
     [IsoId("_n2biQTlHEealR6-8aQ15BA")]
     [Description(@"Sale of goods.")]
     SaleOfGoods = SourceOfCashCode.SaleOfGoods, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income from a savings plan.
     /// Encoded/decoded by serializers as &quot;SVGS&quot;.
@@ -131,7 +131,7 @@ public enum SourceOfCash1Code
     [IsoId("_oAiggTlHEealR6-8aQ15BA")]
     [Description(@"Income from a savings plan.")]
     Savings = SourceOfCashCode.Savings, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income from self-employment.
     /// Encoded/decoded by serializers as &quot;SELF&quot;.
@@ -140,7 +140,7 @@ public enum SourceOfCash1Code
     [IsoId("_oDqtATlHEealR6-8aQ15BA")]
     [Description(@"Income from self-employment.")]
     SelfEmploymentIncome = SourceOfCashCode.SelfEmploymentIncome, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income from a cash win.
     /// Encoded/decoded by serializers as &quot;WINS&quot;.
@@ -149,5 +149,4 @@ public enum SourceOfCash1Code
     [IsoId("_oMvwgTlHEealR6-8aQ15BA")]
     [Description(@"Income from a cash win.")]
     Winnings = SourceOfCashCode.Winnings, // same ordinal as derivation source for type conversions
-    
 }

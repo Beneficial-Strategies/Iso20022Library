@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesTransactionPrice10Choice.Yield))]
     [KnownType(typeof(SecuritiesTransactionPrice10Choice.PendingPrice))]
     [KnownType(typeof(SecuritiesTransactionPrice10Choice.Other))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice10Choice.MonetaryValue),nameof(SecuritiesTransactionPrice10Choice.MonetaryValue))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice10Choice.Unit),nameof(SecuritiesTransactionPrice10Choice.Unit))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice10Choice.Percentage),nameof(SecuritiesTransactionPrice10Choice.Percentage))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice10Choice.Yield),nameof(SecuritiesTransactionPrice10Choice.Yield))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice10Choice.PendingPrice),nameof(SecuritiesTransactionPrice10Choice.PendingPrice))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice10Choice.Other),nameof(SecuritiesTransactionPrice10Choice.Other))]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice10Choice.MonetaryValue),
+        nameof(SecuritiesTransactionPrice10Choice.MonetaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice10Choice.Unit),
+        nameof(SecuritiesTransactionPrice10Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice10Choice.Percentage),
+        nameof(SecuritiesTransactionPrice10Choice.Percentage)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice10Choice.Yield),
+        nameof(SecuritiesTransactionPrice10Choice.Yield)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice10Choice.PendingPrice),
+        nameof(SecuritiesTransactionPrice10Choice.PendingPrice)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice10Choice.Other),
+        nameof(SecuritiesTransactionPrice10Choice.Other)
+    )]
     [IsoId("_QhQ_wf9iEea3W_f2lS_aiw")]
     [DisplayName("Securities Transaction Price 10 Choice")]
-    public abstract partial record SecuritiesTransactionPrice10Choice_
-    {
-    }
+    public abstract record SecuritiesTransactionPrice10Choice_ { }
 }

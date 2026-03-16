@@ -66,7 +66,9 @@ public enum ATMCounterType3Code
     /// </summary>
     [EnumMember(Value = "PRTN")]
     [IsoId("_ATMCounterType3Code_Operation")]
-    [Description(@"Counters as a result of some replenishment operation carried out by an operator (for example adding cash to a cash unit).")]
+    [Description(
+        @"Counters as a result of some replenishment operation carried out by an operator (for example adding cash to a cash unit)."
+    )]
     Operation = ATMCounterTypeV2Code.Operation,
 
     /// <summary>
@@ -77,5 +79,4 @@ public enum ATMCounterType3Code
     [IsoId("_ATMCounterType3Code_SinceLastReplenishmentPoint")]
     [Description(@"Counters since last replenishment point.")]
     SinceLastReplenishmentPoint = ATMCounterTypeV2Code.SinceLastReplenishmentPoint,
-
 }

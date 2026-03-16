@@ -23,5 +23,4 @@ public enum SecuritiesTransactionType5Code
     [IsoId("_ZIwSQdp-Ed-ak6NoX_4Aeg_2040871426")]
     [Description(@"Relates to the settlement of a trade.")]
     Trade = SecuritiesTransactionTypeV2Code.Trade, // same ordinal as derivation source for type conversions
-    
 }

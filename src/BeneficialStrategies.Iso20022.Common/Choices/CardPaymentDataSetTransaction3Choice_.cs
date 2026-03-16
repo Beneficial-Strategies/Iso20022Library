@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CardPaymentDataSetTransaction3Choice.Cancellation))]
     [KnownType(typeof(CardPaymentDataSetTransaction3Choice.AuthorisationRequest))]
     [KnownType(typeof(CardPaymentDataSetTransaction3Choice.AuthorisationResponse))]
-    [JsonDerivedType(typeof(CardPaymentDataSetTransaction3Choice.Completion),nameof(CardPaymentDataSetTransaction3Choice.Completion))]
-    [JsonDerivedType(typeof(CardPaymentDataSetTransaction3Choice.Cancellation),nameof(CardPaymentDataSetTransaction3Choice.Cancellation))]
-    [JsonDerivedType(typeof(CardPaymentDataSetTransaction3Choice.AuthorisationRequest),nameof(CardPaymentDataSetTransaction3Choice.AuthorisationRequest))]
-    [JsonDerivedType(typeof(CardPaymentDataSetTransaction3Choice.AuthorisationResponse),nameof(CardPaymentDataSetTransaction3Choice.AuthorisationResponse))]
+    [JsonDerivedType(
+        typeof(CardPaymentDataSetTransaction3Choice.Completion),
+        nameof(CardPaymentDataSetTransaction3Choice.Completion)
+    )]
+    [JsonDerivedType(
+        typeof(CardPaymentDataSetTransaction3Choice.Cancellation),
+        nameof(CardPaymentDataSetTransaction3Choice.Cancellation)
+    )]
+    [JsonDerivedType(
+        typeof(CardPaymentDataSetTransaction3Choice.AuthorisationRequest),
+        nameof(CardPaymentDataSetTransaction3Choice.AuthorisationRequest)
+    )]
+    [JsonDerivedType(
+        typeof(CardPaymentDataSetTransaction3Choice.AuthorisationResponse),
+        nameof(CardPaymentDataSetTransaction3Choice.AuthorisationResponse)
+    )]
     [IsoId("_EmW5UWmJEeS7iYydEtv3Ug")]
     [DisplayName("Card Payment Data Set Transaction 3 Choice")]
-    public abstract partial record CardPaymentDataSetTransaction3Choice_
-    {
-    }
+    public abstract record CardPaymentDataSetTransaction3Choice_ { }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_LV94AIoQEeahcZ3Nzs1Qag")]
-[Description(@"Specifies the UK tax group to which units belong. For UK tax, the first dividend that an investor receives from a funds investment is deemed to be part income and part return of capital. The capital element is 'equalisation', and is exempt from income tax.")]
+[Description(
+    @"Specifies the UK tax group to which units belong. For UK tax, the first dividend that an investor receives from a funds investment is deemed to be part income and part return of capital. The capital element is 'equalisation', and is exempt from income tax."
+)]
 [DerivedFrom(typeof(UKTaxGroupUnitCode))]
 public enum UKTaxGroupUnit1Code
 {
@@ -23,14 +25,15 @@ public enum UKTaxGroupUnit1Code
     [IsoId("_PGFToYoQEeahcZ3Nzs1Qag")]
     [Description(@"The units that were purchased prior to the last ex-div date.")]
     Group1 = UKTaxGroupUnitCode.Group1, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The units that were purchased since the ex-div date, and that benefit from the tax exemption.
     /// Encoded/decoded by serializers as &quot;GRP2&quot;.
     /// </summary>
     [EnumMember(Value = "GRP2")]
     [IsoId("_PLJZ0YoQEeahcZ3Nzs1Qag")]
-    [Description(@"The units that were purchased since the ex-div date, and that benefit from the tax exemption.")]
+    [Description(
+        @"The units that were purchased since the ex-div date, and that benefit from the tax exemption."
+    )]
     Group2 = UKTaxGroupUnitCode.Group2, // same ordinal as derivation source for type conversions
-    
 }

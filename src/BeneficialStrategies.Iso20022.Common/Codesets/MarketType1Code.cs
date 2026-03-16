@@ -23,7 +23,7 @@ public enum MarketType1Code
     [IsoId("_aUTfZdp-Ed-ak6NoX_4Aeg_2050094305")]
     [Description(@"The place is a primary market.")]
     PrimaryMarket = MarketTypeCode.PrimaryMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a secondary market.
     /// Encoded/decoded by serializers as &quot;SECM&quot;.
@@ -32,7 +32,7 @@ public enum MarketType1Code
     [IsoId("_aUTfZtp-Ed-ak6NoX_4Aeg_2051015336")]
     [Description(@"The place is a secondary market.")]
     SecondaryMarket = MarketTypeCode.SecondaryMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a third market.
     /// Encoded/decoded by serializers as &quot;THIM&quot;.
@@ -41,7 +41,7 @@ public enum MarketType1Code
     [IsoId("_aUTfZ9p-Ed-ak6NoX_4Aeg_-1860687416")]
     [Description(@"The place is a third market.")]
     ThirdMarket = MarketTypeCode.ThirdMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The place is a fourth market.
     /// Encoded/decoded by serializers as &quot;FOUM&quot;.
@@ -50,5 +50,4 @@ public enum MarketType1Code
     [IsoId("_aUdQYNp-Ed-ak6NoX_4Aeg_-1831136197")]
     [Description(@"The place is a fourth market.")]
     FourthMarket = MarketTypeCode.FourthMarket, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum SoundFormatCode
     [IsoId("_Dn7JMN6_Eeiwsev40qZGEQ")]
     [Description(@"Preloaded sound File.")]
     SoundRef,
-    
+
     /// <summary>
     /// Reference of a preloaded text to play.
     /// Encoded/decoded by serializers as &quot;MSGR&quot;.
@@ -32,7 +32,7 @@ public enum SoundFormatCode
     [IsoId("_F6QYMN6_Eeiwsev40qZGEQ")]
     [Description(@"Reference of a preloaded text to play.")]
     MessageRef,
-    
+
     /// <summary>
     /// Text to play.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -41,5 +41,4 @@ public enum SoundFormatCode
     [IsoId("_IaHF0N6_Eeiwsev40qZGEQ")]
     [Description(@"Text to play.")]
     Text,
-    
 }

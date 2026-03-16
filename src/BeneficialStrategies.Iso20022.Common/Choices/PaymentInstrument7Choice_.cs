@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentInstrument7Choice.CreditTransferDetails))]
     [KnownType(typeof(PaymentInstrument7Choice.ChequeDetails))]
     [KnownType(typeof(PaymentInstrument7Choice.AccountDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument7Choice.CreditTransferDetails),nameof(PaymentInstrument7Choice.CreditTransferDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument7Choice.ChequeDetails),nameof(PaymentInstrument7Choice.ChequeDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument7Choice.AccountDetails),nameof(PaymentInstrument7Choice.AccountDetails))]
+    [JsonDerivedType(
+        typeof(PaymentInstrument7Choice.CreditTransferDetails),
+        nameof(PaymentInstrument7Choice.CreditTransferDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument7Choice.ChequeDetails),
+        nameof(PaymentInstrument7Choice.ChequeDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument7Choice.AccountDetails),
+        nameof(PaymentInstrument7Choice.AccountDetails)
+    )]
     [IsoId("_VKiwRtp-Ed-ak6NoX_4Aeg_-1553198103")]
     [DisplayName("Payment Instrument 7 Choice")]
-    public abstract partial record PaymentInstrument7Choice_
-    {
-    }
+    public abstract record PaymentInstrument7Choice_ { }
 }

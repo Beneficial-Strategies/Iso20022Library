@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReferredDocumentType3Choice.Code))]
     [KnownType(typeof(ReferredDocumentType3Choice.Proprietary))]
-    [JsonDerivedType(typeof(ReferredDocumentType3Choice.Code),nameof(ReferredDocumentType3Choice.Code))]
-    [JsonDerivedType(typeof(ReferredDocumentType3Choice.Proprietary),nameof(ReferredDocumentType3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ReferredDocumentType3Choice.Code),
+        nameof(ReferredDocumentType3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ReferredDocumentType3Choice.Proprietary),
+        nameof(ReferredDocumentType3Choice.Proprietary)
+    )]
     [IsoId("_XxL1Jx77EeSxevWRRWxNAg")]
     [DisplayName("Referred Document Type 3 Choice")]
-    public abstract partial record ReferredDocumentType3Choice_
-    {
-    }
+    public abstract record ReferredDocumentType3Choice_ { }
 }

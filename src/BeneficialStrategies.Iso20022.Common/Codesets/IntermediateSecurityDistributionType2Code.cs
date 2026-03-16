@@ -23,7 +23,7 @@ public enum IntermediateSecurityDistributionType2Code
     [IsoId("_aaQ9ctp-Ed-ak6NoX_4Aeg_-1090801611")]
     [Description(@"Distribution of reverser rights.")]
     ReverseRights = IntermediateSecurityDistributionTypeCode.ReverseRights, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of bonus rights.
     /// Encoded/decoded by serializers as &quot;BONU&quot;.
@@ -32,7 +32,7 @@ public enum IntermediateSecurityDistributionType2Code
     [IsoId("_aaQ9c9p-Ed-ak6NoX_4Aeg_-1090801593")]
     [Description(@"Distribution of bonus rights.")]
     BonusRights = IntermediateSecurityDistributionTypeCode.BonusRights, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of dividend reinvestment securities.
     /// Encoded/decoded by serializers as &quot;DRIP&quot;.
@@ -41,7 +41,7 @@ public enum IntermediateSecurityDistributionType2Code
     [IsoId("_aaQ9dNp-Ed-ak6NoX_4Aeg_-1090801568")]
     [Description(@"Distribution of dividend reinvestment securities.")]
     DividendReinvestment = IntermediateSecurityDistributionTypeCode.DividendReinvestment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of dividend option.
     /// Encoded/decoded by serializers as &quot;DVOP&quot;.
@@ -50,7 +50,7 @@ public enum IntermediateSecurityDistributionType2Code
     [IsoId("_aaQ9ddp-Ed-ak6NoX_4Aeg_-1090801551")]
     [Description(@"Distribution of dividend option.")]
     DividendOption = IntermediateSecurityDistributionTypeCode.DividendOption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of subscription rights.
     /// Encoded/decoded by serializers as &quot;EXRI&quot;.
@@ -59,7 +59,7 @@ public enum IntermediateSecurityDistributionType2Code
     [IsoId("_aaQ9dtp-Ed-ak6NoX_4Aeg_-1090801291")]
     [Description(@"Distribution of subscription rights.")]
     SubscriptionRights = IntermediateSecurityDistributionTypeCode.SubscriptionRights, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution of open offer rights.
     /// Encoded/decoded by serializers as &quot;PRIO&quot;.
@@ -68,5 +68,4 @@ public enum IntermediateSecurityDistributionType2Code
     [IsoId("_aaQ9d9p-Ed-ak6NoX_4Aeg_-1090801274")]
     [Description(@"Distribution of open offer rights.")]
     OpenOfferRights = IntermediateSecurityDistributionTypeCode.OpenOfferRights, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum UserInterface3Code
     [IsoId("_ecl4wYO6EeSWSLYdc10LRg")]
     [Description(@"Acquirer.")]
     Acquirer = UserInterfaceCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Agent.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
@@ -32,7 +32,7 @@ public enum UserInterface3Code
     [IsoId("_ejvpoYO6EeSWSLYdc10LRg")]
     [Description(@"Agent.")]
     Agent = UserInterfaceCode.Agent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer.
     /// Encoded/decoded by serializers as &quot;ISSR&quot;.
@@ -41,5 +41,4 @@ public enum UserInterface3Code
     [IsoId("_euVJAYO6EeSWSLYdc10LRg")]
     [Description(@"Issuer.")]
     Issuer = UserInterfaceCode.Issuer, // same ordinal as derivation source for type conversions
-    
 }

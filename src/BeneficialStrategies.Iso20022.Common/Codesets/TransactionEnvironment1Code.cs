@@ -23,7 +23,7 @@ public enum TransactionEnvironment1Code
     [IsoId("_TUJ9MAEcEeCQm6a_G2yO_w_765796733")]
     [Description(@"Merchant environment.")]
     Merchant = TransactionEnvironmentCode.Merchant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Private environment.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -32,7 +32,7 @@ public enum TransactionEnvironment1Code
     [IsoId("_TUJ9MQEcEeCQm6a_G2yO_w_1751770309")]
     [Description(@"Private environment.")]
     Private = TransactionEnvironmentCode.Private, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Public environment.
     /// Encoded/decoded by serializers as &quot;PUBL&quot;.
@@ -41,5 +41,4 @@ public enum TransactionEnvironment1Code
     [IsoId("_TUJ9MgEcEeCQm6a_G2yO_w_-376057534")]
     [Description(@"Public environment.")]
     Public = TransactionEnvironmentCode.Public, // same ordinal as derivation source for type conversions
-    
 }

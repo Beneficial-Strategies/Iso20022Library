@@ -6,7 +6,7 @@ using System.Runtime.Serialization;
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Indicates whether the message is a request for totals or to convey totals. 
+/// Indicates whether the message is a request for totals or to convey totals.
 /// </summary>
 [DataContract]
 [Serializable]
@@ -23,16 +23,16 @@ public enum ReconciliationFunction1Code
     [IsoId("_sqvgYS7OEemIy6A-26wnAg")]
     [Description(@"Inquiry for reconciliation totals")]
     Inquire = ReconciliationFunctionCode.Inquire, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Initiation of a cutover. 
+    /// Initiation of a cutover.
     /// Encoded/decoded by serializers as &quot;INCU&quot;.
     /// </summary>
     [EnumMember(Value = "INCU")]
     [IsoId("_tIhokS7OEemIy6A-26wnAg")]
     [Description(@"Initiation of a cutover. ")]
     InitiateCutover = ReconciliationFunctionCode.InitiateCutover, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Convey reconciliation totals
     /// Encoded/decoded by serializers as &quot;CNVY&quot;.
@@ -41,5 +41,4 @@ public enum ReconciliationFunction1Code
     [IsoId("_tOg70S7OEemIy6A-26wnAg")]
     [Description(@"Convey reconciliation totals")]
     Convey = ReconciliationFunctionCode.Convey, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum SignatureOriginType1Code
     [IsoId("_q_EtIcnIEeWI4cSIO9foRA")]
     [Description(@"Signature is provided for the value validation of the file.")]
     Value = SignatureOriginTypeCode.Value, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Signature is provided for the technical validation of the file.
     /// Encoded/decoded by serializers as &quot;TECH&quot;.
@@ -32,7 +32,7 @@ public enum SignatureOriginType1Code
     [IsoId("_rD_CUcnIEeWI4cSIO9foRA")]
     [Description(@"Signature is provided for the technical validation of the file.")]
     Technical = SignatureOriginTypeCode.Technical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Signature is provided for the contract validation of the file.
     /// Encoded/decoded by serializers as &quot;CTRC&quot;.
@@ -41,7 +41,7 @@ public enum SignatureOriginType1Code
     [IsoId("_rI5XgcnIEeWI4cSIO9foRA")]
     [Description(@"Signature is provided for the contract validation of the file.")]
     Contract = SignatureOriginTypeCode.Contract, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Signature is provided for the bank validation of the file.
     /// Encoded/decoded by serializers as &quot;BANK&quot;.
@@ -50,5 +50,4 @@ public enum SignatureOriginType1Code
     [IsoId("_rNgKscnIEeWI4cSIO9foRA")]
     [Description(@"Signature is provided for the bank validation of the file.")]
     Bank = SignatureOriginTypeCode.Bank, // same ordinal as derivation source for type conversions
-    
 }

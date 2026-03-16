@@ -23,7 +23,7 @@ public enum DeliverReturnCode
     [IsoId("_YcMuRtp-Ed-ak6NoX_4Aeg_-205401924")]
     [Description(@"Specifies that the collateral is to be delivered.")]
     Deliver,
-    
+
     /// <summary>
     /// Specifies that the collateral is to be returned.
     /// Encoded/decoded by serializers as &quot;RETN&quot;.
@@ -32,5 +32,4 @@ public enum DeliverReturnCode
     [IsoId("_YcMuR9p-Ed-ak6NoX_4Aeg_-272083435")]
     [Description(@"Specifies that the collateral is to be returned.")]
     Return,
-    
 }

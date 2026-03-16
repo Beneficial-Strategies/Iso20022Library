@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rvygptp-Ed-ak6NoX_4Aeg_1549201834")]
 [DisplayName("Tax")]
-public partial record Tax12
+public record Tax12
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of tax applied.
     /// </summary>
     [IsoId("_Rvygp9p-Ed-ak6NoX_4Aeg_1549201877")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TaxType9Code Type { get; init; } 
-    
+    public required TaxType9Code Type { get; init; }
+
     /// <summary>
     /// Specifies types of tax not present in a code list.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record Tax12
     [DisplayName("Other Tax Type")]
     [IsoXmlTag("OthrTaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text OtherTaxType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text OtherTaxType { get; init; }
+
     /// <summary>
     /// Amount of money resulting from the calculation of the tax.
     /// </summary>
     [IsoId("_Rvygqdp-Ed-ak6NoX_4Aeg_1549201894")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required CurrencyAndAmount Amount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CurrencyAndAmount Amount { get; init; }
 }

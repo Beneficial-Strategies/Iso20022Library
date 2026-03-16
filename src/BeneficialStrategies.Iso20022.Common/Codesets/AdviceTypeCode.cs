@@ -23,7 +23,7 @@ public enum AdviceTypeCode
     [IsoId("_FeuGANomEembTrt_WixjyQ")]
     [Description(@"Advice with transaction details is requested.")]
     AdviceWithDetails,
-    
+
     /// <summary>
     /// Advice without  transaction details is requested.
     /// Encoded/decoded by serializers as &quot;ADND&quot;.
@@ -32,5 +32,4 @@ public enum AdviceTypeCode
     [IsoId("_F4QAUNomEembTrt_WixjyQ")]
     [Description(@"Advice without  transaction details is requested.")]
     AdviceWithoutDetails,
-    
 }

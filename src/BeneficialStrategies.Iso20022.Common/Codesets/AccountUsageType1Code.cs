@@ -23,7 +23,7 @@ public enum AccountUsageType1Code
     [IsoId("_ayRoIRKDEeKj15WxqwlXPw")]
     [Description(@"Investor.")]
     Investor = AccountUsageTypeCode.Investor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement participant.
     /// Encoded/decoded by serializers as &quot;SETP&quot;.
@@ -32,5 +32,4 @@ public enum AccountUsageType1Code
     [IsoId("_a6Uw4RKDEeKj15WxqwlXPw")]
     [Description(@"Settlement participant.")]
     SettlementParticipant = AccountUsageTypeCode.SettlementParticipant, // same ordinal as derivation source for type conversions
-    
 }

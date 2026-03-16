@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus67Choice.Cancelled))]
     [KnownType(typeof(ProcessingStatus67Choice.AcknowledgedAccepted))]
     [KnownType(typeof(ProcessingStatus67Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus67Choice.Rejected),nameof(ProcessingStatus67Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus67Choice.Repair),nameof(ProcessingStatus67Choice.Repair))]
-    [JsonDerivedType(typeof(ProcessingStatus67Choice.Cancelled),nameof(ProcessingStatus67Choice.Cancelled))]
-    [JsonDerivedType(typeof(ProcessingStatus67Choice.AcknowledgedAccepted),nameof(ProcessingStatus67Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus67Choice.Proprietary),nameof(ProcessingStatus67Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus67Choice.Rejected),
+        nameof(ProcessingStatus67Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus67Choice.Repair),
+        nameof(ProcessingStatus67Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus67Choice.Cancelled),
+        nameof(ProcessingStatus67Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus67Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus67Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus67Choice.Proprietary),
+        nameof(ProcessingStatus67Choice.Proprietary)
+    )]
     [IsoId("_W7Icl-FUEeWIA4E9cYSxxQ")]
     [DisplayName("Processing Status 67 Choice")]
-    public abstract partial record ProcessingStatus67Choice_
-    {
-    }
+    public abstract record ProcessingStatus67Choice_ { }
 }

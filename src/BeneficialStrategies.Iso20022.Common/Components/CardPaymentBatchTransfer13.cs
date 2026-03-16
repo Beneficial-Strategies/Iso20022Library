@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GVZxoaE8Ee-MRKYsaX6JDg")]
 [DisplayName("Card Payment Batch Transfer13")]
-public partial record CardPaymentBatchTransfer13
+public record CardPaymentBatchTransfer13
 {
-    #nullable enable
-
     /// <summary>
     /// Data Set.
     /// </summary>
@@ -31,8 +29,4 @@ public partial record CardPaymentBatchTransfer13
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
     public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

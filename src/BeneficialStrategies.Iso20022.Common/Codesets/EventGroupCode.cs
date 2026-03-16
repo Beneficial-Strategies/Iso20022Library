@@ -12,7 +12,12 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_1oFf0zL3EeKU9IrkkToqcw_648096752")]
 [Description(@"Specifies DTC (The Depository Trust Company) processing domain for the event.")]
-[Derivations(typeof(EventGroup1Code),typeof(EventGroup2Code),typeof(EventGroup3Code),typeof(EventGroup4Code))]
+[Derivations(
+    typeof(EventGroup1Code),
+    typeof(EventGroup2Code),
+    typeof(EventGroup3Code),
+    typeof(EventGroup4Code)
+)]
 public enum EventGroupCode
 {
     /// <summary>
@@ -23,7 +28,7 @@ public enum EventGroupCode
     [IsoId("_1oFf1DL3EeKU9IrkkToqcw_-934083267")]
     [Description(@"Redemption domain events.")]
     Redemption,
-    
+
     /// <summary>
     /// Reorganization domain events.
     /// Encoded/decoded by serializers as &quot;REOR&quot;.
@@ -32,7 +37,7 @@ public enum EventGroupCode
     [IsoId("_yQlqgK2nEea8JNaCEJBGAA")]
     [Description(@"Reorganization domain events.")]
     Reorganization,
-    
+
     /// <summary>
     /// Distribution domain events.
     /// Encoded/decoded by serializers as &quot;DISN&quot;.
@@ -41,7 +46,7 @@ public enum EventGroupCode
     [IsoId("_j3dzYK2oEea8JNaCEJBGAA")]
     [Description(@"Distribution domain events.")]
     Distribution,
-    
+
     /// <summary>
     /// General domain events.
     /// Encoded/decoded by serializers as &quot;GENL&quot;.
@@ -50,5 +55,4 @@ public enum EventGroupCode
     [IsoId("_ZJKr4AB8EeqouY-yI_q3qQ")]
     [Description(@"General domain events.")]
     General,
-    
 }

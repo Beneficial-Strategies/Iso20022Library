@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity2Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.TimeToMaturity2Choice
     /// </summary>
     [IsoId("__aOTk65OEeuo-IflVgGqiA")]
     [DisplayName("Special")]
-    public partial record Special : TimeToMaturity2Choice_
+    public record Special : TimeToMaturity2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies blank or not available codes.
         /// </summary>
         [IsoXmlTag("Spcl")]
-        public required SpecialPurpose2Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SpecialPurpose2Code Value { get; init; }
     }
 }

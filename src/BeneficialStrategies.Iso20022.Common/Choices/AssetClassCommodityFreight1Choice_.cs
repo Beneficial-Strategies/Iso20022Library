@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodityFreight1Choice.Dry))]
     [KnownType(typeof(AssetClassCommodityFreight1Choice.Wet))]
     [KnownType(typeof(AssetClassCommodityFreight1Choice.ContainerShip))]
-    [JsonDerivedType(typeof(AssetClassCommodityFreight1Choice.Dry),nameof(AssetClassCommodityFreight1Choice.Dry))]
-    [JsonDerivedType(typeof(AssetClassCommodityFreight1Choice.Wet),nameof(AssetClassCommodityFreight1Choice.Wet))]
-    [JsonDerivedType(typeof(AssetClassCommodityFreight1Choice.ContainerShip),nameof(AssetClassCommodityFreight1Choice.ContainerShip))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityFreight1Choice.Dry),
+        nameof(AssetClassCommodityFreight1Choice.Dry)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityFreight1Choice.Wet),
+        nameof(AssetClassCommodityFreight1Choice.Wet)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityFreight1Choice.ContainerShip),
+        nameof(AssetClassCommodityFreight1Choice.ContainerShip)
+    )]
     [IsoId("_35TWUFrXEeWN79Bl6BUd3g")]
     [DisplayName("Asset Class Commodity Freight 1 Choice")]
-    public abstract partial record AssetClassCommodityFreight1Choice_
-    {
-    }
+    public abstract record AssetClassCommodityFreight1Choice_ { }
 }

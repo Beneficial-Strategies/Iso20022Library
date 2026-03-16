@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HfBSwK_7EeaE9YROwd69hA")]
 [DisplayName("Security Identification And Amount")]
-public partial record SecurityIdentificationAndAmount1
+public record SecurityIdentificationAndAmount1
 {
-    #nullable enable
-    
     /// <summary>
     /// ISIN of the outright investment.
     /// </summary>
@@ -25,25 +23,21 @@ public partial record SecurityIdentificationAndAmount1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; } 
-    
+    public required IsoISINOct2015Identifier Identification { get; init; }
+
     /// <summary>
     /// Value of the outright investment according to the CCP’s system of record.
     /// </summary>
     [IsoId("_ULeXQK_7EeaE9YROwd69hA")]
     [DisplayName("Market Value")]
     [IsoXmlTag("MktVal")]
-    public required ActiveCurrencyAnd24Amount MarketValue { get; init; } 
-    
+    public required ActiveCurrencyAnd24Amount MarketValue { get; init; }
+
     /// <summary>
     /// Type of a financial instrument: an equity, bond or other.
     /// </summary>
     [IsoId("_kn10ADXsEemdWfjs3tykFQ")]
     [DisplayName("Financial Instrument Type")]
     [IsoXmlTag("FinInstrmTp")]
-    public required ProductType7Code FinancialInstrumentType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ProductType7Code FinancialInstrumentType { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dC8lAEG6EemxGPEh9hU2Xg")]
 [DisplayName("Intra Day Margin Call")]
-public partial record IntraDayMarginCall1
+public record IntraDayMarginCall1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the margin account against which the intraday margin call is being made.
     /// </summary>
     [IsoId("_rCkhkEG6EemxGPEh9hU2Xg")]
     [DisplayName("Margin Account Identification")]
     [IsoXmlTag("MrgnAcctId")]
-    public required GenericIdentification165 MarginAccountIdentification { get; init; } 
-    
+    public required GenericIdentification165 MarginAccountIdentification { get; init; }
+
     /// <summary>
     /// Value of the call being made.
     /// </summary>
     [IsoId("_7dvTgEG6EemxGPEh9hU2Xg")]
     [DisplayName("Intra Day Call")]
     [IsoXmlTag("IntraDayCall")]
-    public required ActiveCurrencyAndAmount IntraDayCall { get; init; } 
-    
+    public required ActiveCurrencyAndAmount IntraDayCall { get; init; }
+
     /// <summary>
     /// Time at which the margin call was made.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record IntraDayMarginCall1
     [DisplayName("Time Stamp")]
     [IsoXmlTag("TmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TimeStamp { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime TimeStamp { get; init; }
 }

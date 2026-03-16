@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -15,10 +15,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__ljNE_QAEeihCvvpsmGI2w")]
 [DisplayName("Document Reference")]
-public partial record DocumentReference1
+public record DocumentReference1
 {
-    #nullable enable
-    
     /// <summary>
     /// Describes the type of document.
     /// </summary>
@@ -26,9 +24,9 @@ public partial record DocumentReference1
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Type { get; init; }
+
     /// <summary>
     /// Reference is a free-form text field containing customer reference information (for example, a document number).
     /// </summary>
@@ -36,10 +34,6 @@ public partial record DocumentReference1
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Reference { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Reference { get; init; }
 }

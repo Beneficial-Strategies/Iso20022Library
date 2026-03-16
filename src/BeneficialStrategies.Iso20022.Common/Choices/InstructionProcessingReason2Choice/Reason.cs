@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason2Choi
     /// </summary>
     [IsoId("_Azo45NokEeC60axPepSq7g_228529796")]
     [DisplayName("Reason")]
-    public partial record Reason : InstructionProcessingReason2Choice_
+    public record Reason : InstructionProcessingReason2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why the instruction is in repair.
         /// </summary>
         [IsoId("_A5mW9NokEeC60axPepSq7g_1225602149")]
         [DisplayName("Code")]
         [IsoXmlTag("Cd")]
-        public required RepairReason9Choice_ Code { get; init; } 
-        
+        public required RepairReason9Choice_ Code { get; init; }
+
         /// <summary>
         /// Provides additional information about the reason in narrative form.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionProcessingReason2Choi
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

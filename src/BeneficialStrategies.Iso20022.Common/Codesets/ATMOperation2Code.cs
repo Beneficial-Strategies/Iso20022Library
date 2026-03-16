@@ -66,7 +66,9 @@ public enum ATMOperation2Code
     /// </summary>
     [EnumMember(Value = "SWAP")]
     [IsoId("_ATMOperation2Code_Swap")]
-    [Description(@"Unload all cassettes, and load a new set of cassettes to replace these. The Cassette structures determines what was removed and what was added.")]
+    [Description(
+        @"Unload all cassettes, and load a new set of cassettes to replace these. The Cassette structures determines what was removed and what was added."
+    )]
     Swap,
 
     /// <summary>
@@ -77,5 +79,4 @@ public enum ATMOperation2Code
     [IsoId("_ATMOperation2Code_Unloading")]
     [Description(@"Unloading cassette.")]
     Unloading = ATMOperationCode.Unloading,
-
 }

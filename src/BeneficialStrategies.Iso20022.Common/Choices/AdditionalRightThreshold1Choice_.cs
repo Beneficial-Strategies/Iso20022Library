@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AdditionalRightThreshold1Choice.AdditionalRightThreshold))]
     [KnownType(typeof(AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage))]
-    [JsonDerivedType(typeof(AdditionalRightThreshold1Choice.AdditionalRightThreshold),nameof(AdditionalRightThreshold1Choice.AdditionalRightThreshold))]
-    [JsonDerivedType(typeof(AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage),nameof(AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage))]
+    [JsonDerivedType(
+        typeof(AdditionalRightThreshold1Choice.AdditionalRightThreshold),
+        nameof(AdditionalRightThreshold1Choice.AdditionalRightThreshold)
+    )]
+    [JsonDerivedType(
+        typeof(AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage),
+        nameof(AdditionalRightThreshold1Choice.AdditionalRightThresholdPercentage)
+    )]
     [IsoId("_RDrok9p-Ed-ak6NoX_4Aeg_1316358552")]
     [DisplayName("Additional Right Threshold 1 Choice")]
-    public abstract partial record AdditionalRightThreshold1Choice_
-    {
-    }
+    public abstract record AdditionalRightThreshold1Choice_ { }
 }

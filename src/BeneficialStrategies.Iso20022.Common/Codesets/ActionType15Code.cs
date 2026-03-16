@@ -21,7 +21,9 @@ public enum ActionType15Code
     /// </summary>
     [EnumMember(Value = "ACUP")]
     [IsoId("_ActionType15Code_AccountUpdate")]
-    [Description(@"Indicates that the account was updated and should be taken into account for future authorisation.")]
+    [Description(
+        @"Indicates that the account was updated and should be taken into account for future authorisation."
+    )]
     AccountUpdate = ActionTypeCode.AccountUpdate,
 
     /// <summary>
@@ -39,8 +41,11 @@ public enum ActionType15Code
     /// </summary>
     [EnumMember(Value = "CDCV")]
     [IsoId("_ActionType15Code_ConsumerDeviceCardholderVerificationMethod")]
-    [Description(@"Request Cardholder Authentification according to the ConsumerDeviceCardholderVerificationMethod.")]
-    ConsumerDeviceCardholderVerificationMethod = ActionTypeCode.ConsumerDeviceCardholderVerificationMethod,
+    [Description(
+        @"Request Cardholder Authentification according to the ConsumerDeviceCardholderVerificationMethod."
+    )]
+    ConsumerDeviceCardholderVerificationMethod =
+        ActionTypeCode.ConsumerDeviceCardholderVerificationMethod,
 
     /// <summary>
     /// Additional authentication of cardholder required.
@@ -102,7 +107,9 @@ public enum ActionType15Code
     /// </summary>
     [EnumMember(Value = "NCOF")]
     [IsoId("_ActionType15Code_CardOnFileNotSupported")]
-    [Description(@"Reference used to process the transaction has been created for this transaction and shouldn’t be used for additional transactions.")]
+    [Description(
+        @"Reference used to process the transaction has been created for this transaction and shouldn’t be used for additional transactions."
+    )]
     CardOnFileNotSupported,
 
     /// <summary>
@@ -111,7 +118,9 @@ public enum ActionType15Code
     /// </summary>
     [EnumMember(Value = "NOVR")]
     [IsoId("_ActionType15Code_ForbidOverride")]
-    [Description(@"Payment application cannot propose to the merchant an override of the payment transaction.")]
+    [Description(
+        @"Payment application cannot propose to the merchant an override of the payment transaction."
+    )]
     ForbidOverride = ActionTypeCode.ForbidOverride,
 
     /// <summary>
@@ -165,7 +174,9 @@ public enum ActionType15Code
     /// </summary>
     [EnumMember(Value = "RQDT")]
     [IsoId("_ActionType15Code_RequestData")]
-    [Description(@"Request additional data through a displayed text and request confirmation by an attendant.")]
+    [Description(
+        @"Request additional data through a displayed text and request confirmation by an attendant."
+    )]
     RequestData = ActionTypeCode.RequestData,
 
     /// <summary>
@@ -203,5 +214,4 @@ public enum ActionType15Code
     [IsoId("_ActionType15Code_TryAgainLater")]
     [Description(@"Indicates that the authorization should be resubmitted at a later time.")]
     TryAgainLater = ActionTypeCode.TryAgainLater,
-
 }

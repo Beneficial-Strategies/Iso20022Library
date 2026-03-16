@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BeneficiaryCertificationType6Choice.Code))]
     [KnownType(typeof(BeneficiaryCertificationType6Choice.Proprietary))]
-    [JsonDerivedType(typeof(BeneficiaryCertificationType6Choice.Code),nameof(BeneficiaryCertificationType6Choice.Code))]
-    [JsonDerivedType(typeof(BeneficiaryCertificationType6Choice.Proprietary),nameof(BeneficiaryCertificationType6Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(BeneficiaryCertificationType6Choice.Code),
+        nameof(BeneficiaryCertificationType6Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(BeneficiaryCertificationType6Choice.Proprietary),
+        nameof(BeneficiaryCertificationType6Choice.Proprietary)
+    )]
     [IsoId("_UozIoQE4EeG0G9kfgQ0HLA")]
     [DisplayName("Beneficiary Certification Type 6 Choice")]
-    public abstract partial record BeneficiaryCertificationType6Choice_
-    {
-    }
+    public abstract record BeneficiaryCertificationType6Choice_ { }
 }

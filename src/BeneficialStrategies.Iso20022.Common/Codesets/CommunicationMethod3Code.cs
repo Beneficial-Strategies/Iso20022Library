@@ -23,7 +23,7 @@ public enum CommunicationMethod3Code
     [IsoId("_tRC9kRg2EeKnW4lR85q-0A")]
     [Description(@"Transmission by e-mail.")]
     Email = CommunicationMethodCode.Email, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by fax.
     /// Encoded/decoded by serializers as &quot;FAXI&quot;.
@@ -32,7 +32,7 @@ public enum CommunicationMethod3Code
     [IsoId("_tf8VMRg2EeKnW4lR85q-0A")]
     [Description(@"Transmission by fax.")]
     Fax = CommunicationMethodCode.Fax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by postal service.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -41,7 +41,7 @@ public enum CommunicationMethod3Code
     [IsoId("_uOSo8Rg2EeKnW4lR85q-0A")]
     [Description(@"Transmission by postal service.")]
     PostalService = CommunicationMethodCode.PostalService, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by telephone.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -50,7 +50,7 @@ public enum CommunicationMethod3Code
     [IsoId("_uWC2wRg2EeKnW4lR85q-0A")]
     [Description(@"Transmission by telephone.")]
     Phone = CommunicationMethodCode.Phone, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by file transfer.
     /// Encoded/decoded by serializers as &quot;FILE&quot;.
@@ -59,7 +59,7 @@ public enum CommunicationMethod3Code
     [IsoId("_xrSUQRg2EeKnW4lR85q-0A")]
     [Description(@"Transmission by file transfer.")]
     File = CommunicationMethodCode.File, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission on line, for example, in a web portal.
     /// Encoded/decoded by serializers as &quot;ONLI&quot;.
@@ -68,5 +68,4 @@ public enum CommunicationMethod3Code
     [IsoId("_NfzJcUp-EeKw5sECfP82rg")]
     [Description(@"Transmission on line, for example, in a web portal.")]
     Online = CommunicationMethodCode.Online, // same ordinal as derivation source for type conversions
-    
 }

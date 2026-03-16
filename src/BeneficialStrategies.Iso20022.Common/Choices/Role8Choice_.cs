@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Role8Choice.Code))]
     [KnownType(typeof(Role8Choice.Proprietary))]
-    [JsonDerivedType(typeof(Role8Choice.Code),nameof(Role8Choice.Code))]
-    [JsonDerivedType(typeof(Role8Choice.Proprietary),nameof(Role8Choice.Proprietary))]
+    [JsonDerivedType(typeof(Role8Choice.Code), nameof(Role8Choice.Code))]
+    [JsonDerivedType(typeof(Role8Choice.Proprietary), nameof(Role8Choice.Proprietary))]
     [IsoId("_hn_C8dyREeqKxsvOxFQHKA")]
     [DisplayName("Role 8 Choice")]
-    public abstract partial record Role8Choice_
-    {
-    }
+    public abstract record Role8Choice_ { }
 }

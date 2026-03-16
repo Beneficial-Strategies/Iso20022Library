@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialInstrumentQuantity18Choice.Unit))]
     [KnownType(typeof(FinancialInstrumentQuantity18Choice.FaceAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity18Choice.Unit),nameof(FinancialInstrumentQuantity18Choice.Unit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity18Choice.FaceAmount),nameof(FinancialInstrumentQuantity18Choice.FaceAmount))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity18Choice.Unit),
+        nameof(FinancialInstrumentQuantity18Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity18Choice.FaceAmount),
+        nameof(FinancialInstrumentQuantity18Choice.FaceAmount)
+    )]
     [IsoId("_SrfnENorEeCWg-hsBVGrDA_1068412329")]
     [DisplayName("Financial Instrument Quantity 18 Choice")]
-    public abstract partial record FinancialInstrumentQuantity18Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity18Choice_ { }
 }

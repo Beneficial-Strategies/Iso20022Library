@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification7Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification7Choic
     /// </summary>
     [IsoId("_XUZ6A5QEEeiILOjNP8ro1w")]
     [DisplayName("Other")]
-    public partial record Other : OrganisationIdentification7Choice_
+    public record Other : OrganisationIdentification7Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identification of the organisation.
         /// </summary>
         [IsoId("_kn9awZQEEeiILOjNP8ro1w")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
-        public required OrganisationIdentification8Choice_ Identification { get; init; } 
-        
+        public required OrganisationIdentification8Choice_ Identification { get; init; }
+
         /// <summary>
         /// Indicates the name of the reporting counterparty.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification7Choic
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max105Text)]
-        [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-        public IsoMax105Text? Name { get; init; } 
-        
+        [StringLength(maximumLength: 105, MinimumLength = 1)]
+        public IsoMax105Text? Name { get; init; }
+
         /// <summary>
         /// Indicates the domicile of counterparty.
         /// </summary>
@@ -42,11 +40,7 @@ namespace BeneficialStrategies.Iso20022.Choices.OrganisationIdentification7Choic
         [DisplayName("Domicile")]
         [IsoXmlTag("Dmcl")]
         [IsoSimpleType(IsoSimpleType.Max500Text)]
-        [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-        public IsoMax500Text? Domicile { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 500, MinimumLength = 1)]
+        public IsoMax500Text? Domicile { get; init; }
     }
 }

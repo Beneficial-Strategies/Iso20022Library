@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TradingVenueIdentification1Choice.MarketIdentificationCode))]
     [KnownType(typeof(TradingVenueIdentification1Choice.NationalCompetentAuthority))]
     [KnownType(typeof(TradingVenueIdentification1Choice.Other))]
-    [JsonDerivedType(typeof(TradingVenueIdentification1Choice.MarketIdentificationCode),nameof(TradingVenueIdentification1Choice.MarketIdentificationCode))]
-    [JsonDerivedType(typeof(TradingVenueIdentification1Choice.NationalCompetentAuthority),nameof(TradingVenueIdentification1Choice.NationalCompetentAuthority))]
-    [JsonDerivedType(typeof(TradingVenueIdentification1Choice.Other),nameof(TradingVenueIdentification1Choice.Other))]
+    [JsonDerivedType(
+        typeof(TradingVenueIdentification1Choice.MarketIdentificationCode),
+        nameof(TradingVenueIdentification1Choice.MarketIdentificationCode)
+    )]
+    [JsonDerivedType(
+        typeof(TradingVenueIdentification1Choice.NationalCompetentAuthority),
+        nameof(TradingVenueIdentification1Choice.NationalCompetentAuthority)
+    )]
+    [JsonDerivedType(
+        typeof(TradingVenueIdentification1Choice.Other),
+        nameof(TradingVenueIdentification1Choice.Other)
+    )]
     [IsoId("_3sh9EhtGEeWhp-Wous5jzA")]
     [DisplayName("Trading Venue Identification 1 Choice")]
-    public abstract partial record TradingVenueIdentification1Choice_
-    {
-    }
+    public abstract record TradingVenueIdentification1Choice_ { }
 }

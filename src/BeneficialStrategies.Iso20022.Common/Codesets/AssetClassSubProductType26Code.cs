@@ -23,5 +23,4 @@ public enum AssetClassSubProductType26Code
     [IsoId("_kgdlQ1rKEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type inter energy.")]
     InterEnergy = AssetClassSubProductTypeCode.InterEnergy, // same ordinal as derivation source for type conversions
-    
 }

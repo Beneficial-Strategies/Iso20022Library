@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification37Choice.ProprietaryIdentification))]
     [KnownType(typeof(PartyIdentification37Choice.NameAndAddress))]
     [KnownType(typeof(PartyIdentification37Choice.Country))]
-    [JsonDerivedType(typeof(PartyIdentification37Choice.AnyBIC),nameof(PartyIdentification37Choice.AnyBIC))]
-    [JsonDerivedType(typeof(PartyIdentification37Choice.ProprietaryIdentification),nameof(PartyIdentification37Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(PartyIdentification37Choice.NameAndAddress),nameof(PartyIdentification37Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(PartyIdentification37Choice.Country),nameof(PartyIdentification37Choice.Country))]
+    [JsonDerivedType(
+        typeof(PartyIdentification37Choice.AnyBIC),
+        nameof(PartyIdentification37Choice.AnyBIC)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification37Choice.ProprietaryIdentification),
+        nameof(PartyIdentification37Choice.ProprietaryIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification37Choice.NameAndAddress),
+        nameof(PartyIdentification37Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification37Choice.Country),
+        nameof(PartyIdentification37Choice.Country)
+    )]
     [IsoId("_7H6pweaPEd-q8fx_Zl_34A")]
     [DisplayName("Party Identification 37 Choice")]
-    public abstract partial record PartyIdentification37Choice_
-    {
-    }
+    public abstract record PartyIdentification37Choice_ { }
 }

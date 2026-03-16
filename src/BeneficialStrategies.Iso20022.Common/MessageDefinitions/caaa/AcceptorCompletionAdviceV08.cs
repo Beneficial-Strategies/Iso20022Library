@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.caaa;
 
@@ -20,70 +18,63 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// The AcceptorCompletionAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the outcome of the payment at the acceptor, and to transfer the financial data of the transaction to the acquirer (capture).
 /// A AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully.
 /// </summary>
-[Description(@"The AcceptorCompletionAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the outcome of the payment at the acceptor, and to transfer the financial data of the transaction to the acquirer (capture).|A AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully.")]
+[Description(
+    @"The AcceptorCompletionAdvice message is sent by an acceptor (or its agent) to notify the acquirer (or its agent) of the outcome of the payment at the acceptor, and to transfer the financial data of the transaction to the acquirer (capture).|A AcceptorCompletionAdvice message is also sent to reverse an approved authorisation and any associated financial transfer (capture), if the card payment transaction could not be completed successfully."
+)]
 [IsoId("_qKYkwdegEeiJyp_aycJaTw")]
 [DisplayName("Acceptor Completion Advice V")]
-public partial record AcceptorCompletionAdviceV08 : IOuterRecord
+public record AcceptorCompletionAdviceV08 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "caaa.003.001.08";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "AccptrCmpltnAdvc";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.003.001.08";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Completion advice message management information.
     /// </summary>
     [IsoId("_qKYkxdegEeiJyp_aycJaTw")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header36 Header { get; init; } 
-    
+    public required Header36 Header { get; init; }
+
     /// <summary>
     /// Information related to the completion advice.
     /// </summary>
     [IsoId("_qKYkx9egEeiJyp_aycJaTw")]
     [DisplayName("Completion Advice")]
     [IsoXmlTag("CmpltnAdvc")]
-    public required AcceptorCompletionAdvice8 CompletionAdvice { get; init; } 
-    
+    public required AcceptorCompletionAdvice8 CompletionAdvice { get; init; }
+
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_qKYkydegEeiJyp_aycJaTw")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public ContentInformationType16? SecurityTrailer { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ContentInformationType16? SecurityTrailer { get; init; }
 }
 
-
-// Since AcceptorCompletionAdviceV08Document is not really part of the logical business domain model, 
+// Since AcceptorCompletionAdviceV08Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to AcceptorCompletionAdviceV08.
-

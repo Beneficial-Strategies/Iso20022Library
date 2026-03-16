@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Number24Choice.NumberIdentification))]
     [KnownType(typeof(Number24Choice.Proprietary))]
-    [JsonDerivedType(typeof(Number24Choice.NumberIdentification),nameof(Number24Choice.NumberIdentification))]
-    [JsonDerivedType(typeof(Number24Choice.Proprietary),nameof(Number24Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(Number24Choice.NumberIdentification),
+        nameof(Number24Choice.NumberIdentification)
+    )]
+    [JsonDerivedType(typeof(Number24Choice.Proprietary), nameof(Number24Choice.Proprietary))]
     [IsoId("_6OTyMZBfEeakHoV5BVecAQ")]
     [DisplayName("Number 24 Choice")]
-    public abstract partial record Number24Choice_
-    {
-    }
+    public abstract record Number24Choice_ { }
 }

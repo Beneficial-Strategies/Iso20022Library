@@ -23,5 +23,4 @@ public enum ProtectTransactionType3Code
     [IsoId("_Kp2HcbpaEeilsanBGAzy4A")]
     [Description(@"Reorganisation is a protect transaction type.")]
     ProtectTransaction = ReorganisationTransactionTypeCode.ProtectTransaction, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_yd5rQZlbEeeE1Ya-LgRsuQ")]
 [DisplayName("Instruction Status Return Criteria")]
-public partial record InstructionStatusReturnCriteria1
+public record InstructionStatusReturnCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates if the instruction status is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record InstructionStatusReturnCriteria1
     [DisplayName("Payment Instruction Status Indicator")]
     [IsoXmlTag("PmtInstrStsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator PaymentInstructionStatusIndicator { get; init; } 
-    
+    public required IsoRequestedIndicator PaymentInstructionStatusIndicator { get; init; }
+
     /// <summary>
     /// Indicates if the status date and time are requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record InstructionStatusReturnCriteria1
     [DisplayName("Payment Instruction Status Date Time Indicator")]
     [IsoXmlTag("PmtInstrStsDtTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentInstructionStatusDateTimeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? PaymentInstructionStatusDateTimeIndicator { get; init; }
+
     /// <summary>
     /// Indicates if the status reason is requested.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record InstructionStatusReturnCriteria1
     [DisplayName("Payment Instruction Status Reason Indicator")]
     [IsoXmlTag("PmtInstrStsRsnInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? PaymentInstructionStatusReasonIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? PaymentInstructionStatusReasonIndicator { get; init; }
 }

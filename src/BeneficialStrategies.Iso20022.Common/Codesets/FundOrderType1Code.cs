@@ -23,7 +23,7 @@ public enum FundOrderType1Code
     [IsoId("_atCvgtp-Ed-ak6NoX_4Aeg_1645076282")]
     [Description(@"Investment fund order is a subscription.")]
     Subscription = FundOrderTypeCode.Subscription, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is a redemption.
     /// Encoded/decoded by serializers as &quot;REDM&quot;.
@@ -32,7 +32,7 @@ public enum FundOrderType1Code
     [IsoId("_atCvg9p-Ed-ak6NoX_4Aeg_1645076559")]
     [Description(@"Investment fund order is a redemption.")]
     Redemption = FundOrderTypeCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is a switch.
     /// Encoded/decoded by serializers as &quot;SWIT&quot;.
@@ -41,5 +41,4 @@ public enum FundOrderType1Code
     [IsoId("_atCvhNp-Ed-ak6NoX_4Aeg_1645076612")]
     [Description(@"Investment fund order is a switch.")]
     Switch = FundOrderTypeCode.Switch, // same ordinal as derivation source for type conversions
-    
 }

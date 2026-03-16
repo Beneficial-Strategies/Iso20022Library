@@ -23,7 +23,7 @@ public enum InterimFinalPayment1Code
     [IsoId("_1tcg9TL3EeKU9IrkkToqcw_579708614")]
     [Description(@"Interim payment. Pending possible future payments.")]
     Interim = InterimFinalPaymentCode.Interim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Final payment positions will be debited.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -32,5 +32,4 @@ public enum InterimFinalPayment1Code
     [IsoId("_1tcg9jL3EeKU9IrkkToqcw_465869548")]
     [Description(@"Final payment positions will be debited.")]
     Final = InterimFinalPaymentCode.Final, // same ordinal as derivation source for type conversions
-    
 }

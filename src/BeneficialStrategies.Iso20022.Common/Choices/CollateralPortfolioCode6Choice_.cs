@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CollateralPortfolioCode6Choice.MarginPortfolioCode))]
     [KnownType(typeof(CollateralPortfolioCode6Choice.Portfolio))]
-    [JsonDerivedType(typeof(CollateralPortfolioCode6Choice.MarginPortfolioCode),nameof(CollateralPortfolioCode6Choice.MarginPortfolioCode))]
-    [JsonDerivedType(typeof(CollateralPortfolioCode6Choice.Portfolio),nameof(CollateralPortfolioCode6Choice.Portfolio))]
+    [JsonDerivedType(
+        typeof(CollateralPortfolioCode6Choice.MarginPortfolioCode),
+        nameof(CollateralPortfolioCode6Choice.MarginPortfolioCode)
+    )]
+    [JsonDerivedType(
+        typeof(CollateralPortfolioCode6Choice.Portfolio),
+        nameof(CollateralPortfolioCode6Choice.Portfolio)
+    )]
     [IsoId("_PhHpcbEtEe63r8FIfzOHCQ")]
     [DisplayName("Collateral Portfolio Code6Choice")]
-    public abstract partial record CollateralPortfolioCode6Choice_
-    {
-    }
+    public abstract record CollateralPortfolioCode6Choice_ { }
 }

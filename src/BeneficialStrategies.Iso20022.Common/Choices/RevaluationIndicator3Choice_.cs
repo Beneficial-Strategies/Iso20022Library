@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RevaluationIndicator3Choice.Indicator))]
     [KnownType(typeof(RevaluationIndicator3Choice.Proprietary))]
-    [JsonDerivedType(typeof(RevaluationIndicator3Choice.Indicator),nameof(RevaluationIndicator3Choice.Indicator))]
-    [JsonDerivedType(typeof(RevaluationIndicator3Choice.Proprietary),nameof(RevaluationIndicator3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RevaluationIndicator3Choice.Indicator),
+        nameof(RevaluationIndicator3Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(RevaluationIndicator3Choice.Proprietary),
+        nameof(RevaluationIndicator3Choice.Proprietary)
+    )]
     [IsoId("_BveJgTw0EeW3QqUkIQtIUA")]
     [DisplayName("Revaluation Indicator 3 Choice")]
-    public abstract partial record RevaluationIndicator3Choice_
-    {
-    }
+    public abstract record RevaluationIndicator3Choice_ { }
 }

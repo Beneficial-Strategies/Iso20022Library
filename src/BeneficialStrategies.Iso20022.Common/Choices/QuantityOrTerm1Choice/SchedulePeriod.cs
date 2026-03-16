@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
     /// </summary>
     [IsoId("_fbqi0SJDEe2zWP9pqvmqdw")]
     [DisplayName("Schedule Period")]
-    public partial record SchedulePeriod : QuantityOrTerm1Choice_
+    public record SchedulePeriod : QuantityOrTerm1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Number of units of the financial instrument, that is, the nominal value.
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-        public required IsoLongFraction19DecimalNumber Quantity { get; init; } 
-        
+        public required IsoLongFraction19DecimalNumber Quantity { get; init; }
+
         /// <summary>
         /// Indicates the unit of measure in which the total notional quantity and notional quantity schedules are expressed.
         /// </summary>
         [IsoId("_Cw9ccSJEEe2zWP9pqvmqdw")]
         [DisplayName("Unit Of Measure")]
         [IsoXmlTag("UnitOfMeasr")]
-        public UnitOfMeasure8Choice_? UnitOfMeasure { get; init; } 
-        
+        public UnitOfMeasure8Choice_? UnitOfMeasure { get; init; }
+
         /// <summary>
         /// Indicates the unadjusted date at which obligations under the  derivative transaction come into effect, as included in the confirmation.
         /// </summary>
@@ -41,8 +39,8 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
         [DisplayName("Unadjusted Effective Date")]
         [IsoXmlTag("UadjstdFctvDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate UnadjustedEffectiveDate { get; init; } 
-        
+        public required IsoISODate UnadjustedEffectiveDate { get; init; }
+
         /// <summary>
         /// Indicates the end date agreed in the derivative transaction without adjustment.
         /// </summary>
@@ -50,10 +48,6 @@ namespace BeneficialStrategies.Iso20022.Choices.QuantityOrTerm1Choice
         [DisplayName("Unadjusted End Date")]
         [IsoXmlTag("UadjstdEndDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? UnadjustedEndDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? UnadjustedEndDate { get; init; }
     }
 }

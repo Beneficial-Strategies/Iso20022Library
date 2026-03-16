@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QsJSUtp-Ed-ak6NoX_4Aeg_-2060321970")]
 [DisplayName("Transaction Identifications")]
-public partial record TransactionIdentifications4
+public record TransactionIdentifications4
 {
-    #nullable enable
-    
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account servicer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TransactionIdentifications4
     [DisplayName("Account Servicer Transaction Identification")]
     [IsoXmlTag("AcctSvcrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountServicerTransactionIdentification { get; init; }
+
     /// <summary>
     /// Identification of a transaction assigned by a market infrastructure other than a central securities depository, for example, Target2-Securities.
     /// </summary>
@@ -35,18 +33,14 @@ public partial record TransactionIdentifications4
     [DisplayName("Market Infrastructure Transaction Identification")]
     [IsoXmlTag("MktInfrstrctrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? MarketInfrastructureTransactionIdentification { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the transaction as known by the account owner (or the instructing party managing the account).
     /// </summary>
     [IsoId("_QsJSVdp-Ed-ak6NoX_4Aeg_-1014713069")]
     [DisplayName("Account Owner Transaction Identification")]
     [IsoXmlTag("AcctOwnrTxId")]
-    public required References4Choice_ AccountOwnerTransactionIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required References4Choice_ AccountOwnerTransactionIdentification { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3T9n8TEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Search10")]
-public partial record PaymentSearch10
+public record PaymentSearch10
 {
-    #nullable enable
-
     /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; } 
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// End To End Identification.
@@ -86,7 +84,7 @@ public partial record PaymentSearch10
     /// </summary>
     [DisplayName("Parties")]
     [IsoXmlTag("Pties")]
-    public PaymentTransactionParty4? Parties { get; init; } 
+    public PaymentTransactionParty4? Parties { get; init; }
 
     /// <summary>
     /// Payment Identification.
@@ -150,8 +148,4 @@ public partial record PaymentSearch10
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     public ValueList<IsoUUIDv4Identifier> UETR { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

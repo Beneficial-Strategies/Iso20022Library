@@ -23,7 +23,7 @@ public enum CardPaymentServiceType14Code
     [IsoId("_dSuycU7DEeyGi9JAv6wq7Q")]
     [Description(@"Initial reservation.")]
     InitialReservation = CardPaymentServiceTypeCode.InitialReservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update reservation.
     /// Encoded/decoded by serializers as &quot;URES&quot;.
@@ -32,7 +32,7 @@ public enum CardPaymentServiceType14Code
     [IsoId("_dSuyc07DEeyGi9JAv6wq7Q")]
     [Description(@"Update reservation.")]
     UpdateReservation = CardPaymentServiceTypeCode.UpdateReservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment after reservation.
     /// Encoded/decoded by serializers as &quot;PRES&quot;.
@@ -41,7 +41,7 @@ public enum CardPaymentServiceType14Code
     [IsoId("_dSuydU7DEeyGi9JAv6wq7Q")]
     [Description(@"Payment after reservation.")]
     PaymentReservation = CardPaymentServiceTypeCode.PaymentReservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional payment after reservation.
     /// Encoded/decoded by serializers as &quot;ARES&quot;.
@@ -50,7 +50,7 @@ public enum CardPaymentServiceType14Code
     [IsoId("_dSuyd07DEeyGi9JAv6wq7Q")]
     [Description(@"Additional payment after reservation.")]
     AdditionalPayment = CardPaymentServiceTypeCode.AdditionalPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Initial recurring payment.
     /// Encoded/decoded by serializers as &quot;FREC&quot;.
@@ -59,7 +59,7 @@ public enum CardPaymentServiceType14Code
     [IsoId("_dSuyeU7DEeyGi9JAv6wq7Q")]
     [Description(@"Initial recurring payment.")]
     FirstRecurring = CardPaymentServiceTypeCode.FirstRecurring, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Repeat recurring payment.
     /// Encoded/decoded by serializers as &quot;RREC&quot;.
@@ -68,7 +68,7 @@ public enum CardPaymentServiceType14Code
     [IsoId("_dSuye07DEeyGi9JAv6wq7Q")]
     [Description(@"Repeat recurring payment.")]
     FollowingRecurring = CardPaymentServiceTypeCode.FollowingRecurring, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acceptor claims for guarantee of payment.
     /// Encoded/decoded by serializers as &quot;GOPT&quot;.
@@ -77,5 +77,4 @@ public enum CardPaymentServiceType14Code
     [IsoId("_r4DdEU7DEeyGi9JAv6wq7Q")]
     [Description(@"Acceptor claims for guarantee of payment.")]
     GuaranteeOfPayment = CardPaymentServiceTypeCode.GuaranteeOfPayment, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AssignmentMethod2Choice.Code))]
     [KnownType(typeof(AssignmentMethod2Choice.Proprietary))]
-    [JsonDerivedType(typeof(AssignmentMethod2Choice.Code),nameof(AssignmentMethod2Choice.Code))]
-    [JsonDerivedType(typeof(AssignmentMethod2Choice.Proprietary),nameof(AssignmentMethod2Choice.Proprietary))]
+    [JsonDerivedType(typeof(AssignmentMethod2Choice.Code), nameof(AssignmentMethod2Choice.Code))]
+    [JsonDerivedType(
+        typeof(AssignmentMethod2Choice.Proprietary),
+        nameof(AssignmentMethod2Choice.Proprietary)
+    )]
     [IsoId("_hJG-heLaEeWFtOV72FbX9w")]
     [DisplayName("Assignment Method 2 Choice")]
-    public abstract partial record AssignmentMethod2Choice_
-    {
-    }
+    public abstract record AssignmentMethod2Choice_ { }
 }

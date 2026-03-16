@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CounterpartyIdentification2Choice.LEI))]
     [KnownType(typeof(CounterpartyIdentification2Choice.Other))]
-    [JsonDerivedType(typeof(CounterpartyIdentification2Choice.LEI),nameof(CounterpartyIdentification2Choice.LEI))]
-    [JsonDerivedType(typeof(CounterpartyIdentification2Choice.Other),nameof(CounterpartyIdentification2Choice.Other))]
+    [JsonDerivedType(
+        typeof(CounterpartyIdentification2Choice.LEI),
+        nameof(CounterpartyIdentification2Choice.LEI)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyIdentification2Choice.Other),
+        nameof(CounterpartyIdentification2Choice.Other)
+    )]
     [IsoId("_QmCKwXvSEeWrWYBng3OpVw")]
     [DisplayName("Counterparty Identification 2 Choice")]
-    public abstract partial record CounterpartyIdentification2Choice_
-    {
-    }
+    public abstract record CounterpartyIdentification2Choice_ { }
 }

@@ -176,5 +176,4 @@ public enum ActionType14Code
     [IsoId("_ActionType14Code_VIPAccountManagement")]
     [Description(@"Manage account as a VIP one.")]
     VIPAccountManagement = ActionTypeCode.VIPAccountManagement,
-
 }

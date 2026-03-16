@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CashAccountIdentification15Choice.BlockChainCashWallet))]
     [KnownType(typeof(CashAccountIdentification15Choice.IBAN))]
     [KnownType(typeof(CashAccountIdentification15Choice.Proprietary))]
-    [JsonDerivedType(typeof(CashAccountIdentification15Choice.BlockChainCashWallet),nameof(CashAccountIdentification15Choice.BlockChainCashWallet))]
-    [JsonDerivedType(typeof(CashAccountIdentification15Choice.IBAN),nameof(CashAccountIdentification15Choice.IBAN))]
-    [JsonDerivedType(typeof(CashAccountIdentification15Choice.Proprietary),nameof(CashAccountIdentification15Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CashAccountIdentification15Choice.BlockChainCashWallet),
+        nameof(CashAccountIdentification15Choice.BlockChainCashWallet)
+    )]
+    [JsonDerivedType(
+        typeof(CashAccountIdentification15Choice.IBAN),
+        nameof(CashAccountIdentification15Choice.IBAN)
+    )]
+    [JsonDerivedType(
+        typeof(CashAccountIdentification15Choice.Proprietary),
+        nameof(CashAccountIdentification15Choice.Proprietary)
+    )]
     [IsoId("_nLmlDZt3Ee-wQIOX0djF2w")]
     [DisplayName("Cash Account Identification15Choice")]
-    public abstract partial record CashAccountIdentification15Choice_
-    {
-    }
+    public abstract record CashAccountIdentification15Choice_ { }
 }

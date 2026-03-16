@@ -23,7 +23,7 @@ public enum BidTypeCode
     [IsoId("_begosdp-Ed-ak6NoX_4Aeg_467216118")]
     [Description(@"Bid type is non disclosed.")]
     NonDisclosed,
-    
+
     /// <summary>
     /// Bid type is disclosed.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,7 +32,7 @@ public enum BidTypeCode
     [IsoId("_begostp-Ed-ak6NoX_4Aeg_481992122")]
     [Description(@"Bid type is disclosed.")]
     Disclosed,
-    
+
     /// <summary>
     /// List order is not related to a bid.
     /// Encoded/decoded by serializers as &quot;NOBI&quot;.
@@ -41,5 +41,4 @@ public enum BidTypeCode
     [IsoId("_begos9p-Ed-ak6NoX_4Aeg_487533177")]
     [Description(@"List order is not related to a bid.")]
     NoBid,
-    
 }

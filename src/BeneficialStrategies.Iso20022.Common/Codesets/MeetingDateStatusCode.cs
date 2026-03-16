@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_aVWBNtp-Ed-ak6NoX_4Aeg_-958051818")]
 [Description(@"Identifies the possible statuses of a meeting date.")]
-[Derivations(typeof(MeetingDateStatus1Code),typeof(MeetingDateStatus2Code))]
+[Derivations(typeof(MeetingDateStatus1Code), typeof(MeetingDateStatus2Code))]
 public enum MeetingDateStatusCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum MeetingDateStatusCode
     [IsoId("_aVWBN9p-Ed-ak6NoX_4Aeg_-471354872")]
     [Description(@"Meeting date is tentative.")]
     Tentative,
-    
+
     /// <summary>
     /// Meeting date is confirmed.
     /// Encoded/decoded by serializers as &quot;CNFR&quot;.
@@ -32,7 +32,7 @@ public enum MeetingDateStatusCode
     [IsoId("_aVWBONp-Ed-ak6NoX_4Aeg_-66852936")]
     [Description(@"Meeting date is confirmed.")]
     Confirmed,
-    
+
     /// <summary>
     /// Meeting date has been cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,7 +41,7 @@ public enum MeetingDateStatusCode
     [IsoId("_aVfyMNp-Ed-ak6NoX_4Aeg_564891")]
     [Description(@"Meeting date has been cancelled.")]
     Cancelled,
-    
+
     /// <summary>
     /// Meeting could not take place as the quorum was not reached.
     /// Encoded/decoded by serializers as &quot;NOQO&quot;.
@@ -50,5 +50,4 @@ public enum MeetingDateStatusCode
     [IsoId("_aVfyMdp-Ed-ak6NoX_4Aeg_2083943406")]
     [Description(@"Meeting could not take place as the quorum was not reached.")]
     NoQuorum,
-    
 }

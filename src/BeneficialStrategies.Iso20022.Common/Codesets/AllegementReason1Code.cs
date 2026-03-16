@@ -23,5 +23,4 @@ public enum AllegementReason1Code
     [IsoId("__0Jx0NojEeC60axPepSq7g_1527696364")]
     [Description(@"Allegement has been received and no match could be found.")]
     AllegementReceived = AllegementReasonCode.AllegementReceived, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum OptionParty3Code
     [IsoId("_g2qdMTzzEeWLuazO9XdCTg")]
     [Description(@"Indicates the receiver of the trade.")]
     Maker = OptionPartyCode.Maker, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates the initiator of the trade.
     /// Encoded/decoded by serializers as &quot;TAKE&quot;.
@@ -32,5 +32,4 @@ public enum OptionParty3Code
     [IsoId("_g9k9gTzzEeWLuazO9XdCTg")]
     [Description(@"Indicates the initiator of the trade.")]
     Taker = OptionPartyCode.Taker, // same ordinal as derivation source for type conversions
-    
 }

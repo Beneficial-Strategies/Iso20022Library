@@ -30,7 +30,9 @@ public enum MessageFunction47Code
     /// </summary>
     [EnumMember(Value = "AUTQ")]
     [IsoId("")]
-    [Description(@"The initiator requests an authorisation without financial impact to complete the transaction.")]
+    [Description(
+        @"The initiator requests an authorisation without financial impact to complete the transaction."
+    )]
     AuthorisationRequest = MessageFunctionCode.AuthorisationRequest, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -167,5 +169,4 @@ public enum MessageFunction47Code
     [IsoId("")]
     [Description(@"Request to receive of a report of transaction from the issuer to the receiver.")]
     TransactionReportRequest = MessageFunctionCode.TransactionReportRequest, // same ordinal as derivation source for type conversions
-
 }

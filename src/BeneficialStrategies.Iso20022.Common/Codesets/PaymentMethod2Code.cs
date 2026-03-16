@@ -21,7 +21,8 @@ public enum PaymentMethod2Code
     /// </summary>
     [EnumMember(Value = "DD")]
     [IsoId("_Z0aeYdp-Ed-ak6NoX_4Aeg_-15953576")]
-    [Description(@"Collection of an amount of money from the debtor's bank account by the creditor. The amount of money and dates of collections may vary.")]
+    [Description(
+        @"Collection of an amount of money from the debtor's bank account by the creditor. The amount of money and dates of collections may vary."
+    )]
     DirectDebit = PaymentMethodCode.DirectDebit, // same ordinal as derivation source for type conversions
-    
 }

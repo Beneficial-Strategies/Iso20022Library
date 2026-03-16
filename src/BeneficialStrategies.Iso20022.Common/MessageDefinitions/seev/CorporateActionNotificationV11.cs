@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
@@ -27,246 +25,239 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - provide a third party with a copy of a message for information (the sub-function of the message is Copy),
 /// - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).
 /// </summary>
-[Description(@"Scope|The CorporateActionNotification message is sent by an account servicer to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.||It may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.||It may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[Description(
+    @"Scope|The CorporateActionNotification message is sent by an account servicer to an account owner or its designated agent to notify details of a corporate action event and optionally account information, eligible balance and entitlements.||It may also include possible elections or choices available to the account owner. The account servicer can initially send the CorporateActionNotification message as a preliminary advice, subsequently replaced by another CorporateActionNotification message with complete or confirmed information.||It may also be sent to an account owner or its designated agent, to remind of event details and/or of missing or incomplete instructions for a corporate action event.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH)."
+)]
 [IsoId("_B3MJ0e2zEeqc-LCjwLsUVg")]
 [DisplayName("Corporate Action Notification V")]
-public partial record CorporateActionNotificationV11 : IOuterRecord
+public record CorporateActionNotificationV11 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "seev.031.001.11";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "CorpActnNtfctn";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:seev.031.001.11";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Page number of the message and continuation indicator to indicate that the multi-part notification is to continue or that the message is the last page of the multi-part notification.
     /// </summary>
     [IsoId("_B3MJ_e2zEeqc-LCjwLsUVg")]
     [DisplayName("Pagination")]
     [IsoXmlTag("Pgntn")]
-    public Pagination1? Pagination { get; init; } 
-    
+    public Pagination1? Pagination { get; init; }
+
     /// <summary>
     /// General information about the event notification type, status and contents.
     /// </summary>
     [IsoId("_B3MJ_-2zEeqc-LCjwLsUVg")]
     [DisplayName("Notification General Information")]
     [IsoXmlTag("NtfctnGnlInf")]
-    public required CorporateActionNotification5 NotificationGeneralInformation { get; init; } 
-    
+    public required CorporateActionNotification5 NotificationGeneralInformation { get; init; }
+
     /// <summary>
     /// Identification of the previously sent notification document.
     /// </summary>
     [IsoId("_B3MKAe2zEeqc-LCjwLsUVg")]
     [DisplayName("Previous Notification Identification")]
     [IsoXmlTag("PrvsNtfctnId")]
-    public DocumentIdentification31? PreviousNotificationIdentification { get; init; } 
-    
+    public DocumentIdentification31? PreviousNotificationIdentification { get; init; }
+
     /// <summary>
     /// Identification of a related instruction document.
     /// </summary>
     [IsoId("_B3MKA-2zEeqc-LCjwLsUVg")]
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
-    public DocumentIdentification9? InstructionIdentification { get; init; } 
-    
+    public DocumentIdentification9? InstructionIdentification { get; init; }
+
     /// <summary>
     /// Identification of other documents as well as the document number.
     /// </summary>
     [IsoId("_B3MKBe2zEeqc-LCjwLsUVg")]
     [DisplayName("Other Document Identification")]
     [IsoXmlTag("OthrDocId")]
-    public DocumentIdentification32? OtherDocumentIdentification { get; init; } 
-    
+    public DocumentIdentification32? OtherDocumentIdentification { get; init; }
+
     /// <summary>
     /// Identification of another corporate action event that needs to be closely linked to the processing of the event notified in this document.
     /// </summary>
     [IsoId("_B3MKB-2zEeqc-LCjwLsUVg")]
     [DisplayName("Events Linkage")]
     [IsoXmlTag("EvtsLkg")]
-    public CorporateActionEventReference3? EventsLinkage { get; init; } 
-    
+    public CorporateActionEventReference3? EventsLinkage { get; init; }
+
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_B3MKCe2zEeqc-LCjwLsUVg")]
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation136 CorporateActionGeneralInformation { get; init; } 
-    
+    public required CorporateActionGeneralInformation136 CorporateActionGeneralInformation { get; init; }
+
     /// <summary>
     /// General information about the safekeeping account, owner and account balance.
     /// </summary>
     [IsoId("_B3MKC-2zEeqc-LCjwLsUVg")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public required AccountIdentification41Choice_ AccountDetails { get; init; } 
-    
+    public required AccountIdentification41Choice_ AccountDetails { get; init; }
+
     /// <summary>
     /// Details on rights credited to the account as for example trading period, expiry date, renounceability.
     /// </summary>
     [IsoId("_B3MKDe2zEeqc-LCjwLsUVg")]
     [DisplayName("Intermediate Security")]
     [IsoXmlTag("IntrmdtScty")]
-    public FinancialInstrumentAttributes93? IntermediateSecurity { get; init; } 
-    
+    public FinancialInstrumentAttributes93? IntermediateSecurity { get; init; }
+
     /// <summary>
     /// Information about the corporate action event.
     /// </summary>
     [IsoId("_B3MKD-2zEeqc-LCjwLsUVg")]
     [DisplayName("Corporate Action Details")]
     [IsoXmlTag("CorpActnDtls")]
-    public CorporateAction57? CorporateActionDetails { get; init; } 
-    
+    public CorporateAction57? CorporateActionDetails { get; init; }
+
     /// <summary>
     /// Information about the corporate action option.
     /// </summary>
     [IsoId("_B3MKEe2zEeqc-LCjwLsUVg")]
     [DisplayName("Corporate Action Option Details")]
     [IsoXmlTag("CorpActnOptnDtls")]
-    public CorporateActionOption177? CorporateActionOptionDetails { get; init; } 
-    
+    public CorporateActionOption177? CorporateActionOptionDetails { get; init; }
+
     /// <summary>
     /// Additional information on the event.
     /// </summary>
     [IsoId("_B3MKE-2zEeqc-LCjwLsUVg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public CorporateActionNarrative46? AdditionalInformation { get; init; } 
-    
+    public CorporateActionNarrative46? AdditionalInformation { get; init; }
+
     /// <summary>
     /// Party appointed to administer the event on behalf of the issuer company/offeror. The party may be contacted for more information about the event.
     /// </summary>
     [IsoId("_B3MKFe2zEeqc-LCjwLsUVg")]
     [DisplayName("Issuer Agent")]
     [IsoXmlTag("IssrAgt")]
-    public PartyIdentification129Choice_? IssuerAgent { get; init; } 
-    
+    public PartyIdentification129Choice_? IssuerAgent { get; init; }
+
     /// <summary>
     /// Agent (principal or fiscal paying agent) appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
     /// </summary>
     [IsoId("_B3MKF-2zEeqc-LCjwLsUVg")]
     [DisplayName("Paying Agent")]
     [IsoXmlTag("PngAgt")]
-    public PartyIdentification120Choice_? PayingAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? PayingAgent { get; init; }
+
     /// <summary>
     /// Sub-agent appointed to execute the payment for the corporate action event on behalf of the issuer company/offeror.
     /// </summary>
     [IsoId("_B3MKGe2zEeqc-LCjwLsUVg")]
     [DisplayName("Sub Paying Agent")]
     [IsoXmlTag("SubPngAgt")]
-    public PartyIdentification120Choice_? SubPayingAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? SubPayingAgent { get; init; }
+
     /// <summary>
     /// Party/agent responsible for maintaining the register of the security.
     /// </summary>
     [IsoId("_B3MKG-2zEeqc-LCjwLsUVg")]
     [DisplayName("Registrar")]
     [IsoXmlTag("Regar")]
-    public PartyIdentification120Choice_? Registrar { get; init; } 
-    
+    public PartyIdentification120Choice_? Registrar { get; init; }
+
     /// <summary>
     /// Broker-dealer responsible for reselling to new investors securities (usually bonds) that have been tendered for purchase by their owner.
     /// </summary>
     [IsoId("_B3MKHe2zEeqc-LCjwLsUVg")]
     [DisplayName("Reselling Agent")]
     [IsoXmlTag("RsellngAgt")]
-    public PartyIdentification120Choice_? ResellingAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? ResellingAgent { get; init; }
+
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to accept presentations of instruments, usually bonds, for transfer and or exchange.
     /// </summary>
     [IsoId("_B3MKH-2zEeqc-LCjwLsUVg")]
     [DisplayName("Physical Securities Agent")]
     [IsoXmlTag("PhysSctiesAgt")]
-    public PartyIdentification120Choice_? PhysicalSecuritiesAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? PhysicalSecuritiesAgent { get; init; }
+
     /// <summary>
     /// A trust company, bank or similar financial institution that acts on behalf of an out-of-town agent or event agent where securities can be delivered in person.
     /// </summary>
     [IsoId("_B3MKIe2zEeqc-LCjwLsUVg")]
     [DisplayName("Drop Agent")]
     [IsoXmlTag("DrpAgt")]
-    public PartyIdentification120Choice_? DropAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? DropAgent { get; init; }
+
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an issuer to maintain records of investors and account balances and transactions for the consent of a material change.
     /// </summary>
     [IsoId("_B3MKI-2zEeqc-LCjwLsUVg")]
     [DisplayName("Solicitation Agent")]
     [IsoXmlTag("SlctnAgt")]
-    public PartyIdentification120Choice_? SolicitationAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? SolicitationAgent { get; init; }
+
     /// <summary>
     /// A trust company, bank or similar financial institution assigned by an Issuer to provide information and copies of the offering documentation.
     /// </summary>
     [IsoId("_B3MKJe2zEeqc-LCjwLsUVg")]
     [DisplayName("Information Agent")]
     [IsoXmlTag("InfAgt")]
-    public PartyIdentification120Choice_? InformationAgent { get; init; } 
-    
+    public PartyIdentification120Choice_? InformationAgent { get; init; }
+
     /// <summary>
     /// Issuer of the financial instrument.
     /// </summary>
     [IsoId("_B3MKJ-2zEeqc-LCjwLsUVg")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public PartyIdentification129Choice_? Issuer { get; init; } 
-    
+    public PartyIdentification129Choice_? Issuer { get; init; }
+
     /// <summary>
     /// Party making the offer and which is different from the issuing company.
     /// </summary>
     [IsoId("_B3MKKe2zEeqc-LCjwLsUVg")]
     [DisplayName("Offeror")]
     [IsoXmlTag("Offerr")]
-    public PartyIdentification129Choice_? Offeror { get; init; } 
-    
+    public PartyIdentification129Choice_? Offeror { get; init; }
+
     /// <summary>
     /// A trust company, bank or similar financial institution appointed by a fund management company to maintain records of investors and account balances. The transfer agent records transactions, including subscriptions, redemptions, switches, transfers, and re-registrations.
     /// </summary>
     [IsoId("_B3MKK-2zEeqc-LCjwLsUVg")]
     [DisplayName("Transfer Agent")]
     [IsoXmlTag("TrfAgt")]
-    public PartyIdentification129Choice_? TransferAgent { get; init; } 
-    
+    public PartyIdentification129Choice_? TransferAgent { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_B3MKLe2zEeqc-LCjwLsUVg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since CorporateActionNotificationV11Document is not really part of the logical business domain model, 
+// Since CorporateActionNotificationV11Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to CorporateActionNotificationV11.
-

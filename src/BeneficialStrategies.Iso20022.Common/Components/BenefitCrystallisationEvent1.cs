@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_N2Aj4LToEeiWMOV-LTfmAw")]
 [DisplayName("Benefit Crystallisation Event")]
-public partial record BenefitCrystallisationEvent1
+public record BenefitCrystallisationEvent1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of crystallisation event.
     /// </summary>
     [IsoId("_UiBv9LToEeiWMOV-LTfmAw")]
     [DisplayName("Event Type")]
     [IsoXmlTag("EvtTp")]
-    public DrawdownEventType1Choice_? EventType { get; init; } 
-    
+    public DrawdownEventType1Choice_? EventType { get; init; }
+
     /// <summary>
     /// Number of the crystallisation event.
     /// </summary>
@@ -33,26 +31,26 @@ public partial record BenefitCrystallisationEvent1
     [DisplayName("Event Number")]
     [IsoXmlTag("EvtNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? EventNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? EventNumber { get; init; }
+
     /// <summary>
-    /// Date on which the crystallisation event was triggered. 
+    /// Date on which the crystallisation event was triggered.
     /// </summary>
     [IsoId("_UiBv8LToEeiWMOV-LTfmAw")]
     [DisplayName("Event Date")]
     [IsoXmlTag("EvtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? EventDate { get; init; } 
-    
+    public IsoISODate? EventDate { get; init; }
+
     /// <summary>
     /// Amount of the crystallisation event.
     /// </summary>
     [IsoId("_UiBv8bToEeiWMOV-LTfmAw")]
     [DisplayName("Crystallisation Amount")]
     [IsoXmlTag("CrstllstnAmt")]
-    public ActiveCurrencyAnd13DecimalAmount? CrystallisationAmount { get; init; } 
-    
+    public ActiveCurrencyAnd13DecimalAmount? CrystallisationAmount { get; init; }
+
     /// <summary>
     /// Percentage of allowance used for the benefit crystallisation event.
     /// </summary>
@@ -60,17 +58,13 @@ public partial record BenefitCrystallisationEvent1
     [DisplayName("Percentage Of Allowance")]
     [IsoXmlTag("PctgOfAllwnc")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PercentageOfAllowance { get; init; } 
-    
+    public IsoPercentageRate? PercentageOfAllowance { get; init; }
+
     /// <summary>
     /// Additional information about the benefit crystallisation event.
     /// </summary>
     [IsoId("_UiBv9bToEeiWMOV-LTfmAw")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

@@ -23,7 +23,7 @@ public enum TriggerAction1Code
     [IsoId("_YvuHN9p-Ed-ak6NoX_4Aeg_353594698")]
     [Description(@"Trigger action is activate.")]
     Activate = TriggerActionCode.Activate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger action is modify.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -32,7 +32,7 @@ public enum TriggerAction1Code
     [IsoId("_Yv34MNp-Ed-ak6NoX_4Aeg_353594733")]
     [Description(@"Trigger action is modify.")]
     Modify = TriggerActionCode.Modify, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trigger action is cancel.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,5 +41,4 @@ public enum TriggerAction1Code
     [IsoId("_Yv34Mdp-Ed-ak6NoX_4Aeg_353594985")]
     [Description(@"Trigger action is cancel.")]
     Cancel = TriggerActionCode.Cancel, // same ordinal as derivation source for type conversions
-    
 }

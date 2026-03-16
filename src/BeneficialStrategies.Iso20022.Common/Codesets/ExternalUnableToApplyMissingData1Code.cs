@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_p-vHsN4jEeqt1ZcLzWyWFw")]
-[Description(@"Specifies the reason of an unable to apply due to missing data, as published in an external unable to apply missing data code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the reason of an unable to apply due to missing data, as published in an external unable to apply missing data code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalUnableToApplyMissingDataCode))]
 public enum ExternalUnableToApplyMissingData1Code
 {
@@ -23,17 +25,21 @@ public enum ExternalUnableToApplyMissingData1Code
     [EnumMember(Value = "MS01")]
     [IsoId("_uwqq8vRYEeuLhpyIdtJzwg")]
     [Description(@"RemittanceInformation is missing.")]
-    MissingRemittanceInformation = ExternalUnableToApplyMissingDataCode.MissingRemittanceInformation, // same ordinal as derivation source for type conversions
-    
+    MissingRemittanceInformation =
+        ExternalUnableToApplyMissingDataCode.MissingRemittanceInformation, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Instruction for next agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information).
     /// Encoded/decoded by serializers as &quot;MS02&quot;.
     /// </summary>
     [EnumMember(Value = "MS02")]
     [IsoId("_uwqq9fRYEeuLhpyIdtJzwg")]
-    [Description(@"Instruction for next agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information).")]
-    MissingInstructionForNextAgent = ExternalUnableToApplyMissingDataCode.MissingInstructionForNextAgent, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Instruction for next agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information)."
+    )]
+    MissingInstructionForNextAgent =
+        ExternalUnableToApplyMissingDataCode.MissingInstructionForNextAgent, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Debtor is missing.
     /// Encoded/decoded by serializers as &quot;MS03&quot;.
@@ -42,7 +48,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uwz04vRYEeuLhpyIdtJzwg")]
     [Description(@"Debtor is missing.")]
     MissingDebtor = ExternalUnableToApplyMissingDataCode.MissingDebtor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// DebtorAccount is missing.
     /// Encoded/decoded by serializers as &quot;MS04&quot;.
@@ -51,7 +57,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uwz05fRYEeuLhpyIdtJzwg")]
     [Description(@"DebtorAccount is missing.")]
     MissingDebtorAccount = ExternalUnableToApplyMissingDataCode.MissingDebtorAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// DebtorAgent is missing (former MissingFirstAgent for credit transfers).
     /// Encoded/decoded by serializers as &quot;MS05&quot;.
@@ -60,7 +66,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uwz06PRYEeuLhpyIdtJzwg")]
     [Description(@"DebtorAgent is missing (former MissingFirstAgent for credit transfers).")]
     MissingDebtorAgent = ExternalUnableToApplyMissingDataCode.MissingDebtorAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount is missing.
     /// Encoded/decoded by serializers as &quot;MS06&quot;.
@@ -69,7 +75,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uwz06_RYEeuLhpyIdtJzwg")]
     [Description(@"Amount is missing.")]
     MissingAmount = ExternalUnableToApplyMissingDataCode.MissingAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// SettlementAccount is missing. (former MissingNostroVostroAccount).
     /// Encoded/decoded by serializers as &quot;MS07&quot;.
@@ -78,7 +84,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uw9l4vRYEeuLhpyIdtJzwg")]
     [Description(@"SettlementAccount is missing. (former MissingNostroVostroAccount).")]
     MissingSettlementAccount = ExternalUnableToApplyMissingDataCode.MissingSettlementAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Intermediary is missing.
     /// Encoded/decoded by serializers as &quot;MS08&quot;.
@@ -87,7 +93,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uw9l5fRYEeuLhpyIdtJzwg")]
     [Description(@"Intermediary is missing.")]
     MissingIntermediary = ExternalUnableToApplyMissingDataCode.MissingIntermediary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// InstructingReimbursementAgent is missing (former MissingReimbursementAgent1).
     /// Encoded/decoded by serializers as &quot;MS09&quot;.
@@ -95,8 +101,9 @@ public enum ExternalUnableToApplyMissingData1Code
     [EnumMember(Value = "MS09")]
     [IsoId("_uw9l6PRYEeuLhpyIdtJzwg")]
     [Description(@"InstructingReimbursementAgent is missing (former MissingReimbursementAgent1).")]
-    MissingInstructingReimbursementAgent = ExternalUnableToApplyMissingDataCode.MissingInstructingReimbursementAgent, // same ordinal as derivation source for type conversions
-    
+    MissingInstructingReimbursementAgent =
+        ExternalUnableToApplyMissingDataCode.MissingInstructingReimbursementAgent, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// InstructedReimbursementAgent is missing (former MissingReimbursementAgent2).
     /// Encoded/decoded by serializers as &quot;MS10&quot;.
@@ -104,8 +111,9 @@ public enum ExternalUnableToApplyMissingData1Code
     [EnumMember(Value = "MS10")]
     [IsoId("_uw9l6_RYEeuLhpyIdtJzwg")]
     [Description(@"InstructedReimbursementAgent is missing (former MissingReimbursementAgent2).")]
-    MissingInstructedReimbursementAgent = ExternalUnableToApplyMissingDataCode.MissingInstructedReimbursementAgent, // same ordinal as derivation source for type conversions
-    
+    MissingInstructedReimbursementAgent =
+        ExternalUnableToApplyMissingDataCode.MissingInstructedReimbursementAgent, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Third reimbursement agent is missing (former MissingReimbursementAgent).
     /// Encoded/decoded by serializers as &quot;MS11&quot;.
@@ -113,8 +121,9 @@ public enum ExternalUnableToApplyMissingData1Code
     [EnumMember(Value = "MS11")]
     [IsoId("_uxHW4vRYEeuLhpyIdtJzwg")]
     [Description(@"Third reimbursement agent is missing (former MissingReimbursementAgent).")]
-    MissingThirdReimbursementAgent = ExternalUnableToApplyMissingDataCode.MissingThirdReimbursementAgent, // same ordinal as derivation source for type conversions
-    
+    MissingThirdReimbursementAgent =
+        ExternalUnableToApplyMissingDataCode.MissingThirdReimbursementAgent, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Creditor is missing.
     /// Encoded/decoded by serializers as &quot;MS12&quot;.
@@ -123,7 +132,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uxHW5fRYEeuLhpyIdtJzwg")]
     [Description(@"Creditor is missing.")]
     MissingCreditor = ExternalUnableToApplyMissingDataCode.MissingCreditor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// CreditorAccount is missing.
     /// Encoded/decoded by serializers as &quot;MS13&quot;.
@@ -132,7 +141,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uxQg0vRYEeuLhpyIdtJzwg")]
     [Description(@"CreditorAccount is missing.")]
     MissingCreditorAccount = ExternalUnableToApplyMissingDataCode.MissingCreditorAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment instruction is missing.
     /// Encoded/decoded by serializers as &quot;MS14&quot;.
@@ -141,7 +150,7 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uxQg1fRYEeuLhpyIdtJzwg")]
     [Description(@"Payment instruction is missing.")]
     MissingInstruction = ExternalUnableToApplyMissingDataCode.MissingInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Creditor agent is missing (former MissingFirstAgent for direct debits).
     /// Encoded/decoded by serializers as &quot;MS15&quot;.
@@ -150,25 +159,31 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uxQg2PRYEeuLhpyIdtJzwg")]
     [Description(@"Creditor agent is missing (former MissingFirstAgent for direct debits).")]
     MissingCreditorAgent = ExternalUnableToApplyMissingDataCode.MissingCreditorAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction for creditor agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information).
     /// Encoded/decoded by serializers as &quot;MS16&quot;.
     /// </summary>
     [EnumMember(Value = "MS16")]
     [IsoId("_uxQg2_RYEeuLhpyIdtJzwg")]
-    [Description(@"Instruction for creditor agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information).")]
-    MissingInstructionForCreditorAgent = ExternalUnableToApplyMissingDataCode.MissingInstructionForCreditorAgent, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Instruction for creditor agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information)."
+    )]
+    MissingInstructionForCreditorAgent =
+        ExternalUnableToApplyMissingDataCode.MissingInstructionForCreditorAgent, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Instruction for debtor agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information).
     /// Encoded/decoded by serializers as &quot;MS17&quot;.
     /// </summary>
     [EnumMember(Value = "MS17")]
     [IsoId("_uxaR0vRYEeuLhpyIdtJzwg")]
-    [Description(@"Instruction for debtor agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information).")]
-    MissingInstructionForDebtorAgent = ExternalUnableToApplyMissingDataCode.MissingInstructionForDebtorAgent, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Instruction for debtor agent is missing (former MissingSenderToReceiverInformation split into debtor, credit and next agent information)."
+    )]
+    MissingInstructionForDebtorAgent =
+        ExternalUnableToApplyMissingDataCode.MissingInstructionForDebtorAgent, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// RelatedRemittanceInformation is missing.
     /// Encoded/decoded by serializers as &quot;MS18&quot;.
@@ -176,8 +191,9 @@ public enum ExternalUnableToApplyMissingData1Code
     [EnumMember(Value = "MS18")]
     [IsoId("_uxaR1fRYEeuLhpyIdtJzwg")]
     [Description(@"RelatedRemittanceInformation is missing.")]
-    MissingRelatedRemittanceInformation = ExternalUnableToApplyMissingDataCode.MissingRelatedRemittanceInformation, // same ordinal as derivation source for type conversions
-    
+    MissingRelatedRemittanceInformation =
+        ExternalUnableToApplyMissingDataCode.MissingRelatedRemittanceInformation, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// See narrative field for additional information.
     /// Encoded/decoded by serializers as &quot;NARR&quot;.
@@ -186,5 +202,4 @@ public enum ExternalUnableToApplyMissingData1Code
     [IsoId("_uxjbwvRYEeuLhpyIdtJzwg")]
     [Description(@"See narrative field for additional information.")]
     Narrative = ExternalUnableToApplyMissingDataCode.Narrative, // same ordinal as derivation source for type conversions
-    
 }

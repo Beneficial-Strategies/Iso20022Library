@@ -23,7 +23,7 @@ public enum ProcessingPosition1Code
     [IsoId("_aKxI59p-Ed-ak6NoX_4Aeg_1050983994")]
     [Description(@"Indicates that the instruction is to be executed after the linked instruction.")]
     After,
-    
+
     /// <summary>
     /// Indicates that the instruction is to be executed with the linked instruction.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
@@ -32,14 +32,15 @@ public enum ProcessingPosition1Code
     [IsoId("_aKxI6Np-Ed-ak6NoX_4Aeg_1067607065")]
     [Description(@"Indicates that the instruction is to be executed with the linked instruction.")]
     With,
-    
+
     /// <summary>
     /// Indicates that the instruction is to be executed before the linked instruction.
     /// Encoded/decoded by serializers as &quot;BEFR&quot;.
     /// </summary>
     [EnumMember(Value = "BEFR")]
     [IsoId("_aK654Np-Ed-ak6NoX_4Aeg_1089773397")]
-    [Description(@"Indicates that the instruction is to be executed before the linked instruction.")]
+    [Description(
+        @"Indicates that the instruction is to be executed before the linked instruction."
+    )]
     Before,
-    
 }

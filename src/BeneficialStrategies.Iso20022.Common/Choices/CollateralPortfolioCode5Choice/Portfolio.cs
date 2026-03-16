@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
 {
     /// <summary>
@@ -15,12 +15,5 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralPortfolioCode5Choice
     /// </summary>
     [IsoId("_YxDO0TIDEe2fXedS_ucFOA")]
     [DisplayName("Portfolio")]
-    public partial record Portfolio : CollateralPortfolioCode5Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record Portfolio : CollateralPortfolioCode5Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum BondTypeCode
     [IsoId("_BKKTQM4mEeSc85GUbgBycw")]
     [Description(@"Bond of type sovereign bond.|")]
     SovereignBond,
-    
+
     /// <summary>
     /// Bond of type non-european sovereign bond.
     /// Encoded/decoded by serializers as &quot;NESB&quot;.
@@ -32,7 +32,7 @@ public enum BondTypeCode
     [IsoId("_BX_68M4mEeSc85GUbgBycw")]
     [Description(@"Bond of type non-european sovereign bond.")]
     NonEuropeanSovereignBond,
-    
+
     /// <summary>
     /// Bond of type other public bond.
     /// Encoded/decoded by serializers as &quot;OEPB&quot;.
@@ -41,7 +41,7 @@ public enum BondTypeCode
     [IsoId("_BcTzMM4mEeSc85GUbgBycw")]
     [Description(@"Bond of type other public bond.")]
     OtherPublicBond,
-    
+
     /// <summary>
     /// Bond of type convertible bond.
     /// Encoded/decoded by serializers as &quot;CVTB&quot;.
@@ -50,7 +50,7 @@ public enum BondTypeCode
     [IsoId("_Bfb_sM4mEeSc85GUbgBycw")]
     [Description(@"Bond of type convertible bond.")]
     ConvertibleBond,
-    
+
     /// <summary>
     /// Bond of type covered Bond.
     /// Encoded/decoded by serializers as &quot;CVDB&quot;.
@@ -59,7 +59,7 @@ public enum BondTypeCode
     [IsoId("_BhhDUM4mEeSc85GUbgBycw")]
     [Description(@"Bond of type covered Bond.")]
     CoveredBond,
-    
+
     /// <summary>
     /// Bond of type corporate Bond.
     /// Encoded/decoded by serializers as &quot;CRPB&quot;.
@@ -68,7 +68,7 @@ public enum BondTypeCode
     [IsoId("_BkWU4M4mEeSc85GUbgBycw")]
     [Description(@"Bond of type corporate Bond.|")]
     CorporateBond,
-    
+
     /// <summary>
     /// Bond of type other non-european public bond.
     /// Encoded/decoded by serializers as &quot;ONEP&quot;.
@@ -77,7 +77,7 @@ public enum BondTypeCode
     [IsoId("_s22aMAkBEeWGouz230Xp5Q")]
     [Description(@"Bond of type other non-european public bond.")]
     OtherNonEuropeanPublicBond,
-    
+
     /// <summary>
     /// Other bond type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -86,5 +86,4 @@ public enum BondTypeCode
     [IsoId("_ss_CcED6EeW1yage4PQ__A")]
     [Description(@"Other bond type.")]
     Other,
-    
 }

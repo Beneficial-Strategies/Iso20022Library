@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__NLEUXsyEeSTS7uHCe8FPQ")]
 [DisplayName("Detailed Amount")]
-public partial record DetailedAmount8
+public record DetailedAmount8
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount after the currency exchange.
     /// It corresponds to ISO 8583 field number 6, completed by the field number 51 for the versions 87 and 93.
@@ -25,8 +23,8 @@ public partial record DetailedAmount8
     [IsoId("__az3sXsyEeSTS7uHCe8FPQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Exchange rate to the currency of the amount.
     /// It corresponds to ISO 8583 field number 10.
@@ -35,8 +33,8 @@ public partial record DetailedAmount8
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; } 
-    
+    public required IsoBaseOneRate ExchangeRate { get; init; }
+
     /// <summary>
     /// Date and time at which the exchange rate has been quoted.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record DetailedAmount8
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; } 
-    
+    public IsoISODateTime? QuotationDate { get; init; }
+
     /// <summary>
     /// Text to display on the cardholder or to print on the cardholder bank statement.
     /// </summary>
@@ -53,10 +51,6 @@ public partial record DetailedAmount8
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Label { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Label { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lvDMenFwEemaN4ndAVY1ZQ")]
 [DisplayName("Generic Organisation Type")]
-public partial record GenericOrganisationType1
+public record GenericOrganisationType1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type assigned by an institution for the organisation.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record GenericOrganisationType1
     [DisplayName("Requested")]
     [IsoXmlTag("Reqd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public required IsoRequestedIndicator Requested { get; init; } 
-    
+    public required IsoRequestedIndicator Requested { get; init; }
+
     /// <summary>
     /// Name of the identification scheme.
     /// </summary>
     [IsoId("_lvDMfHFwEemaN4ndAVY1ZQ")]
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
-    public required OrganisationIdentificationSchemeName1Choice_ SchemeName { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required OrganisationIdentificationSchemeName1Choice_ SchemeName { get; init; }
 }

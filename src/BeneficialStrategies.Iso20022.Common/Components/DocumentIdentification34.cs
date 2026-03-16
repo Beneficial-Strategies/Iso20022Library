@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_celQqZKQEeWHWpTQn1FFVg")]
 [DisplayName("Document Identification")]
-public partial record DocumentIdentification34
+public record DocumentIdentification34
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identifier of the document (message) assigned either by the account servicer or the account owner.
     /// </summary>
     [IsoId("_celQq5KQEeWHWpTQn1FFVg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required DocumentIdentification4Choice_ Identification { get; init; } 
-    
+    public required DocumentIdentification4Choice_ Identification { get; init; }
+
     /// <summary>
     /// Identification of the type of document.
     /// </summary>
     [IsoId("_celQs5KQEeWHWpTQn1FFVg")]
     [DisplayName("Document Number")]
     [IsoXmlTag("DocNb")]
-    public DocumentNumber6Choice_? DocumentNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DocumentNumber6Choice_? DocumentNumber { get; init; }
 }

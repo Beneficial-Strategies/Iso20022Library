@@ -21,21 +21,55 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UpdateLogPartyRecord2Choice.Restriction))]
     [KnownType(typeof(UpdateLogPartyRecord2Choice.TechnicalAddress))]
     [KnownType(typeof(UpdateLogPartyRecord2Choice.Type))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.Address),nameof(UpdateLogPartyRecord2Choice.Address))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.ClosingDate),nameof(UpdateLogPartyRecord2Choice.ClosingDate))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.ContactDetails),nameof(UpdateLogPartyRecord2Choice.ContactDetails))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.LockStatus),nameof(UpdateLogPartyRecord2Choice.LockStatus))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.MarketSpecificAttribute),nameof(UpdateLogPartyRecord2Choice.MarketSpecificAttribute))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.Name),nameof(UpdateLogPartyRecord2Choice.Name))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.OpeningDate),nameof(UpdateLogPartyRecord2Choice.OpeningDate))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.Other),nameof(UpdateLogPartyRecord2Choice.Other))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.ResidenceType),nameof(UpdateLogPartyRecord2Choice.ResidenceType))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.Restriction),nameof(UpdateLogPartyRecord2Choice.Restriction))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.TechnicalAddress),nameof(UpdateLogPartyRecord2Choice.TechnicalAddress))]
-    [JsonDerivedType(typeof(UpdateLogPartyRecord2Choice.Type),nameof(UpdateLogPartyRecord2Choice.Type))]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.Address),
+        nameof(UpdateLogPartyRecord2Choice.Address)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.ClosingDate),
+        nameof(UpdateLogPartyRecord2Choice.ClosingDate)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.ContactDetails),
+        nameof(UpdateLogPartyRecord2Choice.ContactDetails)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.LockStatus),
+        nameof(UpdateLogPartyRecord2Choice.LockStatus)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.MarketSpecificAttribute),
+        nameof(UpdateLogPartyRecord2Choice.MarketSpecificAttribute)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.Name),
+        nameof(UpdateLogPartyRecord2Choice.Name)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.OpeningDate),
+        nameof(UpdateLogPartyRecord2Choice.OpeningDate)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.Other),
+        nameof(UpdateLogPartyRecord2Choice.Other)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.ResidenceType),
+        nameof(UpdateLogPartyRecord2Choice.ResidenceType)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.Restriction),
+        nameof(UpdateLogPartyRecord2Choice.Restriction)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.TechnicalAddress),
+        nameof(UpdateLogPartyRecord2Choice.TechnicalAddress)
+    )]
+    [JsonDerivedType(
+        typeof(UpdateLogPartyRecord2Choice.Type),
+        nameof(UpdateLogPartyRecord2Choice.Type)
+    )]
     [IsoId("_YwDt2TE_Ee62xuUQ2zyZww")]
     [DisplayName("Update Log Party Record2Choice")]
-    public abstract partial record UpdateLogPartyRecord2Choice_
-    {
-    }
+    public abstract record UpdateLogPartyRecord2Choice_ { }
 }

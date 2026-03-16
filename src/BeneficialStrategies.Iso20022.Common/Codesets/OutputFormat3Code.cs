@@ -23,7 +23,7 @@ public enum OutputFormat3Code
     [IsoId("_A6E6kduYEeiB5uLfkg9ZJA")]
     [Description(@"Barcode to output in several possible format.")]
     Barcode = OutputFormatCode.Barcode, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// A text to display as a menu before requesting an input.
     /// Encoded/decoded by serializers as &quot;MENT&quot;.
@@ -32,7 +32,7 @@ public enum OutputFormat3Code
     [IsoId("_A-QP8duYEeiB5uLfkg9ZJA")]
     [Description(@"A text to display as a menu before requesting an input.")]
     MenuEntry = OutputFormatCode.MenuEntry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Predefined configured messages, identified by a reference.
     /// Encoded/decoded by serializers as &quot;MREF&quot;.
@@ -41,7 +41,7 @@ public enum OutputFormat3Code
     [IsoId("_BFHF4duYEeiB5uLfkg9ZJA")]
     [Description(@"Predefined configured messages, identified by a reference.")]
     MessageReference = OutputFormatCode.MessageReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Screen to display identified by a reference.
     /// Encoded/decoded by serializers as &quot;SREF&quot;.
@@ -50,7 +50,7 @@ public enum OutputFormat3Code
     [IsoId("_CYgAYduYEeiB5uLfkg9ZJA")]
     [Description(@"Screen to display identified by a reference.")]
     ScreenReference = OutputFormatCode.ScreenReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Text without format attributes.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -59,7 +59,7 @@ public enum OutputFormat3Code
     [IsoId("_CfgAQduYEeiB5uLfkg9ZJA")]
     [Description(@"Text without format attributes.")]
     SimpleText = OutputFormatCode.SimpleText, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// XHTML document which includes a subset of the XHTML output tag.
     /// Encoded/decoded by serializers as &quot;HTML&quot;.
@@ -68,5 +68,4 @@ public enum OutputFormat3Code
     [IsoId("_CmojAduYEeiB5uLfkg9ZJA")]
     [Description(@"XHTML document which includes a subset of the XHTML output tag.")]
     XHTML = OutputFormatCode.XHTML, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum FundOwnershipCode
     [IsoId("_bNgkMCDXEeWCLu74WLgP4w")]
     [Description(@"All shares owned.")]
     AllOwned,
-    
+
     /// <summary>
     /// Not all shares owned.
     /// Encoded/decoded by serializers as &quot;NALL&quot;.
@@ -32,5 +32,4 @@ public enum FundOwnershipCode
     [IsoId("_dekn4CDXEeWCLu74WLgP4w")]
     [Description(@"Not all shares owned.")]
     NotAllOwned,
-    
 }

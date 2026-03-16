@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_q_KfcSYBEeym0KcvJF9aDQ")]
 [DisplayName("Point Of Interaction Component Identification")]
-public partial record PointOfInteractionComponentIdentification3
+public record PointOfInteractionComponentIdentification3
 {
-    #nullable enable
-    
     /// <summary>
     /// Hierarchical identification of a hardware component inside all the hardware component of the POI. It is composed of all item numbers of the upper level components, separated by the &apos;.&apos; character, ended by the item number of the current component.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PointOfInteractionComponentIdentification3
     [DisplayName("Item Number")]
     [IsoXmlTag("ItmNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ItemNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ItemNumber { get; init; }
+
     /// <summary>
     /// Identifies the provider of the software, hardware or parameters of the POI component.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record PointOfInteractionComponentIdentification3
     [DisplayName("Provider Identification")]
     [IsoXmlTag("PrvdrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ProviderIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ProviderIdentification { get; init; }
+
     /// <summary>
     /// Identification of the POI component assigned by its provider.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record PointOfInteractionComponentIdentification3
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Identification { get; init; }
+
     /// <summary>
     /// Serial number identifying an occurrence of an hardware component.
     /// </summary>
@@ -55,10 +53,6 @@ public partial record PointOfInteractionComponentIdentification3
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? SerialNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? SerialNumber { get; init; }
 }

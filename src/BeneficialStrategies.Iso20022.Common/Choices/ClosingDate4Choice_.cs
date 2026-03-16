@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClosingDate4Choice.Date))]
     [KnownType(typeof(ClosingDate4Choice.Code))]
-    [JsonDerivedType(typeof(ClosingDate4Choice.Date),nameof(ClosingDate4Choice.Date))]
-    [JsonDerivedType(typeof(ClosingDate4Choice.Code),nameof(ClosingDate4Choice.Code))]
+    [JsonDerivedType(typeof(ClosingDate4Choice.Date), nameof(ClosingDate4Choice.Date))]
+    [JsonDerivedType(typeof(ClosingDate4Choice.Code), nameof(ClosingDate4Choice.Code))]
     [IsoId("_xCN8YcpdEemQ1o-hyeYV5w")]
     [DisplayName("Closing Date 4 Choice")]
-    public abstract partial record ClosingDate4Choice_
-    {
-    }
+    public abstract record ClosingDate4Choice_ { }
 }

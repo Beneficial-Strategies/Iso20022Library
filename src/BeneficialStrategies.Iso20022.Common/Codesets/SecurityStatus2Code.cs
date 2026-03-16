@@ -23,7 +23,7 @@ public enum SecurityStatus2Code
     [IsoId("_ha1jsGliEeGaMcKyqKNRfQ_1830027418")]
     [Description(@"The status is active.")]
     Active = SecurityStatusCode.Active, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The status is inactive.
     /// Encoded/decoded by serializers as &quot;INAC&quot;.
@@ -32,7 +32,7 @@ public enum SecurityStatus2Code
     [IsoId("_ha1jsWliEeGaMcKyqKNRfQ_-1878992852")]
     [Description(@"The status is inactive.")]
     Inactive = SecurityStatusCode.Inactive, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The status is suspended.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
@@ -41,5 +41,4 @@ public enum SecurityStatus2Code
     [IsoId("_ha1jsmliEeGaMcKyqKNRfQ_-387389187")]
     [Description(@"The status is suspended.")]
     Suspended = SecurityStatusCode.Suspended, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GeUUQ4JkEeKmtdhZXgREOQ")]
 [DisplayName("Unique Transaction Identifier")]
-public partial record UniqueTransactionIdentifier1
+public record UniqueTransactionIdentifier1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique transaction identifier will be created at the time a transaction is first executed, shared with all registered entities and counterparties involved in the transaction, and used to track that particular transaction during its lifetime. This identifier can also be known as the Unique Swap Identifier (USI).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record UniqueTransactionIdentifier1
     [DisplayName("Unique Transaction Identifier")]
     [IsoXmlTag("UnqTxIdr")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public required IsoMax105Text UniqueTransactionIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public required IsoMax105Text UniqueTransactionIdentifier { get; init; }
+
     /// <summary>
     /// Prior unique transaction identifier specifies the previous unique transaction identifier (UTI) that was created at the time the transaction was executed. This identifier can also be known as the Prior Unique Swap Identifier (PUSI).
     /// </summary>
@@ -35,10 +33,6 @@ public partial record UniqueTransactionIdentifier1
     [DisplayName("Prior Unique Transaction Identifier")]
     [IsoXmlTag("PrrUnqTxIdr")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? PriorUniqueTransactionIdentifier { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? PriorUniqueTransactionIdentifier { get; init; }
 }

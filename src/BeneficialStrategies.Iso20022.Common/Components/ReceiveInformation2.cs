@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VN93tdp-Ed-ak6NoX_4Aeg_-1112110934")]
 [DisplayName("Receive Information")]
-public partial record ReceiveInformation2
+public record ReceiveInformation2
 {
-    #nullable enable
-    
     /// <summary>
     /// Charge related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_VN93ttp-Ed-ak6NoX_4Aeg_-682749671")]
     [DisplayName("Charge Details")]
     [IsoXmlTag("ChrgDtls")]
-    public Charge4? ChargeDetails { get; init; } 
-    
+    public Charge4? ChargeDetails { get; init; }
+
     /// <summary>
     /// Tax related to the transfer of a financial instrument.
     /// </summary>
     [IsoId("_VN93t9p-Ed-ak6NoX_4Aeg_1276116650")]
     [DisplayName("Tax Details")]
     [IsoXmlTag("TaxDtls")]
-    public Tax3? TaxDetails { get; init; } 
-    
+    public Tax3? TaxDetails { get; init; }
+
     /// <summary>
     /// Chain of parties involved in the settlement of a transaction.
     /// </summary>
     [IsoId("_VN93uNp-Ed-ak6NoX_4Aeg_-330292383")]
     [DisplayName("Settlement Parties Details")]
     [IsoXmlTag("SttlmPtiesDtls")]
-    public required ReceivingPartiesAndAccount1 SettlementPartiesDetails { get; init; } 
-    
+    public required ReceivingPartiesAndAccount1 SettlementPartiesDetails { get; init; }
+
     /// <summary>
     /// Indicates whether the financial instrument is to be physically delivered.
     /// </summary>
@@ -49,17 +47,13 @@ public partial record ReceiveInformation2
     [DisplayName("Physical Transfer Indicator")]
     [IsoXmlTag("PhysTrfInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalTransferIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator PhysicalTransferIndicator { get; init; }
+
     /// <summary>
     /// Parameters of a physical delivery.
     /// </summary>
     [IsoId("_VN93utp-Ed-ak6NoX_4Aeg_100067338")]
     [DisplayName("Physical Transfer Details")]
     [IsoXmlTag("PhysTrfDtls")]
-    public DeliveryParameters2? PhysicalTransferDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DeliveryParameters2? PhysicalTransferDetails { get; init; }
 }

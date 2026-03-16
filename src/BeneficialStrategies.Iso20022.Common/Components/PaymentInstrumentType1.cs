@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KRjfA01KEeGAs6v-iSb2RQ")]
 [DisplayName("Payment Instrument Type")]
-public partial record PaymentInstrumentType1
+public record PaymentInstrumentType1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the card number.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PaymentInstrumentType1
     [DisplayName("Card Number")]
     [IsoXmlTag("CardNb")]
     [IsoSimpleType(IsoSimpleType.Min8Max28NumericText)]
-    public required IsoMin8Max28NumericText CardNumber { get; init; } 
-    
+    public required IsoMin8Max28NumericText CardNumber { get; init; }
+
     /// <summary>
     /// Identifies the authority request type as a code.
     /// </summary>
@@ -34,8 +32,9 @@ public partial record PaymentInstrumentType1
     [DisplayName("Authority Request Type")]
     [IsoXmlTag("AuthrtyReqTp")]
     public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
+
     // ID for the above is _PgYUYU1KEeGAs6v-iSb2RQ
-    
+
     /// <summary>
     /// Additional information, in free text form, to complement the requested information.
     /// </summary>
@@ -43,10 +42,6 @@ public partial record PaymentInstrumentType1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
-    [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 500, MinimumLength = 1)]
+    public IsoMax500Text? AdditionalInformation { get; init; }
 }

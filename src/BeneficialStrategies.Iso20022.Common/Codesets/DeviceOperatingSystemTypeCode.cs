@@ -23,7 +23,7 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_V5SYgJfQEeuqNYk2TG3bTg")]
     [Description(@"Android operating system.")]
     Android,
-    
+
     /// <summary>
     /// iOS operating system.
     /// Encoded/decoded by serializers as &quot;IOSS&quot;.
@@ -32,7 +32,7 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_cBa0YJfQEeuqNYk2TG3bTg")]
     [Description(@"iOS operating system.")]
     iOS,
-    
+
     /// <summary>
     /// Windows operating system.
     /// Encoded/decoded by serializers as &quot;WIND&quot;.
@@ -41,7 +41,7 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_xg0VMJfQEeuqNYk2TG3bTg")]
     [Description(@"Windows operating system.")]
     Windows,
-    
+
     /// <summary>
     /// Blackberry operating system.
     /// Encoded/decoded by serializers as &quot;BLCK&quot;.
@@ -50,7 +50,7 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_Wcn5oJfREeuqNYk2TG3bTg")]
     [Description(@"Blackberry operating system.")]
     Blackberry,
-    
+
     /// <summary>
     /// Tizen operating system.
     /// Encoded/decoded by serializers as &quot;TIZN&quot;.
@@ -59,7 +59,7 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_cmnWsJfREeuqNYk2TG3bTg")]
     [Description(@"Tizen operating system.")]
     Tizen,
-    
+
     /// <summary>
     /// Other nationally defined code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +68,7 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_in48oJfREeuqNYk2TG3bTg")]
     [Description(@"Other nationally defined code.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other privately defined code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,5 +77,4 @@ public enum DeviceOperatingSystemTypeCode
     [IsoId("_roPi0JfREeuqNYk2TG3bTg")]
     [Description(@"Other privately defined code.")]
     OtherPrivate,
-    
 }

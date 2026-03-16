@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CurrentOrDefaultReservation1Choice.Current))]
     [KnownType(typeof(CurrentOrDefaultReservation1Choice.Default))]
-    [JsonDerivedType(typeof(CurrentOrDefaultReservation1Choice.Current),nameof(CurrentOrDefaultReservation1Choice.Current))]
-    [JsonDerivedType(typeof(CurrentOrDefaultReservation1Choice.Default),nameof(CurrentOrDefaultReservation1Choice.Default))]
+    [JsonDerivedType(
+        typeof(CurrentOrDefaultReservation1Choice.Current),
+        nameof(CurrentOrDefaultReservation1Choice.Current)
+    )]
+    [JsonDerivedType(
+        typeof(CurrentOrDefaultReservation1Choice.Default),
+        nameof(CurrentOrDefaultReservation1Choice.Default)
+    )]
     [IsoId("_8IjoJKMgEeCJ6YNENx4h-w_-1597699286")]
     [DisplayName("Current Or Default Reservation 1 Choice")]
-    public abstract partial record CurrentOrDefaultReservation1Choice_
-    {
-    }
+    public abstract record CurrentOrDefaultReservation1Choice_ { }
 }

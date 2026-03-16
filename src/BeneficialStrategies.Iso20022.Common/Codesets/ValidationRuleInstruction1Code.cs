@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_cCdYNCAZEeuxStysDTgLiw")]
-[Description(@"Specifies the instruction for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets.")]
+[Description(
+    @"Specifies the instruction for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleInstruction1Code
 {
@@ -24,7 +26,7 @@ public enum ValidationRuleInstruction1Code
     [IsoId("_sgJgYSAeEeuSiN6KdHu9iw")]
     [Description(@"Hold cash for creditor.")]
     HoldCashForCreditor = ValidationRuleCode.HoldCashForCreditor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Phone beneficiary.
     /// Encoded/decoded by serializers as &quot;PHOB&quot;.
@@ -33,7 +35,7 @@ public enum ValidationRuleInstruction1Code
     [IsoId("_sgJgYyAeEeuSiN6KdHu9iw")]
     [Description(@"Phone beneficiary.")]
     PhoneBeneficiary = ValidationRuleCode.PhoneBeneficiary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Telecom beneficiary.
     /// Encoded/decoded by serializers as &quot;TELB&quot;.
@@ -42,5 +44,4 @@ public enum ValidationRuleInstruction1Code
     [IsoId("_sgJgZSAeEeuSiN6KdHu9iw")]
     [Description(@"Telecom beneficiary.")]
     Telecom = ValidationRuleCode.Telecom, // same ordinal as derivation source for type conversions
-    
 }

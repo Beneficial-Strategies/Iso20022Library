@@ -23,7 +23,7 @@ public enum BorrowingReason1Code
     [IsoId("__0dT0NojEeC60axPepSq7g_-351803488")]
     [Description(@"The borrowing reason is for Self consumption.")]
     SelfConsumption = BorrowingReasonCode.SelfConsumption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The borrowing reason is for Transfer to thrid party.
     /// Encoded/decoded by serializers as &quot;TTTP&quot;.
@@ -32,7 +32,7 @@ public enum BorrowingReason1Code
     [IsoId("__0dT0dojEeC60axPepSq7g_1231215891")]
     [Description(@"The borrowing reason is for Transfer to thrid party.")]
     TransferToThirdParty = BorrowingReasonCode.TransferToThirdParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The borrowing reason is for Market making purpose.
     /// Encoded/decoded by serializers as &quot;MMPP&quot;.
@@ -41,5 +41,4 @@ public enum BorrowingReason1Code
     [IsoId("__0dT0tojEeC60axPepSq7g_-1596602642")]
     [Description(@"The borrowing reason is for Market making purpose.")]
     MarketMakingPurpose = BorrowingReasonCode.MarketMakingPurpose, // same ordinal as derivation source for type conversions
-    
 }

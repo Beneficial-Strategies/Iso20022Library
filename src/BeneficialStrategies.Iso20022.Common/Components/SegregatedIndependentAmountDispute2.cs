@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dCiJ4StOEeyOa655cLd-DQ")]
 [DisplayName("Segregated Independent Amount Dispute")]
-public partial record SegregatedIndependentAmountDispute2
+public record SegregatedIndependentAmountDispute2
 {
-    #nullable enable
-    
     /// <summary>
     /// Details of the disputed instruction.
     /// </summary>
     [IsoId("_da94AStOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Details")]
     [IsoXmlTag("DsptDtls")]
-    public required Dispute1 DisputeDetails { get; init; } 
-    
+    public required Dispute1 DisputeDetails { get; init; }
+
     /// <summary>
     /// Specifies the type of dispute that is to be resolved regarding the disputed collateral amount.
     /// </summary>
     [IsoId("_da94AytOEeyOa655cLd-DQ")]
     [DisplayName("Dispute Resolution Type 1 Choice")]
     [IsoXmlTag("DsptRsltnTp1Chc")]
-    public DisputeResolutionType1Choice_? DisputeResolutionType1Choice { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DisputeResolutionType1Choice_? DisputeResolutionType1Choice { get; init; }
 }

@@ -23,7 +23,7 @@ public enum Priority3Code
     [IsoId("_aKUc8dp-Ed-ak6NoX_4Aeg_1584820280")]
     [Description(@"Priority level is urgent (highest priority possible).")]
     Urgent = PriorityCode.Urgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is high.
     /// Encoded/decoded by serializers as &quot;HIGH&quot;.
@@ -32,7 +32,7 @@ public enum Priority3Code
     [IsoId("_aKUc8tp-Ed-ak6NoX_4Aeg_1584820309")]
     [Description(@"Priority level is high.")]
     High = PriorityCode.High, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is normal.
     /// Encoded/decoded by serializers as &quot;NORM&quot;.
@@ -41,5 +41,4 @@ public enum Priority3Code
     [IsoId("_aKUc89p-Ed-ak6NoX_4Aeg_1584820310")]
     [Description(@"Priority level is normal.")]
     Normal = PriorityCode.Normal, // same ordinal as derivation source for type conversions
-    
 }

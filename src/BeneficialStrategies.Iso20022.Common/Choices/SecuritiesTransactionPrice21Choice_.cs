@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesTransactionPrice21Choice.NominalValue))]
     [KnownType(typeof(SecuritiesTransactionPrice21Choice.Percentage))]
     [KnownType(typeof(SecuritiesTransactionPrice21Choice.Yield))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice21Choice.BasisPoints),nameof(SecuritiesTransactionPrice21Choice.BasisPoints))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice21Choice.MonetaryValue),nameof(SecuritiesTransactionPrice21Choice.MonetaryValue))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice21Choice.NominalValue),nameof(SecuritiesTransactionPrice21Choice.NominalValue))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice21Choice.Percentage),nameof(SecuritiesTransactionPrice21Choice.Percentage))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice21Choice.Yield),nameof(SecuritiesTransactionPrice21Choice.Yield))]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice21Choice.BasisPoints),
+        nameof(SecuritiesTransactionPrice21Choice.BasisPoints)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice21Choice.MonetaryValue),
+        nameof(SecuritiesTransactionPrice21Choice.MonetaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice21Choice.NominalValue),
+        nameof(SecuritiesTransactionPrice21Choice.NominalValue)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice21Choice.Percentage),
+        nameof(SecuritiesTransactionPrice21Choice.Percentage)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice21Choice.Yield),
+        nameof(SecuritiesTransactionPrice21Choice.Yield)
+    )]
     [IsoId("_KzWSEWsgEe25qph5Y8_eYQ")]
     [DisplayName("Securities Transaction Price21Choice")]
-    public abstract partial record SecuritiesTransactionPrice21Choice_
-    {
-    }
+    public abstract record SecuritiesTransactionPrice21Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer1Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassCommodityFertilizer1Ch
     /// </summary>
     [IsoId("_tUmQYFr2EeWN79Bl6BUd3g")]
     [DisplayName("Sulphur")]
-    public partial record Sulphur : AssetClassCommodityFertilizer1Choice_
+    public record Sulphur : AssetClassCommodityFertilizer1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Base product for the underlying asset class as specified in the classification of commodities derivatives table.
         /// </summary>
         [IsoId("_86rNYFr2EeWN79Bl6BUd3g")]
         [DisplayName("Base Product")]
         [IsoXmlTag("BasePdct")]
-        public required AssetClassProductType5Code BaseProduct { get; init; } 
-        
+        public required AssetClassProductType5Code BaseProduct { get; init; }
+
         /// <summary>
         /// Sub-product for the underlying asset class.
         /// </summary>
         [IsoId("_nmWesFr3EeWN79Bl6BUd3g")]
         [DisplayName("Sub Product")]
         [IsoXmlTag("SubPdct")]
-        public required AssetClassSubProductType42Code SubProduct { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required AssetClassSubProductType42Code SubProduct { get; init; }
     }
 }

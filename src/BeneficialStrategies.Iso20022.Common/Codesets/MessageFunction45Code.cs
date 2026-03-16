@@ -16,14 +16,16 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 public enum MessageFunction45Code
 {
     /// <summary>
-    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. 
+    /// Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response.
     /// Encoded/decoded by serializers as &quot;ADVC&quot;.
     /// </summary>
     [EnumMember(Value = "ADVC")]
     [IsoId("_W-cvoUGLEeyZG7AU5fJYtQ")]
-    [Description(@"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. ")]
+    [Description(
+        @"Advice indicates where the sender informs the receiver of an activity that has been taken that requires a response. "
+    )]
     Advice = MessageFunctionCode.Advice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Informs of an action to be taken.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -32,7 +34,7 @@ public enum MessageFunction45Code
     [IsoId("_Yc5qoUGLEeyZG7AU5fJYtQ")]
     [Description(@"Informs of an action to be taken.")]
     Instructure = MessageFunctionCode.Instructure, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Information about the transaction.
     /// Encoded/decoded by serializers as &quot;NOTI&quot;.
@@ -41,7 +43,7 @@ public enum MessageFunction45Code
     [IsoId("_ZC56sUGLEeyZG7AU5fJYtQ")]
     [Description(@"Information about the transaction.")]
     Notification = MessageFunctionCode.Notification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message function is a request.
     /// Encoded/decoded by serializers as &quot;REQU&quot;.
@@ -50,7 +52,7 @@ public enum MessageFunction45Code
     [IsoId("_ZphOwUGLEeyZG7AU5fJYtQ")]
     [Description(@"Message function is a request.")]
     Request = MessageFunctionCode.Request, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice about the status of a transaction.
     /// Encoded/decoded by serializers as &quot;STAD&quot;.
@@ -59,7 +61,7 @@ public enum MessageFunction45Code
     [IsoId("_a0AE4UGLEeyZG7AU5fJYtQ")]
     [Description(@"Advice about the status of a transaction.")]
     StatusAdvice = MessageFunctionCode.StatusAdvice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification about the status of a transaction.
     /// Encoded/decoded by serializers as &quot;STNO&quot;.
@@ -68,7 +70,7 @@ public enum MessageFunction45Code
     [IsoId("_bOKRUUGLEeyZG7AU5fJYtQ")]
     [Description(@"Notification about the status of a transaction.")]
     StatusNotification = MessageFunctionCode.StatusNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message function is a status request.
     /// Encoded/decoded by serializers as &quot;STRQ&quot;.
@@ -77,5 +79,4 @@ public enum MessageFunction45Code
     [IsoId("_b7BXUUGLEeyZG7AU5fJYtQ")]
     [Description(@"Message function is a status request.")]
     StatusRequest = MessageFunctionCode.StatusRequest, // same ordinal as derivation source for type conversions
-    
 }

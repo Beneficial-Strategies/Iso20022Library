@@ -23,7 +23,7 @@ public enum TerminalType1Code
     [IsoId("_jUzQIVHIEeeRzt0J6TBeaA")]
     [Description(@"Automated Teller Machine")]
     ATM = TerminalTypeCode.ATM, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mobile or tablet used as a Point of Sale terminal
     /// Encoded/decoded by serializers as &quot;MPOS&quot;.
@@ -32,7 +32,7 @@ public enum TerminalType1Code
     [IsoId("_jcsA0VHIEeeRzt0J6TBeaA")]
     [Description(@"Mobile or tablet used as a Point of Sale terminal")]
     mPOS = TerminalTypeCode.mPOS, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum TerminalType1Code
     [IsoId("_jnZcAVHIEeeRzt0J6TBeaA")]
     [Description(@"Other type defined at national level")]
     OtherNational = TerminalTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other private type of terminal.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,7 +50,7 @@ public enum TerminalType1Code
     [IsoId("_j5jjAVHIEeeRzt0J6TBeaA")]
     [Description(@"Other private type of terminal.")]
     OtherPrivate = TerminalTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Point of Sale terminal.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -59,5 +59,4 @@ public enum TerminalType1Code
     [IsoId("_kF5V4VHIEeeRzt0J6TBeaA")]
     [Description(@"Point of Sale terminal.")]
     POS = TerminalTypeCode.POS, // same ordinal as derivation source for type conversions
-    
 }

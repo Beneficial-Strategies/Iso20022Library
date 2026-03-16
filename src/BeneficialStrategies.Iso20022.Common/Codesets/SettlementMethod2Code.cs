@@ -23,16 +23,18 @@ public enum SettlementMethod2Code
     [IsoId("_ZMCPx9p-Ed-ak6NoX_4Aeg_-673388466")]
     [Description(@"Settlement is done by the agent instructed to execute a payment instruction.")]
     InstructedAgent = SettlementMethodCode.InstructedAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement is done by the agent instructing and forwarding the payment to the next party in the payment chain.
     /// Encoded/decoded by serializers as &quot;INGA&quot;.
     /// </summary>
     [EnumMember(Value = "INGA")]
     [IsoId("_ZMCPyNp-Ed-ak6NoX_4Aeg_-673388449")]
-    [Description(@"Settlement is done by the agent instructing and forwarding the payment to the next party in the payment chain.")]
+    [Description(
+        @"Settlement is done by the agent instructing and forwarding the payment to the next party in the payment chain."
+    )]
     InstructingAgent = SettlementMethodCode.InstructingAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement is done through a payment clearing system.
     /// Encoded/decoded by serializers as &quot;CLRG&quot;.
@@ -41,5 +43,4 @@ public enum SettlementMethod2Code
     [IsoId("_ZMMAwNp-Ed-ak6NoX_4Aeg_-673388407")]
     [Description(@"Settlement is done through a payment clearing system.")]
     ClearingSystem = SettlementMethodCode.ClearingSystem, // same ordinal as derivation source for type conversions
-    
 }

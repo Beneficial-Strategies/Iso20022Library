@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LQcUYaj0Ee--FqfI7l8ySw")]
 [DisplayName("ATM Customer8")]
-public partial record ATMCustomer8
+public record ATMCustomer8
 {
-    #nullable enable
-
     /// <summary>
     /// Authentication.
     /// </summary>
@@ -37,16 +35,12 @@ public partial record ATMCustomer8
     /// </summary>
     [DisplayName("Profile")]
     [IsoXmlTag("Prfl")]
-    public ATMCustomerProfile6? Profile { get; init; } 
+    public ATMCustomerProfile6? Profile { get; init; }
 
     /// <summary>
     /// Selected Language.
     /// </summary>
     [DisplayName("Selected Language")]
     [IsoXmlTag("SelctdLang")]
-    public LanguageCode? SelectedLanguage { get; init; } 
-
-    
-    #nullable disable
-    
+    public LanguageCode? SelectedLanguage { get; init; }
 }

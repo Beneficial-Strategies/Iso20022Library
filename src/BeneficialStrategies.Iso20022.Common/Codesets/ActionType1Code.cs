@@ -23,7 +23,7 @@ public enum ActionType1Code
     [IsoId("_TR6hgwEcEeCQm6a_G2yO_w_707859768")]
     [Description(@"Message to display, print or log.")]
     DisplayMessage = ActionTypeCode.DisplayMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Print a message.
     /// Encoded/decoded by serializers as &quot;PRNT&quot;.
@@ -32,7 +32,7 @@ public enum ActionType1Code
     [IsoId("_TR6hhAEcEeCQm6a_G2yO_w_-1829270022")]
     [Description(@"Print a message.")]
     PrintMessage = ActionTypeCode.PrintMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Referral has to be performed.
     /// Encoded/decoded by serializers as &quot;RFRL&quot;.
@@ -41,7 +41,7 @@ public enum ActionType1Code
     [IsoId("_TR6hhQEcEeCQm6a_G2yO_w_107955151")]
     [Description(@"Referral has to be performed.")]
     Referral = ActionTypeCode.Referral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Capture the card.
     /// Encoded/decoded by serializers as &quot;CPTR&quot;.
@@ -50,7 +50,7 @@ public enum ActionType1Code
     [IsoId("_TR6hhgEcEeCQm6a_G2yO_w_-1550000880")]
     [Description(@"Capture the card.")]
     CaptureCard = ActionTypeCode.CaptureCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN (Personal Identification Number) is wrong, retry a PIN verification.
     /// Encoded/decoded by serializers as &quot;PINR&quot;.
@@ -59,7 +59,7 @@ public enum ActionType1Code
     [IsoId("_TR6hhwEcEeCQm6a_G2yO_w_1672961357")]
     [Description(@"PIN (Personal Identification Number) is wrong, retry a PIN verification.")]
     PINRetry = ActionTypeCode.PINRetry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Last PIN (Personal Identification Number) try.
     /// Encoded/decoded by serializers as &quot;PINL&quot;.
@@ -68,16 +68,18 @@ public enum ActionType1Code
     [IsoId("_TR6hiAEcEeCQm6a_G2yO_w_-684780766")]
     [Description(@"Last PIN (Personal Identification Number) try.")]
     PINLastTry = ActionTypeCode.PINLastTry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request additional data through a displayed text and request confirmation by an attendant.
     /// Encoded/decoded by serializers as &quot;RQDT&quot;.
     /// </summary>
     [EnumMember(Value = "RQDT")]
     [IsoId("_TR6hiQEcEeCQm6a_G2yO_w_1355184696")]
-    [Description(@"Request additional data through a displayed text and request confirmation by an attendant.")]
+    [Description(
+        @"Request additional data through a displayed text and request confirmation by an attendant."
+    )]
     RequestData = ActionTypeCode.RequestData, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Server busy, try later.
     /// Encoded/decoded by serializers as &quot;BUSY&quot;.
@@ -86,7 +88,7 @@ public enum ActionType1Code
     [IsoId("_TR6higEcEeCQm6a_G2yO_w_-1002557427")]
     [Description(@"Server busy, try later.")]
     Busy = ActionTypeCode.Busy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional identification required (passport, ID card, etc.).
     /// Encoded/decoded by serializers as &quot;RQID&quot;.
@@ -95,5 +97,4 @@ public enum ActionType1Code
     [IsoId("_TR6hiwEcEeCQm6a_G2yO_w_2115949849")]
     [Description(@"Additional identification required (passport, ID card, etc.).")]
     IdentificationRequired = ActionTypeCode.IdentificationRequired, // same ordinal as derivation source for type conversions
-    
 }

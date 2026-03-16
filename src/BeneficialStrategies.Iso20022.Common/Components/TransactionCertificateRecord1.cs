@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LUhDsNLiEeSdq5yU2aaSNw")]
 [DisplayName("Transaction Certificate Record")]
-public partial record TransactionCertificateRecord1
+public record TransactionCertificateRecord1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identification of the certificate record.
     /// </summary>
@@ -25,34 +23,30 @@ public partial record TransactionCertificateRecord1
     [DisplayName("Certificate Record Identification")]
     [IsoXmlTag("CertRcrdId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text CertificateRecordIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text CertificateRecordIdentification { get; init; }
+
     /// <summary>
     /// Details of the transaction for which the record has been generated.
     /// </summary>
     [IsoId("_aSH2ANLjEeSdq5yU2aaSNw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required TransactionCertificate2 Transaction { get; init; } 
-    
+    public required TransactionCertificate2 Transaction { get; init; }
+
     /// <summary>
     /// Contract registration details related to the certificate record.
     /// </summary>
     [IsoId("_KGGd4tLkEeSDLevdaFPXHw")]
     [DisplayName("Contract")]
     [IsoXmlTag("Ctrct")]
-    public TransactionCertificateContract1? Contract { get; init; } 
-    
+    public TransactionCertificateContract1? Contract { get; init; }
+
     /// <summary>
     /// Documents provided as attachments to the registered contract.
     /// </summary>
     [IsoId("_HyBtYTm5EeWDb47rJ6ki4Q")]
     [DisplayName("Attachment")]
     [IsoXmlTag("Attchmnt")]
-    public DocumentGeneralInformation3? Attachment { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DocumentGeneralInformation3? Attachment { get; init; }
 }

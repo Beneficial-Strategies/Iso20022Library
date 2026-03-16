@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_c9SiUaEtEe-MRKYsaX6JDg")]
 [DisplayName("TMS Action13")]
-public partial record TMSAction13
+public record TMSAction13
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Information.
     /// </summary>
@@ -30,7 +28,8 @@ public partial record TMSAction13
     /// </summary>
     [DisplayName("Additional Process")]
     [IsoXmlTag("AddtlPrc")]
-    public ValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } = [];
+    public ValueList<TerminalManagementAdditionalProcess1Code> AdditionalProcess { get; init; } =
+        [];
 
     /// <summary>
     /// Component Type.
@@ -44,35 +43,35 @@ public partial record TMSAction13
     /// </summary>
     [DisplayName("Data Set Identification")]
     [IsoXmlTag("DataSetId")]
-    public DataSetIdentification11? DataSetIdentification { get; init; } 
+    public DataSetIdentification11? DataSetIdentification { get; init; }
 
     /// <summary>
     /// Delegation Proof.
     /// </summary>
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
-    public IsoMax5000Binary? DelegationProof { get; init; } 
+    public IsoMax5000Binary? DelegationProof { get; init; }
 
     /// <summary>
     /// Delegation Scope Definition.
     /// </summary>
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; } 
+    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Delegation Scope Identification.
     /// </summary>
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; } 
+    public IsoMax35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Device Request.
     /// </summary>
     [DisplayName("Device Request")]
     [IsoXmlTag("DvcReq")]
-    public DeviceRequest8? DeviceRequest { get; init; } 
+    public DeviceRequest8? DeviceRequest { get; init; }
 
     /// <summary>
     /// Error Action.
@@ -107,72 +106,68 @@ public partial record TMSAction13
     /// </summary>
     [DisplayName("Protected Delegation Proof")]
     [IsoXmlTag("PrtctdDlgtnProof")]
-    public ContentInformationType39? ProtectedDelegationProof { get; init; } 
+    public ContentInformationType39? ProtectedDelegationProof { get; init; }
 
     /// <summary>
     /// Remote Access.
     /// </summary>
     [DisplayName("Remote Access")]
     [IsoXmlTag("RmotAccs")]
-    public NetworkParameters7? RemoteAccess { get; init; } 
+    public NetworkParameters7? RemoteAccess { get; init; }
 
     /// <summary>
     /// Re Try.
     /// </summary>
     [DisplayName("Re Try")]
     [IsoXmlTag("ReTry")]
-    public ProcessRetry3? ReTry { get; init; } 
+    public ProcessRetry3? ReTry { get; init; }
 
     /// <summary>
     /// Terminal Manager Identification.
     /// </summary>
     [DisplayName("Terminal Manager Identification")]
     [IsoXmlTag("TermnlMgrId")]
-    public GenericIdentification176? TerminalManagerIdentification { get; init; } 
+    public GenericIdentification176? TerminalManagerIdentification { get; init; }
 
     /// <summary>
     /// Time Condition.
     /// </summary>
     [DisplayName("Time Condition")]
     [IsoXmlTag("TmCond")]
-    public ProcessTiming5? TimeCondition { get; init; } 
+    public ProcessTiming5? TimeCondition { get; init; }
 
     /// <summary>
     /// TM Challenge.
     /// </summary>
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
-    public IsoMax140Binary? TMChallenge { get; init; } 
+    public IsoMax140Binary? TMChallenge { get; init; }
 
     /// <summary>
     /// TMS Protocol.
     /// </summary>
     [DisplayName("TMS Protocol")]
     [IsoXmlTag("TMSPrtcol")]
-    public IsoMax35Text? TMSProtocol { get; init; } 
+    public IsoMax35Text? TMSProtocol { get; init; }
 
     /// <summary>
     /// TMS Protocol Version.
     /// </summary>
     [DisplayName("TMS Protocol Version")]
     [IsoXmlTag("TMSPrtcolVrsn")]
-    public IsoMax35Text? TMSProtocolVersion { get; init; } 
+    public IsoMax35Text? TMSProtocolVersion { get; init; }
 
     /// <summary>
     /// Trigger.
     /// </summary>
     [DisplayName("Trigger")]
     [IsoXmlTag("Trggr")]
-    public required TerminalManagementActionTrigger1Code Trigger { get; init; } 
+    public required TerminalManagementActionTrigger1Code Trigger { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TerminalManagementAction5Code Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public required TerminalManagementAction5Code Type { get; init; }
 }

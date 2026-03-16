@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V-4PIWxlEe6wzr2RagRERg")]
 [DisplayName("Transaction Characteristics1")]
-public partial record TransactionCharacteristics1
+public record TransactionCharacteristics1
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -37,7 +35,7 @@ public partial record TransactionCharacteristics1
     /// </summary>
     [DisplayName("Cancellation")]
     [IsoXmlTag("Cxl")]
-    public IsoTrueFalseIndicator? Cancellation { get; init; } 
+    public IsoTrueFalseIndicator? Cancellation { get; init; }
 
     /// <summary>
     /// Message Reason.
@@ -58,7 +56,7 @@ public partial record TransactionCharacteristics1
     /// </summary>
     [DisplayName("Pre Authorisation Time Limit")]
     [IsoXmlTag("PreAuthstnTmLmt")]
-    public IsoMax6NumericText? PreAuthorisationTimeLimit { get; init; } 
+    public IsoMax6NumericText? PreAuthorisationTimeLimit { get; init; }
 
     /// <summary>
     /// Transaction Attribute.
@@ -72,23 +70,19 @@ public partial record TransactionCharacteristics1
     /// </summary>
     [DisplayName("Transaction Description")]
     [IsoXmlTag("TxDesc")]
-    public IsoMax1000Text? TransactionDescription { get; init; } 
+    public IsoMax1000Text? TransactionDescription { get; init; }
 
     /// <summary>
     /// Transaction Sub Type.
     /// </summary>
     [DisplayName("Transaction Sub Type")]
     [IsoXmlTag("TxSubTp")]
-    public IsoMax35Text? TransactionSubType { get; init; } 
+    public IsoMax35Text? TransactionSubType { get; init; }
 
     /// <summary>
     /// Transaction Type.
     /// </summary>
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
-    public required ISO8583TransactionTypeCode TransactionType { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ISO8583TransactionTypeCode TransactionType { get; init; }
 }

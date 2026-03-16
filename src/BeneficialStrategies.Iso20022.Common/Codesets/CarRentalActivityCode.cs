@@ -23,7 +23,7 @@ public enum CarRentalActivityCode
     [IsoId("_cjkZ8FyqEeeve7Je9cXtkQ")]
     [Description(@"Company specialised in car sharing activities.")]
     CarSharing,
-    
+
     /// <summary>
     /// Global car rental activities.
     /// Encoded/decoded by serializers as &quot;GLBL&quot;.
@@ -32,7 +32,7 @@ public enum CarRentalActivityCode
     [IsoId("_9x18sFyqEeeve7Je9cXtkQ")]
     [Description(@"Global car rental activities.")]
     Global,
-    
+
     /// <summary>
     /// Individual renting a car.
     /// Encoded/decoded by serializers as &quot;INDV&quot;.
@@ -41,7 +41,7 @@ public enum CarRentalActivityCode
     [IsoId("_DkIrcFyrEeeve7Je9cXtkQ")]
     [Description(@"Individual renting a car.")]
     Individual,
-    
+
     /// <summary>
     /// Peer to peer car rental activities.
     /// Encoded/decoded by serializers as &quot;PETP&quot;.
@@ -50,7 +50,7 @@ public enum CarRentalActivityCode
     [IsoId("_JWJGUFyrEeeve7Je9cXtkQ")]
     [Description(@"Peer to peer car rental activities.")]
     PeerToPeer,
-    
+
     /// <summary>
     /// Other type of car rental activity.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,7 +59,7 @@ public enum CarRentalActivityCode
     [IsoId("_Vyq4cFyrEeeve7Je9cXtkQ")]
     [Description(@"Other type of car rental activity.")]
     Other,
-    
+
     /// <summary>
     /// Other National
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +68,7 @@ public enum CarRentalActivityCode
     [IsoId("_wGMFYPSrEeife6veM7daYw")]
     [Description(@"Other National")]
     OtherNational,
-    
+
     /// <summary>
     /// Other Private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,5 +77,4 @@ public enum CarRentalActivityCode
     [IsoId("_zQjIkPSrEeife6veM7daYw")]
     [Description(@"Other Private")]
     OtherPrivate,
-    
 }

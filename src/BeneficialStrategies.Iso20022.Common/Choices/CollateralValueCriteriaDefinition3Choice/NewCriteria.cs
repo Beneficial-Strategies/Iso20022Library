@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinition3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
     /// </summary>
     [IsoId("__xM6gzpsEemk2e6qGBk8IQ")]
     [DisplayName("New Criteria")]
-    public partial record NewCriteria : CollateralValueCriteriaDefinition3Choice_
+    public record NewCriteria : CollateralValueCriteriaDefinition3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.
         /// </summary>
@@ -24,27 +22,23 @@ namespace BeneficialStrategies.Iso20022.Choices.CollateralValueCriteriaDefinitio
         [DisplayName("Query Name")]
         [IsoXmlTag("QryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? QueryName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? QueryName { get; init; }
+
         /// <summary>
         /// Defines the criteria to be used to extract the account information.
         /// </summary>
         [IsoId("__7yZ4zpsEemk2e6qGBk8IQ")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public CollateralValueSearchCriteria3? SearchCriteria { get; init; } 
-        
+        public CollateralValueSearchCriteria3? SearchCriteria { get; init; }
+
         /// <summary>
         /// Defines the expected account report.
         /// </summary>
         [IsoId("__7yZ5TpsEemk2e6qGBk8IQ")]
         [DisplayName("Return Criteria")]
         [IsoXmlTag("RtrCrit")]
-        public CollateralValueReturnCriteria1? ReturnCriteria { get; init; } 
-        
-        
-        #nullable disable
-        
+        public CollateralValueReturnCriteria1? ReturnCriteria { get; init; }
     }
 }

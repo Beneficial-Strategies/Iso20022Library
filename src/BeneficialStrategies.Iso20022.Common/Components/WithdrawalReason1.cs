@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_t1jau4xnEeKdxfnzD2sqyA")]
 [DisplayName("Withdrawal Reason")]
-public partial record WithdrawalReason1
+public record WithdrawalReason1
 {
-    #nullable enable
-    
     /// <summary>
     /// Withdrawal reason expressed as a code.
     /// </summary>
     [IsoId("_t1jaxYxnEeKdxfnzD2sqyA")]
     [DisplayName("Withdrawal Reason Code")]
     [IsoXmlTag("WdrwlRsnCd")]
-    public required WithdrawalReason1Code WithdrawalReasonCode { get; init; } 
-    
+    public required WithdrawalReason1Code WithdrawalReasonCode { get; init; }
+
     /// <summary>
     /// Further withdrawal reason information expressed as a code.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record WithdrawalReason1
     [DisplayName("Withdrawal Reason Sub Code")]
     [IsoXmlTag("WdrwlRsnSubCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4Text? WithdrawalReasonSubCode { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4Text? WithdrawalReasonSubCode { get; init; }
 }

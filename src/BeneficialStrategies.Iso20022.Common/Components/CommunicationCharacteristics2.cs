@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gvNNkS9MEeOlZIh7PImd0A")]
 [DisplayName("Communication Characteristics")]
-public partial record CommunicationCharacteristics2
+public record CommunicationCharacteristics2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of low level communication.
     /// </summary>
     [IsoId("_g_4G0S9MEeOlZIh7PImd0A")]
     [DisplayName("Communication Type")]
     [IsoXmlTag("ComTp")]
-    public required POICommunicationType1Code CommunicationType { get; init; } 
-    
+    public required POICommunicationType1Code CommunicationType { get; init; }
+
     /// <summary>
     /// Entity that communicate with the current component, using this communication device.
     /// </summary>
@@ -33,8 +31,9 @@ public partial record CommunicationCharacteristics2
     [DisplayName("Remote Party")]
     [IsoXmlTag("RmotPty")]
     public SimpleValueList<PartyType7Code> RemoteParty { get; init; } = [];
+
     // ID for the above is _g_4G0y9MEeOlZIh7PImd0A
-    
+
     /// <summary>
     /// Communication hardware is activated.
     /// </summary>
@@ -42,9 +41,5 @@ public partial record CommunicationCharacteristics2
     [DisplayName("Active")]
     [IsoXmlTag("Actv")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator Active { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoTrueFalseIndicator Active { get; init; }
 }

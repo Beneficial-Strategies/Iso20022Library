@@ -21,9 +21,11 @@ public enum PaymentMethod3Code
     /// </summary>
     [EnumMember(Value = "CHK")]
     [IsoId("_Z0aeY9p-Ed-ak6NoX_4Aeg_1931781357")]
-    [Description(@"Written order to a bank to pay a certain amount of money from one person to another person.")]
+    [Description(
+        @"Written order to a bank to pay a certain amount of money from one person to another person."
+    )]
     Cheque = PaymentMethodCode.Cheque, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer of an amount of money in the books of the account servicer.
     /// Encoded/decoded by serializers as &quot;TRF&quot;.
@@ -32,14 +34,15 @@ public enum PaymentMethod3Code
     [IsoId("_Z0aeZNp-Ed-ak6NoX_4Aeg_1931781374")]
     [Description(@"Transfer of an amount of money in the books of the account servicer.")]
     CreditTransfer = PaymentMethodCode.CreditTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer of an amount of money in the books of the account servicer. An advice should be sent back to the account owner.
     /// Encoded/decoded by serializers as &quot;TRA&quot;.
     /// </summary>
     [EnumMember(Value = "TRA")]
     [IsoId("_Z0kPYNp-Ed-ak6NoX_4Aeg_1931781417")]
-    [Description(@"Transfer of an amount of money in the books of the account servicer. An advice should be sent back to the account owner.")]
+    [Description(
+        @"Transfer of an amount of money in the books of the account servicer. An advice should be sent back to the account owner."
+    )]
     TransferAdvice = PaymentMethodCode.TransferAdvice, // same ordinal as derivation source for type conversions
-    
 }

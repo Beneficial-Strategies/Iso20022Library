@@ -21,9 +21,11 @@ public enum InvestigatedParties1Code
     /// </summary>
     [EnumMember(Value = "ALLP")]
     [IsoId("_XhTElmKEEeG1ab6Vf7EgPA")]
-    [Description(@"Investigated parties are all parties playig a role matching the search criteria.")]
+    [Description(
+        @"Investigated parties are all parties playig a role matching the search criteria."
+    )]
     AllParties = InvestigatedPartiesCode.AllParties, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investigated party is the owner.
     /// Encoded/decoded by serializers as &quot;OWNE&quot;.
@@ -32,5 +34,4 @@ public enum InvestigatedParties1Code
     [IsoId("_XmNZxmKEEeG1ab6Vf7EgPA")]
     [Description(@"Investigated party is the owner.")]
     Owner = InvestigatedPartiesCode.Owner, // same ordinal as derivation source for type conversions
-    
 }

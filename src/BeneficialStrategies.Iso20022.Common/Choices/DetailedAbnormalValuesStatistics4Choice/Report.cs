@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics4Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
     /// </summary>
     [IsoId("_x4ww41yGEe24CqbZJK5XxA")]
     [DisplayName("Report")]
-    public partial record Report : DetailedAbnormalValuesStatistics4Choice_
+    public record Report : DetailedAbnormalValuesStatistics4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Number of reported derivatives.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
         [DisplayName("Number Of Derivatives Reported")]
         [IsoXmlTag("NbOfDerivsRptd")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfDerivativesReported { get; init; } 
-        
+        public required IsoNumber NumberOfDerivativesReported { get; init; }
+
         /// <summary>
         /// Number of reported derivatives with outliers.
         /// </summary>
@@ -33,8 +31,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
         [DisplayName("Number Of Derivatives Reported With Outliers")]
         [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; } 
-        
+        public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; }
+
         /// <summary>
         /// Details of abnormal values.
         /// </summary>
@@ -43,9 +41,5 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedAbnormalValuesStatistics
         [IsoXmlTag("Wrnngs")]
         public ValueList<AbnormalValuesData4> Warnings { get; init; } = [];
         // ID for the above is _x5wPZVyGEe24CqbZJK5XxA
-        
-        
-        #nullable disable
-        
     }
 }

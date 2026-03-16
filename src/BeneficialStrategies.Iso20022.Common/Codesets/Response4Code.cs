@@ -23,7 +23,7 @@ public enum Response4Code
     [IsoId("_0y2tISxQEeW0Obqrzm1X8Q")]
     [Description(@"Service has been successfuly provided.")]
     Approved = ResponseCode.Approved, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service is declined.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
@@ -32,7 +32,7 @@ public enum Response4Code
     [IsoId("_040yQSxQEeW0Obqrzm1X8Q")]
     [Description(@"Service is declined.")]
     Declined = ResponseCode.Declined, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service has been partialy provided.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -41,5 +41,4 @@ public enum Response4Code
     [IsoId("_1HPowSxQEeW0Obqrzm1X8Q")]
     [Description(@"Service has been partialy provided.")]
     PartialApproved = ResponseCode.PartialApproved, // same ordinal as derivation source for type conversions
-    
 }

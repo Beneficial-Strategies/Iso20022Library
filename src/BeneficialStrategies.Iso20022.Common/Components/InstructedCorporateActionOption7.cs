@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cfsrwZKQEeWHWpTQn1FFVg")]
 [DisplayName("Instructed Corporate Action Option")]
-public partial record InstructedCorporateActionOption7
+public record InstructedCorporateActionOption7
 {
-    #nullable enable
-    
     /// <summary>
     /// Number identifying the available corporate action options.
     /// </summary>
@@ -25,32 +23,32 @@ public partial record InstructedCorporateActionOption7
     [DisplayName("Option Number")]
     [IsoXmlTag("OptnNb")]
     [IsoSimpleType(IsoSimpleType.Exact3NumericText)]
-    public IsoExact3NumericText? OptionNumber { get; init; } 
-    
+    public IsoExact3NumericText? OptionNumber { get; init; }
+
     /// <summary>
     /// Specifies the corporate action options available to the account owner.
     /// </summary>
     [IsoId("_cfsry5KQEeWHWpTQn1FFVg")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public required CorporateActionOption23Choice_ OptionType { get; init; } 
-    
+    public required CorporateActionOption23Choice_ OptionType { get; init; }
+
     /// <summary>
     /// Balance of instructed position.
     /// </summary>
     [IsoId("_cfsr05KQEeWHWpTQn1FFVg")]
     [DisplayName("Instructed Balance")]
     [IsoXmlTag("InstdBal")]
-    public required BalanceFormat7Choice_ InstructedBalance { get; init; } 
-    
+    public required BalanceFormat7Choice_ InstructedBalance { get; init; }
+
     /// <summary>
     /// Indicates the default action related to a corporate action event.
     /// </summary>
     [IsoId("_cfsr25KQEeWHWpTQn1FFVg")]
     [DisplayName("Default Action")]
     [IsoXmlTag("DfltActn")]
-    public DefaultProcessingOrStandingInstruction1Choice_? DefaultAction { get; init; } 
-    
+    public DefaultProcessingOrStandingInstruction1Choice_? DefaultAction { get; init; }
+
     /// <summary>
     /// Any deadline chosen by the account servicer (service level agreement).
     /// </summary>
@@ -58,17 +56,13 @@ public partial record InstructedCorporateActionOption7
     [DisplayName("Deadline Date Time")]
     [IsoXmlTag("DdlnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime DeadlineDateTime { get; init; } 
-    
+    public required IsoISODateTime DeadlineDateTime { get; init; }
+
     /// <summary>
     /// Specifies the type of deadline for instructing.
     /// </summary>
     [IsoId("_cfsr5ZKQEeWHWpTQn1FFVg")]
     [DisplayName("Deadline Type")]
     [IsoXmlTag("DdlnTp")]
-    public required DeadlineCode4Choice_ DeadlineType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required DeadlineCode4Choice_ DeadlineType { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fuq9cMlNEeuJ35KoBRZFOg")]
 [DisplayName("Report Data")]
-public partial record ReportData6
+public record ReportData6
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of the report.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ReportData6
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Name { get; init; }
+
     /// <summary>
     /// Report identification.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ReportData6
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Identification { get; init; }
+
     /// <summary>
     /// Additional specific information to ID (Country, Service, etc.)
     /// </summary>
@@ -45,9 +43,9 @@ public partial record ReportData6
     [DisplayName("Qualifier")]
     [IsoXmlTag("Qlfr")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Qualifier { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Qualifier { get; init; }
+
     /// <summary>
     /// Date of the report.
     /// </summary>
@@ -55,8 +53,8 @@ public partial record ReportData6
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// Time of the report.
     /// </summary>
@@ -64,8 +62,8 @@ public partial record ReportData6
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? Time { get; init; } 
-    
+    public IsoISOTime? Time { get; init; }
+
     /// <summary>
     /// Contains the specific instance of the report (e.g., sequence “2” of the report within a specific time frame).
     /// </summary>
@@ -73,8 +71,8 @@ public partial record ReportData6
     [DisplayName("Sequence")]
     [IsoXmlTag("Seq")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? Sequence { get; init; } 
-    
+    public IsoMax5NumericText? Sequence { get; init; }
+
     /// <summary>
     /// Contains the expected total number of occurrences of the report within a specific time frame.
     /// </summary>
@@ -82,24 +80,24 @@ public partial record ReportData6
     [DisplayName("Total Occurrences")]
     [IsoXmlTag("TtlOcrncs")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public IsoMax5NumericText? TotalOccurrences { get; init; } 
-    
+    public IsoMax5NumericText? TotalOccurrences { get; init; }
+
     /// <summary>
     /// Report frequency.
     /// </summary>
     [IsoId("__6uG0MlQEeuJ35KoBRZFOg")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public Frequency17Code? Frequency { get; init; } 
-    
+    public Frequency17Code? Frequency { get; init; }
+
     /// <summary>
     /// Identifies that is a corrected version of a report that was previously sent.
     /// </summary>
     [IsoId("_H1V0AclREeuJ35KoBRZFOg")]
     [DisplayName("Correction")]
     [IsoXmlTag("Crrctn")]
-    public CorrectionIdentification1? Correction { get; init; } 
-    
+    public CorrectionIdentification1? Correction { get; init; }
+
     /// <summary>
     /// Indicates that report is not complete.
     /// </summary>
@@ -107,24 +105,24 @@ public partial record ReportData6
     [DisplayName("Continuation Indicator")]
     [IsoXmlTag("ConttnInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? ContinuationIndicator { get; init; }
+
     /// <summary>
     /// Additional report attributes or information.
     /// </summary>
     [IsoId("_ugTB4MlREeuJ35KoBRZFOg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
+    public AdditionalData1? AdditionalData { get; init; }
+
     /// <summary>
     /// Report format.
     /// </summary>
     [IsoId("_L19M8MlVEeuJ35KoBRZFOg")]
     [DisplayName("Format")]
     [IsoXmlTag("Frmt")]
-    public OutputFormat5Code? Format { get; init; } 
-    
+    public OutputFormat5Code? Format { get; init; }
+
     /// <summary>
     /// Other report format defined by national organization or by bi-lateral agreement.
     /// </summary>
@@ -132,18 +130,14 @@ public partial record ReportData6
     [DisplayName("Other Format")]
     [IsoXmlTag("OthrFrmt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherFormat { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherFormat { get; init; }
+
     /// <summary>
     /// Contains the content of a report.
     /// </summary>
     [IsoId("_syuwAMlVEeuJ35KoBRZFOg")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
-    public ReportContent1? Content { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ReportContent1? Content { get; init; }
 }

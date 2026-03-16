@@ -23,7 +23,7 @@ public enum Appearance1Code
     [IsoId("_be9Uo9p-Ed-ak6NoX_4Aeg_1019818408")]
     [Description(@"Physical certificates exist.")]
     Deliverable = AppearanceCode.Deliverable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not yet deliverable contract.
     /// Encoded/decoded by serializers as &quot;NDEL&quot;.
@@ -32,7 +32,7 @@ public enum Appearance1Code
     [IsoId("_be9UpNp-Ed-ak6NoX_4Aeg_1019818683")]
     [Description(@"Not yet deliverable contract.")]
     NotDeliverable = AppearanceCode.NotDeliverable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Limited or partial deliverability.
     /// Encoded/decoded by serializers as &quot;LIMI&quot;.
@@ -41,16 +41,18 @@ public enum Appearance1Code
     [IsoId("_be9Updp-Ed-ak6NoX_4Aeg_1019818935")]
     [Description(@"Limited or partial deliverability.")]
     Limited = AppearanceCode.Limited, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security exists only as an electronic record, ie, there are no physical certificates representing the security.
     /// Encoded/decoded by serializers as &quot;BENT&quot;.
     /// </summary>
     [EnumMember(Value = "BENT")]
     [IsoId("_be9Uptp-Ed-ak6NoX_4Aeg_1019818978")]
-    [Description(@"Security exists only as an electronic record, ie, there are no physical certificates representing the security.")]
+    [Description(
+        @"Security exists only as an electronic record, ie, there are no physical certificates representing the security."
+    )]
     BookEntry = AppearanceCode.BookEntry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deferred printing, book entry.
     /// Encoded/decoded by serializers as &quot;DFBE&quot;.
@@ -59,7 +61,7 @@ public enum Appearance1Code
     [IsoId("_be9Up9p-Ed-ak6NoX_4Aeg_1019819013")]
     [Description(@"Deferred printing, book entry.")]
     DeferredBookEntry = AppearanceCode.DeferredBookEntry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deliverable, book entry.
     /// Encoded/decoded by serializers as &quot;DLBE&quot;.
@@ -68,7 +70,7 @@ public enum Appearance1Code
     [IsoId("_be9UqNp-Ed-ak6NoX_4Aeg_1020739027")]
     [Description(@"Deliverable, book entry.")]
     DeliverableBookEntry = AppearanceCode.DeliverableBookEntry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deferred printing, global certificate.
     /// Encoded/decoded by serializers as &quot;TMPG&quot;.
@@ -77,7 +79,7 @@ public enum Appearance1Code
     [IsoId("_bfHFoNp-Ed-ak6NoX_4Aeg_1020739087")]
     [Description(@"Deferred printing, global certificate.")]
     TemporaryGlobal = AppearanceCode.TemporaryGlobal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not deliverable, global certificate.
     /// Encoded/decoded by serializers as &quot;GLOB&quot;.
@@ -86,5 +88,4 @@ public enum Appearance1Code
     [IsoId("_bfHFodp-Ed-ak6NoX_4Aeg_1020739165")]
     [Description(@"Not deliverable, global certificate.")]
     Global = AppearanceCode.Global, // same ordinal as derivation source for type conversions
-    
 }

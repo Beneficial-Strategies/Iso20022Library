@@ -23,7 +23,7 @@ public enum CustomerType2Code
     [IsoId("_56414S7QEemIy6A-26wnAg")]
     [Description(@"Consumer")]
     Consumer = CustomerTypeCode.Consumer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Company
     /// Encoded/decoded by serializers as &quot;CPNY&quot;.
@@ -32,5 +32,4 @@ public enum CustomerType2Code
     [IsoId("_6R19US7QEemIy6A-26wnAg")]
     [Description(@"Company")]
     Company = CustomerTypeCode.Company, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,25 +14,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Yy18KTE_Ee62xuUQ2zyZww")]
 [DisplayName("Update Log Contact2")]
-public partial record UpdateLogContact2
+public record UpdateLogContact2
 {
-    #nullable enable
-
     /// <summary>
     /// New.
     /// </summary>
     [DisplayName("New")]
     [IsoXmlTag("New")]
-    public required Contact14 New { get; init; } 
+    public required Contact14 New { get; init; }
 
     /// <summary>
     /// Old.
     /// </summary>
     [DisplayName("Old")]
     [IsoXmlTag("Od")]
-    public required Contact14 Old { get; init; } 
-
-    
-    #nullable disable
-    
+    public required Contact14 Old { get; init; }
 }

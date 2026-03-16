@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_goS4AFNdEeijdq8ilaxyOA")]
 [Description(@"Specifies a type of drawdown.")]
-[Derivations(typeof(DrawdownType1Code),typeof(DrawdownType2Code))]
+[Derivations(typeof(DrawdownType1Code), typeof(DrawdownType2Code))]
 public enum DrawdownTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum DrawdownTypeCode
     [IsoId("_kBqAgFNdEeijdq8ilaxyOA")]
     [Description(@"Drawdown type is flexi-access.")]
     FlexibleAccessDrawdown,
-    
+
     /// <summary>
     /// Drawdown type is capped.
     /// Encoded/decoded by serializers as &quot;CAPP&quot;.
@@ -32,7 +32,7 @@ public enum DrawdownTypeCode
     [IsoId("_oKCLIFNdEeijdq8ilaxyOA")]
     [Description(@"Drawdown type is capped.")]
     CappedIncomeDrawdown,
-    
+
     /// <summary>
     /// Drawdown type is both flexi-access and capped.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +41,4 @@ public enum DrawdownTypeCode
     [IsoId("_VwLq4JNwEembCsVG-3f_AA")]
     [Description(@"Drawdown type is both flexi-access and capped.")]
     Both,
-    
 }

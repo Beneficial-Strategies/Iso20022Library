@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,30 +14,28 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YearcY-KEe6oobnCtR50kw")]
 [DisplayName("Signer8")]
-public partial record Signer8
+public record Signer8
 {
-    #nullable enable
-
     /// <summary>
     /// Digest Algorithm.
     /// </summary>
     [DisplayName("Digest Algorithm")]
     [IsoXmlTag("DgstAlgo")]
-    public required AlgorithmIdentification36 DigestAlgorithm { get; init; } 
+    public required AlgorithmIdentification36 DigestAlgorithm { get; init; }
 
     /// <summary>
     /// Signature.
     /// </summary>
     [DisplayName("Signature")]
     [IsoXmlTag("Sgntr")]
-    public required IsoMax3000Binary Signature { get; init; } 
+    public required IsoMax3000Binary Signature { get; init; }
 
     /// <summary>
     /// Signature Algorithm.
     /// </summary>
     [DisplayName("Signature Algorithm")]
     [IsoXmlTag("SgntrAlgo")]
-    public required AlgorithmIdentification33 SignatureAlgorithm { get; init; } 
+    public required AlgorithmIdentification33 SignatureAlgorithm { get; init; }
 
     /// <summary>
     /// Signed Attributes.
@@ -51,16 +49,12 @@ public partial record Signer8
     /// </summary>
     [DisplayName("Signer Identification")]
     [IsoXmlTag("SgnrId")]
-    public Recipient13Choice_? SignerIdentification { get; init; } 
+    public Recipient13Choice_? SignerIdentification { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoNumber? Version { get; init; }
 }

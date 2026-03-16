@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wlhKENxfEeioifFt1dhnJA")]
 [DisplayName("Reconciliation Response Data")]
-public partial record ReconciliationResponseData1
+public record ReconciliationResponseData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of Reconciliation requested by the Sale to the POI.
     /// </summary>
     [IsoId("_2aeLQNxfEeioifFt1dhnJA")]
     [DisplayName("Reconciliation Type")]
     [IsoXmlTag("RcncltnTp")]
-    public required ReconciliationType1Code ReconciliationType { get; init; } 
-    
+    public required ReconciliationType1Code ReconciliationType { get; init; }
+
     /// <summary>
     /// Identification of the reconciliation period between Sale and POI.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record ReconciliationResponseData1
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? POIReconciliationIdentification { get; init; }
+
     /// <summary>
     /// Result of the Sale to POI Reconciliation processing.
     /// </summary>
     [IsoId("_9SsAQNxfEeioifFt1dhnJA")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public TransactionTotalsSet1? TransactionTotals { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransactionTotalsSet1? TransactionTotals { get; init; }
 }

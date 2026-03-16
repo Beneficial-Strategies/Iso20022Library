@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_qa7c8KFcEeSK_vfd3NHBGg")]
-[Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types.")]
+[Description(
+    @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined payout types."
+)]
 [DerivedFrom(typeof(DTCCPayoutTypeCode))]
 public enum DTCCPayoutType4Code
 {
@@ -23,5 +25,4 @@ public enum DTCCPayoutType4Code
     [IsoId("_xKOmgaFcEeSK_vfd3NHBGg")]
     [Description(@"Payout consisting of securities.")]
     Securities = DTCCPayoutTypeCode.Securities, // same ordinal as derivation source for type conversions
-    
 }

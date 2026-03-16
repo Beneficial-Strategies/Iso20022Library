@@ -21,9 +21,11 @@ public enum Status7Code
     /// </summary>
     [EnumMember(Value = "CSUB")]
     [IsoId("_YyZqoF6uEeSyc4g_pm5hbw")]
-    [Description(@"Instruction has been cancelled by the agent, for example, due to an event deadline extension.")]
+    [Description(
+        @"Instruction has been cancelled by the agent, for example, due to an event deadline extension."
+    )]
     CancelledBySubcustodian = StatusCode.CancelledBySubcustodian, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been accepted and is validated for further processing.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
@@ -32,7 +34,7 @@ public enum Status7Code
     [IsoId("_aCL3gV6uEeSyc4g_pm5hbw")]
     [Description(@"Instruction has been accepted and is validated for further processing.")]
     Accepted = StatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CAND&quot;.
@@ -41,7 +43,7 @@ public enum Status7Code
     [IsoId("_agtmkV6uEeSyc4g_pm5hbw")]
     [Description(@"Instruction has been cancelled.")]
     Cancelled = StatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Processing has been completed.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -50,7 +52,7 @@ public enum Status7Code
     [IsoId("_a88PkV6uEeSyc4g_pm5hbw")]
     [Description(@"Processing has been completed.")]
     Completed = StatusCode.Completed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No instruction has been received (to be used in a reminder).
     /// Encoded/decoded by serializers as &quot;NOIN&quot;.
@@ -59,7 +61,7 @@ public enum Status7Code
     [IsoId("_b10_YV6uEeSyc4g_pm5hbw")]
     [Description(@"No instruction has been received (to be used in a reminder).")]
     NotReceived = StatusCode.NotReceived, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been received by Issuer.
     /// Encoded/decoded by serializers as &quot;RCIS&quot;.
@@ -68,7 +70,7 @@ public enum Status7Code
     [IsoId("_c1-00V6uEeSyc4g_pm5hbw")]
     [Description(@"Instruction has been received by Issuer.")]
     ReceivedByIssuerOrRegistrar = StatusCode.ReceivedByIssuerOrRegistrar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Standing instruction is applied.
     /// Encoded/decoded by serializers as &quot;STIN&quot;.
@@ -77,5 +79,4 @@ public enum Status7Code
     [IsoId("_dTZJkV6uEeSyc4g_pm5hbw")]
     [Description(@"Standing instruction is applied.")]
     StandingInstruction = StatusCode.StandingInstruction, // same ordinal as derivation source for type conversions
-    
 }

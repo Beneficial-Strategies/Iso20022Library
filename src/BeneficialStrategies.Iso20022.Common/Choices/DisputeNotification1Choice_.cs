@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DisputeNotification1Choice.DisputeNotificationDetails))]
     [KnownType(typeof(DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails))]
-    [JsonDerivedType(typeof(DisputeNotification1Choice.DisputeNotificationDetails),nameof(DisputeNotification1Choice.DisputeNotificationDetails))]
-    [JsonDerivedType(typeof(DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails),nameof(DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails))]
+    [JsonDerivedType(
+        typeof(DisputeNotification1Choice.DisputeNotificationDetails),
+        nameof(DisputeNotification1Choice.DisputeNotificationDetails)
+    )]
+    [JsonDerivedType(
+        typeof(DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails),
+        nameof(DisputeNotification1Choice.SegregatedIndependentAmountDisputeDetails)
+    )]
     [IsoId("_QmU-Mtp-Ed-ak6NoX_4Aeg_2020917030")]
     [DisplayName("Dispute Notification 1 Choice")]
-    public abstract partial record DisputeNotification1Choice_
-    {
-    }
+    public abstract record DisputeNotification1Choice_ { }
 }

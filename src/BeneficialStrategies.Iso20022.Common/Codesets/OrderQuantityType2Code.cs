@@ -23,7 +23,7 @@ public enum OrderQuantityType2Code
     [IsoId("_aRVD4dp-Ed-ak6NoX_4Aeg_-1092421681")]
     [Description(@"Order is placed by unit.")]
     Unit = OrderQuantityTypeCode.Unit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order is placed by amount of money.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,5 +32,4 @@ public enum OrderQuantityType2Code
     [IsoId("_aRVD4tp-Ed-ak6NoX_4Aeg_-1092421663")]
     [Description(@"Order is placed by amount of money.")]
     Amount = OrderQuantityTypeCode.Amount, // same ordinal as derivation source for type conversions
-    
 }

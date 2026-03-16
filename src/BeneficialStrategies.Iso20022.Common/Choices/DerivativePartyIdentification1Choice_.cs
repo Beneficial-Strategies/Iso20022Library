@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(DerivativePartyIdentification1Choice.Country))]
     [KnownType(typeof(DerivativePartyIdentification1Choice.CountrySubDivision))]
     [KnownType(typeof(DerivativePartyIdentification1Choice.LEI))]
-    [JsonDerivedType(typeof(DerivativePartyIdentification1Choice.Country),nameof(DerivativePartyIdentification1Choice.Country))]
-    [JsonDerivedType(typeof(DerivativePartyIdentification1Choice.CountrySubDivision),nameof(DerivativePartyIdentification1Choice.CountrySubDivision))]
-    [JsonDerivedType(typeof(DerivativePartyIdentification1Choice.LEI),nameof(DerivativePartyIdentification1Choice.LEI))]
+    [JsonDerivedType(
+        typeof(DerivativePartyIdentification1Choice.Country),
+        nameof(DerivativePartyIdentification1Choice.Country)
+    )]
+    [JsonDerivedType(
+        typeof(DerivativePartyIdentification1Choice.CountrySubDivision),
+        nameof(DerivativePartyIdentification1Choice.CountrySubDivision)
+    )]
+    [JsonDerivedType(
+        typeof(DerivativePartyIdentification1Choice.LEI),
+        nameof(DerivativePartyIdentification1Choice.LEI)
+    )]
     [IsoId("_adARgEW8EeWaZZ6gWK8UVw")]
     [DisplayName("Derivative Party Identification 1 Choice")]
-    public abstract partial record DerivativePartyIdentification1Choice_
-    {
-    }
+    public abstract record DerivativePartyIdentification1Choice_ { }
 }

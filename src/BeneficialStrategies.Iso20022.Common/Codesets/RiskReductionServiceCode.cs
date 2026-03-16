@@ -23,7 +23,7 @@ public enum RiskReductionServiceCode
     [IsoId("_aTUiECi6EeuKKc2MztSwPw")]
     [Description(@"Portfolio Compression without a third-party service provider.")]
     NoThirdPartyPortfolioCompression,
-    
+
     /// <summary>
     /// Portfolio Compression with a third-party service provider or CCP.
     /// Encoded/decoded by serializers as &quot;PWAS&quot;.
@@ -32,7 +32,7 @@ public enum RiskReductionServiceCode
     [IsoId("_bNo1QCi6EeuKKc2MztSwPw")]
     [Description(@"Portfolio Compression with a third-party service provider or CCP.")]
     ThirdPartyPortfolioCompression,
-    
+
     /// <summary>
     /// Portfolio rebalancing or margin management.
     /// Encoded/decoded by serializers as &quot;PRBM&quot;.
@@ -41,7 +41,7 @@ public enum RiskReductionServiceCode
     [IsoId("_cplO0Ci6EeuKKc2MztSwPw")]
     [Description(@"Portfolio rebalancing or margin management.")]
     PortfolioRebalancing,
-    
+
     /// <summary>
     /// There is no portfolio compression.
     /// Encoded/decoded by serializers as &quot;NORR&quot;.
@@ -50,7 +50,7 @@ public enum RiskReductionServiceCode
     [IsoId("_eBy-8Ci6EeuKKc2MztSwPw")]
     [Description(@"There is no portfolio compression.")]
     NoRiskReduction,
-    
+
     /// <summary>
     /// Other portfolio compression.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +59,4 @@ public enum RiskReductionServiceCode
     [IsoId("_i2NJICi6EeuKKc2MztSwPw")]
     [Description(@"Other portfolio compression.")]
     OtherCompression,
-    
 }

@@ -21,7 +21,9 @@ public enum ProrationBelowMinimumQuantity1Code
     /// </summary>
     [EnumMember(Value = "FULL")]
     [IsoId("")]
-    [Description(@"Instructions will be accepted in full (with their original quantity of securities instructed).")]
+    [Description(
+        @"Instructions will be accepted in full (with their original quantity of securities instructed)."
+    )]
     AcceptedInFull = ProrationBelowMinimumQuantityCode.AcceptedInFull, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -30,7 +32,9 @@ public enum ProrationBelowMinimumQuantity1Code
     /// </summary>
     [EnumMember(Value = "MIEX")]
     [IsoId("")]
-    [Description(@"Instructions will be accepted but prorated to the minimum quantity to instruct.")]
+    [Description(
+        @"Instructions will be accepted but prorated to the minimum quantity to instruct."
+    )]
     MinimumQuantity = ProrationBelowMinimumQuantityCode.MinimumQuantity, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum ProrationBelowMinimumQuantity1Code
     /// </summary>
     [EnumMember(Value = "MILT")]
     [IsoId("")]
-    [Description(@"Instructions will be accepted but rounded up or down to the specified minimum multiple quantity to instruct according to the value of the disposition of fraction indicator.")]
+    [Description(
+        @"Instructions will be accepted but rounded up or down to the specified minimum multiple quantity to instruct according to the value of the disposition of fraction indicator."
+    )]
     MultipleQuantity = ProrationBelowMinimumQuantityCode.MultipleQuantity, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -57,7 +63,8 @@ public enum ProrationBelowMinimumQuantity1Code
     /// </summary>
     [EnumMember(Value = "UKWN")]
     [IsoId("")]
-    [Description(@"Processing of instructions prorated below the minimum quantity to instruct is unknown.")]
+    [Description(
+        @"Processing of instructions prorated below the minimum quantity to instruct is unknown."
+    )]
     Unknown = ProrationBelowMinimumQuantityCode.Unknown, // same ordinal as derivation source for type conversions
-
 }

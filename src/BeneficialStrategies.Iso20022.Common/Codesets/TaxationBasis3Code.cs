@@ -23,7 +23,7 @@ public enum TaxationBasis3Code
     [IsoId("_Vg5awtp-Ed-ak6NoX_4Aeg_1288355632")]
     [Description(@"Charge/tax basis is a lump sum.")]
     Flat = TaxationBasisCode.Flat, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charges/tax basis is per unit of financial instrument.
     /// Encoded/decoded by serializers as &quot;PERU&quot;.
@@ -32,7 +32,7 @@ public enum TaxationBasis3Code
     [IsoId("_Vg5aw9p-Ed-ak6NoX_4Aeg_1297589258")]
     [Description(@"Charges/tax basis is per unit of financial instrument.")]
     PerUnit = TaxationBasisCode.PerUnit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Another type of taxation basis.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum TaxationBasis3Code
     [IsoId("_Vg5axNp-Ed-ak6NoX_4Aeg_1301284529")]
     [Description(@"Another type of taxation basis.")]
     Other = TaxationBasisCode.Other, // same ordinal as derivation source for type conversions
-    
 }

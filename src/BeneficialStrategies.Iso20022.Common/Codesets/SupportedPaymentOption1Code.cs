@@ -23,14 +23,15 @@ public enum SupportedPaymentOption1Code
     [IsoId("_Aa2nQTAOEeOqioR9srQH1g")]
     [Description(@"The entity supports a partial approval of the payment transaction.")]
     PartialApproval = SupportedPaymentOptionCode.PartialApproval, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back).
     /// Encoded/decoded by serializers as &quot;MSRV&quot;.
     /// </summary>
     [EnumMember(Value = "MSRV")]
     [IsoId("_Am5fMzAOEeOqioR9srQH1g")]
-    [Description(@"The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back).")]
+    [Description(
+        @"The entity supports the approval of the payment service along with the decline of additional requested services (as cash-back)."
+    )]
     PaymentApprovalOnly = SupportedPaymentOptionCode.PaymentApprovalOnly, // same ordinal as derivation source for type conversions
-    
 }

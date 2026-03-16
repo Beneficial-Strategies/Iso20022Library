@@ -23,7 +23,7 @@ public enum VariationTypeCode
     [IsoId("_t2XLsHynEeGWJuGCfvwOsQ")]
     [Description(@"Increase to undertaking amount.")]
     Increase,
-    
+
     /// <summary>
     /// Decrease to undertaking amount.
     /// Encoded/decoded by serializers as &quot;DECR&quot;.
@@ -32,5 +32,4 @@ public enum VariationTypeCode
     [IsoId("_0QpukHynEeGWJuGCfvwOsQ")]
     [Description(@"Decrease to undertaking amount.")]
     Decrease,
-    
 }

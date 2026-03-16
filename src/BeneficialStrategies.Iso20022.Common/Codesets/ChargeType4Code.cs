@@ -21,7 +21,8 @@ public enum ChargeType4Code
     /// </summary>
     [EnumMember(Value = "TRAN")]
     [IsoId("_VeXEJ9p-Ed-ak6NoX_4Aeg_313498035")]
-    [Description(@"In investment funds, a fee charged for the transfer of ownership of an investment fund.")]
+    [Description(
+        @"In investment funds, a fee charged for the transfer of ownership of an investment fund."
+    )]
     TransferFee = ChargeTypeCode.TransferFee, // same ordinal as derivation source for type conversions
-    
 }

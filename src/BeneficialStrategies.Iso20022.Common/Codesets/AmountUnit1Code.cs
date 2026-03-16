@@ -23,7 +23,7 @@ public enum AmountUnit1Code
     [IsoId("_lOTp0dtlEeipuvJHTHIw9A")]
     [Description(@"The amount is expressed in a monetary value in a currency.")]
     Monetary = AmountUnitCode.Monetary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The amount is expressed in point.
     /// Encoded/decoded by serializers as &quot;POIN&quot;.
@@ -32,5 +32,4 @@ public enum AmountUnit1Code
     [IsoId("_lSlF0dtlEeipuvJHTHIw9A")]
     [Description(@"The amount is expressed in point.")]
     Point = AmountUnitCode.Point, // same ordinal as derivation source for type conversions
-    
 }

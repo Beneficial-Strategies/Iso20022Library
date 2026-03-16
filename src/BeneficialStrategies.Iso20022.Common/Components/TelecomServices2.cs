@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vShsAR1DEey8XKHwKquEQw")]
 [DisplayName("Telecom Services")]
-public partial record TelecomServices2
+public record TelecomServices2
 {
-    #nullable enable
-    
     /// <summary>
-    /// Telecom Services Summary component is designed to carry summary level telephony billing data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to telecommunications services and related billing information. 
+    /// Telecom Services Summary component is designed to carry summary level telephony billing data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to telecommunications services and related billing information.
     /// </summary>
     [IsoId("_vZWswR1DEey8XKHwKquEQw")]
     [DisplayName("Summary")]
     [IsoXmlTag("Summry")]
-    public TelecomServicesSummary2? Summary { get; init; } 
-    
+    public TelecomServicesSummary2? Summary { get; init; }
+
     /// <summary>
-    /// Telecom Services Line Item component is designed to carry detail level telephony billing data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to telecommunications services and related billing information. 
+    /// Telecom Services Line Item component is designed to carry detail level telephony billing data and to enable issuers to supply more transaction information to their consumer and corporate clients pertaining to telecommunications services and related billing information.
     /// </summary>
     [IsoId("_vZWswx1DEey8XKHwKquEQw")]
     [DisplayName("Line Item")]
     [IsoXmlTag("LineItm")]
-    public TelecomServicesLineItem2? LineItem { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TelecomServicesLineItem2? LineItem { get; init; }
 }

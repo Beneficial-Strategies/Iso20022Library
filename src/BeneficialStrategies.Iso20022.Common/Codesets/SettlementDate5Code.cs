@@ -21,9 +21,11 @@ public enum SettlementDate5Code
     /// </summary>
     [EnumMember(Value = "REGU")]
     [IsoId("__wR-dNojEeC60axPepSq7g_-2042913404")]
-    [Description(@"Settlement takes place under the standard rules applicable to the market and instrument.")]
+    [Description(
+        @"Settlement takes place under the standard rules applicable to the market and instrument."
+    )]
     Regular = SettlementDateCode.Regular, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,7 +34,7 @@ public enum SettlementDate5Code
     [IsoId("__wR-ddojEeC60axPepSq7g_-518845108")]
     [Description(@"Settlement takes place on the trade date.")]
     Cash = SettlementDateCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the day after trade date.
     /// Encoded/decoded by serializers as &quot;NXTD&quot;.
@@ -41,7 +43,7 @@ public enum SettlementDate5Code
     [IsoId("__wbvcNojEeC60axPepSq7g_1934277231")]
     [Description(@"Settlement takes place on the day after trade date.")]
     NextDay = SettlementDateCode.NextDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus one business day.
     /// Encoded/decoded by serializers as &quot;TONE&quot;.
@@ -50,7 +52,7 @@ public enum SettlementDate5Code
     [IsoId("__wbvcdojEeC60axPepSq7g_-1599924912")]
     [Description(@"Settlement takes place on the trade date plus one business day.")]
     TPlusOne = SettlementDateCode.TPlusOne, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus two business days.
     /// Encoded/decoded by serializers as &quot;TTWO&quot;.
@@ -59,7 +61,7 @@ public enum SettlementDate5Code
     [IsoId("__wbvctojEeC60axPepSq7g_230998257")]
     [Description(@"Settlement takes place on the trade date plus two business days.")]
     TPlusTwo = SettlementDateCode.TPlusTwo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus three business days.
     /// Encoded/decoded by serializers as &quot;TTRE&quot;.
@@ -68,7 +70,7 @@ public enum SettlementDate5Code
     [IsoId("__wbvc9ojEeC60axPepSq7g_1755066553")]
     [Description(@"Settlement takes place on the trade date plus three business days.")]
     TPlusThree = SettlementDateCode.TPlusThree, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus four business days.
     /// Encoded/decoded by serializers as &quot;TFOR&quot;.
@@ -77,7 +79,7 @@ public enum SettlementDate5Code
     [IsoId("__wbvdNojEeC60axPepSq7g_685085526")]
     [Description(@"Settlement takes place on the trade date plus four business days.")]
     TPlusFour = SettlementDateCode.TPlusFour, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place on the trade date plus five business days.
     /// Encoded/decoded by serializers as &quot;TFIV&quot;.
@@ -86,7 +88,7 @@ public enum SettlementDate5Code
     [IsoId("__wbvddojEeC60axPepSq7g_1010203033")]
     [Description(@"Settlement takes place on the trade date plus five business days.")]
     TPlusFive = SettlementDateCode.TPlusFive, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place at the choice/option of the seller.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -95,7 +97,7 @@ public enum SettlementDate5Code
     [IsoId("__wk5YNojEeC60axPepSq7g_-40862622")]
     [Description(@"Settlement takes place at the choice/option of the seller.")]
     SellersOption = SettlementDateCode.SellersOption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place when the financial instrument is distributed.
     /// Encoded/decoded by serializers as &quot;WDIS&quot;.
@@ -104,7 +106,7 @@ public enum SettlementDate5Code
     [IsoId("__wk5YdojEeC60axPepSq7g_1814515449")]
     [Description(@"Settlement takes place when the financial instrument is distributed.")]
     WhenDistributed = SettlementDateCode.WhenDistributed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place when the financial instrument is issued or distributed.
     /// Encoded/decoded by serializers as &quot;WHID&quot;.
@@ -113,7 +115,7 @@ public enum SettlementDate5Code
     [IsoId("__wk5YtojEeC60axPepSq7g_-1719686694")]
     [Description(@"Settlement takes place when the financial instrument is issued or distributed.")]
     WhenIssuedOrDistributed = SettlementDateCode.WhenIssuedOrDistributed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place as a result of a &quot;to be announced&quot; trade.
     /// Encoded/decoded by serializers as &quot;TBAT&quot;.
@@ -122,7 +124,7 @@ public enum SettlementDate5Code
     [IsoId("__wk5Y9ojEeC60axPepSq7g_-195618398")]
     [Description(@"Settlement takes place as a result of a ""to be announced"" trade.")]
     ToBeAnnouncedTrade = SettlementDateCode.ToBeAnnouncedTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement is to be done when the security is issued.
     /// Encoded/decoded by serializers as &quot;WISS&quot;.
@@ -131,5 +133,4 @@ public enum SettlementDate5Code
     [IsoId("__wk5ZNojEeC60axPepSq7g_1464768024")]
     [Description(@"Settlement is to be done when the security is issued.")]
     WhenIssued = SettlementDateCode.WhenIssued, // same ordinal as derivation source for type conversions
-    
 }

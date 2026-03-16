@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2X0v3TEyEe6g-ffJsqGiSA")]
 [DisplayName("Trade Contract4")]
-public partial record TradeContract4
+public record TradeContract4
 {
-    #nullable enable
-
     /// <summary>
     /// Amount.
     /// </summary>
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveCurrencyAndAmount? Amount { get; init; } 
+    public ActiveCurrencyAndAmount? Amount { get; init; }
 
     /// <summary>
     /// Attachment.
@@ -44,35 +42,35 @@ public partial record TradeContract4
     /// </summary>
     [DisplayName("Contract Document Identification")]
     [IsoXmlTag("CtrctDocId")]
-    public DocumentIdentification22? ContractDocumentIdentification { get; init; } 
+    public DocumentIdentification22? ContractDocumentIdentification { get; init; }
 
     /// <summary>
     /// Exchange Rate Information.
     /// </summary>
     [DisplayName("Exchange Rate Information")]
     [IsoXmlTag("XchgRateInf")]
-    public ExchangeRate1? ExchangeRateInformation { get; init; } 
+    public ExchangeRate1? ExchangeRateInformation { get; init; }
 
     /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; } 
+    public IsoISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Payment Schedule.
     /// </summary>
     [DisplayName("Payment Schedule")]
     [IsoXmlTag("PmtSchdl")]
-    public InterestPaymentDateRange1? PaymentSchedule { get; init; } 
+    public InterestPaymentDateRange1? PaymentSchedule { get; init; }
 
     /// <summary>
     /// Prolongation Flag.
     /// </summary>
     [DisplayName("Prolongation Flag")]
     [IsoXmlTag("PrlngtnFlg")]
-    public IsoTrueFalseIndicator? ProlongationFlag { get; init; } 
+    public IsoTrueFalseIndicator? ProlongationFlag { get; init; }
 
     /// <summary>
     /// Seller.
@@ -86,30 +84,26 @@ public partial record TradeContract4
     /// </summary>
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
-    public ActiveCurrencyCode? SettlementCurrency { get; init; } 
+    public ActiveCurrencyCode? SettlementCurrency { get; init; }
 
     /// <summary>
     /// Shipment Schedule.
     /// </summary>
     [DisplayName("Shipment Schedule")]
     [IsoXmlTag("ShipmntSchdl")]
-    public ShipmentSchedule2Choice_? ShipmentSchedule { get; init; } 
+    public ShipmentSchedule2Choice_? ShipmentSchedule { get; init; }
 
     /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISODate? StartDate { get; init; } 
+    public IsoISODate? StartDate { get; init; }
 
     /// <summary>
     /// Trade Type Identification.
     /// </summary>
     [DisplayName("Trade Type Identification")]
     [IsoXmlTag("TradTpId")]
-    public IsoMax35Text? TradeTypeIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax35Text? TradeTypeIdentification { get; init; }
 }

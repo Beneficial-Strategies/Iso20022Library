@@ -23,7 +23,7 @@ public enum FileActionScope1Code
     [IsoId("_SafpETEmEemzCpWiCwK4aQ")]
     [Description(@"Action applies to a file")]
     File = FileActionScopeCode.File, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Action applies to a record
     /// Encoded/decoded by serializers as &quot;RECD&quot;.
@@ -32,5 +32,4 @@ public enum FileActionScope1Code
     [IsoId("_Sv9iwTEmEemzCpWiCwK4aQ")]
     [Description(@"Action applies to a record")]
     Record = FileActionScopeCode.Record, // same ordinal as derivation source for type conversions
-    
 }

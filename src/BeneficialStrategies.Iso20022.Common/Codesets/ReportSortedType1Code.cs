@@ -23,7 +23,7 @@ public enum ReportSortedType1Code
     [IsoId("_VeXEKdp-Ed-ak6NoX_4Aeg_-2144991903")]
     [Description(@"Type of criterion is a nation.")]
     Country = ReportSortedTypeCode.Country, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of criterion is an entity, eg, a financial institution.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,7 +32,7 @@ public enum ReportSortedType1Code
     [IsoId("_Veg1INp-Ed-ak6NoX_4Aeg_-2144991902")]
     [Description(@"Type of criterion is an entity, eg, a financial institution.")]
     Party = ReportSortedTypeCode.Party, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of criterion is a currency, eg, the euro.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -41,5 +41,4 @@ public enum ReportSortedType1Code
     [IsoId("_Veg1Idp-Ed-ak6NoX_4Aeg_-2144991901")]
     [Description(@"Type of criterion is a currency, eg, the euro.")]
     Currency = ReportSortedTypeCode.Currency, // same ordinal as derivation source for type conversions
-    
 }

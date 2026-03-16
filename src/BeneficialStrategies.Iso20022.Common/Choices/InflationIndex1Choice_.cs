@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InflationIndex1Choice.ISIN))]
     [KnownType(typeof(InflationIndex1Choice.Name))]
-    [JsonDerivedType(typeof(InflationIndex1Choice.ISIN),nameof(InflationIndex1Choice.ISIN))]
-    [JsonDerivedType(typeof(InflationIndex1Choice.Name),nameof(InflationIndex1Choice.Name))]
+    [JsonDerivedType(typeof(InflationIndex1Choice.ISIN), nameof(InflationIndex1Choice.ISIN))]
+    [JsonDerivedType(typeof(InflationIndex1Choice.Name), nameof(InflationIndex1Choice.Name))]
     [IsoId("_ZyZ21CS2EeWsI5Sp3-B3zg")]
     [DisplayName("Inflation Index 1 Choice")]
-    public abstract partial record InflationIndex1Choice_
-    {
-    }
+    public abstract record InflationIndex1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
     /// </summary>
     [IsoId("_w5-30FxYEeWvPv3PXpS3fw")]
     [DisplayName("Individual Person")]
-    public partial record IndividualPerson : RegisteredShareholderName1Choice_
+    public record IndividualPerson : RegisteredShareholderName1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Term used to address the person.
         /// </summary>
         [IsoId("_qTeSU1xiEeWvPv3PXpS3fw")]
         [DisplayName("Name Prefix")]
         [IsoXmlTag("NmPrfx")]
-        public NamePrefix1Choice_? NamePrefix { get; init; } 
-        
+        public NamePrefix1Choice_? NamePrefix { get; init; }
+
         /// <summary>
         /// First name of the person.
         /// </summary>
@@ -32,9 +30,9 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
         [DisplayName("Given Name")]
         [IsoXmlTag("GvnNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? GivenName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? GivenName { get; init; }
+
         /// <summary>
         /// Second name of the person.
         /// </summary>
@@ -42,9 +40,9 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
         [DisplayName("Middle Name")]
         [IsoXmlTag("MddlNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? MiddleName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MiddleName { get; init; }
+
         /// <summary>
         /// Name by which the party is known and which is usually used to identify that person.
         /// </summary>
@@ -52,9 +50,9 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public required IsoMax350Text Name { get; init; } 
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public required IsoMax350Text Name { get; init; }
+
         /// <summary>
         /// Address of the person.
         /// </summary>
@@ -64,9 +62,5 @@ namespace BeneficialStrategies.Iso20022.Choices.RegisteredShareholderName1Choice
         [MinLength(1)]
         [MaxLength(5)]
         public ValueList<PostalAddress21> PostalAddress { get; init; } = [];
-        
-        
-        #nullable disable
-        
     }
 }

@@ -23,7 +23,7 @@ public enum POIComponentAssessment1Code
     [IsoId("_fAoO8bk3EeKg8PSpEMv-Sg")]
     [Description(@"Approval number delivered by an approval centre.")]
     Approval = POIComponentAssessmentCode.Approval, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certification number delivered by a certification body.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
@@ -32,7 +32,7 @@ public enum POIComponentAssessment1Code
     [IsoId("_fLolE7k3EeKg8PSpEMv-Sg")]
     [Description(@"Certification number delivered by a certification body.")]
     Certification = POIComponentAssessmentCode.Certification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Evaluation by a lab or a tool.
     /// Encoded/decoded by serializers as &quot;EVAL&quot;.
@@ -41,5 +41,4 @@ public enum POIComponentAssessment1Code
     [IsoId("_fUtokbk3EeKg8PSpEMv-Sg")]
     [Description(@"Evaluation by a lab or a tool.")]
     Evaluation = POIComponentAssessmentCode.Evaluation, // same ordinal as derivation source for type conversions
-    
 }

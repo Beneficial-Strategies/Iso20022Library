@@ -23,7 +23,7 @@ public enum IntendedOrActual2Code
     [IsoId("_bTCWIYppEeidFfW6ExBZOw")]
     [Description(@"Ex ante (intended).")]
     ExAnte = IntendedOrActualCode.ExAnte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Ex post (actual).
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -32,5 +32,4 @@ public enum IntendedOrActual2Code
     [IsoId("_bYjIQYppEeidFfW6ExBZOw")]
     [Description(@"Ex post (actual).")]
     ExPost = IntendedOrActualCode.ExPost, // same ordinal as derivation source for type conversions
-    
 }

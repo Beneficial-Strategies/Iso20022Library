@@ -23,7 +23,7 @@ public enum AnnualChargePaymentTypeCode
     [IsoId("_be9UoNp-Ed-ak6NoX_4Aeg_1016563741")]
     [Description(@"Annual charge is deducted from the fund capital.")]
     Capital,
-    
+
     /// <summary>
     /// Annual charge is deducted from the fund income.
     /// Encoded/decoded by serializers as &quot;INCO&quot;.
@@ -32,5 +32,4 @@ public enum AnnualChargePaymentTypeCode
     [IsoId("_be9Uodp-Ed-ak6NoX_4Aeg_1016563742")]
     [Description(@"Annual charge is deducted from the fund income.")]
     Income,
-    
 }

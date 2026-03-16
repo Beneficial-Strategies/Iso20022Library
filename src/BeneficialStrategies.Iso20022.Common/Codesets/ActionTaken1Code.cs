@@ -23,7 +23,7 @@ public enum ActionTaken1Code
     [IsoId("_ykWhoXdmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud was accepted")]
     Accepted = ActionTakenCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reported fraud led to actions defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum ActionTaken1Code
     [IsoId("_yzE6IndmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud led to actions defined at national level.")]
     OtherNational = ActionTakenCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reported fraud led to actions defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum ActionTaken1Code
     [IsoId("_y8mpkndmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud led to actions defined at private level.")]
     OtherPrivate = ActionTakenCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reported fraud was rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -50,7 +50,7 @@ public enum ActionTaken1Code
     [IsoId("_zNj2sndmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud was rejected.")]
     Rejected = ActionTakenCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reported fraud was accepted with warnings.
     /// Encoded/decoded by serializers as &quot;WARN&quot;.
@@ -59,5 +59,4 @@ public enum ActionTaken1Code
     [IsoId("_zZUawndmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud was accepted with warnings.")]
     Warning = ActionTakenCode.Warning, // same ordinal as derivation source for type conversions
-    
 }

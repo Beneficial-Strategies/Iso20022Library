@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_FPq5YY0_EeWPUZwhUA4U-w")]
 [DisplayName("Card Payment Transaction Advice Response")]
-public partial record CardPaymentTransactionAdviceResponse6
+public record CardPaymentTransactionAdviceResponse6
 {
-    #nullable enable
-    
     /// <summary>
     /// Global reference of the sale transaction for the sale system.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record CardPaymentTransactionAdviceResponse6
     [DisplayName("Sale Reference Identification")]
     [IsoXmlTag("SaleRefId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SaleReferenceIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SaleReferenceIdentification { get; init; }
+
     /// <summary>
     /// Unique identification of the transaction by the POI (Point Of Interaction).
     /// </summary>
     [IsoId("_FajTs40_EeWPUZwhUA4U-w")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier1 TransactionIdentification { get; init; } 
-    
+    public required TransactionIdentifier1 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Identification of the transaction assigned by the initiating party for the recipient party.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record CardPaymentTransactionAdviceResponse6
     [DisplayName("Initiator Transaction Identification")]
     [IsoXmlTag("InitrTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? InitiatorTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? InitiatorTransactionIdentification { get; init; }
+
     /// <summary>
     /// Identification of the transaction assigned by the recipient party for the initiating party.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record CardPaymentTransactionAdviceResponse6
     [DisplayName("Recipient Transaction Identification")]
     [IsoXmlTag("RcptTxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RecipientTransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RecipientTransactionIdentification { get; init; }
+
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer. This identification might be linked to the identification of the settlement for further verification by the merchant.
     /// </summary>
@@ -63,18 +61,14 @@ public partial record CardPaymentTransactionAdviceResponse6
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ReconciliationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ReconciliationIdentification { get; init; }
+
     /// <summary>
     /// Result of a requested service.
     /// </summary>
     [IsoId("_FajTt40_EeWPUZwhUA4U-w")]
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public required Response4Code Response { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required Response4Code Response { get; init; }
 }

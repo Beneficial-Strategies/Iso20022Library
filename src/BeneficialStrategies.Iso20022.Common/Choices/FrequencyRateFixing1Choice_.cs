@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FrequencyRateFixing1Choice.Code))]
     [KnownType(typeof(FrequencyRateFixing1Choice.NumberOfDays))]
-    [JsonDerivedType(typeof(FrequencyRateFixing1Choice.Code),nameof(FrequencyRateFixing1Choice.Code))]
-    [JsonDerivedType(typeof(FrequencyRateFixing1Choice.NumberOfDays),nameof(FrequencyRateFixing1Choice.NumberOfDays))]
+    [JsonDerivedType(
+        typeof(FrequencyRateFixing1Choice.Code),
+        nameof(FrequencyRateFixing1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FrequencyRateFixing1Choice.NumberOfDays),
+        nameof(FrequencyRateFixing1Choice.NumberOfDays)
+    )]
     [IsoId("_OPAdMI9PEeqMo4JxiuZGSw")]
     [DisplayName("Frequency Rate Fixing 1 Choice")]
-    public abstract partial record FrequencyRateFixing1Choice_
-    {
-    }
+    public abstract record FrequencyRateFixing1Choice_ { }
 }

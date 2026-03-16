@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -17,18 +17,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjUx-AOSNFX-8224494")]
 [DisplayName("Single Qualified Party Identification")]
-public partial record SingleQualifiedPartyIdentification1
+public record SingleQualifiedPartyIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Party identification recognisable by parties in the trade.
     /// </summary>
     [IsoId("_OTgzMjUy-AOSNFX-8224494")]
     [DisplayName("Base Party")]
     [IsoXmlTag("BasePty")]
-    public required TradeParty1 BaseParty { get; init; } 
-    
+    public required TradeParty1 BaseParty { get; init; }
+
     /// <summary>
     /// Identifies a party, each identifier is recursively defined relative to the party identified by the base party and the preceding part of the list.
     /// </summary>
@@ -39,8 +37,4 @@ public partial record SingleQualifiedPartyIdentification1
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> RelativeIdentifier { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

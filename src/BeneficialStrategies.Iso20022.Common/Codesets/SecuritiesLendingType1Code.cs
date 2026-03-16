@@ -23,7 +23,7 @@ public enum SecuritiesLendingType1Code
     [IsoId("__wINctojEeC60axPepSq7g_-1300895809")]
     [Description(@"Securities lending contract is new and registered.")]
     NewRegistration = SecuritiesLendingTypeCode.NewRegistration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Securities lending contract is renewed.
     /// Encoded/decoded by serializers as &quot;RENW&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesLendingType1Code
     [IsoId("__wINc9ojEeC60axPepSq7g_166252954")]
     [Description(@"Securities lending contract is renewed.")]
     RollOverRenewal = SecuritiesLendingTypeCode.RollOverRenewal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Securities lending contract is called back.
     /// Encoded/decoded by serializers as &quot;CABK&quot;.
@@ -41,5 +41,4 @@ public enum SecuritiesLendingType1Code
     [IsoId("__wINdNojEeC60axPepSq7g_-1719429399")]
     [Description(@"Securities lending contract is called back.")]
     CallBack = SecuritiesLendingTypeCode.CallBack, // same ordinal as derivation source for type conversions
-    
 }

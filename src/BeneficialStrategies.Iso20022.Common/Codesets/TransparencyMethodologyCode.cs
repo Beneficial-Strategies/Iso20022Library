@@ -23,7 +23,7 @@ public enum TransparencyMethodologyCode
     [IsoId("_p58NcNQCEeWBZtcpHyzahg")]
     [Description(@"Estimation for New Equity Instruments.")]
     Estimated,
-    
+
     /// <summary>
     /// Calculation based on first Four Weeks of Trading for Equity Instruments.
     /// Encoded/decoded by serializers as &quot;FFWK&quot;.
@@ -32,7 +32,7 @@ public enum TransparencyMethodologyCode
     [IsoId("_rVzugNQCEeWBZtcpHyzahg")]
     [Description(@"Calculation based on first Four Weeks of Trading for Equity Instruments.")]
     FirstFourWeeks,
-    
+
     /// <summary>
     /// Calculation based on yearly cycle.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -41,7 +41,7 @@ public enum TransparencyMethodologyCode
     [IsoId("_tAZoENQCEeWBZtcpHyzahg")]
     [Description(@"Calculation based on yearly cycle.")]
     Year,
-    
+
     /// <summary>
     /// Results of calculations supporting Systematic Internaliser regime.
     /// Encoded/decoded by serializers as &quot;SINT&quot;.
@@ -50,5 +50,4 @@ public enum TransparencyMethodologyCode
     [IsoId("_UE7csHvtEeanCNPcMT7sSg")]
     [Description(@"Results of calculations supporting Systematic Internaliser regime.")]
     SystematicInternaliser,
-    
 }

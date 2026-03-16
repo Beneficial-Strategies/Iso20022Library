@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SB0r1Np-Ed-ak6NoX_4Aeg_-865361430")]
 [DisplayName("Payment Instrument")]
-public partial record PaymentInstrument8
+public record PaymentInstrument8
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency associated with the payment instrument.
     /// </summary>
     [IsoId("_SB0r1dp-Ed-ak6NoX_4Aeg_-865361290")]
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
-    public required ActiveCurrencyCode SettlementCurrency { get; init; } 
-    
+    public required ActiveCurrencyCode SettlementCurrency { get; init; }
+
     /// <summary>
     /// Cash account to debit for the payment of a subscription or of a savings plan to an investment fund.
     /// </summary>
@@ -35,23 +33,23 @@ public partial record PaymentInstrument8
     [MinLength(1)]
     [MaxLength(3)]
     public ValueList<CashAccount4> CashAccountDetails { get; init; } = [];
-    
+
     /// <summary>
     /// Settlement instructions for a payment by card.
     /// </summary>
     [IsoId("_SB0r19p-Ed-ak6NoX_4Aeg_-864440809")]
     [DisplayName("Payment Card Details")]
     [IsoXmlTag("PmtCardDtls")]
-    public required PaymentCard2 PaymentCardDetails { get; init; } 
-    
+    public required PaymentCard2 PaymentCardDetails { get; init; }
+
     /// <summary>
     /// Settlement instructions for a payment by direct debit.
     /// </summary>
     [IsoId("_SB0r2Np-Ed-ak6NoX_4Aeg_-865360858")]
     [DisplayName("Direct Debit Details")]
     [IsoXmlTag("DrctDbtDtls")]
-    public required DirectDebitMandate4 DirectDebitDetails { get; init; } 
-    
+    public required DirectDebitMandate4 DirectDebitDetails { get; init; }
+
     /// <summary>
     /// Indicates whether the payment is done via cheque.
     /// </summary>
@@ -59,8 +57,8 @@ public partial record PaymentInstrument8
     [DisplayName("Cheque")]
     [IsoXmlTag("Chq")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Cheque { get; init; } 
-    
+    public required IsoYesNoIndicator Cheque { get; init; }
+
     /// <summary>
     /// Indicates whether the payment is done via draft.
     /// </summary>
@@ -68,9 +66,5 @@ public partial record PaymentInstrument8
     [DisplayName("Bankers Draft")]
     [IsoXmlTag("BkrsDrft")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator BankersDraft { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator BankersDraft { get; init; }
 }

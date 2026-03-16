@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BzkVIT6XEe-N3-3e5ejJAw")]
 [DisplayName("Portfolio Transfer13")]
-public partial record PortfolioTransfer13
+public record PortfolioTransfer13
 {
-    #nullable enable
-
     /// <summary>
     /// Actual Transfer Date.
     /// </summary>
     [DisplayName("Actual Transfer Date")]
     [IsoXmlTag("ActlTrfDt")]
-    public IsoISODate? ActualTransferDate { get; init; } 
+    public IsoISODate? ActualTransferDate { get; init; }
 
     /// <summary>
     /// Additional Information.
@@ -51,28 +49,29 @@ public partial record PortfolioTransfer13
     /// </summary>
     [DisplayName("Financial Instrument Asset For Transfer")]
     [IsoXmlTag("FinInstrmAsstForTrf")]
-    public ValueList<FinancialInstrument105> FinancialInstrumentAssetForTransfer { get; init; } = [];
+    public ValueList<FinancialInstrument105> FinancialInstrumentAssetForTransfer { get; init; } =
+        [];
 
     /// <summary>
     /// Master Reference.
     /// </summary>
     [DisplayName("Master Reference")]
     [IsoXmlTag("MstrRef")]
-    public IsoMax35Text? MasterReference { get; init; } 
+    public IsoMax35Text? MasterReference { get; init; }
 
     /// <summary>
     /// Payment Details.
     /// </summary>
     [DisplayName("Payment Details")]
     [IsoXmlTag("PmtDtls")]
-    public PaymentInstrument20? PaymentDetails { get; init; } 
+    public PaymentInstrument20? PaymentDetails { get; init; }
 
     /// <summary>
     /// Portfolio.
     /// </summary>
     [DisplayName("Portfolio")]
     [IsoXmlTag("Prtfl")]
-    public FundPortfolio7Choice_? Portfolio { get; init; } 
+    public FundPortfolio7Choice_? Portfolio { get; init; }
 
     /// <summary>
     /// Residual Cash.
@@ -86,23 +85,19 @@ public partial record PortfolioTransfer13
     /// </summary>
     [DisplayName("Tax Date")]
     [IsoXmlTag("TaxDt")]
-    public IsoISODate? TaxDate { get; init; } 
+    public IsoISODate? TaxDate { get; init; }
 
     /// <summary>
     /// Transfer Completion Identification.
     /// </summary>
     [DisplayName("Transfer Completion Identification")]
     [IsoXmlTag("TrfCmpltnId")]
-    public required IsoMax35Text TransferCompletionIdentification { get; init; } 
+    public required IsoMax35Text TransferCompletionIdentification { get; init; }
 
     /// <summary>
     /// Transfer Instruction Reference.
     /// </summary>
     [DisplayName("Transfer Instruction Reference")]
     [IsoXmlTag("TrfInstrRef")]
-    public required IsoMax35Text TransferInstructionReference { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax35Text TransferInstructionReference { get; init; }
 }

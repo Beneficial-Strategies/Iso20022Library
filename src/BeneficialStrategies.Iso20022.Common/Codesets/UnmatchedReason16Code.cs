@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_AUY3gBUJEeuZw7VHHgrHLg")]
-[Description(@"Specifies the reason the transaction, transfer or settlement instruction is unmatched.")]
+[Description(
+    @"Specifies the reason the transaction, transfer or settlement instruction is unmatched."
+)]
 [DerivedFrom(typeof(UnmatchedReasonCode))]
 public enum UnmatchedReason16Code
 {
@@ -23,16 +25,18 @@ public enum UnmatchedReason16Code
     [IsoId("_ETr-oRUJEeuZw7VHHgrHLg")]
     [Description(@"Settlement amount currency does not match.")]
     CurrencySettlementAmount = UnmatchedReasonCode.CurrencySettlementAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
     /// </summary>
     [EnumMember(Value = "DSEC")]
     [IsoId("_F67pQRUJEeuZw7VHHgrHLg")]
-    [Description(@"Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs.")]
+    [Description(
+        @"Financial instrument identification does not match, for example, ISIN, financial instrument attributes differs."
+    )]
     FinancialInstrument = UnmatchedReasonCode.FinancialInstrument, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity of financial instruments does not match.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -41,7 +45,7 @@ public enum UnmatchedReason16Code
     [IsoId("_GVkW0RUJEeuZw7VHHgrHLg")]
     [Description(@"Quantity of financial instruments does not match.")]
     FinancialInstrumentQuantity = UnmatchedReasonCode.FinancialInstrumentQuantity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// A matching instruction from your counterparty could not be found.
     /// Encoded/decoded by serializers as &quot;CMIS&quot;.
@@ -50,7 +54,7 @@ public enum UnmatchedReason16Code
     [IsoId("_HMdikRUJEeuZw7VHHgrHLg")]
     [Description(@"A matching instruction from your counterparty could not be found.")]
     NoMatch = UnmatchedReasonCode.NoMatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Depository does not match.
     /// Encoded/decoded by serializers as &quot;DEPT&quot;.
@@ -59,7 +63,7 @@ public enum UnmatchedReason16Code
     [IsoId("_Kpr3YRUJEeuZw7VHHgrHLg")]
     [Description(@"Depository does not match.")]
     ReceivingDeliveringDepository = UnmatchedReasonCode.ReceivingDeliveringDepository, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Participant of delivering or receiving depository does not match.
     /// Encoded/decoded by serializers as &quot;ICAG&quot;.
@@ -68,7 +72,7 @@ public enum UnmatchedReason16Code
     [IsoId("_MYOc0RUJEeuZw7VHHgrHLg")]
     [Description(@"Participant of delivering or receiving depository does not match.")]
     ReceivingDeliveringParty1 = UnmatchedReasonCode.ReceivingDeliveringParty1, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Client of delivering or receiving party 1 does not match.
     /// Encoded/decoded by serializers as &quot;ICUS&quot;.
@@ -77,7 +81,7 @@ public enum UnmatchedReason16Code
     [IsoId("_Mdbs8RUJEeuZw7VHHgrHLg")]
     [Description(@"Client of delivering or receiving party 1 does not match.")]
     ReceivingDeliveringParty2 = UnmatchedReasonCode.ReceivingDeliveringParty2, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Client of delivering or receiving party 2 does not match.
     /// Encoded/decoded by serializers as &quot;IEXE&quot;.
@@ -86,7 +90,7 @@ public enum UnmatchedReason16Code
     [IsoId("_NCoEsRUJEeuZw7VHHgrHLg")]
     [Description(@"Client of delivering or receiving party 2 does not match.")]
     ReceivingDeliveringParty3 = UnmatchedReasonCode.ReceivingDeliveringParty3, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement amount does not match.
     /// Encoded/decoded by serializers as &quot;DMON&quot;.
@@ -95,7 +99,7 @@ public enum UnmatchedReason16Code
     [IsoId("_OjL4gRUJEeuZw7VHHgrHLg")]
     [Description(@"Settlement amount does not match.")]
     SettlementAmount = UnmatchedReasonCode.SettlementAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement date/time does not match.
     /// Encoded/decoded by serializers as &quot;DDAT&quot;.
@@ -104,7 +108,7 @@ public enum UnmatchedReason16Code
     [IsoId("_OnfwwRUJEeuZw7VHHgrHLg")]
     [Description(@"Settlement date/time does not match.")]
     SettlementDate = UnmatchedReasonCode.SettlementDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade date does not match.
     /// Encoded/decoded by serializers as &quot;DTRD&quot;.
@@ -113,14 +117,15 @@ public enum UnmatchedReason16Code
     [IsoId("_QPpaURUJEeuZw7VHHgrHLg")]
     [Description(@"Trade date does not match.")]
     TradeDate = UnmatchedReasonCode.TradeDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Direction of the trade does not match. Counterparty expects a delivery from you, not a receipt or vice versa.
     /// Encoded/decoded by serializers as &quot;DELN&quot;.
     /// </summary>
     [EnumMember(Value = "DELN")]
     [IsoId("_Q2LO0RUJEeuZw7VHHgrHLg")]
-    [Description(@"Direction of the trade does not match. Counterparty expects a delivery from you, not a receipt or vice versa.")]
+    [Description(
+        @"Direction of the trade does not match. Counterparty expects a delivery from you, not a receipt or vice versa."
+    )]
     TransactionDirection = UnmatchedReasonCode.TransactionDirection, // same ordinal as derivation source for type conversions
-    
 }

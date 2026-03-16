@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_rW7kBCBqEeugLNJneiyzbA")]
-[Description(@"Specifies the instruction for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets.")]
+[Description(
+    @"Specifies the instruction for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleIssuanceType1Code
 {
@@ -24,7 +26,7 @@ public enum ValidationRuleIssuanceType1Code
     [IsoId("_ykFHMSBqEeugLNJneiyzbA")]
     [Description(@"Undertaking issued direct.")]
     UndertakingIssuedDirect = ValidationRuleCode.UndertakingIssuedDirect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undertaking issued via confirming party.
     /// Encoded/decoded by serializers as &quot;ISCO&quot;.
@@ -33,7 +35,7 @@ public enum ValidationRuleIssuanceType1Code
     [IsoId("_yxUR8SBqEeugLNJneiyzbA")]
     [Description(@"Undertaking issued via confirming party.")]
     UndertakingIssuedViaConfirmingParty = ValidationRuleCode.UndertakingIssuedViaConfirmingParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undertaking issued via advising party.
     /// Encoded/decoded by serializers as &quot;ISAD&quot;.
@@ -42,5 +44,4 @@ public enum ValidationRuleIssuanceType1Code
     [IsoId("_y3r_sSBqEeugLNJneiyzbA")]
     [Description(@"Undertaking issued via advising party.")]
     UndertakingViaAdvisingParty = ValidationRuleCode.UndertakingViaAdvisingParty, // same ordinal as derivation source for type conversions
-    
 }

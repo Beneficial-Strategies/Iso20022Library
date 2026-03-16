@@ -1,12 +1,12 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.camt;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice;
 using BeneficialStrategies.Iso20022.Choices.Party40Choice;
-using BeneficialStrategies.Iso20022.camt;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -27,54 +27,60 @@ public class Camt056ExamplesTests
 
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static CaseAssignment5 CreateCaseAssignment() => new()
-    {
-        Identification = CancellationId,
-        Assigner = new Agent
+    public static CaseAssignment5 CreateCaseAssignment() =>
+        new()
         {
-            FinancialInstitutionIdentification = Iso20022TestData.DebtorAgent
-                .FinancialInstitutionIdentification,
-        },
-        Assignee = new Agent
-        {
-            FinancialInstitutionIdentification = Iso20022TestData.CreditorAgent
-                .FinancialInstitutionIdentification,
-        },
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddDays(1),
-    };
+            Identification = CancellationId,
+            Assigner = new Agent
+            {
+                FinancialInstitutionIdentification = Iso20022TestData
+                    .DebtorAgent
+                    .FinancialInstitutionIdentification,
+            },
+            Assignee = new Agent
+            {
+                FinancialInstitutionIdentification = Iso20022TestData
+                    .CreditorAgent
+                    .FinancialInstitutionIdentification,
+            },
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddDays(1),
+        };
 
-    public static Case5 CreateCase() => new()
-    {
-        Identification = CaseId,
-        Creator = new Agent
+    public static Case5 CreateCase() =>
+        new()
         {
-            FinancialInstitutionIdentification = Iso20022TestData.DebtorAgent
-                .FinancialInstitutionIdentification,
-        },
-    };
+            Identification = CaseId,
+            Creator = new Agent
+            {
+                FinancialInstitutionIdentification = Iso20022TestData
+                    .DebtorAgent
+                    .FinancialInstitutionIdentification,
+            },
+        };
 
     public static PaymentTransaction137 CreateTransactionCancellation(
-        CancellationReason33Choice_? reason = null) => new()
-    {
-        CancellationIdentification = CancellationId,
-        OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
-        OriginalUETR = Iso20022TestData.Uetr,
-        OriginalInstructionIdentification = Iso20022TestData.InstructionId,
-        OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount
+        CancellationReason33Choice_? reason = null
+    ) =>
+        new()
         {
-            Currency = Iso20022TestData.Currency,
-            Amount = Iso20022TestData.Amount,
-        },
-        OriginalInterbankSettlementDate = Iso20022TestData.SettlementDate,
-        CancellationReasonInformation = new PaymentCancellationReason5
-        {
-            Originator = Iso20022TestData.Debtor,
-            Reason = reason ?? new Code
+            CancellationIdentification = CancellationId,
+            OriginalEndToEndIdentification = Iso20022TestData.EndToEndId,
+            OriginalUETR = Iso20022TestData.Uetr,
+            OriginalInstructionIdentification = Iso20022TestData.InstructionId,
+            OriginalInterbankSettlementAmount = new ActiveOrHistoricCurrencyAndAmount
             {
-                Value = ExternalCancellationReason1Code.RequestedByCustomer,
+                Currency = Iso20022TestData.Currency,
+                Amount = Iso20022TestData.Amount,
             },
-        },
-    };
+            OriginalInterbankSettlementDate = Iso20022TestData.SettlementDate,
+            CancellationReasonInformation = new PaymentCancellationReason5
+            {
+                Originator = Iso20022TestData.Debtor,
+                Reason =
+                    reason
+                    ?? new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer, },
+            },
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -93,14 +99,16 @@ public class Camt056ExamplesTests
             Underlying = new UnderlyingTransaction28
             {
                 TransactionInformation = CreateTransactionCancellation(
-                    new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer }),
+                    new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer }
+                ),
             },
         };
 
         Assert.NotNull(message);
         Assert.Equal("camt.056.001.10", FIToFIPaymentCancellationRequestV10.IsoIdentifier);
         Assert.IsType<Code>(
-            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason);
+            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+        );
     }
 
     /// <summary>
@@ -117,27 +125,30 @@ public class Camt056ExamplesTests
             {
                 Identification = "DEUTDEFF/240316/CAMT056/00002",
             },
-            Case = CreateCase() with
-            {
-                Identification = "CASE-DEUTDEFF-20240316-002",
-            },
+            Case = CreateCase() with { Identification = "CASE-DEUTDEFF-20240316-002", },
             Underlying = new UnderlyingTransaction28
             {
                 TransactionInformation = CreateTransactionCancellation(
-                    new Code { Value = ExternalCancellationReason1Code.DuplicatePayment }) with
+                    new Code { Value = ExternalCancellationReason1Code.DuplicatePayment }
+                ) with
                 {
                     CancellationIdentification = "DEUTDEFF/240316/CAMT056/00002",
                     CancellationReasonInformation = new PaymentCancellationReason5
                     {
-                        Reason = new Code { Value = ExternalCancellationReason1Code.DuplicatePayment },
-                        AdditionalInformation = "Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent at 08:30 UTC; duplicate submitted at 08:31 UTC.",
+                        Reason = new Code
+                        {
+                            Value = ExternalCancellationReason1Code.DuplicatePayment
+                        },
+                        AdditionalInformation =
+                            "Duplicate of UETR 97ed4827-7b6f-4491-a06f-b548d5a7512d. Original sent at 08:30 UTC; duplicate submitted at 08:31 UTC.",
                     },
                 },
             },
         };
 
         Assert.NotNull(message);
-        var reason = (Code)message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason!;
+        var reason = (Code)
+            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason!;
         Assert.Equal(ExternalCancellationReason1Code.DuplicatePayment, reason.Value);
     }
 
@@ -155,17 +166,12 @@ public class Camt056ExamplesTests
             {
                 Identification = "DEUTDEFF/240316/CAMT056/00003",
             },
-            Case = CreateCase() with
-            {
-                Identification = "CASE-DEUTDEFF-20240316-003",
-            },
+            Case = CreateCase() with { Identification = "CASE-DEUTDEFF-20240316-003", },
             Underlying = new UnderlyingTransaction28
             {
                 TransactionInformation = CreateTransactionCancellation(
-                    new Proprietary
-                    {
-                        Value = "DEUTDE-AML-FREEZE-REF-2024-03-16-0042",
-                    }) with
+                    new Proprietary { Value = "DEUTDE-AML-FREEZE-REF-2024-03-16-0042", }
+                ) with
                 {
                     CancellationIdentification = "DEUTDEFF/240316/CAMT056/00003",
                 },
@@ -174,7 +180,8 @@ public class Camt056ExamplesTests
 
         Assert.NotNull(message);
         Assert.IsType<Proprietary>(
-            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason);
+            message.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+        );
     }
 
     /// <summary>
@@ -193,7 +200,7 @@ public class Camt056ExamplesTests
             ControlData = new ControlData1
             {
                 NumberOfTransactions = "3",
-                ControlSum = 141_750UL,  // 3 × EUR 47,250.00
+                ControlSum = 141_750UL, // 3 × EUR 47,250.00
             },
             Underlying = new UnderlyingTransaction28
             {
@@ -205,8 +212,12 @@ public class Camt056ExamplesTests
                     GroupCancellation = "true",
                     CancellationReasonInformation = new PaymentCancellationReason5
                     {
-                        Reason = new Code { Value = ExternalCancellationReason1Code.RequestedByCustomer },
-                        AdditionalInformation = "Customer requested cancellation of all payments in batch DEUTDEFF/240315/PAC008/00001.",
+                        Reason = new Code
+                        {
+                            Value = ExternalCancellationReason1Code.RequestedByCustomer
+                        },
+                        AdditionalInformation =
+                            "Customer requested cancellation of all payments in batch DEUTDEFF/240315/PAC008/00001.",
                     },
                 },
             },
@@ -239,7 +250,8 @@ public class Camt056ExamplesTests
                 Assigner = corporateAssigner,
                 Assignee = new Agent
                 {
-                    FinancialInstitutionIdentification = Iso20022TestData.DebtorAgent
+                    FinancialInstitutionIdentification = Iso20022TestData
+                        .DebtorAgent
                         .FinancialInstitutionIdentification,
                 },
                 CreationDateTime = Iso20022TestData.MessageCreationDateTime.AddDays(1),

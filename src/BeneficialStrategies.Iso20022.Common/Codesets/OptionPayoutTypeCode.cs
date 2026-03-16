@@ -23,7 +23,7 @@ public enum OptionPayoutTypeCode
     [IsoId("_dV968KbEEeSxuMLA5o46jQ")]
     [Description(@"Indicates the type of vanilla option.")]
     Vanilla,
-    
+
     /// <summary>
     /// Indicates the type of capped option.
     /// Encoded/decoded by serializers as &quot;CAPP&quot;.
@@ -32,7 +32,7 @@ public enum OptionPayoutTypeCode
     [IsoId("_dhVdcKbEEeSxuMLA5o46jQ")]
     [Description(@"Indicates the type of capped option.")]
     Capped,
-    
+
     /// <summary>
     /// Indicates the type of binaryoption.
     /// Encoded/decoded by serializers as &quot;BINA&quot;.
@@ -41,5 +41,4 @@ public enum OptionPayoutTypeCode
     [IsoId("_dlwqcKbEEeSxuMLA5o46jQ")]
     [Description(@"Indicates the type of binaryoption.")]
     Binary,
-    
 }

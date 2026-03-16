@@ -23,7 +23,7 @@ public enum PoliticalExposureType2Code
     [IsoId("_tm6vMZUgEemC09f0MxYkRg")]
     [Description(@"No political exposure.")]
     NoPoliticalExposure = PoliticalExposureTypeCode.NoPoliticalExposure, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Political exposure.
     /// Encoded/decoded by serializers as &quot;YPEX&quot;.
@@ -32,7 +32,7 @@ public enum PoliticalExposureType2Code
     [IsoId("_tuzf4ZUgEemC09f0MxYkRg")]
     [Description(@"Political exposure.")]
     PoliticalExposure = PoliticalExposureTypeCode.PoliticalExposure, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Political exposure type is domestic.
     /// Encoded/decoded by serializers as &quot;PEXD&quot;.
@@ -41,7 +41,7 @@ public enum PoliticalExposureType2Code
     [IsoId("_tzkEEZUgEemC09f0MxYkRg")]
     [Description(@"Political exposure type is domestic.")]
     PoliticalExposureDomestic = PoliticalExposureTypeCode.PoliticalExposureDomestic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Political exposure type is foreign.
     /// Encoded/decoded by serializers as &quot;PEXF&quot;.
@@ -50,5 +50,4 @@ public enum PoliticalExposureType2Code
     [IsoId("_t5g7EZUgEemC09f0MxYkRg")]
     [Description(@"Political exposure type is foreign.")]
     PoliticalExposureForeign = PoliticalExposureTypeCode.PoliticalExposureForeign, // same ordinal as derivation source for type conversions
-    
 }

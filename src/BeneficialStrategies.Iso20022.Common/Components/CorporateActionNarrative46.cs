@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,99 +14,93 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Z4So8e6QEeqc-LCjwLsUVg")]
 [DisplayName("Corporate Action Narrative")]
-public partial record CorporateActionNarrative46
+public record CorporateActionNarrative46
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.
     /// </summary>
     [IsoId("_akeZg-6QEeqc-LCjwLsUVg")]
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
-    public UpdatedAdditionalInformation13? AdditionalText { get; init; } 
-    
+    public UpdatedAdditionalInformation13? AdditionalText { get; init; }
+
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.
     /// </summary>
     [IsoId("_akeZi-6QEeqc-LCjwLsUVg")]
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
-    public UpdatedAdditionalInformation13? NarrativeVersion { get; init; } 
-    
+    public UpdatedAdditionalInformation13? NarrativeVersion { get; init; }
+
     /// <summary>
     /// Provides conditional information related to the event, for example, an offer is subject to 50 percent acceptance, the offeror allows the securities holder to set some conditions.
     /// </summary>
     [IsoId("_akeZk-6QEeqc-LCjwLsUVg")]
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
-    public UpdatedAdditionalInformation13? InformationConditions { get; init; } 
-    
+    public UpdatedAdditionalInformation13? InformationConditions { get; init; }
+
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or SIL (Sophisticated Investor Letter) to be provided.
     /// </summary>
     [IsoId("_akeZm-6QEeqc-LCjwLsUVg")]
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
-    public UpdatedAdditionalInformation13? InformationToComplyWith { get; init; } 
-    
+    public UpdatedAdditionalInformation13? InformationToComplyWith { get; init; }
+
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).
     /// </summary>
     [IsoId("_akeZo-6QEeqc-LCjwLsUVg")]
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
-    public UpdatedAdditionalInformation13? TaxationConditions { get; init; } 
-    
+    public UpdatedAdditionalInformation13? TaxationConditions { get; init; }
+
     /// <summary>
     /// Provides a disclaimer relative to the information provided in the message. It may be ignored for automated processing.
     /// </summary>
     [IsoId("_akeZq-6QEeqc-LCjwLsUVg")]
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
-    public UpdatedAdditionalInformation13? Disclaimer { get; init; } 
-    
+    public UpdatedAdditionalInformation13? Disclaimer { get; init; }
+
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
     /// </summary>
     [IsoId("_akeZs-6QEeqc-LCjwLsUVg")]
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
-    public UpdatedAdditionalInformation13? PartyContactNarrative { get; init; } 
-    
+    public UpdatedAdditionalInformation13? PartyContactNarrative { get; init; }
+
     /// <summary>
     /// Provides information required for the registration.
     /// </summary>
     [IsoId("_akeZu-6QEeqc-LCjwLsUVg")]
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
-    public UpdatedAdditionalInformation13? RegistrationDetails { get; init; } 
-    
+    public UpdatedAdditionalInformation13? RegistrationDetails { get; init; }
+
     /// <summary>
     /// Provides additional information on the basket or index underlying a security, for example a warrant.
     /// </summary>
     [IsoId("_akeZw-6QEeqc-LCjwLsUVg")]
     [DisplayName("Basket Or Index Information")]
     [IsoXmlTag("BsktOrIndxInf")]
-    public UpdatedAdditionalInformation13? BasketOrIndexInformation { get; init; } 
-    
+    public UpdatedAdditionalInformation13? BasketOrIndexInformation { get; init; }
+
     /// <summary>
     /// Provides additional information about the type of certification/breakdown required.
     /// </summary>
     [IsoId("_akeZy-6QEeqc-LCjwLsUVg")]
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
-    public UpdatedAdditionalInformation13? CertificationBreakdown { get; init; } 
-    
+    public UpdatedAdditionalInformation13? CertificationBreakdown { get; init; }
+
     /// <summary>
     /// Provides the web address published for the event, that is, the address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
     /// </summary>
     [IsoId("_akeZze6QEeqc-LCjwLsUVg")]
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
-    public UpdatedURLlnformation4? URLAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public UpdatedURLlnformation4? URLAddress { get; init; }
 }

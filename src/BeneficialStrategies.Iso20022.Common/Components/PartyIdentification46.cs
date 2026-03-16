@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Rpl8YeaPEd-q8fx_Zl_34A")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification46
+public record PartyIdentification46
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the party.
     /// </summary>
     [IsoId("_Rpl8Y-aPEd-q8fx_Zl_34A")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required PartyIdentification44Choice_ Identification { get; init; } 
-    
+    public required PartyIdentification44Choice_ Identification { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the transaction for the party identified.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record PartyIdentification46
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ProcessingIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ProcessingIdentification { get; init; }
 }

@@ -23,7 +23,7 @@ public enum ResidentialStatusCode
     [IsoId("_ZU0_Ytp-Ed-ak6NoX_4Aeg_-1093909086")]
     [Description(@"Resident.")]
     Resident,
-    
+
     /// <summary>
     /// Permanent resident.
     /// Encoded/decoded by serializers as &quot;PRES&quot;.
@@ -32,7 +32,7 @@ public enum ResidentialStatusCode
     [IsoId("_ZU0_Y9p-Ed-ak6NoX_4Aeg_-1073588583")]
     [Description(@"Permanent resident.")]
     PermanentResident,
-    
+
     /// <summary>
     /// Non-resident.
     /// Encoded/decoded by serializers as &quot;NRES&quot;.
@@ -41,5 +41,4 @@ public enum ResidentialStatusCode
     [IsoId("_ZU0_ZNp-Ed-ak6NoX_4Aeg_-1065279846")]
     [Description(@"Non-resident.")]
     NonResident,
-    
 }

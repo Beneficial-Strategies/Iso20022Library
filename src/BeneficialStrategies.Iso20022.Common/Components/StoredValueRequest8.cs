@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7GOAYaEPEe-MRKYsaX6JDg")]
 [DisplayName("Stored Value Request8")]
-public partial record StoredValueRequest8
+public record StoredValueRequest8
 {
-    #nullable enable
-
     /// <summary>
     /// Data.
     /// </summary>
@@ -30,9 +28,5 @@ public partial record StoredValueRequest8
     /// </summary>
     [DisplayName("Sale Transaction Identification")]
     [IsoXmlTag("SaleTxId")]
-    public TransactionIdentifier1? SaleTransactionIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public TransactionIdentifier1? SaleTransactionIdentification { get; init; }
 }

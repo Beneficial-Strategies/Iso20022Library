@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DefinedAttributes1Choice.QuantityDefinedAttributes))]
     [KnownType(typeof(DefinedAttributes1Choice.ValueDefinedAttributes))]
-    [JsonDerivedType(typeof(DefinedAttributes1Choice.QuantityDefinedAttributes),nameof(DefinedAttributes1Choice.QuantityDefinedAttributes))]
-    [JsonDerivedType(typeof(DefinedAttributes1Choice.ValueDefinedAttributes),nameof(DefinedAttributes1Choice.ValueDefinedAttributes))]
+    [JsonDerivedType(
+        typeof(DefinedAttributes1Choice.QuantityDefinedAttributes),
+        nameof(DefinedAttributes1Choice.QuantityDefinedAttributes)
+    )]
+    [JsonDerivedType(
+        typeof(DefinedAttributes1Choice.ValueDefinedAttributes),
+        nameof(DefinedAttributes1Choice.ValueDefinedAttributes)
+    )]
     [IsoId("_wa3m8OPJEea7_eMQH225xA")]
     [DisplayName("Defined Attributes 1 Choice")]
-    public abstract partial record DefinedAttributes1Choice_
-    {
-    }
+    public abstract record DefinedAttributes1Choice_ { }
 }

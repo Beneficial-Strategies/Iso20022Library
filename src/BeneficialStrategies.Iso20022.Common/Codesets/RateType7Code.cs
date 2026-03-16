@@ -23,7 +23,7 @@ public enum RateType7Code
     [IsoId("_ZZmKpdp-Ed-ak6NoX_4Aeg_-218272353")]
     [Description(@"Rate of the scheduled payment.")]
     Scheduled = InterestRateTypeCode.Scheduled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate of the unscheduled payment.
     /// Encoded/decoded by serializers as &quot;USCD&quot;.
@@ -32,5 +32,4 @@ public enum RateType7Code
     [IsoId("_ZZmKptp-Ed-ak6NoX_4Aeg_-218272323")]
     [Description(@"Rate of the unscheduled payment.")]
     Unscheduled = InterestRateTypeCode.Unscheduled, // same ordinal as derivation source for type conversions
-    
 }

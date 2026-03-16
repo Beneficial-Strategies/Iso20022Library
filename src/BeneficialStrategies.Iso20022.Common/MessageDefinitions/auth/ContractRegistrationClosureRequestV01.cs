@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
@@ -19,70 +17,63 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// The ContractRegistrationClosureRequest message is sent by the reporting party to the registration agent to close the registered contract subject to currency control.
 /// </summary>
-[Description(@"The ContractRegistrationClosureRequest message is sent by the reporting party to the registration agent to close the registered contract subject to currency control.")]
+[Description(
+    @"The ContractRegistrationClosureRequest message is sent by the reporting party to the registration agent to close the registered contract subject to currency control."
+)]
 [IsoId("_v30CsNL8EeSDLevdaFPXHw")]
 [DisplayName("Contract Registration Closure Request V")]
-public partial record ContractRegistrationClosureRequestV01 : IOuterRecord
+public record ContractRegistrationClosureRequestV01 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "auth.020.001.01";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "CtrctRegnClsrReq";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:auth.020.001.01";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Characteristics shared by all individual items included in the message.
     /// </summary>
     [IsoId("_DxKLsNL9EeSDLevdaFPXHw")]
     [DisplayName("Group Header")]
     [IsoXmlTag("GrpHdr")]
-    public required CurrencyControlHeader1 GroupHeader { get; init; } 
-    
+    public required CurrencyControlHeader1 GroupHeader { get; init; }
+
     /// <summary>
     /// Details on the closure of the registered contract.
     /// </summary>
     [IsoId("_HBJVwNL9EeSDLevdaFPXHw")]
     [DisplayName("Registered Contract Closure")]
     [IsoXmlTag("RegdCtrctClsr")]
-    public required RegisteredContract2 RegisteredContractClosure { get; init; } 
-    
+    public required RegisteredContract2 RegisteredContractClosure { get; init; }
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_-phjQdObEeS75MhTUaTyUQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since ContractRegistrationClosureRequestV01Document is not really part of the logical business domain model, 
+// Since ContractRegistrationClosureRequestV01Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to ContractRegistrationClosureRequestV01.
-

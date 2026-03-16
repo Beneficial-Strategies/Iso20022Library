@@ -23,7 +23,7 @@ public enum PrioritisationCode
     [IsoId("_aKBiBdp-Ed-ak6NoX_4Aeg_335004688")]
     [Description(@"None of the sides should be prioritised.")]
     None,
-    
+
     /// <summary>
     /// Buy side is prioritized.
     /// Encoded/decoded by serializers as &quot;BSPR&quot;.
@@ -32,7 +32,7 @@ public enum PrioritisationCode
     [IsoId("_aKBiBtp-Ed-ak6NoX_4Aeg_393187379")]
     [Description(@"Buy side is prioritized.")]
     BuySide,
-    
+
     /// <summary>
     /// Sell side is prioritised.
     /// Encoded/decoded by serializers as &quot;SSPR&quot;.
@@ -41,5 +41,4 @@ public enum PrioritisationCode
     [IsoId("_aKBiB9p-Ed-ak6NoX_4Aeg_734890661")]
     [Description(@"Sell side is prioritised.")]
     SellSide,
-    
 }

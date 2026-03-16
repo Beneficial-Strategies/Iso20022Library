@@ -23,7 +23,7 @@ public enum CollateralCode
     [IsoId("_Ey4TkCC-EeWPMvNwVtiMsA")]
     [Description(@"Item is used as collateral.")]
     Collateral,
-    
+
     /// <summary>
     /// Item is not used as collateral.
     /// Encoded/decoded by serializers as &quot;NCOL&quot;.
@@ -32,5 +32,4 @@ public enum CollateralCode
     [IsoId("_JkxVQCC-EeWPMvNwVtiMsA")]
     [Description(@"Item is not used as collateral.")]
     NotCollateral,
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YczLMNp-Ed-ak6NoX_4Aeg_945714582")]
-[Description(@"Determines how the variation margin requirement will be calculated, either net or gross.")]
+[Description(
+    @"Determines how the variation margin requirement will be calculated, either net or gross."
+)]
 [DerivedFrom(typeof(ExposureConventionTypeCode))]
 public enum ExposureConventionType1Code
 {
@@ -21,16 +23,19 @@ public enum ExposureConventionType1Code
     /// </summary>
     [EnumMember(Value = "GROS")]
     [IsoId("_YczLMdp-Ed-ak6NoX_4Aeg_-886123604")]
-    [Description(@"Indicates that the exposed amount to party A and B will be netted together for the variation margin calculation, and then two separate variation margin requirements will be determined.")]
+    [Description(
+        @"Indicates that the exposed amount to party A and B will be netted together for the variation margin calculation, and then two separate variation margin requirements will be determined."
+    )]
     Gross = ExposureConventionTypeCode.Gross, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the exposed amount to party A and B will be netted together for the variation margin calculation.
     /// Encoded/decoded by serializers as &quot;NET1&quot;.
     /// </summary>
     [EnumMember(Value = "NET1")]
     [IsoId("_YczLMtp-Ed-ak6NoX_4Aeg_528113018")]
-    [Description(@"Indicates that the exposed amount to party A and B will be netted together for the variation margin calculation.")]
+    [Description(
+        @"Indicates that the exposed amount to party A and B will be netted together for the variation margin calculation."
+    )]
     Net = ExposureConventionTypeCode.Net, // same ordinal as derivation source for type conversions
-    
 }

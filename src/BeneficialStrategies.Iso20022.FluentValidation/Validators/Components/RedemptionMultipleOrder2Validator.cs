@@ -50,7 +50,9 @@ public sealed class RedemptionMultipleOrder2Validator : AbstractValidator<Redemp
         // IndividualOrderDetails is 1..∞ but the C# model allows empty (model defect — see XML doc).
         RuleFor(x => x.IndividualOrderDetails)
             .NotEmpty()
-                .WithMessage("RedemptionMultipleOrder2.IndividualOrderDetails must contain at least one element (1..∞).");
+            .WithMessage(
+                "RedemptionMultipleOrder2.IndividualOrderDetails must contain at least one element (1..∞)."
+            );
 
         // BulkCashSettlementDetails1Rule and SettlementCurrency5Rule: business-context only —
         // cannot be enforced structurally. See XML doc on this class for the full constraint text.

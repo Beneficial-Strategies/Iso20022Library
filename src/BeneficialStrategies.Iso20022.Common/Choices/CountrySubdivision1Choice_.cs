@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CountrySubdivision1Choice.Code))]
     [KnownType(typeof(CountrySubdivision1Choice.Proprietary))]
-    [JsonDerivedType(typeof(CountrySubdivision1Choice.Code),nameof(CountrySubdivision1Choice.Code))]
-    [JsonDerivedType(typeof(CountrySubdivision1Choice.Proprietary),nameof(CountrySubdivision1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CountrySubdivision1Choice.Code),
+        nameof(CountrySubdivision1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CountrySubdivision1Choice.Proprietary),
+        nameof(CountrySubdivision1Choice.Proprietary)
+    )]
     [IsoId("_93jww3ltEeG7BsjMvd1mEw_-652907596")]
     [DisplayName("Country Subdivision 1 Choice")]
-    public abstract partial record CountrySubdivision1Choice_
-    {
-    }
+    public abstract record CountrySubdivision1Choice_ { }
 }

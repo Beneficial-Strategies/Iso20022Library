@@ -24,5 +24,4 @@ public enum MessageFunction25Code
     [IsoId("_KsoZoemuEemNVKPwszFC-A")]
     [Description(@"Message function is a request.")]
     Request = MessageFunctionCode.Request, // same ordinal as derivation source for type conversions
-    
 }

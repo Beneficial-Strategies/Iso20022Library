@@ -48,41 +48,53 @@ public sealed class FIToFIPaymentCancellationRequestV10Validator
 
         RuleFor(x => x.Assignment)
             .NotNull()
-                .WithMessage("FIToFIPaymentCancellationRequestV10.Assignment is required (CaseAssignment5, 1..1).")
+            .WithMessage(
+                "FIToFIPaymentCancellationRequestV10.Assignment is required (CaseAssignment5, 1..1)."
+            )
             .SetValidator(new CaseAssignment5Validator());
 
         RuleFor(x => x.Underlying)
             .NotNull()
-                .WithMessage("FIToFIPaymentCancellationRequestV10.Underlying is required (UnderlyingTransaction28, 1..1).")
+            .WithMessage(
+                "FIToFIPaymentCancellationRequestV10.Underlying is required (UnderlyingTransaction28, 1..1)."
+            )
             .SetValidator(new UnderlyingTransaction28Validator());
 
         // ── Optional building blocks — validate when present ─────────────────────────
 
-        When(x => x.Case is not null, () =>
-            RuleFor(x => x.Case).SetValidator(new Case5Validator()!));
+        When(
+            x => x.Case is not null,
+            () => RuleFor(x => x.Case).SetValidator(new Case5Validator()!)
+        );
 
-        When(x => x.ControlData is not null, () =>
-            RuleFor(x => x.ControlData).SetValidator(new ControlData1Validator()!));
+        When(
+            x => x.ControlData is not null,
+            () => RuleFor(x => x.ControlData).SetValidator(new ControlData1Validator()!)
+        );
 
         // ── Cross-field: MessageOrGroupCaseRule / MessageOrTransactionCaseRule ───────
         // Spec: Case may be present at either Case, OriginalGroupInformationAndCancellation,
         // or TransactionInformation level — not more than one simultaneously.
         RuleFor(x => x)
             .Must(NoCaseDuplication)
-                .WithName("MessageOrGroupCaseRule")
-                .WithMessage(
-                    "Case identification must appear in at most one location: message-level Case, " +
-                    "Underlying.OriginalGroupInformationAndCancellation.Case, or " +
-                    "Underlying.TransactionInformation.Case " +
-                    "(MessageOrGroupCaseRule / MessageOrTransactionCaseRule).");
+            .WithName("MessageOrGroupCaseRule")
+            .WithMessage(
+                "Case identification must appear in at most one location: message-level Case, "
+                    + "Underlying.OriginalGroupInformationAndCancellation.Case, or "
+                    + "Underlying.TransactionInformation.Case "
+                    + "(MessageOrGroupCaseRule / MessageOrTransactionCaseRule)."
+            );
     }
 
     private static bool NoCaseDuplication(FIToFIPaymentCancellationRequestV10 msg)
     {
         int count = 0;
-        if (msg.Case is not null) count++;
-        if (msg.Underlying?.OriginalGroupInformationAndCancellation?.Case is not null) count++;
-        if (msg.Underlying?.TransactionInformation?.Case is not null) count++;
+        if (msg.Case is not null)
+            count++;
+        if (msg.Underlying?.OriginalGroupInformationAndCancellation?.Case is not null)
+            count++;
+        if (msg.Underlying?.TransactionInformation?.Case is not null)
+            count++;
         return count <= 1;
     }
 }

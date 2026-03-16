@@ -23,7 +23,7 @@ public enum NegotiatedTrade1Code
     [IsoId("_aNJuhdp-Ed-ak6NoX_4Aeg_1840573471")]
     [Description(@"Trade is negotiated.")]
     Negotiated = NegotiatedTradeCode.Negotiated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade is not negotiated.
     /// Encoded/decoded by serializers as &quot;NNGO&quot;.
@@ -32,7 +32,7 @@ public enum NegotiatedTrade1Code
     [IsoId("_aNJuhtp-Ed-ak6NoX_4Aeg_1840573506")]
     [Description(@"Trade is not negotiated.")]
     NotNegotiated = NegotiatedTradeCode.NotNegotiated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Whether the trade is negotiated or not is unknown.
     /// Encoded/decoded by serializers as &quot;UNKW&quot;.
@@ -41,5 +41,4 @@ public enum NegotiatedTrade1Code
     [IsoId("_aNJuh9p-Ed-ak6NoX_4Aeg_1840573524")]
     [Description(@"Whether the trade is negotiated or not is unknown.")]
     Unknown = NegotiatedTradeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

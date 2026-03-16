@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,51 +14,45 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ee_EgddnEeispNOuywCdbA")]
 [DisplayName("Price Information")]
-public partial record PriceInformation21
+public record PriceInformation21
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of price and information about the price.
     /// </summary>
     [IsoId("_eyBVQ9dnEeispNOuywCdbA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TypeOfPrice48Choice_ Type { get; init; } 
-    
+    public required TypeOfPrice48Choice_ Type { get; init; }
+
     /// <summary>
     /// Type of value in which the price is expressed.
     /// </summary>
     [IsoId("_eyBVS9dnEeispNOuywCdbA")]
     [DisplayName("Value Type")]
     [IsoXmlTag("ValTp")]
-    public required YieldedOrValueType1Choice_ ValueType { get; init; } 
-    
+    public required YieldedOrValueType1Choice_ ValueType { get; init; }
+
     /// <summary>
     /// Value of the price, for example, as a currency and value.
     /// </summary>
     [IsoId("_eyBVU9dnEeispNOuywCdbA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required PriceRateOrAmountOrUnknown2Choice_ Value { get; init; } 
-    
+    public required PriceRateOrAmountOrUnknown2Choice_ Value { get; init; }
+
     /// <summary>
     /// Place from which the price was obtained.
     /// </summary>
     [IsoId("_eyLGQddnEeispNOuywCdbA")]
     [DisplayName("Source Of Price")]
     [IsoXmlTag("SrcOfPric")]
-    public MarketIdentification89? SourceOfPrice { get; init; } 
-    
+    public MarketIdentification89? SourceOfPrice { get; init; }
+
     /// <summary>
     /// Date on which the price is obtained. With an investment fund, this is as stated in the prospectus.
     /// </summary>
     [IsoId("_eyLGSddnEeispNOuywCdbA")]
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
-    public DateAndDateTime2Choice_? QuotationDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateAndDateTime2Choice_? QuotationDate { get; init; }
 }

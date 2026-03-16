@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WxX1QZQ0Ee6HYLAajyhWIQ")]
 [DisplayName("Maintenance Delegation18")]
-public partial record MaintenanceDelegation18
+public record MaintenanceDelegation18
 {
-    #nullable enable
-
     /// <summary>
     /// Certificate.
     /// </summary>
@@ -30,28 +28,28 @@ public partial record MaintenanceDelegation18
     /// </summary>
     [DisplayName("Delegated Action")]
     [IsoXmlTag("DlgtdActn")]
-    public MaintenanceDelegateAction9? DelegatedAction { get; init; } 
+    public MaintenanceDelegateAction9? DelegatedAction { get; init; }
 
     /// <summary>
     /// Delegation Scope Definition.
     /// </summary>
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; } 
+    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
 
     /// <summary>
     /// Delegation Scope Identification.
     /// </summary>
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; } 
+    public IsoMax35Text? DelegationScopeIdentification { get; init; }
 
     /// <summary>
     /// Delegation Type.
     /// </summary>
     [DisplayName("Delegation Type")]
     [IsoXmlTag("DlgtnTp")]
-    public required TerminalManagementAction3Code DelegationType { get; init; } 
+    public required TerminalManagementAction3Code DelegationType { get; init; }
 
     /// <summary>
     /// Maintenance Service.
@@ -65,21 +63,22 @@ public partial record MaintenanceDelegation18
     /// </summary>
     [DisplayName("Parameter Data Set")]
     [IsoXmlTag("ParamDataSet")]
-    public AcceptorConfigurationDataSet5? ParameterDataSet { get; init; } 
+    public AcceptorConfigurationDataSet5? ParameterDataSet { get; init; }
 
     /// <summary>
     /// Partial Delegation.
     /// </summary>
     [DisplayName("Partial Delegation")]
     [IsoXmlTag("PrtlDlgtn")]
-    public IsoTrueFalseIndicator? PartialDelegation { get; init; } 
+    public IsoTrueFalseIndicator? PartialDelegation { get; init; }
 
     /// <summary>
     /// POI Identification Association.
     /// </summary>
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
-    public ValueList<MaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; init; } = [];
+    public ValueList<MaintenanceIdentificationAssociation1> POIIdentificationAssociation { get; init; } =
+        [];
 
     /// <summary>
     /// POI Subset.
@@ -94,8 +93,4 @@ public partial record MaintenanceDelegation18
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
     public ValueList<KEKIdentifier5> SymmetricKey { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

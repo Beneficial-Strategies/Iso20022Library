@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TerminationReason1Choice.Code))]
     [KnownType(typeof(TerminationReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TerminationReason1Choice.Code),nameof(TerminationReason1Choice.Code))]
-    [JsonDerivedType(typeof(TerminationReason1Choice.Proprietary),nameof(TerminationReason1Choice.Proprietary))]
+    [JsonDerivedType(typeof(TerminationReason1Choice.Code), nameof(TerminationReason1Choice.Code))]
+    [JsonDerivedType(
+        typeof(TerminationReason1Choice.Proprietary),
+        nameof(TerminationReason1Choice.Proprietary)
+    )]
     [IsoId("_932rsXltEeG7BsjMvd1mEw_1357060754")]
     [DisplayName("Termination Reason 1 Choice")]
-    public abstract partial record TerminationReason1Choice_
-    {
-    }
+    public abstract record TerminationReason1Choice_ { }
 }

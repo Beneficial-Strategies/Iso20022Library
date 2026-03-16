@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ValidationRuleSchemeName1Choice.Code))]
     [KnownType(typeof(ValidationRuleSchemeName1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ValidationRuleSchemeName1Choice.Code),nameof(ValidationRuleSchemeName1Choice.Code))]
-    [JsonDerivedType(typeof(ValidationRuleSchemeName1Choice.Proprietary),nameof(ValidationRuleSchemeName1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ValidationRuleSchemeName1Choice.Code),
+        nameof(ValidationRuleSchemeName1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ValidationRuleSchemeName1Choice.Proprietary),
+        nameof(ValidationRuleSchemeName1Choice.Proprietary)
+    )]
     [IsoId("_kAjWY9jGEeSD0e0ybx5L5Q")]
     [DisplayName("Validation Rule Scheme Name 1 Choice")]
-    public abstract partial record ValidationRuleSchemeName1Choice_
-    {
-    }
+    public abstract record ValidationRuleSchemeName1Choice_ { }
 }

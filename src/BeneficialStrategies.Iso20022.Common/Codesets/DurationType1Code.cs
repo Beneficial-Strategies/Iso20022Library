@@ -23,7 +23,7 @@ public enum DurationType1Code
     [IsoId("_J_AT8RVqEeWkV7eOBXXT7Q")]
     [Description(@"Duration is a year.")]
     Year = DurationTypeCode.Year, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every week.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -32,7 +32,7 @@ public enum DurationType1Code
     [IsoId("_KNSAgRVqEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every week.")]
     Week = DurationTypeCode.Week, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every six months or two times a year.
     /// Encoded/decoded by serializers as &quot;SEAS&quot;.
@@ -41,7 +41,7 @@ public enum DurationType1Code
     [IsoId("_KTiZgRVqEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every six months or two times a year.")]
     Season = DurationTypeCode.Season, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every three months or four times a year.
     /// Encoded/decoded by serializers as &quot;QURT&quot;.
@@ -50,7 +50,7 @@ public enum DurationType1Code
     [IsoId("_KfbgcRVqEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every three months or four times a year.")]
     Quarter = DurationTypeCode.Quarter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place every month or once a month.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -59,7 +59,7 @@ public enum DurationType1Code
     [IsoId("_Kta5IRVqEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every month or once a month.")]
     Month = DurationTypeCode.Month, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duration is a minute.
     /// Encoded/decoded by serializers as &quot;MNUT&quot;.
@@ -68,7 +68,7 @@ public enum DurationType1Code
     [IsoId("_Kxb2cRVqEeWkV7eOBXXT7Q")]
     [Description(@"Duration is a minute.")]
     Minute = DurationTypeCode.Minute, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duration is an hour.
     /// Encoded/decoded by serializers as &quot;HOUR&quot;.
@@ -77,7 +77,7 @@ public enum DurationType1Code
     [IsoId("_K9euYRVqEeWkV7eOBXXT7Q")]
     [Description(@"Duration is an hour.")]
     Hour = DurationTypeCode.Hour, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duration is a day.
     /// Encoded/decoded by serializers as &quot;DASD&quot;.
@@ -86,7 +86,7 @@ public enum DurationType1Code
     [IsoId("_LLdgARVqEeWkV7eOBXXT7Q")]
     [Description(@"Duration is a day.")]
     Day = DurationTypeCode.Day, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duration is expressed in another unit.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -95,5 +95,4 @@ public enum DurationType1Code
     [IsoId("_g4ZDwUDeEeWt96EosbOZ-w")]
     [Description(@"Duration is expressed in another unit.")]
     Other = DurationTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

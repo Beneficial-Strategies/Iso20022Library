@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eG_WwEX8Eeegp_DADCe7HQ")]
 [DisplayName("Settlement Service Date")]
-public partial record SettlementServiceDate1
+public record SettlementServiceDate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date requested for settlement.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SettlementServiceDate1
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; } 
-    
+    public IsoISODate? RequestedSettlementDate { get; init; }
+
     /// <summary>
     /// Actual date of settlement.
     /// ISO 8583 bit 15.
@@ -35,8 +33,8 @@ public partial record SettlementServiceDate1
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? SettlementDate { get; init; } 
-    
+    public IsoISODate? SettlementDate { get; init; }
+
     /// <summary>
     /// Actual time of settlement.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record SettlementServiceDate1
     [DisplayName("Settlement Time")]
     [IsoXmlTag("SttlmTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? SettlementTime { get; init; } 
-    
+    public IsoISOTime? SettlementTime { get; init; }
+
     /// <summary>
     /// Identifies the settlement period, cycle or group. May contain settlement frequency or the identification of specific settlement period. For example, daily, monthly or settlementperiod123acd.
     /// </summary>
@@ -53,19 +51,15 @@ public partial record SettlementServiceDate1
     [DisplayName("Settlement Period")]
     [IsoXmlTag("SttlmPrd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SettlementPeriod { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SettlementPeriod { get; init; }
+
     /// <summary>
-    /// Identifies the effective end time of the settlement date and/or period. 
+    /// Identifies the effective end time of the settlement date and/or period.
     /// </summary>
     [IsoId("_OYpPo2p-EemXfKijhrqa-Q")]
     [DisplayName("Settlement Cut Off Time")]
     [IsoXmlTag("SttlmCutOffTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? SettlementCutOffTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODateTime? SettlementCutOffTime { get; init; }
 }

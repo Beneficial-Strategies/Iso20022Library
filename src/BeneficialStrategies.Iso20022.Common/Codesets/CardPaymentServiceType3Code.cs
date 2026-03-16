@@ -23,7 +23,7 @@ public enum CardPaymentServiceType3Code
     [IsoId("_TSz5ZwEcEeCQm6a_G2yO_w_766984968")]
     [Description(@"Initial reservation.")]
     InitialReservation = CardPaymentServiceTypeCode.InitialReservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update reservation.
     /// Encoded/decoded by serializers as &quot;URES&quot;.
@@ -32,7 +32,7 @@ public enum CardPaymentServiceType3Code
     [IsoId("_TSz5aAEcEeCQm6a_G2yO_w_-1875354820")]
     [Description(@"Update reservation.")]
     UpdateReservation = CardPaymentServiceTypeCode.UpdateReservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment after reservation.
     /// Encoded/decoded by serializers as &quot;PRES&quot;.
@@ -41,7 +41,7 @@ public enum CardPaymentServiceType3Code
     [IsoId("_TSz5aQEcEeCQm6a_G2yO_w_-1697236148")]
     [Description(@"Payment after reservation.")]
     PaymentReservation = CardPaymentServiceTypeCode.PaymentReservation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional payment after reservation.
     /// Encoded/decoded by serializers as &quot;ARES&quot;.
@@ -50,7 +50,7 @@ public enum CardPaymentServiceType3Code
     [IsoId("_TSz5agEcEeCQm6a_G2yO_w_-1989193886")]
     [Description(@"Additional payment after reservation.")]
     AdditionalPayment = CardPaymentServiceTypeCode.AdditionalPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Initial recurring payment.
     /// Encoded/decoded by serializers as &quot;FREC&quot;.
@@ -59,7 +59,7 @@ public enum CardPaymentServiceType3Code
     [IsoId("_TSz5awEcEeCQm6a_G2yO_w_-230087385")]
     [Description(@"Initial recurring payment.")]
     FirstRecurring = CardPaymentServiceTypeCode.FirstRecurring, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Repeat recurring payment.
     /// Encoded/decoded by serializers as &quot;RREC&quot;.
@@ -68,5 +68,4 @@ public enum CardPaymentServiceType3Code
     [IsoId("_TSz5bAEcEeCQm6a_G2yO_w_1422540123")]
     [Description(@"Repeat recurring payment.")]
     FollowingRecurring = CardPaymentServiceTypeCode.FollowingRecurring, // same ordinal as derivation source for type conversions
-    
 }

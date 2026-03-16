@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RDNicZ9rEe-nbM0aSPcoiQ")]
 [DisplayName("Reconciliation Response Data2")]
-public partial record ReconciliationResponseData2
+public record ReconciliationResponseData2
 {
-    #nullable enable
-
     /// <summary>
     /// POI Reconciliation Identification.
     /// </summary>
     [DisplayName("POI Reconciliation Identification")]
     [IsoXmlTag("POIRcncltnId")]
-    public IsoMax35Text? POIReconciliationIdentification { get; init; } 
+    public IsoMax35Text? POIReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Reconciliation Type.
     /// </summary>
     [DisplayName("Reconciliation Type")]
     [IsoXmlTag("RcncltnTp")]
-    public required ReconciliationType1Code ReconciliationType { get; init; } 
+    public required ReconciliationType1Code ReconciliationType { get; init; }
 
     /// <summary>
     /// Transaction Totals.
@@ -38,8 +36,4 @@ public partial record ReconciliationResponseData2
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
     public ValueList<TransactionTotalsSet2> TransactionTotals { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

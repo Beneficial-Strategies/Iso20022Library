@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vsXgeX1qEeGlwNeVP9egyg")]
 [DisplayName("Presentation")]
-public partial record Presentation4
+public record Presentation4
 {
-    #nullable enable
-    
     /// <summary>
     /// Medium through which the presentation can be submitted such as paper, electronic or both.
     /// </summary>
     [IsoId("_vsXgfH1qEeGlwNeVP9egyg")]
     [DisplayName("Medium")]
     [IsoXmlTag("Mdm")]
-    public PresentationMedium1Choice_? Medium { get; init; } 
-    
+    public PresentationMedium1Choice_? Medium { get; init; }
+
     /// <summary>
     /// Document required to be presented.
     /// </summary>
     [IsoId("_vsXgh31qEeGlwNeVP9egyg")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
-    public Document11? Document { get; init; } 
-    
+    public Document11? Document { get; init; }
+
     /// <summary>
     /// Additional information related to the presentation.
     /// </summary>
@@ -44,8 +42,4 @@ public partial record Presentation4
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

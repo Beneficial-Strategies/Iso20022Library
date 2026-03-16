@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L7E1YZNnEeytjZlcgApf6A")]
 [DisplayName("Corporate Sector Criteria")]
-public partial record CorporateSectorCriteria6
+public record CorporateSectorCriteria6
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates that reporting counterparty is a financial institution.
     /// </summary>
     [IsoId("_L70cQZNnEeytjZlcgApf6A")]
     [DisplayName("Financial Institution Sector")]
     [IsoXmlTag("FISctr")]
-    public FinancialPartySectorType2Code? FinancialInstitutionSector { get; init; } 
-    
+    public FinancialPartySectorType2Code? FinancialInstitutionSector { get; init; }
+
     /// <summary>
     /// Indicates that reporting counterparty is a non financial institution.
     /// </summary>
     [IsoId("_L70cQ5NnEeytjZlcgApf6A")]
     [DisplayName("Non Financial Institution Sector")]
     [IsoXmlTag("NFISctr")]
-    public NonFinancialPartySector1Code? NonFinancialInstitutionSector { get; init; } 
-    
+    public NonFinancialPartySector1Code? NonFinancialInstitutionSector { get; init; }
+
     /// <summary>
     /// Indicates that reporting counterparty is another type of counterparty as defined by specific regulations (e.g. a CCP) and the detailed sector is not reported.
     /// </summary>
     [IsoId("_L70cRZNnEeytjZlcgApf6A")]
     [DisplayName("Not Reported")]
     [IsoXmlTag("NotRptd")]
-    public NotReported1Code? NotReported { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NotReported1Code? NotReported { get; init; }
 }

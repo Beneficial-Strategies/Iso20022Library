@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TransactionCollateralData14Choice.BuySellBack))]
     [KnownType(typeof(TransactionCollateralData14Choice.SecuritiesLending))]
     [KnownType(typeof(TransactionCollateralData14Choice.MarginLending))]
-    [JsonDerivedType(typeof(TransactionCollateralData14Choice.RepurchaseTrade),nameof(TransactionCollateralData14Choice.RepurchaseTrade))]
-    [JsonDerivedType(typeof(TransactionCollateralData14Choice.BuySellBack),nameof(TransactionCollateralData14Choice.BuySellBack))]
-    [JsonDerivedType(typeof(TransactionCollateralData14Choice.SecuritiesLending),nameof(TransactionCollateralData14Choice.SecuritiesLending))]
-    [JsonDerivedType(typeof(TransactionCollateralData14Choice.MarginLending),nameof(TransactionCollateralData14Choice.MarginLending))]
+    [JsonDerivedType(
+        typeof(TransactionCollateralData14Choice.RepurchaseTrade),
+        nameof(TransactionCollateralData14Choice.RepurchaseTrade)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionCollateralData14Choice.BuySellBack),
+        nameof(TransactionCollateralData14Choice.BuySellBack)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionCollateralData14Choice.SecuritiesLending),
+        nameof(TransactionCollateralData14Choice.SecuritiesLending)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionCollateralData14Choice.MarginLending),
+        nameof(TransactionCollateralData14Choice.MarginLending)
+    )]
     [IsoId("_ksszMf_9Eemefbt-QjTNnA")]
     [DisplayName("Transaction Collateral Data 14 Choice")]
-    public abstract partial record TransactionCollateralData14Choice_
-    {
-    }
+    public abstract record TransactionCollateralData14Choice_ { }
 }

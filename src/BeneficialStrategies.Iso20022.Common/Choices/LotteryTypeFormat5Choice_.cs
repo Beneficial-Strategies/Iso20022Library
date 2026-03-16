@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LotteryTypeFormat5Choice.Code))]
     [KnownType(typeof(LotteryTypeFormat5Choice.Proprietary))]
-    [JsonDerivedType(typeof(LotteryTypeFormat5Choice.Code),nameof(LotteryTypeFormat5Choice.Code))]
-    [JsonDerivedType(typeof(LotteryTypeFormat5Choice.Proprietary),nameof(LotteryTypeFormat5Choice.Proprietary))]
+    [JsonDerivedType(typeof(LotteryTypeFormat5Choice.Code), nameof(LotteryTypeFormat5Choice.Code))]
+    [JsonDerivedType(
+        typeof(LotteryTypeFormat5Choice.Proprietary),
+        nameof(LotteryTypeFormat5Choice.Proprietary)
+    )]
     [IsoId("_cdS3gZKQEeWHWpTQn1FFVg")]
     [DisplayName("Lottery Type Format 5 Choice")]
-    public abstract partial record LotteryTypeFormat5Choice_
-    {
-    }
+    public abstract record LotteryTypeFormat5Choice_ { }
 }

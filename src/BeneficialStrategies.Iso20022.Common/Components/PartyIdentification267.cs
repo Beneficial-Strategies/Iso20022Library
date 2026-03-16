@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -15,10 +15,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6sPMvwauEe2phaVG0lYKTw")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification267
+public record PartyIdentification267
 {
-    #nullable enable
-    
     /// <summary>
     /// Code allocated to a financial or non-financial institution by the ISO 9362 Registration Authority, as described in ISO 9362 &quot;Banking - Banking telecommunication messages - Business identifier code (BIC)&quot;.
     /// </summary>
@@ -26,25 +24,21 @@ public partial record PartyIdentification267
     [DisplayName("BIC")]
     [IsoXmlTag("BIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public required IsoAnyBICDec2014Identifier BIC { get; init; } 
-    
+    public required IsoAnyBICDec2014Identifier BIC { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
     /// </summary>
     [IsoId("_6_A-owauEe2phaVG0lYKTw")]
     [DisplayName("Proprietary Identification")]
     [IsoXmlTag("PrtryId")]
-    public required GenericIdentification36 ProprietaryIdentification { get; init; } 
-    
+    public required GenericIdentification36 ProprietaryIdentification { get; init; }
+
     /// <summary>
     /// Identification of a party with its name and address in free text.
     /// </summary>
     [IsoId("_6_A-pQauEe2phaVG0lYKTw")]
     [DisplayName("Name And Address")]
     [IsoXmlTag("NmAndAdr")]
-    public NameAndAddress13? NameAndAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NameAndAddress13? NameAndAddress { get; init; }
 }

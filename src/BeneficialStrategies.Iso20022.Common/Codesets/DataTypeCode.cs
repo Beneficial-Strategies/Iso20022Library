@@ -23,7 +23,7 @@ public enum DataTypeCode
     [IsoId("_I7regEeBEeSzluxs8tdrVw")]
     [Description(@"Specified type of data is trading data.")]
     TradingData,
-    
+
     /// <summary>
     /// Specified type of data is exercise data.
     /// Encoded/decoded by serializers as &quot;EXDA&quot;.
@@ -32,5 +32,4 @@ public enum DataTypeCode
     [IsoId("_NweDMEeBEeSzluxs8tdrVw")]
     [Description(@"Specified type of data is exercise data.")]
     ExerciseData,
-    
 }

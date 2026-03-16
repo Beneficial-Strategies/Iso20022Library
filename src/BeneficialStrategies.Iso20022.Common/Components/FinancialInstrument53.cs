@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_a46r4PBqEeWTAY6i--T_aA")]
 [DisplayName("Financial Instrument")]
-public partial record FinancialInstrument53
+public record FinancialInstrument53
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the financial instrument using an ISIN.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record FinancialInstrument53
     [DisplayName("ISIN")]
     [IsoXmlTag("ISIN")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public IsoISINOct2015Identifier? ISIN { get; init; } 
-    
+    public IsoISINOct2015Identifier? ISIN { get; init; }
+
     /// <summary>
     /// The LEI code of the issuer where the instrument is referring to an issuer rather than one single instrument.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record FinancialInstrument53
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLEIIdentifier? LEI { get; init; }
 }

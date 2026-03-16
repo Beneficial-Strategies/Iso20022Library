@@ -23,7 +23,7 @@ public enum ActionType9Code
     [IsoId("_5CnNwQvBEeqgUfvUJi0f5w")]
     [Description(@"Server busy, try later.")]
     Busy = ActionTypeCode.Busy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Capture the card.
     /// Encoded/decoded by serializers as &quot;CPTR&quot;.
@@ -32,7 +32,7 @@ public enum ActionType9Code
     [IsoId("_5CnNwwvBEeqgUfvUJi0f5w")]
     [Description(@"Capture the card.")]
     CaptureCard = ActionTypeCode.CaptureCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message to display, print or log.
     /// Encoded/decoded by serializers as &quot;DISP&quot;.
@@ -41,16 +41,18 @@ public enum ActionType9Code
     [IsoId("_5CnNxQvBEeqgUfvUJi0f5w")]
     [Description(@"Message to display, print or log.")]
     DisplayMessage = ActionTypeCode.DisplayMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment application cannot propose to the merchant an override of the payment transaction.
     /// Encoded/decoded by serializers as &quot;NOVR&quot;.
     /// </summary>
     [EnumMember(Value = "NOVR")]
     [IsoId("_5CnNxwvBEeqgUfvUJi0f5w")]
-    [Description(@"Payment application cannot propose to the merchant an override of the payment transaction.")]
+    [Description(
+        @"Payment application cannot propose to the merchant an override of the payment transaction."
+    )]
     ForbidOverride = ActionTypeCode.ForbidOverride, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Additional identification required (passport, ID card, etc.).
     /// Encoded/decoded by serializers as &quot;RQID&quot;.
@@ -59,7 +61,7 @@ public enum ActionType9Code
     [IsoId("_5CnNyQvBEeqgUfvUJi0f5w")]
     [Description(@"Additional identification required (passport, ID card, etc.).")]
     IdentificationRequired = ActionTypeCode.IdentificationRequired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Last PIN (Personal Identification Number) try.
     /// Encoded/decoded by serializers as &quot;PINL&quot;.
@@ -68,7 +70,7 @@ public enum ActionType9Code
     [IsoId("_5CnNywvBEeqgUfvUJi0f5w")]
     [Description(@"Last PIN (Personal Identification Number) try.")]
     PINLastTry = ActionTypeCode.PINLastTry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// PIN (Personal Identification Number) is wrong, retry a PIN verification.
     /// Encoded/decoded by serializers as &quot;PINR&quot;.
@@ -77,7 +79,7 @@ public enum ActionType9Code
     [IsoId("_5CnNzQvBEeqgUfvUJi0f5w")]
     [Description(@"PIN (Personal Identification Number) is wrong, retry a PIN verification.")]
     PINRetry = ActionTypeCode.PINRetry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Print a message.
     /// Encoded/decoded by serializers as &quot;PRNT&quot;.
@@ -86,7 +88,7 @@ public enum ActionType9Code
     [IsoId("_5CnNzwvBEeqgUfvUJi0f5w")]
     [Description(@"Print a message.")]
     PrintMessage = ActionTypeCode.PrintMessage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Referral has to be performed.
     /// Encoded/decoded by serializers as &quot;RFRL&quot;.
@@ -95,16 +97,18 @@ public enum ActionType9Code
     [IsoId("_5CnN0QvBEeqgUfvUJi0f5w")]
     [Description(@"Referral has to be performed.")]
     Referral = ActionTypeCode.Referral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request additional data through a displayed text and request confirmation by an attendant.
     /// Encoded/decoded by serializers as &quot;RQDT&quot;.
     /// </summary>
     [EnumMember(Value = "RQDT")]
     [IsoId("_5CnN0wvBEeqgUfvUJi0f5w")]
-    [Description(@"Request additional data through a displayed text and request confirmation by an attendant.")]
+    [Description(
+        @"Request additional data through a displayed text and request confirmation by an attendant."
+    )]
     RequestData = ActionTypeCode.RequestData, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Ask the cardholder to accept the currency conversion.
     /// Encoded/decoded by serializers as &quot;DCCQ&quot;.
@@ -113,7 +117,7 @@ public enum ActionType9Code
     [IsoId("_5CnN1QvBEeqgUfvUJi0f5w")]
     [Description(@"Ask the cardholder to accept the currency conversion.")]
     AcceptCurrencyConversion = ActionTypeCode.AcceptCurrencyConversion, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fall-forward from contactless to chip card transaction required.
     /// Encoded/decoded by serializers as &quot;FLFW&quot;.
@@ -122,7 +126,7 @@ public enum ActionType9Code
     [IsoId("_5CnN1wvBEeqgUfvUJi0f5w")]
     [Description(@"Fall-forward from contactless to chip card transaction required.")]
     FallForward = ActionTypeCode.FallForward, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request Cardholder Authentification through PIN insertion.
     /// Encoded/decoded by serializers as &quot;PINQ&quot;.
@@ -131,16 +135,19 @@ public enum ActionType9Code
     [IsoId("_-6m74QvBEeqgUfvUJi0f5w")]
     [Description(@"Request Cardholder Authentification through PIN insertion.")]
     PINRequest = ActionTypeCode.PINRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request Cardholder Authentification according to the ConsumerDeviceCardholderVerificationMethod.
     /// Encoded/decoded by serializers as &quot;CDCV&quot;.
     /// </summary>
     [EnumMember(Value = "CDCV")]
     [IsoId("__4KwUQvBEeqgUfvUJi0f5w")]
-    [Description(@"Request Cardholder Authentification according to the ConsumerDeviceCardholderVerificationMethod.")]
-    ConsumerDeviceCardholderVerificationMethod = ActionTypeCode.ConsumerDeviceCardholderVerificationMethod, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Request Cardholder Authentification according to the ConsumerDeviceCardholderVerificationMethod."
+    )]
+    ConsumerDeviceCardholderVerificationMethod =
+        ActionTypeCode.ConsumerDeviceCardholderVerificationMethod, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Additional authentication of cardholder required.
     /// Encoded/decoded by serializers as &quot;CHDA&quot;.
@@ -149,5 +156,4 @@ public enum ActionType9Code
     [IsoId("_tSmGYRHiEeqHXfNbCUQ1KA")]
     [Description(@"Additional authentication of cardholder required.")]
     CardholderAuthentication = ActionTypeCode.CardholderAuthentication, // same ordinal as derivation source for type conversions
-    
 }

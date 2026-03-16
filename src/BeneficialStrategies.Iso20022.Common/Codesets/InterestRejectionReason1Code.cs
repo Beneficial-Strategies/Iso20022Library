@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YbKMcdp-Ed-ak6NoX_4Aeg_228557165")]
-[Description(@"Indicates whether the interest request is rejected due a value date or an interest amount difference.")]
+[Description(
+    @"Indicates whether the interest request is rejected due a value date or an interest amount difference."
+)]
 [DerivedFrom(typeof(InterestRejectionReasonCode))]
 public enum InterestRejectionReason1Code
 {
@@ -21,16 +23,19 @@ public enum InterestRejectionReason1Code
     /// </summary>
     [EnumMember(Value = "VADA")]
     [IsoId("_YbKMctp-Ed-ak6NoX_4Aeg_-74499350")]
-    [Description(@"Indicates whether the interest request is rejected due a value date difference.")]
+    [Description(
+        @"Indicates whether the interest request is rejected due a value date difference."
+    )]
     ValueDate = InterestRejectionReasonCode.ValueDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates whether the interest request is rejected due an interest amount difference.
     /// Encoded/decoded by serializers as &quot;DIAM&quot;.
     /// </summary>
     [EnumMember(Value = "DIAM")]
     [IsoId("_YbKMc9p-Ed-ak6NoX_4Aeg_1862725823")]
-    [Description(@"Indicates whether the interest request is rejected due an interest amount difference.")]
+    [Description(
+        @"Indicates whether the interest request is rejected due an interest amount difference."
+    )]
     DisputeAmount = InterestRejectionReasonCode.DisputeAmount, // same ordinal as derivation source for type conversions
-    
 }

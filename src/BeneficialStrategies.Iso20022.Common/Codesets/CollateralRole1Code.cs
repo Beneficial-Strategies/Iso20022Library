@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_pFIlUCDCEeaned5xL18mUQ")]
-[Description(@"Identifies whether the reporting counterparty is a collateral provider or a collateral taker.")]
+[Description(
+    @"Identifies whether the reporting counterparty is a collateral provider or a collateral taker."
+)]
 [DerivedFrom(typeof(CollateralRoleCode))]
 public enum CollateralRole1Code
 {
@@ -23,14 +25,13 @@ public enum CollateralRole1Code
     [IsoId("_qHyVISDCEeaned5xL18mUQ")]
     [Description(@"Collateral giver.")]
     CollateralGiver = CollateralRoleCode.CollateralGiver, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Collateral taker. 
+    /// Collateral taker.
     /// Encoded/decoded by serializers as &quot;TAKE&quot;.
     /// </summary>
     [EnumMember(Value = "TAKE")]
     [IsoId("_qPOZ4SDCEeaned5xL18mUQ")]
     [Description(@"Collateral taker. ")]
     CollateralTaker = CollateralRoleCode.CollateralTaker, // same ordinal as derivation source for type conversions
-    
 }

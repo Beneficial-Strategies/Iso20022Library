@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,58 +14,56 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vV7IVqMOEeCojJW5vEuTEQ_-501666863")]
 [DisplayName("Summary")]
-public partial record Summary1
+public record Summary1
 {
-    #nullable enable
-    
     /// <summary>
     /// Sum of the exposures of all transactions which are in the favour of party A. That is, all transactions which would have an amount payable by party B to party A if they were being terminated.
     /// </summary>
     [IsoId("_vV7IV6MOEeCojJW5vEuTEQ_1520216159")]
     [DisplayName("Exposed Amount Party A")]
     [IsoXmlTag("XpsdAmtPtyA")]
-    public ActiveCurrencyAndAmount? ExposedAmountPartyA { get; init; } 
-    
+    public ActiveCurrencyAndAmount? ExposedAmountPartyA { get; init; }
+
     /// <summary>
     /// Sum of the exposures of all transactions which are in the favour of party B. That is, all transactions which would have an amount payable by party A to party B if they were being terminated.
     /// </summary>
     [IsoId("_vWE5UKMOEeCojJW5vEuTEQ_-961807729")]
     [DisplayName("Exposed Amount Party B")]
     [IsoXmlTag("XpsdAmtPtyB")]
-    public ActiveCurrencyAndAmount? ExposedAmountPartyB { get; init; } 
-    
+    public ActiveCurrencyAndAmount? ExposedAmountPartyB { get; init; }
+
     /// <summary>
     /// Specifies the underlying business area/type of trade that triggered the posting of collateral.
     /// </summary>
     [IsoId("_vWE5UaMOEeCojJW5vEuTEQ_653500927")]
     [DisplayName("Exposure Type")]
     [IsoXmlTag("XpsrTp")]
-    public required ExposureType1Code ExposureType { get; init; } 
-    
+    public required ExposureType1Code ExposureType { get; init; }
+
     /// <summary>
     /// Total value of the collateral (post-haircut) held by the exposed party.
     /// </summary>
     [IsoId("_vWE5UqMOEeCojJW5vEuTEQ_-1909342264")]
     [DisplayName("Total Value Of Collateral")]
     [IsoXmlTag("TtlValOfColl")]
-    public required ActiveCurrencyAndAmount TotalValueOfCollateral { get; init; } 
-    
+    public required ActiveCurrencyAndAmount TotalValueOfCollateral { get; init; }
+
     /// <summary>
     /// Specifies the amount of collateral in excess or deficit compared to the exposure.
     /// </summary>
     [IsoId("_vWE5U6MOEeCojJW5vEuTEQ_463949589")]
     [DisplayName("Net Excess Deficit")]
     [IsoXmlTag("NetXcssDfcit")]
-    public ActiveCurrencyAndAmount? NetExcessDeficit { get; init; } 
-    
+    public ActiveCurrencyAndAmount? NetExcessDeficit { get; init; }
+
     /// <summary>
     /// Indicates whether the collateral actually posted is a long or a short position.
     /// </summary>
     [IsoId("_vWE5VKMOEeCojJW5vEuTEQ_-1224092740")]
     [DisplayName("Net Excess Deficit Indicator")]
     [IsoXmlTag("NetXcssDfcitInd")]
-    public ShortLong1Code? NetExcessDeficitIndicator { get; init; } 
-    
+    public ShortLong1Code? NetExcessDeficitIndicator { get; init; }
+
     /// <summary>
     /// Date/time at which the collateral was valued.
     /// </summary>
@@ -73,8 +71,8 @@ public partial record Summary1
     [DisplayName("Valuation Date Time")]
     [IsoXmlTag("ValtnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ValuationDateTime { get; init; } 
-    
+    public required IsoISODateTime ValuationDateTime { get; init; }
+
     /// <summary>
     /// Date on which the instructing party requests settlement of the collateral to take place.
     /// </summary>
@@ -82,17 +80,13 @@ public partial record Summary1
     [DisplayName("Requested Settlement Date")]
     [IsoXmlTag("ReqdSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RequestedSettlementDate { get; init; } 
-    
+    public IsoISODate? RequestedSettlementDate { get; init; }
+
     /// <summary>
     /// Provides the more details on the valuation of the collateral that is posted.
     /// </summary>
     [IsoId("_vWODQqMOEeCojJW5vEuTEQ_-1728273088")]
     [DisplayName("Summary Details")]
     [IsoXmlTag("SummryDtls")]
-    public SummaryAmounts1? SummaryDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SummaryAmounts1? SummaryDetails { get; init; }
 }

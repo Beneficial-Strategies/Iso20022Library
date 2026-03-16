@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialInstitutionIdentification4Choice.BIC))]
     [KnownType(typeof(FinancialInstitutionIdentification4Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(FinancialInstitutionIdentification4Choice.BIC),nameof(FinancialInstitutionIdentification4Choice.BIC))]
-    [JsonDerivedType(typeof(FinancialInstitutionIdentification4Choice.NameAndAddress),nameof(FinancialInstitutionIdentification4Choice.NameAndAddress))]
+    [JsonDerivedType(
+        typeof(FinancialInstitutionIdentification4Choice.BIC),
+        nameof(FinancialInstitutionIdentification4Choice.BIC)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstitutionIdentification4Choice.NameAndAddress),
+        nameof(FinancialInstitutionIdentification4Choice.NameAndAddress)
+    )]
     [IsoId("_QEzlhtp-Ed-ak6NoX_4Aeg_-827596048")]
     [DisplayName("Financial Institution Identification 4 Choice")]
-    public abstract partial record FinancialInstitutionIdentification4Choice_
-    {
-    }
+    public abstract record FinancialInstitutionIdentification4Choice_ { }
 }

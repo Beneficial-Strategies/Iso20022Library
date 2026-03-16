@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_TVyU7AEcEeCQm6a_G2yO_w_1327141076")]
 [Description(@"Entity or object in charge of verifying the cardholder authenticity.")]
-[Derivations(typeof(AuthenticationEntity1Code),typeof(AuthenticationEntity2Code))]
+[Derivations(typeof(AuthenticationEntity1Code), typeof(AuthenticationEntity2Code))]
 public enum AuthenticationEntityCode
 {
     /// <summary>
@@ -21,9 +21,11 @@ public enum AuthenticationEntityCode
     /// </summary>
     [EnumMember(Value = "ICCD")]
     [IsoId("_TVyU7QEcEeCQm6a_G2yO_w_-682815782")]
-    [Description(@"Application in the chip card (Integrated Circuit Card), for instance an offline PIN verification.")]
+    [Description(
+        @"Application in the chip card (Integrated Circuit Card), for instance an offline PIN verification."
+    )]
     ICC,
-    
+
     /// <summary>
     /// Authorisation agent of the issuer.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
@@ -32,7 +34,7 @@ public enum AuthenticationEntityCode
     [IsoId("_TVyU7gEcEeCQm6a_G2yO_w_-1994710956")]
     [Description(@"Authorisation agent of the issuer.")]
     AuthorisedAgent,
-    
+
     /// <summary>
     /// Merchant (for example signature verification by the attendant).
     /// Encoded/decoded by serializers as &quot;MERC&quot;.
@@ -41,7 +43,7 @@ public enum AuthenticationEntityCode
     [IsoId("_TVyU7wEcEeCQm6a_G2yO_w_1584042948")]
     [Description(@"Merchant (for example signature verification by the attendant).")]
     Merchant,
-    
+
     /// <summary>
     /// Acquirer of the transaction.
     /// Encoded/decoded by serializers as &quot;ACQR&quot;.
@@ -50,7 +52,7 @@ public enum AuthenticationEntityCode
     [IsoId("_kbETQGjoEeSDR-pyia6Xtg")]
     [Description(@"Acquirer of the transaction.")]
     Acquirer,
-    
+
     /// <summary>
     /// Card issuer.
     /// Encoded/decoded by serializers as &quot;ISSR&quot;.
@@ -59,7 +61,7 @@ public enum AuthenticationEntityCode
     [IsoId("_m_2kMGjoEeSDR-pyia6Xtg")]
     [Description(@"Card issuer.")]
     Issuer,
-    
+
     /// <summary>
     /// Secure application in the terminal.
     /// Encoded/decoded by serializers as &quot;TRML&quot;.
@@ -68,5 +70,4 @@ public enum AuthenticationEntityCode
     [IsoId("_sEs-IGjoEeSDR-pyia6Xtg")]
     [Description(@"Secure application in the terminal.")]
     Terminal,
-    
 }

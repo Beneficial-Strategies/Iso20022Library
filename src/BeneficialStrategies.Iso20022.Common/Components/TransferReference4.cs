@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SwnEd9p-Ed-ak6NoX_4Aeg_-1173422245")]
 [DisplayName("Transfer Reference")]
-public partial record TransferReference4
+public record TransferReference4
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification assigned by the new plan manager to each transfer of asset.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TransferReference4
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TransferReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for a transfer cancellation, as assigned by the instructing party.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record TransferReference4
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CancellationReference { get; init; }
 }

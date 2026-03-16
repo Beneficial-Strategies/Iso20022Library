@@ -23,16 +23,18 @@ public enum IntraPositionTransactionProcessingStatus1Code
     [IsoId("_aa3aY9p-Ed-ak6NoX_4Aeg_-836405991")]
     [Description(@"Instruction has been cancelled.")]
     Cancelled = InstructionProcessingStatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been acknowledged/accepted for further processing by the account servicer.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_aa3aZNp-Ed-ak6NoX_4Aeg_-836405652")]
-    [Description(@"Instruction has been acknowledged/accepted for further processing by the account servicer.")]
+    [Description(
+        @"Instruction has been acknowledged/accepted for further processing by the account servicer."
+    )]
     AcknowledgedAccepted = InstructionProcessingStatusCode.AcknowledgedAccepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been rejected for further processing.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -41,7 +43,7 @@ public enum IntraPositionTransactionProcessingStatus1Code
     [IsoId("_aa3aZdp-Ed-ak6NoX_4Aeg_-836405651")]
     [Description(@"Instruction has been rejected for further processing.")]
     Rejected = InstructionProcessingStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is accepted but in repair.
     /// Encoded/decoded by serializers as &quot;REPR&quot;.
@@ -50,5 +52,4 @@ public enum IntraPositionTransactionProcessingStatus1Code
     [IsoId("_aa3aZtp-Ed-ak6NoX_4Aeg_-836405621")]
     [Description(@"Instruction is accepted but in repair.")]
     InRepair = InstructionProcessingStatusCode.InRepair, // same ordinal as derivation source for type conversions
-    
 }

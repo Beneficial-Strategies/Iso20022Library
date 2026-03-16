@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_vVeyEA3eEeW9YKj3GUmIEw")]
 [Description(@"Specifies the day of the week of the delivery.")]
-[Derivations(typeof(WeekDay2Code),typeof(WeekDay3Code))]
+[Derivations(typeof(WeekDay2Code), typeof(WeekDay3Code))]
 public enum WeekDayCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum WeekDayCode
     [IsoId("_xLwXMA3eEeW9YKj3GUmIEw")]
     [Description(@"Weekdays.")]
     Weekdays,
-    
+
     /// <summary>
     /// Weekend.
     /// Encoded/decoded by serializers as &quot;WEND&quot;.
@@ -32,7 +32,7 @@ public enum WeekDayCode
     [IsoId("_nCYr8BVcEeWLrt6TQWUeiw")]
     [Description(@"Weekend.")]
     Weekend,
-    
+
     /// <summary>
     /// Monday.
     /// Encoded/decoded by serializers as &quot;MOND&quot;.
@@ -41,7 +41,7 @@ public enum WeekDayCode
     [IsoId("_nKkXkBVcEeWLrt6TQWUeiw")]
     [Description(@"Monday.")]
     Monday,
-    
+
     /// <summary>
     /// Tuesday.
     /// Encoded/decoded by serializers as &quot;TUED&quot;.
@@ -50,7 +50,7 @@ public enum WeekDayCode
     [IsoId("_nKkXkRVcEeWLrt6TQWUeiw")]
     [Description(@"Tuesday.")]
     Tuesday,
-    
+
     /// <summary>
     /// Wednesday.
     /// Encoded/decoded by serializers as &quot;WEDD&quot;.
@@ -59,7 +59,7 @@ public enum WeekDayCode
     [IsoId("_nKkXkhVcEeWLrt6TQWUeiw")]
     [Description(@"Wednesday.")]
     Wednesday,
-    
+
     /// <summary>
     /// Thursday.
     /// Encoded/decoded by serializers as &quot;THUD&quot;.
@@ -68,7 +68,7 @@ public enum WeekDayCode
     [IsoId("_nKkXkxVcEeWLrt6TQWUeiw")]
     [Description(@"Thursday.")]
     Thursday,
-    
+
     /// <summary>
     /// Friday.
     /// Encoded/decoded by serializers as &quot;FRID&quot;.
@@ -77,7 +77,7 @@ public enum WeekDayCode
     [IsoId("_nTC-IBVcEeWLrt6TQWUeiw")]
     [Description(@"Friday.")]
     Friday,
-    
+
     /// <summary>
     /// Saturday.
     /// Encoded/decoded by serializers as &quot;SATD&quot;.
@@ -86,7 +86,7 @@ public enum WeekDayCode
     [IsoId("_nTC-IRVcEeWLrt6TQWUeiw")]
     [Description(@"Saturday.")]
     Saturday,
-    
+
     /// <summary>
     /// Sunday.
     /// Encoded/decoded by serializers as &quot;SUND&quot;.
@@ -95,7 +95,7 @@ public enum WeekDayCode
     [IsoId("_na7u0BVcEeWLrt6TQWUeiw")]
     [Description(@"Sunday.")]
     Sunday,
-    
+
     /// <summary>
     /// All Days of the week.
     /// Encoded/decoded by serializers as &quot;ALLD&quot;.
@@ -104,7 +104,7 @@ public enum WeekDayCode
     [IsoId("_vbnBQJDoEeiZrojxmnmDSQ")]
     [Description(@"All Days of the week.")]
     AllDays,
-    
+
     /// <summary>
     /// Days of the week Including bank holidays.
     /// Encoded/decoded by serializers as &quot;IBHL&quot;.
@@ -113,7 +113,7 @@ public enum WeekDayCode
     [IsoId("__ggBMJDoEeiZrojxmnmDSQ")]
     [Description(@"Days of the week Including bank holidays.")]
     DaysIncludingBankHolidays,
-    
+
     /// <summary>
     /// Days of the week excluding bank holidays.
     /// Encoded/decoded by serializers as &quot;XBHL&quot;.
@@ -122,5 +122,4 @@ public enum WeekDayCode
     [IsoId("_feUBoZDpEeiZrojxmnmDSQ")]
     [Description(@"Days of the week excluding bank holidays.")]
     DaysExcludingBankHolidays,
-    
 }

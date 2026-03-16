@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("__-fWcz_lEeGQnbmlZjr_fQ")]
-[Description(@"Provides the status of the investigation response related to a previously sent request.")]
+[Description(
+    @"Provides the status of the investigation response related to a previously sent request."
+)]
 [Derivations(typeof(InvestigationStatus1Code))]
 public enum InvestigationStatusCode
 {
@@ -21,9 +23,11 @@ public enum InvestigationStatusCode
     /// </summary>
     [EnumMember(Value = "FOUN")]
     [IsoId("_Ksjbpz_mEeGQnbmlZjr_fQ")]
-    [Description(@"Search for requested data is complete, the data has been found and will be sent using a separate message flow.")]
+    [Description(
+        @"Search for requested data is complete, the data has been found and will be sent using a separate message flow."
+    )]
     DataFound,
-    
+
     /// <summary>
     /// Search for requested data is complete, data not found.
     /// Encoded/decoded by serializers as &quot;NFOU&quot;.
@@ -32,7 +36,7 @@ public enum InvestigationStatusCode
     [IsoId("_YnWilz_mEeGQnbmlZjr_fQ")]
     [Description(@"Search for requested data is complete, data not found.")]
     DataNotFound,
-    
+
     /// <summary>
     /// Search for requested data not complete yet.
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -41,5 +45,4 @@ public enum InvestigationStatusCode
     [IsoId("_szJtjT_mEeGQnbmlZjr_fQ")]
     [Description(@"Search for requested data not complete yet.")]
     NotApplicable,
-    
 }

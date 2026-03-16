@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCommunicationFormat1Code")]
-[Description(@"Specifies the communication format for statements in the format of a character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the communication format for statements in the format of a character string with a maximum length of 4 characters."
+)]
 [DerivedFrom(typeof(ExternalCommunicationFormatCode))]
-public enum ExternalCommunicationFormat1Code
-{
-}
+public enum ExternalCommunicationFormat1Code { }

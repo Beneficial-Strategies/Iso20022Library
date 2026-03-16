@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LegalStructure1Choice.Code))]
     [KnownType(typeof(LegalStructure1Choice.Proprietary))]
-    [JsonDerivedType(typeof(LegalStructure1Choice.Code),nameof(LegalStructure1Choice.Code))]
-    [JsonDerivedType(typeof(LegalStructure1Choice.Proprietary),nameof(LegalStructure1Choice.Proprietary))]
+    [JsonDerivedType(typeof(LegalStructure1Choice.Code), nameof(LegalStructure1Choice.Code))]
+    [JsonDerivedType(
+        typeof(LegalStructure1Choice.Proprietary),
+        nameof(LegalStructure1Choice.Proprietary)
+    )]
     [IsoId("_kfzX0DQeEeifw8iDiyZLmQ")]
     [DisplayName("Legal Structure 1 Choice")]
-    public abstract partial record LegalStructure1Choice_
-    {
-    }
+    public abstract record LegalStructure1Choice_ { }
 }

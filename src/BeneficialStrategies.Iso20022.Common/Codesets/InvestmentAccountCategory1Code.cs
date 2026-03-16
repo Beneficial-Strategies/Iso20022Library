@@ -21,16 +21,19 @@ public enum InvestmentAccountCategory1Code
     /// </summary>
     [EnumMember(Value = "MAND")]
     [IsoId("_HQJ88RRIEeOKWo1NF21OVw")]
-    [Description(@"Account is fully managed by the financial institution, that is, an investor gives a 'mandate' to the financial institution to execute a mutually agreed investment strategy on its behalf.")]
+    [Description(
+        @"Account is fully managed by the financial institution, that is, an investor gives a 'mandate' to the financial institution to execute a mutually agreed investment strategy on its behalf."
+    )]
     MandateAccount = InvestmentAccountCategoryCode.MandateAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account is a standard account managed by the investor. The investor issues instructions for the account to the financial institution.
     /// Encoded/decoded by serializers as &quot;RETA&quot;.
     /// </summary>
     [EnumMember(Value = "RETA")]
     [IsoId("_HZh7YRRIEeOKWo1NF21OVw")]
-    [Description(@"Account is a standard account managed by the investor. The investor issues instructions for the account to the financial institution.")]
+    [Description(
+        @"Account is a standard account managed by the investor. The investor issues instructions for the account to the financial institution."
+    )]
     RetailAccount = InvestmentAccountCategoryCode.RetailAccount, // same ordinal as derivation source for type conversions
-    
 }

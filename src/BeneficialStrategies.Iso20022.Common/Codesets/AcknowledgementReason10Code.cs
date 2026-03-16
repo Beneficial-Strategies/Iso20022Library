@@ -21,18 +21,22 @@ public enum AcknowledgementReason10Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_NDLHi5wZEeqtp-LOti013g")]
-    [Description(@"Received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = AcknowledgementReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is accepted but does not comply with the market practice rule published for the concerned market or process.
     /// Encoded/decoded by serializers as &quot;SMPG&quot;.
     /// </summary>
     [EnumMember(Value = "SMPG")]
     [IsoId("_NDLHjJwZEeqtp-LOti013g")]
-    [Description(@"Instruction is accepted but does not comply with the market practice rule published for the concerned market or process.")]
+    [Description(
+        @"Instruction is accepted but does not comply with the market practice rule published for the concerned market or process."
+    )]
     MarketPracticeRuleDiscrepency = AcknowledgementReasonCode.MarketPracticeRuleDiscrepency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +45,4 @@ public enum AcknowledgementReason10Code
     [IsoId("_NDLHkZwZEeqtp-LOti013g")]
     [Description(@"Other. See Narrative.")]
     Other = AcknowledgementReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

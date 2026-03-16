@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5qoZgRIlEeyLzJfz3xPQNA")]
 [DisplayName("Overall Collateral Details")]
-public partial record OverallCollateralDetails2
+public record OverallCollateralDetails2
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides details on the collateral valuation.
     /// </summary>
     [IsoId("_6CxMsRIlEeyLzJfz3xPQNA")]
     [DisplayName("Valuation Amounts")]
     [IsoXmlTag("ValtnAmts")]
-    public required CollateralAmount15 ValuationAmounts { get; init; } 
-    
+    public required CollateralAmount15 ValuationAmounts { get; init; }
+
     /// <summary>
     /// The collateral excess/shortage expressed in the percentage of the collateral required.
     /// </summary>
@@ -33,24 +31,24 @@ public partial record OverallCollateralDetails2
     [DisplayName("Margin Rate")]
     [IsoXmlTag("MrgnRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? MarginRate { get; init; } 
-    
+    public IsoPercentageRate? MarginRate { get; init; }
+
     /// <summary>
     /// Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message.
     /// </summary>
     [IsoId("_6CxMtRIlEeyLzJfz3xPQNA")]
     [DisplayName("Global Collateral Status")]
     [IsoXmlTag("GblCollSts")]
-    public CollateralStatus1Code? GlobalCollateralStatus { get; init; } 
-    
+    public CollateralStatus1Code? GlobalCollateralStatus { get; init; }
+
     /// <summary>
     /// Valuation date/time of both the collateral and the exposure.
     /// </summary>
     [IsoId("_6CxMtxIlEeyLzJfz3xPQNA")]
     [DisplayName("Valuation Date")]
     [IsoXmlTag("ValtnDt")]
-    public required DateAndDateTime2Choice_ ValuationDate { get; init; } 
-    
+    public required DateAndDateTime2Choice_ ValuationDate { get; init; }
+
     /// <summary>
     /// Provides additional information on the collateral.
     /// </summary>
@@ -58,10 +56,6 @@ public partial record OverallCollateralDetails2
     [DisplayName("Collateral Additional Details")]
     [IsoXmlTag("CollAddtlDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? CollateralAdditionalDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? CollateralAdditionalDetails { get; init; }
 }

@@ -23,7 +23,7 @@ public enum SpecialPurpose2Code
     [IsoId("_V-aLccVcEeiYpLQka876sg")]
     [Description(@"Blank value.")]
     Blank = SpecialPurposeCode.Blank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not available (N/A).
     /// Encoded/decoded by serializers as &quot;NTAV&quot;.
@@ -32,5 +32,4 @@ public enum SpecialPurpose2Code
     [IsoId("_WJ0xQsVcEeiYpLQka876sg")]
     [Description(@"Not available (N/A).")]
     NotAvailable = SpecialPurposeCode.NotAvailable, // same ordinal as derivation source for type conversions
-    
 }

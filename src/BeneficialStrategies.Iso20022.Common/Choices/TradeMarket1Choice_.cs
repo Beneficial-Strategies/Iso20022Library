@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeMarket1Choice.Code))]
     [KnownType(typeof(TradeMarket1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TradeMarket1Choice.Code),nameof(TradeMarket1Choice.Code))]
-    [JsonDerivedType(typeof(TradeMarket1Choice.Proprietary),nameof(TradeMarket1Choice.Proprietary))]
+    [JsonDerivedType(typeof(TradeMarket1Choice.Code), nameof(TradeMarket1Choice.Code))]
+    [JsonDerivedType(
+        typeof(TradeMarket1Choice.Proprietary),
+        nameof(TradeMarket1Choice.Proprietary)
+    )]
     [IsoId("_OTgzMzEx-AOSNFX-8224498")]
     [DisplayName("Trade Market 1 Choice")]
-    public abstract partial record TradeMarket1Choice_
-    {
-    }
+    public abstract record TradeMarket1Choice_ { }
 }

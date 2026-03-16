@@ -23,7 +23,7 @@ public enum EquityReturnParameter1Code
     [IsoId("_eyxSAQneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Return Dividend.")]
     ParameterReturnDividend = EquityReturnParameterCode.ParameterReturnDividend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Equity derivative parameter Return Variance.
     /// Encoded/decoded by serializers as &quot;PRVA&quot;.
@@ -32,7 +32,7 @@ public enum EquityReturnParameter1Code
     [IsoId("_e3rnMQneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Return Variance.")]
     ParameterReturnVariance = EquityReturnParameterCode.ParameterReturnVariance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Equity derivative parameter Return Volatility.
     /// Encoded/decoded by serializers as &quot;PRVO&quot;.
@@ -41,7 +41,7 @@ public enum EquityReturnParameter1Code
     [IsoId("_e_kX4QneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Return Volatility.")]
     ParameterReturnVolatility = EquityReturnParameterCode.ParameterReturnVolatility, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Equity derivative parameter Price Return Basis Performance.
     /// Encoded/decoded by serializers as &quot;PRBP&quot;.
@@ -49,6 +49,6 @@ public enum EquityReturnParameter1Code
     [EnumMember(Value = "PRBP")]
     [IsoId("_fD4QIQneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Price Return Basis Performance.")]
-    PriceReturnBasicPerformanceParameter = EquityReturnParameterCode.PriceReturnBasicPerformanceParameter, // same ordinal as derivation source for type conversions
-    
+    PriceReturnBasicPerformanceParameter =
+        EquityReturnParameterCode.PriceReturnBasicPerformanceParameter, // same ordinal as derivation source for type conversions
 }

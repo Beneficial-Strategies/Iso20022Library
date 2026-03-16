@@ -31,5 +31,4 @@ public enum ATMActionTypeCode
     [IsoId("_ATMActionTypeCode_None")]
     [Description(@"There is no specific action required with the received configuration.")]
     None,
-
 }

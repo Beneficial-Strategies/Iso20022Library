@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice
     /// </summary>
     [IsoId("_l0CXowgMEeSFYfyUKDXKaw")]
     [DisplayName("Cancellation By Reference")]
-    public partial record CancellationByReference : Cancellation7Choice_
+    public record CancellationByReference : Cancellation7Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identifier for a group of individual transfers as assigned by the instructing party. This identifier links the individual transfers together.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice
         [DisplayName("Master Reference")]
         [IsoXmlTag("MstrRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? MasterReference { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MasterReference { get; init; }
+
         /// <summary>
         /// Transfer and cancellation reference.
         /// </summary>
@@ -35,9 +33,5 @@ namespace BeneficialStrategies.Iso20022.Choices.Cancellation7Choice
         [IsoXmlTag("TrfRefs")]
         public ValueList<TransferReference8> TransferReferences { get; init; } = [];
         // ID for the above is _HzyxIy8FEeO59oUFO5eLvw
-        
-        
-        #nullable disable
-        
     }
 }

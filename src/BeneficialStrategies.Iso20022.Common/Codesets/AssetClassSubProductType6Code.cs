@@ -23,5 +23,4 @@ public enum AssetClassSubProductType6Code
     [IsoId("_61phYQnzEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type electricity.")]
     Electricity = AssetClassSubProductTypeCode.Electricity, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WIFWkNp-Ed-ak6NoX_4Aeg_-788758749")]
 [DisplayName("Additional Reference")]
-public partial record AdditionalReference5
+public record AdditionalReference5
 {
-    #nullable enable
-    
     /// <summary>
     /// Business reference of a message assigned by the party issuing the message. This reference must be unique amongst all messages of the same name sent by the same party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AdditionalReference5
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public required IsoRestrictedFINMax16Text Reference { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public required IsoRestrictedFINMax16Text Reference { get; init; }
+
     /// <summary>
     /// Name of a message.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record AdditionalReference5
     [DisplayName("Message Name")]
     [IsoXmlTag("MsgNm")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax15Text)]
-    [StringLength(maximumLength: 15 ,MinimumLength = 1)]
-    public IsoRestrictedFINMax15Text? MessageName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 15, MinimumLength = 1)]
+    public IsoRestrictedFINMax15Text? MessageName { get; init; }
 }

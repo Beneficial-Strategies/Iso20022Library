@@ -23,7 +23,7 @@ public enum CorporateActionEventStatus1Code
     [IsoId("_bEJA4tp-Ed-ak6NoX_4Aeg_2009797756")]
     [Description(@"The CA event is active.")]
     Active = CorporateActionEventStatusCode.Active, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The CA event is deactivated. The clients cannot send instruction anymore.
     /// Encoded/decoded by serializers as &quot;DEAC&quot;.
@@ -32,16 +32,18 @@ public enum CorporateActionEventStatus1Code
     [IsoId("_bEJA49p-Ed-ak6NoX_4Aeg_2009797785")]
     [Description(@"The CA event is deactivated. The clients cannot send instruction anymore.")]
     Deactivated = CorporateActionEventStatusCode.Deactivated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The CA event is expired, no more processing, claims, transformations take place.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
     /// </summary>
     [EnumMember(Value = "EXPI")]
     [IsoId("_bEJA5Np-Ed-ak6NoX_4Aeg_2009797786")]
-    [Description(@"The CA event is expired, no more processing, claims, transformations take place.")]
+    [Description(
+        @"The CA event is expired, no more processing, claims, transformations take place."
+    )]
     Expired = CorporateActionEventStatusCode.Expired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The CA event is cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -50,7 +52,7 @@ public enum CorporateActionEventStatus1Code
     [IsoId("_bEJA5dp-Ed-ak6NoX_4Aeg_2009797815")]
     [Description(@"The CA event is cancelled.")]
     Cancelled = CorporateActionEventStatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The CA event is withrawn, ie, cancelled by the market.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
@@ -59,5 +61,4 @@ public enum CorporateActionEventStatus1Code
     [IsoId("_bEJA5tp-Ed-ak6NoX_4Aeg_2009797846")]
     [Description(@"The CA event is withrawn, ie, cancelled by the market.")]
     Withdrawn = CorporateActionEventStatusCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
 }

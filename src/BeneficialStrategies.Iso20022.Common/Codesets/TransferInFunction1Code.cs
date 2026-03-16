@@ -21,9 +21,11 @@ public enum TransferInFunction1Code
     /// </summary>
     [EnumMember(Value = "ADRE")]
     [IsoId("_nxMJ0SVOEeWI0orciOKunQ")]
-    [Description(@"The transfer-in is an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer.")]
+    [Description(
+        @"The transfer-in is an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer."
+    )]
     AdviceAndRequest = TransferInFunctionCode.AdviceAndRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The transfer-in is an instruction.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -32,5 +34,4 @@ public enum TransferInFunction1Code
     [IsoId("_n5X1cSVOEeWI0orciOKunQ")]
     [Description(@"The transfer-in is an instruction.")]
     Instruction = TransferInFunctionCode.Instruction, // same ordinal as derivation source for type conversions
-    
 }

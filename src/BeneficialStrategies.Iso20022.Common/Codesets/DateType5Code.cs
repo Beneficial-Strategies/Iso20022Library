@@ -23,5 +23,4 @@ public enum DateType5Code
     [IsoId("_ayjhoNp-Ed-ak6NoX_4Aeg_957934914")]
     [Description(@"Open-dated, which indicates that the date has not been established.")]
     Open = DateTypeCode.Open, // same ordinal as derivation source for type conversions
-    
 }

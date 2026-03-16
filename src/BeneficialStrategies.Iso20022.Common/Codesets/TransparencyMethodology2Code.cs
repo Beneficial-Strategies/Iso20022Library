@@ -23,7 +23,7 @@ public enum TransparencyMethodology2Code
     [IsoId("_IUk-oXvuEeanCNPcMT7sSg")]
     [Description(@"Calculation based on yearly cycle.")]
     Year = TransparencyMethodologyCode.Year, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Results of calculations supporting Systematic Internaliser regime.
     /// Encoded/decoded by serializers as &quot;SINT&quot;.
@@ -32,7 +32,7 @@ public enum TransparencyMethodology2Code
     [IsoId("_IYpmUXvuEeanCNPcMT7sSg")]
     [Description(@"Results of calculations supporting Systematic Internaliser regime.")]
     SystematicInternaliser = TransparencyMethodologyCode.SystematicInternaliser, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Calculation based on first Four Weeks of Trading for Equity Instruments.
     /// Encoded/decoded by serializers as &quot;FFWK&quot;.
@@ -41,7 +41,7 @@ public enum TransparencyMethodology2Code
     [IsoId("_IcsY0XvuEeanCNPcMT7sSg")]
     [Description(@"Calculation based on first Four Weeks of Trading for Equity Instruments.")]
     FirstFourWeeks = TransparencyMethodologyCode.FirstFourWeeks, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Estimation for New Equity Instruments.
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -50,5 +50,4 @@ public enum TransparencyMethodology2Code
     [IsoId("_IgesoXvuEeanCNPcMT7sSg")]
     [Description(@"Estimation for New Equity Instruments.")]
     Estimated = TransparencyMethodologyCode.Estimated, // same ordinal as derivation source for type conversions
-    
 }

@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity26Choice.PercentageOfTotalRedemptionAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity26Choice.NetAmount))]
     [KnownType(typeof(FinancialInstrumentQuantity26Choice.GrossAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity26Choice.UnitsNumber),nameof(FinancialInstrumentQuantity26Choice.UnitsNumber))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity26Choice.PercentageOfTotalRedemptionAmount),nameof(FinancialInstrumentQuantity26Choice.PercentageOfTotalRedemptionAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity26Choice.NetAmount),nameof(FinancialInstrumentQuantity26Choice.NetAmount))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity26Choice.GrossAmount),nameof(FinancialInstrumentQuantity26Choice.GrossAmount))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity26Choice.UnitsNumber),
+        nameof(FinancialInstrumentQuantity26Choice.UnitsNumber)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity26Choice.PercentageOfTotalRedemptionAmount),
+        nameof(FinancialInstrumentQuantity26Choice.PercentageOfTotalRedemptionAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity26Choice.NetAmount),
+        nameof(FinancialInstrumentQuantity26Choice.NetAmount)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity26Choice.GrossAmount),
+        nameof(FinancialInstrumentQuantity26Choice.GrossAmount)
+    )]
     [IsoId("_AYbkQU_4Eea1ZIrmU5dI3w")]
     [DisplayName("Financial Instrument Quantity 26 Choice")]
-    public abstract partial record FinancialInstrumentQuantity26Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity26Choice_ { }
 }

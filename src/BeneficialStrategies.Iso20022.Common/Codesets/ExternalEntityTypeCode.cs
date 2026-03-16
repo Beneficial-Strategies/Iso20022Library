@@ -13,6 +13,4 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_zu_aYOIZEe-eFYnrXcX-mQ")]
 [Description(@"Specifies the type of entity.")]
 [Derivations(typeof(ExternalEntityType1Code))]
-public enum ExternalEntityTypeCode
-{
-}
+public enum ExternalEntityTypeCode { }

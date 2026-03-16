@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bTCYhdp-Ed-ak6NoX_4Aeg_2055089309")]
-[Description(@"Type of statement reporting on account holdings for corporate action events for example. reporting on multiple accounts or multiple events.")]
+[Description(
+    @"Type of statement reporting on account holdings for corporate action events for example. reporting on multiple accounts or multiple events."
+)]
 [DerivedFrom(typeof(CorporateActionStatementReportingTypeCode))]
 public enum CorporateActionStatementReportingType1Code
 {
@@ -23,7 +25,7 @@ public enum CorporateActionStatementReportingType1Code
     [IsoId("_bTCYhtp-Ed-ak6NoX_4Aeg_-1322387625")]
     [Description(@"The reporting is for a single event and for multiple accounts.")]
     MultipleAccounts = CorporateActionStatementReportingTypeCode.MultipleAccounts, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The reporting is for multiple events for a single account.
     /// Encoded/decoded by serializers as &quot;SAME&quot;.
@@ -32,5 +34,4 @@ public enum CorporateActionStatementReportingType1Code
     [IsoId("_bTCYh9p-Ed-ak6NoX_4Aeg_144761138")]
     [Description(@"The reporting is for multiple events for a single account.")]
     MultipleEvents = CorporateActionStatementReportingTypeCode.MultipleEvents, // same ordinal as derivation source for type conversions
-    
 }

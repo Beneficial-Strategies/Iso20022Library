@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_06D5001FEeGAs6v-iSb2RQ")]
 [DisplayName("Account And Parties")]
-public partial record AccountAndParties1
+public record AccountAndParties1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the account for the investigation.
     /// </summary>
     [IsoId("_3FiS_E1FEeGAs6v-iSb2RQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required CashAccount25 Identification { get; init; } 
-    
+    public required CashAccount25 Identification { get; init; }
+
     /// <summary>
     /// Specifies the investigated parties related to the account such as the owner, beneficiary, signatory or any party playing a role in that account for which the investigation needs to be done.
     /// </summary>
     [IsoId("_AX1IbE4wEeGFgOSp_IATnQ")]
     [DisplayName("Investigated Parties")]
     [IsoXmlTag("InvstgtdPties")]
-    public required InvestigatedParties1Choice_ InvestigatedParties { get; init; } 
-    
+    public required InvestigatedParties1Choice_ InvestigatedParties { get; init; }
+
     /// <summary>
     /// Identifies the authority request type as a code.
     /// </summary>
@@ -42,8 +40,4 @@ public partial record AccountAndParties1
     [IsoXmlTag("AuthrtyReqTp")]
     public ValueList<AuthorityRequestType1> AuthorityRequestType { get; init; } = [];
     // ID for the above is _EcwSUUyvEeGcV5yVhSZuNw
-    
-    
-    #nullable disable
-    
 }

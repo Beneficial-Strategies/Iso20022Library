@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YdP3INp-Ed-ak6NoX_4Aeg_1299879521")]
-[Description(@"Specifies the reason why the instruction/cancellation request has a rejected status.")]
+[Description(
+    @"Specifies the reason why the instruction/cancellation request has a rejected status."
+)]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum RejectionReasonV021Code
@@ -24,7 +26,7 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3Idp-Ed-ak6NoX_4Aeg_1999872429")]
     [Description(@"Unrecognised or invalid financial instrument identification.")]
     InvalidSecurity = RejectionReasonV2Code.InvalidSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised event number.
     /// Encoded/decoded by serializers as &quot;EVNM&quot;.
@@ -33,7 +35,7 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3Itp-Ed-ak6NoX_4Aeg_-350016373")]
     [Description(@"Unrecognised event number.")]
     UnrecognisedIdentification = RejectionReasonV2Code.UnrecognisedIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial instrument&apos;s symbol has not been recognized.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -42,7 +44,7 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3I9p-Ed-ak6NoX_4Aeg_-247276084")]
     [Description(@"Financial instrument's symbol has not been recognized.")]
     UnknownSymbol = RejectionReasonV2Code.UnknownSymbol, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insufficient collateral proposed.
     /// Encoded/decoded by serializers as &quot;ICOL&quot;.
@@ -51,7 +53,7 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3JNp-Ed-ak6NoX_4Aeg_1055915474")]
     [Description(@"Insufficient collateral proposed.")]
     InsufficientCollateral = RejectionReasonV2Code.InsufficientCollateral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Concentration limit was exceeded.
     /// Encoded/decoded by serializers as &quot;CONL&quot;.
@@ -60,7 +62,7 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3Jdp-Ed-ak6NoX_4Aeg_-2079163182")]
     [Description(@"Concentration limit was exceeded.")]
     ConcentrationLimitExceeded = RejectionReasonV2Code.ConcentrationLimitExceeded, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security is not eligible.
     /// Encoded/decoded by serializers as &quot;ELIG&quot;.
@@ -69,16 +71,18 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3Jtp-Ed-ak6NoX_4Aeg_1675525382")]
     [Description(@"Security is not eligible.")]
     NonEligibleSecurity = RejectionReasonV2Code.NonEligibleSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction contains an invalid message identification, identification is unknown.
     /// Encoded/decoded by serializers as &quot;INID&quot;.
     /// </summary>
     [EnumMember(Value = "INID")]
     [IsoId("_YdP3J9p-Ed-ak6NoX_4Aeg_701669872")]
-    [Description(@"Instruction contains an invalid message identification, identification is unknown.")]
+    [Description(
+        @"Instruction contains an invalid message identification, identification is unknown."
+    )]
     InvalidIdentification = RejectionReasonV2Code.InvalidIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -87,5 +91,4 @@ public enum RejectionReasonV021Code
     [IsoId("_YdP3KNp-Ed-ak6NoX_4Aeg_-249155275")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV2Code.Other, // same ordinal as derivation source for type conversions
-    
 }

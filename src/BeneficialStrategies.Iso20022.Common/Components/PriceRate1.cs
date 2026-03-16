@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qa2uBdp-Ed-ak6NoX_4Aeg_101667231")]
 [DisplayName("Price Rate")]
-public partial record PriceRate1
+public record PriceRate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of rate, eg, yield.
     /// </summary>
     [IsoId("_Qa2uBtp-Ed-ak6NoX_4Aeg_112748166")]
     [DisplayName("Rate Type")]
     [IsoXmlTag("RateTp")]
-    public required PriceRateType3FormatChoice_ RateType { get; init; } 
-    
+    public required PriceRateType3FormatChoice_ RateType { get; init; }
+
     /// <summary>
     /// Price expressed as a rate, ie, percentage.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record PriceRate1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoPercentageRate Rate { get; init; }
 }

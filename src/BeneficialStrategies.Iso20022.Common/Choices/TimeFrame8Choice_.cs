@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TimeFrame8Choice.TradePlus))]
     [KnownType(typeof(TimeFrame8Choice.RenunciationPlus))]
-    [JsonDerivedType(typeof(TimeFrame8Choice.TradePlus),nameof(TimeFrame8Choice.TradePlus))]
-    [JsonDerivedType(typeof(TimeFrame8Choice.RenunciationPlus),nameof(TimeFrame8Choice.RenunciationPlus))]
+    [JsonDerivedType(typeof(TimeFrame8Choice.TradePlus), nameof(TimeFrame8Choice.TradePlus))]
+    [JsonDerivedType(
+        typeof(TimeFrame8Choice.RenunciationPlus),
+        nameof(TimeFrame8Choice.RenunciationPlus)
+    )]
     [IsoId("_bxgQATgFEei6RvewLQWEqw")]
     [DisplayName("Time Frame 8 Choice")]
-    public abstract partial record TimeFrame8Choice_
-    {
-    }
+    public abstract record TimeFrame8Choice_ { }
 }

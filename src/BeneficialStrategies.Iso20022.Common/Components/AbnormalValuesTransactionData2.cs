@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x6yxOVyGEe24CqbZJK5XxA")]
 [DisplayName("Abnormal Values Transaction Data")]
-public partial record AbnormalValuesTransactionData2
+public record AbnormalValuesTransactionData2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a transaction.
     /// </summary>
     [IsoId("_x7sJEVyGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TradeTransactionIdentification24 TransactionIdentification { get; init; } 
-    
+    public required TradeTransactionIdentification24 TransactionIdentification { get; init; }
+
     /// <summary>
     /// Posting of an item to a cash account, in the context of a cash transaction, that results in an increase or decrease to the balance of the account.
     /// </summary>
     [IsoId("_x7sJE1yGEe24CqbZJK5XxA")]
     [DisplayName("Notional Amount")]
     [IsoXmlTag("NtnlAmt")]
-    public NotionalAmountLegs5? NotionalAmount { get; init; } 
-    
+    public NotionalAmountLegs5? NotionalAmount { get; init; }
+
     /// <summary>
     /// Indicates for each leg of the transaction the total notional quantity of the underlying asset for the term of the transaction.
     /// </summary>
     [IsoId("_x7sJFVyGEe24CqbZJK5XxA")]
     [DisplayName("Notional Quantity")]
     [IsoXmlTag("NtnlQty")]
-    public NotionalQuantityLegs5? NotionalQuantity { get; init; } 
-    
-    
-    #nullable disable
-    
+    public NotionalQuantityLegs5? NotionalQuantity { get; init; }
 }

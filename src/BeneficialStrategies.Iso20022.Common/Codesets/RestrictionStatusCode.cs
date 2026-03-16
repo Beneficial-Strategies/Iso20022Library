@@ -23,7 +23,7 @@ public enum RestrictionStatusCode
     [IsoId("_m71xICFnEeW9XJWqfgXIIA")]
     [Description(@"Status of the restriction is inactive.")]
     Inactive,
-    
+
     /// <summary>
     /// Status of the restriction is active.
     /// Encoded/decoded by serializers as &quot;ACTV&quot;.
@@ -32,5 +32,4 @@ public enum RestrictionStatusCode
     [IsoId("_q6q-MCFnEeW9XJWqfgXIIA")]
     [Description(@"Status of the restriction is active.")]
     Active,
-    
 }

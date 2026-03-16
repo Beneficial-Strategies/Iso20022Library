@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_RDOJRh-yEeuxStysDTgLiw")]
-[Description(@"Specifies the status for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets.")]
+[Description(
+    @"Specifies the status for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRuleStatus2Code
 {
@@ -24,7 +26,7 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9cSAeEeuSiN6KdHu9iw")]
     [Description(@"Accepted technical validation.")]
     AcceptedTechnicalValidation = ValidationRuleCode.AcceptedTechnicalValidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Accepted customer profile.
     /// Encoded/decoded by serializers as &quot;ACCP&quot;.
@@ -33,7 +35,7 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9cyAeEeuSiN6KdHu9iw")]
     [Description(@"Accepted customer profile.")]
     AcceptedCustomerProfile = ValidationRuleCode.AcceptedCustomerProfile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Accepted settlement in process.
     /// Encoded/decoded by serializers as &quot;ACSP&quot;.
@@ -42,7 +44,7 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9dSAeEeuSiN6KdHu9iw")]
     [Description(@"Accepted settlement in process.")]
     AcceptedSettlementInProcess = ValidationRuleCode.AcceptedSettlementInProcess, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Accepted settlement completed.
     /// Encoded/decoded by serializers as &quot;ACSC&quot;.
@@ -51,7 +53,7 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9dyAeEeuSiN6KdHu9iw")]
     [Description(@"Accepted settlement completed.")]
     AcceptedSettlementCompleted = ValidationRuleCode.AcceptedSettlementCompleted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Accepted cancellation request.
     /// Encoded/decoded by serializers as &quot;ACCR&quot;.
@@ -60,7 +62,7 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9eSAeEeuSiN6KdHu9iw")]
     [Description(@"Accepted cancellation request.")]
     AcceptedCancellationRequest = ValidationRuleCode.AcceptedCancellationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Accepted with change.
     /// Encoded/decoded by serializers as &quot;ACWC&quot;.
@@ -69,7 +71,7 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9eyAeEeuSiN6KdHu9iw")]
     [Description(@"Accepted with change.")]
     AcceptedWithChange = ValidationRuleCode.AcceptedWithChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pending.
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
@@ -78,5 +80,4 @@ public enum ValidationRuleStatus2Code
     [IsoId("_nXe9fSAeEeuSiN6KdHu9iw")]
     [Description(@"Pending.")]
     Pending = ValidationRuleCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

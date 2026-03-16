@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
     /// </summary>
     [IsoId("_CgNiAwgqEeSUG-8hqXsVMQ")]
     [DisplayName("De Minimus Not Applicable")]
-    public partial record DeMinimusNotApplicable : DeMinimus1Choice_
+    public record DeMinimusNotApplicable : DeMinimus1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Reason for the restricted person.
         /// </summary>
@@ -24,11 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.DeMinimus1Choice
         [DisplayName("Restricted Person Reason")]
         [IsoXmlTag("RstrctdPrsnRsn")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public required IsoMax350Text RestrictedPersonReason { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public required IsoMax350Text RestrictedPersonReason { get; init; }
     }
 }

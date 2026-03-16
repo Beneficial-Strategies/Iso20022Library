@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_00iAEXszEeSTS7uHCe8FPQ")]
 [DisplayName("Detailed Amount")]
-public partial record DetailedAmount9
+public record DetailedAmount9
 {
-    #nullable enable
-    
     /// <summary>
     /// Type or class of amount.
     /// </summary>
     [IsoId("_1CY14XszEeSTS7uHCe8FPQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required TypeOfAmount5Code Type { get; init; } 
-    
+    public required TypeOfAmount5Code Type { get; init; }
+
     /// <summary>
     /// Additional information to specify the type of amount.
     /// </summary>
@@ -33,17 +31,17 @@ public partial record DetailedAmount9
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AdditionalType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AdditionalType { get; init; }
+
     /// <summary>
     /// Amount value.
     /// </summary>
     [IsoId("_dMd3sHs1EeSTS7uHCe8FPQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Short description of the amount to provide to the cardholder.
     /// </summary>
@@ -51,10 +49,6 @@ public partial record DetailedAmount9
     [DisplayName("Label")]
     [IsoXmlTag("Labl")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Label { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Label { get; init; }
 }

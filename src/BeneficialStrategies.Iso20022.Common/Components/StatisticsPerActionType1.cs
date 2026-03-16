@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GQMZcIAsEeirUu_C8Wn_0Q")]
 [DisplayName("Statistics Per Action Type")]
-public partial record StatisticsPerActionType1
+public record StatisticsPerActionType1
 {
-    #nullable enable
-    
     /// <summary>
     /// Total number of derivatives which have been reported.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record StatisticsPerActionType1
     [DisplayName("All")]
     [IsoXmlTag("All")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber All { get; init; } 
-    
+    public required IsoMax20PositiveNumber All { get; init; }
+
     /// <summary>
     /// Number of derivatives which have been reported as new.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record StatisticsPerActionType1
     [DisplayName("New")]
     [IsoXmlTag("New")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber New { get; init; } 
-    
+    public required IsoMax20PositiveNumber New { get; init; }
+
     /// <summary>
     /// Number of derivatives which have been reported as modified.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record StatisticsPerActionType1
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber Modification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax20PositiveNumber Modification { get; init; }
 }

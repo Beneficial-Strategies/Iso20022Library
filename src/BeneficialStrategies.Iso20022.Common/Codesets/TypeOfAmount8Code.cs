@@ -23,7 +23,7 @@ public enum TypeOfAmount8Code
     [IsoId("_gKHgEa11EeawR4FMacHsRQ")]
     [Description(@"Actual amount.")]
     Actual = TypeOfAmountCode.Actual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Estimated amount (the final amount could be above or below).
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfAmount8Code
     [IsoId("_gKHgE611EeawR4FMacHsRQ")]
     [Description(@"Estimated amount (the final amount could be above or below).")]
     Estimated = TypeOfAmountCode.Estimated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Maximum amount (the final amount must be less or equal).
     /// Encoded/decoded by serializers as &quot;MAXI&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfAmount8Code
     [IsoId("_gKHgFa11EeawR4FMacHsRQ")]
     [Description(@"Maximum amount (the final amount must be less or equal).")]
     Maximum = TypeOfAmountCode.Maximum, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Default amount.
     /// Encoded/decoded by serializers as &quot;DFLT&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfAmount8Code
     [IsoId("_gKHgF611EeawR4FMacHsRQ")]
     [Description(@"Default amount.")]
     Default = TypeOfAmountCode.Default, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Replacement amount.
     /// Encoded/decoded by serializers as &quot;RPLT&quot;.
@@ -59,7 +59,7 @@ public enum TypeOfAmount8Code
     [IsoId("_gKHgGa11EeawR4FMacHsRQ")]
     [Description(@"Replacement amount.")]
     Replacement = TypeOfAmountCode.Replacement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Incremental amount for reservation.
     /// Encoded/decoded by serializers as &quot;INCR&quot;.
@@ -68,7 +68,7 @@ public enum TypeOfAmount8Code
     [IsoId("_ldQNoa11EeawR4FMacHsRQ")]
     [Description(@"Incremental amount for reservation.")]
     Incremental = TypeOfAmountCode.Incremental, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Decremental amount for reservation.
     /// Encoded/decoded by serializers as &quot;DECR&quot;.
@@ -77,7 +77,7 @@ public enum TypeOfAmount8Code
     [IsoId("_mJlvMa11EeawR4FMacHsRQ")]
     [Description(@"Decremental amount for reservation.")]
     Decremental = TypeOfAmountCode.Decremental, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reserved or updated reserved amount for reservation.
     /// Encoded/decoded by serializers as &quot;RESD&quot;.
@@ -86,5 +86,4 @@ public enum TypeOfAmount8Code
     [IsoId("_m246Ea11EeawR4FMacHsRQ")]
     [Description(@"Reserved or updated reserved amount for reservation.")]
     Reserved = TypeOfAmountCode.Reserved, // same ordinal as derivation source for type conversions
-    
 }

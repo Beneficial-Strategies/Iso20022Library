@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OLZAnc3xEee5nJBZsW8MFQ")]
 [DisplayName("Corporate Action")]
-public partial record CorporateAction48
+public record CorporateAction48
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides information about the dates related to a corporate action event.
     /// </summary>
     [IsoId("_OLZAn83xEee5nJBZsW8MFQ")]
     [DisplayName("Date Details")]
     [IsoXmlTag("DtDtls")]
-    public CorporateActionDate66? DateDetails { get; init; } 
-    
+    public CorporateActionDate66? DateDetails { get; init; }
+
     /// <summary>
     /// Stage in the corporate action event life cycle.
     /// </summary>
     [IsoId("_OLZAoc3xEee5nJBZsW8MFQ")]
     [DisplayName("Event Stage")]
     [IsoXmlTag("EvtStag")]
-    public CorporateActionEventStageFormat15Choice_? EventStage { get; init; } 
-    
+    public CorporateActionEventStageFormat15Choice_? EventStage { get; init; }
+
     /// <summary>
     /// Specifies the type of lottery announced.
     /// </summary>
     [IsoId("_OLZAo83xEee5nJBZsW8MFQ")]
     [DisplayName("Lottery Type")]
     [IsoXmlTag("LtryTp")]
-    public LotteryTypeFormat5Choice_? LotteryType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public LotteryTypeFormat5Choice_? LotteryType { get; init; }
 }

@@ -23,5 +23,4 @@ public enum ValidationRulePending1Code
     [IsoId("_JSdbUR-1EeuxStysDTgLiw")]
     [Description(@"Pending.")]
     Pending = ValidationRuleCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

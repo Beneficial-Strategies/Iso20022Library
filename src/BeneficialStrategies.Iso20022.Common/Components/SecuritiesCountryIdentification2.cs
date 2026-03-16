@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lv3_EYAMEeaYeOsLN4966A")]
 [DisplayName("Securities Country Identification")]
-public partial record SecuritiesCountryIdentification2
+public record SecuritiesCountryIdentification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Two character country code and country name as per ISO 3166.
     /// </summary>
     [IsoId("_l7Ja8YAMEeaYeOsLN4966A")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public required CountryCodeAndName3 Country { get; init; } 
-    
+    public required CountryCodeAndName3 Country { get; init; }
+
     /// <summary>
     /// Flag which reflects if the country is a member of the EEA (European Economic Area) or not.
     /// </summary>
@@ -33,24 +31,24 @@ public partial record SecuritiesCountryIdentification2
     [DisplayName("EEA Country")]
     [IsoXmlTag("EEACtry")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator EEACountry { get; init; } 
-    
+    public required IsoTrueFalseIndicator EEACountry { get; init; }
+
     /// <summary>
     /// Modification status for the record compared to the previous report.
     /// </summary>
     [IsoId("_l7Ja9YAMEeaYeOsLN4966A")]
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
-    public Modification1Code? Modification { get; init; } 
-    
+    public Modification1Code? Modification { get; init; }
+
     /// <summary>
     /// Details the validity of the specific record.
     /// </summary>
     [IsoId("_l7Ja94AMEeaYeOsLN4966A")]
     [DisplayName("Validity Period")]
     [IsoXmlTag("VldtyPrd")]
-    public required Period4Choice_ ValidityPeriod { get; init; } 
-    
+    public required Period4Choice_ ValidityPeriod { get; init; }
+
     /// <summary>
     /// Date when this record was last modified.
     /// </summary>
@@ -58,9 +56,5 @@ public partial record SecuritiesCountryIdentification2
     [DisplayName("Last Updated")]
     [IsoXmlTag("LastUpdtd")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LastUpdated { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? LastUpdated { get; init; }
 }

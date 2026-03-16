@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCreditorReferenceType1Code")]
-[Description(@"Specifies the type of creditor reference as published in an external creditor reference type code set.")]
+[Description(
+    @"Specifies the type of creditor reference as published in an external creditor reference type code set."
+)]
 [DerivedFrom(typeof(ExternalCreditorReferenceTypeCode))]
 public enum ExternalCreditorReferenceType1Code
 {
@@ -30,7 +32,9 @@ public enum ExternalCreditorReferenceType1Code
     /// </summary>
     [EnumMember(Value = "FXDR")]
     [IsoId("_ExternalCreditorReferenceType1Code_ForeignExchangeDealReference")]
-    [Description(@"Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers.")]
+    [Description(
+        @"Document is a pre-agreed or pre-arranged foreign exchange transaction to which the payment transaction refers."
+    )]
     ForeignExchangeDealReference = ExternalCreditorReferenceTypeCode.ForeignExchangeDealReference,
 
     /// <summary>
@@ -57,7 +61,9 @@ public enum ExternalCreditorReferenceType1Code
     /// </summary>
     [EnumMember(Value = "RPIN")]
     [IsoId("_ExternalCreditorReferenceType1Code_RelatedPaymentInstruction")]
-    [Description(@"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario.")]
+    [Description(
+        @"Document is a linked payment instruction to which the current payment instruction is related, for example, in a cover scenario."
+    )]
     RelatedPaymentInstruction = ExternalCreditorReferenceTypeCode.RelatedPaymentInstruction,
 
     /// <summary>
@@ -66,7 +72,9 @@ public enum ExternalCreditorReferenceType1Code
     /// </summary>
     [EnumMember(Value = "SCOR")]
     [IsoId("_ExternalCreditorReferenceType1Code_StructuredCommunicationReference")]
-    [Description(@"Document is a structured communication reference provided by the creditor to identify the referred transaction.")]
-    StructuredCommunicationReference = ExternalCreditorReferenceTypeCode.StructuredCommunicationReference,
-
+    [Description(
+        @"Document is a structured communication reference provided by the creditor to identify the referred transaction."
+    )]
+    StructuredCommunicationReference =
+        ExternalCreditorReferenceTypeCode.StructuredCommunicationReference,
 }

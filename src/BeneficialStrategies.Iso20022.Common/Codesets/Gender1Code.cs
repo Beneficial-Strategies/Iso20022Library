@@ -23,7 +23,7 @@ public enum Gender1Code
     [IsoId("_LwE5wYoTEeahcZ3Nzs1Qag")]
     [Description(@"Individual is a female.")]
     Female = GenderCode.Female, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Individual is a male.
     /// Encoded/decoded by serializers as &quot;MALE&quot;.
@@ -32,5 +32,4 @@ public enum Gender1Code
     [IsoId("_L01d8YoTEeahcZ3Nzs1Qag")]
     [Description(@"Individual is a male.")]
     Male = GenderCode.Male, // same ordinal as derivation source for type conversions
-    
 }

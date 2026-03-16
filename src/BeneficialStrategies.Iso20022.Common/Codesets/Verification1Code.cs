@@ -23,7 +23,7 @@ public enum Verification1Code
     [IsoId("_xPkEAWjpEeSDR-pyia6Xtg")]
     [Description(@"Verification failed.")]
     Failed = VerificationCode.Failed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Information required to perform the verification was missing.
     /// Encoded/decoded by serializers as &quot;MISS&quot;.
@@ -32,7 +32,7 @@ public enum Verification1Code
     [IsoId("_xVtvUWjpEeSDR-pyia6Xtg")]
     [Description(@"Information required to perform the verification was missing.")]
     Missing = VerificationCode.Missing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification has not been performed.
     /// Encoded/decoded by serializers as &quot;NOVF&quot;.
@@ -41,7 +41,7 @@ public enum Verification1Code
     [IsoId("_xdGwwWjpEeSDR-pyia6Xtg")]
     [Description(@"Verification has not been performed.")]
     NotPerformed = VerificationCode.NotPerformed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification was partially successful.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -50,7 +50,7 @@ public enum Verification1Code
     [IsoId("_xib8sWjpEeSDR-pyia6Xtg")]
     [Description(@"Verification was partially successful.")]
     PartialMatch = VerificationCode.PartialMatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification was successful.
     /// Encoded/decoded by serializers as &quot;SUCC&quot;.
@@ -59,7 +59,7 @@ public enum Verification1Code
     [IsoId("_xpMsAWjpEeSDR-pyia6Xtg")]
     [Description(@"Verification was successful.")]
     Successful = VerificationCode.Successful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Device or entity to perform the verification was unavailable.
     /// Encoded/decoded by serializers as &quot;ERRR&quot;.
@@ -68,5 +68,4 @@ public enum Verification1Code
     [IsoId("_xwe_wWjpEeSDR-pyia6Xtg")]
     [Description(@"Device or entity to perform the verification was unavailable.")]
     TechnicalError = VerificationCode.TechnicalError, // same ordinal as derivation source for type conversions
-    
 }

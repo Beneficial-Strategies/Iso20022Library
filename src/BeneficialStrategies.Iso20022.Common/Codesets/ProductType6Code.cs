@@ -23,7 +23,7 @@ public enum ProductType6Code
     [IsoId("_5QytoTXvEemdWfjs3tykFQ")]
     [Description(@"The asset type is bond.")]
     Bond = ProductTypeV2Code.Bond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The asset type is cash.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,7 +32,7 @@ public enum ProductType6Code
     [IsoId("_5YreUTXvEemdWfjs3tykFQ")]
     [Description(@"The asset type is cash.")]
     Cash = ProductTypeV2Code.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other asset type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +41,7 @@ public enum ProductType6Code
     [IsoId("_6Mv_kTXvEemdWfjs3tykFQ")]
     [Description(@"Other asset type.")]
     Other = ProductTypeV2Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies the nature or type of an equity.
     /// Encoded/decoded by serializers as &quot;EQUI&quot;.
@@ -50,5 +50,4 @@ public enum ProductType6Code
     [IsoId("_8fJgATXvEemdWfjs3tykFQ")]
     [Description(@"Identifies the nature or type of an equity.")]
     Equity = ProductTypeV2Code.Equity, // same ordinal as derivation source for type conversions
-    
 }

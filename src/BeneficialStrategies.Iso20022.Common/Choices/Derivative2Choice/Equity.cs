@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.Derivative2Choice
     /// </summary>
     [IsoId("_Bv9MR2kwEeaLAKoEUNsD9g")]
     [DisplayName("Equity")]
-    public partial record Equity : Derivative2Choice_
+    public record Equity : Derivative2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Underlying type of the equity derivative.
         /// </summary>
         [IsoId("_PeXW0WlNEeaLAKoEUNsD9g")]
         [DisplayName("Underlying Type")]
         [IsoXmlTag("UndrlygTp")]
-        public required EquityDerivative3Choice_ UnderlyingType { get; init; } 
-        
+        public required EquityDerivative3Choice_ UnderlyingType { get; init; }
+
         /// <summary>
         /// Return parameter for the equity derivative.
         /// </summary>
         [IsoId("_PeXW02lNEeaLAKoEUNsD9g")]
         [DisplayName("Parameter")]
         [IsoXmlTag("Param")]
-        public EquityReturnParameter1Code? Parameter { get; init; } 
-        
-        
-        #nullable disable
-        
+        public EquityReturnParameter1Code? Parameter { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum AssetClassCode
     [IsoId("_1mSwFjL3EeKU9IrkkToqcw_-183212475")]
     [Description(@"Debt instrument issued by a corporation.")]
     CorporateDebt,
-    
+
     /// <summary>
     /// Equity issued by a corporation.
     /// Encoded/decoded by serializers as &quot;CRPE&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassCode
     [IsoId("_1mchEDL3EeKU9IrkkToqcw_-1016289594")]
     [Description(@"Equity issued by a corporation.")]
     CorporateEquity,
-    
+
     /// <summary>
     /// Debt instrument issued by municipality.
     /// Encoded/decoded by serializers as &quot;MUNB&quot;.
@@ -41,5 +41,4 @@ public enum AssetClassCode
     [IsoId("_1mchETL3EeKU9IrkkToqcw_-601795221")]
     [Description(@"Debt instrument issued by municipality.")]
     MunicipalDebt,
-    
 }

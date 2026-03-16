@@ -23,7 +23,7 @@ public enum RegulatoryTradingCapacity1Code
     [IsoId("_Am-fce8cEeSLA89yUYsVSw")]
     [Description(@"Transaction was carried out as a matched principal trading.")]
     MatchedPrincipal = RegulatoryTradingCapacityCode.MatchedPrincipal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction was carried out as a deal under own account.
     /// Encoded/decoded by serializers as &quot;DEAL&quot;.
@@ -32,7 +32,7 @@ public enum RegulatoryTradingCapacity1Code
     [IsoId("_AuSBUe8cEeSLA89yUYsVSw")]
     [Description(@"Transaction was carried out as a deal under own account.")]
     DealOnOwnAccount = RegulatoryTradingCapacityCode.DealOnOwnAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction was carried out as an agent.
     /// Encoded/decoded by serializers as &quot;AOTC&quot;.
@@ -41,5 +41,4 @@ public enum RegulatoryTradingCapacity1Code
     [IsoId("_A1hRwe8cEeSLA89yUYsVSw")]
     [Description(@"Transaction was carried out as an agent.")]
     AnyOtherCapacity = RegulatoryTradingCapacityCode.AnyOtherCapacity, // same ordinal as derivation source for type conversions
-    
 }

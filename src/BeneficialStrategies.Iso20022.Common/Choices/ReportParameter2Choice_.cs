@@ -13,13 +13,20 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ReportParameter2Choice.Country))]
     [KnownType(typeof(ReportParameter2Choice.Currency))]
     [KnownType(typeof(ReportParameter2Choice.UserDefined))]
-    [JsonDerivedType(typeof(ReportParameter2Choice.Party),nameof(ReportParameter2Choice.Party))]
-    [JsonDerivedType(typeof(ReportParameter2Choice.Country),nameof(ReportParameter2Choice.Country))]
-    [JsonDerivedType(typeof(ReportParameter2Choice.Currency),nameof(ReportParameter2Choice.Currency))]
-    [JsonDerivedType(typeof(ReportParameter2Choice.UserDefined),nameof(ReportParameter2Choice.UserDefined))]
+    [JsonDerivedType(typeof(ReportParameter2Choice.Party), nameof(ReportParameter2Choice.Party))]
+    [JsonDerivedType(
+        typeof(ReportParameter2Choice.Country),
+        nameof(ReportParameter2Choice.Country)
+    )]
+    [JsonDerivedType(
+        typeof(ReportParameter2Choice.Currency),
+        nameof(ReportParameter2Choice.Currency)
+    )]
+    [JsonDerivedType(
+        typeof(ReportParameter2Choice.UserDefined),
+        nameof(ReportParameter2Choice.UserDefined)
+    )]
     [IsoId("_U11EiNp-Ed-ak6NoX_4Aeg_-922147524")]
     [DisplayName("Report Parameter 2 Choice")]
-    public abstract partial record ReportParameter2Choice_
-    {
-    }
+    public abstract record ReportParameter2Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UTjd69p-Ed-ak6NoX_4Aeg_-594646635")]
 [DisplayName("Settlement Type And Identification")]
-public partial record SettlementTypeAndIdentification2
+public record SettlementTypeAndIdentification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies how the transaction is to be settled.
     /// </summary>
     [IsoId("_UTjd7Np-Ed-ak6NoX_4Aeg_-594645564")]
     [DisplayName("Payment")]
     [IsoXmlTag("Pmt")]
-    public required DeliveryReceiptType2Code Payment { get; init; } 
-    
+    public required DeliveryReceiptType2Code Payment { get; init; }
+
     /// <summary>
     /// Reference of the transaction.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record SettlementTypeAndIdentification2
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TransactionIdentification { get; init; }
+
     /// <summary>
     /// Identifies the intended settlement date.
     /// </summary>
     [IsoId("_UTtO4dp-Ed-ak6NoX_4Aeg_1367833673")]
     [DisplayName("Settlement Date")]
     [IsoXmlTag("SttlmDt")]
-    public DateAndDateTimeChoice_? SettlementDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateAndDateTimeChoice_? SettlementDate { get; init; }
 }

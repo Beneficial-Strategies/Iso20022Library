@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,32 +14,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0k5_oVuCEe6gDOpEK7Q4ig")]
 [DisplayName("Financial Instrument Description4")]
-public partial record FinancialInstrumentDescription4
+public record FinancialInstrumentDescription4
 {
-    #nullable enable
-
     /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Place Of Listing.
     /// </summary>
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
-    public MarketIdentification3Choice_? PlaceOfListing { get; init; } 
+    public MarketIdentification3Choice_? PlaceOfListing { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat28Choice_? SafekeepingPlace { get; init; } 
-
-    
-    #nullable disable
-    
+    public SafekeepingPlaceFormat28Choice_? SafekeepingPlace { get; init; }
 }

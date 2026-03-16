@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V8F6Nzk7EeapUO0vUIo9Xw")]
 [DisplayName("Subscription Execution")]
-public partial record SubscriptionExecution12
+public record SubscriptionExecution12
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier for the order, as assigned by the instructing party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SubscriptionExecution12
     [DisplayName("Order Reference")]
     [IsoXmlTag("OrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text OrderReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text OrderReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the order. This reference can typically be used in a hub scenario to give the reference of the order as assigned by the underlying client.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record SubscriptionExecution12
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ClientReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ClientReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for the order execution, as assigned by the confirming party.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record SubscriptionExecution12
     [DisplayName("Deal Reference")]
     [IsoXmlTag("DealRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text DealReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text DealReference { get; init; }
+
     /// <summary>
     /// Category of the investment fund order.
     /// </summary>
@@ -57,23 +55,23 @@ public partial record SubscriptionExecution12
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<FundOrderType4Choice_> OrderType { get; init; } = [];
-    
+
     /// <summary>
     /// Account impacted by the investment fund order execution.
     /// </summary>
     [IsoId("_WVFo8Tk7EeapUO0vUIo9Xw")]
     [DisplayName("Investment Account Details")]
     [IsoXmlTag("InvstmtAcctDtls")]
-    public required InvestmentAccount58 InvestmentAccountDetails { get; init; } 
-    
+    public required InvestmentAccount58 InvestmentAccountDetails { get; init; }
+
     /// <summary>
     /// Additional information about the investor.
     /// </summary>
     [IsoId("_WVFo8zk7EeapUO0vUIo9Xw")]
     [DisplayName("Beneficiary Details")]
     [IsoXmlTag("BnfcryDtls")]
-    public IndividualPerson31? BeneficiaryDetails { get; init; } 
-    
+    public IndividualPerson31? BeneficiaryDetails { get; init; }
+
     /// <summary>
     /// Number of investment fund units subscribed.
     /// </summary>
@@ -81,25 +79,25 @@ public partial record SubscriptionExecution12
     [DisplayName("Units Number")]
     [IsoXmlTag("UnitsNb")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber UnitsNumber { get; init; } 
-    
+    public required IsoDecimalNumber UnitsNumber { get; init; }
+
     /// <summary>
     /// Indicates the rounding direction applied to nearest unit.
     /// </summary>
     [IsoId("_WVFo9zk7EeapUO0vUIo9Xw")]
     [DisplayName("Rounding")]
     [IsoXmlTag("Rndg")]
-    public RoundingDirection2Code? Rounding { get; init; } 
-    
+    public RoundingDirection2Code? Rounding { get; init; }
+
     /// <summary>
-    /// Amount of money invested in the fund. 
+    /// Amount of money invested in the fund.
     /// Net Amount = Quantity * Price.
     /// </summary>
     [IsoId("_WVFo-Tk7EeapUO0vUIo9Xw")]
     [DisplayName("Net Amount")]
     [IsoXmlTag("NetAmt")]
-    public ActiveCurrencyAndAmount? NetAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? NetAmount { get; init; }
+
     /// <summary>
     /// Amount of money to be paid by the investor when subscribing to fund units.
     /// Gross amount = (Quantity * Price) + (Fees + Taxes).
@@ -107,24 +105,24 @@ public partial record SubscriptionExecution12
     [IsoId("_WVFo-zk7EeapUO0vUIo9Xw")]
     [DisplayName("Gross Amount")]
     [IsoXmlTag("GrssAmt")]
-    public ActiveCurrencyAndAmount? GrossAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? GrossAmount { get; init; }
+
     /// <summary>
     /// Date and time at which a price is applied, according to the terms stated in the prospectus.
     /// </summary>
     [IsoId("_WVFo_Tk7EeapUO0vUIo9Xw")]
     [DisplayName("Trade Date Time")]
     [IsoXmlTag("TradDtTm")]
-    public required DateAndDateTimeChoice_ TradeDateTime { get; init; } 
-    
+    public required DateAndDateTimeChoice_ TradeDateTime { get; init; }
+
     /// <summary>
     /// Price at which the order was executed.
     /// </summary>
     [IsoId("_WVFo_zk7EeapUO0vUIo9Xw")]
     [DisplayName("Dealing Price Details")]
     [IsoXmlTag("DealgPricDtls")]
-    public required UnitPrice22 DealingPriceDetails { get; init; } 
-    
+    public required UnitPrice22 DealingPriceDetails { get; init; }
+
     /// <summary>
     /// Other quoted price than the one at which the order was executed.
     /// </summary>
@@ -134,15 +132,15 @@ public partial record SubscriptionExecution12
     [MinLength(0)]
     [MaxLength(2)]
     public ValueList<UnitPrice22> InformativePriceDetails { get; init; } = [];
-    
+
     /// <summary>
     /// Total amount of money paid /to be paid or received in exchange for the financial instrument in the individual order.
     /// </summary>
     [IsoId("_WVFpAzk7EeapUO0vUIo9Xw")]
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
-    public required ActiveCurrencyAndAmount SettlementAmount { get; init; } 
-    
+    public required ActiveCurrencyAndAmount SettlementAmount { get; init; }
+
     /// <summary>
     /// Date on which cash is available.
     /// </summary>
@@ -150,16 +148,16 @@ public partial record SubscriptionExecution12
     [DisplayName("Cash Settlement Date")]
     [IsoXmlTag("CshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CashSettlementDate { get; init; } 
-    
+    public IsoISODate? CashSettlementDate { get; init; }
+
     /// <summary>
     /// Method by which the transaction is settled.
     /// </summary>
     [IsoId("_WVFpBzk7EeapUO0vUIo9Xw")]
     [DisplayName("Settlement Method")]
     [IsoXmlTag("SttlmMtd")]
-    public DeliveryReceiptType2Code? SettlementMethod { get; init; } 
-    
+    public DeliveryReceiptType2Code? SettlementMethod { get; init; }
+
     /// <summary>
     /// Indicates whether the order has been partially executed, that is, the confirmed quantity does not match the ordered quantity for a given financial instrument.
     /// </summary>
@@ -167,16 +165,16 @@ public partial record SubscriptionExecution12
     [DisplayName("Partially Executed Indicator")]
     [IsoXmlTag("PrtlyExctdInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator PartiallyExecutedIndicator { get; init; }
+
     /// <summary>
     /// Specifies that the execution was subject to best execution rules as defined by MiFID.
     /// </summary>
     [IsoId("_WVFpCzk7EeapUO0vUIo9Xw")]
     [DisplayName("Best Execution")]
     [IsoXmlTag("BestExctn")]
-    public BestExecution1Code? BestExecution { get; init; } 
-    
+    public BestExecution1Code? BestExecution { get; init; }
+
     /// <summary>
     /// Indicates whether the dividend is included, that is, cum-dividend, in the executed price. When the dividend is not included, the price will be ex-dividend.
     /// </summary>
@@ -184,20 +182,20 @@ public partial record SubscriptionExecution12
     [DisplayName("Cum Dividend Indicator")]
     [IsoXmlTag("CumDvddInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator CumDividendIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator CumDividendIndicator { get; init; }
+
     /// <summary>
     /// Part of the price deemed as accrued income or profit rather than capital. The interim profit amount is used for tax purposes.
     /// </summary>
     [IsoId("_WVFpDzk7EeapUO0vUIo9Xw")]
     [DisplayName("Interim Profit Amount")]
     [IsoXmlTag("IntrmPrftAmt")]
-    public ProfitAndLoss2Choice_? InterimProfitAmount { get; init; } 
-    
+    public ProfitAndLoss2Choice_? InterimProfitAmount { get; init; }
+
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
     /// How the exchange rate is expressed determines which currency is the Unit Currency and Quoted Currency. If the amounts concerned are EUR 1000 and USD 1300, the exchange rate may be expressed as per either of the following examples:
-    /// EXAMPLE 1 
+    /// EXAMPLE 1
     /// UnitCurrency EUR
     /// QuotedCurrency USD
     /// ExchangeRate 1.300
@@ -209,16 +207,16 @@ public partial record SubscriptionExecution12
     [IsoId("_WVFpETk7EeapUO0vUIo9Xw")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; } 
-    
+    public ForeignExchangeTerms33? ForeignExchangeDetails { get; init; }
+
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
     /// </summary>
     [IsoId("_WVFpEzk7EeapUO0vUIo9Xw")]
     [DisplayName("Income Preference")]
     [IsoXmlTag("IncmPref")]
-    public IncomePreference1Code? IncomePreference { get; init; } 
-    
+    public IncomePreference1Code? IncomePreference { get; init; }
+
     /// <summary>
     /// Reference of a letter of intent program, in which sales commissions are reduced based on the aggregate of a customer&apos;s actual purchase and anticipated purchases, over a specific period of time, and as agreed by the customer. A letter of intent program is mainly used in the US market.
     /// </summary>
@@ -226,9 +224,9 @@ public partial record SubscriptionExecution12
     [DisplayName("Letter Intent Reference")]
     [IsoXmlTag("LttrInttRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? LetterIntentReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? LetterIntentReference { get; init; }
+
     /// <summary>
     /// Reference of an accumulation right program, in which sales commissions are based on a customer&apos;s present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
     /// </summary>
@@ -236,33 +234,33 @@ public partial record SubscriptionExecution12
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccumulationRightReference { get; init; }
+
     /// <summary>
     /// Fees (charges/commission) and taxes that are taken into consideration for the transaction, so that the total difference between the net amount and gross amount is known, without taking into account equalisation.
     /// </summary>
     [IsoId("_b3xOUjk7EeapUO0vUIo9Xw")]
     [DisplayName("Transaction Overhead")]
     [IsoXmlTag("TxOvrhd")]
-    public TotalFeesAndTaxes40? TransactionOverhead { get; init; } 
-    
+    public TotalFeesAndTaxes40? TransactionOverhead { get; init; }
+
     /// <summary>
     /// Additional information about tax that does not have an impact on the transaction overhead.
     /// </summary>
     [IsoId("_b3xOUzk7EeapUO0vUIo9Xw")]
     [DisplayName("Informative Tax Details")]
     [IsoXmlTag("InftvTaxDtls")]
-    public InformativeTax1? InformativeTaxDetails { get; init; } 
-    
+    public InformativeTax1? InformativeTaxDetails { get; init; }
+
     /// <summary>
     /// Parameters used to execute the settlement of an investment fund order.
     /// </summary>
     [IsoId("_WVFpHzk7EeapUO0vUIo9Xw")]
     [DisplayName("Settlement And Custody Details")]
     [IsoXmlTag("SttlmAndCtdyDtls")]
-    public FundSettlementParameters12? SettlementAndCustodyDetails { get; init; } 
-    
+    public FundSettlementParameters12? SettlementAndCustodyDetails { get; init; }
+
     /// <summary>
     /// Indicates whether the financial instrument is to be physically delivered.
     /// </summary>
@@ -270,16 +268,16 @@ public partial record SubscriptionExecution12
     [DisplayName("Physical Delivery Indicator")]
     [IsoXmlTag("PhysDlvryInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator PhysicalDeliveryIndicator { get; init; }
+
     /// <summary>
     /// Information related to the physical delivery of the securities.
     /// </summary>
     [IsoId("_WVFpIzk7EeapUO0vUIo9Xw")]
     [DisplayName("Physical Delivery Details")]
     [IsoXmlTag("PhysDlvryDtls")]
-    public DeliveryParameters3? PhysicalDeliveryDetails { get; init; } 
-    
+    public DeliveryParameters3? PhysicalDeliveryDetails { get; init; }
+
     /// <summary>
     /// Breakdown of the net amount per type of order.
     /// </summary>
@@ -289,31 +287,31 @@ public partial record SubscriptionExecution12
     [MinLength(0)]
     [MaxLength(4)]
     public ValueList<InvestmentFundsOrderBreakdown2> StaffClientBreakdown { get; init; } = [];
-    
+
     /// <summary>
     /// Return of cash that has been overpaid for a subscription.
     /// </summary>
     [IsoId("_WVFpJzk7EeapUO0vUIo9Xw")]
     [DisplayName("Refund")]
     [IsoXmlTag("Rfnd")]
-    public ActiveCurrencyAndAmount? Refund { get; init; } 
-    
+    public ActiveCurrencyAndAmount? Refund { get; init; }
+
     /// <summary>
     /// Interest received when a subscription amount is paid in advance and then invested by the fund.
     /// </summary>
     [IsoId("_WVFpKTk7EeapUO0vUIo9Xw")]
     [DisplayName("Subscription Interest")]
     [IsoXmlTag("SbcptIntrst")]
-    public ActiveCurrencyAndAmount? SubscriptionInterest { get; init; } 
-    
+    public ActiveCurrencyAndAmount? SubscriptionInterest { get; init; }
+
     /// <summary>
     /// Payment process for the transfer of cash from the debtor to the creditor.
     /// </summary>
     [IsoId("_WVFpKzk7EeapUO0vUIo9Xw")]
     [DisplayName("Cash Settlement Details")]
     [IsoXmlTag("CshSttlmDtls")]
-    public PaymentTransaction70? CashSettlementDetails { get; init; } 
-    
+    public PaymentTransaction70? CashSettlementDetails { get; init; }
+
     /// <summary>
     /// Additional specific settlement information for non-regulated traded funds.
     /// </summary>
@@ -321,9 +319,9 @@ public partial record SubscriptionExecution12
     [DisplayName("Non Standard Settlement Information")]
     [IsoXmlTag("NonStdSttlmInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? NonStandardSettlementInformation { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? NonStandardSettlementInformation { get; init; }
+
     /// <summary>
     /// Percentage of units partially settled.
     /// </summary>
@@ -331,32 +329,32 @@ public partial record SubscriptionExecution12
     [DisplayName("Partial Settlement Of Units")]
     [IsoXmlTag("PrtlSttlmOfUnits")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PartialSettlementOfUnits { get; init; } 
-    
+    public IsoPercentageRate? PartialSettlementOfUnits { get; init; }
+
     /// <summary>
     /// Specifies if advice has been received from an independent financial advisor.
     /// </summary>
     [IsoId("_WVFpMTk7EeapUO0vUIo9Xw")]
     [DisplayName("Financial Advice")]
     [IsoXmlTag("FinAdvc")]
-    public FinancialAdvice1Code? FinancialAdvice { get; init; } 
-    
+    public FinancialAdvice1Code? FinancialAdvice { get; init; }
+
     /// <summary>
     /// Specifies whether the trade is negotiated.
     /// </summary>
     [IsoId("_WVFpMzk7EeapUO0vUIo9Xw")]
     [DisplayName("Negotiated Trade")]
     [IsoXmlTag("NgtdTrad")]
-    public NegotiatedTrade1Code? NegotiatedTrade { get; init; } 
-    
+    public NegotiatedTrade1Code? NegotiatedTrade { get; init; }
+
     /// <summary>
     /// Specifies whether the order execution confirmation is late.
     /// </summary>
     [IsoId("_WVFpNTk7EeapUO0vUIo9Xw")]
     [DisplayName("Late Report")]
     [IsoXmlTag("LateRpt")]
-    public LateReport1Code? LateReport { get; init; } 
-    
+    public LateReport1Code? LateReport { get; init; }
+
     /// <summary>
     /// Percentage of cash partially settled.
     /// </summary>
@@ -364,8 +362,8 @@ public partial record SubscriptionExecution12
     [DisplayName("Partial Settlement Of Cash")]
     [IsoXmlTag("PrtlSttlmOfCsh")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PartialSettlementOfCash { get; init; } 
-    
+    public IsoPercentageRate? PartialSettlementOfCash { get; init; }
+
     /// <summary>
     /// Party related to the transaction.
     /// </summary>
@@ -375,56 +373,52 @@ public partial record SubscriptionExecution12
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<Intermediary39> RelatedPartyDetails { get; init; } = [];
-    
+
     /// <summary>
     /// Part of an investor&apos;s subscription amount that is held by the fund in order to pay incentive / performance fees at the end of the fiscal year.
     /// </summary>
     [IsoId("_WVFpOzk7EeapUO0vUIo9Xw")]
     [DisplayName("Equalisation")]
     [IsoXmlTag("Equlstn")]
-    public Equalisation1? Equalisation { get; init; } 
-    
+    public Equalisation1? Equalisation { get; init; }
+
     /// <summary>
     /// Source of cash used for the settlement of the subscription.
     /// </summary>
     [IsoId("_AQC8ATlJEeaYrqEUdbYZQQ")]
     [DisplayName("Source Of Cash")]
     [IsoXmlTag("SrcOfCsh")]
-    public SourceOfCash1Choice_? SourceOfCash { get; init; } 
-    
+    public SourceOfCash1Choice_? SourceOfCash { get; init; }
+
     /// <summary>
     /// Assessment of the customer’s behaviour at the time of the account opening application.
     /// </summary>
     [IsoId("_CUT9ATlNEeaYrqEUdbYZQQ")]
     [DisplayName("Customer Conduct Classification")]
     [IsoXmlTag("CstmrCndctClssfctn")]
-    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; } 
-    
+    public CustomerConductClassification1Choice_? CustomerConductClassification { get; init; }
+
     /// <summary>
     /// Means by which the investor or account owner submits the open account form.
     /// </summary>
     [IsoId("_fLao8ToCEeabspMEjqY5TQ")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice_? TransactionChannelType { get; init; } 
-    
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
+
     /// <summary>
     /// Type of signature.
     /// </summary>
     [IsoId("_GLgAAToIEeabspMEjqY5TQ")]
     [DisplayName("Signature Type")]
     [IsoXmlTag("SgntrTp")]
-    public SignatureType1Choice_? SignatureType { get; init; } 
-    
+    public SignatureType1Choice_? SignatureType { get; init; }
+
     /// <summary>
     /// Information about a non-standard order.
     /// </summary>
     [IsoId("_hFwPgVI8EeajBpkB16m2nQ")]
     [DisplayName("Order Waiver Details")]
     [IsoXmlTag("OrdrWvrDtls")]
-    public OrderWaiver1? OrderWaiverDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public OrderWaiver1? OrderWaiverDetails { get; init; }
 }

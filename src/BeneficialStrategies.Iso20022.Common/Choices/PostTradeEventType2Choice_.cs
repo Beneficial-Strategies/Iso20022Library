@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PostTradeEventType2Choice.Code))]
     [KnownType(typeof(PostTradeEventType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(PostTradeEventType2Choice.Code),nameof(PostTradeEventType2Choice.Code))]
-    [JsonDerivedType(typeof(PostTradeEventType2Choice.Proprietary),nameof(PostTradeEventType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PostTradeEventType2Choice.Code),
+        nameof(PostTradeEventType2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(PostTradeEventType2Choice.Proprietary),
+        nameof(PostTradeEventType2Choice.Proprietary)
+    )]
     [IsoId("_6NBoAUj-Ee-KhcStGV4xTg")]
     [DisplayName("Post Trade Event Type2Choice")]
-    public abstract partial record PostTradeEventType2Choice_
-    {
-    }
+    public abstract record PostTradeEventType2Choice_ { }
 }

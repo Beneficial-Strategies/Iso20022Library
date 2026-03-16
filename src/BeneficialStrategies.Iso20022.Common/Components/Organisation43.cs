@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,51 +14,49 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3YgJsTEyEe6g-ffJsqGiSA")]
 [DisplayName("Organisation43")]
-public partial record Organisation43
+public record Organisation43
 {
-    #nullable enable
-
     /// <summary>
     /// Board Resolution Indicator.
     /// </summary>
     [DisplayName("Board Resolution Indicator")]
     [IsoXmlTag("BrdRsltnInd")]
-    public IsoTrueFalseIndicator? BoardResolutionIndicator { get; init; } 
+    public IsoTrueFalseIndicator? BoardResolutionIndicator { get; init; }
 
     /// <summary>
     /// Business Address.
     /// </summary>
     [DisplayName("Business Address")]
     [IsoXmlTag("BizAdr")]
-    public PostalAddress27? BusinessAddress { get; init; } 
+    public PostalAddress27? BusinessAddress { get; init; }
 
     /// <summary>
     /// Country Of Operation.
     /// </summary>
     [DisplayName("Country Of Operation")]
     [IsoXmlTag("CtryOfOpr")]
-    public CountryCode? CountryOfOperation { get; init; } 
+    public CountryCode? CountryOfOperation { get; init; }
 
     /// <summary>
     /// Established Date.
     /// </summary>
     [DisplayName("Established Date")]
     [IsoXmlTag("EstblishdDt")]
-    public IsoISODate? EstablishedDate { get; init; } 
+    public IsoISODate? EstablishedDate { get; init; }
 
     /// <summary>
     /// Full Legal Name.
     /// </summary>
     [DisplayName("Full Legal Name")]
     [IsoXmlTag("FullLglNm")]
-    public required IsoMax350Text FullLegalName { get; init; } 
+    public required IsoMax350Text FullLegalName { get; init; }
 
     /// <summary>
     /// Legal Address.
     /// </summary>
     [DisplayName("Legal Address")]
     [IsoXmlTag("LglAdr")]
-    public PostalAddress27? LegalAddress { get; init; } 
+    public PostalAddress27? LegalAddress { get; init; }
 
     /// <summary>
     /// Main Mandate Holder.
@@ -72,35 +70,35 @@ public partial record Organisation43
     /// </summary>
     [DisplayName("Operational Address")]
     [IsoXmlTag("OprlAdr")]
-    public PostalAddress27? OperationalAddress { get; init; } 
+    public PostalAddress27? OperationalAddress { get; init; }
 
     /// <summary>
     /// Organisation Legal Status.
     /// </summary>
     [DisplayName("Organisation Legal Status")]
     [IsoXmlTag("OrgLglSts")]
-    public OrganisationLegalStatus1Code? OrganisationLegalStatus { get; init; } 
+    public OrganisationLegalStatus1Code? OrganisationLegalStatus { get; init; }
 
     /// <summary>
     /// Registration Country.
     /// </summary>
     [DisplayName("Registration Country")]
     [IsoXmlTag("RegnCtry")]
-    public CountryCode? RegistrationCountry { get; init; } 
+    public CountryCode? RegistrationCountry { get; init; }
 
     /// <summary>
     /// Registration Date.
     /// </summary>
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
-    public IsoISODate? RegistrationDate { get; init; } 
+    public IsoISODate? RegistrationDate { get; init; }
 
     /// <summary>
     /// Registration Number.
     /// </summary>
     [DisplayName("Registration Number")]
     [IsoXmlTag("RegnNb")]
-    public IsoMax70Text? RegistrationNumber { get; init; } 
+    public IsoMax70Text? RegistrationNumber { get; init; }
 
     /// <summary>
     /// Representative Officer.
@@ -121,30 +119,26 @@ public partial record Organisation43
     /// </summary>
     [DisplayName("Taxation Country")]
     [IsoXmlTag("TaxtnCtry")]
-    public CountryCode? TaxationCountry { get; init; } 
+    public CountryCode? TaxationCountry { get; init; }
 
     /// <summary>
     /// Taxation Identification Number.
     /// </summary>
     [DisplayName("Taxation Identification Number")]
     [IsoXmlTag("TaxtnIdNb")]
-    public IsoMax35Text? TaxationIdentificationNumber { get; init; } 
+    public IsoMax35Text? TaxationIdentificationNumber { get; init; }
 
     /// <summary>
     /// Trading Name.
     /// </summary>
     [DisplayName("Trading Name")]
     [IsoXmlTag("TradgNm")]
-    public IsoMax350Text? TradingName { get; init; } 
+    public IsoMax350Text? TradingName { get; init; }
 
     /// <summary>
     /// Treasury Manager.
     /// </summary>
     [DisplayName("Treasury Manager")]
     [IsoXmlTag("TrsrMgr")]
-    public PartyIdentification272? TreasuryManager { get; init; } 
-
-    
-    #nullable disable
-    
+    public PartyIdentification272? TreasuryManager { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QKKmpdp-Ed-ak6NoX_4Aeg_-22102184")]
 [DisplayName("Communication Address")]
-public partial record CommunicationAddress4
+public record CommunicationAddress4
 {
-    #nullable enable
-    
     /// <summary>
     /// Address for electronic mail (e-mail).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CommunicationAddress4
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? EmailAddress { get; init; }
+
     /// <summary>
     /// Address for the Universal Resource Locator (URL), eg, used over the www (HTTP) service.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record CommunicationAddress4
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? URLAddress { get; init; }
 }

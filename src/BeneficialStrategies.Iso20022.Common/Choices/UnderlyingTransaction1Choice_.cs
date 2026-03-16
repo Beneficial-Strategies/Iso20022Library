@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UnderlyingTransaction1Choice.Initiation))]
     [KnownType(typeof(UnderlyingTransaction1Choice.Interbank))]
     [KnownType(typeof(UnderlyingTransaction1Choice.StatementEntry))]
-    [JsonDerivedType(typeof(UnderlyingTransaction1Choice.Initiation),nameof(UnderlyingTransaction1Choice.Initiation))]
-    [JsonDerivedType(typeof(UnderlyingTransaction1Choice.Interbank),nameof(UnderlyingTransaction1Choice.Interbank))]
-    [JsonDerivedType(typeof(UnderlyingTransaction1Choice.StatementEntry),nameof(UnderlyingTransaction1Choice.StatementEntry))]
+    [JsonDerivedType(
+        typeof(UnderlyingTransaction1Choice.Initiation),
+        nameof(UnderlyingTransaction1Choice.Initiation)
+    )]
+    [JsonDerivedType(
+        typeof(UnderlyingTransaction1Choice.Interbank),
+        nameof(UnderlyingTransaction1Choice.Interbank)
+    )]
+    [JsonDerivedType(
+        typeof(UnderlyingTransaction1Choice.StatementEntry),
+        nameof(UnderlyingTransaction1Choice.StatementEntry)
+    )]
     [IsoId("_P9DXuNp-Ed-ak6NoX_4Aeg_-2030379979")]
     [DisplayName("Underlying Transaction 1 Choice")]
-    public abstract partial record UnderlyingTransaction1Choice_
-    {
-    }
+    public abstract record UnderlyingTransaction1Choice_ { }
 }

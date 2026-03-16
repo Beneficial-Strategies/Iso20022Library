@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s8JQ4LksEe68nbz8Nl_hLQ")]
 [DisplayName("Correspondence Notification1")]
-public partial record CorrespondenceNotification1
+public record CorrespondenceNotification1
 {
-    #nullable enable
-
     /// <summary>
     /// Enclosed File.
     /// </summary>
@@ -37,14 +35,14 @@ public partial record CorrespondenceNotification1
     /// </summary>
     [DisplayName("Notification Sub Type")]
     [IsoXmlTag("NtfctnSubTp")]
-    public NotificationSubType1Choice_? NotificationSubType { get; init; } 
+    public NotificationSubType1Choice_? NotificationSubType { get; init; }
 
     /// <summary>
     /// Notification Type.
     /// </summary>
     [DisplayName("Notification Type")]
     [IsoXmlTag("NtfctnTp")]
-    public required NotificationType1Choice_ NotificationType { get; init; } 
+    public required NotificationType1Choice_ NotificationType { get; init; }
 
     /// <summary>
     /// Related Notification Data.
@@ -58,9 +56,5 @@ public partial record CorrespondenceNotification1
     /// </summary>
     [DisplayName("Sender Notification Identification")]
     [IsoXmlTag("SndrNtfctnId")]
-    public required IsoMax35Text SenderNotificationIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax35Text SenderNotificationIdentification { get; init; }
 }

@@ -23,7 +23,7 @@ public enum CertificateType2Code
     [IsoId("_MX05cRODEeKjmvxNCObNeQ")]
     [Description(@"Anti-money laundering certification form.")]
     AntiMoneyLaundering = CertificateTypeCode.AntiMoneyLaundering, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Government issued form of picture identification - driving license.
     /// Encoded/decoded by serializers as &quot;DVLC&quot;.
@@ -32,7 +32,7 @@ public enum CertificateType2Code
     [IsoId("_MkCwgRODEeKjmvxNCObNeQ")]
     [Description(@"Government issued form of picture identification - driving license.")]
     DrivingLicense = CertificateTypeCode.DrivingLicense, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certification of due formation and organisation.
     /// Encoded/decoded by serializers as &quot;DFOR&quot;.
@@ -41,7 +41,7 @@ public enum CertificateType2Code
     [IsoId("_MvhAsRODEeKjmvxNCObNeQ")]
     [Description(@"Certification of due formation and organisation.")]
     DueFormationAndOrganisation = CertificateTypeCode.DueFormationAndOrganisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certificate of good standing.
     /// Encoded/decoded by serializers as &quot;GOST&quot;.
@@ -50,7 +50,7 @@ public enum CertificateType2Code
     [IsoId("_M6jMARODEeKjmvxNCObNeQ")]
     [Description(@"Certificate of good standing.")]
     GoodStanding = CertificateTypeCode.GoodStanding, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Government issued form of picture identification - identity card.
     /// Encoded/decoded by serializers as &quot;IDEN&quot;.
@@ -59,7 +59,7 @@ public enum CertificateType2Code
     [IsoId("_NHqa8RODEeKjmvxNCObNeQ")]
     [Description(@"Government issued form of picture identification - identity card.")]
     IdentityCard = CertificateTypeCode.IdentityCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certification of incumbency.
     /// Encoded/decoded by serializers as &quot;INCU&quot;.
@@ -68,7 +68,7 @@ public enum CertificateType2Code
     [IsoId("_NacNARODEeKjmvxNCObNeQ")]
     [Description(@"Certification of incumbency.")]
     Incumbency = CertificateTypeCode.Incumbency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Letter of reference.
     /// Encoded/decoded by serializers as &quot;LREF&quot;.
@@ -77,7 +77,7 @@ public enum CertificateType2Code
     [IsoId("_NpCpsRODEeKjmvxNCObNeQ")]
     [Description(@"Letter of reference.")]
     LetterOfReference = CertificateTypeCode.LetterOfReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Government issued form of picture identification - passport.
     /// Encoded/decoded by serializers as &quot;PASS&quot;.
@@ -86,7 +86,7 @@ public enum CertificateType2Code
     [IsoId("_N1HW0RODEeKjmvxNCObNeQ")]
     [Description(@"Government issued form of picture identification - passport.")]
     Passport = CertificateTypeCode.Passport, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Proof of the address, such as a utility bill.
     /// Encoded/decoded by serializers as &quot;PRAD&quot;.
@@ -95,7 +95,7 @@ public enum CertificateType2Code
     [IsoId("_OE6GURODEeKjmvxNCObNeQ")]
     [Description(@"Proof of the address, such as a utility bill.")]
     ProofOfAddress = CertificateTypeCode.ProofOfAddress, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Public key infrastructure certificate.
     /// Encoded/decoded by serializers as &quot;PKIC&quot;.
@@ -104,5 +104,4 @@ public enum CertificateType2Code
     [IsoId("_OPV0sRODEeKjmvxNCObNeQ")]
     [Description(@"Public key infrastructure certificate.")]
     PublicKeyInfrastructureCertificate = CertificateTypeCode.PublicKeyInfrastructureCertificate, // same ordinal as derivation source for type conversions
-    
 }

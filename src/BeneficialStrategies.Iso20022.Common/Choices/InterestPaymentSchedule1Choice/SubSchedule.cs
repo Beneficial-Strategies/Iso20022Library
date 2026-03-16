@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
     /// </summary>
     [IsoId("_u7i5ReFWEeSvv6t4Ka7B7A")]
     [DisplayName("Sub Schedule")]
-    public partial record SubSchedule : InterestPaymentSchedule1Choice_
+    public record SubSchedule : InterestPaymentSchedule1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identification of the interest payment schedule.
         /// </summary>
@@ -24,17 +22,17 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
         [DisplayName("Interest Schedule Identification")]
         [IsoXmlTag("IntrstSchdlId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? InterestScheduleIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? InterestScheduleIdentification { get; init; }
+
         /// <summary>
         /// Interest amount that must be paid at due date.
         /// </summary>
         [IsoId("_es4FqdOJEeSQ_-lmj1tzfw")]
         [DisplayName("Amount")]
         [IsoXmlTag("Amt")]
-        public required ActiveCurrencyAndAmount Amount { get; init; } 
-        
+        public required ActiveCurrencyAndAmount Amount { get; init; }
+
         /// <summary>
         /// Latest date whereby the interest must be paid.
         /// </summary>
@@ -42,8 +40,8 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
         [DisplayName("Due Date")]
         [IsoXmlTag("DueDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate DueDate { get; init; } 
-        
+        public required IsoISODate DueDate { get; init; }
+
         /// <summary>
         /// Further details on the interest payments.
         /// </summary>
@@ -51,11 +49,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestPaymentSchedule1Choice
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max1025Text)]
-        [StringLength(maximumLength: 1025 ,MinimumLength = 1)]
-        public IsoMax1025Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 1025, MinimumLength = 1)]
+        public IsoMax1025Text? AdditionalInformation { get; init; }
     }
 }

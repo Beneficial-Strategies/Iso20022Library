@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4YmZIeLZEeWFtOV72FbX9w")]
 [DisplayName("Equity")]
-public partial record Equity3
+public record Equity3
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the level of priority to claim on income and assets of the company in case of the payment of dividends and in the event of a bankruptcy, for example, ordinary/common stocks, preferred stocks, subordinated debt, etc.
     /// </summary>
     [IsoId("_4jwgQeLZEeWFtOV72FbX9w")]
     [DisplayName("Preference To Income")]
     [IsoXmlTag("PrefToIncm")]
-    public required PreferenceToIncome5Choice_ PreferenceToIncome { get; init; } 
-    
+    public required PreferenceToIncome5Choice_ PreferenceToIncome { get; init; }
+
     /// <summary>
     /// Date/time at which the security will no longer exist, for example, redeemable preference shares.
     /// </summary>
@@ -33,24 +31,24 @@ public partial record Equity3
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? MaturityDate { get; init; } 
-    
+    public IsoISODateTime? MaturityDate { get; init; }
+
     /// <summary>
     /// Nominal amount which is not paid yet.
     /// </summary>
     [IsoId("_4jwgReLZEeWFtOV72FbX9w")]
     [DisplayName("Non Paid Amount")]
     [IsoXmlTag("NonPdAmt")]
-    public ActiveCurrencyAndAmount? NonPaidAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? NonPaidAmount { get; init; }
+
     /// <summary>
     /// Nominal value of an equity security.
     /// </summary>
     [IsoId("_4jwgR-LZEeWFtOV72FbX9w")]
     [DisplayName("Par Value")]
     [IsoXmlTag("ParVal")]
-    public ActiveCurrencyAndAmount? ParValue { get; init; } 
-    
+    public ActiveCurrencyAndAmount? ParValue { get; init; }
+
     /// <summary>
     /// Number of voting rights per share.
     /// </summary>
@@ -58,9 +56,5 @@ public partial record Equity3
     [DisplayName("Voting Rights Per Share")]
     [IsoXmlTag("VtngRghtsPerShr")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? VotingRightsPerShare { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoNumber? VotingRightsPerShare { get; init; }
 }

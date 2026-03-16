@@ -23,7 +23,7 @@ public enum ResultDetail3Code
     [IsoId("_dRl0sY4YEeW6h7rGyYlyTg")]
     [Description(@"The certificate is unknown.")]
     UnknownCertificate = ResultDetailCode.UnknownCertificate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Requested service not supported.
     /// Encoded/decoded by serializers as &quot;SVSU&quot;.
@@ -32,5 +32,4 @@ public enum ResultDetail3Code
     [IsoId("_eBK3g44YEeW6h7rGyYlyTg")]
     [Description(@"Requested service not supported.")]
     UnsupportedService = ResultDetailCode.UnsupportedService, // same ordinal as derivation source for type conversions
-    
 }

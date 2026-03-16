@@ -23,7 +23,7 @@ public enum OptionParty1Code
     [IsoId("_aP_AE9p-Ed-ak6NoX_4Aeg_-1870012986")]
     [Description(@"Seller in a trade.")]
     Seller = OptionPartyCode.Seller, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buyer in a trade.
     /// Encoded/decoded by serializers as &quot;BYER&quot;.
@@ -32,5 +32,4 @@ public enum OptionParty1Code
     [IsoId("_aP_AFNp-Ed-ak6NoX_4Aeg_-1870012969")]
     [Description(@"Buyer in a trade.")]
     Buyer = OptionPartyCode.Buyer, // same ordinal as derivation source for type conversions
-    
 }

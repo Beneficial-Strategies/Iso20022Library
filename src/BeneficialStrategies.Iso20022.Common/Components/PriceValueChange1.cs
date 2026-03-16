@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QajzFNp-Ed-ak6NoX_4Aeg_-1357819098")]
 [DisplayName("Price Value Change")]
-public partial record PriceValueChange1
+public record PriceValueChange1
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount by which the price has changed.
     /// </summary>
     [IsoId("_QajzFdp-Ed-ak6NoX_4Aeg_-1357819072")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveOrHistoricCurrencyAnd13DecimalAmount? Amount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd13DecimalAmount? Amount { get; init; }
+
     /// <summary>
     /// Indicates a positive or negative amount change.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record PriceValueChange1
     [DisplayName("Amount Sign")]
     [IsoXmlTag("AmtSgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? AmountSign { get; init; } 
-    
+    public IsoPlusOrMinusIndicator? AmountSign { get; init; }
+
     /// <summary>
     /// Rate by which the price has changed.
     /// </summary>
@@ -42,9 +40,5 @@ public partial record PriceValueChange1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Rate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? Rate { get; init; }
 }

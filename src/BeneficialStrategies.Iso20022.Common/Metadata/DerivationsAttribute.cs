@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace BeneficialStrategies.Iso20022.Metadata;
 
 /// <summary>
@@ -20,5 +21,3 @@ public class DerivationsAttribute : System.Attribute
     /// </summary>
     public Type[] DerivedTypes { get; }
 }
-
-

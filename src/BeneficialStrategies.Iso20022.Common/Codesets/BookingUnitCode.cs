@@ -23,7 +23,7 @@ public enum BookingUnitCode
     [IsoId("_bU-SN9p-Ed-ak6NoX_4Aeg_335335557")]
     [Description(@"Each partial execution is a bookable unit.")]
     EachPartial,
-    
+
     /// <summary>
     /// Aggregate partial executions on this order, and book one trade per order.
     /// Encoded/decoded by serializers as &quot;AGGP&quot;.
@@ -32,7 +32,7 @@ public enum BookingUnitCode
     [IsoId("_bVIDMNp-Ed-ak6NoX_4Aeg_335335558")]
     [Description(@"Aggregate partial executions on this order, and book one trade per order.")]
     AggregatePartial,
-    
+
     /// <summary>
     /// Aggregate executions for this symbol, side and settlement date.
     /// Encoded/decoded by serializers as &quot;AGGE&quot;.
@@ -41,5 +41,4 @@ public enum BookingUnitCode
     [IsoId("_bVIDMdp-Ed-ak6NoX_4Aeg_335335559")]
     [Description(@"Aggregate executions for this symbol, side and settlement date.")]
     AggregateExecutions,
-    
 }

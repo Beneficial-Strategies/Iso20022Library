@@ -1,8 +1,8 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using Agent = BeneficialStrategies.Iso20022.Choices.Party40Choice.Agent;
-using CxlReasonCode = BeneficialStrategies.Iso20022.Codesets.ExternalCancellationReason1Code;
 using CxlReasonChoice = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice;
+using CxlReasonCode = BeneficialStrategies.Iso20022.Codesets.ExternalCancellationReason1Code;
 
 namespace BeneficialStrategies.Iso20022.Validation.camt;
 
@@ -16,41 +16,39 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
 
     // ── Helpers ────────────────────────────────────────────────────────────────
 
-    private static Agent MakeAgent(string bic) => new()
-    {
-        FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+    private static Agent MakeAgent(string bic) =>
+        new()
         {
-            BICFI = bic,
-        },
-    };
+            FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+            {
+                BICFI = bic,
+            },
+        };
 
-    private static CaseAssignment5 ValidAssignment() => new()
-    {
-        Identification = "ASSIGN-001",
-        Assigner = MakeAgent("DEUTDEFFXXX"),
-        Assignee = MakeAgent("BNPAFRPPXXX"),
-        CreationDateTime = new DateTime(2024, 3, 16, 9, 0, 0),
-    };
-
-    private static UnderlyingTransaction28 ValidUnderlying() => new()
-    {
-        TransactionInformation = new PaymentTransaction137
+    private static CaseAssignment5 ValidAssignment() =>
+        new()
         {
-            OriginalEndToEndIdentification = "E2E-001",
-            OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
-        },
-    };
+            Identification = "ASSIGN-001",
+            Assigner = MakeAgent("DEUTDEFFXXX"),
+            Assignee = MakeAgent("BNPAFRPPXXX"),
+            CreationDateTime = new DateTime(2024, 3, 16, 9, 0, 0),
+        };
 
-    private static PaymentCancellationReason5 ValidCancellationReason() => new()
-    {
-        Reason = new CxlReasonChoice.Code { Value = CxlReasonCode.RequestedByCustomer },
-    };
+    private static UnderlyingTransaction28 ValidUnderlying() =>
+        new()
+        {
+            TransactionInformation = new PaymentTransaction137
+            {
+                OriginalEndToEndIdentification = "E2E-001",
+                OriginalUETR = "97ed4827-7b6f-4491-a06f-b548d5a7512d",
+            },
+        };
 
-    private static FIToFIPaymentCancellationRequestV10 ValidMessage() => new()
-    {
-        Assignment = ValidAssignment(),
-        Underlying = ValidUnderlying(),
-    };
+    private static PaymentCancellationReason5 ValidCancellationReason() =>
+        new() { Reason = new CxlReasonChoice.Code { Value = CxlReasonCode.RequestedByCustomer }, };
+
+    private static FIToFIPaymentCancellationRequestV10 ValidMessage() =>
+        new() { Assignment = ValidAssignment(), Underlying = ValidUnderlying(), };
 
     // ── Happy path ─────────────────────────────────────────────────────────────
 
@@ -65,11 +63,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     {
         var msg = ValidMessage() with
         {
-            Case = new Case5
-            {
-                Identification = "CASE-001",
-                Creator = MakeAgent("DEUTDEFFXXX"),
-            },
+            Case = new Case5 { Identification = "CASE-001", Creator = MakeAgent("DEUTDEFFXXX"), },
         };
         _sut.TestValidate(msg).ShouldNotHaveAnyValidationErrors();
     }
@@ -112,28 +106,32 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     public void MissingAssignment_HasValidationError()
     {
         // Records require `Assignment` at compile time; bypass via cast to trigger runtime validation
-        var msg = ValidMessage() with { };
-        // Use reflection to clear the required property for test
-        var result = _sut.Validate(new FIToFIPaymentCancellationRequestV10
+        var msg = ValidMessage() with
         {
-            // Assignment intentionally omitted — required property, FluentValidation NotNull check
-            Assignment = null!,
-            Underlying = ValidUnderlying(),
-        });
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "Assignment");
+            };
+        // Use reflection to clear the required property for test
+        var result = _sut.Validate(
+            new FIToFIPaymentCancellationRequestV10
+            {
+                // Assignment intentionally omitted — required property, FluentValidation NotNull check
+                Assignment = null!,
+                Underlying = ValidUnderlying(),
+            }
+        );
+        Assert.Contains(result.Errors, e => e.PropertyName == "Assignment");
     }
 
     [Fact]
     public void MissingUnderlying_HasValidationError()
     {
-        var result = _sut.Validate(new FIToFIPaymentCancellationRequestV10
-        {
-            Assignment = ValidAssignment(),
-            Underlying = null!,
-        });
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "Underlying");
+        var result = _sut.Validate(
+            new FIToFIPaymentCancellationRequestV10
+            {
+                Assignment = ValidAssignment(),
+                Underlying = null!,
+            }
+        );
+        Assert.Contains(result.Errors, e => e.PropertyName == "Underlying");
     }
 
     // ── CaseAssignment5: Identification ───────────────────────────────────────
@@ -145,8 +143,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Assignment = ValidAssignment() with { Identification = "" },
         };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.Assignment.Identification);
+        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Identification);
     }
 
     [Fact]
@@ -156,8 +153,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             Assignment = ValidAssignment() with { Identification = new string('A', 36) },
         };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.Assignment.Identification);
+        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Identification);
     }
 
     [Fact]
@@ -175,23 +171,15 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
     [Fact]
     public void Assignment_NullAssigner_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Assignment = ValidAssignment() with { Assigner = null! },
-        };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.Assignment.Assigner);
+        var msg = ValidMessage() with { Assignment = ValidAssignment() with { Assigner = null! }, };
+        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Assigner);
     }
 
     [Fact]
     public void Assignment_NullAssignee_HasValidationError()
     {
-        var msg = ValidMessage() with
-        {
-            Assignment = ValidAssignment() with { Assignee = null! },
-        };
-        _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(x => x.Assignment.Assignee);
+        var msg = ValidMessage() with { Assignment = ValidAssignment() with { Assignee = null! }, };
+        _sut.TestValidate(msg).ShouldHaveValidationErrorFor(x => x.Assignment.Assignee);
     }
 
     // ── ControlData1: NumberOfTransactions pattern ────────────────────────────
@@ -225,7 +213,8 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
         {
             ControlData = new ControlData1 { NumberOfTransactions = "999" },
         };
-        _sut.TestValidate(msg).ShouldNotHaveValidationErrorFor(x => x.ControlData!.NumberOfTransactions);
+        _sut.TestValidate(msg)
+            .ShouldNotHaveValidationErrorFor(x => x.ControlData!.NumberOfTransactions);
     }
 
     // ── PaymentTransaction137: OriginalUETR pattern ───────────────────────────
@@ -244,8 +233,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(
-                x => x.Underlying.TransactionInformation!.OriginalUETR);
+            .ShouldHaveValidationErrorFor(x => x.Underlying.TransactionInformation!.OriginalUETR);
     }
 
     [Fact]
@@ -262,8 +250,9 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         _sut.TestValidate(msg)
-            .ShouldNotHaveValidationErrorFor(
-                x => x.Underlying.TransactionInformation!.OriginalUETR);
+            .ShouldNotHaveValidationErrorFor(x =>
+                x.Underlying.TransactionInformation!.OriginalUETR
+            );
     }
 
     // ── PaymentTransaction137: OriginalEndToEndIdentification length ──────────
@@ -282,8 +271,9 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(
-                x => x.Underlying.TransactionInformation!.OriginalEndToEndIdentification);
+            .ShouldHaveValidationErrorFor(x =>
+                x.Underlying.TransactionInformation!.OriginalEndToEndIdentification
+            );
     }
 
     // ── UnderlyingTransaction28: empty underlying ─────────────────────────────
@@ -300,8 +290,7 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.ErrorMessage.Contains("at least one"));
+        Assert.Contains(result.Errors, e => e.ErrorMessage.Contains("at least one"));
     }
 
     // ── Cross-field: MessageOrGroupCaseRule ───────────────────────────────────
@@ -317,14 +306,17 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             {
                 TransactionInformation = new PaymentTransaction137
                 {
-                    Case = new Case5 { Identification = "CASE-TXN", Creator = MakeAgent("DEUTDEFFXXX") },
+                    Case = new Case5
+                    {
+                        Identification = "CASE-TXN",
+                        Creator = MakeAgent("DEUTDEFFXXX")
+                    },
                     OriginalEndToEndIdentification = "E2E-001",
                 },
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "MessageOrGroupCaseRule");
+        Assert.Contains(result.Errors, e => e.PropertyName == "MessageOrGroupCaseRule");
     }
 
     [Fact]
@@ -340,13 +332,16 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                 {
                     OriginalMessageIdentification = "ORIG-001",
                     OriginalMessageNameIdentification = "pacs.008.001.11",
-                    Case = new Case5 { Identification = "CASE-GRP", Creator = MakeAgent("DEUTDEFFXXX") },
+                    Case = new Case5
+                    {
+                        Identification = "CASE-GRP",
+                        Creator = MakeAgent("DEUTDEFFXXX")
+                    },
                 },
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.PropertyName == "MessageOrGroupCaseRule");
+        Assert.Contains(result.Errors, e => e.PropertyName == "MessageOrGroupCaseRule");
     }
 
     [Fact]
@@ -360,7 +355,11 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             {
                 TransactionInformation = new PaymentTransaction137
                 {
-                    Case = new Case5 { Identification = "CASE-TXN", Creator = MakeAgent("DEUTDEFFXXX") },
+                    Case = new Case5
+                    {
+                        Identification = "CASE-TXN",
+                        Creator = MakeAgent("DEUTDEFFXXX")
+                    },
                     OriginalEndToEndIdentification = "E2E-001",
                 },
             },
@@ -380,14 +379,15 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             {
                 OriginalGroupInformationAndCancellation = new OriginalGroupHeader15
                 {
-                    OriginalMessageIdentification = "",  // violates required Max35Text
+                    OriginalMessageIdentification = "", // violates required Max35Text
                     OriginalMessageNameIdentification = "pacs.008.001.11",
                 },
             },
         };
         _sut.TestValidate(msg)
-            .ShouldHaveValidationErrorFor(
-                x => x.Underlying.OriginalGroupInformationAndCancellation!.OriginalMessageIdentification);
+            .ShouldHaveValidationErrorFor(x =>
+                x.Underlying.OriginalGroupInformationAndCancellation!.OriginalMessageIdentification
+            );
     }
 
     // ── UnderlyingTransaction28: GroupCancellationAndReasonRule ──────────────────
@@ -409,8 +409,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationAndReasonRule"));
+        Assert.Contains(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndReasonRule")
+        );
     }
 
     [Fact]
@@ -430,8 +432,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.DoesNotContain(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationAndReasonRule"));
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndReasonRule")
+        );
     }
 
     // ── UnderlyingTransaction28: GroupCancellationTrueAndTransactionInformationRule ─
@@ -457,8 +461,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationTrueAndTransactionInformationRule"));
+        Assert.Contains(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationTrueAndTransactionInformationRule")
+        );
     }
 
     // ── UnderlyingTransaction28: GroupCancellationFalseAndTransactionInformationRule
@@ -480,8 +486,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationFalseAndTransactionInformationRule"));
+        Assert.Contains(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationFalseAndTransactionInformationRule")
+        );
     }
 
     [Fact]
@@ -504,8 +512,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.DoesNotContain(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationFalseAndTransactionInformationRule"));
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationFalseAndTransactionInformationRule")
+        );
     }
 
     // ── UnderlyingTransaction28: GroupCancellationAndNumberOfTransactionsRule ────
@@ -531,8 +541,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationAndNumberOfTransactionsRule"));
+        Assert.Contains(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndNumberOfTransactionsRule")
+        );
     }
 
     [Fact]
@@ -556,8 +568,10 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             },
         };
         var result = _sut.Validate(msg);
-        Assert.DoesNotContain(result.Errors,
-            e => e.ErrorMessage.Contains("GroupCancellationAndNumberOfTransactionsRule"));
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupCancellationAndNumberOfTransactionsRule")
+        );
     }
 
     // ── UnderlyingTransaction28: GroupOrTransactionCaseRule ──────────────────────
@@ -573,18 +587,25 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
                 {
                     OriginalMessageIdentification = "ORIG-001",
                     OriginalMessageNameIdentification = "pacs.008.001.11",
-                    Case = new Case5 { Identification = "CASE-GRP", Creator = MakeAgent("DEUTDEFFXXX") },
+                    Case = new Case5
+                    {
+                        Identification = "CASE-GRP",
+                        Creator = MakeAgent("DEUTDEFFXXX")
+                    },
                 },
                 TransactionInformation = new PaymentTransaction137
                 {
-                    Case = new Case5 { Identification = "CASE-TXN", Creator = MakeAgent("DEUTDEFFXXX") },
+                    Case = new Case5
+                    {
+                        Identification = "CASE-TXN",
+                        Creator = MakeAgent("DEUTDEFFXXX")
+                    },
                     OriginalEndToEndIdentification = "E2E-001",
                 },
             },
         };
         var result = _sut.Validate(msg);
-        Assert.Contains(result.Errors,
-            e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
+        Assert.Contains(result.Errors, e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
     }
 
     [Fact]
@@ -596,13 +617,19 @@ public class FIToFIPaymentCancellationRequestV10ValidatorTests
             {
                 TransactionInformation = new PaymentTransaction137
                 {
-                    Case = new Case5 { Identification = "CASE-TXN", Creator = MakeAgent("DEUTDEFFXXX") },
+                    Case = new Case5
+                    {
+                        Identification = "CASE-TXN",
+                        Creator = MakeAgent("DEUTDEFFXXX")
+                    },
                     OriginalEndToEndIdentification = "E2E-001",
                 },
             },
         };
         var result = _sut.Validate(msg);
-        Assert.DoesNotContain(result.Errors,
-            e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule"));
+        Assert.DoesNotContain(
+            result.Errors,
+            e => e.ErrorMessage.Contains("GroupOrTransactionCaseRule")
+        );
     }
 }

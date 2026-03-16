@@ -23,7 +23,7 @@ public enum UndertakingIssuanceNameCode
     [IsoId("_-IZCEnltEeG7BsjMvd1mEw_443560113")]
     [Description(@"Demand guarantee.")]
     Guarantee,
-    
+
     /// <summary>
     /// Standby letter of credit.
     /// Encoded/decoded by serializers as &quot;STBY&quot;.
@@ -32,5 +32,4 @@ public enum UndertakingIssuanceNameCode
     [IsoId("_-IZCE3ltEeG7BsjMvd1mEw_621678785")]
     [Description(@"Standby letter of credit.")]
     Standby,
-    
 }

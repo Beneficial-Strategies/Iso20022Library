@@ -23,7 +23,7 @@ public enum CorporateActionCancellationReasonCode
     [IsoId("_bCpMF9p-Ed-ak6NoX_4Aeg_401443465")]
     [Description(@"Cancellation due to a processing error.")]
     Processing,
-    
+
     /// <summary>
     /// Cancellation due to the corporate action event being cancelled by the issuer.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
@@ -32,5 +32,4 @@ public enum CorporateActionCancellationReasonCode
     [IsoId("_bCpMGNp-Ed-ak6NoX_4Aeg_779163570")]
     [Description(@"Cancellation due to the corporate action event being cancelled by the issuer.")]
     Withrawal,
-    
 }

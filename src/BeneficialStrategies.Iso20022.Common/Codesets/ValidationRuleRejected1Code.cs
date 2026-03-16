@@ -23,5 +23,4 @@ public enum ValidationRuleRejected1Code
     [IsoId("_uY6bcR-zEeuxStysDTgLiw")]
     [Description(@"Rejected.")]
     Rejected = ValidationRuleCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

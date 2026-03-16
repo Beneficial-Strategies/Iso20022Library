@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup1Choice
 {
     /// <summary>
@@ -13,16 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup1Choice
     /// </summary>
     [IsoId("_EjCCgA4UEeKGXqvMN6jpiw")]
     [DisplayName("Party")]
-    public partial record Party : PartyOrGroup1Choice_
+    public record Party : PartyOrGroup1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Entity involved in an activity.
         /// </summary>
         [IsoXmlTag("Pty")]
-        public required PartyIdentification43 Value { get; init; } 
-        
+        public required PartyIdentification43 Value { get; init; }
+
         /// <summary>
         /// Security certificate used to sign electronically.
         /// </summary>
@@ -30,10 +28,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrGroup1Choice
         [DisplayName("Certificate")]
         [IsoXmlTag("Cert")]
         [IsoSimpleType(IsoSimpleType.Max10KBinary)]
-        public IsoMax10KBinary? Certificate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoMax10KBinary? Certificate { get; init; }
     }
 }

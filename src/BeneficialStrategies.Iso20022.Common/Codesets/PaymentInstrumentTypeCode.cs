@@ -23,7 +23,7 @@ public enum PaymentInstrumentTypeCode
     [IsoId("_SadrQNxgEeioifFt1dhnJA")]
     [Description(@"Payment card (credit or debit).")]
     Card,
-    
+
     /// <summary>
     /// Paper check.
     /// Encoded/decoded by serializers as &quot;CHCK&quot;.
@@ -32,7 +32,7 @@ public enum PaymentInstrumentTypeCode
     [IsoId("_UlszwNxgEeioifFt1dhnJA")]
     [Description(@"Paper check.")]
     Check,
-    
+
     /// <summary>
     /// Account accessed by a stored value instrument such as a card or a certificate.
     /// Encoded/decoded by serializers as &quot;SVAC&quot;.
@@ -41,7 +41,7 @@ public enum PaymentInstrumentTypeCode
     [IsoId("_Wh6BwNxgEeioifFt1dhnJA")]
     [Description(@"Account accessed by a stored value instrument such as a card or a certificate.")]
     StoredValueAccount,
-    
+
     /// <summary>
     /// Cash managed by a cash handling system.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -50,7 +50,7 @@ public enum PaymentInstrumentTypeCode
     [IsoId("_aoljQNxgEeioifFt1dhnJA")]
     [Description(@"Cash managed by a cash handling system.")]
     Cash,
-    
+
     /// <summary>
     /// Account using loyalty processing.
     /// Encoded/decoded by serializers as &quot;LOYT&quot;.
@@ -59,5 +59,4 @@ public enum PaymentInstrumentTypeCode
     [IsoId("_ci9lQNxgEeioifFt1dhnJA")]
     [Description(@"Account using loyalty processing.")]
     LoyaltyAccount,
-    
 }

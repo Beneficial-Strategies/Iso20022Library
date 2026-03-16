@@ -23,7 +23,7 @@ public enum RejectionReason13Code
     [IsoId("_Zg5FcNp-Ed-ak6NoX_4Aeg_-1186004164")]
     [Description(@"The validation of the advice/instruction/request failed.")]
     FailedValidation = RejectionReasonCode.FailedValidation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Several message with the same identification.
     /// Encoded/decoded by serializers as &quot;SAID&quot;.
@@ -32,16 +32,18 @@ public enum RejectionReason13Code
     [IsoId("_Zg5Fcdp-Ed-ak6NoX_4Aeg_-1186004134")]
     [Description(@"Several message with the same identification.")]
     SameIdentification = RejectionReasonCode.SameIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction contains an invalid message identification, identification is unknown.
     /// Encoded/decoded by serializers as &quot;INID&quot;.
     /// </summary>
     [EnumMember(Value = "INID")]
     [IsoId("_Zg5Fctp-Ed-ak6NoX_4Aeg_-1186004103")]
-    [Description(@"Instruction contains an invalid message identification, identification is unknown.")]
+    [Description(
+        @"Instruction contains an invalid message identification, identification is unknown."
+    )]
     InvalidIdentification = RejectionReasonCode.InvalidIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid corporate action identification supplied.
     /// Encoded/decoded by serializers as &quot;REFI&quot;.
@@ -50,14 +52,15 @@ public enum RejectionReason13Code
     [IsoId("_Zg5Fc9p-Ed-ak6NoX_4Aeg_-1186004102")]
     [Description(@"Invalid corporate action identification supplied.")]
     InvalidCAIdentification = RejectionReasonCode.InvalidCAIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer CA Identification does not correspond with the Corporate Action Identification supplied.
     /// Encoded/decoded by serializers as &quot;MICA&quot;.
     /// </summary>
     [EnumMember(Value = "MICA")]
     [IsoId("_Zg5FdNp-Ed-ak6NoX_4Aeg_-1186004072")]
-    [Description(@"Issuer CA Identification does not correspond with the Corporate Action Identification supplied.")]
+    [Description(
+        @"Issuer CA Identification does not correspond with the Corporate Action Identification supplied."
+    )]
     MismatchedCAIdentification = RejectionReasonCode.MismatchedCAIdentification, // same ordinal as derivation source for type conversions
-    
 }

@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RateAndAmountFormat37Choice.Rate))]
     [KnownType(typeof(RateAndAmountFormat37Choice.NotSpecifiedRate))]
     [KnownType(typeof(RateAndAmountFormat37Choice.Amount))]
-    [JsonDerivedType(typeof(RateAndAmountFormat37Choice.Rate),nameof(RateAndAmountFormat37Choice.Rate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat37Choice.NotSpecifiedRate),nameof(RateAndAmountFormat37Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat37Choice.Amount),nameof(RateAndAmountFormat37Choice.Amount))]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat37Choice.Rate),
+        nameof(RateAndAmountFormat37Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat37Choice.NotSpecifiedRate),
+        nameof(RateAndAmountFormat37Choice.NotSpecifiedRate)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat37Choice.Amount),
+        nameof(RateAndAmountFormat37Choice.Amount)
+    )]
     [IsoId("_qDDni0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Rate And Amount Format 37 Choice")]
-    public abstract partial record RateAndAmountFormat37Choice_
-    {
-    }
+    public abstract record RateAndAmountFormat37Choice_ { }
 }

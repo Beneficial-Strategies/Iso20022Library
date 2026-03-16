@@ -23,5 +23,4 @@ public enum TradingDateCode
     [IsoId("__ztF4tojEeC60axPepSq7g_-94040938")]
     [Description(@"Partial trades have occurred over a period of two or more days.")]
     Various,
-    
 }

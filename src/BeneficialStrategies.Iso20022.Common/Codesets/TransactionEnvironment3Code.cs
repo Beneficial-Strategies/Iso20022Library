@@ -23,7 +23,7 @@ public enum TransactionEnvironment3Code
     [IsoId("_6F6BoXsIEeSR68OJvMfxJQ")]
     [Description(@"Bank environment.")]
     Branch = TransactionEnvironmentCode.Branch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Merchant environment.
     /// Encoded/decoded by serializers as &quot;MERC&quot;.
@@ -32,7 +32,7 @@ public enum TransactionEnvironment3Code
     [IsoId("_6Md8oXsIEeSR68OJvMfxJQ")]
     [Description(@"Merchant environment.")]
     Merchant = TransactionEnvironmentCode.Merchant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other environments, for instance a mall or an airport.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum TransactionEnvironment3Code
     [IsoId("_6SkkoXsIEeSR68OJvMfxJQ")]
     [Description(@"Other environments, for instance a mall or an airport.")]
     Other = TransactionEnvironmentCode.Other, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,23 +1,21 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Lock status of the party for processing in the system. 
+/// Lock status of the party for processing in the system.
 /// </summary>
 [IsoId("_JfSv1mjMEeiRg5NzP0jkQg")]
 [DisplayName("Party Lock Status")]
-public partial record PartyLockStatus1
+public record PartyLockStatus1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the date from which the lock status is valid.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record PartyLockStatus1
     [DisplayName("Valid From")]
     [IsoXmlTag("VldFr")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValidFrom { get; init; } 
-    
+    public IsoISODate? ValidFrom { get; init; }
+
     /// <summary>
     /// Lock status of the party.
     /// </summary>
     [IsoId("_JfT982jMEeiRg5NzP0jkQg")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required LockStatus1Code Status { get; init; } 
-    
+    public required LockStatus1Code Status { get; init; }
+
     /// <summary>
     /// Specifies the underlying reason for the locking of the party.
     /// </summary>
@@ -42,10 +40,6 @@ public partial record PartyLockStatus1
     [DisplayName("Lock Reason")]
     [IsoXmlTag("LckRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? LockReason { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? LockReason { get; init; }
 }

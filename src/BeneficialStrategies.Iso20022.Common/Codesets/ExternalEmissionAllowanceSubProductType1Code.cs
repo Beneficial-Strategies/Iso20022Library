@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_sb74IG8wEe6_0L6gLGEkbA")]
-[Description(@"Specifies the detailed sub products types allowed for emission allowances and associated derivatives.")]
+[Description(
+    @"Specifies the detailed sub products types allowed for emission allowances and associated derivatives."
+)]
 [DerivedFrom(typeof(ExternalEmissionAllowanceSubProductTypeCode))]
 public enum ExternalEmissionAllowanceSubProductType1Code
 {
@@ -21,7 +23,9 @@ public enum ExternalEmissionAllowanceSubProductType1Code
     /// </summary>
     [EnumMember(Value = "CERE")]
     [IsoId("")]
-    [Description(@"Commodity attribute of type emissions allowance CER (Certified Emission Reduction).")]
+    [Description(
+        @"Commodity attribute of type emissions allowance CER (Certified Emission Reduction)."
+    )]
     CER = ExternalEmissionAllowanceSubProductTypeCode.CER, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum ExternalEmissionAllowanceSubProductType1Code
     /// </summary>
     [EnumMember(Value = "EUAA")]
     [IsoId("")]
-    [Description(@"Commodity attribute of type emissions allowance EUAA (European Union Aviation Allowance).")]
+    [Description(
+        @"Commodity attribute of type emissions allowance EUAA (European Union Aviation Allowance)."
+    )]
     EUAA = ExternalEmissionAllowanceSubProductTypeCode.EUAA, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -48,7 +54,9 @@ public enum ExternalEmissionAllowanceSubProductType1Code
     /// </summary>
     [EnumMember(Value = "EUAE")]
     [IsoId("")]
-    [Description(@"Commodity attribute of type emissions allowance EUA (European Union Allowance).")]
+    [Description(
+        @"Commodity attribute of type emissions allowance EUA (European Union Allowance)."
+    )]
     EUA = ExternalEmissionAllowanceSubProductTypeCode.EUA, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -59,5 +67,4 @@ public enum ExternalEmissionAllowanceSubProductType1Code
     [IsoId("")]
     [Description(@"Commodity attribute of other type.")]
     Other = ExternalEmissionAllowanceSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-
 }

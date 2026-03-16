@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,51 +14,45 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rZTGkYgoEeu8-LhY4KPfWg")]
 [DisplayName("Error")]
-public partial record Error2
+public record Error2
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the transaction.
     /// </summary>
     [IsoId("_pNSucT5FEeyHI64WSlzTlg")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public Environment33? Environment { get; init; } 
-    
+    public Environment33? Environment { get; init; }
+
     /// <summary>
     /// Contains or describes conditions and characteristics of the transaction.
     /// </summary>
     [IsoId("_rez4sYgoEeu8-LhY4KPfWg")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
-    public Context17? Context { get; init; } 
-    
+    public Context17? Context { get; init; }
+
     /// <summary>
     /// Error or rejection transaction.
     /// </summary>
     [IsoId("_rez4s4goEeu8-LhY4KPfWg")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required Transaction155 Transaction { get; init; } 
-    
+    public required Transaction155 Transaction { get; init; }
+
     /// <summary>
     /// Contains protected data and the attributes used to protect the data.
     /// </summary>
     [IsoId("_rez4tYgoEeu8-LhY4KPfWg")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; } 
-    
+    public ProtectedData1? ProtectedData { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
     /// </summary>
     [IsoId("_rez4t4goEeu8-LhY4KPfWg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PreviousYear1Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.PreviousYear1Choice
     /// </summary>
     [IsoId("_3fxSc0XfEeGY6MkiuzuPOA_1191226349")]
     [DisplayName("Specific Previous Years")]
-    public partial record SpecificPreviousYears : PreviousYear1Choice_
+    public record SpecificPreviousYears : PreviousYear1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Year represented by YYYY (ISO 8601).
         /// </summary>
         [IsoXmlTag("SpcfcPrvsYrs")]
         [IsoSimpleType(IsoSimpleType.ISOYear)]
-        public required IsoISOYear Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISOYear Value { get; init; }
     }
 }

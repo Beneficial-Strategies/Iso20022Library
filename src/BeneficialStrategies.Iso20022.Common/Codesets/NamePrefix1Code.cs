@@ -23,7 +23,7 @@ public enum NamePrefix1Code
     [IsoId("_jXsywYc0EeeO5vQpPey46w")]
     [Description(@"Title of the person is Doctor or Dr.")]
     Doctor = NamePrefixCode.Doctor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Title of the person is Mister or Mr.
     /// Encoded/decoded by serializers as &quot;MIST&quot;.
@@ -32,7 +32,7 @@ public enum NamePrefix1Code
     [IsoId("_jp59EYc0EeeO5vQpPey46w")]
     [Description(@"Title of the person is Mister or Mr.")]
     Mister = NamePrefixCode.Mister, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Title of the person is Miss.
     /// Encoded/decoded by serializers as &quot;MISS&quot;.
@@ -41,7 +41,7 @@ public enum NamePrefix1Code
     [IsoId("_jkbAIYc0EeeO5vQpPey46w")]
     [Description(@"Title of the person is Miss.")]
     Miss = NamePrefixCode.Miss, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Title of the person is Madam.
     /// Encoded/decoded by serializers as &quot;MADM&quot;.
@@ -50,5 +50,4 @@ public enum NamePrefix1Code
     [IsoId("_jehMcYc0EeeO5vQpPey46w")]
     [Description(@"Title of the person is Madam.")]
     Madam = NamePrefixCode.Madam, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum SecuritiesEntryType3Code
     [IsoId("_RmChwTUFEe2tRf29bleifQ")]
     [Description(@"Total number of securities eligible for this event.")]
     Eligible = SecuritiesEntryTypeCode.Eligible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance of uninstructed position.
     /// Encoded/decoded by serializers as &quot;UNBA&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesEntryType3Code
     [IsoId("_SBw0cTUFEe2tRf29bleifQ")]
     [Description(@"Balance of uninstructed position.")]
     UninstructedBalance = SecuritiesEntryTypeCode.UninstructedBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance of instructed position.
     /// Encoded/decoded by serializers as &quot;INBA&quot;.
@@ -41,5 +41,4 @@ public enum SecuritiesEntryType3Code
     [IsoId("_SrfG4TUFEe2tRf29bleifQ")]
     [Description(@"Balance of instructed position.")]
     InstructedBalance = SecuritiesEntryTypeCode.InstructedBalance, // same ordinal as derivation source for type conversions
-    
 }

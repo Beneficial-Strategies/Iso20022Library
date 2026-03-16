@@ -23,7 +23,7 @@ public enum SwitchType1Code
     [IsoId("_xBa00Q2YEeSNWNtJlXOAhg")]
     [Description(@"Indicates a full switch for an account.")]
     FullSwitch = SwitchTypeCode.FullSwitch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates a partial switch for an account.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,5 +32,4 @@ public enum SwitchType1Code
     [IsoId("_xGBoAQ2YEeSNWNtJlXOAhg")]
     [Description(@"Indicates a partial switch for an account.")]
     PartSwitch = SwitchTypeCode.PartSwitch, // same ordinal as derivation source for type conversions
-    
 }

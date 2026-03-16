@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S-10hgEcEeCQm6a_G2yO_w_-323080810")]
 [DisplayName("Consignment")]
-public partial record Consignment2
+public record Consignment2
 {
-    #nullable enable
-    
     /// <summary>
     /// Party consigning goods as stipulated in the transport contract by the party ordering transport.
     /// </summary>
     [IsoId("_S-10hwEcEeCQm6a_G2yO_w_379767677")]
     [DisplayName("Consignor")]
     [IsoXmlTag("Consgnr")]
-    public TradeParty1? Consignor { get; init; } 
-    
+    public TradeParty1? Consignor { get; init; }
+
     /// <summary>
     /// Party to which goods are consigned.
     /// </summary>
     [IsoId("_S-10iAEcEeCQm6a_G2yO_w_-20999364")]
     [DisplayName("Consignee")]
     [IsoXmlTag("Consgn")]
-    public TradeParty1? Consignee { get; init; } 
-    
+    public TradeParty1? Consignee { get; init; }
+
     /// <summary>
     /// Particular aircraft, vehicle, vessel or other device used for the transport of a consignment.
     /// </summary>
     [IsoId("_S-_lgAEcEeCQm6a_G2yO_w_-1584428859")]
     [DisplayName("Transport Means")]
     [IsoXmlTag("TrnsprtMeans")]
-    public TransportMeans3? TransportMeans { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransportMeans3? TransportMeans { get; init; }
 }

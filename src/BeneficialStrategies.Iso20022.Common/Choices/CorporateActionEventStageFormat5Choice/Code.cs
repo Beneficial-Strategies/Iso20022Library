@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStageFormat5Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionEventStageFormat5
     /// </summary>
     [IsoId("_ohDxAyUfEeO8eOSw0QN9mA")]
     [DisplayName("Code")]
-    public partial record Code : CorporateActionEventStageFormat5Choice_
+    public record Code : CorporateActionEventStageFormat5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the stage of the CA event.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required CorporateActionEventStage3Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required CorporateActionEventStage3Code Value { get; init; }
     }
 }

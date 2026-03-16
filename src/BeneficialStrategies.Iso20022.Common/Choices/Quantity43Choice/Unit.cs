@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Quantity43Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity43Choice
     /// </summary>
     [IsoId("_qCevQa5xEeeMy7TnJ3e__g")]
     [DisplayName("Unit")]
-    public partial record Unit : Quantity43Choice_
+    public record Unit : Quantity43Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Quantity expressed as a number, for example, a number of shares.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity43Choice
         [DisplayName("Total Units Number")]
         [IsoXmlTag("TtlUnitsNb")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber TotalUnitsNumber { get; init; } 
-        
+        public required IsoDecimalNumber TotalUnitsNumber { get; init; }
+
         /// <summary>
         /// Information about the units to be transferred.
         /// </summary>
@@ -35,9 +33,5 @@ namespace BeneficialStrategies.Iso20022.Choices.Quantity43Choice
         [MinLength(0)]
         [MaxLength(2)]
         public ValueList<Unit10> UnitDetails { get; init; } = [];
-        
-        
-        #nullable disable
-        
     }
 }

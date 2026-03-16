@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_12sPUGw8Ee-t2JGPeXy0Sw")]
-[Description(@"Specifies the payment scenario, as published in an external payment scenario code set.")]
+[Description(
+    @"Specifies the payment scenario, as published in an external payment scenario code set."
+)]
 [Derivations(typeof(ExternalPaymentScenario1Code))]
-public enum ExternalPaymentScenarioCode
-{
-}
+public enum ExternalPaymentScenarioCode { }

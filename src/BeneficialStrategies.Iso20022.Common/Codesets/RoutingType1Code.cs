@@ -23,7 +23,7 @@ public enum RoutingType1Code
     [IsoId("_Y-Uj6Np-Ed-ak6NoX_4Aeg_1903962381")]
     [Description(@"Indicates that routing is allowed.")]
     Allowed = RoutingTypeCode.Allowed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that routing is blocked.
     /// Encoded/decoded by serializers as &quot;BLOC&quot;.
@@ -32,5 +32,4 @@ public enum RoutingType1Code
     [IsoId("_Y-Uj6dp-Ed-ak6NoX_4Aeg_1903962382")]
     [Description(@"Indicates that routing is blocked.")]
     Blocked = RoutingTypeCode.Blocked, // same ordinal as derivation source for type conversions
-    
 }

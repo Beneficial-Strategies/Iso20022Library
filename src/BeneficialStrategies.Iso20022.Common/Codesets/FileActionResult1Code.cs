@@ -23,7 +23,7 @@ public enum FileActionResult1Code
     [IsoId("_1m3kQVECEee94_dUz-hvgw")]
     [Description(@"Identified record is already present in the file.")]
     DuplicateRecord = FileActionResultCode.DuplicateRecord, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid record field syntax.
     /// Encoded/decoded by serializers as &quot;FERD&quot;.
@@ -32,7 +32,7 @@ public enum FileActionResult1Code
     [IsoId("_2AgMQlECEee94_dUz-hvgw")]
     [Description(@"Invalid record field syntax.")]
     FieldEditError = FileActionResultCode.FieldEditError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid field value in record.
     /// Encoded/decoded by serializers as &quot;INFD&quot;.
@@ -41,7 +41,7 @@ public enum FileActionResult1Code
     [IsoId("_2KX58lECEee94_dUz-hvgw")]
     [Description(@"Invalid field value in record.")]
     FieldValueInvalid = FileActionResultCode.FieldValueInvalid, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File is locked and cannot be modified.
     /// Encoded/decoded by serializers as &quot;FLCK&quot;.
@@ -50,7 +50,7 @@ public enum FileActionResult1Code
     [IsoId("_2YQk8lECEee94_dUz-hvgw")]
     [Description(@"File is locked and cannot be modified.")]
     FileLocked = FileActionResultCode.FileLocked, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid record format.
     /// Encoded/decoded by serializers as &quot;FTER&quot;.
@@ -59,7 +59,7 @@ public enum FileActionResult1Code
     [IsoId("_2jasElECEee94_dUz-hvgw")]
     [Description(@"Invalid record format.")]
     FormatError = FileActionResultCode.FormatError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Requested file action not supported.
     /// Encoded/decoded by serializers as &quot;NSUP&quot;.
@@ -68,7 +68,7 @@ public enum FileActionResult1Code
     [IsoId("_2tRyslECEee94_dUz-hvgw")]
     [Description(@"Requested file action not supported.")]
     NotSupported = FileActionResultCode.NotSupported, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of file action result
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,7 +77,7 @@ public enum FileActionResult1Code
     [IsoId("_23jJAlECEee94_dUz-hvgw")]
     [Description(@"Other type of file action result")]
     Other = FileActionResultCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Action performed successfully
     /// Encoded/decoded by serializers as &quot;SUCC&quot;.
@@ -86,7 +86,7 @@ public enum FileActionResult1Code
     [IsoId("_3D14klECEee94_dUz-hvgw")]
     [Description(@"Action performed successfully")]
     Successful = FileActionResultCode.Successful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identified record was not found.
     /// Encoded/decoded by serializers as &quot;UTLR&quot;.
@@ -95,7 +95,7 @@ public enum FileActionResult1Code
     [IsoId("_3NXA8lECEee94_dUz-hvgw")]
     [Description(@"Identified record was not found.")]
     UnableToLocateRecord = FileActionResultCode.UnableToLocateRecord, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File is unknown.
     /// Encoded/decoded by serializers as &quot;UNKF&quot;.
@@ -104,7 +104,7 @@ public enum FileActionResult1Code
     [IsoId("_3b2I4lECEee94_dUz-hvgw")]
     [Description(@"File is unknown.")]
     UnknownFile = FileActionResultCode.UnknownFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Action could not be performed.
     /// Encoded/decoded by serializers as &quot;USUC&quot;.
@@ -113,5 +113,4 @@ public enum FileActionResult1Code
     [IsoId("_3nfYMlECEee94_dUz-hvgw")]
     [Description(@"Action could not be performed.")]
     Unsuccessful = FileActionResultCode.Unsuccessful, // same ordinal as derivation source for type conversions
-    
 }

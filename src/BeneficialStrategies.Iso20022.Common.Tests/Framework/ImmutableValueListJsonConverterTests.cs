@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
+using System.Text.Json;
+using BeneficialStrategies.Iso20022.camt;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice;
-using BeneficialStrategies.Iso20022.camt;
-using System.Text.Json;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022;
 
@@ -17,10 +17,11 @@ namespace BeneficialStrategies.Iso20022;
 /// </summary>
 public class ImmutableValueListJsonConverterTests
 {
-    private static readonly JsonSerializerOptions Options = new(JsonSerializerOptions.Default)
-    {
-        Converters = { ImmutableValueListConverterFactory.Instance },
-    };
+    private static readonly JsonSerializerOptions Options =
+        new(JsonSerializerOptions.Default)
+        {
+            Converters = { ImmutableValueListConverterFactory.Instance },
+        };
 
     // ── ValueList<T> ──────────────────────────────────────────────────────────
 
@@ -121,8 +122,14 @@ public class ImmutableValueListJsonConverterTests
             Account = Camt053ExamplesTests.CreateStatementAccount(),
             Balance =
             [
-                Camt053ExamplesTests.CreateClosingBookedBalance(905_500.00m, CreditDebitCode.Credit),
-                Camt053ExamplesTests.CreateClosingBookedBalance(952_750.00m, CreditDebitCode.Credit),
+                Camt053ExamplesTests.CreateClosingBookedBalance(
+                    905_500.00m,
+                    CreditDebitCode.Credit
+                ),
+                Camt053ExamplesTests.CreateClosingBookedBalance(
+                    952_750.00m,
+                    CreditDebitCode.Credit
+                ),
             ],
         };
 
@@ -155,11 +162,18 @@ public class ImmutableValueListJsonConverterTests
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Balance =
                 [
-                    Camt053ExamplesTests.CreateClosingBookedBalance(905_500.00m, CreditDebitCode.Credit),
-                    Camt053ExamplesTests.CreateClosingBookedBalance(952_750.00m, CreditDebitCode.Credit),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        905_500.00m,
+                        CreditDebitCode.Credit
+                    ),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        952_750.00m,
+                        CreditDebitCode.Credit
+                    ),
                 ],
                 Entry = Camt053ExamplesTests.CreateCreditEntry(
-                    new Code { Value = ExternalEntryStatus1Code.Booked }),
+                    new Code { Value = ExternalEntryStatus1Code.Booked }
+                ),
             },
         };
 
@@ -167,8 +181,10 @@ public class ImmutableValueListJsonConverterTests
         var result = JsonSerializer.Deserialize<BankToCustomerStatementV11>(json, Options);
 
         Assert.NotNull(result);
-        Assert.Equal(original.GroupHeader.MessageIdentification,
-            result.GroupHeader.MessageIdentification);
+        Assert.Equal(
+            original.GroupHeader.MessageIdentification,
+            result.GroupHeader.MessageIdentification
+        );
         Assert.Equal(2, result.Statement.Balance.Count);
         Assert.Equal(905_500.00m, result.Statement.Balance[0].Amount.Amount);
 

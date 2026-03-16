@@ -21,27 +21,33 @@ public enum ReconciliationTypeCode
     /// </summary>
     [EnumMember(Value = "SREC")]
     [IsoId("_My0YMNxeEeioifFt1dhnJA")]
-    [Description(@"Reconciliation with closure of the current period, without	any Acquirers synchronisation.")]
+    [Description(
+        @"Reconciliation with closure of the current period, without	any Acquirers synchronisation."
+    )]
     SaleReconciliation,
-    
+
     /// <summary>
     /// Reconciliation and closure of the current period, with synchronisation of the reconciliation between the POI and Acquirers.
     /// Encoded/decoded by serializers as &quot;ASYN&quot;.
     /// </summary>
     [EnumMember(Value = "ASYN")]
     [IsoId("_QEaEwNxeEeioifFt1dhnJA")]
-    [Description(@"Reconciliation and closure of the current period, with synchronisation of the reconciliation between the POI and Acquirers.")]
+    [Description(
+        @"Reconciliation and closure of the current period, with synchronisation of the reconciliation between the POI and Acquirers."
+    )]
     AcquirerSynchronisation,
-    
+
     /// <summary>
     /// Reconciliation between the POI and one or several Acquirers only. There is no reconciliation between the Sale System and the POI System.
     /// Encoded/decoded by serializers as &quot;AREC&quot;.
     /// </summary>
     [EnumMember(Value = "AREC")]
     [IsoId("_TVSmsNxeEeioifFt1dhnJA")]
-    [Description(@"Reconciliation between the POI and one or several Acquirers only. There is no reconciliation between the Sale System and the POI System.")]
+    [Description(
+        @"Reconciliation between the POI and one or several Acquirers only. There is no reconciliation between the Sale System and the POI System."
+    )]
     AcquirerReconciliation,
-    
+
     /// <summary>
     /// Request result of a previous reconciliation.
     /// Encoded/decoded by serializers as &quot;PREC&quot;.
@@ -50,5 +56,4 @@ public enum ReconciliationTypeCode
     [IsoId("_Wlz8QNxeEeioifFt1dhnJA")]
     [Description(@"Request result of a previous reconciliation.")]
     PreviousReconciliation,
-    
 }

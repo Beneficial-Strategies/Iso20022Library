@@ -23,7 +23,7 @@ public enum ValuationType1Code
     [IsoId("_wGC2AfP4EeS_qLctCs2aRQ")]
     [Description(@"Central counterparty (CCP) valuation.")]
     CCPValuation = ValuationTypeCode.CCPValuation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mark to market valuation.
     /// Encoded/decoded by serializers as &quot;MTMA&quot;.
@@ -32,7 +32,7 @@ public enum ValuationType1Code
     [IsoId("_wQAqUfP4EeS_qLctCs2aRQ")]
     [Description(@"Mark to market valuation.||")]
     MarkToMarket = ValuationTypeCode.MarkToMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mark to model valuation.
     /// Encoded/decoded by serializers as &quot;MTMO&quot;.
@@ -41,5 +41,4 @@ public enum ValuationType1Code
     [IsoId("_wbndY_P4EeS_qLctCs2aRQ")]
     [Description(@"Mark to model valuation.|")]
     MarkToModel = ValuationTypeCode.MarkToModel, // same ordinal as derivation source for type conversions
-    
 }

@@ -21,9 +21,11 @@ public enum FractionalSecurityRuleCode
     /// </summary>
     [EnumMember(Value = "BORU")]
     [IsoId("_1rgnQTL3EeKU9IrkkToqcw_-428904472")]
-    [Description(@"Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.")]
+    [Description(
+        @"Round Up x and above on the beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down."
+    )]
     BeneficialOwnerRoundUpXAndAbove,
-    
+
     /// <summary>
     /// Cash in Lieu on the beneficial owner fractions.
     /// Encoded/decoded by serializers as &quot;BCIL&quot;.
@@ -32,14 +34,15 @@ public enum FractionalSecurityRuleCode
     [IsoId("_1rgnQjL3EeKU9IrkkToqcw_1097474043")]
     [Description(@"Cash in Lieu on the beneficial owner fractions.")]
     BeneficialOwnerCashInLieu,
-    
+
     /// <summary>
     /// Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.
     /// Encoded/decoded by serializers as &quot;BORD&quot;.
     /// </summary>
     [EnumMember(Value = "BORD")]
     [IsoId("_1rgnQzL3EeKU9IrkkToqcw_1047506999")]
-    [Description(@"Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down.")]
+    [Description(
+        @"Round Down x and below beneficial owner fractions, where x is the rounding factor. For an example if rounding factor is 0.6 this means that fractional units greater than or equal to 6 will be rounded up and less than 6 will be rounded down."
+    )]
     BeneficialOwnerRoundDownXAndBelow,
-    
 }

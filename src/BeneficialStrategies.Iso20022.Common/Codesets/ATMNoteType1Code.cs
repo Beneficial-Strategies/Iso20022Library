@@ -23,7 +23,7 @@ public enum ATMNoteType1Code
     [IsoId("_V2iWcYqgEeS4a4abTJTSSw")]
     [Description(@"All fit bank note types.")]
     All = ATMNoteTypeCode.All, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Detected counterfeit notes.
     /// Encoded/decoded by serializers as &quot;CNTR&quot;.
@@ -32,7 +32,7 @@ public enum ATMNoteType1Code
     [IsoId("_V7mcoYqgEeS4a4abTJTSSw")]
     [Description(@"Detected counterfeit notes.")]
     Counterfeit = ATMNoteTypeCode.Counterfeit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// All types of fit bank notes specified in an individual list.
     /// Encoded/decoded by serializers as &quot;IDVD&quot;.
@@ -41,7 +41,7 @@ public enum ATMNoteType1Code
     [IsoId("_WAqi0YqgEeS4a4abTJTSSw")]
     [Description(@"All types of fit bank notes specified in an individual list.")]
     Individual = ATMNoteTypeCode.Individual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Suspected counterfeit notes.
     /// Encoded/decoded by serializers as &quot;SCNT&quot;.
@@ -50,7 +50,7 @@ public enum ATMNoteType1Code
     [IsoId("_WHEs0YqgEeS4a4abTJTSSw")]
     [Description(@"Suspected counterfeit notes.")]
     SuspectedCounterfeit = ATMNoteTypeCode.SuspectedCounterfeit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unfit bank notes (unacceptable quality).
     /// Encoded/decoded by serializers as &quot;UNFT&quot;.
@@ -59,5 +59,4 @@ public enum ATMNoteType1Code
     [IsoId("_WNL74YqgEeS4a4abTJTSSw")]
     [Description(@"Unfit bank notes (unacceptable quality).")]
     Unfit = ATMNoteTypeCode.Unfit, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_V7K9oZBxEe6TWIDarRgYow")]
 [DisplayName("Processing Result26")]
-public partial record ProcessingResult26
+public record ProcessingResult26
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Information.
     /// </summary>
@@ -30,51 +28,47 @@ public partial record ProcessingResult26
     /// </summary>
     [DisplayName("Response Code")]
     [IsoXmlTag("RspnCd")]
-    public ISO8583ResponseCode? ResponseCode { get; init; } 
+    public ISO8583ResponseCode? ResponseCode { get; init; }
 
     /// <summary>
     /// Response Source Assigner.
     /// </summary>
     [DisplayName("Response Source Assigner")]
     [IsoXmlTag("RspnSrcAssgnr")]
-    public PartyType9Code? ResponseSourceAssigner { get; init; } 
+    public PartyType9Code? ResponseSourceAssigner { get; init; }
 
     /// <summary>
     /// Response Source Country.
     /// </summary>
     [DisplayName("Response Source Country")]
     [IsoXmlTag("RspnSrcCtry")]
-    public ISOMax3ACountryCode? ResponseSourceCountry { get; init; } 
+    public ISOMax3ACountryCode? ResponseSourceCountry { get; init; }
 
     /// <summary>
     /// Response Source Identification.
     /// </summary>
     [DisplayName("Response Source Identification")]
     [IsoXmlTag("RspnSrcId")]
-    public IsoMax35Text? ResponseSourceIdentification { get; init; } 
+    public IsoMax35Text? ResponseSourceIdentification { get; init; }
 
     /// <summary>
     /// Response Source Other Type.
     /// </summary>
     [DisplayName("Response Source Other Type")]
     [IsoXmlTag("RspnSrcOthrTp")]
-    public IsoMax35Text? ResponseSourceOtherType { get; init; } 
+    public IsoMax35Text? ResponseSourceOtherType { get; init; }
 
     /// <summary>
     /// Response Source Short Name.
     /// </summary>
     [DisplayName("Response Source Short Name")]
     [IsoXmlTag("RspnSrcShrtNm")]
-    public IsoMax35Text? ResponseSourceShortName { get; init; } 
+    public IsoMax35Text? ResponseSourceShortName { get; init; }
 
     /// <summary>
     /// Response Source Type.
     /// </summary>
     [DisplayName("Response Source Type")]
     [IsoXmlTag("RspnSrcTp")]
-    public PartyType26Code? ResponseSourceType { get; init; } 
-
-    
-    #nullable disable
-    
+    public PartyType26Code? ResponseSourceType { get; init; }
 }

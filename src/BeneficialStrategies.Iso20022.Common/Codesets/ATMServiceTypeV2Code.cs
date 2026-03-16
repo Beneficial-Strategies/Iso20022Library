@@ -29,7 +29,9 @@ public enum ATMServiceTypeV2Code
     /// </summary>
     [EnumMember(Value = "ASTS")]
     [IsoId("_ATMServiceTypeV2Code_AccountStatements")]
-    [Description(@"Request a full statement (that is a legal statement) related to a customer account.")]
+    [Description(
+        @"Request a full statement (that is a legal statement) related to a customer account."
+    )]
     AccountStatements,
 
     /// <summary>
@@ -128,7 +130,9 @@ public enum ATMServiceTypeV2Code
     /// </summary>
     [EnumMember(Value = "MINI")]
     [IsoId("_ATMServiceTypeV2Code_MiniStatement")]
-    [Description(@"Request a mini-statement (i.e. partial statement) related to a customer account.")]
+    [Description(
+        @"Request a mini-statement (i.e. partial statement) related to a customer account."
+    )]
     MiniStatement,
 
     /// <summary>
@@ -137,7 +141,9 @@ public enum ATMServiceTypeV2Code
     /// </summary>
     [EnumMember(Value = "PATH")]
     [IsoId("_ATMServiceTypeV2Code_PreAuthorisedWithdrawal")]
-    [Description(@"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message.")]
+    [Description(
+        @"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message."
+    )]
     PreAuthorisedWithdrawal,
 
     /// <summary>
@@ -238,5 +244,4 @@ public enum ATMServiceTypeV2Code
     [IsoId("_ATMServiceTypeV2Code_ExchangeRateWithdrawal")]
     [Description(@"Ask for exchange rate for the ongoing withdrawal transaction.")]
     ExchangeRateWithdrawal,
-
 }

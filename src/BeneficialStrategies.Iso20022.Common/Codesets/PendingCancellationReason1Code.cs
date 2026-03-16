@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Z-Gl4dp-Ed-ak6NoX_4Aeg_332106838")]
-[Description(@"Specifies the reason why a cancellation request sent for the related instruction is pending.")]
+[Description(
+    @"Specifies the reason why a cancellation request sent for the related instruction is pending."
+)]
 [DerivedFrom(typeof(PendingFailingReasonCode))]
 public enum PendingCancellationReason1Code
 {
@@ -21,9 +23,11 @@ public enum PendingCancellationReason1Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_Z-Gl4tp-Ed-ak6NoX_4Aeg_332106961")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Awaiting confirmation from the counterparty.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -32,5 +36,4 @@ public enum PendingCancellationReason1Code
     [IsoId("_Z-Gl49p-Ed-ak6NoX_4Aeg_332107239")]
     [Description(@"Awaiting confirmation from the counterparty.")]
     AwaitingConfirmation = PendingFailingReasonCode.AwaitingConfirmation, // same ordinal as derivation source for type conversions
-    
 }

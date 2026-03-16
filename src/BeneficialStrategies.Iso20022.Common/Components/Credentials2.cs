@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,28 +14,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3tXfsad2EeuEcqP2FGAFaA")]
 [DisplayName("Credentials")]
-public partial record Credentials2
+public record Credentials2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the type of credential.
     /// </summary>
     [IsoId("_3zANoad2EeuEcqP2FGAFaA")]
     [DisplayName("Identification Code")]
     [IsoXmlTag("IdCd")]
-    public required Identification3Code IdentificationCode { get; init; } 
-    
+    public required Identification3Code IdentificationCode { get; init; }
+
     /// <summary>
-    /// Used when OtherNational or OtherPrivate value is selected in identification code list. 
+    /// Used when OtherNational or OtherPrivate value is selected in identification code list.
     /// </summary>
     [IsoId("_3zA0sad2EeuEcqP2FGAFaA")]
     [DisplayName("Other Identification Code")]
     [IsoXmlTag("OthrIdCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherIdentificationCode { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherIdentificationCode { get; init; }
+
     /// <summary>
     /// Value of identification.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record Credentials2
     [DisplayName("Identification Value")]
     [IsoXmlTag("IdVal")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text IdentificationValue { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text IdentificationValue { get; init; }
+
     /// <summary>
     /// Expiration date of the identification.
     /// </summary>
@@ -53,17 +51,13 @@ public partial record Credentials2
     [DisplayName("Identification Expiry Date")]
     [IsoXmlTag("IdXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? IdentificationExpiryDate { get; init; } 
-    
+    public IsoISOYearMonth? IdentificationExpiryDate { get; init; }
+
     /// <summary>
     /// Entity that assigns and manages this type of identification.
     /// </summary>
     [IsoId("_JSH9oKd8EeuEcqP2FGAFaA")]
     [DisplayName("Assigner Authority")]
     [IsoXmlTag("AssgnrAuthrty")]
-    public Authority1? AssignerAuthority { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Authority1? AssignerAuthority { get; init; }
 }

@@ -22,8 +22,9 @@ public enum RetailerService7Code
     [EnumMember(Value = "RPTP")]
     [IsoId("_c4lHMd6VEeiwsev40qZGEQ")]
     [Description(@"The POI System responds to a transaction report request.")]
-    AdministrativeReportTransactionResponse = RetailerServiceCode.AdministrativeReportTransactionResponse, // same ordinal as derivation source for type conversions
-    
+    AdministrativeReportTransactionResponse =
+        RetailerServiceCode.AdministrativeReportTransactionResponse, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The POI System responds to a totals figures request.
     /// Encoded/decoded by serializers as &quot;RPAP&quot;.
@@ -31,6 +32,6 @@ public enum RetailerService7Code
     [EnumMember(Value = "RPAP")]
     [IsoId("_dKVlkd6VEeiwsev40qZGEQ")]
     [Description(@"The POI System responds to a totals figures request.")]
-    AdministrativeReportGetTotalsResponse = RetailerServiceCode.AdministrativeReportGetTotalsResponse, // same ordinal as derivation source for type conversions
-    
+    AdministrativeReportGetTotalsResponse =
+        RetailerServiceCode.AdministrativeReportGetTotalsResponse, // same ordinal as derivation source for type conversions
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReturnExcessCash1Choice.Code))]
     [KnownType(typeof(ReturnExcessCash1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ReturnExcessCash1Choice.Code),nameof(ReturnExcessCash1Choice.Code))]
-    [JsonDerivedType(typeof(ReturnExcessCash1Choice.Proprietary),nameof(ReturnExcessCash1Choice.Proprietary))]
+    [JsonDerivedType(typeof(ReturnExcessCash1Choice.Code), nameof(ReturnExcessCash1Choice.Code))]
+    [JsonDerivedType(
+        typeof(ReturnExcessCash1Choice.Proprietary),
+        nameof(ReturnExcessCash1Choice.Proprietary)
+    )]
     [IsoId("_BGt5wALpEeutW5-TpeYJhA")]
     [DisplayName("Return Excess Cash 1 Choice")]
-    public abstract partial record ReturnExcessCash1Choice_
-    {
-    }
+    public abstract record ReturnExcessCash1Choice_ { }
 }

@@ -21,9 +21,11 @@ public enum PaymentMethod7Code
     /// </summary>
     [EnumMember(Value = "CHK")]
     [IsoId("_YbT9ddp-Ed-ak6NoX_4Aeg_-1320976702")]
-    [Description(@"Written order to a bank to pay a certain amount of money from one person to another person.")]
+    [Description(
+        @"Written order to a bank to pay a certain amount of money from one person to another person."
+    )]
     Cheque = PaymentMethodCode.Cheque, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer of an amount of money in the books of the account servicer.
     /// Encoded/decoded by serializers as &quot;TRF&quot;.
@@ -32,5 +34,4 @@ public enum PaymentMethod7Code
     [IsoId("_YbT9dtp-Ed-ak6NoX_4Aeg_-2113712619")]
     [Description(@"Transfer of an amount of money in the books of the account servicer.")]
     CreditTransfer = PaymentMethodCode.CreditTransfer, // same ordinal as derivation source for type conversions
-    
 }

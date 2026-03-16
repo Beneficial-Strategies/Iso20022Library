@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FundParameters3Choice.NoCriteria))]
     [KnownType(typeof(FundParameters3Choice.Parameters))]
-    [JsonDerivedType(typeof(FundParameters3Choice.NoCriteria),nameof(FundParameters3Choice.NoCriteria))]
-    [JsonDerivedType(typeof(FundParameters3Choice.Parameters),nameof(FundParameters3Choice.Parameters))]
+    [JsonDerivedType(
+        typeof(FundParameters3Choice.NoCriteria),
+        nameof(FundParameters3Choice.NoCriteria)
+    )]
+    [JsonDerivedType(
+        typeof(FundParameters3Choice.Parameters),
+        nameof(FundParameters3Choice.Parameters)
+    )]
     [IsoId("_Q6l-ANp-Ed-ak6NoX_4Aeg_36568283")]
     [DisplayName("Fund Parameters 3 Choice")]
-    public abstract partial record FundParameters3Choice_
-    {
-    }
+    public abstract record FundParameters3Choice_ { }
 }

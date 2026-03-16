@@ -23,7 +23,7 @@ public enum DTCCQuantitySoughtCode
     [IsoId("_1oiLxDL3EeKU9IrkkToqcw_1656668752")]
     [Description(@"Quantity Sought expressed as quantity.")]
     Quantity,
-    
+
     /// <summary>
     /// Check Quantity Sought Comments for quantity sought (irregular expression).
     /// Encoded/decoded by serializers as &quot;CHCO&quot;.
@@ -32,7 +32,7 @@ public enum DTCCQuantitySoughtCode
     [IsoId("_1oiLxTL3EeKU9IrkkToqcw_-517245427")]
     [Description(@"Check Quantity Sought Comments for quantity sought (irregular expression).")]
     CheckComments,
-    
+
     /// <summary>
     /// Quantity sought is expressed as percentage.
     /// Encoded/decoded by serializers as &quot;PRTG&quot;.
@@ -41,5 +41,4 @@ public enum DTCCQuantitySoughtCode
     [IsoId("_1orVsDL3EeKU9IrkkToqcw_1342787087")]
     [Description(@"Quantity sought is expressed as percentage.")]
     Percentage,
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeReportQuery13Choice.AdHocQuery))]
     [KnownType(typeof(TradeReportQuery13Choice.RecurrentQuery))]
-    [JsonDerivedType(typeof(TradeReportQuery13Choice.AdHocQuery),nameof(TradeReportQuery13Choice.AdHocQuery))]
-    [JsonDerivedType(typeof(TradeReportQuery13Choice.RecurrentQuery),nameof(TradeReportQuery13Choice.RecurrentQuery))]
+    [JsonDerivedType(
+        typeof(TradeReportQuery13Choice.AdHocQuery),
+        nameof(TradeReportQuery13Choice.AdHocQuery)
+    )]
+    [JsonDerivedType(
+        typeof(TradeReportQuery13Choice.RecurrentQuery),
+        nameof(TradeReportQuery13Choice.RecurrentQuery)
+    )]
     [IsoId("_1LqeURfMEeyPHpqpKwtFdw")]
     [DisplayName("Trade Report Query 13 Choice")]
-    public abstract partial record TradeReportQuery13Choice_
-    {
-    }
+    public abstract record TradeReportQuery13Choice_ { }
 }

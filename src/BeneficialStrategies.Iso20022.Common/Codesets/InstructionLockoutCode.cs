@@ -23,7 +23,7 @@ public enum InstructionLockoutCode
     [IsoId("_1oOpwDL3EeKU9IrkkToqcw_-978797614")]
     [Description(@"System suspended elections processing based on business rules.")]
     SystemicLocked,
-    
+
     /// <summary>
     /// DTC (the Depository Trust Company) personnel suspended elections processing.
     /// Encoded/decoded by serializers as &quot;MALK&quot;.
@@ -32,7 +32,7 @@ public enum InstructionLockoutCode
     [IsoId("_1oOpwTL3EeKU9IrkkToqcw_1556868203")]
     [Description(@"DTC (the Depository Trust Company) personnel suspended elections processing.")]
     ManualLocked,
-    
+
     /// <summary>
     /// Eligible for elections processing.
     /// Encoded/decoded by serializers as &quot;NOLO&quot;.
@@ -41,5 +41,4 @@ public enum InstructionLockoutCode
     [IsoId("_1oOpwjL3EeKU9IrkkToqcw_-748248972")]
     [Description(@"Eligible for elections processing.")]
     NotLocked,
-    
 }

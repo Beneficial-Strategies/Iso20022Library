@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementDate12Choice.Date))]
     [KnownType(typeof(SettlementDate12Choice.DateCode))]
-    [JsonDerivedType(typeof(SettlementDate12Choice.Date),nameof(SettlementDate12Choice.Date))]
-    [JsonDerivedType(typeof(SettlementDate12Choice.DateCode),nameof(SettlementDate12Choice.DateCode))]
+    [JsonDerivedType(typeof(SettlementDate12Choice.Date), nameof(SettlementDate12Choice.Date))]
+    [JsonDerivedType(
+        typeof(SettlementDate12Choice.DateCode),
+        nameof(SettlementDate12Choice.DateCode)
+    )]
     [IsoId("_5TGUn5NLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Date 12 Choice")]
-    public abstract partial record SettlementDate12Choice_
-    {
-    }
+    public abstract record SettlementDate12Choice_ { }
 }

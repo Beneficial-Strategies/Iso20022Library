@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QbAfAtp-Ed-ak6NoX_4Aeg_-795428506")]
 [DisplayName("Amount Price Per Amount")]
-public partial record AmountPricePerAmount1
+public record AmountPricePerAmount1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of amount price.
     /// </summary>
     [IsoId("_QbAfA9p-Ed-ak6NoX_4Aeg_-512832907")]
     [DisplayName("Amount Price Type")]
     [IsoXmlTag("AmtPricTp")]
-    public required AmountPriceType1FormatChoice_ AmountPriceType { get; init; } 
-    
+    public required AmountPriceType1FormatChoice_ AmountPriceType { get; init; }
+
     /// <summary>
     /// Value of the price.
     /// </summary>
     [IsoId("_QbAfBNp-Ed-ak6NoX_4Aeg_-512832899")]
     [DisplayName("Price Value")]
     [IsoXmlTag("PricVal")]
-    public required ActiveCurrencyAnd13DecimalAmount PriceValue { get; init; } 
-    
+    public required ActiveCurrencyAnd13DecimalAmount PriceValue { get; init; }
+
     /// <summary>
     /// The amount.
     /// </summary>
     [IsoId("_QbAfBdp-Ed-ak6NoX_4Aeg_-510984913")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ActiveCurrencyAnd13DecimalAmount Amount { get; init; }
 }

@@ -31,5 +31,4 @@ public enum CAPEExchangeModeCode
     [IsoId("_CAPEExchangeModeCode_ExchangeByMessage")]
     [Description(@"With this protocol, the communication is done through message exchanges.")]
     ExchangeByMessage,
-
 }

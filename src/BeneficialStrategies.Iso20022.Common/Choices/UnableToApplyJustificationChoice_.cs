@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnableToApplyJustificationChoice.AnyInformation))]
     [KnownType(typeof(UnableToApplyJustificationChoice.MissingOrIncorrectInformation))]
-    [JsonDerivedType(typeof(UnableToApplyJustificationChoice.AnyInformation),nameof(UnableToApplyJustificationChoice.AnyInformation))]
-    [JsonDerivedType(typeof(UnableToApplyJustificationChoice.MissingOrIncorrectInformation),nameof(UnableToApplyJustificationChoice.MissingOrIncorrectInformation))]
+    [JsonDerivedType(
+        typeof(UnableToApplyJustificationChoice.AnyInformation),
+        nameof(UnableToApplyJustificationChoice.AnyInformation)
+    )]
+    [JsonDerivedType(
+        typeof(UnableToApplyJustificationChoice.MissingOrIncorrectInformation),
+        nameof(UnableToApplyJustificationChoice.MissingOrIncorrectInformation)
+    )]
     [IsoId("_VFn0Dtp-Ed-ak6NoX_4Aeg_811633564")]
     [DisplayName("Unable To Apply Justification Choice")]
-    public abstract partial record UnableToApplyJustificationChoice_
-    {
-    }
+    public abstract record UnableToApplyJustificationChoice_ { }
 }

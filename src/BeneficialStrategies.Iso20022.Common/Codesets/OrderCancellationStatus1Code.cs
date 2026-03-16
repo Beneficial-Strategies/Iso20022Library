@@ -21,25 +21,30 @@ public enum OrderCancellationStatus1Code
     /// </summary>
     [EnumMember(Value = "STNP")]
     [IsoId("_aQk18Np-Ed-ak6NoX_4Aeg_-1213961837")]
-    [Description(@"Order cancellation request has been sent to the next party, eg, the next intermediary.")]
+    [Description(
+        @"Order cancellation request has been sent to the next party, eg, the next intermediary."
+    )]
     SentToNextParty = OrderCancellationStatusCode.SentToNextParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order cancellation request is pending, The order cancellation request has been received but this does not indicate the order has been cancelled.
     /// Encoded/decoded by serializers as &quot;CANP&quot;.
     /// </summary>
     [EnumMember(Value = "CANP")]
     [IsoId("_aQk18dp-Ed-ak6NoX_4Aeg_-1213961821")]
-    [Description(@"Order cancellation request is pending, The order cancellation request has been received but this does not indicate the order has been cancelled.")]
+    [Description(
+        @"Order cancellation request is pending, The order cancellation request has been received but this does not indicate the order has been cancelled."
+    )]
     CancellationPending = OrderCancellationStatusCode.CancellationPending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the order cancellation request is completed. The cancellation request has been accepted and processed; the order has been cancelled.
     /// Encoded/decoded by serializers as &quot;CAND&quot;.
     /// </summary>
     [EnumMember(Value = "CAND")]
     [IsoId("_aQk18tp-Ed-ak6NoX_4Aeg_288864191")]
-    [Description(@"Status of the order cancellation request is completed. The cancellation request has been accepted and processed; the order has been cancelled.")]
+    [Description(
+        @"Status of the order cancellation request is completed. The cancellation request has been accepted and processed; the order has been cancelled."
+    )]
     CancellationCompleted = OrderCancellationStatusCode.CancellationCompleted, // same ordinal as derivation source for type conversions
-    
 }

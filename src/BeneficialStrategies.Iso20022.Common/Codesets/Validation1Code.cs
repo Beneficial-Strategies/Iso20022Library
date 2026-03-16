@@ -23,7 +23,7 @@ public enum Validation1Code
     [IsoId("_-T5V8smKEeWAGphE2LvqeA")]
     [Description(@"Validation of the signature is successful.")]
     ValidationSuccessful = ValidationCode.ValidationSuccessful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Validation of the signature is unknown or not yet executed.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,7 +32,7 @@ public enum Validation1Code
     [IsoId("_-VFBscmKEeWAGphE2LvqeA")]
     [Description(@"Validation of the signature is unknown or not yet executed.")]
     ValidationUnkonwn = ValidationCode.ValidationUnkonwn, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Validation of the signature has failed.
     /// Encoded/decoded by serializers as &quot;NTOK&quot;.
@@ -41,5 +41,4 @@ public enum Validation1Code
     [IsoId("_UqKgocnIEeWI4cSIO9foRA")]
     [Description(@"Validation of the signature has failed.")]
     ValidationFailed = ValidationCode.ValidationFailed, // same ordinal as derivation source for type conversions
-    
 }

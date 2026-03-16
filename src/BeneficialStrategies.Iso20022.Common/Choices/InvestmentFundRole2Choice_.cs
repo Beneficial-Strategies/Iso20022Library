@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InvestmentFundRole2Choice.Code))]
     [KnownType(typeof(InvestmentFundRole2Choice.Proprietary))]
-    [JsonDerivedType(typeof(InvestmentFundRole2Choice.Code),nameof(InvestmentFundRole2Choice.Code))]
-    [JsonDerivedType(typeof(InvestmentFundRole2Choice.Proprietary),nameof(InvestmentFundRole2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(InvestmentFundRole2Choice.Code),
+        nameof(InvestmentFundRole2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(InvestmentFundRole2Choice.Proprietary),
+        nameof(InvestmentFundRole2Choice.Proprietary)
+    )]
     [IsoId("_cdaGUDhcEeaRwdGFv45qTQ")]
     [DisplayName("Investment Fund Role 2 Choice")]
-    public abstract partial record InvestmentFundRole2Choice_
-    {
-    }
+    public abstract record InvestmentFundRole2Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum ExchangeRateAgreementType1Code
     [IsoId("_Dq8h8YZ7EeuSbct6WWD-Ng")]
     [Description(@"Forward contract exchange rate type.")]
     ForwardContract = ExchangeRateAgreementTypeCode.ForwardContract, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Normal exchange rate agreement type.
     /// Encoded/decoded by serializers as &quot;NORM&quot;.
@@ -32,7 +32,7 @@ public enum ExchangeRateAgreementType1Code
     [IsoId("_EVLKsYZ7EeuSbct6WWD-Ng")]
     [Description(@"Normal exchange rate agreement type.")]
     Normal = ExchangeRateAgreementTypeCode.Normal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other exchange rate agreement type defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum ExchangeRateAgreementType1Code
     [IsoId("_EdpKMYZ7EeuSbct6WWD-Ng")]
     [Description(@"Other exchange rate agreement type defined at national level.")]
     OtherNational = ExchangeRateAgreementTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other exchange rate agreement type that is privately defined.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,7 +50,7 @@ public enum ExchangeRateAgreementType1Code
     [IsoId("_FBk9sYZ7EeuSbct6WWD-Ng")]
     [Description(@"Other exchange rate agreement type that is privately defined.")]
     OtherPrivate = ExchangeRateAgreementTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Spot agreement exchange rate type.
     /// Encoded/decoded by serializers as &quot;SPOT&quot;.
@@ -59,5 +59,4 @@ public enum ExchangeRateAgreementType1Code
     [IsoId("_FClDQYZ7EeuSbct6WWD-Ng")]
     [Description(@"Spot agreement exchange rate type.")]
     Spot = ExchangeRateAgreementTypeCode.Spot, // same ordinal as derivation source for type conversions
-    
 }

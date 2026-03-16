@@ -23,7 +23,7 @@ public enum FractionDispositionType12Code
     [IsoId("_Of_qMZFGEeanIpS4qvJ1tw")]
     [Description(@"Round down to the nearest whole number.")]
     RoundDown = FractionDispositionTypeCode.RoundDown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Round up to the nearest whole number.
     /// Encoded/decoded by serializers as &quot;RDUP&quot;.
@@ -32,5 +32,4 @@ public enum FractionDispositionType12Code
     [IsoId("_OqaKcZFGEeanIpS4qvJ1tw")]
     [Description(@"Round up to the nearest whole number.")]
     RoundUp = FractionDispositionTypeCode.RoundUp, // same ordinal as derivation source for type conversions
-    
 }

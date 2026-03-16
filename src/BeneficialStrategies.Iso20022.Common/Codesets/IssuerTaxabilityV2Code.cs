@@ -23,5 +23,4 @@ public enum IssuerTaxabilityV2Code
     [IsoId("_gBpAo4lyEeavwKddCbm3hg")]
     [Description(@"The relevant proceeds are taxable.")]
     Taxable,
-    
 }

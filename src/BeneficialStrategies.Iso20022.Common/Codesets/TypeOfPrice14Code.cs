@@ -23,5 +23,4 @@ public enum TypeOfPrice14Code
     [IsoId("_Yx9i4dp-Ed-ak6NoX_4Aeg_-1357807596")]
     [Description(@"Price is an average execution price.")]
     Average = TypeOfPriceCode.Average, // same ordinal as derivation source for type conversions
-    
 }

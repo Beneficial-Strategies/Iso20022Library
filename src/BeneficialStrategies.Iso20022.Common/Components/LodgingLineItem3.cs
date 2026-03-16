@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3IKvQXTsEe6h-4AZRg9sVg")]
 [DisplayName("Lodging Line Item3")]
-public partial record LodgingLineItem3
+public record LodgingLineItem3
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -30,42 +28,42 @@ public partial record LodgingLineItem3
     /// </summary>
     [DisplayName("Credit Debit")]
     [IsoXmlTag("CdtDbt")]
-    public CreditDebit3Code? CreditDebit { get; init; } 
+    public CreditDebit3Code? CreditDebit { get; init; }
 
     /// <summary>
     /// Date.
     /// </summary>
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
-    public IsoISODate? Date { get; init; } 
+    public IsoISODate? Date { get; init; }
 
     /// <summary>
     /// Duration.
     /// </summary>
     [DisplayName("Duration")]
     [IsoXmlTag("Drtn")]
-    public IsoMax4NumericText? Duration { get; init; } 
+    public IsoMax4NumericText? Duration { get; init; }
 
     /// <summary>
     /// Other Type.
     /// </summary>
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
-    public IsoMax35Text? OtherType { get; init; } 
+    public IsoMax35Text? OtherType { get; init; }
 
     /// <summary>
     /// Post Check Out.
     /// </summary>
     [DisplayName("Post Check Out")]
     [IsoXmlTag("PstChckOut")]
-    public IsoTrueFalseIndicator? PostCheckOut { get; init; } 
+    public IsoTrueFalseIndicator? PostCheckOut { get; init; }
 
     /// <summary>
     /// Sub Total Amount.
     /// </summary>
     [DisplayName("Sub Total Amount")]
     [IsoXmlTag("SubTtlAmt")]
-    public ImpliedCurrencyAndAmount? SubTotalAmount { get; init; } 
+    public ImpliedCurrencyAndAmount? SubTotalAmount { get; init; }
 
     /// <summary>
     /// Tax.
@@ -79,23 +77,19 @@ public partial record LodgingLineItem3
     /// </summary>
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
-    public IsoISOTime? Time { get; init; } 
+    public IsoISOTime? Time { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public LodgingService1Code? Type { get; init; } 
+    public LodgingService1Code? Type { get; init; }
 
     /// <summary>
     /// Unit Amount.
     /// </summary>
     [DisplayName("Unit Amount")]
     [IsoXmlTag("UnitAmt")]
-    public ImpliedCurrencyAndAmount? UnitAmount { get; init; } 
-
-    
-    #nullable disable
-    
+    public ImpliedCurrencyAndAmount? UnitAmount { get; init; }
 }

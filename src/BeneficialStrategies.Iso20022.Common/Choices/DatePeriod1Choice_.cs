@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(DatePeriod1Choice.Date))]
     [KnownType(typeof(DatePeriod1Choice.DateMonth))]
     [KnownType(typeof(DatePeriod1Choice.FromDateToDate))]
-    [JsonDerivedType(typeof(DatePeriod1Choice.Date),nameof(DatePeriod1Choice.Date))]
-    [JsonDerivedType(typeof(DatePeriod1Choice.DateMonth),nameof(DatePeriod1Choice.DateMonth))]
-    [JsonDerivedType(typeof(DatePeriod1Choice.FromDateToDate),nameof(DatePeriod1Choice.FromDateToDate))]
+    [JsonDerivedType(typeof(DatePeriod1Choice.Date), nameof(DatePeriod1Choice.Date))]
+    [JsonDerivedType(typeof(DatePeriod1Choice.DateMonth), nameof(DatePeriod1Choice.DateMonth))]
+    [JsonDerivedType(
+        typeof(DatePeriod1Choice.FromDateToDate),
+        nameof(DatePeriod1Choice.FromDateToDate)
+    )]
     [IsoId("_kaGgU579EeOieb-y7x0pFg")]
     [DisplayName("Date Period 1 Choice")]
-    public abstract partial record DatePeriod1Choice_
-    {
-    }
+    public abstract record DatePeriod1Choice_ { }
 }

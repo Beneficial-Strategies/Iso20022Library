@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MhZA27iEeKo25nLKvGr8w_1180759625")]
-[Description(@"Specifies the external undertaking amount type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external undertaking amount type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalUndertakingAmountType1Code))]
 public enum ExternalUndertakingAmountTypeCode
 {
@@ -24,7 +26,7 @@ public enum ExternalUndertakingAmountTypeCode
     [IsoId("_uQxp-fRYEeuLhpyIdtJzwg")]
     [Description(@"Amount is an increase.")]
     Increase,
-    
+
     /// <summary>
     /// Amount is a reduction.
     /// Encoded/decoded by serializers as &quot;REDC&quot;.
@@ -33,5 +35,4 @@ public enum ExternalUndertakingAmountTypeCode
     [IsoId("_uQ7a8PRYEeuLhpyIdtJzwg")]
     [Description(@"Amount is a reduction.")]
     Reduction,
-    
 }

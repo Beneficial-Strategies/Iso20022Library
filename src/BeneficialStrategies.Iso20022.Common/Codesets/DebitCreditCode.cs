@@ -22,7 +22,7 @@ public enum DebitCreditCode
     [IsoId("_Ieq6AVlcEeGqx4xQw6z6Ug_-1358749425")]
     [Description(@"Operation is an increase.")]
     Credit,
-    
+
     /// <summary>
     /// Operation is a decrease.
     /// Encoded/decoded by serializers as &quot;DBIT&quot;.
@@ -31,5 +31,4 @@ public enum DebitCreditCode
     [IsoId("_Ieq6AllcEeGqx4xQw6z6Ug_-1371089833")]
     [Description(@"Operation is a decrease.")]
     Debit,
-    
 }

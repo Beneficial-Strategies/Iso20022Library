@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d7nnwAJXEeS2H9l84F_isg")]
 [DisplayName("Header")]
-public partial record Header23
+public record Header23
 {
-    #nullable enable
-    
     /// <summary>
     /// Version of file format.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Header23
     [DisplayName("Format Version")]
     [IsoXmlTag("FrmtVrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
-    [StringLength(maximumLength: 6 ,MinimumLength = 1)]
-    public required IsoMax6Text FormatVersion { get; init; } 
-    
+    [StringLength(maximumLength: 6, MinimumLength = 1)]
+    public required IsoMax6Text FormatVersion { get; init; }
+
     /// <summary>
     /// Unique identification of an exchange occurrence.
     /// </summary>
@@ -35,24 +33,24 @@ public partial record Header23
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText ExchangeIdentification { get; init; } 
-    
+    public required IsoMax3NumericText ExchangeIdentification { get; init; }
+
     /// <summary>
     /// Unique identification of the partner that has initiated the exchange.
     /// </summary>
     [IsoId("_eMpGWQJXEeS2H9l84F_isg")]
     [DisplayName("Initiating Party")]
     [IsoXmlTag("InitgPty")]
-    public required GenericIdentification32 InitiatingParty { get; init; } 
-    
+    public required GenericIdentification32 InitiatingParty { get; init; }
+
     /// <summary>
     /// Unique identification of the partner that is the recipient of the exchange.
     /// </summary>
     [IsoId("_eMptYQJXEeS2H9l84F_isg")]
     [DisplayName("Recipient Party")]
     [IsoXmlTag("RcptPty")]
-    public GenericIdentification32? RecipientParty { get; init; } 
-    
+    public GenericIdentification32? RecipientParty { get; init; }
+
     /// <summary>
     /// Sequence of this message in a conversation in integer.
     /// </summary>
@@ -60,8 +58,8 @@ public partial record Header23
     [DisplayName("Message Sequence Number")]
     [IsoXmlTag("MsgSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber MessageSequenceNumber { get; init; } 
-    
+    public required IsoNumber MessageSequenceNumber { get; init; }
+
     /// <summary>
     /// Date and time at which the file or message was created.
     /// </summary>
@@ -69,9 +67,5 @@ public partial record Header23
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
 }

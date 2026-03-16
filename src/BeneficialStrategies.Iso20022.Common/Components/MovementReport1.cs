@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jf2uIe5NEeCisYr99QEiWA_-2045963141")]
 [DisplayName("Movement Report")]
-public partial record MovementReport1
+public record MovementReport1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the Query message sent to request this statement.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MovementReport1
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? QueryReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? QueryReference { get; init; }
+
     /// <summary>
     /// Reference common to all pages of a report.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record MovementReport1
     [DisplayName("Report Identification")]
     [IsoXmlTag("RptId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ReportIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ReportIdentification { get; init; }
+
     /// <summary>
     /// Defines the type of query.
     /// </summary>
     [IsoId("_jf2uJO5NEeCisYr99QEiWA_141020383")]
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
-    public required MovementResponseType1Code QueryType { get; init; } 
-    
+    public required MovementResponseType1Code QueryType { get; init; }
+
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.
     /// </summary>
@@ -53,9 +51,5 @@ public partial record MovementReport1
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator ActivityIndicator { get; init; }
 }

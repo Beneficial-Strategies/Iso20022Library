@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -20,64 +18,55 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3M05TEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Get Transaction V11")]
-public partial record GetTransactionV11 : IOuterRecord
+public record GetTransactionV11 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "camt.005.001.11";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "GetTx";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.005.001.11";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
-    public required MessageHeader9 MessageHeader { get; init; } 
-    
+    public required MessageHeader9 MessageHeader { get; init; }
+
     /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-    
+
     /// <summary>
     /// Transaction Query Definition.
     /// </summary>
     [DisplayName("Transaction Query Definition")]
     [IsoXmlTag("TxQryDef")]
-    public TransactionQuery8? TransactionQueryDefinition { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransactionQuery8? TransactionQueryDefinition { get; init; }
 }
 
-
-// Since GetTransactionV11Document is not really part of the logical business domain model, 
+// Since GetTransactionV11Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to GetTransactionV11.
-

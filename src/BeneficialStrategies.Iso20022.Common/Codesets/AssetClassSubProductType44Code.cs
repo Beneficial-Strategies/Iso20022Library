@@ -23,5 +23,4 @@ public enum AssetClassSubProductType44Code
     [IsoId("_voxdC1r3EeWN79Bl6BUd3g")]
     [Description(@"Commodity of type urea and ammonium nitrite.")]
     UreaAndAmmoniumNitrite = AssetClassSubProductTypeCode.UreaAndAmmoniumNitrite, // same ordinal as derivation source for type conversions
-    
 }

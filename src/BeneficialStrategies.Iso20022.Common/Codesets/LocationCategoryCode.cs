@@ -11,8 +11,14 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_TUvzEAEcEeCQm6a_G2yO_w_-212887785")]
-[Description(@"Location category code of the place where the merchant actually performed the transaction.")]
-[Derivations(typeof(LocationCategory1Code),typeof(LocationCategory2Code),typeof(LocationCategory3Code))]
+[Description(
+    @"Location category code of the place where the merchant actually performed the transaction."
+)]
+[Derivations(
+    typeof(LocationCategory1Code),
+    typeof(LocationCategory2Code),
+    typeof(LocationCategory3Code)
+)]
 [Obsolete("Marked obsolete in the ISO 20022 2025-04-24 snapshot. No removal date recorded.")]
 public enum LocationCategoryCode
 {
@@ -24,7 +30,7 @@ public enum LocationCategoryCode
     [IsoId("_TUvzEQEcEeCQm6a_G2yO_w_-2072023787")]
     [Description(@"Fixed location, for example in a shop.")]
     Fixed,
-    
+
     /// <summary>
     /// Aboard a bus, train, ship, airplane, taxi, etc.
     /// Encoded/decoded by serializers as &quot;ABRD&quot;.
@@ -33,7 +39,7 @@ public enum LocationCategoryCode
     [IsoId("_TUvzEgEcEeCQm6a_G2yO_w_-632717979")]
     [Description(@"Aboard a bus, train, ship, airplane, taxi, etc.")]
     Aboard,
-    
+
     /// <summary>
     /// Nomadic location.
     /// Encoded/decoded by serializers as &quot;NMDC&quot;.
@@ -42,7 +48,7 @@ public enum LocationCategoryCode
     [IsoId("_TUvzEwEcEeCQm6a_G2yO_w_515385128")]
     [Description(@"Nomadic location.")]
     Nomadic,
-    
+
     /// <summary>
     /// Mail order or telephone order.
     /// Encoded/decoded by serializers as &quot;MOTO&quot;.
@@ -51,7 +57,7 @@ public enum LocationCategoryCode
     [IsoId("_TUvzFAEcEeCQm6a_G2yO_w_1800464399")]
     [Description(@"Mail order or telephone order.")]
     MailOrderTelephoneOrder,
-    
+
     /// <summary>
     /// Customer home.
     /// Encoded/decoded by serializers as &quot;HOME&quot;.
@@ -60,7 +66,7 @@ public enum LocationCategoryCode
     [IsoId("_TUvzFQEcEeCQm6a_G2yO_w_-566393141")]
     [Description(@"Customer home.")]
     Home,
-    
+
     /// <summary>
     /// Indoor terminal.
     /// Encoded/decoded by serializers as &quot;INDR&quot;.
@@ -69,7 +75,7 @@ public enum LocationCategoryCode
     [IsoId("_YppBoJX5EeWMQt4mOczoDw")]
     [Description(@"Indoor terminal.")]
     Indoor,
-    
+
     /// <summary>
     /// Terminal incorporated in the pump dispensing petrol.
     /// Encoded/decoded by serializers as &quot;IPMP&quot;.
@@ -78,7 +84,7 @@ public enum LocationCategoryCode
     [IsoId("_bTq-8JX5EeWMQt4mOczoDw")]
     [Description(@"Terminal incorporated in the pump dispensing petrol.")]
     InsidePump,
-    
+
     /// <summary>
     /// Outdoor terminal serving several petrol pumps.
     /// Encoded/decoded by serializers as &quot;MPMP&quot;.
@@ -87,7 +93,7 @@ public enum LocationCategoryCode
     [IsoId("_d8s2sJX5EeWMQt4mOczoDw")]
     [Description(@"Outdoor terminal serving several petrol pumps.")]
     MultiplePump,
-    
+
     /// <summary>
     /// Multiple terminals linked to a unique sale terminal.
     /// Encoded/decoded by serializers as &quot;MPOI&quot;.
@@ -96,7 +102,7 @@ public enum LocationCategoryCode
     [IsoId("_ifu9AJX5EeWMQt4mOczoDw")]
     [Description(@"Multiple terminals linked to a unique sale terminal.")]
     MultiplePOITerminal,
-    
+
     /// <summary>
     /// Terminal serving multiple sale terminals.
     /// Encoded/decoded by serializers as &quot;MSLE&quot;.
@@ -105,7 +111,7 @@ public enum LocationCategoryCode
     [IsoId("_kr-yIJX5EeWMQt4mOczoDw")]
     [Description(@"Terminal serving multiple sale terminals.")]
     MultipleSaleTerminal,
-    
+
     /// <summary>
     /// Terminal linked to a unique sale terminal.
     /// Encoded/decoded by serializers as &quot;SSLE&quot;.
@@ -114,7 +120,7 @@ public enum LocationCategoryCode
     [IsoId("_pI4bQJX5EeWMQt4mOczoDw")]
     [Description(@"Terminal linked to a unique sale terminal.")]
     SingleSaleTerminal,
-    
+
     /// <summary>
     /// Terminal integrated in a vending machine.
     /// Encoded/decoded by serializers as &quot;VNDG&quot;.
@@ -123,7 +129,7 @@ public enum LocationCategoryCode
     [IsoId("_sdowkJX5EeWMQt4mOczoDw")]
     [Description(@"Terminal integrated in a vending machine.")]
     VendingMachine,
-    
+
     /// <summary>
     /// Virtual Shop is used for any ecommerce solution.
     /// Encoded/decoded by serializers as &quot;VIRT&quot;.
@@ -132,5 +138,4 @@ public enum LocationCategoryCode
     [IsoId("_7imhYEUJEeuSWeURYeKGvg")]
     [Description(@"Virtual Shop is used for any ecommerce solution.")]
     VirtualShop,
-    
 }

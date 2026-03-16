@@ -12,12 +12,16 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(BalanceFormat1Choice.Balance))]
     [KnownType(typeof(BalanceFormat1Choice.EligibleBalance))]
     [KnownType(typeof(BalanceFormat1Choice.NotEligibleBalance))]
-    [JsonDerivedType(typeof(BalanceFormat1Choice.Balance),nameof(BalanceFormat1Choice.Balance))]
-    [JsonDerivedType(typeof(BalanceFormat1Choice.EligibleBalance),nameof(BalanceFormat1Choice.EligibleBalance))]
-    [JsonDerivedType(typeof(BalanceFormat1Choice.NotEligibleBalance),nameof(BalanceFormat1Choice.NotEligibleBalance))]
+    [JsonDerivedType(typeof(BalanceFormat1Choice.Balance), nameof(BalanceFormat1Choice.Balance))]
+    [JsonDerivedType(
+        typeof(BalanceFormat1Choice.EligibleBalance),
+        nameof(BalanceFormat1Choice.EligibleBalance)
+    )]
+    [JsonDerivedType(
+        typeof(BalanceFormat1Choice.NotEligibleBalance),
+        nameof(BalanceFormat1Choice.NotEligibleBalance)
+    )]
     [IsoId("_Q0of-tp-Ed-ak6NoX_4Aeg_86295556")]
     [DisplayName("Balance Format 1 Choice")]
-    public abstract partial record BalanceFormat1Choice_
-    {
-    }
+    public abstract record BalanceFormat1Choice_ { }
 }

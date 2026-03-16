@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Quantity52Choice.Code))]
     [KnownType(typeof(Quantity52Choice.OriginalAndCurrentFaceAmount))]
     [KnownType(typeof(Quantity52Choice.Quantity))]
-    [JsonDerivedType(typeof(Quantity52Choice.Code),nameof(Quantity52Choice.Code))]
-    [JsonDerivedType(typeof(Quantity52Choice.OriginalAndCurrentFaceAmount),nameof(Quantity52Choice.OriginalAndCurrentFaceAmount))]
-    [JsonDerivedType(typeof(Quantity52Choice.Quantity),nameof(Quantity52Choice.Quantity))]
+    [JsonDerivedType(typeof(Quantity52Choice.Code), nameof(Quantity52Choice.Code))]
+    [JsonDerivedType(
+        typeof(Quantity52Choice.OriginalAndCurrentFaceAmount),
+        nameof(Quantity52Choice.OriginalAndCurrentFaceAmount)
+    )]
+    [JsonDerivedType(typeof(Quantity52Choice.Quantity), nameof(Quantity52Choice.Quantity))]
     [IsoId("_OT3o3RuyEeyhRdHRjakS2w")]
     [DisplayName("Quantity 52 Choice")]
-    public abstract partial record Quantity52Choice_
-    {
-    }
+    public abstract record Quantity52Choice_ { }
 }

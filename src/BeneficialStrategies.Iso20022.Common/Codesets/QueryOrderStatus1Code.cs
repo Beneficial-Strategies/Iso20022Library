@@ -23,7 +23,7 @@ public enum QueryOrderStatus1Code
     [IsoId("_TUJ7sQ2NEeSwB74WgTbh4Q")]
     [Description(@"Query for orders which are not confirmed by a party.")]
     QueryUnconfirmedOrder = QueryOrderStatusCode.QueryUnconfirmedOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for all orders for a party.
     /// Encoded/decoded by serializers as &quot;QOFP&quot;.
@@ -32,7 +32,7 @@ public enum QueryOrderStatus1Code
     [IsoId("_ThlTsQ2NEeSwB74WgTbh4Q")]
     [Description(@"Query for all orders for a party.")]
     QueryOrdersForTheParty = QueryOrderStatusCode.QueryOrdersForTheParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for orders have been completely executed.
     /// Encoded/decoded by serializers as &quot;QFEO&quot;.
@@ -41,7 +41,7 @@ public enum QueryOrderStatus1Code
     [IsoId("_HaAlAQ4pEeSvVsudrRLaVg")]
     [Description(@"Query for orders have been completely executed.")]
     QueryFullyExecutedOrder = QueryOrderStatusCode.QueryFullyExecutedOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for orders have been partially executed.
     /// Encoded/decoded by serializers as &quot;QPEO&quot;.
@@ -50,7 +50,7 @@ public enum QueryOrderStatus1Code
     [IsoId("_HcB-QQ4pEeSvVsudrRLaVg")]
     [Description(@"Query for orders have been partially executed.")]
     QueryPartiallyExecutedOrder = QueryOrderStatusCode.QueryPartiallyExecutedOrder, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for all orders.
     /// Encoded/decoded by serializers as &quot;QUAO&quot;.
@@ -59,5 +59,4 @@ public enum QueryOrderStatus1Code
     [IsoId("_V2KK8YA3EeSUJZYcWGKkkw")]
     [Description(@"Query for all orders.|")]
     QueryAllOrders = QueryOrderStatusCode.QueryAllOrders, // same ordinal as derivation source for type conversions
-    
 }

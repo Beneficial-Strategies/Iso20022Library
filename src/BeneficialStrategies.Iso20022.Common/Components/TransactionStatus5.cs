@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RbFb9Np-Ed-ak6NoX_4Aeg_-2036389843")]
 [DisplayName("Transaction Status")]
-public partial record TransactionStatus5
+public record TransactionStatus5
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the status of the transaction by means of a code.
     /// </summary>
     [IsoId("_RbFb9dp-Ed-ak6NoX_4Aeg_-2036389841")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required BaselineStatus3Code Status { get; init; } 
-    
+    public required BaselineStatus3Code Status { get; init; }
+
     /// <summary>
     /// Date and time at which the current status will change.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record TransactionStatus5
     [DisplayName("Change Date Time")]
     [IsoXmlTag("ChngDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime ChangeDateTime { get; init; } 
-    
+    public required IsoISODateTime ChangeDateTime { get; init; }
+
     /// <summary>
     /// Additional information on the reason for the time-out.
     /// </summary>
@@ -42,10 +40,6 @@ public partial record TransactionStatus5
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Description { get; init; }
 }

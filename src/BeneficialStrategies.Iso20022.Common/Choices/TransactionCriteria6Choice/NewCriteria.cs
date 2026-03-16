@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria6Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria6Choice
     /// </summary>
     [IsoId("_gUfE49cZEeqRFcf2R4bPBw")]
     [DisplayName("New Criteria")]
-    public partial record NewCriteria : TransactionCriteria6Choice_
+    public record NewCriteria : TransactionCriteria6Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.
         /// </summary>
@@ -24,35 +22,31 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionCriteria6Choice
         [DisplayName("New Query Name")]
         [IsoXmlTag("NewQryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? NewQueryName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? NewQueryName { get; init; }
+
         /// <summary>
         /// Defines the criteria on which the information is extracted.
         /// </summary>
         [IsoId("_gWBV9dcZEeqRFcf2R4bPBw")]
         [DisplayName("Search Criteria")]
         [IsoXmlTag("SchCrit")]
-        public TransactionSearchCriteria9? SearchCriteria { get; init; } 
-        
+        public TransactionSearchCriteria9? SearchCriteria { get; init; }
+
         /// <summary>
         /// Indicates the format of the requested report.
         /// </summary>
         [IsoId("_gWBV99cZEeqRFcf2R4bPBw")]
         [DisplayName("Statement Report")]
         [IsoXmlTag("StmtRpt")]
-        public ReportIndicator1Code? StatementReport { get; init; } 
-        
+        public ReportIndicator1Code? StatementReport { get; init; }
+
         /// <summary>
         /// Defines the expected payment transaction report.
         /// </summary>
         [IsoId("_gWBV-dcZEeqRFcf2R4bPBw")]
         [DisplayName("Return Criteria")]
         [IsoXmlTag("RtrCrit")]
-        public TransactionReturnCriteria5? ReturnCriteria { get; init; } 
-        
-        
-        #nullable disable
-        
+        public TransactionReturnCriteria5? ReturnCriteria { get; init; }
     }
 }

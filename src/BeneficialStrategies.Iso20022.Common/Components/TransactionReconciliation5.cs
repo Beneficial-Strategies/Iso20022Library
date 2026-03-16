@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OsbaYS4_EeunNvJlR_vCbg")]
 [DisplayName("Transaction Reconciliation")]
-public partial record TransactionReconciliation5
+public record TransactionReconciliation5
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates if the transaction requires a closure of the reconciliation period.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record TransactionReconciliation5
     [DisplayName("Close Period")]
     [IsoXmlTag("ClsPrd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? ClosePeriod { get; init; } 
-    
+    public IsoTrueFalseIndicator? ClosePeriod { get; init; }
+
     /// <summary>
     /// Unique identification of a reconciliation transaction.
     /// </summary>
     [IsoId("_O4Dbky4_EeunNvJlR_vCbg")]
     [DisplayName("Reconciliation Transaction Identification")]
     [IsoXmlTag("RcncltnTxId")]
-    public required TransactionIdentifier1 ReconciliationTransactionIdentification { get; init; } 
-    
+    public required TransactionIdentifier1 ReconciliationTransactionIdentification { get; init; }
+
     /// <summary>
     /// Unique identification of the reconciliation period between the acceptor and the acquirer.
     /// </summary>
@@ -42,17 +40,17 @@ public partial record TransactionReconciliation5
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text ReconciliationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text ReconciliationIdentification { get; init; }
+
     /// <summary>
     /// Transaction totals during the reconciliation period for a certain type of transaction.
     /// </summary>
     [IsoId("_O4Dbly4_EeunNvJlR_vCbg")]
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
-    public TransactionTotals12? TransactionTotals { get; init; } 
-    
+    public TransactionTotals12? TransactionTotals { get; init; }
+
     /// <summary>
     /// Additional information related to the reconciliation transaction.
     /// </summary>
@@ -60,10 +58,6 @@ public partial record TransactionReconciliation5
     [DisplayName("Additional Transaction Data")]
     [IsoXmlTag("AddtlTxData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AdditionalTransactionData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AdditionalTransactionData { get; init; }
 }

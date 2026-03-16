@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,51 +14,49 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3FrCgYV4Ee-oeNhl-Tk6YQ")]
 [DisplayName("Securities Option112")]
-public partial record SecuritiesOption112
+public record SecuritiesOption112
 {
-    #nullable enable
-
     /// <summary>
     /// Amount Details.
     /// </summary>
     [DisplayName("Amount Details")]
     [IsoXmlTag("AmtDtls")]
-    public CorporateActionAmounts60? AmountDetails { get; init; } 
+    public CorporateActionAmounts60? AmountDetails { get; init; }
 
     /// <summary>
     /// Country Of Income Source.
     /// </summary>
     [DisplayName("Country Of Income Source")]
     [IsoXmlTag("CtryOfIncmSrc")]
-    public CountryCode? CountryOfIncomeSource { get; init; } 
+    public CountryCode? CountryOfIncomeSource { get; init; }
 
     /// <summary>
     /// Credit Debit Indicator.
     /// </summary>
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
-    public required CreditDebitCode CreditDebitIndicator { get; init; } 
+    public required CreditDebitCode CreditDebitIndicator { get; init; }
 
     /// <summary>
     /// Currency Option.
     /// </summary>
     [DisplayName("Currency Option")]
     [IsoXmlTag("CcyOptn")]
-    public ActiveCurrencyCode? CurrencyOption { get; init; } 
+    public ActiveCurrencyCode? CurrencyOption { get; init; }
 
     /// <summary>
     /// Date Details.
     /// </summary>
     [DisplayName("Date Details")]
     [IsoXmlTag("DtDtls")]
-    public required SecurityDate25 DateDetails { get; init; } 
+    public required SecurityDate25 DateDetails { get; init; }
 
     /// <summary>
     /// Delivering Settlement Parties.
     /// </summary>
     [DisplayName("Delivering Settlement Parties")]
     [IsoXmlTag("DlvrgSttlmPties")]
-    public SettlementParties129? DeliveringSettlementParties { get; init; } 
+    public SettlementParties129? DeliveringSettlementParties { get; init; }
 
     /// <summary>
     /// Exemption Type.
@@ -72,35 +70,35 @@ public partial record SecuritiesOption112
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; } 
+    public required SecurityIdentification19 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Fraction Disposition.
     /// </summary>
     [DisplayName("Fraction Disposition")]
     [IsoXmlTag("FrctnDspstn")]
-    public FractionDispositionType27Choice_? FractionDisposition { get; init; } 
+    public FractionDispositionType27Choice_? FractionDisposition { get; init; }
 
     /// <summary>
     /// Income Type.
     /// </summary>
     [DisplayName("Income Type")]
     [IsoXmlTag("IncmTp")]
-    public GenericIdentification30? IncomeType { get; init; } 
+    public GenericIdentification30? IncomeType { get; init; }
 
     /// <summary>
     /// Issuer Offeror Taxability Indicator.
     /// </summary>
     [DisplayName("Issuer Offeror Taxability Indicator")]
     [IsoXmlTag("IssrOfferrTaxbltyInd")]
-    public IssuerOfferorTaxabilityIndicator2Choice_? IssuerOfferorTaxabilityIndicator { get; init; } 
+    public IssuerOfferorTaxabilityIndicator2Choice_? IssuerOfferorTaxabilityIndicator { get; init; }
 
     /// <summary>
     /// New Securities Issuance Indicator.
     /// </summary>
     [DisplayName("New Securities Issuance Indicator")]
     [IsoXmlTag("NewSctiesIssncInd")]
-    public NewSecuritiesIssuanceType6Code? NewSecuritiesIssuanceIndicator { get; init; } 
+    public NewSecuritiesIssuanceType6Code? NewSecuritiesIssuanceIndicator { get; init; }
 
     /// <summary>
     /// Other Income Type.
@@ -114,44 +112,40 @@ public partial record SecuritiesOption112
     /// </summary>
     [DisplayName("Posting Quantity")]
     [IsoXmlTag("PstngQty")]
-    public required Quantity51Choice_ PostingQuantity { get; init; } 
+    public required Quantity51Choice_ PostingQuantity { get; init; }
 
     /// <summary>
     /// Price Details.
     /// </summary>
     [DisplayName("Price Details")]
     [IsoXmlTag("PricDtls")]
-    public CorporateActionPrice83? PriceDetails { get; init; } 
+    public CorporateActionPrice83? PriceDetails { get; init; }
 
     /// <summary>
     /// Rate Details.
     /// </summary>
     [DisplayName("Rate Details")]
     [IsoXmlTag("RateDtls")]
-    public CorporateActionRate125? RateDetails { get; init; } 
+    public CorporateActionRate125? RateDetails { get; init; }
 
     /// <summary>
     /// Receiving Settlement Parties.
     /// </summary>
     [DisplayName("Receiving Settlement Parties")]
     [IsoXmlTag("RcvgSttlmPties")]
-    public SettlementParties129? ReceivingSettlementParties { get; init; } 
+    public SettlementParties129? ReceivingSettlementParties { get; init; }
 
     /// <summary>
     /// Safekeeping Place.
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; } 
+    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 
     /// <summary>
     /// Temporary Financial Instrument Indicator.
     /// </summary>
     [DisplayName("Temporary Financial Instrument Indicator")]
     [IsoXmlTag("TempFinInstrmInd")]
-    public TemporaryFinancialInstrumentIndicator3Choice_? TemporaryFinancialInstrumentIndicator { get; init; } 
-
-    
-    #nullable disable
-    
+    public TemporaryFinancialInstrumentIndicator3Choice_? TemporaryFinancialInstrumentIndicator { get; init; }
 }

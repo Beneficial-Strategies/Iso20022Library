@@ -23,7 +23,7 @@ public enum LiabilityCode
     [IsoId("_1MIqYCDMEeWPMvNwVtiMsA")]
     [Description(@"Investor is responsible.")]
     Investor,
-    
+
     /// <summary>
     /// Investor is not assumed responsibile.
     /// Encoded/decoded by serializers as &quot;NINV&quot;.
@@ -32,7 +32,7 @@ public enum LiabilityCode
     [IsoId("_7hUDwCDMEeWPMvNwVtiMsA")]
     [Description(@"Investor is not assumed responsibile.")]
     NotInvestor,
-    
+
     /// <summary>
     /// Broker is responsible.
     /// Encoded/decoded by serializers as &quot;BROK&quot;.
@@ -41,5 +41,4 @@ public enum LiabilityCode
     [IsoId("_9TbU4Da1EeWxoIK_IhudJg")]
     [Description(@"Broker is responsible.")]
     Broker,
-    
 }

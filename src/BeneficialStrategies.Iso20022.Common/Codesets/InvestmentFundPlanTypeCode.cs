@@ -23,7 +23,7 @@ public enum InvestmentFundPlanTypeCode
     [IsoId("_xwSXgF9BEeicg40_9gK9vQ")]
     [Description(@"Savings investment plan.")]
     SavingsInvestmentPlan,
-    
+
     /// <summary>
     /// Withdrawal plan.
     /// Encoded/decoded by serializers as &quot;WTHP&quot;.
@@ -32,7 +32,7 @@ public enum InvestmentFundPlanTypeCode
     [IsoId("_0aRRgF9BEeicg40_9gK9vQ")]
     [Description(@"Withdrawal plan.")]
     WithdrawalPlan,
-    
+
     /// <summary>
     /// Switch plan.
     /// Encoded/decoded by serializers as &quot;SWIP&quot;.
@@ -41,5 +41,4 @@ public enum InvestmentFundPlanTypeCode
     [IsoId("_2F9XQF9BEeicg40_9gK9vQ")]
     [Description(@"Switch plan.")]
     SwitchPlan,
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TransferCancellationCompleteStatusChoice.Reason))]
     [KnownType(typeof(TransferCancellationCompleteStatusChoice.DataSourceScheme))]
-    [JsonDerivedType(typeof(TransferCancellationCompleteStatusChoice.Reason),nameof(TransferCancellationCompleteStatusChoice.Reason))]
-    [JsonDerivedType(typeof(TransferCancellationCompleteStatusChoice.DataSourceScheme),nameof(TransferCancellationCompleteStatusChoice.DataSourceScheme))]
+    [JsonDerivedType(
+        typeof(TransferCancellationCompleteStatusChoice.Reason),
+        nameof(TransferCancellationCompleteStatusChoice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(TransferCancellationCompleteStatusChoice.DataSourceScheme),
+        nameof(TransferCancellationCompleteStatusChoice.DataSourceScheme)
+    )]
     [IsoId("_U0C70dp-Ed-ak6NoX_4Aeg_-1711844694")]
     [DisplayName("Transfer Cancellation Complete Status Choice")]
-    public abstract partial record TransferCancellationCompleteStatusChoice_
-    {
-    }
+    public abstract record TransferCancellationCompleteStatusChoice_ { }
 }

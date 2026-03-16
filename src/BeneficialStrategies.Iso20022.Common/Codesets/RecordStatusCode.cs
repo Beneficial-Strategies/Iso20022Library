@@ -23,7 +23,7 @@ public enum RecordStatusCode
     [IsoId("_iqDKAdHDEeaokquJJ-K6uA")]
     [Description(@"Record has been accepted.")]
     Accepted,
-    
+
     /// <summary>
     /// Record has been accepted, following a pending status.
     /// Encoded/decoded by serializers as &quot;ACPD&quot;.
@@ -32,16 +32,18 @@ public enum RecordStatusCode
     [IsoId("_oWERptHDEeaokquJJ-K6uA")]
     [Description(@"Record has been accepted, following a pending status.")]
     AcceptedAfterPending,
-    
+
     /// <summary>
     /// Processing of the record is pending (some validation rules have been executed but some have not and the final status is not known yet).
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
     /// </summary>
     [EnumMember(Value = "PDNG")]
     [IsoId("_oWERp9HDEeaokquJJ-K6uA")]
-    [Description(@"Processing of the record is pending (some validation rules have been executed but some have not and the final status is not known yet).")]
+    [Description(
+        @"Processing of the record is pending (some validation rules have been executed but some have not and the final status is not known yet)."
+    )]
     Pending,
-    
+
     /// <summary>
     /// Recrod has been received but not processed yet.
     /// Encoded/decoded by serializers as &quot;RCVD&quot;.
@@ -50,7 +52,7 @@ public enum RecordStatusCode
     [IsoId("_oWERqNHDEeaokquJJ-K6uA")]
     [Description(@"Recrod has been received but not processed yet.")]
     Received,
-    
+
     /// <summary>
     /// Record has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -59,7 +61,7 @@ public enum RecordStatusCode
     [IsoId("_oWERqdHDEeaokquJJ-K6uA")]
     [Description(@"Record has been rejected.")]
     Rejected,
-    
+
     /// <summary>
     /// Record has been rejected, following a pending status.
     /// Encoded/decoded by serializers as &quot;RJPD&quot;.
@@ -68,7 +70,7 @@ public enum RecordStatusCode
     [IsoId("_oWERqtHDEeaokquJJ-K6uA")]
     [Description(@"Record has been rejected, following a pending status.")]
     RejectedAfterPending,
-    
+
     /// <summary>
     /// Record has been accepted with warnings.
     /// Encoded/decoded by serializers as &quot;WARN&quot;.
@@ -77,5 +79,4 @@ public enum RecordStatusCode
     [IsoId("_oWERq9HDEeaokquJJ-K6uA")]
     [Description(@"Record has been accepted with warnings.")]
     Warning,
-    
 }

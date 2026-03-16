@@ -23,7 +23,7 @@ public enum MeetingDateStatus1Code
     [IsoId("_aVWBMtp-Ed-ak6NoX_4Aeg_1034907041")]
     [Description(@"Meeting date is tentative.")]
     Tentative = MeetingDateStatusCode.Tentative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting date is confirmed.
     /// Encoded/decoded by serializers as &quot;CNFR&quot;.
@@ -32,7 +32,7 @@ public enum MeetingDateStatus1Code
     [IsoId("_aVWBM9p-Ed-ak6NoX_4Aeg_1049683942")]
     [Description(@"Meeting date is confirmed.")]
     Confirmed = MeetingDateStatusCode.Confirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting date has been cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,7 +41,7 @@ public enum MeetingDateStatus1Code
     [IsoId("_aVWBNNp-Ed-ak6NoX_4Aeg_1064459735")]
     [Description(@"Meeting date has been cancelled.")]
     Cancelled = MeetingDateStatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting could not take place as the quorum was not reached.
     /// Encoded/decoded by serializers as &quot;NOQO&quot;.
@@ -50,5 +50,4 @@ public enum MeetingDateStatus1Code
     [IsoId("_aVWBNdp-Ed-ak6NoX_4Aeg_-1791743871")]
     [Description(@"Meeting could not take place as the quorum was not reached.")]
     NoQuorum = MeetingDateStatusCode.NoQuorum, // same ordinal as derivation source for type conversions
-    
 }

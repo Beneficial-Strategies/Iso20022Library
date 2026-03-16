@@ -14,14 +14,21 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Status33Choice.InferredMatchingStatus))]
     [KnownType(typeof(Status33Choice.SettlementStatus))]
     [KnownType(typeof(Status33Choice.InstructionProcessingStatus))]
-    [JsonDerivedType(typeof(Status33Choice.Proprietary),nameof(Status33Choice.Proprietary))]
-    [JsonDerivedType(typeof(Status33Choice.MatchingStatus),nameof(Status33Choice.MatchingStatus))]
-    [JsonDerivedType(typeof(Status33Choice.InferredMatchingStatus),nameof(Status33Choice.InferredMatchingStatus))]
-    [JsonDerivedType(typeof(Status33Choice.SettlementStatus),nameof(Status33Choice.SettlementStatus))]
-    [JsonDerivedType(typeof(Status33Choice.InstructionProcessingStatus),nameof(Status33Choice.InstructionProcessingStatus))]
+    [JsonDerivedType(typeof(Status33Choice.Proprietary), nameof(Status33Choice.Proprietary))]
+    [JsonDerivedType(typeof(Status33Choice.MatchingStatus), nameof(Status33Choice.MatchingStatus))]
+    [JsonDerivedType(
+        typeof(Status33Choice.InferredMatchingStatus),
+        nameof(Status33Choice.InferredMatchingStatus)
+    )]
+    [JsonDerivedType(
+        typeof(Status33Choice.SettlementStatus),
+        nameof(Status33Choice.SettlementStatus)
+    )]
+    [JsonDerivedType(
+        typeof(Status33Choice.InstructionProcessingStatus),
+        nameof(Status33Choice.InstructionProcessingStatus)
+    )]
     [IsoId("_waWF8yAeEeuyDZ-ukt4YRg")]
     [DisplayName("Status 33 Choice")]
-    public abstract partial record Status33Choice_
-    {
-    }
+    public abstract record Status33Choice_ { }
 }

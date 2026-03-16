@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AssetClassCommodityIndustrialProduct1Choice.Construction))]
     [KnownType(typeof(AssetClassCommodityIndustrialProduct1Choice.Manufacturing))]
-    [JsonDerivedType(typeof(AssetClassCommodityIndustrialProduct1Choice.Construction),nameof(AssetClassCommodityIndustrialProduct1Choice.Construction))]
-    [JsonDerivedType(typeof(AssetClassCommodityIndustrialProduct1Choice.Manufacturing),nameof(AssetClassCommodityIndustrialProduct1Choice.Manufacturing))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityIndustrialProduct1Choice.Construction),
+        nameof(AssetClassCommodityIndustrialProduct1Choice.Construction)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityIndustrialProduct1Choice.Manufacturing),
+        nameof(AssetClassCommodityIndustrialProduct1Choice.Manufacturing)
+    )]
     [IsoId("_5jkmIFrfEeWN79Bl6BUd3g")]
     [DisplayName("Asset Class Commodity Industrial Product 1 Choice")]
-    public abstract partial record AssetClassCommodityIndustrialProduct1Choice_
-    {
-    }
+    public abstract record AssetClassCommodityIndustrialProduct1Choice_ { }
 }

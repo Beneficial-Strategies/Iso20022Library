@@ -23,5 +23,4 @@ public enum Quantity1Code
     [IsoId("_ZXWu9dp-Ed-ak6NoX_4Aeg_1332281018")]
     [Description(@"Instruction applies to the entire eligible balance of underlying securities.")]
     AllSecurities = QuantityCode.AllSecurities, // same ordinal as derivation source for type conversions
-    
 }

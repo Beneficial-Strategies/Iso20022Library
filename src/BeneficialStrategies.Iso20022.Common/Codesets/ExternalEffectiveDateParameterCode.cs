@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_e41SoDcfEeOA3chqL9a4Rw")]
-[Description(@"Specifies how the SSI update effective date is to be applied.|The list of valid codes is an external code list published separately. External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies how the SSI update effective date is to be applied.|The list of valid codes is an external code list published separately. External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalEffectiveDateParameter1Code))]
 public enum ExternalEffectiveDateParameterCode
 {
@@ -24,7 +26,7 @@ public enum ExternalEffectiveDateParameterCode
     [IsoId("_uU8YQ_RYEeuLhpyIdtJzwg")]
     [Description(@"Relates to the settlement date.")]
     SettlementDate,
-    
+
     /// <summary>
     /// Relates to the trade date.
     /// Encoded/decoded by serializers as &quot;TRAD&quot;.
@@ -33,5 +35,4 @@ public enum ExternalEffectiveDateParameterCode
     [IsoId("_uU8YRvRYEeuLhpyIdtJzwg")]
     [Description(@"Relates to the trade date.")]
     TradeDate,
-    
 }

@@ -30,7 +30,8 @@ public enum ActivationStatus2Code
     /// </summary>
     [EnumMember(Value = "WACT")]
     [IsoId("_ActivationStatus2Code_AwaitingActivation")]
-    [Description(@"The configuration download was successful and is now awaiting a future activation date.")]
+    [Description(
+        @"The configuration download was successful and is now awaiting a future activation date."
+    )]
     AwaitingActivation = ActivationStatusCode.AwaitingActivation,
-
 }

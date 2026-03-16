@@ -23,7 +23,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_H5588E1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the safekeeping account (Level 0).")]
     SafekeepingAccount,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 1 account.
     /// Encoded/decoded by serializers as &quot;LVL1&quot;.
@@ -32,7 +32,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_Mx4_kU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 1 account.")]
     Level1,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 2 account.
     /// Encoded/decoded by serializers as &quot;LVL2&quot;.
@@ -41,7 +41,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_NgcusU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 2 account.")]
     Level2,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 3 account.
     /// Encoded/decoded by serializers as &quot;LVL3&quot;.
@@ -50,7 +50,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_N1bgMU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 3 account.")]
     Level3,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 4 account.
     /// Encoded/decoded by serializers as &quot;LVL4&quot;.
@@ -59,7 +59,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_ONh3IU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 4 account.")]
     Level4,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 5 account.
     /// Encoded/decoded by serializers as &quot;LVL5&quot;.
@@ -68,7 +68,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_OgblAU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 5 account.")]
     Level5,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 6 account.
     /// Encoded/decoded by serializers as &quot;LVL6&quot;.
@@ -77,7 +77,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_O0z5kU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 6 account.")]
     Level6,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 7 account.
     /// Encoded/decoded by serializers as &quot;LVL7&quot;.
@@ -86,7 +86,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_PFUawU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 7 account.")]
     Level7,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 8 account.
     /// Encoded/decoded by serializers as &quot;LVL8&quot;.
@@ -95,7 +95,7 @@ public enum HoldingAccountLevelCode
     [IsoId("_PUpQMU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 8 account.")]
     Level8,
-    
+
     /// <summary>
     /// Holding account is defined as the sub-level 9 account.
     /// Encoded/decoded by serializers as &quot;LVL9&quot;.
@@ -104,5 +104,4 @@ public enum HoldingAccountLevelCode
     [IsoId("_Pj0UoU1qEeSvz4A_x0ui8g")]
     [Description(@"Holding account is defined as the sub-level 9 account.")]
     Level9,
-    
 }

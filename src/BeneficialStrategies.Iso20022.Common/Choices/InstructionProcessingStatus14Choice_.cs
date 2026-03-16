@@ -17,17 +17,39 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstructionProcessingStatus14Choice.Repair))]
     [KnownType(typeof(InstructionProcessingStatus14Choice.PendingCancellation))]
     [KnownType(typeof(InstructionProcessingStatus14Choice.ModificationRequested))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.PendingProcessing),nameof(InstructionProcessingStatus14Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.CancellationRequested),nameof(InstructionProcessingStatus14Choice.CancellationRequested))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.AcknowledgedAccepted),nameof(InstructionProcessingStatus14Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.Cancelled),nameof(InstructionProcessingStatus14Choice.Cancelled))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.Generated),nameof(InstructionProcessingStatus14Choice.Generated))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.Repair),nameof(InstructionProcessingStatus14Choice.Repair))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.PendingCancellation),nameof(InstructionProcessingStatus14Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus14Choice.ModificationRequested),nameof(InstructionProcessingStatus14Choice.ModificationRequested))]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.PendingProcessing),
+        nameof(InstructionProcessingStatus14Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.CancellationRequested),
+        nameof(InstructionProcessingStatus14Choice.CancellationRequested)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.AcknowledgedAccepted),
+        nameof(InstructionProcessingStatus14Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.Cancelled),
+        nameof(InstructionProcessingStatus14Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.Generated),
+        nameof(InstructionProcessingStatus14Choice.Generated)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.Repair),
+        nameof(InstructionProcessingStatus14Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.PendingCancellation),
+        nameof(InstructionProcessingStatus14Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus14Choice.ModificationRequested),
+        nameof(InstructionProcessingStatus14Choice.ModificationRequested)
+    )]
     [IsoId("_EU___SRhEeO8sskhVI3IDA")]
     [DisplayName("Instruction Processing Status 14 Choice")]
-    public abstract partial record InstructionProcessingStatus14Choice_
-    {
-    }
+    public abstract record InstructionProcessingStatus14Choice_ { }
 }

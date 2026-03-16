@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
     /// </summary>
     [IsoId("_7_BRqqMgEeCJ6YNENx4h-w_-1593914623")]
     [DisplayName("To")]
-    public partial record To : PercentageRange1Choice_
+    public record To : PercentageRange1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Percentage rate of the range limit.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
         [DisplayName("Boundary Rate")]
         [IsoXmlTag("BdryRate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate BoundaryRate { get; init; } 
-        
+        public required IsoPercentageRate BoundaryRate { get; init; }
+
         /// <summary>
         /// Indicates whether the boundary percentage rate is included in the range of percentage rates.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.PercentageRange1Choice
         [DisplayName("Included")]
         [IsoXmlTag("Incl")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public required IsoYesNoIndicator Included { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoYesNoIndicator Included { get; init; }
     }
 }

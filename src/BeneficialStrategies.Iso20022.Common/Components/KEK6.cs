@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_tm7aodZ3EeeA4_YxLuyJaA")]
 [DisplayName("KEK")]
-public partial record KEK6
+public record KEK6
 {
-    #nullable enable
-    
     /// <summary>
     /// Version of the data structure.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record KEK6
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; } 
-    
+    public IsoNumber? Version { get; init; }
+
     /// <summary>
     /// Identification of the key encryption key (KEK).
     /// </summary>
     [IsoId("_tyiNs9Z3EeeA4_YxLuyJaA")]
     [DisplayName("KEK Identification")]
     [IsoXmlTag("KEKId")]
-    public required KEKIdentifier6 KEKIdentification { get; init; } 
-    
+    public required KEKIdentifier6 KEKIdentification { get; init; }
+
     /// <summary>
     /// Algorithm to encrypt the key encryption key (KEK).
     /// </summary>
     [IsoId("_tyiNtdZ3EeeA4_YxLuyJaA")]
     [DisplayName("Key Encryption Algorithm")]
     [IsoXmlTag("KeyNcrptnAlgo")]
-    public required AlgorithmIdentification28 KeyEncryptionAlgorithm { get; init; } 
-    
+    public required AlgorithmIdentification28 KeyEncryptionAlgorithm { get; init; }
+
     /// <summary>
     /// Encrypted key encryption key (KEK).
     /// </summary>
@@ -50,9 +48,5 @@ public partial record KEK6
     [DisplayName("Encrypted Key")]
     [IsoXmlTag("NcrptdKey")]
     [IsoSimpleType(IsoSimpleType.Max500Binary)]
-    public IsoMax500Binary? EncryptedKey { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax500Binary? EncryptedKey { get; init; }
 }

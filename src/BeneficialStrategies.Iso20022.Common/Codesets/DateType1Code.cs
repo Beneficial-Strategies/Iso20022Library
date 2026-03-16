@@ -23,5 +23,4 @@ public enum DateType1Code
     [IsoId("_ayQmuNp-Ed-ak6NoX_4Aeg_-6438361")]
     [Description(@"Date is unknown by the sender or has not been established.")]
     Unknown = DateTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

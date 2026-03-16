@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7-tU_UEEEeWVgfuHGaKtRQ")]
 [DisplayName("Corporate Action Rate")]
-public partial record CorporateActionRate71
+public record CorporateActionRate71
 {
-    #nullable enable
-    
     /// <summary>
     /// Rate proposed in a remarketing of variable rate notes.
     /// </summary>
@@ -25,33 +23,29 @@ public partial record CorporateActionRate71
     [DisplayName("Proposed Rate")]
     [IsoXmlTag("PropsdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? ProposedRate { get; init; } 
-    
+    public IsoPercentageRate? ProposedRate { get; init; }
+
     /// <summary>
     /// Rate of allowed over-subscription.
     /// </summary>
     [IsoId("_8LDueUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Oversubscription Rate")]
     [IsoXmlTag("OvrsbcptRate")]
-    public RateAndAmountFormat39Choice_? OversubscriptionRate { get; init; } 
-    
+    public RateAndAmountFormat39Choice_? OversubscriptionRate { get; init; }
+
     /// <summary>
     /// Requested tax rate that will be withheld by the tax authorities of the jurisdiction of the issuer, for which a relief at source and/or reclaim may be possible.
     /// </summary>
     [IsoId("_8LDugUEEEeWVgfuHGaKtRQ")]
     [DisplayName("Requested Withholding Tax Rate")]
     [IsoXmlTag("ReqdWhldgTaxRate")]
-    public RateAndAmountFormat40Choice_? RequestedWithholdingTaxRate { get; init; } 
-    
+    public RateAndAmountFormat40Choice_? RequestedWithholdingTaxRate { get; init; }
+
     /// <summary>
     /// Requested rate at which the income will be withheld by the jurisdiction other than the jurisdiction of the issuer’s country of tax incorporation, for which a relief at source and/or reclaim may be possible.
     /// </summary>
     [IsoId("_8LDui0EEEeWVgfuHGaKtRQ")]
     [DisplayName("Requested Second Level Tax Rate")]
     [IsoXmlTag("ReqdScndLvlTaxRate")]
-    public RateAndAmountFormat40Choice_? RequestedSecondLevelTaxRate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public RateAndAmountFormat40Choice_? RequestedSecondLevelTaxRate { get; init; }
 }

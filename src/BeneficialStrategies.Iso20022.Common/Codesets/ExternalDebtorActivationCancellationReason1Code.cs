@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_90jEy_GAEemQ7oqCO5NTQw")]
-[Description(@"Specifies the debtor activation cancellation reason code, as published in an external debtor activation cancellation reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the debtor activation cancellation reason code, as published in an external debtor activation cancellation reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalDebtorActivationCancellationReasonCode))]
 public enum ExternalDebtorActivationCancellationReason1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalDebtorActivationCancellationReason1Code
     [IsoId("_uvBsMvRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication = ExternalDebtorActivationCancellationReasonCode.Duplication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDebtorActivationCancellationReason1Code
     [IsoId("_uvBsNfRYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference = ExternalDebtorActivationCancellationReasonCode.NotUniqueReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDebtorActivationCancellationReason1Code
     [IsoId("_uvK2IvRYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason = ExternalDebtorActivationCancellationReasonCode.RegulatoryReason, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDebtorActivationCancellationReason1Code
     [IsoId("_uvK2JfRYEeuLhpyIdtJzwg")]
     [Description(@"Technical rejection.")]
     TechnicalRejection = ExternalDebtorActivationCancellationReasonCode.TechnicalRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unknown creditor.
     /// Encoded/decoded by serializers as &quot;UCRD&quot;.
@@ -60,5 +62,4 @@ public enum ExternalDebtorActivationCancellationReason1Code
     [IsoId("_uvUnIvRYEeuLhpyIdtJzwg")]
     [Description(@"Unknown creditor.")]
     UnknownCreditor = ExternalDebtorActivationCancellationReasonCode.UnknownCreditor, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,5 +23,4 @@ public enum AssetClassSubProductType33Code
     [IsoId("_yRs7A1rfEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type construction.")]
     Construction = AssetClassSubProductTypeCode.Construction, // same ordinal as derivation source for type conversions
-    
 }

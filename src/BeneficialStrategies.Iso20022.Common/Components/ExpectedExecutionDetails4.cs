@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6azDQUgXEea9YuSvQGoi-w")]
 [DisplayName("Expected Execution Details")]
-public partial record ExpectedExecutionDetails4
+public record ExpectedExecutionDetails4
 {
-    #nullable enable
-    
     /// <summary>
     /// Expected date or expected date and time at which a price will be applied according to the terms of the prospectus.
     /// </summary>
     [IsoId("_60PeA0gXEea9YuSvQGoi-w")]
     [DisplayName("Expected Trade Date Time")]
     [IsoXmlTag("XpctdTradDtTm")]
-    public DateAndDateTimeChoice_? ExpectedTradeDateTime { get; init; } 
-    
+    public DateAndDateTimeChoice_? ExpectedTradeDateTime { get; init; }
+
     /// <summary>
     /// Date of a payment, for example, a prepayment date.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record ExpectedExecutionDetails4
     [DisplayName("Expected Cash Settlement Date")]
     [IsoXmlTag("XpctdCshSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedCashSettlementDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? ExpectedCashSettlementDate { get; init; }
 }

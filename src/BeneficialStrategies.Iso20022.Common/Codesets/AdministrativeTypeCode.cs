@@ -23,7 +23,7 @@ public enum AdministrativeTypeCode
     [IsoId("_N79nkDNKEeylu6lH-gut-A")]
     [Description(@"Text message.")]
     TextMessage,
-    
+
     /// <summary>
     /// Other administrative type defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum AdministrativeTypeCode
     [IsoId("_TckJYDNKEeylu6lH-gut-A")]
     [Description(@"Other administrative type defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Other administrative type defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum AdministrativeTypeCode
     [IsoId("_fkWakDNKEeylu6lH-gut-A")]
     [Description(@"Other administrative type defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Currency conversion rate data.
     /// Encoded/decoded by serializers as &quot;CCRD&quot;.
@@ -50,5 +50,4 @@ public enum AdministrativeTypeCode
     [IsoId("_kBf7UDNKEeylu6lH-gut-A")]
     [Description(@"Currency conversion rate data.")]
     CurrencyConversionRateData,
-    
 }

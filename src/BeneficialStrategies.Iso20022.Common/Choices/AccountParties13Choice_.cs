@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AccountParties13Choice.Trustee))]
     [KnownType(typeof(AccountParties13Choice.Nominee))]
     [KnownType(typeof(AccountParties13Choice.JointOwner))]
-    [JsonDerivedType(typeof(AccountParties13Choice.PrimaryOwner),nameof(AccountParties13Choice.PrimaryOwner))]
-    [JsonDerivedType(typeof(AccountParties13Choice.Trustee),nameof(AccountParties13Choice.Trustee))]
-    [JsonDerivedType(typeof(AccountParties13Choice.Nominee),nameof(AccountParties13Choice.Nominee))]
-    [JsonDerivedType(typeof(AccountParties13Choice.JointOwner),nameof(AccountParties13Choice.JointOwner))]
+    [JsonDerivedType(
+        typeof(AccountParties13Choice.PrimaryOwner),
+        nameof(AccountParties13Choice.PrimaryOwner)
+    )]
+    [JsonDerivedType(
+        typeof(AccountParties13Choice.Trustee),
+        nameof(AccountParties13Choice.Trustee)
+    )]
+    [JsonDerivedType(
+        typeof(AccountParties13Choice.Nominee),
+        nameof(AccountParties13Choice.Nominee)
+    )]
+    [JsonDerivedType(
+        typeof(AccountParties13Choice.JointOwner),
+        nameof(AccountParties13Choice.JointOwner)
+    )]
     [IsoId("_oK88BZQ_EemqYPWMBuVawg")]
     [DisplayName("Account Parties 13 Choice")]
-    public abstract partial record AccountParties13Choice_
-    {
-    }
+    public abstract record AccountParties13Choice_ { }
 }

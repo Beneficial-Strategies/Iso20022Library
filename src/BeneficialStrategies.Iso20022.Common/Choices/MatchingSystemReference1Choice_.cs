@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MatchingSystemReference1Choice.MatchingSystemUniqueReference))]
     [KnownType(typeof(MatchingSystemReference1Choice.RelatedReference))]
-    [JsonDerivedType(typeof(MatchingSystemReference1Choice.MatchingSystemUniqueReference),nameof(MatchingSystemReference1Choice.MatchingSystemUniqueReference))]
-    [JsonDerivedType(typeof(MatchingSystemReference1Choice.RelatedReference),nameof(MatchingSystemReference1Choice.RelatedReference))]
+    [JsonDerivedType(
+        typeof(MatchingSystemReference1Choice.MatchingSystemUniqueReference),
+        nameof(MatchingSystemReference1Choice.MatchingSystemUniqueReference)
+    )]
+    [JsonDerivedType(
+        typeof(MatchingSystemReference1Choice.RelatedReference),
+        nameof(MatchingSystemReference1Choice.RelatedReference)
+    )]
     [IsoId("_i-a184ufEeKYr_965Eh8aQ")]
     [DisplayName("Matching System Reference 1 Choice")]
-    public abstract partial record MatchingSystemReference1Choice_
-    {
-    }
+    public abstract record MatchingSystemReference1Choice_ { }
 }

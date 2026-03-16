@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Sp--1gEcEeCQm6a_G2yO_w_-1939966628")]
 [DisplayName("Financial Card")]
-public partial record FinancialCard1
+public record FinancialCard1
 {
-    #nullable enable
-    
     /// <summary>
     /// Monetary value of the credit limit for this financial card.
     /// </summary>
     [IsoId("_Sp--1wEcEeCQm6a_G2yO_w_-447801115")]
     [DisplayName("Credit Limit Amount")]
     [IsoXmlTag("CdtLmtAmt")]
-    public CurrencyAndAmount? CreditLimitAmount { get; init; } 
-    
+    public CurrencyAndAmount? CreditLimitAmount { get; init; }
+
     /// <summary>
     /// Monetary value of the credit available for this financial card.
     /// </summary>
     [IsoId("_Sp--2AEcEeCQm6a_G2yO_w_-496515812")]
     [DisplayName("Credit Available Amount")]
     [IsoXmlTag("CdtAvlblAmt")]
-    public CurrencyAndAmount? CreditAvailableAmount { get; init; } 
-    
+    public CurrencyAndAmount? CreditAvailableAmount { get; init; }
+
     /// <summary>
     /// Interest rate expressed as a percentage for this financial card.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record FinancialCard1
     [DisplayName("Interest Rate Percent")]
     [IsoXmlTag("IntrstRatePct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? InterestRatePercent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? InterestRatePercent { get; init; }
 }

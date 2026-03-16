@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-zhqwZjCEe6BApM7bIoABA")]
 [DisplayName("Trade Recurrent Query7")]
-public partial record TradeRecurrentQuery7
+public record TradeRecurrentQuery7
 {
-    #nullable enable
-
     /// <summary>
     /// Frequency.
     /// </summary>
@@ -30,16 +28,12 @@ public partial record TradeRecurrentQuery7
     /// </summary>
     [DisplayName("Query Type")]
     [IsoXmlTag("QryTp")]
-    public required IsoMax1000Text QueryType { get; init; } 
+    public required IsoMax1000Text QueryType { get; init; }
 
     /// <summary>
     /// Valid Until.
     /// </summary>
     [DisplayName("Valid Until")]
     [IsoXmlTag("VldUntil")]
-    public required IsoISODate ValidUntil { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoISODate ValidUntil { get; init; }
 }

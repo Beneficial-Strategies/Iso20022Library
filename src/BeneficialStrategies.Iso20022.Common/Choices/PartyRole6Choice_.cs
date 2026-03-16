@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PartyRole6Choice.Code))]
     [KnownType(typeof(PartyRole6Choice.Proprietary))]
-    [JsonDerivedType(typeof(PartyRole6Choice.Code),nameof(PartyRole6Choice.Code))]
-    [JsonDerivedType(typeof(PartyRole6Choice.Proprietary),nameof(PartyRole6Choice.Proprietary))]
+    [JsonDerivedType(typeof(PartyRole6Choice.Code), nameof(PartyRole6Choice.Code))]
+    [JsonDerivedType(typeof(PartyRole6Choice.Proprietary), nameof(PartyRole6Choice.Proprietary))]
     [IsoId("_Ny0Ls46OEemzmeK8_tPygg")]
     [DisplayName("Party Role 6 Choice")]
-    public abstract partial record PartyRole6Choice_
-    {
-    }
+    public abstract record PartyRole6Choice_ { }
 }

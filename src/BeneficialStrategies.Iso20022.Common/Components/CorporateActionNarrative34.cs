@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_chfbXZKQEeWHWpTQn1FFVg")]
 [DisplayName("Corporate Action Narrative")]
-public partial record CorporateActionNarrative34
+public record CorporateActionNarrative34
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides information required for the registration.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionNarrative34
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? RegistrationDetails { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? RegistrationDetails { get; init; }
+
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CorporateActionNarrative34
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; }
+
     /// <summary>
     /// Provides information required for the certification/breakdown.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record CorporateActionNarrative34
     [DisplayName("Certification Breakdown")]
     [IsoXmlTag("CertfctnBrkdwn")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? CertificationBreakdown { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? CertificationBreakdown { get; init; }
 }

@@ -23,7 +23,7 @@ public enum LodgingActivity1Code
     [IsoId("_Dl0zwWMdEeexSYCBvAp_qA")]
     [Description(@"Apartment residence.")]
     Apartment = LodgingActivityCode.Apartment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bed and breakfast or related lodging.
     /// Encoded/decoded by serializers as &quot;BEBR&quot;.
@@ -32,7 +32,7 @@ public enum LodgingActivity1Code
     [IsoId("_DvdQ4WMdEeexSYCBvAp_qA")]
     [Description(@"Bed and breakfast or related lodging.")]
     BedAndBreakfast = LodgingActivityCode.BedAndBreakfast, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cottage and related lodging.
     /// Encoded/decoded by serializers as &quot;COTT&quot;.
@@ -41,7 +41,7 @@ public enum LodgingActivity1Code
     [IsoId("_D6_ygWMdEeexSYCBvAp_qA")]
     [Description(@"Cottage and related lodging.")]
     Cottage = LodgingActivityCode.Cottage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cruise line lodging.
     /// Encoded/decoded by serializers as &quot;CRUI&quot;.
@@ -50,7 +50,7 @@ public enum LodgingActivity1Code
     [IsoId("_EH_FoWMdEeexSYCBvAp_qA")]
     [Description(@"Cruise line lodging.")]
     Cruise = LodgingActivityCode.Cruise, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// An individual offering lodging facilities.
     /// Encoded/decoded by serializers as &quot;HOME&quot;.
@@ -59,7 +59,7 @@ public enum LodgingActivity1Code
     [IsoId("_EP_yIWMdEeexSYCBvAp_qA")]
     [Description(@"An individual offering lodging facilities.")]
     Home = LodgingActivityCode.Home, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hostel or related lodging.
     /// Encoded/decoded by serializers as &quot;HOST&quot;.
@@ -68,7 +68,7 @@ public enum LodgingActivity1Code
     [IsoId("_EY9g4WMdEeexSYCBvAp_qA")]
     [Description(@"Hostel or related lodging.")]
     Hostel = LodgingActivityCode.Hostel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Hotel or related lodging.
     /// Encoded/decoded by serializers as &quot;HOTL&quot;.
@@ -77,7 +77,7 @@ public enum LodgingActivity1Code
     [IsoId("_Eh2XIWMdEeexSYCBvAp_qA")]
     [Description(@"Hotel or related lodging.")]
     Hotel = LodgingActivityCode.Hotel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Lodge or related lodging.
     /// Encoded/decoded by serializers as &quot;LODG&quot;.
@@ -86,7 +86,7 @@ public enum LodgingActivity1Code
     [IsoId("_EsVv4WMdEeexSYCBvAp_qA")]
     [Description(@"Lodge or related lodging.")]
     Lodge = LodgingActivityCode.Lodge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Motel or related lodging.
     /// Encoded/decoded by serializers as &quot;MOTL&quot;.
@@ -95,7 +95,7 @@ public enum LodgingActivity1Code
     [IsoId("_E3f3AWMdEeexSYCBvAp_qA")]
     [Description(@"Motel or related lodging.")]
     Motel = LodgingActivityCode.Motel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of lodging defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -104,7 +104,7 @@ public enum LodgingActivity1Code
     [IsoId("_FAXfIWMdEeexSYCBvAp_qA")]
     [Description(@"Other type of lodging defined at national level.")]
     OtherNational = LodgingActivityCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of lodging defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -113,7 +113,7 @@ public enum LodgingActivity1Code
     [IsoId("_FJPHQWMdEeexSYCBvAp_qA")]
     [Description(@"Other type of lodging defined at private level.")]
     OtherPrivate = LodgingActivityCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Resort or related lodging.
     /// Encoded/decoded by serializers as &quot;RESO&quot;.
@@ -122,7 +122,7 @@ public enum LodgingActivity1Code
     [IsoId("_FSGvYWMdEeexSYCBvAp_qA")]
     [Description(@"Resort or related lodging.")]
     Resort = LodgingActivityCode.Resort, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Room and board or related lodging.
     /// Encoded/decoded by serializers as &quot;ROAB&quot;.
@@ -131,7 +131,7 @@ public enum LodgingActivity1Code
     [IsoId("_FdW9IWMdEeexSYCBvAp_qA")]
     [Description(@"Room and board or related lodging.")]
     RoomAndBoard = LodgingActivityCode.RoomAndBoard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tourist shelter and related lodging.
     /// Encoded/decoded by serializers as &quot;TOSH&quot;.
@@ -140,5 +140,4 @@ public enum LodgingActivity1Code
     [IsoId("_FrkYQWMdEeexSYCBvAp_qA")]
     [Description(@"Tourist shelter and related lodging.")]
     TouristShelter = LodgingActivityCode.TouristShelter, // same ordinal as derivation source for type conversions
-    
 }

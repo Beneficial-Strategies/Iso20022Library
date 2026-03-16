@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
     /// </summary>
     [IsoId("_7MMKY9jKEeq5MfBBxQig1Q")]
     [DisplayName("Missing Or Incorrect Information")]
-    public partial record MissingOrIncorrectInformation : UnableToApplyJustification4Choice_
+    public record MissingOrIncorrectInformation : UnableToApplyJustification4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Indicates whether the request is related to an AML (Anti Money Laundering) investigation or not.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
         [DisplayName("Anti Money Laundering Request")]
         [IsoXmlTag("AMLReq")]
         [IsoSimpleType(IsoSimpleType.AMLIndicator)]
-        public IsoAMLIndicator? AntiMoneyLaunderingRequest { get; init; } 
-        
+        public IsoAMLIndicator? AntiMoneyLaunderingRequest { get; init; }
+
         /// <summary>
         /// Indicates the missing information.
         /// </summary>
@@ -35,7 +33,7 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
         [MinLength(0)]
         [MaxLength(10)]
         public ValueList<UnableToApplyMissing2> MissingInformation { get; init; } = [];
-        
+
         /// <summary>
         /// Indicates, in a coded form, the incorrect information.
         /// </summary>
@@ -45,9 +43,5 @@ namespace BeneficialStrategies.Iso20022.Choices.UnableToApplyJustification4Choic
         [MinLength(0)]
         [MaxLength(10)]
         public ValueList<UnableToApplyIncorrect2> IncorrectInformation { get; init; } = [];
-        
-        
-        #nullable disable
-        
     }
 }

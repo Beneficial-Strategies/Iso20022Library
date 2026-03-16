@@ -21,7 +21,8 @@ public enum ChargeBearerType2Code
     /// </summary>
     [EnumMember(Value = "SLEV")]
     [IsoId("_a8PpJtp-Ed-ak6NoX_4Aeg_-867377749")]
-    [Description(@"Charges are to be applied following the rules agreed in the service level and/or scheme.")]
+    [Description(
+        @"Charges are to be applied following the rules agreed in the service level and/or scheme."
+    )]
     FollowingServiceLevel = ChargeBearerTypeCode.FollowingServiceLevel, // same ordinal as derivation source for type conversions
-    
 }

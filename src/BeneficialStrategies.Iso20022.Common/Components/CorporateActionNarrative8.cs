@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ULqGIdp-Ed-ak6NoX_4Aeg_-819428560")]
 [DisplayName("Corporate Action Narrative")]
-public partial record CorporateActionNarrative8
+public record CorporateActionNarrative8
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, for example, not open to US/Canadian residents, Qualified Institutional Buyers (QIB) or Sophisticated Investor Letter (SIL) to be provided.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionNarrative8
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? InformationToComplyWith { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InformationToComplyWith { get; init; }
+
     /// <summary>
     /// Provides additional information on the delivery details of the outturned (derived) securities. This narrative is only to be used in case the securities are not eligible at the agent/custodian, and may not be used for settlement instructions.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CorporateActionNarrative8
     [DisplayName("Delivery Details")]
     [IsoXmlTag("DlvryDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? DeliveryDetails { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? DeliveryDetails { get; init; }
+
     /// <summary>
     /// Provides additional details pertaining to foreign exchange instructions.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record CorporateActionNarrative8
     [DisplayName("Foreign Exchange Instructions Additional Information")]
     [IsoXmlTag("FXInstrsAddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? ForeignExchangeInstructionsAdditionalInformation { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? ForeignExchangeInstructionsAdditionalInformation { get; init; }
+
     /// <summary>
     /// Disclaimer relative to the information provided in the message. It may be ignored for automated processing. No information about the instruction itself is allowed here.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record CorporateActionNarrative8
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Disclaimer { get; init; }
+
     /// <summary>
     /// Provides additional details pertaining to the corporate action instruction.
     /// </summary>
@@ -65,10 +63,6 @@ public partial record CorporateActionNarrative8
     [DisplayName("Instruction Additional Information")]
     [IsoXmlTag("InstrAddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? InstructionAdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InstructionAdditionalInformation { get; init; }
 }

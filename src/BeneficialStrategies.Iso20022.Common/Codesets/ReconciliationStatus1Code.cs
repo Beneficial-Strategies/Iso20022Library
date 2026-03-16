@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_hX-RwJSZEeyTze01ewG2Qw")]
-[Description(@"Indicator if reconciliation of derivatives for which all the reconcilable fields are within the allowed tolerances.")]
+[Description(
+    @"Indicator if reconciliation of derivatives for which all the reconcilable fields are within the allowed tolerances."
+)]
 [DerivedFrom(typeof(ReconciliationStatusCode))]
 public enum ReconciliationStatus1Code
 {
@@ -21,16 +23,19 @@ public enum ReconciliationStatus1Code
     /// </summary>
     [EnumMember(Value = "NREC")]
     [IsoId("_oQJDcZSZEeyTze01ewG2Qw")]
-    [Description(@"Indicator of reconciliation of derivatives for which all the reconcilable fields are not within the allowed tolerances.")]
+    [Description(
+        @"Indicator of reconciliation of derivatives for which all the reconcilable fields are not within the allowed tolerances."
+    )]
     NonReconciled = ReconciliationStatusCode.NonReconciled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicator of reconciliation of derivatives for which all the reconcilable fields are within the allowed tolerances.
     /// Encoded/decoded by serializers as &quot;RECO&quot;.
     /// </summary>
     [EnumMember(Value = "RECO")]
     [IsoId("_oU6OsZSZEeyTze01ewG2Qw")]
-    [Description(@"Indicator of reconciliation of derivatives for which all the reconcilable fields are within the allowed tolerances.")]
+    [Description(
+        @"Indicator of reconciliation of derivatives for which all the reconcilable fields are within the allowed tolerances."
+    )]
     Reconciled = ReconciliationStatusCode.Reconciled, // same ordinal as derivation source for type conversions
-    
 }

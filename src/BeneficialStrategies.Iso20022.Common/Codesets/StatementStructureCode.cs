@@ -23,7 +23,7 @@ public enum StatementStructureCode
     [IsoId("_ZQM-Edp-Ed-ak6NoX_4Aeg_1615497706")]
     [Description(@"Statement is sorted by status.")]
     Statuses,
-    
+
     /// <summary>
     /// Statement is sorted by transaction.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -32,5 +32,4 @@ public enum StatementStructureCode
     [IsoId("_ZQM-Etp-Ed-ak6NoX_4Aeg_1615497971")]
     [Description(@"Statement is sorted by transaction.")]
     Transactions,
-    
 }

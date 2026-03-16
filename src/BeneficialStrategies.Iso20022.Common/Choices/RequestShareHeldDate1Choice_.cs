@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RequestShareHeldDate1Choice.DateCalculationMethod))]
     [KnownType(typeof(RequestShareHeldDate1Choice.DateCalculationDescription))]
-    [JsonDerivedType(typeof(RequestShareHeldDate1Choice.DateCalculationMethod),nameof(RequestShareHeldDate1Choice.DateCalculationMethod))]
-    [JsonDerivedType(typeof(RequestShareHeldDate1Choice.DateCalculationDescription),nameof(RequestShareHeldDate1Choice.DateCalculationDescription))]
+    [JsonDerivedType(
+        typeof(RequestShareHeldDate1Choice.DateCalculationMethod),
+        nameof(RequestShareHeldDate1Choice.DateCalculationMethod)
+    )]
+    [JsonDerivedType(
+        typeof(RequestShareHeldDate1Choice.DateCalculationDescription),
+        nameof(RequestShareHeldDate1Choice.DateCalculationDescription)
+    )]
     [IsoId("_iOMVYFSTEempisJfoIfvvQ")]
     [DisplayName("Request Share Held Date 1 Choice")]
-    public abstract partial record RequestShareHeldDate1Choice_
-    {
-    }
+    public abstract record RequestShareHeldDate1Choice_ { }
 }

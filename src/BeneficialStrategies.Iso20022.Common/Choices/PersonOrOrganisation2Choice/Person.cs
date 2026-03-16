@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
     /// </summary>
     [IsoId("_-GX-RQkiEeWGouz230Xp5Q")]
     [DisplayName("Person")]
-    public partial record Person : PersonOrOrganisation2Choice_
+    public record Person : PersonOrOrganisation2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// First name of a person (also known as given name).
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
         [DisplayName("First Name")]
         [IsoXmlTag("FrstNm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public required IsoMax140Text FirstName { get; init; } 
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public required IsoMax140Text FirstName { get; init; }
+
         /// <summary>
         /// Name by which a party is known and which is usually used to identify that party.
         /// </summary>
@@ -34,9 +32,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
         [DisplayName("Name")]
         [IsoXmlTag("Nm")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public required IsoMax140Text Name { get; init; } 
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public required IsoMax140Text Name { get; init; }
+
         /// <summary>
         /// Date on which a person is born.
         /// </summary>
@@ -44,18 +42,14 @@ namespace BeneficialStrategies.Iso20022.Choices.PersonOrOrganisation2Choice
         [DisplayName("Birth Date")]
         [IsoXmlTag("BirthDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate BirthDate { get; init; } 
-        
+        public required IsoISODate BirthDate { get; init; }
+
         /// <summary>
         /// Unique identification of a person, as assigned by an institution, using an identification scheme.
         /// </summary>
         [IsoId("_98J3xfPYEeS_qLctCs2aRQ")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public required GenericPersonIdentification1 Other { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required GenericPersonIdentification1 Other { get; init; }
     }
 }

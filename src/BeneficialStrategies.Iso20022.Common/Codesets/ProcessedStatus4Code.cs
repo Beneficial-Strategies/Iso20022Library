@@ -23,7 +23,7 @@ public enum ProcessedStatus4Code
     [IsoId("_aKnX5Np-Ed-ak6NoX_4Aeg_-879600124")]
     [Description(@"The instruction/request has been received.")]
     Received = CorporateActionProcessedStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The request has been completed.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -32,7 +32,7 @@ public enum ProcessedStatus4Code
     [IsoId("_aKnX5dp-Ed-ak6NoX_4Aeg_-879600094")]
     [Description(@"The request has been completed.")]
     Completed = CorporateActionProcessedStatusCode.Completed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The processing of the request is pending.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -41,5 +41,4 @@ public enum ProcessedStatus4Code
     [IsoId("_aKnX5tp-Ed-ak6NoX_4Aeg_-879600093")]
     [Description(@"The processing of the request is pending.")]
     Pending = CorporateActionProcessedStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

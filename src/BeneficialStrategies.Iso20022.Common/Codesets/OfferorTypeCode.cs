@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_1oYawDL3EeKU9IrkkToqcw_1230885883")]
-[Description(@"Specifies whether the offeror for the event is the issuing company or a third party.")]
+[Description(
+    @"Specifies whether the offeror for the event is the issuing company or a third party."
+)]
 [Derivations(typeof(OfferorType1Code))]
 public enum OfferorTypeCode
 {
@@ -23,7 +25,7 @@ public enum OfferorTypeCode
     [IsoId("_1oYawTL3EeKU9IrkkToqcw_-1991997331")]
     [Description(@"Offeror is the issuing company.")]
     Self,
-    
+
     /// <summary>
     /// Offer is made by the third party.
     /// Encoded/decoded by serializers as &quot;THRD&quot;.
@@ -32,5 +34,4 @@ public enum OfferorTypeCode
     [IsoId("_1oYawjL3EeKU9IrkkToqcw_-246077871")]
     [Description(@"Offer is made by the third party.")]
     ThirdParty,
-    
 }

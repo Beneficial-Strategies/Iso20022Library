@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Status32Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.Status32Choice
     /// </summary>
     [IsoId("_BH0PhQpIEeup4r-PFG2T5Q")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : Status32Choice_
+    public record Proprietary : Status32Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Proprietary identification of the status related to an instruction.
         /// </summary>
         [IsoId("_y0NzcTp4EeWVrPy0StzzSg")]
         [DisplayName("Proprietary Status")]
         [IsoXmlTag("PrtrySts")]
-        public required GenericIdentification30 ProprietaryStatus { get; init; } 
-        
+        public required GenericIdentification30 ProprietaryStatus { get; init; }
+
         /// <summary>
         /// Proprietary identification of the reason related to a proprietary status.
         /// </summary>
         [IsoId("_y0OagTp4EeWVrPy0StzzSg")]
         [DisplayName("Proprietary Reason")]
         [IsoXmlTag("PrtryRsn")]
-        public ProprietaryReason4? ProprietaryReason { get; init; } 
-        
-        
-        #nullable disable
-        
+        public ProprietaryReason4? ProprietaryReason { get; init; }
     }
 }

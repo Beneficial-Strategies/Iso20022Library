@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1SxXJTL3EeKU9IrkkToqcw_-1416431204")]
 [DisplayName("Corporate Action Quantity SD")]
-public partial record CorporateActionQuantitySD1
+public record CorporateActionQuantitySD1
 {
-    #nullable enable
-    
     /// <summary>
     /// xPath to the element that is being extended.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record CorporateActionQuantitySD1
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text PlaceAndName { get; init; }
+
     /// <summary>
     /// Represents &quot;subscription base&quot; (Quantity2) and &quot;subscription disbursed&quot; (Quantity1) quantity elements. &quot;Subscription base quantity&quot; is the quantity of the rights security that forms the basis for calculating the payout. It is located on the distribution announcement, with the rights subscription announcement following later. &quot;Subscription disbursed quantity&quot; is the quantity of securities received in the security payout. It is located on the distribution announcement, with the rights subscription announcement following later.
     /// </summary>
     [IsoId("_1S7IITL3EeKU9IrkkToqcw_-1074072378")]
     [DisplayName("Subscription Quantity")]
     [IsoXmlTag("SbcptQty")]
-    public RatioFormat13Choice_? SubscriptionQuantity { get; init; } 
-    
-    
-    #nullable disable
-    
+    public RatioFormat13Choice_? SubscriptionQuantity { get; init; }
 }

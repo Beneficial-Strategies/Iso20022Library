@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dhlT8ZGqEem-9Y6mq5ZH3Q")]
 [DisplayName("Transfer Reference")]
-public partial record TransferReference16
+public record TransferReference16
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier for the transfer instruction for which the confirmation reversal is sent, as assigned by the instructing party.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record TransferReference16
     [DisplayName("Transfer Reference")]
     [IsoXmlTag("TrfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TransferReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TransferReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous investor&apos;s identification of the transfer. This reference can typically be used in a hub scenario to give the reference of the transfer as assigned by the underlying client.
     /// </summary>
     [IsoId("_d1z3g5GqEem-9Y6mq5ZH3Q")]
     [DisplayName("Client Reference")]
     [IsoXmlTag("ClntRef")]
-    public AdditionalReference10? ClientReference { get; init; } 
-    
+    public AdditionalReference10? ClientReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for the transfer execution for which the confirmation reversal is sent, as assigned by the confirming party.
     /// </summary>
@@ -43,17 +41,17 @@ public partial record TransferReference16
     [DisplayName("Transfer Confirmation Reference")]
     [IsoXmlTag("TrfConfRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TransferConfirmationReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TransferConfirmationReference { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the transfer allocated by the counterparty.
     /// </summary>
     [IsoId("_d1z3h5GqEem-9Y6mq5ZH3Q")]
     [DisplayName("Counterparty Reference")]
     [IsoXmlTag("CtrPtyRef")]
-    public AdditionalReference10? CounterpartyReference { get; init; } 
-    
+    public AdditionalReference10? CounterpartyReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for the reversal as assigned by the confirming party.
     /// </summary>
@@ -61,9 +59,9 @@ public partial record TransferReference16
     [DisplayName("Cancellation Reference")]
     [IsoXmlTag("CxlRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CancellationReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CancellationReference { get; init; }
+
     /// <summary>
     /// Reason for the reversal of confirmation.
     /// </summary>
@@ -71,10 +69,6 @@ public partial record TransferReference16
     [DisplayName("Reversal Reason")]
     [IsoXmlTag("RvslRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ReversalReason { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ReversalReason { get; init; }
 }

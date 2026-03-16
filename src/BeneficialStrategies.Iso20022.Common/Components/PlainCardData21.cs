@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VZbFQSFPEey8XKHwKquEQw")]
 [DisplayName("Plain Card Data")]
-public partial record PlainCardData21
+public record PlainCardData21
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the driver or vehicle.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record PlainCardData21
     [DisplayName("Driver Or Vehicle Identification")]
     [IsoXmlTag("DrvrOrVhclId")]
     [IsoSimpleType(IsoSimpleType.Max20Text)]
-    [StringLength(maximumLength: 20 ,MinimumLength = 1)]
-    public IsoMax20Text? DriverOrVehicleIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 20, MinimumLength = 1)]
+    public IsoMax20Text? DriverOrVehicleIdentification { get; init; }
+
     /// <summary>
     /// Additional card specific data.
     /// </summary>
     [IsoId("_VfOyUyFPEey8XKHwKquEQw")]
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
-    public AdditionalData1? AdditionalCardData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalCardData { get; init; }
 }

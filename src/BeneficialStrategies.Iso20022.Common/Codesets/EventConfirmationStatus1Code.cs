@@ -23,7 +23,7 @@ public enum EventConfirmationStatus1Code
     [IsoId("_ajNeEtp-Ed-ak6NoX_4Aeg_-181611544")]
     [Description(@"Occurrence of the event has been confirmed.")]
     Confirmed = EventConfirmationStatusCode.Confirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Occurrence of the event has not been confirmed.
     /// Encoded/decoded by serializers as &quot;UCON&quot;.
@@ -32,5 +32,4 @@ public enum EventConfirmationStatus1Code
     [IsoId("_ajNeE9p-Ed-ak6NoX_4Aeg_-176071125")]
     [Description(@"Occurrence of the event has not been confirmed.")]
     Unconfirmed = EventConfirmationStatusCode.Unconfirmed, // same ordinal as derivation source for type conversions
-    
 }

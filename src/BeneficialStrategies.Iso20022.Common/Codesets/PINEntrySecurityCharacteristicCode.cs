@@ -23,7 +23,7 @@ public enum PINEntrySecurityCharacteristicCode
     [IsoId("_ZexIcKH3EeuiuNcvKhXmNQ")]
     [Description(@"PIN entry is protected via a secure hardware solution.")]
     SecureHardware,
-    
+
     /// <summary>
     /// PIN entry is protected via an approved software solution.
     /// Encoded/decoded by serializers as &quot;SECS&quot;.
@@ -32,7 +32,7 @@ public enum PINEntrySecurityCharacteristicCode
     [IsoId("_tKYXcKH3EeuiuNcvKhXmNQ")]
     [Description(@"PIN entry is protected via an approved software solution.")]
     SecureSoftware,
-    
+
     /// <summary>
     /// Other nationally assigned code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum PINEntrySecurityCharacteristicCode
     [IsoId("_AsLjIKH4EeuiuNcvKhXmNQ")]
     [Description(@"Other nationally assigned code.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other privately assigned code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum PINEntrySecurityCharacteristicCode
     [IsoId("_FOFBAKH4EeuiuNcvKhXmNQ")]
     [Description(@"Other privately assigned code.")]
     OtherPrivate,
-    
 }

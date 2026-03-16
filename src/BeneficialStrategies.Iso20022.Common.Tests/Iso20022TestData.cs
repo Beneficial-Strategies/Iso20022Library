@@ -1,10 +1,10 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 
 namespace BeneficialStrategies.Iso20022;
 
@@ -39,101 +39,102 @@ public static class Iso20022TestData
     public const decimal Amount = 47_250.00m;
 
     /// <summary>EUR 47,250.00 – invoice amount being paid.</summary>
-    public static ActiveCurrencyAndAmount InvoiceAmount => new()
-    {
-        Currency = Currency,
-        Amount = Amount,
-    };
+    public static ActiveCurrencyAndAmount InvoiceAmount =>
+        new() { Currency = Currency, Amount = Amount, };
 
     // ── Settlement dates ───────────────────────────────────────────────────────
 
     public static readonly DateOnly SettlementDate = new(2024, 3, 15);
-    public static readonly DateTime MessageCreationDateTime = new(2024, 3, 15, 8, 30, 0, DateTimeKind.Utc);
+    public static readonly DateTime MessageCreationDateTime =
+        new(2024, 3, 15, 8, 30, 0, DateTimeKind.Utc);
 
     // ── Debtor: Acme Manufacturing GmbH, Frankfurt ─────────────────────────────
 
     /// <summary>Debtor bank: Deutsche Bank Frankfurt AG (DEUTDEFF).</summary>
-    public static BranchAndFinancialInstitutionIdentification6 DebtorAgent => new()
-    {
-        FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+    public static BranchAndFinancialInstitutionIdentification6 DebtorAgent =>
+        new()
         {
-            BICFI = "DEUTDEFFXXX",
-        },
-    };
+            FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+            {
+                BICFI = "DEUTDEFFXXX",
+            },
+        };
 
     /// <summary>Debtor account (German IBAN).</summary>
-    public static CashAccount40 DebtorAccount => new()
-    {
-        Identification = new IBAN { Value = "DE89370400440532013000" },
-        Currency = "EUR",
-    };
+    public static CashAccount40 DebtorAccount =>
+        new()
+        {
+            Identification = new IBAN { Value = "DE89370400440532013000" },
+            Currency = "EUR",
+        };
 
     /// <summary>Debtor party: Acme Manufacturing GmbH.</summary>
-    public static PartyIdentification135 Debtor => new()
-    {
-        Name = "Acme Manufacturing GmbH",
-        PostalAddress = new PostalAddress24
+    public static PartyIdentification135 Debtor =>
+        new()
         {
-            StreetName = "Mainzer Landstrasse",
-            BuildingNumber = "46",
-            PostCode = "60325",
-            TownName = "Frankfurt am Main",
-            Country = "DE",
-        },
-    };
+            Name = "Acme Manufacturing GmbH",
+            PostalAddress = new PostalAddress24
+            {
+                StreetName = "Mainzer Landstrasse",
+                BuildingNumber = "46",
+                PostCode = "60325",
+                TownName = "Frankfurt am Main",
+                Country = "DE",
+            },
+        };
 
     // ── Creditor: GlobalSupply S.A.S., Paris ───────────────────────────────────
 
     /// <summary>Creditor bank: BNP Paribas SA, Paris (BNPAFRPP).</summary>
-    public static BranchAndFinancialInstitutionIdentification6 CreditorAgent => new()
-    {
-        FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+    public static BranchAndFinancialInstitutionIdentification6 CreditorAgent =>
+        new()
         {
-            BICFI = "BNPAFRPPXXX",
-        },
-    };
+            FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+            {
+                BICFI = "BNPAFRPPXXX",
+            },
+        };
 
     /// <summary>Creditor account (French IBAN).</summary>
-    public static CashAccount40 CreditorAccount => new()
-    {
-        Identification = new IBAN { Value = "FR7630006000011234567890189" },
-        Currency = "EUR",
-    };
+    public static CashAccount40 CreditorAccount =>
+        new()
+        {
+            Identification = new IBAN { Value = "FR7630006000011234567890189" },
+            Currency = "EUR",
+        };
 
     /// <summary>Creditor party: GlobalSupply S.A.S.</summary>
-    public static PartyIdentification135 Creditor => new()
-    {
-        Name = "GlobalSupply S.A.S.",
-        PostalAddress = new PostalAddress24
+    public static PartyIdentification135 Creditor =>
+        new()
         {
-            StreetName = "Rue de Rivoli",
-            BuildingNumber = "228",
-            PostCode = "75001",
-            TownName = "Paris",
-            Country = "FR",
-        },
-    };
+            Name = "GlobalSupply S.A.S.",
+            PostalAddress = new PostalAddress24
+            {
+                StreetName = "Rue de Rivoli",
+                BuildingNumber = "228",
+                PostCode = "75001",
+                TownName = "Paris",
+                Country = "FR",
+            },
+        };
 
     // ── Correspondent bank (for pacs.009 cover scenario) ──────────────────────
 
     /// <summary>JPMorgan Chase New York – used as correspondent/intermediary agent.</summary>
-    public static BranchAndFinancialInstitutionIdentification6 CorrespondentAgent => new()
-    {
-        FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+    public static BranchAndFinancialInstitutionIdentification6 CorrespondentAgent =>
+        new()
         {
-            BICFI = "CHASUS33XXX",
-        },
-    };
+            FinancialInstitutionIdentification = new FinancialInstitutionIdentification18
+            {
+                BICFI = "CHASUS33XXX",
+            },
+        };
 
     // ── Common settlement instruction (SEPA/TARGET2 clearing) ─────────────────
 
-    public static SettlementInstruction11 ClearingSettlement => new()
-    {
-        SettlementMethod = SettlementMethod1Code.ClearingSystem,
-    };
+    public static SettlementInstruction11 ClearingSettlement =>
+        new() { SettlementMethod = SettlementMethod1Code.ClearingSystem, };
 
-    public static SettlementInstruction11 CoverSettlement => new()
-    {
-        SettlementMethod = SettlementMethod1Code.CoverMethod,
-    };
+    public static SettlementInstruction11 CoverSettlement =>
+        new() { SettlementMethod = SettlementMethod1Code.CoverMethod, };
 }

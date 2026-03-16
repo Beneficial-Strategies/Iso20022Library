@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_AJCXgSp8EeyR9JrVGfaMKw")]
 [DisplayName("Balance")]
-public partial record Balance18
+public record Balance18
 {
-    #nullable enable
-    
     /// <summary>
     /// Indication that the position is short or long.
     /// </summary>
     [IsoId("_AgcK0Sp8EeyR9JrVGfaMKw")]
     [DisplayName("Short Long Indicator")]
     [IsoXmlTag("ShrtLngInd")]
-    public ShortLong1Code? ShortLongIndicator { get; init; } 
-    
+    public ShortLong1Code? ShortLongIndicator { get; init; }
+
     /// <summary>
     /// Total quantity of financial instruments of the balance.
     /// </summary>
     [IsoId("_AgcK2Sp8EeyR9JrVGfaMKw")]
     [DisplayName("Quantity")]
     [IsoXmlTag("Qty")]
-    public required BalanceQuantity14Choice_ Quantity { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required BalanceQuantity14Choice_ Quantity { get; init; }
 }

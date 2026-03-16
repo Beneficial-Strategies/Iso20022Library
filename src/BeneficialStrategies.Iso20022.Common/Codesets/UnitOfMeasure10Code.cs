@@ -23,7 +23,7 @@ public enum UnitOfMeasure10Code
     [IsoId("_l6goQX0mEemfrNOe0zHQyg")]
     [Description(@"Unit of measure that is equal to 1, 000 meters.")]
     Kilometre = UnitOfMeasureCode.Kilometre, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unit of length equal to 1, 760 yards.
     /// Encoded/decoded by serializers as &quot;MILE&quot;.
@@ -32,5 +32,4 @@ public enum UnitOfMeasure10Code
     [IsoId("_l6goQ30mEemfrNOe0zHQyg")]
     [Description(@"Unit of length equal to 1, 760 yards.")]
     Mile = UnitOfMeasureCode.Mile, // same ordinal as derivation source for type conversions
-    
 }

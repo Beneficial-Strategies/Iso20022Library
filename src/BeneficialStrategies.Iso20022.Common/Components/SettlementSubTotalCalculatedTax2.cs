@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sGUvgKtnEeSPCbFcs9Ilyw")]
 [DisplayName("Settlement Sub Total Calculated Tax")]
-public partial record SettlementSubTotalCalculatedTax2
+public record SettlementSubTotalCalculatedTax2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of tax applied.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record SettlementSubTotalCalculatedTax2
     [DisplayName("Type Code")]
     [IsoXmlTag("TpCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4Text? TypeCode { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4Text? TypeCode { get; init; }
+
     /// <summary>
     /// Rate used to calculate the amount of this tax, levy or duty.
     /// </summary>
@@ -35,24 +33,24 @@ public partial record SettlementSubTotalCalculatedTax2
     [DisplayName("Calculated Rate")]
     [IsoXmlTag("ClctdRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? CalculatedRate { get; init; } 
-    
+    public IsoPercentageRate? CalculatedRate { get; init; }
+
     /// <summary>
     /// Monetary value used as the basis on which this tax, levy or duty is calculated.
     /// </summary>
     [IsoId("_PI8kwKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
-    public CurrencyAndAmount? BasisAmount { get; init; } 
-    
+    public CurrencyAndAmount? BasisAmount { get; init; }
+
     /// <summary>
     /// Monetary value resulting from the calculation of this tax, levy or duty.
     /// </summary>
     [IsoId("_Khf4gKtoEeSPCbFcs9Ilyw")]
     [DisplayName("Calculated Amount")]
     [IsoXmlTag("ClctdAmt")]
-    public CurrencyAndAmount? CalculatedAmount { get; init; } 
-    
+    public CurrencyAndAmount? CalculatedAmount { get; init; }
+
     /// <summary>
     /// Reason for tax exemption expressed as a code, if invoice or card transaction is out of tax processing.
     /// </summary>
@@ -60,9 +58,9 @@ public partial record SettlementSubTotalCalculatedTax2
     [DisplayName("Exemption Reason Code")]
     [IsoXmlTag("XmptnRsnCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4Text? ExemptionReasonCode { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4Text? ExemptionReasonCode { get; init; }
+
     /// <summary>
     /// Reason for a tax exemption, if invoice or card transaction is out of tax processing.
     /// </summary>
@@ -70,18 +68,14 @@ public partial record SettlementSubTotalCalculatedTax2
     [DisplayName("Exemption Reason Text")]
     [IsoXmlTag("XmptnRsnTxt")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
-    [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    public IsoMax500Text? ExemptionReasonText { get; init; } 
-    
+    [StringLength(maximumLength: 500, MinimumLength = 1)]
+    public IsoMax500Text? ExemptionReasonText { get; init; }
+
     /// <summary>
     /// If tax currency in tax calculation is different from invoice currency, then applied exchange rate is given in this message structure.
     /// </summary>
     [IsoId("_WOKf4KuoEeSmE8_WfXaYYg")]
     [DisplayName("Tax Currency Exchange")]
     [IsoXmlTag("TaxCcyXchg")]
-    public CurrencyReference3? TaxCurrencyExchange { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CurrencyReference3? TaxCurrencyExchange { get; init; }
 }

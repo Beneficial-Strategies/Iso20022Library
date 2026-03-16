@@ -23,7 +23,7 @@ public enum POIComponentStatusCode
     [IsoId("_rAURoAxwEeKa_56Jbsi1RQ")]
     [Description(@"Component not yet activated.")]
     WaitingActivation,
-    
+
     /// <summary>
     /// Component activated and in operation.
     /// Encoded/decoded by serializers as &quot;OPER&quot;.
@@ -32,7 +32,7 @@ public enum POIComponentStatusCode
     [IsoId("_09qrkAxwEeKa_56Jbsi1RQ")]
     [Description(@"Component activated and in operation.")]
     InOperation,
-    
+
     /// <summary>
     /// Component not working properly.
     /// Encoded/decoded by serializers as &quot;OUTD&quot;.
@@ -41,7 +41,7 @@ public enum POIComponentStatusCode
     [IsoId("_6gMgAAxwEeKa_56Jbsi1RQ")]
     [Description(@"Component not working properly.")]
     OutOfOrder,
-    
+
     /// <summary>
     /// Component has been deactivated.
     /// Encoded/decoded by serializers as &quot;DACT&quot;.
@@ -50,5 +50,4 @@ public enum POIComponentStatusCode
     [IsoId("__5DbEAxwEeKa_56Jbsi1RQ")]
     [Description(@"Component has been deactivated.")]
     Deactivated,
-    
 }

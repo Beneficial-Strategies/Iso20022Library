@@ -23,23 +23,26 @@ public enum IndependentAmountConventionType1Code
     [IsoId("_YczLN9p-Ed-ak6NoX_4Aeg_-1097054396")]
     [Description(@"Independent amount is an add on to exposure.")]
     NettedBeforeThreshold = IndependentAmountConventionTypeCode.NettedBeforeThreshold, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Independent amount is an add on to the credit support amount and forms part of the variation margin requirement.
     /// Encoded/decoded by serializers as &quot;NATR&quot;.
     /// </summary>
     [EnumMember(Value = "NATR")]
     [IsoId("_Yc8VINp-Ed-ak6NoX_4Aeg_-642967127")]
-    [Description(@"Independent amount is an add on to the credit support amount and forms part of the variation margin requirement.")]
+    [Description(
+        @"Independent amount is an add on to the credit support amount and forms part of the variation margin requirement."
+    )]
     NettedAfterThreshold = IndependentAmountConventionTypeCode.NettedAfterThreshold, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Independent amount is treated independently of variation margin for segregation purposes.
     /// Encoded/decoded by serializers as &quot;SEGR&quot;.
     /// </summary>
     [EnumMember(Value = "SEGR")]
     [IsoId("_Yc8VIdp-Ed-ak6NoX_4Aeg_226653514")]
-    [Description(@"Independent amount is treated independently of variation margin for segregation purposes.")]
+    [Description(
+        @"Independent amount is treated independently of variation margin for segregation purposes."
+    )]
     Segregated = IndependentAmountConventionTypeCode.Segregated, // same ordinal as derivation source for type conversions
-    
 }

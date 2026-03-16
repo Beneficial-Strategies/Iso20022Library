@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A8HNEYtzEeSLQutgI1Ulfw")]
 [DisplayName("ATM Totals")]
-public partial record ATMTotals3
+public record ATMTotals3
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the type of transaction. The following values are predefined: Withdrawal, QuickWithdrawal, WithdrawalForDisabledPerson, CashDeposit, Transfer, InternationalTransfer, PeriodicTransfer, CheckCommand, MobileTopUp, Moneo.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ATMTotals3
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public required IsoMax70Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public required IsoMax70Text Identification { get; init; }
+
     /// <summary>
     /// Additional identification of the type of transaction. The following values are predefined: Vodaphone, TMobile, Verizon.
     /// </summary>
@@ -35,25 +33,25 @@ public partial record ATMTotals3
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AdditionalIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AdditionalIdentification { get; init; }
+
     /// <summary>
     /// Period of computation for the counters.
     /// </summary>
     [IsoId("_Waj2MOg6EeSbwP3G-MV9YA")]
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
-    public required ATMCounterType2Code Period { get; init; } 
-    
+    public required ATMCounterType2Code Period { get; init; }
+
     /// <summary>
     /// Currency of the totals.
     /// </summary>
     [IsoId("_BIxwE4tzEeSLQutgI1Ulfw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Number of transaction with the defined currency.
     /// </summary>
@@ -61,17 +59,13 @@ public partial record ATMTotals3
     [DisplayName("Count")]
     [IsoXmlTag("Cnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber Count { get; init; } 
-    
+    public required IsoNumber Count { get; init; }
+
     /// <summary>
     /// Amount of transaction with the defined currency.
     /// </summary>
     [IsoId("_BIxwFYtzEeSLQutgI1Ulfw")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ImpliedCurrencyAndAmount? Amount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ImpliedCurrencyAndAmount? Amount { get; init; }
 }

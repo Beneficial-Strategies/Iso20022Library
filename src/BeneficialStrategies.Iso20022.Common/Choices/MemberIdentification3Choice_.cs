@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(MemberIdentification3Choice.BICFI))]
     [KnownType(typeof(MemberIdentification3Choice.ClearingSystemMemberIdentification))]
     [KnownType(typeof(MemberIdentification3Choice.Other))]
-    [JsonDerivedType(typeof(MemberIdentification3Choice.BICFI),nameof(MemberIdentification3Choice.BICFI))]
-    [JsonDerivedType(typeof(MemberIdentification3Choice.ClearingSystemMemberIdentification),nameof(MemberIdentification3Choice.ClearingSystemMemberIdentification))]
-    [JsonDerivedType(typeof(MemberIdentification3Choice.Other),nameof(MemberIdentification3Choice.Other))]
+    [JsonDerivedType(
+        typeof(MemberIdentification3Choice.BICFI),
+        nameof(MemberIdentification3Choice.BICFI)
+    )]
+    [JsonDerivedType(
+        typeof(MemberIdentification3Choice.ClearingSystemMemberIdentification),
+        nameof(MemberIdentification3Choice.ClearingSystemMemberIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(MemberIdentification3Choice.Other),
+        nameof(MemberIdentification3Choice.Other)
+    )]
     [IsoId("_h_8rhXSbEeiH1ZOt2UD8vQ")]
     [DisplayName("Member Identification 3 Choice")]
-    public abstract partial record MemberIdentification3Choice_
-    {
-    }
+    public abstract record MemberIdentification3Choice_ { }
 }

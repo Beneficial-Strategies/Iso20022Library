@@ -23,7 +23,7 @@ public enum BlockedReason1Code
     [IsoId("_WeMLwRHeEeKVqeHljBM1MQ")]
     [Description(@"Bankruptcy.")]
     Bankruptcy = BlockedReasonCode.Bankruptcy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commitment.
     /// Encoded/decoded by serializers as &quot;CMMT&quot;.
@@ -32,7 +32,7 @@ public enum BlockedReason1Code
     [IsoId("_Wm-7YRHeEeKVqeHljBM1MQ")]
     [Description(@"Commitment.")]
     Commitment = BlockedReasonCode.Commitment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Confiscation.
     /// Encoded/decoded by serializers as &quot;CNFS&quot;.
@@ -41,7 +41,7 @@ public enum BlockedReason1Code
     [IsoId("_WyKQoRHeEeKVqeHljBM1MQ")]
     [Description(@"Confiscation.")]
     Confiscation = BlockedReasonCode.Confiscation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reserved in contemplation of death.
     /// Encoded/decoded by serializers as &quot;MORT&quot;.
@@ -50,7 +50,7 @@ public enum BlockedReason1Code
     [IsoId("_XAKQYRHeEeKVqeHljBM1MQ")]
     [Description(@"Reserved in contemplation of death.")]
     MortisCausa = BlockedReasonCode.MortisCausa, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pledged.
     /// Encoded/decoded by serializers as &quot;PLDG&quot;.
@@ -59,7 +59,7 @@ public enum BlockedReason1Code
     [IsoId("_XOK3MRHeEeKVqeHljBM1MQ")]
     [Description(@"Pledged.")]
     Pledged = BlockedReasonCode.Pledged, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reregistration.
     /// Encoded/decoded by serializers as &quot;TRPE&quot;.
@@ -68,7 +68,7 @@ public enum BlockedReason1Code
     [IsoId("_XYTqoRHeEeKVqeHljBM1MQ")]
     [Description(@"Reregistration.")]
     Reregistration = BlockedReasonCode.Reregistration, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
@@ -77,5 +77,4 @@ public enum BlockedReason1Code
     [IsoId("_Xmw9YRHeEeKVqeHljBM1MQ")]
     [Description(@"Transfer.")]
     Transfer = BlockedReasonCode.Transfer, // same ordinal as derivation source for type conversions
-    
 }

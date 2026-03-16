@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatistics4Choice
 {
     /// <summary>
@@ -13,19 +13,17 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
     /// </summary>
     [IsoId("_x1GY41yGEe24CqbZJK5XxA")]
     [DisplayName("Report")]
-    public partial record Report : DetailedMissingValuationsStatistics4Choice_
+    public record Report : DetailedMissingValuationsStatistics4Choice_
     {
-        #nullable enable
-        
         /// <summary>
-        /// Number of outstanding derivatives. 
+        /// Number of outstanding derivatives.
         /// </summary>
         [IsoId("_x2DbIFyGEe24CqbZJK5XxA")]
         [DisplayName("Number Of Outstanding Derivatives")]
         [IsoXmlTag("NbOfOutsdngDerivs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfOutstandingDerivatives { get; init; } 
-        
+        public required IsoNumber NumberOfOutstandingDerivatives { get; init; }
+
         /// <summary>
         /// Number of outstanding derivatives for which valuation amount was never reported.
         /// </summary>
@@ -33,8 +31,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [DisplayName("Number Of Outstanding Derivatives With No Valuation")]
         [IsoXmlTag("NbOfOutsdngDerivsWthNoValtn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfOutstandingDerivativesWithNoValuation { get; init; } 
-        
+        public required IsoNumber NumberOfOutstandingDerivativesWithNoValuation { get; init; }
+
         /// <summary>
         /// Number of outstanding derivatives with outdated valuation.
         /// </summary>
@@ -42,8 +40,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [DisplayName("Number Of Outstanding Derivatives With Outdated Valuation")]
         [IsoXmlTag("NbOfOutsdngDerivsWthOutdtdValtn")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber NumberOfOutstandingDerivativesWithOutdatedValuation { get; init; } 
-        
+        public required IsoNumber NumberOfOutstandingDerivativesWithOutdatedValuation { get; init; }
+
         /// <summary>
         /// Details of outstanding derivatives for which the valuation was not reported or the valuation reported is more than fourteen calendar days earlier than the date for which the report was generated shall be included in the report of missing valuations at the end of the day.
         /// </summary>
@@ -52,9 +50,5 @@ namespace BeneficialStrategies.Iso20022.Choices.DetailedMissingValuationsStatist
         [IsoXmlTag("Wrnngs")]
         public ValueList<MissingValuationsData2> Warnings { get; init; } = [];
         // ID for the above is _x2DbJlyGEe24CqbZJK5XxA
-        
-        
-        #nullable disable
-        
     }
 }

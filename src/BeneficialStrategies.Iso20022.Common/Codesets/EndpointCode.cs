@@ -16,14 +16,14 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 public enum EndpointCode
 {
     /// <summary>
-    /// Destination	
+    /// Destination
     /// Encoded/decoded by serializers as &quot;DEST&quot;.
     /// </summary>
     [EnumMember(Value = "DEST")]
     [IsoId("_QzGoEINnEeuHqfO1LgkE9Q")]
     [Description(@"Destination	")]
     Destination,
-    
+
     /// <summary>
     /// Origination
     /// Encoded/decoded by serializers as &quot;ORIG&quot;.
@@ -32,7 +32,7 @@ public enum EndpointCode
     [IsoId("_VhhfAINnEeuHqfO1LgkE9Q")]
     [Description(@"Origination")]
     Origination,
-    
+
     /// <summary>
     /// Type specified at the national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum EndpointCode
     [IsoId("_bKi9AINnEeuHqfO1LgkE9Q")]
     [Description(@"Type specified at the national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Type specified at a private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum EndpointCode
     [IsoId("_vNbcgINnEeuHqfO1LgkE9Q")]
     [Description(@"Type specified at a private level.")]
     OtherPrivate,
-    
 }

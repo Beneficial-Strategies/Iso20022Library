@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_0so80JB0Ee-COKgew96POA")]
-[Description(@"Standard code to specify the reason why the instruction/event has a pending status.")]
+[Description(
+    @"Standard code to specify the reason why the instruction/event has a pending status."
+)]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
 public enum PendingReason29Code
 {
@@ -21,7 +23,9 @@ public enum PendingReason29Code
     /// </summary>
     [EnumMember(Value = "AUTH")]
     [IsoId("")]
-    [Description(@"Instruction/event is pending because the reclaim is sent to the tax authorities.")]
+    [Description(
+        @"Instruction/event is pending because the reclaim is sent to the tax authorities."
+    )]
     SentToTaxAuthorities = PendingFailingReasonV2Code.SentToTaxAuthorities, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -50,5 +54,4 @@ public enum PendingReason29Code
     [IsoId("")]
     [Description(@"Other. See Narrative.")]
     Other = PendingFailingReasonV2Code.Other, // same ordinal as derivation source for type conversions
-
 }

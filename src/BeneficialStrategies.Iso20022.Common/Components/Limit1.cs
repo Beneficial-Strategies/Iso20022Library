@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJpGpNp-Ed-ak6NoX_4Aeg_-234268618")]
 [DisplayName("Limit")]
-public partial record Limit1
+public record Limit1
 {
-    #nullable enable
-    
     /// <summary>
     /// Number of occurrences of a particular event.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record Limit1
     [DisplayName("Current")]
     [IsoXmlTag("Cur")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText Current { get; init; } 
-    
+    public required IsoMax3NumericText Current { get; init; }
+
     /// <summary>
     /// Specifies the maximum number of times an event may occur.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record Limit1
     [DisplayName("Limit")]
     [IsoXmlTag("Lmt")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public required IsoMax3NumericText Limit { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax3NumericText Limit { get; init; }
 }

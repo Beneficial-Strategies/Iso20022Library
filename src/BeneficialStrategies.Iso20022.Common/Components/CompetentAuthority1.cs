@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jODlAIAuEeirUu_C8Wn_0Q")]
 [DisplayName("Competent Authority")]
-public partial record CompetentAuthority1
+public record CompetentAuthority1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification field for the competent authority.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CompetentAuthority1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Identification { get; init; }
+
     /// <summary>
     /// Information on the onboarding status of the competent authority.
     /// </summary>
@@ -35,9 +33,5 @@ public partial record CompetentAuthority1
     [DisplayName("Onboarding Status")]
     [IsoXmlTag("OnbrdgSts")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public required IsoTrueFalseIndicator OnboardingStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoTrueFalseIndicator OnboardingStatus { get; init; }
 }

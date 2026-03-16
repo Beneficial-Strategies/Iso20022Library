@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InterestRateDerivative2Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateDerivative2Choice
     /// </summary>
     [IsoId("_xbbEcWlIEeaLAKoEUNsD9g")]
     [DisplayName("Swap Related")]
-    public partial record SwapRelated : InterestRateDerivative2Choice_
+    public record SwapRelated : InterestRateDerivative2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the type of an interest rate derivative when the contract type is a swap, a swaption, a future on a swap and / or a forward on a swap.
         /// </summary>
         [IsoXmlTag("SwpRltd")]
-        public required SwapType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SwapType1Code Value { get; init; }
     }
 }

@@ -23,7 +23,7 @@ public enum ATMServiceType9Code
     [IsoId("_GTc9Aa4tEeWLdt0vLARX2Q")]
     [Description(@"Funds transfer between accounts belonging to the customer in the same bank.")]
     CustomerTransfer = ATMServiceTypeCode.CustomerTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Funds transfer to another customer.
     /// Encoded/decoded by serializers as &quot;TRFI&quot;.
@@ -32,7 +32,7 @@ public enum ATMServiceType9Code
     [IsoId("_GkSOUa4tEeWLdt0vLARX2Q")]
     [Description(@"Funds transfer to another customer.")]
     InterCustomerTransfer = ATMServiceTypeCode.InterCustomerTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Funds transfer to pay a third party.
     /// Encoded/decoded by serializers as &quot;TRFP&quot;.
@@ -41,5 +41,4 @@ public enum ATMServiceType9Code
     [IsoId("_PF0xka4tEeWLdt0vLARX2Q")]
     [Description(@"Funds transfer to pay a third party.")]
     Payment = ATMServiceTypeCode.Payment, // same ordinal as derivation source for type conversions
-    
 }

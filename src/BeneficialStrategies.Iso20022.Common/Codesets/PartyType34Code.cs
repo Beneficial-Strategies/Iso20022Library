@@ -21,7 +21,9 @@ public enum PartyType34Code
     /// </summary>
     [EnumMember(Value = "ACCP")]
     [IsoId("")]
-    [Description(@"Card acceptor, party accepting the card and presenting transaction data to the acquirer.")]
+    [Description(
+        @"Card acceptor, party accepting the card and presenting transaction data to the acquirer."
+    )]
     Acceptor = PartyTypeCode.Acceptor, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +41,9 @@ public enum PartyType34Code
     /// </summary>
     [EnumMember(Value = "AGNT")]
     [IsoId("")]
-    [Description(@"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.")]
+    [Description(
+        @"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer."
+    )]
     Agent = PartyTypeCode.Agent, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -77,5 +81,4 @@ public enum PartyType34Code
     [IsoId("")]
     [Description(@"Other card payment entity type defined at private level")]
     OtherPrivate = PartyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-
 }

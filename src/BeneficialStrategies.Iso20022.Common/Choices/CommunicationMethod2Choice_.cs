@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CommunicationMethod2Choice.Code))]
     [KnownType(typeof(CommunicationMethod2Choice.Proprietary))]
-    [JsonDerivedType(typeof(CommunicationMethod2Choice.Code),nameof(CommunicationMethod2Choice.Code))]
-    [JsonDerivedType(typeof(CommunicationMethod2Choice.Proprietary),nameof(CommunicationMethod2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CommunicationMethod2Choice.Code),
+        nameof(CommunicationMethod2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CommunicationMethod2Choice.Proprietary),
+        nameof(CommunicationMethod2Choice.Proprietary)
+    )]
     [IsoId("_vGYggA1fEeKGXqvMN6jpiw")]
     [DisplayName("Communication Method 2 Choice")]
-    public abstract partial record CommunicationMethod2Choice_
-    {
-    }
+    public abstract record CommunicationMethod2Choice_ { }
 }

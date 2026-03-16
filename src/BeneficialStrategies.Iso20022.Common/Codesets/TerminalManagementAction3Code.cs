@@ -23,7 +23,7 @@ public enum TerminalManagementAction3Code
     [IsoId("_r33vIY34EeWRwov1g9WL_A")]
     [Description(@"Request to create or add the element identified inside the message exchange.")]
     Create = TerminalManagementActionCode.Create, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to delete the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -32,7 +32,7 @@ public enum TerminalManagementAction3Code
     [IsoId("_sBQUoY34EeWRwov1g9WL_A")]
     [Description(@"Request to delete the element identified inside the message exchange.")]
     Delete = TerminalManagementActionCode.Delete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to update the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -41,5 +41,4 @@ public enum TerminalManagementAction3Code
     [IsoId("_sMIu8Y34EeWRwov1g9WL_A")]
     [Description(@"Request to update the element identified inside the message exchange.")]
     Update = TerminalManagementActionCode.Update, // same ordinal as derivation source for type conversions
-    
 }

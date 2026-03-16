@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_DkNtsJ26Eeuwmdq0KtnICg")]
-[Description(@"Specifies the reason for the exchange with the national competent authority, as published in an external category purpose code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the reason for the exchange with the national competent authority, as published in an external category purpose code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalAuthorityExchangeReason1Code))]
 public enum ExternalAuthorityExchangeReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzf8g_RYEeuLhpyIdtJzwg")]
     [Description(@"Ad hoc request.")]
     AdHocRequest,
-    
+
     /// <summary>
     /// Competent Authority for Buyer Branch.
     /// Encoded/decoded by serializers as &quot;CABB&quot;.
@@ -33,7 +35,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzf8hvRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Buyer Branch.")]
     CompetentAuthorityForBuyerBranch,
-    
+
     /// <summary>
     /// Competent Authority for Basket Constituant.
     /// Encoded/decoded by serializers as &quot;CABC&quot;.
@@ -42,7 +44,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzf8ifRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Basket Constituant.")]
     CompetentAuthorityForBasketConstituant,
-    
+
     /// <summary>
     /// Competent Authority for Buyer Transmitting Firm.
     /// Encoded/decoded by serializers as &quot;CABT&quot;.
@@ -51,7 +53,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzpGcPRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Buyer Transmitting Firm.")]
     CompetentAuthorityForBuyerTransmittingFirm,
-    
+
     /// <summary>
     /// Competent Authority for Decision Making Branch.
     /// Encoded/decoded by serializers as &quot;CADB&quot;.
@@ -60,7 +62,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzpGc_RYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Decision Making Branch.")]
     CompetentAuthorityForDecisionMakingBranch,
-    
+
     /// <summary>
     /// Competent Authority for Direct Underlying.
     /// Encoded/decoded by serializers as &quot;CADU&quot;.
@@ -69,7 +71,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzpGdvRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Direct Underlying.")]
     CompetentAuthorityForDirectUnderlying,
-    
+
     /// <summary>
     /// Competent Authority for Executing Branch.
     /// Encoded/decoded by serializers as &quot;CAEB&quot;.
@@ -78,7 +80,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzpGefRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Executing Branch.")]
     CompetentAuthorityForExecutingBranch,
-    
+
     /// <summary>
     /// Competent Authority for Instrument.
     /// Encoded/decoded by serializers as &quot;CAFI&quot;.
@@ -87,7 +89,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzy3cPRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Instrument.")]
     CompetentAuthorityForInstrument,
-    
+
     /// <summary>
     /// Competent Authority for Index.
     /// Encoded/decoded by serializers as &quot;CAIX&quot;.
@@ -96,7 +98,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uzy3c_RYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Index.")]
     CompetentAuthorityForIndex,
-    
+
     /// <summary>
     /// Competent Authority for Membership Branch.
     /// Encoded/decoded by serializers as &quot;CAMB&quot;.
@@ -105,7 +107,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uz8ocPRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Membership Branch.")]
     CompetentAuthorityForMembershipBranch,
-    
+
     /// <summary>
     /// Competent Authority for Seller Branch.
     /// Encoded/decoded by serializers as &quot;CASB&quot;.
@@ -114,7 +116,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uz8oc_RYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Seller Branch.")]
     CompetentAuthorityForSellerBranch,
-    
+
     /// <summary>
     /// Competent Authority for Seller Transmitting Firm.
     /// Encoded/decoded by serializers as &quot;CAST&quot;.
@@ -123,7 +125,7 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uz8odvRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Seller Transmitting Firm.")]
     CompetentAuthorityForSellerTransmittingFirm,
-    
+
     /// <summary>
     /// Competent Authority for Trading Venue.
     /// Encoded/decoded by serializers as &quot;CATV&quot;.
@@ -132,5 +134,4 @@ public enum ExternalAuthorityExchangeReasonCode
     [IsoId("_uz8oefRYEeuLhpyIdtJzwg")]
     [Description(@"Competent Authority for Trading Venue.")]
     CompetentAuthorityForTradingVenue,
-    
 }

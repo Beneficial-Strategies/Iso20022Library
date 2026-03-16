@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_20fXAS8REeu125Ip9zFcsQ")]
 [DisplayName("Point Of Interaction Component")]
-public partial record PointOfInteractionComponent11
+public record PointOfInteractionComponent11
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of component belonging to a POI (Point Of Interaction) Terminal.
     /// </summary>
     [IsoId("_2_1EUS8REeu125Ip9zFcsQ")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required POIComponentType6Code Type { get; init; } 
-    
+    public required POIComponentType6Code Type { get; init; }
+
     /// <summary>
     /// Additional information regarding the type of the component.
     /// </summary>
@@ -33,58 +31,54 @@ public partial record PointOfInteractionComponent11
     [DisplayName("Sub Type Information")]
     [IsoXmlTag("SubTpInf")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? SubTypeInformation { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? SubTypeInformation { get; init; }
+
     /// <summary>
     /// Identification of the POI (Point Of Interaction) component.
     /// </summary>
     [IsoId("_2_1EVS8REeu125Ip9zFcsQ")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required PointOfInteractionComponentIdentification2 Identification { get; init; } 
-    
+    public required PointOfInteractionComponentIdentification2 Identification { get; init; }
+
     /// <summary>
     /// Status of the POI (Point Of Interaction) component.
     /// </summary>
     [IsoId("_2_1EVy8REeu125Ip9zFcsQ")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public PointOfInteractionComponentStatus3? Status { get; init; } 
-    
+    public PointOfInteractionComponentStatus3? Status { get; init; }
+
     /// <summary>
     /// Identification of the standard for which the component complies with.
     /// </summary>
     [IsoId("_2_1EWS8REeu125Ip9zFcsQ")]
     [DisplayName("Standard Compliance")]
     [IsoXmlTag("StdCmplc")]
-    public GenericIdentification48? StandardCompliance { get; init; } 
-    
+    public GenericIdentification48? StandardCompliance { get; init; }
+
     /// <summary>
     /// Characteristics of a POI (Point Of Interaction) component.
     /// </summary>
     [IsoId("_2_1EWy8REeu125Ip9zFcsQ")]
     [DisplayName("Characteristics")]
     [IsoXmlTag("Chrtcs")]
-    public PointOfInteractionComponentCharacteristics7? Characteristics { get; init; } 
-    
+    public PointOfInteractionComponentCharacteristics7? Characteristics { get; init; }
+
     /// <summary>
     /// Assessments for the component of the point of interaction.
     /// </summary>
     [IsoId("_2_1EXS8REeu125Ip9zFcsQ")]
     [DisplayName("Assessment")]
     [IsoXmlTag("Assmnt")]
-    public PointOfInteractionComponentAssessment1? Assessment { get; init; } 
-    
+    public PointOfInteractionComponentAssessment1? Assessment { get; init; }
+
     /// <summary>
     /// Chunk of a software package.
     /// </summary>
     [IsoId("_2_1EXy8REeu125Ip9zFcsQ")]
     [DisplayName("Package")]
     [IsoXmlTag("Packg")]
-    public PackageType2? Package { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PackageType2? Package { get; init; }
 }

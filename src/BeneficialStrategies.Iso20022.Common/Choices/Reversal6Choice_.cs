@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Reversal6Choice.Reference))]
     [KnownType(typeof(Reversal6Choice.TransferInConfirmationDetails))]
-    [JsonDerivedType(typeof(Reversal6Choice.Reference),nameof(Reversal6Choice.Reference))]
-    [JsonDerivedType(typeof(Reversal6Choice.TransferInConfirmationDetails),nameof(Reversal6Choice.TransferInConfirmationDetails))]
+    [JsonDerivedType(typeof(Reversal6Choice.Reference), nameof(Reversal6Choice.Reference))]
+    [JsonDerivedType(
+        typeof(Reversal6Choice.TransferInConfirmationDetails),
+        nameof(Reversal6Choice.TransferInConfirmationDetails)
+    )]
     [IsoId("_f7k5oT8BEeSIqOPJHpnleA")]
     [DisplayName("Reversal 6 Choice")]
-    public abstract partial record Reversal6Choice_
-    {
-    }
+    public abstract record Reversal6Choice_ { }
 }

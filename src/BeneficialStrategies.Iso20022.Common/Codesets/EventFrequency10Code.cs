@@ -23,7 +23,7 @@ public enum EventFrequency10Code
     [IsoId("_ASy8ISDVEeWCLu74WLgP4w")]
     [Description(@"Event takes place every day.")]
     Daily = EventFrequencyCode.Daily, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place as necessary.
     /// Encoded/decoded by serializers as &quot;ADHO&quot;.
@@ -32,5 +32,4 @@ public enum EventFrequency10Code
     [IsoId("_Aryq8SDVEeWCLu74WLgP4w")]
     [Description(@"Event takes place as necessary.")]
     Adhoc = EventFrequencyCode.Adhoc, // same ordinal as derivation source for type conversions
-    
 }

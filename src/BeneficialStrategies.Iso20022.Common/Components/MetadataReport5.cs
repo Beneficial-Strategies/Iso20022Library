@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JwtpgfgxEe-yU4gaFULAeA")]
 [DisplayName("Metadata Report5")]
-public partial record MetadataReport5
+public record MetadataReport5
 {
-    #nullable enable
-
     /// <summary>
     /// Collection Body.
     /// </summary>
     [DisplayName("Collection Body")]
     [IsoXmlTag("ColltnBody")]
-    public GenericIdentification175? CollectionBody { get; init; } 
+    public GenericIdentification175? CollectionBody { get; init; }
 
     /// <summary>
     /// Regulatory Data.
@@ -58,9 +56,5 @@ public partial record MetadataReport5
     /// </summary>
     [DisplayName("Submitting Entity")]
     [IsoXmlTag("SubmitgNtty")]
-    public PartyIdentification260Choice_? SubmittingEntity { get; init; } 
-
-    
-    #nullable disable
-    
+    public PartyIdentification260Choice_? SubmittingEntity { get; init; }
 }

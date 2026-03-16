@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RPUoIZTLEemqYPWMBuVawg")]
 [DisplayName("Modification Scope")]
-public partial record ModificationScope43
+public record ModificationScope43
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of modification to be applied.
     /// </summary>
     [IsoId("_RkJooZTLEemqYPWMBuVawg")]
     [DisplayName("Modification Scope Indication")]
     [IsoXmlTag("ModScpIndctn")]
-    public required DataModification1Code ModificationScopeIndication { get; init; } 
-    
+    public required DataModification1Code ModificationScopeIndication { get; init; }
+
     /// <summary>
     /// Referral information.
     /// </summary>
     [IsoId("_RkJoo5TLEemqYPWMBuVawg")]
     [DisplayName("Placement")]
     [IsoXmlTag("Plcmnt")]
-    public required ReferredAgent3 Placement { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ReferredAgent3 Placement { get; init; }
 }

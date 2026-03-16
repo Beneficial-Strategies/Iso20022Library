@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(IntraPositionProcessingStatus7Choice.Cancelled))]
     [KnownType(typeof(IntraPositionProcessingStatus7Choice.AcknowledgedAccepted))]
     [KnownType(typeof(IntraPositionProcessingStatus7Choice.Proprietary))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus7Choice.Rejected),nameof(IntraPositionProcessingStatus7Choice.Rejected))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus7Choice.Repair),nameof(IntraPositionProcessingStatus7Choice.Repair))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus7Choice.Cancelled),nameof(IntraPositionProcessingStatus7Choice.Cancelled))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus7Choice.AcknowledgedAccepted),nameof(IntraPositionProcessingStatus7Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus7Choice.Proprietary),nameof(IntraPositionProcessingStatus7Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus7Choice.Rejected),
+        nameof(IntraPositionProcessingStatus7Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus7Choice.Repair),
+        nameof(IntraPositionProcessingStatus7Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus7Choice.Cancelled),
+        nameof(IntraPositionProcessingStatus7Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus7Choice.AcknowledgedAccepted),
+        nameof(IntraPositionProcessingStatus7Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus7Choice.Proprietary),
+        nameof(IntraPositionProcessingStatus7Choice.Proprietary)
+    )]
     [IsoId("_4EhzQewLEeiazoAmcoGsBQ")]
     [DisplayName("Intra Position Processing Status 7 Choice")]
-    public abstract partial record IntraPositionProcessingStatus7Choice_
-    {
-    }
+    public abstract record IntraPositionProcessingStatus7Choice_ { }
 }

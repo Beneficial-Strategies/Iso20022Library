@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VQgOUtp-Ed-ak6NoX_4Aeg_-769020295")]
 [DisplayName("Payment Instruction Extract")]
-public partial record PaymentInstructionExtract
+public record PaymentInstructionExtract
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assigner.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PaymentInstructionExtract
     [DisplayName("Assigner Instruction Identification")]
     [IsoXmlTag("AssgnrInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AssignerInstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AssignerInstructionIdentification { get; init; }
+
     /// <summary>
     /// Identification of the payment instruction (eg, field 20 of an MT 103) when meaningful to the case assignee.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record PaymentInstructionExtract
     [DisplayName("Assignee Instruction Identification")]
     [IsoXmlTag("AssgneInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AssigneeInstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AssigneeInstructionIdentification { get; init; }
+
     /// <summary>
     /// Amount of the payment. Depending on the context it can be either the amount settled (UnableToApply) or the instructed amount (RequestToCancel, RequestToModify, ClaimNonReceipt).
     /// </summary>
     [IsoId("_VQgOVdp-Ed-ak6NoX_4Aeg_-745398050")]
     [DisplayName("Currency Amount")]
     [IsoXmlTag("CcyAmt")]
-    public CurrencyAndAmount? CurrencyAmount { get; init; } 
-    
+    public CurrencyAndAmount? CurrencyAmount { get; init; }
+
     /// <summary>
     /// Value date of the payment.
     /// </summary>
@@ -53,9 +51,5 @@ public partial record PaymentInstructionExtract
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? ValueDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODateTime? ValueDate { get; init; }
 }

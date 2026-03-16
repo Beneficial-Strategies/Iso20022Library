@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NotificationCancellationRequestStatus2Choice.ProcessedStatus))]
     [KnownType(typeof(NotificationCancellationRequestStatus2Choice.RejectedStatus))]
-    [JsonDerivedType(typeof(NotificationCancellationRequestStatus2Choice.ProcessedStatus),nameof(NotificationCancellationRequestStatus2Choice.ProcessedStatus))]
-    [JsonDerivedType(typeof(NotificationCancellationRequestStatus2Choice.RejectedStatus),nameof(NotificationCancellationRequestStatus2Choice.RejectedStatus))]
+    [JsonDerivedType(
+        typeof(NotificationCancellationRequestStatus2Choice.ProcessedStatus),
+        nameof(NotificationCancellationRequestStatus2Choice.ProcessedStatus)
+    )]
+    [JsonDerivedType(
+        typeof(NotificationCancellationRequestStatus2Choice.RejectedStatus),
+        nameof(NotificationCancellationRequestStatus2Choice.RejectedStatus)
+    )]
     [IsoId("_Eye7gVvFEe6gDOpEK7Q4ig")]
     [DisplayName("Notification Cancellation Request Status2Choice")]
-    public abstract partial record NotificationCancellationRequestStatus2Choice_
-    {
-    }
+    public abstract record NotificationCancellationRequestStatus2Choice_ { }
 }

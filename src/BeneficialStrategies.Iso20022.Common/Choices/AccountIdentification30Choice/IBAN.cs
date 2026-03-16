@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification30Choice
 {
     /// <summary>
@@ -13,20 +13,14 @@ namespace BeneficialStrategies.Iso20022.Choices.AccountIdentification30Choice
     /// </summary>
     [IsoId("_cZCygXs8EeSTS7uHCe8FPQ")]
     [DisplayName("IBAN")]
-    public partial record IBAN : AccountIdentification30Choice_
+    public record IBAN : AccountIdentification30Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// An identifier used internationally by financial institutions to uniquely identify the account of a customer at a financial institution, as described in the latest edition of the international standard ISO 13616. &quot;Banking and related financial services - International Bank Account Number (IBAN)&quot;.
         /// </summary>
         [IsoXmlTag("IBAN")]
         [IsoSimpleType(IsoSimpleType.IBANIdentifier)]
-        public required IsoIBANIdentifier Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoIBANIdentifier Value { get; init; }
     }
 }

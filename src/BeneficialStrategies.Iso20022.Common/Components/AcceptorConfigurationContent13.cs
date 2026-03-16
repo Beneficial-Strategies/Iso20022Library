@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mXeR4ZI7Ee6RsYhlPIxpVw")]
 [DisplayName("Acceptor Configuration Content13")]
-public partial record AcceptorConfigurationContent13
+public record AcceptorConfigurationContent13
 {
-    #nullable enable
-
     /// <summary>
     /// Acquirer Protocol Parameters.
     /// </summary>
@@ -51,7 +49,7 @@ public partial record AcceptorConfigurationContent13
     /// </summary>
     [DisplayName("Replace Configuration")]
     [IsoXmlTag("RplcCfgtn")]
-    public IsoTrueFalseIndicator? ReplaceConfiguration { get; init; } 
+    public IsoTrueFalseIndicator? ReplaceConfiguration { get; init; }
 
     /// <summary>
     /// Sale To POI Parameters.
@@ -94,8 +92,4 @@ public partial record AcceptorConfigurationContent13
     [DisplayName("TMS Protocol Parameters")]
     [IsoXmlTag("TMSPrtcolParams")]
     public ValueList<TMSProtocolParameters7> TMSProtocolParameters { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

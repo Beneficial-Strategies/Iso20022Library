@@ -23,7 +23,7 @@ public enum SettlementTypeCode
     [IsoId("_ZOREYtp-Ed-ak6NoX_4Aeg_-149211342")]
     [Description(@"Option trade is settled as principal.")]
     Principal,
-    
+
     /// <summary>
     /// Option trade is netted off against another trade.
     /// Encoded/decoded by serializers as &quot;NETO&quot;.
@@ -32,5 +32,4 @@ public enum SettlementTypeCode
     [IsoId("_ZOREY9p-Ed-ak6NoX_4Aeg_122301287")]
     [Description(@"Option trade is netted off against another trade.")]
     NettedOff,
-    
 }

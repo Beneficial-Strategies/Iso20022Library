@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Period2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Period2Choice
     /// </summary>
     [IsoId("_T5exE9p-Ed-ak6NoX_4Aeg_322590951")]
     [DisplayName("From Date To Date")]
-    public partial record FromDateToDate : Period2Choice_
+    public record FromDateToDate : Period2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date and time at which the range starts.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Period2Choice
         [DisplayName("From Date")]
         [IsoXmlTag("FrDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate FromDate { get; init; } 
-        
+        public required IsoISODate FromDate { get; init; }
+
         /// <summary>
         /// Date and time at which the range ends.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Period2Choice
         [DisplayName("To Date")]
         [IsoXmlTag("ToDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate ToDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISODate ToDate { get; init; }
     }
 }

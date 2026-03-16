@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SpAnotp-Ed-ak6NoX_4Aeg_136183535")]
 [DisplayName("Case")]
-public partial record Case
+public record Case
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique id assigned by the case creator.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Case
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Party that created the case.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record Case
     [DisplayName("Creator")]
     [IsoXmlTag("Cretr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier Creator { get; init; } 
-    
+    public required IsoAnyBICIdentifier Creator { get; init; }
+
     /// <summary>
     /// Set to yes if the case was closed and needs to be re-opened.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record Case
     [DisplayName("Reopen Case Indication")]
     [IsoXmlTag("ReopCaseIndctn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ReopenCaseIndication { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoYesNoIndicator? ReopenCaseIndication { get; init; }
 }

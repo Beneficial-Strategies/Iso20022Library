@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementBasisCodeAndDSSCodeChoi
     /// </summary>
     [IsoId("_Q7Cp8dp-Ed-ak6NoX_4Aeg_-1663061250")]
     [DisplayName("Statement Basis As Code")]
-    public partial record StatementBasisAsCode : StatementBasisCodeAndDSSCodeChoice_
+    public record StatementBasisAsCode : StatementBasisCodeAndDSSCodeChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the type of balances on which the statement is prepared.
         /// </summary>
         [IsoXmlTag("StmtBsisAsCd")]
-        public required StatementBasis1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required StatementBasis1Code Value { get; init; }
     }
 }

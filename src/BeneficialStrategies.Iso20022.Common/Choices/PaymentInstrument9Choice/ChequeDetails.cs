@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice
     /// </summary>
     [IsoId("_VK1rMtp-Ed-ak6NoX_4Aeg_-493839753")]
     [DisplayName("Cheque Details")]
-    public partial record ChequeDetails : PaymentInstrument9Choice_
+    public record ChequeDetails : PaymentInstrument9Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identifier for a cheque as assigned by the financial institution.
         /// </summary>
@@ -24,35 +22,31 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument9Choice
         [DisplayName("Number")]
         [IsoXmlTag("Nb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Number { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Number { get; init; }
+
         /// <summary>
         /// Party to which a cheque is made payable.
         /// </summary>
         [IsoId("_QbdK_dp-Ed-ak6NoX_4Aeg_-241775384")]
         [DisplayName("Payee Identification")]
         [IsoXmlTag("PyeeId")]
-        public required PartyIdentification2Choice_ PayeeIdentification { get; init; } 
-        
+        public required PartyIdentification2Choice_ PayeeIdentification { get; init; }
+
         /// <summary>
         /// Financial institution on which a cheque is drawn, ie, the financial institution that services the account of the entity that issued the cheque.
         /// </summary>
         [IsoId("_QbdK_tp-Ed-ak6NoX_4Aeg_-241775426")]
         [DisplayName("Drawee Identification")]
         [IsoXmlTag("DrweeId")]
-        public FinancialInstitutionIdentification3Choice_? DraweeIdentification { get; init; } 
-        
+        public FinancialInstitutionIdentification3Choice_? DraweeIdentification { get; init; }
+
         /// <summary>
         /// Account owner that issues a cheque ordering the drawee bank to pay a specific amount, upon demand, to the payee.
         /// </summary>
         [IsoId("_QbmU4Np-Ed-ak6NoX_4Aeg_-241775434")]
         [DisplayName("Drawer Identification")]
         [IsoXmlTag("DrwrId")]
-        public PartyIdentification2Choice_? DrawerIdentification { get; init; } 
-        
-        
-        #nullable disable
-        
+        public PartyIdentification2Choice_? DrawerIdentification { get; init; }
     }
 }

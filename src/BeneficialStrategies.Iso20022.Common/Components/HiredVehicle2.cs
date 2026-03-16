@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jwEksYv0EeumSPwlS1PkxQ")]
 [DisplayName("Hired Vehicle")]
-public partial record HiredVehicle2
+public record HiredVehicle2
 {
-    #nullable enable
-    
     /// <summary>
     /// Defines the type of company or vehicle being hired (for example, private, taxi, chauffeur service, rideshare).
     /// </summary>
@@ -25,29 +23,29 @@ public partial record HiredVehicle2
     [DisplayName("Company Type")]
     [IsoXmlTag("CpnyTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CompanyType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CompanyType { get; init; }
+
     /// <summary>
-    /// Contains the name of the company that provided the hired vehicle services. 
+    /// Contains the name of the company that provided the hired vehicle services.
     /// </summary>
     [IsoId("_j2JXg4v0EeumSPwlS1PkxQ")]
     [DisplayName("Company Name")]
     [IsoXmlTag("CpnyNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? CompanyName { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? CompanyName { get; init; }
+
     /// <summary>
-    /// Contains the type of vehicle that was hired (for example, limousine, black, SUV). 
+    /// Contains the type of vehicle that was hired (for example, limousine, black, SUV).
     /// </summary>
     [IsoId("_j2JXhYv0EeumSPwlS1PkxQ")]
     [DisplayName("Type Of Vehicle")]
     [IsoXmlTag("TpOfVhcl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TypeOfVehicle { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TypeOfVehicle { get; init; }
+
     /// <summary>
     /// Contains the identifier assigned to the vehicle.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record HiredVehicle2
     [DisplayName("Vehicle Identification")]
     [IsoXmlTag("VhclId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? VehicleIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? VehicleIdentification { get; init; }
+
     /// <summary>
     /// Contains the identifier assigned to the driver.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record HiredVehicle2
     [DisplayName("Driver Identification")]
     [IsoXmlTag("DrvrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DriverIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DriverIdentification { get; init; }
+
     /// <summary>
     /// Contains the tax identifier assigned to the driver.
     /// </summary>
@@ -75,18 +73,14 @@ public partial record HiredVehicle2
     [DisplayName("Driver Tax Identification")]
     [IsoXmlTag("DrvrTaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DriverTaxIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DriverTaxIdentification { get; init; }
+
     /// <summary>
-    /// Destination of the hired vehicle. 
+    /// Destination of the hired vehicle.
     /// </summary>
     [IsoId("_j2JXjYv0EeumSPwlS1PkxQ")]
     [DisplayName("Destination")]
     [IsoXmlTag("Dstn")]
-    public Destination3? Destination { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Destination3? Destination { get; init; }
 }

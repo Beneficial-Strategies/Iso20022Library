@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nLi525t3Ee-wQIOX0djF2w")]
 [DisplayName("Corporate Action Rate136")]
-public partial record CorporateActionRate136
+public record CorporateActionRate136
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Tax.
     /// </summary>
     [DisplayName("Additional Tax")]
     [IsoXmlTag("AddtlTax")]
-    public RateAndAmountFormat72Choice_? AdditionalTax { get; init; } 
+    public RateAndAmountFormat72Choice_? AdditionalTax { get; init; }
 
     /// <summary>
     /// Bid Interval.
     /// </summary>
     [DisplayName("Bid Interval")]
     [IsoXmlTag("BidIntrvl")]
-    public RateAndAmountFormat73Choice_? BidInterval { get; init; } 
+    public RateAndAmountFormat73Choice_? BidInterval { get; init; }
 
     /// <summary>
     /// Gross Distribution Rate.
@@ -44,21 +42,22 @@ public partial record CorporateActionRate136
     /// </summary>
     [DisplayName("Gross Interest Rate Used For Payment")]
     [IsoXmlTag("GrssIntrstRateUsdForPmt")]
-    public ValueList<InterestRateUsedForPaymentFormat18Choice_> GrossInterestRateUsedForPayment { get; init; } = [];
+    public ValueList<InterestRateUsedForPaymentFormat18Choice_> GrossInterestRateUsedForPayment { get; init; } =
+        [];
 
     /// <summary>
     /// Issuer Declared Exchange Rate.
     /// </summary>
     [DisplayName("Issuer Declared Exchange Rate")]
     [IsoXmlTag("IssrDclrdXchgRate")]
-    public ForeignExchangeTerms38? IssuerDeclaredExchangeRate { get; init; } 
+    public ForeignExchangeTerms38? IssuerDeclaredExchangeRate { get; init; }
 
     /// <summary>
     /// Maximum Allowed Oversubscription Rate.
     /// </summary>
     [DisplayName("Maximum Allowed Oversubscription Rate")]
     [IsoXmlTag("MaxAllwdOvrsbcptRate")]
-    public RateFormat24Choice_? MaximumAllowedOversubscriptionRate { get; init; } 
+    public RateFormat24Choice_? MaximumAllowedOversubscriptionRate { get; init; }
 
     /// <summary>
     /// Net Distribution Rate.
@@ -72,7 +71,7 @@ public partial record CorporateActionRate136
     /// </summary>
     [DisplayName("Proration Rate")]
     [IsoXmlTag("PrratnRate")]
-    public RateFormat24Choice_? ProrationRate { get; init; } 
+    public RateFormat24Choice_? ProrationRate { get; init; }
 
     /// <summary>
     /// Second Level Tax.
@@ -86,14 +85,15 @@ public partial record CorporateActionRate136
     /// </summary>
     [DisplayName("Taxable Income Per Dividend Share")]
     [IsoXmlTag("TaxblIncmPerDvddShr")]
-    public ValueList<RateTypeAndAmountAndStatus33> TaxableIncomePerDividendShare { get; init; } = [];
+    public ValueList<RateTypeAndAmountAndStatus33> TaxableIncomePerDividendShare { get; init; } =
+        [];
 
     /// <summary>
     /// Tax On Income.
     /// </summary>
     [DisplayName("Tax On Income")]
     [IsoXmlTag("TaxOnIncm")]
-    public RateAndAmountFormat72Choice_? TaxOnIncome { get; init; } 
+    public RateAndAmountFormat72Choice_? TaxOnIncome { get; init; }
 
     /// <summary>
     /// Withholding Tax Rate.
@@ -101,8 +101,4 @@ public partial record CorporateActionRate136
     [DisplayName("Withholding Tax Rate")]
     [IsoXmlTag("WhldgTaxRate")]
     public ValueList<RateAndAmountFormat75Choice_> WithholdingTaxRate { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

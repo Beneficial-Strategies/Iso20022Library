@@ -23,7 +23,7 @@ public enum Priority5Code
     [IsoId("_mcdxcH_QEeiik6YN_dzlEA")]
     [Description(@"Priority level is high.")]
     High = PriorityCode.High, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is low.
     /// Encoded/decoded by serializers as &quot;LOWW&quot;.
@@ -32,7 +32,7 @@ public enum Priority5Code
     [IsoId("_mh3O0X_QEeiik6YN_dzlEA")]
     [Description(@"Priority level is low.")]
     Low = PriorityCode.Low, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is normal.
     /// Encoded/decoded by serializers as &quot;NORM&quot;.
@@ -41,7 +41,7 @@ public enum Priority5Code
     [IsoId("_mpC04X_QEeiik6YN_dzlEA")]
     [Description(@"Priority level is normal.")]
     Normal = PriorityCode.Normal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is urgent (highest priority possible).
     /// Encoded/decoded by serializers as &quot;URGT&quot;.
@@ -50,5 +50,4 @@ public enum Priority5Code
     [IsoId("_muQFAX_QEeiik6YN_dzlEA")]
     [Description(@"Priority level is urgent (highest priority possible).")]
     Urgent = PriorityCode.Urgent, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_DeMAwYcNEe-6cOl7zMpJaA")]
-[Description(@"Specifies the reason the transaction/instruction is pending settlement. Settlement on the instructed settlement date is still possible.")]
+[Description(
+    @"Specifies the reason the transaction/instruction is pending settlement. Settlement on the instructed settlement date is still possible."
+)]
 [DerivedFrom(typeof(PendingFailingReasonV2Code))]
 public enum PendingReason28Code
 {
@@ -21,7 +23,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed = PendingFailingReasonV2Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -30,7 +34,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "AWMO")]
     [IsoId("")]
-    [Description(@"Financial instruments are delivered, but still awaiting money from counterparty.")]
+    [Description(
+        @"Financial instruments are delivered, but still awaiting money from counterparty."
+    )]
     AwaitingMoney = PendingFailingReasonV2Code.AwaitingMoney, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,8 +45,11 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "AWSH")]
     [IsoId("")]
-    [Description(@"Financial instruments have not yet been received from the counterparty (if receive against payment trade), the money has been delivered.")]
-    AwaitingSecuritiesFromCounterparty = PendingFailingReasonV2Code.AwaitingSecuritiesFromCounterparty, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Financial instruments have not yet been received from the counterparty (if receive against payment trade), the money has been delivered."
+    )]
+    AwaitingSecuritiesFromCounterparty =
+        PendingFailingReasonV2Code.AwaitingSecuritiesFromCounterparty, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Processing batch differs in the counterparty's instruction, for example, daytime/real-time versus overnight.
@@ -48,7 +57,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "BATC")]
     [IsoId("")]
-    [Description(@"Processing batch differs in the counterparty's instruction, for example, daytime/real-time versus overnight.")]
+    [Description(
+        @"Processing batch differs in the counterparty's instruction, for example, daytime/real-time versus overnight."
+    )]
     ProcessingBatchDifference = PendingFailingReasonV2Code.ProcessingBatchDifference, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -75,7 +86,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "BOTH")]
     [IsoId("")]
-    [Description(@"Counterparty's instruction and your instruction are on hold/frozen/ in a preadvice mode.")]
+    [Description(
+        @"Counterparty's instruction and your instruction are on hold/frozen/ in a preadvice mode."
+    )]
     BothInstructionsOnHold = PendingFailingReasonV2Code.BothInstructionsOnHold, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -84,7 +97,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CAIS")]
     [IsoId("")]
-    [Description(@"Awaiting financial instruments from a corporate action or other procedure, for example, conversion, dematerialisation, exchange, registration, stamping, splitting.")]
+    [Description(
+        @"Awaiting financial instruments from a corporate action or other procedure, for example, conversion, dematerialisation, exchange, registration, stamping, splitting."
+    )]
     AwaitingSecurities = PendingFailingReasonV2Code.AwaitingSecurities, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -93,8 +108,11 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CDLR")]
     [IsoId("")]
-    [Description(@"Instruction is in a hold/frozen/preadvice mode. Market infrastructure platform is awaiting release.")]
-    ConditionalDeliveryAwaitingRelease = PendingFailingReasonV2Code.ConditionalDeliveryAwaitingRelease, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Instruction is in a hold/frozen/preadvice mode. Market infrastructure platform is awaiting release."
+    )]
+    ConditionalDeliveryAwaitingRelease =
+        PendingFailingReasonV2Code.ConditionalDeliveryAwaitingRelease, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Certificate number error.
@@ -120,8 +138,11 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CLAC")]
     [IsoId("")]
-    [Description(@"Insufficient deliverable financial instruments in counterparty's account or counterparty does not hold financial instruments.")]
-    CounterpartyInsufficientSecurities = PendingFailingReasonV2Code.CounterpartyInsufficientSecurities, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Insufficient deliverable financial instruments in counterparty's account or counterparty does not hold financial instruments."
+    )]
+    CounterpartyInsufficientSecurities =
+        PendingFailingReasonV2Code.CounterpartyInsufficientSecurities, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India.
@@ -129,7 +150,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CLHT")]
     [IsoId("")]
-    [Description(@"Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India.")]
+    [Description(
+        @"Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India."
+    )]
     ClearingHouseTrade = PendingFailingReasonV2Code.ClearingHouseTrade, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -156,7 +179,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CPEC")]
     [IsoId("")]
-    [Description(@"Counterparty is in receivership (form of bankruptcy where a court appointed person - the receiver - manages the affairs of the business).")]
+    [Description(
+        @"Counterparty is in receivership (form of bankruptcy where a court appointed person - the receiver - manages the affairs of the business)."
+    )]
     CounterpartyInReceivership = PendingFailingReasonV2Code.CounterpartyInReceivership, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -165,7 +190,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CSDH")]
     [IsoId("")]
-    [Description(@"Central securities depository sets the instruction in a hold/frozen/preadvice mode.")]
+    [Description(
+        @"Central securities depository sets the instruction in a hold/frozen/preadvice mode."
+    )]
     CSDHold = PendingFailingReasonV2Code.CSDHold, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -174,7 +201,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CVAL")]
     [IsoId("")]
-    [Description(@"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.")]
+    [Description(
+        @"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform."
+    )]
     CSDValidation = PendingFailingReasonV2Code.CSDValidation, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -183,7 +212,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "CYCL")]
     [IsoId("")]
-    [Description(@"Your instruction is confirmed in the local market or is ready for settlement, awaiting next settlement cycle.")]
+    [Description(
+        @"Your instruction is confirmed in the local market or is ready for settlement, awaiting next settlement cycle."
+    )]
     AwaitingNextSettlementCycle = PendingFailingReasonV2Code.AwaitingNextSettlementCycle, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -192,8 +223,11 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "DENO")]
     [IsoId("")]
-    [Description(@"Quantity instructed does not match the denomination available/deliverable. Physical securities need to be obtained in deliverable denominated quantities.")]
-    UnavailableDeliverableDenominatedQuantity = PendingFailingReasonV2Code.UnavailableDeliverableDenominatedQuantity, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Quantity instructed does not match the denomination available/deliverable. Physical securities need to be obtained in deliverable denominated quantities."
+    )]
+    UnavailableDeliverableDenominatedQuantity =
+        PendingFailingReasonV2Code.UnavailableDeliverableDenominatedQuantity, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction.
@@ -201,8 +235,11 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "DEPO")]
     [IsoId("")]
-    [Description(@"Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction.")]
-    RefusedDepositForIssueOfDepositaryReceipts = PendingFailingReasonV2Code.RefusedDepositForIssueOfDepositaryReceipts, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction."
+    )]
+    RefusedDepositForIssueOfDepositaryReceipts =
+        PendingFailingReasonV2Code.RefusedDepositForIssueOfDepositaryReceipts, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Exceptional closing of all financial institutions due to natural disaster, for example, earthquake.
@@ -210,7 +247,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "DISA")]
     [IsoId("")]
-    [Description(@"Exceptional closing of all financial institutions due to natural disaster, for example, earthquake.")]
+    [Description(
+        @"Exceptional closing of all financial institutions due to natural disaster, for example, earthquake."
+    )]
     NaturalDisaster = PendingFailingReasonV2Code.NaturalDisaster, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -229,7 +268,8 @@ public enum PendingReason28Code
     [EnumMember(Value = "DOCC")]
     [IsoId("")]
     [Description(@"Awaiting documents or endorsements from counterparty.")]
-    AwaitingDocumentsOrEndorsementsFromCounterparty = PendingFailingReasonV2Code.AwaitingDocumentsOrEndorsementsFromCounterparty, // same ordinal as derivation source for type conversions
+    AwaitingDocumentsOrEndorsementsFromCounterparty =
+        PendingFailingReasonV2Code.AwaitingDocumentsOrEndorsementsFromCounterparty, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Awaiting documents or endorsements from you.
@@ -238,7 +278,8 @@ public enum PendingReason28Code
     [EnumMember(Value = "DOCY")]
     [IsoId("")]
     [Description(@"Awaiting documents or endorsements from you.")]
-    AwaitingDocumentsOrEndorsementsFromYou = PendingFailingReasonV2Code.AwaitingDocumentsOrEndorsementsFromYou, // same ordinal as derivation source for type conversions
+    AwaitingDocumentsOrEndorsementsFromYou =
+        PendingFailingReasonV2Code.AwaitingDocumentsOrEndorsementsFromYou, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached.
@@ -246,7 +287,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "FLIM")]
     [IsoId("")]
-    [Description(@"Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached.")]
+    [Description(
+        @"Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached."
+    )]
     MaximumForeignLimitReached = PendingFailingReasonV2Code.MaximumForeignLimitReached, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -255,7 +298,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "FROZ")]
     [IsoId("")]
-    [Description(@"Financial instruments are blocked at the Central Security Depository (CSD) following a corporate event.")]
+    [Description(
+        @"Financial instruments are blocked at the Central Security Depository (CSD) following a corporate event."
+    )]
     SecuritiesFrozenAtCSD = PendingFailingReasonV2Code.SecuritiesFrozenAtCSD, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -300,7 +345,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "INCA")]
     [IsoId("")]
-    [Description(@"Financial instruments require income adjustment, for example, dividend or interest.")]
+    [Description(
+        @"Financial instruments require income adjustment, for example, dividend or interest."
+    )]
     IncomeAdjustementRequired = PendingFailingReasonV2Code.IncomeAdjustementRequired, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -345,7 +392,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "LINK")]
     [IsoId("")]
-    [Description(@"Your instruction is pending settlement because the instruction linked to it is pending.")]
+    [Description(
+        @"Your instruction is pending settlement because the instruction linked to it is pending."
+    )]
     PendingLinkedInstruction = PendingFailingReasonV2Code.PendingLinkedInstruction, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -363,7 +412,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "MINO")]
     [IsoId("")]
-    [Description(@"Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument.")]
+    [Description(
+        @"Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument."
+    )]
     MinimumSettlementAmount = PendingFailingReasonV2Code.MinimumSettlementAmount, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -381,7 +432,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "MUNO")]
     [IsoId("")]
-    [Description(@"Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument.")]
+    [Description(
+        @"Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument."
+    )]
     MultipleSettlementAmount = PendingFailingReasonV2Code.MultipleSettlementAmount, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -453,7 +506,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "PHCK")]
     [IsoId("")]
-    [Description(@"Physical financial instruments have been received and are being checked for authenticity.")]
+    [Description(
+        @"Physical financial instruments have been received and are being checked for authenticity."
+    )]
     PhysicalSecuritiesVerification = PendingFailingReasonV2Code.PhysicalSecuritiesVerification, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -507,7 +562,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "REFS")]
     [IsoId("")]
-    [Description(@"Delivery/receipt was refused because physical financial instruments are not in good order.")]
+    [Description(
+        @"Delivery/receipt was refused because physical financial instruments are not in good order."
+    )]
     NotInGoodOrder = PendingFailingReasonV2Code.NotInGoodOrder, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -516,8 +573,11 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "REFU")]
     [IsoId("")]
-    [Description(@"Instruction has been refused or not recognised and is represented automatically.")]
-    InstructionRefusedOrNotRecognised = PendingFailingReasonV2Code.InstructionRefusedOrNotRecognised, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Instruction has been refused or not recognised and is represented automatically."
+    )]
+    InstructionRefusedOrNotRecognised =
+        PendingFailingReasonV2Code.InstructionRefusedOrNotRecognised, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached.
@@ -525,7 +585,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "REGT")]
     [IsoId("")]
-    [Description(@"Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached.")]
+    [Description(
+        @"Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached."
+    )]
     CertificatesRejected = PendingFailingReasonV2Code.CertificatesRejected, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -534,7 +596,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "SBLO")]
     [IsoId("")]
-    [Description(@"Financial instruments are blocked due to a corporate action event, realignment, etc.")]
+    [Description(
+        @"Financial instruments are blocked due to a corporate action event, realignment, etc."
+    )]
     SecuritiesBlocked = PendingFailingReasonV2Code.SecuritiesBlocked, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -552,7 +616,9 @@ public enum PendingReason28Code
     /// </summary>
     [EnumMember(Value = "SETS")]
     [IsoId("")]
-    [Description(@"Settlement system/method has been modified at central securities depository to allow settlement.")]
+    [Description(
+        @"Settlement system/method has been modified at central securities depository to allow settlement."
+    )]
     SettlementSystemMethodModified = PendingFailingReasonV2Code.SettlementSystemMethodModified, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -572,5 +638,4 @@ public enum PendingReason28Code
     [IsoId("")]
     [Description(@"Insufficient collateral in your account to execute the instruction.")]
     CollateralShortage = PendingFailingReasonV2Code.CollateralShortage, // same ordinal as derivation source for type conversions
-
 }

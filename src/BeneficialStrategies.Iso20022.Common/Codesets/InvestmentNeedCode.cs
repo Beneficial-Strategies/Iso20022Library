@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_S9gOMDcdEeidBoT_PugKiA")]
 [Description(@"Specifies an investment need.")]
-[Derivations(typeof(InvestmentNeed1Code),typeof(InvestmentNeed2Code))]
+[Derivations(typeof(InvestmentNeed1Code), typeof(InvestmentNeed2Code))]
 public enum InvestmentNeedCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum InvestmentNeedCode
     [IsoId("_gMLO8DcdEeidBoT_PugKiA")]
     [Description(@"No specific need.")]
     None,
-    
+
     /// <summary>
     /// Investment need is for green investment.
     /// Encoded/decoded by serializers as &quot;GRIN&quot;.
@@ -32,7 +32,7 @@ public enum InvestmentNeedCode
     [IsoId("_h2QLIDcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for green investment.")]
     GreenInvestment,
-    
+
     /// <summary>
     /// Investment need is for ethical investment.
     /// Encoded/decoded by serializers as &quot;ETHI&quot;.
@@ -41,7 +41,7 @@ public enum InvestmentNeedCode
     [IsoId("_oNAR0DcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for ethical investment.")]
     EthicalInvestment,
-    
+
     /// <summary>
     /// Investment need is for Islamic banking.
     /// Encoded/decoded by serializers as &quot;ISLB&quot;.
@@ -50,7 +50,7 @@ public enum InvestmentNeedCode
     [IsoId("_t5M_oDcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for Islamic banking.")]
     IslamicBanking,
-    
+
     /// <summary>
     /// Investment need is for environmental social corporate governance.
     /// Encoded/decoded by serializers as &quot;ESGO&quot;.
@@ -59,7 +59,7 @@ public enum InvestmentNeedCode
     [IsoId("_xXxYQDcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for environmental social corporate governance.|")]
     EnvironmentalSocialCorporateGovernance,
-    
+
     /// <summary>
     /// Other specific need.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,7 +68,7 @@ public enum InvestmentNeedCode
     [IsoId("_3zbNEDcdEeidBoT_PugKiA")]
     [Description(@"Other specific need.")]
     Other,
-    
+
     /// <summary>
     /// Specific investment need.
     /// Encoded/decoded by serializers as &quot;YSPE&quot;.
@@ -77,5 +77,4 @@ public enum InvestmentNeedCode
     [IsoId("_CY4s4Ol4Eei6w4V2u1HOBw")]
     [Description(@"Specific investment need.")]
     SpecificNeed,
-    
 }

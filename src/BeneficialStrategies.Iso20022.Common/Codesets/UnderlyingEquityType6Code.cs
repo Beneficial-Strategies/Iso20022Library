@@ -23,7 +23,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_kVvNUYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a basket.")]
     Basket = UnderlyingTypeV3Code.Basket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a dividend index.
     /// Encoded/decoded by serializers as &quot;DIVI&quot;.
@@ -32,7 +32,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_khfKUYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a dividend index.")]
     DividendIndex = UnderlyingTypeV3Code.DividendIndex, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is an exchange traded fund.
     /// Encoded/decoded by serializers as &quot;ETFS&quot;.
@@ -41,7 +41,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_k8RB0YHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is an exchange traded fund.")]
     ExchangeTradedFund = UnderlyingTypeV3Code.ExchangeTradedFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,7 +50,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_lhw7kYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is of other type.")]
     Other = UnderlyingTypeV3Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a share.
     /// Encoded/decoded by serializers as &quot;SHRS&quot;.
@@ -59,7 +59,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_l3es4YHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a share.")]
     Share = UnderlyingTypeV3Code.Share, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a stock dividend.
     /// Encoded/decoded by serializers as &quot;DVSE&quot;.
@@ -68,7 +68,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_mUMeEYHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a stock dividend.")]
     StockDividend = UnderlyingTypeV3Code.StockDividend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a stock index.
     /// Encoded/decoded by serializers as &quot;STIX&quot;.
@@ -77,7 +77,7 @@ public enum UnderlyingEquityType6Code
     [IsoId("_mnPV4YHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a stock index.")]
     StockIndex = UnderlyingTypeV3Code.StockIndex, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a volatility index.
     /// Encoded/decoded by serializers as &quot;VOLI&quot;.
@@ -86,5 +86,4 @@ public enum UnderlyingEquityType6Code
     [IsoId("_mysX8YHCEeaalK9UbuVGFw")]
     [Description(@"Underlying is a volatility index.")]
     VolatilityIndex = UnderlyingTypeV3Code.VolatilityIndex, // same ordinal as derivation source for type conversions
-    
 }

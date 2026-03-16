@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities2Choice
     /// </summary>
     [IsoId("_tqS1MVkyEeGeoaLUQk__nA_2026377494")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : TransactionQuantities2Choice_
+    public record Proprietary : TransactionQuantities2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identifies the type of proprietary quantity reported.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities2Choice
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Type { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Type { get; init; }
+
         /// <summary>
         /// Provides the proprietary quantity in free format.
         /// </summary>
@@ -34,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.TransactionQuantities2Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Quantity { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Quantity { get; init; }
     }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AssetClassCommodityPolypropylene4Choice.Plastic))]
     [KnownType(typeof(AssetClassCommodityPolypropylene4Choice.Other))]
-    [JsonDerivedType(typeof(AssetClassCommodityPolypropylene4Choice.Plastic),nameof(AssetClassCommodityPolypropylene4Choice.Plastic))]
-    [JsonDerivedType(typeof(AssetClassCommodityPolypropylene4Choice.Other),nameof(AssetClassCommodityPolypropylene4Choice.Other))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPolypropylene4Choice.Plastic),
+        nameof(AssetClassCommodityPolypropylene4Choice.Plastic)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityPolypropylene4Choice.Other),
+        nameof(AssetClassCommodityPolypropylene4Choice.Other)
+    )]
     [IsoId("_yRdvERZZEe2QNcZTDeoKnQ")]
     [DisplayName("Asset Class Commodity Polypropylene 4 Choice")]
-    public abstract partial record AssetClassCommodityPolypropylene4Choice_
-    {
-    }
+    public abstract record AssetClassCommodityPolypropylene4Choice_ { }
 }

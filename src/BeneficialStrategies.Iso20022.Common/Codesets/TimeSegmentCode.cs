@@ -23,7 +23,7 @@ public enum TimeSegmentCode
     [IsoId("_ZeDJgF1lEeeu75xdwwAXQw")]
     [Description(@"Ante meridiem or before noon time period.")]
     AM,
-    
+
     /// <summary>
     /// Post meridiem or after noon time period.
     /// Encoded/decoded by serializers as &quot;PMAN&quot;.
@@ -32,5 +32,4 @@ public enum TimeSegmentCode
     [IsoId("_q_p_EF1lEeeu75xdwwAXQw")]
     [Description(@"Post meridiem or after noon time period.")]
     PM,
-    
 }

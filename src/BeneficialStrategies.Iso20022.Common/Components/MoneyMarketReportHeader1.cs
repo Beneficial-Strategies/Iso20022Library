@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_MVvycJfiEeSfnc-VXAEapg")]
 [DisplayName("Money Market Report Header")]
-public partial record MoneyMarketReportHeader1
+public record MoneyMarketReportHeader1
 {
-    #nullable enable
-    
     /// <summary>
     /// Agent which is subject to reporting requirements.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record MoneyMarketReportHeader1
     [DisplayName("Reporting Agent")]
     [IsoXmlTag("RptgAgt")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier ReportingAgent { get; init; } 
-    
+    public required IsoLEIIdentifier ReportingAgent { get; init; }
+
     /// <summary>
     /// Beginning and ending date-time to which the transaction data refers (trade date in case of new transactions and date of amendment in case of revisions).
     /// </summary>
     [IsoId("_WRwIkZfiEeSfnc-VXAEapg")]
     [DisplayName("Reference Period")]
     [IsoXmlTag("RefPrd")]
-    public required DateTimePeriod1 ReferencePeriod { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required DateTimePeriod1 ReferencePeriod { get; init; }
 }

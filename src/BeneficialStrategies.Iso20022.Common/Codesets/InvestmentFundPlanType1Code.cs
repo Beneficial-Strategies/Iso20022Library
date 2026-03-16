@@ -23,7 +23,7 @@ public enum InvestmentFundPlanType1Code
     [IsoId("_ORZ8sV9EEeicg40_9gK9vQ")]
     [Description(@"Savings investment plan.")]
     SavingsInvestmentPlan = InvestmentFundPlanTypeCode.SavingsInvestmentPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Switch plan.
     /// Encoded/decoded by serializers as &quot;SWIP&quot;.
@@ -32,7 +32,7 @@ public enum InvestmentFundPlanType1Code
     [IsoId("_OW2dYV9EEeicg40_9gK9vQ")]
     [Description(@"Switch plan.")]
     SwitchPlan = InvestmentFundPlanTypeCode.SwitchPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Withdrawal plan.
     /// Encoded/decoded by serializers as &quot;WTHP&quot;.
@@ -41,5 +41,4 @@ public enum InvestmentFundPlanType1Code
     [IsoId("_Oc3l0V9EEeicg40_9gK9vQ")]
     [Description(@"Withdrawal plan.")]
     WithdrawalPlan = InvestmentFundPlanTypeCode.WithdrawalPlan, // same ordinal as derivation source for type conversions
-    
 }

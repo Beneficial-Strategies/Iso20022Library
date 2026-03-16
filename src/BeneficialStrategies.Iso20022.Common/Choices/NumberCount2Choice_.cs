@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NumberCount2Choice.CurrentInstructionNumber))]
     [KnownType(typeof(NumberCount2Choice.TotalNumber))]
-    [JsonDerivedType(typeof(NumberCount2Choice.CurrentInstructionNumber),nameof(NumberCount2Choice.CurrentInstructionNumber))]
-    [JsonDerivedType(typeof(NumberCount2Choice.TotalNumber),nameof(NumberCount2Choice.TotalNumber))]
+    [JsonDerivedType(
+        typeof(NumberCount2Choice.CurrentInstructionNumber),
+        nameof(NumberCount2Choice.CurrentInstructionNumber)
+    )]
+    [JsonDerivedType(
+        typeof(NumberCount2Choice.TotalNumber),
+        nameof(NumberCount2Choice.TotalNumber)
+    )]
     [IsoId("_JBmOYSgdEey2k_sfZmJz4g")]
     [DisplayName("Number Count 2 Choice")]
-    public abstract partial record NumberCount2Choice_
-    {
-    }
+    public abstract record NumberCount2Choice_ { }
 }

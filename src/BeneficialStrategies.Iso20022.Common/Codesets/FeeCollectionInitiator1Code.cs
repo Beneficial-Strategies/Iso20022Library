@@ -23,16 +23,18 @@ public enum FeeCollectionInitiator1Code
     [IsoId("_Qd1jQSxLEeyg-aG5nXcnfg")]
     [Description(@"Entity acquiring card transaction.")]
     Acquirer = FeeCollectionInitiatorCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
     /// </summary>
     [EnumMember(Value = "AGNT")]
     [IsoId("_Qih2ASxLEeyg-aG5nXcnfg")]
-    [Description(@"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer")]
+    [Description(
+        @"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer"
+    )]
     Agent = FeeCollectionInitiatorCode.Agent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity issuing card.
     /// Encoded/decoded by serializers as &quot;CISS&quot;.
@@ -41,7 +43,7 @@ public enum FeeCollectionInitiator1Code
     [IsoId("_QnBUcSxLEeyg-aG5nXcnfg")]
     [Description(@"Entity issuing card.")]
     CardIssuer = FeeCollectionInitiatorCode.CardIssuer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other entity initiates fee collection defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +52,7 @@ public enum FeeCollectionInitiator1Code
     [IsoId("_Qs3dwSxLEeyg-aG5nXcnfg")]
     [Description(@"Other entity initiates fee collection defined at national level.")]
     OtherNational = FeeCollectionInitiatorCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other entity initiates fee collection defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +61,4 @@ public enum FeeCollectionInitiator1Code
     [IsoId("_Qw30ASxLEeyg-aG5nXcnfg")]
     [Description(@"Other entity initiates fee collection defined at private level.")]
     OtherPrivate = FeeCollectionInitiatorCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

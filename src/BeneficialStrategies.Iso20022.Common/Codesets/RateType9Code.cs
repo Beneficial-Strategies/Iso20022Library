@@ -23,5 +23,4 @@ public enum RateType9Code
     [IsoId("_ZZvUlNp-Ed-ak6NoX_4Aeg_-1126354403")]
     [Description(@"Any and all rate is sought.")]
     AnyAndAll = RateTypeCode.AnyAndAll, // same ordinal as derivation source for type conversions
-    
 }

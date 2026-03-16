@@ -23,7 +23,7 @@ public enum ProvidedCode
     [IsoId("_EOnjEBKFEeKj15WxqwlXPw")]
     [Description(@"Provided.")]
     Provided,
-    
+
     /// <summary>
     /// Not provided.
     /// Encoded/decoded by serializers as &quot;NPRO&quot;.
@@ -32,5 +32,4 @@ public enum ProvidedCode
     [IsoId("_EiSF8BKFEeKj15WxqwlXPw")]
     [Description(@"Not provided.")]
     NotProvided,
-    
 }

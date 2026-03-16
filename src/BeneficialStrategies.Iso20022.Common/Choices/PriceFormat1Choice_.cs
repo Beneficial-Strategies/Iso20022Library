@@ -14,14 +14,21 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat1Choice.AmountPricePerFinancialInstrumentQuantity))]
     [KnownType(typeof(PriceFormat1Choice.AmountPricePerAmount))]
     [KnownType(typeof(PriceFormat1Choice.NotSpecified))]
-    [JsonDerivedType(typeof(PriceFormat1Choice.Amount),nameof(PriceFormat1Choice.Amount))]
-    [JsonDerivedType(typeof(PriceFormat1Choice.Rate),nameof(PriceFormat1Choice.Rate))]
-    [JsonDerivedType(typeof(PriceFormat1Choice.AmountPricePerFinancialInstrumentQuantity),nameof(PriceFormat1Choice.AmountPricePerFinancialInstrumentQuantity))]
-    [JsonDerivedType(typeof(PriceFormat1Choice.AmountPricePerAmount),nameof(PriceFormat1Choice.AmountPricePerAmount))]
-    [JsonDerivedType(typeof(PriceFormat1Choice.NotSpecified),nameof(PriceFormat1Choice.NotSpecified))]
+    [JsonDerivedType(typeof(PriceFormat1Choice.Amount), nameof(PriceFormat1Choice.Amount))]
+    [JsonDerivedType(typeof(PriceFormat1Choice.Rate), nameof(PriceFormat1Choice.Rate))]
+    [JsonDerivedType(
+        typeof(PriceFormat1Choice.AmountPricePerFinancialInstrumentQuantity),
+        nameof(PriceFormat1Choice.AmountPricePerFinancialInstrumentQuantity)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat1Choice.AmountPricePerAmount),
+        nameof(PriceFormat1Choice.AmountPricePerAmount)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat1Choice.NotSpecified),
+        nameof(PriceFormat1Choice.NotSpecified)
+    )]
     [IsoId("_QatkFdp-Ed-ak6NoX_4Aeg_-958538176")]
     [DisplayName("Price Format 1 Choice")]
-    public abstract partial record PriceFormat1Choice_
-    {
-    }
+    public abstract record PriceFormat1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RJy3pdp-Ed-ak6NoX_4Aeg_2106998089")]
 [DisplayName("Rejected Element")]
-public partial record RejectedElement1
+public record RejectedElement1
 {
-    #nullable enable
-    
     /// <summary>
     /// Sequence number that allows to easily identify the element that is rejected.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record RejectedElement1
     [DisplayName("Element Sequence Number")]
     [IsoXmlTag("ElmtSeqNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ElementSequenceNumber { get; init; } 
-    
+    public required IsoNumber ElementSequenceNumber { get; init; }
+
     /// <summary>
     /// Reason for rejecting an individual element.
     /// </summary>
@@ -34,10 +32,6 @@ public partial record RejectedElement1
     [DisplayName("Individual Rejection Reason")]
     [IsoXmlTag("IndvRjctnRsn")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text IndividualRejectionReason { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text IndividualRejectionReason { get; init; }
 }

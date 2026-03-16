@@ -23,5 +23,4 @@ public enum AcknowledgementReason8Code
     [IsoId("__j-uESz2EeOsiuMH68so7Q")]
     [Description(@"See narrative field for reason.")]
     NarrativeReason = AcknowledgementReasonCode.NarrativeReason, // same ordinal as derivation source for type conversions
-    
 }

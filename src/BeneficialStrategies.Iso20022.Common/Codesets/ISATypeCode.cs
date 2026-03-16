@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_adi6-Np-Ed-ak6NoX_4Aeg_277587694")]
 [Description(@"Specifies the type of the current year ISA.")]
-[Derivations(typeof(ISAType1Code),typeof(ISAType2Code))]
+[Derivations(typeof(ISAType1Code), typeof(ISAType2Code))]
 public enum ISATypeCode
 {
     /// <summary>
@@ -23,16 +23,18 @@ public enum ISATypeCode
     [IsoId("_adsE4Np-Ed-ak6NoX_4Aeg_391181286")]
     [Description(@"Type of ISA that offers a stocks and shares component only (no cash).")]
     MiniEquity,
-    
+
     /// <summary>
     /// Type of ISA that must offer a stocks and shares component and, optionally, a cash component.
     /// Encoded/decoded by serializers as &quot;MAXI&quot;.
     /// </summary>
     [EnumMember(Value = "MAXI")]
     [IsoId("_adsE4dp-Ed-ak6NoX_4Aeg_421659448")]
-    [Description(@"Type of ISA that must offer a stocks and shares component and, optionally, a cash component.")]
+    [Description(
+        @"Type of ISA that must offer a stocks and shares component and, optionally, a cash component."
+    )]
     Maxi,
-    
+
     /// <summary>
     /// Type of ISA that offers a cash component only (no stock).
     /// Encoded/decoded by serializers as &quot;MINC&quot;.
@@ -41,7 +43,7 @@ public enum ISATypeCode
     [IsoId("_adsE4tp-Ed-ak6NoX_4Aeg_1575662850")]
     [Description(@"Type of ISA that offers a cash component only (no stock).")]
     MiniCash,
-    
+
     /// <summary>
     /// Any ISA.
     /// Encoded/decoded by serializers as &quot;ANYI&quot;.
@@ -50,5 +52,4 @@ public enum ISATypeCode
     [IsoId("_adsE49p-Ed-ak6NoX_4Aeg_749358612")]
     [Description(@"Any ISA.")]
     Any,
-    
 }

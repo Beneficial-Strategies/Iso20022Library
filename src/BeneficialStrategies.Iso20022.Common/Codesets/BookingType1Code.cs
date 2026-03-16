@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bU1IRdp-Ed-ak6NoX_4Aeg_909907363")]
-[Description(@"Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an Over The Counter derivative (for example, Contract For Difference - CFD or similar).")]
+[Description(
+    @"Method for booking out an order. Used when notifying a broker that an order to be settled by that broker is to be booked out as an Over The Counter derivative (for example, Contract For Difference - CFD or similar)."
+)]
 [DerivedFrom(typeof(BookingTypeCode))]
 public enum BookingType1Code
 {
@@ -23,7 +25,7 @@ public enum BookingType1Code
     [IsoId("_bU1IRtp-Ed-ak6NoX_4Aeg_-626502093")]
     [Description(@"Booking type is regular.")]
     Regular = BookingTypeCode.Regular, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order is to be booked out as a CFD.
     /// Encoded/decoded by serializers as &quot;CFOD&quot;.
@@ -32,7 +34,7 @@ public enum BookingType1Code
     [IsoId("_bU-SMNp-Ed-ak6NoX_4Aeg_-626502041")]
     [Description(@"Order is to be booked out as a CFD.")]
     ContractForDifference = BookingTypeCode.ContractForDifference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order is to be booked out as an OTC derivative (for example, Swap).
     /// Encoded/decoded by serializers as &quot;TRSW&quot;.
@@ -41,5 +43,4 @@ public enum BookingType1Code
     [IsoId("_bU-SMdp-Ed-ak6NoX_4Aeg_-626501775")]
     [Description(@"Order is to be booked out as an OTC derivative (for example, Swap).")]
     TotalReturnSwap = BookingTypeCode.TotalReturnSwap, // same ordinal as derivation source for type conversions
-    
 }

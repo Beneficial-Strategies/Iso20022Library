@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zzErYdwrEeeKpa-yxjuKzQ")]
 [DisplayName("Amount And Direction")]
-public partial record AmountAndDirection93
+public record AmountAndDirection93
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount value.
     /// </summary>
     [IsoId("_z8Fdc9wrEeeKpa-yxjuKzQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Currency associated with the transaction.
     /// </summary>
     [IsoId("_96C7YNwrEeeKpa-yxjuKzQ")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public required ActiveCurrencyCode Currency { get; init; } 
-    
+    public required ActiveCurrencyCode Currency { get; init; }
+
     /// <summary>
     /// Indicates that the amount value is positive or negative.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record AmountAndDirection93
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? Sign { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPlusOrMinusIndicator? Sign { get; init; }
 }

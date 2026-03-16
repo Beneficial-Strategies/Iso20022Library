@@ -23,7 +23,7 @@ public enum PresentationMedium2Code
     [IsoId("_NnVqMX0kEemfrNOe0zHQyg")]
     [Description(@"Biometric medium.")]
     Biometric = PresentationMediumCode.Biometric, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Presentation is made electronically.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +32,7 @@ public enum PresentationMedium2Code
     [IsoId("_NnVqM30kEemfrNOe0zHQyg")]
     [Description(@"Presentation is made electronically.")]
     Electronic = PresentationMediumCode.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Presentation is made on paper.
     /// Encoded/decoded by serializers as &quot;PAPR&quot;.
@@ -41,7 +41,7 @@ public enum PresentationMedium2Code
     [IsoId("_NnVqNX0kEemfrNOe0zHQyg")]
     [Description(@"Presentation is made on paper.")]
     Paper = PresentationMediumCode.Paper, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Presentation is made on paper and/or electronically.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -50,5 +50,4 @@ public enum PresentationMedium2Code
     [IsoId("_NnVqN30kEemfrNOe0zHQyg")]
     [Description(@"Presentation is made on paper and/or electronically.")]
     PaperElectronic = PresentationMediumCode.PaperElectronic, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LocalInstrument2Choice.Code))]
     [KnownType(typeof(LocalInstrument2Choice.Proprietary))]
-    [JsonDerivedType(typeof(LocalInstrument2Choice.Code),nameof(LocalInstrument2Choice.Code))]
-    [JsonDerivedType(typeof(LocalInstrument2Choice.Proprietary),nameof(LocalInstrument2Choice.Proprietary))]
+    [JsonDerivedType(typeof(LocalInstrument2Choice.Code), nameof(LocalInstrument2Choice.Code))]
+    [JsonDerivedType(
+        typeof(LocalInstrument2Choice.Proprietary),
+        nameof(LocalInstrument2Choice.Proprietary)
+    )]
     [IsoId("_TF7NItp-Ed-ak6NoX_4Aeg_365018897")]
     [DisplayName("Local Instrument 2 Choice")]
-    public abstract partial record LocalInstrument2Choice_
-    {
-    }
+    public abstract record LocalInstrument2Choice_ { }
 }

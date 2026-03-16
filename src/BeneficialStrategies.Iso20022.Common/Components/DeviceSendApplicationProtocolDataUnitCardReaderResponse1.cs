@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_W5rM4N6iEeiwsev40qZGEQ")]
 [DisplayName("Device Send Application Protocol Data Unit Card Reader Response")]
-public partial record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
+public record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
 {
-    #nullable enable
-    
     /// <summary>
     /// Class field of the Application Protocol Data Unit command (CLA).
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
     [DisplayName("Data")]
     [IsoXmlTag("Data")]
     [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
-    public IsoMin1Max256Binary? Data { get; init; } 
-    
+    public IsoMin1Max256Binary? Data { get; init; }
+
     /// <summary>
     /// Status of a smartcard response to a command (SW1-SW2). Reference: ISO 7816-4.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record DeviceSendApplicationProtocolDataUnitCardReaderResponse1
     [DisplayName("Card Status")]
     [IsoXmlTag("CardSts")]
     [IsoSimpleType(IsoSimpleType.Min1Max256Binary)]
-    public required IsoMin1Max256Binary CardStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMin1Max256Binary CardStatus { get; init; }
 }

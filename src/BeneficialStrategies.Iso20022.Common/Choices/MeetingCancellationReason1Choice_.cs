@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MeetingCancellationReason1Choice.Code))]
     [KnownType(typeof(MeetingCancellationReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(MeetingCancellationReason1Choice.Code),nameof(MeetingCancellationReason1Choice.Code))]
-    [JsonDerivedType(typeof(MeetingCancellationReason1Choice.Proprietary),nameof(MeetingCancellationReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(MeetingCancellationReason1Choice.Code),
+        nameof(MeetingCancellationReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(MeetingCancellationReason1Choice.Proprietary),
+        nameof(MeetingCancellationReason1Choice.Proprietary)
+    )]
     [IsoId("_RCWL0dp-Ed-ak6NoX_4Aeg_1417276542")]
     [DisplayName("Meeting Cancellation Reason 1 Choice")]
-    public abstract partial record MeetingCancellationReason1Choice_
-    {
-    }
+    public abstract record MeetingCancellationReason1Choice_ { }
 }

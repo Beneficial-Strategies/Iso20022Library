@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References19Choice.PoolIdentification))]
     [KnownType(typeof(References19Choice.MarketInfrastructureTransactionIdentification))]
     [KnownType(typeof(References19Choice.ProcessorTransactionIdentification))]
-    [JsonDerivedType(typeof(References19Choice.AccountOwnerTransactionIdentification),nameof(References19Choice.AccountOwnerTransactionIdentification))]
-    [JsonDerivedType(typeof(References19Choice.AccountServicerTransactionIdentification),nameof(References19Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References19Choice.PoolIdentification),nameof(References19Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References19Choice.MarketInfrastructureTransactionIdentification),nameof(References19Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References19Choice.ProcessorTransactionIdentification),nameof(References19Choice.ProcessorTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References19Choice.AccountOwnerTransactionIdentification),
+        nameof(References19Choice.AccountOwnerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References19Choice.AccountServicerTransactionIdentification),
+        nameof(References19Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References19Choice.PoolIdentification),
+        nameof(References19Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References19Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References19Choice.MarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References19Choice.ProcessorTransactionIdentification),
+        nameof(References19Choice.ProcessorTransactionIdentification)
+    )]
     [IsoId("_w7exzUADEeC4mKrqv7wPJQ")]
     [DisplayName("References 19 Choice")]
-    public abstract partial record References19Choice_
-    {
-    }
+    public abstract record References19Choice_ { }
 }

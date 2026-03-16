@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TPwek9p-Ed-ak6NoX_4Aeg_1694475325")]
 [DisplayName("Cancellation Status Reason Information")]
-public partial record CancellationStatusReasonInformation1
+public record CancellationStatusReasonInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that issues the cancellation status.
     /// </summary>
     [IsoId("_TPwelNp-Ed-ak6NoX_4Aeg_1694475696")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification32? Originator { get; init; } 
-    
+    public PartyIdentification32? Originator { get; init; }
+
     /// <summary>
     /// Specifies the reason for the status report.
     /// </summary>
     [IsoId("_TPweldp-Ed-ak6NoX_4Aeg_1694475418")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public CancellationStatusReason1Choice_? Reason { get; init; } 
-    
+    public CancellationStatusReason1Choice_? Reason { get; init; }
+
     /// <summary>
     /// Further details on the cancellation status reason.
     /// </summary>
@@ -41,10 +39,6 @@ public partial record CancellationStatusReasonInformation1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? AdditionalInformation { get; init; }
 }

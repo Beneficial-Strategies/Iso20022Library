@@ -30,7 +30,9 @@ public enum DataSetCategory19Code
     /// </summary>
     [EnumMember(Value = "APPR")]
     [IsoId("_DataSetCategory19Code_ApplicationParameters")]
-    [Description(@"Payment application specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Payment application specific configuration parameters for the point of interaction (POI) system."
+    )]
     ApplicationParameters = DataSetCategoryCode.ApplicationParameters,
 
     /// <summary>
@@ -138,7 +140,9 @@ public enum DataSetCategory19Code
     /// </summary>
     [EnumMember(Value = "SPRP")]
     [IsoId("_DataSetCategory19Code_ServiceProviderParameters")]
-    [Description(@"Service Provider specific parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Service Provider specific parameters for the point of interaction (POI) system."
+    )]
     ServiceProviderParameters = DataSetCategoryCode.ServiceProviderParameters,
 
     /// <summary>
@@ -174,7 +178,8 @@ public enum DataSetCategory19Code
     /// </summary>
     [EnumMember(Value = "TRPR")]
     [IsoId("_DataSetCategory19Code_TerminalParameters")]
-    [Description(@"Point of interaction parameters attached to the terminal as serial number or physical capabilities.")]
+    [Description(
+        @"Point of interaction parameters attached to the terminal as serial number or physical capabilities."
+    )]
     TerminalParameters = DataSetCategoryCode.TerminalParameters,
-
 }

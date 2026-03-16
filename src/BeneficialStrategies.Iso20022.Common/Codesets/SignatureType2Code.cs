@@ -21,9 +21,11 @@ public enum SignatureType2Code
     /// </summary>
     [EnumMember(Value = "DIGI")]
     [IsoId("_r15dAV-dEeavlvCtut5bgg")]
-    [Description(@"Technical signature that includes algorithms and private key and public key information. Used to sign and verify the contents of a message.")]
+    [Description(
+        @"Technical signature that includes algorithms and private key and public key information. Used to sign and verify the contents of a message."
+    )]
     Digital = SignatureTypeV2Code.Digital, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Copy of a physical or original signature in an electronic format.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -32,7 +34,7 @@ public enum SignatureType2Code
     [IsoId("_sBDkIV-dEeavlvCtut5bgg")]
     [Description(@"Copy of a physical or original signature in an electronic format.")]
     Electronic = SignatureTypeV2Code.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No signature.
     /// Encoded/decoded by serializers as &quot;NONE&quot;.
@@ -41,7 +43,7 @@ public enum SignatureType2Code
     [IsoId("_sEVhoV-dEeavlvCtut5bgg")]
     [Description(@"No signature.")]
     None = SignatureTypeV2Code.None, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Written signature. May also be known as a physical or wet signature.
     /// Encoded/decoded by serializers as &quot;ORIG&quot;.
@@ -50,5 +52,4 @@ public enum SignatureType2Code
     [IsoId("_sJGF0V-dEeavlvCtut5bgg")]
     [Description(@"Written signature. May also be known as a physical or wet signature.")]
     Original = SignatureTypeV2Code.Original, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum EmbeddedType1Code
     [IsoId("_LgjXkYcQEeu4rpsqTt37Pg")]
     [Description(@"Option can be cancelled.")]
     Cancellable = EmbeddedTypeCode.Cancellable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option can be extended.
     /// Encoded/decoded by serializers as &quot;EXTD&quot;.
@@ -32,7 +32,7 @@ public enum EmbeddedType1Code
     [IsoId("_Ll808YcQEeu4rpsqTt37Pg")]
     [Description(@"Option can be extended.")]
     Extendible = EmbeddedTypeCode.Extendible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option can be early terminated.
     /// Encoded/decoded by serializers as &quot;OPET&quot;.
@@ -41,7 +41,7 @@ public enum EmbeddedType1Code
     [IsoId("_LzfhsYcQEeu4rpsqTt37Pg")]
     [Description(@"Option can be early terminated.")]
     OptionalEarlyTermination = EmbeddedTypeCode.OptionalEarlyTermination, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option type is other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,7 +50,7 @@ public enum EmbeddedType1Code
     [IsoId("_L5WSEYcQEeu4rpsqTt37Pg")]
     [Description(@"Option type is other.")]
     Other = EmbeddedTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option must be early terminated.
     /// Encoded/decoded by serializers as &quot;MDET&quot;.
@@ -59,5 +59,4 @@ public enum EmbeddedType1Code
     [IsoId("_r1K6MZibEeyBPr8ozNGJLg")]
     [Description(@"Option must be early terminated.")]
     MandatoryEarlyTermination = EmbeddedTypeCode.MandatoryEarlyTermination, // same ordinal as derivation source for type conversions
-    
 }

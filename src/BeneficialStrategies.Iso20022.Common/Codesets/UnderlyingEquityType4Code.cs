@@ -23,7 +23,7 @@ public enum UnderlyingEquityType4Code
     [IsoId("_u5AjUWlOEeaLAKoEUNsD9g")]
     [Description(@"Underlying is a stock index.")]
     StockIndex = UnderlyingTypeV2Code.StockIndex, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a dividend index.
     /// Encoded/decoded by serializers as &quot;DIVI&quot;.
@@ -32,7 +32,7 @@ public enum UnderlyingEquityType4Code
     [IsoId("_vggBIWlOEeaLAKoEUNsD9g")]
     [Description(@"Underlying is a dividend index.")]
     DividendIndex = UnderlyingTypeV2Code.DividendIndex, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +41,7 @@ public enum UnderlyingEquityType4Code
     [IsoId("_v6xiUWlOEeaLAKoEUNsD9g")]
     [Description(@"Underlying is of other type.")]
     Other = UnderlyingTypeV2Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Underlying is a volatility index.
     /// Encoded/decoded by serializers as &quot;VOLI&quot;.
@@ -50,5 +50,4 @@ public enum UnderlyingEquityType4Code
     [IsoId("_wUg4AWlOEeaLAKoEUNsD9g")]
     [Description(@"Underlying is a volatility index.")]
     VolatilityIndex = UnderlyingTypeV2Code.VolatilityIndex, // same ordinal as derivation source for type conversions
-    
 }

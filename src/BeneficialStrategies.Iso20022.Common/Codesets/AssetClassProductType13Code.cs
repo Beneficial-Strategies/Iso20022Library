@@ -23,5 +23,4 @@ public enum AssetClassProductType13Code
     [IsoId("_XyXFgVrLEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type multi commodity exotic.")]
     MultiCommodityExotic = AssetClassProductTypeCode.MultiCommodityExotic, // same ordinal as derivation source for type conversions
-    
 }

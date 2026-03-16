@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vIQrUXh2EeStacoNRHtESA")]
 [DisplayName("Process Timing")]
-public partial record ProcessTiming4
+public record ProcessTiming4
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and time to start the action.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ProcessTiming4
     [DisplayName("Start Time")]
     [IsoXmlTag("StartTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? StartTime { get; init; } 
-    
+    public IsoISODateTime? StartTime { get; init; }
+
     /// <summary>
     /// Date and time after which the action cannot be processed.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record ProcessTiming4
     [DisplayName("End Time")]
     [IsoXmlTag("EndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? EndTime { get; init; } 
-    
+    public IsoISODateTime? EndTime { get; init; }
+
     /// <summary>
     /// Period delay between cyclic action activation in months, days, hours and minutes, leading zeros could be omitted.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record ProcessTiming4
     [DisplayName("Period")]
     [IsoXmlTag("Prd")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? Period { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax9NumericText? Period { get; init; }
 }

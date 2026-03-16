@@ -23,7 +23,7 @@ public enum InformationType1Code
     [IsoId("_aWsFANp-Ed-ak6NoX_4Aeg_1720047685")]
     [Description(@"Instructions used to ease automatic request processing.")]
     ProcessingInstructions = InformationTypeCode.ProcessingInstructions, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instructions used to ease automatic request relay.
     /// Encoded/decoded by serializers as &quot;RELY&quot;.
@@ -32,5 +32,4 @@ public enum InformationType1Code
     [IsoId("_aWsFAdp-Ed-ak6NoX_4Aeg_1720047911")]
     [Description(@"Instructions used to ease automatic request relay.")]
     RelayInstructions = InformationTypeCode.RelayInstructions, // same ordinal as derivation source for type conversions
-    
 }

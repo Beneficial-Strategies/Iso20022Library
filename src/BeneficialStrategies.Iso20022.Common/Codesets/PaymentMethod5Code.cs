@@ -23,5 +23,4 @@ public enum PaymentMethod5Code
     [IsoId("_Vr6_Bdp-Ed-ak6NoX_4Aeg_869407428")]
     [Description(@"Transfer of an amount of money in the books of the account servicer.")]
     CreditTransfer = PaymentMethodCode.CreditTransfer, // same ordinal as derivation source for type conversions
-    
 }

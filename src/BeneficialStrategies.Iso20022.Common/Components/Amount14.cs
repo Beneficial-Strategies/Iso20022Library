@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZCN_0ERQEeeb1MmUPTrSMw")]
 [DisplayName("Amount")]
-public partial record Amount14
+public record Amount14
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount value.
     /// </summary>
     [IsoId("_s1sKUERQEeeb1MmUPTrSMw")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ImpliedCurrencyAndAmount Amount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Currency code associated with the applicable type of amount.  ISO 4217 &quot;Codes for the representation of currencies and funds&quot;.
     /// </summary>
     [IsoId("_0UL8MERQEeeb1MmUPTrSMw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ISO3NumericCurrencyCode? Currency { get; init; } 
-    
+    public ISO3NumericCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Sign of the amount.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record Amount14
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? Sign { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPlusOrMinusIndicator? Sign { get; init; }
 }

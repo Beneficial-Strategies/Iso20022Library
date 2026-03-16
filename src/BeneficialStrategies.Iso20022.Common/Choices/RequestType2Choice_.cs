@@ -12,12 +12,16 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RequestType2Choice.PaymentControl))]
     [KnownType(typeof(RequestType2Choice.Enquiry))]
     [KnownType(typeof(RequestType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(RequestType2Choice.PaymentControl),nameof(RequestType2Choice.PaymentControl))]
-    [JsonDerivedType(typeof(RequestType2Choice.Enquiry),nameof(RequestType2Choice.Enquiry))]
-    [JsonDerivedType(typeof(RequestType2Choice.Proprietary),nameof(RequestType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(RequestType2Choice.PaymentControl),
+        nameof(RequestType2Choice.PaymentControl)
+    )]
+    [JsonDerivedType(typeof(RequestType2Choice.Enquiry), nameof(RequestType2Choice.Enquiry))]
+    [JsonDerivedType(
+        typeof(RequestType2Choice.Proprietary),
+        nameof(RequestType2Choice.Proprietary)
+    )]
     [IsoId("_76G8cqMgEeCJ6YNENx4h-w_-156360077")]
     [DisplayName("Request Type 2 Choice")]
-    public abstract partial record RequestType2Choice_
-    {
-    }
+    public abstract record RequestType2Choice_ { }
 }

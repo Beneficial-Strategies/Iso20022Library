@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7r9TsJTSEemC09f0MxYkRg")]
 [DisplayName("GDPR Data")]
-public partial record GDPRData1
+public record GDPRData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of consent.
     /// </summary>
     [IsoId("_BaPFIJTTEemC09f0MxYkRg")]
     [DisplayName("Consent Type")]
     [IsoXmlTag("CnsntTp")]
-    public required GDPRDataConsent1Choice_ ConsentType { get; init; } 
-    
+    public required GDPRDataConsent1Choice_ ConsentType { get; init; }
+
     /// <summary>
     /// Indicates whether consent has been given.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record GDPRData1
     [DisplayName("Consent Indicator")]
     [IsoXmlTag("CnsntInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ConsentIndicator { get; init; } 
-    
+    public required IsoYesNoIndicator ConsentIndicator { get; init; }
+
     /// <summary>
     /// Date of the consent.
     /// </summary>
@@ -42,9 +40,5 @@ public partial record GDPRData1
     [DisplayName("Consent Date")]
     [IsoXmlTag("CnsntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate ConsentDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODate ConsentDate { get; init; }
 }

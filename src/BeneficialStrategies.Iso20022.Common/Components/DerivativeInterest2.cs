@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_pMapccnYEeWpf-ImB_F2gQ")]
 [DisplayName("Derivative Interest")]
-public partial record DerivativeInterest2
+public record DerivativeInterest2
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency in which leg 2 of the contract is denominated, in case of multi-currency or cross-currency swaps.
     /// Currency in which leg 2 of the swap is denominated, in case of swaptions where the underlying swap is multi-currency.
@@ -25,9 +23,5 @@ public partial record DerivativeInterest2
     [IsoId("_pqvkNcnYEeWpf-ImB_F2gQ")]
     [DisplayName("Other Notional Currency")]
     [IsoXmlTag("OthrNtnlCcy")]
-    public required ActiveOrHistoricCurrencyCode OtherNotionalCurrency { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ActiveOrHistoricCurrencyCode OtherNotionalCurrency { get; init; }
 }

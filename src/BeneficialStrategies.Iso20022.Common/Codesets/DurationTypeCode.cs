@@ -23,7 +23,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlABVpEeWkV7eOBXXT7Q")]
     [Description(@"Duration is a year.")]
     Year,
-    
+
     /// <summary>
     /// Duration is a day.
     /// Encoded/decoded by serializers as &quot;DASD&quot;.
@@ -32,7 +32,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlBxVpEeWkV7eOBXXT7Q")]
     [Description(@"Duration is a day.")]
     Day,
-    
+
     /// <summary>
     /// Event takes place every month or once a month.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -41,7 +41,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlEBVpEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every month or once a month.")]
     Month,
-    
+
     /// <summary>
     /// Duration is a minute.
     /// Encoded/decoded by serializers as &quot;MNUT&quot;.
@@ -50,7 +50,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlFxVpEeWkV7eOBXXT7Q")]
     [Description(@"Duration is a minute.")]
     Minute,
-    
+
     /// <summary>
     /// Event takes place every three months or four times a year.
     /// Encoded/decoded by serializers as &quot;QURT&quot;.
@@ -59,7 +59,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlGBVpEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every three months or four times a year.")]
     Quarter,
-    
+
     /// <summary>
     /// Event takes place every six months or two times a year.
     /// Encoded/decoded by serializers as &quot;SEAS&quot;.
@@ -68,7 +68,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlHxVpEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every six months or two times a year.")]
     Season,
-    
+
     /// <summary>
     /// Event takes place every week.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -77,7 +77,7 @@ public enum DurationTypeCode
     [IsoId("_ZymlJRVpEeWkV7eOBXXT7Q")]
     [Description(@"Event takes place every week.")]
     Week,
-    
+
     /// <summary>
     /// Duration is an hour.
     /// Encoded/decoded by serializers as &quot;HOUR&quot;.
@@ -86,7 +86,7 @@ public enum DurationTypeCode
     [IsoId("_85z_UBVpEeWkV7eOBXXT7Q")]
     [Description(@"Duration is an hour.")]
     Hour,
-    
+
     /// <summary>
     /// Duration is expressed in another unit.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -95,5 +95,4 @@ public enum DurationTypeCode
     [IsoId("_c0MOgEDeEeWt96EosbOZ-w")]
     [Description(@"Duration is expressed in another unit.")]
     Other,
-    
 }

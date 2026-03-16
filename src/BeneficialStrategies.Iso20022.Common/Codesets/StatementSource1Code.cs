@@ -23,7 +23,7 @@ public enum StatementSource1Code
     [IsoId("_m5hTc_NBEeCuA5Tr22BnwA_770688282")]
     [Description(@"Accounting.")]
     Accounting = StatementSourceCode.Accounting, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Custody.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -32,5 +32,4 @@ public enum StatementSource1Code
     [IsoId("_m5hTdPNBEeCuA5Tr22BnwA_770688600")]
     [Description(@"Custody.")]
     Custody = StatementSourceCode.Custody, // same ordinal as derivation source for type conversions
-    
 }

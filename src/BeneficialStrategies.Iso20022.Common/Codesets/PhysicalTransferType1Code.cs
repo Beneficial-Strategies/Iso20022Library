@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_sXY0QPrqEeCJc7cZxzE2fg")]
-[Description(@"Specifies whether the financial instrument is to be physically delivered or is a dematerialised transfer.")]
+[Description(
+    @"Specifies whether the financial instrument is to be physically delivered or is a dematerialised transfer."
+)]
 [DerivedFrom(typeof(PhysicalTransferTypeCode))]
 public enum PhysicalTransferType1Code
 {
@@ -23,7 +25,7 @@ public enum PhysicalTransferType1Code
     [IsoId("_kzEcnv8vEeCuNd2SpsBr7g")]
     [Description(@"Dematerialised transfer.")]
     Dematerialised = PhysicalTransferTypeCode.Dematerialised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Physical transfer.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -32,5 +34,4 @@ public enum PhysicalTransferType1Code
     [IsoId("_k2gLHv8vEeCuNd2SpsBr7g")]
     [Description(@"Physical transfer.")]
     Physical = PhysicalTransferTypeCode.Physical, // same ordinal as derivation source for type conversions
-    
 }

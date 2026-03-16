@@ -23,7 +23,7 @@ public enum SecuritiesFinancingTransactionType1Code
     [IsoId("_ZFoFwtp-Ed-ak6NoX_4Aeg_-738371349")]
     [Description(@"Relates to a repurchase agreement transaction.")]
     Repo = SecuritiesTransactionTypeV2Code.Repo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a reverse repurchase agreement transaction.
     /// Encoded/decoded by serializers as &quot;RVPO&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesFinancingTransactionType1Code
     [IsoId("_ZFoFw9p-Ed-ak6NoX_4Aeg_-738371331")]
     [Description(@"Relates to a reverse repurchase agreement transaction.")]
     ReverseRepo = SecuritiesTransactionTypeV2Code.ReverseRepo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a securities borrowing operation.
     /// Encoded/decoded by serializers as &quot;SECB&quot;.
@@ -41,7 +41,7 @@ public enum SecuritiesFinancingTransactionType1Code
     [IsoId("_ZFoFxNp-Ed-ak6NoX_4Aeg_-738371296")]
     [Description(@"Relates to a securities borrowing operation.")]
     SecuritiesBorrowing = SecuritiesTransactionTypeV2Code.SecuritiesBorrowing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a securities lending operation.
     /// Encoded/decoded by serializers as &quot;SECL&quot;.
@@ -50,5 +50,4 @@ public enum SecuritiesFinancingTransactionType1Code
     [IsoId("_ZFoFxdp-Ed-ak6NoX_4Aeg_-738371271")]
     [Description(@"Relates to a securities lending operation.")]
     SecuritiesLending = SecuritiesTransactionTypeV2Code.SecuritiesLending, // same ordinal as derivation source for type conversions
-    
 }

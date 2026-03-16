@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice
     /// </summary>
     [IsoId("_0ZWmkefHEeKNfc-Rw_dPYg")]
     [DisplayName("Shipment Date Range")]
-    public partial record ShipmentDateRange : ShipmentSchedule2Choice_
+    public record ShipmentDateRange : ShipmentSchedule2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Earliest date whereby the goods must be shipped.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice
         [DisplayName("Earliest Shipment Date")]
         [IsoXmlTag("EarlstShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? EarliestShipmentDate { get; init; } 
-        
+        public IsoISODate? EarliestShipmentDate { get; init; }
+
         /// <summary>
         /// Latest date whereby the goods must be shipped.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule2Choice
         [DisplayName("Latest Shipment Date")]
         [IsoXmlTag("LatstShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? LatestShipmentDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? LatestShipmentDate { get; init; }
     }
 }

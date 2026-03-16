@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice
     /// </summary>
     [IsoId("_RCWL1tp-Ed-ak6NoX_4Aeg_2114144001")]
     [DisplayName("Instruction Cancellation Identification")]
-    public partial record InstructionCancellationIdentification : InstructionType1Choice_
+    public record InstructionCancellationIdentification : InstructionType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// String of characters that uniquely identifies a message.
         /// </summary>
@@ -24,11 +22,7 @@ namespace BeneficialStrategies.Iso20022.Choices.InstructionType1Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
     }
 }

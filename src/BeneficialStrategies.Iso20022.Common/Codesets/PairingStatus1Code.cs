@@ -23,7 +23,7 @@ public enum PairingStatus1Code
     [IsoId("_sPf1AV54Ee2a_-MvhEjKmA")]
     [Description(@"Transaction has been paired.")]
     Paired = PairingStatusCode.Paired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has not been paired.
     /// Encoded/decoded by serializers as &quot;UNPR&quot;.
@@ -32,5 +32,4 @@ public enum PairingStatus1Code
     [IsoId("_sPf1Al54Ee2a_-MvhEjKmA")]
     [Description(@"Transaction has not been paired.")]
     Unpaired = PairingStatusCode.Unpaired, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.AssetClassAttributes1Choice
     /// </summary>
     [IsoId("_vAX4UO94EeW7gabYEJmWIA")]
     [DisplayName("Both")]
-    public partial record Both : AssetClassAttributes1Choice_
+    public record Both : AssetClassAttributes1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Asset class is a non-financial instrument of type interest rate.
         /// </summary>
         [IsoId("_IO1OE8nYEeWpf-ImB_F2gQ")]
         [DisplayName("Interest")]
         [IsoXmlTag("Intrst")]
-        public required DerivativeInterest2 Interest { get; init; } 
-        
+        public required DerivativeInterest2 Interest { get; init; }
+
         /// <summary>
         /// Asset class is a non-financial instrument of type foreign exchange.
         /// </summary>
         [IsoId("_IO1OFcnYEeWpf-ImB_F2gQ")]
         [DisplayName("Foreign Exchange")]
         [IsoXmlTag("FX")]
-        public required DerivativeForeignExchange2 ForeignExchange { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required DerivativeForeignExchange2 ForeignExchange { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_imfkUZIhEeect698_YsnIA")]
 [DisplayName("Message Header")]
-public partial record MessageHeader7
+public record MessageHeader7
 {
-    #nullable enable
-    
     /// <summary>
     /// Point to point reference, as assigned by the sender, to unambiguously identify the message.|Usage: The sender has to make sure that MessageIdentification is unique for a pre-agreed period.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MessageHeader7
     [DisplayName("Message Identification")]
     [IsoXmlTag("MsgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text MessageIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text MessageIdentification { get; init; }
+
     /// <summary>
     /// Date and time at which the message was created.
     /// </summary>
@@ -35,24 +33,24 @@ public partial record MessageHeader7
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? CreationDateTime { get; init; } 
-    
+    public IsoISODateTime? CreationDateTime { get; init; }
+
     /// <summary>
     /// Specific actions to be executed through the request.
     /// </summary>
     [IsoId("_ivV-V5IhEeect698_YsnIA")]
     [DisplayName("Request Type")]
     [IsoXmlTag("ReqTp")]
-    public RequestType4Choice_? RequestType { get; init; } 
-    
+    public RequestType4Choice_? RequestType { get; init; }
+
     /// <summary>
     /// Unique identification of the original query message.
     /// </summary>
     [IsoId("_ivV-WZIhEeect698_YsnIA")]
     [DisplayName("Original Business Query")]
     [IsoXmlTag("OrgnlBizQry")]
-    public OriginalBusinessQuery1? OriginalBusinessQuery { get; init; } 
-    
+    public OriginalBusinessQuery1? OriginalBusinessQuery { get; init; }
+
     /// <summary>
     /// Recalls the criteria (search and return criteria) defined in a preceding query.
     /// </summary>
@@ -60,10 +58,6 @@ public partial record MessageHeader7
     [DisplayName("Query Name")]
     [IsoXmlTag("QryNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? QueryName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? QueryName { get; init; }
 }

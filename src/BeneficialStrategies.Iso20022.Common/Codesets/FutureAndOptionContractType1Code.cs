@@ -23,7 +23,7 @@ public enum FutureAndOptionContractType1Code
     [IsoId("__2sIcNojEeC60axPepSq7g_-842269814")]
     [Description(@"Ordinary future and option contract.")]
     Ordinary = FutureAndOptionContractTypeCode.Ordinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Future and option contract on an index as opposed to an underlying equity.
     /// Encoded/decoded by serializers as &quot;INDX&quot;.
@@ -32,7 +32,7 @@ public enum FutureAndOptionContractType1Code
     [IsoId("__2sIcdojEeC60axPepSq7g_-1031487263")]
     [Description(@"Future and option contract on an index as opposed to an underlying equity.")]
     Index = FutureAndOptionContractTypeCode.Index, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Receipt of future contract when an option on a future is exercised.
     /// Encoded/decoded by serializers as &quot;EXFU&quot;.
@@ -41,5 +41,4 @@ public enum FutureAndOptionContractType1Code
     [IsoId("__2sIctojEeC60axPepSq7g_19645809")]
     [Description(@"Receipt of future contract when an option on a future is exercised.")]
     ExercisedFuture = FutureAndOptionContractTypeCode.ExercisedFuture, // same ordinal as derivation source for type conversions
-    
 }

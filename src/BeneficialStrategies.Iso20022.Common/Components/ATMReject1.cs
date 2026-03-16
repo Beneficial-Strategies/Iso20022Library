@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rjtNsIrFEeSRwL6n4K9igA")]
 [DisplayName("ATM Reject")]
-public partial record ATMReject1
+public record ATMReject1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the entity sending the reject message.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record ATMReject1
     [DisplayName("Reject Initiator Identification")]
     [IsoXmlTag("RjctInitrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RejectInitiatorIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RejectInitiatorIdentification { get; init; }
+
     /// <summary>
     /// High level information allowing the sender of a request or an advice to know the types of error, and handle them accordingly.
     /// </summary>
     [IsoId("_CHSIUIrGEeSRwL6n4K9igA")]
     [DisplayName("Reject Reason")]
     [IsoXmlTag("RjctRsn")]
-    public required RejectReason1Code RejectReason { get; init; } 
-    
+    public required RejectReason1Code RejectReason { get; init; }
+
     /// <summary>
     /// Additional information related to the sending of a reject message in response to a request or an advice.
     /// For logging purpose, in order to allow further analysis, statistics and deferred processing on the success or the failure of the request processing.
@@ -44,17 +42,17 @@ public partial record ATMReject1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
-    [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    public IsoMax500Text? AdditionalInformation { get; init; } 
-    
+    [StringLength(maximumLength: 500, MinimumLength = 1)]
+    public IsoMax500Text? AdditionalInformation { get; init; }
+
     /// <summary>
     /// Maintenance command to perform on the ATM.
     /// </summary>
     [IsoId("_MCaUsIrGEeSRwL6n4K9igA")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand1? Command { get; init; } 
-    
+    public ATMCommand1? Command { get; init; }
+
     /// <summary>
     /// Received message that has been rejected.
     /// </summary>
@@ -62,9 +60,5 @@ public partial record ATMReject1
     [DisplayName("Message In Error")]
     [IsoXmlTag("MsgInErr")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public IsoMax100KBinary? MessageInError { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax100KBinary? MessageInError { get; init; }
 }

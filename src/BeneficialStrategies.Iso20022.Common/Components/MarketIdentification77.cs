@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ArcmOtokEeC60axPepSq7g_1234584716")]
 [DisplayName("Market Identification")]
-public partial record MarketIdentification77
+public record MarketIdentification77
 {
-    #nullable enable
-    
     /// <summary>
     /// Code allocated to places of trade, ie, stock exchanges, regulated markets, eg, Electronic Trading Platforms (ECN), and unregulated markets, eg, Automated Trading Systems (ATS), as sources of prices and related information, in order to facilitate automated processing.
     /// </summary>
     [IsoId("_ArcmO9okEeC60axPepSq7g_1120745650")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public MarketIdentification3Choice_? Identification { get; init; } 
-    
+    public MarketIdentification3Choice_? Identification { get; init; }
+
     /// <summary>
     /// Nature of a market in which transactions take place.
     /// </summary>
     [IsoId("_ArcmPNokEeC60axPepSq7g_123673297")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public MarketType11Choice_? Type { get; init; } 
-    
-    
-    #nullable disable
-    
+    public MarketType11Choice_? Type { get; init; }
 }

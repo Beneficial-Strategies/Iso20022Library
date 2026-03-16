@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(EventProcessingStatus6Choice.Reconciled))]
     [KnownType(typeof(EventProcessingStatus6Choice.Pending))]
     [KnownType(typeof(EventProcessingStatus6Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(EventProcessingStatus6Choice.Complete),nameof(EventProcessingStatus6Choice.Complete))]
-    [JsonDerivedType(typeof(EventProcessingStatus6Choice.Reconciled),nameof(EventProcessingStatus6Choice.Reconciled))]
-    [JsonDerivedType(typeof(EventProcessingStatus6Choice.Pending),nameof(EventProcessingStatus6Choice.Pending))]
-    [JsonDerivedType(typeof(EventProcessingStatus6Choice.ProprietaryStatus),nameof(EventProcessingStatus6Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(EventProcessingStatus6Choice.Complete),
+        nameof(EventProcessingStatus6Choice.Complete)
+    )]
+    [JsonDerivedType(
+        typeof(EventProcessingStatus6Choice.Reconciled),
+        nameof(EventProcessingStatus6Choice.Reconciled)
+    )]
+    [JsonDerivedType(
+        typeof(EventProcessingStatus6Choice.Pending),
+        nameof(EventProcessingStatus6Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(EventProcessingStatus6Choice.ProprietaryStatus),
+        nameof(EventProcessingStatus6Choice.ProprietaryStatus)
+    )]
     [IsoId("_Szi6OgVREeqjd8n6wD9JVw")]
     [DisplayName("Event Processing Status 6 Choice")]
-    public abstract partial record EventProcessingStatus6Choice_
-    {
-    }
+    public abstract record EventProcessingStatus6Choice_ { }
 }

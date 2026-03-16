@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PartiallySettled21Choice.Code))]
     [KnownType(typeof(PartiallySettled21Choice.Proprietary))]
-    [JsonDerivedType(typeof(PartiallySettled21Choice.Code),nameof(PartiallySettled21Choice.Code))]
-    [JsonDerivedType(typeof(PartiallySettled21Choice.Proprietary),nameof(PartiallySettled21Choice.Proprietary))]
+    [JsonDerivedType(typeof(PartiallySettled21Choice.Code), nameof(PartiallySettled21Choice.Code))]
+    [JsonDerivedType(
+        typeof(PartiallySettled21Choice.Proprietary),
+        nameof(PartiallySettled21Choice.Proprietary)
+    )]
     [IsoId("_R48xQUHtEeaNSo9he0Belg")]
     [DisplayName("Partially Settled 21 Choice")]
-    public abstract partial record PartiallySettled21Choice_
-    {
-    }
+    public abstract record PartiallySettled21Choice_ { }
 }

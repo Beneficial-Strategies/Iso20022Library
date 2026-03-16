@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementInstructionGeneration1Choice.Code))]
     [KnownType(typeof(SettlementInstructionGeneration1Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlementInstructionGeneration1Choice.Code),nameof(SettlementInstructionGeneration1Choice.Code))]
-    [JsonDerivedType(typeof(SettlementInstructionGeneration1Choice.Proprietary),nameof(SettlementInstructionGeneration1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SettlementInstructionGeneration1Choice.Code),
+        nameof(SettlementInstructionGeneration1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementInstructionGeneration1Choice.Proprietary),
+        nameof(SettlementInstructionGeneration1Choice.Proprietary)
+    )]
     [IsoId("_AbMjstokEeC60axPepSq7g_-1902988326")]
     [DisplayName("Settlement Instruction Generation 1 Choice")]
-    public abstract partial record SettlementInstructionGeneration1Choice_
-    {
-    }
+    public abstract record SettlementInstructionGeneration1Choice_ { }
 }

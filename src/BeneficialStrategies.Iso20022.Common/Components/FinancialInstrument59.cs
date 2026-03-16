@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7cAW8LVXEeadLcJesEbkTQ")]
 [DisplayName("Financial Instrument")]
-public partial record FinancialInstrument59
+public record FinancialInstrument59
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the ISIN of the collateral.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record FinancialInstrument59
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier Identification { get; init; } 
-    
+    public required IsoISINOct2015Identifier Identification { get; init; }
+
     /// <summary>
     /// Identifies the security issuer.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record FinancialInstrument59
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Issuer { get; init; } 
-    
+    public required IsoLEIIdentifier Issuer { get; init; }
+
     /// <summary>
     /// Sector for the security issuer, for example, 0500.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record FinancialInstrument59
     [DisplayName("Sector")]
     [IsoXmlTag("Sctr")]
     [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
-    public IsoSNA2008SectorIdentifier? Sector { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoSNA2008SectorIdentifier? Sector { get; init; }
 }

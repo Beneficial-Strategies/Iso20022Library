@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_gtemoeIwEeqbls7Gk4-ckA")]
-[Description(@"Specifies the  creditor enrolment status reason code, as published in an external  creditor enrolment status reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the  creditor enrolment status reason code, as published in an external  creditor enrolment status reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalCreditorEnrolmentStatusReasonCode))]
 public enum ExternalCreditorEnrolmentStatusReason1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uvUnJfRYEeuLhpyIdtJzwg")]
     [Description(@"Already existing creditor.")]
     AlreadyExistingCreditor = ExternalCreditorEnrolmentStatusReasonCode.AlreadyExistingCreditor, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Duplication.
     /// Encoded/decoded by serializers as &quot;AM05&quot;.
@@ -33,7 +35,7 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uvUnKPRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication = ExternalCreditorEnrolmentStatusReasonCode.Duplication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid file format.
     /// Encoded/decoded by serializers as &quot;FF01&quot;.
@@ -42,7 +44,7 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uvUnK_RYEeuLhpyIdtJzwg")]
     [Description(@"Invalid file format.")]
     InvalidFileFormat = ExternalCreditorEnrolmentStatusReasonCode.InvalidFileFormat, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -51,7 +53,7 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uveYIvRYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference = ExternalCreditorEnrolmentStatusReasonCode.NotUniqueReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -60,7 +62,7 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uveYJfRYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason = ExternalCreditorEnrolmentStatusReasonCode.RegulatoryReason, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid character set.
     /// Encoded/decoded by serializers as &quot;RR10&quot;.
@@ -69,7 +71,7 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uvoJIvRYEeuLhpyIdtJzwg")]
     [Description(@"Invalid character set.")]
     InvalidCharacterSet = ExternalCreditorEnrolmentStatusReasonCode.InvalidCharacterSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -78,5 +80,4 @@ public enum ExternalCreditorEnrolmentStatusReason1Code
     [IsoId("_uvoJJfRYEeuLhpyIdtJzwg")]
     [Description(@"Technical rejection.")]
     TechnicalRejection = ExternalCreditorEnrolmentStatusReasonCode.TechnicalRejection, // same ordinal as derivation source for type conversions
-    
 }

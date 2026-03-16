@@ -23,5 +23,4 @@ public enum AssetClassSubProductType48Code
     [IsoId("_oS0CcfwhEeW4Wthd0Ze_kA")]
     [Description(@"Commodity of type non deliverable.")]
     NonDeliverable = AssetClassSubProductTypeCode.NonDeliverable, // same ordinal as derivation source for type conversions
-    
 }

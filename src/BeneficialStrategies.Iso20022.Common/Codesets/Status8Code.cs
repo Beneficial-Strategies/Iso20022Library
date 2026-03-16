@@ -21,9 +21,11 @@ public enum Status8Code
     /// </summary>
     [EnumMember(Value = "CSUB")]
     [IsoId("_T6q-oa-nEemJ1NnLPsTFaw")]
-    [Description(@"Instruction has been cancelled by the agent, for example, due to an event deadline extension.")]
+    [Description(
+        @"Instruction has been cancelled by the agent, for example, due to an event deadline extension."
+    )]
     CancelledBySubcustodian = StatusCode.CancelledBySubcustodian, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been accepted and is validated for further processing.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
@@ -32,7 +34,7 @@ public enum Status8Code
     [IsoId("_T6q-o6-nEemJ1NnLPsTFaw")]
     [Description(@"Instruction has been accepted and is validated for further processing.")]
     Accepted = StatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CAND&quot;.
@@ -41,7 +43,7 @@ public enum Status8Code
     [IsoId("_T6q-pa-nEemJ1NnLPsTFaw")]
     [Description(@"Instruction has been cancelled.")]
     Cancelled = StatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been received by Issuer.
     /// Encoded/decoded by serializers as &quot;RCIS&quot;.
@@ -50,7 +52,7 @@ public enum Status8Code
     [IsoId("_T6q-q6-nEemJ1NnLPsTFaw")]
     [Description(@"Instruction has been received by Issuer.")]
     ReceivedByIssuerOrRegistrar = StatusCode.ReceivedByIssuerOrRegistrar, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Standing instruction is applied.
     /// Encoded/decoded by serializers as &quot;STIN&quot;.
@@ -59,7 +61,7 @@ public enum Status8Code
     [IsoId("_T6q-ra-nEemJ1NnLPsTFaw")]
     [Description(@"Standing instruction is applied.")]
     StandingInstruction = StatusCode.StandingInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Accepted and sent along the chain.
     /// Encoded/decoded by serializers as &quot;FRWD&quot;.
@@ -68,5 +70,4 @@ public enum Status8Code
     [IsoId("_OS6H0bUsEem2T48lBgJbww")]
     [Description(@"Accepted and sent along the chain.")]
     Forwarded = StatusCode.Forwarded, // same ordinal as derivation source for type conversions
-    
 }

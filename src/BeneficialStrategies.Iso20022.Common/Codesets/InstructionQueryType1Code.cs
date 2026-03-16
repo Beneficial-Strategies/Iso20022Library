@@ -23,7 +23,7 @@ public enum InstructionQueryType1Code
     [IsoId("_jjvIlu5NEeCisYr99QEiWA_351623035")]
     [Description(@"Query is performed on settlement transactions.")]
     SettlementInstruction = InstructionQueryTypeCode.SettlementInstruction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query is performed on intra-position movements.
     /// Encoded/decoded by serializers as &quot;IPOS&quot;.
@@ -32,14 +32,15 @@ public enum InstructionQueryType1Code
     [IsoId("_jj4SgO5NEeCisYr99QEiWA_1818771798")]
     [Description(@"Query is performed on intra-position movements.")]
     IntraPositionMovement = InstructionQueryTypeCode.IntraPositionMovement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query is performed on both settlement transactions and intra-position movements.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
     /// </summary>
     [EnumMember(Value = "BOTH")]
     [IsoId("_jj4Sge5NEeCisYr99QEiWA_-645449318")]
-    [Description(@"Query is performed on both settlement transactions and intra-position movements.")]
+    [Description(
+        @"Query is performed on both settlement transactions and intra-position movements."
+    )]
     SettlementAndIntraPosition = InstructionQueryTypeCode.SettlementAndIntraPosition, // same ordinal as derivation source for type conversions
-    
 }

@@ -30,7 +30,9 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "APPR")]
     [IsoId("_DataSetCategory20Code_ApplicationParameters")]
-    [Description(@"Payment application specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Payment application specific configuration parameters for the point of interaction (POI) system."
+    )]
     ApplicationParameters = DataSetCategoryCode.ApplicationParameters,
 
     /// <summary>
@@ -39,7 +41,9 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "AQPR")]
     [IsoId("_DataSetCategory20Code_AcquirerParameters")]
-    [Description(@"Acquirer specific configuration parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Acquirer specific configuration parameters for the point of interaction (POI) system."
+    )]
     AcquirerParameters = DataSetCategoryCode.AcquirerParameters,
 
     /// <summary>
@@ -120,7 +124,9 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "PARA")]
     [IsoId("_DataSetCategory20Code_Parameters")]
-    [Description(@"Any combination of configuration parameters for the point of interaction (POI).")]
+    [Description(
+        @"Any combination of configuration parameters for the point of interaction (POI)."
+    )]
     Parameters = DataSetCategoryCode.Parameters,
 
     /// <summary>
@@ -156,7 +162,9 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "SCPR")]
     [IsoId("_DataSetCategory20Code_SecurityParameters")]
-    [Description(@"Point of interaction parameters related to the security of software application and application protocol.")]
+    [Description(
+        @"Point of interaction parameters related to the security of software application and application protocol."
+    )]
     SecurityParameters = DataSetCategoryCode.SecurityParameters,
 
     /// <summary>
@@ -165,7 +173,9 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "SPRP")]
     [IsoId("_DataSetCategory20Code_ServiceProviderParameters")]
-    [Description(@"Service Provider specific parameters for the point of interaction (POI) system.")]
+    [Description(
+        @"Service Provider specific parameters for the point of interaction (POI) system."
+    )]
     ServiceProviderParameters = DataSetCategoryCode.ServiceProviderParameters,
 
     /// <summary>
@@ -201,7 +211,9 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "TRPR")]
     [IsoId("_DataSetCategory20Code_TerminalParameters")]
-    [Description(@"Point of interaction parameters attached to the terminal as serial number or physical capabilities.")]
+    [Description(
+        @"Point of interaction parameters attached to the terminal as serial number or physical capabilities."
+    )]
     TerminalParameters = DataSetCategoryCode.TerminalParameters,
 
     /// <summary>
@@ -219,7 +231,8 @@ public enum DataSetCategory20Code
     /// </summary>
     [EnumMember(Value = "VDPR")]
     [IsoId("_DataSetCategory20Code_VendorParameters")]
-    [Description(@"Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities.")]
+    [Description(
+        @"Point of interaction parameters defined by the manufacturer for instance the PIN verification capabilities."
+    )]
     VendorParameters = DataSetCategoryCode.VendorParameters,
-
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_fpPGh_fYEeiNZp_PtLohLw")]
 [DisplayName("Party Identification")]
-public partial record PartyIdentification191
+public record PartyIdentification191
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the party.
     /// </summary>
     [IsoId("_fpPGi_fYEeiNZp_PtLohLw")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required PartyIdentification145Choice_ Identification { get; init; } 
-    
+    public required PartyIdentification145Choice_ Identification { get; init; }
+
     /// <summary>
     /// Legal entity identification as an alternate identification for a party.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record PartyIdentification191
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
+    public IsoLEIIdentifier? LEI { get; init; }
+
     /// <summary>
     /// Unambiguous identification of the transaction for the party identified.
     /// </summary>
@@ -42,10 +40,6 @@ public partial record PartyIdentification191
     [DisplayName("Processing Identification")]
     [IsoXmlTag("PrcgId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? ProcessingIdentification { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ODM5MDI2-AOSNFX-3397728")]
 [DisplayName("Payment Terms")]
-public partial record PaymentTerms6
+public record PaymentTerms6
 {
-    #nullable enable
-    
     /// <summary>
     /// Due date specified for the payment terms.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record PaymentTerms6
     [DisplayName("Due Date")]
     [IsoXmlTag("DueDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DueDate { get; init; } 
-    
+    public IsoISODate? DueDate { get; init; }
+
     /// <summary>
     /// Payment period specified for these payment terms.
     /// </summary>
     [IsoId("_ODM5MDI4-AOSNFX-3397728")]
     [DisplayName("Payment Period")]
     [IsoXmlTag("PmtPrd")]
-    public PaymentPeriod1? PaymentPeriod { get; init; } 
-    
+    public PaymentPeriod1? PaymentPeriod { get; init; }
+
     /// <summary>
     /// Textual description of these payment terms.
     /// </summary>
@@ -42,9 +40,9 @@ public partial record PaymentTerms6
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Description { get; init; }
+
     /// <summary>
     /// Partial payment, expressed as a percentage, for the payment terms.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record PaymentTerms6
     [DisplayName("Partial Payment Percent")]
     [IsoXmlTag("PrtlPmtPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PartialPaymentPercent { get; init; } 
-    
+    public IsoPercentageRate? PartialPaymentPercent { get; init; }
+
     /// <summary>
     /// Direct debit mandate identification specified for these payment terms.
     /// </summary>
@@ -61,25 +59,25 @@ public partial record PaymentTerms6
     [DisplayName("Direct Debit Mandate Identification")]
     [IsoXmlTag("DrctDbtMndtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DirectDebitMandateIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DirectDebitMandateIdentification { get; init; }
+
     /// <summary>
     /// Amount used as a basis to calculate the discount amount for these payment terms.
     /// </summary>
     [IsoId("_ODM5MDMy-AOSNFX-3397728")]
     [DisplayName("Basis Amount")]
     [IsoXmlTag("BsisAmt")]
-    public CurrencyAndAmount? BasisAmount { get; init; } 
-    
+    public CurrencyAndAmount? BasisAmount { get; init; }
+
     /// <summary>
     /// Amount of money that results from the application of an agreed discount percentage to the basis amount and payable to the creditor.
     /// </summary>
     [IsoId("_ODM5MDMz-AOSNFX-3397729")]
     [DisplayName("Discount Amount")]
     [IsoXmlTag("DscntAmt")]
-    public CurrencyAndAmount? DiscountAmount { get; init; } 
-    
+    public CurrencyAndAmount? DiscountAmount { get; init; }
+
     /// <summary>
     /// Percent rate used to calculate the discount for these payment terms.
     /// </summary>
@@ -87,16 +85,16 @@ public partial record PaymentTerms6
     [DisplayName("Discount Percent Rate")]
     [IsoXmlTag("DscntPctRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? DiscountPercentRate { get; init; } 
-    
+    public IsoPercentageRate? DiscountPercentRate { get; init; }
+
     /// <summary>
     /// Amount of money that results from the application of an agreed penalty percentage to the basis amount and payable by the creditor.
     /// </summary>
     [IsoId("_ODM5MDM1-AOSNFX-3397729")]
     [DisplayName("Penalty Amount")]
     [IsoXmlTag("PnltyAmt")]
-    public CurrencyAndAmount? PenaltyAmount { get; init; } 
-    
+    public CurrencyAndAmount? PenaltyAmount { get; init; }
+
     /// <summary>
     /// Percent rate used to calculate the penalty for these payment terms.
     /// </summary>
@@ -104,9 +102,5 @@ public partial record PaymentTerms6
     [DisplayName("Penalty Percent Rate")]
     [IsoXmlTag("PnltyPctRate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PenaltyPercentRate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? PenaltyPercentRate { get; init; }
 }

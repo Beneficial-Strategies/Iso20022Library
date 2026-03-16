@@ -23,16 +23,18 @@ public enum PartyType32Code
     [IsoId("_6Pgn8X0lEemfrNOe0zHQyg")]
     [Description(@"Entity acquiring card transactions.")]
     Acquirer = PartyTypeCode.Acquirer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
     /// </summary>
     [EnumMember(Value = "AGNT")]
     [IsoId("_6Pgn830lEemfrNOe0zHQyg")]
-    [Description(@"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer.")]
+    [Description(
+        @"Entity providing card payment processing services acting as an intermediary between an acquirer and an issuer."
+    )]
     Agent = PartyTypeCode.Agent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Issuer is the entitled party.
     /// Encoded/decoded by serializers as &quot;ISUR&quot;.
@@ -41,7 +43,7 @@ public enum PartyType32Code
     [IsoId("_6Pgn9X0lEemfrNOe0zHQyg")]
     [Description(@"Issuer is the entitled party.")]
     Issuer = PartyTypeCode.Issuer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +52,7 @@ public enum PartyType32Code
     [IsoId("_6Pgn930lEemfrNOe0zHQyg")]
     [Description(@"Other card payment entity type defined at national level")]
     OtherNational = PartyTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +61,4 @@ public enum PartyType32Code
     [IsoId("_6Pgn-X0lEemfrNOe0zHQyg")]
     [Description(@"Other card payment entity type defined at private level")]
     OtherPrivate = PartyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

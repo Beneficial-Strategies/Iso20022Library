@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
     /// </summary>
     [IsoId("_Q-xTadp-Ed-ak6NoX_4Aeg_-1848289996")]
     [DisplayName("Rate")]
-    public partial record Rate : RateOrName1Choice_
+    public record Rate : RateOrName1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Indicates the sign of the rate.
         /// </summary>
@@ -24,17 +22,13 @@ namespace BeneficialStrategies.Iso20022.Choices.RateOrName1Choice
         [DisplayName("Sign")]
         [IsoXmlTag("Sgn")]
         [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-        public IsoPlusOrMinusIndicator? Sign { get; init; } 
-        
+        public IsoPlusOrMinusIndicator? Sign { get; init; }
+
         /// <summary>
         /// Percentage charged for the use of an amount of money, usually expressed at an annual rate. The interest rate is the ratio of the amount of interest paid during a certain period of time compared to the principal amount of the interest bearing financial instrument.
         /// </summary>
         [IsoXmlTag("Rate")]
         [IsoSimpleType(IsoSimpleType.PercentageRate)]
-        public required IsoPercentageRate Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoPercentageRate Value { get; init; }
     }
 }

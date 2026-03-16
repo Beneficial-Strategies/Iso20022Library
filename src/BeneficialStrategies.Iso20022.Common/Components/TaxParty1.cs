@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PdBMxtp-Ed-ak6NoX_4Aeg_-1937885674")]
 [DisplayName("Tax Party")]
-public partial record TaxParty1
+public record TaxParty1
 {
-    #nullable enable
-    
     /// <summary>
     /// Tax identification number of the creditor.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TaxParty1
     [DisplayName("Tax Identification")]
     [IsoXmlTag("TaxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxIdentification { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by an organisation, to unambiguously identify a party.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TaxParty1
     [DisplayName("Registration Identification")]
     [IsoXmlTag("RegnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RegistrationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RegistrationIdentification { get; init; }
+
     /// <summary>
     /// Type of tax payer.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record TaxParty1
     [DisplayName("Tax Type")]
     [IsoXmlTag("TaxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxType { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxType { get; init; }
 }

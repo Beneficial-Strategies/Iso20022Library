@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QhXrcee-Ee-AuZFZ3aE3Cg")]
 [DisplayName("ATM Customer Profile7")]
-public partial record ATMCustomerProfile7
+public record ATMCustomerProfile7
 {
-    #nullable enable
-
     /// <summary>
     /// Allowed Services.
     /// </summary>
@@ -30,23 +28,19 @@ public partial record ATMCustomerProfile7
     /// </summary>
     [DisplayName("Customer Identification")]
     [IsoXmlTag("CstmrId")]
-    public IsoMax35Text? CustomerIdentification { get; init; } 
+    public IsoMax35Text? CustomerIdentification { get; init; }
 
     /// <summary>
     /// Profile Description.
     /// </summary>
     [DisplayName("Profile Description")]
     [IsoXmlTag("PrflDesc")]
-    public IsoMax70Text? ProfileDescription { get; init; } 
+    public IsoMax70Text? ProfileDescription { get; init; }
 
     /// <summary>
     /// Profile Reference.
     /// </summary>
     [DisplayName("Profile Reference")]
     [IsoXmlTag("PrflRef")]
-    public IsoMax35Text? ProfileReference { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax35Text? ProfileReference { get; init; }
 }

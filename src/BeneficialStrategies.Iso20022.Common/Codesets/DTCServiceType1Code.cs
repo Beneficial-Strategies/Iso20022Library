@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_14xnNDL3EeKU9IrkkToqcw_-790926092")]
-[Description(@"Indicates the type of DTC (The Depository Trust Company) service for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc.")]
+[Description(
+    @"Indicates the type of DTC (The Depository Trust Company) service for example Cash In Lieu/ Round Up, Foreign Tax Relief, etc."
+)]
 [DerivedFrom(typeof(DTCServiceType))]
 public enum DTCServiceType1Code
 {
@@ -23,7 +25,7 @@ public enum DTCServiceType1Code
     [IsoId("_14xnNTL3EeKU9IrkkToqcw_-623906197")]
     [Description(@"Cash In Lieu or Round Up service.")]
     CashInLieuRoundUp = DTCServiceType.CashInLieuRoundUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// U.S. Tax Withholding service.
     /// Encoded/decoded by serializers as &quot;USTX&quot;.
@@ -32,7 +34,7 @@ public enum DTCServiceType1Code
     [IsoId("_14xnNjL3EeKU9IrkkToqcw_843242566")]
     [Description(@"U.S. Tax Withholding service.")]
     USTaxWithholding = DTCServiceType.USTaxWithholding, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Foreign Tax Relief service.
     /// Encoded/decoded by serializers as &quot;FTXR&quot;.
@@ -41,5 +43,4 @@ public enum DTCServiceType1Code
     [IsoId("_146xIDL3EeKU9IrkkToqcw_1672203018")]
     [Description(@"Foreign Tax Relief service.")]
     ForeignTaxRelief = DTCServiceType.ForeignTaxRelief, // same ordinal as derivation source for type conversions
-    
 }

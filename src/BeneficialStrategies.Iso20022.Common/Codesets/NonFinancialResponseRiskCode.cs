@@ -6,12 +6,14 @@ using System.Runtime.Serialization;
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Type of risk management answer from an Acquirer (or its IntermediaryAgent) to a POI through a NonFinancialResponse. 
+/// Type of risk management answer from an Acquirer (or its IntermediaryAgent) to a POI through a NonFinancialResponse.
 /// </summary>
 [DataContract]
 [Serializable]
 [IsoId("_qrdJwC_vEeugIJ3Gvoevmg")]
-[Description(@"Type of risk management answer from an Acquirer (or its IntermediaryAgent) to a POI through a NonFinancialResponse. ")]
+[Description(
+    @"Type of risk management answer from an Acquirer (or its IntermediaryAgent) to a POI through a NonFinancialResponse. "
+)]
 [Derivations(typeof(NonFinancialResponseRisk1Code))]
 public enum NonFinancialResponseRiskCode
 {
@@ -23,7 +25,7 @@ public enum NonFinancialResponseRiskCode
     [IsoId("_MuDscC_wEeugIJ3Gvoevmg")]
     [Description(@"An authorisation is expected from the POI to manage risk.")]
     RequestOnline,
-    
+
     /// <summary>
     /// A decline of the transaction is expected by the POI to manage risk.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
@@ -32,7 +34,7 @@ public enum NonFinancialResponseRiskCode
     [IsoId("_qv-A4C_wEeugIJ3Gvoevmg")]
     [Description(@"A decline of the transaction is expected by the POI to manage risk.")]
     Decline,
-    
+
     /// <summary>
     /// The POI is able to assess the risk by himself.
     /// Encoded/decoded by serializers as &quot;NCHG&quot;.
@@ -41,5 +43,4 @@ public enum NonFinancialResponseRiskCode
     [IsoId("_vf1CQC_wEeugIJ3Gvoevmg")]
     [Description(@"The POI is able to assess the risk by himself.")]
     LocallyManaged,
-    
 }

@@ -23,7 +23,7 @@ public enum PledgeeTypeCode
     [IsoId("_J-JKME9aEeSn2-3swbRbzg")]
     [Description(@"Financial instruments are pledged to a regulatory body.")]
     RegulatoryBody,
-    
+
     /// <summary>
     /// Financial instruments are pledged to a counterparty.
     /// Encoded/decoded by serializers as &quot;CPTY&quot;.
@@ -32,5 +32,4 @@ public enum PledgeeTypeCode
     [IsoId("_0CJM8E9ZEeSn2-3swbRbzg")]
     [Description(@"Financial instruments are pledged to a counterparty.")]
     Counterparty,
-    
 }

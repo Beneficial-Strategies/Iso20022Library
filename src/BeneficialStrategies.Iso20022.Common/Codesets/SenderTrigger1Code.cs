@@ -23,7 +23,7 @@ public enum SenderTrigger1Code
     [IsoId("_sdhbYcm4EeWAGphE2LvqeA")]
     [Description(@"File generated based on a date/time event.")]
     DateTime = SenderTriggerCode.DateTime, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File generated based on a manual event (file has been
     /// generated manually).
@@ -33,16 +33,18 @@ public enum SenderTrigger1Code
     [IsoId("_sx6XAcm4EeWAGphE2LvqeA")]
     [Description(@"File generated based on a manual event (file has been|generated manually).")]
     Manual = SenderTriggerCode.Manual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File generated based on a signature event (file has the minimum required signature from the sender).
     /// Encoded/decoded by serializers as &quot;SFSG&quot;.
     /// </summary>
     [EnumMember(Value = "SFSG")]
     [IsoId("_s8U3Qsm4EeWAGphE2LvqeA")]
-    [Description(@"File generated based on a signature event (file has the minimum required signature from the sender).")]
+    [Description(
+        @"File generated based on a signature event (file has the minimum required signature from the sender)."
+    )]
     SufficientlySigned = SenderTriggerCode.SufficientlySigned, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File generated based on a forced event (file generation has been forced).
     /// Encoded/decoded by serializers as &quot;FRCD&quot;.
@@ -51,5 +53,4 @@ public enum SenderTrigger1Code
     [IsoId("_s9gjAcm4EeWAGphE2LvqeA")]
     [Description(@"File generated based on a forced event (file generation has been forced).")]
     Forced = SenderTriggerCode.Forced, // same ordinal as derivation source for type conversions
-    
 }

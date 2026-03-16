@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CounterpartyTradeNature9Choice.NonFinancialInstitution))]
     [KnownType(typeof(CounterpartyTradeNature9Choice.CentralCounterParty))]
     [KnownType(typeof(CounterpartyTradeNature9Choice.Other))]
-    [JsonDerivedType(typeof(CounterpartyTradeNature9Choice.FinancialInstitution),nameof(CounterpartyTradeNature9Choice.FinancialInstitution))]
-    [JsonDerivedType(typeof(CounterpartyTradeNature9Choice.NonFinancialInstitution),nameof(CounterpartyTradeNature9Choice.NonFinancialInstitution))]
-    [JsonDerivedType(typeof(CounterpartyTradeNature9Choice.CentralCounterParty),nameof(CounterpartyTradeNature9Choice.CentralCounterParty))]
-    [JsonDerivedType(typeof(CounterpartyTradeNature9Choice.Other),nameof(CounterpartyTradeNature9Choice.Other))]
+    [JsonDerivedType(
+        typeof(CounterpartyTradeNature9Choice.FinancialInstitution),
+        nameof(CounterpartyTradeNature9Choice.FinancialInstitution)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyTradeNature9Choice.NonFinancialInstitution),
+        nameof(CounterpartyTradeNature9Choice.NonFinancialInstitution)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyTradeNature9Choice.CentralCounterParty),
+        nameof(CounterpartyTradeNature9Choice.CentralCounterParty)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyTradeNature9Choice.Other),
+        nameof(CounterpartyTradeNature9Choice.Other)
+    )]
     [IsoId("_hsQpoT7KEeq0cMLnAmm7Lg")]
     [DisplayName("Counterparty Trade Nature 9 Choice")]
-    public abstract partial record CounterpartyTradeNature9Choice_
-    {
-    }
+    public abstract record CounterpartyTradeNature9Choice_ { }
 }

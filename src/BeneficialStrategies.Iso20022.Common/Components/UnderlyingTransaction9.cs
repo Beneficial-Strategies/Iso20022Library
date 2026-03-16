@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_oFWZmR72EeSxevWRRWxNAg")]
 [DisplayName("Underlying Transaction")]
-public partial record UnderlyingTransaction9
+public record UnderlyingTransaction9
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides information on the original cancellation message, to which the resolution refers.
     /// </summary>
     [IsoId("_oXLwWR72EeSxevWRRWxNAg")]
     [DisplayName("Original Group Information And Status")]
     [IsoXmlTag("OrgnlGrpInfAndSts")]
-    public OriginalGroupHeader5? OriginalGroupInformationAndStatus { get; init; } 
-    
+    public OriginalGroupHeader5? OriginalGroupInformationAndStatus { get; init; }
+
     /// <summary>
     /// Provides information on the original (group of) transactions, to which the cancellation status refers.
     /// </summary>
     [IsoId("_oXLwWx72EeSxevWRRWxNAg")]
     [DisplayName("Original Payment Information And Status")]
     [IsoXmlTag("OrgnlPmtInfAndSts")]
-    public OriginalPaymentInstruction10? OriginalPaymentInformationAndStatus { get; init; } 
-    
+    public OriginalPaymentInstruction10? OriginalPaymentInformationAndStatus { get; init; }
+
     /// <summary>
     /// Provides details on the original transactions to which the cancellation request message refers.
     /// </summary>
     [IsoId("_oXLwXR72EeSxevWRRWxNAg")]
     [DisplayName("Transaction Information And Status")]
     [IsoXmlTag("TxInfAndSts")]
-    public PaymentTransaction53? TransactionInformationAndStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PaymentTransaction53? TransactionInformationAndStatus { get; init; }
 }

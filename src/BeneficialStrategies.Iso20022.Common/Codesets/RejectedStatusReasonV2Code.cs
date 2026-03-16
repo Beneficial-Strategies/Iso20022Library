@@ -23,7 +23,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqOUpIEe2Kv_AXFg3f7A")]
     [Description(@"Cash settlement date is not recognised or is invalid.")]
     SettlementDate,
-    
+
     /// <summary>
     /// Acquisition date is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;IAQD&quot;.
@@ -32,7 +32,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqQkpIEe2Kv_AXFg3f7A")]
     [Description(@"Acquisition date is not recognised or is invalid.")]
     AcquisitionDate,
-    
+
     /// <summary>
     /// Order contains funds that have different valuation points.
     /// Encoded/decoded by serializers as &quot;POIN&quot;.
@@ -41,7 +41,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqaUpIEe2Kv_AXFg3f7A")]
     [Description(@"Order contains funds that have different valuation points.")]
     DifferentValuationPoints,
-    
+
     /// <summary>
     /// Delivering agent is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;ICAG&quot;.
@@ -50,7 +50,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqSEpIEe2Kv_AXFg3f7A")]
     [Description(@"Delivering agent is not recognised or is invalid.")]
     DeliveringAgent,
-    
+
     /// <summary>
     /// Direct debit account identification is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;IDDB&quot;.
@@ -59,7 +59,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqLUpIEe2Kv_AXFg3f7A")]
     [Description(@"Direct debit account identification is not recognised or is invalid.")]
     DirectDebit,
-    
+
     /// <summary>
     /// Intermediary is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -68,7 +68,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqPUpIEe2Kv_AXFg3f7A")]
     [Description(@"Intermediary is not recognised or is invalid.")]
     Intermediary,
-    
+
     /// <summary>
     /// Investment account identification is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;SAFE&quot;.
@@ -77,7 +77,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqQEpIEe2Kv_AXFg3f7A")]
     [Description(@"Investment account identification is not recognised or is invalid.")]
     InvestmentAccount,
-    
+
     /// <summary>
     /// Payment card details are incorrect.
     /// Encoded/decoded by serializers as &quot;IPAY&quot;.
@@ -86,7 +86,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqL0pIEe2Kv_AXFg3f7A")]
     [Description(@"Payment card details are incorrect.")]
     PaymentCard,
-    
+
     /// <summary>
     /// Credit transfer details are incorrect.
     /// Encoded/decoded by serializers as &quot;ICTR&quot;.
@@ -95,7 +95,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqWEpIEe2Kv_AXFg3f7A")]
     [Description(@"Credit transfer details are incorrect.")]
     InvalidCreditTransfer,
-    
+
     /// <summary>
     /// Place of settlement is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;DEPT&quot;.
@@ -104,7 +104,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqX0pIEe2Kv_AXFg3f7A")]
     [Description(@"Place of settlement is not recognised or is invalid.")]
     SettlementPlace,
-    
+
     /// <summary>
     /// Receiving agent is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;IVAG&quot;.
@@ -113,7 +113,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqN0pIEe2Kv_AXFg3f7A")]
     [Description(@"Receiving agent is not recognised or is invalid.")]
     ReceivingAgent,
-    
+
     /// <summary>
     /// Safekeeping place is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;ISAF&quot;.
@@ -122,16 +122,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqVkpIEe2Kv_AXFg3f7A")]
     [Description(@"Safekeeping place is not recognised or is invalid.")]
     SafekeepingPlace,
-    
+
     /// <summary>
     /// Form of the security is wrong, eg, the form of security is registered not bearer or vice versa.
     /// Encoded/decoded by serializers as &quot;DFOR&quot;.
     /// </summary>
     [EnumMember(Value = "DFOR")]
     [IsoId("_SOEqOkpIEe2Kv_AXFg3f7A")]
-    [Description(@"Form of the security is wrong, eg, the form of security is registered not bearer or vice versa.")]
+    [Description(
+        @"Form of the security is wrong, eg, the form of security is registered not bearer or vice versa."
+    )]
     InvalidSecurityForm,
-    
+
     /// <summary>
     /// Identification of the security is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
@@ -140,7 +142,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqXEpIEe2Kv_AXFg3f7A")]
     [Description(@"Identification of the security is not recognised or is invalid.")]
     FinancialInstrumentIdentification,
-    
+
     /// <summary>
     /// Investment account is blocked due to a corporate action.
     /// Encoded/decoded by serializers as &quot;BLCA&quot;.
@@ -149,7 +151,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqY0pIEe2Kv_AXFg3f7A")]
     [Description(@"Investment account is blocked due to a corporate action.")]
     AccountBlockedForCorporateAction,
-    
+
     /// <summary>
     /// Investment account is blocked due to a transfer out of investment funds.
     /// Encoded/decoded by serializers as &quot;BLTR&quot;.
@@ -158,16 +160,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqZUpIEe2Kv_AXFg3f7A")]
     [Description(@"Investment account is blocked due to a transfer out of investment funds.")]
     AccountBlockedForTransfer,
-    
+
     /// <summary>
     /// Investment account is blocked until certain legal proceedings are completed, for example, legal documents from the successor, legal proceedings due to bankruptcy.
     /// Encoded/decoded by serializers as &quot;DOCC&quot;.
     /// </summary>
     [EnumMember(Value = "DOCC")]
     [IsoId("_SOEqNkpIEe2Kv_AXFg3f7A")]
-    [Description(@"Investment account is blocked until certain legal proceedings are completed, for example, legal documents from the successor, legal proceedings due to bankruptcy.")]
+    [Description(
+        @"Investment account is blocked until certain legal proceedings are completed, for example, legal documents from the successor, legal proceedings due to bankruptcy."
+    )]
     AccountBlockedMissingDocuments,
-    
+
     /// <summary>
     /// There is not enough cash in the account to process the instruction.
     /// Encoded/decoded by serializers as &quot;MONY&quot;.
@@ -176,7 +180,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqfEpIEe2Kv_AXFg3f7A")]
     [Description(@"There is not enough cash in the account to process the instruction.")]
     NotEnoughCash,
-    
+
     /// <summary>
     /// There are not enough securities in the account to process the instruction.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -185,7 +189,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqO0pIEe2Kv_AXFg3f7A")]
     [Description(@"There are not enough securities in the account to process the instruction.")]
     NotEnoughFinancialInstrument,
-    
+
     /// <summary>
     /// Identification of the security and the security name are not the same.
     /// Encoded/decoded by serializers as &quot;IDNA&quot;.
@@ -194,16 +198,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqLkpIEe2Kv_AXFg3f7A")]
     [Description(@"Identification of the security and the security name are not the same.")]
     FinancialInstrumentIdentificationAndName,
-    
+
     /// <summary>
     /// Percentage of commission waiving exceeds the commission percentage or commission amount.
     /// Encoded/decoded by serializers as &quot;UWAI&quot;.
     /// </summary>
     [EnumMember(Value = "UWAI")]
     [IsoId("_SOEqS0pIEe2Kv_AXFg3f7A")]
-    [Description(@"Percentage of commission waiving exceeds the commission percentage or commission amount.")]
+    [Description(
+        @"Percentage of commission waiving exceeds the commission percentage or commission amount."
+    )]
     UnacceptedCommissionWaiving,
-    
+
     /// <summary>
     /// Deal currency is not supported.
     /// Encoded/decoded by serializers as &quot;UDCY&quot;.
@@ -212,7 +218,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqc0pIEe2Kv_AXFg3f7A")]
     [Description(@"Deal currency is not supported.")]
     UnacceptedDealCurrency,
-    
+
     /// <summary>
     /// Net asset value currency is not supported.
     /// Encoded/decoded by serializers as &quot;UNAV&quot;.
@@ -221,7 +227,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqU0pIEe2Kv_AXFg3f7A")]
     [Description(@"Net asset value currency is not supported.")]
     UnacceptedNAVCurrency,
-    
+
     /// <summary>
     /// Payment method, for example, cheque or payment card, is not accepted.
     /// Encoded/decoded by serializers as &quot;UPAY&quot;.
@@ -230,7 +236,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqNEpIEe2Kv_AXFg3f7A")]
     [Description(@"Payment method, for example, cheque or payment card, is not accepted.")]
     UnacceptedPaymentMethod,
-    
+
     /// <summary>
     /// Settlement currency requested is not supported.
     /// Encoded/decoded by serializers as &quot;URSC&quot;.
@@ -239,25 +245,29 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqZEpIEe2Kv_AXFg3f7A")]
     [Description(@"Settlement currency requested is not supported.")]
     UnacceptedRequestedSettlementCurrency,
-    
+
     /// <summary>
     /// Quantity of units or amount of money in the order is too high for a subscription.
     /// Encoded/decoded by serializers as &quot;SHIG&quot;.
     /// </summary>
     [EnumMember(Value = "SHIG")]
     [IsoId("_SOEqfUpIEe2Kv_AXFg3f7A")]
-    [Description(@"Quantity of units or amount of money in the order is too high for a subscription.")]
+    [Description(
+        @"Quantity of units or amount of money in the order is too high for a subscription."
+    )]
     TooHighUnitsOrAmountToSubscribe,
-    
+
     /// <summary>
     /// Quantity of units or amount of money in the order is too low for a subscription.
     /// Encoded/decoded by serializers as &quot;SLOW&quot;.
     /// </summary>
     [EnumMember(Value = "SLOW")]
     [IsoId("_SOEqTkpIEe2Kv_AXFg3f7A")]
-    [Description(@"Quantity of units or amount of money in the order is too low for a subscription.")]
+    [Description(
+        @"Quantity of units or amount of money in the order is too low for a subscription."
+    )]
     TooLowUnitsOrAmountToSubscribe,
-    
+
     /// <summary>
     /// Linked reference is not known.
     /// Encoded/decoded by serializers as &quot;ULNK&quot;.
@@ -266,16 +276,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqMkpIEe2Kv_AXFg3f7A")]
     [Description(@"Linked reference is not known.")]
     UnknownLinkagesReference,
-    
+
     /// <summary>
     /// Order contains physical delivery details but the fund can not be physically delivered.
     /// Encoded/decoded by serializers as &quot;DLVY&quot;.
     /// </summary>
     [EnumMember(Value = "DLVY")]
     [IsoId("_SOEqeEpIEe2Kv_AXFg3f7A")]
-    [Description(@"Order contains physical delivery details but the fund can not be physically delivered.")]
+    [Description(
+        @"Order contains physical delivery details but the fund can not be physically delivered."
+    )]
     PhysicalDeliveryImpossible,
-    
+
     /// <summary>
     /// Order reference is a duplicate of a previously received order.
     /// Encoded/decoded by serializers as &quot;ORRF&quot;.
@@ -284,7 +296,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqdEpIEe2Kv_AXFg3f7A")]
     [Description(@"Order reference is a duplicate of a previously received order.")]
     DuplicateOrderReference,
-    
+
     /// <summary>
     /// Instructing party is not allowed to instruct for this investment account.
     /// Encoded/decoded by serializers as &quot;IPAC&quot;.
@@ -293,7 +305,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqPkpIEe2Kv_AXFg3f7A")]
     [Description(@"Instructing party is not allowed to instruct for this investment account.")]
     InstructingPartyNotAllowedForAccount,
-    
+
     /// <summary>
     /// Order type is invalid.
     /// Encoded/decoded by serializers as &quot;IOTP&quot;.
@@ -302,7 +314,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqcEpIEe2Kv_AXFg3f7A")]
     [Description(@"Order type is invalid.")]
     InvalidOrderType,
-    
+
     /// <summary>
     /// Instruction is not compliant with the service level agreement.
     /// Encoded/decoded by serializers as &quot;NSLA&quot;.
@@ -311,7 +323,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqcUpIEe2Kv_AXFg3f7A")]
     [Description(@"Instruction is not compliant with the service level agreement.")]
     NotCompliantWithSLA,
-    
+
     /// <summary>
     /// Instruction has been received after the cut-off time.
     /// Encoded/decoded by serializers as &quot;CUTO&quot;.
@@ -320,7 +332,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqYUpIEe2Kv_AXFg3f7A")]
     [Description(@"Instruction has been received after the cut-off time.")]
     CutOffTime,
-    
+
     /// <summary>
     /// Request contains an invalid or unrecognised business reference.
     /// Encoded/decoded by serializers as &quot;REFE&quot;.
@@ -329,7 +341,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqVEpIEe2Kv_AXFg3f7A")]
     [Description(@"Request contains an invalid or unrecognised business reference.")]
     InvalidOrUnrecognisedReference,
-    
+
     /// <summary>
     /// Sending party is not allowed to send this request.
     /// Encoded/decoded by serializers as &quot;NALO&quot;.
@@ -338,7 +350,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqRUpIEe2Kv_AXFg3f7A")]
     [Description(@"Sending party is not allowed to send this request.")]
     NotAllowedRequest,
-    
+
     /// <summary>
     /// Order or transfer has already been executed and confirmation has been sent.
     /// Encoded/decoded by serializers as &quot;COSE&quot;.
@@ -347,7 +359,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqUEpIEe2Kv_AXFg3f7A")]
     [Description(@"Order or transfer has already been executed and confirmation has been sent.")]
     AlreadyExecuted,
-    
+
     /// <summary>
     /// Instructing party is not allowed to request a cancellation.
     /// Encoded/decoded by serializers as &quot;NALC&quot;.
@@ -356,7 +368,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqekpIEe2Kv_AXFg3f7A")]
     [Description(@"Instructing party is not allowed to request a cancellation.")]
     NotAllowedToCancel,
-    
+
     /// <summary>
     /// Legally impossible to cancel.
     /// Encoded/decoded by serializers as &quot;LEGL&quot;.
@@ -365,7 +377,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqT0pIEe2Kv_AXFg3f7A")]
     [Description(@"Legally impossible to cancel.")]
     LegallyImpossible,
-    
+
     /// <summary>
     /// Another reason for the status rejected.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -374,7 +386,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqOEpIEe2Kv_AXFg3f7A")]
     [Description(@"Another reason for the status rejected.")]
     Other,
-    
+
     /// <summary>
     /// Financial instrument quantity is invalid.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -383,7 +395,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqLEpIEe2Kv_AXFg3f7A")]
     [Description(@"Financial instrument quantity is invalid.")]
     FinancialInstrumentQuantity,
-    
+
     /// <summary>
     /// Certificate number is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;ICTN&quot;.
@@ -392,7 +404,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqV0pIEe2Kv_AXFg3f7A")]
     [Description(@"Certificate number is not recognised or is invalid.")]
     CertificateNumber,
-    
+
     /// <summary>
     /// One or several settlement parties are not recognised or are invalid.
     /// Encoded/decoded by serializers as &quot;ISTP&quot;.
@@ -401,7 +413,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqPEpIEe2Kv_AXFg3f7A")]
     [Description(@"One or several settlement parties are not recognised or are invalid.")]
     SettlementParties,
-    
+
     /// <summary>
     /// Instruction was received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -410,7 +422,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqZ0pIEe2Kv_AXFg3f7A")]
     [Description(@"Instruction was received after market deadline.")]
     TooLate,
-    
+
     /// <summary>
     /// Instruction was received after the Receiver&apos;s deadline.
     /// Encoded/decoded by serializers as &quot;ADEA&quot;.
@@ -419,16 +431,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqa0pIEe2Kv_AXFg3f7A")]
     [Description(@"Instruction was received after the Receiver's deadline.")]
     AfterDeadline,
-    
+
     /// <summary>
     /// Unrecognised or invalid trade date or requested trade date or future trade date.
     /// Encoded/decoded by serializers as &quot;DTRD&quot;.
     /// </summary>
     [EnumMember(Value = "DTRD")]
     [IsoId("_SOEqRkpIEe2Kv_AXFg3f7A")]
-    [Description(@"Unrecognised or invalid trade date or requested trade date or future trade date.")]
+    [Description(
+        @"Unrecognised or invalid trade date or requested trade date or future trade date."
+    )]
     TradeDate,
-    
+
     /// <summary>
     /// Unrecognised or invalid fee or commission.
     /// Encoded/decoded by serializers as &quot;FEEE&quot;.
@@ -437,7 +451,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqXkpIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid fee or commission.")]
     FeeOrCommission,
-    
+
     /// <summary>
     /// Unrecognised or invalid subscriber or redeemer.
     /// Encoded/decoded by serializers as &quot;IEXE&quot;.
@@ -446,7 +460,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqREpIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid subscriber or redeemer.")]
     SubscriberOrRedeemer,
-    
+
     /// <summary>
     /// Unrecognised or invalid Settlement Amount Currency.
     /// Encoded/decoded by serializers as &quot;NCRR&quot;.
@@ -455,7 +469,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqeUpIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid Settlement Amount Currency.")]
     SettlementAmountCurrency,
-    
+
     /// <summary>
     /// Physical Settlement Impossible.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -464,7 +478,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqdkpIEe2Kv_AXFg3f7A")]
     [Description(@"Physical Settlement Impossible.")]
     PhysicalSettlement,
-    
+
     /// <summary>
     /// Unrecognised or invalid Place of Trade.
     /// Encoded/decoded by serializers as &quot;PLCE&quot;.
@@ -473,7 +487,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqTEpIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid Place of Trade.")]
     PlaceOfTrade,
-    
+
     /// <summary>
     /// Unrecognised or invalid Settlement Transaction.
     /// Encoded/decoded by serializers as &quot;SETR&quot;.
@@ -482,7 +496,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqd0pIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid Settlement Transaction.")]
     SettlementTransaction,
-    
+
     /// <summary>
     /// Impossible to use RTGS System.
     /// Encoded/decoded by serializers as &quot;RTGS&quot;.
@@ -491,16 +505,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqckpIEe2Kv_AXFg3f7A")]
     [Description(@"Impossible to use RTGS System.")]
     RTGSSystem,
-    
+
     /// <summary>
     /// The cancellation request has been rejected since more than one instruction match to the cancellation criteria.
     /// Encoded/decoded by serializers as &quot;NRGM&quot;.
     /// </summary>
     [EnumMember(Value = "NRGM")]
     [IsoId("_SOEqZkpIEe2Kv_AXFg3f7A")]
-    [Description(@"The cancellation request has been rejected since more than one instruction match to the cancellation criteria.")]
+    [Description(
+        @"The cancellation request has been rejected since more than one instruction match to the cancellation criteria."
+    )]
     NoCancellationMatch,
-    
+
     /// <summary>
     /// Investor name and address is not recognised.
     /// Encoded/decoded by serializers as &quot;INUK&quot;.
@@ -509,16 +525,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqM0pIEe2Kv_AXFg3f7A")]
     [Description(@"Investor name and address is not recognised.")]
     InvestorNameAddressUnknown,
-    
+
     /// <summary>
     /// Investor data is insufficient. Applicable when the mandated market practice is not followed.
     /// Encoded/decoded by serializers as &quot;INID&quot;.
     /// </summary>
     [EnumMember(Value = "INID")]
     [IsoId("_SOEqbkpIEe2Kv_AXFg3f7A")]
-    [Description(@"Investor data is insufficient. Applicable when the mandated market practice is not followed.")]
+    [Description(
+        @"Investor data is insufficient. Applicable when the mandated market practice is not followed."
+    )]
     InsufficientInvestorData,
-    
+
     /// <summary>
     /// Account servicer is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;INAC&quot;.
@@ -527,7 +545,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqWUpIEe2Kv_AXFg3f7A")]
     [Description(@"Account servicer is not recognised or is invalid.")]
     InvalidAccountServicer,
-    
+
     /// <summary>
     /// Nominee account is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;INNA&quot;.
@@ -536,7 +554,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqW0pIEe2Kv_AXFg3f7A")]
     [Description(@"Nominee account is not recognised or is invalid.")]
     InvalidNomineeAccount,
-    
+
     /// <summary>
     /// New plan manager is not recognised or is invalid.
     /// Encoded/decoded by serializers as &quot;INPM&quot;.
@@ -545,25 +563,29 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqYkpIEe2Kv_AXFg3f7A")]
     [Description(@"New plan manager is not recognised or is invalid.")]
     InvalidNewPlanManager,
-    
+
     /// <summary>
     /// Partial transfer of current year is not allowed, that is, it is not possible to transfer one asset for the current year as other assets are held for the current year.
     /// Encoded/decoded by serializers as &quot;CYPA&quot;.
     /// </summary>
     [EnumMember(Value = "CYPA")]
     [IsoId("_SOEqP0pIEe2Kv_AXFg3f7A")]
-    [Description(@"Partial transfer of current year is not allowed, that is, it is not possible to transfer one asset for the current year as other assets are held for the current year.")]
+    [Description(
+        @"Partial transfer of current year is not allowed, that is, it is not possible to transfer one asset for the current year as other assets are held for the current year."
+    )]
     CurrentYearPartial,
-    
+
     /// <summary>
     /// Partial transfer is not supported. Applicable when tax years are rolled up and because, for example, a transfer request for tax year 2000 only is received, it is not possible to process the transfer as the investor holds other tax years as well.
     /// Encoded/decoded by serializers as &quot;PTNS&quot;.
     /// </summary>
     [EnumMember(Value = "PTNS")]
     [IsoId("_SOEqaEpIEe2Kv_AXFg3f7A")]
-    [Description(@"Partial transfer is not supported. Applicable when tax years are rolled up and because, for example, a transfer request for tax year 2000 only is received, it is not possible to process the transfer as the investor holds other tax years as well.")]
+    [Description(
+        @"Partial transfer is not supported. Applicable when tax years are rolled up and because, for example, a transfer request for tax year 2000 only is received, it is not possible to process the transfer as the investor holds other tax years as well."
+    )]
     PartialNotSupported,
-    
+
     /// <summary>
     /// Financial instrument is not valid for the requested tax year.
     /// Encoded/decoded by serializers as &quot;FTAX&quot;.
@@ -572,7 +594,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqQ0pIEe2Kv_AXFg3f7A")]
     [Description(@"Financial instrument is not valid for the requested tax year.")]
     FinancialInstrumentTaxYear,
-    
+
     /// <summary>
     /// ISA type is not recognised or invalid.
     /// Encoded/decoded by serializers as &quot;ISAT&quot;.
@@ -581,7 +603,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqb0pIEe2Kv_AXFg3f7A")]
     [Description(@"ISA type is not recognised or invalid.")]
     InvalidISAType,
-    
+
     /// <summary>
     /// Cash account is not recognised or invalid.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -590,7 +612,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqbUpIEe2Kv_AXFg3f7A")]
     [Description(@"Cash account is not recognised or invalid.")]
     InvalidCashAccount,
-    
+
     /// <summary>
     /// Transfer reference is a duplicate of a previously received transfer.
     /// Encoded/decoded by serializers as &quot;TREF&quot;.
@@ -599,7 +621,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqUUpIEe2Kv_AXFg3f7A")]
     [Description(@"Transfer reference is a duplicate of a previously received transfer.")]
     DuplicateTransferReference,
-    
+
     /// <summary>
     /// Unrecognised or invalid settlement amount.
     /// Encoded/decoded by serializers as &quot;DMON&quot;.
@@ -608,7 +630,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqbEpIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid settlement amount.")]
     InvalidSettlementAmount,
-    
+
     /// <summary>
     /// Unrecognised or invalid ordered amount.
     /// Encoded/decoded by serializers as &quot;ORDR&quot;.
@@ -617,7 +639,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqe0pIEe2Kv_AXFg3f7A")]
     [Description(@"Unrecognised or invalid ordered amount.")]
     InvalidOrderedAmount,
-    
+
     /// <summary>
     /// Amount of subscription is below the minimum initial investment amount.
     /// Encoded/decoded by serializers as &quot;BMIN&quot;.
@@ -626,7 +648,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqVUpIEe2Kv_AXFg3f7A")]
     [Description(@"Amount of subscription is below the minimum initial investment amount.")]
     BelowMinimumInitialInvestmentAmount,
-    
+
     /// <summary>
     /// Amount of subscription is below the minimum top-up investment.
     /// Encoded/decoded by serializers as &quot;BMTO&quot;.
@@ -635,7 +657,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqUkpIEe2Kv_AXFg3f7A")]
     [Description(@"Amount of subscription is below the minimum top-up investment.")]
     BelowMinimumTopUpAmount,
-    
+
     /// <summary>
     /// Insufficient capacity.
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
@@ -644,7 +666,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqXUpIEe2Kv_AXFg3f7A")]
     [Description(@"Insufficient capacity.")]
     InsufficientCapacity,
-    
+
     /// <summary>
     /// Percentage holding breach, for example, PPM rules; taxation rules (ERISA).
     /// Encoded/decoded by serializers as &quot;PRCT&quot;.
@@ -653,7 +675,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqTUpIEe2Kv_AXFg3f7A")]
     [Description(@"Percentage holding breach, for example, PPM rules; taxation rules (ERISA).")]
     PercentageHoldingBreach,
-    
+
     /// <summary>
     /// Amount is below the minimum redemption amount.
     /// Encoded/decoded by serializers as &quot;BMRA&quot;.
@@ -662,7 +684,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqMEpIEe2Kv_AXFg3f7A")]
     [Description(@"Amount is below the minimum redemption amount.")]
     BelowMinimumRedemptionAmount,
-    
+
     /// <summary>
     /// Holding will be below the minimum retained value.
     /// Encoded/decoded by serializers as &quot;BMRV&quot;.
@@ -671,7 +693,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqR0pIEe2Kv_AXFg3f7A")]
     [Description(@"Holding will be below the minimum retained value.")]
     BelowMinimumRetainedAmount,
-    
+
     /// <summary>
     /// Lock-up period is in place.
     /// Encoded/decoded by serializers as &quot;LOCK&quot;.
@@ -680,7 +702,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqSUpIEe2Kv_AXFg3f7A")]
     [Description(@"Lock-up period is in place.")]
     LockUp,
-    
+
     /// <summary>
     /// Assets are illiquid.
     /// Encoded/decoded by serializers as &quot;ILLI&quot;.
@@ -689,7 +711,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqNUpIEe2Kv_AXFg3f7A")]
     [Description(@"Assets are illiquid.")]
     AssetsIlliquid,
-    
+
     /// <summary>
     /// Data in the order or transfer instruction is invalid.
     /// Encoded/decoded by serializers as &quot;DINV&quot;.
@@ -698,7 +720,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqK0pIEe2Kv_AXFg3f7A")]
     [Description(@"Data in the order or transfer instruction is invalid.")]
     DataInvalid,
-    
+
     /// <summary>
     /// Fund is closed and will not take in any more investments.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -707,16 +729,18 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqdUpIEe2Kv_AXFg3f7A")]
     [Description(@"Fund is closed and will not take in any more investments.")]
     FundClosed,
-    
+
     /// <summary>
     /// Instruction specifies an unacceptable combination for the financial instruments in the switch order.
     /// Encoded/decoded by serializers as &quot;UNSC&quot;.
     /// </summary>
     [EnumMember(Value = "UNSC")]
     [IsoId("_SOEqQUpIEe2Kv_AXFg3f7A")]
-    [Description(@"Instruction specifies an unacceptable combination for the financial instruments in the switch order.")]
+    [Description(
+        @"Instruction specifies an unacceptable combination for the financial instruments in the switch order."
+    )]
     UnacceptableSwitchCombination,
-    
+
     /// <summary>
     /// The two share classes are not part of the same fund.
     /// Encoded/decoded by serializers as &quot;NCON&quot;.
@@ -725,7 +749,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqYEpIEe2Kv_AXFg3f7A")]
     [Description(@"The two share classes are not part of the same fund.")]
     NotConvertable,
-    
+
     /// <summary>
     /// Asset instructed for transfer is closed.
     /// Encoded/decoded by serializers as &quot;ACLO&quot;.
@@ -734,7 +758,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqWkpIEe2Kv_AXFg3f7A")]
     [Description(@"Asset instructed for transfer is closed.")]
     AssetClosed,
-    
+
     /// <summary>
     /// Transfer quantity is too small.
     /// Encoded/decoded by serializers as &quot;NQTY&quot;.
@@ -743,7 +767,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqakpIEe2Kv_AXFg3f7A")]
     [Description(@"Transfer quantity is too small.")]
     QuantityBelowMinimum,
-    
+
     /// <summary>
     /// Asset does not support reregistration.
     /// Encoded/decoded by serializers as &quot;NASS&quot;.
@@ -752,7 +776,7 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqSkpIEe2Kv_AXFg3f7A")]
     [Description(@"Asset does not support reregistration.")]
     AssetNotSupported,
-    
+
     /// <summary>
     /// Instruction is not compliant with the relevant market practice.
     /// Encoded/decoded by serializers as &quot;NCMP&quot;.
@@ -761,5 +785,4 @@ public enum RejectedStatusReasonV2Code
     [IsoId("_SOEqMUpIEe2Kv_AXFg3f7A")]
     [Description(@"Instruction is not compliant with the relevant market practice.")]
     NotCompliantWithMarketPractice,
-    
 }

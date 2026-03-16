@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dwTQ-9cZEeqRFcf2R4bPBw")]
 [DisplayName("Payment Transaction")]
-public partial record PaymentTransaction139
+public record PaymentTransaction139
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier of a cancellation request status, as assigned by the assigner.||Usage: The cancellation status identification can be used for reconciliation or to link tasks relating to the cancellation request.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record PaymentTransaction139
     [DisplayName("Cancellation Status Identification")]
     [IsoXmlTag("CxlStsId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CancellationStatusIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CancellationStatusIdentification { get; init; }
+
     /// <summary>
     /// Identifies the resolved case.
     /// </summary>
     [IsoId("_dxoGk9cZEeqRFcf2R4bPBw")]
     [DisplayName("Resolved Case")]
     [IsoXmlTag("RslvdCase")]
-    public Case5? ResolvedCase { get; init; } 
-    
+    public Case5? ResolvedCase { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by the original instructing party for the original instructed party to unambiguously identify the original instruction.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record PaymentTransaction139
     [DisplayName("Original Instruction Identification")]
     [IsoXmlTag("OrgnlInstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OriginalInstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OriginalInstructionIdentification { get; init; }
+
     /// <summary>
     /// Unique identification, as assigned by the original initiating party, to unambiguously identify the original transaction.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record PaymentTransaction139
     [DisplayName("Original End To End Identification")]
     [IsoXmlTag("OrgnlEndToEndId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OriginalEndToEndIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OriginalEndToEndIdentification { get; init; }
+
     /// <summary>
     /// Universally unique identifier to provide an end-to-end reference of a payment transaction.
     /// </summary>
@@ -63,24 +61,24 @@ public partial record PaymentTransaction139
     [DisplayName("UETR")]
     [IsoXmlTag("UETR")]
     [IsoSimpleType(IsoSimpleType.UUIDv4Identifier)]
-    public IsoUUIDv4Identifier? UETR { get; init; } 
-    
+    public IsoUUIDv4Identifier? UETR { get; init; }
+
     /// <summary>
     /// Specifies the status of the transaction cancellation request.
     /// </summary>
     [IsoId("_dxoGm9cZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction Cancellation Status")]
     [IsoXmlTag("TxCxlSts")]
-    public CancellationIndividualStatus1Code? TransactionCancellationStatus { get; init; } 
-    
+    public CancellationIndividualStatus1Code? TransactionCancellationStatus { get; init; }
+
     /// <summary>
     /// Provides detailed information on the cancellation status reason.
     /// </summary>
     [IsoId("_dxoGndcZEeqRFcf2R4bPBw")]
     [DisplayName("Cancellation Status Reason Information")]
     [IsoXmlTag("CxlStsRsnInf")]
-    public CancellationStatusReason4? CancellationStatusReasonInformation { get; init; } 
-    
+    public CancellationStatusReason4? CancellationStatusReasonInformation { get; init; }
+
     /// <summary>
     /// Amount of money, as provided in the original transaction, to be moved between the debtor and the creditor, before deduction of charges, expressed in the currency, as ordered by the original initiating party.
     /// Usage: This amount has to be transported unchanged through the transaction chain.
@@ -88,16 +86,16 @@ public partial record PaymentTransaction139
     [IsoId("_dxoGn9cZEeqRFcf2R4bPBw")]
     [DisplayName("Original Instructed Amount")]
     [IsoXmlTag("OrgnlInstdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? OriginalInstructedAmount { get; init; }
+
     /// <summary>
     /// Date at which the initiating party originally requested the clearing agent to process the payment.
     /// </summary>
     [IsoId("_dxoGodcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Requested Execution Date")]
     [IsoXmlTag("OrgnlReqdExctnDt")]
-    public DateAndDateTime2Choice_? OriginalRequestedExecutionDate { get; init; } 
-    
+    public DateAndDateTime2Choice_? OriginalRequestedExecutionDate { get; init; }
+
     /// <summary>
     /// Date at which the creditor originally requested the collection of the amount of money from the debtor.
     /// </summary>
@@ -105,17 +103,13 @@ public partial record PaymentTransaction139
     [DisplayName("Original Requested Collection Date")]
     [IsoXmlTag("OrgnlReqdColltnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? OriginalRequestedCollectionDate { get; init; } 
-    
+    public IsoISODate? OriginalRequestedCollectionDate { get; init; }
+
     /// <summary>
     /// Key elements used to identify the original transaction that is being referred to.
     /// </summary>
     [IsoId("_dxoGpdcZEeqRFcf2R4bPBw")]
     [DisplayName("Original Transaction Reference")]
     [IsoXmlTag("OrgnlTxRef")]
-    public OriginalTransactionReference35? OriginalTransactionReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    public OriginalTransactionReference35? OriginalTransactionReference { get; init; }
 }

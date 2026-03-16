@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UFracZELEem-9Y6mq5ZH3Q")]
 [DisplayName("Foreign Exchange Terms")]
-public partial record ForeignExchangeTerms37
+public record ForeignExchangeTerms37
 {
-    #nullable enable
-    
     /// <summary>
     /// Cash amount resulting from a foreign exchange trade.
     /// </summary>
     [IsoId("_UZK-M5ELEem-9Y6mq5ZH3Q")]
     [DisplayName("To Amount")]
     [IsoXmlTag("ToAmt")]
-    public ActiveCurrencyAndAmount? ToAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? ToAmount { get; init; }
+
     /// <summary>
     /// Cash amount for which a foreign exchange is required.
     /// </summary>
     [IsoId("_UZK-NZELEem-9Y6mq5ZH3Q")]
     [DisplayName("From Amount")]
     [IsoXmlTag("FrAmt")]
-    public ActiveCurrencyAndAmount? FromAmount { get; init; } 
-    
+    public ActiveCurrencyAndAmount? FromAmount { get; init; }
+
     /// <summary>
     /// Currency from which the quoted currency is converted in an exchange rate calculation.
     /// 1 x &lt;UnitCcy&gt; = &lt;XchgRate&gt; x &lt;QtdCcy&gt;.
@@ -41,8 +39,8 @@ public partial record ForeignExchangeTerms37
     [IsoId("_UZK-N5ELEem-9Y6mq5ZH3Q")]
     [DisplayName("Unit Currency")]
     [IsoXmlTag("UnitCcy")]
-    public required ActiveCurrencyCode UnitCurrency { get; init; } 
-    
+    public required ActiveCurrencyCode UnitCurrency { get; init; }
+
     /// <summary>
     /// Currency into which the unit currency is converted in an exchange rate calculation.
     /// 1 x &lt;UnitCcy&gt; = &lt;XchgRate&gt; x &lt;QtdCcy&gt;.
@@ -50,14 +48,14 @@ public partial record ForeignExchangeTerms37
     [IsoId("_UZK-OZELEem-9Y6mq5ZH3Q")]
     [DisplayName("Quoted Currency")]
     [IsoXmlTag("QtdCcy")]
-    public required ActiveCurrencyCode QuotedCurrency { get; init; } 
-    
+    public required ActiveCurrencyCode QuotedCurrency { get; init; }
+
     /// <summary>
-    /// Factor used for the conversion of an amount from one currency into another. This reflects that amount of the quoted currency that can be purchased with one unit of the unit currency, as follows: 
-    /// 1 x CUR1 = nnn x CUR2, 
-    /// where: 
-    /// CUR1 is the unit currency 
-    /// CUR2 is the quoted currency 
+    /// Factor used for the conversion of an amount from one currency into another. This reflects that amount of the quoted currency that can be purchased with one unit of the unit currency, as follows:
+    /// 1 x CUR1 = nnn x CUR2,
+    /// where:
+    /// CUR1 is the unit currency
+    /// CUR2 is the quoted currency
     /// nnn is the exchange rate.
     /// 1 x &lt;UnitCcy&gt; = &lt;XchgRate&gt; x &lt;QtdCcy&gt;.
     /// </summary>
@@ -65,8 +63,8 @@ public partial record ForeignExchangeTerms37
     [DisplayName("Exchange Rate")]
     [IsoXmlTag("XchgRate")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public required IsoBaseOneRate ExchangeRate { get; init; } 
-    
+    public required IsoBaseOneRate ExchangeRate { get; init; }
+
     /// <summary>
     /// Date and time at which an exchange rate is quoted.
     /// </summary>
@@ -74,17 +72,13 @@ public partial record ForeignExchangeTerms37
     [DisplayName("Quotation Date")]
     [IsoXmlTag("QtnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? QuotationDate { get; init; } 
-    
+    public IsoISODateTime? QuotationDate { get; init; }
+
     /// <summary>
     /// Party that proposes the foreign exchange rate.
     /// </summary>
     [IsoId("_UZK-RZELEem-9Y6mq5ZH3Q")]
     [DisplayName("Quoting Institution")]
     [IsoXmlTag("QtgInstn")]
-    public PartyIdentification139? QuotingInstitution { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification139? QuotingInstitution { get; init; }
 }

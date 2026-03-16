@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice
     /// </summary>
     [IsoId("_mNON4fOFEeaS7fYULSI4_Q")]
     [DisplayName("Term")]
-    public partial record Term : InterestRateFrequency2Choice_
+    public record Term : InterestRateFrequency2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unit for the rate basis.
         /// </summary>
         [IsoId("_sO0L0exREeakeva4q26Yqg")]
         [DisplayName("Unit")]
         [IsoXmlTag("Unit")]
-        public RateBasis1Code? Unit { get; init; } 
-        
+        public RateBasis1Code? Unit { get; init; }
+
         /// <summary>
         /// Value of the contract term in number of units.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestRateFrequency2Choice
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
         [IsoSimpleType(IsoSimpleType.Max3Number)]
-        public IsoMax3Number? Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoMax3Number? Value { get; init; }
     }
 }

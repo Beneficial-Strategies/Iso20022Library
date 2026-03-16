@@ -23,7 +23,7 @@ public enum AdditionalServiceResultCode
     [IsoId("_2ed0UJ1JEeublrfU-wN95w")]
     [Description(@"The service was performed.")]
     Performed,
-    
+
     /// <summary>
     /// The service was not performed.
     /// Encoded/decoded by serializers as &quot;NOPF&quot;.
@@ -32,7 +32,7 @@ public enum AdditionalServiceResultCode
     [IsoId("_6ZF20J1JEeublrfU-wN95w")]
     [Description(@"The service was not performed.")]
     NotPerformed,
-    
+
     /// <summary>
     /// The service is not supported and could not be performed.
     /// Encoded/decoded by serializers as &quot;NOSP&quot;.
@@ -41,7 +41,7 @@ public enum AdditionalServiceResultCode
     [IsoId("_-u4LUJ1JEeublrfU-wN95w")]
     [Description(@"The service is not supported and could not be performed.")]
     NotSupported,
-    
+
     /// <summary>
     /// Other nationally defined code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum AdditionalServiceResultCode
     [IsoId("_Ea8WQJ1KEeublrfU-wN95w")]
     [Description(@"Other nationally defined code.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other privately defined code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum AdditionalServiceResultCode
     [IsoId("_HxzkYJ1KEeublrfU-wN95w")]
     [Description(@"Other privately defined code.")]
     OtherPrivate,
-    
 }

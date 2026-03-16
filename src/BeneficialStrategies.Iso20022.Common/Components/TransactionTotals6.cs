@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_uP6W4Xu_EeSLmfFG0DG7zQ")]
 [DisplayName("Transaction Totals")]
-public partial record TransactionTotals6
+public record TransactionTotals6
 {
-    #nullable enable
-    
     /// <summary>
     /// Sum number of all authorisation transactions.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record TransactionTotals6
     [DisplayName("Authorisation")]
     [IsoXmlTag("Authstn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Authorisation { get; init; } 
-    
+    public IsoNumber? Authorisation { get; init; }
+
     /// <summary>
     /// Sum number of all reversed authorisation transactions.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record TransactionTotals6
     [DisplayName("Authorisation Reversal")]
     [IsoXmlTag("AuthstnRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? AuthorisationReversal { get; init; } 
-    
+    public IsoNumber? AuthorisationReversal { get; init; }
+
     /// <summary>
     /// Sum number of all inquiry transactions.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record TransactionTotals6
     [DisplayName("Inquiry")]
     [IsoXmlTag("Nqry")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Inquiry { get; init; } 
-    
+    public IsoNumber? Inquiry { get; init; }
+
     /// <summary>
     /// Sum number of all reversed inquiry transactions.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record TransactionTotals6
     [DisplayName("Inquiry Reversal")]
     [IsoXmlTag("NqryRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? InquiryReversal { get; init; } 
-    
+    public IsoNumber? InquiryReversal { get; init; }
+
     /// <summary>
     /// Sum number of all financial presentment payment transactions processed.
     /// </summary>
@@ -61,8 +59,8 @@ public partial record TransactionTotals6
     [DisplayName("Payments")]
     [IsoXmlTag("Pmts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Payments { get; init; } 
-    
+    public IsoNumber? Payments { get; init; }
+
     /// <summary>
     /// Sum number of all financial presentment payment transactions which have been reversed.
     /// </summary>
@@ -70,8 +68,8 @@ public partial record TransactionTotals6
     [DisplayName("Payment Reversal")]
     [IsoXmlTag("PmtRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? PaymentReversal { get; init; } 
-    
+    public IsoNumber? PaymentReversal { get; init; }
+
     /// <summary>
     /// Sum number of all financial presentment transactions processed.
     /// </summary>
@@ -79,8 +77,8 @@ public partial record TransactionTotals6
     [DisplayName("Transfer")]
     [IsoXmlTag("Trf")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Transfer { get; init; } 
-    
+    public IsoNumber? Transfer { get; init; }
+
     /// <summary>
     /// Sum number of all reversal transactions processed.
     /// </summary>
@@ -88,8 +86,8 @@ public partial record TransactionTotals6
     [DisplayName("Transfer Reversal")]
     [IsoXmlTag("TrfRvsl")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? TransferReversal { get; init; } 
-    
+    public IsoNumber? TransferReversal { get; init; }
+
     /// <summary>
     /// Sum number of all fee collection transactions.
     /// </summary>
@@ -97,9 +95,5 @@ public partial record TransactionTotals6
     [DisplayName("Fee Collection")]
     [IsoXmlTag("FeeColltn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? FeeCollection { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoNumber? FeeCollection { get; init; }
 }

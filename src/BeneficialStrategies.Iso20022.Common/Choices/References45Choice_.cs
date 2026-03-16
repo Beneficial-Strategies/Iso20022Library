@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References45Choice.SecuritiesFinancingTransactionIdentification))]
     [KnownType(typeof(References45Choice.IntraPositionMovementIdentification))]
     [KnownType(typeof(References45Choice.OtherTransactionIdentification))]
-    [JsonDerivedType(typeof(References45Choice.SecuritiesSettlementTransactionIdentification),nameof(References45Choice.SecuritiesSettlementTransactionIdentification))]
-    [JsonDerivedType(typeof(References45Choice.SecuritiesFinancingTransactionIdentification),nameof(References45Choice.SecuritiesFinancingTransactionIdentification))]
-    [JsonDerivedType(typeof(References45Choice.IntraPositionMovementIdentification),nameof(References45Choice.IntraPositionMovementIdentification))]
-    [JsonDerivedType(typeof(References45Choice.OtherTransactionIdentification),nameof(References45Choice.OtherTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References45Choice.SecuritiesSettlementTransactionIdentification),
+        nameof(References45Choice.SecuritiesSettlementTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References45Choice.SecuritiesFinancingTransactionIdentification),
+        nameof(References45Choice.SecuritiesFinancingTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References45Choice.IntraPositionMovementIdentification),
+        nameof(References45Choice.IntraPositionMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References45Choice.OtherTransactionIdentification),
+        nameof(References45Choice.OtherTransactionIdentification)
+    )]
     [IsoId("_RbgB0ztpEeWHYdqXF6YZmg")]
     [DisplayName("References 45 Choice")]
-    public abstract partial record References45Choice_
-    {
-    }
+    public abstract record References45Choice_ { }
 }

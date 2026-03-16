@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReuseValue1Choice.Actual))]
     [KnownType(typeof(ReuseValue1Choice.Estimated))]
-    [JsonDerivedType(typeof(ReuseValue1Choice.Actual),nameof(ReuseValue1Choice.Actual))]
-    [JsonDerivedType(typeof(ReuseValue1Choice.Estimated),nameof(ReuseValue1Choice.Estimated))]
+    [JsonDerivedType(typeof(ReuseValue1Choice.Actual), nameof(ReuseValue1Choice.Actual))]
+    [JsonDerivedType(typeof(ReuseValue1Choice.Estimated), nameof(ReuseValue1Choice.Estimated))]
     [IsoId("_MSGu8IxnEeap1-whlAlpOw")]
     [DisplayName("Reuse Value 1 Choice")]
-    public abstract partial record ReuseValue1Choice_
-    {
-    }
+    public abstract record ReuseValue1Choice_ { }
 }

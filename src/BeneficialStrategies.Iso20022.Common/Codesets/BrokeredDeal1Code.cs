@@ -23,7 +23,7 @@ public enum BrokeredDeal1Code
     [IsoId("_kvdzoXvREeWrWYBng3OpVw")]
     [Description(@"Transaction was arranged directly by the reporting agent.")]
     BilateralTransaction = BrokeredDealCode.BilateralTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction was arranged by a third party broking agent.
     /// Encoded/decoded by serializers as &quot;BROK&quot;.
@@ -32,5 +32,4 @@ public enum BrokeredDeal1Code
     [IsoId("_k2VQoXvREeWrWYBng3OpVw")]
     [Description(@"Transaction was arranged by a third party broking agent.||")]
     BrokeredTransaction = BrokeredDealCode.BrokeredTransaction, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum DeviceIdentificationType1Code
     [IsoId("_XS0CIZfOEeuqNYk2TG3bTg")]
     [Description(@"International Mobile Equipment Identity.")]
     IMEI = DeviceIdentificationTypeCode.IMEI, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other nationally assigned code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum DeviceIdentificationType1Code
     [IsoId("_XaxrUZfOEeuqNYk2TG3bTg")]
     [Description(@"Other nationally assigned code.")]
     OtherNational = DeviceIdentificationTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other privately assigned code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum DeviceIdentificationType1Code
     [IsoId("_X8TrEZfOEeuqNYk2TG3bTg")]
     [Description(@"Other privately assigned code.")]
     OtherPrivate = DeviceIdentificationTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Secure element ID.
     /// Encoded/decoded by serializers as &quot;SEID&quot;.
@@ -50,7 +50,7 @@ public enum DeviceIdentificationType1Code
     [IsoId("_X9ZQMZfOEeuqNYk2TG3bTg")]
     [Description(@"Secure element ID.")]
     SecureElementIdentification = DeviceIdentificationTypeCode.SecureElementIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Device serial number.
     /// Encoded/decoded by serializers as &quot;SENU&quot;.
@@ -59,5 +59,4 @@ public enum DeviceIdentificationType1Code
     [IsoId("_X-KsQZfOEeuqNYk2TG3bTg")]
     [Description(@"Device serial number.")]
     SerialNumber = DeviceIdentificationTypeCode.SerialNumber, // same ordinal as derivation source for type conversions
-    
 }

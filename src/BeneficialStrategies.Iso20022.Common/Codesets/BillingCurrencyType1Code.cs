@@ -23,7 +23,7 @@ public enum BillingCurrencyType1Code
     [IsoId("_6WXNtJqlEeGSON8vddiWzQ_42035703")]
     [Description(@"Currency type used for the billing is the account currency.")]
     Account = BillingCurrencyTypeCode.Account, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Currency type used for the billing is the settlement currency.
     /// Encoded/decoded by serializers as &quot;STLM&quot;.
@@ -32,7 +32,7 @@ public enum BillingCurrencyType1Code
     [IsoId("_6WXNtZqlEeGSON8vddiWzQ_-2111377502")]
     [Description(@"Currency type used for the billing is the settlement currency.")]
     Settlement = BillingCurrencyTypeCode.Settlement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Currency type used for the billing is the pricing currency.
     /// Encoded/decoded by serializers as &quot;PRCG&quot;.
@@ -41,5 +41,4 @@ public enum BillingCurrencyType1Code
     [IsoId("_6WXNtpqlEeGSON8vddiWzQ_-644228739")]
     [Description(@"Currency type used for the billing is the pricing currency.")]
     Pricing = BillingCurrencyTypeCode.Pricing, // same ordinal as derivation source for type conversions
-    
 }

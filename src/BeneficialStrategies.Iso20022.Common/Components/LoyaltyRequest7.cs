@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vWAaUaESEe-MRKYsaX6JDg")]
 [DisplayName("Loyalty Request7")]
-public partial record LoyaltyRequest7
+public record LoyaltyRequest7
 {
-    #nullable enable
-
     /// <summary>
     /// Customer Order.
     /// </summary>
     [DisplayName("Customer Order")]
     [IsoXmlTag("CstmrOrdr")]
-    public CustomerOrder1? CustomerOrder { get; init; } 
+    public CustomerOrder1? CustomerOrder { get; init; }
 
     /// <summary>
     /// Data.
@@ -37,9 +35,5 @@ public partial record LoyaltyRequest7
     /// </summary>
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required LoyaltyTransaction7 Transaction { get; init; } 
-
-    
-    #nullable disable
-    
+    public required LoyaltyTransaction7 Transaction { get; init; }
 }

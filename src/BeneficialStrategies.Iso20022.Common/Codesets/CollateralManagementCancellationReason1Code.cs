@@ -23,14 +23,15 @@ public enum CollateralManagementCancellationReason1Code
     [IsoId("_Ybm4adp-Ed-ak6NoX_4Aeg_809732037")]
     [Description(@"Cancellation due to message being sent in error.")]
     ProcessingError = CollateralManagementCancellationReasonCode.ProcessingError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation due to a change in exposure or collateral or independent amount or margin terms. For collateral proposal submitting new/different collateral.
     /// Encoded/decoded by serializers as &quot;PNSU&quot;.
     /// </summary>
     [EnumMember(Value = "PNSU")]
     [IsoId("_Ybm4atp-Ed-ak6NoX_4Aeg_1570497190")]
-    [Description(@"Cancellation due to a change in exposure or collateral or independent amount or margin terms. For collateral proposal submitting new/different collateral.")]
+    [Description(
+        @"Cancellation due to a change in exposure or collateral or independent amount or margin terms. For collateral proposal submitting new/different collateral."
+    )]
     PendingNewSubmission = CollateralManagementCancellationReasonCode.PendingNewSubmission, // same ordinal as derivation source for type conversions
-    
 }

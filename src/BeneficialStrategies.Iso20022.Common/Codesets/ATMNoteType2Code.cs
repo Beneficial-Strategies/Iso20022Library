@@ -23,7 +23,7 @@ public enum ATMNoteType2Code
     [IsoId("_lznowYqhEeS4a4abTJTSSw")]
     [Description(@"Detected counterfeit notes.")]
     Counterfeit = ATMNoteTypeCode.Counterfeit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fit bank notes.
     /// Encoded/decoded by serializers as &quot;FITN&quot;.
@@ -32,7 +32,7 @@ public enum ATMNoteType2Code
     [IsoId("_l5u30YqhEeS4a4abTJTSSw")]
     [Description(@"Fit bank notes.")]
     Fit = ATMNoteTypeCode.Fit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fit and unfit bank notes, if fitness cannot be determined.
     /// Encoded/decoded by serializers as &quot;FITU&quot;.
@@ -41,7 +41,7 @@ public enum ATMNoteType2Code
     [IsoId("_mBByoYqhEeS4a4abTJTSSw")]
     [Description(@"Fit and unfit bank notes, if fitness cannot be determined.")]
     FitAndUnfit = ATMNoteTypeCode.FitAndUnfit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notes stained by dye pack.
     /// Encoded/decoded by serializers as &quot;NTRL&quot;.
@@ -50,7 +50,7 @@ public enum ATMNoteType2Code
     [IsoId("_m4m64YqhEeS4a4abTJTSSw")]
     [Description(@"Notes stained by dye pack.")]
     Neutralised = ATMNoteTypeCode.Neutralised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Suspect notes.
     /// Encoded/decoded by serializers as &quot;SPCT&quot;.
@@ -59,7 +59,7 @@ public enum ATMNoteType2Code
     [IsoId("_m_dw0YqhEeS4a4abTJTSSw")]
     [Description(@"Suspect notes.")]
     Suspect = ATMNoteTypeCode.Suspect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unfit bank notes (unacceptable quality).
     /// Encoded/decoded by serializers as &quot;UNFT&quot;.
@@ -68,7 +68,7 @@ public enum ATMNoteType2Code
     [IsoId("_nI29YYqhEeS4a4abTJTSSw")]
     [Description(@"Unfit bank notes (unacceptable quality).")]
     Unfit = ATMNoteTypeCode.Unfit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised notes.
     /// Encoded/decoded by serializers as &quot;UNRG&quot;.
@@ -77,5 +77,4 @@ public enum ATMNoteType2Code
     [IsoId("_nPaRUYqhEeS4a4abTJTSSw")]
     [Description(@"Unrecognised notes.")]
     Unrecognised = ATMNoteTypeCode.Unrecognised, // same ordinal as derivation source for type conversions
-    
 }

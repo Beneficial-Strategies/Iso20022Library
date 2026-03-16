@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MarginTerms1Choice.MarginDetails))]
     [KnownType(typeof(MarginTerms1Choice.SegregatedIndependentAmountMargin))]
-    [JsonDerivedType(typeof(MarginTerms1Choice.MarginDetails),nameof(MarginTerms1Choice.MarginDetails))]
-    [JsonDerivedType(typeof(MarginTerms1Choice.SegregatedIndependentAmountMargin),nameof(MarginTerms1Choice.SegregatedIndependentAmountMargin))]
+    [JsonDerivedType(
+        typeof(MarginTerms1Choice.MarginDetails),
+        nameof(MarginTerms1Choice.MarginDetails)
+    )]
+    [JsonDerivedType(
+        typeof(MarginTerms1Choice.SegregatedIndependentAmountMargin),
+        nameof(MarginTerms1Choice.SegregatedIndependentAmountMargin)
+    )]
     [IsoId("_QmogMtp-Ed-ak6NoX_4Aeg_86732419")]
     [DisplayName("Margin Terms 1 Choice")]
-    public abstract partial record MarginTerms1Choice_
-    {
-    }
+    public abstract record MarginTerms1Choice_ { }
 }

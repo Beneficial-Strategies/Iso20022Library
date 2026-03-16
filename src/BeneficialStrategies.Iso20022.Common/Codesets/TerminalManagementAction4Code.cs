@@ -23,7 +23,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHc96FEeeCre2qFaLC2A")]
     [Description(@"Request to deactivate the element identified inside the message exchange.")]
     Deactivate = TerminalManagementActionCode.Deactivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to delete the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -32,7 +32,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHdd6FEeeCre2qFaLC2A")]
     [Description(@"Request to delete the element identified inside the message exchange.")]
     Delete = TerminalManagementActionCode.Delete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to download the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;DWNL&quot;.
@@ -41,7 +41,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHd96FEeeCre2qFaLC2A")]
     [Description(@"Request to download the element identified inside the message exchange.")]
     Download = TerminalManagementActionCode.Download, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to install the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -50,7 +50,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHed6FEeeCre2qFaLC2A")]
     [Description(@"Request to install the element identified inside the message exchange.")]
     Install = TerminalManagementActionCode.Install, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to restart the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;RSTR&quot;.
@@ -59,7 +59,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHe96FEeeCre2qFaLC2A")]
     [Description(@"Request to restart the element identified inside the message exchange.")]
     Restart = TerminalManagementActionCode.Restart, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to upload the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;UPLD&quot;.
@@ -68,7 +68,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHfd6FEeeCre2qFaLC2A")]
     [Description(@"Request to upload the element identified inside the message exchange.")]
     Upload = TerminalManagementActionCode.Upload, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to update the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -77,7 +77,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_dXUHf96FEeeCre2qFaLC2A")]
     [Description(@"Request to update the element identified inside the message exchange.")]
     Update = TerminalManagementActionCode.Update, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request sent to a POI to bind with a server.
     /// Encoded/decoded by serializers as &quot;BIND&quot;.
@@ -86,7 +86,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_ekYXgd6FEeeCre2qFaLC2A")]
     [Description(@"Request sent to a POI to bind with a server.")]
     Bind = TerminalManagementActionCode.Bind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request sent to a POI to rebind with a server.
     /// Encoded/decoded by serializers as &quot;RBND&quot;.
@@ -95,7 +95,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_e-L-od6FEeeCre2qFaLC2A")]
     [Description(@"Request sent to a POI to rebind with a server.")]
     Rebind = TerminalManagementActionCode.Rebind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request sent to a POI to unbind with a server.
     /// Encoded/decoded by serializers as &quot;UBND&quot;.
@@ -104,7 +104,7 @@ public enum TerminalManagementAction4Code
     [IsoId("_fKLzQd6FEeeCre2qFaLC2A")]
     [Description(@"Request sent to a POI to unbind with a server.")]
     Unbind = TerminalManagementActionCode.Unbind, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to activate the element identified inside the message exchange.
     /// Encoded/decoded by serializers as &quot;ACTV&quot;.
@@ -113,5 +113,4 @@ public enum TerminalManagementAction4Code
     [IsoId("_hFFZsd6FEeeCre2qFaLC2A")]
     [Description(@"Request to activate the element identified inside the message exchange.")]
     Activate = TerminalManagementActionCode.Activate, // same ordinal as derivation source for type conversions
-    
 }

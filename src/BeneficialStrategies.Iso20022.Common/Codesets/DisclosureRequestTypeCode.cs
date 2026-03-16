@@ -23,7 +23,7 @@ public enum DisclosureRequestTypeCode
     [IsoId("_-p6BIEV2EemRx7jyevcLwg")]
     [Description(@"New disclosure request.")]
     New,
-    
+
     /// <summary>
     /// Disclosure request replacing a previously sent request.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
@@ -32,5 +32,4 @@ public enum DisclosureRequestTypeCode
     [IsoId("_FetVwEV3EemRx7jyevcLwg")]
     [Description(@"Disclosure request replacing a previously sent request.")]
     Replacement,
-    
 }

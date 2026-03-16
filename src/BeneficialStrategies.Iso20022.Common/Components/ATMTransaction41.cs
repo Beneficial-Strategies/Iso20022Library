@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T5pTMaEPEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction41")]
-public partial record ATMTransaction41
+public record ATMTransaction41
 {
-    #nullable enable
-
     /// <summary>
     /// Command.
     /// </summary>
@@ -30,16 +28,12 @@ public partial record ATMTransaction41
     /// </summary>
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public required Response2Code Response { get; init; } 
+    public required Response2Code Response { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public TransactionIdentifier3? TransactionIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public TransactionIdentifier3? TransactionIdentification { get; init; }
 }

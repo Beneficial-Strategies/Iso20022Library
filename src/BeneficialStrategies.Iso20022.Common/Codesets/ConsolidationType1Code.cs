@@ -23,7 +23,7 @@ public enum ConsolidationType1Code
     [IsoId("_5ZjW8SDVEeWCLu74WLgP4w")]
     [Description(@"Consolidation is general.")]
     General = ConsolidationTypeCode.General, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Consolidation is at the level of the participant.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,5 +32,4 @@ public enum ConsolidationType1Code
     [IsoId("_5i6uUSDVEeWCLu74WLgP4w")]
     [Description(@"Consolidation is at the level of the participant.")]
     Participation = ConsolidationTypeCode.Participation, // same ordinal as derivation source for type conversions
-    
 }

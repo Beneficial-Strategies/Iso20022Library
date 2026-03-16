@@ -15,7 +15,7 @@
         /// Constructs the attribute as a marker on a member using the specified simple type.
         /// </summary>
         /// <param name="isoSimpleType">ISO20022 simple type for this member.</param>
-        public IsoSimpleTypeAttribute( IsoSimpleType isoSimpleType)
+        public IsoSimpleTypeAttribute(IsoSimpleType isoSimpleType)
         {
             this.SimpleType = isoSimpleType;
         }
@@ -38,7 +38,7 @@
         /// Constructs the attribute using the specified tag.
         /// </summary>
         /// <param name="xmlTag">ISO20022 xml element name used for this member.</param>
-        public IsoXmlTagAttribute( string xmlTag )
+        public IsoXmlTagAttribute(string xmlTag)
         {
             this.XmlTag = xmlTag;
         }

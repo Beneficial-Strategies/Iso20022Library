@@ -23,7 +23,7 @@ public enum EquityReturnParameterCode
     [IsoId("_HwuSsAneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Price Return Basis Performance.")]
     PriceReturnBasicPerformanceParameter,
-    
+
     /// <summary>
     /// Equity derivative parameter Return Variance.
     /// Encoded/decoded by serializers as &quot;PRVA&quot;.
@@ -32,7 +32,7 @@ public enum EquityReturnParameterCode
     [IsoId("_LKYWIAneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Return Variance.")]
     ParameterReturnVariance,
-    
+
     /// <summary>
     /// Equity derivative parameter Return Volatility.
     /// Encoded/decoded by serializers as &quot;PRVO&quot;.
@@ -41,7 +41,7 @@ public enum EquityReturnParameterCode
     [IsoId("_XgXbYQneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Return Volatility.")]
     ParameterReturnVolatility,
-    
+
     /// <summary>
     /// Equity derivative parameter Return Dividend.
     /// Encoded/decoded by serializers as &quot;PRDV&quot;.
@@ -50,5 +50,4 @@ public enum EquityReturnParameterCode
     [IsoId("_YKeIUQneEeWa7rBfPECYsw")]
     [Description(@"Equity derivative parameter Return Dividend.")]
     ParameterReturnDividend,
-    
 }

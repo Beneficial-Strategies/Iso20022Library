@@ -14,20 +14,44 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References78Choice.IntraBalanceMovementIdentification))]
     [KnownType(typeof(References78Choice.AccountServicerTransactionIdentification))]
     [KnownType(typeof(References78Choice.MarketInfrastructureTransactionIdentification))]
-    [KnownType(typeof(References78Choice.CounterpartyMarketInfrastructureTransactionIdentification))]
+    [KnownType(
+        typeof(References78Choice.CounterpartyMarketInfrastructureTransactionIdentification)
+    )]
     [KnownType(typeof(References78Choice.PoolIdentification))]
     [KnownType(typeof(References78Choice.OtherTransactionIdentification))]
-    [JsonDerivedType(typeof(References78Choice.SecuritiesSettlementTransactionIdentification),nameof(References78Choice.SecuritiesSettlementTransactionIdentification))]
-    [JsonDerivedType(typeof(References78Choice.IntraPositionMovementIdentification),nameof(References78Choice.IntraPositionMovementIdentification))]
-    [JsonDerivedType(typeof(References78Choice.IntraBalanceMovementIdentification),nameof(References78Choice.IntraBalanceMovementIdentification))]
-    [JsonDerivedType(typeof(References78Choice.AccountServicerTransactionIdentification),nameof(References78Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References78Choice.MarketInfrastructureTransactionIdentification),nameof(References78Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References78Choice.CounterpartyMarketInfrastructureTransactionIdentification),nameof(References78Choice.CounterpartyMarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References78Choice.PoolIdentification),nameof(References78Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References78Choice.OtherTransactionIdentification),nameof(References78Choice.OtherTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References78Choice.SecuritiesSettlementTransactionIdentification),
+        nameof(References78Choice.SecuritiesSettlementTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.IntraPositionMovementIdentification),
+        nameof(References78Choice.IntraPositionMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.IntraBalanceMovementIdentification),
+        nameof(References78Choice.IntraBalanceMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.AccountServicerTransactionIdentification),
+        nameof(References78Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References78Choice.MarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.CounterpartyMarketInfrastructureTransactionIdentification),
+        nameof(References78Choice.CounterpartyMarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.PoolIdentification),
+        nameof(References78Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References78Choice.OtherTransactionIdentification),
+        nameof(References78Choice.OtherTransactionIdentification)
+    )]
     [IsoId("_d_pEWzi8Eeydid5dcNPKvg")]
     [DisplayName("References 78 Choice")]
-    public abstract partial record References78Choice_
-    {
-    }
+    public abstract record References78Choice_ { }
 }

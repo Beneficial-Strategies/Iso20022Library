@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_kx_YcMX0EeiSF9q-coWegA")]
-[Description(@"Specifies if the status on a  transaction is pending initiation or has been initiated.")]
+[Description(
+    @"Specifies if the status on a  transaction is pending initiation or has been initiated."
+)]
 [Derivations(typeof(ExecutionStatus1Code))]
 public enum ExecutionStatusCode
 {
@@ -23,7 +25,7 @@ public enum ExecutionStatusCode
     [IsoId("_9-YvcMX0EeiSF9q-coWegA")]
     [Description(@"Transaction which has been initiated and has not yet closed.")]
     Initiated,
-    
+
     /// <summary>
     /// Pending Initiation.
     /// Encoded/decoded by serializers as &quot;PINT&quot;.
@@ -32,5 +34,4 @@ public enum ExecutionStatusCode
     [IsoId("_CeKtcMX1EeiSF9q-coWegA")]
     [Description(@"Pending Initiation.")]
     PendingInitiation,
-    
 }

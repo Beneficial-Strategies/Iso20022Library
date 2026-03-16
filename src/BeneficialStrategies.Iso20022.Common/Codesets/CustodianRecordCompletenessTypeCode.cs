@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_11fptTL3EeKU9IrkkToqcw_1241268024")]
-[Description(@"Specifies the state of details of the composite record on the system. Applicable to custodian service only.")]
+[Description(
+    @"Specifies the state of details of the composite record on the system. Applicable to custodian service only."
+)]
 [Derivations(typeof(CustodianRecordCompletenessType1Code))]
 public enum CustodianRecordCompletenessTypeCode
 {
@@ -23,7 +25,7 @@ public enum CustodianRecordCompletenessTypeCode
     [IsoId("_11pasDL3EeKU9IrkkToqcw_-85851678")]
     [Description(@"Custodian record is complete.")]
     Complete,
-    
+
     /// <summary>
     /// Custodian record is incomplete.
     /// Encoded/decoded by serializers as &quot;INCO&quot;.
@@ -32,7 +34,7 @@ public enum CustodianRecordCompletenessTypeCode
     [IsoId("_11pasTL3EeKU9IrkkToqcw_-167921638")]
     [Description(@"Custodian record is incomplete.")]
     Incomplete,
-    
+
     /// <summary>
     /// Custodian record is conditionally complete.
     /// Encoded/decoded by serializers as &quot;CCOM&quot;.
@@ -41,5 +43,4 @@ public enum CustodianRecordCompletenessTypeCode
     [IsoId("_11pasjL3EeKU9IrkkToqcw_-1808310521")]
     [Description(@"Custodian record is conditionally complete.")]
     ConditionallyComplete,
-    
 }

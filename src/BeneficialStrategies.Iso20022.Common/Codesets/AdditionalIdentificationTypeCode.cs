@@ -23,16 +23,18 @@ public enum AdditionalIdentificationTypeCode
     [IsoId("_AEXInfJXEeiJn9rM2Znz2w")]
     [Description(@"Contains the Austin-Tetra Number assigned to the card acceptor.")]
     AustinTetra,
-    
+
     /// <summary>
     /// Contains the North American Industry Classification System (NAICS) code assigned to the card acceptor.
     /// Encoded/decoded by serializers as &quot;ICSN&quot;.
     /// </summary>
     [EnumMember(Value = "ICSN")]
     [IsoId("_AEXImfJXEeiJn9rM2Znz2w")]
-    [Description(@"Contains the North American Industry Classification System (NAICS) code assigned to the card acceptor.")]
+    [Description(
+        @"Contains the North American Industry Classification System (NAICS) code assigned to the card acceptor."
+    )]
     NAICS,
-    
+
     /// <summary>
     /// Other Additional Identification defined at a national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +43,7 @@ public enum AdditionalIdentificationTypeCode
     [IsoId("_AEXImvJXEeiJn9rM2Znz2w")]
     [Description(@"Other Additional Identification defined at a national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other Additional Identification defined at a private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +52,4 @@ public enum AdditionalIdentificationTypeCode
     [IsoId("_AEXInPJXEeiJn9rM2Znz2w")]
     [Description(@"Other Additional Identification defined at a private level.")]
     OtherPrivate,
-    
 }

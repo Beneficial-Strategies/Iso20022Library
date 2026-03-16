@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4TAcsa4OEeWZgJQOa6iKCQ")]
 [DisplayName("ATM Service")]
-public partial record ATMService13
+public record ATMService13
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification of the deposit service provided by the ATM inside the session.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ATMService13
     [DisplayName("Service Reference")]
     [IsoXmlTag("SvcRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ServiceReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ServiceReference { get; init; }
+
     /// <summary>
     /// Codification of the type of service for the ATM.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ATMService13
     [DisplayName("ATM Service Code")]
     [IsoXmlTag("ATMSvcCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ATMServiceCode { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ATMServiceCode { get; init; }
+
     /// <summary>
     /// Codification of the type of service for the host.
     /// </summary>
@@ -45,17 +43,17 @@ public partial record ATMService13
     [DisplayName("Host Service Code")]
     [IsoXmlTag("HstSvcCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? HostServiceCode { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? HostServiceCode { get; init; }
+
     /// <summary>
     /// Describes the type of deposit service selected by the customer.
     /// </summary>
     [IsoId("_4dlVB64OEeWZgJQOa6iKCQ")]
     [DisplayName("Service Type")]
     [IsoXmlTag("SvcTp")]
-    public required ATMServiceType6Code ServiceType { get; init; } 
-    
+    public required ATMServiceType6Code ServiceType { get; init; }
+
     /// <summary>
     /// Identification of the variant of the service.
     /// </summary>
@@ -63,9 +61,9 @@ public partial record ATMService13
     [DisplayName("Service Variant Identification")]
     [IsoXmlTag("SvcVarntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ServiceVariantIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ServiceVariantIdentification { get; init; }
+
     /// <summary>
     /// True if deposit with cash back transaction.
     /// </summary>
@@ -73,8 +71,8 @@ public partial record ATMService13
     [DisplayName("Cash Back")]
     [IsoXmlTag("CshBck")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? CashBack { get; init; } 
-    
+    public IsoTrueFalseIndicator? CashBack { get; init; }
+
     /// <summary>
     /// True if the deposit transaction is split in multiple accounts.
     /// </summary>
@@ -82,8 +80,8 @@ public partial record ATMService13
     [DisplayName("Multi Account")]
     [IsoXmlTag("MultiAcct")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? MultiAccount { get; init; } 
-    
+    public IsoTrueFalseIndicator? MultiAccount { get; init; }
+
     /// <summary>
     /// True if this is not the final deposit.
     /// </summary>
@@ -91,9 +89,5 @@ public partial record ATMService13
     [DisplayName("Partial Deposit")]
     [IsoXmlTag("PrtlDpst")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? PartialDeposit { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? PartialDeposit { get; init; }
 }

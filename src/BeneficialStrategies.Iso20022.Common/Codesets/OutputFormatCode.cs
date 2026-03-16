@@ -12,7 +12,13 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_tW6kUHr5EeSZrs_hiwNOWA")]
 [Description(@"Available message format to display or print.")]
-[Derivations(typeof(OutputFormat5Code),typeof(OutputFormat2Code),typeof(OutputFormat3Code),typeof(OutputFormat1Code),typeof(OutputFormat4Code))]
+[Derivations(
+    typeof(OutputFormat5Code),
+    typeof(OutputFormat2Code),
+    typeof(OutputFormat3Code),
+    typeof(OutputFormat1Code),
+    typeof(OutputFormat4Code)
+)]
 public enum OutputFormatCode
 {
     /// <summary>
@@ -23,7 +29,7 @@ public enum OutputFormatCode
     [IsoId("_yWkVMHr5EeSZrs_hiwNOWA")]
     [Description(@"Text without format attributes.")]
     SimpleText,
-    
+
     /// <summary>
     /// Predefined configured messages, identified by a reference.
     /// Encoded/decoded by serializers as &quot;MREF&quot;.
@@ -32,7 +38,7 @@ public enum OutputFormatCode
     [IsoId("_2CqzgHr5EeSZrs_hiwNOWA")]
     [Description(@"Predefined configured messages, identified by a reference.")]
     MessageReference,
-    
+
     /// <summary>
     /// XHTML document which includes a subset of the XHTML output tag.
     /// Encoded/decoded by serializers as &quot;HTML&quot;.
@@ -41,7 +47,7 @@ public enum OutputFormatCode
     [IsoId("_4w1C4Hr5EeSZrs_hiwNOWA")]
     [Description(@"XHTML document which includes a subset of the XHTML output tag.")]
     XHTML,
-    
+
     /// <summary>
     /// Screen to display identified by a reference.
     /// Encoded/decoded by serializers as &quot;SREF&quot;.
@@ -50,7 +56,7 @@ public enum OutputFormatCode
     [IsoId("_aR8PAM4xEeSiNPH-YrkZ3A")]
     [Description(@"Screen to display identified by a reference.")]
     ScreenReference,
-    
+
     /// <summary>
     /// Barcode to output in several possible format.
     /// Encoded/decoded by serializers as &quot;BARC&quot;.
@@ -59,7 +65,7 @@ public enum OutputFormatCode
     [IsoId("_XlImcGpUEemFuJNacM8hZA")]
     [Description(@"Barcode to output in several possible format.")]
     Barcode,
-    
+
     /// <summary>
     /// A text to display as a menu before requesting an input.
     /// Encoded/decoded by serializers as &quot;MENT&quot;.
@@ -68,7 +74,7 @@ public enum OutputFormatCode
     [IsoId("_d3t-0GpUEemFuJNacM8hZA")]
     [Description(@"A text to display as a menu before requesting an input.")]
     MenuEntry,
-    
+
     /// <summary>
     /// File name and location identification for stored messages or data.
     /// Encoded/decoded by serializers as &quot;FLNM&quot;.
@@ -77,7 +83,7 @@ public enum OutputFormatCode
     [IsoId("_JtYkFnyKEemHsOqJOzMVfg")]
     [Description(@"File name and location identification for stored messages or data.")]
     FileName,
-    
+
     /// <summary>
     /// Multi-media messaging service
     /// Encoded/decoded by serializers as &quot;MMSI&quot;.
@@ -86,7 +92,7 @@ public enum OutputFormatCode
     [IsoId("_JtYkF3yKEemHsOqJOzMVfg")]
     [Description(@"Multi-media messaging service")]
     MultiMediaMessaging,
-    
+
     /// <summary>
     /// Other type of output of message defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -95,7 +101,7 @@ public enum OutputFormatCode
     [IsoId("_JtYkGHyKEemHsOqJOzMVfg")]
     [Description(@"Other type of output of message defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of output format defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -104,7 +110,7 @@ public enum OutputFormatCode
     [IsoId("_JtYkGXyKEemHsOqJOzMVfg")]
     [Description(@"Other type of output format defined at private level.")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Short message service
     /// Encoded/decoded by serializers as &quot;SMSI&quot;.
@@ -113,7 +119,7 @@ public enum OutputFormatCode
     [IsoId("_JtYkGnyKEemHsOqJOzMVfg")]
     [Description(@"Short message service")]
     ShortMessageService,
-    
+
     /// <summary>
     /// Uniform Resource Locator (URL) reference for the message.
     /// Encoded/decoded by serializers as &quot;URLI&quot;.
@@ -122,7 +128,7 @@ public enum OutputFormatCode
     [IsoId("_JtYkG3yKEemHsOqJOzMVfg")]
     [Description(@"Uniform Resource Locator (URL) reference for the message.")]
     UniformResourceLocator,
-    
+
     /// <summary>
     /// A formatted print line.
     /// Encoded/decoded by serializers as &quot;PLIN&quot;.
@@ -131,7 +137,7 @@ public enum OutputFormatCode
     [IsoId("_nbH5gMlSEeuJ35KoBRZFOg")]
     [Description(@"A formatted print line.")]
     PrintLine,
-    
+
     /// <summary>
     /// Java Syntax Object Notation format.
     /// Encoded/decoded by serializers as &quot;JSON&quot;.
@@ -140,7 +146,7 @@ public enum OutputFormatCode
     [IsoId("_1NF0kMlSEeuJ35KoBRZFOg")]
     [Description(@"Java Syntax Object Notation format.")]
     JSON,
-    
+
     /// <summary>
     /// eXtensible Markup Language format.
     /// Encoded/decoded by serializers as &quot;XMLF&quot;.
@@ -149,7 +155,7 @@ public enum OutputFormatCode
     [IsoId("_8nMOoMlSEeuJ35KoBRZFOg")]
     [Description(@"eXtensible Markup Language format.")]
     XML,
-    
+
     /// <summary>
     /// Electronic data interchange for administration, commerce and transport.
     /// Encoded/decoded by serializers as &quot;EDIF&quot;.
@@ -158,7 +164,7 @@ public enum OutputFormatCode
     [IsoId("_MV-bsMlTEeuJ35KoBRZFOg")]
     [Description(@"Electronic data interchange for administration, commerce and transport.")]
     EDIFACT,
-    
+
     /// <summary>
     /// Comma separated value format.
     /// Encoded/decoded by serializers as &quot;CSVF&quot;.
@@ -167,7 +173,7 @@ public enum OutputFormatCode
     [IsoId("_YZZKQMlTEeuJ35KoBRZFOg")]
     [Description(@"Comma separated value format.")]
     CSV,
-    
+
     /// <summary>
     /// Joint Photographic Experts Group format.
     /// Encoded/decoded by serializers as &quot;JPEG&quot;.
@@ -176,7 +182,7 @@ public enum OutputFormatCode
     [IsoId("_dkt_oMlTEeuJ35KoBRZFOg")]
     [Description(@"Joint Photographic Experts Group format.")]
     JPEG,
-    
+
     /// <summary>
     /// Portable Document Format.
     /// Encoded/decoded by serializers as &quot;PDFF&quot;.
@@ -185,7 +191,7 @@ public enum OutputFormatCode
     [IsoId("_xskesMlTEeuJ35KoBRZFOg")]
     [Description(@"Portable Document Format.")]
     PDF,
-    
+
     /// <summary>
     /// Portable Network Graphics format.
     /// Encoded/decoded by serializers as &quot;PNGF&quot;.
@@ -194,7 +200,7 @@ public enum OutputFormatCode
     [IsoId("_3DW9MMlTEeuJ35KoBRZFOg")]
     [Description(@"Portable Network Graphics format.")]
     PNG,
-    
+
     /// <summary>
     /// Scalable vector graphic format.
     /// Encoded/decoded by serializers as &quot;SVGF&quot;.
@@ -203,5 +209,4 @@ public enum OutputFormatCode
     [IsoId("_BhESMMlUEeuJ35KoBRZFOg")]
     [Description(@"Scalable vector graphic format.")]
     SVG,
-    
 }

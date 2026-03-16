@@ -23,5 +23,4 @@ public enum AssetClassSubProductType15Code
     [IsoId("_lluxkQn0EeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type non precious metals.")]
     NonPrecious = AssetClassSubProductTypeCode.NonPrecious, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum SettlementDate3Code
     [IsoId("_ZLby0Np-Ed-ak6NoX_4Aeg_-219579438")]
     [Description(@"Settlement takes place at the choice/option of the seller.")]
     SellersOption = SettlementDateCode.SellersOption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place as a result of a &quot;to be announced&quot; trade.
     /// Encoded/decoded by serializers as &quot;TBAT&quot;.
@@ -32,7 +32,7 @@ public enum SettlementDate3Code
     [IsoId("_ZLby0dp-Ed-ak6NoX_4Aeg_-73663569")]
     [Description(@"Settlement takes place as a result of a ""to be announced"" trade.")]
     ToBeAnnouncedTrade = SettlementDateCode.ToBeAnnouncedTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place when the financial instrument is distributed.
     /// Encoded/decoded by serializers as &quot;WDIS&quot;.
@@ -41,7 +41,7 @@ public enum SettlementDate3Code
     [IsoId("_ZLby0tp-Ed-ak6NoX_4Aeg_341923237")]
     [Description(@"Settlement takes place when the financial instrument is distributed.")]
     WhenDistributed = SettlementDateCode.WhenDistributed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement takes place when the financial instrument is issued or distributed.
     /// Encoded/decoded by serializers as &quot;WHID&quot;.
@@ -50,7 +50,7 @@ public enum SettlementDate3Code
     [IsoId("_ZLby09p-Ed-ak6NoX_4Aeg_372397488")]
     [Description(@"Settlement takes place when the financial instrument is issued or distributed.")]
     WhenIssuedOrDistributed = SettlementDateCode.WhenIssuedOrDistributed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Settlement is to be done when the security is issued.
     /// Encoded/decoded by serializers as &quot;WISS&quot;.
@@ -59,5 +59,4 @@ public enum SettlementDate3Code
     [IsoId("_ZLby1Np-Ed-ak6NoX_4Aeg_671619815")]
     [Description(@"Settlement is to be done when the security is issued.")]
     WhenIssued = SettlementDateCode.WhenIssued, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum OptionRight1Code
     [IsoId("__vPco9ojEeC60axPepSq7g_-581695193")]
     [Description(@"Exercise option right.")]
     Exercise = OptionRightCode.Exercise, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option right assignment.
     /// Encoded/decoded by serializers as &quot;ASGN&quot;.
@@ -32,7 +32,7 @@ public enum OptionRight1Code
     [IsoId("__vPcpNojEeC60axPepSq7g_-1981917652")]
     [Description(@"Option right assignment.")]
     Assignment = OptionRightCode.Assignment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The option right is renounced.
     /// Encoded/decoded by serializers as &quot;RENO&quot;.
@@ -41,7 +41,7 @@ public enum OptionRight1Code
     [IsoId("__vPcpdojEeC60axPepSq7g_-1993016429")]
     [Description(@"The option right is renounced.")]
     Renouncement = OptionRightCode.Renouncement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option right expires.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -50,5 +50,4 @@ public enum OptionRight1Code
     [IsoId("__vYmkNojEeC60axPepSq7g_-525867666")]
     [Description(@"Option right expires.")]
     Expiration = OptionRightCode.Expiration, // same ordinal as derivation source for type conversions
-    
 }

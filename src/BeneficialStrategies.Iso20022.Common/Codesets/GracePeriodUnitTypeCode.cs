@@ -23,7 +23,7 @@ public enum GracePeriodUnitTypeCode
     [IsoId("_s_4u-duVEei2qvU6FBLZYA")]
     [Description(@"Grace period months.")]
     Months,
-    
+
     /// <summary>
     /// Grace period payments.
     /// Encoded/decoded by serializers as &quot;PMTS&quot;.
@@ -32,7 +32,7 @@ public enum GracePeriodUnitTypeCode
     [IsoId("_s_4u_NuVEei2qvU6FBLZYA")]
     [Description(@"Grace period payments.")]
     Payments,
-    
+
     /// <summary>
     /// Grace period days.
     /// Encoded/decoded by serializers as &quot;DAYS&quot;.
@@ -41,7 +41,7 @@ public enum GracePeriodUnitTypeCode
     [IsoId("_s_4u-NuVEei2qvU6FBLZYA")]
     [Description(@"Grace period days.")]
     Days,
-    
+
     /// <summary>
     /// Grace period weeks.
     /// Encoded/decoded by serializers as &quot;WEKS&quot;.
@@ -50,7 +50,7 @@ public enum GracePeriodUnitTypeCode
     [IsoId("_s_4u-9uVEei2qvU6FBLZYA")]
     [Description(@"Grace period weeks.")]
     Weeks,
-    
+
     /// <summary>
     /// Other National Grace period.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum GracePeriodUnitTypeCode
     [IsoId("_s_4u-tuVEei2qvU6FBLZYA")]
     [Description(@"Other National Grace period.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other Private Grace period.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,5 +68,4 @@ public enum GracePeriodUnitTypeCode
     [IsoId("_s_4u_duVEei2qvU6FBLZYA")]
     [Description(@"Other Private Grace period.")]
     OtherPrivate,
-    
 }

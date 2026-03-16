@@ -11,7 +11,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_EuroCurrencyCode")]
-[Description(@"Code allocated to the Euro currency, as described in the latest edition of the international standard ISO 4217.")]
-public enum EuroCurrencyCode
-{
-}
+[Description(
+    @"Code allocated to the Euro currency, as described in the latest edition of the international standard ISO 4217."
+)]
+public enum EuroCurrencyCode { }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CashInOrOut5Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.CashInOrOut5Choice
     /// </summary>
     [IsoId("_SBq61Np-Ed-ak6NoX_4Aeg_1170441476")]
     [DisplayName("Cash Out Payment Instrument")]
-    public partial record CashOutPaymentInstrument : CashInOrOut5Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record CashOutPaymentInstrument : CashInOrOut5Choice_ { }
 }

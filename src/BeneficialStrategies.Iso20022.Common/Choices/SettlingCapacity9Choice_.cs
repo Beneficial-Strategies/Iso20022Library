@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlingCapacity9Choice.Code))]
     [KnownType(typeof(SettlingCapacity9Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlingCapacity9Choice.Code),nameof(SettlingCapacity9Choice.Code))]
-    [JsonDerivedType(typeof(SettlingCapacity9Choice.Proprietary),nameof(SettlingCapacity9Choice.Proprietary))]
+    [JsonDerivedType(typeof(SettlingCapacity9Choice.Code), nameof(SettlingCapacity9Choice.Code))]
+    [JsonDerivedType(
+        typeof(SettlingCapacity9Choice.Proprietary),
+        nameof(SettlingCapacity9Choice.Proprietary)
+    )]
     [IsoId("_hOSOwZEZEeakHoV5BVecAQ")]
     [DisplayName("Settling Capacity 9 Choice")]
-    public abstract partial record SettlingCapacity9Choice_
-    {
-    }
+    public abstract record SettlingCapacity9Choice_ { }
 }

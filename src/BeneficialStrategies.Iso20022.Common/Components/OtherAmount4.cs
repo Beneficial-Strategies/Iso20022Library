@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_L8b4wZM5EeuleeHpFMMhmQ")]
 [DisplayName("Other Amount")]
-public partial record OtherAmount4
+public record OtherAmount4
 {
-    #nullable enable
-    
     /// <summary>
     /// Number of other amounts involved in clearing.
     /// </summary>
@@ -25,33 +23,29 @@ public partial record OtherAmount4
     [DisplayName("Clearing Count")]
     [IsoXmlTag("ClrCnt")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber ClearingCount { get; init; } 
-    
+    public required IsoNumber ClearingCount { get; init; }
+
     /// <summary>
     /// Amount of clearing.
     /// </summary>
     [IsoId("_MBFvQ5M5EeuleeHpFMMhmQ")]
     [DisplayName("Clearing Amount")]
     [IsoXmlTag("ClrAmt")]
-    public required Amount17 ClearingAmount { get; init; } 
-    
+    public required Amount17 ClearingAmount { get; init; }
+
     /// <summary>
     /// Interchange fee.
     /// </summary>
     [IsoId("_MBFvRZM5EeuleeHpFMMhmQ")]
     [DisplayName("Interchange Fee")]
     [IsoXmlTag("IntrchngFee")]
-    public Amount17? InterchangeFee { get; init; } 
-    
+    public Amount17? InterchangeFee { get; init; }
+
     /// <summary>
     /// Agent fee.
     /// </summary>
     [IsoId("_MBFvR5M5EeuleeHpFMMhmQ")]
     [DisplayName("Agent Fee")]
     [IsoXmlTag("AgtFee")]
-    public Amount17? AgentFee { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Amount17? AgentFee { get; init; }
 }

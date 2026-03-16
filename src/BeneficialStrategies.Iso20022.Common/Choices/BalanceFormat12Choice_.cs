@@ -14,14 +14,24 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(BalanceFormat12Choice.NotEligibleBalance))]
     [KnownType(typeof(BalanceFormat12Choice.FullPeriodUnits))]
     [KnownType(typeof(BalanceFormat12Choice.PartWayPeriodUnits))]
-    [JsonDerivedType(typeof(BalanceFormat12Choice.Balance),nameof(BalanceFormat12Choice.Balance))]
-    [JsonDerivedType(typeof(BalanceFormat12Choice.EligibleBalance),nameof(BalanceFormat12Choice.EligibleBalance))]
-    [JsonDerivedType(typeof(BalanceFormat12Choice.NotEligibleBalance),nameof(BalanceFormat12Choice.NotEligibleBalance))]
-    [JsonDerivedType(typeof(BalanceFormat12Choice.FullPeriodUnits),nameof(BalanceFormat12Choice.FullPeriodUnits))]
-    [JsonDerivedType(typeof(BalanceFormat12Choice.PartWayPeriodUnits),nameof(BalanceFormat12Choice.PartWayPeriodUnits))]
+    [JsonDerivedType(typeof(BalanceFormat12Choice.Balance), nameof(BalanceFormat12Choice.Balance))]
+    [JsonDerivedType(
+        typeof(BalanceFormat12Choice.EligibleBalance),
+        nameof(BalanceFormat12Choice.EligibleBalance)
+    )]
+    [JsonDerivedType(
+        typeof(BalanceFormat12Choice.NotEligibleBalance),
+        nameof(BalanceFormat12Choice.NotEligibleBalance)
+    )]
+    [JsonDerivedType(
+        typeof(BalanceFormat12Choice.FullPeriodUnits),
+        nameof(BalanceFormat12Choice.FullPeriodUnits)
+    )]
+    [JsonDerivedType(
+        typeof(BalanceFormat12Choice.PartWayPeriodUnits),
+        nameof(BalanceFormat12Choice.PartWayPeriodUnits)
+    )]
     [IsoId("_KADDNRuyEeyhRdHRjakS2w")]
     [DisplayName("Balance Format 12 Choice")]
-    public abstract partial record BalanceFormat12Choice_
-    {
-    }
+    public abstract record BalanceFormat12Choice_ { }
 }

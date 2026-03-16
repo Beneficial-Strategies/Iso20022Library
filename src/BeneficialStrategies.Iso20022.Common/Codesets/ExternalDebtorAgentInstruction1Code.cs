@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_hokV-csaEemxFbEZK-FMzw")]
-[Description(@"Specifies further instructions concerning the processing of a payment instruction, as provided to the creditor agent.")]
+[Description(
+    @"Specifies further instructions concerning the processing of a payment instruction, as provided to the creditor agent."
+)]
 [DerivedFrom(typeof(ExternalDebtorAgentInstructionCode))]
 public enum ExternalDebtorAgentInstruction1Code
 {
@@ -30,7 +32,9 @@ public enum ExternalDebtorAgentInstruction1Code
     /// </summary>
     [EnumMember(Value = "HOLD")]
     [IsoId("")]
-    [Description(@"Amount of money must be held for the (ultimate) creditor, who will call. Pay on identification.")]
+    [Description(
+        @"Amount of money must be held for the (ultimate) creditor, who will call. Pay on identification."
+    )]
     HoldCashForCreditor = ExternalDebtorAgentInstructionCode.HoldCashForCreditor, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -57,7 +61,9 @@ public enum ExternalDebtorAgentInstruction1Code
     /// </summary>
     [EnumMember(Value = "TELB")]
     [IsoId("")]
-    [Description(@"Please advise/contact (ultimate) creditor/claimant by the most efficient means of telecommunication.")]
+    [Description(
+        @"Please advise/contact (ultimate) creditor/claimant by the most efficient means of telecommunication."
+    )]
     Telecom = ExternalDebtorAgentInstructionCode.Telecom, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -77,5 +83,4 @@ public enum ExternalDebtorAgentInstruction1Code
     [IsoId("")]
     [Description(@"Additional validation information to be used in conjunction with the token.")]
     TokenValidation = ExternalDebtorAgentInstructionCode.TokenValidation, // same ordinal as derivation source for type conversions
-
 }

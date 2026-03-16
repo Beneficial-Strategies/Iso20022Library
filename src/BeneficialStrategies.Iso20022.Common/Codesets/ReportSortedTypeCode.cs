@@ -23,7 +23,7 @@ public enum ReportSortedTypeCode
     [IsoId("_VqbxRdp-Ed-ak6NoX_4Aeg_-2144991897")]
     [Description(@"Type of criterion is a nation.")]
     Country,
-    
+
     /// <summary>
     /// Type of criterion is an entity, eg, a financial institution.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,7 +32,7 @@ public enum ReportSortedTypeCode
     [IsoId("_VqbxRtp-Ed-ak6NoX_4Aeg_-2144991896")]
     [Description(@"Type of criterion is an entity, eg, a financial institution.")]
     Party,
-    
+
     /// <summary>
     /// Type of criterion is a currency, eg, the euro.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -41,5 +41,4 @@ public enum ReportSortedTypeCode
     [IsoId("_VqbxR9p-Ed-ak6NoX_4Aeg_-2144991895")]
     [Description(@"Type of criterion is a currency, eg, the euro.")]
     Currency,
-    
 }

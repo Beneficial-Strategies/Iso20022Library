@@ -23,7 +23,7 @@ public enum QRCodePresentmentMode1Code
     [IsoId("_CPnUMcV4Eeua2vd9tJAtHg")]
     [Description(@"The consumer presented a QR Code at the point of service for the transaction.")]
     ConsumerPresented = QRCodePresentmentModeCode.ConsumerPresented, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other nationally defined method for QR Code presentment for the transaction.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum QRCodePresentmentMode1Code
     [IsoId("_CwAEccV4Eeua2vd9tJAtHg")]
     [Description(@"Other nationally defined method for QR Code presentment for the transaction.")]
     OtherNational = QRCodePresentmentModeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other QR Code presentment mode defined by bilateral agreement.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum QRCodePresentmentMode1Code
     [IsoId("_DGIFccV4Eeua2vd9tJAtHg")]
     [Description(@"Other QR Code presentment mode defined by bilateral agreement.")]
     OtherPrivate = QRCodePresentmentModeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The acceptor presented a QR Code to the consumer for the transaction.
     /// Encoded/decoded by serializers as &quot;MPMD&quot;.
@@ -50,5 +50,4 @@ public enum QRCodePresentmentMode1Code
     [IsoId("_DGuiYcV4Eeua2vd9tJAtHg")]
     [Description(@"The acceptor presented a QR Code to the consumer for the transaction.")]
     MerchantPresented = QRCodePresentmentModeCode.MerchantPresented, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(KYCCheckType1Choice.Code))]
     [KnownType(typeof(KYCCheckType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(KYCCheckType1Choice.Code),nameof(KYCCheckType1Choice.Code))]
-    [JsonDerivedType(typeof(KYCCheckType1Choice.Proprietary),nameof(KYCCheckType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(KYCCheckType1Choice.Code), nameof(KYCCheckType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(KYCCheckType1Choice.Proprietary),
+        nameof(KYCCheckType1Choice.Proprietary)
+    )]
     [IsoId("_HadL0RRxEeOKWo1NF21OVw")]
     [DisplayName("KYC Check Type 1 Choice")]
-    public abstract partial record KYCCheckType1Choice_
-    {
-    }
+    public abstract record KYCCheckType1Choice_ { }
 }

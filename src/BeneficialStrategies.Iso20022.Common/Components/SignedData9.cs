@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_A4xIcY-NEe6oobnCtR50kw")]
 [DisplayName("Signed Data9")]
-public partial record SignedData9
+public record SignedData9
 {
-    #nullable enable
-
     /// <summary>
     /// Certificate.
     /// </summary>
@@ -37,7 +35,7 @@ public partial record SignedData9
     /// </summary>
     [DisplayName("Encapsulated Content")]
     [IsoXmlTag("NcpsltdCntt")]
-    public EncapsulatedContent3? EncapsulatedContent { get; init; } 
+    public EncapsulatedContent3? EncapsulatedContent { get; init; }
 
     /// <summary>
     /// Signer.
@@ -51,9 +49,5 @@ public partial record SignedData9
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public IsoNumber? Version { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoNumber? Version { get; init; }
 }

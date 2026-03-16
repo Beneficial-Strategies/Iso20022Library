@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KpedcTF5EeO118ZQJgaQSQ")]
 [DisplayName("Content Information Type")]
-public partial record ContentInformationType8
+public record ContentInformationType8
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of data protection.
     /// </summary>
     [IsoId("_K5_lsTF5EeO118ZQJgaQSQ")]
     [DisplayName("Content Type")]
     [IsoXmlTag("CnttTp")]
-    public required ContentType1Code ContentType { get; init; } 
-    
+    public required ContentType1Code ContentType { get; init; }
+
     /// <summary>
     /// Data protection by a message authentication code (MAC).
     /// </summary>
     [IsoId("_K5_lszF5EeO118ZQJgaQSQ")]
     [DisplayName("Authenticated Data")]
     [IsoXmlTag("AuthntcdData")]
-    public AuthenticatedData3? AuthenticatedData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AuthenticatedData3? AuthenticatedData { get; init; }
 }

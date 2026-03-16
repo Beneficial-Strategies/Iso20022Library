@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kfXKsXHDEe60F8I8TAMKmg")]
 [DisplayName("Dispute Data4")]
-public partial record DisputeData4
+public record DisputeData4
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -30,35 +28,35 @@ public partial record DisputeData4
     /// </summary>
     [DisplayName("Chargeback Eligibility")]
     [IsoXmlTag("ChrgbckElgblty")]
-    public IsoMax35Text? ChargebackEligibility { get; init; } 
+    public IsoMax35Text? ChargebackEligibility { get; init; }
 
     /// <summary>
     /// Condition.
     /// </summary>
     [DisplayName("Condition")]
     [IsoXmlTag("Cond")]
-    public IsoMax35Text? Condition { get; init; } 
+    public IsoMax35Text? Condition { get; init; }
 
     /// <summary>
     /// Cycle.
     /// </summary>
     [DisplayName("Cycle")]
     [IsoXmlTag("Cycl")]
-    public IsoExact1NumericText? Cycle { get; init; } 
+    public IsoExact1NumericText? Cycle { get; init; }
 
     /// <summary>
     /// Documentation Status.
     /// </summary>
     [DisplayName("Documentation Status")]
     [IsoXmlTag("DcmnttnSts")]
-    public IsoMax35Text? DocumentationStatus { get; init; } 
+    public IsoMax35Text? DocumentationStatus { get; init; }
 
     /// <summary>
     /// Partial.
     /// </summary>
     [DisplayName("Partial")]
     [IsoXmlTag("Prtl")]
-    public IsoTrueFalseIndicator? Partial { get; init; } 
+    public IsoTrueFalseIndicator? Partial { get; init; }
 
     /// <summary>
     /// Reference.
@@ -79,9 +77,5 @@ public partial record DisputeData4
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public IsoMax35Text? Status { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax35Text? Status { get; init; }
 }

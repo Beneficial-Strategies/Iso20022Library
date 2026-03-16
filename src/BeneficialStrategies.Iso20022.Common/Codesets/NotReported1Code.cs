@@ -23,5 +23,4 @@ public enum NotReported1Code
     [IsoId("_WhKP8dGfEeaQk737TH1Fzw")]
     [Description(@"Value not reported by the party.")]
     NotReported = SpecialPurposeCode.NotReported, // same ordinal as derivation source for type conversions
-    
 }

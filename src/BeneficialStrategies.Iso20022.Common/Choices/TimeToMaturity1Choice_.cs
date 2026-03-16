@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TimeToMaturity1Choice.Period))]
     [KnownType(typeof(TimeToMaturity1Choice.Special))]
-    [JsonDerivedType(typeof(TimeToMaturity1Choice.Period),nameof(TimeToMaturity1Choice.Period))]
-    [JsonDerivedType(typeof(TimeToMaturity1Choice.Special),nameof(TimeToMaturity1Choice.Special))]
+    [JsonDerivedType(typeof(TimeToMaturity1Choice.Period), nameof(TimeToMaturity1Choice.Period))]
+    [JsonDerivedType(typeof(TimeToMaturity1Choice.Special), nameof(TimeToMaturity1Choice.Special))]
     [IsoId("_r8FOkMVaEeiYpLQka876sg")]
     [DisplayName("Time To Maturity 1 Choice")]
-    public abstract partial record TimeToMaturity1Choice_
-    {
-    }
+    public abstract record TimeToMaturity1Choice_ { }
 }

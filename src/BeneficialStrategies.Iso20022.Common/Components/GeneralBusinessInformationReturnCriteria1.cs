@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1mEoCZlZEeeE1Ya-LgRsuQ")]
 [DisplayName("General Business Information Return Criteria")]
-public partial record GeneralBusinessInformationReturnCriteria1
+public record GeneralBusinessInformationReturnCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the qualifier is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record GeneralBusinessInformationReturnCriteria1
     [DisplayName("Qualifier Indicator")]
     [IsoXmlTag("QlfrInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? QualifierIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? QualifierIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the subject is requested.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record GeneralBusinessInformationReturnCriteria1
     [DisplayName("Subject Indicator")]
     [IsoXmlTag("SbjtInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SubjectIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? SubjectIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the subject details are requested.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record GeneralBusinessInformationReturnCriteria1
     [DisplayName("Subject Details Indicator")]
     [IsoXmlTag("SbjtDtlsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? SubjectDetailsIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? SubjectDetailsIndicator { get; init; }
 }

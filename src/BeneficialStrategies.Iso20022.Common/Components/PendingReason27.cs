@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NJb8wOBhEeiVRbNQx5-Vhg")]
 [DisplayName("Pending Reason")]
-public partial record PendingReason27
+public record PendingReason27
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the reason of the pending status expressed as a code.
     /// </summary>
     [IsoId("_LTyNQOBiEeiVRbNQx5-Vhg")]
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
-    public required PendingReason52Choice_ Code { get; init; } 
-    
+    public required PendingReason52Choice_ Code { get; init; }
+
     /// <summary>
     /// Indicates that there is no reason available or to report.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record PendingReason27
     [DisplayName("Additional Reason Information")]
     [IsoXmlTag("AddtlRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
-    [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoMax210Text? AdditionalReasonInformation { get; init; }
 }

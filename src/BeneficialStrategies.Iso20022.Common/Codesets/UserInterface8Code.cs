@@ -23,7 +23,7 @@ public enum UserInterface8Code
     [IsoId("_sHJJoX0mEemfrNOe0zHQyg")]
     [Description(@"Interface used in case of disputes or chargebacks.")]
     Dispute = UserInterfaceCode.Dispute, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File used to store the message.
     /// Encoded/decoded by serializers as &quot;FILE&quot;.
@@ -32,7 +32,7 @@ public enum UserInterface8Code
     [IsoId("_sHJJo30mEemfrNOe0zHQyg")]
     [Description(@"File used to store the message.")]
     File = UserInterfaceCode.File, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Information dedicated to a log file.
     /// Encoded/decoded by serializers as &quot;LOGF&quot;.
@@ -41,7 +41,7 @@ public enum UserInterface8Code
     [IsoId("_sHJJpX0mEemfrNOe0zHQyg")]
     [Description(@"Information dedicated to a log file.")]
     Log = UserInterfaceCode.Log, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of interface defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,7 +50,7 @@ public enum UserInterface8Code
     [IsoId("_sHJJp30mEemfrNOe0zHQyg")]
     [Description(@"Other type of interface defined at private level.")]
     OtherPrivate = UserInterfaceCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of interface defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,5 +59,4 @@ public enum UserInterface8Code
     [IsoId("_sHJJqX0mEemfrNOe0zHQyg")]
     [Description(@"Other type of interface defined at national level.")]
     OtherNational = UserInterfaceCode.OtherNational, // same ordinal as derivation source for type conversions
-    
 }

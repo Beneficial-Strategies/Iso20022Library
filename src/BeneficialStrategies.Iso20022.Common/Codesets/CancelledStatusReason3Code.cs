@@ -23,7 +23,7 @@ public enum CancelledStatusReason3Code
     [IsoId("_a0yWQ9p-Ed-ak6NoX_4Aeg_2105332427")]
     [Description(@"Transaction is cancelled by the transfer agent.")]
     CancelledByTransferAgent = CancelledStatusReasonCode.CancelledByTransferAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is cancelled by the client.
     /// Encoded/decoded by serializers as &quot;CNCL&quot;.
@@ -32,7 +32,7 @@ public enum CancelledStatusReason3Code
     [IsoId("_a0yWRNp-Ed-ak6NoX_4Aeg_2105332450")]
     [Description(@"Transaction is cancelled by the client.")]
     CancelledByClient = CancelledStatusReasonCode.CancelledByClient, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is cancelled by the intermediary.
     /// Encoded/decoded by serializers as &quot;CNIN&quot;.
@@ -41,5 +41,4 @@ public enum CancelledStatusReason3Code
     [IsoId("_a0yWRdp-Ed-ak6NoX_4Aeg_2105332467")]
     [Description(@"Transaction is cancelled by the intermediary.")]
     CancelledByIntermediary = CancelledStatusReasonCode.CancelledByIntermediary, // same ordinal as derivation source for type conversions
-    
 }

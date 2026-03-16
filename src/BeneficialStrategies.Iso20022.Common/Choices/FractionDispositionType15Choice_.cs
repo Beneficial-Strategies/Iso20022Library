@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FractionDispositionType15Choice.Code))]
     [KnownType(typeof(FractionDispositionType15Choice.Proprietary))]
-    [JsonDerivedType(typeof(FractionDispositionType15Choice.Code),nameof(FractionDispositionType15Choice.Code))]
-    [JsonDerivedType(typeof(FractionDispositionType15Choice.Proprietary),nameof(FractionDispositionType15Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FractionDispositionType15Choice.Code),
+        nameof(FractionDispositionType15Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FractionDispositionType15Choice.Proprietary),
+        nameof(FractionDispositionType15Choice.Proprietary)
+    )]
     [IsoId("_D3_naWSDEeKFfdK0gKYFLQ")]
     [DisplayName("Fraction Disposition Type 15 Choice")]
-    public abstract partial record FractionDispositionType15Choice_
-    {
-    }
+    public abstract record FractionDispositionType15Choice_ { }
 }

@@ -21,25 +21,30 @@ public enum ReconciliationCriteriaCode
     /// </summary>
     [EnumMember(Value = "GRUP")]
     [IsoId("_ZNckYCpVEeuUucRY0yCMTA")]
-    [Description(@"The set is defined by transactions processed by POIs identified with the same POIGroup.")]
+    [Description(
+        @"The set is defined by transactions processed by POIs identified with the same POIGroup."
+    )]
     PoiGroup,
-    
+
     /// <summary>
     /// The set is defined by transactions made with cards sharing the same CardProductProfile.
     /// Encoded/decoded by serializers as &quot;PROF&quot;.
     /// </summary>
     [EnumMember(Value = "PROF")]
     [IsoId("_t62AgCpVEeuUucRY0yCMTA")]
-    [Description(@"The set is defined by transactions made with cards sharing the same CardProductProfile.")]
+    [Description(
+        @"The set is defined by transactions made with cards sharing the same CardProductProfile."
+    )]
     CardProductProfile,
-    
+
     /// <summary>
     /// The set is defined by transactions made with cards belonging  to the same brand.
     /// Encoded/decoded by serializers as &quot;BRND&quot;.
     /// </summary>
     [EnumMember(Value = "BRND")]
     [IsoId("_7_6dwCpVEeuUucRY0yCMTA")]
-    [Description(@"The set is defined by transactions made with cards belonging  to the same brand.")]
+    [Description(
+        @"The set is defined by transactions made with cards belonging  to the same brand."
+    )]
     CardBrand,
-    
 }

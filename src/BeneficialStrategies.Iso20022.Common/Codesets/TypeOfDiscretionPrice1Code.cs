@@ -23,7 +23,7 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwUkJ9p-Ed-ak6NoX_4Aeg_-493976446")]
     [Description(@"Indicates that the offset value is related to displayed price.")]
     DisplayedPrice = TypeOfDiscretionPriceCode.DisplayedPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the offset value is related to market price.
     /// Encoded/decoded by serializers as &quot;MRKT&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwduENp-Ed-ak6NoX_4Aeg_-493976411")]
     [Description(@"Indicates that the offset value is related to market price.")]
     MarketPrice = TypeOfDiscretionPriceCode.MarketPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the offset value is related to primary price.
     /// Encoded/decoded by serializers as &quot;PRIM&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwduEdp-Ed-ak6NoX_4Aeg_-493976369")]
     [Description(@"Indicates that the offset value is related to primary price.")]
     PrimaryPrice = TypeOfDiscretionPriceCode.PrimaryPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the offset value is related to local primary price.
     /// Encoded/decoded by serializers as &quot;LPRI&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwduEtp-Ed-ak6NoX_4Aeg_-493976316")]
     [Description(@"Indicates that the offset value is related to local primary price.")]
     LocalPrimaryPrice = TypeOfDiscretionPriceCode.LocalPrimaryPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the offset value is related to midpoint price.
     /// Encoded/decoded by serializers as &quot;MIDP&quot;.
@@ -59,7 +59,7 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwduE9p-Ed-ak6NoX_4Aeg_-493976274")]
     [Description(@"Indicates that the offset value is related to midpoint price.")]
     MidpointPrice = TypeOfDiscretionPriceCode.MidpointPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the offset value is related to VWAP price.
     /// Encoded/decoded by serializers as &quot;VWAP&quot;.
@@ -68,7 +68,7 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwduFNp-Ed-ak6NoX_4Aeg_-493976231")]
     [Description(@"Indicates that the offset value is related to VWAP price.")]
     VolumeWeightedAveragePrice = TypeOfDiscretionPriceCode.VolumeWeightedAveragePrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the offset value is related to average price guarantee.
     /// Encoded/decoded by serializers as &quot;AVPG&quot;.
@@ -77,5 +77,4 @@ public enum TypeOfDiscretionPrice1Code
     [IsoId("_YwduFdp-Ed-ak6NoX_4Aeg_-493976196")]
     [Description(@"Indicates that the offset value is related to average price guarantee.")]
     AveragePriceGuarantee = TypeOfDiscretionPriceCode.AveragePriceGuarantee, // same ordinal as derivation source for type conversions
-    
 }

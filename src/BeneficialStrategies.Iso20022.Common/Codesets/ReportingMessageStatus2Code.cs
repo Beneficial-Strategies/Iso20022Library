@@ -23,7 +23,7 @@ public enum ReportingMessageStatus2Code
     [IsoId("_Wl48AT5-Ee2Z1_pdMHu4SA")]
     [Description(@"Whole message has been accepted.")]
     Accepted = MessageStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message has been rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -32,7 +32,7 @@ public enum ReportingMessageStatus2Code
     [IsoId("_Wl48CT5-Ee2Z1_pdMHu4SA")]
     [Description(@"Message has been rejected.")]
     Rejected = MessageStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File containing the report has an incorrect filename.
     /// Encoded/decoded by serializers as &quot;INCF&quot;.
@@ -41,7 +41,7 @@ public enum ReportingMessageStatus2Code
     [IsoId("_Wl48Dz5-Ee2Z1_pdMHu4SA")]
     [Description(@"File containing the report has an incorrect filename.")]
     IncorrectFilename = MessageStatusCode.IncorrectFilename, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// File containing the report is corrupted.
     /// Encoded/decoded by serializers as &quot;CRPT&quot;.
@@ -50,7 +50,7 @@ public enum ReportingMessageStatus2Code
     [IsoId("_Wl48ET5-Ee2Z1_pdMHu4SA")]
     [Description(@"File containing the report is corrupted.")]
     CorruptedFile = MessageStatusCode.CorruptedFile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Message was rejected due to authorisation/permission issues.
     /// Encoded/decoded by serializers as &quot;NAUT&quot;.
@@ -59,5 +59,4 @@ public enum ReportingMessageStatus2Code
     [IsoId("_zlZYQT5-Ee2Z1_pdMHu4SA")]
     [Description(@"Message was rejected due to authorisation/permission issues.")]
     NotAuthorised = MessageStatusCode.NotAuthorised, // same ordinal as derivation source for type conversions
-    
 }

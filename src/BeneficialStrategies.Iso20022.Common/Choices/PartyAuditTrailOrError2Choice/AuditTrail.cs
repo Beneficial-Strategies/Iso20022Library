@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
     /// </summary>
     [IsoId("_HK0lEWjHEeiCUdTMLdZoIg")]
     [DisplayName("Audit Trail")]
-    public partial record AuditTrail : PartyAuditTrailOrError2Choice_
+    public record AuditTrail : PartyAuditTrailOrError2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Individual record of the party audit trail.
         /// </summary>
@@ -24,8 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
         [DisplayName("Record")]
         [IsoXmlTag("Rcrd")]
         public ValueList<UpdateLogPartyRecord1Choice_> Record { get; init; } = [];
+
         // ID for the above is _GLdVoWjOEeiRg5NzP0jkQg
-        
+
         /// <summary>
         /// Timestamp of the change.
         /// </summary>
@@ -33,8 +32,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
         [DisplayName("Operation Time Stamp")]
         [IsoXmlTag("OprTmStmp")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime OperationTimeStamp { get; init; } 
-        
+        public required IsoISODateTime OperationTimeStamp { get; init; }
+
         /// <summary>
         /// User who instructed the change.
         /// </summary>
@@ -42,9 +41,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
         [DisplayName("Instructing User")]
         [IsoXmlTag("InstgUsr")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
-        [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-        public required IsoMax256Text InstructingUser { get; init; } 
-        
+        [StringLength(maximumLength: 256, MinimumLength = 1)]
+        public required IsoMax256Text InstructingUser { get; init; }
+
         /// <summary>
         /// User who approved the change instructed by the instructing user.
         /// </summary>
@@ -52,11 +51,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAuditTrailOrError2Choice
         [DisplayName("Approving User")]
         [IsoXmlTag("ApprvgUsr")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
-        [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-        public IsoMax256Text? ApprovingUser { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 256, MinimumLength = 1)]
+        public IsoMax256Text? ApprovingUser { get; init; }
     }
 }

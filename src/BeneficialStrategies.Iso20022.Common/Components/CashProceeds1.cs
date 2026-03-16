@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UP1bhtp-Ed-ak6NoX_4Aeg_1953970402")]
 [DisplayName("Cash Proceeds")]
-public partial record CashProceeds1
+public record CashProceeds1
 {
-    #nullable enable
-    
     /// <summary>
     /// Cash amount which is posted.
     /// </summary>
     [IsoId("_UP1bh9p-Ed-ak6NoX_4Aeg_1291538706")]
     [DisplayName("Posting Amount")]
     [IsoXmlTag("PstngAmt")]
-    public required ActiveCurrencyAndAmount PostingAmount { get; init; } 
-    
+    public required ActiveCurrencyAndAmount PostingAmount { get; init; }
+
     /// <summary>
     /// Reconciliation information.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record CashProceeds1
     [DisplayName("Reconciliation Details")]
     [IsoXmlTag("RcncltnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? ReconciliationDetails { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? ReconciliationDetails { get; init; }
+
     /// <summary>
     /// Provides information about the debited securities account.
     /// </summary>
@@ -45,8 +43,4 @@ public partial record CashProceeds1
     [MinLength(1)]
     [MaxLength(2)]
     public ValueList<CashAccount19> AccountDetails { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

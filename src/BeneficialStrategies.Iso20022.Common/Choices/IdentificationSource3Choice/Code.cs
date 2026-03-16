@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource3Choice
     /// </summary>
     [IsoId("_QmU-MNp-Ed-ak6NoX_4Aeg_-1238582323")]
     [DisplayName("Code")]
-    public partial record Code : IdentificationSource3Choice_
+    public record Code : IdentificationSource3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the external financial instrument identification type scheme name code in the format of character string with a maximum length of 4 characters.
@@ -24,10 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.IdentificationSource3Choice
         /// External code sets can be downloaded from www.iso20022.org.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required ExternalFinancialInstrumentIdentificationType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ExternalFinancialInstrumentIdentificationType1Code Value { get; init; }
     }
 }

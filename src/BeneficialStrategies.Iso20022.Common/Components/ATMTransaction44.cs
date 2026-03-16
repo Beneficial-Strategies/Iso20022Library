@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_f_z-UaEQEe-MRKYsaX6JDg")]
 [DisplayName("ATM Transaction44")]
-public partial record ATMTransaction44
+public record ATMTransaction44
 {
-    #nullable enable
-
     /// <summary>
     /// Account Information.
     /// </summary>
@@ -37,7 +35,7 @@ public partial record ATMTransaction44
     /// </summary>
     [DisplayName("Authorisation Result")]
     [IsoXmlTag("AuthstnRslt")]
-    public AuthorisationResult20? AuthorisationResult { get; init; } 
+    public AuthorisationResult20? AuthorisationResult { get; init; }
 
     /// <summary>
     /// Command.
@@ -51,7 +49,7 @@ public partial record ATMTransaction44
     /// </summary>
     [DisplayName("Completion Required")]
     [IsoXmlTag("CmpltnReqrd")]
-    public IsoTrueFalseIndicator? CompletionRequired { get; init; } 
+    public IsoTrueFalseIndicator? CompletionRequired { get; init; }
 
     /// <summary>
     /// Deposited Media.
@@ -65,14 +63,14 @@ public partial record ATMTransaction44
     /// </summary>
     [DisplayName("ICC Related Data")]
     [IsoXmlTag("ICCRltdData")]
-    public IsoMax10000Binary? ICCRelatedData { get; init; } 
+    public IsoMax10000Binary? ICCRelatedData { get; init; }
 
     /// <summary>
     /// Reconciliation Identification.
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public IsoMax35Text? ReconciliationIdentification { get; init; } 
+    public IsoMax35Text? ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Sub Deposit.
@@ -100,9 +98,5 @@ public partial record ATMTransaction44
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 }

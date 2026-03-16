@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PendingOpeningStatusReason2Choice.Code))]
     [KnownType(typeof(PendingOpeningStatusReason2Choice.Proprietary))]
-    [JsonDerivedType(typeof(PendingOpeningStatusReason2Choice.Code),nameof(PendingOpeningStatusReason2Choice.Code))]
-    [JsonDerivedType(typeof(PendingOpeningStatusReason2Choice.Proprietary),nameof(PendingOpeningStatusReason2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PendingOpeningStatusReason2Choice.Code),
+        nameof(PendingOpeningStatusReason2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(PendingOpeningStatusReason2Choice.Proprietary),
+        nameof(PendingOpeningStatusReason2Choice.Proprietary)
+    )]
     [IsoId("_xDGacWCJEeabZtzjEVWYCQ")]
     [DisplayName("Pending Opening Status Reason 2 Choice")]
-    public abstract partial record PendingOpeningStatusReason2Choice_
-    {
-    }
+    public abstract record PendingOpeningStatusReason2Choice_ { }
 }

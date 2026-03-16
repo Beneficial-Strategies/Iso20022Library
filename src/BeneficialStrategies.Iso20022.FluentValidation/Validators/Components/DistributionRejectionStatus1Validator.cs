@@ -19,19 +19,24 @@ namespace BeneficialStrategies.Iso20022.Validation.Components;
 ///
 /// Constraints: *(none defined in spec)*
 /// </remarks>
-public sealed class DistributionRejectionStatus1Validator : AbstractValidator<DistributionRejectionStatus1>
+public sealed class DistributionRejectionStatus1Validator
+    : AbstractValidator<DistributionRejectionStatus1>
 {
     public DistributionRejectionStatus1Validator()
     {
         // Reason is 1..∞ but the C# model allows empty (model defect — see XML doc).
         RuleFor(x => x.Reason)
             .NotEmpty()
-                .WithMessage("DistributionRejectionStatus1.Reason must contain at least one element (1..∞).");
+            .WithMessage(
+                "DistributionRejectionStatus1.Reason must contain at least one element (1..∞)."
+            );
 
         RuleFor(x => x.AdditionalInformation)
             .MinimumLength(1)
             .MaximumLength(350)
-                .WithMessage("DistributionRejectionStatus1.AdditionalInformation must not exceed 350 characters (Max350Text).")
+            .WithMessage(
+                "DistributionRejectionStatus1.AdditionalInformation must not exceed 350 characters (Max350Text)."
+            )
             .When(x => x.AdditionalInformation is not null);
     }
 }

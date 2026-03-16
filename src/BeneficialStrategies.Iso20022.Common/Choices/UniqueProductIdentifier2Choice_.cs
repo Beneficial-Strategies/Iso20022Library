@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UniqueProductIdentifier2Choice.Identification))]
     [KnownType(typeof(UniqueProductIdentifier2Choice.Proprietary))]
-    [JsonDerivedType(typeof(UniqueProductIdentifier2Choice.Identification),nameof(UniqueProductIdentifier2Choice.Identification))]
-    [JsonDerivedType(typeof(UniqueProductIdentifier2Choice.Proprietary),nameof(UniqueProductIdentifier2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(UniqueProductIdentifier2Choice.Identification),
+        nameof(UniqueProductIdentifier2Choice.Identification)
+    )]
+    [JsonDerivedType(
+        typeof(UniqueProductIdentifier2Choice.Proprietary),
+        nameof(UniqueProductIdentifier2Choice.Proprietary)
+    )]
     [IsoId("__zlGkWETEe2P-L9DBerEgA")]
     [DisplayName("Unique Product Identifier 2 Choice")]
-    public abstract partial record UniqueProductIdentifier2Choice_
-    {
-    }
+    public abstract record UniqueProductIdentifier2Choice_ { }
 }

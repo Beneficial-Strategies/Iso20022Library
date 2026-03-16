@@ -23,5 +23,4 @@ public enum PriceStatus2Code
     [IsoId("_DfTKsQbCEeqrW7Meu5r3kQ")]
     [Description(@"Price is pending.")]
     Pending = PriceStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

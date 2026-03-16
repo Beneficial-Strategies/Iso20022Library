@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTradeVenueCriteria1Choice
 {
     /// <summary>
@@ -15,19 +15,13 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTradeVenueCriteria1Cho
     /// </summary>
     [IsoId("_ph_4kB3ZEeWNp95x0ENf8w")]
     [DisplayName("Any MIC")]
-    public partial record AnyMIC : SecuritiesTradeVenueCriteria1Choice_
+    public record AnyMIC : SecuritiesTradeVenueCriteria1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies a market identification code (MIC).
         /// </summary>
         [IsoXmlTag("AnyMIC")]
-        public required AnyMIC1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required AnyMIC1Code Value { get; init; }
     }
 }

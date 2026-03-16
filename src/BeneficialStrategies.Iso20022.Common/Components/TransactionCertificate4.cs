@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bKeVEbGJEeuSTr8k0UEM8A")]
 [DisplayName("Transaction Certificate")]
-public partial record TransactionCertificate4
+public record TransactionCertificate4
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identification of the transaction.
     /// </summary>
@@ -25,41 +23,41 @@ public partial record TransactionCertificate4
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TransactionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TransactionIdentification { get; init; }
+
     /// <summary>
     /// Reference of the transaction certificate.
     /// </summary>
     [IsoId("_bLb-Y7GJEeuSTr8k0UEM8A")]
     [DisplayName("Certificate")]
     [IsoXmlTag("Cert")]
-    public required DocumentIdentification28 Certificate { get; init; } 
-    
+    public required DocumentIdentification28 Certificate { get; init; }
+
     /// <summary>
     /// Cash account, linked to the registered contract, on which the cash entry is made.
     /// </summary>
     [IsoId("_bLb-ZbGJEeuSTr8k0UEM8A")]
     [DisplayName("Account")]
     [IsoXmlTag("Acct")]
-    public CashAccount40? Account { get; init; } 
-    
+    public CashAccount40? Account { get; init; }
+
     /// <summary>
     /// Country in which the bank account is located, when the bank which services the account is located in another country.
     /// </summary>
     [IsoId("_bLb-Z7GJEeuSTr8k0UEM8A")]
     [DisplayName("Bank Account Domiciliation Country")]
     [IsoXmlTag("BkAcctDmcltnCtry")]
-    public CountryCode? BankAccountDomiciliationCountry { get; init; } 
-    
+    public CountryCode? BankAccountDomiciliationCountry { get; init; }
+
     /// <summary>
     /// Amendment indicator details.
     /// </summary>
     [IsoId("_bLb-abGJEeuSTr8k0UEM8A")]
     [DisplayName("Amendment")]
     [IsoXmlTag("Amdmnt")]
-    public DocumentAmendment1? Amendment { get; init; } 
-    
+    public DocumentAmendment1? Amendment { get; init; }
+
     /// <summary>
     /// Record of the transaction certificate.
     /// </summary>
@@ -67,17 +65,14 @@ public partial record TransactionCertificate4
     [DisplayName("Certificate Record")]
     [IsoXmlTag("CertRcrd")]
     public ValueList<TransactionCertificateRecord2> CertificateRecord { get; init; } = [];
+
     // ID for the above is _bLb-a7GJEeuSTr8k0UEM8A
-    
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("_bLb-bbGJEeuSTr8k0UEM8A")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

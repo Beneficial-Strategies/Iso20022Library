@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_1R0xKTEyEe6g-ffJsqGiSA")]
 [DisplayName("Operation Mandate7")]
-public partial record OperationMandate7
+public record OperationMandate7
 {
-    #nullable enable
-
     /// <summary>
     /// Applicable Channel.
     /// </summary>
@@ -37,14 +35,14 @@ public partial record OperationMandate7
     /// </summary>
     [DisplayName("End Date")]
     [IsoXmlTag("EndDt")]
-    public IsoISODate? EndDate { get; init; } 
+    public IsoISODate? EndDate { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; } 
+    public required IsoMax35Text Identification { get; init; }
 
     /// <summary>
     /// Mandate Holder.
@@ -58,23 +56,19 @@ public partial record OperationMandate7
     /// </summary>
     [DisplayName("Required Signature Number")]
     [IsoXmlTag("ReqrdSgntrNb")]
-    public required IsoMax15PlusSignedNumericText RequiredSignatureNumber { get; init; } 
+    public required IsoMax15PlusSignedNumericText RequiredSignatureNumber { get; init; }
 
     /// <summary>
     /// Signature Order Indicator.
     /// </summary>
     [DisplayName("Signature Order Indicator")]
     [IsoXmlTag("SgntrOrdrInd")]
-    public required IsoYesNoIndicator SignatureOrderIndicator { get; init; } 
+    public required IsoYesNoIndicator SignatureOrderIndicator { get; init; }
 
     /// <summary>
     /// Start Date.
     /// </summary>
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
-    public IsoISODate? StartDate { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoISODate? StartDate { get; init; }
 }

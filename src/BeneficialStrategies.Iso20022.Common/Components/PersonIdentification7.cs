@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_De5uQS_mEeO4w-IWHJMI9g")]
 [DisplayName("Person Identification")]
-public partial record PersonIdentification7
+public record PersonIdentification7
 {
-    #nullable enable
-    
     /// <summary>
     /// Number assigned by a license authority to a driver&apos;s license.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record PersonIdentification7
     [DisplayName("Drivers License Number")]
     [IsoXmlTag("DrvrsLicNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DriversLicenseNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DriversLicenseNumber { get; init; }
+
     /// <summary>
     /// Number assigned by an agent to identify its customer.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record PersonIdentification7
     [DisplayName("Customer Number")]
     [IsoXmlTag("CstmrNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CustomerNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CustomerNumber { get; init; }
+
     /// <summary>
     /// Number assigned by a social security agency.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record PersonIdentification7
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SocialSecurityNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SocialSecurityNumber { get; init; }
+
     /// <summary>
     /// Number assigned by a government agency to identify foreign nationals.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record PersonIdentification7
     [DisplayName("Alien Registration Number")]
     [IsoXmlTag("AlnRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AlienRegistrationNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AlienRegistrationNumber { get; init; }
+
     /// <summary>
     /// Number assigned by a passport authority to a passport.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record PersonIdentification7
     [DisplayName("Passport Number")]
     [IsoXmlTag("PsptNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PassportNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PassportNumber { get; init; }
+
     /// <summary>
     /// Number assigned by a tax authority to an entity.
     /// </summary>
@@ -75,9 +73,9 @@ public partial record PersonIdentification7
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentificationNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxIdentificationNumber { get; init; }
+
     /// <summary>
     /// Number assigned by a national authority to an identity card.
     /// </summary>
@@ -85,9 +83,9 @@ public partial record PersonIdentification7
     [DisplayName("Identity Card Number")]
     [IsoXmlTag("IdntyCardNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? IdentityCardNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? IdentityCardNumber { get; init; }
+
     /// <summary>
     /// Number assigned to an employer by a registration authority.
     /// </summary>
@@ -95,9 +93,9 @@ public partial record PersonIdentification7
     [DisplayName("Employer Identification Number")]
     [IsoXmlTag("MplyrIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? EmployerIdentificationNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? EmployerIdentificationNumber { get; init; }
+
     /// <summary>
     /// Number assigned to an employee by a employer.
     /// </summary>
@@ -105,9 +103,9 @@ public partial record PersonIdentification7
     [DisplayName("Employee Identification Number")]
     [IsoXmlTag("MplyeeIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? EmployeeIdentificationNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? EmployeeIdentificationNumber { get; init; }
+
     /// <summary>
     /// Address for electronic mail (e-mail).
     /// </summary>
@@ -115,26 +113,22 @@ public partial record PersonIdentification7
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? EmailAddress { get; init; }
+
     /// <summary>
     /// Date and place of birth of a person.
     /// </summary>
     [IsoId("_DtoGwy_mEeO4w-IWHJMI9g")]
     [DisplayName("Date And Place Of Birth")]
     [IsoXmlTag("DtAndPlcOfBirth")]
-    public DateAndPlaceOfBirth? DateAndPlaceOfBirth { get; init; } 
-    
+    public DateAndPlaceOfBirth? DateAndPlaceOfBirth { get; init; }
+
     /// <summary>
     /// Unique identification of a person, as assigned by an institution, using an identification scheme.
     /// </summary>
     [IsoId("_DtoGxS_mEeO4w-IWHJMI9g")]
     [DisplayName("Other")]
     [IsoXmlTag("Othr")]
-    public GenericIdentification4? Other { get; init; } 
-    
-    
-    #nullable disable
-    
+    public GenericIdentification4? Other { get; init; }
 }

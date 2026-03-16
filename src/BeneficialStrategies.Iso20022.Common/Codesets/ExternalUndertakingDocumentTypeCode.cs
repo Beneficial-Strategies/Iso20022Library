@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MrKA27iEeKo25nLKvGr8w_-2015115819")]
-[Description(@"Specifies the external undertaking document type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external undertaking document type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalUndertakingDocumentType1Code))]
 public enum ExternalUndertakingDocumentTypeCode
 {
@@ -24,7 +26,7 @@ public enum ExternalUndertakingDocumentTypeCode
     [IsoId("_uRYG4PRYEeuLhpyIdtJzwg")]
     [Description(@"Document is a beneficiary statement.")]
     BeneficiaryStatement,
-    
+
     /// <summary>
     /// Document is an invoice.
     /// Encoded/decoded by serializers as &quot;CINV&quot;.
@@ -33,7 +35,7 @@ public enum ExternalUndertakingDocumentTypeCode
     [IsoId("_uRYG4_RYEeuLhpyIdtJzwg")]
     [Description(@"Document is an invoice.")]
     CommercialInvoice,
-    
+
     /// <summary>
     /// Document is a claim form.
     /// Encoded/decoded by serializers as &quot;CLAF&quot;.
@@ -42,7 +44,7 @@ public enum ExternalUndertakingDocumentTypeCode
     [IsoId("_uRYG5vRYEeuLhpyIdtJzwg")]
     [Description(@"Document is a claim form.")]
     ClaimForm,
-    
+
     /// <summary>
     /// Document is an undertaking demand.
     /// Encoded/decoded by serializers as &quot;DEMD&quot;.
@@ -51,7 +53,7 @@ public enum ExternalUndertakingDocumentTypeCode
     [IsoId("_uRYG6fRYEeuLhpyIdtJzwg")]
     [Description(@"Document is an undertaking demand.")]
     Demand,
-    
+
     /// <summary>
     /// Document is a transfer form.
     /// Encoded/decoded by serializers as &quot;TRAF&quot;.
@@ -60,5 +62,4 @@ public enum ExternalUndertakingDocumentTypeCode
     [IsoId("_uRYG7PRYEeuLhpyIdtJzwg")]
     [Description(@"Document is a transfer form.")]
     TransferForm,
-    
 }

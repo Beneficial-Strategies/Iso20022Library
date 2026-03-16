@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GIEfkaifEeWHO_l3hf2rlA")]
 [DisplayName("Floating Rate Note")]
-public partial record FloatingRateNote2
+public record FloatingRateNote2
 {
-    #nullable enable
-    
     /// <summary>
     /// Underlying reference rate on the basis on which the periodic interest payments are calculated.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record FloatingRateNote2
     [DisplayName("Reference Rate Index")]
     [IsoXmlTag("RefRateIndx")]
     [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-    public required IsoISINOct2015Identifier ReferenceRateIndex { get; init; } 
-    
+    public required IsoISINOct2015Identifier ReferenceRateIndex { get; init; }
+
     /// <summary>
     /// Number of basis points added to (if positive) or deducted from (if negative) the underlying reference rate to calculate the actual interest rate applicable for a given period at issuance of the floating rate instrument.
     /// Used to express differences in interest rates, for example, a difference of 0.10% is equivalent to a change of 10 basis points.
@@ -35,9 +33,5 @@ public partial record FloatingRateNote2
     [DisplayName("Basis Point Spread")]
     [IsoXmlTag("BsisPtSprd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber BasisPointSpread { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoNumber BasisPointSpread { get; init; }
 }

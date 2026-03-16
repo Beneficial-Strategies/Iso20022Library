@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ckQaw5KQEeWHWpTQn1FFVg")]
 [DisplayName("Corporate Action Narrative")]
-public partial record CorporateActionNarrative35
+public record CorporateActionNarrative35
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a message. This field may only be used when the information to be transmitted, cannot be coded.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionNarrative35
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? AdditionalText { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? AdditionalText { get; init; }
+
     /// <summary>
     /// Provides information that can be ignored for automated processing; - reiteration of information that has been included within structured fields, - or narrative information not needed for automatic processing.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CorporateActionNarrative35
     [DisplayName("Narrative Version")]
     [IsoXmlTag("NrrtvVrsn")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? NarrativeVersion { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? NarrativeVersion { get; init; }
+
     /// <summary>
     /// Provides additional information regarding the party, for example, the contact unit or person responsible for the transaction identified in the message.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record CorporateActionNarrative35
     [DisplayName("Party Contact Narrative")]
     [IsoXmlTag("PtyCtctNrrtv")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? PartyContactNarrative { get; init; }
+
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the Service Level Agreement (SLA).
     /// </summary>
@@ -55,10 +53,6 @@ public partial record CorporateActionNarrative35
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax350Text? TaxationConditions { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoRestrictedFINXMax350Text? TaxationConditions { get; init; }
 }

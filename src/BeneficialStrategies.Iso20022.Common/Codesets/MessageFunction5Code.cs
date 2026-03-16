@@ -23,7 +23,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozoWpsEeSMqvBfBY1c9A")]
     [Description(@"Request for authorisation with financial capture.")]
     FinancialAuthorisationRequest = MessageFunctionCode.FinancialAuthorisationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request for cancellation.
     /// Encoded/decoded by serializers as &quot;CCAQ&quot;.
@@ -32,7 +32,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozo2psEeSMqvBfBY1c9A")]
     [Description(@"Request for cancellation.")]
     CancellationRequest = MessageFunctionCode.CancellationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice for completion without financial capture.
     /// Encoded/decoded by serializers as &quot;CMPV&quot;.
@@ -41,7 +41,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozpWpsEeSMqvBfBY1c9A")]
     [Description(@"Advice for completion without financial capture.")]
     CompletionAdvice = MessageFunctionCode.CompletionAdvice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request for diagnostic.
     /// Encoded/decoded by serializers as &quot;DGNP&quot;.
@@ -50,7 +50,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozp2psEeSMqvBfBY1c9A")]
     [Description(@"Request for diagnostic.")]
     DiagnosticRequest = MessageFunctionCode.DiagnosticRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request for reconciliation.
     /// Encoded/decoded by serializers as &quot;RCLQ&quot;.
@@ -59,7 +59,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozqWpsEeSMqvBfBY1c9A")]
     [Description(@"Request for reconciliation.")]
     ReconciliationRequest = MessageFunctionCode.ReconciliationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice for cancellation.
     /// Encoded/decoded by serializers as &quot;CCAV&quot;.
@@ -68,7 +68,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozq2psEeSMqvBfBY1c9A")]
     [Description(@"Advice for cancellation.")]
     CancellationAdvice = MessageFunctionCode.CancellationAdvice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer the financial data as a collection of transction.
     /// Encoded/decoded by serializers as &quot;BTCH&quot;.
@@ -77,7 +77,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozrWpsEeSMqvBfBY1c9A")]
     [Description(@"Transfer the financial data as a collection of transction.")]
     BatchTransfer = MessageFunctionCode.BatchTransfer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice for reversal with financial capture.
     /// Encoded/decoded by serializers as &quot;FRVA&quot;.
@@ -86,16 +86,18 @@ public enum MessageFunction5Code
     [IsoId("_jGozr2psEeSMqvBfBY1c9A")]
     [Description(@"Advice for reversal with financial capture.")]
     FinancialReversalAdvice = MessageFunctionCode.FinancialReversalAdvice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The initiator requests an authorisation without financial impact to complete the transaction.
     /// Encoded/decoded by serializers as &quot;AUTQ&quot;.
     /// </summary>
     [EnumMember(Value = "AUTQ")]
     [IsoId("_jGozsWpsEeSMqvBfBY1c9A")]
-    [Description(@"The initiator requests an authorisation without financial impact to complete the transaction.")]
+    [Description(
+        @"The initiator requests an authorisation without financial impact to complete the transaction."
+    )]
     AuthorisationRequest = MessageFunctionCode.AuthorisationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice for completion with financial capture.
     /// Encoded/decoded by serializers as &quot;FCMV&quot;.
@@ -104,7 +106,7 @@ public enum MessageFunction5Code
     [IsoId("_jGozs2psEeSMqvBfBY1c9A")]
     [Description(@"Advice for completion with financial capture.")]
     FinancialCompletionAdvice = MessageFunctionCode.FinancialCompletionAdvice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reversal advice of an authorisation or a financial message.
     /// Encoded/decoded by serializers as &quot;REVV&quot;.
@@ -113,7 +115,7 @@ public enum MessageFunction5Code
     [IsoId("_jGoztWpsEeSMqvBfBY1c9A")]
     [Description(@"Reversal advice of an authorisation or a financial message.")]
     AcquirerReversalAdvice = MessageFunctionCode.AcquirerReversalAdvice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request for dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;DCCQ&quot;.
@@ -122,5 +124,4 @@ public enum MessageFunction5Code
     [IsoId("_nmCXIWpsEeSMqvBfBY1c9A")]
     [Description(@"Request for dynamic currency conversion.")]
     CurrencyConversionRequest = MessageFunctionCode.CurrencyConversionRequest, // same ordinal as derivation source for type conversions
-    
 }

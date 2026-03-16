@@ -23,7 +23,7 @@ public enum Validation2Code
     [IsoId("_H_9LkcmLEeWAGphE2LvqeA")]
     [Description(@"Validation of the signature is successful.")]
     ValidationSuccessful = ValidationCode.ValidationSuccessful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Validation of the signature has failed.
     /// Encoded/decoded by serializers as &quot;NTOK&quot;.
@@ -32,5 +32,4 @@ public enum Validation2Code
     [IsoId("_WPzBscnIEeWI4cSIO9foRA")]
     [Description(@"Validation of the signature has failed.")]
     ValidationFailed = ValidationCode.ValidationFailed, // same ordinal as derivation source for type conversions
-    
 }

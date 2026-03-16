@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.PortfolioCode5Choice
     /// </summary>
     [IsoId("_wnwaszICEe2fXedS_ucFOA")]
     [DisplayName("No Portfolio")]
-    public partial record NoPortfolio : PortfolioCode5Choice_
+    public record NoPortfolio : PortfolioCode5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies special purpose codes.
         /// </summary>
         [IsoXmlTag("NoPrtfl")]
-        public required NotApplicable1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required NotApplicable1Code Value { get; init; }
     }
 }

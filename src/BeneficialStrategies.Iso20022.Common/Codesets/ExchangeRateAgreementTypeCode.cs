@@ -23,7 +23,7 @@ public enum ExchangeRateAgreementTypeCode
     [IsoId("_qOpjMIZ5EeuSbct6WWD-Ng")]
     [Description(@"Normal exchange rate agreement type.")]
     Normal,
-    
+
     /// <summary>
     /// Spot agreement exchange rate type.
     /// Encoded/decoded by serializers as &quot;SPOT&quot;.
@@ -32,7 +32,7 @@ public enum ExchangeRateAgreementTypeCode
     [IsoId("_vLLHkIZ5EeuSbct6WWD-Ng")]
     [Description(@"Spot agreement exchange rate type.")]
     Spot,
-    
+
     /// <summary>
     /// Forward contract exchange rate type.
     /// Encoded/decoded by serializers as &quot;FWCT&quot;.
@@ -41,7 +41,7 @@ public enum ExchangeRateAgreementTypeCode
     [IsoId("_zdOyoIZ5EeuSbct6WWD-Ng")]
     [Description(@"Forward contract exchange rate type.")]
     ForwardContract,
-    
+
     /// <summary>
     /// Other exchange rate agreement type defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum ExchangeRateAgreementTypeCode
     [IsoId("_7OiLwIZ5EeuSbct6WWD-Ng")]
     [Description(@"Other exchange rate agreement type defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other exchange rate agreement type that is privately defined.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum ExchangeRateAgreementTypeCode
     [IsoId("_ENkjUIZ6EeuSbct6WWD-Ng")]
     [Description(@"Other exchange rate agreement type that is privately defined.")]
     OtherPrivate,
-    
 }

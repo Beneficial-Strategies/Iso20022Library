@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RSSsUNp-Ed-ak6NoX_4Aeg_-1126394129")]
 [DisplayName("De Minimus Applicable")]
-public partial record DeMinimusApplicable1
+public record DeMinimusApplicable1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the investor permits its beneficial owners that are restricted persons, if any, to participate in profits and losses allocated to the investor that are attribute to new issue securities.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DeMinimusApplicable1
     [DisplayName("New Issue Permission")]
     [IsoXmlTag("NewIssePrmssn")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator NewIssuePermission { get; init; } 
-    
+    public required IsoYesNoIndicator NewIssuePermission { get; init; }
+
     /// <summary>
     /// Percentage of the new issue profits and losses that it receives to beneficial owners that are restricted persons.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record DeMinimusApplicable1
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Percentage { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageRate? Percentage { get; init; }
 }

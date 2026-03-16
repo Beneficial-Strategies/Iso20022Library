@@ -12,11 +12,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PlannedQuantity1Choice.Quantity))]
     [KnownType(typeof(PlannedQuantity1Choice.Code))]
-    [JsonDerivedType(typeof(PlannedQuantity1Choice.Quantity),nameof(PlannedQuantity1Choice.Quantity))]
-    [JsonDerivedType(typeof(PlannedQuantity1Choice.Code),nameof(PlannedQuantity1Choice.Code))]
+    [JsonDerivedType(
+        typeof(PlannedQuantity1Choice.Quantity),
+        nameof(PlannedQuantity1Choice.Quantity)
+    )]
+    [JsonDerivedType(typeof(PlannedQuantity1Choice.Code), nameof(PlannedQuantity1Choice.Code))]
     [IsoId("_X3C-0zFzEeGKkIZzgd38VA")]
     [DisplayName("Planned Quantity 1 Choice")]
-    public abstract partial record PlannedQuantity1Choice_
-    {
-    }
+    public abstract record PlannedQuantity1Choice_ { }
 }

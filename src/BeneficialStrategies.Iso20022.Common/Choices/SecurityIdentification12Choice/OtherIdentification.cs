@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification12Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification12Choice
     /// </summary>
     [IsoId("_XMCG5Np-Ed-ak6NoX_4Aeg_1227787110")]
     [DisplayName("Other Identification")]
-    public partial record OtherIdentification : SecurityIdentification12Choice_
+    public record OtherIdentification : SecurityIdentification12Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identifier of a security.
         /// </summary>
@@ -24,19 +22,15 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification12Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax31Text)]
-        [StringLength(maximumLength: 31 ,MinimumLength = 1)]
-        public required IsoRestrictedFINXMax31Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 31, MinimumLength = 1)]
+        public required IsoRestrictedFINXMax31Text Identification { get; init; }
+
         /// <summary>
         /// Source of the security identification.
         /// </summary>
         [IsoId("_W9k0INp-Ed-ak6NoX_4Aeg_-1624701768")]
         [DisplayName("Identification Source")]
         [IsoXmlTag("IdSrc")]
-        public required IdentificationSource2Choice_ IdentificationSource { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IdentificationSource2Choice_ IdentificationSource { get; init; }
     }
 }

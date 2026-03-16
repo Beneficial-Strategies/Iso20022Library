@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7D3oNTEyEe6g-ffJsqGiSA")]
 [DisplayName("Intra Balance Query Criteria11")]
-public partial record IntraBalanceQueryCriteria11
+public record IntraBalanceQueryCriteria11
 {
-    #nullable enable
-
     /// <summary>
     /// Balance Type.
     /// </summary>
@@ -44,7 +42,7 @@ public partial record IntraBalanceQueryCriteria11
     /// </summary>
     [DisplayName("Cash Account Servicer")]
     [IsoXmlTag("CshAcctSvcr")]
-    public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? CashAccountServicer { get; init; }
 
     /// <summary>
     /// Cash Sub Balance Identification.
@@ -58,21 +56,21 @@ public partial record IntraBalanceQueryCriteria11
     /// </summary>
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
-    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; } 
+    public DateAndDateTimeSearch5Choice_? CreationDateTime { get; init; }
 
     /// <summary>
     /// Effective Settlement Date.
     /// </summary>
     [DisplayName("Effective Settlement Date")]
     [IsoXmlTag("FctvSttlmDt")]
-    public DateAndDateTimeSearch5Choice_? EffectiveSettlementDate { get; init; } 
+    public DateAndDateTimeSearch5Choice_? EffectiveSettlementDate { get; init; }
 
     /// <summary>
     /// Intended Settlement Date.
     /// </summary>
     [DisplayName("Intended Settlement Date")]
     [IsoXmlTag("IntnddSttlmDt")]
-    public DateAndDateTimeSearch5Choice_? IntendedSettlementDate { get; init; } 
+    public DateAndDateTimeSearch5Choice_? IntendedSettlementDate { get; init; }
 
     /// <summary>
     /// Message Originator.
@@ -100,14 +98,14 @@ public partial record IntraBalanceQueryCriteria11
     /// </summary>
     [DisplayName("Settled Amount")]
     [IsoXmlTag("SttldAmt")]
-    public ImpliedCurrencyAmountRange1Choice_? SettledAmount { get; init; } 
+    public ImpliedCurrencyAmountRange1Choice_? SettledAmount { get; init; }
 
     /// <summary>
     /// Settlement Amount.
     /// </summary>
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
-    public ImpliedCurrencyAmountRange1Choice_? SettlementAmount { get; init; } 
+    public ImpliedCurrencyAmountRange1Choice_? SettlementAmount { get; init; }
 
     /// <summary>
     /// Settlement Currency.
@@ -121,9 +119,5 @@ public partial record IntraBalanceQueryCriteria11
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public IntraBalanceQueryStatus3? Status { get; init; } 
-
-    
-    #nullable disable
-    
+    public IntraBalanceQueryStatus3? Status { get; init; }
 }

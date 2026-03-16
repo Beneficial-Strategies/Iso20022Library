@@ -23,7 +23,7 @@ public enum SecurityStatus1Code
     [IsoId("_ZKGWENp-Ed-ak6NoX_4Aeg_243065")]
     [Description(@"The status is active.")]
     Active = SecurityStatusCode.Active, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The status is inactive.
     /// Encoded/decoded by serializers as &quot;INAC&quot;.
@@ -32,5 +32,4 @@ public enum SecurityStatus1Code
     [IsoId("_ZKGWEdp-Ed-ak6NoX_4Aeg_243066")]
     [Description(@"The status is inactive.")]
     Inactive = SecurityStatusCode.Inactive, // same ordinal as derivation source for type conversions
-    
 }

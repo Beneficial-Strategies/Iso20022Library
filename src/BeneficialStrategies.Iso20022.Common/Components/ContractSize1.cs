@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SCZ9ILb6EeabfchHYoktpA")]
 [DisplayName("Contract Size")]
-public partial record ContractSize1
+public record ContractSize1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the total quantity of financial product to be delivered as per the terms of the contract.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record ContractSize1
     [DisplayName("Lot Size")]
     [IsoXmlTag("LotSz")]
     [IsoSimpleType(IsoSimpleType.PositiveNumber)]
-    public required IsoPositiveNumber LotSize { get; init; } 
-    
+    public required IsoPositiveNumber LotSize { get; init; }
+
     /// <summary>
     /// Specifies the unit of underlying.
     /// </summary>
     [IsoId("_O0sZELb8EeabfchHYoktpA")]
     [DisplayName("Unit")]
     [IsoXmlTag("Unit")]
-    public UnitOfMeasure5Choice_? Unit { get; init; } 
-    
-    
-    #nullable disable
-    
+    public UnitOfMeasure5Choice_? Unit { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zIOnkHdiEeeKH6vrEwvLHA")]
 [DisplayName("Fraud Disposition Status")]
-public partial record FraudDispositionStatus1
+public record FraudDispositionStatus1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates the action taken as a disposition of the previously fraud report message.
     /// </summary>
     [IsoId("_KfaJYHdjEeeKH6vrEwvLHA")]
     [DisplayName("Action Taken")]
     [IsoXmlTag("ActnTaken")]
-    public required ActionTaken1Code ActionTaken { get; init; } 
-    
+    public required ActionTaken1Code ActionTaken { get; init; }
+
     /// <summary>
     /// Other action taken as defined at national or private level.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record FraudDispositionStatus1
     [DisplayName("Other Action Taken")]
     [IsoXmlTag("OthrActnTaken")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherActionTaken { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherActionTaken { get; init; }
+
     /// <summary>
     /// Contains errors found in the submitted fraud report message.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record FraudDispositionStatus1
     [DisplayName("Error Data")]
     [IsoXmlTag("ErrData")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? ErrorData { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? ErrorData { get; init; }
+
     /// <summary>
     /// Contains warnings found in the submitted fraud report message.
     /// </summary>
@@ -53,18 +51,14 @@ public partial record FraudDispositionStatus1
     [DisplayName("Warning Data")]
     [IsoXmlTag("WrngData")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? WarningData { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? WarningData { get; init; }
+
     /// <summary>
     /// Additional information
     /// </summary>
     [IsoId("_fDSBsJjDEeefZKJHxQTztg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation22? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation22? AdditionalInformation { get; init; }
 }

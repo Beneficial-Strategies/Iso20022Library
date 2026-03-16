@@ -23,7 +23,7 @@ public enum ATMOperation1Code
     [IsoId("_EHHP0ehBEeSbwP3G-MV9YA")]
     [Description(@"Adjust logical counters of the cassette.")]
     Adjust = ATMOperationCode.Adjust, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Add physically media to cassette.
     /// Encoded/decoded by serializers as &quot;INSR&quot;.
@@ -32,7 +32,7 @@ public enum ATMOperation1Code
     [IsoId("_EQDwc-hBEeSbwP3G-MV9YA")]
     [Description(@"Add physically media to cassette.")]
     InsertMedia = ATMOperationCode.InsertMedia, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loading cassette.
     /// Encoded/decoded by serializers as &quot;LOAD&quot;.
@@ -41,7 +41,7 @@ public enum ATMOperation1Code
     [IsoId("_ERi-MehBEeSbwP3G-MV9YA")]
     [Description(@"Loading cassette.")]
     Loading = ATMOperationCode.Loading, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Substract physically media from cassette.
     /// Encoded/decoded by serializers as &quot;REMV&quot;.
@@ -50,7 +50,7 @@ public enum ATMOperation1Code
     [IsoId("_EZ5B4ehBEeSbwP3G-MV9YA")]
     [Description(@"Substract physically media from cassette.")]
     RemoveMedia = ATMOperationCode.RemoveMedia, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unloading cassette.
     /// Encoded/decoded by serializers as &quot;UNLD&quot;.
@@ -59,5 +59,4 @@ public enum ATMOperation1Code
     [IsoId("_Ei-sc-hBEeSbwP3G-MV9YA")]
     [Description(@"Unloading cassette.")]
     Unloading = ATMOperationCode.Unloading, // same ordinal as derivation source for type conversions
-    
 }

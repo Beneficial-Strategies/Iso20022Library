@@ -23,7 +23,7 @@ public enum SettlementUnitTypeCode
     [IsoId("_hblKk2liEeGaMcKyqKNRfQ_1606915778")]
     [Description(@"Represent the face amount, for example the principal of a debt instrument.")]
     FaceAmount,
-    
+
     /// <summary>
     /// Represent the unit as a number, for example a number of shares.
     /// Encoded/decoded by serializers as &quot;UNIT&quot;.
@@ -32,5 +32,4 @@ public enum SettlementUnitTypeCode
     [IsoId("_hblKlGliEeGaMcKyqKNRfQ_1719234918")]
     [Description(@"Represent the unit as a number, for example a number of shares.")]
     Unit,
-    
 }

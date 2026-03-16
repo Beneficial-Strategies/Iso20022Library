@@ -23,7 +23,7 @@ public enum ModifiedStatusReasonCode
     [IsoId("_0ldWowlIEeGATtfOBToyew_471915014")]
     [Description(@"Modification of a transaction by the account owner.")]
     ModifiedByYourself,
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +32,4 @@ public enum ModifiedStatusReasonCode
     [IsoId("_0ldWpAlIEeGATtfOBToyew_377855801")]
     [Description(@"Other. See Narrative.")]
     Other,
-    
 }

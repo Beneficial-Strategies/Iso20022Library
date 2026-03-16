@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Xx790Y4HEeWrZqsymMFdfg")]
 [DisplayName("Maintenance Delegation")]
-public partial record MaintenanceDelegation4
+public record MaintenanceDelegation4
 {
-    #nullable enable
-    
     /// <summary>
     /// Maintenance service to be delegated.
     /// </summary>
@@ -25,16 +23,17 @@ public partial record MaintenanceDelegation4
     [DisplayName("Maintenance Service")]
     [IsoXmlTag("MntncSvc")]
     public SimpleValueList<DataSetCategory6Code> MaintenanceService { get; init; } = [];
+
     // ID for the above is _X8XsMY4HEeWrZqsymMFdfg
-    
+
     /// <summary>
     /// Response of the MTM to the delegation of the maintenance service.
     /// </summary>
     [IsoId("_X8XsM44HEeWrZqsymMFdfg")]
     [DisplayName("Response")]
     [IsoXmlTag("Rspn")]
-    public required Response2Code Response { get; init; } 
-    
+    public required Response2Code Response { get; init; }
+
     /// <summary>
     /// Reason of the response of the MTM.
     /// </summary>
@@ -42,17 +41,17 @@ public partial record MaintenanceDelegation4
     [DisplayName("Response Reason")]
     [IsoXmlTag("RspnRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ResponseReason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ResponseReason { get; init; }
+
     /// <summary>
     /// Type of delegation action.
     /// </summary>
     [IsoId("_hJKL4I4HEeWrZqsymMFdfg")]
     [DisplayName("Delegation Type")]
     [IsoXmlTag("DlgtnTp")]
-    public required TerminalManagementAction3Code DelegationType { get; init; } 
-    
+    public required TerminalManagementAction3Code DelegationType { get; init; }
+
     /// <summary>
     /// Subset of the terminal estate for the delegated actions, for instance for pilot or key deactivation). The subset may be expressed as a list of POI or terminal estate subset identifier.
     /// </summary>
@@ -60,9 +59,9 @@ public partial record MaintenanceDelegation4
     [DisplayName("POI Subset")]
     [IsoXmlTag("POISubset")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? POISubset { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? POISubset { get; init; }
+
     /// <summary>
     /// Identification of the parameters subset assigned by the MTM.
     /// </summary>
@@ -70,9 +69,9 @@ public partial record MaintenanceDelegation4
     [DisplayName("Delegation Scope Identification")]
     [IsoXmlTag("DlgtnScpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DelegationScopeIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DelegationScopeIdentification { get; init; }
+
     /// <summary>
     /// Definition of the delegation scope, for instance inside the payment application parameters the range of application profiles, the RID (registered application provider identification).
     /// </summary>
@@ -80,8 +79,8 @@ public partial record MaintenanceDelegation4
     [DisplayName("Delegation Scope Definition")]
     [IsoXmlTag("DlgtnScpDef")]
     [IsoSimpleType(IsoSimpleType.Max3000Binary)]
-    public IsoMax3000Binary? DelegationScopeDefinition { get; init; } 
-    
+    public IsoMax3000Binary? DelegationScopeDefinition { get; init; }
+
     /// <summary>
     /// Proof of delegation to be verified by the POI, when performing the delegated actions.
     /// </summary>
@@ -89,25 +88,21 @@ public partial record MaintenanceDelegation4
     [DisplayName("Delegation Proof")]
     [IsoXmlTag("DlgtnProof")]
     [IsoSimpleType(IsoSimpleType.Max5000Binary)]
-    public IsoMax5000Binary? DelegationProof { get; init; } 
-    
+    public IsoMax5000Binary? DelegationProof { get; init; }
+
     /// <summary>
     /// Protected proof of delegation.
     /// </summary>
     [IsoId("_X8XsP44HEeWrZqsymMFdfg")]
     [DisplayName("Protected Delegation Proof")]
     [IsoXmlTag("PrtctdDlgtnProof")]
-    public ContentInformationType12? ProtectedDelegationProof { get; init; } 
-    
+    public ContentInformationType12? ProtectedDelegationProof { get; init; }
+
     /// <summary>
     /// Association of the TM identifier and the MTM identifier of a POI.
     /// </summary>
     [IsoId("_X8XsQY4HEeWrZqsymMFdfg")]
     [DisplayName("POI Identification Association")]
     [IsoXmlTag("POIIdAssoctn")]
-    public MaintenanceIdentificationAssociation1? POIIdentificationAssociation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public MaintenanceIdentificationAssociation1? POIIdentificationAssociation { get; init; }
 }

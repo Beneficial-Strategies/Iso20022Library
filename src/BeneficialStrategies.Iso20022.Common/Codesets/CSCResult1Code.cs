@@ -23,7 +23,7 @@ public enum CSCResult1Code
     [IsoId("_TS9qZwEcEeCQm6a_G2yO_w_153972600")]
     [Description(@"Card security code match.")]
     CSCMatch = CSCResultCode.CSCMatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No card security code match.
     /// Encoded/decoded by serializers as &quot;CNMH&quot;.
@@ -32,7 +32,7 @@ public enum CSCResult1Code
     [IsoId("_TS9qaAEcEeCQm6a_G2yO_w_-1576057323")]
     [Description(@"No card security code match.")]
     CSCNoMatch = CSCResultCode.CSCNoMatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card security code not processed for technical reason.
     /// Encoded/decoded by serializers as &quot;CNMT&quot;.
@@ -41,7 +41,7 @@ public enum CSCResult1Code
     [IsoId("_TS9qaQEcEeCQm6a_G2yO_w_-1689896389")]
     [Description(@"Card security code not processed for technical reason.")]
     CSCTechnical = CSCResultCode.CSCTechnical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card security code not processed for non-technical reason.
     /// Encoded/decoded by serializers as &quot;CNMO&quot;.
@@ -50,7 +50,7 @@ public enum CSCResult1Code
     [IsoId("_TS9qagEcEeCQm6a_G2yO_w_-1542897554")]
     [Description(@"Card security code not processed for non-technical reason.")]
     CSCNotTechnical = CSCResultCode.CSCNotTechnical, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card security code missing in request.
     /// Encoded/decoded by serializers as &quot;CMSS&quot;.
@@ -59,7 +59,7 @@ public enum CSCResult1Code
     [IsoId("_TS9qawEcEeCQm6a_G2yO_w_394327619")]
     [Description(@"Card security code missing in request.")]
     CSCMissing = CSCResultCode.CSCMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card security code not used by issuer.
     /// Encoded/decoded by serializers as &quot;CNUS&quot;.
@@ -68,5 +68,4 @@ public enum CSCResult1Code
     [IsoId("_TS9qbAEcEeCQm6a_G2yO_w_-1425026569")]
     [Description(@"Card security code not used by issuer.")]
     CSCNotUsed = CSCResultCode.CSCNotUsed, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TerminalManagementActionTrigger1Code
     [IsoId("_KUOSln1DEeCF8NjrBemJWQ_-370493014")]
     [Description(@"Date and time trigger the terminal management action.")]
     DateTime = TerminalManagementActionTriggerCode.DateTime, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acquirer triggers the terminal management action.
     /// Encoded/decoded by serializers as &quot;HOST&quot;.
@@ -32,7 +32,7 @@ public enum TerminalManagementActionTrigger1Code
     [IsoId("_KUOSl31DEeCF8NjrBemJWQ_1411431502")]
     [Description(@"Acquirer triggers the terminal management action.")]
     HostEvent = TerminalManagementActionTriggerCode.HostEvent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Acceptor triggers the terminal management action.
     /// Encoded/decoded by serializers as &quot;MANU&quot;.
@@ -41,7 +41,7 @@ public enum TerminalManagementActionTrigger1Code
     [IsoId("_KUYDkH1DEeCF8NjrBemJWQ_-1262025415")]
     [Description(@"Acceptor triggers the terminal management action.")]
     Manual = TerminalManagementActionTriggerCode.Manual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sale system triggers the terminal management action.
     /// Encoded/decoded by serializers as &quot;SALE&quot;.
@@ -50,5 +50,4 @@ public enum TerminalManagementActionTrigger1Code
     [IsoId("_KUYDkX1DEeCF8NjrBemJWQ_-2047159303")]
     [Description(@"Sale system triggers the terminal management action.")]
     SaleEvent = TerminalManagementActionTriggerCode.SaleEvent, // same ordinal as derivation source for type conversions
-    
 }

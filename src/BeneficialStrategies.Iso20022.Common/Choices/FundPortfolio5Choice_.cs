@@ -12,12 +12,16 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FundPortfolio5Choice.TaxEfficientProduct))]
     [KnownType(typeof(FundPortfolio5Choice.GeneralInvestment))]
     [KnownType(typeof(FundPortfolio5Choice.Pension))]
-    [JsonDerivedType(typeof(FundPortfolio5Choice.TaxEfficientProduct),nameof(FundPortfolio5Choice.TaxEfficientProduct))]
-    [JsonDerivedType(typeof(FundPortfolio5Choice.GeneralInvestment),nameof(FundPortfolio5Choice.GeneralInvestment))]
-    [JsonDerivedType(typeof(FundPortfolio5Choice.Pension),nameof(FundPortfolio5Choice.Pension))]
+    [JsonDerivedType(
+        typeof(FundPortfolio5Choice.TaxEfficientProduct),
+        nameof(FundPortfolio5Choice.TaxEfficientProduct)
+    )]
+    [JsonDerivedType(
+        typeof(FundPortfolio5Choice.GeneralInvestment),
+        nameof(FundPortfolio5Choice.GeneralInvestment)
+    )]
+    [JsonDerivedType(typeof(FundPortfolio5Choice.Pension), nameof(FundPortfolio5Choice.Pension))]
     [IsoId("_nbBfUZNMEemQB_8XA98K0Q")]
     [DisplayName("Fund Portfolio 5 Choice")]
-    public abstract partial record FundPortfolio5Choice_
-    {
-    }
+    public abstract record FundPortfolio5Choice_ { }
 }

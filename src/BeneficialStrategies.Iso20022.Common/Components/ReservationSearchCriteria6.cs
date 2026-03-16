@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zxJBeTEyEe6g-ffJsqGiSA")]
 [DisplayName("Reservation Search Criteria6")]
-public partial record ReservationSearchCriteria6
+public record ReservationSearchCriteria6
 {
-    #nullable enable
-
     /// <summary>
     /// Account Identification.
     /// </summary>
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentification4Choice_? AccountIdentification { get; init; } 
+    public AccountIdentification4Choice_? AccountIdentification { get; init; }
 
     /// <summary>
     /// Account Owner.
     /// </summary>
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; } 
+    public BranchAndFinancialInstitutionIdentification8? AccountOwner { get; init; }
 
     /// <summary>
     /// Current Reservation Type.
@@ -44,7 +42,7 @@ public partial record ReservationSearchCriteria6
     /// </summary>
     [DisplayName("Date Time")]
     [IsoXmlTag("DtTm")]
-    public DateTimeSearch2Choice_? DateTime { get; init; } 
+    public DateTimeSearch2Choice_? DateTime { get; init; }
 
     /// <summary>
     /// Default Reservation Type.
@@ -58,9 +56,5 @@ public partial record ReservationSearchCriteria6
     /// </summary>
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
-    public SystemIdentification2Choice_? SystemIdentification { get; init; } 
-
-    
-    #nullable disable
-    
+    public SystemIdentification2Choice_? SystemIdentification { get; init; }
 }

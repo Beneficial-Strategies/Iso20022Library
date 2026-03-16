@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JmPTASi1Eeurkfo6MpvKDA")]
 [DisplayName("Status Report Data Set Request")]
-public partial record StatusReportDataSetRequest2
+public record StatusReportDataSetRequest2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the data set containing the status report.
     /// </summary>
     [IsoId("_J0H-ASi1Eeurkfo6MpvKDA")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required DataSetIdentification8 Identification { get; init; } 
-    
+    public required DataSetIdentification8 Identification { get; init; }
+
     /// <summary>
     /// Counter to identify a single data set within the whole transfer.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record StatusReportDataSetRequest2
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? SequenceCounter { get; init; } 
-    
+    public IsoMax9NumericText? SequenceCounter { get; init; }
+
     /// <summary>
     /// Indication of the last sequence in case of split messages.
     /// </summary>
@@ -42,17 +40,13 @@ public partial record StatusReportDataSetRequest2
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LastSequence { get; init; } 
-    
+    public IsoTrueFalseIndicator? LastSequence { get; init; }
+
     /// <summary>
     /// Content of the status report.
     /// </summary>
     [IsoId("_J0H-BSi1Eeurkfo6MpvKDA")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
-    public required StatusReportContent10 Content { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required StatusReportContent10 Content { get; init; }
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ExposureType24Choice.Code))]
     [KnownType(typeof(ExposureType24Choice.Proprietary))]
-    [JsonDerivedType(typeof(ExposureType24Choice.Code),nameof(ExposureType24Choice.Code))]
-    [JsonDerivedType(typeof(ExposureType24Choice.Proprietary),nameof(ExposureType24Choice.Proprietary))]
+    [JsonDerivedType(typeof(ExposureType24Choice.Code), nameof(ExposureType24Choice.Code))]
+    [JsonDerivedType(
+        typeof(ExposureType24Choice.Proprietary),
+        nameof(ExposureType24Choice.Proprietary)
+    )]
     [IsoId("_ciETATi8Eeydid5dcNPKvg")]
     [DisplayName("Exposure Type 24 Choice")]
-    public abstract partial record ExposureType24Choice_
-    {
-    }
+    public abstract record ExposureType24Choice_ { }
 }

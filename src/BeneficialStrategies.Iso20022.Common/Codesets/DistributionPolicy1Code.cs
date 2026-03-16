@@ -23,7 +23,7 @@ public enum DistributionPolicy1Code
     [IsoId("_awwx49p-Ed-ak6NoX_4Aeg_-433302196")]
     [Description(@"Income is distributed to the investors in the fund.")]
     Distribution = DistributionPolicyCode.Distribution, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Income is added to the capital of the fund.
     /// Encoded/decoded by serializers as &quot;ACCU&quot;.
@@ -32,5 +32,4 @@ public enum DistributionPolicy1Code
     [IsoId("_awwx5Np-Ed-ak6NoX_4Aeg_-433302187")]
     [Description(@"Income is added to the capital of the fund.")]
     Accumulation = DistributionPolicyCode.Accumulation, // same ordinal as derivation source for type conversions
-    
 }

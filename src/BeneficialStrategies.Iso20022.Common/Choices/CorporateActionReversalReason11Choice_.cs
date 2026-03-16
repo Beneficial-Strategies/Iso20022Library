@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CorporateActionReversalReason11Choice.Code))]
     [KnownType(typeof(CorporateActionReversalReason11Choice.Proprietary))]
-    [JsonDerivedType(typeof(CorporateActionReversalReason11Choice.Code),nameof(CorporateActionReversalReason11Choice.Code))]
-    [JsonDerivedType(typeof(CorporateActionReversalReason11Choice.Proprietary),nameof(CorporateActionReversalReason11Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CorporateActionReversalReason11Choice.Code),
+        nameof(CorporateActionReversalReason11Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CorporateActionReversalReason11Choice.Proprietary),
+        nameof(CorporateActionReversalReason11Choice.Proprietary)
+    )]
     [IsoId("_l6NNk5t3Ee-wQIOX0djF2w")]
     [DisplayName("Corporate Action Reversal Reason11Choice")]
-    public abstract partial record CorporateActionReversalReason11Choice_
-    {
-    }
+    public abstract record CorporateActionReversalReason11Choice_ { }
 }

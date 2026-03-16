@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ql4SRdp-Ed-ak6NoX_4Aeg_1999754651")]
 [DisplayName("Reference")]
-public partial record Reference19
+public record Reference19
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference allocated by the central counterparty - central counterpatry trade leg reference identification that uniquely identifies the trade.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Reference19
     [DisplayName("Trade Leg Notification Identification")]
     [IsoXmlTag("TradLegNtfctnId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TradeLegNotificationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TradeLegNotificationIdentification { get; init; }
+
     /// <summary>
     /// After netting, reference that is common to a net transaction to settle and all its underlying trades.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record Reference19
     [DisplayName("Net Position Identification")]
     [IsoXmlTag("NetPosId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? NetPositionIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? NetPositionIdentification { get; init; }
 }

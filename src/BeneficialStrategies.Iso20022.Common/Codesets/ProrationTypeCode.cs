@@ -23,7 +23,7 @@ public enum ProrationTypeCode
     [IsoId("_330GQDFrEeGKkIZzgd38VA")]
     [Description(@"Pro ration is not decided.")]
     NotDecided,
-    
+
     /// <summary>
     /// Pro ration is not established.
     /// Encoded/decoded by serializers as &quot;PRNE&quot;.
@@ -32,7 +32,7 @@ public enum ProrationTypeCode
     [IsoId("_LGBnkDFsEeGKkIZzgd38VA")]
     [Description(@"Pro ration is not established.")]
     NotEstablished,
-    
+
     /// <summary>
     /// Pro ration is not used.
     /// Encoded/decoded by serializers as &quot;PRNU&quot;.
@@ -41,5 +41,4 @@ public enum ProrationTypeCode
     [IsoId("_Xg_9YDVEEeGIoujPqYSZDw")]
     [Description(@"Pro ration is not used.")]
     NotUsed,
-    
 }

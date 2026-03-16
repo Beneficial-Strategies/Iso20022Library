@@ -1,10 +1,10 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
 using BeneficialStrategies.Iso20022.Amounts;
-using BeneficialStrategies.Iso20022.Codesets;
-using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.Choices;
 using BeneficialStrategies.Iso20022.Choices.AccountIdentification4Choice;
+using BeneficialStrategies.Iso20022.Codesets;
+using BeneficialStrategies.Iso20022.Components;
 using BeneficialStrategies.Iso20022.pacs;
 
 namespace BeneficialStrategies.Iso20022.pacs;
@@ -21,33 +21,35 @@ public class Pacs009ExamplesTests
 {
     // ── Shared builders ────────────────────────────────────────────────────────
 
-    public static GroupHeader96 CreateGroupHeader(string msgId = "DEUTDEFF/240315/PAC009/00001") => new()
-    {
-        MessageIdentification = msgId,
-        CreationDateTime = Iso20022TestData.MessageCreationDateTime,
-        NumberOfTransactions = "1",
-        SettlementInformation = Iso20022TestData.ClearingSettlement,
-        InstructingAgent = Iso20022TestData.DebtorAgent,
-        InstructedAgent = Iso20022TestData.CreditorAgent,
-    };
+    public static GroupHeader96 CreateGroupHeader(string msgId = "DEUTDEFF/240315/PAC009/00001") =>
+        new()
+        {
+            MessageIdentification = msgId,
+            CreationDateTime = Iso20022TestData.MessageCreationDateTime,
+            NumberOfTransactions = "1",
+            SettlementInformation = Iso20022TestData.ClearingSettlement,
+            InstructingAgent = Iso20022TestData.DebtorAgent,
+            InstructedAgent = Iso20022TestData.CreditorAgent,
+        };
 
-    public static CreditTransferTransaction56 CreateFiTransfer() => new()
-    {
-        PaymentIdentification = new PaymentIdentification13
+    public static CreditTransferTransaction56 CreateFiTransfer() =>
+        new()
         {
-            InstructionIdentification = "DEUTDEFF/240315/FI009/00001",
-            EndToEndIdentification = "NOSTRO-REBAL-20240315-001",
-            UETR = "a3c8e91f-2b4d-4f67-8e9a-bc1234567890",
-        },
-        InterbankSettlementAmount = new ActiveCurrencyAndAmount
-        {
-            Currency = "EUR",
-            Amount = 5_000_000.00m,
-        },
-        InterbankSettlementDate = Iso20022TestData.SettlementDate,
-        Debtor = Iso20022TestData.DebtorAgent,
-        Creditor = Iso20022TestData.CreditorAgent,
-    };
+            PaymentIdentification = new PaymentIdentification13
+            {
+                InstructionIdentification = "DEUTDEFF/240315/FI009/00001",
+                EndToEndIdentification = "NOSTRO-REBAL-20240315-001",
+                UETR = "a3c8e91f-2b4d-4f67-8e9a-bc1234567890",
+            },
+            InterbankSettlementAmount = new ActiveCurrencyAndAmount
+            {
+                Currency = "EUR",
+                Amount = 5_000_000.00m,
+            },
+            InterbankSettlementDate = Iso20022TestData.SettlementDate,
+            Debtor = Iso20022TestData.DebtorAgent,
+            Creditor = Iso20022TestData.CreditorAgent,
+        };
 
     // ── Examples ───────────────────────────────────────────────────────────────
 
@@ -108,7 +110,7 @@ public class Pacs009ExamplesTests
                 InterbankSettlementAmount = new ActiveCurrencyAndAmount
                 {
                     Currency = "USD",
-                    Amount = 51_300.00m,   // USD equivalent at spot rate
+                    Amount = 51_300.00m, // USD equivalent at spot rate
                 },
                 InterbankSettlementDate = Iso20022TestData.SettlementDate,
                 Debtor = Iso20022TestData.DebtorAgent,
@@ -117,8 +119,10 @@ public class Pacs009ExamplesTests
         };
 
         Assert.NotNull(message);
-        Assert.Equal(SettlementMethod1Code.CoverMethod,
-            message.GroupHeader.SettlementInformation.SettlementMethod);
+        Assert.Equal(
+            SettlementMethod1Code.CoverMethod,
+            message.GroupHeader.SettlementInformation.SettlementMethod
+        );
     }
 
     /// <summary>
@@ -135,7 +139,7 @@ public class Pacs009ExamplesTests
             {
                 ClearingSystemMemberIdentification = new ClearingSystemMemberIdentification2
                 {
-                    MemberIdentification = "0002",  // JPMorgan CHIPS UID
+                    MemberIdentification = "0002", // JPMorgan CHIPS UID
                 },
             },
         };
@@ -159,7 +163,12 @@ public class Pacs009ExamplesTests
         };
 
         Assert.NotNull(message);
-        Assert.NotNull(message.CreditTransferTransactionInformation.Debtor
-            .FinancialInstitutionIdentification.ClearingSystemMemberIdentification);
+        Assert.NotNull(
+            message
+                .CreditTransferTransactionInformation
+                .Debtor
+                .FinancialInstitutionIdentification
+                .ClearingSystemMemberIdentification
+        );
     }
 }

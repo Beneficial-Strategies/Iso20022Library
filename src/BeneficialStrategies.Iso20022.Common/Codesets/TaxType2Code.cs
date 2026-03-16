@@ -23,23 +23,26 @@ public enum TaxType2Code
     [IsoId("_Veg1I9p-Ed-ak6NoX_4Aeg_1366299075")]
     [Description(@"Tax is on certain documents and transactions.")]
     StampDuty = TaxTypeCode.StampDuty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax is on income deducted at source, which the paying agent is legally obliged to deduct from its payments of interest on deposits and other proceeds of a financial instrument.
     /// Encoded/decoded by serializers as &quot;WITH&quot;.
     /// </summary>
     [EnumMember(Value = "WITH")]
     [IsoId("_Veg1JNp-Ed-ak6NoX_4Aeg_-1219693756")]
-    [Description(@"Tax is on income deducted at source, which the paying agent is legally obliged to deduct from its payments of interest on deposits and other proceeds of a financial instrument.")]
+    [Description(
+        @"Tax is on income deducted at source, which the paying agent is legally obliged to deduct from its payments of interest on deposits and other proceeds of a financial instrument."
+    )]
     WithholdingTax = TaxTypeCode.WithholdingTax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax withheld at source in the framework of the European Directive on taxation of savings in the form of interest payments.
     /// Encoded/decoded by serializers as &quot;EUTR&quot;.
     /// </summary>
     [EnumMember(Value = "EUTR")]
     [IsoId("_Veg1Jdp-Ed-ak6NoX_4Aeg_-1802624814")]
-    [Description(@"Tax withheld at source in the framework of the European Directive on taxation of savings in the form of interest payments.")]
+    [Description(
+        @"Tax withheld at source in the framework of the European Directive on taxation of savings in the form of interest payments."
+    )]
     EUTaxRetention = TaxTypeCode.EUTaxRetention, // same ordinal as derivation source for type conversions
-    
 }

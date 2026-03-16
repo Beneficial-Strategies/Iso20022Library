@@ -21,25 +21,30 @@ public enum PriceReportFunctionCode
     /// </summary>
     [EnumMember(Value = "NEWP")]
     [IsoId("_gOSiUBl9EeKxsrht2duUcg")]
-    [Description(@"The price report is ‘new’, that is the report is not being used as a correction of previously sent prices.")]
+    [Description(
+        @"The price report is ‘new’, that is the report is not being used as a correction of previously sent prices."
+    )]
     NewPriceReport,
-    
+
     /// <summary>
     /// The price report conveys the correction of the complete set of prices previously sent for the same price report identification.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
     /// </summary>
     [EnumMember(Value = "REPL")]
     [IsoId("_gXEq4Bl9EeKxsrht2duUcg")]
-    [Description(@"The price report conveys the correction of the complete set of prices previously sent for the same price report identification.")]
+    [Description(
+        @"The price report conveys the correction of the complete set of prices previously sent for the same price report identification."
+    )]
     CompleteReplacementPriceReport,
-    
+
     /// <summary>
     /// The price report conveys the correction of some of the prices previously sent for the same price report identification.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
     /// </summary>
     [EnumMember(Value = "PART")]
     [IsoId("_gfRkoBl9EeKxsrht2duUcg")]
-    [Description(@"The price report conveys the correction of some of the prices previously sent for the same price report identification.")]
+    [Description(
+        @"The price report conveys the correction of some of the prices previously sent for the same price report identification."
+    )]
     PartialCorrectionPriceReport,
-    
 }

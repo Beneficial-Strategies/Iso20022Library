@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SystemEventType4Choice.Code))]
     [KnownType(typeof(SystemEventType4Choice.Proprietary))]
-    [JsonDerivedType(typeof(SystemEventType4Choice.Code),nameof(SystemEventType4Choice.Code))]
-    [JsonDerivedType(typeof(SystemEventType4Choice.Proprietary),nameof(SystemEventType4Choice.Proprietary))]
+    [JsonDerivedType(typeof(SystemEventType4Choice.Code), nameof(SystemEventType4Choice.Code))]
+    [JsonDerivedType(
+        typeof(SystemEventType4Choice.Proprietary),
+        nameof(SystemEventType4Choice.Proprietary)
+    )]
     [IsoId("_d7AQEXhkEeidzqjNEfehPg")]
     [DisplayName("System Event Type 4 Choice")]
-    public abstract partial record SystemEventType4Choice_
-    {
-    }
+    public abstract record SystemEventType4Choice_ { }
 }

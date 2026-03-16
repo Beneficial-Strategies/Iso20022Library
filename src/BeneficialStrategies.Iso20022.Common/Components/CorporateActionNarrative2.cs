@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UMZtAdp-Ed-ak6NoX_4Aeg_325732462")]
 [DisplayName("Corporate Action Narrative")]
-public partial record CorporateActionNarrative2
+public record CorporateActionNarrative2
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides conditional information related to the event, eg, an offer is subject to 50% acceptance, the offeror allows the securities holder to set some conditions.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionNarrative2
     [DisplayName("Information Conditions")]
     [IsoXmlTag("InfConds")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? InformationConditions { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InformationConditions { get; init; }
+
     /// <summary>
     /// Provides information conditions to the account owner that are to be complied with, eg, not open to US/Canadian residents, QIB or SIL to be provided.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CorporateActionNarrative2
     [DisplayName("Information To Comply With")]
     [IsoXmlTag("InfToCmplyWth")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? InformationToComplyWith { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InformationToComplyWith { get; init; }
+
     /// <summary>
     /// Provides taxation conditions that cannot be included within the structured fields of this message and has not been mentioned in the SLA.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record CorporateActionNarrative2
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? TaxationConditions { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? TaxationConditions { get; init; }
+
     /// <summary>
     /// Provides declaration details narrative relative to the financial instrument, eg, beneficial ownership.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record CorporateActionNarrative2
     [DisplayName("Declaration Details")]
     [IsoXmlTag("DclrtnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? DeclarationDetails { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? DeclarationDetails { get; init; }
+
     /// <summary>
     /// Provides information required for the registration.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record CorporateActionNarrative2
     [DisplayName("Registration Details")]
     [IsoXmlTag("RegnDtls")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? RegistrationDetails { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? RegistrationDetails { get; init; }
+
     /// <summary>
     /// Provides additional information or specifies in more detail the content of a message.
     /// </summary>
@@ -75,10 +73,6 @@ public partial record CorporateActionNarrative2
     [DisplayName("Additional Text")]
     [IsoXmlTag("AddtlTxt")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? AdditionalText { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? AdditionalText { get; init; }
 }

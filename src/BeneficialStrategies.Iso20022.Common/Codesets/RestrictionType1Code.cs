@@ -23,7 +23,7 @@ public enum RestrictionType1Code
     [IsoId("_hbcAr2liEeGaMcKyqKNRfQ_-1297174021")]
     [Description(@"Selling restriction.")]
     Selling = RestrictionTypeCode.Selling, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buying restriction.
     /// Encoded/decoded by serializers as &quot;BUYR&quot;.
@@ -32,7 +32,7 @@ public enum RestrictionType1Code
     [IsoId("_hbcAsGliEeGaMcKyqKNRfQ_-268302593")]
     [Description(@"Buying restriction.")]
     Buying = RestrictionTypeCode.Buying, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Placing restriction.
     /// Encoded/decoded by serializers as &quot;PLAR&quot;.
@@ -41,7 +41,7 @@ public enum RestrictionType1Code
     [IsoId("_hbcAsWliEeGaMcKyqKNRfQ_809717745")]
     [Description(@"Placing restriction.")]
     Placing = RestrictionTypeCode.Placing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Holding restriction.
     /// Encoded/decoded by serializers as &quot;HOLR&quot;.
@@ -50,7 +50,7 @@ public enum RestrictionType1Code
     [IsoId("_hblKkGliEeGaMcKyqKNRfQ_-1548024378")]
     [Description(@"Holding restriction.")]
     Holding = RestrictionTypeCode.Holding, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Voting restriction.
     /// Encoded/decoded by serializers as &quot;VOTR&quot;.
@@ -59,5 +59,4 @@ public enum RestrictionType1Code
     [IsoId("_hblKkWliEeGaMcKyqKNRfQ_798618968")]
     [Description(@"Voting restriction.")]
     Voting = RestrictionTypeCode.Voting, // same ordinal as derivation source for type conversions
-    
 }

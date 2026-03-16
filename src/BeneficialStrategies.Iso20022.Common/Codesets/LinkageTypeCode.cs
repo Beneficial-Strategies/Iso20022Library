@@ -23,7 +23,7 @@ public enum LinkageTypeCode
     [IsoId("_afCIsdp-Ed-ak6NoX_4Aeg_1642832919")]
     [Description(@"Request is to link the referenced transactions.")]
     Link,
-    
+
     /// <summary>
     /// Request is to unlink the referenced transactions.
     /// Encoded/decoded by serializers as &quot;UNLK&quot;.
@@ -32,7 +32,7 @@ public enum LinkageTypeCode
     [IsoId("_afCIstp-Ed-ak6NoX_4Aeg_1965142157")]
     [Description(@"Request is to unlink the referenced transactions.")]
     Unlink,
-    
+
     /// <summary>
     /// Request is to soft link the referenced transactions.
     /// Encoded/decoded by serializers as &quot;SOFT&quot;.
@@ -41,5 +41,4 @@ public enum LinkageTypeCode
     [IsoId("_afCIs9p-Ed-ak6NoX_4Aeg_2015936781")]
     [Description(@"Request is to soft link the referenced transactions.")]
     Soft,
-    
 }

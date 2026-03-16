@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TransactionQuantities3Choice.Quantity))]
     [KnownType(typeof(TransactionQuantities3Choice.OriginalAndCurrentFaceAmount))]
     [KnownType(typeof(TransactionQuantities3Choice.Proprietary))]
-    [JsonDerivedType(typeof(TransactionQuantities3Choice.Quantity),nameof(TransactionQuantities3Choice.Quantity))]
-    [JsonDerivedType(typeof(TransactionQuantities3Choice.OriginalAndCurrentFaceAmount),nameof(TransactionQuantities3Choice.OriginalAndCurrentFaceAmount))]
-    [JsonDerivedType(typeof(TransactionQuantities3Choice.Proprietary),nameof(TransactionQuantities3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TransactionQuantities3Choice.Quantity),
+        nameof(TransactionQuantities3Choice.Quantity)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionQuantities3Choice.OriginalAndCurrentFaceAmount),
+        nameof(TransactionQuantities3Choice.OriginalAndCurrentFaceAmount)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionQuantities3Choice.Proprietary),
+        nameof(TransactionQuantities3Choice.Proprietary)
+    )]
     [IsoId("_dBfEgXkcEei6JsZKrqN0hQ")]
     [DisplayName("Transaction Quantities 3 Choice")]
-    public abstract partial record TransactionQuantities3Choice_
-    {
-    }
+    public abstract record TransactionQuantities3Choice_ { }
 }

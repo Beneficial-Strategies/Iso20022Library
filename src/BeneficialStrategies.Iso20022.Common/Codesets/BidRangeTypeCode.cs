@@ -21,25 +21,30 @@ public enum BidRangeTypeCode
     /// </summary>
     [EnumMember(Value = "DIVI")]
     [IsoId("_3wBtwO3MEeqc-LCjwLsUVg")]
-    [Description(@"All values (including minimum and maximum prices) are divisible by the bid interval.")]
+    [Description(
+        @"All values (including minimum and maximum prices) are divisible by the bid interval."
+    )]
     Divisible,
-    
+
     /// <summary>
     /// Minimum and maximum prices are not divisible by the bid interval.  All successive values between the minimum and maximum prices are in multiples of the bid interval.
     /// Encoded/decoded by serializers as &quot;MULT&quot;.
     /// </summary>
     [EnumMember(Value = "MULT")]
     [IsoId("_8sdykO3MEeqc-LCjwLsUVg")]
-    [Description(@"Minimum and maximum prices are not divisible by the bid interval.  All successive values between the minimum and maximum prices are in multiples of the bid interval.")]
+    [Description(
+        @"Minimum and maximum prices are not divisible by the bid interval.  All successive values between the minimum and maximum prices are in multiples of the bid interval."
+    )]
     InMultiple,
-    
+
     /// <summary>
     /// No values within the bid range are divisible by the bid interval including the minimum and maximum prices.  Each value between the minimum and maximum prices is incremented by the bid interval.
     /// Encoded/decoded by serializers as &quot;INCR&quot;.
     /// </summary>
     [EnumMember(Value = "INCR")]
     [IsoId("_ALoBEO3NEeqc-LCjwLsUVg")]
-    [Description(@"No values within the bid range are divisible by the bid interval including the minimum and maximum prices.  Each value between the minimum and maximum prices is incremented by the bid interval.")]
+    [Description(
+        @"No values within the bid range are divisible by the bid interval including the minimum and maximum prices.  Each value between the minimum and maximum prices is incremented by the bid interval."
+    )]
     Incremental,
-    
 }

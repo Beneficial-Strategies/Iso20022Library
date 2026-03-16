@@ -23,7 +23,7 @@ public enum NotificationType1Code
     [IsoId("_aODGZ9p-Ed-ak6NoX_4Aeg_959058836")]
     [Description(@"User must withdraw from transaction because of Force Majeure.")]
     MustWithdrawFromTransaction = NotificationTypeCode.MustWithdrawFromTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// User is unable to submit data set(s).
     /// Encoded/decoded by serializers as &quot;CSDS&quot;.
@@ -32,5 +32,4 @@ public enum NotificationType1Code
     [IsoId("_aODGaNp-Ed-ak6NoX_4Aeg_963678886")]
     [Description(@"User is unable to submit data set(s).")]
     CannotSubmitDataSet = NotificationTypeCode.CannotSubmitDataSet, // same ordinal as derivation source for type conversions
-    
 }

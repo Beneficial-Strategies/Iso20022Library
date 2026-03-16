@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vJy54WizEeS87LmvcA55sg")]
 [DisplayName("Enveloped Data")]
-public partial record EnvelopedData4
+public record EnvelopedData4
 {
-    #nullable enable
-    
     /// <summary>
     /// Version of the data structure.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record EnvelopedData4
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Version { get; init; } 
-    
+    public IsoNumber? Version { get; init; }
+
     /// <summary>
     /// Session key or identification of the protection key used by the recipient.
     /// </summary>
@@ -34,17 +32,14 @@ public partial record EnvelopedData4
     [DisplayName("Recipient")]
     [IsoXmlTag("Rcpt")]
     public ValueList<Recipient4Choice_> Recipient { get; init; } = [];
+
     // ID for the above is _vXG9I2izEeS87LmvcA55sg
-    
+
     /// <summary>
     /// Data protection by encryption (digital envelope), with an encryption key.
     /// </summary>
     [IsoId("_vXG9JWizEeS87LmvcA55sg")]
     [DisplayName("Encrypted Content")]
     [IsoXmlTag("NcrptdCntt")]
-    public EncryptedContent3? EncryptedContent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public EncryptedContent3? EncryptedContent { get; init; }
 }

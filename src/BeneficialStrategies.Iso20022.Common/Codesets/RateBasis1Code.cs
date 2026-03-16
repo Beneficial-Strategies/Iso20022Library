@@ -23,7 +23,7 @@ public enum RateBasis1Code
     [IsoId("_Oxb24c5KEeSc85GUbgBycw")]
     [Description(@"Rate is reported in days.")]
     Days = RateBasisCode.Days, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is reported in months.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -32,7 +32,7 @@ public enum RateBasis1Code
     [IsoId("_O4WXMc5KEeSc85GUbgBycw")]
     [Description(@"Rate is reported in months.")]
     Months = RateBasisCode.Months, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is reported in weeks.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -41,7 +41,7 @@ public enum RateBasis1Code
     [IsoId("_O9mqoc5KEeSc85GUbgBycw")]
     [Description(@"Rate is reported in weeks.")]
     Weeks = RateBasisCode.Weeks, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rate is reported in years.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -50,5 +50,4 @@ public enum RateBasis1Code
     [IsoId("_PCi1Ac5KEeSc85GUbgBycw")]
     [Description(@"Rate is reported in years.")]
     Years = RateBasisCode.Years, // same ordinal as derivation source for type conversions
-    
 }

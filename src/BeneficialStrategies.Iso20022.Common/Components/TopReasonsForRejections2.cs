@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NeaEeVfdEeqZr5K1Woax-g")]
 [DisplayName("Top Reasons For Rejections")]
-public partial record TopReasonsForRejections2
+public record TopReasonsForRejections2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the most common data field that has not passed the validation rule for all derivatives.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TopReasonsForRejections2
     [DisplayName("All")]
     [IsoXmlTag("All")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? All { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? All { get; init; }
+
     /// <summary>
     /// Identification of the most common data field that has not passed the validation rule for derivatives which have been reported as new.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TopReasonsForRejections2
     [DisplayName("New")]
     [IsoXmlTag("New")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? New { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? New { get; init; }
+
     /// <summary>
     /// Identification of the most common data field that has not passed the validation rule for derivatives which have been reported as modification.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record TopReasonsForRejections2
     [DisplayName("Modification")]
     [IsoXmlTag("Mod")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Modification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Modification { get; init; }
 }

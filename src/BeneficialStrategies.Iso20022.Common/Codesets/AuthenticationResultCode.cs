@@ -23,7 +23,7 @@ public enum AuthenticationResultCode
     [IsoId("_pHOwwLABEeah1_v59tW6Rg")]
     [Description(@"The authentication didn’t succeed.")]
     Denial,
-    
+
     /// <summary>
     /// The card does not participate in the authentication programme.
     /// Encoded/decoded by serializers as &quot;CARD&quot;.
@@ -32,7 +32,7 @@ public enum AuthenticationResultCode
     [IsoId("_vTZYELABEeah1_v59tW6Rg")]
     [Description(@"The card does not participate in the authentication programme.")]
     NonParticipation,
-    
+
     /// <summary>
     /// The authentication couldn’t be carried out.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -41,7 +41,7 @@ public enum AuthenticationResultCode
     [IsoId("_zS4FYLABEeah1_v59tW6Rg")]
     [Description(@"The authentication couldn’t be carried out.")]
     UnableToAuthenticate,
-    
+
     /// <summary>
     /// Merchant not enrolled in the authentication programme.
     /// Encoded/decoded by serializers as &quot;MRCH&quot;.
@@ -50,7 +50,7 @@ public enum AuthenticationResultCode
     [IsoId("_41PhwLABEeah1_v59tW6Rg")]
     [Description(@"Merchant not enrolled in the authentication programme.")]
     MerchantNotEnroled,
-    
+
     /// <summary>
     /// Authentication succeeded with a cryptogram.
     /// Encoded/decoded by serializers as &quot;CRPT&quot;.
@@ -59,7 +59,7 @@ public enum AuthenticationResultCode
     [IsoId("_8GEZULABEeah1_v59tW6Rg")]
     [Description(@"Authentication succeeded with a cryptogram.")]
     WithCryptogram,
-    
+
     /// <summary>
     /// Authentication succeeded without a cryptogram.
     /// Encoded/decoded by serializers as &quot;UCRP&quot;.
@@ -68,5 +68,4 @@ public enum AuthenticationResultCode
     [IsoId("__VGhILABEeah1_v59tW6Rg")]
     [Description(@"Authentication succeeded without a cryptogram.")]
     WithoutCryptogram,
-    
 }

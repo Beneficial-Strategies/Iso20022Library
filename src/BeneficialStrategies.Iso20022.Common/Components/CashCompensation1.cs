@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UokEmtp-Ed-ak6NoX_4Aeg_-1006073827")]
 [DisplayName("Cash Compensation")]
-public partial record CashCompensation1
+public record CashCompensation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides the original amount to be settled.
     /// </summary>
     [IsoId("_UokEm9p-Ed-ak6NoX_4Aeg_1436012936")]
     [DisplayName("Settlement Amount")]
     [IsoXmlTag("SttlmAmt")]
-    public required AmountAndDirection20 SettlementAmount { get; init; } 
-    
+    public required AmountAndDirection20 SettlementAmount { get; init; }
+
     /// <summary>
     /// Amount of fees linked to the cash compensation process.
     /// </summary>
     [IsoId("_UokEnNp-Ed-ak6NoX_4Aeg_796992332")]
     [DisplayName("Fees")]
     [IsoXmlTag("Fees")]
-    public AmountAndDirection20? Fees { get; init; } 
-    
+    public AmountAndDirection20? Fees { get; init; }
+
     /// <summary>
     /// Indicates the value date of the cash compensation.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record CashCompensation1
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ValueDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? ValueDate { get; init; }
 }

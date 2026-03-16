@@ -14,14 +14,24 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentStatusCode6Choice.RTGS))]
     [KnownType(typeof(PaymentStatusCode6Choice.Settlement))]
     [KnownType(typeof(PaymentStatusCode6Choice.Proprietary))]
-    [JsonDerivedType(typeof(PaymentStatusCode6Choice.Pending),nameof(PaymentStatusCode6Choice.Pending))]
-    [JsonDerivedType(typeof(PaymentStatusCode6Choice.Final),nameof(PaymentStatusCode6Choice.Final))]
-    [JsonDerivedType(typeof(PaymentStatusCode6Choice.RTGS),nameof(PaymentStatusCode6Choice.RTGS))]
-    [JsonDerivedType(typeof(PaymentStatusCode6Choice.Settlement),nameof(PaymentStatusCode6Choice.Settlement))]
-    [JsonDerivedType(typeof(PaymentStatusCode6Choice.Proprietary),nameof(PaymentStatusCode6Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PaymentStatusCode6Choice.Pending),
+        nameof(PaymentStatusCode6Choice.Pending)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusCode6Choice.Final),
+        nameof(PaymentStatusCode6Choice.Final)
+    )]
+    [JsonDerivedType(typeof(PaymentStatusCode6Choice.RTGS), nameof(PaymentStatusCode6Choice.RTGS))]
+    [JsonDerivedType(
+        typeof(PaymentStatusCode6Choice.Settlement),
+        nameof(PaymentStatusCode6Choice.Settlement)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusCode6Choice.Proprietary),
+        nameof(PaymentStatusCode6Choice.Proprietary)
+    )]
     [IsoId("_pIXBKRbzEeOy-PlRuFSUzQ")]
     [DisplayName("Payment Status Code 6 Choice")]
-    public abstract partial record PaymentStatusCode6Choice_
-    {
-    }
+    public abstract record PaymentStatusCode6Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum TimeOut1Code
     [IsoId("_VrxOCNp-Ed-ak6NoX_4Aeg_1511821876")]
     [Description(@"Reason for time-out is the reaching of latest shipment date.")]
     LatestShipmentDateDue = TimeOutCode.LatestShipmentDateDue, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reason for time-out is the lack of action from the user side.
     /// Encoded/decoded by serializers as &quot;NACT&quot;.
@@ -32,5 +32,4 @@ public enum TimeOut1Code
     [IsoId("_Vr6_ANp-Ed-ak6NoX_4Aeg_1511821877")]
     [Description(@"Reason for time-out is the lack of action from the user side.")]
     NoAction = TimeOutCode.NoAction, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bmticdp-Ed-ak6NoX_4Aeg_-456866775")]
-[Description(@"Define specific rights that the shareholder has (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions).")]
+[Description(
+    @"Define specific rights that the shareholder has (for example, the right to ask questions, the right to add items to the agenda or table draft resolutions)."
+)]
 [Derivations(typeof(AdditionalRight1Code))]
 public enum AdditionalRightCode
 {
@@ -23,7 +25,7 @@ public enum AdditionalRightCode
     [IsoId("_bmtictp-Ed-ak6NoX_4Aeg_49222869")]
     [Description(@"Defines a written question proposal.")]
     WrittenQuestionProposal,
-    
+
     /// <summary>
     /// Defines a resolution proposal.
     /// Encoded/decoded by serializers as &quot;RSPS&quot;.
@@ -32,7 +34,7 @@ public enum AdditionalRightCode
     [IsoId("_bmtic9p-Ed-ak6NoX_4Aeg_392774918")]
     [Description(@"Defines a resolution proposal.")]
     ResolutionProposal,
-    
+
     /// <summary>
     /// Defines a resolution proposal.
     /// Encoded/decoded by serializers as &quot;AIPS&quot;.
@@ -41,5 +43,4 @@ public enum AdditionalRightCode
     [IsoId("_bmtidNp-Ed-ak6NoX_4Aeg_792659885")]
     [Description(@"Defines a resolution proposal.")]
     AgendaItemProposal,
-    
 }

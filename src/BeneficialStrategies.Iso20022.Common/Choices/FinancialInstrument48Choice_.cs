@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrument48Choice.ISIN))]
     [KnownType(typeof(FinancialInstrument48Choice.LEI))]
     [KnownType(typeof(FinancialInstrument48Choice.Index))]
-    [JsonDerivedType(typeof(FinancialInstrument48Choice.ISIN),nameof(FinancialInstrument48Choice.ISIN))]
-    [JsonDerivedType(typeof(FinancialInstrument48Choice.LEI),nameof(FinancialInstrument48Choice.LEI))]
-    [JsonDerivedType(typeof(FinancialInstrument48Choice.Index),nameof(FinancialInstrument48Choice.Index))]
+    [JsonDerivedType(
+        typeof(FinancialInstrument48Choice.ISIN),
+        nameof(FinancialInstrument48Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrument48Choice.LEI),
+        nameof(FinancialInstrument48Choice.LEI)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrument48Choice.Index),
+        nameof(FinancialInstrument48Choice.Index)
+    )]
     [IsoId("_HQWTxX5aEea2k7EBUopqxw")]
     [DisplayName("Financial Instrument 48 Choice")]
-    public abstract partial record FinancialInstrument48Choice_
-    {
-    }
+    public abstract record FinancialInstrument48Choice_ { }
 }

@@ -21,18 +21,24 @@ public enum IssuanceType1Code
     /// </summary>
     [EnumMember(Value = "CRQL")]
     [IsoId("_6Joo9n4MEeG05p8M2uqofg")]
-    [Description(@"Counter-undertaking issued to a correspondent with a request to issue a local undertaking.")]
-    CounterUndertakingRequestForLocalUndertaking = IssuanceTypeCode.CounterUndertakingRequestForLocalUndertaking, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Counter-undertaking issued to a correspondent with a request to issue a local undertaking."
+    )]
+    CounterUndertakingRequestForLocalUndertaking =
+        IssuanceTypeCode.CounterUndertakingRequestForLocalUndertaking, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking.
     /// Encoded/decoded by serializers as &quot;CRQC&quot;.
     /// </summary>
     [EnumMember(Value = "CRQC")]
     [IsoId("_6S3ddn4MEeG05p8M2uqofg")]
-    [Description(@"Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking.")]
-    CounterUndertakingRequestForCounterUndertaking = IssuanceTypeCode.CounterUndertakingRequestForCounterUndertaking, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking."
+    )]
+    CounterUndertakingRequestForCounterUndertaking =
+        IssuanceTypeCode.CounterUndertakingRequestForCounterUndertaking, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Undertaking issued direct to the beneficiary.
     /// Encoded/decoded by serializers as &quot;ISSU&quot;.
@@ -41,7 +47,7 @@ public enum IssuanceType1Code
     [IsoId("_6ZlJdn4MEeG05p8M2uqofg")]
     [Description(@"Undertaking issued direct to the beneficiary.")]
     UndertakingIssuedDirect = IssuanceTypeCode.UndertakingIssuedDirect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undertaking issued to the beneficiary via a confirming party.
     /// Encoded/decoded by serializers as &quot;ISCO&quot;.
@@ -50,7 +56,7 @@ public enum IssuanceType1Code
     [IsoId("_6ihDBn4MEeG05p8M2uqofg")]
     [Description(@"Undertaking issued to the beneficiary via a confirming party.")]
     UndertakingIssuedViaConfirmingParty = IssuanceTypeCode.UndertakingIssuedViaConfirmingParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Undertaking issued to the beneficiary via an advising party.
     /// Encoded/decoded by serializers as &quot;ISAD&quot;.
@@ -59,5 +65,4 @@ public enum IssuanceType1Code
     [IsoId("_6qt8xn4MEeG05p8M2uqofg")]
     [Description(@"Undertaking issued to the beneficiary via an advising party.")]
     UndertakingViaAdvisingParty = IssuanceTypeCode.UndertakingViaAdvisingParty, // same ordinal as derivation source for type conversions
-    
 }

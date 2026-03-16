@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,23 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cdiXEZB0Ee6FLLjWp95ntQ")]
 [DisplayName("Cryptographic Key18")]
-public partial record CryptographicKey18
+public record CryptographicKey18
 {
-    #nullable enable
-
     /// <summary>
     /// Activation Date.
     /// </summary>
     [DisplayName("Activation Date")]
     [IsoXmlTag("ActvtnDt")]
-    public IsoISODateTime? ActivationDate { get; init; } 
+    public IsoISODateTime? ActivationDate { get; init; }
 
     /// <summary>
     /// Additional Identification.
     /// </summary>
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
-    public IsoMax35Binary? AdditionalIdentification { get; init; } 
+    public IsoMax35Binary? AdditionalIdentification { get; init; }
 
     /// <summary>
     /// Additional Management Information.
@@ -51,7 +49,7 @@ public partial record CryptographicKey18
     /// </summary>
     [DisplayName("Deactivation Date")]
     [IsoXmlTag("DeactvtnDt")]
-    public IsoISODateTime? DeactivationDate { get; init; } 
+    public IsoISODateTime? DeactivationDate { get; init; }
 
     /// <summary>
     /// Function.
@@ -65,65 +63,62 @@ public partial record CryptographicKey18
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax350Text Identification { get; init; } 
+    public required IsoMax350Text Identification { get; init; }
 
     /// <summary>
     /// Item Number.
     /// </summary>
     [DisplayName("Item Number")]
     [IsoXmlTag("ItmNb")]
-    public IsoMax35Text? ItemNumber { get; init; } 
+    public IsoMax35Text? ItemNumber { get; init; }
 
     /// <summary>
     /// Key Check Value.
     /// </summary>
     [DisplayName("Key Check Value")]
     [IsoXmlTag("KeyChckVal")]
-    public IsoMax35Binary? KeyCheckValue { get; init; } 
+    public IsoMax35Binary? KeyCheckValue { get; init; }
 
     /// <summary>
     /// Key Value.
     /// </summary>
     [DisplayName("Key Value")]
     [IsoXmlTag("KeyVal")]
-    public ContentInformationType39? KeyValue { get; init; } 
+    public ContentInformationType39? KeyValue { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax256Text? Name { get; init; } 
+    public IsoMax256Text? Name { get; init; }
 
     /// <summary>
     /// Protected Component With Authorised Access.
     /// </summary>
     [DisplayName("Protected Component With Authorised Access")]
     [IsoXmlTag("PrtctdCmpntWthAuthrsdAccs")]
-    public ValueList<ContentInformationType39> ProtectedComponentWithAuthorisedAccess { get; init; } = [];
+    public ValueList<ContentInformationType39> ProtectedComponentWithAuthorisedAccess { get; init; } =
+        [];
 
     /// <summary>
     /// Security Profile.
     /// </summary>
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
-    public IsoMax35Text? SecurityProfile { get; init; } 
+    public IsoMax35Text? SecurityProfile { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public CryptographicKeyType3Code? Type { get; init; } 
+    public CryptographicKeyType3Code? Type { get; init; }
 
     /// <summary>
     /// Version.
     /// </summary>
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
-    public required IsoMax256Text Version { get; init; } 
-
-    
-    #nullable disable
-    
+    public required IsoMax256Text Version { get; init; }
 }

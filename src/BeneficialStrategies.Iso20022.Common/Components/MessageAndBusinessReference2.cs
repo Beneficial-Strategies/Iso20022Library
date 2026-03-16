@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UvH_lNp-Ed-ak6NoX_4Aeg_-1303328661")]
 [DisplayName("Message And Business Reference")]
-public partial record MessageAndBusinessReference2
+public record MessageAndBusinessReference2
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference to a linked message sent in a proprietary way or reference of a system.
     /// </summary>
     [IsoId("_UvH_ldp-Ed-ak6NoX_4Aeg_1913296890")]
     [DisplayName("Other Reference")]
     [IsoXmlTag("OthrRef")]
-    public required AdditionalReference3 OtherReference { get; init; } 
-    
+    public required AdditionalReference3 OtherReference { get; init; }
+
     /// <summary>
     /// Reference to a linked message that was previously sent.
     /// </summary>
     [IsoId("_UvH_ltp-Ed-ak6NoX_4Aeg_1585446487")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public required AdditionalReference3 PreviousReference { get; init; } 
-    
+    public required AdditionalReference3 PreviousReference { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for an order, as assigned by the instructing party.
     /// </summary>
@@ -41,18 +39,14 @@ public partial record MessageAndBusinessReference2
     [DisplayName("Individual Order Reference")]
     [IsoXmlTag("IndvOrdrRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? IndividualOrderReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? IndividualOrderReference { get; init; }
+
     /// <summary>
     /// Account information of the order message for which the status is requested.
     /// </summary>
     [IsoId("_UvH_mNp-Ed-ak6NoX_4Aeg_608688577")]
     [DisplayName("Investment Account")]
     [IsoXmlTag("InvstmtAcct")]
-    public InvestmentAccount13? InvestmentAccount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public InvestmentAccount13? InvestmentAccount { get; init; }
 }

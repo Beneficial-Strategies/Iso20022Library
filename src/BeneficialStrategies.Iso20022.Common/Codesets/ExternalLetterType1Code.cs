@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_REvvQLTLEeuzjuBeu7kFjQ")]
-[Description(@"Specifies the letter type as published in an external letter type code list.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the letter type as published in an external letter type code list.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalLetterTypeCode))]
 public enum ExternalLetterType1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalLetterType1Code
     [IsoId("_T0320SqmEeyXnMF3dld6dw")]
     [Description(@"Document is a letter from the bank.")]
     LetterFromBank = ExternalLetterTypeCode.LetterFromBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document is a letter to the bank.
     /// Encoded/decoded by serializers as &quot;LTBK&quot;.
@@ -33,7 +35,7 @@ public enum ExternalLetterType1Code
     [IsoId("_T63xISqmEeyXnMF3dld6dw")]
     [Description(@"Document is a letter to the bank.")]
     LetterToBank = ExternalLetterTypeCode.LetterToBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document is a supporting document.
     /// Encoded/decoded by serializers as &quot;SUPP&quot;.
@@ -42,5 +44,4 @@ public enum ExternalLetterType1Code
     [IsoId("_UDEq4SqmEeyXnMF3dld6dw")]
     [Description(@"Document is a supporting document.")]
     SupportingDocument = ExternalLetterTypeCode.SupportingDocument, // same ordinal as derivation source for type conversions
-    
 }

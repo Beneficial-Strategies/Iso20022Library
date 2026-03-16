@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2e8rgTEyEe6g-ffJsqGiSA")]
 [DisplayName("Payment Return Reason8")]
-public partial record PaymentReturnReason8
+public record PaymentReturnReason8
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Information.
     /// </summary>
@@ -30,23 +28,19 @@ public partial record PaymentReturnReason8
     /// </summary>
     [DisplayName("Original Bank Transaction Code")]
     [IsoXmlTag("OrgnlBkTxCd")]
-    public BankTransactionCodeStructure4? OriginalBankTransactionCode { get; init; } 
+    public BankTransactionCodeStructure4? OriginalBankTransactionCode { get; init; }
 
     /// <summary>
     /// Originator.
     /// </summary>
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification272? Originator { get; init; } 
+    public PartyIdentification272? Originator { get; init; }
 
     /// <summary>
     /// Reason.
     /// </summary>
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ReturnReason5Choice_? Reason { get; init; } 
-
-    
-    #nullable disable
-    
+    public ReturnReason5Choice_? Reason { get; init; }
 }

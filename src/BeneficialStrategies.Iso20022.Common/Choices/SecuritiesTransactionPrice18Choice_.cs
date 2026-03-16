@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecuritiesTransactionPrice18Choice.Percentage))]
     [KnownType(typeof(SecuritiesTransactionPrice18Choice.Decimal))]
     [KnownType(typeof(SecuritiesTransactionPrice18Choice.BasisPoints))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice18Choice.MonetaryValue),nameof(SecuritiesTransactionPrice18Choice.MonetaryValue))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice18Choice.Percentage),nameof(SecuritiesTransactionPrice18Choice.Percentage))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice18Choice.Decimal),nameof(SecuritiesTransactionPrice18Choice.Decimal))]
-    [JsonDerivedType(typeof(SecuritiesTransactionPrice18Choice.BasisPoints),nameof(SecuritiesTransactionPrice18Choice.BasisPoints))]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice18Choice.MonetaryValue),
+        nameof(SecuritiesTransactionPrice18Choice.MonetaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice18Choice.Percentage),
+        nameof(SecuritiesTransactionPrice18Choice.Percentage)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice18Choice.Decimal),
+        nameof(SecuritiesTransactionPrice18Choice.Decimal)
+    )]
+    [JsonDerivedType(
+        typeof(SecuritiesTransactionPrice18Choice.BasisPoints),
+        nameof(SecuritiesTransactionPrice18Choice.BasisPoints)
+    )]
     [IsoId("_XQwXoMgpEeuGrNSsxk3B0A")]
     [DisplayName("Securities Transaction Price 18 Choice")]
-    public abstract partial record SecuritiesTransactionPrice18Choice_
-    {
-    }
+    public abstract record SecuritiesTransactionPrice18Choice_ { }
 }

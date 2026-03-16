@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_HAPJcLTpEeiENt6AoDfPXg")]
 [DisplayName("Pension Order")]
-public partial record PensionOrder1
+public record PensionOrder1
 {
-    #nullable enable
-    
     /// <summary>
     /// Order attached to the pension policy, plan or scheme.
     /// </summary>
     [IsoId("_PU2D8LTpEeiENt6AoDfPXg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required PensionOrderType1Choice_ Type { get; init; } 
-    
+    public required PensionOrderType1Choice_ Type { get; init; }
+
     /// <summary>
     /// Additional information about the pension order.
     /// </summary>
     [IsoId("_4z8_ALTqEeiENt6AoDfPXg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation15? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation15? AdditionalInformation { get; init; }
 }

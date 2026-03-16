@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentStatusReasonCode7Choice.PendingSettlement))]
     [KnownType(typeof(PaymentStatusReasonCode7Choice.ProprietaryRejection))]
     [KnownType(typeof(PaymentStatusReasonCode7Choice.Proprietary))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.Unmatched),nameof(PaymentStatusReasonCode7Choice.Unmatched))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.Cancelled),nameof(PaymentStatusReasonCode7Choice.Cancelled))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.Suspended),nameof(PaymentStatusReasonCode7Choice.Suspended))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.PendingFailingSettlement),nameof(PaymentStatusReasonCode7Choice.PendingFailingSettlement))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.PendingSettlement),nameof(PaymentStatusReasonCode7Choice.PendingSettlement))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.ProprietaryRejection),nameof(PaymentStatusReasonCode7Choice.ProprietaryRejection))]
-    [JsonDerivedType(typeof(PaymentStatusReasonCode7Choice.Proprietary),nameof(PaymentStatusReasonCode7Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.Unmatched),
+        nameof(PaymentStatusReasonCode7Choice.Unmatched)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.Cancelled),
+        nameof(PaymentStatusReasonCode7Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.Suspended),
+        nameof(PaymentStatusReasonCode7Choice.Suspended)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.PendingFailingSettlement),
+        nameof(PaymentStatusReasonCode7Choice.PendingFailingSettlement)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.PendingSettlement),
+        nameof(PaymentStatusReasonCode7Choice.PendingSettlement)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.ProprietaryRejection),
+        nameof(PaymentStatusReasonCode7Choice.ProprietaryRejection)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentStatusReasonCode7Choice.Proprietary),
+        nameof(PaymentStatusReasonCode7Choice.Proprietary)
+    )]
     [IsoId("_NqBxSZlPEee-Zps0fZQaFQ")]
     [DisplayName("Payment Status Reason Code 7 Choice")]
-    public abstract partial record PaymentStatusReasonCode7Choice_
-    {
-    }
+    public abstract record PaymentStatusReasonCode7Choice_ { }
 }

@@ -22,8 +22,9 @@ public enum PersonIdentificationType7Code
     [EnumMember(Value = "ATIN")]
     [IsoId("_CZgLUU4REeiQHa-q1Uephw")]
     [Description(@"Temporary tax processing number (used in the domestic adoption of a child).")]
-    AdoptionTaxpayerIdentificationNumber = PersonIdentificationTypeCode.AdoptionTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    AdoptionTaxpayerIdentificationNumber =
+        PersonIdentificationTypeCode.AdoptionTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Generic tax identification number.
     /// Encoded/decoded by serializers as &quot;GTIN&quot;.
@@ -32,7 +33,7 @@ public enum PersonIdentificationType7Code
     [IsoId("_C_cJ8U4REeiQHa-q1Uephw")]
     [Description(@"Generic tax identification number.")]
     GenericTaxIdentificationNumber = PersonIdentificationTypeCode.GenericTaxIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tax processing number.
     /// Encoded/decoded by serializers as &quot;ITIN&quot;.
@@ -40,6 +41,6 @@ public enum PersonIdentificationType7Code
     [EnumMember(Value = "ITIN")]
     [IsoId("_D1vf0U4REeiQHa-q1Uephw")]
     [Description(@"Tax processing number.")]
-    IndividualTaxpayerIdentificationNumber = PersonIdentificationTypeCode.IndividualTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    IndividualTaxpayerIdentificationNumber =
+        PersonIdentificationTypeCode.IndividualTaxpayerIdentificationNumber, // same ordinal as derivation source for type conversions
 }

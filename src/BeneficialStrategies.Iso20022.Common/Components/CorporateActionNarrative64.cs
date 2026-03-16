@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U_741XSdEe6VWZz2tTgENw")]
 [DisplayName("Corporate Action Narrative64")]
-public partial record CorporateActionNarrative64
+public record CorporateActionNarrative64
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Text.
     /// </summary>
@@ -73,8 +71,4 @@ public partial record CorporateActionNarrative64
     [DisplayName("Taxation Conditions")]
     [IsoXmlTag("TaxtnConds")]
     public ValueList<UpdatedAdditionalInformation25> TaxationConditions { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

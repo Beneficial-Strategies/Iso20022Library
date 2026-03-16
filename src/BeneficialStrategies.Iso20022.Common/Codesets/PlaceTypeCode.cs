@@ -23,5 +23,4 @@ public enum PlaceTypeCode
     [IsoId("_aHWBdNp-Ed-ak6NoX_4Aeg_-1656475988")]
     [Description(@"The type of place is unknown.")]
     Unknown,
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DebtorActivationStatusReason1Choice.Code))]
     [KnownType(typeof(DebtorActivationStatusReason1Choice.Proprietary))]
-    [JsonDerivedType(typeof(DebtorActivationStatusReason1Choice.Code),nameof(DebtorActivationStatusReason1Choice.Code))]
-    [JsonDerivedType(typeof(DebtorActivationStatusReason1Choice.Proprietary),nameof(DebtorActivationStatusReason1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(DebtorActivationStatusReason1Choice.Code),
+        nameof(DebtorActivationStatusReason1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(DebtorActivationStatusReason1Choice.Proprietary),
+        nameof(DebtorActivationStatusReason1Choice.Proprietary)
+    )]
     [IsoId("_yBQtU-IJEeqbls7Gk4-ckA")]
     [DisplayName("Debtor Activation Status Reason 1 Choice")]
-    public abstract partial record DebtorActivationStatusReason1Choice_
-    {
-    }
+    public abstract record DebtorActivationStatusReason1Choice_ { }
 }

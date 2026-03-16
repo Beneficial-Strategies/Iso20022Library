@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ElectionCancellationStatus1Choice.ProcessedStatus))]
     [KnownType(typeof(ElectionCancellationStatus1Choice.RejectedStatus))]
-    [JsonDerivedType(typeof(ElectionCancellationStatus1Choice.ProcessedStatus),nameof(ElectionCancellationStatus1Choice.ProcessedStatus))]
-    [JsonDerivedType(typeof(ElectionCancellationStatus1Choice.RejectedStatus),nameof(ElectionCancellationStatus1Choice.RejectedStatus))]
+    [JsonDerivedType(
+        typeof(ElectionCancellationStatus1Choice.ProcessedStatus),
+        nameof(ElectionCancellationStatus1Choice.ProcessedStatus)
+    )]
+    [JsonDerivedType(
+        typeof(ElectionCancellationStatus1Choice.RejectedStatus),
+        nameof(ElectionCancellationStatus1Choice.RejectedStatus)
+    )]
     [IsoId("_RiiHwtp-Ed-ak6NoX_4Aeg_1698122957")]
     [DisplayName("Election Cancellation Status 1 Choice")]
-    public abstract partial record ElectionCancellationStatus1Choice_
-    {
-    }
+    public abstract record ElectionCancellationStatus1Choice_ { }
 }

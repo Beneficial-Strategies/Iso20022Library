@@ -23,7 +23,7 @@ public enum Eligible1Code
     [IsoId("_RBY30SC-EeWPMvNwVtiMsA")]
     [Description(@"Item is eligible.")]
     Eligible = EligibleCode.Eligible, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Item is not eligible.
     /// Encoded/decoded by serializers as &quot;NELI&quot;.
@@ -32,5 +32,4 @@ public enum Eligible1Code
     [IsoId("_RIY3sSC-EeWPMvNwVtiMsA")]
     [Description(@"Item is not eligible.")]
     NotEligible = EligibleCode.NotEligible, // same ordinal as derivation source for type conversions
-    
 }

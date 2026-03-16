@@ -23,7 +23,7 @@ public enum CallInCode
     [IsoId("_bXW309p-Ed-ak6NoX_4Aeg_-299796204")]
     [Description(@"Pay-in call is for account value.")]
     CallForAccountValue,
-    
+
     /// <summary>
     /// Pay-in call is for settlement.
     /// Encoded/decoded by serializers as &quot;CFST&quot;.
@@ -32,7 +32,7 @@ public enum CallInCode
     [IsoId("_bXW31Np-Ed-ak6NoX_4Aeg_-245307801")]
     [Description(@"Pay-in call is for settlement.")]
     CallForSettlement,
-    
+
     /// <summary>
     /// Pay-in call is for currency close.
     /// Encoded/decoded by serializers as &quot;CFCC&quot;.
@@ -41,5 +41,4 @@ public enum CallInCode
     [IsoId("_bXW31dp-Ed-ak6NoX_4Aeg_-225911984")]
     [Description(@"Pay-in call is for currency close.")]
     CallForCurrencyClose,
-    
 }

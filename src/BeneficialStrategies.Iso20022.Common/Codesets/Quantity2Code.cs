@@ -23,7 +23,7 @@ public enum Quantity2Code
     [IsoId("_ZXgf8Np-Ed-ak6NoX_4Aeg_274124253")]
     [Description(@"Instruction applies to the entire eligible balance of underlying securities.")]
     AllSecurities = QuantityCode.AllSecurities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity has not been established.
     /// Encoded/decoded by serializers as &quot;OPEN&quot;.
@@ -32,7 +32,7 @@ public enum Quantity2Code
     [IsoId("_ZXgf8dp-Ed-ak6NoX_4Aeg_391412322")]
     [Description(@"Quantity has not been established.")]
     Open = QuantityCode.Open, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity is unknown by the sender or has not been established.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -41,5 +41,4 @@ public enum Quantity2Code
     [IsoId("_ZXgf8tp-Ed-ak6NoX_4Aeg_678624841")]
     [Description(@"Quantity is unknown by the sender or has not been established.")]
     UnknownQuantity = QuantityCode.UnknownQuantity, // same ordinal as derivation source for type conversions
-    
 }

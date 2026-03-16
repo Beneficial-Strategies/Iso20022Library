@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AcknowledgementDetails1Choice.PayInScheduleReference))]
     [KnownType(typeof(AcknowledgementDetails1Choice.PayInCallReference))]
-    [JsonDerivedType(typeof(AcknowledgementDetails1Choice.PayInScheduleReference),nameof(AcknowledgementDetails1Choice.PayInScheduleReference))]
-    [JsonDerivedType(typeof(AcknowledgementDetails1Choice.PayInCallReference),nameof(AcknowledgementDetails1Choice.PayInCallReference))]
+    [JsonDerivedType(
+        typeof(AcknowledgementDetails1Choice.PayInScheduleReference),
+        nameof(AcknowledgementDetails1Choice.PayInScheduleReference)
+    )]
+    [JsonDerivedType(
+        typeof(AcknowledgementDetails1Choice.PayInCallReference),
+        nameof(AcknowledgementDetails1Choice.PayInCallReference)
+    )]
     [IsoId("_oIaocSzSEeKZfox_pyYpTA")]
     [DisplayName("Acknowledgement Details 1 Choice")]
-    public abstract partial record AcknowledgementDetails1Choice_
-    {
-    }
+    public abstract record AcknowledgementDetails1Choice_ { }
 }

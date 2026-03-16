@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PriceFormat91Choice.IndexPoints))]
     [KnownType(typeof(PriceFormat91Choice.NotSpecifiedPrice))]
     [KnownType(typeof(PriceFormat91Choice.PercentagePrice))]
-    [JsonDerivedType(typeof(PriceFormat91Choice.AmountPrice),nameof(PriceFormat91Choice.AmountPrice))]
-    [JsonDerivedType(typeof(PriceFormat91Choice.IndexPoints),nameof(PriceFormat91Choice.IndexPoints))]
-    [JsonDerivedType(typeof(PriceFormat91Choice.NotSpecifiedPrice),nameof(PriceFormat91Choice.NotSpecifiedPrice))]
-    [JsonDerivedType(typeof(PriceFormat91Choice.PercentagePrice),nameof(PriceFormat91Choice.PercentagePrice))]
+    [JsonDerivedType(
+        typeof(PriceFormat91Choice.AmountPrice),
+        nameof(PriceFormat91Choice.AmountPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat91Choice.IndexPoints),
+        nameof(PriceFormat91Choice.IndexPoints)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat91Choice.NotSpecifiedPrice),
+        nameof(PriceFormat91Choice.NotSpecifiedPrice)
+    )]
+    [JsonDerivedType(
+        typeof(PriceFormat91Choice.PercentagePrice),
+        nameof(PriceFormat91Choice.PercentagePrice)
+    )]
     [IsoId("_nLgefZt3Ee-wQIOX0djF2w")]
     [DisplayName("Price Format91Choice")]
-    public abstract partial record PriceFormat91Choice_
-    {
-    }
+    public abstract record PriceFormat91Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum CorporateActionNotificationType1Code
     [IsoId("_bK_Pxtp-Ed-ak6NoX_4Aeg_724518620")]
     [Description(@"New notification.")]
     New = CorporateActionNotificationTypeCode.New, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification replacing a previously sent notification.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
@@ -32,7 +32,7 @@ public enum CorporateActionNotificationType1Code
     [IsoId("_bK_Px9p-Ed-ak6NoX_4Aeg_724518628")]
     [Description(@"Notification replacing a previously sent notification.")]
     Replacement = CorporateActionNotificationTypeCode.Replacement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification sent as a reminder of an event taking place.
     /// Encoded/decoded by serializers as &quot;RMDR&quot;.
@@ -41,5 +41,4 @@ public enum CorporateActionNotificationType1Code
     [IsoId("_bK_PyNp-Ed-ak6NoX_4Aeg_724518629")]
     [Description(@"Notification sent as a reminder of an event taking place.")]
     Reminder = CorporateActionNotificationTypeCode.Reminder, // same ordinal as derivation source for type conversions
-    
 }

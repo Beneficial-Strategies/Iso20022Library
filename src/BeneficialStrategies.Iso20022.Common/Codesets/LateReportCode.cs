@@ -23,14 +23,15 @@ public enum LateReportCode
     [IsoId("_ad114dp-Ed-ak6NoX_4Aeg_-1204743163")]
     [Description(@"The confirmation is late.")]
     Late,
-    
+
     /// <summary>
     /// The confirmation is late because the trade was executed as a number of partials.
     /// Encoded/decoded by serializers as &quot;LAT2&quot;.
     /// </summary>
     [EnumMember(Value = "LAT2")]
     [IsoId("_ad114tp-Ed-ak6NoX_4Aeg_-1188118789")]
-    [Description(@"The confirmation is late because the trade was executed as a number of partials.")]
+    [Description(
+        @"The confirmation is late because the trade was executed as a number of partials."
+    )]
     LateBecausePartial,
-    
 }

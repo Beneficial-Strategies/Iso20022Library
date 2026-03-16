@@ -23,7 +23,7 @@ public enum SecuritiesStatementType1Code
     [IsoId("_ZF7As9p-Ed-ak6NoX_4Aeg_-1354761291")]
     [Description(@"Statement is a custody statement.")]
     Custody = SecuritiesStatementTypeCode.Custody, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement is an accounting statement.
     /// Encoded/decoded by serializers as &quot;ACCT&quot;.
@@ -32,5 +32,4 @@ public enum SecuritiesStatementType1Code
     [IsoId("_ZF7AtNp-Ed-ak6NoX_4Aeg_-1354760395")]
     [Description(@"Statement is an accounting statement.")]
     Accounting = SecuritiesStatementTypeCode.Accounting, // same ordinal as derivation source for type conversions
-    
 }

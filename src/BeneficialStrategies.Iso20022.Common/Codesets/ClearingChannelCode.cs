@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_a_X1oNp-Ed-ak6NoX_4Aeg_-75802580")]
-[Description(@"Specifies the clearing channel for the routing of the transaction, as part of the payment type identification.")]
+[Description(
+    @"Specifies the clearing channel for the routing of the transaction, as part of the payment type identification."
+)]
 [Derivations(typeof(ClearingChannel2Code))]
 public enum ClearingChannelCode
 {
@@ -23,7 +25,7 @@ public enum ClearingChannelCode
     [IsoId("_a_X1odp-Ed-ak6NoX_4Aeg_349344962")]
     [Description(@"Clearing channel is a real-time gross settlement system.")]
     RealTimeGrossSettlementSystem,
-    
+
     /// <summary>
     /// Clearing channel is a real-time net settlement system.
     /// Encoded/decoded by serializers as &quot;RTNS&quot;.
@@ -32,7 +34,7 @@ public enum ClearingChannelCode
     [IsoId("_a_X1otp-Ed-ak6NoX_4Aeg_419533382")]
     [Description(@"Clearing channel is a real-time net settlement system.")]
     RealTimeNetSettlementSystem,
-    
+
     /// <summary>
     /// Clearing channel is a mass payment net settlement system.
     /// Encoded/decoded by serializers as &quot;MPNS&quot;.
@@ -41,7 +43,7 @@ public enum ClearingChannelCode
     [IsoId("_a_X1o9p-Ed-ak6NoX_4Aeg_496187714")]
     [Description(@"Clearing channel is a mass payment net settlement system.")]
     MassPaymentNetSystem,
-    
+
     /// <summary>
     /// Payment through internal book transfer.
     /// Encoded/decoded by serializers as &quot;BOOK&quot;.
@@ -50,5 +52,4 @@ public enum ClearingChannelCode
     [IsoId("_a_X1pNp-Ed-ak6NoX_4Aeg_-537955381")]
     [Description(@"Payment through internal book transfer.")]
     BookTransfer,
-    
 }

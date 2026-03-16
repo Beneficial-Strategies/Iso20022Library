@@ -23,7 +23,7 @@ public enum ResourceTypeCode
     [IsoId("_togtcC8CEeu125Ip9zFcsQ")]
     [Description(@"Voice synthesis.")]
     TextToSpeech,
-    
+
     /// <summary>
     /// String of characters that unambiguously identifies a particular resource.
     /// Encoded/decoded by serializers as &quot;URLI&quot;.
@@ -32,5 +32,4 @@ public enum ResourceTypeCode
     [IsoId("_1mAIcC8CEeu125Ip9zFcsQ")]
     [Description(@"String of characters that unambiguously identifies a particular resource.")]
     UniformResourceIdentifier,
-    
 }

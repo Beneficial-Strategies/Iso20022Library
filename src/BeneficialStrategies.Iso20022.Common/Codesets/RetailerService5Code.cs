@@ -22,8 +22,9 @@ public enum RetailerService5Code
     [EnumMember(Value = "SMIP")]
     [IsoId("_fuo54d6LEeiwsev40qZGEQ")]
     [Description(@"The POI System responds to a login request.")]
-    AdministrativeSessionManagementLoginResponse = RetailerServiceCode.AdministrativeSessionManagementLoginResponse, // same ordinal as derivation source for type conversions
-    
+    AdministrativeSessionManagementLoginResponse =
+        RetailerServiceCode.AdministrativeSessionManagementLoginResponse, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The POI System responds to a logout request.
     /// Encoded/decoded by serializers as &quot;SMOP&quot;.
@@ -31,8 +32,9 @@ public enum RetailerService5Code
     [EnumMember(Value = "SMOP")]
     [IsoId("_gFTtcd6LEeiwsev40qZGEQ")]
     [Description(@"The POI System responds to a logout request.")]
-    AdministrativeSessionManagementLogoutResponse = RetailerServiceCode.AdministrativeSessionManagementLogoutResponse, // same ordinal as derivation source for type conversions
-    
+    AdministrativeSessionManagementLogoutResponse =
+        RetailerServiceCode.AdministrativeSessionManagementLogoutResponse, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The POI System responds to a diagnosis request.
     /// Encoded/decoded by serializers as &quot;SMDP&quot;.
@@ -40,6 +42,6 @@ public enum RetailerService5Code
     [EnumMember(Value = "SMDP")]
     [IsoId("_guks4d6LEeiwsev40qZGEQ")]
     [Description(@"The POI System responds to a diagnosis request.")]
-    AdministrativeSessionManagementDiagnosisResponse = RetailerServiceCode.AdministrativeSessionManagementDiagnosisResponse, // same ordinal as derivation source for type conversions
-    
+    AdministrativeSessionManagementDiagnosisResponse =
+        RetailerServiceCode.AdministrativeSessionManagementDiagnosisResponse, // same ordinal as derivation source for type conversions
 }

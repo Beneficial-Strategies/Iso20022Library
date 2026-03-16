@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-hi44LJUEeaYqc4G3TTwhA")]
 [DisplayName("Deposit")]
-public partial record Deposit1
+public record Deposit1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date on which the deposit matures.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record Deposit1
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate MaturityDate { get; init; } 
-    
+    public required IsoISODate MaturityDate { get; init; }
+
     /// <summary>
     /// Specifies the value of the deposit.
     /// </summary>
     [IsoId("_LYG7oLJVEeaYqc4G3TTwhA")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required ActiveCurrencyAndAmount Value { get; init; } 
-    
+    public required ActiveCurrencyAndAmount Value { get; init; }
+
     /// <summary>
     /// Identifies the legal entity that takes the deposit.
     /// </summary>
@@ -42,9 +40,5 @@ public partial record Deposit1
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier CounterpartyIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoLEIIdentifier CounterpartyIdentification { get; init; }
 }

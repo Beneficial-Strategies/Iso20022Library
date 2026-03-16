@@ -23,7 +23,7 @@ public enum MessageRejectedReason1Code
     [IsoId("_aL9bsdp-Ed-ak6NoX_4Aeg_1732404066")]
     [Description(@"Request contains an invalid or unrecognised business reference.")]
     InvalidOrUnrecognisedReference = RejectedStatusReasonCode.InvalidOrUnrecognisedReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instructing party is not allowed to ask for a status for that specific order.
     /// Encoded/decoded by serializers as &quot;NALO&quot;.
@@ -32,5 +32,4 @@ public enum MessageRejectedReason1Code
     [IsoId("_aL9bstp-Ed-ak6NoX_4Aeg_1732404091")]
     [Description(@"Instructing party is not allowed to ask for a status for that specific order.")]
     NotAllowedRequest = RejectedStatusReasonCode.NotAllowedRequest, // same ordinal as derivation source for type conversions
-    
 }

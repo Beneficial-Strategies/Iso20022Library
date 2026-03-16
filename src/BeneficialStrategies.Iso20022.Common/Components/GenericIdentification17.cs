@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WIiCh9p-Ed-ak6NoX_4Aeg_1795584190")]
 [DisplayName("Generic Identification")]
-public partial record GenericIdentification17
+public record GenericIdentification17
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification assigned by an institution.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record GenericIdentification17
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINMax34Text)]
-    [StringLength(maximumLength: 34 ,MinimumLength = 1)]
-    public required IsoRestrictedFINMax34Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 34, MinimumLength = 1)]
+    public required IsoRestrictedFINMax34Text Identification { get; init; }
+
     /// <summary>
     /// Entity that assigns the identification.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record GenericIdentification17
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max8Text)]
-    [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-    public required IsoMax8Text Issuer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 8, MinimumLength = 1)]
+    public required IsoMax8Text Issuer { get; init; }
 }

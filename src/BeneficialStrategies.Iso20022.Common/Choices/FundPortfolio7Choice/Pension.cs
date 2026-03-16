@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
 {
     /// <summary>
@@ -13,42 +13,40 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
     /// </summary>
     [IsoId("_X-C5JelfEeu9cf4XM82AQQ")]
     [DisplayName("Pension")]
-    public partial record Pension : FundPortfolio7Choice_
+    public record Pension : FundPortfolio7Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEHw-lmEeuvhrZwLF0fDg")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
-        public PensionPolicy1? Identification { get; init; } 
-        
+        public PensionPolicy1? Identification { get; init; }
+
         /// <summary>
         /// Type of pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEHxelmEeuvhrZwLF0fDg")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public required PensionSchemeType3Choice_ Type { get; init; } 
-        
+        public required PensionSchemeType3Choice_ Type { get; init; }
+
         /// <summary>
         /// Scope of the pension policy, plan or scheme transfer.
         /// </summary>
         [IsoId("_xOEHx-lmEeuvhrZwLF0fDg")]
         [DisplayName("Transfer Scope")]
         [IsoXmlTag("TrfScp")]
-        public PensionTransferScope1Choice_? TransferScope { get; init; } 
-        
+        public PensionTransferScope1Choice_? TransferScope { get; init; }
+
         /// <summary>
         /// Tax reference issued to the pension policy, plan or scheme by a central organisation.
         /// </summary>
         [IsoId("_xOEHyelmEeuvhrZwLF0fDg")]
         [DisplayName("Tax Reference")]
         [IsoXmlTag("TaxRef")]
-        public TaxReference1? TaxReference { get; init; } 
-        
+        public TaxReference1? TaxReference { get; init; }
+
         /// <summary>
         /// Reference of the drawdown.
         /// </summary>
@@ -56,25 +54,25 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Drawdown Tranche Identification")]
         [IsoXmlTag("DrwdwnTrchId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? DrawdownTrancheIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+
         /// <summary>
         /// Drawdown status of the pension.
         /// </summary>
         [IsoId("_xOEHzelmEeuvhrZwLF0fDg")]
         [DisplayName("Drawdown Status")]
         [IsoXmlTag("DrwdwnSts")]
-        public DrawdownStatus1Choice_? DrawdownStatus { get; init; } 
-        
+        public DrawdownStatus1Choice_? DrawdownStatus { get; init; }
+
         /// <summary>
         /// Type of drawdown tranche.
         /// </summary>
         [IsoId("_xOEHz-lmEeuvhrZwLF0fDg")]
         [DisplayName("Drawdown Type")]
         [IsoXmlTag("DrwdwnTp")]
-        public DrawdownType2Choice_? DrawdownType { get; init; } 
-        
+        public DrawdownType2Choice_? DrawdownType { get; init; }
+
         /// <summary>
         /// Number of drawdown tranches.
         /// </summary>
@@ -82,16 +80,16 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Number Of Drawdown Tranches")]
         [IsoXmlTag("NbOfDrwdwnTrnchs")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public IsoNumber? NumberOfDrawdownTranches { get; init; } 
-        
+        public IsoNumber? NumberOfDrawdownTranches { get; init; }
+
         /// <summary>
         /// Estimated value of the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEH0elmEeuvhrZwLF0fDg")]
         [DisplayName("Estimated Value")]
         [IsoXmlTag("EstmtdVal")]
-        public DateAndAmount2? EstimatedValue { get; init; } 
-        
+        public DateAndAmount2? EstimatedValue { get; init; }
+
         /// <summary>
         /// Indicates whether the transfer forms part of a block transfer.
         /// </summary>
@@ -99,8 +97,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Block Transfer")]
         [IsoXmlTag("BlckTrf")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? BlockTransfer { get; init; } 
-        
+        public IsoYesNoIndicator? BlockTransfer { get; init; }
+
         /// <summary>
         /// When the transfer is part of a block transfer, reference to link several items.
         /// </summary>
@@ -108,9 +106,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Block Transfer Reference")]
         [IsoXmlTag("BlckTrfRef")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? BlockTransferReference { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? BlockTransferReference { get; init; }
+
         /// <summary>
         /// Indicates whether the tax-free cash is protected when the pension policy, plan or scheme is transferred.
         /// </summary>
@@ -118,24 +116,24 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Tax Free Cash Protection")]
         [IsoXmlTag("TaxFreeCshPrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? TaxFreeCashProtection { get; init; } 
-        
+        public IsoYesNoIndicator? TaxFreeCashProtection { get; init; }
+
         /// <summary>
         /// Amount of cash that is tax free.
         /// </summary>
         [IsoId("_xOEH2elmEeuvhrZwLF0fDg")]
         [DisplayName("Tax Free Cash Amount")]
         [IsoXmlTag("TaxFreeCshAmt")]
-        public DateAndAmount2? TaxFreeCashAmount { get; init; } 
-        
+        public DateAndAmount2? TaxFreeCashAmount { get; init; }
+
         /// <summary>
         /// Value of the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEH2-lmEeuvhrZwLF0fDg")]
         [DisplayName("Value Of Pension Policy Or Plan Or Scheme")]
         [IsoXmlTag("ValOfPnsnPlcyOrPlanOrSchme")]
-        public DateAndAmount2? ValueOfPensionPolicyOrPlanOrScheme { get; init; } 
-        
+        public DateAndAmount2? ValueOfPensionPolicyOrPlanOrScheme { get; init; }
+
         /// <summary>
         /// Indicates whether the pension policy, plan or scheme has retirement age protection.
         /// </summary>
@@ -143,8 +141,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Retirement Age Protection")]
         [IsoXmlTag("RtrmntAgePrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? RetirementAgeProtection { get; init; } 
-        
+        public IsoYesNoIndicator? RetirementAgeProtection { get; init; }
+
         /// <summary>
         /// Age at which the pension policy, plan or scheme holder retires.
         /// </summary>
@@ -152,8 +150,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Retirement Age")]
         [IsoXmlTag("RtrmntAge")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public IsoDecimalNumber? RetirementAge { get; init; } 
-        
+        public IsoDecimalNumber? RetirementAge { get; init; }
+
         /// <summary>
         /// Indicates whether the pension benefits are shared.
         /// </summary>
@@ -161,24 +159,24 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Sharing")]
         [IsoXmlTag("Shrg")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? Sharing { get; init; } 
-        
+        public IsoYesNoIndicator? Sharing { get; init; }
+
         /// <summary>
         /// Type of lump sum paid to a member of the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEH4-lmEeuvhrZwLF0fDg")]
         [DisplayName("Lump Sum Type")]
         [IsoXmlTag("LumpSumTp")]
-        public LumpSumType1Choice_? LumpSumType { get; init; } 
-        
+        public LumpSumType1Choice_? LumpSumType { get; init; }
+
         /// <summary>
         /// Order attached to the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEH5elmEeuvhrZwLF0fDg")]
         [DisplayName("Pension Order")]
         [IsoXmlTag("PnsnOrdr")]
-        public PensionOrder1? PensionOrder { get; init; } 
-        
+        public PensionOrder1? PensionOrder { get; init; }
+
         /// <summary>
         /// Indicates whether assets held within the pension are ring-fenced into specific tranches.
         /// </summary>
@@ -186,16 +184,16 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Ring Fenced Drawdown Assets")]
         [IsoXmlTag("RingFncdDrwdwnAssts")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? RingFencedDrawdownAssets { get; init; } 
-        
+        public IsoYesNoIndicator? RingFencedDrawdownAssets { get; init; }
+
         /// <summary>
         /// Money Purchase Annual Allowance (MPAA) details.
         /// </summary>
         [IsoId("_xOEH6elmEeuvhrZwLF0fDg")]
         [DisplayName("Money Purchase Annual Allowance")]
         [IsoXmlTag("MnyPurchsAnlAllwnc")]
-        public MoneyPurchaseAnnualAllowance1? MoneyPurchaseAnnualAllowance { get; init; } 
-        
+        public MoneyPurchaseAnnualAllowance1? MoneyPurchaseAnnualAllowance { get; init; }
+
         /// <summary>
         /// Indicates whether the pension policy, plan or scheme is covered by a safeguard benefit.
         /// </summary>
@@ -203,8 +201,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Safeguard Benefit")]
         [IsoXmlTag("SfgrdBnft")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? SafeguardBenefit { get; init; } 
-        
+        public IsoYesNoIndicator? SafeguardBenefit { get; init; }
+
         /// <summary>
         /// Indicates whether the pension policy, plan or scheme has non-safeguarded guaranteed benefits.
         /// </summary>
@@ -212,8 +210,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Non Safeguarded Guaranteed Benefits")]
         [IsoXmlTag("NonSfgrddGrntedBnfts")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? NonSafeguardedGuaranteedBenefits { get; init; } 
-        
+        public IsoYesNoIndicator? NonSafeguardedGuaranteedBenefits { get; init; }
+
         /// <summary>
         /// Indicates whether the pension policy, plan or scheme has lifetime allowance protection.
         /// </summary>
@@ -221,8 +219,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Lifetime Allowance Protection")]
         [IsoXmlTag("LftmAllwncPrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? LifetimeAllowanceProtection { get; init; } 
-        
+        public IsoYesNoIndicator? LifetimeAllowanceProtection { get; init; }
+
         /// <summary>
         /// Indicates whether the client has any lifetime allowance protection.
         /// </summary>
@@ -230,8 +228,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Client Lifetime Allowance Protection")]
         [IsoXmlTag("ClntLftmAllwncPrtcn")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? ClientLifetimeAllowanceProtection { get; init; } 
-        
+        public IsoYesNoIndicator? ClientLifetimeAllowanceProtection { get; init; }
+
         /// <summary>
         /// Indicates whether a benefit crystallisation event (BCE) has occurred. This includes ‘age 75 checks’.
         /// </summary>
@@ -239,8 +237,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Benefit Crystallisation Event Occurred")]
         [IsoXmlTag("BnftCrstllstnEvtOcrd")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? BenefitCrystallisationEventOccurred { get; init; } 
-        
+        public IsoYesNoIndicator? BenefitCrystallisationEventOccurred { get; init; }
+
         /// <summary>
         /// Indicates that the transfer is only in relation to underlying assets, and that the wrapper transfer will occur separately.
         /// </summary>
@@ -248,18 +246,14 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio7Choice
         [DisplayName("Non Wrapper Transfer")]
         [IsoXmlTag("NonWrpprTrf")]
         [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-        public IsoYesNoIndicator? NonWrapperTransfer { get; init; } 
-        
+        public IsoYesNoIndicator? NonWrapperTransfer { get; init; }
+
         /// <summary>
         /// Additional information about the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_xOEH9elmEeuvhrZwLF0fDg")]
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
-        public AdditionalInformation15? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        public AdditionalInformation15? AdditionalInformation { get; init; }
     }
 }

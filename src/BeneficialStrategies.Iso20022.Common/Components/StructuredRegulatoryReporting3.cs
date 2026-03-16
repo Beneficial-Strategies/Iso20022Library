@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SnhZ4tp-Ed-ak6NoX_4Aeg_797411932")]
 [DisplayName("Structured Regulatory Reporting")]
-public partial record StructuredRegulatoryReporting3
+public record StructuredRegulatoryReporting3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of the information supplied in the regulatory reporting details.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record StructuredRegulatoryReporting3
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Type { get; init; }
+
     /// <summary>
     /// Date related to the specified type of regulatory reporting details.
     /// </summary>
@@ -35,16 +33,16 @@ public partial record StructuredRegulatoryReporting3
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// Country related to the specified type of regulatory reporting details.
     /// </summary>
     [IsoId("_SnhZ5dp-Ed-ak6NoX_4Aeg_123830660")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public CountryCode? Country { get; init; } 
-    
+    public CountryCode? Country { get; init; }
+
     /// <summary>
     /// Specifies the nature, purpose, and reason for the transaction to be reported for regulatory and statutory requirements in a coded form.
     /// </summary>
@@ -52,17 +50,17 @@ public partial record StructuredRegulatoryReporting3
     [DisplayName("Code")]
     [IsoXmlTag("Cd")]
     [IsoSimpleType(IsoSimpleType.Max10Text)]
-    [StringLength(maximumLength: 10 ,MinimumLength = 1)]
-    public IsoMax10Text? Code { get; init; } 
-    
+    [StringLength(maximumLength: 10, MinimumLength = 1)]
+    public IsoMax10Text? Code { get; init; }
+
     /// <summary>
     /// Amount of money to be reported for regulatory and statutory requirements.
     /// </summary>
     [IsoId("_SnhZ59p-Ed-ak6NoX_4Aeg_797412303")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public ActiveOrHistoricCurrencyAndAmount? Amount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? Amount { get; init; }
+
     /// <summary>
     /// Additional details that cater for specific domestic regulatory requirements.
     /// </summary>
@@ -70,10 +68,6 @@ public partial record StructuredRegulatoryReporting3
     [DisplayName("Information")]
     [IsoXmlTag("Inf")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Information { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Information { get; init; }
 }

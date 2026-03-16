@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PersonOrOrganisation4Choice.ExceptionIdentification))]
     [KnownType(typeof(PersonOrOrganisation4Choice.LEI))]
     [KnownType(typeof(PersonOrOrganisation4Choice.Person))]
-    [JsonDerivedType(typeof(PersonOrOrganisation4Choice.ExceptionIdentification),nameof(PersonOrOrganisation4Choice.ExceptionIdentification))]
-    [JsonDerivedType(typeof(PersonOrOrganisation4Choice.LEI),nameof(PersonOrOrganisation4Choice.LEI))]
-    [JsonDerivedType(typeof(PersonOrOrganisation4Choice.Person),nameof(PersonOrOrganisation4Choice.Person))]
+    [JsonDerivedType(
+        typeof(PersonOrOrganisation4Choice.ExceptionIdentification),
+        nameof(PersonOrOrganisation4Choice.ExceptionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PersonOrOrganisation4Choice.LEI),
+        nameof(PersonOrOrganisation4Choice.LEI)
+    )]
+    [JsonDerivedType(
+        typeof(PersonOrOrganisation4Choice.Person),
+        nameof(PersonOrOrganisation4Choice.Person)
+    )]
     [IsoId("_gwG4sSCYEe64P8jfINlL1Q")]
     [DisplayName("Person Or Organisation4Choice")]
-    public abstract partial record PersonOrOrganisation4Choice_
-    {
-    }
+    public abstract record PersonOrOrganisation4Choice_ { }
 }

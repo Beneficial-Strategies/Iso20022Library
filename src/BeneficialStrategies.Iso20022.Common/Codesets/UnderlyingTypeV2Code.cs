@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_01GtYOJOEeWKDJcMqE1cSA")]
 [Description(@"Specifies the underlying financial instrument.")]
-[Derivations(typeof(UnderlyingEquityType3Code),typeof(UnderlyingEquityType4Code))]
+[Derivations(typeof(UnderlyingEquityType3Code), typeof(UnderlyingEquityType4Code))]
 public enum UnderlyingTypeV2Code
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_Bv_2gOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a basket.")]
     Basket,
-    
+
     /// <summary>
     /// Underlying is a bond.
     /// Encoded/decoded by serializers as &quot;BOND&quot;.
@@ -32,7 +32,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_DCjDgOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a bond.")]
     Bond,
-    
+
     /// <summary>
     /// Underlying is a bond future.
     /// Encoded/decoded by serializers as &quot;BNDF&quot;.
@@ -41,7 +41,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_El5FkOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a bond future.")]
     BondFuture,
-    
+
     /// <summary>
     /// Underlying is a commodity.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -50,7 +50,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_GewEoOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a commodity.")]
     Commodity,
-    
+
     /// <summary>
     /// Underlying is a currency.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -59,7 +59,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_IJ9CMOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a currency.")]
     Currency,
-    
+
     /// <summary>
     /// Underlying is a dividend index.
     /// Encoded/decoded by serializers as &quot;DIVI&quot;.
@@ -68,7 +68,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_KLIPwOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a dividend index.")]
     DividendIndex,
-    
+
     /// <summary>
     /// Underlying is an equity.
     /// Encoded/decoded by serializers as &quot;EQUI&quot;.
@@ -77,7 +77,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_MapbUOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is an equity.")]
     Equity,
-    
+
     /// <summary>
     /// Underlying is an exchange traded fund.
     /// Encoded/decoded by serializers as &quot;ETFT&quot;.
@@ -86,7 +86,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_ODfBYOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is an exchange traded fund.")]
     ExchangeTradedFund,
-    
+
     /// <summary>
     /// Underlying is a future.
     /// Encoded/decoded by serializers as &quot;FUTR&quot;.
@@ -95,7 +95,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_dMyi0OJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a future.")]
     Future,
-    
+
     /// <summary>
     /// Underlying is a future on equity.
     /// Encoded/decoded by serializers as &quot;FTEQ&quot;.
@@ -104,7 +104,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_gEvnYOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a future on equity.")]
     FutureOnEquity,
-    
+
     /// <summary>
     /// Underlying is an index.
     /// Encoded/decoded by serializers as &quot;INDX&quot;.
@@ -113,7 +113,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_iIhdAOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is an index.")]
     Index,
-    
+
     /// <summary>
     /// Underlying is interest.
     /// Encoded/decoded by serializers as &quot;INTR&quot;.
@@ -122,7 +122,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_jmvugOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is interest.")]
     Interest,
-    
+
     /// <summary>
     /// Underlying is an option.
     /// Encoded/decoded by serializers as &quot;OPTN&quot;.
@@ -131,7 +131,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_lnYwkOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is an option.")]
     Option,
-    
+
     /// <summary>
     /// Underlying is an option on equity.
     /// Encoded/decoded by serializers as &quot;OPEQ&quot;.
@@ -140,7 +140,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_m9iEIOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is an option on equity.")]
     OptionOnEquity,
-    
+
     /// <summary>
     /// Underlying is of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -149,7 +149,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_olTTMOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is of other type.")]
     Other,
-    
+
     /// <summary>
     /// Underlying is precious metal.
     /// Encoded/decoded by serializers as &quot;PRME&quot;.
@@ -158,7 +158,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_pvdZMOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is precious metal.")]
     PreciousMetal,
-    
+
     /// <summary>
     /// Underlying is a share.
     /// Encoded/decoded by serializers as &quot;SHAR&quot;.
@@ -167,7 +167,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_rj0SwOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a share.")]
     Share,
-    
+
     /// <summary>
     /// Underlying is a stock dividend.
     /// Encoded/decoded by serializers as &quot;DVSE&quot;.
@@ -176,7 +176,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_strd0OJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a stock dividend.")]
     StockDividend,
-    
+
     /// <summary>
     /// Underlying is a stock index.
     /// Encoded/decoded by serializers as &quot;STIX&quot;.
@@ -185,7 +185,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_vALE4OJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a stock index.")]
     StockIndex,
-    
+
     /// <summary>
     /// Underlying is a swap.
     /// Encoded/decoded by serializers as &quot;SWAP&quot;.
@@ -194,7 +194,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_w5PfUOJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a swap.")]
     Swap,
-    
+
     /// <summary>
     /// Underlying is a volatility index.
     /// Encoded/decoded by serializers as &quot;VOLI&quot;.
@@ -203,7 +203,7 @@ public enum UnderlyingTypeV2Code
     [IsoId("_yJSK4OJPEeWKDJcMqE1cSA")]
     [Description(@"Underlying is a volatility index.")]
     VolatilityIndex,
-    
+
     /// <summary>
     /// Underlying is an interest rate future or a forward rate agreement (FRA).
     /// Encoded/decoded by serializers as &quot;IFUT&quot;.
@@ -212,5 +212,4 @@ public enum UnderlyingTypeV2Code
     [IsoId("_UQtCgDfLEeaXwbucHIjFhw")]
     [Description(@"Underlying is an interest rate future or a forward rate agreement (FRA).")]
     InterestRateFutureFRA,
-    
 }

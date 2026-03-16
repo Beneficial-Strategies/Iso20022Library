@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BogXkZHjEe6qwqnYOGEReg")]
 [DisplayName("Terminal Package Type5")]
-public partial record TerminalPackageType5
+public record TerminalPackageType5
 {
-    #nullable enable
-
     /// <summary>
     /// Package.
     /// </summary>
@@ -30,9 +28,6 @@ public partial record TerminalPackageType5
     /// </summary>
     [DisplayName("POI Component Identification")]
     [IsoXmlTag("POICmpntId")]
-    public ValueList<PointOfInteractionComponentIdentification2> POIComponentIdentification { get; init; } = [];
-
-    
-    #nullable disable
-    
+    public ValueList<PointOfInteractionComponentIdentification2> POIComponentIdentification { get; init; } =
+        [];
 }

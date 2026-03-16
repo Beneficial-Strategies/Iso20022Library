@@ -23,7 +23,7 @@ public enum SecuritiesExitReason1Code
     [IsoId("_10TW5TL3EeKU9IrkkToqcw_480606307")]
     [Description(@"Shares are restricted.")]
     Restricted = SecuritiesExitReasonCode.Restricted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Shares are non transferable.
     /// Encoded/decoded by serializers as &quot;NTRN&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesExitReason1Code
     [IsoId("_10dH4DL3EeKU9IrkkToqcw_1947755070")]
     [Description(@"Shares are non transferable.")]
     NonTransferable = SecuritiesExitReasonCode.NonTransferable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other reason.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +41,4 @@ public enum SecuritiesExitReason1Code
     [IsoId("_10dH4TL3EeKU9IrkkToqcw_1012448860")]
     [Description(@"Other reason.")]
     Other = SecuritiesExitReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

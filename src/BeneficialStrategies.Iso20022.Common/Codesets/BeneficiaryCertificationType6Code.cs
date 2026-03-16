@@ -21,7 +21,9 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "ACCI")]
     [IsoId("_BeneficiaryCertificationType6Code_AccreditedInvestor")]
-    [Description(@"The holder of the security has to irrevocably certify that it is an Accredited Investor as defined in US Securities and Exchange Commission Regulation D.")]
+    [Description(
+        @"The holder of the security has to irrevocably certify that it is an Accredited Investor as defined in US Securities and Exchange Commission Regulation D."
+    )]
     AccreditedInvestor = BeneficiaryCertificationTypeCode.AccreditedInvestor,
 
     /// <summary>
@@ -48,7 +50,9 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "FRAC")]
     [IsoId("_BeneficiaryCertificationType6Code_FractionBreakdown")]
-    [Description(@"Indicates that the rounding rule in the Fraction Disposition component at the option level can be offered at the beneficial owner level.")]
+    [Description(
+        @"Indicates that the rounding rule in the Fraction Disposition component at the option level can be offered at the beneficial owner level."
+    )]
     FractionBreakdown = BeneficiaryCertificationTypeCode.FractionBreakdown,
 
     /// <summary>
@@ -57,7 +61,9 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "FULL")]
     [IsoId("_BeneficiaryCertificationType6Code_FullBeneficialOwnerBreakdown")]
-    [Description(@"The holder of the security has to provide his beneficial owner details for disclosure/instruction purpose.")]
+    [Description(
+        @"The holder of the security has to provide his beneficial owner details for disclosure/instruction purpose."
+    )]
     FullBeneficialOwnerBreakdown = BeneficiaryCertificationTypeCode.FullBeneficialOwnerBreakdown,
 
     /// <summary>
@@ -75,7 +81,9 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "NDOM")]
     [IsoId("_BeneficiaryCertificationType6Code_NonDomicileCountry")]
-    [Description(@"The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated.")]
+    [Description(
+        @"The holder of the security has to certify, in line with the terms of the corporate action, that it is not domiciled in the country indicated."
+    )]
     NonDomicileCountry = BeneficiaryCertificationTypeCode.NonDomicileCountry,
 
     /// <summary>
@@ -84,7 +92,9 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "PABD")]
     [IsoId("_BeneficiaryCertificationType6Code_ICSDParticipantBreakdown")]
-    [Description(@"The (I)CSD has to provide its participants’ details for disclosure purpose to the issuer/issuer’s agent.")]
+    [Description(
+        @"The (I)CSD has to provide its participants’ details for disclosure purpose to the issuer/issuer’s agent."
+    )]
     ICSDParticipantBreakdown = BeneficiaryCertificationTypeCode.ICSDParticipantBreakdown,
 
     /// <summary>
@@ -102,7 +112,9 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "QIBB")]
     [IsoId("_BeneficiaryCertificationType6Code_QIBCertification")]
-    [Description(@"The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A.")]
+    [Description(
+        @"The holder of the security has to irrevocably certify that it is a Qualified Institutional Buyer as defined in US Securities and Exchange Commission Rule 144A."
+    )]
     QIBCertification = BeneficiaryCertificationTypeCode.QIBCertification,
 
     /// <summary>
@@ -111,7 +123,8 @@ public enum BeneficiaryCertificationType6Code
     /// </summary>
     [EnumMember(Value = "TRBD")]
     [IsoId("_BeneficiaryCertificationType6Code_TaxRateBreakdown")]
-    [Description(@"The holder of the security has to provide basic details on nominals and associated tax rate to be used by the account servicer.")]
+    [Description(
+        @"The holder of the security has to provide basic details on nominals and associated tax rate to be used by the account servicer."
+    )]
     TaxRateBreakdown = BeneficiaryCertificationTypeCode.TaxRateBreakdown,
-
 }

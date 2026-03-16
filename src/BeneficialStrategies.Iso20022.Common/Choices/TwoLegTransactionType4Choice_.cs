@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TwoLegTransactionType4Choice.FutureOrOptionDetails))]
     [KnownType(typeof(TwoLegTransactionType4Choice.SecuritiesFinancingDetails))]
-    [JsonDerivedType(typeof(TwoLegTransactionType4Choice.FutureOrOptionDetails),nameof(TwoLegTransactionType4Choice.FutureOrOptionDetails))]
-    [JsonDerivedType(typeof(TwoLegTransactionType4Choice.SecuritiesFinancingDetails),nameof(TwoLegTransactionType4Choice.SecuritiesFinancingDetails))]
+    [JsonDerivedType(
+        typeof(TwoLegTransactionType4Choice.FutureOrOptionDetails),
+        nameof(TwoLegTransactionType4Choice.FutureOrOptionDetails)
+    )]
+    [JsonDerivedType(
+        typeof(TwoLegTransactionType4Choice.SecuritiesFinancingDetails),
+        nameof(TwoLegTransactionType4Choice.SecuritiesFinancingDetails)
+    )]
     [IsoId("_854_sQhKEe2fOITqoTnSLQ")]
     [DisplayName("Two Leg Transaction Type 4 Choice")]
-    public abstract partial record TwoLegTransactionType4Choice_
-    {
-    }
+    public abstract record TwoLegTransactionType4Choice_ { }
 }

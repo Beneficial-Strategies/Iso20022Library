@@ -23,7 +23,7 @@ public enum BuyInState1Code
     [IsoId("_q9Bo8ZwVEeqtp-LOti013g")]
     [Description(@"Buy-in was partially successful.")]
     PartiallySuccessful = BuyInStateCode.PartiallySuccessful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buy-in was successful.
     /// Encoded/decoded by serializers as &quot;BSSY&quot;.
@@ -32,7 +32,7 @@ public enum BuyInState1Code
     [IsoId("_rBfSMZwVEeqtp-LOti013g")]
     [Description(@"Buy-in was successful.")]
     Successful = BuyInStateCode.Successful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Buy-in was unsuccessful.
     /// Encoded/decoded by serializers as &quot;BSSN&quot;.
@@ -41,5 +41,4 @@ public enum BuyInState1Code
     [IsoId("_rF87cZwVEeqtp-LOti013g")]
     [Description(@"Buy-in was unsuccessful.")]
     Unsuccesssful = BuyInStateCode.Unsuccesssful, // same ordinal as derivation source for type conversions
-    
 }

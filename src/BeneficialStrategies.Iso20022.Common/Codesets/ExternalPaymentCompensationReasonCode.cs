@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_WyP5wYjXEeeDW7_wB-eK_g")]
-[Description(@"Specifies the reason for compensation for the processing of a payment, as published in an external code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the reason for compensation for the processing of a payment, as published in an external code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalPaymentCompensationReason1Code))]
 public enum ExternalPaymentCompensationReasonCode
 {
@@ -24,5 +26,4 @@ public enum ExternalPaymentCompensationReasonCode
     [IsoId("_vvidwIjXEeeDW7_wB-eK_g")]
     [Description(@"Compensation requested for value date correction.")]
     ValueDateAdjustment,
-    
 }

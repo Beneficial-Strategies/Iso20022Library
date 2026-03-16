@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_bqvG0tp-Ed-ak6NoX_4Aeg_-845396197")]
-[Description(@"Refer to an account management instruction ie, either an account opening instruction or an account modification instruction or a get account details message.")]
+[Description(
+    @"Refer to an account management instruction ie, either an account opening instruction or an account modification instruction or a get account details message."
+)]
 [DerivedFrom(typeof(AccountManagementTypeCode))]
 public enum AccountManagementType2Code
 {
@@ -23,7 +25,7 @@ public enum AccountManagementType2Code
     [IsoId("_bqvG09p-Ed-ak6NoX_4Aeg_-845396171")]
     [Description(@"Refers to an account opening instruction message.")]
     AccountOpening = AccountManagementTypeCode.AccountOpening, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refers to an account modification instruction message.
     /// Encoded/decoded by serializers as &quot;ACCM&quot;.
@@ -32,7 +34,7 @@ public enum AccountManagementType2Code
     [IsoId("_bqvG1Np-Ed-ak6NoX_4Aeg_-845395920")]
     [Description(@"Refers to an account modification instruction message.")]
     AccountModification = AccountManagementTypeCode.AccountModification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Refers to a get account details message.
     /// Encoded/decoded by serializers as &quot;GACC&quot;.
@@ -41,5 +43,4 @@ public enum AccountManagementType2Code
     [IsoId("_bqvG1dp-Ed-ak6NoX_4Aeg_-784440543")]
     [Description(@"Refers to a get account details message.")]
     GetAccountDetails = AccountManagementTypeCode.GetAccountDetails, // same ordinal as derivation source for type conversions
-    
 }

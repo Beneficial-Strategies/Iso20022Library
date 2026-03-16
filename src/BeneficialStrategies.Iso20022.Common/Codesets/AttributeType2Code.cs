@@ -23,7 +23,7 @@ public enum AttributeType2Code
     [IsoId("_56IUsY4TEeW6h7rGyYlyTg")]
     [Description(@"Email address of the certificate subject.")]
     EmailAddress = AttributeTypeCode.EmailAddress, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Password by which an entity may request certificate revocation.
     /// Encoded/decoded by serializers as &quot;CHLG&quot;.
@@ -32,5 +32,4 @@ public enum AttributeType2Code
     [IsoId("_6f_a044TEeW6h7rGyYlyTg")]
     [Description(@"Password by which an entity may request certificate revocation.")]
     ChallengePassword = AttributeTypeCode.ChallengePassword, // same ordinal as derivation source for type conversions
-    
 }

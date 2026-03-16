@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UcqZAcWwEeuhguwJmlgagQ")]
 [DisplayName("Cardholder Name")]
-public partial record CardholderName2
+public record CardholderName2
 {
-    #nullable enable
-    
     /// <summary>
     /// Local language equivalent of the name of the cardholder.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CardholderName2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? Name { get; init; }
+
     /// <summary>
     /// Local language equivalent of the first name of the cardholder.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CardholderName2
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? GivenName { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? GivenName { get; init; }
+
     /// <summary>
     /// Local language equivalent of the middle name or initials present in the name of a person.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record CardholderName2
     [DisplayName("Middle Name")]
     [IsoXmlTag("MddlNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? MiddleName { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? MiddleName { get; init; }
+
     /// <summary>
     /// Local language equivalent of the last name or surname of the cardholder.
     /// </summary>
@@ -55,10 +53,6 @@ public partial record CardholderName2
     [DisplayName("Last Name")]
     [IsoXmlTag("LastNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? LastName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? LastName { get; init; }
 }

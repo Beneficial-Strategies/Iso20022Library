@@ -23,23 +23,26 @@ public enum RepurchaseType6Code
     [IsoId("_q5t_JWtdEeCY4-KZ9JEyUQ_1110886064")]
     [Description(@"Relates to a Swap/Substitution.")]
     Swap = RepurchaseTypeCode.Swap, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a repo rollover of a position extending the closing or maturity date.
     /// Encoded/decoded by serializers as &quot;TOPU&quot;.
     /// </summary>
     [EnumMember(Value = "TOPU")]
     [IsoId("_q53wIGtdEeCY4-KZ9JEyUQ_-1569933634")]
-    [Description(@"Relates to a repo rollover of a position extending the closing or maturity date.")]
+    [Description(
+        @"Relates to a repo rollover of a position extending the closing or maturity date."
+    )]
     TopUp = RepurchaseTypeCode.TopUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a repo rollover of a position extending the closing or maturity date.
     /// Encoded/decoded by serializers as &quot;WTHD&quot;.
     /// </summary>
     [EnumMember(Value = "WTHD")]
     [IsoId("_q53wIWtdEeCY4-KZ9JEyUQ_1727961309")]
-    [Description(@"Relates to a repo rollover of a position extending the closing or maturity date.")]
+    [Description(
+        @"Relates to a repo rollover of a position extending the closing or maturity date."
+    )]
     Withdrawal = RepurchaseTypeCode.Withdrawal, // same ordinal as derivation source for type conversions
-    
 }

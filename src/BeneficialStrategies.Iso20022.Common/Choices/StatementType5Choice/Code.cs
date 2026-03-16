@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.StatementType5Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.StatementType5Choice
     /// </summary>
     [IsoId("_u_T9oTqoEeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public partial record Code : StatementType5Choice_
+    public record Code : StatementType5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies whether the statement is an accounting or a custody statement.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required SecuritiesStatementType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SecuritiesStatementType1Code Value { get; init; }
     }
 }

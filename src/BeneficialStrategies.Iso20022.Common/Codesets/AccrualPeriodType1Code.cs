@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_10Ab8DL3EeKU9IrkkToqcw_1816998804")]
-[Description(@"Specifies the type of the first accrual period for debt instruments compared to the normal accrual period of the security.")]
+[Description(
+    @"Specifies the type of the first accrual period for debt instruments compared to the normal accrual period of the security."
+)]
 [DerivedFrom(typeof(AccrualPeriodTypeCode))]
 public enum AccrualPeriodType1Code
 {
@@ -23,7 +25,7 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Ab8TL3EeKU9IrkkToqcw_151248487")]
     [Description(@"Long first payment period is applicable.")]
     LongFirstPaymentPeriod = AccrualPeriodTypeCode.LongFirstPaymentPeriod, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Regular first payment period is applicable.
     /// Encoded/decoded by serializers as &quot;FREG&quot;.
@@ -32,7 +34,7 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Ab8jL3EeKU9IrkkToqcw_476365994")]
     [Description(@"Regular first payment period is applicable.")]
     FirstRegularPaymentPeriod = AccrualPeriodTypeCode.FirstRegularPaymentPeriod, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Short first payment period is applicable.
     /// Encoded/decoded by serializers as &quot;SHRT&quot;.
@@ -41,7 +43,7 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Ab8zL3EeKU9IrkkToqcw_-455570526")]
     [Description(@"Short first payment period is applicable.")]
     ShortFirstPaymentperiod = AccrualPeriodTypeCode.ShortFirstPaymentperiod, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// First year of payment is applicable.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -50,7 +52,7 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Ab9DL3EeKU9IrkkToqcw_-1483257")]
     [Description(@"First year of payment is applicable.")]
     FirstYearOfPayment = AccrualPeriodTypeCode.FirstYearOfPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Extra long payment period is applicable.
     /// Encoded/decoded by serializers as &quot;XLNG&quot;.
@@ -59,7 +61,7 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Ab9TL3EeKU9IrkkToqcw_584463769")]
     [Description(@"Extra long payment period is applicable.")]
     ExtraLongPaymentPeriod = AccrualPeriodTypeCode.ExtraLongPaymentPeriod, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Default payment period is applicable.
     /// Encoded/decoded by serializers as &quot;DFLT&quot;.
@@ -68,7 +70,7 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Ab9jL3EeKU9IrkkToqcw_2051612532")]
     [Description(@"Default payment period is applicable.")]
     DefaultPeriod = AccrualPeriodTypeCode.DefaultPeriod, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment has not been done.
     /// Encoded/decoded by serializers as &quot;OMIT&quot;.
@@ -77,5 +79,4 @@ public enum AccrualPeriodType1Code
     [IsoId("_10Jl4DL3EeKU9IrkkToqcw_-794219174")]
     [Description(@"Payment has not been done.")]
     PaymentOmitted = AccrualPeriodTypeCode.PaymentOmitted, // same ordinal as derivation source for type conversions
-    
 }

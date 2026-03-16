@@ -14,14 +14,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PercentageRange1Choice.FromTo))]
     [KnownType(typeof(PercentageRange1Choice.Equal))]
     [KnownType(typeof(PercentageRange1Choice.NotEqual))]
-    [JsonDerivedType(typeof(PercentageRange1Choice.From),nameof(PercentageRange1Choice.From))]
-    [JsonDerivedType(typeof(PercentageRange1Choice.To),nameof(PercentageRange1Choice.To))]
-    [JsonDerivedType(typeof(PercentageRange1Choice.FromTo),nameof(PercentageRange1Choice.FromTo))]
-    [JsonDerivedType(typeof(PercentageRange1Choice.Equal),nameof(PercentageRange1Choice.Equal))]
-    [JsonDerivedType(typeof(PercentageRange1Choice.NotEqual),nameof(PercentageRange1Choice.NotEqual))]
+    [JsonDerivedType(typeof(PercentageRange1Choice.From), nameof(PercentageRange1Choice.From))]
+    [JsonDerivedType(typeof(PercentageRange1Choice.To), nameof(PercentageRange1Choice.To))]
+    [JsonDerivedType(typeof(PercentageRange1Choice.FromTo), nameof(PercentageRange1Choice.FromTo))]
+    [JsonDerivedType(typeof(PercentageRange1Choice.Equal), nameof(PercentageRange1Choice.Equal))]
+    [JsonDerivedType(
+        typeof(PercentageRange1Choice.NotEqual),
+        nameof(PercentageRange1Choice.NotEqual)
+    )]
     [IsoId("_7_BRqKMgEeCJ6YNENx4h-w_249022340")]
     [DisplayName("Percentage Range 1 Choice")]
-    public abstract partial record PercentageRange1Choice_
-    {
-    }
+    public abstract record PercentageRange1Choice_ { }
 }

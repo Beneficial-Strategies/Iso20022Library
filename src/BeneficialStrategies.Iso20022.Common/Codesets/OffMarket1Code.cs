@@ -23,14 +23,15 @@ public enum OffMarket1Code
     [IsoId("_aOfyUtp-Ed-ak6NoX_4Aeg_-2050871151")]
     [Description(@"Trade was executed off-market.")]
     OffMarket = OffMarketCode.OffMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trade was executed off-exchange because the instrument is not admitted to trade on an exchange.
     /// Encoded/decoded by serializers as &quot;XXXX&quot;.
     /// </summary>
     [EnumMember(Value = "XXXX")]
     [IsoId("_aOfyU9p-Ed-ak6NoX_4Aeg_-103068136")]
-    [Description(@"Trade was executed off-exchange because the instrument is not admitted to trade on an exchange.")]
+    [Description(
+        @"Trade was executed off-exchange because the instrument is not admitted to trade on an exchange."
+    )]
     NotAdmittedOnExchange = OffMarketCode.NotAdmittedOnExchange, // same ordinal as derivation source for type conversions
-    
 }

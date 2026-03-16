@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialIdentificationSchemeName1Choice.Code))]
     [KnownType(typeof(FinancialIdentificationSchemeName1Choice.Proprietary))]
-    [JsonDerivedType(typeof(FinancialIdentificationSchemeName1Choice.Code),nameof(FinancialIdentificationSchemeName1Choice.Code))]
-    [JsonDerivedType(typeof(FinancialIdentificationSchemeName1Choice.Proprietary),nameof(FinancialIdentificationSchemeName1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FinancialIdentificationSchemeName1Choice.Code),
+        nameof(FinancialIdentificationSchemeName1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialIdentificationSchemeName1Choice.Proprietary),
+        nameof(FinancialIdentificationSchemeName1Choice.Proprietary)
+    )]
     [IsoId("_QALkMNp-Ed-ak6NoX_4Aeg_-2021925461")]
     [DisplayName("Financial Identification Scheme Name 1 Choice")]
-    public abstract partial record FinancialIdentificationSchemeName1Choice_
-    {
-    }
+    public abstract record FinancialIdentificationSchemeName1Choice_ { }
 }

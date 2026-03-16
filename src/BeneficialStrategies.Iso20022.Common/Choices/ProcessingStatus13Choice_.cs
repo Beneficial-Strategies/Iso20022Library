@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus13Choice.Proprietary))]
     [KnownType(typeof(ProcessingStatus13Choice.Denied))]
     [KnownType(typeof(ProcessingStatus13Choice.Cancelled))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.PendingCancellation),nameof(ProcessingStatus13Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.Rejected),nameof(ProcessingStatus13Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.Repair),nameof(ProcessingStatus13Choice.Repair))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.AcknowledgedAccepted),nameof(ProcessingStatus13Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.Proprietary),nameof(ProcessingStatus13Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.Denied),nameof(ProcessingStatus13Choice.Denied))]
-    [JsonDerivedType(typeof(ProcessingStatus13Choice.Cancelled),nameof(ProcessingStatus13Choice.Cancelled))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.PendingCancellation),
+        nameof(ProcessingStatus13Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.Rejected),
+        nameof(ProcessingStatus13Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.Repair),
+        nameof(ProcessingStatus13Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus13Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.Proprietary),
+        nameof(ProcessingStatus13Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.Denied),
+        nameof(ProcessingStatus13Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus13Choice.Cancelled),
+        nameof(ProcessingStatus13Choice.Cancelled)
+    )]
     [IsoId("_ZH-k4eZgEd-q8fx_Zl_34A")]
     [DisplayName("Processing Status 13 Choice")]
-    public abstract partial record ProcessingStatus13Choice_
-    {
-    }
+    public abstract record ProcessingStatus13Choice_ { }
 }

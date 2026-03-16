@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OrderWaiverReason3Choice.Code))]
     [KnownType(typeof(OrderWaiverReason3Choice.Proprietary))]
-    [JsonDerivedType(typeof(OrderWaiverReason3Choice.Code),nameof(OrderWaiverReason3Choice.Code))]
-    [JsonDerivedType(typeof(OrderWaiverReason3Choice.Proprietary),nameof(OrderWaiverReason3Choice.Proprietary))]
+    [JsonDerivedType(typeof(OrderWaiverReason3Choice.Code), nameof(OrderWaiverReason3Choice.Code))]
+    [JsonDerivedType(
+        typeof(OrderWaiverReason3Choice.Proprietary),
+        nameof(OrderWaiverReason3Choice.Proprietary)
+    )]
     [IsoId("_PJanIToREeabspMEjqY5TQ")]
     [DisplayName("Order Waiver Reason 3 Choice")]
-    public abstract partial record OrderWaiverReason3Choice_
-    {
-    }
+    public abstract record OrderWaiverReason3Choice_ { }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_90jEzPGAEemQ7oqCO5NTQw")]
-[Description(@"Specifies the debtor activation cancellation reason code, as published in an external debtor activation cancellation reason code set.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the debtor activation cancellation reason code, as published in an external debtor activation cancellation reason code set.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalDebtorActivationCancellationReason1Code))]
 public enum ExternalDebtorActivationCancellationReasonCode
 {
@@ -24,7 +26,7 @@ public enum ExternalDebtorActivationCancellationReasonCode
     [IsoId("_uvBsMPRYEeuLhpyIdtJzwg")]
     [Description(@"Duplication.")]
     Duplication,
-    
+
     /// <summary>
     /// Reference is not unique.
     /// Encoded/decoded by serializers as &quot;RF01&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDebtorActivationCancellationReasonCode
     [IsoId("_uvBsM_RYEeuLhpyIdtJzwg")]
     [Description(@"Reference is not unique.")]
     NotUniqueReference,
-    
+
     /// <summary>
     /// Regulatory Reason.
     /// Encoded/decoded by serializers as &quot;RR04&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDebtorActivationCancellationReasonCode
     [IsoId("_uvK2IPRYEeuLhpyIdtJzwg")]
     [Description(@"Regulatory Reason.")]
     RegulatoryReason,
-    
+
     /// <summary>
     /// Technical rejection.
     /// Encoded/decoded by serializers as &quot;TRJT&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDebtorActivationCancellationReasonCode
     [IsoId("_90jEzfGAEemQ7oqCO5NTQw")]
     [Description(@"Technical rejection.")]
     TechnicalRejection,
-    
+
     /// <summary>
     /// Unknown creditor.
     /// Encoded/decoded by serializers as &quot;UCRD&quot;.
@@ -60,5 +62,4 @@ public enum ExternalDebtorActivationCancellationReasonCode
     [IsoId("_uvUnIPRYEeuLhpyIdtJzwg")]
     [Description(@"Unknown creditor.")]
     UnknownCreditor,
-    
 }

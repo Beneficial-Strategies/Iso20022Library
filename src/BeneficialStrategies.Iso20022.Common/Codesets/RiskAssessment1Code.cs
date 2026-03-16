@@ -23,7 +23,7 @@ public enum RiskAssessment1Code
     [IsoId("_5HcuQZljEeu76rs9yGlfEg")]
     [Description(@"Recommended to approve conditionally.")]
     ApproveConditionally = RiskAssessmentCode.ApproveConditionally, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Recommended to approve conditionally; high risk conditions exist.
     /// Encoded/decoded by serializers as &quot;APPH&quot;.
@@ -32,7 +32,7 @@ public enum RiskAssessment1Code
     [IsoId("_5PkIcZljEeu76rs9yGlfEg")]
     [Description(@"Recommended to approve conditionally; high risk conditions exist.")]
     ApproveConditionallyWithHighRisk = RiskAssessmentCode.ApproveConditionallyWithHighRisk, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Recommended to approve unconditionally.
     /// Encoded/decoded by serializers as &quot;APPU&quot;.
@@ -41,7 +41,7 @@ public enum RiskAssessment1Code
     [IsoId("_5xslIZljEeu76rs9yGlfEg")]
     [Description(@"Recommended to approve unconditionally.")]
     ApproveUnconditionally = RiskAssessmentCode.ApproveUnconditionally, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Recommended to not approve.
     /// Encoded/decoded by serializers as &quot;DONT&quot;.
@@ -50,5 +50,4 @@ public enum RiskAssessment1Code
     [IsoId("_56CBwZljEeu76rs9yGlfEg")]
     [Description(@"Recommended to not approve.")]
     DoNotApprove = RiskAssessmentCode.DoNotApprove, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum ATMCommandReason1Code
     [IsoId("_Z7ffwYtHEeSxlKlAGYErFg")]
     [Description(@"Request the status of or action from the ATM to perform a diagnostic.")]
     Diagnostic = ATMCommandReasonCode.Diagnostic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Supervise the ATM.
     /// Encoded/decoded by serializers as &quot;MONI&quot;.
@@ -32,7 +32,7 @@ public enum ATMCommandReason1Code
     [IsoId("_aBKC4YtHEeSxlKlAGYErFg")]
     [Description(@"Supervise the ATM.")]
     Monitoring = ATMCommandReasonCode.Monitoring, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security error.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -41,7 +41,7 @@ public enum ATMCommandReason1Code
     [IsoId("_aLIeQ4tHEeSxlKlAGYErFg")]
     [Description(@"Security error.")]
     SecurityError = ATMCommandReasonCode.SecurityError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Desynchronisation of dialogue between entities.
     /// Encoded/decoded by serializers as &quot;SYNC&quot;.
@@ -50,7 +50,7 @@ public enum ATMCommandReason1Code
     [IsoId("_aQWVc4tHEeSxlKlAGYErFg")]
     [Description(@"Desynchronisation of dialogue between entities.")]
     Synchronisation = ATMCommandReasonCode.Synchronisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the ATM.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -59,5 +59,4 @@ public enum ATMCommandReason1Code
     [IsoId("_aW6QcYtHEeSxlKlAGYErFg")]
     [Description(@"Update the ATM.")]
     Update = ATMCommandReasonCode.Update, // same ordinal as derivation source for type conversions
-    
 }

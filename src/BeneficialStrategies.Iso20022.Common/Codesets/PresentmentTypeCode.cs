@@ -23,14 +23,15 @@ public enum PresentmentTypeCode
     [IsoId("_bca4gEWeEempSe_3C1a9EQ")]
     [Description(@"Full information of the presented e-invoice should be presented to the debtor.")]
     Full,
-    
+
     /// <summary>
     /// Only information necessary to initiate the payment should be presented to the debtor.
     /// Encoded/decoded by serializers as &quot;PAYD&quot;.
     /// </summary>
     [EnumMember(Value = "PAYD")]
     [IsoId("_bgijgEWeEempSe_3C1a9EQ")]
-    [Description(@"Only information necessary to initiate the payment should be presented to the debtor.")]
+    [Description(
+        @"Only information necessary to initiate the payment should be presented to the debtor."
+    )]
     RequiredPaymentData,
-    
 }

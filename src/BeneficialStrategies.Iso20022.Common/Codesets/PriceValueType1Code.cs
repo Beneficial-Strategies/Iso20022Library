@@ -21,18 +21,22 @@ public enum PriceValueType1Code
     /// </summary>
     [EnumMember(Value = "DISC")]
     [IsoId("_aJIKKNp-Ed-ak6NoX_4Aeg_-2127153341")]
-    [Description(@"Price expressed as a number of percentage points below par, for example, a discount price of 2.0% equals a price of 98 when par is 100.")]
+    [Description(
+        @"Price expressed as a number of percentage points below par, for example, a discount price of 2.0% equals a price of 98 when par is 100."
+    )]
     Discount = PriceValueTypeCode.Discount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price expressed as a number of percentage points above par, for example, a premium price of 2.0% equals a price of 102 when par is 100.
     /// Encoded/decoded by serializers as &quot;PREM&quot;.
     /// </summary>
     [EnumMember(Value = "PREM")]
     [IsoId("_aJR7INp-Ed-ak6NoX_4Aeg_-2125306944")]
-    [Description(@"Price expressed as a number of percentage points above par, for example, a premium price of 2.0% equals a price of 102 when par is 100.")]
+    [Description(
+        @"Price expressed as a number of percentage points above par, for example, a premium price of 2.0% equals a price of 102 when par is 100."
+    )]
     Premium = PriceValueTypeCode.Premium, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is the face amount.
     /// Encoded/decoded by serializers as &quot;PARV&quot;.
@@ -41,5 +45,4 @@ public enum PriceValueType1Code
     [IsoId("_aJR7Idp-Ed-ak6NoX_4Aeg_1927701255")]
     [Description(@"Price is the face amount.")]
     Par = PriceValueTypeCode.Par, // same ordinal as derivation source for type conversions
-    
 }

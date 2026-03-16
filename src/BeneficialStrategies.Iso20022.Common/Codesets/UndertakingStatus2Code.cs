@@ -23,7 +23,7 @@ public enum UndertakingStatus2Code
     [IsoId("_9NC3RnymEeGWJuGCfvwOsQ")]
     [Description(@"Accepted.")]
     Accepted = UndertakingStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,5 +32,4 @@ public enum UndertakingStatus2Code
     [IsoId("_u-8y1n4EEeG05p8M2uqofg")]
     [Description(@"Rejected.")]
     Rejected = UndertakingStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

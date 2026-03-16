@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Party50Choice.Agent))]
     [KnownType(typeof(Party50Choice.Party))]
-    [JsonDerivedType(typeof(Party50Choice.Agent),nameof(Party50Choice.Agent))]
-    [JsonDerivedType(typeof(Party50Choice.Party),nameof(Party50Choice.Party))]
+    [JsonDerivedType(typeof(Party50Choice.Agent), nameof(Party50Choice.Agent))]
+    [JsonDerivedType(typeof(Party50Choice.Party), nameof(Party50Choice.Party))]
     [IsoId("_vqulsTEyEe6g-ffJsqGiSA")]
     [DisplayName("Party50Choice")]
-    public abstract partial record Party50Choice_
-    {
-    }
+    public abstract record Party50Choice_ { }
 }

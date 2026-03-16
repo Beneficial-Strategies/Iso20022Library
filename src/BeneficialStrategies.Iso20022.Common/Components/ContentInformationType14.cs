@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NW_1sYtNEeSxlKlAGYErFg")]
 [DisplayName("Content Information Type")]
-public partial record ContentInformationType14
+public record ContentInformationType14
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of data protection.
     /// </summary>
     [IsoId("_NjOT0YtNEeSxlKlAGYErFg")]
     [DisplayName("Content Type")]
     [IsoXmlTag("CnttTp")]
-    public required ContentType2Code ContentType { get; init; } 
-    
+    public required ContentType2Code ContentType { get; init; }
+
     /// <summary>
     /// Data protected by a digital signatures.
     /// </summary>
     [IsoId("_NjOT14tNEeSxlKlAGYErFg")]
     [DisplayName("Signed Data")]
     [IsoXmlTag("SgndData")]
-    public required SignedData4 SignedData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required SignedData4 SignedData { get; init; }
 }

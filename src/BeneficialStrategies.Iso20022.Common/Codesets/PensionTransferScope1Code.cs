@@ -23,7 +23,7 @@ public enum PensionTransferScope1Code
     [IsoId("_6W9-oU4YEeiQHa-q1Uephw")]
     [Description(@"Transfer is for the crystallised portion.")]
     CrystallisedPart = PensionTransferScopeCode.CrystallisedPart, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer is for a specific drawdown tranche.
     /// Encoded/decoded by serializers as &quot;SDDT&quot;.
@@ -32,7 +32,7 @@ public enum PensionTransferScope1Code
     [IsoId("_6b_okU4YEeiQHa-q1Uephw")]
     [Description(@"Transfer is for a specific drawdown tranche.")]
     DrawdownTranche = PensionTransferScopeCode.DrawdownTranche, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer is for the full pension.
     /// Encoded/decoded by serializers as &quot;FULP&quot;.
@@ -41,7 +41,7 @@ public enum PensionTransferScope1Code
     [IsoId("_6hnvcU4YEeiQHa-q1Uephw")]
     [Description(@"Transfer is for the full pension.")]
     FullPension = PensionTransferScopeCode.FullPension, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer is for the uncrystallised portion.
     /// Encoded/decoded by serializers as &quot;UCRY&quot;.
@@ -50,5 +50,4 @@ public enum PensionTransferScope1Code
     [IsoId("_6lp64U4YEeiQHa-q1Uephw")]
     [Description(@"Transfer is for the uncrystallised portion.")]
     UncrystallisedPart = PensionTransferScopeCode.UncrystallisedPart, // same ordinal as derivation source for type conversions
-    
 }

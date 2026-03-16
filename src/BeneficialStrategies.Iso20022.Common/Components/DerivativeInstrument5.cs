@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_G_iQo35aEea2k7EBUopqxw")]
 [DisplayName("Derivative Instrument")]
-public partial record DerivativeInstrument5
+public record DerivativeInstrument5
 {
-    #nullable enable
-    
     /// <summary>
     /// Expiry date of the financial instrument.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record DerivativeInstrument5
     [DisplayName("Expiry Date")]
     [IsoXmlTag("XpryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpiryDate { get; init; } 
-    
+    public IsoISODate? ExpiryDate { get; init; }
+
     /// <summary>
     /// Number of units of the underlying instrument represented by a single derivative contract. For a future or option on an index, the amount per index point.
     /// </summary>
@@ -34,16 +32,16 @@ public partial record DerivativeInstrument5
     [DisplayName("Price Multiplier")]
     [IsoXmlTag("PricMltplr")]
     [IsoSimpleType(IsoSimpleType.NonNegativeDecimalNumber)]
-    public IsoNonNegativeDecimalNumber? PriceMultiplier { get; init; } 
-    
+    public IsoNonNegativeDecimalNumber? PriceMultiplier { get; init; }
+
     /// <summary>
     /// Choice to specify the type(s) of underlying instrument(s) that make up the financial instrument.
     /// </summary>
     [IsoId("_HH3GKX5aEea2k7EBUopqxw")]
     [DisplayName("Underlying Instrument")]
     [IsoXmlTag("UndrlygInstrm")]
-    public FinancialInstrumentIdentification5Choice_? UnderlyingInstrument { get; init; } 
-    
+    public FinancialInstrumentIdentification5Choice_? UnderlyingInstrument { get; init; }
+
     /// <summary>
     /// Specifies whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).
     /// Usage:
@@ -52,8 +50,8 @@ public partial record DerivativeInstrument5
     [IsoId("_HH3GK35aEea2k7EBUopqxw")]
     [DisplayName("Option Type")]
     [IsoXmlTag("OptnTp")]
-    public OptionType2Code? OptionType { get; init; } 
-    
+    public OptionType2Code? OptionType { get; init; }
+
     /// <summary>
     /// Attributes to specify the strike price of a derivative.
     /// Usage:
@@ -62,8 +60,8 @@ public partial record DerivativeInstrument5
     [IsoId("_HH3GLX5aEea2k7EBUopqxw")]
     [DisplayName("Strike Price")]
     [IsoXmlTag("StrkPric")]
-    public SecuritiesTransactionPrice4Choice_? StrikePrice { get; init; } 
-    
+    public SecuritiesTransactionPrice4Choice_? StrikePrice { get; init; }
+
     /// <summary>
     /// Indication as to whether the option may be exercised only at a fixed date (European, and Asian style), a series of pre-specified dates (Bermudan) or at any time during the life of the contract (American style).
     /// Usage:
@@ -72,25 +70,21 @@ public partial record DerivativeInstrument5
     [IsoId("_HH3GMX5aEea2k7EBUopqxw")]
     [DisplayName("Option Exercise Style")]
     [IsoXmlTag("OptnExrcStyle")]
-    public OptionStyle7Code? OptionExerciseStyle { get; init; } 
-    
+    public OptionStyle7Code? OptionExerciseStyle { get; init; }
+
     /// <summary>
     /// Indicates whether the transaction is settled physically or in cash.
     /// </summary>
     [IsoId("_HH3GM35aEea2k7EBUopqxw")]
     [DisplayName("Delivery Type")]
     [IsoXmlTag("DlvryTp")]
-    public PhysicalTransferType4Code? DeliveryType { get; init; } 
-    
+    public PhysicalTransferType4Code? DeliveryType { get; init; }
+
     /// <summary>
     /// Specific attributes of the underlying asset class of the financial instrument.
     /// </summary>
     [IsoId("_HH3GNX5aEea2k7EBUopqxw")]
     [DisplayName("Asset Class Specific Attributes")]
     [IsoXmlTag("AsstClssSpcfcAttrbts")]
-    public AssetClass2? AssetClassSpecificAttributes { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AssetClass2? AssetClassSpecificAttributes { get; init; }
 }

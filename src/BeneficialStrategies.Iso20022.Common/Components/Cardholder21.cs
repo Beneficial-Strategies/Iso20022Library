@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0VCDsZFQEe6reqfAp4CunQ")]
 [DisplayName("Cardholder21")]
-public partial record Cardholder21
+public record Cardholder21
 {
-    #nullable enable
-
     /// <summary>
     /// Authentication.
     /// </summary>
@@ -30,21 +28,21 @@ public partial record Cardholder21
     /// </summary>
     [DisplayName("Billing Address")]
     [IsoXmlTag("BllgAdr")]
-    public PostalAddress22? BillingAddress { get; init; } 
+    public PostalAddress22? BillingAddress { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public PersonIdentification15? Identification { get; init; } 
+    public PersonIdentification15? Identification { get; init; }
 
     /// <summary>
     /// Language.
     /// </summary>
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public LanguageCode? Language { get; init; } 
+    public LanguageCode? Language { get; init; }
 
     /// <summary>
     /// Mobile Data.
@@ -58,44 +56,41 @@ public partial record Cardholder21
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public IsoMax45Text? Name { get; init; } 
+    public IsoMax45Text? Name { get; init; }
 
     /// <summary>
     /// Personal Data.
     /// </summary>
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
-    public IsoMax70Text? PersonalData { get; init; } 
+    public IsoMax70Text? PersonalData { get; init; }
 
     /// <summary>
     /// Shipping Address.
     /// </summary>
     [DisplayName("Shipping Address")]
     [IsoXmlTag("ShppgAdr")]
-    public PostalAddress22? ShippingAddress { get; init; } 
+    public PostalAddress22? ShippingAddress { get; init; }
 
     /// <summary>
     /// Transaction Verification Result.
     /// </summary>
     [DisplayName("Transaction Verification Result")]
     [IsoXmlTag("TxVrfctnRslt")]
-    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } = [];
+    public ValueList<TransactionVerificationResult4> TransactionVerificationResult { get; init; } =
+        [];
 
     /// <summary>
     /// Trip Number.
     /// </summary>
     [DisplayName("Trip Number")]
     [IsoXmlTag("TripNb")]
-    public IsoMax35Text? TripNumber { get; init; } 
+    public IsoMax35Text? TripNumber { get; init; }
 
     /// <summary>
     /// Vehicle.
     /// </summary>
     [DisplayName("Vehicle")]
     [IsoXmlTag("Vhcl")]
-    public Vehicle1? Vehicle { get; init; } 
-
-    
-    #nullable disable
-    
+    public Vehicle1? Vehicle { get; init; }
 }

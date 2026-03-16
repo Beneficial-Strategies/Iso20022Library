@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_DUt1SjQVEe2o-K1dwNg8Gg")]
-[Description(@"The reason why a reversal of payment is taking place in corporate action processing.")]
+[Description(
+    @"The reason why a reversal of payment is taking place in corporate action processing."
+)]
 [Derivations(typeof(CorporateActionReversalReason2Code))]
 public enum CorporateActionReversalReasonV2Code
 {
@@ -23,7 +25,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1SzQVEe2o-K1dwNg8Gg")]
     [Description(@"Difference in day count basis.")]
     DayCountBasisDifference,
-    
+
     /// <summary>
     /// Value date is incorrect.
     /// Encoded/decoded by serializers as &quot;IVAD&quot;.
@@ -32,7 +34,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1UDQVEe2o-K1dwNg8Gg")]
     [Description(@"Value date is incorrect.")]
     IncorrectValueDate,
-    
+
     /// <summary>
     /// Entitlement date is incorrect.
     /// Encoded/decoded by serializers as &quot;IRED&quot;.
@@ -41,7 +43,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1TDQVEe2o-K1dwNg8Gg")]
     [Description(@"Entitlement date is incorrect.")]
     IncorrectEntitlementDate,
-    
+
     /// <summary>
     /// Price is incorrect.
     /// Encoded/decoded by serializers as &quot;IPRI&quot;.
@@ -50,7 +52,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1TzQVEe2o-K1dwNg8Gg")]
     [Description(@"Price is incorrect.")]
     IncorrectPrice,
-    
+
     /// <summary>
     /// Payment is not due.
     /// Encoded/decoded by serializers as &quot;UPAY&quot;.
@@ -59,7 +61,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1TTQVEe2o-K1dwNg8Gg")]
     [Description(@"Payment is not due.")]
     UnduePayment,
-    
+
     /// <summary>
     /// Event level tax rate is incorrect.
     /// Encoded/decoded by serializers as &quot;IETR&quot;.
@@ -68,7 +70,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1UTQVEe2o-K1dwNg8Gg")]
     [Description(@"Event level tax rate is incorrect.")]
     IncorrectEventLevelTaxRate,
-    
+
     /// <summary>
     /// Funds have not been received.
     /// Encoded/decoded by serializers as &quot;FNRC&quot;.
@@ -77,7 +79,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1TjQVEe2o-K1dwNg8Gg")]
     [Description(@"Funds have not been received.")]
     FundsNotReceived,
-    
+
     /// <summary>
     /// Payment will occur outside of clearing system.
     /// Encoded/decoded by serializers as &quot;POCS&quot;.
@@ -86,7 +88,7 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1UjQVEe2o-K1dwNg8Gg")]
     [Description(@"Payment will occur outside of clearing system.")]
     PaymentOutsideClearingSystem,
-    
+
     /// <summary>
     /// Payment currency is incorrect.
     /// Encoded/decoded by serializers as &quot;IPCU&quot;.
@@ -95,5 +97,4 @@ public enum CorporateActionReversalReasonV2Code
     [IsoId("_DUt1UzQVEe2o-K1dwNg8Gg")]
     [Description(@"Payment currency is incorrect.")]
     IncorrectPaymentCurrency,
-    
 }

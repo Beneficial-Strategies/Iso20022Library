@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_KGtCIDcMEeO3kN9FenmyTQ")]
-[Description(@"Specifies the reason why the instruction/cancellation request has a rejected status.")]
+[Description(
+    @"Specifies the reason why the instruction/cancellation request has a rejected status."
+)]
 [DerivedFrom(typeof(RejectionReasonV2Code))]
 public enum RejectionReason42Code
 {
@@ -21,18 +23,22 @@ public enum RejectionReason42Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_54I24TcNEeO3kN9FenmyTQ")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV2Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is rejected since the provided certification is incorrect or incomplete.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
     /// </summary>
     [EnumMember(Value = "CERT")]
     [IsoId("_7HJAoTcNEeO3kN9FenmyTQ")]
-    [Description(@"Instruction is rejected since the provided certification is incorrect or incomplete.")]
+    [Description(
+        @"Instruction is rejected since the provided certification is incorrect or incomplete."
+    )]
     IncorrectCertification = RejectionReasonV2Code.IncorrectCertification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is irrevocable.
     /// Encoded/decoded by serializers as &quot;INIR&quot;.
@@ -41,7 +47,7 @@ public enum RejectionReason42Code
     [IsoId("_8AH3ETcNEeO3kN9FenmyTQ")]
     [Description(@"Instruction is irrevocable.")]
     InstructionIrrevocable = RejectionReasonV2Code.InstructionIrrevocable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// For tax reclaim, the reclaim is invalid for the tax authorities.
     /// Encoded/decoded by serializers as &quot;INVA&quot;.
@@ -50,7 +56,7 @@ public enum RejectionReason42Code
     [IsoId("_9cqtkTcNEeO3kN9FenmyTQ")]
     [Description(@"For tax reclaim, the reclaim is invalid for the tax authorities.")]
     InvalidForTaxAuthorities = RejectionReasonV2Code.InvalidForTaxAuthorities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid option type.
     /// Encoded/decoded by serializers as &quot;OPTY&quot;.
@@ -59,7 +65,7 @@ public enum RejectionReason42Code
     [IsoId("__CuscTcNEeO3kN9FenmyTQ")]
     [Description(@"Invalid option type.")]
     InvalidOptionType = RejectionReasonV2Code.InvalidOptionType, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Linked reference is unknown.
     /// Encoded/decoded by serializers as &quot;ULNK&quot;.
@@ -68,7 +74,7 @@ public enum RejectionReason42Code
     [IsoId("__vqD4TcNEeO3kN9FenmyTQ")]
     [Description(@"Linked reference is unknown.")]
     InvalidReference = RejectionReasonV2Code.InvalidReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid financial instrument identification.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
@@ -77,7 +83,7 @@ public enum RejectionReason42Code
     [IsoId("_BdwkcTcOEeO3kN9FenmyTQ")]
     [Description(@"Unrecognised or invalid financial instrument identification.")]
     InvalidSecurity = RejectionReasonV2Code.InvalidSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instructed position exceeds the eligible balance.
     /// Encoded/decoded by serializers as &quot;LACK&quot;.
@@ -86,7 +92,7 @@ public enum RejectionReason42Code
     [IsoId("_CaAxUTcOEeO3kN9FenmyTQ")]
     [Description(@"Instructed position exceeds the eligible balance.")]
     LackofSecurities = RejectionReasonV2Code.LackofSecurities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -95,7 +101,7 @@ public enum RejectionReason42Code
     [IsoId("_D6klITcOEeO3kN9FenmyTQ")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonV2Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mismatch between option number and option type.
     /// Encoded/decoded by serializers as &quot;NMTY&quot;.
@@ -104,7 +110,7 @@ public enum RejectionReason42Code
     [IsoId("_EhZ7oTcOEeO3kN9FenmyTQ")]
     [Description(@"Mismatch between option number and option type.")]
     Mismatch = RejectionReasonV2Code.Mismatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rejected due to missing beneficiary owner details.
     /// Encoded/decoded by serializers as &quot;BOIS&quot;.
@@ -113,25 +119,29 @@ public enum RejectionReason42Code
     [IsoId("_F3ioITcOEeO3kN9FenmyTQ")]
     [Description(@"Rejected due to missing beneficiary owner details.")]
     MissingBeneficiaryOwnerDetails = RejectionReasonV2Code.MissingBeneficiaryOwnerDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
     /// </summary>
     [EnumMember(Value = "CANC")]
     [IsoId("_G6y04TcOEeO3kN9FenmyTQ")]
-    [Description(@"Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required.")]
+    [Description(
+        @"Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required."
+    )]
     OptionCancelled = RejectionReasonV2Code.OptionCancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option.
     /// Encoded/decoded by serializers as &quot;INTV&quot;.
     /// </summary>
     [EnumMember(Value = "INTV")]
     [IsoId("_Hig8MTcOEeO3kN9FenmyTQ")]
-    [Description(@"Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option.")]
+    [Description(
+        @"Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option."
+    )]
     OptionInactive = RejectionReasonV2Code.OptionInactive, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised option number.
     /// Encoded/decoded by serializers as &quot;OPNM&quot;.
@@ -140,7 +150,7 @@ public enum RejectionReason42Code
     [IsoId("_IBUYETcOEeO3kN9FenmyTQ")]
     [Description(@"Unrecognised option number.")]
     OptionNumberRejection = RejectionReasonV2Code.OptionNumberRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -149,7 +159,7 @@ public enum RejectionReason42Code
     [IsoId("_Ic_AYTcOEeO3kN9FenmyTQ")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV2Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed quantity.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -158,7 +168,7 @@ public enum RejectionReason42Code
     [IsoId("_JwwVYTcOEeO3kN9FenmyTQ")]
     [Description(@"Unrecognised or invalid instructed quantity.")]
     QuantityRejection = RejectionReasonV2Code.QuantityRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reclaim is refused by the tax authorities.
     /// Encoded/decoded by serializers as &quot;REFT&quot;.
@@ -167,25 +177,29 @@ public enum RejectionReason42Code
     [IsoId("_KsaFUTcOEeO3kN9FenmyTQ")]
     [Description(@"Reclaim is refused by the tax authorities.")]
     RefusedByTaxAuthorities = RejectionReasonV2Code.RefusedByTaxAuthorities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was rejected since the instruction has already been cancelled.
     /// Encoded/decoded by serializers as &quot;DCAN&quot;.
     /// </summary>
     [EnumMember(Value = "DCAN")]
     [IsoId("_Magl4TcOEeO3kN9FenmyTQ")]
-    [Description(@"Cancellation request was rejected since the instruction has already been cancelled.")]
+    [Description(
+        @"Cancellation request was rejected since the instruction has already been cancelled."
+    )]
     RejectedSinceAlreadyCancelled = RejectionReasonV2Code.RejectedSinceAlreadyCancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request has been rejected because the instruction process is in progress or has been processed.
     /// Encoded/decoded by serializers as &quot;DPRG&quot;.
     /// </summary>
     [EnumMember(Value = "DPRG")]
     [IsoId("_M6DBkTcOEeO3kN9FenmyTQ")]
-    [Description(@"Cancellation request has been rejected because the instruction process is in progress or has been processed.")]
+    [Description(
+        @"Cancellation request has been rejected because the instruction process is in progress or has been processed."
+    )]
     RejectedSinceInProgress = RejectionReasonV2Code.RejectedSinceInProgress, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid message sender&apos;s safekeeping account.
     /// Encoded/decoded by serializers as &quot;SAFE&quot;.
@@ -194,7 +208,7 @@ public enum RejectionReason42Code
     [IsoId("_N8G7gTcOEeO3kN9FenmyTQ")]
     [Description(@"Unrecognised or invalid message sender's safekeeping account.")]
     SafekeepingAccountRejection = RejectionReasonV2Code.SafekeepingAccountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised event number.
     /// Encoded/decoded by serializers as &quot;EVNM&quot;.
@@ -203,5 +217,4 @@ public enum RejectionReason42Code
     [IsoId("_P0BfYTcOEeO3kN9FenmyTQ")]
     [Description(@"Unrecognised event number.")]
     UnrecognisedIdentification = RejectionReasonV2Code.UnrecognisedIdentification, // same ordinal as derivation source for type conversions
-    
 }

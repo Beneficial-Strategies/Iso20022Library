@@ -23,7 +23,7 @@ public enum CardDepositType1Code
     [IsoId("_6AbV0S7TEemIy6A-26wnAg")]
     [Description(@"Other Private")]
     OtherPrivate = CardDepositTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other National
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum CardDepositType1Code
     [IsoId("_6EiZwS7TEemIy6A-26wnAg")]
     [Description(@"Other National")]
     OtherNational = CardDepositTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Envelope
     /// Encoded/decoded by serializers as &quot;ENVL&quot;.
@@ -41,7 +41,7 @@ public enum CardDepositType1Code
     [IsoId("_6JHXwS7TEemIy6A-26wnAg")]
     [Description(@"Envelope")]
     Envelope = CardDepositTypeCode.Envelope, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cheque
     /// Encoded/decoded by serializers as &quot;CHEC&quot;.
@@ -50,7 +50,7 @@ public enum CardDepositType1Code
     [IsoId("_6KROUS7TEemIy6A-26wnAg")]
     [Description(@"Cheque")]
     Cheque = CardDepositTypeCode.Cheque, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -59,5 +59,4 @@ public enum CardDepositType1Code
     [IsoId("_6L8CQS7TEemIy6A-26wnAg")]
     [Description(@"Cash")]
     Cash = CardDepositTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
 }

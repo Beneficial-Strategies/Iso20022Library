@@ -23,7 +23,7 @@ public enum ConfirmationRequestCode
     [IsoId("_4Cs50AJhEeS2H9l84F_isg")]
     [Description(@"To inquire about the status of the trade confirmation.")]
     Status,
-    
+
     /// <summary>
     /// To confirm the trade.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -32,7 +32,7 @@ public enum ConfirmationRequestCode
     [IsoId("_iDFaUAKBEeS2H9l84F_isg")]
     [Description(@"To confirm the trade.")]
     Confirmation,
-    
+
     /// <summary>
     /// To reject the confirmation of the trade.
     /// Encoded/decoded by serializers as &quot;CNRR&quot;.
@@ -41,5 +41,4 @@ public enum ConfirmationRequestCode
     [IsoId("_kheIUAKBEeS2H9l84F_isg")]
     [Description(@"To reject the confirmation of the trade.")]
     ConfirmationRequestRejected,
-    
 }

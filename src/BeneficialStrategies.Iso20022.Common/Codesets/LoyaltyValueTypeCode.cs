@@ -23,7 +23,7 @@ public enum LoyaltyValueTypeCode
     [IsoId("_xDNpgF_BEee_oqB7UglxLw")]
     [Description(@"Value expressed in points.")]
     Points,
-    
+
     /// <summary>
     /// Value expressed in miles.
     /// Encoded/decoded by serializers as &quot;MILE&quot;.
@@ -32,7 +32,7 @@ public enum LoyaltyValueTypeCode
     [IsoId("_0JFOQF_BEee_oqB7UglxLw")]
     [Description(@"Value expressed in miles.")]
     Miles,
-    
+
     /// <summary>
     /// Value expressed in monetary units.
     /// Encoded/decoded by serializers as &quot;MONE&quot;.
@@ -41,7 +41,7 @@ public enum LoyaltyValueTypeCode
     [IsoId("_3WrysF_BEee_oqB7UglxLw")]
     [Description(@"Value expressed in monetary units.")]
     Monetary,
-    
+
     /// <summary>
     /// Value expressed in a private currency.
     /// Encoded/decoded by serializers as &quot;PRIV&quot;.
@@ -50,7 +50,7 @@ public enum LoyaltyValueTypeCode
     [IsoId("_8cf18F_BEee_oqB7UglxLw")]
     [Description(@"Value expressed in a private currency.")]
     PrivateCurrency,
-    
+
     /// <summary>
     /// Value expressed in any other type of loyalty value.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +59,4 @@ public enum LoyaltyValueTypeCode
     [IsoId("_BI4FgF_CEee_oqB7UglxLw")]
     [Description(@"Value expressed in any other type of loyalty value.")]
     Other,
-    
 }

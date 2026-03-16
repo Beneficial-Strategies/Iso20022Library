@@ -23,5 +23,4 @@ public enum AssetClassProductType16Code
     [IsoId("_aDo5gU7KEe2PGo0mhYCh1g")]
     [Description(@"Index type of commodities.")]
     Index = AssetClassProductTypeCode.Index, // same ordinal as derivation source for type conversions
-    
 }

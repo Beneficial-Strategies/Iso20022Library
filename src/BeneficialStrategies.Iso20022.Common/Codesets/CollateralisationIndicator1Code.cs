@@ -23,7 +23,7 @@ public enum CollateralisationIndicator1Code
     [IsoId("_At8bUS5VEeKwTrPDLMbLxA")]
     [Description(@"Transaction is fully collateralised.")]
     FullyCollateralised = CollateralisationIndicatorCode.FullyCollateralised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is one-way collateralised.
     /// Encoded/decoded by serializers as &quot;ONEW&quot;.
@@ -32,7 +32,7 @@ public enum CollateralisationIndicator1Code
     [IsoId("_Ax7jcS5VEeKwTrPDLMbLxA")]
     [Description(@"Transaction is one-way collateralised.")]
     OneWayCollateralised = CollateralisationIndicatorCode.OneWayCollateralised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is partially collateralised.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -41,7 +41,7 @@ public enum CollateralisationIndicator1Code
     [IsoId("_A2-bgS5VEeKwTrPDLMbLxA")]
     [Description(@"Transaction is partially collateralised.")]
     PartiallyCollateralised = CollateralisationIndicatorCode.PartiallyCollateralised, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is uncollateralised.
     /// Encoded/decoded by serializers as &quot;UNCO&quot;.
@@ -50,5 +50,4 @@ public enum CollateralisationIndicator1Code
     [IsoId("_A7OpYS5VEeKwTrPDLMbLxA")]
     [Description(@"Transaction is uncollateralised.")]
     Uncollateralised = CollateralisationIndicatorCode.Uncollateralised, // same ordinal as derivation source for type conversions
-    
 }

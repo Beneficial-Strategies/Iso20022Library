@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus56Choice.Rejected))]
     [KnownType(typeof(ProcessingStatus56Choice.Cancelled))]
     [KnownType(typeof(ProcessingStatus56Choice.Accepted))]
-    [JsonDerivedType(typeof(ProcessingStatus56Choice.Rejected),nameof(ProcessingStatus56Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus56Choice.Cancelled),nameof(ProcessingStatus56Choice.Cancelled))]
-    [JsonDerivedType(typeof(ProcessingStatus56Choice.Accepted),nameof(ProcessingStatus56Choice.Accepted))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus56Choice.Rejected),
+        nameof(ProcessingStatus56Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus56Choice.Cancelled),
+        nameof(ProcessingStatus56Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus56Choice.Accepted),
+        nameof(ProcessingStatus56Choice.Accepted)
+    )]
     [IsoId("_c72FMTt5EeW638lNyHKv7A")]
     [DisplayName("Processing Status 56 Choice")]
-    public abstract partial record ProcessingStatus56Choice_
-    {
-    }
+    public abstract record ProcessingStatus56Choice_ { }
 }

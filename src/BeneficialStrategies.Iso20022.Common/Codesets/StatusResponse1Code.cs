@@ -23,7 +23,7 @@ public enum StatusResponse1Code
     [IsoId("_tNlTBj2yEeGXQ7zxoAIFpQ")]
     [Description(@"Response not provided yet.")]
     NoResponseYet = StatusResponseCode.NoResponseYet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Response is partially provided.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,7 +32,7 @@ public enum StatusResponse1Code
     [IsoId("_tTP2Jj2yEeGXQ7zxoAIFpQ")]
     [Description(@"Response is partially provided.")]
     PartialResponse = StatusResponseCode.PartialResponse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Response is complete.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -41,5 +41,4 @@ public enum StatusResponse1Code
     [IsoId("_tZXFNj2yEeGXQ7zxoAIFpQ")]
     [Description(@"Response is complete.")]
     CompleteResponse = StatusResponseCode.CompleteResponse, // same ordinal as derivation source for type conversions
-    
 }

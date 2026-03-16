@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Z4sT8S4-EeunNvJlR_vCbg")]
 [DisplayName("Card Payment Data Set")]
-public partial record CardPaymentDataSet26
+public record CardPaymentDataSet26
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the data set.
     /// </summary>
     [IsoId("_aEKkIS4-EeunNvJlR_vCbg")]
     [DisplayName("Data Set Identification")]
     [IsoXmlTag("DataSetId")]
-    public required DataSetIdentification5 DataSetIdentification { get; init; } 
-    
+    public required DataSetIdentification5 DataSetIdentification { get; init; }
+
     /// <summary>
     /// Identification of partners involved in the data set building.
     /// </summary>
     [IsoId("_aEKkIy4-EeunNvJlR_vCbg")]
     [DisplayName("Traceability")]
     [IsoXmlTag("Tracblt")]
-    public Traceability8? Traceability { get; init; } 
-    
+    public Traceability8? Traceability { get; init; }
+
     /// <summary>
     /// Initiator of the data set.
     /// </summary>
     [IsoId("_aEKkJS4-EeunNvJlR_vCbg")]
     [DisplayName("Data Set Initiator")]
     [IsoXmlTag("DataSetInitr")]
-    public GenericIdentification176? DataSetInitiator { get; init; } 
-    
+    public GenericIdentification176? DataSetInitiator { get; init; }
+
     /// <summary>
     /// Transaction totals of the data set.
     /// </summary>
@@ -49,16 +47,17 @@ public partial record CardPaymentDataSet26
     [DisplayName("Transaction Totals")]
     [IsoXmlTag("TxTtls")]
     public ValueList<TransactionTotals12> TransactionTotals { get; init; } = [];
+
     // ID for the above is _aEKkJy4-EeunNvJlR_vCbg
-    
+
     /// <summary>
     /// Data common to all transactions of the data set.
     /// </summary>
     [IsoId("_aEKkKS4-EeunNvJlR_vCbg")]
     [DisplayName("Common Data")]
     [IsoXmlTag("CmonData")]
-    public CommonData10? CommonData { get; init; } 
-    
+    public CommonData10? CommonData { get; init; }
+
     /// <summary>
     /// Set of transaction to Process.
     /// </summary>
@@ -67,8 +66,4 @@ public partial record CardPaymentDataSet26
     [IsoXmlTag("Tx")]
     public ValueList<CardPaymentDataSetTransaction9Choice_> Transaction { get; init; } = [];
     // ID for the above is _aEKkKy4-EeunNvJlR_vCbg
-    
-    
-    #nullable disable
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
     /// </summary>
     [IsoId("_c8uDQFc0EeOi-M6GtW0vCQ")]
     [DisplayName("Key Identifier")]
-    public partial record KeyIdentifier : Recipient3Choice_
+    public record KeyIdentifier : Recipient3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the cryptographic key.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
         [DisplayName("Key Identification")]
         [IsoXmlTag("KeyId")]
         [IsoSimpleType(IsoSimpleType.Max140Text)]
-        [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-        public required IsoMax140Text KeyIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 140, MinimumLength = 1)]
+        public required IsoMax140Text KeyIdentification { get; init; }
+
         /// <summary>
         /// Version of the cryptographic key.
         /// </summary>
@@ -34,8 +32,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
         [DisplayName("Key Version")]
         [IsoXmlTag("KeyVrsn")]
         [IsoSimpleType(IsoSimpleType.Exact10Text)]
-        public required IsoExact10Text KeyVersion { get; init; } 
-        
+        public required IsoExact10Text KeyVersion { get; init; }
+
         /// <summary>
         /// Identification used for derivation of a unique key from a master key provided for the data protection.
         /// </summary>
@@ -43,10 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient3Choice
         [DisplayName("Derivation Identification")]
         [IsoXmlTag("DerivtnId")]
         [IsoSimpleType(IsoSimpleType.Min5Max16Binary)]
-        public IsoMin5Max16Binary? DerivationIdentification { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoMin5Max16Binary? DerivationIdentification { get; init; }
     }
 }

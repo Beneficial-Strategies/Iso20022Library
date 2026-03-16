@@ -23,7 +23,7 @@ public enum BeneficiaryTypeCode
     [IsoId("__reU0FNgEeijdq8ilaxyOA")]
     [Description(@"Beneficiary is a dependent.")]
     Dependent,
-    
+
     /// <summary>
     /// Beneficiary is a nominee.
     /// Encoded/decoded by serializers as &quot;NOMI&quot;.
@@ -32,7 +32,7 @@ public enum BeneficiaryTypeCode
     [IsoId("_GzUhQFNhEeijdq8ilaxyOA")]
     [Description(@"Beneficiary is a nominee.")]
     Nominee,
-    
+
     /// <summary>
     /// Beneficiary is a successor.
     /// Encoded/decoded by serializers as &quot;SUCC&quot;.
@@ -41,5 +41,4 @@ public enum BeneficiaryTypeCode
     [IsoId("_JziJ8FNhEeijdq8ilaxyOA")]
     [Description(@"Beneficiary is a successor.")]
     Successor,
-    
 }

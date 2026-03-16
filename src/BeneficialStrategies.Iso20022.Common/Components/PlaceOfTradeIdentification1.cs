@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xU1ak2wsEeWLq_lbZ2Mhyw")]
 [DisplayName("Place Of Trade Identification")]
-public partial record PlaceOfTradeIdentification1
+public record PlaceOfTradeIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification and type of the place of trade.
     /// </summary>
     [IsoId("_xU1alGwsEeWLq_lbZ2Mhyw")]
     [DisplayName("Market Type And Identification")]
     [IsoXmlTag("MktTpAndId")]
-    public MarketIdentification84? MarketTypeAndIdentification { get; init; } 
-    
+    public MarketIdentification84? MarketTypeAndIdentification { get; init; }
+
     /// <summary>
     /// Legal entity identification as an alternate identification for a place of trade.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record PlaceOfTradeIdentification1
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLEIIdentifier? LEI { get; init; }
 }

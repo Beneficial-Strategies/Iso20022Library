@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(IntraPositionProcessingStatus9Choice.Cancelled))]
     [KnownType(typeof(IntraPositionProcessingStatus9Choice.AcknowledgedAccepted))]
     [KnownType(typeof(IntraPositionProcessingStatus9Choice.Proprietary))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus9Choice.Rejected),nameof(IntraPositionProcessingStatus9Choice.Rejected))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus9Choice.Repair),nameof(IntraPositionProcessingStatus9Choice.Repair))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus9Choice.Cancelled),nameof(IntraPositionProcessingStatus9Choice.Cancelled))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus9Choice.AcknowledgedAccepted),nameof(IntraPositionProcessingStatus9Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(IntraPositionProcessingStatus9Choice.Proprietary),nameof(IntraPositionProcessingStatus9Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus9Choice.Rejected),
+        nameof(IntraPositionProcessingStatus9Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus9Choice.Repair),
+        nameof(IntraPositionProcessingStatus9Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus9Choice.Cancelled),
+        nameof(IntraPositionProcessingStatus9Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus9Choice.AcknowledgedAccepted),
+        nameof(IntraPositionProcessingStatus9Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(IntraPositionProcessingStatus9Choice.Proprietary),
+        nameof(IntraPositionProcessingStatus9Choice.Proprietary)
+    )]
     [IsoId("_ZJraQStUEeyhipY4f42fZQ")]
     [DisplayName("Intra Position Processing Status 9 Choice")]
-    public abstract partial record IntraPositionProcessingStatus9Choice_
-    {
-    }
+    public abstract record IntraPositionProcessingStatus9Choice_ { }
 }

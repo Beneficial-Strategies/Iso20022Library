@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_cP0N0CVNEeWI0orciOKunQ")]
 [Description(@"Specifies the function of the transfer in.")]
-[Derivations(typeof(TransferInFunction1Code),typeof(TransferInFunction2Code))]
+[Derivations(typeof(TransferInFunction1Code), typeof(TransferInFunction2Code))]
 public enum TransferInFunctionCode
 {
     /// <summary>
@@ -21,9 +21,11 @@ public enum TransferInFunctionCode
     /// </summary>
     [EnumMember(Value = "ADRE")]
     [IsoId("_kBA5QCVNEeWI0orciOKunQ")]
-    [Description(@"The transfer-in is an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer.")]
+    [Description(
+        @"The transfer-in is an advice and request, that is, the message is used to inform the receiver to expect an unsolicited transfer in confirmation and to request account information for the transfer."
+    )]
     AdviceAndRequest,
-    
+
     /// <summary>
     /// The transfer-in is an instruction.
     /// Encoded/decoded by serializers as &quot;INST&quot;.
@@ -32,7 +34,7 @@ public enum TransferInFunctionCode
     [IsoId("_Fq0hcCVOEeWI0orciOKunQ")]
     [Description(@"The transfer-in is an instruction.")]
     Instruction,
-    
+
     /// <summary>
     /// The transfer-in provides advice about account information for a transfer.
     /// Encoded/decoded by serializers as &quot;ADVI&quot;.
@@ -41,7 +43,7 @@ public enum TransferInFunctionCode
     [IsoId("_KOaocCVOEeWI0orciOKunQ")]
     [Description(@"The transfer-in provides advice about account information for a transfer.")]
     Advice,
-    
+
     /// <summary>
     /// The transfer-in is a confirmation (rather than an advice).
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -50,5 +52,4 @@ public enum TransferInFunctionCode
     [IsoId("_X8MAACVOEeWI0orciOKunQ")]
     [Description(@"The transfer-in is a confirmation (rather than an advice).")]
     Confirmation,
-    
 }

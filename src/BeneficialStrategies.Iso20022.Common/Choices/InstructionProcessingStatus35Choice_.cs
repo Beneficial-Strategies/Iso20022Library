@@ -17,17 +17,39 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstructionProcessingStatus35Choice.Repair))]
     [KnownType(typeof(InstructionProcessingStatus35Choice.PendingCancellation))]
     [KnownType(typeof(InstructionProcessingStatus35Choice.ModificationRequested))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.PendingProcessing),nameof(InstructionProcessingStatus35Choice.PendingProcessing))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.CancellationRequested),nameof(InstructionProcessingStatus35Choice.CancellationRequested))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.AcknowledgedAccepted),nameof(InstructionProcessingStatus35Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.Cancelled),nameof(InstructionProcessingStatus35Choice.Cancelled))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.Generated),nameof(InstructionProcessingStatus35Choice.Generated))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.Repair),nameof(InstructionProcessingStatus35Choice.Repair))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.PendingCancellation),nameof(InstructionProcessingStatus35Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(InstructionProcessingStatus35Choice.ModificationRequested),nameof(InstructionProcessingStatus35Choice.ModificationRequested))]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.PendingProcessing),
+        nameof(InstructionProcessingStatus35Choice.PendingProcessing)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.CancellationRequested),
+        nameof(InstructionProcessingStatus35Choice.CancellationRequested)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.AcknowledgedAccepted),
+        nameof(InstructionProcessingStatus35Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.Cancelled),
+        nameof(InstructionProcessingStatus35Choice.Cancelled)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.Generated),
+        nameof(InstructionProcessingStatus35Choice.Generated)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.Repair),
+        nameof(InstructionProcessingStatus35Choice.Repair)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.PendingCancellation),
+        nameof(InstructionProcessingStatus35Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionProcessingStatus35Choice.ModificationRequested),
+        nameof(InstructionProcessingStatus35Choice.ModificationRequested)
+    )]
     [IsoId("_iE4Oe_fZEeiNZp_PtLohLw")]
     [DisplayName("Instruction Processing Status 35 Choice")]
-    public abstract partial record InstructionProcessingStatus35Choice_
-    {
-    }
+    public abstract record InstructionProcessingStatus35Choice_ { }
 }

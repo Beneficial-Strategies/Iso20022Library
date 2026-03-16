@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PriceValueType5FormatChoice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.PriceValueType5FormatChoice
     /// </summary>
     [IsoId("_RnAYF9p-Ed-ak6NoX_4Aeg_-121428172")]
     [DisplayName("Code")]
-    public partial record Code : PriceValueType5FormatChoice_
+    public record Code : PriceValueType5FormatChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the value of a price.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required PriceValueType5Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PriceValueType5Code Value { get; init; }
     }
 }

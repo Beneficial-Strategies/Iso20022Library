@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.caaa;
 
@@ -19,70 +17,63 @@ namespace BeneficialStrategies.Iso20022.caaa;
 /// There are significant differences between different variants of the same message. It is crucial that you select exactly the implementation you intend to send or receive.
 /// The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.
 /// </summary>
-[Description(@"The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment.")]
+[Description(
+    @"The AcceptorDiagnosticRequest message is sent by an acceptor (or its agent) to the acquirer (or its agent), to check the end-to-end communication, to test the availability of this acquirer, or to validate the security environment."
+)]
 [IsoId("_nWbGATTaEeO5e9wx3yvd8g")]
 [DisplayName("Acceptor Diagnostic Request V")]
-public partial record AcceptorDiagnosticRequestV03 : IOuterRecord
+public record AcceptorDiagnosticRequestV03 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "caaa.013.001.03";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "AccptrDgnstcReq";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:caaa.013.001.03";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Diagnostic request message management information.
     /// </summary>
     [IsoId("_nWbGAzTaEeO5e9wx3yvd8g")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public required Header7 Header { get; init; } 
-    
+    public required Header7 Header { get; init; }
+
     /// <summary>
     /// Information related to the diagnostic request.
     /// </summary>
     [IsoId("_nWbGBTTaEeO5e9wx3yvd8g")]
     [DisplayName("Diagnostic Request")]
     [IsoXmlTag("DgnstcReq")]
-    public required AcceptorDiagnosticRequest3 DiagnosticRequest { get; init; } 
-    
+    public required AcceptorDiagnosticRequest3 DiagnosticRequest { get; init; }
+
     /// <summary>
     /// Trailer of the message containing a MAC.
     /// </summary>
     [IsoId("_nWbGBzTaEeO5e9wx3yvd8g")]
     [DisplayName("Security Trailer")]
     [IsoXmlTag("SctyTrlr")]
-    public required ContentInformationType8 SecurityTrailer { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ContentInformationType8 SecurityTrailer { get; init; }
 }
 
-
-// Since AcceptorDiagnosticRequestV03Document is not really part of the logical business domain model, 
+// Since AcceptorDiagnosticRequestV03Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to AcceptorDiagnosticRequestV03.
-

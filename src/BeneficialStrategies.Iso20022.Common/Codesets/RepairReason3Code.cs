@@ -23,5 +23,4 @@ public enum RepairReason3Code
     [IsoId("_Zt3Kdtp-Ed-ak6NoX_4Aeg_1265326437")]
     [Description(@"Unrecognised or invalid settlement date.")]
     SettlementDate = RepairReasonCode.SettlementDate, // same ordinal as derivation source for type conversions
-    
 }

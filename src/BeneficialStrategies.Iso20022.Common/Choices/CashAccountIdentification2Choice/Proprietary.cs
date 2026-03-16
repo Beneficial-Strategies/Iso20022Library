@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification2Choice
 {
     /// <summary>
@@ -13,21 +13,15 @@ namespace BeneficialStrategies.Iso20022.Choices.CashAccountIdentification2Choice
     /// </summary>
     [IsoId("_Pd6kotp-Ed-ak6NoX_4Aeg_326739645")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : CashAccountIdentification2Choice_
+    public record Proprietary : CashAccountIdentification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies a character string with a maximum length of 34 characters.
         /// </summary>
         [IsoXmlTag("Prtry")]
         [IsoSimpleType(IsoSimpleType.Max34Text)]
-        [StringLength(maximumLength: 34 ,MinimumLength = 1)]
-        public required IsoMax34Text Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 34, MinimumLength = 1)]
+        public required IsoMax34Text Value { get; init; }
     }
 }

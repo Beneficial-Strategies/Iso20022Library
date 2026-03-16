@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_YSPLwcVVEeuPIIgba4mCug")]
 [DisplayName("Verification")]
-public partial record Verification5
+public record Verification5
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of authentication or verification.
     /// </summary>
     [IsoId("_YYHKQcVVEeuPIIgba4mCug")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public ExternalAuthenticationMethod1Code? Type { get; init; } 
-    
+    public ExternalAuthenticationMethod1Code? Type { get; init; }
+
     /// <summary>
     /// Other type of authentication or verification.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record Verification5
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
     /// Type of authentication for a given method (for example, three domain authentication, scheme proprietary solution, type of cryptogram, etc.).
     /// </summary>
@@ -43,17 +41,17 @@ public partial record Verification5
     [DisplayName("Sub Type")]
     [IsoXmlTag("SubTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SubType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SubType { get; init; }
+
     /// <summary>
     /// Contains verification or authentication data.
     /// </summary>
     [IsoId("_YYHKR8VVEeuPIIgba4mCug")]
     [DisplayName("Verification Information")]
     [IsoXmlTag("VrfctnInf")]
-    public VerificationInformation1? VerificationInformation { get; init; } 
-    
+    public VerificationInformation1? VerificationInformation { get; init; }
+
     /// <summary>
     /// Result of verifications performed prior or after the transaction.
     /// ISO 8583:93 bit 39
@@ -62,9 +60,5 @@ public partial record Verification5
     [IsoId("_YYHKScVVEeuPIIgba4mCug")]
     [DisplayName("Verification Result")]
     [IsoXmlTag("VrfctnRslt")]
-    public VerificationResult2? VerificationResult { get; init; } 
-    
-    
-    #nullable disable
-    
+    public VerificationResult2? VerificationResult { get; init; }
 }

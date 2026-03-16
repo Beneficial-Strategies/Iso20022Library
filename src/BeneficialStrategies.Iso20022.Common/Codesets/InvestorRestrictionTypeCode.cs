@@ -23,7 +23,7 @@ public enum InvestorRestrictionTypeCode
     [IsoId("_adQAA9p-Ed-ak6NoX_4Aeg_1438807698")]
     [Description(@"Restriction applies to a legal resident.")]
     LegalResident,
-    
+
     /// <summary>
     /// Restriction applies to a citizen.
     /// Encoded/decoded by serializers as &quot;CITI&quot;.
@@ -32,7 +32,7 @@ public enum InvestorRestrictionTypeCode
     [IsoId("_adQABNp-Ed-ak6NoX_4Aeg_1439730879")]
     [Description(@"Restriction applies to a citizen.")]
     Citizen,
-    
+
     /// <summary>
     /// Restriction applies to an individual.
     /// Encoded/decoded by serializers as &quot;INDV&quot;.
@@ -41,5 +41,4 @@ public enum InvestorRestrictionTypeCode
     [IsoId("_adQABdp-Ed-ak6NoX_4Aeg_1441575812")]
     [Description(@"Restriction applies to an individual.")]
     Individual,
-    
 }

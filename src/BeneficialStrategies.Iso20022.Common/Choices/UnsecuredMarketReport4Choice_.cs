@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnsecuredMarketReport4Choice.DataSetAction))]
     [KnownType(typeof(UnsecuredMarketReport4Choice.Transaction))]
-    [JsonDerivedType(typeof(UnsecuredMarketReport4Choice.DataSetAction),nameof(UnsecuredMarketReport4Choice.DataSetAction))]
-    [JsonDerivedType(typeof(UnsecuredMarketReport4Choice.Transaction),nameof(UnsecuredMarketReport4Choice.Transaction))]
+    [JsonDerivedType(
+        typeof(UnsecuredMarketReport4Choice.DataSetAction),
+        nameof(UnsecuredMarketReport4Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(UnsecuredMarketReport4Choice.Transaction),
+        nameof(UnsecuredMarketReport4Choice.Transaction)
+    )]
     [IsoId("_G-P9i8EREea7jLfvGi1PDw")]
     [DisplayName("Unsecured Market Report 4 Choice")]
-    public abstract partial record UnsecuredMarketReport4Choice_
-    {
-    }
+    public abstract record UnsecuredMarketReport4Choice_ { }
 }

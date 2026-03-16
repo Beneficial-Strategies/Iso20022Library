@@ -23,7 +23,7 @@ public enum TradeFinanceServiceCode
     [IsoId("_YmyNodp-Ed-ak6NoX_4Aeg_274027739")]
     [Description(@"Code for purchase order services.")]
     PurchaseOrderServices,
-    
+
     /// <summary>
     /// Code for level 1 services.
     /// Encoded/decoded by serializers as &quot;LEV1&quot;.
@@ -32,7 +32,7 @@ public enum TradeFinanceServiceCode
     [IsoId("_YmyNotp-Ed-ak6NoX_4Aeg_-1329776224")]
     [Description(@"Code for level 1 services.")]
     Level1Services,
-    
+
     /// <summary>
     /// Code for level 2 services.
     /// Encoded/decoded by serializers as &quot;LEV2&quot;.
@@ -41,7 +41,7 @@ public enum TradeFinanceServiceCode
     [IsoId("_YmyNo9p-Ed-ak6NoX_4Aeg_-1329775933")]
     [Description(@"Code for level 2 services.")]
     Level2Services,
-    
+
     /// <summary>
     /// Code for level 3 services.
     /// Encoded/decoded by serializers as &quot;LEV3&quot;.
@@ -50,5 +50,4 @@ public enum TradeFinanceServiceCode
     [IsoId("_YmyNpNp-Ed-ak6NoX_4Aeg_-1329775916")]
     [Description(@"Code for level 3 services.")]
     Level3Services,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType31Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType31Choice
     /// </summary>
     [IsoId("_ctaYC5KQEeWHWpTQn1FFVg")]
     [DisplayName("Proprietary")]
-    public partial record Proprietary : FractionDispositionType31Choice_
+    public record Proprietary : FractionDispositionType31Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType31Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Identification { get; init; } 
-        
+        public required IsoExact4AlphaNumericText Identification { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -33,9 +31,9 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType31Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public required IsoMax4AlphaNumericText Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public required IsoMax4AlphaNumericText Issuer { get; init; }
+
         /// <summary>
         /// Short textual description of the scheme.
         /// </summary>
@@ -43,11 +41,7 @@ namespace BeneficialStrategies.Iso20022.Choices.FractionDispositionType31Choice
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public IsoMax4AlphaNumericText? SchemeName { get; init; }
     }
 }

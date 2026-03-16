@@ -23,7 +23,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySMTAXEeOqioR9srQH1g")]
     [Description(@"Aggregation of low payments.")]
     Aggregation = CardPaymentServiceTypeCode.Aggregation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dynamic currency conversion (DCC).
     /// Encoded/decoded by serializers as &quot;DCCV&quot;.
@@ -32,7 +32,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySMzAXEeOqioR9srQH1g")]
     [Description(@"Dynamic currency conversion (DCC).")]
     DCC = CardPaymentServiceTypeCode.DCC, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card payment with gratuity.
     /// Encoded/decoded by serializers as &quot;GRTT&quot;.
@@ -41,7 +41,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySNTAXEeOqioR9srQH1g")]
     [Description(@"Card payment with gratuity.")]
     Gratuity = CardPaymentServiceTypeCode.Gratuity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Loyalty services.
     /// Encoded/decoded by serializers as &quot;LOYT&quot;.
@@ -50,7 +50,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySOTAXEeOqioR9srQH1g")]
     [Description(@"Loyalty services.")]
     Loyalty = CardPaymentServiceTypeCode.Loyalty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No show after reservation.
     /// Encoded/decoded by serializers as &quot;NRES&quot;.
@@ -59,7 +59,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySOzAXEeOqioR9srQH1g")]
     [Description(@"No show after reservation.")]
     NoShow = CardPaymentServiceTypeCode.NoShow, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Purchase and corporate data.
     /// Encoded/decoded by serializers as &quot;PUCO&quot;.
@@ -68,7 +68,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySPTAXEeOqioR9srQH1g")]
     [Description(@"Purchase and corporate data.")]
     PurchaseCorporate = CardPaymentServiceTypeCode.PurchaseCorporate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Recurring payment.
     /// Encoded/decoded by serializers as &quot;RECP&quot;.
@@ -77,7 +77,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySPzAXEeOqioR9srQH1g")]
     [Description(@"Recurring payment.")]
     RecurringPayment = CardPaymentServiceTypeCode.RecurringPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Solicited available funds.
     /// Encoded/decoded by serializers as &quot;SOAF&quot;.
@@ -86,7 +86,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySQTAXEeOqioR9srQH1g")]
     [Description(@"Solicited available funds.")]
     SolicitedAvailableFunds = CardPaymentServiceTypeCode.SolicitedAvailableFunds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Voice authorisation.
     /// Encoded/decoded by serializers as &quot;VCAU&quot;.
@@ -95,7 +95,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_DwySRTAXEeOqioR9srQH1g")]
     [Description(@"Voice authorisation.")]
     VoiceAuthorisation = CardPaymentServiceTypeCode.VoiceAuthorisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instalment payment transaction performed by the card issuer.
     /// Encoded/decoded by serializers as &quot;INSI&quot;.
@@ -104,7 +104,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_HS68MTAXEeOqioR9srQH1g")]
     [Description(@"Instalment payment transaction performed by the card issuer.")]
     IssuerInstalment = CardPaymentServiceTypeCode.IssuerInstalment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instalment payment transaction performed by the acceptor or the acquirer.
     /// Encoded/decoded by serializers as &quot;INSA&quot;.
@@ -113,7 +113,7 @@ public enum CardPaymentServiceType6Code
     [IsoId("_Hvx3UzAXEeOqioR9srQH1g")]
     [Description(@"Instalment payment transaction performed by the acceptor or the acquirer.")]
     AcceptorInstalment = CardPaymentServiceTypeCode.AcceptorInstalment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card payment with cash-back.
     /// Encoded/decoded by serializers as &quot;CSHB&quot;.
@@ -122,5 +122,4 @@ public enum CardPaymentServiceType6Code
     [IsoId("_Yf8poUuGEeOC3MFxIpMwug")]
     [Description(@"Card payment with cash-back.")]
     CashBack = CardPaymentServiceTypeCode.CashBack, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum PreAllocationMethod1Code
     [IsoId("_aH73Vtp-Ed-ak6NoX_4Aeg_1246774126")]
     [Description(@"Preallocation is proratised.")]
     Prorata = PreAllocationMethodCode.Prorata, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No prorata, discuss first.
     /// Encoded/decoded by serializers as &quot;TALK&quot;.
@@ -32,5 +32,4 @@ public enum PreAllocationMethod1Code
     [IsoId("_aH73V9p-Ed-ak6NoX_4Aeg_1246774161")]
     [Description(@"No prorata, discuss first.")]
     SpeakFirst = PreAllocationMethodCode.SpeakFirst, // same ordinal as derivation source for type conversions
-    
 }

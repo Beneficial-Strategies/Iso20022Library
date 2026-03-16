@@ -22,6 +22,6 @@ public enum AccountStatusUpdateRequestReason1Code
     [EnumMember(Value = "CLOE")]
     [IsoId("_cw_7YXjAEeaRm5xIK6nGuQ")]
     [Description(@"Previous account closure instruction was sent in error.")]
-    AccountClosureInstructionError = AccountStatusUpdateRequestReasonCode.AccountClosureInstructionError, // same ordinal as derivation source for type conversions
-    
+    AccountClosureInstructionError =
+        AccountStatusUpdateRequestReasonCode.AccountClosureInstructionError, // same ordinal as derivation source for type conversions
 }

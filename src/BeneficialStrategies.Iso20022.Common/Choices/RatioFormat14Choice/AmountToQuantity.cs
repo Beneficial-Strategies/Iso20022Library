@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
     /// </summary>
     [IsoId("_ffvb7AgYEeCVlvYcV4HKqQ")]
     [DisplayName("Amount To Quantity")]
-    public partial record AmountToQuantity : RatioFormat14Choice_
+    public record AmountToQuantity : RatioFormat14Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Cash amount.
         /// </summary>
         [IsoId("_WPFWdNp-Ed-ak6NoX_4Aeg_-1390119931")]
         [DisplayName("Amount")]
         [IsoXmlTag("Amt")]
-        public required RestrictedFINActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-        
+        public required RestrictedFINActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
         /// <summary>
         /// Quantity expressed as number.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Quantity { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoRestrictedFINDecimalNumber Quantity { get; init; }
     }
 }

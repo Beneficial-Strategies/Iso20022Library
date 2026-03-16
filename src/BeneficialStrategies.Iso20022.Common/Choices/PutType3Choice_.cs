@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PutType3Choice.Code))]
     [KnownType(typeof(PutType3Choice.Proprietary))]
-    [JsonDerivedType(typeof(PutType3Choice.Code),nameof(PutType3Choice.Code))]
-    [JsonDerivedType(typeof(PutType3Choice.Proprietary),nameof(PutType3Choice.Proprietary))]
+    [JsonDerivedType(typeof(PutType3Choice.Code), nameof(PutType3Choice.Code))]
+    [JsonDerivedType(typeof(PutType3Choice.Proprietary), nameof(PutType3Choice.Proprietary))]
     [IsoId("_bj1s8eLcEeWFtOV72FbX9w")]
     [DisplayName("Put Type 3 Choice")]
-    public abstract partial record PutType3Choice_
-    {
-    }
+    public abstract record PutType3Choice_ { }
 }

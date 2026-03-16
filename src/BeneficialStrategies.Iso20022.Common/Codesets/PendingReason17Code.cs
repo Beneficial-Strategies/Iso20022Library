@@ -23,5 +23,4 @@ public enum PendingReason17Code
     [IsoId("_Es9YUeBkEeiVRbNQx5-Vhg")]
     [Description(@"Awaiting confirmation from the counterparty.")]
     AwaitingConfirmation = PendingFailingReasonCode.AwaitingConfirmation, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_zQRzsb5YEeexmbB7KsjCwA")]
 [DisplayName("Optional Dividend Account Quantity SD")]
-public partial record OptionalDividendAccountQuantitySD3
+public record OptionalDividendAccountQuantitySD3
 {
-    #nullable enable
-    
     /// <summary>
     /// Xpath to the element that is being extended.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record OptionalDividendAccountQuantitySD3
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? PlaceAndName { get; init; }
+
     /// <summary>
     /// Beneficial owner quantity to be paid.
     /// </summary>
     [IsoId("_zgpK875YEeexmbB7KsjCwA")]
     [DisplayName("Beneficial Owner Quantity")]
     [IsoXmlTag("BnfclOwnrQty")]
-    public required FinancialInstrumentQuantity15Choice_ BeneficialOwnerQuantity { get; init; } 
-    
+    public required FinancialInstrumentQuantity15Choice_ BeneficialOwnerQuantity { get; init; }
+
     /// <summary>
     /// Number of accounts for which the beneficial quantity is elected.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record OptionalDividendAccountQuantitySD3
     [DisplayName("Number Of Accounts")]
     [IsoXmlTag("NbOfAccts")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText NumberOfAccounts { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax15NumericText NumberOfAccounts { get; init; }
 }

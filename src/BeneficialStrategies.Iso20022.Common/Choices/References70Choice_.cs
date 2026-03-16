@@ -10,12 +10,18 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// Reference to the linked transaction.
     /// </summary>
     [KnownType(typeof(References70Choice.ClientCollateralInstructionIdentification))]
-    [KnownType(typeof(References70Choice.TripartyAgentServiceProviderCollateralInstructionIdentification))]
-    [JsonDerivedType(typeof(References70Choice.ClientCollateralInstructionIdentification),nameof(References70Choice.ClientCollateralInstructionIdentification))]
-    [JsonDerivedType(typeof(References70Choice.TripartyAgentServiceProviderCollateralInstructionIdentification),nameof(References70Choice.TripartyAgentServiceProviderCollateralInstructionIdentification))]
+    [KnownType(
+        typeof(References70Choice.TripartyAgentServiceProviderCollateralInstructionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References70Choice.ClientCollateralInstructionIdentification),
+        nameof(References70Choice.ClientCollateralInstructionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References70Choice.TripartyAgentServiceProviderCollateralInstructionIdentification),
+        nameof(References70Choice.TripartyAgentServiceProviderCollateralInstructionIdentification)
+    )]
     [IsoId("_21pbMFSLEemTt7251YwCKw")]
     [DisplayName("References 70 Choice")]
-    public abstract partial record References70Choice_
-    {
-    }
+    public abstract record References70Choice_ { }
 }

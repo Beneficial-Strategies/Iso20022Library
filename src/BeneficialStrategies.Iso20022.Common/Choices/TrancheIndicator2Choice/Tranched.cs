@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice
     /// </summary>
     [IsoId("_52td0byOEeaUov4jN5X9Qw")]
     [DisplayName("Tranched")]
-    public partial record Tranched : TrancheIndicator2Choice_
+    public record Tranched : TrancheIndicator2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Indicates the point at which losses in the pool will attach to a particular tranche.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice
         [DisplayName("Attachment Point")]
         [IsoXmlTag("AttchmntPt")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? AttachmentPoint { get; init; } 
-        
+        public IsoBaseOneRate? AttachmentPoint { get; init; }
+
         /// <summary>
         /// Indicates the point beyond which losses do not affect the particular tranche.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.TrancheIndicator2Choice
         [DisplayName("Detachment Point")]
         [IsoXmlTag("DtchmntPt")]
         [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-        public IsoBaseOneRate? DetachmentPoint { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoBaseOneRate? DetachmentPoint { get; init; }
     }
 }

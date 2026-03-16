@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TerminationDate6Choice.Date))]
     [KnownType(typeof(TerminationDate6Choice.Code))]
-    [JsonDerivedType(typeof(TerminationDate6Choice.Date),nameof(TerminationDate6Choice.Date))]
-    [JsonDerivedType(typeof(TerminationDate6Choice.Code),nameof(TerminationDate6Choice.Code))]
+    [JsonDerivedType(typeof(TerminationDate6Choice.Date), nameof(TerminationDate6Choice.Date))]
+    [JsonDerivedType(typeof(TerminationDate6Choice.Code), nameof(TerminationDate6Choice.Code))]
     [IsoId("_hE2NAbPvEeelzbgsFa3sqQ")]
     [DisplayName("Termination Date 6 Choice")]
-    public abstract partial record TerminationDate6Choice_
-    {
-    }
+    public abstract record TerminationDate6Choice_ { }
 }

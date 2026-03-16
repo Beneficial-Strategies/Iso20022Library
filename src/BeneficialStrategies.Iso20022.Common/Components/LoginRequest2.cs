@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Mn8iYQ0yEeqUVL7sB4m7NA")]
 [DisplayName("Login Request")]
-public partial record LoginRequest2
+public record LoginRequest2
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and Time of Login.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record LoginRequest2
     [DisplayName("Login Date Time")]
     [IsoXmlTag("LgnDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime LoginDateTime { get; init; } 
-    
+    public required IsoISODateTime LoginDateTime { get; init; }
+
     /// <summary>
     /// Information related to the software of the Sale System which manages the Sale to POI protocol.
     /// </summary>
@@ -34,16 +32,17 @@ public partial record LoginRequest2
     [DisplayName("Sale Software")]
     [IsoXmlTag("SaleSftwr")]
     public ValueList<PointOfInteractionComponent10> SaleSoftware { get; init; } = [];
+
     // ID for the above is _M0LAgw0yEeqUVL7sB4m7NA
-    
+
     /// <summary>
     /// Information related to the software and hardware feature of the Sale Terminal.
     /// </summary>
     [IsoId("_M0LAhQ0yEeqUVL7sB4m7NA")]
     [DisplayName("Sale Terminal Data")]
     [IsoXmlTag("SaleTermnlData")]
-    public SaleTerminalData1? SaleTerminalData { get; init; } 
-    
+    public SaleTerminalData1? SaleTerminalData { get; init; }
+
     /// <summary>
     /// Training mode.
     /// </summary>
@@ -51,8 +50,8 @@ public partial record LoginRequest2
     [DisplayName("Training Mode Flag")]
     [IsoXmlTag("TrngMdFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TrainingModeFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? TrainingModeFlag { get; init; }
+
     /// <summary>
     /// Identification of the cashier.
     /// </summary>
@@ -60,17 +59,17 @@ public partial record LoginRequest2
     [DisplayName("Cashier Identification")]
     [IsoXmlTag("CshrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CashierIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CashierIdentification { get; init; }
+
     /// <summary>
     /// Language of the cashier.
     /// </summary>
     [IsoId("_M0LAiw0yEeqUVL7sB4m7NA")]
     [DisplayName("Cashier Language")]
     [IsoXmlTag("CshrLang")]
-    public required LanguageCode CashierLanguage { get; init; } 
-    
+    public required LanguageCode CashierLanguage { get; init; }
+
     /// <summary>
     /// Shift number of the cashier.
     /// </summary>
@@ -78,32 +77,32 @@ public partial record LoginRequest2
     [DisplayName("Shift Number")]
     [IsoXmlTag("ShftNb")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? ShiftNumber { get; init; } 
-    
+    public IsoMax2NumericText? ShiftNumber { get; init; }
+
     /// <summary>
     /// Type of token replacing the PAN of a payment card to identify the payment mean of the customer.
     /// </summary>
     [IsoId("_M0LAjw0yEeqUVL7sB4m7NA")]
     [DisplayName("Token Requested Type")]
     [IsoXmlTag("TknReqdTp")]
-    public SaleTokenScope1Code? TokenRequestedType { get; init; } 
-    
+    public SaleTokenScope1Code? TokenRequestedType { get; init; }
+
     /// <summary>
     /// Type of customer orders that must be sent in response message.
     /// </summary>
     [IsoId("_M0LAkQ0yEeqUVL7sB4m7NA")]
     [DisplayName("Customer Order Request")]
     [IsoXmlTag("CstmrOrdrReq")]
-    public CustomerOrderRequest1Code? CustomerOrderRequest { get; init; } 
-    
+    public CustomerOrderRequest1Code? CustomerOrderRequest { get; init; }
+
     /// <summary>
     /// POI Terminal identification.
     /// </summary>
     [IsoId("_M0LAkw0yEeqUVL7sB4m7NA")]
     [DisplayName("POI Identification")]
     [IsoXmlTag("POIId")]
-    public PointOfInteractionComponentIdentification1? POIIdentification { get; init; } 
-    
+    public PointOfInteractionComponentIdentification1? POIIdentification { get; init; }
+
     /// <summary>
     /// Default group identification for transaction consolidation (Totals).
     /// </summary>
@@ -111,18 +110,14 @@ public partial record LoginRequest2
     [DisplayName("Totals Group Identification")]
     [IsoXmlTag("TtlsGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TotalsGroupIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TotalsGroupIdentification { get; init; }
+
     /// <summary>
     /// Message to be displayed.
     /// </summary>
     [IsoId("_ePH0cA0yEeqUVL7sB4m7NA")]
     [DisplayName("Output Display")]
     [IsoXmlTag("OutptDisp")]
-    public ActionMessage7? OutputDisplay { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActionMessage7? OutputDisplay { get; init; }
 }

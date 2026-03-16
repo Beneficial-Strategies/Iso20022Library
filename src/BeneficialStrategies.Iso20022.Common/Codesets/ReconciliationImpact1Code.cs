@@ -23,7 +23,7 @@ public enum ReconciliationImpact1Code
     [IsoId("__1Z-cS7OEemIy6A-26wnAg")]
     [Description(@"Debit category")]
     Debit = ReconciliationImpactCode.Debit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Credit category
     /// Encoded/decoded by serializers as &quot;CRDT&quot;.
@@ -32,5 +32,4 @@ public enum ReconciliationImpact1Code
     [IsoId("__5E9gS7OEemIy6A-26wnAg")]
     [Description(@"Credit category")]
     Credit = ReconciliationImpactCode.Credit, // same ordinal as derivation source for type conversions
-    
 }

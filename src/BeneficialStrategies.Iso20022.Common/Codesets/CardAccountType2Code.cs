@@ -23,7 +23,7 @@ public enum CardAccountType2Code
     [IsoId("_4Q354WkFEeS7zPBpvm732w")]
     [Description(@"Certificate of deposit saving account.")]
     CertificateOfDeposit = CardAccountTypeCode.CertificateOfDeposit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Checking account.
     /// Encoded/decoded by serializers as &quot;CHCK&quot;.
@@ -32,7 +32,7 @@ public enum CardAccountType2Code
     [IsoId("_4WziwWkFEeS7zPBpvm732w")]
     [Description(@"Checking account.")]
     Checking = CardAccountTypeCode.Checking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Credit card account.
     /// Encoded/decoded by serializers as &quot;CRDT&quot;.
@@ -41,7 +41,7 @@ public enum CardAccountType2Code
     [IsoId("_4dNswWkFEeS7zPBpvm732w")]
     [Description(@"Credit card account.")]
     CreditCard = CardAccountTypeCode.CreditCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Current account.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -50,7 +50,7 @@ public enum CardAccountType2Code
     [IsoId("_4kKpUWkFEeS7zPBpvm732w")]
     [Description(@"Current account.")]
     Current = CardAccountTypeCode.Current, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Debit card account.
     /// Encoded/decoded by serializers as &quot;CDBT&quot;.
@@ -59,7 +59,7 @@ public enum CardAccountType2Code
     [IsoId("_4uAh0WkFEeS7zPBpvm732w")]
     [Description(@"Debit card account.")]
     DebitCard = CardAccountTypeCode.DebitCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Default account.
     /// Encoded/decoded by serializers as &quot;DFLT&quot;.
@@ -68,7 +68,7 @@ public enum CardAccountType2Code
     [IsoId("_41VR0WkFEeS7zPBpvm732w")]
     [Description(@"Default account.")]
     Default = CardAccountTypeCode.Default, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Electronic purse card account.
     /// Encoded/decoded by serializers as &quot;EPRS&quot;.
@@ -77,7 +77,7 @@ public enum CardAccountType2Code
     [IsoId("_48Mu0WkFEeS7zPBpvm732w")]
     [Description(@"Electronic purse card account.")]
     EpurseCard = CardAccountTypeCode.EpurseCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Home equity loan credit account.
     /// Encoded/decoded by serializers as &quot;HEQL&quot;.
@@ -86,7 +86,7 @@ public enum CardAccountType2Code
     [IsoId("_6KsiQWkFEeS7zPBpvm732w")]
     [Description(@"Home equity loan credit account.")]
     HomeEquityLoan = CardAccountTypeCode.HomeEquityLoan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instalment loan credit account.
     /// Encoded/decoded by serializers as &quot;ISTL&quot;.
@@ -95,7 +95,7 @@ public enum CardAccountType2Code
     [IsoId("_6QpZQWkFEeS7zPBpvm732w")]
     [Description(@"Instalment loan credit account.")]
     InstalmentLoan = CardAccountTypeCode.InstalmentLoan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment account.
     /// Encoded/decoded by serializers as &quot;INVS&quot;.
@@ -104,7 +104,7 @@ public enum CardAccountType2Code
     [IsoId("_6X0_UWkFEeS7zPBpvm732w")]
     [Description(@"Investment account.")]
     Investment = CardAccountTypeCode.Investment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Line of credit account.
     /// Encoded/decoded by serializers as &quot;LCDT&quot;.
@@ -113,7 +113,7 @@ public enum CardAccountType2Code
     [IsoId("_6hvJQWkFEeS7zPBpvm732w")]
     [Description(@"Line of credit account.")]
     LineOfCredit = CardAccountTypeCode.LineOfCredit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mobile Station Integrated Services Digital Network Number (MSISDN).
     /// Encoded/decoded by serializers as &quot;MBNW&quot;.
@@ -122,7 +122,7 @@ public enum CardAccountType2Code
     [IsoId("_6tftUWkFEeS7zPBpvm732w")]
     [Description(@"Mobile Station Integrated Services Digital Network Number (MSISDN).")]
     MobilePhoneAccount = CardAccountTypeCode.MobilePhoneAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Money market saving account.
     /// Encoded/decoded by serializers as &quot;MNMK&quot;.
@@ -131,7 +131,7 @@ public enum CardAccountType2Code
     [IsoId("_70cHQWkFEeS7zPBpvm732w")]
     [Description(@"Money market saving account.")]
     MoneyMarket = CardAccountTypeCode.MoneyMarket, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Money market checking account.
     /// Encoded/decoded by serializers as &quot;MNMC&quot;.
@@ -140,7 +140,7 @@ public enum CardAccountType2Code
     [IsoId("_77nGQWkFEeS7zPBpvm732w")]
     [Description(@"Money market checking account.")]
     MoneyMarketChecking = CardAccountTypeCode.MoneyMarketChecking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mortgage loan credit account.
     /// Encoded/decoded by serializers as &quot;MTGL&quot;.
@@ -149,7 +149,7 @@ public enum CardAccountType2Code
     [IsoId("_8DeBwWkFEeS7zPBpvm732w")]
     [Description(@"Mortgage loan credit account.")]
     MortgageLoan = CardAccountTypeCode.MortgageLoan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Retirement account.
     /// Encoded/decoded by serializers as &quot;RTRM&quot;.
@@ -158,7 +158,7 @@ public enum CardAccountType2Code
     [IsoId("_8LU9QWkFEeS7zPBpvm732w")]
     [Description(@"Retirement account.")]
     RetirementAccount = CardAccountTypeCode.RetirementAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Revolving loan account.
     /// Encoded/decoded by serializers as &quot;RVLV&quot;.
@@ -167,7 +167,7 @@ public enum CardAccountType2Code
     [IsoId("_8VPuQWkFEeS7zPBpvm732w")]
     [Description(@"Revolving loan account.")]
     RevolvingLoanAccount = CardAccountTypeCode.RevolvingLoanAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Savings account.
     /// Encoded/decoded by serializers as &quot;SVNG&quot;.
@@ -176,7 +176,7 @@ public enum CardAccountType2Code
     [IsoId("_89JbwWkFEeS7zPBpvm732w")]
     [Description(@"Savings account.")]
     Savings = CardAccountTypeCode.Savings, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Stock or bond investment account.
     /// Encoded/decoded by serializers as &quot;STBD&quot;.
@@ -185,7 +185,7 @@ public enum CardAccountType2Code
     [IsoId("_9CVdwWkFEeS7zPBpvm732w")]
     [Description(@"Stock or bond investment account.")]
     StockOrBond = CardAccountTypeCode.StockOrBond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Universal account.
     /// Encoded/decoded by serializers as &quot;UVRL&quot;.
@@ -194,5 +194,4 @@ public enum CardAccountType2Code
     [IsoId("_9IXNQWkFEeS7zPBpvm732w")]
     [Description(@"Universal account.")]
     Universal = CardAccountTypeCode.Universal, // same ordinal as derivation source for type conversions
-    
 }

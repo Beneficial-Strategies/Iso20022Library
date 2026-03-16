@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
     /// </summary>
     [IsoId("_fflq7QgYEeCVlvYcV4HKqQ")]
     [DisplayName("Quantity To Quantity")]
-    public partial record QuantityToQuantity : RatioFormat14Choice_
+    public record QuantityToQuantity : RatioFormat14Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Numerator of the quotient of quantities.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty1")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Quantity1 { get; init; } 
-        
+        public required IsoRestrictedFINDecimalNumber Quantity1 { get; init; }
+
         /// <summary>
         /// Denominator of the quotient of quantities.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.RatioFormat14Choice
         [DisplayName("Quantity")]
         [IsoXmlTag("Qty2")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINDecimalNumber)]
-        public required IsoRestrictedFINDecimalNumber Quantity2 { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoRestrictedFINDecimalNumber Quantity2 { get; init; }
     }
 }

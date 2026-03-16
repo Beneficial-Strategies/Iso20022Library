@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WZgu8cWqEeuhguwJmlgagQ")]
 [DisplayName("Address")]
-public partial record Address2
+public record Address2
 {
-    #nullable enable
-    
     /// <summary>
     /// First line of information that locates and identifies a specific address, as defined by postal services.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Address2
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine1")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
-    [StringLength(maximumLength: 99 ,MinimumLength = 1)]
-    public IsoMax99Text? AddressLine1 { get; init; } 
-    
+    [StringLength(maximumLength: 99, MinimumLength = 1)]
+    public IsoMax99Text? AddressLine1 { get; init; }
+
     /// <summary>
     /// Second line of information that locates and identifies a specific address, as defined by postal services.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record Address2
     [DisplayName("Address Line")]
     [IsoXmlTag("AdrLine2")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
-    [StringLength(maximumLength: 99 ,MinimumLength = 1)]
-    public IsoMax99Text? AddressLine2 { get; init; } 
-    
+    [StringLength(maximumLength: 99, MinimumLength = 1)]
+    public IsoMax99Text? AddressLine2 { get; init; }
+
     /// <summary>
     /// Name of a street or thoroughfare.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record Address2
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max99Text)]
-    [StringLength(maximumLength: 99 ,MinimumLength = 1)]
-    public IsoMax99Text? StreetName { get; init; } 
-    
+    [StringLength(maximumLength: 99, MinimumLength = 1)]
+    public IsoMax99Text? StreetName { get; init; }
+
     /// <summary>
     /// Number that identifies the position of a building on a street.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record Address2
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? BuildingNumber { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? BuildingNumber { get; init; }
+
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record Address2
     [DisplayName("Postal Code")]
     [IsoXmlTag("PstlCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? PostalCode { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? PostalCode { get; init; }
+
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
     /// </summary>
@@ -75,9 +73,9 @@ public partial record Address2
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? TownName { get; init; } 
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? TownName { get; init; }
+
     /// <summary>
     /// Identifies a minor subdivision of a country, for instance county, prefecture.
     /// In accordance with ISO 3166-2 or the local authority.
@@ -85,8 +83,8 @@ public partial record Address2
     [IsoId("_Wd6t3cWqEeuhguwJmlgagQ")]
     [DisplayName("Country Sub Division Minor")]
     [IsoXmlTag("CtrySubDvsnMnr")]
-    public ISOCountrySubDivisionCode? CountrySubDivisionMinor { get; init; } 
-    
+    public ISOCountrySubDivisionCode? CountrySubDivisionMinor { get; init; }
+
     /// <summary>
     /// Identifies a major subdivision of a country, for instance state, province.
     /// In accordance with ISO 3166-2 or the local authority.
@@ -94,8 +92,8 @@ public partial record Address2
     [IsoId("_Wd6t38WqEeuhguwJmlgagQ")]
     [DisplayName("Country Sub Division Major")]
     [IsoXmlTag("CtrySubDvsnMjr")]
-    public ISOCountrySubDivisionCode? CountrySubDivisionMajor { get; init; } 
-    
+    public ISOCountrySubDivisionCode? CountrySubDivisionMajor { get; init; }
+
     /// <summary>
     /// Name of a major subdivision of a country, for instance county, prefecture.
     /// </summary>
@@ -103,9 +101,9 @@ public partial record Address2
     [DisplayName("Country Sub Division Major Name")]
     [IsoXmlTag("CtrySubDvsnMjrNm")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? CountrySubDivisionMajorName { get; init; } 
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? CountrySubDivisionMajorName { get; init; }
+
     /// <summary>
     /// Name of a minor subdivision of a country, for instance county, prefecture.
     /// </summary>
@@ -113,9 +111,9 @@ public partial record Address2
     [DisplayName("Country Sub Division Minor Name")]
     [IsoXmlTag("CtrySubDvsnMnrNm")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? CountrySubDivisionMinorName { get; init; } 
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? CountrySubDivisionMinorName { get; init; }
+
     /// <summary>
     /// Nation with its own government occupying a particular territory.
     /// In accordance with ISO 3166-1.
@@ -123,9 +121,5 @@ public partial record Address2
     [IsoId("_Wd6t4cWqEeuhguwJmlgagQ")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public ISOMax3ACountryCode? Country { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ISOMax3ACountryCode? Country { get; init; }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReservationCriteria3Choice.QueryName))]
     [KnownType(typeof(ReservationCriteria3Choice.NewCriteria))]
-    [JsonDerivedType(typeof(ReservationCriteria3Choice.QueryName),nameof(ReservationCriteria3Choice.QueryName))]
-    [JsonDerivedType(typeof(ReservationCriteria3Choice.NewCriteria),nameof(ReservationCriteria3Choice.NewCriteria))]
+    [JsonDerivedType(
+        typeof(ReservationCriteria3Choice.QueryName),
+        nameof(ReservationCriteria3Choice.QueryName)
+    )]
+    [JsonDerivedType(
+        typeof(ReservationCriteria3Choice.NewCriteria),
+        nameof(ReservationCriteria3Choice.NewCriteria)
+    )]
     [IsoId("_D2D0B24-EeiU9cctagi5ow")]
     [DisplayName("Reservation Criteria 3 Choice")]
-    public abstract partial record ReservationCriteria3Choice_
-    {
-    }
+    public abstract record ReservationCriteria3Choice_ { }
 }

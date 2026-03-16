@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_B1kYEXG2Ee60F8I8TAMKmg")]
 [DisplayName("Cardholder22")]
-public partial record Cardholder22
+public record Cardholder22
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Data.
     /// </summary>
@@ -30,28 +28,28 @@ public partial record Cardholder22
     /// </summary>
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; } 
+    public Address2? Address { get; init; }
 
     /// <summary>
     /// Contact Information.
     /// </summary>
     [DisplayName("Contact Information")]
     [IsoXmlTag("CtctInf")]
-    public ContactPersonal1? ContactInformation { get; init; } 
+    public ContactPersonal1? ContactInformation { get; init; }
 
     /// <summary>
     /// Date Of Birth.
     /// </summary>
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
-    public IsoISODate? DateOfBirth { get; init; } 
+    public IsoISODate? DateOfBirth { get; init; }
 
     /// <summary>
     /// High Value.
     /// </summary>
     [DisplayName("High Value")]
     [IsoXmlTag("HghVal")]
-    public IsoTrueFalseIndicator? HighValue { get; init; } 
+    public IsoTrueFalseIndicator? HighValue { get; init; }
 
     /// <summary>
     /// Identification.
@@ -65,16 +63,12 @@ public partial record Cardholder22
     /// </summary>
     [DisplayName("Local Data")]
     [IsoXmlTag("LclData")]
-    public LocalData13? LocalData { get; init; } 
+    public LocalData13? LocalData { get; init; }
 
     /// <summary>
     /// Name.
     /// </summary>
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
-    public CardholderName3? Name { get; init; } 
-
-    
-    #nullable disable
-    
+    public CardholderName3? Name { get; init; }
 }

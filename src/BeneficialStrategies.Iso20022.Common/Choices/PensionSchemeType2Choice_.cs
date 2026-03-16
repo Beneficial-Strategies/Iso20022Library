@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PensionSchemeType2Choice.Code))]
     [KnownType(typeof(PensionSchemeType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(PensionSchemeType2Choice.Code),nameof(PensionSchemeType2Choice.Code))]
-    [JsonDerivedType(typeof(PensionSchemeType2Choice.Proprietary),nameof(PensionSchemeType2Choice.Proprietary))]
+    [JsonDerivedType(typeof(PensionSchemeType2Choice.Code), nameof(PensionSchemeType2Choice.Code))]
+    [JsonDerivedType(
+        typeof(PensionSchemeType2Choice.Proprietary),
+        nameof(PensionSchemeType2Choice.Proprietary)
+    )]
     [IsoId("_CELmwTOUEeqLMcD_sEa8Xw")]
     [DisplayName("Pension Scheme Type 2 Choice")]
-    public abstract partial record PensionSchemeType2Choice_
-    {
-    }
+    public abstract record PensionSchemeType2Choice_ { }
 }

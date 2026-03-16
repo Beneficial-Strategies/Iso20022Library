@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_U23mVNp-Ed-ak6NoX_4Aeg_-2053158623")]
 [DisplayName("Rejected Status")]
-public partial record RejectedStatus3
+public record RejectedStatus3
 {
-    #nullable enable
-    
     /// <summary>
     /// Reason for a rejected status in the report.
     /// </summary>
@@ -27,7 +25,7 @@ public partial record RejectedStatus3
     [MinLength(1)]
     [MaxLength(10)]
     public ValueList<RejectedStatusReason6> Reason { get; init; } = [];
-    
+
     /// <summary>
     /// Proprietary identification of a reason for a rejected status in the report.
     /// </summary>
@@ -37,8 +35,4 @@ public partial record RejectedStatus3
     [MinLength(1)]
     [MaxLength(10)]
     public ValueList<GenericIdentification1> DataSourceScheme { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

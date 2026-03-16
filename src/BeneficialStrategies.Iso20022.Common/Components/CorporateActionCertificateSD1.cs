@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OBTl0MViEeeprYdSN88o0Q")]
 [DisplayName("Corporate Action Certificate SD")]
-public partial record CorporateActionCertificateSD1
+public record CorporateActionCertificateSD1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique identification or serial number that is assigned and affixed by an issuer or transfer agent to each securities certificate.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionCertificateSD1
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
     [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
-    [StringLength(maximumLength: 15 ,MinimumLength = 1)]
-    public required IsoMax15AlphaNumericText CertificateNumber { get; init; } 
-    
+    [StringLength(maximumLength: 15, MinimumLength = 1)]
+    public required IsoMax15AlphaNumericText CertificateNumber { get; init; }
+
     /// <summary>
     /// Additional identifier assigned by DTC.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record CorporateActionCertificateSD1
     [DisplayName("Certificate Sequence Number")]
     [IsoXmlTag("CertSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max15AlphaNumericText)]
-    [StringLength(maximumLength: 15 ,MinimumLength = 1)]
-    public IsoMax15AlphaNumericText? CertificateSequenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 15, MinimumLength = 1)]
+    public IsoMax15AlphaNumericText? CertificateSequenceNumber { get; init; }
+
     /// <summary>
     /// Registration name of the beneficial holder.
     /// </summary>
@@ -45,9 +43,5 @@ public partial record CorporateActionCertificateSD1
     [DisplayName("Certificate Registration Name")]
     [IsoXmlTag("CertRegnNm")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CertificateRegistrationName { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax30Text? CertificateRegistrationName { get; init; }
 }

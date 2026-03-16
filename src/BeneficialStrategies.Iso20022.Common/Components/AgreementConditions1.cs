@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bedvoJUTEea7vKctaoIyEQ")]
 [DisplayName("Agreement Conditions")]
-public partial record AgreementConditions1
+public record AgreementConditions1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of agreement.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record AgreementConditions1
     [DisplayName("Agreement Code")]
     [IsoXmlTag("AgrmtCd")]
     [IsoSimpleType(IsoSimpleType.Max6AlphaText)]
-    public required IsoMax6AlphaText AgreementCode { get; init; } 
-    
+    public required IsoMax6AlphaText AgreementCode { get; init; }
+
     /// <summary>
     /// Specifies the date of the agreement.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record AgreementConditions1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// Specifies the version of the agreement.
     /// </summary>
@@ -43,9 +41,5 @@ public partial record AgreementConditions1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? Version { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoExact4NumericText? Version { get; init; }
 }

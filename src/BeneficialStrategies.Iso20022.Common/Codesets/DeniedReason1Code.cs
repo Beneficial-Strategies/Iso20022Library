@@ -23,7 +23,7 @@ public enum DeniedReason1Code
     [IsoId("_az5lcNp-Ed-ak6NoX_4Aeg_1343217135")]
     [Description(@"Received after the account servicer's deadline.")]
     AccountServicerDeadlineMissed = DeniedReasonCode.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Repo call request was denied since another call already applies.
     /// Encoded/decoded by serializers as &quot;DCAL&quot;.
@@ -32,34 +32,40 @@ public enum DeniedReason1Code
     [IsoId("_az5lcdp-Ed-ak6NoX_4Aeg_1343217164")]
     [Description(@"Repo call request was denied since another call already applies.")]
     CallDeniedSinceAlreadyApplied = DeniedReasonCode.CallDeniedSinceAlreadyApplied, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was denied since the instruction has already been cancelled.
     /// Encoded/decoded by serializers as &quot;DCAN&quot;.
     /// </summary>
     [EnumMember(Value = "DCAN")]
     [IsoId("_az5lctp-Ed-ak6NoX_4Aeg_1343217165")]
-    [Description(@"Cancellation request was denied since the instruction has already been cancelled.")]
+    [Description(
+        @"Cancellation request was denied since the instruction has already been cancelled."
+    )]
     DeniedSinceAlreadyCancelled = DeniedReasonCode.DeniedSinceAlreadyCancelled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Repo call request was denied. Call not allowed on the concerned repo, for example, out of delay.
     /// Encoded/decoded by serializers as &quot;DFOR&quot;.
     /// </summary>
     [EnumMember(Value = "DFOR")]
     [IsoId("_az5lc9p-Ed-ak6NoX_4Aeg_1343217195")]
-    [Description(@"Repo call request was denied. Call not allowed on the concerned repo, for example, out of delay.")]
+    [Description(
+        @"Repo call request was denied. Call not allowed on the concerned repo, for example, out of delay."
+    )]
     DeniedSinceNotAllowed = DeniedReasonCode.DeniedSinceNotAllowed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was denied because the process of settlement is in progress.
     /// Encoded/decoded by serializers as &quot;DPRG&quot;.
     /// </summary>
     [EnumMember(Value = "DPRG")]
     [IsoId("_az5ldNp-Ed-ak6NoX_4Aeg_1343217196")]
-    [Description(@"Cancellation request was denied because the process of settlement is in progress.")]
+    [Description(
+        @"Cancellation request was denied because the process of settlement is in progress."
+    )]
     DeniedSinceInProgress = DeniedReasonCode.DeniedSinceInProgress, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was denied because the repo was cancelled.
     /// Encoded/decoded by serializers as &quot;DREP&quot;.
@@ -68,7 +74,7 @@ public enum DeniedReason1Code
     [IsoId("_az5lddp-Ed-ak6NoX_4Aeg_1343217197")]
     [Description(@"Cancellation request was denied because the repo was cancelled.")]
     DeniedSinceRepoEnded = DeniedReasonCode.DeniedSinceRepoEnded, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request was denied because the instruction was already settled.
     /// Encoded/decoded by serializers as &quot;DSET&quot;.
@@ -77,7 +83,7 @@ public enum DeniedReason1Code
     [IsoId("_az5ldtp-Ed-ak6NoX_4Aeg_1343217225")]
     [Description(@"Cancellation request was denied because the instruction was already settled.")]
     DeniedSinceAlreadySettled = DeniedReasonCode.DeniedSinceAlreadySettled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been processed and cannot be cancelled.
     /// Encoded/decoded by serializers as &quot;IPNC&quot;.
@@ -86,7 +92,7 @@ public enum DeniedReason1Code
     [IsoId("_az5ld9p-Ed-ak6NoX_4Aeg_1343217226")]
     [Description(@"Instruction has been processed and cannot be cancelled.")]
     InstructionProcessed = DeniedReasonCode.InstructionProcessed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -95,5 +101,4 @@ public enum DeniedReason1Code
     [IsoId("_az5leNp-Ed-ak6NoX_4Aeg_1343217227")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = DeniedReasonCode.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
 }

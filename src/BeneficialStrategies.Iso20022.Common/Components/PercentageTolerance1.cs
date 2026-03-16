@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SsvRF9p-Ed-ak6NoX_4Aeg_964334524")]
 [DisplayName("Percentage Tolerance")]
-public partial record PercentageTolerance1
+public record PercentageTolerance1
 {
-    #nullable enable
-    
     /// <summary>
     /// Variance in percentage allowed over the agreed dimension. For example, plus 10 percent.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PercentageTolerance1
     [DisplayName("Plus Percent")]
     [IsoXmlTag("PlusPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate PlusPercent { get; init; } 
-    
+    public required IsoPercentageRate PlusPercent { get; init; }
+
     /// <summary>
     /// Variance in percentage allowed below the agreed dimension. For example, minus 10 percent.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record PercentageTolerance1
     [DisplayName("Minus Percent")]
     [IsoXmlTag("MnsPct")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate MinusPercent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoPercentageRate MinusPercent { get; init; }
 }

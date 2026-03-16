@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_2bAEIHGzEe6S2Llv74R19w")]
-[Description(@"Indicates how prorated instructions will be handled when the prorated entitlement results in less than the minimum denomination.")]
+[Description(
+    @"Indicates how prorated instructions will be handled when the prorated entitlement results in less than the minimum denomination."
+)]
 [DerivedFrom(typeof(ProrationReturnQuantityTreatmentCode))]
 public enum ProrationReturnQuantityTreatment1Code
 {
@@ -21,7 +23,9 @@ public enum ProrationReturnQuantityTreatment1Code
     /// </summary>
     [EnumMember(Value = "ACPT")]
     [IsoId("")]
-    [Description(@"Prorated instructions which result in less than the minimum denominations will be accepted in full.")]
+    [Description(
+        @"Prorated instructions which result in less than the minimum denominations will be accepted in full."
+    )]
     Accept = ProrationReturnQuantityTreatmentCode.Accept, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -30,7 +34,9 @@ public enum ProrationReturnQuantityTreatment1Code
     /// </summary>
     [EnumMember(Value = "ADJT")]
     [IsoId("")]
-    [Description(@"Prorated instructions which result in less than the minimum denominations will be adjusted up.")]
+    [Description(
+        @"Prorated instructions which result in less than the minimum denominations will be adjusted up."
+    )]
     Adjust = ProrationReturnQuantityTreatmentCode.Adjust, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +45,8 @@ public enum ProrationReturnQuantityTreatment1Code
     /// </summary>
     [EnumMember(Value = "REJT")]
     [IsoId("")]
-    [Description(@"Prorated instructions which result in less than the minimum denominations will be rejected in full.")]
+    [Description(
+        @"Prorated instructions which result in less than the minimum denominations will be rejected in full."
+    )]
     Reject = ProrationReturnQuantityTreatmentCode.Reject, // same ordinal as derivation source for type conversions
-
 }

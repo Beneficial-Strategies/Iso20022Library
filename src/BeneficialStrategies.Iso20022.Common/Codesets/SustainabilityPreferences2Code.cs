@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_hSE6gcQYEe2pvZQ_33Qz1Q")]
-[Description(@"Specifies whether the product is compatible with investors that have sustainability preferences.")]
+[Description(
+    @"Specifies whether the product is compatible with investors that have sustainability preferences."
+)]
 [DerivedFrom(typeof(SustainabilityPreferencesCode))]
 public enum SustainabilityPreferences2Code
 {
@@ -32,5 +34,4 @@ public enum SustainabilityPreferences2Code
     [IsoId("")]
     [Description(@"Yes, is applicable.")]
     InScope = SustainabilityPreferencesCode.InScope, // same ordinal as derivation source for type conversions
-
 }

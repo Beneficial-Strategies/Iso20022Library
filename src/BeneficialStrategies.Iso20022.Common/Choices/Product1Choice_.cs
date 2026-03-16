@@ -12,12 +12,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Product1Choice.Derivative))]
     [KnownType(typeof(Product1Choice.SecuritiesFinancingTransaction))]
     [KnownType(typeof(Product1Choice.Security))]
-    [JsonDerivedType(typeof(Product1Choice.Derivative),nameof(Product1Choice.Derivative))]
-    [JsonDerivedType(typeof(Product1Choice.SecuritiesFinancingTransaction),nameof(Product1Choice.SecuritiesFinancingTransaction))]
-    [JsonDerivedType(typeof(Product1Choice.Security),nameof(Product1Choice.Security))]
+    [JsonDerivedType(typeof(Product1Choice.Derivative), nameof(Product1Choice.Derivative))]
+    [JsonDerivedType(
+        typeof(Product1Choice.SecuritiesFinancingTransaction),
+        nameof(Product1Choice.SecuritiesFinancingTransaction)
+    )]
+    [JsonDerivedType(typeof(Product1Choice.Security), nameof(Product1Choice.Security))]
     [IsoId("_AS4VYLVPEeadLcJesEbkTQ")]
     [DisplayName("Product 1 Choice")]
-    public abstract partial record Product1Choice_
-    {
-    }
+    public abstract record Product1Choice_ { }
 }

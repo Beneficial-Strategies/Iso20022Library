@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ehW6AQvVEeKzJ69IWwzB9Q")]
 [DisplayName("Payment Card")]
-public partial record PaymentCard6
+public record PaymentCard6
 {
-    #nullable enable
-    
     /// <summary>
     /// Sensitive data of the card (PlainCardData1 including the envelope), encrypted with a cryptographic key.
     /// </summary>
     [IsoId("_esqyIQvVEeKzJ69IWwzB9Q")]
     [DisplayName("Protected Card Data")]
     [IsoXmlTag("PrtctdCardData")]
-    public ContentInformationType5? ProtectedCardData { get; init; } 
-    
+    public ContentInformationType5? ProtectedCardData { get; init; }
+
     /// <summary>
     /// Sensitive data associated with the card performing the transaction.
     /// </summary>
     [IsoId("_esqyJQvVEeKzJ69IWwzB9Q")]
     [DisplayName("Plain Card Data")]
     [IsoXmlTag("PlainCardData")]
-    public PlainCardData2? PlainCardData { get; init; } 
-    
+    public PlainCardData2? PlainCardData { get; init; }
+
     /// <summary>
     /// Country code assigned to the card by the card issuer.
     /// </summary>
@@ -41,9 +39,9 @@ public partial record PaymentCard6
     [DisplayName("Card Country Code")]
     [IsoXmlTag("CardCtryCd")]
     [IsoSimpleType(IsoSimpleType.Max3Text)]
-    [StringLength(maximumLength: 3 ,MinimumLength = 1)]
-    public IsoMax3Text? CardCountryCode { get; init; } 
-    
+    [StringLength(maximumLength: 3, MinimumLength = 1)]
+    public IsoMax3Text? CardCountryCode { get; init; }
+
     /// <summary>
     /// Defines a category of cards related the acceptance processing rules defined by the acquirer.
     /// </summary>
@@ -51,8 +49,8 @@ public partial record PaymentCard6
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? CardProductProfile { get; init; } 
-    
+    public IsoExact4NumericText? CardProductProfile { get; init; }
+
     /// <summary>
     /// Brand name of the card.
     /// </summary>
@@ -60,9 +58,9 @@ public partial record PaymentCard6
     [DisplayName("Card Brand")]
     [IsoXmlTag("CardBrnd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CardBrand { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CardBrand { get; init; }
+
     /// <summary>
     /// Additional card issuer specific data.
     /// </summary>
@@ -70,10 +68,6 @@ public partial record PaymentCard6
     [DisplayName("Additional Card Data")]
     [IsoXmlTag("AddtlCardData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AdditionalCardData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AdditionalCardData { get; init; }
 }

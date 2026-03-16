@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Cancellation11Choice.CancellationByTransferInstructionDetails))]
     [KnownType(typeof(Cancellation11Choice.CancellationByReference))]
-    [JsonDerivedType(typeof(Cancellation11Choice.CancellationByTransferInstructionDetails),nameof(Cancellation11Choice.CancellationByTransferInstructionDetails))]
-    [JsonDerivedType(typeof(Cancellation11Choice.CancellationByReference),nameof(Cancellation11Choice.CancellationByReference))]
+    [JsonDerivedType(
+        typeof(Cancellation11Choice.CancellationByTransferInstructionDetails),
+        nameof(Cancellation11Choice.CancellationByTransferInstructionDetails)
+    )]
+    [JsonDerivedType(
+        typeof(Cancellation11Choice.CancellationByReference),
+        nameof(Cancellation11Choice.CancellationByReference)
+    )]
     [IsoId("_8SMzVSPvEeWQjryFgN2ITg")]
     [DisplayName("Cancellation 11 Choice")]
-    public abstract partial record Cancellation11Choice_
-    {
-    }
+    public abstract record Cancellation11Choice_ { }
 }

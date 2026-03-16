@@ -24,24 +24,67 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetClassCommodity6Choice.OtherC10))]
     [KnownType(typeof(AssetClassCommodity6Choice.Paper))]
     [KnownType(typeof(AssetClassCommodity6Choice.Polypropylene))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Agricultural),nameof(AssetClassCommodity6Choice.Agricultural))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Energy),nameof(AssetClassCommodity6Choice.Energy))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Environmental),nameof(AssetClassCommodity6Choice.Environmental))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Fertilizer),nameof(AssetClassCommodity6Choice.Fertilizer))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Freight),nameof(AssetClassCommodity6Choice.Freight))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Index),nameof(AssetClassCommodity6Choice.Index))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.IndustrialProduct),nameof(AssetClassCommodity6Choice.IndustrialProduct))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Inflation),nameof(AssetClassCommodity6Choice.Inflation))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Metal),nameof(AssetClassCommodity6Choice.Metal))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.MultiCommodityExotic),nameof(AssetClassCommodity6Choice.MultiCommodityExotic))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.OfficialEconomicStatistics),nameof(AssetClassCommodity6Choice.OfficialEconomicStatistics))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Other),nameof(AssetClassCommodity6Choice.Other))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.OtherC10),nameof(AssetClassCommodity6Choice.OtherC10))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Paper),nameof(AssetClassCommodity6Choice.Paper))]
-    [JsonDerivedType(typeof(AssetClassCommodity6Choice.Polypropylene),nameof(AssetClassCommodity6Choice.Polypropylene))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Agricultural),
+        nameof(AssetClassCommodity6Choice.Agricultural)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Energy),
+        nameof(AssetClassCommodity6Choice.Energy)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Environmental),
+        nameof(AssetClassCommodity6Choice.Environmental)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Fertilizer),
+        nameof(AssetClassCommodity6Choice.Fertilizer)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Freight),
+        nameof(AssetClassCommodity6Choice.Freight)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Index),
+        nameof(AssetClassCommodity6Choice.Index)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.IndustrialProduct),
+        nameof(AssetClassCommodity6Choice.IndustrialProduct)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Inflation),
+        nameof(AssetClassCommodity6Choice.Inflation)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Metal),
+        nameof(AssetClassCommodity6Choice.Metal)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.MultiCommodityExotic),
+        nameof(AssetClassCommodity6Choice.MultiCommodityExotic)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.OfficialEconomicStatistics),
+        nameof(AssetClassCommodity6Choice.OfficialEconomicStatistics)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Other),
+        nameof(AssetClassCommodity6Choice.Other)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.OtherC10),
+        nameof(AssetClassCommodity6Choice.OtherC10)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Paper),
+        nameof(AssetClassCommodity6Choice.Paper)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodity6Choice.Polypropylene),
+        nameof(AssetClassCommodity6Choice.Polypropylene)
+    )]
     [IsoId("_1anjQRZXEe2QNcZTDeoKnQ")]
     [DisplayName("Asset Class Commodity 6 Choice")]
-    public abstract partial record AssetClassCommodity6Choice_
-    {
-    }
+    public abstract record AssetClassCommodity6Choice_ { }
 }

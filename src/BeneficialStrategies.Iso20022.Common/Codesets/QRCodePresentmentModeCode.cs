@@ -23,7 +23,7 @@ public enum QRCodePresentmentModeCode
     [IsoId("_Y7sgAMV3Eeua2vd9tJAtHg")]
     [Description(@"The consumer presented a QR Code at the point of service for the transaction.")]
     ConsumerPresented,
-    
+
     /// <summary>
     /// The acceptor presented a QR Code to the consumer for the transaction.
     /// Encoded/decoded by serializers as &quot;MPMD&quot;.
@@ -32,7 +32,7 @@ public enum QRCodePresentmentModeCode
     [IsoId("_fYdIEMV3Eeua2vd9tJAtHg")]
     [Description(@"The acceptor presented a QR Code to the consumer for the transaction.")]
     MerchantPresented,
-    
+
     /// <summary>
     /// Other nationally defined method for QR Code presentment for the transaction.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum QRCodePresentmentModeCode
     [IsoId("_uyBTEMV3Eeua2vd9tJAtHg")]
     [Description(@"Other nationally defined method for QR Code presentment for the transaction.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other QR Code presentment mode defined by bilateral agreement.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum QRCodePresentmentModeCode
     [IsoId("_1ojtEMV3Eeua2vd9tJAtHg")]
     [Description(@"Other QR Code presentment mode defined by bilateral agreement.")]
     OtherPrivate,
-    
 }

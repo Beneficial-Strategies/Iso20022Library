@@ -23,7 +23,7 @@ public enum MessageClass1Code
     [IsoId("_MJCC8RtCEeqrvK3udMUsNQ")]
     [Description(@"Addendum class of messages.")]
     Addendum = MessageClassCode.Addendum, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amendment class of messages.
     /// Encoded/decoded by serializers as &quot;AMDT&quot;.
@@ -32,7 +32,7 @@ public enum MessageClass1Code
     [IsoId("_MUMKERtCEeqrvK3udMUsNQ")]
     [Description(@"Amendment class of messages.")]
     Amendment = MessageClassCode.Amendment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Authorisation class of messages.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -41,7 +41,7 @@ public enum MessageClass1Code
     [IsoId("_Mfy9IRtCEeqrvK3udMUsNQ")]
     [Description(@"Authorisation class of messages.")]
     Authorisation = MessageClassCode.Authorisation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card management class of messages.
     /// Encoded/decoded by serializers as &quot;CMGT&quot;.
@@ -50,7 +50,7 @@ public enum MessageClass1Code
     [IsoId("_M3wKIRtCEeqrvK3udMUsNQ")]
     [Description(@"Card management class of messages.")]
     CardManagement = MessageClassCode.CardManagement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge back class of messages.
     /// Encoded/decoded by serializers as &quot;CBCK&quot;.
@@ -59,7 +59,7 @@ public enum MessageClass1Code
     [IsoId("_NDgHIRtCEeqrvK3udMUsNQ")]
     [Description(@"Charge back class of messages.")]
     ChargeBack = MessageClassCode.ChargeBack, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee collection class of messages.
     /// Encoded/decoded by serializers as &quot;FEEC&quot;.
@@ -68,7 +68,7 @@ public enum MessageClass1Code
     [IsoId("_NJmvIRtCEeqrvK3udMUsNQ")]
     [Description(@"Fee collection class of messages.")]
     FeeCollection = MessageClassCode.FeeCollection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Financial class of messages.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -77,7 +77,7 @@ public enum MessageClass1Code
     [IsoId("_NPQrMRtCEeqrvK3udMUsNQ")]
     [Description(@"Financial class of messages.")]
     Financial = MessageClassCode.Financial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Inquiry class of messages.
     /// Encoded/decoded by serializers as &quot;INQY&quot;.
@@ -86,7 +86,7 @@ public enum MessageClass1Code
     [IsoId("_NbTjIRtCEeqrvK3udMUsNQ")]
     [Description(@"Inquiry class of messages.")]
     Inquiry = MessageClassCode.Inquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification class of messages.
     /// Encoded/decoded by serializers as &quot;VERI&quot;.
@@ -95,5 +95,4 @@ public enum MessageClass1Code
     [IsoId("_NjCi0RtCEeqrvK3udMUsNQ")]
     [Description(@"Verification class of messages.")]
     Verification = MessageClassCode.Verification, // same ordinal as derivation source for type conversions
-    
 }

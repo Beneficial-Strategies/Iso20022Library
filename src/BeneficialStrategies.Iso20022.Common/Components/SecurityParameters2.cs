@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Jjm7YTZ4EeOP_KvUKe29ng")]
 [DisplayName("Security Parameters")]
-public partial record SecurityParameters2
+public record SecurityParameters2
 {
-    #nullable enable
-    
     /// <summary>
     /// Point of interaction challenge for cryptographic key injection.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SecurityParameters2
     [DisplayName("POI Challenge")]
     [IsoXmlTag("POIChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? POIChallenge { get; init; } 
-    
+    public IsoMax140Binary? POIChallenge { get; init; }
+
     /// <summary>
     /// Terminal manager challenge for cryptographic key injection.
     /// </summary>
@@ -34,17 +32,13 @@ public partial record SecurityParameters2
     [DisplayName("TM Challenge")]
     [IsoXmlTag("TMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? TMChallenge { get; init; } 
-    
+    public IsoMax140Binary? TMChallenge { get; init; }
+
     /// <summary>
     /// Key to inject in the point of interaction, protected by the temporary key previously sent.
     /// </summary>
     [IsoId("_J1bEJTZ4EeOP_KvUKe29ng")]
     [DisplayName("Symmetric Key")]
     [IsoXmlTag("SmmtrcKey")]
-    public CryptographicKey4? SymmetricKey { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CryptographicKey4? SymmetricKey { get; init; }
 }

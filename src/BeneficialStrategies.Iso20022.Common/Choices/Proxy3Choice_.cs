@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Proxy3Choice.Proxy))]
     [KnownType(typeof(Proxy3Choice.ProxyNotAllowed))]
-    [JsonDerivedType(typeof(Proxy3Choice.Proxy),nameof(Proxy3Choice.Proxy))]
-    [JsonDerivedType(typeof(Proxy3Choice.ProxyNotAllowed),nameof(Proxy3Choice.ProxyNotAllowed))]
+    [JsonDerivedType(typeof(Proxy3Choice.Proxy), nameof(Proxy3Choice.Proxy))]
+    [JsonDerivedType(typeof(Proxy3Choice.ProxyNotAllowed), nameof(Proxy3Choice.ProxyNotAllowed))]
     [IsoId("_j7B_sa09EemDtrWpq90Ckg")]
     [DisplayName("Proxy 3 Choice")]
-    public abstract partial record Proxy3Choice_
-    {
-    }
+    public abstract record Proxy3Choice_ { }
 }

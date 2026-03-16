@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification234Choice.ProprietaryIdentification))]
     [KnownType(typeof(PartyIdentification234Choice.NameAndAddress))]
     [KnownType(typeof(PartyIdentification234Choice.IndividualOwnerIdentification))]
-    [JsonDerivedType(typeof(PartyIdentification234Choice.AnyBIC),nameof(PartyIdentification234Choice.AnyBIC))]
-    [JsonDerivedType(typeof(PartyIdentification234Choice.ProprietaryIdentification),nameof(PartyIdentification234Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(PartyIdentification234Choice.NameAndAddress),nameof(PartyIdentification234Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(PartyIdentification234Choice.IndividualOwnerIdentification),nameof(PartyIdentification234Choice.IndividualOwnerIdentification))]
+    [JsonDerivedType(
+        typeof(PartyIdentification234Choice.AnyBIC),
+        nameof(PartyIdentification234Choice.AnyBIC)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification234Choice.ProprietaryIdentification),
+        nameof(PartyIdentification234Choice.ProprietaryIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification234Choice.NameAndAddress),
+        nameof(PartyIdentification234Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification234Choice.IndividualOwnerIdentification),
+        nameof(PartyIdentification234Choice.IndividualOwnerIdentification)
+    )]
     [IsoId("_F-iyMR9REeuFz_FaCzCLgQ")]
     [DisplayName("Party Identification 234 Choice")]
-    public abstract partial record PartyIdentification234Choice_
-    {
-    }
+    public abstract record PartyIdentification234Choice_ { }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MOeE27iEeKo25nLKvGr8w_969448361")]
-[Description(@"Specifies the external document format code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external document format code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalDocumentFormatCode))]
 public enum ExternalDocumentFormat1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalDocumentFormat1Code
     [IsoId("_uPIrNfRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is PDF.")]
     PDF = ExternalDocumentFormatCode.PDF, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document format is XML.
     /// Encoded/decoded by serializers as &quot;DXML&quot;.
@@ -33,7 +35,7 @@ public enum ExternalDocumentFormat1Code
     [IsoId("_uPIrOPRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is XML.")]
     XML = ExternalDocumentFormatCode.XML, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document format is a spreadsheet.
     /// Encoded/decoded by serializers as &quot;SDSH&quot;.
@@ -42,7 +44,7 @@ public enum ExternalDocumentFormat1Code
     [IsoId("_uPIrO_RYEeuLhpyIdtJzwg")]
     [Description(@"Document format is a spreadsheet.")]
     Spreadsheet = ExternalDocumentFormatCode.Spreadsheet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document format is Word.
     /// Encoded/decoded by serializers as &quot;WORD&quot;.
@@ -51,7 +53,7 @@ public enum ExternalDocumentFormat1Code
     [IsoId("_uPIrPvRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is Word.")]
     Word = ExternalDocumentFormatCode.Word, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Document format is XSLT.
     /// Encoded/decoded by serializers as &quot;XSLT&quot;.
@@ -60,5 +62,4 @@ public enum ExternalDocumentFormat1Code
     [IsoId("_uPScMvRYEeuLhpyIdtJzwg")]
     [Description(@"Document format is XSLT.")]
     XSLT = ExternalDocumentFormatCode.XSLT, // same ordinal as derivation source for type conversions
-    
 }

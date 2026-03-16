@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ax9Et9p-Ed-ak6NoX_4Aeg_1251381702")]
 [Description(@"Specified the type of modification to be applied on a data set.")]
-[Derivations(typeof(DataModification1Code),typeof(DataModification2Code))]
+[Derivations(typeof(DataModification1Code), typeof(DataModification2Code))]
 public enum DataModificationCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum DataModificationCode
     [IsoId("_ax9EuNp-Ed-ak6NoX_4Aeg_1708524214")]
     [Description(@"Insert a new set of data.")]
     InsertNewDataSet,
-    
+
     /// <summary>
     /// Update the details of an existing set of data.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -32,7 +32,7 @@ public enum DataModificationCode
     [IsoId("_ayG1sNp-Ed-ak6NoX_4Aeg_1821193248")]
     [Description(@"Update the details of an existing set of data.")]
     UpdateDataSetDetails,
-    
+
     /// <summary>
     /// Delete an existing set of data.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -41,5 +41,4 @@ public enum DataModificationCode
     [IsoId("_ayG1sdp-Ed-ak6NoX_4Aeg_2075163954")]
     [Description(@"Delete an existing set of data.")]
     DeleteDataSet,
-    
 }

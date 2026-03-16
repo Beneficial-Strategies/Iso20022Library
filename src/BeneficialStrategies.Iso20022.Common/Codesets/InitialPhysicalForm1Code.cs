@@ -23,7 +23,7 @@ public enum InitialPhysicalForm1Code
     [IsoId("_hblKnWliEeGaMcKyqKNRfQ_-933244343")]
     [Description(@"Initial Physical Form is GT.")]
     GT = InitialPhysicalFormCode.GT, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Initial Physical Form is GP.
     /// Encoded/decoded by serializers as &quot;GPGP&quot;.
@@ -32,7 +32,7 @@ public enum InitialPhysicalForm1Code
     [IsoId("_hblKnmliEeGaMcKyqKNRfQ_1809811702")]
     [Description(@"Initial Physical Form is GP.")]
     GP = InitialPhysicalFormCode.GP, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Initial Physical Form is definitive.
     /// Encoded/decoded by serializers as &quot;DERN&quot;.
@@ -41,5 +41,4 @@ public enum InitialPhysicalForm1Code
     [IsoId("_hblKn2liEeGaMcKyqKNRfQ_-2031068325")]
     [Description(@"Initial Physical Form is definitive.")]
     Definitive = InitialPhysicalFormCode.Definitive, // same ordinal as derivation source for type conversions
-    
 }

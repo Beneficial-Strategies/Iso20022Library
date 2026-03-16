@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6RcRcJqlEeGSON8vddiWzQ_-480249725")]
 [DisplayName("Billing Services Tax")]
-public partial record BillingServicesTax2
+public record BillingServicesTax2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification number of the specific region tax used to calculate the tax.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record BillingServicesTax2
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Number { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Number { get; init; }
+
     /// <summary>
     /// Name used to describe the tax (such as the national value added tax).
     /// </summary>
@@ -35,9 +33,9 @@ public partial record BillingServicesTax2
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max40Text)]
-    [StringLength(maximumLength: 40 ,MinimumLength = 1)]
-    public IsoMax40Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 40, MinimumLength = 1)]
+    public IsoMax40Text? Description { get; init; }
+
     /// <summary>
     /// Rate used to calculate the tax.
     /// </summary>
@@ -45,17 +43,13 @@ public partial record BillingServicesTax2
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public required IsoDecimalNumber Rate { get; init; } 
-    
+    public required IsoDecimalNumber Rate { get; init; }
+
     /// <summary>
     /// Amount of the tax obligation expressed in the tax region&apos;s pricing currency.
     /// </summary>
     [IsoId("_6RcRdJqlEeGSON8vddiWzQ_126308982")]
     [DisplayName("Pricing Amount")]
     [IsoXmlTag("PricgAmt")]
-    public required AmountAndDirection34 PricingAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required AmountAndDirection34 PricingAmount { get; init; }
 }

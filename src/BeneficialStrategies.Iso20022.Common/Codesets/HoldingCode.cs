@@ -23,7 +23,7 @@ public enum HoldingCode
     [IsoId("_qyrf8BKfEeKj15WxqwlXPw")]
     [Description(@"Partial holding.")]
     PartialHolding,
-    
+
     /// <summary>
     /// Non partial holding.
     /// Encoded/decoded by serializers as &quot;NPRH&quot;.
@@ -32,7 +32,7 @@ public enum HoldingCode
     [IsoId("_q7nZgBKfEeKj15WxqwlXPw")]
     [Description(@"Non partial holding.")]
     NonPartialHolding,
-    
+
     /// <summary>
     /// Certificate.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
@@ -41,5 +41,4 @@ public enum HoldingCode
     [IsoId("_5Y4UUBKfEeKj15WxqwlXPw")]
     [Description(@"Certificate.")]
     Certificate,
-    
 }

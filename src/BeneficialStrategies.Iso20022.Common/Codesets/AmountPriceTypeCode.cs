@@ -12,7 +12,11 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_beqZtdp-Ed-ak6NoX_4Aeg_904379222")]
 [Description(@"Specifies the amount price type.")]
-[Derivations(typeof(AmountPriceType1Code),typeof(AmountPriceType2Code),typeof(AmountPriceType3Code))]
+[Derivations(
+    typeof(AmountPriceType1Code),
+    typeof(AmountPriceType2Code),
+    typeof(AmountPriceType3Code)
+)]
 public enum AmountPriceTypeCode
 {
     /// <summary>
@@ -23,7 +27,7 @@ public enum AmountPriceTypeCode
     [IsoId("_beqZttp-Ed-ak6NoX_4Aeg_907150846")]
     [Description(@"Price expressed as a currency and amount per unit or per share.")]
     ActualAmount,
-    
+
     /// <summary>
     /// Price expressed as a discount amount.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,7 +36,7 @@ public enum AmountPriceTypeCode
     [IsoId("_beqZt9p-Ed-ak6NoX_4Aeg_907150854")]
     [Description(@"Price expressed as a discount amount.")]
     Discount,
-    
+
     /// <summary>
     /// Price expressed as an amount of money per lot.
     /// Encoded/decoded by serializers as &quot;PLOT&quot;.
@@ -41,7 +45,7 @@ public enum AmountPriceTypeCode
     [IsoId("_beqZuNp-Ed-ak6NoX_4Aeg_907150877")]
     [Description(@"Price expressed as an amount of money per lot.")]
     Lot,
-    
+
     /// <summary>
     /// Price expressed as a premium.
     /// Encoded/decoded by serializers as &quot;PREM&quot;.
@@ -50,5 +54,4 @@ public enum AmountPriceTypeCode
     [IsoId("_be0KsNp-Ed-ak6NoX_4Aeg_907150885")]
     [Description(@"Price expressed as a premium.")]
     Premium,
-    
 }

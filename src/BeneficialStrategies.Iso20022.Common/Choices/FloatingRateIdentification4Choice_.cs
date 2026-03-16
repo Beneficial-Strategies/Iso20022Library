@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FloatingRateIdentification4Choice.Code))]
     [KnownType(typeof(FloatingRateIdentification4Choice.Proprietary))]
-    [JsonDerivedType(typeof(FloatingRateIdentification4Choice.Code),nameof(FloatingRateIdentification4Choice.Code))]
-    [JsonDerivedType(typeof(FloatingRateIdentification4Choice.Proprietary),nameof(FloatingRateIdentification4Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FloatingRateIdentification4Choice.Code),
+        nameof(FloatingRateIdentification4Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(FloatingRateIdentification4Choice.Proprietary),
+        nameof(FloatingRateIdentification4Choice.Proprietary)
+    )]
     [IsoId("_LrWLESjFEeuKKc2MztSwPw")]
     [DisplayName("Floating Rate Identification 4 Choice")]
-    public abstract partial record FloatingRateIdentification4Choice_
-    {
-    }
+    public abstract record FloatingRateIdentification4Choice_ { }
 }

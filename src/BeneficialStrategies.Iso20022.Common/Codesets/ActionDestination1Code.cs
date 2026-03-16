@@ -23,7 +23,7 @@ public enum ActionDestination1Code
     [IsoId("_3O1WAU0wEeea0Mdu1TOzDQ")]
     [Description(@"Data file")]
     File = ActionDestinationCode.File, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mobile telephone
     /// Encoded/decoded by serializers as &quot;MOBL&quot;.
@@ -32,7 +32,7 @@ public enum ActionDestination1Code
     [IsoId("_3bOMMk0wEeea0Mdu1TOzDQ")]
     [Description(@"Mobile telephone")]
     Mobile = ActionDestinationCode.Mobile, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of destination for action defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum ActionDestination1Code
     [IsoId("_3jrkok0wEeea0Mdu1TOzDQ")]
     [Description(@"Other type of destination for action defined at national level.")]
     OtherNational = ActionDestinationCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of destination for action defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,7 +50,7 @@ public enum ActionDestination1Code
     [IsoId("_3tJCok0wEeea0Mdu1TOzDQ")]
     [Description(@"Other type of destination for action defined at private level.")]
     OtherPrivate = ActionDestinationCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Personal computer.
     /// Encoded/decoded by serializers as &quot;PECR&quot;.
@@ -59,7 +59,7 @@ public enum ActionDestination1Code
     [IsoId("_39Imck0wEeea0Mdu1TOzDQ")]
     [Description(@"Personal computer.")]
     PersonalComputer = ActionDestinationCode.PersonalComputer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Point of sale terminal.
     /// Encoded/decoded by serializers as &quot;POFS&quot;.
@@ -68,5 +68,4 @@ public enum ActionDestination1Code
     [IsoId("_4Fl-4U0wEeea0Mdu1TOzDQ")]
     [Description(@"Point of sale terminal.")]
     PointOfSale = ActionDestinationCode.PointOfSale, // same ordinal as derivation source for type conversions
-    
 }

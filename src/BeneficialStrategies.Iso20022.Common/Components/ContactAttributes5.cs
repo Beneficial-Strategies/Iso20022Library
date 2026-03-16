@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vkaQkTQlEeifw8iDiyZLmQ")]
 [DisplayName("Contact Attributes")]
-public partial record ContactAttributes5
+public record ContactAttributes5
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of the party.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record ContactAttributes5
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Name { get; init; }
+
     /// <summary>
     /// Address of the party.
     /// </summary>
     [IsoId("_v1EixTQlEeifw8iDiyZLmQ")]
     [DisplayName("Postal Address")]
     [IsoXmlTag("PstlAdr")]
-    public PostalAddress1? PostalAddress { get; init; } 
-    
+    public PostalAddress1? PostalAddress { get; init; }
+
     /// <summary>
     /// Phone number of the party.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record ContactAttributes5
     [DisplayName("Phone Number")]
     [IsoXmlTag("PhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? PhoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? PhoneNumber { get; init; }
+
     /// <summary>
     /// Fax number of the party.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record ContactAttributes5
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; } 
-    
+    public IsoPhoneNumber? FaxNumber { get; init; }
+
     /// <summary>
     /// Address for electronic mail (e-mail) for the party.
     /// </summary>
@@ -61,9 +59,9 @@ public partial record ContactAttributes5
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? EmailAddress { get; init; }
+
     /// <summary>
     /// Address for the Universal Resource Locator (URL), for example, used over the www (HTTP) service.
     /// </summary>
@@ -71,9 +69,9 @@ public partial record ContactAttributes5
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    public IsoMax2048Text? URLAddress { get; init; } 
-    
+    [StringLength(maximumLength: 2048, MinimumLength = 1)]
+    public IsoMax2048Text? URLAddress { get; init; }
+
     /// <summary>
     /// Identification of the party expressed as a BIC.
     /// </summary>
@@ -81,8 +79,8 @@ public partial record ContactAttributes5
     [DisplayName("Any BIC")]
     [IsoXmlTag("AnyBIC")]
     [IsoSimpleType(IsoSimpleType.AnyBICDec2014Identifier)]
-    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; } 
-    
+    public IsoAnyBICDec2014Identifier? AnyBIC { get; init; }
+
     /// <summary>
     /// Legal entity identification as an alternate identification for the party.
     /// </summary>
@@ -90,9 +88,5 @@ public partial record ContactAttributes5
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? LEI { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLEIIdentifier? LEI { get; init; }
 }

@@ -21,7 +21,8 @@ public enum TransactionIndividualStatus2Code
     /// </summary>
     [EnumMember(Value = "RJCT")]
     [IsoId("_Yr2T2Np-Ed-ak6NoX_4Aeg_916455781")]
-    [Description(@"Payment initiation or individual transaction included in the payment initiation has been rejected.")]
+    [Description(
+        @"Payment initiation or individual transaction included in the payment initiation has been rejected."
+    )]
     Rejected = PaymentStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

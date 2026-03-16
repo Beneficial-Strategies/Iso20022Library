@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(NamePrefix2Choice.NamePrefix))]
     [KnownType(typeof(NamePrefix2Choice.ExtendedNamePrefix))]
-    [JsonDerivedType(typeof(NamePrefix2Choice.NamePrefix),nameof(NamePrefix2Choice.NamePrefix))]
-    [JsonDerivedType(typeof(NamePrefix2Choice.ExtendedNamePrefix),nameof(NamePrefix2Choice.ExtendedNamePrefix))]
+    [JsonDerivedType(typeof(NamePrefix2Choice.NamePrefix), nameof(NamePrefix2Choice.NamePrefix))]
+    [JsonDerivedType(
+        typeof(NamePrefix2Choice.ExtendedNamePrefix),
+        nameof(NamePrefix2Choice.ExtendedNamePrefix)
+    )]
     [IsoId("_HMqgQQ2fEeSNWNtJlXOAhg")]
     [DisplayName("Name Prefix 2 Choice")]
-    public abstract partial record NamePrefix2Choice_
-    {
-    }
+    public abstract record NamePrefix2Choice_ { }
 }

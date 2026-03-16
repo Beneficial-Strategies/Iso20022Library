@@ -23,7 +23,7 @@ public enum StatementStatusType1Code
     [IsoId("_raAf8dBVEeiirviLm7P0IA")]
     [Description(@"Transactions reported are confirmed.")]
     Confirmed = StatementStatusTypeCode.Confirmed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instructions or transactions  reported are pending.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -32,5 +32,4 @@ public enum StatementStatusType1Code
     [IsoId("_riiw4dBVEeiirviLm7P0IA")]
     [Description(@"Instructions or transactions  reported are pending.")]
     Pending = StatementStatusTypeCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

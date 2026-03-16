@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType2Choice
 {
     /// <summary>
@@ -13,21 +13,15 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType2Choice
     /// </summary>
     [IsoId("_3gENYUXfEeGY6MkiuzuPOA_-1651867592")]
     [DisplayName("Extended Current Year Type")]
-    public partial record ExtendedCurrentYearType : CurrentYearType2Choice_
+    public record ExtendedCurrentYearType : CurrentYearType2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Code and / or description for values that are not yet part of the related code list.
         /// </summary>
         [IsoXmlTag("XtndedCurYrTp")]
         [IsoSimpleType(IsoSimpleType.Extended350Code)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public required IsoExtended350Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public required IsoExtended350Code Value { get; init; }
     }
 }

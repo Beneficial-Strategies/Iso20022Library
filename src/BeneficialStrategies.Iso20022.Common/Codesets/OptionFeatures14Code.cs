@@ -21,7 +21,9 @@ public enum OptionFeatures14Code
     /// </summary>
     [EnumMember(Value = "COND")]
     [IsoId("")]
-    [Description(@"Feature whereby the holder can elect to place a condition on the acceptance of the option.")]
+    [Description(
+        @"Feature whereby the holder can elect to place a condition on the acceptance of the option."
+    )]
     Conditional = OptionFeaturesCode.Conditional, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -30,7 +32,9 @@ public enum OptionFeatures14Code
     /// </summary>
     [EnumMember(Value = "MAXC")]
     [IsoId("")]
-    [Description(@"Maximum cash option, may be subject to scaling, as such you may receive a combination of cash and securities outturn.")]
+    [Description(
+        @"Maximum cash option, may be subject to scaling, as such you may receive a combination of cash and securities outturn."
+    )]
     MaximumCash = OptionFeaturesCode.MaximumCash, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum OptionFeatures14Code
     /// </summary>
     [EnumMember(Value = "MAXS")]
     [IsoId("")]
-    [Description(@"Maximum stock option, may be subject to scaling, as such you may receive a combination of securities and cash outturn.")]
+    [Description(
+        @"Maximum stock option, may be subject to scaling, as such you may receive a combination of securities and cash outturn."
+    )]
     MaximumSecurities = OptionFeaturesCode.MaximumSecurities, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -57,7 +63,9 @@ public enum OptionFeatures14Code
     /// </summary>
     [EnumMember(Value = "PROR")]
     [IsoId("")]
-    [Description(@"Feature whereby the option can be subject to pro ration in case, for example, of over-subscription.")]
+    [Description(
+        @"Feature whereby the option can be subject to pro ration in case, for example, of over-subscription."
+    )]
     Proration = OptionFeaturesCode.Proration, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -86,5 +94,4 @@ public enum OptionFeatures14Code
     [IsoId("")]
     [Description(@"Reduced withholding tax rate applies to the option.")]
     ReducedWithholdingTax = OptionFeaturesCode.ReducedWithholdingTax, // same ordinal as derivation source for type conversions
-
 }

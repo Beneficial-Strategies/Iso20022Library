@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZU0_aNp-Ed-ak6NoX_4Aeg_1388201869")]
 [Description(@"Specifies the status of a resolution in a meeting agenda.")]
-[Derivations(typeof(ResolutionStatus1Code),typeof(ResolutionStatus2Code))]
+[Derivations(typeof(ResolutionStatus1Code), typeof(ResolutionStatus2Code))]
 public enum ResolutionStatusCode
 {
     /// <summary>
@@ -21,9 +21,11 @@ public enum ResolutionStatusCode
     /// </summary>
     [EnumMember(Value = "ACTV")]
     [IsoId("_ZU-JUNp-Ed-ak6NoX_4Aeg_1419601443")]
-    [Description(@"Meeting resolution has to be voted for by the participants to a general meeting.")]
+    [Description(
+        @"Meeting resolution has to be voted for by the participants to a general meeting."
+    )]
     Active,
-    
+
     /// <summary>
     /// Meeting resolution has been withdrawn.
     /// Encoded/decoded by serializers as &quot;WDRA&quot;.
@@ -32,7 +34,7 @@ public enum ResolutionStatusCode
     [IsoId("_ZU-JUdp-Ed-ak6NoX_4Aeg_1710508898")]
     [Description(@"Meeting resolution has been withdrawn.")]
     Withdrawn,
-    
+
     /// <summary>
     /// Meeting resolution has been rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -41,7 +43,7 @@ public enum ResolutionStatusCode
     [IsoId("_XE0YYF63EeSjaerr_EM7AQ")]
     [Description(@"Meeting resolution has been rejected.")]
     Rejected,
-    
+
     /// <summary>
     /// Meeting resolution has been accepted.
     /// Encoded/decoded by serializers as &quot;ACPT&quot;.
@@ -50,5 +52,4 @@ public enum ResolutionStatusCode
     [IsoId("_eBOw4F63EeSjaerr_EM7AQ")]
     [Description(@"Meeting resolution has been accepted.")]
     Accepted,
-    
 }

@@ -23,7 +23,7 @@ public enum MailTypeCode
     [IsoId("_TWh08CCXEeWJd9HF2tO7BA")]
     [Description(@"Air mail.")]
     AirMail,
-    
+
     /// <summary>
     /// Ordinary mail.
     /// Encoded/decoded by serializers as &quot;ORDM&quot;.
@@ -32,7 +32,7 @@ public enum MailTypeCode
     [IsoId("_WlBxQCCXEeWJd9HF2tO7BA")]
     [Description(@"Ordinary mail.")]
     OrdinaryMail,
-    
+
     /// <summary>
     /// Registered Mail.
     /// Encoded/decoded by serializers as &quot;REGM&quot;.
@@ -41,5 +41,4 @@ public enum MailTypeCode
     [IsoId("_ZmldwCCXEeWJd9HF2tO7BA")]
     [Description(@"Registered Mail.")]
     RegisteredMail,
-    
 }

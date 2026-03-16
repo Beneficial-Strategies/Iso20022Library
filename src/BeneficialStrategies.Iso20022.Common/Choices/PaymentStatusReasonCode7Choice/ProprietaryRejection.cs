@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice
     /// </summary>
     [IsoId("_Ny9Dy5lPEee-Zps0fZQaFQ")]
     [DisplayName("Proprietary Rejection")]
-    public partial record ProprietaryRejection : PaymentStatusReasonCode7Choice_
+    public record ProprietaryRejection : PaymentStatusReasonCode7Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Defines the reason why the Target2 SSP system has rejected the transaction.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice
         [DisplayName("Proprietary Status Reason")]
         [IsoXmlTag("PrtryStsRsn")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public required IsoMax4AlphaNumericText ProprietaryStatusReason { get; init; } 
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public required IsoMax4AlphaNumericText ProprietaryStatusReason { get; init; }
+
         /// <summary>
         /// Provides detailed information about the reason why the Target2 SSP system has rejected the transaction.
         /// </summary>
@@ -34,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentStatusReasonCode7Choice
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
         [IsoSimpleType(IsoSimpleType.Max256Text)]
-        [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-        public required IsoMax256Text Reason { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 256, MinimumLength = 1)]
+        public required IsoMax256Text Reason { get; init; }
     }
 }

@@ -21,27 +21,33 @@ public enum InvestmentFundFee2Code
     /// </summary>
     [EnumMember(Value = "BEND")]
     [IsoId("_uPlWAa26EeerDLLe8bZJCA")]
-    [Description(@"Fee paid by the investor to the fund or fund management company when redeeming.")]
+    [Description(
+        @"Fee paid by the investor to the fund or fund management company when redeeming."
+    )]
     BackEndLoad = InvestmentFundFeeCode.BackEndLoad, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee paid by the investor to the fund or fund management company when subscribing.
     /// Encoded/decoded by serializers as &quot;FEND&quot;.
     /// </summary>
     [EnumMember(Value = "FEND")]
     [IsoId("_uhu18a26EeerDLLe8bZJCA")]
-    [Description(@"Fee paid by the investor to the fund or fund management company when subscribing.")]
+    [Description(
+        @"Fee paid by the investor to the fund or fund management company when subscribing."
+    )]
     FrontEndLoad = InvestmentFundFeeCode.FrontEndLoad, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// In investment funds, a fee charged for the transfer of ownership of an investment fund.
     /// Encoded/decoded by serializers as &quot;TRAN&quot;.
     /// </summary>
     [EnumMember(Value = "TRAN")]
     [IsoId("_uzbp8a26EeerDLLe8bZJCA")]
-    [Description(@"In investment funds, a fee charged for the transfer of ownership of an investment fund.")]
+    [Description(
+        @"In investment funds, a fee charged for the transfer of ownership of an investment fund."
+    )]
     TransferFee = InvestmentFundFeeCode.TransferFee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge paid for the postage.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -50,16 +56,18 @@ public enum InvestmentFundFee2Code
     [IsoId("_0rY70a26EeerDLLe8bZJCA")]
     [Description(@"Charge paid for the postage.")]
     PostageCharge = InvestmentFundFeeCode.PostageCharge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee charged by a regulatory authority, for example, securities and exchange fees.
     /// Encoded/decoded by serializers as &quot;REGF&quot;.
     /// </summary>
     [EnumMember(Value = "REGF")]
     [IsoId("_48070a26EeerDLLe8bZJCA")]
-    [Description(@"Fee charged by a regulatory authority, for example, securities and exchange fees.")]
+    [Description(
+        @"Fee charged by a regulatory authority, for example, securities and exchange fees."
+    )]
     RegulatoryFee = InvestmentFundFeeCode.RegulatoryFee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge for shipping, including the insurance of securities.
     /// Encoded/decoded by serializers as &quot;SHIP&quot;.
@@ -68,7 +76,7 @@ public enum InvestmentFundFee2Code
     [IsoId("_6HEhYa26EeerDLLe8bZJCA")]
     [Description(@"Charge for shipping, including the insurance of securities.")]
     ShippingCharge = InvestmentFundFeeCode.ShippingCharge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fees, drawdown, or other reduction from or in addition to the deal price.
     /// Encoded/decoded by serializers as &quot;SPCN&quot;.
@@ -77,5 +85,4 @@ public enum InvestmentFundFee2Code
     [IsoId("_uV2goa27EeerDLLe8bZJCA")]
     [Description(@"Fees, drawdown, or other reduction from or in addition to the deal price.")]
     SpecialConcessions = InvestmentFundFeeCode.SpecialConcessions, // same ordinal as derivation source for type conversions
-    
 }

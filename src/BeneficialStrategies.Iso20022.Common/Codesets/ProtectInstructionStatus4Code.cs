@@ -21,7 +21,8 @@ public enum ProtectInstructionStatus4Code
     /// </summary>
     [EnumMember(Value = "OPEN")]
     [IsoId("_BshVMbpcEeilsanBGAzy4A")]
-    [Description(@"Protect instruction which has not been fully covered. Will include partial covers.")]
+    [Description(
+        @"Protect instruction which has not been fully covered. Will include partial covers."
+    )]
     Open = DTCInstructionStatusCode.Open, // same ordinal as derivation source for type conversions
-    
 }

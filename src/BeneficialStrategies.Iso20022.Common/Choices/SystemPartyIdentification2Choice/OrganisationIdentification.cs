@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
     /// </summary>
     [IsoId("_w8OZgWc-EemvNLufWGIVOQ")]
     [DisplayName("Organisation Identification")]
-    public partial record OrganisationIdentification : SystemPartyIdentification2Choice_
+    public record OrganisationIdentification : SystemPartyIdentification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique identification of the party.
         /// </summary>
         [IsoId("_VulSIbpYEeifFaUMRKyMMw")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
-        public required PartyIdentification120Choice_ Identification { get; init; } 
-        
+        public required PartyIdentification120Choice_ Identification { get; init; }
+
         /// <summary>
         /// Legal entity identification as an alternate identification for a party.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SystemPartyIdentification2Choice
         [DisplayName("LEI")]
         [IsoXmlTag("LEI")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LEI { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoLEIIdentifier? LEI { get; init; }
     }
 }

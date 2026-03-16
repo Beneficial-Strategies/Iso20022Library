@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_DTCCSubEventType12Code")]
-[Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types.")]
+[Description(
+    @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined sub event types."
+)]
 [DerivedFrom(typeof(DTCCSubEventTypeCode))]
 public enum DTCCSubEventType12Code
 {
@@ -21,7 +23,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "A144")]
     [IsoId("_DTCCSubEventType12Code_USLegal144A")]
-    [Description(@"Identifies an exchange offer on securities that are subject to Securities Rule 144A.")]
+    [Description(
+        @"Identifies an exchange offer on securities that are subject to Securities Rule 144A."
+    )]
     USLegal144A = DTCCSubEventTypeCode.USLegal144A,
 
     /// <summary>
@@ -30,7 +34,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "ADRS")]
     [IsoId("_DTCCSubEventType12Code_ADR")]
-    [Description(@"Identifies when the event security is an ADR. The underlying security is American Depositary Receipt.")]
+    [Description(
+        @"Identifies when the event security is an ADR. The underlying security is American Depositary Receipt."
+    )]
     ADR = DTCCSubEventTypeCode.ADR,
 
     /// <summary>
@@ -48,7 +54,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "BTST")]
     [IsoId("_DTCCSubEventType12Code_BidTenderSealedTender")]
-    [Description(@"Identifies a tender offer event in which the holder can choose the price at which they are willing to tender their securities.")]
+    [Description(
+        @"Identifies a tender offer event in which the holder can choose the price at which they are willing to tender their securities."
+    )]
     BidTenderSealedTender = DTCCSubEventTypeCode.BidTenderSealedTender,
 
     /// <summary>
@@ -57,7 +65,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "C305")]
     [IsoId("_DTCCSubEventType12Code_DeemedDividend305C")]
-    [Description(@"Identifies an event which has been considered a deemed distribution under Section 305(c) of the United States Internal Revenue Code.")]
+    [Description(
+        @"Identifies an event which has been considered a deemed distribution under Section 305(c) of the United States Internal Revenue Code."
+    )]
     DeemedDividend305C = DTCCSubEventTypeCode.DeemedDividend305C,
 
     /// <summary>
@@ -84,7 +94,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "CILI")]
     [IsoId("_DTCCSubEventType12Code_CashinLieu")]
-    [Description(@"Identifies DTC specific sub-event where holders can elect to sell whole shares to satisfy fractional entitlements.")]
+    [Description(
+        @"Identifies DTC specific sub-event where holders can elect to sell whole shares to satisfy fractional entitlements."
+    )]
     CashinLieu = DTCCSubEventTypeCode.CashinLieu,
 
     /// <summary>
@@ -111,7 +123,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "CTAX")]
     [IsoId("_DTCCSubEventType12Code_TaxCredit")]
-    [Description(@"Identifies an event where a tax credit relating to the Build America Bonds will occur.")]
+    [Description(
+        @"Identifies an event where a tax credit relating to the Build America Bonds will occur."
+    )]
     TaxCredit = DTCCSubEventTypeCode.TaxCredit,
 
     /// <summary>
@@ -120,7 +134,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "DRPD")]
     [IsoId("_DTCCSubEventType12Code_DividendReinvestmentByDTC")]
-    [Description(@"Identifies an event where the Issue is eligible for a Dividend Reinvestment program at DTCC.")]
+    [Description(
+        @"Identifies an event where the Issue is eligible for a Dividend Reinvestment program at DTCC."
+    )]
     DividendReinvestmentByDTC = DTCCSubEventTypeCode.DividendReinvestmentByDTC,
 
     /// <summary>
@@ -129,7 +145,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "DRPI")]
     [IsoId("_DTCCSubEventType12Code_DividendReinvestmentByIssuer")]
-    [Description(@"Identifies an event where the issuer offers a dividend reinvestment program that is not processed by DTC.")]
+    [Description(
+        @"Identifies an event where the issuer offers a dividend reinvestment program that is not processed by DTC."
+    )]
     DividendReinvestmentByIssuer = DTCCSubEventTypeCode.DividendReinvestmentByIssuer,
 
     /// <summary>
@@ -138,8 +156,11 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "ECNI")]
     [IsoId("_DTCCSubEventType12Code_AmountsInExcessOfCumulativeNetIncome")]
-    [Description(@"Identifies when a publicly traded partnership identifies amounts in excess of cumulative net income.")]
-    AmountsInExcessOfCumulativeNetIncome = DTCCSubEventTypeCode.AmountsInExcessOfCumulativeNetIncome,
+    [Description(
+        @"Identifies when a publicly traded partnership identifies amounts in excess of cumulative net income."
+    )]
+    AmountsInExcessOfCumulativeNetIncome =
+        DTCCSubEventTypeCode.AmountsInExcessOfCumulativeNetIncome,
 
     /// <summary>
     /// Identifies a tender offer event made by another company to purchase a portion or all of the outstanding shares.
@@ -147,7 +168,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "FTPR")]
     [IsoId("_DTCCSubEventType12Code_OfferToPurchase")]
-    [Description(@"Identifies a tender offer event made by another company to purchase a portion or all of the outstanding shares.")]
+    [Description(
+        @"Identifies a tender offer event made by another company to purchase a portion or all of the outstanding shares."
+    )]
     OfferToPurchase = DTCCSubEventTypeCode.OfferToPurchase,
 
     /// <summary>
@@ -165,7 +188,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "M871")]
     [IsoId("_DTCCSubEventType12Code_DividendEquivalentPayment871M")]
-    [Description(@"Identifies an event which has been considered a dividend equivalent payment under Section 871(m).")]
+    [Description(
+        @"Identifies an event which has been considered a dividend equivalent payment under Section 871(m)."
+    )]
     DividendEquivalentPayment871M = DTCCSubEventTypeCode.DividendEquivalentPayment871M,
 
     /// <summary>
@@ -174,7 +199,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "MBCK")]
     [IsoId("_DTCCSubEventType12Code_MortgageBacked")]
-    [Description(@"Indicates an event where the issue has an early redemption feature allowing the holder to elect to sell bonds back to the issuer on a monthly basis.")]
+    [Description(
+        @"Indicates an event where the issue has an early redemption feature allowing the holder to elect to sell bonds back to the issuer on a monthly basis."
+    )]
     MortgageBacked = DTCCSubEventTypeCode.MortgageBacked,
 
     /// <summary>
@@ -192,7 +219,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "MROS")]
     [IsoId("_DTCCSubEventType12Code_MandatoryRedemptionOfShares")]
-    [Description(@"Identifies an event where redemption shares are issued in addition to shares of the original security.")]
+    [Description(
+        @"Identifies an event where redemption shares are issued in addition to shares of the original security."
+    )]
     MandatoryRedemptionOfShares = DTCCSubEventTypeCode.MandatoryRedemptionOfShares,
 
     /// <summary>
@@ -219,7 +248,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "OPTO")]
     [IsoId("_DTCCSubEventType12Code_OptOut")]
-    [Description(@"Identifies an event where DTC offers a DRIP option as a default option (holder must opt out).")]
+    [Description(
+        @"Identifies an event where DTC offers a DRIP option as a default option (holder must opt out)."
+    )]
     OptOut = DTCCSubEventTypeCode.OptOut,
 
     /// <summary>
@@ -255,7 +286,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "PRNI")]
     [IsoId("_DTCCSubEventType12Code_PhysicalRightsNotIssued")]
-    [Description(@"Identifies an event where the company is not issuing a security with the right to subscribe for additional shares.")]
+    [Description(
+        @"Identifies an event where the company is not issuing a security with the right to subscribe for additional shares."
+    )]
     PhysicalRightsNotIssued = DTCCSubEventTypeCode.PhysicalRightsNotIssued,
 
     /// <summary>
@@ -273,7 +306,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "RCLA")]
     [IsoId("_DTCCSubEventType12Code_Classification1042S")]
-    [Description(@"Identifies distributions that have multiple components for tax withholding and 1042-S reporting purposes.")]
+    [Description(
+        @"Identifies distributions that have multiple components for tax withholding and 1042-S reporting purposes."
+    )]
     Classification1042S = DTCCSubEventTypeCode.Classification1042S,
 
     /// <summary>
@@ -291,7 +326,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "REGS")]
     [IsoId("_DTCCSubEventType12Code_RegulationS")]
-    [Description(@"Identifies an exchange offer on securities that are subject to securities rule Reg S.")]
+    [Description(
+        @"Identifies an exchange offer on securities that are subject to securities rule Reg S."
+    )]
     RegulationS = DTCCSubEventTypeCode.RegulationS,
 
     /// <summary>
@@ -300,7 +337,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "RMRK")]
     [IsoId("_DTCCSubEventType12Code_Remarketing")]
-    [Description(@"Identifies an event that involves a Stock Purchase Contract product offering an early settlement or remarketing feature.")]
+    [Description(
+        @"Identifies an event that involves a Stock Purchase Contract product offering an early settlement or remarketing feature."
+    )]
     Remarketing = DTCCSubEventTypeCode.Remarketing,
 
     /// <summary>
@@ -309,7 +348,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "SALE")]
     [IsoId("_DTCCSubEventType12Code_SaleOfAssets")]
-    [Description(@"Identifies an event where the distribution is from the proceeds of the sale of assets.")]
+    [Description(
+        @"Identifies an event where the distribution is from the proceeds of the sale of assets."
+    )]
     SaleOfAssets = DTCCSubEventTypeCode.SaleOfAssets,
 
     /// <summary>
@@ -345,7 +386,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "SHPP")]
     [IsoId("_DTCCSubEventType12Code_SharePurchasePlan")]
-    [Description(@"Identifies an event involving the offer of shares by a corporation listed on the Australia Stock Exchange.")]
+    [Description(
+        @"Identifies an event involving the offer of shares by a corporation listed on the Australia Stock Exchange."
+    )]
     SharePurchasePlan = DTCCSubEventTypeCode.SharePurchasePlan,
 
     /// <summary>
@@ -354,7 +397,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "SOPT")]
     [IsoId("_DTCCSubEventType12Code_SurvivorOptions")]
-    [Description(@"Indicates an event where the Issue has an early redemption feature allowing the holder to elect to sell bonds back to the issuer.")]
+    [Description(
+        @"Indicates an event where the Issue has an early redemption feature allowing the holder to elect to sell bonds back to the issuer."
+    )]
     SurvivorOptions = DTCCSubEventTypeCode.SurvivorOptions,
 
     /// <summary>
@@ -363,7 +408,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "SPAC")]
     [IsoId("_DTCCSubEventType12Code_SpecialPurposeAcquisitionCompany")]
-    [Description(@"Specified purpose acquisition companies (SPACs) are public companies comprised of cash available to investors in financial markets.")]
+    [Description(
+        @"Specified purpose acquisition companies (SPACs) are public companies comprised of cash available to investors in financial markets."
+    )]
     SpecialPurposeAcquisitionCompany = DTCCSubEventTypeCode.SpecialPurposeAcquisitionCompany,
 
     /// <summary>
@@ -372,7 +419,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "STDT")]
     [IsoId("_DTCCSubEventType12Code_Standard")]
-    [Description(@"Identifies an event where one company merges with the other and assumes the name of the surviving company.")]
+    [Description(
+        @"Identifies an event where one company merges with the other and assumes the name of the surviving company."
+    )]
     Standard = DTCCSubEventTypeCode.Standard,
 
     /// <summary>
@@ -390,7 +439,9 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "UNIT")]
     [IsoId("_DTCCSubEventType12Code_UnitCombination")]
-    [Description(@"Identifies a combination of assets or types of assets packaged together and sold as one.")]
+    [Description(
+        @"Identifies a combination of assets or types of assets packaged together and sold as one."
+    )]
     UnitCombination = DTCCSubEventTypeCode.UnitCombination,
 
     /// <summary>
@@ -435,7 +486,8 @@ public enum DTCCSubEventType12Code
     /// </summary>
     [EnumMember(Value = "XFER")]
     [IsoId("_DTCCSubEventType12Code_Transfer")]
-    [Description(@"Identifies an event where one company transfers all of its shares to a newly created company.")]
+    [Description(
+        @"Identifies an event where one company transfers all of its shares to a newly created company."
+    )]
     Transfer = DTCCSubEventTypeCode.Transfer,
-
 }

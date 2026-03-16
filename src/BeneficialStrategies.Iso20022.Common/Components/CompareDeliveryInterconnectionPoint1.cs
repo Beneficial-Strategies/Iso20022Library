@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g-BqME6cEeyEpI66tm807w")]
 [DisplayName("Compare Delivery Interconnection Point")]
-public partial record CompareDeliveryInterconnectionPoint1
+public record CompareDeliveryInterconnectionPoint1
 {
-    #nullable enable
-    
     /// <summary>
     /// Information for the first side of the transaction.
     /// </summary>
     [IsoId("_pRvM0E6cEeyEpI66tm807w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val1")]
-    public DeliveryInterconnectionPoint1Choice_? Value1 { get; init; } 
-    
+    public DeliveryInterconnectionPoint1Choice_? Value1 { get; init; }
+
     /// <summary>
     /// Information for the second side of the transaction.
     /// </summary>
     [IsoId("_sCby0E6cEeyEpI66tm807w")]
     [DisplayName("Value")]
     [IsoXmlTag("Val2")]
-    public DeliveryInterconnectionPoint1Choice_? Value2 { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DeliveryInterconnectionPoint1Choice_? Value2 { get; init; }
 }

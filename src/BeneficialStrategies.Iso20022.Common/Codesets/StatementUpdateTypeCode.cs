@@ -22,7 +22,7 @@ public enum StatementUpdateTypeCode
     [IsoId("_ZQWvEtp-Ed-ak6NoX_4Aeg_-1582551317")]
     [Description(@"Statement is complete.")]
     Complete,
-    
+
     /// <summary>
     /// Statement contains changes only.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -31,5 +31,4 @@ public enum StatementUpdateTypeCode
     [IsoId("_ZQWvE9p-Ed-ak6NoX_4Aeg_-1582551316")]
     [Description(@"Statement contains changes only.")]
     Delta,
-    
 }

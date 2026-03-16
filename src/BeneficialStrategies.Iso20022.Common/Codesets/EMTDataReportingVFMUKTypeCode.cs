@@ -22,5 +22,4 @@ public enum EMTDataReportingVFMUKTypeCode
     [IsoId("_EMTDataReportingVFMUKTypeCode_Yes")]
     [Description(@"Value for money data is being provided.")]
     Yes,
-
 }

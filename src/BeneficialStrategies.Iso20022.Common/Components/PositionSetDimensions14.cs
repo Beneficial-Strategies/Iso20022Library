@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F6dn8cguEeuGrNSsxk3B0A")]
 [DisplayName("Position Set Dimensions")]
-public partial record PositionSetDimensions14
+public record PositionSetDimensions14
 {
-    #nullable enable
-    
     /// <summary>
     /// Data specific to counterparties.
     /// </summary>
     [IsoId("_F8SM48guEeuGrNSsxk3B0A")]
     [DisplayName("Counterparty Data")]
     [IsoXmlTag("CtrPtyData")]
-    public CounterpartyData86? CounterpartyData { get; init; } 
-    
+    public CounterpartyData86? CounterpartyData { get; init; }
+
     /// <summary>
     /// Details of the loan used for financing the transaction.
     /// </summary>
     [IsoId("_F8SM5cguEeuGrNSsxk3B0A")]
     [DisplayName("Loan Data")]
     [IsoXmlTag("LnData")]
-    public LoanData134? LoanData { get; init; } 
-    
+    public LoanData134? LoanData { get; init; }
+
     /// <summary>
     /// Provides the details of the collateral used in the transaction.
     /// </summary>
     [IsoId("_F8SM58guEeuGrNSsxk3B0A")]
     [DisplayName("Collateral Data")]
     [IsoXmlTag("CollData")]
-    public CollateralData33? CollateralData { get; init; } 
-    
+    public CollateralData33? CollateralData { get; init; }
+
     /// <summary>
     /// Flag to identify whether the reported Securities Financing Transaction position contains abnormal values.
     /// </summary>
@@ -49,9 +47,5 @@ public partial record PositionSetDimensions14
     [DisplayName("Outliers Included")]
     [IsoXmlTag("OtlrsIncl")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? OutliersIncluded { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? OutliersIncluded { get; init; }
 }

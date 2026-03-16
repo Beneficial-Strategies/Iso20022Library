@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VSSIMbLQEemDyeh7tbvg1w")]
 [DisplayName("Cancellation Processing Status")]
-public partial record CancellationProcessingStatus2
+public record CancellationProcessingStatus2
 {
-    #nullable enable
-    
     /// <summary>
     /// Status code.
     /// </summary>
     [IsoId("_VqsBIbLQEemDyeh7tbvg1w")]
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public required CancellationStatus6Code Status { get; init; } 
-    
+    public required CancellationStatus6Code Status { get; init; }
+
     /// <summary>
     /// Additional information about the status.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record CancellationProcessingStatus2
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? AdditionalInformation { get; init; }
 }

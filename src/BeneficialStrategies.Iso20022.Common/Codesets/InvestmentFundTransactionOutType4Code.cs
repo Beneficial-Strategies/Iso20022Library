@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ViYohNp-Ed-ak6NoX_4Aeg_1123962465")]
-[Description(@"Specifies the type of investment fund transaction that results in a cash movement out of a fund.")]
+[Description(
+    @"Specifies the type of investment fund transaction that results in a cash movement out of a fund."
+)]
 [DerivedFrom(typeof(InvestmentFundTransactionTypeCode))]
 public enum InvestmentFundTransactionOutType4Code
 {
@@ -23,7 +25,7 @@ public enum InvestmentFundTransactionOutType4Code
     [IsoId("_ViYohdp-Ed-ak6NoX_4Aeg_-1882035565")]
     [Description(@"Transaction is a redemption of an investment fund.")]
     Redemption = InvestmentFundTransactionTypeCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a subscription leg of a switch order execution.
     /// Encoded/decoded by serializers as &quot;SWIO&quot;.
@@ -32,7 +34,7 @@ public enum InvestmentFundTransactionOutType4Code
     [IsoId("_ViYohtp-Ed-ak6NoX_4Aeg_-1812771225")]
     [Description(@"Transaction is a subscription leg of a switch order execution.")]
     SwitchOut = InvestmentFundTransactionTypeCode.SwitchOut, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is an InSpecie.
     /// Encoded/decoded by serializers as &quot;INSP&quot;.
@@ -41,7 +43,7 @@ public enum InvestmentFundTransactionOutType4Code
     [IsoId("_ViYoh9p-Ed-ak6NoX_4Aeg_1824710762")]
     [Description(@"Transaction is an InSpecie.")]
     InSpecie = InvestmentFundTransactionTypeCode.InSpecie, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a cross out.
     /// Encoded/decoded by serializers as &quot;CROO&quot;.
@@ -50,7 +52,7 @@ public enum InvestmentFundTransactionOutType4Code
     [IsoId("_ViYoiNp-Ed-ak6NoX_4Aeg_1843184237")]
     [Description(@"Transaction is a cross out.")]
     CrossOut = InvestmentFundTransactionTypeCode.CrossOut, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a dividend.
     /// Encoded/decoded by serializers as &quot;DIVI&quot;.
@@ -59,7 +61,7 @@ public enum InvestmentFundTransactionOutType4Code
     [IsoId("_ViYoidp-Ed-ak6NoX_4Aeg_1864425612")]
     [Description(@"Transaction is a dividend.")]
     Dividend = InvestmentFundTransactionTypeCode.Dividend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is another type of transaction.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,5 +70,4 @@ public enum InvestmentFundTransactionOutType4Code
     [IsoId("_ViiZgNp-Ed-ak6NoX_4Aeg_1870890259")]
     [Description(@"Transaction is another type of transaction.")]
     Other = InvestmentFundTransactionTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

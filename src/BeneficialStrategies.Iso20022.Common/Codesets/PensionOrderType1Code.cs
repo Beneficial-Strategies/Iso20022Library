@@ -23,14 +23,15 @@ public enum PensionOrderType1Code
     [IsoId("_j14EwbT5EeiENt6AoDfPXg")]
     [Description(@"Pension policy, plan or scheme has been earmarked (set aside.)")]
     Earmark = PensionOrderTypeCode.Earmark, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sharing order for the pension policy, plan or scheme has been issued by a court.
     /// Encoded/decoded by serializers as &quot;SHAR&quot;.
     /// </summary>
     [EnumMember(Value = "SHAR")]
     [IsoId("_j7FU4bT5EeiENt6AoDfPXg")]
-    [Description(@"Sharing order for the pension policy, plan or scheme has been issued by a court.")]
+    [Description(
+        @"Sharing order for the pension policy, plan or scheme has been issued by a court."
+    )]
     Sharing = PensionOrderTypeCode.Sharing, // same ordinal as derivation source for type conversions
-    
 }

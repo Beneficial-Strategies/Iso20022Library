@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_a78HINp-Ed-ak6NoX_4Aeg_-1603295237")]
-[Description(@"Specifies the certification format required, that is, physical or electronic format.")]
+[Description(
+    @"Specifies the certification format required, that is, physical or electronic format."
+)]
 [DerivedFrom(typeof(CertificationFormatTypeCode))]
 public enum CertificationFormatType1Code
 {
@@ -23,7 +25,7 @@ public enum CertificationFormatType1Code
     [IsoId("_a78HIdp-Ed-ak6NoX_4Aeg_-1559890547")]
     [Description(@"Certification must be provided in electronic format.")]
     Electronic = CertificationFormatTypeCode.Electronic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Certification must be provided in physical format.
     /// Encoded/decoded by serializers as &quot;PHYS&quot;.
@@ -32,5 +34,4 @@ public enum CertificationFormatType1Code
     [IsoId("_a78HItp-Ed-ak6NoX_4Aeg_-1559890529")]
     [Description(@"Certification must be provided in physical format.")]
     Physical = CertificationFormatTypeCode.Physical, // same ordinal as derivation source for type conversions
-    
 }

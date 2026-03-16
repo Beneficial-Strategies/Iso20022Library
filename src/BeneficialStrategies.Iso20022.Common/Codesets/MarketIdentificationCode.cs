@@ -23,7 +23,7 @@ public enum MarketIdentificationCode
     [IsoId("_rMH-EMObEeWiEtRBUJSIaA")]
     [Description(@"Market segment code.")]
     Segment,
-    
+
     /// <summary>
     /// Market operating code.
     /// Encoded/decoded by serializers as &quot;OPRT&quot;.
@@ -32,5 +32,4 @@ public enum MarketIdentificationCode
     [IsoId("_tbGXEMObEeWiEtRBUJSIaA")]
     [Description(@"Market operating code.")]
     Operating,
-    
 }

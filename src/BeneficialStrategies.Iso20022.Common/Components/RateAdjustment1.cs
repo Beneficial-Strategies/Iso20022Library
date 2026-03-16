@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_D6Df4CDwEeahCJeThTBhHA")]
 [DisplayName("Rate Adjustment")]
-public partial record RateAdjustment1
+public record RateAdjustment1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the rate as determined by the rate schedule.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record RateAdjustment1
     [DisplayName("Rate")]
     [IsoXmlTag("Rate")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public required IsoPercentageRate Rate { get; init; } 
-    
+    public required IsoPercentageRate Rate { get; init; }
+
     /// <summary>
     /// Specifies date as of which the rate is effective.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record RateAdjustment1
     [DisplayName("Adjustment Date")]
     [IsoXmlTag("AdjstmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate AdjustmentDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODate AdjustmentDate { get; init; }
 }

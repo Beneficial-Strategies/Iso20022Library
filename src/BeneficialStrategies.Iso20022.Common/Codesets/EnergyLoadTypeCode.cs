@@ -23,7 +23,7 @@ public enum EnergyLoadTypeCode
     [IsoId("_0JbZsBVnEeWXLoZC9OIRgg")]
     [Description(@"Off-Peak.|")]
     Off_Peak,
-    
+
     /// <summary>
     /// Hour and block hours.
     /// Encoded/decoded by serializers as &quot;HABH&quot;.
@@ -32,7 +32,7 @@ public enum EnergyLoadTypeCode
     [IsoId("_0NmIABVnEeWXLoZC9OIRgg")]
     [Description(@"Hour and block hours.")]
     HourAndBlockHours,
-    
+
     /// <summary>
     /// Shaped.
     /// Encoded/decoded by serializers as &quot;SHPD&quot;.
@@ -41,7 +41,7 @@ public enum EnergyLoadTypeCode
     [IsoId("_0Rw2UBVnEeWXLoZC9OIRgg")]
     [Description(@"Shaped.")]
     Shaped,
-    
+
     /// <summary>
     /// Gas day.
     /// Encoded/decoded by serializers as &quot;GASD&quot;.
@@ -50,7 +50,7 @@ public enum EnergyLoadTypeCode
     [IsoId("_0Rw2URVnEeWXLoZC9OIRgg")]
     [Description(@"Gas day.")]
     GasDay,
-    
+
     /// <summary>
     /// Base load.
     /// Encoded/decoded by serializers as &quot;BSLD&quot;.
@@ -59,7 +59,7 @@ public enum EnergyLoadTypeCode
     [IsoId("_EmqBIhVoEeWXLoZC9OIRgg")]
     [Description(@"Base load.")]
     BaseLoad,
-    
+
     /// <summary>
     /// Peak load.
     /// Encoded/decoded by serializers as &quot;PKLD&quot;.
@@ -68,7 +68,7 @@ public enum EnergyLoadTypeCode
     [IsoId("_EmqBIxVoEeWXLoZC9OIRgg")]
     [Description(@"Peak load.")]
     PeakLoad,
-    
+
     /// <summary>
     /// Other.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,5 +77,4 @@ public enum EnergyLoadTypeCode
     [IsoId("_jP73kBVoEeWXLoZC9OIRgg")]
     [Description(@"Other.")]
     Other,
-    
 }

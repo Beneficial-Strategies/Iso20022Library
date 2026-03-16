@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_h9QSsCuYEe6GGqp7D_oKtA")]
-[Description(@"Specifies the outcome of PRIN value assessment or review about fair value of product. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09060.")]
+[Description(
+    @"Specifies the outcome of PRIN value assessment or review about fair value of product. When used in reference to MiFID, this is in the scope of the European MiFID Template (EMT) reference 09060."
+)]
 [DerivedFrom(typeof(OutcomeOfPRINValueAssessmentOrReviewUKTypeCode))]
 public enum OutcomeOfPRINValueAssessmentOrReviewUKType1Code
 {
@@ -30,7 +32,8 @@ public enum OutcomeOfPRINValueAssessmentOrReviewUKType1Code
     /// </summary>
     [EnumMember(Value = "PRI2")]
     [IsoId("")]
-    [Description(@"Review indicates significant changes are required in order to provide fair value.")]
+    [Description(
+        @"Review indicates significant changes are required in order to provide fair value."
+    )]
     ChangesRequired = OutcomeOfPRINValueAssessmentOrReviewUKTypeCode.ChangesRequired, // same ordinal as derivation source for type conversions
-
 }

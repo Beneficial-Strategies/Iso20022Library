@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TT2PUN6aEeiwsev40qZGEQ")]
 [DisplayName("Retailer Event")]
-public partial record RetailerEvent1
+public record RetailerEvent1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date and time of the event.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record RetailerEvent1
     [DisplayName("Event Time Stamp")]
     [IsoXmlTag("EvtTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime EventTimeStamp { get; init; } 
-    
+    public required IsoISODateTime EventTimeStamp { get; init; }
+
     /// <summary>
     /// Event the POI notifies to the Sale System.
     /// </summary>
     [IsoId("_bTTZMN6aEeiwsev40qZGEQ")]
     [DisplayName("Event To Notify")]
     [IsoXmlTag("EvtToNtfy")]
-    public required EventToNotify1Code EventToNotify { get; init; } 
-    
+    public required EventToNotify1Code EventToNotify { get; init; }
+
     /// <summary>
     /// Context of the Event message.
     /// </summary>
     [IsoId("_sl3QsN6bEeiwsev40qZGEQ")]
     [DisplayName("Event Context")]
     [IsoXmlTag("EvtCntxt")]
-    public EventContext1? EventContext { get; init; } 
-    
+    public EventContext1? EventContext { get; init; }
+
     /// <summary>
     /// Additional Information according to the event type.
     /// </summary>
@@ -50,10 +48,6 @@ public partial record RetailerEvent1
     [DisplayName("Additional Event Information")]
     [IsoXmlTag("AddtlEvtInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025 ,MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalEventInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 1025, MinimumLength = 1)]
+    public IsoMax1025Text? AdditionalEventInformation { get; init; }
 }

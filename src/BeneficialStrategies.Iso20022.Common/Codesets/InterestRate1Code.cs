@@ -23,7 +23,7 @@ public enum InterestRate1Code
     [IsoId("_RBUdYTErEemzCpWiCwK4aQ")]
     [Description(@"Gross interest rate of the instalment")]
     GrossRate = InterestRateCode.GrossRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Net interest rate of the instalment
     /// Encoded/decoded by serializers as &quot;NTRT&quot;.
@@ -32,7 +32,7 @@ public enum InterestRate1Code
     [IsoId("_RW7hATErEemzCpWiCwK4aQ")]
     [Description(@"Net interest rate of the instalment")]
     NetRate = InterestRateCode.NetRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other interest rate of the instalment
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum InterestRate1Code
     [IsoId("_RrpMwTErEemzCpWiCwK4aQ")]
     [Description(@"Other interest rate of the instalment")]
     OtherNational = InterestRateCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other interest rate of the instalment
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,5 +50,4 @@ public enum InterestRate1Code
     [IsoId("_R9-S4TErEemzCpWiCwK4aQ")]
     [Description(@"Other interest rate of the instalment")]
     OtherPrivate = InterestRateCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

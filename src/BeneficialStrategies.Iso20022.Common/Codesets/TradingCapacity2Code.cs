@@ -23,7 +23,7 @@ public enum TradingCapacity2Code
     [IsoId("_YZOSydp-Ed-ak6NoX_4Aeg_936150344")]
     [Description(@"Broker is buying or selling securities for its own account.")]
     TradingPrincipal,
-    
+
     /// <summary>
     /// Broker is trading on behalf of another party.
     /// Encoded/decoded by serializers as &quot;TAGN&quot;.
@@ -32,5 +32,4 @@ public enum TradingCapacity2Code
     [IsoId("_YZOSytp-Ed-ak6NoX_4Aeg_936150369")]
     [Description(@"Broker is trading on behalf of another party.")]
     TradingAgent,
-    
 }

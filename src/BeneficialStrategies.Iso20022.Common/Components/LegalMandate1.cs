@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bhYnwEJ4EeGuetKibuqsKw")]
 [DisplayName("Legal Mandate")]
-public partial record LegalMandate1
+public record LegalMandate1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the legal mandate paragraph in law which gives power to the authority&apos;s request.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record LegalMandate1
     [DisplayName("Paragraph")]
     [IsoXmlTag("Prgrph")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Paragraph { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Paragraph { get; init; }
+
     /// <summary>
     /// Specifies any additional information describing how or why the paragraph of law should be applied.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record LegalMandate1
     [DisplayName("Disclaimer")]
     [IsoXmlTag("Dsclmr")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Disclaimer { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Disclaimer { get; init; }
 }

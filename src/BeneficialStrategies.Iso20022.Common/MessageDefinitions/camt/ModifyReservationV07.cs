@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.camt;
 
@@ -20,71 +18,62 @@ namespace BeneficialStrategies.Iso20022.camt;
 /// </summary>
 [IsoId("_R3QfUTEZEe6kQ-WGAhcVPQ")]
 [DisplayName("Modify Reservation V07")]
-public partial record ModifyReservationV07 : IOuterRecord
+public record ModifyReservationV07 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "camt.048.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "ModfyRsvatn";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:camt.048.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Message Header.
     /// </summary>
     [DisplayName("Message Header")]
     [IsoXmlTag("MsgHdr")]
-    public required MessageHeader1 MessageHeader { get; init; } 
-    
+    public required MessageHeader1 MessageHeader { get; init; }
+
     /// <summary>
     /// New Reservation Value Set.
     /// </summary>
     [DisplayName("New Reservation Value Set")]
     [IsoXmlTag("NewRsvatnValSet")]
-    public required Reservation4 NewReservationValueSet { get; init; } 
-    
+    public required Reservation4 NewReservationValueSet { get; init; }
+
     /// <summary>
     /// Reservation Identification.
     /// </summary>
     [DisplayName("Reservation Identification")]
     [IsoXmlTag("RsvatnId")]
-    public required CurrentOrDefaultReservation4Choice_ ReservationIdentification { get; init; } 
-    
+    public required CurrentOrDefaultReservation4Choice_ ReservationIdentification { get; init; }
+
     /// <summary>
     /// Supplementary Data.
     /// </summary>
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
     public ValueList<SupplementaryData1> SupplementaryData { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }
 
-
-// Since ModifyReservationV07Document is not really part of the logical business domain model, 
+// Since ModifyReservationV07Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to ModifyReservationV07.
-

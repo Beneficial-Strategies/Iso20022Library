@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CorporateActionEventType57Choice.Code))]
     [KnownType(typeof(CorporateActionEventType57Choice.Proprietary))]
-    [JsonDerivedType(typeof(CorporateActionEventType57Choice.Code),nameof(CorporateActionEventType57Choice.Code))]
-    [JsonDerivedType(typeof(CorporateActionEventType57Choice.Proprietary),nameof(CorporateActionEventType57Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(CorporateActionEventType57Choice.Code),
+        nameof(CorporateActionEventType57Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(CorporateActionEventType57Choice.Proprietary),
+        nameof(CorporateActionEventType57Choice.Proprietary)
+    )]
     [IsoId("_sb-57ZwqEeazcsnODTksnQ")]
     [DisplayName("Corporate Action Event Type 57 Choice")]
-    public abstract partial record CorporateActionEventType57Choice_
-    {
-    }
+    public abstract record CorporateActionEventType57Choice_ { }
 }

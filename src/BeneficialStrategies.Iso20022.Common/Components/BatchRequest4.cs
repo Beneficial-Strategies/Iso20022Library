@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_rZAYYU35Eey_VecAUE-C9Q")]
 [DisplayName("Batch Request")]
-public partial record BatchRequest4
+public record BatchRequest4
 {
-    #nullable enable
-    
     /// <summary>
     /// Sale System identification of the batch in an unambiguous way.
     /// </summary>
     [IsoId("_ahgJgU7aEeyGi9JAv6wq7Q")]
     [DisplayName("Sale Batch Identification")]
     [IsoXmlTag("SaleBtchId")]
-    public TransactionIdentifier1? SaleBatchIdentification { get; init; } 
-    
+    public TransactionIdentifier1? SaleBatchIdentification { get; init; }
+
     /// <summary>
     /// Flag to remove all the transactions.
     /// </summary>
@@ -33,17 +31,13 @@ public partial record BatchRequest4
     [DisplayName("Remove All Flag")]
     [IsoXmlTag("RmvAllFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? RemoveAllFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? RemoveAllFlag { get; init; }
+
     /// <summary>
     /// Content of the Batch Request message.
     /// </summary>
     [IsoId("_rfaiYU35Eey_VecAUE-C9Q")]
     [DisplayName("Transaction To Perform")]
     [IsoXmlTag("TxToPrfrm")]
-    public TransactionToPerform4Choice_? TransactionToPerform { get; init; } 
-    
-    
-    #nullable disable
-    
+    public TransactionToPerform4Choice_? TransactionToPerform { get; init; }
 }

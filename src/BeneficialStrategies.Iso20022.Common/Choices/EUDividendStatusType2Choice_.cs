@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(EUDividendStatusType2Choice.Code))]
     [KnownType(typeof(EUDividendStatusType2Choice.Proprietary))]
-    [JsonDerivedType(typeof(EUDividendStatusType2Choice.Code),nameof(EUDividendStatusType2Choice.Code))]
-    [JsonDerivedType(typeof(EUDividendStatusType2Choice.Proprietary),nameof(EUDividendStatusType2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(EUDividendStatusType2Choice.Code),
+        nameof(EUDividendStatusType2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(EUDividendStatusType2Choice.Proprietary),
+        nameof(EUDividendStatusType2Choice.Proprietary)
+    )]
     [IsoId("_PfdboTh8EeaH-93K5JKmzw")]
     [DisplayName("EU Dividend Status Type 2 Choice")]
-    public abstract partial record EUDividendStatusType2Choice_
-    {
-    }
+    public abstract record EUDividendStatusType2Choice_ { }
 }

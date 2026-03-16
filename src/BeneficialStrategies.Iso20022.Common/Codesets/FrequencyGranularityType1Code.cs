@@ -23,7 +23,7 @@ public enum FrequencyGranularityType1Code
     [IsoId("_Bh82kTy6EeS4E7Ac8_OV3g")]
     [Description(@"Event takes place at the end of each month or period of one month.")]
     EndOfMonth = FrequencyGranularityTypeCode.EndOfMonth, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place at the end of each week.
     /// Encoded/decoded by serializers as &quot;EWEK&quot;.
@@ -32,7 +32,7 @@ public enum FrequencyGranularityType1Code
     [IsoId("_iKUaEUimEeSlHoYg_EudVQ")]
     [Description(@"Event takes place at the end of each week.")]
     EndOfWeek = FrequencyGranularityTypeCode.EndOfWeek, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place at the end of each six months (or two times a year).
     /// Encoded/decoded by serializers as &quot;ESEM&quot;.
@@ -41,16 +41,18 @@ public enum FrequencyGranularityType1Code
     [IsoId("_iRnU4UimEeSlHoYg_EudVQ")]
     [Description(@"Event takes place at the end of each six months (or two times a year).")]
     EndOfSemester = FrequencyGranularityTypeCode.EndOfSemester, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place at the end of each period of three months (or four times a year).
     /// Encoded/decoded by serializers as &quot;EQRT&quot;.
     /// </summary>
     [EnumMember(Value = "EQRT")]
     [IsoId("_iZzAgUimEeSlHoYg_EudVQ")]
-    [Description(@"Event takes place at the end of each period of three months (or four times a year).")]
+    [Description(
+        @"Event takes place at the end of each period of three months (or four times a year)."
+    )]
     EndOfQuarter = FrequencyGranularityTypeCode.EndOfQuarter, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place at the end of each two weeks.
     /// Encoded/decoded by serializers as &quot;EFRT&quot;.
@@ -59,7 +61,7 @@ public enum FrequencyGranularityType1Code
     [IsoId("_ih07IUimEeSlHoYg_EudVQ")]
     [Description(@"Event takes place at the end of each two weeks.")]
     EndOfFortnight = FrequencyGranularityTypeCode.EndOfFortnight, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place at the end of each day.
     /// Encoded/decoded by serializers as &quot;EDAY&quot;.
@@ -68,7 +70,7 @@ public enum FrequencyGranularityType1Code
     [IsoId("_iqnDsUimEeSlHoYg_EudVQ")]
     [Description(@"Event takes place at the end of each day.")]
     EndOfDay = FrequencyGranularityTypeCode.EndOfDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event takes place at the end of each year.
     /// Encoded/decoded by serializers as &quot;ENDY&quot;.
@@ -77,5 +79,4 @@ public enum FrequencyGranularityType1Code
     [IsoId("_qoAfQUrvEeSHP9pzU4nIpA")]
     [Description(@"Event takes place at the end of each year.")]
     EndOfYear = FrequencyGranularityTypeCode.EndOfYear, // same ordinal as derivation source for type conversions
-    
 }

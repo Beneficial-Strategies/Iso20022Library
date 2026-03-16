@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_itEK0MUZEeiF-qqyf1JQhg")]
-[Description(@"Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message.")]
+[Description(
+    @"Provides the status after comparing the total collateral required and the total collateral value of all transactions covered in the message."
+)]
 [Derivations(typeof(CollateralStatus1Code))]
 public enum CollateralStatusCode
 {
@@ -23,7 +25,7 @@ public enum CollateralStatusCode
     [IsoId("_HnIp4MUaEeiF-qqyf1JQhg")]
     [Description(@"Shortage of collateral.")]
     CollateralShortage,
-    
+
     /// <summary>
     /// Excess of collateral.
     /// Encoded/decoded by serializers as &quot;EXCS&quot;.
@@ -32,7 +34,7 @@ public enum CollateralStatusCode
     [IsoId("_KxXKMMUaEeiF-qqyf1JQhg")]
     [Description(@"Excess of collateral.")]
     CollateralExcess,
-    
+
     /// <summary>
     /// Collateral covers the exposure and there is no excess.
     /// Encoded/decoded by serializers as &quot;FLAT&quot;.
@@ -41,5 +43,4 @@ public enum CollateralStatusCode
     [IsoId("_UvIa4MUaEeiF-qqyf1JQhg")]
     [Description(@"Collateral covers the exposure and there is no excess.")]
     NoExcessCollateral,
-    
 }

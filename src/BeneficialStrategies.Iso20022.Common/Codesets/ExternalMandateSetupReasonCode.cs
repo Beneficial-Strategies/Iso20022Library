@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Q77v4T2MEeS6DKIV6SF6gw")]
-[Description(@"Specifies the mandate setup reason, as published in an external mandate setup reason code set.")]
+[Description(
+    @"Specifies the mandate setup reason, as published in an external mandate setup reason code set."
+)]
 [Derivations(typeof(ExternalMandateSetupReason1Code))]
-public enum ExternalMandateSetupReasonCode
-{
-}
+public enum ExternalMandateSetupReasonCode { }

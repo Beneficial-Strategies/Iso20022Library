@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Ul4kA9p-Ed-ak6NoX_4Aeg_1931035123")]
 [DisplayName("Requirement")]
-public partial record Requirement1
+public record Requirement1
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides details about the margin requirements for the variation margin.
     /// </summary>
     [IsoId("_Ul4kBNp-Ed-ak6NoX_4Aeg_-362986859")]
     [DisplayName("Variation Margin Requirement")]
     [IsoXmlTag("VartnMrgnRqrmnt")]
-    public required MarginRequirement1 VariationMarginRequirement { get; init; } 
-    
+    public required MarginRequirement1 VariationMarginRequirement { get; init; }
+
     /// <summary>
     /// Provides details about the margin requirements for the segregated independent amount.
     /// </summary>
     [IsoId("_Ul4kBdp-Ed-ak6NoX_4Aeg_-1666534406")]
     [DisplayName("Segregated Independent Amount Requirement")]
     [IsoXmlTag("SgrtdIndpdntAmtRqrmnt")]
-    public MarginRequirement1? SegregatedIndependentAmountRequirement { get; init; } 
-    
-    
-    #nullable disable
-    
+    public MarginRequirement1? SegregatedIndependentAmountRequirement { get; init; }
 }

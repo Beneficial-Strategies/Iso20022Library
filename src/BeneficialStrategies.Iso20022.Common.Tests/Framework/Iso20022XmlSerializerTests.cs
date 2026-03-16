@@ -1,17 +1,17 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
+using System.Linq;
+using System.Xml.Linq;
 using BeneficialStrategies.Iso20022.Amounts;
+using BeneficialStrategies.Iso20022.camt;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Choices.Party40Choice;
 using BeneficialStrategies.Iso20022.Codesets;
 using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.Choices;
 using CxlCode = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice.Code;
 using CxlProprietary = BeneficialStrategies.Iso20022.Choices.CancellationReason33Choice.Proprietary;
 using EntryCode = BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice.Code;
 using EntryProprietary = BeneficialStrategies.Iso20022.Choices.EntryStatus1Choice.Proprietary;
-using BeneficialStrategies.Iso20022.Choices.Party40Choice;
-using BeneficialStrategies.Iso20022.camt;
-using System.Linq;
-using System.Xml.Linq;
 
 namespace BeneficialStrategies.Iso20022;
 
@@ -72,8 +72,14 @@ public class Iso20022XmlSerializerTests
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Balance =
                 [
-                    Camt053ExamplesTests.CreateClosingBookedBalance(905_500.00m, CreditDebitCode.Credit),
-                    Camt053ExamplesTests.CreateClosingBookedBalance(952_750.00m, CreditDebitCode.Credit),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        905_500.00m,
+                        CreditDebitCode.Credit
+                    ),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        952_750.00m,
+                        CreditDebitCode.Credit
+                    ),
                 ],
             },
         };
@@ -104,7 +110,8 @@ public class Iso20022XmlSerializerTests
                 Identification = "STMT-002",
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Entry = Camt053ExamplesTests.CreateCreditEntry(
-                    new EntryCode { Value = ExternalEntryStatus1Code.Booked }),
+                    new EntryCode { Value = ExternalEntryStatus1Code.Booked }
+                ),
             },
         };
 
@@ -126,7 +133,8 @@ public class Iso20022XmlSerializerTests
                 Identification = "STMT-003",
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Entry = Camt053ExamplesTests.CreateCreditEntry(
-                    new EntryProprietary { Value = "BNPFR-PRE-BOOKED" }),
+                    new EntryProprietary { Value = "BNPFR-PRE-BOOKED" }
+                ),
             },
         };
 
@@ -197,7 +205,8 @@ public class Iso20022XmlSerializerTests
             Underlying = new UnderlyingTransaction28
             {
                 TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation(
-                    new CxlCode { Value = ExternalCancellationReason1Code.RequestedByCustomer }),
+                    new CxlCode { Value = ExternalCancellationReason1Code.RequestedByCustomer }
+                ),
             },
         };
 
@@ -205,7 +214,8 @@ public class Iso20022XmlSerializerTests
         var result = Iso20022XmlSerializer.Deserialize<FIToFIPaymentCancellationRequestV10>(xml);
 
         var reason = Assert.IsType<CxlCode>(
-            result.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason);
+            result.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+        );
         Assert.Equal(ExternalCancellationReason1Code.RequestedByCustomer, reason.Value);
     }
 
@@ -218,7 +228,8 @@ public class Iso20022XmlSerializerTests
             Underlying = new UnderlyingTransaction28
             {
                 TransactionInformation = Camt056ExamplesTests.CreateTransactionCancellation(
-                    new CxlProprietary { Value = "DEUTDE-FRAUD-HOLD" }),
+                    new CxlProprietary { Value = "DEUTDE-FRAUD-HOLD" }
+                ),
             },
         };
 
@@ -226,7 +237,8 @@ public class Iso20022XmlSerializerTests
         var result = Iso20022XmlSerializer.Deserialize<FIToFIPaymentCancellationRequestV10>(xml);
 
         var reason = Assert.IsType<CxlProprietary>(
-            result.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason);
+            result.Underlying.TransactionInformation!.CancellationReasonInformation!.Reason
+        );
         Assert.Equal("DEUTDE-FRAUD-HOLD", reason.Value);
     }
 
@@ -239,11 +251,16 @@ public class Iso20022XmlSerializerTests
         var opts = Iso20022JsonSerializerOptions.Default;
 
         var json = System.Text.Json.JsonSerializer.Serialize(original, opts);
-        var result = System.Text.Json.JsonSerializer.Deserialize<BankToCustomerStatementV11>(json, opts);
+        var result = System.Text.Json.JsonSerializer.Deserialize<BankToCustomerStatementV11>(
+            json,
+            opts
+        );
 
         Assert.NotNull(result);
-        Assert.Equal(original.GroupHeader.MessageIdentification,
-            result.GroupHeader.MessageIdentification);
+        Assert.Equal(
+            original.GroupHeader.MessageIdentification,
+            result.GroupHeader.MessageIdentification
+        );
     }
 
     [Fact]
@@ -271,7 +288,10 @@ public class Iso20022XmlSerializerTests
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Balance =
                 [
-                    Camt053ExamplesTests.CreateClosingBookedBalance(905_500.00m, CreditDebitCode.Credit),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        905_500.00m,
+                        CreditDebitCode.Credit
+                    ),
                 ],
             },
         };
@@ -300,7 +320,10 @@ public class Iso20022XmlSerializerTests
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Balance =
                 [
-                    Camt053ExamplesTests.CreateClosingBookedBalance(100.00m, CreditDebitCode.Credit),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        100.00m,
+                        CreditDebitCode.Credit
+                    ),
                 ],
             },
         };
@@ -328,7 +351,10 @@ public class Iso20022XmlSerializerTests
                 Account = Camt053ExamplesTests.CreateStatementAccount(),
                 Balance =
                 [
-                    Camt053ExamplesTests.CreateClosingBookedBalance(47_250.00m, CreditDebitCode.Credit),
+                    Camt053ExamplesTests.CreateClosingBookedBalance(
+                        47_250.00m,
+                        CreditDebitCode.Credit
+                    ),
                 ],
             },
         };
@@ -375,13 +401,14 @@ public class Iso20022XmlSerializerTests
 
     // ── Helpers ────────────────────────────────────────────────────────────────
 
-    private static BankToCustomerStatementV11 MinimalStatement() => new()
-    {
-        GroupHeader = Camt053ExamplesTests.CreateGroupHeader(),
-        Statement = new AccountStatement12
+    private static BankToCustomerStatementV11 MinimalStatement() =>
+        new()
         {
-            Identification = "STMT-MINIMAL",
-            Account = Camt053ExamplesTests.CreateStatementAccount(),
-        },
-    };
+            GroupHeader = Camt053ExamplesTests.CreateGroupHeader(),
+            Statement = new AccountStatement12
+            {
+                Identification = "STMT-MINIMAL",
+                Account = Camt053ExamplesTests.CreateStatementAccount(),
+            },
+        };
 }

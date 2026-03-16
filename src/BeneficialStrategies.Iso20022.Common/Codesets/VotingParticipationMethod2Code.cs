@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Blwy0PNqEeqRfth943bvEA")]
-[Description(@"Specifies the different methods allowed for participating to the vote of agenda resolutions in a general meeting.")]
+[Description(
+    @"Specifies the different methods allowed for participating to the vote of agenda resolutions in a general meeting."
+)]
 [DerivedFrom(typeof(VotingParticipationMethodCode))]
 public enum VotingParticipationMethod2Code
 {
@@ -23,5 +25,4 @@ public enum VotingParticipationMethod2Code
     [IsoId("_F2nkAfNqEeqRfth943bvEA")]
     [Description(@"Participation to the meeting is in person but the person is not voting.")]
     NotVoting = VotingParticipationMethodCode.NotVoting, // same ordinal as derivation source for type conversions
-    
 }

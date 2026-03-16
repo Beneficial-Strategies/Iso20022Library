@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(IncentivePremiumType2Choice.PerSecurity))]
     [KnownType(typeof(IncentivePremiumType2Choice.PerVote))]
     [KnownType(typeof(IncentivePremiumType2Choice.PerAttendee))]
-    [JsonDerivedType(typeof(IncentivePremiumType2Choice.PerSecurity),nameof(IncentivePremiumType2Choice.PerSecurity))]
-    [JsonDerivedType(typeof(IncentivePremiumType2Choice.PerVote),nameof(IncentivePremiumType2Choice.PerVote))]
-    [JsonDerivedType(typeof(IncentivePremiumType2Choice.PerAttendee),nameof(IncentivePremiumType2Choice.PerAttendee))]
+    [JsonDerivedType(
+        typeof(IncentivePremiumType2Choice.PerSecurity),
+        nameof(IncentivePremiumType2Choice.PerSecurity)
+    )]
+    [JsonDerivedType(
+        typeof(IncentivePremiumType2Choice.PerVote),
+        nameof(IncentivePremiumType2Choice.PerVote)
+    )]
+    [JsonDerivedType(
+        typeof(IncentivePremiumType2Choice.PerAttendee),
+        nameof(IncentivePremiumType2Choice.PerAttendee)
+    )]
     [IsoId("_ui4e-_NBEeqRfth943bvEA")]
     [DisplayName("Incentive Premium Type 2 Choice")]
-    public abstract partial record IncentivePremiumType2Choice_
-    {
-    }
+    public abstract record IncentivePremiumType2Choice_ { }
 }

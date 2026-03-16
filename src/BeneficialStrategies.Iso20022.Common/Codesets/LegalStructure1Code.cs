@@ -23,7 +23,7 @@ public enum LegalStructure1Code
     [IsoId("_VbY_4X0lEemfrNOe0zHQyg")]
     [Description(@"Legal structure is a state.")]
     State = LegalStructureCode.State, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a province.
     /// Encoded/decoded by serializers as &quot;PVIN&quot;.
@@ -32,7 +32,7 @@ public enum LegalStructure1Code
     [IsoId("_VbY_430lEemfrNOe0zHQyg")]
     [Description(@"Legal structure is a province.")]
     Province = LegalStructureCode.Province, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a municipal.
     /// Encoded/decoded by serializers as &quot;MUNI&quot;.
@@ -41,7 +41,7 @@ public enum LegalStructure1Code
     [IsoId("_VbY_5X0lEemfrNOe0zHQyg")]
     [Description(@"Legal structure is a municipal.")]
     Municipal = LegalStructureCode.Municipal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a county.
     /// Encoded/decoded by serializers as &quot;CNTY&quot;.
@@ -50,7 +50,7 @@ public enum LegalStructure1Code
     [IsoId("_VbY_530lEemfrNOe0zHQyg")]
     [Description(@"Legal structure is a county.")]
     County = LegalStructureCode.County, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a state.
     /// Encoded/decoded by serializers as &quot;NATI&quot;.
@@ -59,5 +59,4 @@ public enum LegalStructure1Code
     [IsoId("_VbY_6X0lEemfrNOe0zHQyg")]
     [Description(@"Legal structure is a state.")]
     National = LegalStructureCode.National, // same ordinal as derivation source for type conversions
-    
 }

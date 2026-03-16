@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PlaceOfTradeIdentification1Choice.Exchange))]
     [KnownType(typeof(PlaceOfTradeIdentification1Choice.Party))]
     [KnownType(typeof(PlaceOfTradeIdentification1Choice.OverTheCounter))]
-    [JsonDerivedType(typeof(PlaceOfTradeIdentification1Choice.Country),nameof(PlaceOfTradeIdentification1Choice.Country))]
-    [JsonDerivedType(typeof(PlaceOfTradeIdentification1Choice.Exchange),nameof(PlaceOfTradeIdentification1Choice.Exchange))]
-    [JsonDerivedType(typeof(PlaceOfTradeIdentification1Choice.Party),nameof(PlaceOfTradeIdentification1Choice.Party))]
-    [JsonDerivedType(typeof(PlaceOfTradeIdentification1Choice.OverTheCounter),nameof(PlaceOfTradeIdentification1Choice.OverTheCounter))]
+    [JsonDerivedType(
+        typeof(PlaceOfTradeIdentification1Choice.Country),
+        nameof(PlaceOfTradeIdentification1Choice.Country)
+    )]
+    [JsonDerivedType(
+        typeof(PlaceOfTradeIdentification1Choice.Exchange),
+        nameof(PlaceOfTradeIdentification1Choice.Exchange)
+    )]
+    [JsonDerivedType(
+        typeof(PlaceOfTradeIdentification1Choice.Party),
+        nameof(PlaceOfTradeIdentification1Choice.Party)
+    )]
+    [JsonDerivedType(
+        typeof(PlaceOfTradeIdentification1Choice.OverTheCounter),
+        nameof(PlaceOfTradeIdentification1Choice.OverTheCounter)
+    )]
     [IsoId("_TCWUu9p-Ed-ak6NoX_4Aeg_-2100921873")]
     [DisplayName("Place Of Trade Identification 1 Choice")]
-    public abstract partial record PlaceOfTradeIdentification1Choice_
-    {
-    }
+    public abstract record PlaceOfTradeIdentification1Choice_ { }
 }

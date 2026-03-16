@@ -23,5 +23,4 @@ public enum AssetClassSubProductType29Code
     [IsoId("_ePRMoVrNEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type carbon related.")]
     CarbonRelated = AssetClassSubProductTypeCode.CarbonRelated, // same ordinal as derivation source for type conversions
-    
 }

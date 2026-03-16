@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Frequency21Choice.Type))]
     [KnownType(typeof(Frequency21Choice.Period))]
-    [JsonDerivedType(typeof(Frequency21Choice.Type),nameof(Frequency21Choice.Type))]
-    [JsonDerivedType(typeof(Frequency21Choice.Period),nameof(Frequency21Choice.Period))]
+    [JsonDerivedType(typeof(Frequency21Choice.Type), nameof(Frequency21Choice.Type))]
+    [JsonDerivedType(typeof(Frequency21Choice.Period), nameof(Frequency21Choice.Period))]
     [IsoId("_51BdAR7yEeSxevWRRWxNAg")]
     [DisplayName("Frequency 21 Choice")]
-    public abstract partial record Frequency21Choice_
-    {
-    }
+    public abstract record Frequency21Choice_ { }
 }

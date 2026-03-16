@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_BM4rsBbxEeit0dtP9bTmEg")]
 [Description(@"Type of detail amount")]
-[Derivations(typeof(DetailAmount2Code),typeof(DetailAmount1Code))]
+[Derivations(typeof(DetailAmount2Code), typeof(DetailAmount1Code))]
 public enum DetailAmountCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum DetailAmountCode
     [IsoId("_FqYxwBbxEeit0dtP9bTmEg")]
     [Description(@"Cashback amount")]
     Cashback,
-    
+
     /// <summary>
     /// Dynamic Currency Conversion type of amount
     /// Encoded/decoded by serializers as &quot;DCCF&quot;.
@@ -32,7 +32,7 @@ public enum DetailAmountCode
     [IsoId("_RauzUBbxEeit0dtP9bTmEg")]
     [Description(@"Dynamic Currency Conversion type of amount")]
     DynamicCurrencyConversionFee,
-    
+
     /// <summary>
     /// Donation amount
     /// Encoded/decoded by serializers as &quot;DONN&quot;.
@@ -41,7 +41,7 @@ public enum DetailAmountCode
     [IsoId("_fQFZkBbxEeit0dtP9bTmEg")]
     [Description(@"Donation amount")]
     Donation,
-    
+
     /// <summary>
     /// Extra charges (for example, minibar, etc.)
     /// Encoded/decoded by serializers as &quot;EXTR&quot;.
@@ -50,7 +50,7 @@ public enum DetailAmountCode
     [IsoId("_k5c10BbxEeit0dtP9bTmEg")]
     [Description(@"Extra charges (for example, minibar, etc.)")]
     Extra,
-    
+
     /// <summary>
     /// Gratuity amount
     /// Encoded/decoded by serializers as &quot;GRTY&quot;.
@@ -59,7 +59,7 @@ public enum DetailAmountCode
     [IsoId("_tCmuQBbxEeit0dtP9bTmEg")]
     [Description(@"Gratuity amount")]
     Gratuity,
-    
+
     /// <summary>
     /// Other type of amount defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +68,7 @@ public enum DetailAmountCode
     [IsoId("_y7vr4BbxEeit0dtP9bTmEg")]
     [Description(@"Other type of amount defined at national level")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of amount defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,7 +77,7 @@ public enum DetailAmountCode
     [IsoId("_5BY0cBbxEeit0dtP9bTmEg")]
     [Description(@"Other type of amount defined at private level")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Fee charged by the acceptor for the transaction.
     /// Encoded/decoded by serializers as &quot;SRCH&quot;.
@@ -86,7 +86,7 @@ public enum DetailAmountCode
     [IsoId("_-ZNNsBbxEeit0dtP9bTmEg")]
     [Description(@"Fee charged by the acceptor for the transaction.")]
     Surcharge,
-    
+
     /// <summary>
     /// Tax applicable to the transaction
     /// Encoded/decoded by serializers as &quot;TAXT&quot;.
@@ -95,7 +95,7 @@ public enum DetailAmountCode
     [IsoId("_HJ7ccBbyEeit0dtP9bTmEg")]
     [Description(@"Tax applicable to the transaction")]
     Tax,
-    
+
     /// <summary>
     /// Fee applicable to a foreign exchange (Forex) transaction
     /// Encoded/decoded by serializers as &quot;FORX&quot;.
@@ -104,5 +104,4 @@ public enum DetailAmountCode
     [IsoId("_OB2WgBbyEeit0dtP9bTmEg")]
     [Description(@"Fee applicable to a foreign exchange (Forex) transaction")]
     ForeignExchangeFee,
-    
 }

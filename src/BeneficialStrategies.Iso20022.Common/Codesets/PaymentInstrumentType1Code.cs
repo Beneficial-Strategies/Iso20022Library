@@ -23,7 +23,7 @@ public enum PaymentInstrumentType1Code
     [IsoId("_jjj6MdxgEeioifFt1dhnJA")]
     [Description(@"Payment card (credit or debit).")]
     Card = PaymentInstrumentTypeCode.Card, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cash managed by a cash handling system.
     /// Encoded/decoded by serializers as &quot;CASH&quot;.
@@ -32,7 +32,7 @@ public enum PaymentInstrumentType1Code
     [IsoId("_jmi8wdxgEeioifFt1dhnJA")]
     [Description(@"Cash managed by a cash handling system.")]
     Cash = PaymentInstrumentTypeCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Paper check.
     /// Encoded/decoded by serializers as &quot;CHCK&quot;.
@@ -41,7 +41,7 @@ public enum PaymentInstrumentType1Code
     [IsoId("_jp2IYdxgEeioifFt1dhnJA")]
     [Description(@"Paper check.")]
     Check = PaymentInstrumentTypeCode.Check, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account using loyalty processing.
     /// Encoded/decoded by serializers as &quot;LOYT&quot;.
@@ -50,7 +50,7 @@ public enum PaymentInstrumentType1Code
     [IsoId("_jt13kdxgEeioifFt1dhnJA")]
     [Description(@"Account using loyalty processing.")]
     LoyaltyAccount = PaymentInstrumentTypeCode.LoyaltyAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account accessed by a stored value instrument such as a card or a certificate.
     /// Encoded/decoded by serializers as &quot;SVAC&quot;.
@@ -59,5 +59,4 @@ public enum PaymentInstrumentType1Code
     [IsoId("_jxDjodxgEeioifFt1dhnJA")]
     [Description(@"Account accessed by a stored value instrument such as a card or a certificate.")]
     StoredValueAccount = PaymentInstrumentTypeCode.StoredValueAccount, // same ordinal as derivation source for type conversions
-    
 }

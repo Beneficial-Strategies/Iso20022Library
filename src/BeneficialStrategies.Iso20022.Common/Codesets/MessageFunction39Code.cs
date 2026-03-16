@@ -23,7 +23,7 @@ public enum MessageFunction39Code
     [IsoId("_XATzEPGrEeiGNursv3uE_g")]
     [Description(@"Notification of a rejected message.")]
     RejectNotification = MessageFunctionCode.RejectNotification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Notification of a message containing errors.
     /// Encoded/decoded by serializers as &quot;ERNO&quot;.
@@ -32,5 +32,4 @@ public enum MessageFunction39Code
     [IsoId("_XF6r0fGrEeiGNursv3uE_g")]
     [Description(@"Notification of a message containing errors.")]
     ErrorNotification = MessageFunctionCode.ErrorNotification, // same ordinal as derivation source for type conversions
-    
 }

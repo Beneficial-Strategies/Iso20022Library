@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_wRR50rtvEeq_cfXrH83Rcw")]
-[Description(@"Specifies the external cheque cancellation status code in the format of character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the external cheque cancellation status code in the format of character string with a maximum length of 4 characters."
+)]
 [DerivedFrom(typeof(ExternalChequeCancellationStatusCode))]
 public enum ExternalChequeCancellationStatus1Code
 {
@@ -23,7 +25,8 @@ public enum ExternalChequeCancellationStatus1Code
     [EnumMember(Value = "ACCR")]
     [IsoId("")]
     [Description(@"Cheque cancellation request or request to stop the cheque is accepted.")]
-    AcceptedCancellationOrStopChequeRequest = ExternalChequeCancellationStatusCode.AcceptedCancellationOrStopChequeRequest, // same ordinal as derivation source for type conversions
+    AcceptedCancellationOrStopChequeRequest =
+        ExternalChequeCancellationStatusCode.AcceptedCancellationOrStopChequeRequest, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Cheque cancellation request or request to stop the cheque is rejected.
@@ -32,6 +35,6 @@ public enum ExternalChequeCancellationStatus1Code
     [EnumMember(Value = "RJCR")]
     [IsoId("")]
     [Description(@"Cheque cancellation request or request to stop the cheque is rejected.")]
-    RejectedCancellationOrStopChequeRequest = ExternalChequeCancellationStatusCode.RejectedCancellationOrStopChequeRequest, // same ordinal as derivation source for type conversions
-
+    RejectedCancellationOrStopChequeRequest =
+        ExternalChequeCancellationStatusCode.RejectedCancellationOrStopChequeRequest, // same ordinal as derivation source for type conversions
 }

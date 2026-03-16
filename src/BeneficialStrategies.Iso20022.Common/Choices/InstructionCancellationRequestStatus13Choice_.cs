@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InstructionCancellationRequestStatus13Choice.Rejected))]
     [KnownType(typeof(InstructionCancellationRequestStatus13Choice.PendingCancellation))]
     [KnownType(typeof(InstructionCancellationRequestStatus13Choice.ProprietaryStatus))]
-    [JsonDerivedType(typeof(InstructionCancellationRequestStatus13Choice.CancellationCompleted),nameof(InstructionCancellationRequestStatus13Choice.CancellationCompleted))]
-    [JsonDerivedType(typeof(InstructionCancellationRequestStatus13Choice.Accepted),nameof(InstructionCancellationRequestStatus13Choice.Accepted))]
-    [JsonDerivedType(typeof(InstructionCancellationRequestStatus13Choice.Rejected),nameof(InstructionCancellationRequestStatus13Choice.Rejected))]
-    [JsonDerivedType(typeof(InstructionCancellationRequestStatus13Choice.PendingCancellation),nameof(InstructionCancellationRequestStatus13Choice.PendingCancellation))]
-    [JsonDerivedType(typeof(InstructionCancellationRequestStatus13Choice.ProprietaryStatus),nameof(InstructionCancellationRequestStatus13Choice.ProprietaryStatus))]
+    [JsonDerivedType(
+        typeof(InstructionCancellationRequestStatus13Choice.CancellationCompleted),
+        nameof(InstructionCancellationRequestStatus13Choice.CancellationCompleted)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionCancellationRequestStatus13Choice.Accepted),
+        nameof(InstructionCancellationRequestStatus13Choice.Accepted)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionCancellationRequestStatus13Choice.Rejected),
+        nameof(InstructionCancellationRequestStatus13Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionCancellationRequestStatus13Choice.PendingCancellation),
+        nameof(InstructionCancellationRequestStatus13Choice.PendingCancellation)
+    )]
+    [JsonDerivedType(
+        typeof(InstructionCancellationRequestStatus13Choice.ProprietaryStatus),
+        nameof(InstructionCancellationRequestStatus13Choice.ProprietaryStatus)
+    )]
     [IsoId("_Vi6SERn0EeyroI8qKgB7Mg")]
     [DisplayName("Instruction Cancellation Request Status 13 Choice")]
-    public abstract partial record InstructionCancellationRequestStatus13Choice_
-    {
-    }
+    public abstract record InstructionCancellationRequestStatus13Choice_ { }
 }

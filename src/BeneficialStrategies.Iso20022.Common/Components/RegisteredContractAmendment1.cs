@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("__zlVIdL3EeSDLevdaFPXHw")]
 [DisplayName("Registered Contract Amendment")]
-public partial record RegisteredContractAmendment1
+public record RegisteredContractAmendment1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date of the amendment of the registered contract.
     /// </summary>
@@ -25,16 +23,16 @@ public partial record RegisteredContractAmendment1
     [DisplayName("Amendment Date")]
     [IsoXmlTag("AmdmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate AmendmentDate { get; init; } 
-    
+    public required IsoISODate AmendmentDate { get; init; }
+
     /// <summary>
     /// Reference of the amendment document.
     /// </summary>
     [IsoId("_jCKiwNL4EeSDLevdaFPXHw")]
     [DisplayName("Document")]
     [IsoXmlTag("Doc")]
-    public required DocumentIdentification28 Document { get; init; } 
-    
+    public required DocumentIdentification28 Document { get; init; }
+
     /// <summary>
     /// Date from which the amendment is applicable.
     /// </summary>
@@ -42,8 +40,8 @@ public partial record RegisteredContractAmendment1
     [DisplayName("Start Date")]
     [IsoXmlTag("StartDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? StartDate { get; init; } 
-    
+    public IsoISODate? StartDate { get; init; }
+
     /// <summary>
     /// Reason for the amendment.
     /// </summary>
@@ -51,9 +49,9 @@ public partial record RegisteredContractAmendment1
     [DisplayName("Amendment Reason")]
     [IsoXmlTag("AmdmntRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AmendmentReason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AmendmentReason { get; init; }
+
     /// <summary>
     /// Further details on the amendment.
     /// </summary>
@@ -61,10 +59,6 @@ public partial record RegisteredContractAmendment1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025 ,MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 1025, MinimumLength = 1)]
+    public IsoMax1025Text? AdditionalInformation { get; init; }
 }

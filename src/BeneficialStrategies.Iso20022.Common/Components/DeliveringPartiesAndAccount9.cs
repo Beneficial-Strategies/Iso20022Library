@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,42 +14,40 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_K_E78R6fEeOolf0-cMYhrw")]
 [DisplayName("Delivering Parties And Account")]
-public partial record DeliveringPartiesAndAccount9
+public record DeliveringPartiesAndAccount9
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that sells goods or services, or a financial instrument.
     /// </summary>
     [IsoId("_LVi7NR6fEeOolf0-cMYhrw")]
     [DisplayName("Deliverer Details")]
     [IsoXmlTag("DlvrrDtls")]
-    public InvestmentAccount41? DelivererDetails { get; init; } 
-    
+    public InvestmentAccount41? DelivererDetails { get; init; }
+
     /// <summary>
     /// Party that acts on behalf of the seller of securities when the seller does not have a direct relationship with the delivering agent.
     /// </summary>
     [IsoId("_LVi7Nx6fEeOolf0-cMYhrw")]
     [DisplayName("Deliverers Custodian Details")]
     [IsoXmlTag("DlvrrsCtdnDtls")]
-    public PartyIdentificationAndAccount5? DeliverersCustodianDetails { get; init; } 
-    
+    public PartyIdentificationAndAccount5? DeliverersCustodianDetails { get; init; }
+
     /// <summary>
     /// Party that the deliverer&apos;s custodian uses to effect the delivery of a security, when the deliverer&apos;s custodian does not have a direct relationship with the delivering agent.
     /// </summary>
     [IsoId("_LVi7OR6fEeOolf0-cMYhrw")]
     [DisplayName("Deliverers Intermediary Details")]
     [IsoXmlTag("DlvrrsIntrmyDtls")]
-    public PartyIdentificationAndAccount5? DeliverersIntermediaryDetails { get; init; } 
-    
+    public PartyIdentificationAndAccount5? DeliverersIntermediaryDetails { get; init; }
+
     /// <summary>
     /// Party that delivers securities to the receiving agent at the place of settlement, eg, central securities depository.
     /// </summary>
     [IsoId("_LVi7Ox6fEeOolf0-cMYhrw")]
     [DisplayName("Delivering Agent Details")]
     [IsoXmlTag("DlvrgAgtDtls")]
-    public required PartyIdentificationAndAccount4 DeliveringAgentDetails { get; init; } 
-    
+    public required PartyIdentificationAndAccount4 DeliveringAgentDetails { get; init; }
+
     /// <summary>
     /// Identifies the securities settlement system to be used.
     /// </summary>
@@ -57,18 +55,14 @@ public partial record DeliveringPartiesAndAccount9
     [DisplayName("Securities Settlement System")]
     [IsoXmlTag("SctiesSttlmSys")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SecuritiesSettlementSystem { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SecuritiesSettlementSystem { get; init; }
+
     /// <summary>
     /// Place where settlement of the securities takes place.
     /// </summary>
     [IsoId("_LVi7Px6fEeOolf0-cMYhrw")]
     [DisplayName("Place Of Settlement Details")]
     [IsoXmlTag("PlcOfSttlmDtls")]
-    public PartyIdentification21? PlaceOfSettlementDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification21? PlaceOfSettlementDetails { get; init; }
 }

@@ -23,5 +23,4 @@ public enum AssetClassProductType1Code
     [IsoId("_eBGNYQnyEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type agricultural.")]
     Agricultural = AssetClassProductTypeCode.Agricultural, // same ordinal as derivation source for type conversions
-    
 }

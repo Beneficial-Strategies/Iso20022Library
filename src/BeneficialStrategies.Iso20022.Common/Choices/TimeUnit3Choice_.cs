@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TimeUnit3Choice.Code))]
     [KnownType(typeof(TimeUnit3Choice.Proprietary))]
-    [JsonDerivedType(typeof(TimeUnit3Choice.Code),nameof(TimeUnit3Choice.Code))]
-    [JsonDerivedType(typeof(TimeUnit3Choice.Proprietary),nameof(TimeUnit3Choice.Proprietary))]
+    [JsonDerivedType(typeof(TimeUnit3Choice.Code), nameof(TimeUnit3Choice.Code))]
+    [JsonDerivedType(typeof(TimeUnit3Choice.Proprietary), nameof(TimeUnit3Choice.Proprietary))]
     [IsoId("_oIB4MeLaEeWFtOV72FbX9w")]
     [DisplayName("Time Unit 3 Choice")]
-    public abstract partial record TimeUnit3Choice_
-    {
-    }
+    public abstract record TimeUnit3Choice_ { }
 }

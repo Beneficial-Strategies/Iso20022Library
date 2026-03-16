@@ -11,8 +11,10 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aR8RMQ26EeWmAKKPnqYEVQ")]
-[Description(@"Specifies whether the contract was electronically confirmed, non-electronically confirmed or remains unconfirmed.")]
-[Derivations(typeof(TradeConfirmationType2Code),typeof(TradeConfirmationType1Code))]
+[Description(
+    @"Specifies whether the contract was electronically confirmed, non-electronically confirmed or remains unconfirmed."
+)]
+[Derivations(typeof(TradeConfirmationType2Code), typeof(TradeConfirmationType1Code))]
 public enum TradeConfirmationTypeCode
 {
     /// <summary>
@@ -23,7 +25,7 @@ public enum TradeConfirmationTypeCode
     [IsoId("_iuIaYA26EeWmAKKPnqYEVQ")]
     [Description(@"Non-electronically confirmed.")]
     NonElectronicallyConfirmed,
-    
+
     /// <summary>
     /// Electronically confirmed.
     /// Encoded/decoded by serializers as &quot;ECNF&quot;.
@@ -32,7 +34,7 @@ public enum TradeConfirmationTypeCode
     [IsoId("_lzHOUA26EeWmAKKPnqYEVQ")]
     [Description(@"Electronically confirmed.")]
     ElectronicallyConfirmed,
-    
+
     /// <summary>
     /// Non-confirmed.
     /// Encoded/decoded by serializers as &quot;NCNF&quot;.
@@ -41,5 +43,4 @@ public enum TradeConfirmationTypeCode
     [IsoId("_l_myMA26EeWmAKKPnqYEVQ")]
     [Description(@"Non-confirmed.")]
     NonConfirmed,
-    
 }

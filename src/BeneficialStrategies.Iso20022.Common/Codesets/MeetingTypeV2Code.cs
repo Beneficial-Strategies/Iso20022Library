@@ -21,9 +21,11 @@ public enum MeetingTypeV2Code
     /// </summary>
     [EnumMember(Value = "AMET")]
     [IsoId("_Oq2Rc67DEemG7MmivSuE5g")]
-    [Description(@"Specifies a meeting held periodically to approve the financial statements and elect the board members and the auditors.")]
+    [Description(
+        @"Specifies a meeting held periodically to approve the financial statements and elect the board members and the auditors."
+    )]
     AnnualGeneralMeeting,
-    
+
     /// <summary>
     /// Specifies a meeting that is not planned in the by laws.
     /// Encoded/decoded by serializers as &quot;OMET&quot;.
@@ -32,16 +34,18 @@ public enum MeetingTypeV2Code
     [IsoId("_Oq2RcK7DEemG7MmivSuE5g")]
     [Description(@"Specifies a meeting that is not planned in the by laws.")]
     Ordinary,
-    
+
     /// <summary>
     /// Meeting that takes place as needed, in addition to the general meetings, is extraordinary as per the bylaws. The resolutions are related to the unusual business of the company, for example, approval of takeovers or mergers or spin-offs. These meetings are always issuer initiated.
     /// Encoded/decoded by serializers as &quot;XMET&quot;.
     /// </summary>
     [EnumMember(Value = "XMET")]
     [IsoId("_Oq2Rb67DEemG7MmivSuE5g")]
-    [Description(@"Meeting that takes place as needed, in addition to the general meetings, is extraordinary as per the bylaws. The resolutions are related to the unusual business of the company, for example, approval of takeovers or mergers or spin-offs. These meetings are always issuer initiated.")]
+    [Description(
+        @"Meeting that takes place as needed, in addition to the general meetings, is extraordinary as per the bylaws. The resolutions are related to the unusual business of the company, for example, approval of takeovers or mergers or spin-offs. These meetings are always issuer initiated."
+    )]
     Extraordinary,
-    
+
     /// <summary>
     /// Meeting which contains both ordinary and extraordinary resolutions.
     /// Encoded/decoded by serializers as &quot;MIXD&quot;.
@@ -50,7 +54,7 @@ public enum MeetingTypeV2Code
     [IsoId("_Oq2Rbq7DEemG7MmivSuE5g")]
     [Description(@"Meeting which contains both ordinary and extraordinary resolutions.")]
     Mixed,
-    
+
     /// <summary>
     /// Meeting for a class of assets.
     /// Encoded/decoded by serializers as &quot;CLAS&quot;.
@@ -59,7 +63,7 @@ public enum MeetingTypeV2Code
     [IsoId("_Oq2RbK7DEemG7MmivSuE5g")]
     [Description(@"Meeting for a class of assets.")]
     ClassMeeting,
-    
+
     /// <summary>
     /// Meeting is the result of a legal proceeding.
     /// Encoded/decoded by serializers as &quot;CMET&quot;.
@@ -68,7 +72,7 @@ public enum MeetingTypeV2Code
     [IsoId("_Oq2Ra67DEemG7MmivSuE5g")]
     [Description(@"Meeting is the result of a legal proceeding.")]
     CourtMeeting,
-    
+
     /// <summary>
     /// Meeting that takes place as needed that is neither ordinary nor extraordinary.
     /// Encoded/decoded by serializers as &quot;SPCL&quot;.
@@ -77,16 +81,18 @@ public enum MeetingTypeV2Code
     [IsoId("_Oq2Rca7DEemG7MmivSuE5g")]
     [Description(@"Meeting that takes place as needed that is neither ordinary nor extraordinary.")]
     Special,
-    
+
     /// <summary>
     /// Includes annual and ordinary meetings. Statutory meeting(s) usually held at least once a year. The resolutions are related to the usual business of the company, for example, approval of dividends and directors. These meetings are always issuer initiated.
     /// Encoded/decoded by serializers as &quot;GMET&quot;.
     /// </summary>
     [EnumMember(Value = "GMET")]
     [IsoId("_Oq2Rcq7DEemG7MmivSuE5g")]
-    [Description(@"Includes annual and ordinary meetings. Statutory meeting(s) usually held at least once a year. The resolutions are related to the usual business of the company, for example, approval of dividends and directors. These meetings are always issuer initiated.")]
+    [Description(
+        @"Includes annual and ordinary meetings. Statutory meeting(s) usually held at least once a year. The resolutions are related to the usual business of the company, for example, approval of dividends and directors. These meetings are always issuer initiated."
+    )]
     General,
-    
+
     /// <summary>
     /// Physical meeting of bond holders.
     /// Encoded/decoded by serializers as &quot;BMET&quot;.
@@ -95,5 +101,4 @@ public enum MeetingTypeV2Code
     [IsoId("_Oq2Rba7DEemG7MmivSuE5g")]
     [Description(@"Physical meeting of bond holders.")]
     BondHolderMeeting,
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalDeviceOperatingSystemType1Code")]
-[Description(@"Type of operating system deployed on device, as published separately in an external device operating system type code set.")]
+[Description(
+    @"Type of operating system deployed on device, as published separately in an external device operating system type code set."
+)]
 [DerivedFrom(typeof(ExternalDeviceOperatingSystemTypeCode))]
 public enum ExternalDeviceOperatingSystemType1Code
 {
@@ -59,5 +61,4 @@ public enum ExternalDeviceOperatingSystemType1Code
     [IsoId("_ExternalDeviceOperatingSystemType1Code_Windows")]
     [Description(@"Windows operating system.")]
     Windows = ExternalDeviceOperatingSystemTypeCode.Windows,
-
 }

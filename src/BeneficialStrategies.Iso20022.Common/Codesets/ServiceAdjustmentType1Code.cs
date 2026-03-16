@@ -21,16 +21,19 @@ public enum ServiceAdjustmentType1Code
     /// </summary>
     [EnumMember(Value = "COMP")]
     [IsoId("_6V6hwJqlEeGSON8vddiWzQ_1688850679")]
-    [Description(@"Adjustment applies to a service which is balance compensable. Earnings credits based on average balances maintained in the account can be used to offset the service charge.")]
+    [Description(
+        @"Adjustment applies to a service which is balance compensable. Earnings credits based on average balances maintained in the account can be used to offset the service charge."
+    )]
     Compensable = ServiceAdjustmentTypeCode.Compensable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Adjustment applies to a service which is not balance compensable. Balance based credits cannot be used to offset the service charge.
     /// Encoded/decoded by serializers as &quot;NCMP&quot;.
     /// </summary>
     [EnumMember(Value = "NCMP")]
     [IsoId("_6V6hwZqlEeGSON8vddiWzQ_1677751902")]
-    [Description(@"Adjustment applies to a service which is not balance compensable. Balance based credits cannot be used to offset the service charge.")]
+    [Description(
+        @"Adjustment applies to a service which is not balance compensable. Balance based credits cannot be used to offset the service charge."
+    )]
     NonCompensable = ServiceAdjustmentTypeCode.NonCompensable, // same ordinal as derivation source for type conversions
-    
 }

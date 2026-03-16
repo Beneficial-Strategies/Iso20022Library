@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SUW0IQ1JEeqV4s5SpzR1dQ")]
 [DisplayName("Trade Position Early Termination")]
-public partial record TradePositionEarlyTermination5
+public record TradePositionEarlyTermination5
 {
-    #nullable enable
-    
     /// <summary>
     /// Counterparty data details.
     /// </summary>
@@ -27,32 +25,28 @@ public partial record TradePositionEarlyTermination5
     [MinLength(1)]
     [MaxLength(2)]
     public ValueList<CounterpartySpecificData22> CounterpartySpecificData { get; init; } = [];
-    
+
     /// <summary>
     /// Contract and transaction trade data details.
     /// </summary>
     [IsoId("_SVL6kw1JEeqV4s5SpzR1dQ")]
     [DisplayName("Common Trade Data")]
     [IsoXmlTag("CmonTradData")]
-    public required CommonTradeDataReport35 CommonTradeData { get; init; } 
-    
+    public required CommonTradeDataReport35 CommonTradeData { get; init; }
+
     /// <summary>
     /// Specifies technical attributes of the message.
     /// </summary>
     [IsoId("_SVL6lQ1JEeqV4s5SpzR1dQ")]
     [DisplayName("Technical Attributes")]
     [IsoXmlTag("TechAttrbts")]
-    public TechnicalAttributes1? TechnicalAttributes { get; init; } 
-    
+    public TechnicalAttributes1? TechnicalAttributes { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_SVL6lw1JEeqV4s5SpzR1dQ")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

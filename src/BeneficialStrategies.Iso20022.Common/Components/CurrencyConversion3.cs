@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_JDwRMXb8EeSDp9fqjaZo5w")]
 [DisplayName("Currency Conversion")]
-public partial record CurrencyConversion3
+public record CurrencyConversion3
 {
-    #nullable enable
-    
     /// <summary>
     /// Result of a requested currency conversion.
     /// </summary>
     [IsoId("_JQa0M3b8EeSDp9fqjaZo5w")]
     [DisplayName("Result")]
     [IsoXmlTag("Rslt")]
-    public required CurrencyConversionResponse1Code Result { get; init; } 
-    
+    public required CurrencyConversionResponse1Code Result { get; init; }
+
     /// <summary>
     /// Plain text explaining the result of the currency conversion request.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record CurrencyConversion3
     [DisplayName("Result Reason")]
     [IsoXmlTag("RsltRsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ResultReason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ResultReason { get; init; }
+
     /// <summary>
     /// Information about the conversion of currency.
     /// </summary>
     [IsoId("_dSZ70Hb8EeSDp9fqjaZo5w")]
     [DisplayName("Conversion")]
     [IsoXmlTag("Convs")]
-    public CurrencyConversion2? Conversion { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CurrencyConversion2? Conversion { get; init; }
 }

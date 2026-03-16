@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice
     /// </summary>
     [IsoId("_Szn0AQgHEeSxsfb1OEDVsw")]
     [DisplayName("Intermediary Opening Balance")]
-    public partial record IntermediaryOpeningBalance : OpeningBalance3Choice_
+    public record IntermediaryOpeningBalance : OpeningBalance3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Quantity expressed as a number, eg, a number of shares.
         /// </summary>
@@ -24,10 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.OpeningBalance3Choice
         [DisplayName("Unit")]
         [IsoXmlTag("Unit")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Unit { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoDecimalNumber Unit { get; init; }
     }
 }

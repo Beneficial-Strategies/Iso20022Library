@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CashInOrOut3Choice.CashInPaymentInstrument))]
     [KnownType(typeof(CashInOrOut3Choice.CashOutPaymentInstrument))]
-    [JsonDerivedType(typeof(CashInOrOut3Choice.CashInPaymentInstrument),nameof(CashInOrOut3Choice.CashInPaymentInstrument))]
-    [JsonDerivedType(typeof(CashInOrOut3Choice.CashOutPaymentInstrument),nameof(CashInOrOut3Choice.CashOutPaymentInstrument))]
+    [JsonDerivedType(
+        typeof(CashInOrOut3Choice.CashInPaymentInstrument),
+        nameof(CashInOrOut3Choice.CashInPaymentInstrument)
+    )]
+    [JsonDerivedType(
+        typeof(CashInOrOut3Choice.CashOutPaymentInstrument),
+        nameof(CashInOrOut3Choice.CashOutPaymentInstrument)
+    )]
     [IsoId("_VKGEX9p-Ed-ak6NoX_4Aeg_2056585648")]
     [DisplayName("Cash In Or Out 3 Choice")]
-    public abstract partial record CashInOrOut3Choice_
-    {
-    }
+    public abstract record CashInOrOut3Choice_ { }
 }

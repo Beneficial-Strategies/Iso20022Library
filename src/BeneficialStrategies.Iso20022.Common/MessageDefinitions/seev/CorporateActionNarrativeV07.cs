@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.seev;
 
@@ -25,86 +23,79 @@ namespace BeneficialStrategies.Iso20022.seev;
 /// - provide a third party with a copy of a message for information (the sub-function of the message is Copy),
 /// - re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).
 /// </summary>
-[Description(@"Scope|The CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for such processes that cannot be handled using messages such as the CorporateActionNotification. It is not to be used for event narrative as that should be included in the CorporateActionNotification. Examples of when the CorporateActionNarrative message may be used include tax reclaims, restrictions, documentation requirements. This message should only be used when bilaterally agreed. This message is bi-directional.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH).")]
+[Description(
+    @"Scope|The CorporateActionNarrative message is sent between an account servicer and an account owner or its designated agent to cater for such processes that cannot be handled using messages such as the CorporateActionNotification. It is not to be used for event narrative as that should be included in the CorporateActionNotification. Examples of when the CorporateActionNarrative message may be used include tax reclaims, restrictions, documentation requirements. This message should only be used when bilaterally agreed. This message is bi-directional.|Usage|The message may also be used to:|- re-send a message previously sent (the sub-function of the message is Duplicate),|- provide a third party with a copy of a message for information (the sub-function of the message is Copy),|- re-send to a third party a copy of a message for information (the sub-function of the message is Copy Duplicate), using the relevant elements in the business application header (BAH)."
+)]
 [IsoId("_yg7BdxbHEeyroI8qKgB7Mg")]
 [DisplayName("Corporate Action Narrative V")]
-public partial record CorporateActionNarrativeV07 : IOuterRecord
+public record CorporateActionNarrativeV07 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "seev.038.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "CorpActnNrrtv";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:seev.038.001.07";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// General information about the safekeeping account and the account owner.
     /// </summary>
     [IsoId("_yg7BfRbHEeyroI8qKgB7Mg")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public AccountIdentification48Choice_? AccountDetails { get; init; } 
-    
+    public AccountIdentification48Choice_? AccountDetails { get; init; }
+
     /// <summary>
     /// Provides information about the securitised right for entitlement.
     /// </summary>
     [IsoId("_yg7BfxbHEeyroI8qKgB7Mg")]
     [DisplayName("Underlying Security")]
     [IsoXmlTag("UndrlygScty")]
-    public SecurityIdentification19? UnderlyingSecurity { get; init; } 
-    
+    public SecurityIdentification19? UnderlyingSecurity { get; init; }
+
     /// <summary>
     /// General information about the corporate action event.
     /// </summary>
     [IsoId("_yg7BgRbHEeyroI8qKgB7Mg")]
     [DisplayName("Corporate Action General Information")]
     [IsoXmlTag("CorpActnGnlInf")]
-    public required CorporateActionGeneralInformation92 CorporateActionGeneralInformation { get; init; } 
-    
+    public required CorporateActionGeneralInformation92 CorporateActionGeneralInformation { get; init; }
+
     /// <summary>
     /// Provides additional information.
     /// </summary>
     [IsoId("_yg7BgxbHEeyroI8qKgB7Mg")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public required UpdatedAdditionalInformation8 AdditionalInformation { get; init; } 
-    
+    public required UpdatedAdditionalInformation8 AdditionalInformation { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or any other specific block.
     /// </summary>
     [IsoId("_yg7BhRbHEeyroI8qKgB7Mg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }
 
-
-// Since CorporateActionNarrativeV07Document is not really part of the logical business domain model, 
+// Since CorporateActionNarrativeV07Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to CorporateActionNarrativeV07.
-

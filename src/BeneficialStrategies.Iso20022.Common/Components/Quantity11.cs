@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S8gtWznXEeWV5sr121Fc8A")]
 [DisplayName("Quantity")]
-public partial record Quantity11
+public record Quantity11
 {
-    #nullable enable
-    
     /// <summary>
     /// Total quantity of securities to be settled.
     /// </summary>
     [IsoId("_TdGRwznXEeWV5sr121Fc8A")]
     [DisplayName("Settlement Quantity")]
     [IsoXmlTag("SttlmQty")]
-    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; } 
-    
+    public required FinancialInstrumentQuantity1Choice_ SettlementQuantity { get; init; }
+
     /// <summary>
     /// Denomination of the security to be received or delivered.
     /// </summary>
@@ -33,26 +31,22 @@ public partial record Quantity11
     [DisplayName("Denomination Choice")]
     [IsoXmlTag("DnmtnChc")]
     [IsoSimpleType(IsoSimpleType.Max210Text)]
-    [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-    public IsoMax210Text? DenominationChoice { get; init; } 
-    
+    [StringLength(maximumLength: 210, MinimumLength = 1)]
+    public IsoMax210Text? DenominationChoice { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier of a certificate assigned by the issuer.
     /// </summary>
     [IsoId("_TdGR0znXEeWV5sr121Fc8A")]
     [DisplayName("Certificate Number")]
     [IsoXmlTag("CertNb")]
-    public SecuritiesCertificate4? CertificateNumber { get; init; } 
-    
+    public SecuritiesCertificate4? CertificateNumber { get; init; }
+
     /// <summary>
     /// Breakdown of a quantity into lots such as tax lots, instrument series, etc.
     /// </summary>
     [IsoId("_TdGR2znXEeWV5sr121Fc8A")]
     [DisplayName("Quantity Breakdown")]
     [IsoXmlTag("QtyBrkdwn")]
-    public QuantityBreakdown30? QuantityBreakdown { get; init; } 
-    
-    
-    #nullable disable
-    
+    public QuantityBreakdown30? QuantityBreakdown { get; init; }
 }

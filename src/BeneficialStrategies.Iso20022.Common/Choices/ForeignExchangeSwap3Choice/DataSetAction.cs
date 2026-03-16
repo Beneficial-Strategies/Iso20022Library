@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap3Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.ForeignExchangeSwap3Choice
     /// </summary>
     [IsoId("_FAmvkcESEea7jLfvGi1PDw")]
     [DisplayName("Data Set Action")]
-    public partial record DataSetAction : ForeignExchangeSwap3Choice_
+    public record DataSetAction : ForeignExchangeSwap3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the type of report activity for a specific reporting period.
         /// </summary>
         [IsoXmlTag("DataSetActn")]
-        public required ReportPeriodActivity3Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ReportPeriodActivity3Code Value { get; init; }
     }
 }

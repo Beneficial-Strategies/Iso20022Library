@@ -23,7 +23,7 @@ public enum MatchingProcessCode
     [IsoId("_aVDGQdp-Ed-ak6NoX_4Aeg_-796590257")]
     [Description(@"The referenced transaction is requested to be unmatched.")]
     Unmatch,
-    
+
     /// <summary>
     /// Matching process is to be resumed for the referenced transaction.
     /// Encoded/decoded by serializers as &quot;MTRE&quot;.
@@ -32,5 +32,4 @@ public enum MatchingProcessCode
     [IsoId("_aVDGQtp-Ed-ak6NoX_4Aeg_-704236763")]
     [Description(@"Matching process is to be resumed for the referenced transaction.")]
     ResumeMatching,
-    
 }

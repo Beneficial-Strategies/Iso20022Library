@@ -23,7 +23,7 @@ public enum ActionDestinationCode
     [IsoId("_JiPRYE0wEeea0Mdu1TOzDQ")]
     [Description(@"Personal computer.")]
     PersonalComputer,
-    
+
     /// <summary>
     /// Mobile telephone
     /// Encoded/decoded by serializers as &quot;MOBL&quot;.
@@ -32,7 +32,7 @@ public enum ActionDestinationCode
     [IsoId("_RgGf0U0wEeea0Mdu1TOzDQ")]
     [Description(@"Mobile telephone")]
     Mobile,
-    
+
     /// <summary>
     /// Point of sale terminal.
     /// Encoded/decoded by serializers as &quot;POFS&quot;.
@@ -41,7 +41,7 @@ public enum ActionDestinationCode
     [IsoId("_XwLWwE0wEeea0Mdu1TOzDQ")]
     [Description(@"Point of sale terminal.")]
     PointOfSale,
-    
+
     /// <summary>
     /// Data file
     /// Encoded/decoded by serializers as &quot;FILE&quot;.
@@ -50,7 +50,7 @@ public enum ActionDestinationCode
     [IsoId("_eYyCcE0wEeea0Mdu1TOzDQ")]
     [Description(@"Data file")]
     File,
-    
+
     /// <summary>
     /// Other type of destination for action defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum ActionDestinationCode
     [IsoId("_jyGQgE0wEeea0Mdu1TOzDQ")]
     [Description(@"Other type of destination for action defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other type of destination for action defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,5 +68,4 @@ public enum ActionDestinationCode
     [IsoId("_o2RVAE0wEeea0Mdu1TOzDQ")]
     [Description(@"Other type of destination for action defined at private level.")]
     OtherPrivate,
-    
 }

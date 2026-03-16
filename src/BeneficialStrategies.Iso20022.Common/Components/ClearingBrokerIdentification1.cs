@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_KYvvc4uZEeKYr_965Eh8aQ")]
 [DisplayName("Clearing Broker Identification")]
-public partial record ClearingBrokerIdentification1
+public record ClearingBrokerIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Distinguishes the client leg from the central counterparty (CCP) leg in the clearing broker identification.
     /// </summary>
     [IsoId("_s1IrIIuZEeKYr_965Eh8aQ")]
     [DisplayName("Side Indicator")]
     [IsoXmlTag("SdInd")]
-    public required SideIndicator1Code SideIndicator { get; init; } 
-    
+    public required SideIndicator1Code SideIndicator { get; init; }
+
     /// <summary>
     /// Specifies the identification assigned to the clearing broker.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record ClearingBrokerIdentification1
     [DisplayName("Clearing Broker Identification")]
     [IsoXmlTag("ClrBrkrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text ClearingBrokerIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text ClearingBrokerIdentification { get; init; }
 }

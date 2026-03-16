@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InitialPhysicalForm3Choice.Code))]
     [KnownType(typeof(InitialPhysicalForm3Choice.Proprietary))]
-    [JsonDerivedType(typeof(InitialPhysicalForm3Choice.Code),nameof(InitialPhysicalForm3Choice.Code))]
-    [JsonDerivedType(typeof(InitialPhysicalForm3Choice.Proprietary),nameof(InitialPhysicalForm3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(InitialPhysicalForm3Choice.Code),
+        nameof(InitialPhysicalForm3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(InitialPhysicalForm3Choice.Proprietary),
+        nameof(InitialPhysicalForm3Choice.Proprietary)
+    )]
     [IsoId("_mx0oUeLcEeWFtOV72FbX9w")]
     [DisplayName("Initial Physical Form 3 Choice")]
-    public abstract partial record InitialPhysicalForm3Choice_
-    {
-    }
+    public abstract record InitialPhysicalForm3Choice_ { }
 }

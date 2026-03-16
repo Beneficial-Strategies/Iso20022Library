@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus10Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus10Choice
     /// </summary>
     [IsoId("_avGTs-ZgEd-q8fx_Zl_34A")]
     [DisplayName("Reason")]
-    public partial record Reason : RejectionOrRepairStatus10Choice_
+    public record Reason : RejectionOrRepairStatus10Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why the instruction/request has a rejected or repair status.
         /// </summary>
         [IsoId("_b6DD4-ZgEd-q8fx_Zl_34A")]
         [DisplayName("Code")]
         [IsoXmlTag("Cd")]
-        public required RejectionAndRepairReason9Choice_ Code { get; init; } 
-        
+        public required RejectionAndRepairReason9Choice_ Code { get; init; }
+
         /// <summary>
         /// Provides additional reason information that cannot be provided in a structured field.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus10Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

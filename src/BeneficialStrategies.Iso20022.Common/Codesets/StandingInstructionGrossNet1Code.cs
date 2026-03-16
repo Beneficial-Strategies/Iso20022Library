@@ -23,7 +23,7 @@ public enum StandingInstructionGrossNet1Code
     [IsoId("_ZPnIONp-Ed-ak6NoX_4Aeg_1018738724")]
     [Description(@"Gross payment.")]
     Gross = StandingInstructionGrossNetCode.Gross, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Net payment.
     /// Encoded/decoded by serializers as &quot;NETT&quot;.
@@ -32,5 +32,4 @@ public enum StandingInstructionGrossNet1Code
     [IsoId("_ZPw5MNp-Ed-ak6NoX_4Aeg_1053834510")]
     [Description(@"Net payment.")]
     Net = StandingInstructionGrossNetCode.Net, // same ordinal as derivation source for type conversions
-    
 }

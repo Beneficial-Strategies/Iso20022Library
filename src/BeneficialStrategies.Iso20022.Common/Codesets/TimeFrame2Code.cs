@@ -23,7 +23,7 @@ public enum TimeFrame2Code
     [IsoId("_ft5hQcztEeq1WLK5fVzKiQ")]
     [Description(@"Hold to maturity.")]
     Hold = TimeFrameCode.Hold, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Greater than five years.
     /// Encoded/decoded by serializers as &quot;LONG&quot;.
@@ -32,7 +32,7 @@ public enum TimeFrame2Code
     [IsoId("_f1VmAcztEeq1WLK5fVzKiQ")]
     [Description(@"Greater than five years.")]
     LongTerm = TimeFrameCode.LongTerm, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Greater than or equal to three years.
     /// Encoded/decoded by serializers as &quot;MEDM&quot;.
@@ -41,7 +41,7 @@ public enum TimeFrame2Code
     [IsoId("_f9OWscztEeq1WLK5fVzKiQ")]
     [Description(@"Greater than or equal to three years.")]
     MediumTerm = TimeFrameCode.MediumTerm, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Greater than or equal to one year.
     /// Encoded/decoded by serializers as &quot;SHOR&quot;.
@@ -50,7 +50,7 @@ public enum TimeFrame2Code
     [IsoId("_gHCaAcztEeq1WLK5fVzKiQ")]
     [Description(@"Greater than or equal to one year.")]
     ShortTerm = TimeFrameCode.ShortTerm, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Less than one year.
     /// Encoded/decoded by serializers as &quot;VSHT&quot;.
@@ -59,5 +59,4 @@ public enum TimeFrame2Code
     [IsoId("_gM_4EcztEeq1WLK5fVzKiQ")]
     [Description(@"Less than one year.")]
     VeryShortTerm = TimeFrameCode.VeryShortTerm, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum StampDutyType2Code
     [IsoId("_Cd9Nnv8vEeC87tbx-VXRVA")]
     [Description(@"Stamps duty is applicable.")]
     Applicable = StampDutyTypeCode.Applicable, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Stamp duty not applicable.
     /// Encoded/decoded by serializers as &quot;SDRN&quot;.
@@ -32,5 +32,4 @@ public enum StampDutyType2Code
     [IsoId("_CmdCSv8vEeC87tbx-VXRVA")]
     [Description(@"Stamp duty not applicable.")]
     NotApplicable = StampDutyTypeCode.NotApplicable, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_cLmfgQ0cEeqUVL7sB4m7NA")]
 [DisplayName("Device Input Notification")]
-public partial record DeviceInputNotification2
+public record DeviceInputNotification2
 {
-    #nullable enable
-    
     /// <summary>
     /// Message main identifier.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record DeviceInputNotification2
     [DisplayName("Exchange Identification")]
     [IsoXmlTag("XchgId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text ExchangeIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text ExchangeIdentification { get; init; }
+
     /// <summary>
     /// Updated content of the message to display before input.
     /// </summary>
     [IsoId("_cW4icQ0cEeqUVL7sB4m7NA")]
     [DisplayName("Output Content")]
     [IsoXmlTag("OutptCntt")]
-    public required ActionMessage7 OutputContent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required ActionMessage7 OutputContent { get; init; }
 }

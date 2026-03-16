@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SoWAKwEcEeCQm6a_G2yO_w_-1995265470")]
 [DisplayName("Cardholder Identification")]
-public partial record CardholderIdentification1
+public record CardholderIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification value of the cardholder involved in a transaction.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record CardholderIdentification1
     [DisplayName("Cardholder Identification Value")]
     [IsoXmlTag("CrdhldrIdVal")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text CardholderIdentificationValue { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text CardholderIdentificationValue { get; init; }
+
     /// <summary>
     /// Type of identification used for identifying the cardholder.
     /// </summary>
     [IsoId("_SoWALQEcEeCQm6a_G2yO_w_-899306894")]
     [DisplayName("Cardholder Identification Type")]
     [IsoXmlTag("CrdhldrIdTp")]
-    public required PersonIdentificationType4Code CardholderIdentificationType { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PersonIdentificationType4Code CardholderIdentificationType { get; init; }
 }

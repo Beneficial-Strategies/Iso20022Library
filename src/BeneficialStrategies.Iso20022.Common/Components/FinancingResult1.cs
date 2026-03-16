@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiFktdp-Ed-ak6NoX_4Aeg_1101123529")]
 [DisplayName("Financing Result")]
-public partial record FinancingResult1
+public record FinancingResult1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the status of the financing request (e.g. financed. not financed).
     /// </summary>
     [IsoId("_TiFkttp-Ed-ak6NoX_4Aeg_352221392")]
     [DisplayName("Financing Request Status")]
     [IsoXmlTag("FincgReqSts")]
-    public required RequestStatus1Code FinancingRequestStatus { get; init; } 
-    
+    public required RequestStatus1Code FinancingRequestStatus { get; init; }
+
     /// <summary>
     /// Indicates the reasons that have determined the result of the single request.
     /// </summary>
     [IsoId("_TiFkt9p-Ed-ak6NoX_4Aeg_564525140")]
     [DisplayName("Status Reason")]
     [IsoXmlTag("StsRsn")]
-    public StatusReason4Choice_? StatusReason { get; init; } 
-    
+    public StatusReason4Choice_? StatusReason { get; init; }
+
     /// <summary>
     /// Further details on the status reason.
     /// </summary>
@@ -41,18 +39,14 @@ public partial record FinancingResult1
     [DisplayName("Additional Status Reason Information")]
     [IsoXmlTag("AddtlStsRsnInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? AdditionalStatusReasonInformation { get; init; } 
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? AdditionalStatusReasonInformation { get; init; }
+
     /// <summary>
     /// Indicates amount financed related to the request.
     /// </summary>
     [IsoId("_TiOuoNp-Ed-ak6NoX_4Aeg_603605189")]
     [DisplayName("Financed Amount")]
     [IsoXmlTag("FincdAmt")]
-    public FinancingRateOrAmountChoice_? FinancedAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public FinancingRateOrAmountChoice_? FinancedAmount { get; init; }
 }

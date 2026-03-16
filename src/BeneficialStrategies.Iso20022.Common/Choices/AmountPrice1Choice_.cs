@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AmountPrice1Choice.Amount))]
     [KnownType(typeof(AmountPrice1Choice.UnitPrice))]
-    [JsonDerivedType(typeof(AmountPrice1Choice.Amount),nameof(AmountPrice1Choice.Amount))]
-    [JsonDerivedType(typeof(AmountPrice1Choice.UnitPrice),nameof(AmountPrice1Choice.UnitPrice))]
+    [JsonDerivedType(typeof(AmountPrice1Choice.Amount), nameof(AmountPrice1Choice.Amount))]
+    [JsonDerivedType(typeof(AmountPrice1Choice.UnitPrice), nameof(AmountPrice1Choice.UnitPrice))]
     [IsoId("_VMB-CNp-Ed-ak6NoX_4Aeg_834424130")]
     [DisplayName("Amount Price 1 Choice")]
-    public abstract partial record AmountPrice1Choice_
-    {
-    }
+    public abstract record AmountPrice1Choice_ { }
 }

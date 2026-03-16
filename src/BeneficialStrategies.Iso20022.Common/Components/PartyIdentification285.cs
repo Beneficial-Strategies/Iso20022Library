@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_J-YwkXjNEe6YlIMyoxWMJA")]
 [DisplayName("Party Identification285")]
-public partial record PartyIdentification285
+public record PartyIdentification285
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Identification.
     /// </summary>
@@ -30,28 +28,28 @@ public partial record PartyIdentification285
     /// </summary>
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
-    public IsoMax35Text? Assigner { get; init; } 
+    public IsoMax35Text? Assigner { get; init; }
 
     /// <summary>
     /// Country.
     /// </summary>
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public ISO3NumericCountryCode? Country { get; init; } 
+    public ISO3NumericCountryCode? Country { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required IsoMax35Text Identification { get; init; } 
+    public required IsoMax35Text Identification { get; init; }
 
     /// <summary>
     /// Legal Corporate Name.
     /// </summary>
     [DisplayName("Legal Corporate Name")]
     [IsoXmlTag("LglCorpNm")]
-    public IsoMax99Text? LegalCorporateName { get; init; } 
+    public IsoMax99Text? LegalCorporateName { get; init; }
 
     /// <summary>
     /// Local Data.
@@ -65,9 +63,5 @@ public partial record PartyIdentification285
     /// </summary>
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
-    public IsoMax35Text? ShortName { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax35Text? ShortName { get; init; }
 }

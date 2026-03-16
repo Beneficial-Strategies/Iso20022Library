@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SafekeepingPlaceFormatChoice.Identification))]
     [KnownType(typeof(SafekeepingPlaceFormatChoice.IdentificationAsDSS))]
     [KnownType(typeof(SafekeepingPlaceFormatChoice.IdentificationAsCountry))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormatChoice.Identification),nameof(SafekeepingPlaceFormatChoice.Identification))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormatChoice.IdentificationAsDSS),nameof(SafekeepingPlaceFormatChoice.IdentificationAsDSS))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormatChoice.IdentificationAsCountry),nameof(SafekeepingPlaceFormatChoice.IdentificationAsCountry))]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormatChoice.Identification),
+        nameof(SafekeepingPlaceFormatChoice.Identification)
+    )]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormatChoice.IdentificationAsDSS),
+        nameof(SafekeepingPlaceFormatChoice.IdentificationAsDSS)
+    )]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormatChoice.IdentificationAsCountry),
+        nameof(SafekeepingPlaceFormatChoice.IdentificationAsCountry)
+    )]
     [IsoId("_RB5f5Np-Ed-ak6NoX_4Aeg_-418949931")]
     [DisplayName("Safekeeping Place Format Choice")]
-    public abstract partial record SafekeepingPlaceFormatChoice_
-    {
-    }
+    public abstract record SafekeepingPlaceFormatChoice_ { }
 }

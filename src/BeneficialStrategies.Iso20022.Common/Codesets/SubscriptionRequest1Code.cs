@@ -23,7 +23,7 @@ public enum SubscriptionRequest1Code
     [IsoId("_ZQpqBdp-Ed-ak6NoX_4Aeg_-1044305239")]
     [Description(@"Specifies that the request is to subscribe to snapshots.")]
     Snapshot = SubscriptionRequestCode.Snapshot, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the request is to subscribe to snapshots and updates.
     /// Encoded/decoded by serializers as &quot;SUBS&quot;.
@@ -32,14 +32,15 @@ public enum SubscriptionRequest1Code
     [IsoId("_ZQpqBtp-Ed-ak6NoX_4Aeg_-1044305197")]
     [Description(@"Specifies that the request is to subscribe to snapshots and updates.")]
     Subscribe = SubscriptionRequestCode.Subscribe, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the request is to disable the previous snapshot subscription and to update the request (unsubscribe).
     /// Encoded/decoded by serializers as &quot;UNSU&quot;.
     /// </summary>
     [EnumMember(Value = "UNSU")]
     [IsoId("_ZQpqB9p-Ed-ak6NoX_4Aeg_-1044305162")]
-    [Description(@"Specifies that the request is to disable the previous snapshot subscription and to update the request (unsubscribe).")]
+    [Description(
+        @"Specifies that the request is to disable the previous snapshot subscription and to update the request (unsubscribe)."
+    )]
     Unsubscribe = SubscriptionRequestCode.Unsubscribe, // same ordinal as derivation source for type conversions
-    
 }

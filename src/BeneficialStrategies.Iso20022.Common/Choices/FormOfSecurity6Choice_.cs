@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FormOfSecurity6Choice.Code))]
     [KnownType(typeof(FormOfSecurity6Choice.Proprietary))]
-    [JsonDerivedType(typeof(FormOfSecurity6Choice.Code),nameof(FormOfSecurity6Choice.Code))]
-    [JsonDerivedType(typeof(FormOfSecurity6Choice.Proprietary),nameof(FormOfSecurity6Choice.Proprietary))]
+    [JsonDerivedType(typeof(FormOfSecurity6Choice.Code), nameof(FormOfSecurity6Choice.Code))]
+    [JsonDerivedType(
+        typeof(FormOfSecurity6Choice.Proprietary),
+        nameof(FormOfSecurity6Choice.Proprietary)
+    )]
     [IsoId("_MBPGgTm-EeWV5sr121Fc8A")]
     [DisplayName("Form Of Security 6 Choice")]
-    public abstract partial record FormOfSecurity6Choice_
-    {
-    }
+    public abstract record FormOfSecurity6Choice_ { }
 }

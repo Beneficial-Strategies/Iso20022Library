@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nI5VVdL9EeSDLevdaFPXHw")]
 [DisplayName("Registered Contract")]
-public partial record RegisteredContract1
+public record RegisteredContract1
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identification of the contract registration amendment.
     /// </summary>
@@ -25,25 +23,25 @@ public partial record RegisteredContract1
     [DisplayName("Contract Registration Amendment Identification")]
     [IsoXmlTag("CtrctRegnAmdmntId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text ContractRegistrationAmendmentIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text ContractRegistrationAmendmentIdentification { get; init; }
+
     /// <summary>
     /// Party registering the currency control contract.
     /// </summary>
     [IsoId("_nI5VWNL9EeSDLevdaFPXHw")]
     [DisplayName("Reporting Party")]
     [IsoXmlTag("RptgPty")]
-    public required TradeParty2 ReportingParty { get; init; } 
-    
+    public required TradeParty2 ReportingParty { get; init; }
+
     /// <summary>
     /// Agent which registers the currency control contract.
     /// </summary>
     [IsoId("_nI5VV9L9EeSDLevdaFPXHw")]
     [DisplayName("Registration Agent")]
     [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification5 RegistrationAgent { get; init; } 
-    
+    public required BranchAndFinancialInstitutionIdentification5 RegistrationAgent { get; init; }
+
     /// <summary>
     /// Amendment details applied on one or several registered contracts.
     /// </summary>
@@ -51,17 +49,14 @@ public partial record RegisteredContract1
     [DisplayName("Registered Contract Amendment")]
     [IsoXmlTag("RegdCtrctAmdmnt")]
     public ValueList<RegisteredContract3> RegisteredContractAmendment { get; init; } = [];
+
     // ID for the above is _nI5VWdL9EeSDLevdaFPXHw
-    
+
     /// <summary>
     /// Additional information that cannot be captured in the structured elements and/or any other specific block.
     /// </summary>
     [IsoId("__7OX8TmyEeWDb47rJ6ki4Q")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

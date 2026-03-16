@@ -21,9 +21,11 @@ public enum SecuritiesSettlementStatus3Code
     /// </summary>
     [EnumMember(Value = "PEND")]
     [IsoId("_YKVI0cX-EeiSF9q-coWegA")]
-    [Description(@"Instruction is pending. Settlement at the instructed settlement date is still possible.")]
+    [Description(
+        @"Instruction is pending. Settlement at the instructed settlement date is still possible."
+    )]
     Pending = SecuritiesSettlementStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Full settlement.
     /// Encoded/decoded by serializers as &quot;SETT&quot;.
@@ -32,5 +34,4 @@ public enum SecuritiesSettlementStatus3Code
     [IsoId("_YSXqgcX-EeiSF9q-coWegA")]
     [Description(@"Full settlement.")]
     Settled = SecuritiesSettlementStatusCode.Settled, // same ordinal as derivation source for type conversions
-    
 }

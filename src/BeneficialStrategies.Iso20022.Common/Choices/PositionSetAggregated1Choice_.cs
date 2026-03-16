@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PositionSetAggregated1Choice.DataSetAction))]
     [KnownType(typeof(PositionSetAggregated1Choice.Report))]
-    [JsonDerivedType(typeof(PositionSetAggregated1Choice.DataSetAction),nameof(PositionSetAggregated1Choice.DataSetAction))]
-    [JsonDerivedType(typeof(PositionSetAggregated1Choice.Report),nameof(PositionSetAggregated1Choice.Report))]
+    [JsonDerivedType(
+        typeof(PositionSetAggregated1Choice.DataSetAction),
+        nameof(PositionSetAggregated1Choice.DataSetAction)
+    )]
+    [JsonDerivedType(
+        typeof(PositionSetAggregated1Choice.Report),
+        nameof(PositionSetAggregated1Choice.Report)
+    )]
     [IsoId("_CHENw0whEeqwfMIOLcNxbw")]
     [DisplayName("Position Set Aggregated 1 Choice")]
-    public abstract partial record PositionSetAggregated1Choice_
-    {
-    }
+    public abstract record PositionSetAggregated1Choice_ { }
 }

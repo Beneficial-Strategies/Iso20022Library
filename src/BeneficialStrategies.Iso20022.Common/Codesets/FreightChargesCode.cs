@@ -23,7 +23,7 @@ public enum FreightChargesCode
     [IsoId("_ar_mpdp-Ed-ak6NoX_4Aeg_-915354796")]
     [Description(@"Freight charges are to collect from consignee.")]
     Collect,
-    
+
     /// <summary>
     /// Freight charges are paid by shipper.
     /// Encoded/decoded by serializers as &quot;PRPD&quot;.
@@ -32,5 +32,4 @@ public enum FreightChargesCode
     [IsoId("_ar_mptp-Ed-ak6NoX_4Aeg_-799916141")]
     [Description(@"Freight charges are paid by shipper.")]
     Prepaid,
-    
 }

@@ -23,7 +23,7 @@ public enum DeliveryPlace1Code
     [IsoId("_azANkdp-Ed-ak6NoX_4Aeg_-743931467")]
     [Description(@"Card needs to be mailed to employers address.")]
     Employer = DeliveryPlaceCode.Employer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card needs to be mailed to individual specified in PersonDetail.
     /// Encoded/decoded by serializers as &quot;INDI&quot;.
@@ -32,7 +32,7 @@ public enum DeliveryPlace1Code
     [IsoId("_azANktp-Ed-ak6NoX_4Aeg_-743931451")]
     [Description(@"Card needs to be mailed to individual specified in PersonDetail.")]
     Individual = DeliveryPlaceCode.Individual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Card needs to be available at the entrance of the meeting.
     /// Encoded/decoded by serializers as &quot;ENTR&quot;.
@@ -41,7 +41,7 @@ public enum DeliveryPlace1Code
     [IsoId("_azANk9p-Ed-ak6NoX_4Aeg_-743931450")]
     [Description(@"Card needs to be available at the entrance of the meeting.")]
     EntranceOfMeeting = DeliveryPlaceCode.EntranceOfMeeting, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cards needs to be send to other specified address.
     /// Encoded/decoded by serializers as &quot;OADR&quot;.
@@ -50,5 +50,4 @@ public enum DeliveryPlace1Code
     [IsoId("_azANlNp-Ed-ak6NoX_4Aeg_1639092662")]
     [Description(@"Cards needs to be send to other specified address.")]
     OtherAddress = DeliveryPlaceCode.OtherAddress, // same ordinal as derivation source for type conversions
-    
 }

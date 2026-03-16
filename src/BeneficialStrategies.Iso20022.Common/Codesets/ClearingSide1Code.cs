@@ -23,7 +23,7 @@ public enum ClearingSide1Code
     [IsoId("__1DJtdojEeC60axPepSq7g_-1447578854")]
     [Description(@"Clearing member is on the buying side.")]
     Buy = ClearingSideCode.Buy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing member is on the selling side.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -32,7 +32,7 @@ public enum ClearingSide1Code
     [IsoId("__1M6sNojEeC60axPepSq7g_-1458677631")]
     [Description(@"Clearing member is on the selling side.")]
     Sell = ClearingSideCode.Sell, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing member is on the lending side.
     /// Encoded/decoded by serializers as &quot;LEND&quot;.
@@ -41,7 +41,7 @@ public enum ClearingSide1Code
     [IsoId("__1M6sdojEeC60axPepSq7g_8471132")]
     [Description(@"Clearing member is on the lending side.")]
     Lend = ClearingSideCode.Lend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing member is on the borrowing side.
     /// Encoded/decoded by serializers as &quot;BORW&quot;.
@@ -50,5 +50,4 @@ public enum ClearingSide1Code
     [IsoId("__1M6stojEeC60axPepSq7g_-407544559")]
     [Description(@"Clearing member is on the borrowing side.")]
     Borrow = ClearingSideCode.Borrow, // same ordinal as derivation source for type conversions
-    
 }

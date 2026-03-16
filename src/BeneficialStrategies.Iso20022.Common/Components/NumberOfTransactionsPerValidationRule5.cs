@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TiPqwcrdEeii_5g6VX90qQ")]
 [DisplayName("Number Of Transactions Per Validation Rule")]
-public partial record NumberOfTransactionsPerValidationRule5
+public record NumberOfTransactionsPerValidationRule5
 {
-    #nullable enable
-    
     /// <summary>
     /// Number of individual reports or transactions sent / received, detailed per status.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record NumberOfTransactionsPerValidationRule5
     [DisplayName("Detailed Number")]
     [IsoXmlTag("DtldNb")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public required IsoMax15NumericText DetailedNumber { get; init; } 
-    
+    public required IsoMax15NumericText DetailedNumber { get; init; }
+
     /// <summary>
     /// Common validation rule for all individual reports received.
     /// </summary>
@@ -35,8 +33,4 @@ public partial record NumberOfTransactionsPerValidationRule5
     [IsoXmlTag("RptSts")]
     public ValueList<RejectionReason45> ReportStatus { get; init; } = [];
     // ID for the above is _Tr7yQ8rdEeii_5g6VX90qQ
-    
-    
-    #nullable disable
-    
 }

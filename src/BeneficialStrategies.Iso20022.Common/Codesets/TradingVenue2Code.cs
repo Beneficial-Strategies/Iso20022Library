@@ -21,16 +21,19 @@ public enum TradingVenue2Code
     /// </summary>
     [EnumMember(Value = "APPA")]
     [IsoId("_dy31QV0iEeWErPfQ7BYx8A")]
-    [Description(@"Person authorised under the provisions established in the regulation to provide the service of publishing trade reports on behalf of investment firms.")]
+    [Description(
+        @"Person authorised under the provisions established in the regulation to provide the service of publishing trade reports on behalf of investment firms."
+    )]
     ApprovedPublicationArrangement = TradingVenueCode.ApprovedPublicationArrangement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Provider which will consolidate post-trade information into a continuous electronic data stream and make it publicly available as close to real time as technologically possible on a reasonable commercial basis and free of charge after 15 minutes.
     /// Encoded/decoded by serializers as &quot;CTPS&quot;.
     /// </summary>
     [EnumMember(Value = "CTPS")]
     [IsoId("_F8rOgb4BEeWvRsMSLyTf-A")]
-    [Description(@"Provider which will consolidate post-trade information into a continuous electronic data stream and make it publicly available as close to real time as technologically possible on a reasonable commercial basis and free of charge after 15 minutes.")]
+    [Description(
+        @"Provider which will consolidate post-trade information into a continuous electronic data stream and make it publicly available as close to real time as technologically possible on a reasonable commercial basis and free of charge after 15 minutes."
+    )]
     ConsolidatedTapeProvider = TradingVenueCode.ConsolidatedTapeProvider, // same ordinal as derivation source for type conversions
-    
 }

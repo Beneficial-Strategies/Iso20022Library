@@ -23,7 +23,7 @@ public enum InstalmentPeriod1Code
     [IsoId("_wMPdwTEqEemzCpWiCwK4aQ")]
     [Description(@"Monthly instalment period.")]
     Monthly = InstalmentPeriodCode.Monthly, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Annual instalment period.
     /// Encoded/decoded by serializers as &quot;ANNU&quot;.
@@ -32,5 +32,4 @@ public enum InstalmentPeriod1Code
     [IsoId("_wgNioTEqEemzCpWiCwK4aQ")]
     [Description(@"Annual instalment period.")]
     Annual = InstalmentPeriodCode.Annual, // same ordinal as derivation source for type conversions
-    
 }

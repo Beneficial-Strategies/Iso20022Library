@@ -21,9 +21,11 @@ public enum TransferStatus3Code
     /// </summary>
     [EnumMember(Value = "COSE")]
     [IsoId("_tuKvABwfEeOIveEnnb_1-A")]
-    [Description(@"Transfer or settlement instruction is fully executed and the confirmation is sent.")]
+    [Description(
+        @"Transfer or settlement instruction is fully executed and the confirmation is sent."
+    )]
     AlreadyExecuted = TransferStatusCode.AlreadyExecuted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer or settlement instruction is matched.
     /// Encoded/decoded by serializers as &quot;MACH&quot;.
@@ -32,16 +34,18 @@ public enum TransferStatus3Code
     [IsoId("_uABUARwfEeOIveEnnb_1-A")]
     [Description(@"Transfer or settlement instruction is matched.")]
     Matched = TransferStatusCode.Matched, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer or settlement instruction has been acknowledged / accepted for further processing.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_uwqt0RwfEeOIveEnnb_1-A")]
-    [Description(@"Transfer or settlement instruction has been acknowledged / accepted for further processing.")]
+    [Description(
+        @"Transfer or settlement instruction has been acknowledged / accepted for further processing."
+    )]
     Accepted = TransferStatusCode.Accepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer or settlement instruction is settled.
     /// Encoded/decoded by serializers as &quot;SETT&quot;.
@@ -50,23 +54,26 @@ public enum TransferStatus3Code
     [IsoId("_ve8JERwfEeOIveEnnb_1-A")]
     [Description(@"Transfer or settlement instruction is settled.")]
     Settled = TransferStatusCode.Settled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer or settlement instruction has been sent to the next party, that is, the next intermediary.
     /// Encoded/decoded by serializers as &quot;STNP&quot;.
     /// </summary>
     [EnumMember(Value = "STNP")]
     [IsoId("_wFUzoRwfEeOIveEnnb_1-A")]
-    [Description(@"Transfer or settlement instruction has been sent to the next party, that is, the next intermediary.")]
+    [Description(
+        @"Transfer or settlement instruction has been sent to the next party, that is, the next intermediary."
+    )]
     SentToNextParty = TransferStatusCode.SentToNextParty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been received, that is, technical validation of the message is ok, and the message is now at the receiving side.
     /// Encoded/decoded by serializers as &quot;RECE&quot;.
     /// </summary>
     [EnumMember(Value = "RECE")]
     [IsoId("_wkHocRwfEeOIveEnnb_1-A")]
-    [Description(@"Instruction has been received, that is, technical validation of the message is ok, and the message is now at the receiving side.")]
+    [Description(
+        @"Instruction has been received, that is, technical validation of the message is ok, and the message is now at the receiving side."
+    )]
     Received = TransferStatusCode.Received, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnmatchedReason30Choice.Code))]
     [KnownType(typeof(UnmatchedReason30Choice.Proprietary))]
-    [JsonDerivedType(typeof(UnmatchedReason30Choice.Code),nameof(UnmatchedReason30Choice.Code))]
-    [JsonDerivedType(typeof(UnmatchedReason30Choice.Proprietary),nameof(UnmatchedReason30Choice.Proprietary))]
+    [JsonDerivedType(typeof(UnmatchedReason30Choice.Code), nameof(UnmatchedReason30Choice.Code))]
+    [JsonDerivedType(
+        typeof(UnmatchedReason30Choice.Proprietary),
+        nameof(UnmatchedReason30Choice.Proprietary)
+    )]
     [IsoId("_4-yjYOCXEei2UYJ62ws-Fw")]
     [DisplayName("Unmatched Reason 30 Choice")]
-    public abstract partial record UnmatchedReason30Choice_
-    {
-    }
+    public abstract record UnmatchedReason30Choice_ { }
 }

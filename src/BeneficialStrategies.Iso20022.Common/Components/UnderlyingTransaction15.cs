@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_wsiMN0gtEeaGKYpLDboHPQ")]
 [DisplayName("Underlying Transaction")]
-public partial record UnderlyingTransaction15
+public record UnderlyingTransaction15
 {
-    #nullable enable
-    
     /// <summary>
     /// Provides information on the original message, to which the cancellation refers.
     /// </summary>
     [IsoId("_w2KpX0gtEeaGKYpLDboHPQ")]
     [DisplayName("Original Group Information And Cancellation")]
     [IsoXmlTag("OrgnlGrpInfAndCxl")]
-    public OriginalGroupHeader6? OriginalGroupInformationAndCancellation { get; init; } 
-    
+    public OriginalGroupHeader6? OriginalGroupInformationAndCancellation { get; init; }
+
     /// <summary>
     /// Provides information on the original (group of) transactions, to which the cancellation request refers.
     /// </summary>
     [IsoId("_w2KpYUgtEeaGKYpLDboHPQ")]
     [DisplayName("Original Payment Information And Cancellation")]
     [IsoXmlTag("OrgnlPmtInfAndCxl")]
-    public OriginalPaymentInstruction20? OriginalPaymentInformationAndCancellation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public OriginalPaymentInstruction20? OriginalPaymentInformationAndCancellation { get; init; }
 }

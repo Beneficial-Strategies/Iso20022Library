@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PaymentInstrument24Choice.DirectDebitDetails))]
     [KnownType(typeof(PaymentInstrument24Choice.Cheque))]
     [KnownType(typeof(PaymentInstrument24Choice.BankersDraft))]
-    [JsonDerivedType(typeof(PaymentInstrument24Choice.PaymentCardDetails),nameof(PaymentInstrument24Choice.PaymentCardDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument24Choice.DirectDebitDetails),nameof(PaymentInstrument24Choice.DirectDebitDetails))]
-    [JsonDerivedType(typeof(PaymentInstrument24Choice.Cheque),nameof(PaymentInstrument24Choice.Cheque))]
-    [JsonDerivedType(typeof(PaymentInstrument24Choice.BankersDraft),nameof(PaymentInstrument24Choice.BankersDraft))]
+    [JsonDerivedType(
+        typeof(PaymentInstrument24Choice.PaymentCardDetails),
+        nameof(PaymentInstrument24Choice.PaymentCardDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument24Choice.DirectDebitDetails),
+        nameof(PaymentInstrument24Choice.DirectDebitDetails)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument24Choice.Cheque),
+        nameof(PaymentInstrument24Choice.Cheque)
+    )]
+    [JsonDerivedType(
+        typeof(PaymentInstrument24Choice.BankersDraft),
+        nameof(PaymentInstrument24Choice.BankersDraft)
+    )]
     [IsoId("_JSXkMZTBEemqYPWMBuVawg")]
     [DisplayName("Payment Instrument 24 Choice")]
-    public abstract partial record PaymentInstrument24Choice_
-    {
-    }
+    public abstract record PaymentInstrument24Choice_ { }
 }

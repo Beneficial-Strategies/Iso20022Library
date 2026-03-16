@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_UIO-sNp-Ed-ak6NoX_4Aeg_-697458395")]
 [DisplayName("Underlying Security Movement")]
-public partial record UnderlyingSecurityMovement1
+public record UnderlyingSecurityMovement1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the financial instrument.
     /// </summary>
     [IsoId("_UIO-sdp-Ed-ak6NoX_4Aeg_-326202017")]
     [DisplayName("Security Identification")]
     [IsoXmlTag("SctyId")]
-    public required SecurityIdentification7 SecurityIdentification { get; init; } 
-    
+    public required SecurityIdentification7 SecurityIdentification { get; init; }
+
     /// <summary>
     /// Quantity of financial instrument.
     /// </summary>
     [IsoId("_UIO-stp-Ed-ak6NoX_4Aeg_-310505043")]
     [DisplayName("Securities Quantity")]
     [IsoXmlTag("SctiesQty")]
-    public required UnitOrFaceAmount1Choice_ SecuritiesQuantity { get; init; } 
-    
+    public required UnitOrFaceAmount1Choice_ SecuritiesQuantity { get; init; }
+
     /// <summary>
     /// Provides information about the debited/credited securities account.
     /// </summary>
@@ -43,8 +41,4 @@ public partial record UnderlyingSecurityMovement1
     [MinLength(1)]
     [MaxLength(2)]
     public ValueList<SecuritiesAccount8> AccountDetails { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

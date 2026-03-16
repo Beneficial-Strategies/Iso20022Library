@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentification1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentificati
     /// </summary>
     [IsoId("_8BQtWaMgEeCJ6YNENx4h-w_-1124219834")]
     [DisplayName("Code")]
-    public partial record Code : MarketInfrastructureIdentification1Choice_
+    public record Code : MarketInfrastructureIdentification1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the market infrastructure identification, as published in an external market infrastructure code list.
@@ -24,10 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.MarketInfrastructureIdentificati
         /// External code sets can be downloaded from www.iso20022.org.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required ExternalMarketInfrastructure1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ExternalMarketInfrastructure1Code Value { get; init; }
     }
 }

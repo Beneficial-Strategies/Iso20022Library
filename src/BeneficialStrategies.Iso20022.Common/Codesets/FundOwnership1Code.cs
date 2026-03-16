@@ -23,7 +23,7 @@ public enum FundOwnership1Code
     [IsoId("_cYpsMSDYEeWCLu74WLgP4w")]
     [Description(@"All shares owned.")]
     AllOwned = FundOwnershipCode.AllOwned, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not all shares owned.
     /// Encoded/decoded by serializers as &quot;NALL&quot;.
@@ -32,5 +32,4 @@ public enum FundOwnership1Code
     [IsoId("_cfy2ASDYEeWCLu74WLgP4w")]
     [Description(@"Not all shares owned.")]
     NotAllOwned = FundOwnershipCode.NotAllOwned, // same ordinal as derivation source for type conversions
-    
 }

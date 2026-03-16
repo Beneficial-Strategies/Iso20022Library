@@ -23,7 +23,7 @@ public enum ProductCodeTypeCode
     [IsoId("_LTcIQErKEeenp6hmNprBHg")]
     [Description(@"Uniform Product Code - A-type")]
     UniformProductCodeA,
-    
+
     /// <summary>
     /// Uniform Product Code E-Type
     /// Encoded/decoded by serializers as &quot;UPCE&quot;.
@@ -32,7 +32,7 @@ public enum ProductCodeTypeCode
     [IsoId("_0UlKYErKEeenp6hmNprBHg")]
     [Description(@"Uniform Product Code E-Type")]
     UniformProductCodeE,
-    
+
     /// <summary>
     /// European Article Number of type-8 also known as International Article Number
     /// Encoded/decoded by serializers as &quot;EAN8&quot;.
@@ -41,7 +41,7 @@ public enum ProductCodeTypeCode
     [IsoId("_7c3bsErKEeenp6hmNprBHg")]
     [Description(@"European Article Number of type-8 also known as International Article Number")]
     EuropeanArticleNumber8,
-    
+
     /// <summary>
     /// European Article Number of type-13 also known as International Article Number
     /// Encoded/decoded by serializers as &quot;EA13&quot;.
@@ -50,16 +50,18 @@ public enum ProductCodeTypeCode
     [IsoId("_T8_ikErLEeenp6hmNprBHg")]
     [Description(@"European Article Number of type-13 also known as International Article Number")]
     EuropeanArticleNumber13,
-    
+
     /// <summary>
     /// Price look-up codes, commonly called PLU codes, PLU numbers, PLUs, produce codes, or produce labels, are identification numbers affixed to produce in grocery stores and supermarkets
     /// Encoded/decoded by serializers as &quot;PLUP&quot;.
     /// </summary>
     [EnumMember(Value = "PLUP")]
     [IsoId("_0FX0QErLEeenp6hmNprBHg")]
-    [Description(@"Price look-up codes, commonly called PLU codes, PLU numbers, PLUs, produce codes, or produce labels, are identification numbers affixed to produce in grocery stores and supermarkets")]
+    [Description(
+        @"Price look-up codes, commonly called PLU codes, PLU numbers, PLUs, produce codes, or produce labels, are identification numbers affixed to produce in grocery stores and supermarkets"
+    )]
     PriceLookUpCodes,
-    
+
     /// <summary>
     /// Global Trade Item Number (GTIN) is an identifier for trade items.
     /// Encoded/decoded by serializers as &quot;GTIN&quot;.
@@ -68,16 +70,18 @@ public enum ProductCodeTypeCode
     [IsoId("_JBfB0ErMEeenp6hmNprBHg")]
     [Description(@"Global Trade Item Number (GTIN) is an identifier for trade items.")]
     GlobalTradeItemNumber,
-    
+
     /// <summary>
     /// RSS 14 barcode (Reduce Space Symbology) encodes the full  EAN item identification in a symbol that can be omnidirectionally scanned by suitably configured point-of-sale laser scanners.
     /// Encoded/decoded by serializers as &quot;RS14&quot;.
     /// </summary>
     [EnumMember(Value = "RS14")]
     [IsoId("_aljVgErMEeenp6hmNprBHg")]
-    [Description(@"RSS 14 barcode (Reduce Space Symbology) encodes the full  EAN item identification in a symbol that can be omnidirectionally scanned by suitably configured point-of-sale laser scanners.")]
+    [Description(
+        @"RSS 14 barcode (Reduce Space Symbology) encodes the full  EAN item identification in a symbol that can be omnidirectionally scanned by suitably configured point-of-sale laser scanners."
+    )]
     ReduceSpaceSymbology14,
-    
+
     /// <summary>
     /// Other type of product code classification.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -86,5 +90,4 @@ public enum ProductCodeTypeCode
     [IsoId("_mQAKcErMEeenp6hmNprBHg")]
     [Description(@"Other type of product code classification.")]
     Other,
-    
 }

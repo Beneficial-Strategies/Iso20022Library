@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PendingSettlementStatus3Choice.ExtendedReason))]
     [KnownType(typeof(PendingSettlementStatus3Choice.DataSourceScheme))]
     [KnownType(typeof(PendingSettlementStatus3Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(PendingSettlementStatus3Choice.Reason),nameof(PendingSettlementStatus3Choice.Reason))]
-    [JsonDerivedType(typeof(PendingSettlementStatus3Choice.ExtendedReason),nameof(PendingSettlementStatus3Choice.ExtendedReason))]
-    [JsonDerivedType(typeof(PendingSettlementStatus3Choice.DataSourceScheme),nameof(PendingSettlementStatus3Choice.DataSourceScheme))]
-    [JsonDerivedType(typeof(PendingSettlementStatus3Choice.NoSpecifiedReason),nameof(PendingSettlementStatus3Choice.NoSpecifiedReason))]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatus3Choice.Reason),
+        nameof(PendingSettlementStatus3Choice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatus3Choice.ExtendedReason),
+        nameof(PendingSettlementStatus3Choice.ExtendedReason)
+    )]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatus3Choice.DataSourceScheme),
+        nameof(PendingSettlementStatus3Choice.DataSourceScheme)
+    )]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatus3Choice.NoSpecifiedReason),
+        nameof(PendingSettlementStatus3Choice.NoSpecifiedReason)
+    )]
     [IsoId("_LPufISY4EeW_ZNn8gbfY7Q")]
     [DisplayName("Pending Settlement Status 3 Choice")]
-    public abstract partial record PendingSettlementStatus3Choice_
-    {
-    }
+    public abstract record PendingSettlementStatus3Choice_ { }
 }

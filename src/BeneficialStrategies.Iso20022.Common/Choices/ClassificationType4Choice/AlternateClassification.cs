@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
     /// </summary>
     [IsoId("_XQgXNNp-Ed-ak6NoX_4Aeg_-641393136")]
     [DisplayName("Alternate Classification")]
-    public partial record AlternateClassification : ClassificationType4Choice_
+    public record AlternateClassification : ClassificationType4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification assigned by an institution.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.RestrictedFINXMax30Text)]
-        [StringLength(maximumLength: 30 ,MinimumLength = 1)]
-        public required IsoRestrictedFINXMax30Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 30, MinimumLength = 1)]
+        public required IsoRestrictedFINXMax30Text Identification { get; init; }
+
         /// <summary>
         /// Name of the identification scheme.
         /// </summary>
@@ -34,9 +32,9 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
         [DisplayName("Scheme Name")]
         [IsoXmlTag("SchmeNm")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public IsoMax4AlphaNumericText? SchemeName { get; init; }
+
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -44,11 +42,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ClassificationType4Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-        [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-        public IsoMax4AlphaNumericText? Issuer { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 4, MinimumLength = 1)]
+        public IsoMax4AlphaNumericText? Issuer { get; init; }
     }
 }

@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TransactionLoanData30Choice.BuySellBack))]
     [KnownType(typeof(TransactionLoanData30Choice.SecuritiesLending))]
     [KnownType(typeof(TransactionLoanData30Choice.MarginLending))]
-    [JsonDerivedType(typeof(TransactionLoanData30Choice.RepurchaseTrade),nameof(TransactionLoanData30Choice.RepurchaseTrade))]
-    [JsonDerivedType(typeof(TransactionLoanData30Choice.BuySellBack),nameof(TransactionLoanData30Choice.BuySellBack))]
-    [JsonDerivedType(typeof(TransactionLoanData30Choice.SecuritiesLending),nameof(TransactionLoanData30Choice.SecuritiesLending))]
-    [JsonDerivedType(typeof(TransactionLoanData30Choice.MarginLending),nameof(TransactionLoanData30Choice.MarginLending))]
+    [JsonDerivedType(
+        typeof(TransactionLoanData30Choice.RepurchaseTrade),
+        nameof(TransactionLoanData30Choice.RepurchaseTrade)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionLoanData30Choice.BuySellBack),
+        nameof(TransactionLoanData30Choice.BuySellBack)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionLoanData30Choice.SecuritiesLending),
+        nameof(TransactionLoanData30Choice.SecuritiesLending)
+    )]
+    [JsonDerivedType(
+        typeof(TransactionLoanData30Choice.MarginLending),
+        nameof(TransactionLoanData30Choice.MarginLending)
+    )]
     [IsoId("_gF0WAcg4Eeu4ecZgAYuz5w")]
     [DisplayName("Transaction Loan Data 30 Choice")]
-    public abstract partial record TransactionLoanData30Choice_
-    {
-    }
+    public abstract record TransactionLoanData30Choice_ { }
 }

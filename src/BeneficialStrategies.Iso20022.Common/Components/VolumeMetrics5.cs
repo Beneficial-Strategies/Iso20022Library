@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,28 +14,22 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_d5k5U65MEeuo-IflVgGqiA")]
 [DisplayName("Volume Metrics")]
-public partial record VolumeMetrics5
+public record VolumeMetrics5
 {
-    #nullable enable
-    
     /// <summary>
-    /// Count of the number of Unique Trade Identifiers. 
+    /// Count of the number of Unique Trade Identifiers.
     /// </summary>
     [IsoId("_eIL9Ea5MEeuo-IflVgGqiA")]
     [DisplayName("Number Of Transactions")]
     [IsoXmlTag("NbOfTxs")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfTransactions { get; init; } 
-    
+    public IsoMax15NumericText? NumberOfTransactions { get; init; }
+
     /// <summary>
     /// Sum for each exposure variable and currency.
     /// </summary>
     [IsoId("_eIL9E65MEeuo-IflVgGqiA")]
     [DisplayName("Exposure")]
     [IsoXmlTag("Xpsr")]
-    public ExposureMetrics4? Exposure { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ExposureMetrics4? Exposure { get; init; }
 }

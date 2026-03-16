@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bafQEdcZEeqRFcf2R4bPBw")]
 [DisplayName("Card Transaction")]
-public partial record CardTransaction18
+public record CardTransaction18
 {
-    #nullable enable
-    
     /// <summary>
     /// Electronic money product that provides the cardholder with a portable and specialised computer device, which typically contains a microprocessor.
     /// </summary>
     [IsoId("_bb0FwdcZEeqRFcf2R4bPBw")]
     [DisplayName("Card")]
     [IsoXmlTag("Card")]
-    public PaymentCard4? Card { get; init; } 
-    
+    public PaymentCard4? Card { get; init; }
+
     /// <summary>
     /// Physical or logical card payment terminal containing software and hardware components.
     /// </summary>
     [IsoId("_bb0Fw9cZEeqRFcf2R4bPBw")]
     [DisplayName("POI")]
     [IsoXmlTag("POI")]
-    public PointOfInteraction1? POI { get; init; } 
-    
+    public PointOfInteraction1? POI { get; init; }
+
     /// <summary>
     /// Card transaction details, which can be either globalised by the acquirer or individual transaction.
     /// </summary>
     [IsoId("_bb0FxdcZEeqRFcf2R4bPBw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public CardTransaction3Choice_? Transaction { get; init; } 
-    
+    public CardTransaction3Choice_? Transaction { get; init; }
+
     /// <summary>
     /// Prepaid account for the transfer or loading of an amount of money.
     /// </summary>
     [IsoId("_bb0Fx9cZEeqRFcf2R4bPBw")]
     [DisplayName("Pre Paid Account")]
     [IsoXmlTag("PrePdAcct")]
-    public CashAccount40? PrePaidAccount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CashAccount40? PrePaidAccount { get; init; }
 }

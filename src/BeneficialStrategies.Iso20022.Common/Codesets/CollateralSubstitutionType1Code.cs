@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_YcDkVNp-Ed-ak6NoX_4Aeg_917519215")]
-[Description(@"Specifies if the collateral that is substituted was posted against the variation margin or the independent amount.")]
+[Description(
+    @"Specifies if the collateral that is substituted was posted against the variation margin or the independent amount."
+)]
 [DerivedFrom(typeof(CollateralSubstitutionTypeCode))]
 public enum CollateralSubstitutionType1Code
 {
@@ -21,16 +23,20 @@ public enum CollateralSubstitutionType1Code
     /// </summary>
     [EnumMember(Value = "AVMG")]
     [IsoId("_YcDkVdp-Ed-ak6NoX_4Aeg_168648303")]
-    [Description(@"Specifies if the collateral that is substituted was posted against the variation margin.")]
+    [Description(
+        @"Specifies if the collateral that is substituted was posted against the variation margin."
+    )]
     AgainstVariationMargin = CollateralSubstitutionTypeCode.AgainstVariationMargin, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies if the collateral that is substituted was posted against the independent amount.
     /// Encoded/decoded by serializers as &quot;ASIA&quot;.
     /// </summary>
     [EnumMember(Value = "ASIA")]
     [IsoId("_YcDkVtp-Ed-ak6NoX_4Aeg_-914318971")]
-    [Description(@"Specifies if the collateral that is substituted was posted against the independent amount.")]
-    AgainstSegregatedIndependentAmount = CollateralSubstitutionTypeCode.AgainstSegregatedIndependentAmount, // same ordinal as derivation source for type conversions
-    
+    [Description(
+        @"Specifies if the collateral that is substituted was posted against the independent amount."
+    )]
+    AgainstSegregatedIndependentAmount =
+        CollateralSubstitutionTypeCode.AgainstSegregatedIndependentAmount, // same ordinal as derivation source for type conversions
 }

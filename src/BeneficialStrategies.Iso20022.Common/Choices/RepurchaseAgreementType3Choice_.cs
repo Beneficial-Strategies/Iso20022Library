@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(RepurchaseAgreementType3Choice.SpecificCollateral))]
     [KnownType(typeof(RepurchaseAgreementType3Choice.GeneralCollateral))]
-    [JsonDerivedType(typeof(RepurchaseAgreementType3Choice.SpecificCollateral),nameof(RepurchaseAgreementType3Choice.SpecificCollateral))]
-    [JsonDerivedType(typeof(RepurchaseAgreementType3Choice.GeneralCollateral),nameof(RepurchaseAgreementType3Choice.GeneralCollateral))]
+    [JsonDerivedType(
+        typeof(RepurchaseAgreementType3Choice.SpecificCollateral),
+        nameof(RepurchaseAgreementType3Choice.SpecificCollateral)
+    )]
+    [JsonDerivedType(
+        typeof(RepurchaseAgreementType3Choice.GeneralCollateral),
+        nameof(RepurchaseAgreementType3Choice.GeneralCollateral)
+    )]
     [IsoId("_BgUqseoaEeadseq5W5YLvQ")]
     [DisplayName("Repurchase Agreement Type 3 Choice")]
-    public abstract partial record RepurchaseAgreementType3Choice_
-    {
-    }
+    public abstract record RepurchaseAgreementType3Choice_ { }
 }

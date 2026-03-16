@@ -23,7 +23,7 @@ public enum ProrationType1Code
     [IsoId("_d7XV5jFsEeGKkIZzgd38VA")]
     [Description(@"Pro ration is not decided.")]
     NotDecided = ProrationTypeCode.NotDecided, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pro ration is not used.
     /// Encoded/decoded by serializers as &quot;PRNU&quot;.
@@ -32,5 +32,4 @@ public enum ProrationType1Code
     [IsoId("_DIpHtjVFEeGIoujPqYSZDw")]
     [Description(@"Pro ration is not used.")]
     NotUsed = ProrationTypeCode.NotUsed, // same ordinal as derivation source for type conversions
-    
 }

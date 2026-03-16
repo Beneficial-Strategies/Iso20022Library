@@ -15,15 +15,13 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AssetHolding3Choice.Guarantee))]
     [KnownType(typeof(AssetHolding3Choice.Security))]
     [KnownType(typeof(AssetHolding3Choice.Triparty))]
-    [JsonDerivedType(typeof(AssetHolding3Choice.Cash),nameof(AssetHolding3Choice.Cash))]
-    [JsonDerivedType(typeof(AssetHolding3Choice.Commodity),nameof(AssetHolding3Choice.Commodity))]
-    [JsonDerivedType(typeof(AssetHolding3Choice.Gold),nameof(AssetHolding3Choice.Gold))]
-    [JsonDerivedType(typeof(AssetHolding3Choice.Guarantee),nameof(AssetHolding3Choice.Guarantee))]
-    [JsonDerivedType(typeof(AssetHolding3Choice.Security),nameof(AssetHolding3Choice.Security))]
-    [JsonDerivedType(typeof(AssetHolding3Choice.Triparty),nameof(AssetHolding3Choice.Triparty))]
+    [JsonDerivedType(typeof(AssetHolding3Choice.Cash), nameof(AssetHolding3Choice.Cash))]
+    [JsonDerivedType(typeof(AssetHolding3Choice.Commodity), nameof(AssetHolding3Choice.Commodity))]
+    [JsonDerivedType(typeof(AssetHolding3Choice.Gold), nameof(AssetHolding3Choice.Gold))]
+    [JsonDerivedType(typeof(AssetHolding3Choice.Guarantee), nameof(AssetHolding3Choice.Guarantee))]
+    [JsonDerivedType(typeof(AssetHolding3Choice.Security), nameof(AssetHolding3Choice.Security))]
+    [JsonDerivedType(typeof(AssetHolding3Choice.Triparty), nameof(AssetHolding3Choice.Triparty))]
     [IsoId("_eUalMShJEe2H2s7qerne1w")]
     [DisplayName("Asset Holding3Choice")]
-    public abstract partial record AssetHolding3Choice_
-    {
-    }
+    public abstract record AssetHolding3Choice_ { }
 }

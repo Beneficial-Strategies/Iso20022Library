@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClaimNonReceipt3Choice.Accepted))]
     [KnownType(typeof(ClaimNonReceipt3Choice.Rejected))]
-    [JsonDerivedType(typeof(ClaimNonReceipt3Choice.Accepted),nameof(ClaimNonReceipt3Choice.Accepted))]
-    [JsonDerivedType(typeof(ClaimNonReceipt3Choice.Rejected),nameof(ClaimNonReceipt3Choice.Rejected))]
+    [JsonDerivedType(
+        typeof(ClaimNonReceipt3Choice.Accepted),
+        nameof(ClaimNonReceipt3Choice.Accepted)
+    )]
+    [JsonDerivedType(
+        typeof(ClaimNonReceipt3Choice.Rejected),
+        nameof(ClaimNonReceipt3Choice.Rejected)
+    )]
     [IsoId("_2vK40TEyEe6g-ffJsqGiSA")]
     [DisplayName("Claim Non Receipt3Choice")]
-    public abstract partial record ClaimNonReceipt3Choice_
-    {
-    }
+    public abstract record ClaimNonReceipt3Choice_ { }
 }

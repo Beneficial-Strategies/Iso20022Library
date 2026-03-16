@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradingVenueType1Choice.OnVenue))]
     [KnownType(typeof(TradingVenueType1Choice.OffVenue))]
-    [JsonDerivedType(typeof(TradingVenueType1Choice.OnVenue),nameof(TradingVenueType1Choice.OnVenue))]
-    [JsonDerivedType(typeof(TradingVenueType1Choice.OffVenue),nameof(TradingVenueType1Choice.OffVenue))]
+    [JsonDerivedType(
+        typeof(TradingVenueType1Choice.OnVenue),
+        nameof(TradingVenueType1Choice.OnVenue)
+    )]
+    [JsonDerivedType(
+        typeof(TradingVenueType1Choice.OffVenue),
+        nameof(TradingVenueType1Choice.OffVenue)
+    )]
     [IsoId("_MXZ-8Hy7Eeu1BeE84IrnAQ")]
     [DisplayName("Trading Venue Type 1 Choice")]
-    public abstract partial record TradingVenueType1Choice_
-    {
-    }
+    public abstract record TradingVenueType1Choice_ { }
 }

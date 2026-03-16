@@ -23,7 +23,7 @@ public enum PEPISACode
     [IsoId("_aGcpktp-Ed-ak6NoX_4Aeg_-1535050554")]
     [Description(@"Personal equity plan.")]
     PEP,
-    
+
     /// <summary>
     /// Individual savings account.
     /// Encoded/decoded by serializers as &quot;ISAT&quot;.
@@ -32,5 +32,4 @@ public enum PEPISACode
     [IsoId("_aGcpk9p-Ed-ak6NoX_4Aeg_-1061285641")]
     [Description(@"Individual savings account.")]
     ISA,
-    
 }

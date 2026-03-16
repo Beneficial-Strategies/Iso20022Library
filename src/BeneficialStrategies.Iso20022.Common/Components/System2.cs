@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,43 +14,37 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BIwgSW4-EeiU9cctagi5ow")]
 [DisplayName("System")]
-public partial record System2
+public record System2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a particular cash clearing system.
     /// </summary>
     [IsoId("_BSvis24-EeiU9cctagi5ow")]
     [DisplayName("System Identification")]
     [IsoXmlTag("SysId")]
-    public MarketInfrastructureIdentification1Choice_? SystemIdentification { get; init; } 
-    
+    public MarketInfrastructureIdentification1Choice_? SystemIdentification { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identification of a member within a system, assigned using the member identification scheme of the system.
     /// </summary>
     [IsoId("_BSvitW4-EeiU9cctagi5ow")]
     [DisplayName("Member Identification")]
     [IsoXmlTag("MmbId")]
-    public BranchAndFinancialInstitutionIdentification6? MemberIdentification { get; init; } 
-    
+    public BranchAndFinancialInstitutionIdentification6? MemberIdentification { get; init; }
+
     /// <summary>
     /// Country in which the system is located.
     /// </summary>
     [IsoId("_BSvit24-EeiU9cctagi5ow")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public CountryCode? Country { get; init; } 
-    
+    public CountryCode? Country { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identification for the account between the account owner and the account servicer.
     /// </summary>
     [IsoId("_BSviuW4-EeiU9cctagi5ow")]
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
-    public AccountIdentification4Choice_? AccountIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AccountIdentification4Choice_? AccountIdentification { get; init; }
 }

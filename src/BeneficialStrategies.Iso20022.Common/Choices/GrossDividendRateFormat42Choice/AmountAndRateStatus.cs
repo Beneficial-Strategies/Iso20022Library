@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat42Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.GrossDividendRateFormat42Choice
     /// </summary>
     [IsoId("_bZ_lIwVTEeqjd8n6wD9JVw")]
     [DisplayName("Amount And Rate Status")]
-    public partial record AmountAndRateStatus : GrossDividendRateFormat42Choice_
+    public record AmountAndRateStatus : GrossDividendRateFormat42Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Value expressed as an amount.
         /// </summary>
         [IsoId("_g2FhhZnREeWLs7cvLxlyAg")]
         [DisplayName("Amount")]
         [IsoXmlTag("Amt")]
-        public required RestrictedFINActiveCurrencyAnd13DecimalAmount Amount { get; init; } 
-        
+        public required RestrictedFINActiveCurrencyAnd13DecimalAmount Amount { get; init; }
+
         /// <summary>
         /// Value expressed as a rate status.
         /// </summary>
         [IsoId("_g2FhhJnREeWLs7cvLxlyAg")]
         [DisplayName("Rate Status")]
         [IsoXmlTag("RateSts")]
-        public required RateStatus1Code RateStatus { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required RateStatus1Code RateStatus { get; init; }
     }
 }

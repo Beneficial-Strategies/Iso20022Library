@@ -21,7 +21,9 @@ public enum Algorithm27Code
     /// </summary>
     [EnumMember(Value = "CCA1")]
     [IsoId("_Algorithm27Code_CMACAES128")]
-    [Description(@"CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 128 bits cryptographic key.")]
+    [Description(
+        @"CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 128 bits cryptographic key."
+    )]
     CMACAES128 = AlgorithmCode.CMACAES128,
 
     /// <summary>
@@ -30,7 +32,9 @@ public enum Algorithm27Code
     /// </summary>
     [EnumMember(Value = "CCA2")]
     [IsoId("_Algorithm27Code_CMACAES192")]
-    [Description(@"CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 192 bits cryptographic key.")]
+    [Description(
+        @"CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 192 bits cryptographic key."
+    )]
     CMACAES192 = AlgorithmCode.CMACAES192,
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum Algorithm27Code
     /// </summary>
     [EnumMember(Value = "CCA3")]
     [IsoId("_Algorithm27Code_CMACAES256")]
-    [Description(@"CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key.")]
+    [Description(
+        @"CMAC (Cipher based Message Authentication Code) defined by the National Institute of Standards and Technology (NIST 800-38B - May 2005), using the block cipher Advanced Encryption Standard with a 256 bits cryptographic key."
+    )]
     CMACAES256 = AlgorithmCode.CMACAES256,
 
     /// <summary>
@@ -111,7 +117,9 @@ public enum Algorithm27Code
     /// </summary>
     [EnumMember(Value = "MACC")]
     [IsoId("_Algorithm27Code_RetailCBCMAC")]
-    [Description(@"Retail CBC (Chaining Block Cypher) MAC (Message Authentication Code) (cf. ISO 9807, ANSI X9.19).")]
+    [Description(
+        @"Retail CBC (Chaining Block Cypher) MAC (Message Authentication Code) (cf. ISO 9807, ANSI X9.19)."
+    )]
     RetailCBCMAC = AlgorithmCode.RetailCBCMAC,
 
     /// <summary>
@@ -147,7 +155,9 @@ public enum Algorithm27Code
     /// </summary>
     [EnumMember(Value = "S34C")]
     [IsoId("_Algorithm27Code_SM3SM4CBC")]
-    [Description(@"ShangMi 4 enciphering method used in CBC mode coupled with ShangMi 3 hash function.")]
+    [Description(
+        @"ShangMi 4 enciphering method used in CBC mode coupled with ShangMi 3 hash function."
+    )]
     SM3SM4CBC,
 
     /// <summary>
@@ -156,7 +166,8 @@ public enum Algorithm27Code
     /// </summary>
     [EnumMember(Value = "S34R")]
     [IsoId("_Algorithm27Code_SM3SM4CTR")]
-    [Description(@"ShangMi 4 enciphering method used in CTR mode coupled with ShangMi 3 hash function.")]
+    [Description(
+        @"ShangMi 4 enciphering method used in CTR mode coupled with ShangMi 3 hash function."
+    )]
     SM3SM4CTR,
-
 }

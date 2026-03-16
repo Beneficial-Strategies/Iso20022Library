@@ -23,16 +23,18 @@ public enum CommissionType5Code
     [IsoId("_VkKxN9p-Ed-ak6NoX_4Aeg_445405236")]
     [Description(@"Type of service for which the commission is asked or paid.")]
     FrontEnd = CommissionTypeCode.FrontEnd, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commission for redeeming an investment, when an investor redeems an investment fund within a certain period of time.
     /// Encoded/decoded by serializers as &quot;BEND&quot;.
     /// </summary>
     [EnumMember(Value = "BEND")]
     [IsoId("_VkKxONp-Ed-ak6NoX_4Aeg_446328819")]
-    [Description(@"Commission for redeeming an investment, when an investor redeems an investment fund within a certain period of time.")]
+    [Description(
+        @"Commission for redeeming an investment, when an investor redeems an investment fund within a certain period of time."
+    )]
     BackEnd = CommissionTypeCode.BackEnd, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commission is another type of transaction.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,5 +43,4 @@ public enum CommissionType5Code
     [IsoId("_VkUiMNp-Ed-ak6NoX_4Aeg_449101350")]
     [Description(@"Commission is another type of transaction.")]
     Other = CommissionTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

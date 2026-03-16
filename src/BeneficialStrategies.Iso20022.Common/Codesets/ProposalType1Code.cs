@@ -23,7 +23,7 @@ public enum ProposalType1Code
     [IsoId("_YdGGJNp-Ed-ak6NoX_4Aeg_-733247113")]
     [Description(@"Specifies this is an initial proposal.")]
     Initial = ProposalTypeCode.Initial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies this is a counter proposal.
     /// Encoded/decoded by serializers as &quot;COUN&quot;.
@@ -32,5 +32,4 @@ public enum ProposalType1Code
     [IsoId("_YdGGJdp-Ed-ak6NoX_4Aeg_698103565")]
     [Description(@"Specifies this is a counter proposal.")]
     Counter = ProposalTypeCode.Counter, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum FundCashAccount2Code
     [IsoId("_asmDkdp-Ed-ak6NoX_4Aeg_-1052927881")]
     [Description(@"Cash account.")]
     CashAccount = FundCashAccountCode.CashAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Central Provident Fund (CPF) ordinary account.
     /// Encoded/decoded by serializers as &quot;CPFO&quot;.
@@ -32,7 +32,7 @@ public enum FundCashAccount2Code
     [IsoId("_asmDktp-Ed-ak6NoX_4Aeg_-1052926597")]
     [Description(@"Central Provident Fund (CPF) ordinary account.")]
     PensionFundOrdinary = FundCashAccountCode.PensionFundOrdinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Central Provident Fund (CPF) special account.
     /// Encoded/decoded by serializers as &quot;CPFS&quot;.
@@ -41,7 +41,7 @@ public enum FundCashAccount2Code
     [IsoId("_asmDk9p-Ed-ak6NoX_4Aeg_-1052926493")]
     [Description(@"Central Provident Fund (CPF) special account.")]
     PensionFundSpecial = FundCashAccountCode.PensionFundSpecial, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Supplementary Retirement Scheme (SRS) account.
     /// Encoded/decoded by serializers as &quot;SRSA&quot;.
@@ -50,5 +50,4 @@ public enum FundCashAccount2Code
     [IsoId("_asmDlNp-Ed-ak6NoX_4Aeg_-1052926150")]
     [Description(@"Supplementary Retirement Scheme (SRS) account.")]
     RetirementScheme = FundCashAccountCode.RetirementScheme, // same ordinal as derivation source for type conversions
-    
 }

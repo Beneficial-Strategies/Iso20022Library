@@ -23,7 +23,7 @@ public enum CorporateActionCalculationMethod1Code
     [IsoId("_bCgCI9p-Ed-ak6NoX_4Aeg_-666370477")]
     [Description(@"Pro-rata for drawings.")]
     ProRata = CorporateActionCalculationMethodCode.ProRata, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Lottery for drawings.
     /// Encoded/decoded by serializers as &quot;LOTT&quot;.
@@ -32,7 +32,7 @@ public enum CorporateActionCalculationMethod1Code
     [IsoId("_bCgCJNp-Ed-ak6NoX_4Aeg_-666370476")]
     [Description(@"Lottery for drawings.")]
     Lottery = CorporateActionCalculationMethodCode.Lottery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reduction of nominal for partial redemption.
     /// Encoded/decoded by serializers as &quot;NOMI&quot;.
@@ -41,7 +41,7 @@ public enum CorporateActionCalculationMethod1Code
     [IsoId("_bCgCJdp-Ed-ak6NoX_4Aeg_-666370467")]
     [Description(@"Reduction of nominal for partial redemption.")]
     NominalReduction = CorporateActionCalculationMethodCode.NominalReduction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Without reduction of nominal (via pool factor) for partial redemption.
     /// Encoded/decoded by serializers as &quot;NNOM&quot;.
@@ -50,5 +50,4 @@ public enum CorporateActionCalculationMethod1Code
     [IsoId("_bCgCJtp-Ed-ak6NoX_4Aeg_-666370446")]
     [Description(@"Without reduction of nominal (via pool factor) for partial redemption.")]
     NoNominalReduction = CorporateActionCalculationMethodCode.NoNominalReduction, // same ordinal as derivation source for type conversions
-    
 }

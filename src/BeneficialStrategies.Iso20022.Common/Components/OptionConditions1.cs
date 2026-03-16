@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y41SoA7zEeuZI5Sr_GAcuA")]
 [DisplayName("Option Conditions")]
-public partial record OptionConditions1
+public record OptionConditions1
 {
-    #nullable enable
-    
     /// <summary>
     /// Number of the condition.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record OptionConditions1
     [DisplayName("Condition Number")]
     [IsoXmlTag("CondNb")]
     [IsoSimpleType(IsoSimpleType.Max1Number)]
-    public required IsoMax1Number ConditionNumber { get; init; } 
-    
+    public required IsoMax1Number ConditionNumber { get; init; }
+
     /// <summary>
     /// Description of the condition.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record OptionConditions1
     [DisplayName("Condition Text")]
     [IsoXmlTag("CondTxt")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax520Text)]
-    [StringLength(maximumLength: 520 ,MinimumLength = 1)]
-    public required IsoRestrictedFINXMax520Text ConditionText { get; init; } 
-    
+    [StringLength(maximumLength: 520, MinimumLength = 1)]
+    public required IsoRestrictedFINXMax520Text ConditionText { get; init; }
+
     /// <summary>
     /// States whether the condition must be acknowledged. Conditions with a No (&quot;false&quot; or &quot;0&quot;) do not need acknowledgement.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record OptionConditions1
     [DisplayName("Condition Required Flag")]
     [IsoXmlTag("CondReqrdFlg")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ConditionRequiredFlag { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator ConditionRequiredFlag { get; init; }
 }

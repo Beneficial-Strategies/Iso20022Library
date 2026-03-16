@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5IBIoahOEeuOaMA1YOy5YQ")]
 [DisplayName("Processing Result")]
-public partial record ProcessingResult11
+public record ProcessingResult11
 {
-    #nullable enable
-    
     /// <summary>
     /// Result of the processing.
     /// </summary>
     [IsoId("_5NhTsahOEeuOaMA1YOy5YQ")]
     [DisplayName("Result Data")]
     [IsoXmlTag("RsltData")]
-    public ResultData7? ResultData { get; init; } 
-    
+    public ResultData7? ResultData { get; init; }
+
     /// <summary>
     /// Outcome of a previous processing, for example, in response to a duplicate request.
     /// </summary>
     [IsoId("_5NhTs6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Original Result Data")]
     [IsoXmlTag("OrgnlRsltData")]
-    public ResultData7? OriginalResultData { get; init; } 
-    
+    public ResultData7? OriginalResultData { get; init; }
+
     /// <summary>
     /// Action required flag.
     /// Default: False: Action Not Required.
@@ -43,24 +41,24 @@ public partial record ProcessingResult11
     [DisplayName("Action Required")]
     [IsoXmlTag("ActnReqrd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? ActionRequired { get; init; } 
-    
+    public IsoYesNoIndicator? ActionRequired { get; init; }
+
     /// <summary>
     /// Set of actions to be performed.
     /// </summary>
     [IsoId("_5NhTt6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Action")]
     [IsoXmlTag("Actn")]
-    public Action13? Action { get; init; } 
-    
+    public Action13? Action { get; init; }
+
     /// <summary>
     /// Additional action to perform.
     /// </summary>
     [IsoId("_5NhTuahOEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Action")]
     [IsoXmlTag("AddtlActn")]
-    public AdditionalAction1? AdditionalAction { get; init; } 
-    
+    public AdditionalAction1? AdditionalAction { get; init; }
+
     /// <summary>
     /// Additional information relevant for the destination.
     /// ISO 8583 bit 44
@@ -68,9 +66,5 @@ public partial record ProcessingResult11
     [IsoId("_5NhTu6hOEeuOaMA1YOy5YQ")]
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
-    public AdditionalInformation29? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalInformation29? AdditionalInformation { get; init; }
 }

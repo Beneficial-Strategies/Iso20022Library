@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason15Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.AcknowledgementReason15Choice
     /// </summary>
     [IsoId("_P-QQoTq5EeWyoP0PbocV1Q")]
     [DisplayName("Code")]
-    public partial record Code : AcknowledgementReason15Choice_
+    public record Code : AcknowledgementReason15Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies additional information about the processed instruction.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required AcknowledgementReason3Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required AcknowledgementReason3Code Value { get; init; }
     }
 }

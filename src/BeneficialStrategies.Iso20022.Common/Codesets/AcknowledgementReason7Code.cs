@@ -21,9 +21,11 @@ public enum AcknowledgementReason7Code
     /// </summary>
     [EnumMember(Value = "NSTP")]
     [IsoId("_D0GuMSqAEeO3oOoGGWHH4A")]
-    [Description(@"Instruction was not straight through processing and had to be processed manually.")]
+    [Description(
+        @"Instruction was not straight through processing and had to be processed manually."
+    )]
     NotStraightThroughProcessing = AcknowledgementReasonCode.NotStraightThroughProcessing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +34,4 @@ public enum AcknowledgementReason7Code
     [IsoId("_D7GHASqAEeO3oOoGGWHH4A")]
     [Description(@"Other. See Narrative.")]
     Other = AcknowledgementReasonCode.Other, // same ordinal as derivation source for type conversions
-    
 }

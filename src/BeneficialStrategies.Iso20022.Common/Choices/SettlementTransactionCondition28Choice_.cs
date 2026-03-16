@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementTransactionCondition28Choice.Code))]
     [KnownType(typeof(SettlementTransactionCondition28Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlementTransactionCondition28Choice.Code),nameof(SettlementTransactionCondition28Choice.Code))]
-    [JsonDerivedType(typeof(SettlementTransactionCondition28Choice.Proprietary),nameof(SettlementTransactionCondition28Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SettlementTransactionCondition28Choice.Code),
+        nameof(SettlementTransactionCondition28Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementTransactionCondition28Choice.Proprietary),
+        nameof(SettlementTransactionCondition28Choice.Proprietary)
+    )]
     [IsoId("_6SbDLZNLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Transaction Condition 28 Choice")]
-    public abstract partial record SettlementTransactionCondition28Choice_
-    {
-    }
+    public abstract record SettlementTransactionCondition28Choice_ { }
 }

@@ -23,5 +23,4 @@ public enum AssetClassSubProductType38Code
     [IsoId("_9VZXV1ryEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type recovered paper.")]
     RecoveredPaper = AssetClassSubProductTypeCode.RecoveredPaper, // same ordinal as derivation source for type conversions
-    
 }

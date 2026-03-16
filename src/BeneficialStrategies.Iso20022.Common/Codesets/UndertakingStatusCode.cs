@@ -12,7 +12,11 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_uQUrMHykEeGWJuGCfvwOsQ")]
 [Description(@"Specifies the undertaking status.")]
-[Derivations(typeof(UndertakingStatus1Code),typeof(UndertakingStatus2Code),typeof(UndertakingStatus3Code))]
+[Derivations(
+    typeof(UndertakingStatus1Code),
+    typeof(UndertakingStatus2Code),
+    typeof(UndertakingStatus3Code)
+)]
 public enum UndertakingStatusCode
 {
     /// <summary>
@@ -23,7 +27,7 @@ public enum UndertakingStatusCode
     [IsoId("_Wf67oHylEeGWJuGCfvwOsQ")]
     [Description(@"Accepted in accordance with technical validation.")]
     AcceptedTechnicalValidation,
-    
+
     /// <summary>
     /// Accepted.
     /// Encoded/decoded by serializers as &quot;ACCP&quot;.
@@ -32,7 +36,7 @@ public enum UndertakingStatusCode
     [IsoId("_f4Ou0HylEeGWJuGCfvwOsQ")]
     [Description(@"Accepted.")]
     Accepted,
-    
+
     /// <summary>
     /// Pending further processing.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -41,7 +45,7 @@ public enum UndertakingStatusCode
     [IsoId("_kdrP8HylEeGWJuGCfvwOsQ")]
     [Description(@"Pending further processing.")]
     Pending,
-    
+
     /// <summary>
     /// Received.
     /// Encoded/decoded by serializers as &quot;RCVD&quot;.
@@ -50,7 +54,7 @@ public enum UndertakingStatusCode
     [IsoId("_tiKvQHylEeGWJuGCfvwOsQ")]
     [Description(@"Received.")]
     Received,
-    
+
     /// <summary>
     /// Rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -59,7 +63,7 @@ public enum UndertakingStatusCode
     [IsoId("_0hHeYHylEeGWJuGCfvwOsQ")]
     [Description(@"Rejected.")]
     Rejected,
-    
+
     /// <summary>
     /// Undertaking not confirmed.
     /// Encoded/decoded by serializers as &quot;NCON&quot;.
@@ -68,7 +72,7 @@ public enum UndertakingStatusCode
     [IsoId("_IeDI0H1UEeGlwNeVP9egyg")]
     [Description(@"Undertaking not confirmed.")]
     NonConfirmation,
-    
+
     /// <summary>
     /// Demand has been withdrawn.
     /// Encoded/decoded by serializers as &quot;WTHD&quot;.
@@ -77,7 +81,7 @@ public enum UndertakingStatusCode
     [IsoId("_5NIuEH1UEeGlwNeVP9egyg")]
     [Description(@"Demand has been withdrawn.")]
     Withdrawn,
-    
+
     /// <summary>
     /// Change to undertaking amount.
     /// Encoded/decoded by serializers as &quot;AMTU&quot;.
@@ -86,7 +90,7 @@ public enum UndertakingStatusCode
     [IsoId("_VkLcAK-xEeGNi5z8K_XPKQ")]
     [Description(@"Change to undertaking amount.")]
     UndertakingAmountChange,
-    
+
     /// <summary>
     /// Change to counter-undertaking amount.
     /// Encoded/decoded by serializers as &quot;AMTC&quot;.
@@ -95,5 +99,4 @@ public enum UndertakingStatusCode
     [IsoId("_srHiYK-xEeGNi5z8K_XPKQ")]
     [Description(@"Change to counter-undertaking amount.")]
     CounterUndertakingAmountChange,
-    
 }

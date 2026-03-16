@@ -23,7 +23,7 @@ public enum FileActionScopeCode
     [IsoId("_NFffsN0mEeil7LQldntseg")]
     [Description(@"Action applies to a file")]
     File,
-    
+
     /// <summary>
     /// Action applies to a record
     /// Encoded/decoded by serializers as &quot;RECD&quot;.
@@ -32,5 +32,4 @@ public enum FileActionScopeCode
     [IsoId("_NFffsd0mEeil7LQldntseg")]
     [Description(@"Action applies to a record")]
     Record,
-    
 }

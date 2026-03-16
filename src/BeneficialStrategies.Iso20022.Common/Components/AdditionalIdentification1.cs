@@ -1,31 +1,29 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
 /// <summary>
-/// Contains additional identification details of additional card acceptor data. 
+/// Contains additional identification details of additional card acceptor data.
 /// </summary>
 [IsoId("_0eiKZPJVEeiJn9rM2Znz2w")]
 [DisplayName("Additional Identification")]
-public partial record AdditionalIdentification1
+public record AdditionalIdentification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of additional identification.
     /// </summary>
     [IsoId("_0eiKZvJVEeiJn9rM2Znz2w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required AdditionalIdentificationType1Code Type { get; init; } 
-    
+    public required AdditionalIdentificationType1Code Type { get; init; }
+
     /// <summary>
     /// Other Additional Identification applied to the transaction.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record AdditionalIdentification1
     [DisplayName("Other Type")]
     [IsoXmlTag("OthrTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherType { get; init; }
+
     /// <summary>
     /// Additional identification value.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record AdditionalIdentification1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Value { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Value { get; init; }
 }

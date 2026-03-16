@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_brKtAWluEeSGkpGpjm7tzg")]
 [DisplayName("Cardholder")]
-public partial record Cardholder8
+public record Cardholder8
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the cardholder involved in a transaction.
     /// </summary>
     [IsoId("_b31QAWluEeSGkpGpjm7tzg")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public PersonIdentification7? Identification { get; init; } 
-    
+    public PersonIdentification7? Identification { get; init; }
+
     /// <summary>
     /// Cardholder name associated with the card.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record Cardholder8
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max45Text)]
-    [StringLength(maximumLength: 45 ,MinimumLength = 1)]
-    public IsoMax45Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 45, MinimumLength = 1)]
+    public IsoMax45Text? Name { get; init; }
+
     /// <summary>
     /// Identifies personal data related to the cardholder.
     /// </summary>
@@ -43,10 +41,6 @@ public partial record Cardholder8
     [DisplayName("Personal Data")]
     [IsoXmlTag("PrsnlData")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? PersonalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? PersonalData { get; init; }
 }

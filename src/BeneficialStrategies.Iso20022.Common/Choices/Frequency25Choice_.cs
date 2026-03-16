@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Frequency25Choice.Code))]
     [KnownType(typeof(Frequency25Choice.Proprietary))]
-    [JsonDerivedType(typeof(Frequency25Choice.Code),nameof(Frequency25Choice.Code))]
-    [JsonDerivedType(typeof(Frequency25Choice.Proprietary),nameof(Frequency25Choice.Proprietary))]
+    [JsonDerivedType(typeof(Frequency25Choice.Code), nameof(Frequency25Choice.Code))]
+    [JsonDerivedType(typeof(Frequency25Choice.Proprietary), nameof(Frequency25Choice.Proprietary))]
     [IsoId("_bo7ZATeNEeWm5uvLSn0jEw")]
     [DisplayName("Frequency 25 Choice")]
-    public abstract partial record Frequency25Choice_
-    {
-    }
+    public abstract record Frequency25Choice_ { }
 }

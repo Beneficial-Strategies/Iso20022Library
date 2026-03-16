@@ -23,7 +23,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_N8-YETEqEemzCpWiCwK4aQ")]
     [Description(@"Instalment amount tax")]
     Tax = InstalmentAmountDetailsTypeCode.Tax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Requested amount
     /// Encoded/decoded by serializers as &quot;RQST&quot;.
@@ -32,7 +32,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_ORPX4TEqEemzCpWiCwK4aQ")]
     [Description(@"Requested amount")]
     Requested = InstalmentAmountDetailsTypeCode.Requested, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Grace period unit type
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_Olz5sTEqEemzCpWiCwK4aQ")]
     [Description(@"Grace period unit type")]
     OtherPrivate = InstalmentAmountDetailsTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Grace period unit type
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_O6hlcTEqEemzCpWiCwK4aQ")]
     [Description(@"Grace period unit type")]
     OtherNational = InstalmentAmountDetailsTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other amounts
     /// Encoded/decoded by serializers as &quot;OTHC&quot;.
@@ -59,7 +59,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_PO8WQTEqEemzCpWiCwK4aQ")]
     [Description(@"Other amounts")]
     OtherCharges = InstalmentAmountDetailsTypeCode.OtherCharges, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Insurance amount
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
@@ -68,7 +68,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_PjXHETEqEemzCpWiCwK4aQ")]
     [Description(@"Insurance amount")]
     Insurance = InstalmentAmountDetailsTypeCode.Insurance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Funded amount
     /// Encoded/decoded by serializers as &quot;FUNA&quot;.
@@ -77,7 +77,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_P4N8wTEqEemzCpWiCwK4aQ")]
     [Description(@"Funded amount")]
     Funded = InstalmentAmountDetailsTypeCode.Funded, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fees amount
     /// Encoded/decoded by serializers as &quot;FEES&quot;.
@@ -86,7 +86,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_QNYUcTEqEemzCpWiCwK4aQ")]
     [Description(@"Fees amount")]
     Fees = InstalmentAmountDetailsTypeCode.Fees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Expense Amount
     /// Encoded/decoded by serializers as &quot;EXPN&quot;.
@@ -95,7 +95,7 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_QiZiMTEqEemzCpWiCwK4aQ")]
     [Description(@"Expense Amount")]
     Expense = InstalmentAmountDetailsTypeCode.Expense, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Total financing cost per annum.
     /// Encoded/decoded by serializers as &quot;AFCO&quot;.
@@ -104,5 +104,4 @@ public enum InstalmentAmountDetailsType1Code
     [IsoId("_DL1y4ekYEemeDPHh-U9b6w")]
     [Description(@"Total financing cost per annum.")]
     AnnualFinancingCost = InstalmentAmountDetailsTypeCode.AnnualFinancingCost, // same ordinal as derivation source for type conversions
-    
 }

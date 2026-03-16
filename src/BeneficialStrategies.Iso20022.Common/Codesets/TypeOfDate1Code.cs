@@ -23,7 +23,7 @@ public enum TypeOfDate1Code
     [IsoId("_Ua4UEVfvEeOuDtoQo1qilA")]
     [Description(@"Date / date and time is the actual date / date and time.")]
     Actual = TypeOfDateCode.Actual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Date/date and time is estimated.
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -32,5 +32,4 @@ public enum TypeOfDate1Code
     [IsoId("_UiUY0VfvEeOuDtoQo1qilA")]
     [Description(@"Date/date and time is estimated.")]
     Estimated = TypeOfDateCode.Estimated, // same ordinal as derivation source for type conversions
-    
 }

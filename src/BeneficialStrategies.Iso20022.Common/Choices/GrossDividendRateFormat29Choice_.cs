@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(GrossDividendRateFormat29Choice.Amount))]
     [KnownType(typeof(GrossDividendRateFormat29Choice.AmountAndRateStatus))]
     [KnownType(typeof(GrossDividendRateFormat29Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(GrossDividendRateFormat29Choice.Amount),nameof(GrossDividendRateFormat29Choice.Amount))]
-    [JsonDerivedType(typeof(GrossDividendRateFormat29Choice.AmountAndRateStatus),nameof(GrossDividendRateFormat29Choice.AmountAndRateStatus))]
-    [JsonDerivedType(typeof(GrossDividendRateFormat29Choice.RateTypeAndAmountAndRateStatus),nameof(GrossDividendRateFormat29Choice.RateTypeAndAmountAndRateStatus))]
+    [JsonDerivedType(
+        typeof(GrossDividendRateFormat29Choice.Amount),
+        nameof(GrossDividendRateFormat29Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(GrossDividendRateFormat29Choice.AmountAndRateStatus),
+        nameof(GrossDividendRateFormat29Choice.AmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(GrossDividendRateFormat29Choice.RateTypeAndAmountAndRateStatus),
+        nameof(GrossDividendRateFormat29Choice.RateTypeAndAmountAndRateStatus)
+    )]
     [IsoId("_6AoXsZb8Eee8S7xwGG7Veg")]
     [DisplayName("Gross Dividend Rate Format 29 Choice")]
-    public abstract partial record GrossDividendRateFormat29Choice_
-    {
-    }
+    public abstract record GrossDividendRateFormat29Choice_ { }
 }

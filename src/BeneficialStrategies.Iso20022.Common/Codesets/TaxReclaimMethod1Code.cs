@@ -23,25 +23,29 @@ public enum TaxReclaimMethod1Code
     [IsoId("_8RyWcTEuEemzCpWiCwK4aQ")]
     [Description(@"Invoice printed and given to purchaser and then used for tax reclaim")]
     InvoicePrintedPrimary = TaxReclaimMethodCode.InvoicePrintedPrimary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invoice printed but treated as supplemental because electronic copy is used for tax reclaim
     /// Encoded/decoded by serializers as &quot;INPS&quot;.
     /// </summary>
     [EnumMember(Value = "INPS")]
     [IsoId("_8lwbUTEuEemzCpWiCwK4aQ")]
-    [Description(@"Invoice printed but treated as supplemental because electronic copy is used for tax reclaim")]
+    [Description(
+        @"Invoice printed but treated as supplemental because electronic copy is used for tax reclaim"
+    )]
     InvoicePrintedSupplimental = TaxReclaimMethodCode.InvoicePrintedSupplimental, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Printed invoice suppressed because electronic master version is used for tax reclaim
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
     /// </summary>
     [EnumMember(Value = "INSU")]
     [IsoId("_866zATEuEemzCpWiCwK4aQ")]
-    [Description(@"Printed invoice suppressed because electronic master version is used for tax reclaim")]
+    [Description(
+        @"Printed invoice suppressed because electronic master version is used for tax reclaim"
+    )]
     InvoiceSuppressed = TaxReclaimMethodCode.InvoiceSuppressed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other tax reclaim method not elsewhere specified
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -50,5 +54,4 @@ public enum TaxReclaimMethod1Code
     [IsoId("_9QYFoTEuEemzCpWiCwK4aQ")]
     [Description(@"Other tax reclaim method not elsewhere specified")]
     Other = TaxReclaimMethodCode.Other, // same ordinal as derivation source for type conversions
-    
 }

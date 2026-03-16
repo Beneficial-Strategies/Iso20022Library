@@ -23,7 +23,7 @@ public enum NovationStatus1Code
     [IsoId("_k6HCUcETEea7jLfvGi1PDw")]
     [Description(@"Transaction is not a novation.")]
     NoNovation = NovationStatusCode.NoNovation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction is a novation.
     /// Encoded/decoded by serializers as &quot;NOVA&quot;.
@@ -32,5 +32,4 @@ public enum NovationStatus1Code
     [IsoId("_lA8qIcETEea7jLfvGi1PDw")]
     [Description(@"Transaction is a novation.")]
     Novation = NovationStatusCode.Novation, // same ordinal as derivation source for type conversions
-    
 }

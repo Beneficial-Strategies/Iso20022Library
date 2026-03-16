@@ -23,7 +23,7 @@ public enum ATMCassetteTypeCode
     [IsoId("_ZQDFYIqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for deposits.")]
     In,
-    
+
     /// <summary>
     /// Cassette for dispense.
     /// Encoded/decoded by serializers as &quot;DISP&quot;.
@@ -32,7 +32,7 @@ public enum ATMCassetteTypeCode
     [IsoId("_cvkgQIqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for dispense.")]
     Out,
-    
+
     /// <summary>
     /// Cassette for recycling.
     /// Encoded/decoded by serializers as &quot;RCYC&quot;.
@@ -41,7 +41,7 @@ public enum ATMCassetteTypeCode
     [IsoId("_fI5vIIqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for recycling.")]
     Recycling,
-    
+
     /// <summary>
     /// Cassette for replenishment.
     /// Encoded/decoded by serializers as &quot;RPLT&quot;.
@@ -50,7 +50,7 @@ public enum ATMCassetteTypeCode
     [IsoId("_hhCrMIqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for replenishment.")]
     Replenishment,
-    
+
     /// <summary>
     /// Cassette for reject.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -59,7 +59,7 @@ public enum ATMCassetteTypeCode
     [IsoId("_kgFPMIqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for reject.")]
     Reject,
-    
+
     /// <summary>
     /// Cassette for retract.
     /// Encoded/decoded by serializers as &quot;RTRC&quot;.
@@ -68,5 +68,4 @@ public enum ATMCassetteTypeCode
     [IsoId("_nSTfMIqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for retract.")]
     Retract,
-    
 }

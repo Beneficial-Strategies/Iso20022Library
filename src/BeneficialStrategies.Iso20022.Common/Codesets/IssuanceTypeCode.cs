@@ -23,7 +23,7 @@ public enum IssuanceTypeCode
     [IsoId("_okhB0H4LEeG05p8M2uqofg")]
     [Description(@"Undertaking issued direct to the beneficiary.")]
     UndertakingIssuedDirect,
-    
+
     /// <summary>
     /// Undertaking issued to the beneficiary via an advising party.
     /// Encoded/decoded by serializers as &quot;ISAD&quot;.
@@ -32,7 +32,7 @@ public enum IssuanceTypeCode
     [IsoId("_2S0k4H4LEeG05p8M2uqofg")]
     [Description(@"Undertaking issued to the beneficiary via an advising party.")]
     UndertakingViaAdvisingParty,
-    
+
     /// <summary>
     /// Undertaking issued to the beneficiary via a confirming party.
     /// Encoded/decoded by serializers as &quot;ISCO&quot;.
@@ -41,23 +41,26 @@ public enum IssuanceTypeCode
     [IsoId("_-OEkMH4LEeG05p8M2uqofg")]
     [Description(@"Undertaking issued to the beneficiary via a confirming party.")]
     UndertakingIssuedViaConfirmingParty,
-    
+
     /// <summary>
     /// Counter-undertaking issued to a correspondent with a request to issue a local undertaking.
     /// Encoded/decoded by serializers as &quot;CRQL&quot;.
     /// </summary>
     [EnumMember(Value = "CRQL")]
     [IsoId("_HetpIH4MEeG05p8M2uqofg")]
-    [Description(@"Counter-undertaking issued to a correspondent with a request to issue a local undertaking.")]
+    [Description(
+        @"Counter-undertaking issued to a correspondent with a request to issue a local undertaking."
+    )]
     CounterUndertakingRequestForLocalUndertaking,
-    
+
     /// <summary>
     /// Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking.
     /// Encoded/decoded by serializers as &quot;CRQC&quot;.
     /// </summary>
     [EnumMember(Value = "CRQC")]
     [IsoId("_cyhlAH4MEeG05p8M2uqofg")]
-    [Description(@"Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking.")]
+    [Description(
+        @"Counter-undertaking issued to a correspondent with a request to issue another counter-undertaking."
+    )]
     CounterUndertakingRequestForCounterUndertaking,
-    
 }

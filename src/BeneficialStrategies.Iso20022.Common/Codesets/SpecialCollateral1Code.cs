@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_crADcJf_EeSfnc-VXAEapg")]
-[Description(@"Specifies the collateral type against which all repurchase agreements are conducted.")]
+[Description(
+    @"Specifies the collateral type against which all repurchase agreements are conducted."
+)]
 [DerivedFrom(typeof(SpecialCollateralCode))]
 public enum SpecialCollateral1Code
 {
@@ -21,16 +23,19 @@ public enum SpecialCollateral1Code
     /// </summary>
     [EnumMember(Value = "GENE")]
     [IsoId("_gWcacZf_EeSfnc-VXAEapg")]
-    [Description(@"Identifies that all repurchase agreements are conducted against general collateral.")]
+    [Description(
+        @"Identifies that all repurchase agreements are conducted against general collateral."
+    )]
     GeneralCollateral = SpecialCollateralCode.GeneralCollateral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Identifies that all repurchase agreements are conducted against special collateral.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
     /// </summary>
     [EnumMember(Value = "SPEC")]
     [IsoId("_gb8lgZf_EeSfnc-VXAEapg")]
-    [Description(@"Identifies that all repurchase agreements are conducted against special collateral.")]
+    [Description(
+        @"Identifies that all repurchase agreements are conducted against special collateral."
+    )]
     SpecialCollateral = SpecialCollateralCode.SpecialCollateral, // same ordinal as derivation source for type conversions
-    
 }

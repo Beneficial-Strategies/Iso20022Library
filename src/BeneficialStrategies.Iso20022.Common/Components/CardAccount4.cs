@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_eYroYYp5EeS3NqNpgnMh2w")]
 [DisplayName("Card Account")]
-public partial record CardAccount4
+public record CardAccount4
 {
-    #nullable enable
-    
     /// <summary>
     /// Method used by the cardholder and the terminal for the choice of the account.
     /// </summary>
     [IsoId("_ekmkgYp5EeS3NqNpgnMh2w")]
     [DisplayName("Selection Method")]
     [IsoXmlTag("SelctnMtd")]
-    public AccountChoiceMethod1Code? SelectionMethod { get; init; } 
-    
+    public AccountChoiceMethod1Code? SelectionMethod { get; init; }
+
     /// <summary>
     /// Type of cardholder account used for the transaction.
     /// </summary>
     [IsoId("_ekmkg4p5EeS3NqNpgnMh2w")]
     [DisplayName("Selected Account Type")]
     [IsoXmlTag("SelctdAcctTp")]
-    public CardAccountType2Code? SelectedAccountType { get; init; } 
-    
+    public CardAccountType2Code? SelectedAccountType { get; init; }
+
     /// <summary>
     /// Name of the account, as assigned by the account servicing institution, in agreement with the account owner in order to provide an additional means of identification of the account.
     /// Usage: The account name is different from the account owner name. The account name is used in certain user communities to provide a means of identifying the account, in addition to the account owner&apos;s identity and the account number.
@@ -42,33 +40,33 @@ public partial record CardAccount4
     [DisplayName("Account Name")]
     [IsoXmlTag("AcctNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? AccountName { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? AccountName { get; init; }
+
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_rK5gECq-EeWRf8RNsvC5fQ")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public NameAndAddress3? AccountOwner { get; init; } 
-    
+    public NameAndAddress3? AccountOwner { get; init; }
+
     /// <summary>
     /// Identification of the currency in which the account is held.
     /// </summary>
     [IsoId("_ekmkiYp5EeS3NqNpgnMh2w")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Unique identifier of the account, as assigned by the account servicer.
     /// </summary>
     [IsoId("_ekmki4p5EeS3NqNpgnMh2w")]
     [DisplayName("Account Identifier")]
     [IsoXmlTag("AcctIdr")]
-    public AccountIdentification31Choice_? AccountIdentifier { get; init; } 
-    
+    public AccountIdentification31Choice_? AccountIdentifier { get; init; }
+
     /// <summary>
     /// Internal account reference in case of credit account.
     /// </summary>
@@ -76,25 +74,25 @@ public partial record CardAccount4
     [DisplayName("Credit Reference")]
     [IsoXmlTag("CdtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CreditReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CreditReference { get; init; }
+
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
     /// </summary>
     [IsoId("_ekmkj4p5EeS3NqNpgnMh2w")]
     [DisplayName("Servicer")]
     [IsoXmlTag("Svcr")]
-    public PartyIdentification72Choice_? Servicer { get; init; } 
-    
+    public PartyIdentification72Choice_? Servicer { get; init; }
+
     /// <summary>
     /// Balance of the account.
     /// </summary>
     [IsoId("__a99kIp5EeS3NqNpgnMh2w")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public AmountAndDirection43? Balance { get; init; } 
-    
+    public AmountAndDirection43? Balance { get; init; }
+
     /// <summary>
     /// Indicates if the balance must be displayed to the customer on the ATM.
     /// </summary>
@@ -102,8 +100,8 @@ public partial record CardAccount4
     [DisplayName("Balance Display Flag")]
     [IsoXmlTag("BalDispFlg")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? BalanceDisplayFlag { get; init; } 
-    
+    public IsoTrueFalseIndicator? BalanceDisplayFlag { get; init; }
+
     /// <summary>
     /// Indicates if this is the default account.
     /// </summary>
@@ -111,9 +109,5 @@ public partial record CardAccount4
     [DisplayName("Default Account Indicator")]
     [IsoXmlTag("DfltAcctInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? DefaultAccountIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? DefaultAccountIndicator { get; init; }
 }

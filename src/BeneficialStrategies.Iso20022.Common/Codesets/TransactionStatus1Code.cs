@@ -23,7 +23,7 @@ public enum TransactionStatus1Code
     [IsoId("_zdmYYA93EeGeV5vP7Mvdig_-1941849246")]
     [Description(@"Transaction has been reversed.")]
     Reversal = TransactionStatusCode.Reversal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has been rebooked.
     /// Encoded/decoded by serializers as &quot;REBO&quot;.
@@ -32,7 +32,7 @@ public enum TransactionStatus1Code
     [IsoId("_zdmYYQ93EeGeV5vP7Mvdig_-595137067")]
     [Description(@"Transaction has been rebooked.")]
     Rebooked = TransactionStatusCode.Rebooked, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has been cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -41,5 +41,4 @@ public enum TransactionStatus1Code
     [IsoId("_zdmYYg93EeGeV5vP7Mvdig_880282350")]
     [Description(@"Transaction has been cancelled.")]
     Cancelled = TransactionStatusCode.Cancelled, // same ordinal as derivation source for type conversions
-    
 }

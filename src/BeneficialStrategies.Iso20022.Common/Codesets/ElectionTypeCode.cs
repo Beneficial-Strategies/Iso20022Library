@@ -23,7 +23,7 @@ public enum ElectionTypeCode
     [IsoId("_ahHzYtp-Ed-ak6NoX_4Aeg_-1876817891")]
     [Description(@"New election advice.")]
     NewElection,
-    
+
     /// <summary>
     /// Election advice which is the result of an option change.
     /// Encoded/decoded by serializers as &quot;CHAN&quot;.
@@ -32,5 +32,4 @@ public enum ElectionTypeCode
     [IsoId("_ahHzY9p-Ed-ak6NoX_4Aeg_-1876817860")]
     [Description(@"Election advice which is the result of an option change.")]
     OptionChange,
-    
 }

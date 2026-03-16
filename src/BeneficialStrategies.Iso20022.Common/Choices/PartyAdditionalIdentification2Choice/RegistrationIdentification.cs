@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
     /// </summary>
     [IsoId("_Qo3U09p-Ed-ak6NoX_4Aeg_136820808")]
     [DisplayName("Registration Identification")]
-    public partial record RegistrationIdentification : PartyAdditionalIdentification2Choice_
+    public record RegistrationIdentification : PartyAdditionalIdentification2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name of the register of legal entities.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
         [DisplayName("Registration Number")]
         [IsoXmlTag("RegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text RegistrationNumber { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text RegistrationNumber { get; init; }
+
         /// <summary>
         /// Name of the register managed by a registration authority.
         /// </summary>
@@ -34,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyAdditionalIdentification2Ch
         [DisplayName("Register Name")]
         [IsoXmlTag("RegrNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? RegisterName { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? RegisterName { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5mrXWZNLEeWGlc8L7oPDIg")]
 [DisplayName("Additional Parameters")]
-public partial record AdditionalParameters26
+public record AdditionalParameters26
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies whether there exists a pre-confirmation.
     /// </summary>
     [IsoId("_5mrXXZNLEeWGlc8L7oPDIg")]
     [DisplayName("Pre Confirmation")]
     [IsoXmlTag("PreConf")]
-    public PreConfirmation1Code? PreConfirmation { get; init; } 
-    
+    public PreConfirmation1Code? PreConfirmation { get; init; }
+
     /// <summary>
     /// Specifies partial settlement information.
     /// </summary>
     [IsoId("_5mrXZZNLEeWGlc8L7oPDIg")]
     [DisplayName("Partial Settlement")]
     [IsoXmlTag("PrtlSttlm")]
-    public PartialSettlement2Code? PartialSettlement { get; init; } 
-    
+    public PartialSettlement2Code? PartialSettlement { get; init; }
+
     /// <summary>
     /// Identification of the confirmation previously sent to confirm the partial settlement of a transaction.
     /// </summary>
@@ -41,10 +39,6 @@ public partial record AdditionalParameters26
     [DisplayName("Previous Partial Confirmation Identification")]
     [IsoXmlTag("PrvsPrtlConfId")]
     [IsoSimpleType(IsoSimpleType.RestrictedFINXMax16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoRestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoRestrictedFINXMax16Text? PreviousPartialConfirmationIdentification { get; init; }
 }

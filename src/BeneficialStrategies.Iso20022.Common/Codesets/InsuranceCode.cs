@@ -23,7 +23,7 @@ public enum InsuranceCode
     [IsoId("_qztGcBQaEeKebsB9eKJSkA")]
     [Description(@"Life insurance.")]
     LifeInsurance,
-    
+
     /// <summary>
     /// Permanent disability insurance.
     /// Encoded/decoded by serializers as &quot;PDIS&quot;.
@@ -32,5 +32,4 @@ public enum InsuranceCode
     [IsoId("_q9Fr8BQaEeKebsB9eKJSkA")]
     [Description(@"Permanent disability insurance.")]
     PermanentDisabilityInsurance,
-    
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-fsj1KMOEeCojJW5vEuTEQ_1016949174")]
-[Description(@"Specifies the trade is maintained as a separate individual position in the clearing account, or not.")]
+[Description(
+    @"Specifies the trade is maintained as a separate individual position in the clearing account, or not."
+)]
 [Derivations(typeof(TradePosting1Code))]
 public enum TradePostingCode
 {
@@ -23,7 +25,7 @@ public enum TradePostingCode
     [IsoId("_-fsj1aMOEeCojJW5vEuTEQ_-309637518")]
     [Description(@"Trade is maintained as a separate individual position in the clearing account.")]
     Gross,
-    
+
     /// <summary>
     /// Trade is maintained as a net position in the clearing account.
     /// Encoded/decoded by serializers as &quot;NETT&quot;.
@@ -32,5 +34,4 @@ public enum TradePostingCode
     [IsoId("_-fsj1qMOEeCojJW5vEuTEQ_-1574089543")]
     [Description(@"Trade is maintained as a net position in the clearing account.")]
     Net,
-    
 }

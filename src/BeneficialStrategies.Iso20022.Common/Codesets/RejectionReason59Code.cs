@@ -21,9 +21,11 @@ public enum RejectionReason59Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_MsI1YRHqEeuE0Pnt-OcNOA")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV3Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid option type.
     /// Encoded/decoded by serializers as &quot;OPTY&quot;.
@@ -32,7 +34,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1ZxHqEeuE0Pnt-OcNOA")]
     [Description(@"Invalid option type.")]
     InvalidOptionType = RejectionReasonV3Code.InvalidOptionType, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Linked reference is unknown.
     /// Encoded/decoded by serializers as &quot;ULNK&quot;.
@@ -41,7 +43,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1aRHqEeuE0Pnt-OcNOA")]
     [Description(@"Linked reference is unknown.")]
     InvalidReference = RejectionReasonV3Code.InvalidReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid financial instrument identification.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
@@ -50,7 +52,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1axHqEeuE0Pnt-OcNOA")]
     [Description(@"Unrecognised or invalid financial instrument identification.")]
     InvalidSecurity = RejectionReasonV3Code.InvalidSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -59,7 +61,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1bxHqEeuE0Pnt-OcNOA")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonV3Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mismatch between option number and option type.
     /// Encoded/decoded by serializers as &quot;NMTY&quot;.
@@ -68,7 +70,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1cRHqEeuE0Pnt-OcNOA")]
     [Description(@"Mismatch between option number and option type.")]
     Mismatch = RejectionReasonV3Code.Mismatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised option number.
     /// Encoded/decoded by serializers as &quot;OPNM&quot;.
@@ -77,7 +79,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1eRHqEeuE0Pnt-OcNOA")]
     [Description(@"Unrecognised option number.")]
     OptionNumberRejection = RejectionReasonV3Code.OptionNumberRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -86,7 +88,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1exHqEeuE0Pnt-OcNOA")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV3Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed quantity.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -95,7 +97,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1fRHqEeuE0Pnt-OcNOA")]
     [Description(@"Unrecognised or invalid instructed quantity.")]
     QuantityRejection = RejectionReasonV3Code.QuantityRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid message sender&apos;s safekeeping account.
     /// Encoded/decoded by serializers as &quot;SAFE&quot;.
@@ -104,7 +106,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1gRHqEeuE0Pnt-OcNOA")]
     [Description(@"Unrecognised or invalid message sender's safekeeping account.")]
     SafekeepingAccountRejection = RejectionReasonV3Code.SafekeepingAccountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised event number.
     /// Encoded/decoded by serializers as &quot;EVNM&quot;.
@@ -113,7 +115,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1gxHqEeuE0Pnt-OcNOA")]
     [Description(@"Unrecognised event number.")]
     UnrecognisedIdentification = RejectionReasonV3Code.UnrecognisedIdentification, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed cash amount.
     /// Encoded/decoded by serializers as &quot;DQCS&quot;.
@@ -122,7 +124,7 @@ public enum RejectionReason59Code
     [IsoId("_MsI1hRHqEeuE0Pnt-OcNOA")]
     [Description(@"Unrecognised or invalid instructed cash amount.")]
     AmountRejection = RejectionReasonV3Code.AmountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Invalid instructed currency.
     /// Encoded/decoded by serializers as &quot;DQCC&quot;.
@@ -131,5 +133,4 @@ public enum RejectionReason59Code
     [IsoId("_MsI1hxHqEeuE0Pnt-OcNOA")]
     [Description(@"Invalid instructed currency.")]
     CurrencyRejection = RejectionReasonV3Code.CurrencyRejection, // same ordinal as derivation source for type conversions
-    
 }

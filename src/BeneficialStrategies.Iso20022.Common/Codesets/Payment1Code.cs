@@ -21,16 +21,19 @@ public enum Payment1Code
     /// </summary>
     [EnumMember(Value = "ACTU")]
     [IsoId("_Zy7Qp9p-Ed-ak6NoX_4Aeg_1133077747")]
-    [Description(@"The cash payment occurs or will occur upon receipt of proceeds from the issuer.")]
+    [Description(
+        @"The cash payment occurs or will occur upon receipt of proceeds from the issuer."
+    )]
     ActualPayment = PaymentCode.ActualPayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer.
     /// Encoded/decoded by serializers as &quot;CONT&quot;.
     /// </summary>
     [EnumMember(Value = "CONT")]
     [IsoId("_Zy7QqNp-Ed-ak6NoX_4Aeg_1133077769")]
-    [Description(@"The cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer.")]
+    [Description(
+        @"The cash payment occurs or will occur in advance of receipt of proceeds from the issuer and based on a contractual agreement established with the account servicer."
+    )]
     ContractualPayment = PaymentCode.ContractualPayment, // same ordinal as derivation source for type conversions
-    
 }

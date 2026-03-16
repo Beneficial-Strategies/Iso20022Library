@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.InterestType1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.InterestType1Choice
     /// </summary>
     [IsoId("_SRnbV9p-Ed-ak6NoX_4Aeg_-822918101")]
     [DisplayName("Code")]
-    public partial record Code : InterestType1Choice_
+    public record Code : InterestType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Indicates which type of interest is applied to a balance left on an account.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required InterestType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required InterestType1Code Value { get; init; }
     }
 }

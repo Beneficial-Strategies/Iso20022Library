@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio2Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio2Choice
     /// </summary>
     [IsoId("_3fxScEXfEeGY6MkiuzuPOA_1749849393")]
     [DisplayName("Portfolio")]
-    public partial record Portfolio : ISAPortfolio2Choice_
+    public record Portfolio : ISAPortfolio2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Additional information related to the portfolio.
         /// </summary>
@@ -26,11 +24,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ISAPortfolio2Choice
         [IsoSimpleType(IsoSimpleType.Max350Text)]
         [MinLength(0)]
         [MaxLength(5)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
         public SimpleValueList<System.String> PortfolioInformation { get; init; } = [];
-        
-        
-        #nullable disable
-        
     }
 }

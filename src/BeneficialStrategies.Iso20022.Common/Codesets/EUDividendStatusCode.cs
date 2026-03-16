@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aiKVONp-Ed-ak6NoX_4Aeg_235937580")]
-[Description(@"Specifies whether the dividend is in the scope of the European directive on taxation of savings income in the form of interest payments.")]
+[Description(
+    @"Specifies whether the dividend is in the scope of the European directive on taxation of savings income in the form of interest payments."
+)]
 [Derivations(typeof(EUDividendStatus1Code))]
 public enum EUDividendStatusCode
 {
@@ -23,7 +25,7 @@ public enum EUDividendStatusCode
     [IsoId("_aiUGMNp-Ed-ak6NoX_4Aeg_-1873978987")]
     [Description(@"Dividend is in the scope of the directive.")]
     DividendInScope,
-    
+
     /// <summary>
     /// Dividend is out of the scope of the directive.
     /// Encoded/decoded by serializers as &quot;DIVO&quot;.
@@ -32,7 +34,7 @@ public enum EUDividendStatusCode
     [IsoId("_aiUGMdp-Ed-ak6NoX_4Aeg_-1873978970")]
     [Description(@"Dividend is out of the scope of the directive.")]
     DividendOutScope,
-    
+
     /// <summary>
     /// Unknown whether the dividend is in or out of the scope of the directive.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -41,5 +43,4 @@ public enum EUDividendStatusCode
     [IsoId("_aiUGMtp-Ed-ak6NoX_4Aeg_-1873978935")]
     [Description(@"Unknown whether the dividend is in or out of the scope of the directive.")]
     DividendUnknown,
-    
 }

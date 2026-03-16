@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_JpJNUJ5REeWsgrkrngh7Ew")]
-[Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.")]
+[Description(
+    @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type."
+)]
 [DerivedFrom(typeof(ExtendedEventTypeV2Code))]
 public enum ExtendedEventType3Code
 {
@@ -21,7 +23,8 @@ public enum ExtendedEventType3Code
     /// </summary>
     [EnumMember(Value = "TMTN")]
     [IsoId("_VygL0Z5REeWsgrkrngh7Ew")]
-    [Description(@"Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code.")]
+    [Description(
+        @"Security, usually a form of a derivative, for which the agent or issuer has decided to terminate the derivative based on a change to the underlying security(ies) or a change in strategy. Distinguishes from Mandatory Exchange, Exchange Offer event types mapped to the same ISO event type code."
+    )]
     Termination = ExtendedEventTypeV2Code.Termination, // same ordinal as derivation source for type conversions
-    
 }

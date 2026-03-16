@@ -23,7 +23,7 @@ public enum TypeOfRequestCode
     [IsoId("__q5pwNvdEeqxGfKJubfhIw")]
     [Description(@"Request for status.")]
     Status,
-    
+
     /// <summary>
     /// Request for information.
     /// Encoded/decoded by serializers as &quot;INFO&quot;.
@@ -32,5 +32,4 @@ public enum TypeOfRequestCode
     [IsoId("_BILgENveEeqxGfKJubfhIw")]
     [Description(@"Request for information.")]
     Information,
-    
 }

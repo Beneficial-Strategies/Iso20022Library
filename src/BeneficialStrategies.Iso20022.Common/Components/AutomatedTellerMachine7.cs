@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OFzg0YtrEeSDLd7nI4Quzw")]
 [DisplayName("Automated Teller Machine")]
-public partial record AutomatedTellerMachine7
+public record AutomatedTellerMachine7
 {
-    #nullable enable
-    
     /// <summary>
     /// ATM terminal device identification for the acquirer and the issuer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AutomatedTellerMachine7
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// ATM terminal device identification for the ATM manager.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record AutomatedTellerMachine7
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AdditionalIdentification { get; init; }
+
     /// <summary>
     /// ATM terminal device identification for the branch.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record AutomatedTellerMachine7
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SequenceNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SequenceNumber { get; init; }
 }

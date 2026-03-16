@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_lLLsQdLNEeSdq5yU2aaSNw")]
 [DisplayName("Postal Address")]
-public partial record PostalAddress19
+public record PostalAddress19
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the nature of the postal address.
     /// </summary>
     [IsoId("_lVJgk9LNEeSdq5yU2aaSNw")]
     [DisplayName("Address Type")]
     [IsoXmlTag("AdrTp")]
-    public AddressType2Code? AddressType { get; init; } 
-    
+    public AddressType2Code? AddressType { get; init; }
+
     /// <summary>
     /// Identification of a division of a large organisation or building.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record PostalAddress19
     [DisplayName("Department")]
     [IsoXmlTag("Dept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Department { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Department { get; init; }
+
     /// <summary>
     /// Identification of a sub-division of a large organisation or building.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record PostalAddress19
     [DisplayName("Sub Department")]
     [IsoXmlTag("SubDept")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? SubDepartment { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? SubDepartment { get; init; }
+
     /// <summary>
     /// Name of a street or thoroughfare.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record PostalAddress19
     [DisplayName("Street Name")]
     [IsoXmlTag("StrtNm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? StreetName { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? StreetName { get; init; }
+
     /// <summary>
     /// Number that identifies the position of a building on a street.
     /// </summary>
@@ -63,9 +61,9 @@ public partial record PostalAddress19
     [DisplayName("Building Number")]
     [IsoXmlTag("BldgNb")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? BuildingNumber { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? BuildingNumber { get; init; }
+
     /// <summary>
     /// Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.
     /// </summary>
@@ -73,9 +71,9 @@ public partial record PostalAddress19
     [DisplayName("Post Code")]
     [IsoXmlTag("PstCd")]
     [IsoSimpleType(IsoSimpleType.Max16Text)]
-    [StringLength(maximumLength: 16 ,MinimumLength = 1)]
-    public IsoMax16Text? PostCode { get; init; } 
-    
+    [StringLength(maximumLength: 16, MinimumLength = 1)]
+    public IsoMax16Text? PostCode { get; init; }
+
     /// <summary>
     /// Name of a built-up area, with defined boundaries, and a local government.
     /// </summary>
@@ -83,9 +81,9 @@ public partial record PostalAddress19
     [DisplayName("Town Name")]
     [IsoXmlTag("TwnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TownName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TownName { get; init; }
+
     /// <summary>
     /// Specific location name within the town.
     /// </summary>
@@ -93,9 +91,9 @@ public partial record PostalAddress19
     [DisplayName("Town Location Name")]
     [IsoXmlTag("TwnLctnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TownLocationName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TownLocationName { get; init; }
+
     /// <summary>
     /// Identifies a subdivision within a country sub-division.
     /// </summary>
@@ -103,9 +101,9 @@ public partial record PostalAddress19
     [DisplayName("District Name")]
     [IsoXmlTag("DstrctNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? DistrictName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? DistrictName { get; init; }
+
     /// <summary>
     /// Identifies a subdivision of a country such as state, region, county.
     /// </summary>
@@ -113,17 +111,17 @@ public partial record PostalAddress19
     [DisplayName("Country Sub Division")]
     [IsoXmlTag("CtrySubDvsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CountrySubDivision { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CountrySubDivision { get; init; }
+
     /// <summary>
     /// Nation with its own government.
     /// </summary>
     [IsoId("_lVJgo9LNEeSdq5yU2aaSNw")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public CountryCode? Country { get; init; } 
-    
+    public CountryCode? Country { get; init; }
+
     /// <summary>
     /// Information that locates and identifies a specific address, as defined by postal services, presented in free format text.
     /// </summary>
@@ -134,8 +132,4 @@ public partial record PostalAddress19
     [MinLength(0)]
     [MaxLength(7)]
     public SimpleValueList<System.String> AddressLine { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

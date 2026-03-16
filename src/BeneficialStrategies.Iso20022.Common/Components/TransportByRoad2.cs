@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SuOe2dp-Ed-ak6NoX_4Aeg_-77444670")]
 [DisplayName("Transport By Road")]
-public partial record TransportByRoad2
+public record TransportByRoad2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the location where the goods are received for transportation.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TransportByRoad2
     [DisplayName("Place Of Receipt")]
     [IsoXmlTag("PlcOfRct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfReceipt { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PlaceOfReceipt { get; init; }
+
     /// <summary>
     /// Identifies the location of delivery of the goods.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TransportByRoad2
     [DisplayName("Place Of Delivery")]
     [IsoXmlTag("PlcOfDlvry")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfDelivery { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PlaceOfDelivery { get; init; }
+
     /// <summary>
     /// Identifies the party that is responsible for the conveyance of the goods from one place to another.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record TransportByRoad2
     [DisplayName("Road Carrier Name")]
     [IsoXmlTag("RoadCrrierNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? RoadCarrierName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? RoadCarrierName { get; init; }
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(InterestComputationMethodFormat3Choice.Code))]
     [KnownType(typeof(InterestComputationMethodFormat3Choice.Proprietary))]
-    [JsonDerivedType(typeof(InterestComputationMethodFormat3Choice.Code),nameof(InterestComputationMethodFormat3Choice.Code))]
-    [JsonDerivedType(typeof(InterestComputationMethodFormat3Choice.Proprietary),nameof(InterestComputationMethodFormat3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(InterestComputationMethodFormat3Choice.Code),
+        nameof(InterestComputationMethodFormat3Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(InterestComputationMethodFormat3Choice.Proprietary),
+        nameof(InterestComputationMethodFormat3Choice.Proprietary)
+    )]
     [IsoId("_AbzApdokEeC60axPepSq7g_-1161845137")]
     [DisplayName("Interest Computation Method Format 3 Choice")]
-    public abstract partial record InterestComputationMethodFormat3Choice_
-    {
-    }
+    public abstract record InterestComputationMethodFormat3Choice_ { }
 }

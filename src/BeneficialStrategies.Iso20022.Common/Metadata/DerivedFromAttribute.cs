@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace BeneficialStrategies.Iso20022.Metadata;
 
 /// <summary>
@@ -6,19 +7,17 @@ namespace BeneficialStrategies.Iso20022.Metadata;
 /// </summary>
 public class DerivedFromAttribute : System.Attribute
 {
-	/// <summary>
-	/// Adorns an enum structure to specify the enum type that is being extended or restricted.
-	/// </summary>
-	/// <param name="derivedFromType"></param>
-	public DerivedFromAttribute(Type derivedFromType)
-	{
-		DerivedFrom = derivedFromType;
-	}
+    /// <summary>
+    /// Adorns an enum structure to specify the enum type that is being extended or restricted.
+    /// </summary>
+    /// <param name="derivedFromType"></param>
+    public DerivedFromAttribute(Type derivedFromType)
+    {
+        DerivedFrom = derivedFromType;
+    }
 
-	/// <summary>
-	/// The type the adorned type is derived from.
-	/// </summary>
+    /// <summary>
+    /// The type the adorned type is derived from.
+    /// </summary>
     public Type DerivedFrom { get; }
 }
-
-

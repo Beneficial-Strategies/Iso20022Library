@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_7fsShVtgEeSwKe7KuKvXhg")]
 [DisplayName("Proxy Appointment Information")]
-public partial record ProxyAppointmentInformation3
+public record ProxyAppointmentInformation3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies how to register the proxy.
     /// </summary>
@@ -25,33 +23,33 @@ public partial record ProxyAppointmentInformation3
     [DisplayName("Registration Method")]
     [IsoXmlTag("RegnMtd")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? RegistrationMethod { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? RegistrationMethod { get; init; }
+
     /// <summary>
     /// Date by which the information on the proxy assignment must be received by the intermediary.
     /// </summary>
     [IsoId("_79clhVtgEeSwKe7KuKvXhg")]
     [DisplayName("Deadline")]
     [IsoXmlTag("Ddln")]
-    public DateFormat29Choice_? Deadline { get; init; } 
-    
+    public DateFormat29Choice_? Deadline { get; init; }
+
     /// <summary>
     /// Date by which the information on the proxy assignment must be received by the intermediary (STP mode).
     /// </summary>
     [IsoId("_79clh1tgEeSwKe7KuKvXhg")]
     [DisplayName("STP Deadline")]
     [IsoXmlTag("STPDdln")]
-    public DateFormat29Choice_? STPDeadline { get; init; } 
-    
+    public DateFormat29Choice_? STPDeadline { get; init; }
+
     /// <summary>
     /// Date by which the information on the proxy assignment must be received by the issuer.
     /// </summary>
     [IsoId("_79cliVtgEeSwKe7KuKvXhg")]
     [DisplayName("Market Deadline")]
     [IsoXmlTag("MktDdln")]
-    public DateFormat29Choice_? MarketDeadline { get; init; } 
-    
+    public DateFormat29Choice_? MarketDeadline { get; init; }
+
     /// <summary>
     /// Specifies the proxy person that is authorised by the issuer.
     /// </summary>
@@ -61,8 +59,4 @@ public partial record ProxyAppointmentInformation3
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<Proxy5> AuthorisedProxy { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

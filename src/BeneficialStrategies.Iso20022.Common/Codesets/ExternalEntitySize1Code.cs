@@ -13,6 +13,4 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [IsoId("_cBuwUOIYEe-eFYnrXcX-mQ")]
 [Description(@"Specifies the size of an entity according to a list of categories.")]
 [DerivedFrom(typeof(ExternalEntitySizeCode))]
-public enum ExternalEntitySize1Code
-{
-}
+public enum ExternalEntitySize1Code { }

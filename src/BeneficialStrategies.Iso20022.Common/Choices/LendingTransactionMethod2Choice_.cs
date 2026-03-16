@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LendingTransactionMethod2Choice.Code))]
     [KnownType(typeof(LendingTransactionMethod2Choice.Proprietary))]
-    [JsonDerivedType(typeof(LendingTransactionMethod2Choice.Code),nameof(LendingTransactionMethod2Choice.Code))]
-    [JsonDerivedType(typeof(LendingTransactionMethod2Choice.Proprietary),nameof(LendingTransactionMethod2Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(LendingTransactionMethod2Choice.Code),
+        nameof(LendingTransactionMethod2Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(LendingTransactionMethod2Choice.Proprietary),
+        nameof(LendingTransactionMethod2Choice.Proprietary)
+    )]
     [IsoId("_2NBuAZEjEeakHoV5BVecAQ")]
     [DisplayName("Lending Transaction Method 2 Choice")]
-    public abstract partial record LendingTransactionMethod2Choice_
-    {
-    }
+    public abstract record LendingTransactionMethod2Choice_ { }
 }

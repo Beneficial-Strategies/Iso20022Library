@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
     /// </summary>
     [IsoId("_weKLIzbsEead9bDRE_1DAQ")]
     [DisplayName("Cash Account Details")]
-    public partial record CashAccountDetails : PaymentInstrument20Choice_
+    public record CashAccountDetails : PaymentInstrument20Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique and unambiguous identification for the account between the account owner and the account servicer.
         /// </summary>
@@ -24,19 +22,15 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [DisplayName("Account Identification")]
         [IsoXmlTag("AcctId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? AccountIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? AccountIdentification { get; init; }
+
         /// <summary>
         /// Account type.
         /// </summary>
         [IsoId("_5DKXFzhiEeamLZQeccJa7w")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public InvestmentAccountType1Choice_? Type { get; init; } 
-        
-        
-        #nullable disable
-        
+        public InvestmentAccountType1Choice_? Type { get; init; }
     }
 }

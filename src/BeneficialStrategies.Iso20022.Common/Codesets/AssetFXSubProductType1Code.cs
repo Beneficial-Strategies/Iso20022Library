@@ -23,7 +23,7 @@ public enum AssetFXSubProductType1Code
     [IsoId("_LWWI4dDjEeSv_Pll20DdbA")]
     [Description(@"Commodity attribute of type foreign exchange cross rate.")]
     ForeignExchangeCrossRate = AssetClassDetailedSubProductTypeCode.ForeignExchangeCrossRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type foreign exchange emerging markets.
     /// Encoded/decoded by serializers as &quot;FXEM&quot;.
@@ -31,8 +31,9 @@ public enum AssetFXSubProductType1Code
     [EnumMember(Value = "FXEM")]
     [IsoId("_LeFIkdDjEeSv_Pll20DdbA")]
     [Description(@"Commodity attribute of type foreign exchange emerging markets.")]
-    ForeignExchangeEmergingMarket = AssetClassDetailedSubProductTypeCode.ForeignExchangeEmergingMarket, // same ordinal as derivation source for type conversions
-    
+    ForeignExchangeEmergingMarket =
+        AssetClassDetailedSubProductTypeCode.ForeignExchangeEmergingMarket, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Commodity attribute of type foreign exchange majors.
     /// Encoded/decoded by serializers as &quot;FXMJ&quot;.
@@ -41,5 +42,4 @@ public enum AssetFXSubProductType1Code
     [IsoId("_Lj4OkdDjEeSv_Pll20DdbA")]
     [Description(@"Commodity attribute of type foreign exchange majors.")]
     ForeignExchangeMajor = AssetClassDetailedSubProductTypeCode.ForeignExchangeMajor, // same ordinal as derivation source for type conversions
-    
 }

@@ -13,7 +13,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_C0GiwPS8EeiAX8EjdnKKRw")]
-[Description(@"Specifies the external mandate status code in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external mandate status code in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalMandateStatus1Code))]
 public enum ExternalMandateStatusCode
 {
@@ -25,7 +27,7 @@ public enum ExternalMandateStatusCode
     [IsoId("_uYrBs_RYEeuLhpyIdtJzwg")]
     [Description(@"The mandate is active.")]
     Active,
-    
+
     /// <summary>
     /// The mandate is cancelled.
     /// Encoded/decoded by serializers as &quot;CANC&quot;.
@@ -34,7 +36,7 @@ public enum ExternalMandateStatusCode
     [IsoId("_uYrBtvRYEeuLhpyIdtJzwg")]
     [Description(@"The mandate is cancelled.")]
     Cancelled,
-    
+
     /// <summary>
     /// The mandate has passed the end date.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -43,7 +45,7 @@ public enum ExternalMandateStatusCode
     [IsoId("_uYrBufRYEeuLhpyIdtJzwg")]
     [Description(@"The mandate has passed the end date.")]
     Expired,
-    
+
     /// <summary>
     /// The mandate is put on hold.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
@@ -52,5 +54,4 @@ public enum ExternalMandateStatusCode
     [IsoId("_uY0ysPRYEeuLhpyIdtJzwg")]
     [Description(@"The mandate is put on hold.")]
     Suspended,
-    
 }

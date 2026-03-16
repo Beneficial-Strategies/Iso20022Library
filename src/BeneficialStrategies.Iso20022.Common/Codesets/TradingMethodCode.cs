@@ -23,7 +23,7 @@ public enum TradingMethodCode
     [IsoId("_YrGs8dp-Ed-ak6NoX_4Aeg_627416883")]
     [Description(@"Trade executed through an electronic trading system.")]
     Electronic,
-    
+
     /// <summary>
     /// Trade executed over the phone.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -32,7 +32,7 @@ public enum TradingMethodCode
     [IsoId("_YrGs8tp-Ed-ak6NoX_4Aeg_627416884")]
     [Description(@"Trade executed over the phone.")]
     Phone,
-    
+
     /// <summary>
     /// Trade executed through a broker.
     /// Encoded/decoded by serializers as &quot;BROK&quot;.
@@ -41,5 +41,4 @@ public enum TradingMethodCode
     [IsoId("_YrGs89p-Ed-ak6NoX_4Aeg_627416885")]
     [Description(@"Trade executed through a broker.")]
     Broker,
-    
 }

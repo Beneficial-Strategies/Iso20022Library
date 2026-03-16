@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_BaYc8Em3Ee-NocYul3BKXQ")]
-[Description(@"Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type.")]
+[Description(
+    @"Specifies DTCC (The Depository Trust and Clearing Corporation) defined corporate action event type."
+)]
 [DerivedFrom(typeof(ExtendedEventTypeV2Code))]
 public enum ExtendedEventType7Code
 {
@@ -21,8 +23,11 @@ public enum ExtendedEventType7Code
     /// </summary>
     [EnumMember(Value = "CDRD")]
     [IsoId("")]
-    [Description(@"Feature of a security that allows an issuer to make a payment to the security holders before the maturity date.")]
-    CertificateOfDepositEarlyRedemption = ExtendedEventTypeV2Code.CertificateOfDepositEarlyRedemption, // same ordinal as derivation source for type conversions
+    [Description(
+        @"Feature of a security that allows an issuer to make a payment to the security holders before the maturity date."
+    )]
+    CertificateOfDepositEarlyRedemption =
+        ExtendedEventTypeV2Code.CertificateOfDepositEarlyRedemption, // same ordinal as derivation source for type conversions
 
     /// <summary>
     /// Final distribution of principal due on a security, typically Collateralised Mortgage Obligation (CMO) or Asset Backed Security (ABS).
@@ -30,7 +35,9 @@ public enum ExtendedEventType7Code
     /// </summary>
     [EnumMember(Value = "FPAY")]
     [IsoId("")]
-    [Description(@"Final distribution of principal due on a security, typically Collateralised Mortgage Obligation (CMO) or Asset Backed Security (ABS).")]
+    [Description(
+        @"Final distribution of principal due on a security, typically Collateralised Mortgage Obligation (CMO) or Asset Backed Security (ABS)."
+    )]
     FinalPaydown = ExtendedEventTypeV2Code.FinalPaydown, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -48,7 +55,8 @@ public enum ExtendedEventType7Code
     /// </summary>
     [EnumMember(Value = "TMTN")]
     [IsoId("")]
-    [Description(@"Security, usually a form of a derivative, for which the agent or issuer has declared the security to have terminated.")]
+    [Description(
+        @"Security, usually a form of a derivative, for which the agent or issuer has declared the security to have terminated."
+    )]
     Termination = ExtendedEventTypeV2Code.Termination, // same ordinal as derivation source for type conversions
-
 }

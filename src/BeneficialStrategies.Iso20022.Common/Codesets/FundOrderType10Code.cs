@@ -23,16 +23,18 @@ public enum FundOrderType10Code
     [IsoId("_fPfJIbszEeiTr4dQrTCaYA")]
     [Description(@"Investment fund order is a subscription.")]
     Subscription = FundOrderTypeCode.Subscription, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is a dividend reinvestment (only applicable to a subscription).
     /// Encoded/decoded by serializers as &quot;RDIV&quot;.
     /// </summary>
     [EnumMember(Value = "RDIV")]
     [IsoId("_f00q0bszEeiTr4dQrTCaYA")]
-    [Description(@"Investment fund order is a dividend reinvestment (only applicable to a subscription).")]
+    [Description(
+        @"Investment fund order is a dividend reinvestment (only applicable to a subscription)."
+    )]
     ReinvestmentOfDividend = FundOrderTypeCode.ReinvestmentOfDividend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is a redemption.
     /// Encoded/decoded by serializers as &quot;REDM&quot;.
@@ -41,23 +43,26 @@ public enum FundOrderType10Code
     [IsoId("_gs6wcbszEeiTr4dQrTCaYA")]
     [Description(@"Investment fund order is a redemption.")]
     Redemption = FundOrderTypeCode.Redemption, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is a regular savings plan (only applicable to a subscription).
     /// Encoded/decoded by serializers as &quot;RGSV&quot;.
     /// </summary>
     [EnumMember(Value = "RGSV")]
     [IsoId("_hNyo4bszEeiTr4dQrTCaYA")]
-    [Description(@"Investment fund order is a regular savings plan (only applicable to a subscription).")]
+    [Description(
+        @"Investment fund order is a regular savings plan (only applicable to a subscription)."
+    )]
     RegularSavingsPlan = FundOrderTypeCode.RegularSavingsPlan, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment fund order is for a withdrawal investment plan (only applicable to a redemption).
     /// Encoded/decoded by serializers as &quot;WIDP&quot;.
     /// </summary>
     [EnumMember(Value = "WIDP")]
     [IsoId("_hpd4QbszEeiTr4dQrTCaYA")]
-    [Description(@"Investment fund order is for a withdrawal investment plan (only applicable to a redemption).")]
+    [Description(
+        @"Investment fund order is for a withdrawal investment plan (only applicable to a redemption)."
+    )]
     Withdrawal = FundOrderTypeCode.Withdrawal, // same ordinal as derivation source for type conversions
-    
 }

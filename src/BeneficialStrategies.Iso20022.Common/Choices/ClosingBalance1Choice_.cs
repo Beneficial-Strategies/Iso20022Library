@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ClosingBalance1Choice.Final))]
     [KnownType(typeof(ClosingBalance1Choice.Intermediary))]
-    [JsonDerivedType(typeof(ClosingBalance1Choice.Final),nameof(ClosingBalance1Choice.Final))]
-    [JsonDerivedType(typeof(ClosingBalance1Choice.Intermediary),nameof(ClosingBalance1Choice.Intermediary))]
+    [JsonDerivedType(typeof(ClosingBalance1Choice.Final), nameof(ClosingBalance1Choice.Final))]
+    [JsonDerivedType(
+        typeof(ClosingBalance1Choice.Intermediary),
+        nameof(ClosingBalance1Choice.Intermediary)
+    )]
     [IsoId("_R9NRn9p-Ed-ak6NoX_4Aeg_-1862201522")]
     [DisplayName("Closing Balance 1 Choice")]
-    public abstract partial record ClosingBalance1Choice_
-    {
-    }
+    public abstract record ClosingBalance1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jiooYSFhEeW9XJWqfgXIIA")]
 [DisplayName("Referred Agent")]
-public partial record ReferredAgent2
+public record ReferredAgent2
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates if the investor was referred by a placement agent.
     /// </summary>
     [IsoId("_j-L78yFhEeW9XJWqfgXIIA")]
     [DisplayName("Referred")]
     [IsoXmlTag("Rfrd")]
-    public required Referred1Code Referred { get; init; } 
-    
+    public required Referred1Code Referred { get; init; }
+
     /// <summary>
     /// Placement agent that referred the investor.
     /// </summary>
     [IsoId("_j-L79SFhEeW9XJWqfgXIIA")]
     [DisplayName("Referred Placement Agent")]
     [IsoXmlTag("RfrdPlcmntAgt")]
-    public PartyIdentification70Choice_? ReferredPlacementAgent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PartyIdentification70Choice_? ReferredPlacementAgent { get; init; }
 }

@@ -23,7 +23,7 @@ public enum TerminationReason1Code
     [IsoId("_946n4RSKEeKyNbjzgBLUcA")]
     [Description(@"Reason for termination is reduction terms have been fulfilled.")]
     ReductionTermsFulfilled = TerminationReasonCode.ReductionTermsFulfilled, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reason for termination is non-acceptance of a tender.
     /// Encoded/decoded by serializers as &quot;NOAC&quot;.
@@ -32,7 +32,7 @@ public enum TerminationReason1Code
     [IsoId("_-CKDcRSKEeKyNbjzgBLUcA")]
     [Description(@"Reason for termination is non-acceptance of a tender.")]
     TenderNonAcceptance = TerminationReasonCode.TenderNonAcceptance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reason for termination is underlying business has finished.
     /// Encoded/decoded by serializers as &quot;BUFI&quot;.
@@ -41,7 +41,7 @@ public enum TerminationReason1Code
     [IsoId("_-NLnsRSKEeKyNbjzgBLUcA")]
     [Description(@"Reason for termination is underlying business has finished.")]
     UnderlyingBusinessFinished = TerminationReasonCode.UnderlyingBusinessFinished, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Reason for termination is warranty obligation period has expired.
     /// Encoded/decoded by serializers as &quot;WOEX&quot;.
@@ -50,5 +50,4 @@ public enum TerminationReason1Code
     [IsoId("_-Yp34RSKEeKyNbjzgBLUcA")]
     [Description(@"Reason for termination is warranty obligation period has expired.")]
     WarrantyObligationPeriodExpired = TerminationReasonCode.WarrantyObligationPeriodExpired, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum QueryTradeStatus1Code
     [IsoId("_vWekwaadEeSR8qifggAitQ")]
     [Description(@"Query for all trades.")]
     QueryAllStatus = QueryTradeStatusCode.QueryAllStatus, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for trades have been canceled.
     /// Encoded/decoded by serializers as &quot;QCTR&quot;.
@@ -32,7 +32,7 @@ public enum QueryTradeStatus1Code
     [IsoId("_vcIg0aadEeSR8qifggAitQ")]
     [Description(@"Query for trades have been canceled.")]
     QueryCanceledTrade = QueryTradeStatusCode.QueryCanceledTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for cancelling trades.
     /// Encoded/decoded by serializers as &quot;QCIR&quot;.
@@ -41,7 +41,7 @@ public enum QueryTradeStatus1Code
     [IsoId("_vhor4aadEeSR8qifggAitQ")]
     [Description(@"Query for cancelling trades.")]
     QueryCancellingTrade = QueryTradeStatusCode.QueryCancellingTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for emergency trades.
     /// Encoded/decoded by serializers as &quot;QETR&quot;.
@@ -50,7 +50,7 @@ public enum QueryTradeStatus1Code
     [IsoId("_vnI28aadEeSR8qifggAitQ")]
     [Description(@"Query for emergency trades.")]
     QueryEmergencyTrade = QueryTradeStatusCode.QueryEmergencyTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for new trades.
     /// Encoded/decoded by serializers as &quot;QNTR&quot;.
@@ -59,7 +59,7 @@ public enum QueryTradeStatus1Code
     [IsoId("_vsppEaadEeSR8qifggAitQ")]
     [Description(@"Query for new trades.")]
     QueryNewTrade = QueryTradeStatusCode.QueryNewTrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Query for trades have been replaced.
     /// Encoded/decoded by serializers as &quot;QRTR&quot;.
@@ -68,5 +68,4 @@ public enum QueryTradeStatus1Code
     [IsoId("_vyQh0aadEeSR8qifggAitQ")]
     [Description(@"Query for trades have been replaced.")]
     QueryReplacedTrade = QueryTradeStatusCode.QueryReplacedTrade, // same ordinal as derivation source for type conversions
-    
 }

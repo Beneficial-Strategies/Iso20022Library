@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DateOrBlankQuery2Choice.Range))]
     [KnownType(typeof(DateOrBlankQuery2Choice.NotReported))]
-    [JsonDerivedType(typeof(DateOrBlankQuery2Choice.Range),nameof(DateOrBlankQuery2Choice.Range))]
-    [JsonDerivedType(typeof(DateOrBlankQuery2Choice.NotReported),nameof(DateOrBlankQuery2Choice.NotReported))]
+    [JsonDerivedType(typeof(DateOrBlankQuery2Choice.Range), nameof(DateOrBlankQuery2Choice.Range))]
+    [JsonDerivedType(
+        typeof(DateOrBlankQuery2Choice.NotReported),
+        nameof(DateOrBlankQuery2Choice.NotReported)
+    )]
     [IsoId("_cc1HsdGgEeaQk737TH1Fzw")]
     [DisplayName("Date Or Blank Query 2 Choice")]
-    public abstract partial record DateOrBlankQuery2Choice_
-    {
-    }
+    public abstract record DateOrBlankQuery2Choice_ { }
 }

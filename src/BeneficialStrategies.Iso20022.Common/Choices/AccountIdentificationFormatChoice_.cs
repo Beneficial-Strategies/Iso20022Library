@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AccountIdentificationFormatChoice.SimpleIdentification))]
     [KnownType(typeof(AccountIdentificationFormatChoice.IdentificationAndPurpose))]
     [KnownType(typeof(AccountIdentificationFormatChoice.IdentificationAsDSS))]
-    [JsonDerivedType(typeof(AccountIdentificationFormatChoice.SimpleIdentification),nameof(AccountIdentificationFormatChoice.SimpleIdentification))]
-    [JsonDerivedType(typeof(AccountIdentificationFormatChoice.IdentificationAndPurpose),nameof(AccountIdentificationFormatChoice.IdentificationAndPurpose))]
-    [JsonDerivedType(typeof(AccountIdentificationFormatChoice.IdentificationAsDSS),nameof(AccountIdentificationFormatChoice.IdentificationAsDSS))]
+    [JsonDerivedType(
+        typeof(AccountIdentificationFormatChoice.SimpleIdentification),
+        nameof(AccountIdentificationFormatChoice.SimpleIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(AccountIdentificationFormatChoice.IdentificationAndPurpose),
+        nameof(AccountIdentificationFormatChoice.IdentificationAndPurpose)
+    )]
+    [JsonDerivedType(
+        typeof(AccountIdentificationFormatChoice.IdentificationAsDSS),
+        nameof(AccountIdentificationFormatChoice.IdentificationAsDSS)
+    )]
     [IsoId("_RBvu5dp-Ed-ak6NoX_4Aeg_1713990380")]
     [DisplayName("Account Identification Format Choice")]
-    public abstract partial record AccountIdentificationFormatChoice_
-    {
-    }
+    public abstract record AccountIdentificationFormatChoice_ { }
 }

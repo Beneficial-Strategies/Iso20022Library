@@ -23,7 +23,7 @@ public enum CSCManagementCode
     [IsoId("_TWii4gEcEeCQm6a_G2yO_w_-86583445")]
     [Description(@"Card security code present.")]
     CSCPresent,
-    
+
     /// <summary>
     /// Card security code by-passed or not provided by the merchant.
     /// Encoded/decoded by serializers as &quot;BYPS&quot;.
@@ -32,7 +32,7 @@ public enum CSCManagementCode
     [IsoId("_TWrswAEcEeCQm6a_G2yO_w_-1184407427")]
     [Description(@"Card security code by-passed or not provided by the merchant.")]
     CSCByPass,
-    
+
     /// <summary>
     /// Card security code unreadable.
     /// Encoded/decoded by serializers as &quot;UNRD&quot;.
@@ -41,7 +41,7 @@ public enum CSCManagementCode
     [IsoId("_TWrswQEcEeCQm6a_G2yO_w_-1151247658")]
     [Description(@"Card security code unreadable.")]
     CSCUnread,
-    
+
     /// <summary>
     /// No card security code imprint.
     /// Encoded/decoded by serializers as &quot;NCSC&quot;.
@@ -50,5 +50,4 @@ public enum CSCManagementCode
     [IsoId("_TWrswgEcEeCQm6a_G2yO_w_1063680011")]
     [Description(@"No card security code imprint.")]
     NoCSC,
-    
 }

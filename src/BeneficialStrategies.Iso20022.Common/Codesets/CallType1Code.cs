@@ -23,7 +23,7 @@ public enum CallType1Code
     [IsoId("_ha1jv2liEeGaMcKyqKNRfQ_1557320145")]
     [Description(@"Type of execution of the call feature is a lottery.")]
     Lottery = CallTypeCode.Lottery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Type of execution of the call feature is pro-rata.
     /// Encoded/decoded by serializers as &quot;PRTA&quot;.
@@ -32,5 +32,4 @@ public enum CallType1Code
     [IsoId("_ha1jwGliEeGaMcKyqKNRfQ_-906723982")]
     [Description(@"Type of execution of the call feature is pro-rata.")]
     ProRata = CallTypeCode.ProRata, // same ordinal as derivation source for type conversions
-    
 }

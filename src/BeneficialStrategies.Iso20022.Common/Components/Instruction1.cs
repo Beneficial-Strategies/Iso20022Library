@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RW6GmNp-Ed-ak6NoX_4Aeg_-1229563854")]
 [DisplayName("Instruction")]
-public partial record Instruction1
+public record Instruction1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the detailed instruction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Instruction1
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text InstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text InstructionIdentification { get; init; }
+
     /// <summary>
     /// Date at which the instruction must be executed.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record Instruction1
     [DisplayName("Requested Execution Date")]
     [IsoXmlTag("ReqdExctnDt")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? RequestedExecutionDate { get; init; } 
-    
+    public IsoISODateTime? RequestedExecutionDate { get; init; }
+
     /// <summary>
     /// Indicates that a Vote execution confirmation is requested.
     /// </summary>
@@ -44,49 +42,45 @@ public partial record Instruction1
     [DisplayName("Vote Execution Confirmation")]
     [IsoXmlTag("VoteExctnConf")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator VoteExecutionConfirmation { get; init; } 
-    
+    public required IsoYesNoIndicator VoteExecutionConfirmation { get; init; }
+
     /// <summary>
     /// Identification of the securities account.
     /// </summary>
     [IsoId("_RXD3ktp-Ed-ak6NoX_4Aeg_1099288385")]
     [DisplayName("Account Details")]
     [IsoXmlTag("AcctDtls")]
-    public required SafekeepingAccount3 AccountDetails { get; init; } 
-    
+    public required SafekeepingAccount3 AccountDetails { get; init; }
+
     /// <summary>
     /// Identification of the person appointed by the security holder as proxy.
     /// </summary>
     [IsoId("_RXD3k9p-Ed-ak6NoX_4Aeg_1488769519")]
     [DisplayName("Proxy")]
     [IsoXmlTag("Prxy")]
-    public Proxy2? Proxy { get; init; } 
-    
+    public Proxy2? Proxy { get; init; }
+
     /// <summary>
     /// Specifies detailed voting instructions.
     /// </summary>
     [IsoId("_RXD3lNp-Ed-ak6NoX_4Aeg_-1182245952")]
     [DisplayName("Vote Details")]
     [IsoXmlTag("VoteDtls")]
-    public VoteDetails1? VoteDetails { get; init; } 
-    
+    public VoteDetails1? VoteDetails { get; init; }
+
     /// <summary>
     /// Identification of the security holder who will attend and vote at the meeting in person and/or a person assigned by the security holder to attend the meeting without having any voting rights or taking any action.
     /// </summary>
     [IsoId("_RXD3ldp-Ed-ak6NoX_4Aeg_1510934648")]
     [DisplayName("Meeting Attendee")]
     [IsoXmlTag("MtgAttndee")]
-    public IndividualPerson13? MeetingAttendee { get; init; } 
-    
+    public IndividualPerson13? MeetingAttendee { get; init; }
+
     /// <summary>
     /// Request to execute specific instructions, such as participation registration, securities registration or blocking of securities.
     /// </summary>
     [IsoId("_RXD3ltp-Ed-ak6NoX_4Aeg_-362500258")]
     [DisplayName("Specific Instruction Request")]
     [IsoXmlTag("SpcfcInstrReq")]
-    public SpecificInstructionRequest1? SpecificInstructionRequest { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SpecificInstructionRequest1? SpecificInstructionRequest { get; init; }
 }

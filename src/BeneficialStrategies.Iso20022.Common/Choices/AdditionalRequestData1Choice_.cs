@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(AdditionalRequestData1Choice.RequestedDebitAuthorisation))]
     [KnownType(typeof(AdditionalRequestData1Choice.RequestedValuation))]
     [KnownType(typeof(AdditionalRequestData1Choice.RequestNarrative))]
-    [JsonDerivedType(typeof(AdditionalRequestData1Choice.RequestedCompensation),nameof(AdditionalRequestData1Choice.RequestedCompensation))]
-    [JsonDerivedType(typeof(AdditionalRequestData1Choice.RequestedDebitAuthorisation),nameof(AdditionalRequestData1Choice.RequestedDebitAuthorisation))]
-    [JsonDerivedType(typeof(AdditionalRequestData1Choice.RequestedValuation),nameof(AdditionalRequestData1Choice.RequestedValuation))]
-    [JsonDerivedType(typeof(AdditionalRequestData1Choice.RequestNarrative),nameof(AdditionalRequestData1Choice.RequestNarrative))]
+    [JsonDerivedType(
+        typeof(AdditionalRequestData1Choice.RequestedCompensation),
+        nameof(AdditionalRequestData1Choice.RequestedCompensation)
+    )]
+    [JsonDerivedType(
+        typeof(AdditionalRequestData1Choice.RequestedDebitAuthorisation),
+        nameof(AdditionalRequestData1Choice.RequestedDebitAuthorisation)
+    )]
+    [JsonDerivedType(
+        typeof(AdditionalRequestData1Choice.RequestedValuation),
+        nameof(AdditionalRequestData1Choice.RequestedValuation)
+    )]
+    [JsonDerivedType(
+        typeof(AdditionalRequestData1Choice.RequestNarrative),
+        nameof(AdditionalRequestData1Choice.RequestNarrative)
+    )]
     [IsoId("_QnNBUHSHEe2bKJC9xIuWQw")]
     [DisplayName("Additional Request Data1Choice")]
-    public abstract partial record AdditionalRequestData1Choice_
-    {
-    }
+    public abstract record AdditionalRequestData1Choice_ { }
 }

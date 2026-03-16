@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecurityIdentification41Choice.Index))]
     [KnownType(typeof(SecurityIdentification41Choice.Other))]
     [KnownType(typeof(SecurityIdentification41Choice.IdentificationNotAvailable))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.ISIN),nameof(SecurityIdentification41Choice.ISIN))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.AlternativeInstrumentIdentification),nameof(SecurityIdentification41Choice.AlternativeInstrumentIdentification))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.UniqueProductIdentifier),nameof(SecurityIdentification41Choice.UniqueProductIdentifier))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.Basket),nameof(SecurityIdentification41Choice.Basket))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.Index),nameof(SecurityIdentification41Choice.Index))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.Other),nameof(SecurityIdentification41Choice.Other))]
-    [JsonDerivedType(typeof(SecurityIdentification41Choice.IdentificationNotAvailable),nameof(SecurityIdentification41Choice.IdentificationNotAvailable))]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.ISIN),
+        nameof(SecurityIdentification41Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.AlternativeInstrumentIdentification),
+        nameof(SecurityIdentification41Choice.AlternativeInstrumentIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.UniqueProductIdentifier),
+        nameof(SecurityIdentification41Choice.UniqueProductIdentifier)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.Basket),
+        nameof(SecurityIdentification41Choice.Basket)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.Index),
+        nameof(SecurityIdentification41Choice.Index)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.Other),
+        nameof(SecurityIdentification41Choice.Other)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification41Choice.IdentificationNotAvailable),
+        nameof(SecurityIdentification41Choice.IdentificationNotAvailable)
+    )]
     [IsoId("_ibqGsVo2Ee23K4GXSpBSeg")]
     [DisplayName("Security Identification 41 Choice")]
-    public abstract partial record SecurityIdentification41Choice_
-    {
-    }
+    public abstract record SecurityIdentification41Choice_ { }
 }

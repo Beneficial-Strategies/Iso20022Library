@@ -23,7 +23,7 @@ public enum RiskAssessmentCode
     [IsoId("_FPaQgJliEeu76rs9yGlfEg")]
     [Description(@"Recommended to approve unconditionally.")]
     ApproveUnconditionally,
-    
+
     /// <summary>
     /// Recommended to approve conditionally.
     /// Encoded/decoded by serializers as &quot;APPC&quot;.
@@ -32,7 +32,7 @@ public enum RiskAssessmentCode
     [IsoId("_bKPwIJliEeu76rs9yGlfEg")]
     [Description(@"Recommended to approve conditionally.")]
     ApproveConditionally,
-    
+
     /// <summary>
     /// Recommended to approve conditionally; high risk conditions exist.
     /// Encoded/decoded by serializers as &quot;APPH&quot;.
@@ -41,7 +41,7 @@ public enum RiskAssessmentCode
     [IsoId("_js9_IJliEeu76rs9yGlfEg")]
     [Description(@"Recommended to approve conditionally; high risk conditions exist.")]
     ApproveConditionallyWithHighRisk,
-    
+
     /// <summary>
     /// Recommended to not approve.
     /// Encoded/decoded by serializers as &quot;DONT&quot;.
@@ -50,5 +50,4 @@ public enum RiskAssessmentCode
     [IsoId("_5xK2IJliEeu76rs9yGlfEg")]
     [Description(@"Recommended to not approve.")]
     DoNotApprove,
-    
 }

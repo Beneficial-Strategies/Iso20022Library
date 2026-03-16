@@ -23,5 +23,4 @@ public enum SecuritiesQuantity2Code
     [IsoId("_bLRaljFxEeGKkIZzgd38VA")]
     [Description(@"Maximum / Minimum number is unknown or not decided.")]
     Unknown = SecuritiesQuantityTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

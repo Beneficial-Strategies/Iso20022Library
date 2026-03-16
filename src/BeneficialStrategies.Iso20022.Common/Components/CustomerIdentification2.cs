@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_83etz248EeiU9cctagi5ow")]
 [DisplayName("Customer Identification2")]
-public partial record CustomerIdentification2
+public record CustomerIdentification2
 {
-    #nullable enable
-
     /// <summary>
     /// Authority Request.
     /// </summary>
@@ -30,9 +28,5 @@ public partial record CustomerIdentification2
     /// </summary>
     [DisplayName("Party")]
     [IsoXmlTag("Pty")]
-    public required PartyIdentification272 Party { get; init; } 
-
-    
-    #nullable disable
-    
+    public required PartyIdentification272 Party { get; init; }
 }

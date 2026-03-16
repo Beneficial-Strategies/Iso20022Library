@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
     /// </summary>
     [IsoId("_RcH9wdp-Ed-ak6NoX_4Aeg_-444169830")]
     [DisplayName("Shipment Sub Schedule")]
-    public partial record ShipmentSubSchedule : ShipmentSchedule1Choice_
+    public record ShipmentSubSchedule : ShipmentSchedule1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Sub quantity that must be shipped no sooner than the earliest shipment date and no later than the latest shipment date.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
         [DisplayName("Sub Quantity Value")]
         [IsoXmlTag("SubQtyVal")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber SubQuantityValue { get; init; } 
-        
+        public required IsoDecimalNumber SubQuantityValue { get; init; }
+
         /// <summary>
         /// Earliest date whereby the goods must be shipped.
         /// </summary>
@@ -33,8 +31,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
         [DisplayName("Earliest Shipment Date")]
         [IsoXmlTag("EarlstShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? EarliestShipmentDate { get; init; } 
-        
+        public IsoISODate? EarliestShipmentDate { get; init; }
+
         /// <summary>
         /// Latest date whereby the goods must be shipped.
         /// </summary>
@@ -42,10 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.ShipmentSchedule1Choice
         [DisplayName("Latest Shipment Date")]
         [IsoXmlTag("LatstShipmntDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? LatestShipmentDate { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoISODate? LatestShipmentDate { get; init; }
     }
 }

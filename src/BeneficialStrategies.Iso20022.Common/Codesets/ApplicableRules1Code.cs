@@ -23,7 +23,7 @@ public enum ApplicableRules1Code
     [IsoId("_NhLLQVNfEeijdq8ilaxyOA")]
     [Description(@"Pre A Day rules do not apply.")]
     NotPreADay = ApplicableRulesCode.NotPreADay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pre A Day rules applies.
     /// Encoded/decoded by serializers as &quot;YPRE&quot;.
@@ -32,5 +32,4 @@ public enum ApplicableRules1Code
     [IsoId("_NlylgVNfEeijdq8ilaxyOA")]
     [Description(@"Pre A Day rules applies.")]
     PreADay = ApplicableRulesCode.PreADay, // same ordinal as derivation source for type conversions
-    
 }

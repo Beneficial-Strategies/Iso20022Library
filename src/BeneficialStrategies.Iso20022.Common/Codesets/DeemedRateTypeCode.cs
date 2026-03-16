@@ -23,7 +23,7 @@ public enum DeemedRateTypeCode
     [IsoId("_LmfRwJSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of interest proceeds attributed to the security holder.")]
     DeemedInterestProceeds,
-    
+
     /// <summary>
     /// Deemed rate of dividend proceeds attributed to the security holder.
     /// Encoded/decoded by serializers as &quot;DEDI&quot;.
@@ -32,7 +32,7 @@ public enum DeemedRateTypeCode
     [IsoId("_Qgj_EJSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of dividend proceeds attributed to the security holder.")]
     DeemedDividendProceeds,
-    
+
     /// <summary>
     /// Deemed rate of fund proceeds attributed to the security holder.
     /// Encoded/decoded by serializers as &quot;DEFP&quot;.
@@ -41,7 +41,7 @@ public enum DeemedRateTypeCode
     [IsoId("_U-XAEJSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of fund proceeds attributed to the security holder.")]
     DeemedFundProceeds,
-    
+
     /// <summary>
     /// Deemed rate of royalties proceeds attributed to the security holder.
     /// Encoded/decoded by serializers as &quot;DERY&quot;.
@@ -50,5 +50,4 @@ public enum DeemedRateTypeCode
     [IsoId("_cXd7oJSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of royalties proceeds attributed to the security holder.")]
     DeemedRoyaltiesProceeds,
-    
 }

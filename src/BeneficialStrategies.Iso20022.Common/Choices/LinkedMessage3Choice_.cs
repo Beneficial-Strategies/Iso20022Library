@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LinkedMessage3Choice.PreviousReference))]
     [KnownType(typeof(LinkedMessage3Choice.OtherReference))]
-    [JsonDerivedType(typeof(LinkedMessage3Choice.PreviousReference),nameof(LinkedMessage3Choice.PreviousReference))]
-    [JsonDerivedType(typeof(LinkedMessage3Choice.OtherReference),nameof(LinkedMessage3Choice.OtherReference))]
+    [JsonDerivedType(
+        typeof(LinkedMessage3Choice.PreviousReference),
+        nameof(LinkedMessage3Choice.PreviousReference)
+    )]
+    [JsonDerivedType(
+        typeof(LinkedMessage3Choice.OtherReference),
+        nameof(LinkedMessage3Choice.OtherReference)
+    )]
     [IsoId("_dqR1QCFeEeW9XJWqfgXIIA")]
     [DisplayName("Linked Message 3 Choice")]
-    public abstract partial record LinkedMessage3Choice_
-    {
-    }
+    public abstract record LinkedMessage3Choice_ { }
 }

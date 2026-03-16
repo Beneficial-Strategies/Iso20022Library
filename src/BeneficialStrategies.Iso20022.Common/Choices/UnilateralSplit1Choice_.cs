@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnilateralSplit1Choice.Code))]
     [KnownType(typeof(UnilateralSplit1Choice.Proprietary))]
-    [JsonDerivedType(typeof(UnilateralSplit1Choice.Code),nameof(UnilateralSplit1Choice.Code))]
-    [JsonDerivedType(typeof(UnilateralSplit1Choice.Proprietary),nameof(UnilateralSplit1Choice.Proprietary))]
+    [JsonDerivedType(typeof(UnilateralSplit1Choice.Code), nameof(UnilateralSplit1Choice.Code))]
+    [JsonDerivedType(
+        typeof(UnilateralSplit1Choice.Proprietary),
+        nameof(UnilateralSplit1Choice.Proprietary)
+    )]
     [IsoId("_QtogGdp-Ed-ak6NoX_4Aeg_510702003")]
     [DisplayName("Unilateral Split 1 Choice")]
-    public abstract partial record UnilateralSplit1Choice_
-    {
-    }
+    public abstract record UnilateralSplit1Choice_ { }
 }

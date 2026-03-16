@@ -23,5 +23,4 @@ public enum AssetClassSubProductType34Code
     [IsoId("_z68wwVrfEeWN79Bl6BUd3g")]
     [Description(@"Commodity of type manufacturing.")]
     Manufacturing = AssetClassSubProductTypeCode.Manufacturing, // same ordinal as derivation source for type conversions
-    
 }

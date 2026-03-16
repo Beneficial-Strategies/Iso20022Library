@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
     /// </summary>
     [IsoId("_tbdG8PbfEeyInphUKJZxtQ")]
     [DisplayName("Post Trade Risk Reduction Identifier")]
-    public partial record PostTradeRiskReductionIdentifier : EventIdentifier1Choice_
+    public record PostTradeRiskReductionIdentifier : EventIdentifier1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the structurer of the post trade risk reduction identifier.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
         [DisplayName("Structurer")]
         [IsoXmlTag("Strr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Structurer { get; init; } 
-        
+        public required IsoLEIIdentifier Structurer { get; init; }
+
         /// <summary>
         /// Post trade risk reduction identifier assigned by the structurer allowing to link the constituents.
         /// </summary>
@@ -33,11 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.EventIdentifier1Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
-        [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-        public required IsoMax52Text Identification { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 52, MinimumLength = 1)]
+        public required IsoMax52Text Identification { get; init; }
     }
 }

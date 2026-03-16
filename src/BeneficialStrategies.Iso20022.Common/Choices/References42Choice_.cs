@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References42Choice.PoolIdentification))]
     [KnownType(typeof(References42Choice.MarketInfrastructureTransactionIdentification))]
     [KnownType(typeof(References42Choice.ProcessorTransactionIdentification))]
-    [JsonDerivedType(typeof(References42Choice.AccountOwnerTransactionIdentification),nameof(References42Choice.AccountOwnerTransactionIdentification))]
-    [JsonDerivedType(typeof(References42Choice.AccountServicerTransactionIdentification),nameof(References42Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References42Choice.PoolIdentification),nameof(References42Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References42Choice.MarketInfrastructureTransactionIdentification),nameof(References42Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References42Choice.ProcessorTransactionIdentification),nameof(References42Choice.ProcessorTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References42Choice.AccountOwnerTransactionIdentification),
+        nameof(References42Choice.AccountOwnerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References42Choice.AccountServicerTransactionIdentification),
+        nameof(References42Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References42Choice.PoolIdentification),
+        nameof(References42Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References42Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References42Choice.MarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References42Choice.ProcessorTransactionIdentification),
+        nameof(References42Choice.ProcessorTransactionIdentification)
+    )]
     [IsoId("_FlUvwTp-EeWVrPy0StzzSg")]
     [DisplayName("References 42 Choice")]
-    public abstract partial record References42Choice_
-    {
-    }
+    public abstract record References42Choice_ { }
 }

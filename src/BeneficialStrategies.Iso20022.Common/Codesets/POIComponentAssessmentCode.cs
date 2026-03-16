@@ -23,7 +23,7 @@ public enum POIComponentAssessmentCode
     [IsoId("_xXWtYAyKEeKa_56Jbsi1RQ")]
     [Description(@"Evaluation by a lab or a tool.")]
     Evaluation,
-    
+
     /// <summary>
     /// Certification number delivered by a certification body.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
@@ -32,7 +32,7 @@ public enum POIComponentAssessmentCode
     [IsoId("_1l-C4AyKEeKa_56Jbsi1RQ")]
     [Description(@"Certification number delivered by a certification body.")]
     Certification,
-    
+
     /// <summary>
     /// Approval number delivered by an approval centre.
     /// Encoded/decoded by serializers as &quot;APPL&quot;.
@@ -41,5 +41,4 @@ public enum POIComponentAssessmentCode
     [IsoId("_5B2T4AyKEeKa_56Jbsi1RQ")]
     [Description(@"Approval number delivered by an approval centre.")]
     Approval,
-    
 }

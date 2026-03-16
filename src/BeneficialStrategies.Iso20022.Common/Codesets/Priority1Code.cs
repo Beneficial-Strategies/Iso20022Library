@@ -23,7 +23,7 @@ public enum Priority1Code
     [IsoId("_aKLTAdp-Ed-ak6NoX_4Aeg_-291486778")]
     [Description(@"Priority level is high.")]
     High = PriorityCode.High, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is normal.
     /// Encoded/decoded by serializers as &quot;NORM&quot;.
@@ -32,7 +32,7 @@ public enum Priority1Code
     [IsoId("_aKLTAtp-Ed-ak6NoX_4Aeg_-262855798")]
     [Description(@"Priority level is normal.")]
     Normal = PriorityCode.Normal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Priority level is low.
     /// Encoded/decoded by serializers as &quot;LOWW&quot;.
@@ -41,5 +41,4 @@ public enum Priority1Code
     [IsoId("_aKLTA9p-Ed-ak6NoX_4Aeg_-248081725")]
     [Description(@"Priority level is low.")]
     Low = PriorityCode.Low, // same ordinal as derivation source for type conversions
-    
 }

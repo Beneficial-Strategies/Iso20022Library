@@ -23,7 +23,7 @@ public enum ShareRanking1Code
     [IsoId("_ZOkmZtp-Ed-ak6NoX_4Aeg_1470328798")]
     [Description(@"Payable on the date specified.")]
     Dividend = ShareRankingCode.Dividend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pari Passu. With equal rights as other shares of the company.
     /// Encoded/decoded by serializers as &quot;PARI&quot;.
@@ -32,5 +32,4 @@ public enum ShareRanking1Code
     [IsoId("_ZOkmZ9p-Ed-ak6NoX_4Aeg_1470328827")]
     [Description(@"Pari Passu. With equal rights as other shares of the company.")]
     PariPassu = ShareRankingCode.PariPassu, // same ordinal as derivation source for type conversions
-    
 }

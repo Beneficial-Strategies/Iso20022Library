@@ -23,7 +23,7 @@ public enum VariationType1Code
     [IsoId("_GXO5dnyoEeGWJuGCfvwOsQ")]
     [Description(@"Decrease to undertaking amount.")]
     Decrease = VariationTypeCode.Decrease, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Increase to undertaking amount.
     /// Encoded/decoded by serializers as &quot;INCR&quot;.
@@ -32,5 +32,4 @@ public enum VariationType1Code
     [IsoId("_GeibVnyoEeGWJuGCfvwOsQ")]
     [Description(@"Increase to undertaking amount.")]
     Increase = VariationTypeCode.Increase, // same ordinal as derivation source for type conversions
-    
 }

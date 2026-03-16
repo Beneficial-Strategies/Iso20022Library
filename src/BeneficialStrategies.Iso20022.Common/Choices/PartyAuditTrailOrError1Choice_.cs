@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PartyAuditTrailOrError1Choice.PartyAuditTrailReport))]
     [KnownType(typeof(PartyAuditTrailOrError1Choice.OperationalError))]
-    [JsonDerivedType(typeof(PartyAuditTrailOrError1Choice.PartyAuditTrailReport),nameof(PartyAuditTrailOrError1Choice.PartyAuditTrailReport))]
-    [JsonDerivedType(typeof(PartyAuditTrailOrError1Choice.OperationalError),nameof(PartyAuditTrailOrError1Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(PartyAuditTrailOrError1Choice.PartyAuditTrailReport),
+        nameof(PartyAuditTrailOrError1Choice.PartyAuditTrailReport)
+    )]
+    [JsonDerivedType(
+        typeof(PartyAuditTrailOrError1Choice.OperationalError),
+        nameof(PartyAuditTrailOrError1Choice.OperationalError)
+    )]
     [IsoId("_QgdAwZ9uEee7Qpz45yWJJw")]
     [DisplayName("Party Audit Trail Or Error 1 Choice")]
-    public abstract partial record PartyAuditTrailOrError1Choice_
-    {
-    }
+    public abstract record PartyAuditTrailOrError1Choice_ { }
 }

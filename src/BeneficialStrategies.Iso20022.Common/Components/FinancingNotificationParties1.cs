@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMzMw-AOSNFX-8224500")]
 [DisplayName("Financing Notification Parties")]
-public partial record FinancingNotificationParties1
+public record FinancingNotificationParties1
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that notifies a third party.
     /// </summary>
     [IsoId("_OTMxOTcy-AOSNFX-0262747")]
     [DisplayName("Notifying Party")]
     [IsoXmlTag("NtifngPty")]
-    public required QualifiedPartyIdentification1 NotifyingParty { get; init; } 
-    
+    public required QualifiedPartyIdentification1 NotifyingParty { get; init; }
+
     /// <summary>
     /// Party (to be) notified.
     /// </summary>
     [IsoId("_OTMxOTcz-AOSNFX-0262747")]
     [DisplayName("Notification Receiver")]
     [IsoXmlTag("NtfctnRcvr")]
-    public required QualifiedPartyIdentification1 NotificationReceiver { get; init; } 
-    
+    public required QualifiedPartyIdentification1 NotificationReceiver { get; init; }
+
     /// <summary>
     /// Party to whom a notification acknowledgement has to be sent by the notification receiver.
     /// </summary>
     [IsoId("_OTMxOTc0-AOSNFX-0262747")]
     [DisplayName("Acknowledgement Receiver")]
     [IsoXmlTag("AckRcvr")]
-    public QualifiedPartyIdentification1? AcknowledgementReceiver { get; init; } 
-    
-    
-    #nullable disable
-    
+    public QualifiedPartyIdentification1? AcknowledgementReceiver { get; init; }
 }

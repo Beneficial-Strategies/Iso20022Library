@@ -23,7 +23,7 @@ public enum DTCCashRoundingTypeCode
     [IsoId("_1sZ_IDL3EeKU9IrkkToqcw_-232119891")]
     [Description(@"Round down to the nearest cent.")]
     RoundDownToTheNearestCent,
-    
+
     /// <summary>
     /// Round down to the nearest dollar.
     /// Encoded/decoded by serializers as &quot;RDND&quot;.
@@ -32,7 +32,7 @@ public enum DTCCashRoundingTypeCode
     [IsoId("_1sZ_ITL3EeKU9IrkkToqcw_1453354338")]
     [Description(@"Round down to the nearest dollar.")]
     RoundDownToTheNearestDollar,
-    
+
     /// <summary>
     /// Round up to the nearest cent.
     /// Encoded/decoded by serializers as &quot;RUNC&quot;.
@@ -41,7 +41,7 @@ public enum DTCCashRoundingTypeCode
     [IsoId("_1sZ_IjL3EeKU9IrkkToqcw_1668730619")]
     [Description(@"Round up to the nearest cent.")]
     RoundUpToTheNearestCent,
-    
+
     /// <summary>
     /// Round up to the nearest dollar.
     /// Encoded/decoded by serializers as &quot;RUND&quot;.
@@ -50,5 +50,4 @@ public enum DTCCashRoundingTypeCode
     [IsoId("_1sZ_IzL3EeKU9IrkkToqcw_-1607281533")]
     [Description(@"Round up to the nearest dollar.")]
     RoundUpToTheNearestDollar,
-    
 }

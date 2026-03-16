@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Lh2DkDYoEeuD7rm9md9zvg")]
 [DisplayName("Valuation Factor Breakdown")]
-public partial record ValuationFactorBreakdown1
+public record ValuationFactorBreakdown1
 {
-    #nullable enable
-    
     /// <summary>
     /// Aggregated adjustment applied on the liability/collateral to calculate the position. It is the sum of the inflation, the haircut/margin and pool factors.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record ValuationFactorBreakdown1
     [DisplayName("Valuation Factor")]
     [IsoXmlTag("ValtnFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? ValuationFactor { get; init; } 
-    
+    public IsoBaseOneRate? ValuationFactor { get; init; }
+
     /// <summary>
-    /// Adjustment related to inflation applied on the liability/collateral to calculate the position. 
+    /// Adjustment related to inflation applied on the liability/collateral to calculate the position.
     /// </summary>
     [IsoId("_w_l3cTYoEeuD7rm9md9zvg")]
     [DisplayName("Inflation Factor")]
     [IsoXmlTag("InfltnFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? InflationFactor { get; init; } 
-    
+    public IsoBaseOneRate? InflationFactor { get; init; }
+
     /// <summary>
     /// Haircut or margin on the security  expressed as a percentage.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record ValuationFactorBreakdown1
     [DisplayName("Haircut")]
     [IsoXmlTag("Hrcut")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? Haircut { get; init; } 
-    
+    public IsoBaseOneRate? Haircut { get; init; }
+
     /// <summary>
     /// Percentage that applies to price of the securities following a redemption.
     /// </summary>
@@ -52,9 +50,5 @@ public partial record ValuationFactorBreakdown1
     [DisplayName("Pool Factor")]
     [IsoXmlTag("PoolFctr")]
     [IsoSimpleType(IsoSimpleType.BaseOneRate)]
-    public IsoBaseOneRate? PoolFactor { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoBaseOneRate? PoolFactor { get; init; }
 }

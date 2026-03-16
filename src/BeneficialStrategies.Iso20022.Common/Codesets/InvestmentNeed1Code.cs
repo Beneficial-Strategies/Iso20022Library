@@ -22,8 +22,9 @@ public enum InvestmentNeed1Code
     [EnumMember(Value = "ESGO")]
     [IsoId("_-DCJ8TcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for environmental social corporate governance.|")]
-    EnvironmentalSocialCorporateGovernance = InvestmentNeedCode.EnvironmentalSocialCorporateGovernance, // same ordinal as derivation source for type conversions
-    
+    EnvironmentalSocialCorporateGovernance =
+        InvestmentNeedCode.EnvironmentalSocialCorporateGovernance, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Investment need is for ethical investment.
     /// Encoded/decoded by serializers as &quot;ETHI&quot;.
@@ -32,7 +33,7 @@ public enum InvestmentNeed1Code
     [IsoId("_-IFpETcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for ethical investment.")]
     EthicalInvestment = InvestmentNeedCode.EthicalInvestment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment need is for green investment.
     /// Encoded/decoded by serializers as &quot;GRIN&quot;.
@@ -41,7 +42,7 @@ public enum InvestmentNeed1Code
     [IsoId("_-NJvQTcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for green investment.")]
     GreenInvestment = InvestmentNeedCode.GreenInvestment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Investment need is for Islamic banking.
     /// Encoded/decoded by serializers as &quot;ISLB&quot;.
@@ -50,7 +51,7 @@ public enum InvestmentNeed1Code
     [IsoId("_-SgJUTcdEeidBoT_PugKiA")]
     [Description(@"Investment need is for Islamic banking.")]
     IslamicBanking = InvestmentNeedCode.IslamicBanking, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No specific need.
     /// Encoded/decoded by serializers as &quot;NSPE&quot;.
@@ -59,7 +60,7 @@ public enum InvestmentNeed1Code
     [IsoId("_-US5ETcdEeidBoT_PugKiA")]
     [Description(@"No specific need.")]
     None = InvestmentNeedCode.None, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other specific need.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,7 +69,7 @@ public enum InvestmentNeed1Code
     [IsoId("_-ZgJMTcdEeidBoT_PugKiA")]
     [Description(@"Other specific need.")]
     Other = InvestmentNeedCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specific investment need.
     /// Encoded/decoded by serializers as &quot;YSPE&quot;.
@@ -77,5 +78,4 @@ public enum InvestmentNeed1Code
     [IsoId("_c_wd0el4Eei6w4V2u1HOBw")]
     [Description(@"Specific investment need.")]
     SpecificNeed = InvestmentNeedCode.SpecificNeed, // same ordinal as derivation source for type conversions
-    
 }

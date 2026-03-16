@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_HqDnMezYEeSBf_ghFpb9rQ")]
 [Description(@"Status of the price of a financial instrument.")]
-[Derivations(typeof(PriceStatus1Code),typeof(PriceStatus2Code))]
+[Derivations(typeof(PriceStatus1Code), typeof(PriceStatus2Code))]
 public enum PriceStatusCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum PriceStatusCode
     [IsoId("_KRC3kOzYEeSBf_ghFpb9rQ")]
     [Description(@"Price is pending.")]
     Pending,
-    
+
     /// <summary>
     /// No price for transaction (e.g. transfer between accounts).
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -32,5 +32,4 @@ public enum PriceStatusCode
     [IsoId("_ybLl0I-SEeWtN7rsKJRs8Q")]
     [Description(@"No price for transaction (e.g. transfer between accounts).")]
     NotApplicable,
-    
 }

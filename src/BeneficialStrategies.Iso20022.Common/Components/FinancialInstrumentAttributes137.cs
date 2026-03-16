@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,172 +14,166 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nLkIrZt3Ee-wQIOX0djF2w")]
 [DisplayName("Financial Instrument Attributes137")]
-public partial record FinancialInstrumentAttributes137
+public record FinancialInstrumentAttributes137
 {
-    #nullable enable
-
     /// <summary>
     /// Classification Type.
     /// </summary>
     [DisplayName("Classification Type")]
     [IsoXmlTag("ClssfctnTp")]
-    public ClassificationType33Choice_? ClassificationType { get; init; } 
+    public ClassificationType33Choice_? ClassificationType { get; init; }
 
     /// <summary>
     /// Contract Size.
     /// </summary>
     [DisplayName("Contract Size")]
     [IsoXmlTag("CtrctSz")]
-    public FinancialInstrumentQuantity36Choice_? ContractSize { get; init; } 
+    public FinancialInstrumentQuantity36Choice_? ContractSize { get; init; }
 
     /// <summary>
     /// Conversion Date.
     /// </summary>
     [DisplayName("Conversion Date")]
     [IsoXmlTag("ConvsDt")]
-    public IsoISODate? ConversionDate { get; init; } 
+    public IsoISODate? ConversionDate { get; init; }
 
     /// <summary>
     /// Dated Date.
     /// </summary>
     [DisplayName("Dated Date")]
     [IsoXmlTag("DtdDt")]
-    public IsoISODate? DatedDate { get; init; } 
+    public IsoISODate? DatedDate { get; init; }
 
     /// <summary>
     /// Day Count Basis.
     /// </summary>
     [DisplayName("Day Count Basis")]
     [IsoXmlTag("DayCntBsis")]
-    public InterestComputationMethodFormat5Choice_? DayCountBasis { get; init; } 
+    public InterestComputationMethodFormat5Choice_? DayCountBasis { get; init; }
 
     /// <summary>
     /// Denomination Currency.
     /// </summary>
     [DisplayName("Denomination Currency")]
     [IsoXmlTag("DnmtnCcy")]
-    public ActiveOrHistoricCurrencyCode? DenominationCurrency { get; init; } 
+    public ActiveOrHistoricCurrencyCode? DenominationCurrency { get; init; }
 
     /// <summary>
     /// Financial Instrument Identification.
     /// </summary>
     [DisplayName("Financial Instrument Identification")]
     [IsoXmlTag("FinInstrmId")]
-    public required SecurityIdentification20 FinancialInstrumentIdentification { get; init; } 
+    public required SecurityIdentification20 FinancialInstrumentIdentification { get; init; }
 
     /// <summary>
     /// Floating Rate Fixing Date.
     /// </summary>
     [DisplayName("Floating Rate Fixing Date")]
     [IsoXmlTag("FltgRateFxgDt")]
-    public IsoISODate? FloatingRateFixingDate { get; init; } 
+    public IsoISODate? FloatingRateFixingDate { get; init; }
 
     /// <summary>
     /// Interest Rate.
     /// </summary>
     [DisplayName("Interest Rate")]
     [IsoXmlTag("IntrstRate")]
-    public RateFormat24Choice_? InterestRate { get; init; } 
+    public RateFormat24Choice_? InterestRate { get; init; }
 
     /// <summary>
     /// Issue Date.
     /// </summary>
     [DisplayName("Issue Date")]
     [IsoXmlTag("IsseDt")]
-    public IsoISODate? IssueDate { get; init; } 
+    public IsoISODate? IssueDate { get; init; }
 
     /// <summary>
     /// Issue Price.
     /// </summary>
     [DisplayName("Issue Price")]
     [IsoXmlTag("IssePric")]
-    public PriceFormat92Choice_? IssuePrice { get; init; } 
+    public PriceFormat92Choice_? IssuePrice { get; init; }
 
     /// <summary>
     /// Maturity Date.
     /// </summary>
     [DisplayName("Maturity Date")]
     [IsoXmlTag("MtrtyDt")]
-    public IsoISODate? MaturityDate { get; init; } 
+    public IsoISODate? MaturityDate { get; init; }
 
     /// <summary>
     /// Minimum Multiple Quantity To Instruct.
     /// </summary>
     [DisplayName("Minimum Multiple Quantity To Instruct")]
     [IsoXmlTag("MinMltplQtyToInst")]
-    public FinancialInstrumentQuantity36Choice_? MinimumMultipleQuantityToInstruct { get; init; } 
+    public FinancialInstrumentQuantity36Choice_? MinimumMultipleQuantityToInstruct { get; init; }
 
     /// <summary>
     /// Minimum Nominal Quantity.
     /// </summary>
     [DisplayName("Minimum Nominal Quantity")]
     [IsoXmlTag("MinNmnlQty")]
-    public FinancialInstrumentQuantity36Choice_? MinimumNominalQuantity { get; init; } 
+    public FinancialInstrumentQuantity36Choice_? MinimumNominalQuantity { get; init; }
 
     /// <summary>
     /// Minimum Quantity To Instruct.
     /// </summary>
     [DisplayName("Minimum Quantity To Instruct")]
     [IsoXmlTag("MinQtyToInst")]
-    public FinancialInstrumentQuantity36Choice_? MinimumQuantityToInstruct { get; init; } 
+    public FinancialInstrumentQuantity36Choice_? MinimumQuantityToInstruct { get; init; }
 
     /// <summary>
     /// Next Callable Date.
     /// </summary>
     [DisplayName("Next Callable Date")]
     [IsoXmlTag("NxtCllblDt")]
-    public IsoISODate? NextCallableDate { get; init; } 
+    public IsoISODate? NextCallableDate { get; init; }
 
     /// <summary>
     /// Next Coupon Date.
     /// </summary>
     [DisplayName("Next Coupon Date")]
     [IsoXmlTag("NxtCpnDt")]
-    public IsoISODate? NextCouponDate { get; init; } 
+    public IsoISODate? NextCouponDate { get; init; }
 
     /// <summary>
     /// Next Factor.
     /// </summary>
     [DisplayName("Next Factor")]
     [IsoXmlTag("NxtFctr")]
-    public RateFormat12Choice_? NextFactor { get; init; } 
+    public RateFormat12Choice_? NextFactor { get; init; }
 
     /// <summary>
     /// Next Interest Rate.
     /// </summary>
     [DisplayName("Next Interest Rate")]
     [IsoXmlTag("NxtIntrstRate")]
-    public RateFormat24Choice_? NextInterestRate { get; init; } 
+    public RateFormat24Choice_? NextInterestRate { get; init; }
 
     /// <summary>
     /// Option Style.
     /// </summary>
     [DisplayName("Option Style")]
     [IsoXmlTag("OptnStyle")]
-    public OptionStyle9Choice_? OptionStyle { get; init; } 
+    public OptionStyle9Choice_? OptionStyle { get; init; }
 
     /// <summary>
     /// Place Of Listing.
     /// </summary>
     [DisplayName("Place Of Listing")]
     [IsoXmlTag("PlcOfListg")]
-    public MarketIdentification4Choice_? PlaceOfListing { get; init; } 
+    public MarketIdentification4Choice_? PlaceOfListing { get; init; }
 
     /// <summary>
     /// Previous Factor.
     /// </summary>
     [DisplayName("Previous Factor")]
     [IsoXmlTag("PrvsFctr")]
-    public RateFormat12Choice_? PreviousFactor { get; init; } 
+    public RateFormat12Choice_? PreviousFactor { get; init; }
 
     /// <summary>
     /// Putable Date.
     /// </summary>
     [DisplayName("Putable Date")]
     [IsoXmlTag("PutblDt")]
-    public IsoISODate? PutableDate { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoISODate? PutableDate { get; init; }
 }

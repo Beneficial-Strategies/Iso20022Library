@@ -23,7 +23,7 @@ public enum PresentationPartyCode
     [IsoId("_miKJ0HydEeGWJuGCfvwOsQ")]
     [Description(@"Presentation made exclusively to the confirmer.")]
     ExclusiveConfirmer,
-    
+
     /// <summary>
     /// Presentation made exclusively to the issuer.
     /// Encoded/decoded by serializers as &quot;EXIS&quot;.
@@ -32,7 +32,7 @@ public enum PresentationPartyCode
     [IsoId("_t0V-AHydEeGWJuGCfvwOsQ")]
     [Description(@"Presentation made exclusively to the issuer.")]
     ExclusiveIssuer,
-    
+
     /// <summary>
     /// Presentation made either to the issuer or other nominated party.
     /// Encoded/decoded by serializers as &quot;ETHR&quot;.
@@ -41,5 +41,4 @@ public enum PresentationPartyCode
     [IsoId("_3TDUIHydEeGWJuGCfvwOsQ")]
     [Description(@"Presentation made either to the issuer or other nominated party.")]
     IssuerOrOtherNominatatedParty,
-    
 }

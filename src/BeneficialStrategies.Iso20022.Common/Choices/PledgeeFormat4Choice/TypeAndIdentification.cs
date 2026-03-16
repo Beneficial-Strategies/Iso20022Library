@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat4Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat4Choice
     /// </summary>
     [IsoId("_XDu4sZj3EeWn2ur3BXxtdg")]
     [DisplayName("Type And Identification")]
-    public partial record TypeAndIdentification : PledgeeFormat4Choice_
+    public record TypeAndIdentification : PledgeeFormat4Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the entity to which the financial instruments are pledged, expressed as a BIC.
         /// </summary>
@@ -24,18 +22,14 @@ namespace BeneficialStrategies.Iso20022.Choices.PledgeeFormat4Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-        public required IsoAnyBICIdentifier Identification { get; init; } 
-        
+        public required IsoAnyBICIdentifier Identification { get; init; }
+
         /// <summary>
         /// Entity to which the financial instruments are pledged expressed as a code.
         /// </summary>
         [IsoId("_C2hN8E9fEeSn2-3swbRbzg")]
         [DisplayName("Pledgee Type")]
         [IsoXmlTag("PldgeeTp")]
-        public required PledgeeType1Code PledgeeType { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PledgeeType1Code PledgeeType { get; init; }
     }
 }

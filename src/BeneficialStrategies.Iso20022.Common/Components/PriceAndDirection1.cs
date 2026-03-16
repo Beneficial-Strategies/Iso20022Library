@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_m-cPtfNBEeCuA5Tr22BnwA_127397945")]
 [DisplayName("Price And Direction")]
-public partial record PriceAndDirection1
+public record PriceAndDirection1
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency and value.
     /// </summary>
     [IsoId("_m-cPtvNBEeCuA5Tr22BnwA_-1084265103")]
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
-    public required ActiveOrHistoricCurrencyAnd13DecimalAmount Value { get; init; } 
-    
+    public required ActiveOrHistoricCurrencyAnd13DecimalAmount Value { get; init; }
+
     /// <summary>
     /// Indicates that the value is positive or negative.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record PriceAndDirection1
     [DisplayName("Sign")]
     [IsoXmlTag("Sgn")]
     [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-    public IsoPlusOrMinusIndicator? Sign { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPlusOrMinusIndicator? Sign { get; init; }
 }

@@ -23,7 +23,7 @@ public enum ActionTakenCode
     [IsoId("_8QpIIHdjEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud was accepted")]
     Accepted,
-    
+
     /// <summary>
     /// Reported fraud was rejected.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -32,7 +32,7 @@ public enum ActionTakenCode
     [IsoId("_Og4TYHdmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud was rejected.")]
     Rejected,
-    
+
     /// <summary>
     /// Reported fraud was accepted with warnings.
     /// Encoded/decoded by serializers as &quot;WARN&quot;.
@@ -41,7 +41,7 @@ public enum ActionTakenCode
     [IsoId("_XWXGUHdmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud was accepted with warnings.")]
     Warning,
-    
+
     /// <summary>
     /// Reported fraud led to actions defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum ActionTakenCode
     [IsoId("_eaCkcHdmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud led to actions defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Reported fraud led to actions defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum ActionTakenCode
     [IsoId("_nOyXkHdmEeeKH6vrEwvLHA")]
     [Description(@"Reported fraud led to actions defined at private level.")]
     OtherPrivate,
-    
 }

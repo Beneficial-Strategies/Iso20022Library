@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice
     /// </summary>
     [IsoId("_tKrKc69_EemF0ZVFnxVu4g")]
     [DisplayName("Fixed")]
-    public partial record Fixed : ContractTerm3Choice_
+    public record Fixed : ContractTerm3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date on which the counterparties contractually agree the exchange of securities or commodities versus collateral for the closing leg (forward leg) of the secured financing transaction. This information shall not be reported for open term agreements.
         /// </summary>
@@ -24,18 +22,14 @@ namespace BeneficialStrategies.Iso20022.Choices.ContractTerm3Choice
         [DisplayName("Maturity Date")]
         [IsoXmlTag("MtrtyDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? MaturityDate { get; init; } 
-        
+        public IsoISODate? MaturityDate { get; init; }
+
         /// <summary>
         /// Indication whether the counterparties to the transaction have agreed to an evergreen or extendable agreement.
         /// </summary>
         [IsoId("_aMOjQ09xEeeRtrXYXV38uA")]
         [DisplayName("Termination Option")]
         [IsoXmlTag("TermntnOptn")]
-        public RepoTerminationOption2Code? TerminationOption { get; init; } 
-        
-        
-        #nullable disable
-        
+        public RepoTerminationOption2Code? TerminationOption { get; init; }
     }
 }

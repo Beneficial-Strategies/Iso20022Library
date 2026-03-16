@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,59 +14,53 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Y5jikYv-EeuC5632vxUfGg")]
 [DisplayName("Reconciliation Response")]
-public partial record ReconciliationResponse7
+public record ReconciliationResponse7
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the transaction.
     /// </summary>
     [IsoId("_Y-RqgYv-EeuC5632vxUfGg")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required Environment33 Environment { get; init; } 
-    
+    public required Environment33 Environment { get; init; }
+
     /// <summary>
     /// Contains or describes conditions and characteristics of the transaction.
     /// </summary>
     [IsoId("_Y-Rqg4v-EeuC5632vxUfGg")]
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
-    public Context17? Context { get; init; } 
-    
+    public Context17? Context { get; init; }
+
     /// <summary>
     /// Data pertaining to the reconciliation transaction.
     /// </summary>
     [IsoId("_Y-RqhYv-EeuC5632vxUfGg")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required Transaction135 Transaction { get; init; } 
-    
+    public required Transaction135 Transaction { get; init; }
+
     /// <summary>
     /// Outcome of the processing.
     /// </summary>
     [IsoId("_Y-Rqh4v-EeuC5632vxUfGg")]
     [DisplayName("Processing Result")]
     [IsoXmlTag("PrcgRslt")]
-    public required ProcessingResult19 ProcessingResult { get; init; } 
-    
+    public required ProcessingResult19 ProcessingResult { get; init; }
+
     /// <summary>
     /// Contains protected data and the attributes used to protect the data.
     /// </summary>
     [IsoId("_Y-RqiYv-EeuC5632vxUfGg")]
     [DisplayName("Protected Data")]
     [IsoXmlTag("PrtctdData")]
-    public ProtectedData1? ProtectedData { get; init; } 
-    
+    public ProtectedData1? ProtectedData { get; init; }
+
     /// <summary>
     /// Additional information that can not be captured in the structured fields and/or other specific block.
     /// </summary>
     [IsoId("_Y-Rqi4v-EeuC5632vxUfGg")]
     [DisplayName("Supplementary Data")]
     [IsoXmlTag("SplmtryData")]
-    public SupplementaryData1? SupplementaryData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SupplementaryData1? SupplementaryData { get; init; }
 }

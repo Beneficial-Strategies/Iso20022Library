@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QLb-ke6PEeqc-LCjwLsUVg")]
 [DisplayName("Updated Additional Information")]
-public partial record UpdatedAdditionalInformation12
+public record UpdatedAdditionalInformation12
 {
-    #nullable enable
-    
     /// <summary>
     /// Language used to provide additional information and using the ISO 639-1 language code standard.
     /// </summary>
     [IsoId("_Zv7zoe6PEeqc-LCjwLsUVg")]
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public required ISO2ALanguageCode Language { get; init; } 
-    
+    public required ISO2ALanguageCode Language { get; init; }
+
     /// <summary>
     /// Specifies the amendments made to the narrative since the last message.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record UpdatedAdditionalInformation12
     [DisplayName("Update Description")]
     [IsoXmlTag("UpdDesc")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? UpdateDescription { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? UpdateDescription { get; init; }
+
     /// <summary>
     /// Specifies the date at which the narrative has been updated.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record UpdatedAdditionalInformation12
     [DisplayName("Update Date")]
     [IsoXmlTag("UpdDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? UpdateDate { get; init; } 
-    
+    public IsoISODate? UpdateDate { get; init; }
+
     /// <summary>
     /// Provides additional textual information.
     /// </summary>
@@ -52,10 +50,6 @@ public partial record UpdatedAdditionalInformation12
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text AdditionalInformation { get; init; }
 }

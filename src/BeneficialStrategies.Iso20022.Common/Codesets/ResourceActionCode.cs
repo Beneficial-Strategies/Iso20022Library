@@ -23,7 +23,7 @@ public enum ResourceActionCode
     [IsoId("_f977MS7_Eeu125Ip9zFcsQ")]
     [Description(@"Set the default volume of sounds.")]
     SetDefaultVolume,
-    
+
     /// <summary>
     /// Start the media resource as specified in the message.
     /// Encoded/decoded by serializers as &quot;STAS&quot;.
@@ -32,7 +32,7 @@ public enum ResourceActionCode
     [IsoId("_mCpPoS7_Eeu125Ip9zFcsQ")]
     [Description(@"Start the media resource as specified in the message.")]
     Play,
-    
+
     /// <summary>
     /// Play in a loop the media resource as specified in the message.
     /// Encoded/decoded by serializers as &quot;LOOP&quot;.
@@ -41,7 +41,7 @@ public enum ResourceActionCode
     [IsoId("_m1zK4S7_Eeu125Ip9zFcsQ")]
     [Description(@"Play in a loop the media resource as specified in the message.")]
     PlayInLoop,
-    
+
     /// <summary>
     /// Stop the media resource in progress.
     /// Encoded/decoded by serializers as &quot;STOS&quot;.
@@ -50,7 +50,7 @@ public enum ResourceActionCode
     [IsoId("_89VCsS7_Eeu125Ip9zFcsQ")]
     [Description(@"Stop the media resource in progress.")]
     Stop,
-    
+
     /// <summary>
     /// Pause the media resource in progress as specified in the message.
     /// Encoded/decoded by serializers as &quot;PAUS&quot;.
@@ -59,7 +59,7 @@ public enum ResourceActionCode
     [IsoId("_DYgWYS8AEeu125Ip9zFcsQ")]
     [Description(@"Pause the media resource in progress as specified in the message.")]
     Pause,
-    
+
     /// <summary>
     /// Resume the progress of the media resource as specified in the message.
     /// Encoded/decoded by serializers as &quot;RESU&quot;.
@@ -68,5 +68,4 @@ public enum ResourceActionCode
     [IsoId("_D5h_0S8AEeu125Ip9zFcsQ")]
     [Description(@"Resume the progress of the media resource as specified in the message.")]
     Resume,
-    
 }

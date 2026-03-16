@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_NfldERlWEe2Do_UtrNmb2g")]
 [DisplayName("Charges")]
-public partial record Charges12
+public record Charges12
 {
-    #nullable enable
-    
     /// <summary>
     /// Transaction charges to be paid by the charge bearer.
     /// </summary>
     [IsoId("_NqTfUxlWEe2Do_UtrNmb2g")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; } 
-    
+    public required ActiveOrHistoricCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Agent that takes the transaction charges or to which the transaction charges are due.
     /// </summary>
     [IsoId("_NqTfVRlWEe2Do_UtrNmb2g")]
     [DisplayName("Agent")]
     [IsoXmlTag("Agt")]
-    public required BranchAndFinancialInstitutionIdentification6 Agent { get; init; } 
-    
+    public required BranchAndFinancialInstitutionIdentification6 Agent { get; init; }
+
     /// <summary>
     /// Defines the type of charges.
     /// </summary>
     [IsoId("_W6o64BlZEe2Do_UtrNmb2g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public ChargeType3Choice_? Type { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ChargeType3Choice_? Type { get; init; }
 }

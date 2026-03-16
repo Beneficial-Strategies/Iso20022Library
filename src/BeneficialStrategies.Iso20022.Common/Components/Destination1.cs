@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZQh2YE95EeePXdaAO32Uew")]
 [DisplayName("Destination")]
-public partial record Destination1
+public record Destination1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the destination of the transaction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Destination1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Identification of the entity assigning the destination identification.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record Destination1
     [DisplayName("Assigner")]
     [IsoXmlTag("Assgnr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Assigner { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Assigner { get; init; }
+
     /// <summary>
     /// Country of the destination.
     /// </summary>
     [IsoId("_HtvVFk95EeePXdaAO32Uew")]
     [DisplayName("Country")]
     [IsoXmlTag("Ctry")]
-    public ISO3NumericCountryCode? Country { get; init; } 
-    
+    public ISO3NumericCountryCode? Country { get; init; }
+
     /// <summary>
     /// Short name of the destination.
     /// </summary>
@@ -53,10 +51,6 @@ public partial record Destination1
     [DisplayName("Short Name")]
     [IsoXmlTag("ShrtNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ShortName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ShortName { get; init; }
 }

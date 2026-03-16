@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xXJXkR3ZEeKKrOIoqWglDw")]
 [DisplayName("Management Plan Content")]
-public partial record ManagementPlanContent2
+public record ManagementPlanContent2
 {
-    #nullable enable
-    
     /// <summary>
     /// Terminal management action to be performed by the point of interaction (POI).
     /// </summary>
@@ -26,8 +24,4 @@ public partial record ManagementPlanContent2
     [IsoXmlTag("Actn")]
     public ValueList<TMSAction2> Action { get; init; } = [];
     // ID for the above is _xjWnkR3ZEeKKrOIoqWglDw
-    
-    
-    #nullable disable
-    
 }

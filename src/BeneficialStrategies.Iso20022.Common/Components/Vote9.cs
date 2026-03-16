@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CijmgV69EeSjaerr_EM7AQ")]
 [DisplayName("Vote")]
-public partial record Vote9
+public record Vote9
 {
-    #nullable enable
-    
     /// <summary>
     /// Numbering of the resolution as specified by the issuer or its agent.
     /// </summary>
@@ -25,18 +23,14 @@ public partial record Vote9
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text IssuerLabel { get; init; }
+
     /// <summary>
     /// Specifies the different instructions that can be used to vote.
     /// </summary>
     [IsoId("_C_kSo169EeSjaerr_EM7AQ")]
     [DisplayName("Vote Option")]
     [IsoXmlTag("VoteOptn")]
-    public required VoteInstruction3Code VoteOption { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required VoteInstruction3Code VoteOption { get; init; }
 }

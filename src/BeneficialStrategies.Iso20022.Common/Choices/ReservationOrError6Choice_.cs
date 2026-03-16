@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReservationOrError6Choice.BusinessReport))]
     [KnownType(typeof(ReservationOrError6Choice.OperationalError))]
-    [JsonDerivedType(typeof(ReservationOrError6Choice.BusinessReport),nameof(ReservationOrError6Choice.BusinessReport))]
-    [JsonDerivedType(typeof(ReservationOrError6Choice.OperationalError),nameof(ReservationOrError6Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(ReservationOrError6Choice.BusinessReport),
+        nameof(ReservationOrError6Choice.BusinessReport)
+    )]
+    [JsonDerivedType(
+        typeof(ReservationOrError6Choice.OperationalError),
+        nameof(ReservationOrError6Choice.OperationalError)
+    )]
     [IsoId("_TanVMZliEeeE1Ya-LgRsuQ")]
     [DisplayName("Reservation Or Error 6 Choice")]
-    public abstract partial record ReservationOrError6Choice_
-    {
-    }
+    public abstract record ReservationOrError6Choice_ { }
 }

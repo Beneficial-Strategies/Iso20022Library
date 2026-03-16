@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PendingSettlementStatusChoice.Reason))]
     [KnownType(typeof(PendingSettlementStatusChoice.DataSourceScheme))]
     [KnownType(typeof(PendingSettlementStatusChoice.NoReason))]
-    [JsonDerivedType(typeof(PendingSettlementStatusChoice.Reason),nameof(PendingSettlementStatusChoice.Reason))]
-    [JsonDerivedType(typeof(PendingSettlementStatusChoice.DataSourceScheme),nameof(PendingSettlementStatusChoice.DataSourceScheme))]
-    [JsonDerivedType(typeof(PendingSettlementStatusChoice.NoReason),nameof(PendingSettlementStatusChoice.NoReason))]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatusChoice.Reason),
+        nameof(PendingSettlementStatusChoice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatusChoice.DataSourceScheme),
+        nameof(PendingSettlementStatusChoice.DataSourceScheme)
+    )]
+    [JsonDerivedType(
+        typeof(PendingSettlementStatusChoice.NoReason),
+        nameof(PendingSettlementStatusChoice.NoReason)
+    )]
     [IsoId("_U1POpdp-Ed-ak6NoX_4Aeg_-1501368338")]
     [DisplayName("Pending Settlement Status Choice")]
-    public abstract partial record PendingSettlementStatusChoice_
-    {
-    }
+    public abstract record PendingSettlementStatusChoice_ { }
 }

@@ -23,7 +23,7 @@ public enum PartyType23Code
     [IsoId("_TverwVBBEeedyPuM0kK2EQ")]
     [Description(@"Other card payment entity type defined at national level")]
     OtherNational = PartyTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other card payment entity type defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum PartyType23Code
     [IsoId("_UI7GglBBEeedyPuM0kK2EQ")]
     [Description(@"Other card payment entity type defined at private level")]
     OtherPrivate = PartyTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Agent in charge of clearing payment or related transactions.
     /// Encoded/decoded by serializers as &quot;CLRA&quot;.
@@ -41,5 +41,4 @@ public enum PartyType23Code
     [IsoId("_VLk2UlBBEeedyPuM0kK2EQ")]
     [Description(@"Agent in charge of clearing payment or related transactions.")]
     ClearingAgent = PartyTypeCode.ClearingAgent, // same ordinal as derivation source for type conversions
-    
 }

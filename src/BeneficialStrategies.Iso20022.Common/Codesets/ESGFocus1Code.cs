@@ -23,7 +23,7 @@ public enum ESGFocus1Code
     [IsoId("_RHqrsdA7EeuSBa1PsnseFg")]
     [Description(@"Main focus will be environmental.")]
     Environmental = ESGFocusCode.Environmental, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Main focus will be governance.
     /// Encoded/decoded by serializers as &quot;GOVR&quot;.
@@ -32,7 +32,7 @@ public enum ESGFocus1Code
     [IsoId("_RN7EsdA7EeuSBa1PsnseFg")]
     [Description(@"Main focus will be governance.")]
     Governance = ESGFocusCode.Governance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Main focus will be social.
     /// Encoded/decoded by serializers as &quot;SOCL&quot;.
@@ -41,5 +41,4 @@ public enum ESGFocus1Code
     [IsoId("_RW2-QdA7EeuSBa1PsnseFg")]
     [Description(@"Main focus will be social.")]
     Social = ESGFocusCode.Social, // same ordinal as derivation source for type conversions
-    
 }

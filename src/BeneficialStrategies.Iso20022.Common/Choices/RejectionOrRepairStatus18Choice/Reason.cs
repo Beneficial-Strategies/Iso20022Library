@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus18Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus18Choice
     /// </summary>
     [IsoId("_4Yi_Uf7rEeCvPoRGOxRobQ")]
     [DisplayName("Reason")]
-    public partial record Reason : RejectionOrRepairStatus18Choice_
+    public record Reason : RejectionOrRepairStatus18Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why the instruction/request has a rejected or repair status.
         /// </summary>
         [IsoId("_UUTEwdp-Ed-ak6NoX_4Aeg_87526689")]
         [DisplayName("Code")]
         [IsoXmlTag("Cd")]
-        public required RejectionAndRepairReason2Choice_ Code { get; init; } 
-        
+        public required RejectionAndRepairReason2Choice_ Code { get; init; }
+
         /// <summary>
         /// Provides additional reason information that cannot be provided in a structured field.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionOrRepairStatus18Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

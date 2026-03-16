@@ -23,7 +23,7 @@ public enum AdjustmentDirectionCode
     [IsoId("_bnKOZNp-Ed-ak6NoX_4Aeg_-644239632")]
     [Description(@"Adjustment amount must be added to the total amount.")]
     Added,
-    
+
     /// <summary>
     /// Adjustment amount must be substracted from the total amount.
     /// Encoded/decoded by serializers as &quot;SUBS&quot;.
@@ -32,5 +32,4 @@ public enum AdjustmentDirectionCode
     [IsoId("_bnKOZdp-Ed-ak6NoX_4Aeg_-614687103")]
     [Description(@"Adjustment amount must be substracted from the total amount.")]
     Substracted,
-    
 }

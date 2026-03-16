@@ -12,7 +12,12 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_ZKjCBtp-Ed-ak6NoX_4Aeg_27077398")]
 [Description(@"Specifies the pre-agreed level of service between the parties.")]
-[Derivations(typeof(ServiceLevel1Code),typeof(ServiceLevel2Code),typeof(ServiceLevel4Code),typeof(ServiceLevel3Code))]
+[Derivations(
+    typeof(ServiceLevel1Code),
+    typeof(ServiceLevel2Code),
+    typeof(ServiceLevel4Code),
+    typeof(ServiceLevel3Code)
+)]
 public enum ServiceLevelCode
 {
     /// <summary>
@@ -23,7 +28,7 @@ public enum ServiceLevelCode
     [IsoId("_ZKjCB9p-Ed-ak6NoX_4Aeg_269040383")]
     [Description(@"Payment must be executed with same day value to the creditor.")]
     SameDayValue,
-    
+
     /// <summary>
     /// Payment must be executed following the Single Euro Payments Area scheme.
     /// Encoded/decoded by serializers as &quot;SEPA&quot;.
@@ -32,7 +37,7 @@ public enum ServiceLevelCode
     [IsoId("_ZKjCCNp-Ed-ak6NoX_4Aeg_354928380")]
     [Description(@"Payment must be executed following the Single Euro Payments Area scheme.")]
     SingleEuroPaymentsArea,
-    
+
     /// <summary>
     /// Transaction must be processed according to the EBA|Priority Service.
     /// Encoded/decoded by serializers as &quot;PRPT&quot;.
@@ -41,5 +46,4 @@ public enum ServiceLevelCode
     [IsoId("_ZKsL8Np-Ed-ak6NoX_4Aeg_1356003774")]
     [Description(@"Transaction must be processed according to the EBA|Priority Service.")]
     EBAPriorityService,
-    
 }

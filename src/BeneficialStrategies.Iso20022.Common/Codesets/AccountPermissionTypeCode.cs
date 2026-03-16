@@ -23,7 +23,7 @@ public enum AccountPermissionTypeCode
     [IsoId("_lCwnoJiuEeO4o528ngEXuw")]
     [Description(@"No right to use the account.")]
     NoRight,
-    
+
     /// <summary>
     /// Right to use the account alone.
     /// Encoded/decoded by serializers as &quot;RIAL&quot;.
@@ -32,7 +32,7 @@ public enum AccountPermissionTypeCode
     [IsoId("_smNK8JiuEeO4o528ngEXuw")]
     [Description(@"Right to use the account alone.")]
     RightToUseAlone,
-    
+
     /// <summary>
     /// Right to use the account together with another person.
     /// Encoded/decoded by serializers as &quot;RIWI&quot;.
@@ -41,5 +41,4 @@ public enum AccountPermissionTypeCode
     [IsoId("_0GHSEJiuEeO4o528ngEXuw")]
     [Description(@"Right to use the account together with another person.")]
     RightToUseWithOther,
-    
 }

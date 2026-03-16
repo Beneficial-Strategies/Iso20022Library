@@ -23,7 +23,7 @@ public enum MessageClassCode
     [IsoId("_5ZRNoBtAEeqrvK3udMUsNQ")]
     [Description(@"Addendum class of messages.")]
     Addendum,
-    
+
     /// <summary>
     /// Amendment class of messages.
     /// Encoded/decoded by serializers as &quot;AMDT&quot;.
@@ -32,7 +32,7 @@ public enum MessageClassCode
     [IsoId("_EOQaMBtBEeqrvK3udMUsNQ")]
     [Description(@"Amendment class of messages.")]
     Amendment,
-    
+
     /// <summary>
     /// Authorisation class of messages.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -41,7 +41,7 @@ public enum MessageClassCode
     [IsoId("_OBMT4BtBEeqrvK3udMUsNQ")]
     [Description(@"Authorisation class of messages.")]
     Authorisation,
-    
+
     /// <summary>
     /// Card management class of messages.
     /// Encoded/decoded by serializers as &quot;CMGT&quot;.
@@ -50,7 +50,7 @@ public enum MessageClassCode
     [IsoId("_d8JUsBtBEeqrvK3udMUsNQ")]
     [Description(@"Card management class of messages.")]
     CardManagement,
-    
+
     /// <summary>
     /// Charge back class of messages.
     /// Encoded/decoded by serializers as &quot;CBCK&quot;.
@@ -59,7 +59,7 @@ public enum MessageClassCode
     [IsoId("_okyuYBtBEeqrvK3udMUsNQ")]
     [Description(@"Charge back class of messages.")]
     ChargeBack,
-    
+
     /// <summary>
     /// Fee collection class of messages.
     /// Encoded/decoded by serializers as &quot;FEEC&quot;.
@@ -68,7 +68,7 @@ public enum MessageClassCode
     [IsoId("_vc3ZcBtBEeqrvK3udMUsNQ")]
     [Description(@"Fee collection class of messages.")]
     FeeCollection,
-    
+
     /// <summary>
     /// Financial class of messages.
     /// Encoded/decoded by serializers as &quot;FINL&quot;.
@@ -77,7 +77,7 @@ public enum MessageClassCode
     [IsoId("_3EZLgBtBEeqrvK3udMUsNQ")]
     [Description(@"Financial class of messages.")]
     Financial,
-    
+
     /// <summary>
     /// Inquiry class of messages.
     /// Encoded/decoded by serializers as &quot;INQY&quot;.
@@ -86,7 +86,7 @@ public enum MessageClassCode
     [IsoId("_8m6_8BtBEeqrvK3udMUsNQ")]
     [Description(@"Inquiry class of messages.")]
     Inquiry,
-    
+
     /// <summary>
     /// Verification class of messages.
     /// Encoded/decoded by serializers as &quot;VERI&quot;.
@@ -95,5 +95,4 @@ public enum MessageClassCode
     [IsoId("_BKOMABtCEeqrvK3udMUsNQ")]
     [Description(@"Verification class of messages.")]
     Verification,
-    
 }

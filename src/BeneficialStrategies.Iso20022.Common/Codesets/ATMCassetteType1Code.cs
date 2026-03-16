@@ -23,7 +23,7 @@ public enum ATMCassetteType1Code
     [IsoId("_783pwYqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for deposits.")]
     In = ATMCassetteTypeCode.In, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cassette for dispense.
     /// Encoded/decoded by serializers as &quot;DISP&quot;.
@@ -32,7 +32,7 @@ public enum ATMCassetteType1Code
     [IsoId("_8CFg8YqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for dispense.")]
     Out = ATMCassetteTypeCode.Out, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cassette for recycling.
     /// Encoded/decoded by serializers as &quot;RCYC&quot;.
@@ -41,7 +41,7 @@ public enum ATMCassetteType1Code
     [IsoId("_8HvdAYqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for recycling.")]
     Recycling = ATMCassetteTypeCode.Recycling, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cassette for reject.
     /// Encoded/decoded by serializers as &quot;RJCT&quot;.
@@ -50,7 +50,7 @@ public enum ATMCassetteType1Code
     [IsoId("_8NQ2MYqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for reject.")]
     Reject = ATMCassetteTypeCode.Reject, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cassette for replenishment.
     /// Encoded/decoded by serializers as &quot;RPLT&quot;.
@@ -59,7 +59,7 @@ public enum ATMCassetteType1Code
     [IsoId("_8Sn3UYqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for replenishment.")]
     Replenishment = ATMCassetteTypeCode.Replenishment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cassette for retract.
     /// Encoded/decoded by serializers as &quot;RTRC&quot;.
@@ -68,5 +68,4 @@ public enum ATMCassetteType1Code
     [IsoId("_8X_fgYqfEeS4a4abTJTSSw")]
     [Description(@"Cassette for retract.")]
     Retract = ATMCassetteTypeCode.Retract, // same ordinal as derivation source for type conversions
-    
 }

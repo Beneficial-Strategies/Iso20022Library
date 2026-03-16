@@ -1,29 +1,23 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.IndustrySector3Choice
 {
     /// <summary>
     /// Regulatory Taxonomy Sector.
     /// </summary>
     [DisplayName("Regulatory Taxonomy Sector")]
-    public partial record RegulatoryTaxonomySector : IndustrySector3Choice_
+    public record RegulatoryTaxonomySector : IndustrySector3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("RgltryTxnmySctr")]
-        public required ExternalIndustrySectorClassification1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ExternalIndustrySectorClassification1Code Value { get; init; }
     }
 }

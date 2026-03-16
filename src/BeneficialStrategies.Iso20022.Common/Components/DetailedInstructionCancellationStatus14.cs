@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WrUtJ8T3Eem9aZlimxVUIw")]
 [DisplayName("Detailed Instruction Cancellation Status")]
-public partial record DetailedInstructionCancellationStatus14
+public record DetailedInstructionCancellationStatus14
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the specific individual instruction cancellation request from the original meeting instruction cancellation request message identified in InstructionType/ InstructionCancellationIdentification, for which the status is provided.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record DetailedInstructionCancellationStatus14
     [DisplayName("Single Instruction Cancellation Identification")]
     [IsoXmlTag("SnglInstrCxlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text SingleInstructionCancellationIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text SingleInstructionCancellationIdentification { get; init; }
+
     /// <summary>
     /// Identification of the securities account.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record DetailedInstructionCancellationStatus14
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountIdentification { get; init; }
+
     /// <summary>
     /// Identification of the subaccount within the safekeeping account.
     /// </summary>
@@ -45,18 +43,14 @@ public partial record DetailedInstructionCancellationStatus14
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SubAccountIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SubAccountIdentification { get; init; }
+
     /// <summary>
     /// Status of an individual meeting instruction cancellation request.
     /// </summary>
     [IsoId("_Wrd3EcT3Eem9aZlimxVUIw")]
     [DisplayName("Instruction Cancellation Status")]
     [IsoXmlTag("InstrCxlSts")]
-    public required CancellationStatus26Choice_ InstructionCancellationStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required CancellationStatus26Choice_ InstructionCancellationStatus { get; init; }
 }

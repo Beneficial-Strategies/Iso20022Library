@@ -23,7 +23,7 @@ public enum OptionRightCode
     [IsoId("__vYmktojEeC60axPepSq7g_1129606095")]
     [Description(@"Exercise option right.")]
     Exercise,
-    
+
     /// <summary>
     /// Option right assignment.
     /// Encoded/decoded by serializers as &quot;ASGN&quot;.
@@ -32,7 +32,7 @@ public enum OptionRightCode
     [IsoId("__vYmk9ojEeC60axPepSq7g_1685806667")]
     [Description(@"Option right assignment.")]
     Assignment,
-    
+
     /// <summary>
     /// The option right is renounced.
     /// Encoded/decoded by serializers as &quot;RENO&quot;.
@@ -41,7 +41,7 @@ public enum OptionRightCode
     [IsoId("__vYmlNojEeC60axPepSq7g_-1347774066")]
     [Description(@"The option right is renounced.")]
     Renouncement,
-    
+
     /// <summary>
     /// Option right expires.
     /// Encoded/decoded by serializers as &quot;EXPI&quot;.
@@ -50,5 +50,4 @@ public enum OptionRightCode
     [IsoId("__vYmldojEeC60axPepSq7g_764314845")]
     [Description(@"Option right expires.")]
     Expiration,
-    
 }

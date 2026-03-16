@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,37 +14,35 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mENFsZI9Ee6RsYhlPIxpVw")]
 [DisplayName("Acceptor Configuration Data Set5")]
-public partial record AcceptorConfigurationDataSet5
+public record AcceptorConfigurationDataSet5
 {
-    #nullable enable
-
     /// <summary>
     /// Configuration Scope.
     /// </summary>
     [DisplayName("Configuration Scope")]
     [IsoXmlTag("CfgtnScp")]
-    public PartyType15Code? ConfigurationScope { get; init; } 
+    public PartyType15Code? ConfigurationScope { get; init; }
 
     /// <summary>
     /// Content.
     /// </summary>
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
-    public required AcceptorConfigurationContent13 Content { get; init; } 
+    public required AcceptorConfigurationContent13 Content { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required DataSetIdentification10 Identification { get; init; } 
+    public required DataSetIdentification10 Identification { get; init; }
 
     /// <summary>
     /// Last Sequence.
     /// </summary>
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
-    public IsoTrueFalseIndicator? LastSequence { get; init; } 
+    public IsoTrueFalseIndicator? LastSequence { get; init; }
 
     /// <summary>
     /// POI Identification.
@@ -58,9 +56,5 @@ public partial record AcceptorConfigurationDataSet5
     /// </summary>
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
-    public IsoMax9NumericText? SequenceCounter { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoMax9NumericText? SequenceCounter { get; init; }
 }

@@ -23,7 +23,7 @@ public enum AssetPriceType1Code
     [IsoId("_Uio3oRtFEeWhp-Wous5jzA")]
     [Description(@"Argus / Mc Closkey price.")]
     ArgusMcCloskey = AssetPriceTypeCode.ArgusMcCloskey, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Baltic price.
     /// Encoded/decoded by serializers as &quot;BLTC&quot;.
@@ -32,7 +32,7 @@ public enum AssetPriceType1Code
     [IsoId("_UnPq0RtFEeWhp-Wous5jzA")]
     [Description(@"Baltic price.")]
     Baltic = AssetPriceTypeCode.Baltic, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange price.
     /// Encoded/decoded by serializers as &quot;EXOF&quot;.
@@ -41,7 +41,7 @@ public enum AssetPriceType1Code
     [IsoId("_UsAPARtFEeWhp-Wous5jzA")]
     [Description(@"Exchange price.")]
     Exchange = AssetPriceTypeCode.Exchange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Global coal price.
     /// Encoded/decoded by serializers as &quot;GBCL&quot;.
@@ -50,7 +50,7 @@ public enum AssetPriceType1Code
     [IsoId("_UwnpQRtFEeWhp-Wous5jzA")]
     [Description(@"Global coal price.")]
     GlobalCoal = AssetPriceTypeCode.GlobalCoal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// IHS Mc Closkey price.
     /// Encoded/decoded by serializers as &quot;IHSM&quot;.
@@ -59,7 +59,7 @@ public enum AssetPriceType1Code
     [IsoId("_U1YNcRtFEeWhp-Wous5jzA")]
     [Description(@"IHS Mc Closkey price.")]
     IHSMcCloskey = AssetPriceTypeCode.IHSMcCloskey, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other price.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,7 +68,7 @@ public enum AssetPriceType1Code
     [IsoId("_U9tqERtFEeWhp-Wous5jzA")]
     [Description(@"Other price.")]
     Other = AssetPriceTypeCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Platts price.
     /// Encoded/decoded by serializers as &quot;PLAT&quot;.
@@ -77,5 +77,4 @@ public enum AssetPriceType1Code
     [IsoId("_VFS4wRtFEeWhp-Wous5jzA")]
     [Description(@"Platts price.")]
     Platts = AssetPriceTypeCode.Platts, // same ordinal as derivation source for type conversions
-    
 }

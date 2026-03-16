@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TyNBsNLiEeSdq5yU2aaSNw")]
 [DisplayName("Transaction Certificate Contract")]
-public partial record TransactionCertificateContract1
+public record TransactionCertificateContract1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference of the contract provided as through the date and identification of the contract or through the registered contract identification.
     /// </summary>
     [IsoId("_eIX1MNLrEeSDLevdaFPXHw")]
     [DisplayName("Contract Reference")]
     [IsoXmlTag("CtrctRef")]
-    public ContractRegistrationReference1Choice_? ContractReference { get; init; } 
-    
+    public ContractRegistrationReference1Choice_? ContractReference { get; init; }
+
     /// <summary>
     /// Provides the amount of the transaction in the currency of the registered contract.
     /// </summary>
     [IsoId("_kbjDcNLrEeSDLevdaFPXHw")]
     [DisplayName("Transaction Amount In Contract Currency")]
     [IsoXmlTag("TxAmtInCtrctCcy")]
-    public ActiveCurrencyAndAmount? TransactionAmountInContractCurrency { get; init; } 
-    
+    public ActiveCurrencyAndAmount? TransactionAmountInContractCurrency { get; init; }
+
     /// <summary>
     /// Expected shipment date as per registered contract.
     /// </summary>
@@ -41,8 +39,8 @@ public partial record TransactionCertificateContract1
     [DisplayName("Expected Shipment Date")]
     [IsoXmlTag("XpctdShipmntDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedShipmentDate { get; init; } 
-    
+    public IsoISODate? ExpectedShipmentDate { get; init; }
+
     /// <summary>
     /// Expected advance payment (or prepayment) return date in case counterparty will not deliver the goods/services.
     /// </summary>
@@ -50,8 +48,8 @@ public partial record TransactionCertificateContract1
     [DisplayName("Expected Advance Payment Return Date")]
     [IsoXmlTag("XpctdAdvncPmtRtrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ExpectedAdvancePaymentReturnDate { get; init; } 
-    
+    public IsoISODate? ExpectedAdvancePaymentReturnDate { get; init; }
+
     /// <summary>
     /// Further details on the transaction certificate contract.
     /// </summary>
@@ -59,10 +57,6 @@ public partial record TransactionCertificateContract1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max1025Text)]
-    [StringLength(maximumLength: 1025 ,MinimumLength = 1)]
-    public IsoMax1025Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 1025, MinimumLength = 1)]
+    public IsoMax1025Text? AdditionalInformation { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError3Choice
 {
     /// <summary>
@@ -13,28 +13,22 @@ namespace BeneficialStrategies.Iso20022.Choices.PartyOrOperationalError3Choice
     /// </summary>
     [IsoId("_7fpegVhLEeih3fUfzR38Ig")]
     [DisplayName("Party Report")]
-    public partial record PartyReport : PartyOrOperationalError3Choice_
+    public record PartyReport : PartyOrOperationalError3Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique identification to unambiguously identify the party within the system.
         /// </summary>
         [IsoId("_7qW5sVhLEeih3fUfzR38Ig")]
         [DisplayName("Party Identification")]
         [IsoXmlTag("PtyId")]
-        public required SystemPartyIdentification8 PartyIdentification { get; init; } 
-        
+        public required SystemPartyIdentification8 PartyIdentification { get; init; }
+
         /// <summary>
         /// Identifies the returned party reference data or error information.
         /// </summary>
         [IsoId("_7qW5s1hLEeih3fUfzR38Ig")]
         [DisplayName("Party Or Error")]
         [IsoXmlTag("PtyOrErr")]
-        public required PartyOrBusinessError3Choice_ PartyOrError { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PartyOrBusinessError3Choice_ PartyOrError { get; init; }
     }
 }

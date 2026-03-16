@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ShipmentCondition1Choice.Code))]
     [KnownType(typeof(ShipmentCondition1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ShipmentCondition1Choice.Code),nameof(ShipmentCondition1Choice.Code))]
-    [JsonDerivedType(typeof(ShipmentCondition1Choice.Proprietary),nameof(ShipmentCondition1Choice.Proprietary))]
+    [JsonDerivedType(typeof(ShipmentCondition1Choice.Code), nameof(ShipmentCondition1Choice.Code))]
+    [JsonDerivedType(
+        typeof(ShipmentCondition1Choice.Proprietary),
+        nameof(ShipmentCondition1Choice.Proprietary)
+    )]
     [IsoId("_TISQMLGdEeuSTr8k0UEM8A")]
     [DisplayName("Shipment Condition 1 Choice")]
-    public abstract partial record ShipmentCondition1Choice_
-    {
-    }
+    public abstract record ShipmentCondition1Choice_ { }
 }

@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SubBalanceQuantity6Choice.Quantity))]
     [KnownType(typeof(SubBalanceQuantity6Choice.Proprietary))]
     [KnownType(typeof(SubBalanceQuantity6Choice.QuantityAndAvailability))]
-    [JsonDerivedType(typeof(SubBalanceQuantity6Choice.Quantity),nameof(SubBalanceQuantity6Choice.Quantity))]
-    [JsonDerivedType(typeof(SubBalanceQuantity6Choice.Proprietary),nameof(SubBalanceQuantity6Choice.Proprietary))]
-    [JsonDerivedType(typeof(SubBalanceQuantity6Choice.QuantityAndAvailability),nameof(SubBalanceQuantity6Choice.QuantityAndAvailability))]
+    [JsonDerivedType(
+        typeof(SubBalanceQuantity6Choice.Quantity),
+        nameof(SubBalanceQuantity6Choice.Quantity)
+    )]
+    [JsonDerivedType(
+        typeof(SubBalanceQuantity6Choice.Proprietary),
+        nameof(SubBalanceQuantity6Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(SubBalanceQuantity6Choice.QuantityAndAvailability),
+        nameof(SubBalanceQuantity6Choice.QuantityAndAvailability)
+    )]
     [IsoId("_MLLzLznGEeWV5sr121Fc8A")]
     [DisplayName("Sub Balance Quantity 6 Choice")]
-    public abstract partial record SubBalanceQuantity6Choice_
-    {
-    }
+    public abstract record SubBalanceQuantity6Choice_ { }
 }

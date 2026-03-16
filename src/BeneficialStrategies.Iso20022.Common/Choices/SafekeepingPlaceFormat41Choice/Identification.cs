@@ -1,29 +1,23 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormat41Choice
 {
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
-    public partial record Identification : SafekeepingPlaceFormat41Choice_
+    public record Identification : SafekeepingPlaceFormat41Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// </summary>
         [IsoXmlTag("Id")]
-        public required SafekeepingPlaceTypeAndText8 Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required SafekeepingPlaceTypeAndText8 Value { get; init; }
     }
 }

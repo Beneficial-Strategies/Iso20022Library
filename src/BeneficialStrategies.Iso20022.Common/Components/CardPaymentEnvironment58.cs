@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_VZfuAapzEeanIZ10Ka8PnA")]
 [DisplayName("Card Payment Environment")]
-public partial record CardPaymentEnvironment58
+public record CardPaymentEnvironment58
 {
-    #nullable enable
-    
     /// <summary>
     /// Acquirer involved in the card payment transactions.
     /// </summary>
     [IsoId("_Vj5AIapzEeanIZ10Ka8PnA")]
     [DisplayName("Acquirer")]
     [IsoXmlTag("Acqrr")]
-    public Acquirer5? Acquirer { get; init; } 
-    
+    public Acquirer5? Acquirer { get; init; }
+
     /// <summary>
     /// Merchant performing the card payment transactions.
     /// Usage: In some cases, merchant and acceptor may be regarded as the same entity.
@@ -33,17 +31,13 @@ public partial record CardPaymentEnvironment58
     [IsoId("_Vj5AI6pzEeanIZ10Ka8PnA")]
     [DisplayName("Merchant")]
     [IsoXmlTag("Mrchnt")]
-    public Organisation9? Merchant { get; init; } 
-    
+    public Organisation9? Merchant { get; init; }
+
     /// <summary>
     /// Point of interaction (POI) performing the transaction.
     /// </summary>
     [IsoId("_Vj5AJapzEeanIZ10Ka8PnA")]
     [DisplayName("POI")]
     [IsoXmlTag("POI")]
-    public PointOfInteraction7? POI { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PointOfInteraction7? POI { get; init; }
 }

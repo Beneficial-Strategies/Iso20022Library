@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_jtniYIqdEeS4a4abTJTSSw")]
 [Description(@"Type or category of media inside an ATM cassette.")]
-[Derivations(typeof(ATMMediaType1Code),typeof(ATMMediaType3Code),typeof(ATMMediaType2Code))]
+[Derivations(typeof(ATMMediaType1Code), typeof(ATMMediaType3Code), typeof(ATMMediaType2Code))]
 public enum ATMMediaTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ATMMediaTypeCode
     [IsoId("_n4p_cIqdEeS4a4abTJTSSw")]
     [Description(@"Card media.")]
     Cards,
-    
+
     /// <summary>
     /// Coin media.
     /// Encoded/decoded by serializers as &quot;COIN&quot;.
@@ -32,7 +32,7 @@ public enum ATMMediaTypeCode
     [IsoId("_sCQ5IIqdEeS4a4abTJTSSw")]
     [Description(@"Coin media.")]
     Coins,
-    
+
     /// <summary>
     /// Non fixed value of the media, for instance gold, silver.
     /// Encoded/decoded by serializers as &quot;CMDT&quot;.
@@ -41,7 +41,7 @@ public enum ATMMediaTypeCode
     [IsoId("_vGNyUIqdEeS4a4abTJTSSw")]
     [Description(@"Non fixed value of the media, for instance gold, silver.")]
     Commodity,
-    
+
     /// <summary>
     /// Coupon media.
     /// Encoded/decoded by serializers as &quot;CPNS&quot;.
@@ -50,7 +50,7 @@ public enum ATMMediaTypeCode
     [IsoId("_x3PvgIqdEeS4a4abTJTSSw")]
     [Description(@"Coupon media.")]
     Coupons,
-    
+
     /// <summary>
     /// Bank note media.
     /// Encoded/decoded by serializers as &quot;NOTE&quot;.
@@ -59,7 +59,7 @@ public enum ATMMediaTypeCode
     [IsoId("_1EcEQIqdEeS4a4abTJTSSw")]
     [Description(@"Bank note media.")]
     Notes,
-    
+
     /// <summary>
     /// Stamp media.
     /// Encoded/decoded by serializers as &quot;STMP&quot;.
@@ -68,7 +68,7 @@ public enum ATMMediaTypeCode
     [IsoId("_3K2XIIqdEeS4a4abTJTSSw")]
     [Description(@"Stamp media.")]
     Stamps,
-    
+
     /// <summary>
     /// Undetermined medias.
     /// Encoded/decoded by serializers as &quot;UDTM&quot;.
@@ -77,7 +77,7 @@ public enum ATMMediaTypeCode
     [IsoId("_6X7XIIqdEeS4a4abTJTSSw")]
     [Description(@"Undetermined medias.")]
     Undetermined,
-    
+
     /// <summary>
     /// Check media.
     /// Encoded/decoded by serializers as &quot;CHCK&quot;.
@@ -86,7 +86,7 @@ public enum ATMMediaTypeCode
     [IsoId("_jCUjwK4CEeWL1uap3dNhCQ")]
     [Description(@"Check media.")]
     Check,
-    
+
     /// <summary>
     /// Detected counterfeit media.
     /// Encoded/decoded by serializers as &quot;CNTR&quot;.
@@ -95,7 +95,7 @@ public enum ATMMediaTypeCode
     [IsoId("_Ae4IYK4DEeWL1uap3dNhCQ")]
     [Description(@"Detected counterfeit media.")]
     Counterfeit,
-    
+
     /// <summary>
     /// Fit media.
     /// Encoded/decoded by serializers as &quot;FITN&quot;.
@@ -104,7 +104,7 @@ public enum ATMMediaTypeCode
     [IsoId("_C75kcK4DEeWL1uap3dNhCQ")]
     [Description(@"Fit media.")]
     Fit,
-    
+
     /// <summary>
     /// Fit or unfit media, if fitness cannot be determined.
     /// Encoded/decoded by serializers as &quot;FITU&quot;.
@@ -113,7 +113,7 @@ public enum ATMMediaTypeCode
     [IsoId("_Fva08K4DEeWL1uap3dNhCQ")]
     [Description(@"Fit or unfit media, if fitness cannot be determined.")]
     FitAndUnfit,
-    
+
     /// <summary>
     /// Suspect media.
     /// Encoded/decoded by serializers as &quot;SPCT&quot;.
@@ -122,7 +122,7 @@ public enum ATMMediaTypeCode
     [IsoId("_IwagwK4DEeWL1uap3dNhCQ")]
     [Description(@"Suspect media.")]
     Suspect,
-    
+
     /// <summary>
     /// Unfit media (unacceptable quality).
     /// Encoded/decoded by serializers as &quot;UNFT&quot;.
@@ -131,7 +131,7 @@ public enum ATMMediaTypeCode
     [IsoId("_LGBGMK4DEeWL1uap3dNhCQ")]
     [Description(@"Unfit media (unacceptable quality).")]
     Unfit,
-    
+
     /// <summary>
     /// Unrecognised media.
     /// Encoded/decoded by serializers as &quot;UNRG&quot;.
@@ -140,5 +140,4 @@ public enum ATMMediaTypeCode
     [IsoId("_PKQ-wK4DEeWL1uap3dNhCQ")]
     [Description(@"Unrecognised media.")]
     Unrecognised,
-    
 }

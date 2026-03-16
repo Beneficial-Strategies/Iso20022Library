@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QKKmqNp-Ed-ak6NoX_4Aeg_1690739648")]
 [DisplayName("Contact Information")]
-public partial record ContactInformation1
+public record ContactInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ContactInformation1
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Name { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a FAX number, as defined by telecom services.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record ContactInformation1
     [DisplayName("Fax Number")]
     [IsoXmlTag("FaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? FaxNumber { get; init; } 
-    
+    public IsoPhoneNumber? FaxNumber { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a phone number, as defined by telecom services.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record ContactInformation1
     [DisplayName("Telephone Number")]
     [IsoXmlTag("TelNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? TelephoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? TelephoneNumber { get; init; }
+
     /// <summary>
     /// Address for electronic mail (e-mail).
     /// </summary>
@@ -53,10 +51,6 @@ public partial record ContactInformation1
     [DisplayName("Email Address")]
     [IsoXmlTag("EmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? EmailAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? EmailAddress { get; init; }
 }

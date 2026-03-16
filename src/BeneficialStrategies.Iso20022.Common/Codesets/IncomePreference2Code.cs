@@ -23,7 +23,7 @@ public enum IncomePreference2Code
     [IsoId("_ril1cSFJEeWgV9SQSyaAog")]
     [Description(@"Distribution in cash.")]
     Cash = IncomePreferenceCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Distribution in securities.
     /// Encoded/decoded by serializers as &quot;SECU&quot;.
@@ -32,5 +32,4 @@ public enum IncomePreference2Code
     [IsoId("_ryQpISFJEeWgV9SQSyaAog")]
     [Description(@"Distribution in securities.")]
     Securities = IncomePreferenceCode.Securities, // same ordinal as derivation source for type conversions
-    
 }

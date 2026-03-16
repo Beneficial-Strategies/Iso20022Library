@@ -23,7 +23,7 @@ public enum DTCCQuantitySought1Code
     [IsoId("_1sjJFDL3EeKU9IrkkToqcw_2031372842")]
     [Description(@"Quantity Sought expressed as quantity.")]
     Quantity = DTCCQuantitySoughtCode.Quantity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Check Quantity Sought Comments for quantity sought (irregular expression).
     /// Encoded/decoded by serializers as &quot;CHCO&quot;.
@@ -32,7 +32,7 @@ public enum DTCCQuantitySought1Code
     [IsoId("_1sjJFTL3EeKU9IrkkToqcw_-1982735493")]
     [Description(@"Check Quantity Sought Comments for quantity sought (irregular expression).")]
     CheckComments = DTCCQuantitySoughtCode.CheckComments, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Quantity sought is expressed as percentage.
     /// Encoded/decoded by serializers as &quot;PRTG&quot;.
@@ -41,5 +41,4 @@ public enum DTCCQuantitySought1Code
     [IsoId("_1sjJFjL3EeKU9IrkkToqcw_-1528648224")]
     [Description(@"Quantity sought is expressed as percentage.")]
     Percentage = DTCCQuantitySoughtCode.Percentage, // same ordinal as derivation source for type conversions
-    
 }

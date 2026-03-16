@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DateFormat67Choice.Date))]
     [KnownType(typeof(DateFormat67Choice.DateCode))]
-    [JsonDerivedType(typeof(DateFormat67Choice.Date),nameof(DateFormat67Choice.Date))]
-    [JsonDerivedType(typeof(DateFormat67Choice.DateCode),nameof(DateFormat67Choice.DateCode))]
+    [JsonDerivedType(typeof(DateFormat67Choice.Date), nameof(DateFormat67Choice.Date))]
+    [JsonDerivedType(typeof(DateFormat67Choice.DateCode), nameof(DateFormat67Choice.DateCode))]
     [IsoId("_XMoEkaAXEe-6zfgb2Rwrlw")]
     [DisplayName("Date Format67Choice")]
-    public abstract partial record DateFormat67Choice_
-    {
-    }
+    public abstract record DateFormat67Choice_ { }
 }

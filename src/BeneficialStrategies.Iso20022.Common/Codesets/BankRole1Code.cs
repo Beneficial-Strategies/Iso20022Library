@@ -23,7 +23,7 @@ public enum BankRole1Code
     [IsoId("_ReWlMdmCEeKjKfTom1JlPQ")]
     [Description(@"Bank of the buyer.")]
     BuyersBank = BankRoleCode.BuyersBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Obligor bank.
     /// Encoded/decoded by serializers as &quot;OBLB&quot;.
@@ -32,7 +32,7 @@ public enum BankRole1Code
     [IsoId("_RnCnIdmCEeKjKfTom1JlPQ")]
     [Description(@"Obligor bank.")]
     ObligorBank = BankRoleCode.ObligorBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Recipient bank.
     /// Encoded/decoded by serializers as &quot;RECB&quot;.
@@ -41,7 +41,7 @@ public enum BankRole1Code
     [IsoId("_RvpwkdmCEeKjKfTom1JlPQ")]
     [Description(@"Recipient bank.")]
     RecipientBank = BankRoleCode.RecipientBank, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bank of the seller.
     /// Encoded/decoded by serializers as &quot;SELB&quot;.
@@ -50,5 +50,4 @@ public enum BankRole1Code
     [IsoId("_R4wCMdmCEeKjKfTom1JlPQ")]
     [Description(@"Bank of the seller.")]
     SellersBank = BankRoleCode.SellersBank, // same ordinal as derivation source for type conversions
-    
 }

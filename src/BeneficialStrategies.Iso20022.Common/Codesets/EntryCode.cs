@@ -23,7 +23,7 @@ public enum EntryCode
     [IsoId("_ahauUNp-Ed-ak6NoX_4Aeg_-1237295637")]
     [Description(@"Trial pay-in schedule.")]
     Trial,
-    
+
     /// <summary>
     /// Official pay-in schedule.
     /// Encoded/decoded by serializers as &quot;OFFI&quot;.
@@ -32,7 +32,7 @@ public enum EntryCode
     [IsoId("_ahauUdp-Ed-ak6NoX_4Aeg_-1227134519")]
     [Description(@"Official pay-in schedule.")]
     Official,
-    
+
     /// <summary>
     /// Pay-in schedule on request.
     /// Encoded/decoded by serializers as &quot;REQU&quot;.
@@ -41,5 +41,4 @@ public enum EntryCode
     [IsoId("_ahauUtp-Ed-ak6NoX_4Aeg_-276202344")]
     [Description(@"Pay-in schedule on request.")]
     Requested,
-    
 }

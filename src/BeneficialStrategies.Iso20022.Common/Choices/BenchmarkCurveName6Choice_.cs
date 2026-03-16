@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(BenchmarkCurveName6Choice.ISIN))]
     [KnownType(typeof(BenchmarkCurveName6Choice.Index))]
     [KnownType(typeof(BenchmarkCurveName6Choice.Name))]
-    [JsonDerivedType(typeof(BenchmarkCurveName6Choice.ISIN),nameof(BenchmarkCurveName6Choice.ISIN))]
-    [JsonDerivedType(typeof(BenchmarkCurveName6Choice.Index),nameof(BenchmarkCurveName6Choice.Index))]
-    [JsonDerivedType(typeof(BenchmarkCurveName6Choice.Name),nameof(BenchmarkCurveName6Choice.Name))]
+    [JsonDerivedType(
+        typeof(BenchmarkCurveName6Choice.ISIN),
+        nameof(BenchmarkCurveName6Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(BenchmarkCurveName6Choice.Index),
+        nameof(BenchmarkCurveName6Choice.Index)
+    )]
+    [JsonDerivedType(
+        typeof(BenchmarkCurveName6Choice.Name),
+        nameof(BenchmarkCurveName6Choice.Name)
+    )]
     [IsoId("_ZHdRcSc1EeaCIe3n1Gx9ug")]
     [DisplayName("Benchmark Curve Name 6 Choice")]
-    public abstract partial record BenchmarkCurveName6Choice_
-    {
-    }
+    public abstract record BenchmarkCurveName6Choice_ { }
 }

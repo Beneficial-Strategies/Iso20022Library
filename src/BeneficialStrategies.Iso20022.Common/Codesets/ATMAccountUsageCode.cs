@@ -40,5 +40,4 @@ public enum ATMAccountUsageCode
     [IsoId("_ATMAccountUsageCode_Source")]
     [Description(@"Source account.")]
     Source,
-
 }

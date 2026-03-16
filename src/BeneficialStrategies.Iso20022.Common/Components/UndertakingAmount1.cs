@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_94wDmHltEeG7BsjMvd1mEw_-848178472")]
 [DisplayName("Undertaking Amount")]
-public partial record UndertakingAmount1
+public record UndertakingAmount1
 {
-    #nullable enable
-    
     /// <summary>
     /// Amount and currency of the undertaking.
     /// </summary>
     [IsoId("_945NgHltEeG7BsjMvd1mEw_-1186189572")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; } 
-    
+    public required ActiveCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Percentage by which the amount claimed under the undertaking may be more than the undertaking amount.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record UndertakingAmount1
     [DisplayName("Plus Tolerance")]
     [IsoXmlTag("PlusTlrnce")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? PlusTolerance { get; init; } 
-    
+    public IsoPercentageRate? PlusTolerance { get; init; }
+
     /// <summary>
     /// Additional information concerning the undertaking amount.
     /// </summary>
@@ -45,8 +43,4 @@ public partial record UndertakingAmount1
     [MinLength(0)]
     [MaxLength(5)]
     public SimpleValueList<System.String> AdditionalInformation { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

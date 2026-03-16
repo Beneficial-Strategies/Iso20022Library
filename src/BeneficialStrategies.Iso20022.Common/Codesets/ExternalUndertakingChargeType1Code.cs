@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MhZBG7iEeKo25nLKvGr8w_-389480050")]
-[Description(@"Specifies the external charge type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external charge type code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalUndertakingChargeTypeCode))]
 public enum ExternalUndertakingChargeType1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uQ7a9fRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the issuance of an amendment.")]
     Amendment = ExternalUndertakingChargeTypeCode.Amendment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge related to the processing of a claim.
     /// Encoded/decoded by serializers as &quot;CLAM&quot;.
@@ -33,7 +35,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uQ7a-PRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the processing of a claim.")]
     Claim = ExternalUndertakingChargeTypeCode.Claim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commission charge.
     /// Encoded/decoded by serializers as &quot;COMM&quot;.
@@ -42,7 +44,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uQ7a-_RYEeuLhpyIdtJzwg")]
     [Description(@"Commission charge.")]
     Commission = ExternalUndertakingChargeTypeCode.Commission, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge for confirmation.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -51,7 +53,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uREk4vRYEeuLhpyIdtJzwg")]
     [Description(@"Charge for confirmation.")]
     Confirmation = ExternalUndertakingChargeTypeCode.Confirmation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Courier charge.
     /// Encoded/decoded by serializers as &quot;COUR&quot;.
@@ -60,7 +62,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uREk5fRYEeuLhpyIdtJzwg")]
     [Description(@"Courier charge.")]
     Courier = ExternalUndertakingChargeTypeCode.Courier, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge related to the issuance of an undertaking.
     /// Encoded/decoded by serializers as &quot;ISSU&quot;.
@@ -69,7 +71,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uROV4vRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the issuance of an undertaking.")]
     IssuanceCharge = ExternalUndertakingChargeTypeCode.IssuanceCharge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Miscellaneous charge.
     /// Encoded/decoded by serializers as &quot;MISC&quot;.
@@ -78,7 +80,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uROV5fRYEeuLhpyIdtJzwg")]
     [Description(@"Miscellaneous charge.")]
     Miscellaneous = ExternalUndertakingChargeTypeCode.Miscellaneous, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Charge related to the payment processing.
     /// Encoded/decoded by serializers as &quot;PAYM&quot;.
@@ -87,7 +89,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uROV6PRYEeuLhpyIdtJzwg")]
     [Description(@"Charge related to the payment processing.")]
     Payment = ExternalUndertakingChargeTypeCode.Payment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Postage charge.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -96,7 +98,7 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uROV6_RYEeuLhpyIdtJzwg")]
     [Description(@"Postage charge.")]
     Postage = ExternalUndertakingChargeTypeCode.Postage, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Telecommunication charge.
     /// Encoded/decoded by serializers as &quot;TELE&quot;.
@@ -105,5 +107,4 @@ public enum ExternalUndertakingChargeType1Code
     [IsoId("_uROV7vRYEeuLhpyIdtJzwg")]
     [Description(@"Telecommunication charge.")]
     Telecommunication = ExternalUndertakingChargeTypeCode.Telecommunication, // same ordinal as derivation source for type conversions
-    
 }

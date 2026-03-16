@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_P74IcRuyEeyhRdHRjakS2w")]
 [DisplayName("Pending Balance")]
-public partial record PendingBalance7
+public record PendingBalance7
 {
-    #nullable enable
-    
     /// <summary>
     /// Signed quantity of balance.
     /// </summary>
     [IsoId("_QQcqQRuyEeyhRdHRjakS2w")]
     [DisplayName("Balance")]
     [IsoXmlTag("Bal")]
-    public required SignedQuantityFormat10 Balance { get; init; } 
-    
+    public required SignedQuantityFormat10 Balance { get; init; }
+
     /// <summary>
     /// Overall process covering the trade and settlement transactions of financial instruments.
     /// </summary>
     [IsoId("_QQcqSRuyEeyhRdHRjakS2w")]
     [DisplayName("Pending Transactions")]
     [IsoXmlTag("PdgTxs")]
-    public SettlementTypeAndIdentification25? PendingTransactions { get; init; } 
-    
-    
-    #nullable disable
-    
+    public SettlementTypeAndIdentification25? PendingTransactions { get; init; }
 }

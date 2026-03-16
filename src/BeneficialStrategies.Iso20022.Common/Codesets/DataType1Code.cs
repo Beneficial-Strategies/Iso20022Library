@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_X5YEEIAwEeSUJZYcWGKkkw")]
-[Description(@"Type of data to indicate whether a trade is an option or resulted by an option exercise.")]
+[Description(
+    @"Type of data to indicate whether a trade is an option or resulted by an option exercise."
+)]
 [DerivedFrom(typeof(DataTypeCode))]
 public enum DataType1Code
 {
@@ -23,7 +25,7 @@ public enum DataType1Code
     [IsoId("_cftWAYAwEeSUJZYcWGKkkw")]
     [Description(@"Specified type of data is exercise data.")]
     ExerciseData = DataTypeCode.ExerciseData, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specified type of data is trading data.
     /// Encoded/decoded by serializers as &quot;TRDA&quot;.
@@ -32,5 +34,4 @@ public enum DataType1Code
     [IsoId("_clTnsYAwEeSUJZYcWGKkkw")]
     [Description(@"Specified type of data is trading data.")]
     TradingData = DataTypeCode.TradingData, // same ordinal as derivation source for type conversions
-    
 }

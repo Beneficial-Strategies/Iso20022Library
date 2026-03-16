@@ -23,7 +23,7 @@ public enum FundIntention1Code
     [IsoId("_YBiiASDYEeWCLu74WLgP4w")]
     [Description(@"Qualified.")]
     Qualified = FundIntentionCode.Qualified, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Not qualified.
     /// Encoded/decoded by serializers as &quot;NQUA&quot;.
@@ -32,5 +32,4 @@ public enum FundIntention1Code
     [IsoId("_uOC44TavEeWxoIK_IhudJg")]
     [Description(@"Not qualified.")]
     NotQualified = FundIntentionCode.NotQualified, // same ordinal as derivation source for type conversions
-    
 }

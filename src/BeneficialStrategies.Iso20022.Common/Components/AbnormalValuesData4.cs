@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_x5wPZ1yGEe24CqbZJK5XxA")]
 [DisplayName("Abnormal Values Data")]
-public partial record AbnormalValuesData4
+public record AbnormalValuesData4
 {
-    #nullable enable
-    
     /// <summary>
     /// Data specific to counterparties and related fields.
     /// </summary>
     [IsoId("_x6yxMVyGEe24CqbZJK5XxA")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
-    public required CounterpartyData92 CounterpartyIdentification { get; init; } 
-    
+    public required CounterpartyData92 CounterpartyIdentification { get; init; }
+
     /// <summary>
     /// Number of reported derivatives.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record AbnormalValuesData4
     [DisplayName("Number Of Derivatives Reported")]
     [IsoXmlTag("NbOfDerivsRptd")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDerivativesReported { get; init; } 
-    
+    public required IsoNumber NumberOfDerivativesReported { get; init; }
+
     /// <summary>
     /// Number of reported derivatives with outliers.
     /// </summary>
@@ -42,17 +40,13 @@ public partial record AbnormalValuesData4
     [DisplayName("Number Of Derivatives Reported With Outliers")]
     [IsoXmlTag("NbOfDerivsRptdWthOtlrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; } 
-    
+    public required IsoNumber NumberOfDerivativesReportedWithOutliers { get; init; }
+
     /// <summary>
     /// Details on abnormal values per transaction.
     /// </summary>
     [IsoId("_x6yxN1yGEe24CqbZJK5XxA")]
     [DisplayName("Transaction Details")]
     [IsoXmlTag("TxDtls")]
-    public AbnormalValuesTransactionData2? TransactionDetails { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AbnormalValuesTransactionData2? TransactionDetails { get; init; }
 }

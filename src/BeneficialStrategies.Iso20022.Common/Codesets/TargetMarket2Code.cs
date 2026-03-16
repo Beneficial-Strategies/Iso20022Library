@@ -23,7 +23,7 @@ public enum TargetMarket2Code
     [IsoId("_w63t0ddjEeibyvRfU9vJ7w")]
     [Description(@"Neutral or has no impact.")]
     Neutral = TargetMarketCode.Neutral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Yes, is applicable.
     /// Encoded/decoded by serializers as &quot;YSCO&quot;.
@@ -32,5 +32,4 @@ public enum TargetMarket2Code
     [IsoId("_xEinMddjEeibyvRfU9vJ7w")]
     [Description(@"Yes, is applicable.")]
     InScope = TargetMarketCode.InScope, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,42 +14,40 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g9Y4w5PeEey0rJ3Gl6WZVA")]
 [DisplayName("Option Or Swaption")]
-public partial record OptionOrSwaption10
+public record OptionOrSwaption10
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of the Option whether it is a call option (right to purchase a specific underlying asset) or a put option (right to sell a specific underlying asset).
     /// </summary>
     [IsoId("_g-V6w5PeEey0rJ3Gl6WZVA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public OptionType2Code? Type { get; init; } 
-    
+    public OptionType2Code? Type { get; init; }
+
     /// <summary>
     /// Specifies the type of the Option when an optional provision is embedded in the contract.
     /// </summary>
     [IsoId("_g-V6xZPeEey0rJ3Gl6WZVA")]
     [DisplayName("Embedded Type")]
     [IsoXmlTag("MbddTp")]
-    public EmbeddedType1Code? EmbeddedType { get; init; } 
-    
+    public EmbeddedType1Code? EmbeddedType { get; init; }
+
     /// <summary>
     /// Indication as to whether the option may be exercised only at a fixed date (European, and Asian style), a series of pre-specified dates (Bermudan) or at any time during the life of the contract (American style). This field does not have to be populated for ISIN instruments.
     /// </summary>
     [IsoId("_g-V6x5PeEey0rJ3Gl6WZVA")]
     [DisplayName("Exercise Style")]
     [IsoXmlTag("ExrcStyle")]
-    public OptionStyle6Code? ExerciseStyle { get; init; } 
-    
+    public OptionStyle6Code? ExerciseStyle { get; init; }
+
     /// <summary>
     /// Specifies the earliest unadjusted date during the exercise period on which an option can be exercised.
     /// </summary>
     [IsoId("_g-V6yZPeEey0rJ3Gl6WZVA")]
     [DisplayName("Exercise Date")]
     [IsoXmlTag("ExrcDt")]
-    public ExerciseDate1Choice_? ExerciseDate { get; init; } 
-    
+    public ExerciseDate1Choice_? ExerciseDate { get; init; }
+
     /// <summary>
     /// Specifies the predetermined price at which the owner of the option can buy or sell the underlying instrument.
     /// Usage: For foreign exchange options, specifies the exchange rate at which the option can be exercised as the rate of exchange from converting the unit currency into the quoted currency.
@@ -58,40 +56,40 @@ public partial record OptionOrSwaption10
     [IsoId("_g-V6y5PeEey0rJ3Gl6WZVA")]
     [DisplayName("Strike Price")]
     [IsoXmlTag("StrkPric")]
-    public SecuritiesTransactionPrice17Choice_? StrikePrice { get; init; } 
-    
+    public SecuritiesTransactionPrice17Choice_? StrikePrice { get; init; }
+
     /// <summary>
     /// Specifies the effective date and end date of the schedule for derivative transactions with strike prices varying throughout the life of the transaction.
     /// </summary>
     [IsoId("_g-V6z5PeEey0rJ3Gl6WZVA")]
     [DisplayName("Strike Price Schedule")]
     [IsoXmlTag("StrkPricSchdl")]
-    public Schedule4? StrikePriceSchedule { get; init; } 
-    
+    public Schedule4? StrikePriceSchedule { get; init; }
+
     /// <summary>
     /// Indicates the amount and currency of a foreign exchange option that the option holder has the right to buy.
     /// </summary>
     [IsoId("_g-V60ZPeEey0rJ3Gl6WZVA")]
     [DisplayName("Call Amount")]
     [IsoXmlTag("CallAmt")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? CallAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? CallAmount { get; init; }
+
     /// <summary>
     /// Indicates the amount and currency of a foreign exchange option that the option holder has the right to sell.
     /// </summary>
     [IsoId("_g-V605PeEey0rJ3Gl6WZVA")]
     [DisplayName("Put Amount")]
     [IsoXmlTag("PutAmt")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PutAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PutAmount { get; init; }
+
     /// <summary>
     /// Specifies the monetary amount of the premium paid by the buyer of the option.
     /// </summary>
     [IsoId("_g-V61ZPeEey0rJ3Gl6WZVA")]
     [DisplayName("Premium Amount")]
     [IsoXmlTag("PrmAmt")]
-    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PremiumAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAnd19DecimalAmount? PremiumAmount { get; init; }
+
     /// <summary>
     /// Specifies the date on which the option premium is paid.
     /// </summary>
@@ -99,8 +97,8 @@ public partial record OptionOrSwaption10
     [DisplayName("Premium Payment Date")]
     [IsoXmlTag("PrmPmtDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? PremiumPaymentDate { get; init; } 
-    
+    public IsoISODate? PremiumPaymentDate { get; init; }
+
     /// <summary>
     /// In case of swaptions, maturity date of the underlying swap.
     /// </summary>
@@ -108,9 +106,5 @@ public partial record OptionOrSwaption10
     [DisplayName("Maturity Date Of Underlying")]
     [IsoXmlTag("MtrtyDtOfUndrlyg")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? MaturityDateOfUnderlying { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? MaturityDateOfUnderlying { get; init; }
 }

@@ -23,7 +23,7 @@ public enum CheckType1Code
     [IsoId("_ipUJEdtbEeipuvJHTHIw9A")]
     [Description(@"The check is guaranteed by a bank.")]
     BankCheck = CheckTypeCode.BankCheck, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The check belongs to a Company or a professional entity.
     /// Encoded/decoded by serializers as &quot;BUSI&quot;.
@@ -32,7 +32,7 @@ public enum CheckType1Code
     [IsoId("_itISEdtbEeipuvJHTHIw9A")]
     [Description(@"The check belongs to a Company or a professional entity.")]
     BusinessCheck = CheckTypeCode.BusinessCheck, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Check issued by Government.
     /// Encoded/decoded by serializers as &quot;GOVC&quot;.
@@ -41,7 +41,7 @@ public enum CheckType1Code
     [IsoId("_ixdYcdtbEeipuvJHTHIw9A")]
     [Description(@"Check issued by Government.")]
     GovernmentCheck = CheckTypeCode.GovernmentCheck, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Check issued by a company for the employees.
     /// Encoded/decoded by serializers as &quot;PAYR&quot;.
@@ -50,7 +50,7 @@ public enum CheckType1Code
     [IsoId("_i2vhEdtbEeipuvJHTHIw9A")]
     [Description(@"Check issued by a company for the employees.")]
     PayrollCheck = CheckTypeCode.PayrollCheck, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The check belongs to an individual.
     /// Encoded/decoded by serializers as &quot;PERS&quot;.
@@ -59,5 +59,4 @@ public enum CheckType1Code
     [IsoId("_i6bHMdtbEeipuvJHTHIw9A")]
     [Description(@"The check belongs to an individual.")]
     PersonalCheck = CheckTypeCode.PersonalCheck, // same ordinal as derivation source for type conversions
-    
 }

@@ -21,16 +21,19 @@ public enum TradingSession1Code
     /// </summary>
     [EnumMember(Value = "AUCT")]
     [IsoId("_zdcnYw93EeGeV5vP7Mvdig_407428199")]
-    [Description(@"Orders that are traded in regularly occuring auctions: orders are accumulated and executed on basis of defined algorithms.")]
+    [Description(
+        @"Orders that are traded in regularly occuring auctions: orders are accumulated and executed on basis of defined algorithms."
+    )]
     Auction = TradingSessionCode.Auction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Trading process where orders are executed directly against each others as they hit the marketplace.
     /// Encoded/decoded by serializers as &quot;CONT&quot;.
     /// </summary>
     [EnumMember(Value = "CONT")]
     [IsoId("_zdcnZA93EeGeV5vP7Mvdig_574841635")]
-    [Description(@"Trading process where orders are executed directly against each others as they hit the marketplace.")]
+    [Description(
+        @"Trading process where orders are executed directly against each others as they hit the marketplace."
+    )]
     Continuous = TradingSessionCode.Continuous, // same ordinal as derivation source for type conversions
-    
 }

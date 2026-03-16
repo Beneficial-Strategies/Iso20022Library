@@ -23,7 +23,7 @@ public enum ATMServiceType4Code
     [IsoId("_q0NdsYq1EeSIDtZ76p6McQ")]
     [Description(@"Ask for account statement information to a related custumer account.")]
     AccountStatements = ATMServiceTypeCode.AccountStatements, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Balance inquiry.
     /// Encoded/decoded by serializers as &quot;BLCQ&quot;.
@@ -32,7 +32,7 @@ public enum ATMServiceType4Code
     [IsoId("_rAu2w4q1EeSIDtZ76p6McQ")]
     [Description(@"Balance inquiry.")]
     BalanceInquiry = ATMServiceTypeCode.BalanceInquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deposit of items.
     /// Encoded/decoded by serializers as &quot;DPST&quot;.
@@ -41,7 +41,7 @@ public enum ATMServiceType4Code
     [IsoId("_r33TE4q1EeSIDtZ76p6McQ")]
     [Description(@"Deposit of items.")]
     Deposit = ATMServiceTypeCode.Deposit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modification of the card PIN value.
     /// Encoded/decoded by serializers as &quot;PINC&quot;.
@@ -50,7 +50,7 @@ public enum ATMServiceType4Code
     [IsoId("_sHXHo4q1EeSIDtZ76p6McQ")]
     [Description(@"Modification of the card PIN value.")]
     PINChange = ATMServiceTypeCode.PINChange, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Standard withdrawal of items.
     /// Encoded/decoded by serializers as &quot;STDR&quot;.
@@ -59,7 +59,7 @@ public enum ATMServiceType4Code
     [IsoId("_tePbA4q1EeSIDtZ76p6McQ")]
     [Description(@"Standard withdrawal of items.")]
     StandardWithdrawal = ATMServiceTypeCode.StandardWithdrawal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount and notes Values are pre-defined by the customer profile.
     /// Encoded/decoded by serializers as &quot;PRFL&quot;.
@@ -68,16 +68,18 @@ public enum ATMServiceType4Code
     [IsoId("_ttIyo4q1EeSIDtZ76p6McQ")]
     [Description(@"Amount and notes Values are pre-defined by the customer profile.")]
     ProfileWithdrawal = ATMServiceTypeCode.ProfileWithdrawal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message.
     /// Encoded/decoded by serializers as &quot;PATH&quot;.
     /// </summary>
     [EnumMember(Value = "PATH")]
     [IsoId("_uqYeA4q1EeSIDtZ76p6McQ")]
-    [Description(@"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message.")]
+    [Description(
+        @"Withdrawal transaction was pre-authorised by another channel, for instance a mobile. The amount could be absent from the withdrawal request message."
+    )]
     PreAuthorisedWithdrawal = ATMServiceTypeCode.PreAuthorisedWithdrawal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Amount and notes values are chosen by the customer.
     /// Encoded/decoded by serializers as &quot;CHSN&quot;.
@@ -86,5 +88,4 @@ public enum ATMServiceType4Code
     [IsoId("_-zpAkYq1EeSIDtZ76p6McQ")]
     [Description(@"Amount and notes values are chosen by the customer.")]
     ChosenWithdrawal = ATMServiceTypeCode.ChosenWithdrawal, // same ordinal as derivation source for type conversions
-    
 }

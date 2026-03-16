@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jVcYQNqfEeearpaEPXv9UA")]
 [DisplayName("Physical Interface Parameter")]
-public partial record PhysicalInterfaceParameter1
+public record PhysicalInterfaceParameter1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the interface.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record PhysicalInterfaceParameter1
     [DisplayName("Interface Name")]
     [IsoXmlTag("IntrfcNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text InterfaceName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text InterfaceName { get; init; }
+
     /// <summary>
     /// Identification of the physical link layer.
     /// </summary>
     [IsoId("_IBxWQNqgEeearpaEPXv9UA")]
     [DisplayName("Interface Type")]
     [IsoXmlTag("IntrfcTp")]
-    public POICommunicationType2Code? InterfaceType { get; init; } 
-    
+    public POICommunicationType2Code? InterfaceType { get; init; }
+
     /// <summary>
     /// Optional user name to provide to use this interface.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record PhysicalInterfaceParameter1
     [DisplayName("User Name")]
     [IsoXmlTag("UsrNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? UserName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? UserName { get; init; }
+
     /// <summary>
     /// Optional access code to provide to use this interface.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record PhysicalInterfaceParameter1
     [DisplayName("Access Code")]
     [IsoXmlTag("AccsCd")]
     [IsoSimpleType(IsoSimpleType.Max35Binary)]
-    public IsoMax35Binary? AccessCode { get; init; } 
-    
+    public IsoMax35Binary? AccessCode { get; init; }
+
     /// <summary>
     /// Identification of the optional security profile to use with this interface.
     /// </summary>
@@ -62,9 +60,9 @@ public partial record PhysicalInterfaceParameter1
     [DisplayName("Security Profile")]
     [IsoXmlTag("SctyPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SecurityProfile { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SecurityProfile { get; init; }
+
     /// <summary>
     /// Any other parameters relevant for this interface.
     /// </summary>
@@ -72,9 +70,5 @@ public partial record PhysicalInterfaceParameter1
     [DisplayName("Additional Parameters")]
     [IsoXmlTag("AddtlParams")]
     [IsoSimpleType(IsoSimpleType.Max2KBinary)]
-    public IsoMax2KBinary? AdditionalParameters { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax2KBinary? AdditionalParameters { get; init; }
 }

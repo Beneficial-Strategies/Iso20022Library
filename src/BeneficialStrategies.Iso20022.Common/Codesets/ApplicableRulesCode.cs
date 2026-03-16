@@ -23,7 +23,7 @@ public enum ApplicableRulesCode
     [IsoId("_ALp7oFNfEeijdq8ilaxyOA")]
     [Description(@"Pre A Day rules applies.")]
     PreADay,
-    
+
     /// <summary>
     /// Pre A Day rules do not apply.
     /// Encoded/decoded by serializers as &quot;NPRE&quot;.
@@ -32,5 +32,4 @@ public enum ApplicableRulesCode
     [IsoId("_EeJrkFNfEeijdq8ilaxyOA")]
     [Description(@"Pre A Day rules do not apply.")]
     NotPreADay,
-    
 }

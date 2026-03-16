@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vkOZsb5NEeexmbB7KsjCwA")]
 [DisplayName("Corporate Action Notification SD")]
-public partial record CorporateActionNotificationSD9
+public record CorporateActionNotificationSD9
 {
-    #nullable enable
-    
     /// <summary>
     /// Xpath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionNotificationSD9
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? PlaceAndName { get; init; }
+
     /// <summary>
     /// Date and time when DTCC (The Depository Trust and Clearing Corporation) created the announcement record.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record CorporateActionNotificationSD9
     [DisplayName("Create Date And Time")]
     [IsoXmlTag("CretDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreateDateAndTime { get; init; } 
-    
+    public required IsoISODateTime CreateDateAndTime { get; init; }
+
     /// <summary>
     /// Date and time when DTCC (The Depository Trust and Clearing Corporation) last updated the announcement.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record CorporateActionNotificationSD9
     [DisplayName("Update Date And Time")]
     [IsoXmlTag("UpdDtAndTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public IsoISODateTime? UpdateDateAndTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODateTime? UpdateDateAndTime { get; init; }
 }

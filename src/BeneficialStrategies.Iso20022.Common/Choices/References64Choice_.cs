@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(References64Choice.RelatedReference))]
     [KnownType(typeof(References64Choice.OtherReference))]
-    [JsonDerivedType(typeof(References64Choice.RelatedReference),nameof(References64Choice.RelatedReference))]
-    [JsonDerivedType(typeof(References64Choice.OtherReference),nameof(References64Choice.OtherReference))]
+    [JsonDerivedType(
+        typeof(References64Choice.RelatedReference),
+        nameof(References64Choice.RelatedReference)
+    )]
+    [JsonDerivedType(
+        typeof(References64Choice.OtherReference),
+        nameof(References64Choice.OtherReference)
+    )]
     [IsoId("_5f_BEWpYEeipaMTLlhaKMQ")]
     [DisplayName("References 64 Choice")]
-    public abstract partial record References64Choice_
-    {
-    }
+    public abstract record References64Choice_ { }
 }

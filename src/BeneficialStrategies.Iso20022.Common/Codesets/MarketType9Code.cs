@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Ny1Z8YVYEe-Pv9KR9bv9IA")]
-[Description(@"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed.")]
+[Description(
+    @"Specifies the type of place where a trade was executed, a price was sourced from, an instrument is listed."
+)]
 [DerivedFrom(typeof(MarketTypeCode))]
 public enum MarketType9Code
 {
@@ -59,5 +61,4 @@ public enum MarketType9Code
     [IsoId("")]
     [Description(@"The place is a vendor.")]
     Vendor = MarketTypeCode.Vendor, // same ordinal as derivation source for type conversions
-
 }

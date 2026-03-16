@@ -23,7 +23,7 @@ public enum ReportItemStatusCode
     [IsoId("_sjRYqkirEeSlHoYg_EudVQ")]
     [Description(@"Entry has been accepted with exceptions by the receiver of the report.")]
     AcceptedWithException,
-    
+
     /// <summary>
     /// Entry has been rejected by the receiver of the report.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,7 +32,7 @@ public enum ReportItemStatusCode
     [IsoId("_sjRYqEirEeSlHoYg_EudVQ")]
     [Description(@"Entry has been rejected by the receiver of the report.")]
     Rejected,
-    
+
     /// <summary>
     /// Entry has been accepted by the receiver of the report.
     /// Encoded/decoded by serializers as &quot;ACPD&quot;.
@@ -41,5 +41,4 @@ public enum ReportItemStatusCode
     [IsoId("_Ff6cYUisEeSlHoYg_EudVQ")]
     [Description(@"Entry has been accepted by the receiver of the report.")]
     Accepted,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -22,10 +22,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMjA0-AOSNFX-8224491")]
 [DisplayName("Qualified Document Information")]
-public partial record QualifiedDocumentInformation1
+public record QualifiedDocumentInformation1
 {
-    #nullable enable
-    
     /// <summary>
     /// Local identification to be used in IDREFs in this message.
     /// </summary>
@@ -33,16 +31,16 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public required IsoID Identification { get; init; } 
-    
+    public required IsoID Identification { get; init; }
+
     /// <summary>
     /// Party issuing the reference.
     /// </summary>
     [IsoId("_OTgzMjM0-AOSNFX-8224494")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public QualifiedPartyIdentification1? Issuer { get; init; } 
-    
+    public QualifiedPartyIdentification1? Issuer { get; init; }
+
     /// <summary>
     /// Unambiguous identifier relative to the issuing party of a list of items.
     /// </summary>
@@ -50,9 +48,9 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("Item List Identifier")]
     [IsoXmlTag("ItmListIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ItemListIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ItemListIdentifier { get; init; }
+
     /// <summary>
     /// Unambiguous identifier relative to the issuing party of an item (independent of any list).
     /// </summary>
@@ -60,9 +58,9 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("Item Identifier")]
     [IsoXmlTag("ItmIdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ItemIdentifier { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ItemIdentifier { get; init; }
+
     /// <summary>
     /// Date of document or element. This may be used as a control value to indicate a specific version.
     /// </summary>
@@ -70,8 +68,8 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("Date")]
     [IsoXmlTag("Dt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? Date { get; init; } 
-    
+    public IsoISODate? Date { get; init; }
+
     /// <summary>
     /// Identification of the version of the document or element. This may be used as a control value to indicate a specific version.
     /// </summary>
@@ -79,9 +77,9 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
-    [StringLength(maximumLength: 6 ,MinimumLength = 1)]
-    public IsoMax6Text? Version { get; init; } 
-    
+    [StringLength(maximumLength: 6, MinimumLength = 1)]
+    public IsoMax6Text? Version { get; init; }
+
     /// <summary>
     /// If true, document is in its original form, otherwise it is a scanned version.
     /// </summary>
@@ -89,8 +87,8 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("Electronic Original")]
     [IsoXmlTag("ElctrncOrgnl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ElectronicOriginal { get; init; } 
-    
+    public required IsoYesNoIndicator ElectronicOriginal { get; init; }
+
     /// <summary>
     /// Cryptographic hash of the document.
     /// </summary>
@@ -100,15 +98,15 @@ public partial record QualifiedDocumentInformation1
     [MinLength(0)]
     [MaxLength(2)]
     public ValueList<AlgorithmAndDigest1> Digest { get; init; } = [];
-    
+
     /// <summary>
     /// Specifies the type of the document, for example commercial invoice.
     /// </summary>
     [IsoId("_OTgzMjQy-AOSNFX-8224494")]
     [DisplayName("Document Type")]
     [IsoXmlTag("DocTp")]
-    public ExternalDocumentType1Code? DocumentType { get; init; } 
-    
+    public ExternalDocumentType1Code? DocumentType { get; init; }
+
     /// <summary>
     /// URL (Uniform Resource Locator) where the document can be found.
     /// </summary>
@@ -116,18 +114,14 @@ public partial record QualifiedDocumentInformation1
     [DisplayName("URL")]
     [IsoXmlTag("URL")]
     [IsoSimpleType(IsoSimpleType.Max2048Text)]
-    [StringLength(maximumLength: 2048 ,MinimumLength = 1)]
-    public IsoMax2048Text? URL { get; init; } 
-    
+    [StringLength(maximumLength: 2048, MinimumLength = 1)]
+    public IsoMax2048Text? URL { get; init; }
+
     /// <summary>
     /// Attached file for this document. The file must be in a self-describing format.
     /// </summary>
     [IsoId("_OTgzMjQ0-AOSNFX-8224494")]
     [DisplayName("Attached File")]
     [IsoXmlTag("AttchdFile")]
-    public BinaryFile1? AttachedFile { get; init; } 
-    
-    
-    #nullable disable
-    
+    public BinaryFile1? AttachedFile { get; init; }
 }

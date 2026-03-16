@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RRZUddp-Ed-ak6NoX_4Aeg_1555387855")]
 [DisplayName("Modification Scope")]
-public partial record ModificationScope7
+public record ModificationScope7
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of modification to be applied on a set of information.
     /// </summary>
     [IsoId("_RRZUdtp-Ed-ak6NoX_4Aeg_1555387898")]
     [DisplayName("Modification Scope Indication")]
     [IsoXmlTag("ModScpIndctn")]
-    public required DataModification1Code ModificationScopeIndication { get; init; } 
-    
+    public required DataModification1Code ModificationScopeIndication { get; init; }
+
     /// <summary>
     /// Information related to intermediaries.
     /// </summary>
     [IsoId("_RRZUd9p-Ed-ak6NoX_4Aeg_1555387934")]
     [DisplayName("Intermediary")]
     [IsoXmlTag("Intrmy")]
-    public required Intermediary13 Intermediary { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required Intermediary13 Intermediary { get; init; }
 }

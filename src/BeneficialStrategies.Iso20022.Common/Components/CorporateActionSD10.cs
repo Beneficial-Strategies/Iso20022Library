@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S9dVw2JhEeOfOt7Y7nAPUA")]
 [DisplayName("Corporate Action SD")]
-public partial record CorporateActionSD10
+public record CorporateActionSD10
 {
-    #nullable enable
-    
     /// <summary>
     /// xPath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionSD10
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text PlaceAndName { get; init; }
+
     /// <summary>
     /// DTC generated number to distinguish between the series of lotteries run against a particular redemption.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record CorporateActionSD10
     [DisplayName("Lottery Sequence Number")]
     [IsoXmlTag("LtrySeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? LotterySequenceNumber { get; init; } 
-    
+    public IsoMax3NumericText? LotterySequenceNumber { get; init; }
+
     /// <summary>
     /// Date/time on which the lottery is run and applied to the holder&apos;s positions. This is also applicable to partial calls.
     /// </summary>
@@ -44,9 +42,5 @@ public partial record CorporateActionSD10
     [DisplayName("Lottery Date")]
     [IsoXmlTag("LtryDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? LotteryDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISODate? LotteryDate { get; init; }
 }

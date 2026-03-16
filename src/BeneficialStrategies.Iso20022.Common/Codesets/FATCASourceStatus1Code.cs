@@ -23,14 +23,15 @@ public enum FATCASourceStatus1Code
     [IsoId("_QakGUQjVEeS5F6qHcKOrew")]
     [Description(@"Source of the Foreign Account Tax Compliance Act (FATCA) status calculated.")]
     Calculated = FATCASourceStatusCode.Calculated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Source of the Foreign Account Tax Compliance Act (FATCA) status is as declared by the investor.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
     /// </summary>
     [EnumMember(Value = "DECL")]
     [IsoId("_QjVn0QjVEeS5F6qHcKOrew")]
-    [Description(@"Source of the Foreign Account Tax Compliance Act (FATCA) status is as declared by the investor.")]
+    [Description(
+        @"Source of the Foreign Account Tax Compliance Act (FATCA) status is as declared by the investor."
+    )]
     Declared = FATCASourceStatusCode.Declared, // same ordinal as derivation source for type conversions
-    
 }

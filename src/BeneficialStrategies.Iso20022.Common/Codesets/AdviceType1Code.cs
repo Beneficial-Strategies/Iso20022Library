@@ -23,7 +23,7 @@ public enum AdviceType1Code
     [IsoId("_XiPt0e8XEemSR6j6KWQzCg")]
     [Description(@"Advice with transaction details is requested.")]
     AdviceWithDetails = AdviceTypeCode.AdviceWithDetails, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice without  transaction details is requested.
     /// Encoded/decoded by serializers as &quot;ADND&quot;.
@@ -32,5 +32,4 @@ public enum AdviceType1Code
     [IsoId("_Xz3CQe8XEemSR6j6KWQzCg")]
     [Description(@"Advice without  transaction details is requested.")]
     AdviceWithoutDetails = AdviceTypeCode.AdviceWithoutDetails, // same ordinal as derivation source for type conversions
-    
 }

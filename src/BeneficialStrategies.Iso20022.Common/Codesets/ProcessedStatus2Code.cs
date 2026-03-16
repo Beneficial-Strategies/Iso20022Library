@@ -23,7 +23,7 @@ public enum ProcessedStatus2Code
     [IsoId("_aKeN9tp-Ed-ak6NoX_4Aeg_1837333616")]
     [Description(@"The instruction/request has been received.")]
     Received = CorporateActionProcessedStatusCode.Received, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The request has been completed.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -32,5 +32,4 @@ public enum ProcessedStatus2Code
     [IsoId("_aKeN99p-Ed-ak6NoX_4Aeg_1837333617")]
     [Description(@"The request has been completed.")]
     Completed = CorporateActionProcessedStatusCode.Completed, // same ordinal as derivation source for type conversions
-    
 }

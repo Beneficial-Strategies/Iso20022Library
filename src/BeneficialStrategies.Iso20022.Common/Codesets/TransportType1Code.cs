@@ -23,7 +23,7 @@ public enum TransportType1Code
     [IsoId("_VCaiATEwEemzCpWiCwK4aQ")]
     [Description(@"Air")]
     Air = TransportTypeCode.Air, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bus
     /// Encoded/decoded by serializers as &quot;BUSS&quot;.
@@ -32,7 +32,7 @@ public enum TransportType1Code
     [IsoId("_VW-cwTEwEemzCpWiCwK4aQ")]
     [Description(@"Bus")]
     Bus = TransportTypeCode.Bus, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other National
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -41,7 +41,7 @@ public enum TransportType1Code
     [IsoId("_VX30oTEwEemzCpWiCwK4aQ")]
     [Description(@"Other National")]
     OtherNational = TransportTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other Private
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -50,7 +50,7 @@ public enum TransportType1Code
     [IsoId("_VuhaETEwEemzCpWiCwK4aQ")]
     [Description(@"Other Private")]
     OtherPrivate = TransportTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Rail
     /// Encoded/decoded by serializers as &quot;RAIL&quot;.
@@ -59,7 +59,7 @@ public enum TransportType1Code
     [IsoId("_Vvki8TEwEemzCpWiCwK4aQ")]
     [Description(@"Rail")]
     Rail = TransportTypeCode.Rail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Ship
     /// Encoded/decoded by serializers as &quot;SHIP&quot;.
@@ -68,5 +68,4 @@ public enum TransportType1Code
     [IsoId("_V6JbQTEwEemzCpWiCwK4aQ")]
     [Description(@"Ship")]
     Ship = TransportTypeCode.Ship, // same ordinal as derivation source for type conversions
-    
 }

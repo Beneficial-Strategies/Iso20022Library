@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ahHzZNp-Ed-ak6NoX_4Aeg_-1375297258")]
-[Description(@"Identifies the type of investor. The rules that apply to each type of client are different.")]
+[Description(
+    @"Identifies the type of investor. The rules that apply to each type of client are different."
+)]
 [DerivedFrom(typeof(EligibilityCode))]
 public enum Eligibility1Code
 {
@@ -21,9 +23,11 @@ public enum Eligibility1Code
     /// </summary>
     [EnumMember(Value = "ELIG")]
     [IsoId("_ahHzZdp-Ed-ak6NoX_4Aeg_-1307879388")]
-    [Description(@"Eligible customers are the most sophisticated level of investor, able to opt out of some the protections afforded by conduct of business rules.")]
+    [Description(
+        @"Eligible customers are the most sophisticated level of investor, able to opt out of some the protections afforded by conduct of business rules."
+    )]
     EligibleCounterparty = EligibilityCode.EligibleCounterparty, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Retail customers are the least sophisticated level of investor.
     /// Encoded/decoded by serializers as &quot;RETL&quot;.
@@ -32,14 +36,15 @@ public enum Eligibility1Code
     [IsoId("_ahHzZtp-Ed-ak6NoX_4Aeg_-1307879371")]
     [Description(@"Retail customers are the least sophisticated level of investor.")]
     RetailClient = EligibilityCode.RetailClient, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Professional customers are, for example, investment firms, credit institutions, insurance companies.
     /// Encoded/decoded by serializers as &quot;PROF&quot;.
     /// </summary>
     [EnumMember(Value = "PROF")]
     [IsoId("_ahHzZ9p-Ed-ak6NoX_4Aeg_-1307879327")]
-    [Description(@"Professional customers are, for example, investment firms, credit institutions, insurance companies.")]
+    [Description(
+        @"Professional customers are, for example, investment firms, credit institutions, insurance companies."
+    )]
     ProfessionalClient = EligibilityCode.ProfessionalClient, // same ordinal as derivation source for type conversions
-    
 }

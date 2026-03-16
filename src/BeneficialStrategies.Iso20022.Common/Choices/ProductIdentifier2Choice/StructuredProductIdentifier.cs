@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice
     /// </summary>
     [IsoId("_Rb1C0dp-Ed-ak6NoX_4Aeg_-1291805271")]
     [DisplayName("Structured Product Identifier")]
-    public partial record StructuredProductIdentifier : ProductIdentifier2Choice_
+    public record StructuredProductIdentifier : ProductIdentifier2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the type of product identifier by means of a code.
         /// </summary>
         [IsoId("_TRZdUNp-Ed-ak6NoX_4Aeg_-1876396252")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public required ProductIdentifier2Code Type { get; init; } 
-        
+        public required ProductIdentifier2Code Type { get; init; }
+
         /// <summary>
         /// Specifies the product identifier.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.ProductIdentifier2Choice
         [DisplayName("Identifier")]
         [IsoXmlTag("Idr")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identifier { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identifier { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_nDDUWYybEe-PVZsedaAGaA")]
 [DisplayName("Intra Position Details66")]
-public partial record IntraPositionDetails66
+public record IntraPositionDetails66
 {
-    #nullable enable
-
     /// <summary>
     /// Balance From.
     /// </summary>
     [DisplayName("Balance From")]
     [IsoXmlTag("BalFr")]
-    public required SecuritiesBalanceType6Choice_ BalanceFrom { get; init; } 
+    public required SecuritiesBalanceType6Choice_ BalanceFrom { get; init; }
 
     /// <summary>
     /// Intra Position Movement.
@@ -37,9 +35,5 @@ public partial record IntraPositionDetails66
     /// </summary>
     [DisplayName("Safekeeping Place")]
     [IsoXmlTag("SfkpgPlc")]
-    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; } 
-
-    
-    #nullable disable
-    
+    public SafekeepingPlaceFormat41Choice_? SafekeepingPlace { get; init; }
 }

@@ -23,5 +23,4 @@ public enum NoReasonCode
     [IsoId("_aNmaeNp-Ed-ak6NoX_4Aeg_1957291337")]
     [Description(@"No reason to report or no reason available to report.")]
     NoReason = SpecialPurposeCode.NoReason, // same ordinal as derivation source for type conversions
-    
 }

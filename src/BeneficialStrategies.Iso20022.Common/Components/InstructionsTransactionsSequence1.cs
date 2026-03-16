@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gaqnAOceEei5aPS232E3Mw")]
 [DisplayName("Instructions Transactions Sequence")]
-public partial record InstructionsTransactionsSequence1
+public record InstructionsTransactionsSequence1
 {
-    #nullable enable
-    
     /// <summary>
     /// Number which further identifies DTC instruction reference number. Not applicable to reorganisation / custody deposits.
     /// </summary>
@@ -25,24 +23,24 @@ public partial record InstructionsTransactionsSequence1
     [DisplayName("Transaction Sequence Number")]
     [IsoXmlTag("TxSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? TransactionSequenceNumber { get; init; } 
-    
+    public IsoMax3NumericText? TransactionSequenceNumber { get; init; }
+
     /// <summary>
     /// Instruction quantity for a given transaction sequence number.
     /// </summary>
     [IsoId("_NA4c8-cgEei5aPS232E3Mw")]
     [DisplayName("Instruction Quantity")]
     [IsoXmlTag("InstrQty")]
-    public FinancialInstrumentQuantity31Choice_? InstructionQuantity { get; init; } 
-    
+    public FinancialInstrumentQuantity31Choice_? InstructionQuantity { get; init; }
+
     /// <summary>
     /// For rights subscription events with an oversubscription feature, the quantity of the oversubscription for the given instruction.
     /// </summary>
     [IsoId("_NA4c8ucgEei5aPS232E3Mw")]
     [DisplayName("Oversubscription Quantity")]
     [IsoXmlTag("OvrsbcptQty")]
-    public FinancialInstrumentQuantity4? OversubscriptionQuantity { get; init; } 
-    
+    public FinancialInstrumentQuantity4? OversubscriptionQuantity { get; init; }
+
     /// <summary>
     /// Customer identification entered by client upon instruction submission.
     /// </summary>
@@ -50,9 +48,5 @@ public partial record InstructionsTransactionsSequence1
     [DisplayName("Customer Reference Identification")]
     [IsoXmlTag("CstmrRefId")]
     [IsoSimpleType(IsoSimpleType.Max30Text)]
-    public IsoMax30Text? CustomerReferenceIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoMax30Text? CustomerReferenceIdentification { get; init; }
 }

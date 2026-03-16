@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ZBRJsZ9hEe-nbM0aSPcoiQ")]
 [DisplayName("Point Of Interaction Component17")]
-public partial record PointOfInteractionComponent17
+public record PointOfInteractionComponent17
 {
-    #nullable enable
-
     /// <summary>
     /// Assessment.
     /// </summary>
@@ -30,14 +28,14 @@ public partial record PointOfInteractionComponent17
     /// </summary>
     [DisplayName("Characteristics")]
     [IsoXmlTag("Chrtcs")]
-    public PointOfInteractionComponentCharacteristics10? Characteristics { get; init; } 
+    public PointOfInteractionComponentCharacteristics10? Characteristics { get; init; }
 
     /// <summary>
     /// Identification.
     /// </summary>
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required PointOfInteractionComponentIdentification2 Identification { get; init; } 
+    public required PointOfInteractionComponentIdentification2 Identification { get; init; }
 
     /// <summary>
     /// Package.
@@ -51,7 +49,7 @@ public partial record PointOfInteractionComponent17
     /// </summary>
     [DisplayName("Probe Value")]
     [IsoXmlTag("PrbVal")]
-    public IsoMax35Binary? ProbeValue { get; init; } 
+    public IsoMax35Binary? ProbeValue { get; init; }
 
     /// <summary>
     /// Standard Compliance.
@@ -65,23 +63,19 @@ public partial record PointOfInteractionComponent17
     /// </summary>
     [DisplayName("Status")]
     [IsoXmlTag("Sts")]
-    public PointOfInteractionComponentStatus3? Status { get; init; } 
+    public PointOfInteractionComponentStatus3? Status { get; init; }
 
     /// <summary>
     /// Sub Type Information.
     /// </summary>
     [DisplayName("Sub Type Information")]
     [IsoXmlTag("SubTpInf")]
-    public IsoMax70Text? SubTypeInformation { get; init; } 
+    public IsoMax70Text? SubTypeInformation { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required POIComponentType7Code Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public required POIComponentType7Code Type { get; init; }
 }

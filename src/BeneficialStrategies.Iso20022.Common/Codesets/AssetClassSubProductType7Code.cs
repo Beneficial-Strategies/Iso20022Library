@@ -23,5 +23,4 @@ public enum AssetClassSubProductType7Code
     [IsoId("_8eix0QnzEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type natural gas.")]
     NaturalGas = AssetClassSubProductTypeCode.NaturalGas, // same ordinal as derivation source for type conversions
-    
 }

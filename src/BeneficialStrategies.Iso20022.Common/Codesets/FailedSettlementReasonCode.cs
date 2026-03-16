@@ -23,7 +23,7 @@ public enum FailedSettlementReasonCode
     [IsoId("_amyWiNp-Ed-ak6NoX_4Aeg_822057797")]
     [Description(@"Credit account is not eligible.")]
     CreditAccountNotEligible,
-    
+
     /// <summary>
     /// Credit account is disabled.
     /// Encoded/decoded by serializers as &quot;CADI&quot;.
@@ -32,7 +32,7 @@ public enum FailedSettlementReasonCode
     [IsoId("_am7gcNp-Ed-ak6NoX_4Aeg_822058068")]
     [Description(@"Credit account is disabled.")]
     CreditAccountDisabled,
-    
+
     /// <summary>
     /// Debit account is not eligible.
     /// Encoded/decoded by serializers as &quot;DANE&quot;.
@@ -41,7 +41,7 @@ public enum FailedSettlementReasonCode
     [IsoId("_am7gcdp-Ed-ak6NoX_4Aeg_822058076")]
     [Description(@"Debit account is not eligible.")]
     DebitAccountNotEligible,
-    
+
     /// <summary>
     /// Debit account is disabled.
     /// Encoded/decoded by serializers as &quot;AADI&quot;.
@@ -50,7 +50,7 @@ public enum FailedSettlementReasonCode
     [IsoId("_am7gctp-Ed-ak6NoX_4Aeg_822058099")]
     [Description(@"Debit account is disabled.")]
     DebitAccountDisabled,
-    
+
     /// <summary>
     /// Insufficient securities on the account to settle.
     /// Encoded/decoded by serializers as &quot;INSE&quot;.
@@ -59,7 +59,7 @@ public enum FailedSettlementReasonCode
     [IsoId("_am7gc9p-Ed-ak6NoX_4Aeg_822058107")]
     [Description(@"Insufficient securities on the account to settle.")]
     InsufficientSecurities,
-    
+
     /// <summary>
     /// The distribution is incomplete.
     /// Encoded/decoded by serializers as &quot;INDI&quot;.
@@ -68,7 +68,7 @@ public enum FailedSettlementReasonCode
     [IsoId("_am7gdNp-Ed-ak6NoX_4Aeg_822058129")]
     [Description(@"The distribution is incomplete.")]
     IncompleteDistribution,
-    
+
     /// <summary>
     /// Insufficient cash on the account to settle.
     /// Encoded/decoded by serializers as &quot;INCA&quot;.
@@ -77,5 +77,4 @@ public enum FailedSettlementReasonCode
     [IsoId("_am7gddp-Ed-ak6NoX_4Aeg_822058130")]
     [Description(@"Insufficient cash on the account to settle.")]
     InsufficientCash,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
     /// </summary>
     [IsoId("_idD051o2Ee23K4GXSpBSeg")]
     [DisplayName("Basket")]
-    public partial record Basket : SecurityIdentification41Choice_
+    public record Basket : SecurityIdentification41Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the structurer of the customer basket.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
         [DisplayName("Structurer")]
         [IsoXmlTag("Strr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? Structurer { get; init; } 
-        
+        public IsoLEIIdentifier? Structurer { get; init; }
+
         /// <summary>
         /// Identifier of the custom basket assigned by the structurer allowing to link the constituents of the basket of indexes.
         /// </summary>
@@ -33,19 +31,15 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max52Text)]
-        [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-        public IsoMax52Text? Identification { get; init; } 
-        
+        [StringLength(maximumLength: 52, MinimumLength = 1)]
+        public IsoMax52Text? Identification { get; init; }
+
         /// <summary>
         /// Identifier of the underliers that represent the constituents of a custom basket.
         /// </summary>
         [IsoId("_mv1RpVo2Ee23K4GXSpBSeg")]
         [DisplayName("Constituents")]
         [IsoXmlTag("Cnsttnts")]
-        public BasketConstituents3? Constituents { get; init; } 
-        
-        
-        #nullable disable
-        
+        public BasketConstituents3? Constituents { get; init; }
     }
 }

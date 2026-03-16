@@ -23,7 +23,7 @@ public enum CommissionValueType1Code
     [IsoId("_bAkIctp-Ed-ak6NoX_4Aeg_-559114087")]
     [Description(@"Price expressed per unit.")]
     PerUnit = PriceValueTypeCode.PerUnit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is expressed as absolute.
     /// Encoded/decoded by serializers as &quot;ABSO&quot;.
@@ -32,5 +32,4 @@ public enum CommissionValueType1Code
     [IsoId("_bAkIc9p-Ed-ak6NoX_4Aeg_-555420258")]
     [Description(@"Price is expressed as absolute.")]
     Absolute = PriceValueTypeCode.Absolute, // same ordinal as derivation source for type conversions
-    
 }

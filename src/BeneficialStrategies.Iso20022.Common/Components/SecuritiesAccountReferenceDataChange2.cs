@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QPfxleGBEeWCAvUNsZ5u6g")]
 [DisplayName("Securities Account Reference Data Change")]
-public partial record SecuritiesAccountReferenceDataChange2
+public record SecuritiesAccountReferenceDataChange2
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the securities account for which the changes are listed in the advice.
     /// </summary>
     [IsoId("_QaW9weGBEeWCAvUNsZ5u6g")]
     [DisplayName("Securities Account Identification")]
     [IsoXmlTag("SctiesAcctId")]
-    public required SecuritiesAccount19 SecuritiesAccountIdentification { get; init; } 
-    
+    public required SecuritiesAccount19 SecuritiesAccountIdentification { get; init; }
+
     /// <summary>
     /// Name of the element, as specified in the short tag name for the field in the message.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record SecuritiesAccountReferenceDataChange2
     [DisplayName("Field Name")]
     [IsoXmlTag("FldNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text FieldName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text FieldName { get; init; }
+
     /// <summary>
     /// Value of the related field before the change was applied.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record SecuritiesAccountReferenceDataChange2
     [DisplayName("Old Field Value")]
     [IsoXmlTag("OdFldVal")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text OldFieldValue { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text OldFieldValue { get; init; }
+
     /// <summary>
     /// Value of the related field after the change was applied.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record SecuritiesAccountReferenceDataChange2
     [DisplayName("New Field Value")]
     [IsoXmlTag("NewFldVal")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text NewFieldValue { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text NewFieldValue { get; init; }
+
     /// <summary>
     /// Specifies the timestamp of the operation.
     /// </summary>
@@ -63,9 +61,5 @@ public partial record SecuritiesAccountReferenceDataChange2
     [DisplayName("Operation Time Stamp")]
     [IsoXmlTag("OprTmStmp")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime OperationTimeStamp { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime OperationTimeStamp { get; init; }
 }

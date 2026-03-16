@@ -21,9 +21,11 @@ public enum ResolutionStatus1Code
     /// </summary>
     [EnumMember(Value = "ACTV")]
     [IsoId("_ZU0_Ztp-Ed-ak6NoX_4Aeg_268414544")]
-    [Description(@"Meeting resolution has to be voted for by the participants to a general meeting.")]
+    [Description(
+        @"Meeting resolution has to be voted for by the participants to a general meeting."
+    )]
     Active = ResolutionStatusCode.Active, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting resolution has been withdrawn.
     /// Encoded/decoded by serializers as &quot;WDRA&quot;.
@@ -32,5 +34,4 @@ public enum ResolutionStatus1Code
     [IsoId("_ZU0_Z9p-Ed-ak6NoX_4Aeg_268414545")]
     [Description(@"Meeting resolution has been withdrawn.")]
     Withdrawn = ResolutionStatusCode.Withdrawn, // same ordinal as derivation source for type conversions
-    
 }

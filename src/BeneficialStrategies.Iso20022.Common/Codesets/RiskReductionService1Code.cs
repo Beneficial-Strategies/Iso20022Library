@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_3WO5sIKOEeyi6unpji8kcA")]
-[Description(@"Indicator of a type of a post trade risk reduction operation for the purpose of reporting.")]
+[Description(
+    @"Indicator of a type of a post trade risk reduction operation for the purpose of reporting."
+)]
 [DerivedFrom(typeof(RiskReductionServiceCode))]
 public enum RiskReductionService1Code
 {
@@ -23,7 +25,7 @@ public enum RiskReductionService1Code
     [IsoId("_IMhhYYKPEeyi6unpji8kcA")]
     [Description(@"There is no portfolio compression.")]
     NoRiskReduction = RiskReductionServiceCode.NoRiskReduction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Portfolio Compression without a third-party service provider.
     /// Encoded/decoded by serializers as &quot;PWOS&quot;.
@@ -32,7 +34,7 @@ public enum RiskReductionService1Code
     [IsoId("_ITNYMYKPEeyi6unpji8kcA")]
     [Description(@"Portfolio Compression without a third-party service provider.")]
     NoThirdPartyPortfolioCompression = RiskReductionServiceCode.NoThirdPartyPortfolioCompression, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other portfolio compression.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -41,7 +43,7 @@ public enum RiskReductionService1Code
     [IsoId("_IYeSsYKPEeyi6unpji8kcA")]
     [Description(@"Other portfolio compression.")]
     OtherCompression = RiskReductionServiceCode.OtherCompression, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Portfolio rebalancing or margin management.
     /// Encoded/decoded by serializers as &quot;PRBM&quot;.
@@ -50,7 +52,7 @@ public enum RiskReductionService1Code
     [IsoId("_IeBhEYKPEeyi6unpji8kcA")]
     [Description(@"Portfolio rebalancing or margin management.")]
     PortfolioRebalancing = RiskReductionServiceCode.PortfolioRebalancing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Portfolio Compression with a third-party service provider or CCP.
     /// Encoded/decoded by serializers as &quot;PWAS&quot;.
@@ -59,5 +61,4 @@ public enum RiskReductionService1Code
     [IsoId("_IilQ8YKPEeyi6unpji8kcA")]
     [Description(@"Portfolio Compression with a third-party service provider or CCP.")]
     ThirdPartyPortfolioCompression = RiskReductionServiceCode.ThirdPartyPortfolioCompression, // same ordinal as derivation source for type conversions
-    
 }

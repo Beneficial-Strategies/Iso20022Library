@@ -23,7 +23,7 @@ public enum TaxableIncomePerShareCalculated2Code
     [IsoId("_ZSSoxdp-Ed-ak6NoX_4Aeg_206054111")]
     [Description(@"Fund is calculating the taxable interest per share with the NAV.")]
     FundCalculates = TaxableIncomePerShareCalculatedCode.FundCalculates, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fund is not calculating the taxable interest per share with the NAV.
     /// Encoded/decoded by serializers as &quot;TSIN&quot;.
@@ -32,14 +32,15 @@ public enum TaxableIncomePerShareCalculated2Code
     [IsoId("_ZSSoxtp-Ed-ak6NoX_4Aeg_206055154")]
     [Description(@"Fund is not calculating the taxable interest per share with the NAV.")]
     FundDoesNotCalculate = TaxableIncomePerShareCalculatedCode.FundDoesNotCalculate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unknown whether the fund is calculating the taxable interest per share with the NAV.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
     /// </summary>
     [EnumMember(Value = "UKWN")]
     [IsoId("_ZSSox9p-Ed-ak6NoX_4Aeg_206055214")]
-    [Description(@"Unknown whether the fund is calculating the taxable interest per share with the NAV.")]
+    [Description(
+        @"Unknown whether the fund is calculating the taxable interest per share with the NAV."
+    )]
     FundCalculatesUnknown = TaxableIncomePerShareCalculatedCode.FundCalculatesUnknown, // same ordinal as derivation source for type conversions
-    
 }

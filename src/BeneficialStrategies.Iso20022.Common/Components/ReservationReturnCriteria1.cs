@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kuH-C5laEeeE1Ya-LgRsuQ")]
 [DisplayName("Reservation Return Criteria")]
-public partial record ReservationReturnCriteria1
+public record ReservationReturnCriteria1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the reservation start date time is requested.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ReservationReturnCriteria1
     [DisplayName("Start Date Time Indicator")]
     [IsoXmlTag("StartDtTmInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StartDateTimeIndicator { get; init; } 
-    
+    public IsoRequestedIndicator? StartDateTimeIndicator { get; init; }
+
     /// <summary>
     /// Indicates whether the reservation status is requested.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record ReservationReturnCriteria1
     [DisplayName("Status Indicator")]
     [IsoXmlTag("StsInd")]
     [IsoSimpleType(IsoSimpleType.RequestedIndicator)]
-    public IsoRequestedIndicator? StatusIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoRequestedIndicator? StatusIndicator { get; init; }
 }

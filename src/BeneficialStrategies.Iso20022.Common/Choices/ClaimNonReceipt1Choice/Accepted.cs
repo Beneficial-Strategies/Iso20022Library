@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice
     /// </summary>
     [IsoId("_vzbp0IjYEeeDW7_wB-eK_g")]
     [DisplayName("Accepted")]
-    public partial record Accepted : ClaimNonReceipt1Choice_
+    public record Accepted : ClaimNonReceipt1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the date the original payment instruction was processed.
         /// </summary>
@@ -24,18 +22,14 @@ namespace BeneficialStrategies.Iso20022.Choices.ClaimNonReceipt1Choice
         [DisplayName("Date Processed")]
         [IsoXmlTag("DtPrcd")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public required IsoISODate DateProcessed { get; init; } 
-        
+        public required IsoISODate DateProcessed { get; init; }
+
         /// <summary>
         /// Specifies the next party the original payment instruction was sent to.
         /// </summary>
         [IsoId("_jfyHEItuEee-OJ-wXSj3YQ")]
         [DisplayName("Original Next Agent")]
         [IsoXmlTag("OrgnlNxtAgt")]
-        public required BranchAndFinancialInstitutionIdentification5 OriginalNextAgent { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required BranchAndFinancialInstitutionIdentification5 OriginalNextAgent { get; init; }
     }
 }

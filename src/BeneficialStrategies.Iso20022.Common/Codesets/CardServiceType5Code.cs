@@ -23,7 +23,7 @@ public enum CardServiceType5Code
     [IsoId("_8u0YcX0kEemfrNOe0zHQyg")]
     [Description(@"Convey the key to the receiver.")]
     DeliverKey = CardServiceTypeCode.DeliverKey, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// National defined code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -32,7 +32,7 @@ public enum CardServiceType5Code
     [IsoId("_8u0Yd30kEemfrNOe0zHQyg")]
     [Description(@"National defined code.")]
     OtherNational = CardServiceTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Private defined code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -41,7 +41,7 @@ public enum CardServiceType5Code
     [IsoId("_8u0YeX0kEemfrNOe0zHQyg")]
     [Description(@"Private defined code.")]
     OtherPrivate = CardServiceTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deactivate the specified key.
     /// Encoded/decoded by serializers as &quot;DEKY&quot;.
@@ -50,7 +50,7 @@ public enum CardServiceType5Code
     [IsoId("_XFuv8ZJcEemtzI0l4QED6w")]
     [Description(@"Deactivate the specified key.")]
     DeactivateKey = CardServiceTypeCode.DeactivateKey, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request new key to be generated and conveyed.
     /// Encoded/decoded by serializers as &quot;RQKY&quot;.
@@ -59,5 +59,4 @@ public enum CardServiceType5Code
     [IsoId("_FFXUMa4bEemYtqDpusmLsQ")]
     [Description(@"Request new key to be generated and conveyed.")]
     RequestKey = CardServiceTypeCode.RequestKey, // same ordinal as derivation source for type conversions
-    
 }

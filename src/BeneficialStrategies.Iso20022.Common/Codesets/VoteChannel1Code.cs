@@ -21,9 +21,11 @@ public enum VoteChannel1Code
     /// </summary>
     [EnumMember(Value = "VOPI")]
     [IsoId("_k3lkkTT9Ee2tRf29bleifQ")]
-    [Description(@"Vote is as per described in the processing text for next intermediary information field.")]
+    [Description(
+        @"Vote is as per described in the processing text for next intermediary information field."
+    )]
     VoteAsPerIntermediaryInformation = VoteChannelCode.VoteAsPerIntermediaryInformation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Vote is via the chain of intermediaries.
     /// Encoded/decoded by serializers as &quot;VOCI&quot;.
@@ -32,5 +34,4 @@ public enum VoteChannel1Code
     [IsoId("_k-cagTT9Ee2tRf29bleifQ")]
     [Description(@"Vote is via the chain of intermediaries.")]
     VoteThroughChain = VoteChannelCode.VoteThroughChain, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TemporaryFinancialInstrumentIndicator1Choice.TemporaryIndicator))]
     [KnownType(typeof(TemporaryFinancialInstrumentIndicator1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TemporaryFinancialInstrumentIndicator1Choice.TemporaryIndicator),nameof(TemporaryFinancialInstrumentIndicator1Choice.TemporaryIndicator))]
-    [JsonDerivedType(typeof(TemporaryFinancialInstrumentIndicator1Choice.Proprietary),nameof(TemporaryFinancialInstrumentIndicator1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TemporaryFinancialInstrumentIndicator1Choice.TemporaryIndicator),
+        nameof(TemporaryFinancialInstrumentIndicator1Choice.TemporaryIndicator)
+    )]
+    [JsonDerivedType(
+        typeof(TemporaryFinancialInstrumentIndicator1Choice.Proprietary),
+        nameof(TemporaryFinancialInstrumentIndicator1Choice.Proprietary)
+    )]
     [IsoId("_Q08B89p-Ed-ak6NoX_4Aeg_-1040584730")]
     [DisplayName("Temporary Financial Instrument Indicator 1 Choice")]
-    public abstract partial record TemporaryFinancialInstrumentIndicator1Choice_
-    {
-    }
+    public abstract record TemporaryFinancialInstrumentIndicator1Choice_ { }
 }

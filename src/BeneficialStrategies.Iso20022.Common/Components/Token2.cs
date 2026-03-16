@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_vbKOYZF8EeukDPgU2BMkjQ")]
 [DisplayName("Token")]
-public partial record Token2
+public record Token2
 {
-    #nullable enable
-    
     /// <summary>
     /// Surrogate value of the PAN.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record Token2
     [DisplayName("Payment Token")]
     [IsoXmlTag("PmtTkn")]
     [IsoSimpleType(IsoSimpleType.Max19NumericText)]
-    public IsoMax19NumericText? PaymentToken { get; init; } 
-    
+    public IsoMax19NumericText? PaymentToken { get; init; }
+
     /// <summary>
     /// Expiry date of the payment token.
     /// ISO 8583 bit 14.
@@ -35,8 +33,8 @@ public partial record Token2
     [DisplayName("Token Expiry Date")]
     [IsoXmlTag("TknXpryDt")]
     [IsoSimpleType(IsoSimpleType.ISOYearMonth)]
-    public IsoISOYearMonth? TokenExpiryDate { get; init; } 
-    
+    public IsoISOYearMonth? TokenExpiryDate { get; init; }
+
     /// <summary>
     /// Identification of a party requesting a token.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record Token2
     [DisplayName("Token Requestor Identification")]
     [IsoXmlTag("TknRqstrId")]
     [IsoSimpleType(IsoSimpleType.Max11NumericText)]
-    public IsoMax11NumericText? TokenRequestorIdentification { get; init; } 
-    
+    public IsoMax11NumericText? TokenRequestorIdentification { get; init; }
+
     /// <summary>
     /// Supporting information for the Token Assurance Method.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record Token2
     [DisplayName("Token Assurance Data")]
     [IsoXmlTag("TknAssrncData")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public IsoMax140Text? TokenAssuranceData { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public IsoMax140Text? TokenAssuranceData { get; init; }
+
     /// <summary>
     /// Value that allows a Token Service Provider to indicate the identification and verification performed representing the binding of the payment token to the underlying PAN and cardholder.
     /// </summary>
@@ -63,8 +61,8 @@ public partial record Token2
     [DisplayName("Token Assurance Method")]
     [IsoXmlTag("TknAssrncMtd")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? TokenAssuranceMethod { get; init; } 
-    
+    public IsoMax2NumericText? TokenAssuranceMethod { get; init; }
+
     /// <summary>
     /// Original transaction was initiated by Token.
     /// </summary>
@@ -72,16 +70,16 @@ public partial record Token2
     [DisplayName("Token Initiated Indicator")]
     [IsoXmlTag("TknInittdInd")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TokenInitiatedIndicator { get; init; } 
-    
+    public IsoTrueFalseIndicator? TokenInitiatedIndicator { get; init; }
+
     /// <summary>
     /// Storage location of the token.
     /// </summary>
     [IsoId("_riI4cJx_EeuwYeL1lHu9zw")]
     [DisplayName("Storage Location")]
     [IsoXmlTag("StorgLctn")]
-    public StorageLocation1Code? StorageLocation { get; init; } 
-    
+    public StorageLocation1Code? StorageLocation { get; init; }
+
     /// <summary>
     /// Other private or national storage location code.
     /// </summary>
@@ -89,17 +87,17 @@ public partial record Token2
     [DisplayName("Other Storage Location")]
     [IsoXmlTag("OthrStorgLctn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherStorageLocation { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherStorageLocation { get; init; }
+
     /// <summary>
     /// Method used to protect the token.
     /// </summary>
     [IsoId("_iCA7IJyBEeuo7tDc4CDHXg")]
     [DisplayName("Protection Method")]
     [IsoXmlTag("PrtcnMtd")]
-    public ProtectionMethod1Code? ProtectionMethod { get; init; } 
-    
+    public ProtectionMethod1Code? ProtectionMethod { get; init; }
+
     /// <summary>
     /// Other national or private protection method code.
     /// </summary>
@@ -107,18 +105,14 @@ public partial record Token2
     [DisplayName("Other Protection Method")]
     [IsoXmlTag("OthrPrtcnMtd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherProtectionMethod { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherProtectionMethod { get; init; }
+
     /// <summary>
     /// Additional token data.
     /// </summary>
     [IsoId("_uAZ_wJyBEeuo7tDc4CDHXg")]
     [DisplayName("Additional Data")]
     [IsoXmlTag("AddtlData")]
-    public AdditionalData1? AdditionalData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public AdditionalData1? AdditionalData { get; init; }
 }

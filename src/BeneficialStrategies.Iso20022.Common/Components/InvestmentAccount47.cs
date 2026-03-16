@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qet0USLxEeS91KOsP2gZVg")]
 [DisplayName("Investment Account")]
-public partial record InvestmentAccount47
+public record InvestmentAccount47
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of the account. It provides an additional means of identification, and is designated by the account servicer in agreement with the account owner.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record InvestmentAccount47
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Name { get; init; }
+
     /// <summary>
     /// Supplementary registration information applying to a specific block of units for dealing and reporting purposes. The supplementary registration information may be used when all the units are registered, for example, to a funds supermarket, but holdings for each investor have to reconciled individually.
     /// </summary>
@@ -35,89 +33,89 @@ public partial record InvestmentAccount47
     [DisplayName("Designation")]
     [IsoXmlTag("Dsgnt")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Designation { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Designation { get; init; }
+
     /// <summary>
     /// Purpose of the account/source fund type. This is typically linked to an investment product, for example, wrapper, ISA.
     /// </summary>
     [IsoId("_Q4wsDSLxEeS91KOsP2gZVg")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public AccountType1Choice_? Type { get; init; } 
-    
+    public AccountType1Choice_? Type { get; init; }
+
     /// <summary>
     /// Ownership status of the account, for example, joint owners.
     /// </summary>
     [IsoId("_Q4wsDyLxEeS91KOsP2gZVg")]
     [DisplayName("Ownership Type")]
     [IsoXmlTag("OwnrshTp")]
-    public required OwnershipType1Choice_ OwnershipType { get; init; } 
-    
+    public required OwnershipType1Choice_ OwnershipType { get; init; }
+
     /// <summary>
     /// Tax advantage specific to the account.
     /// </summary>
     [IsoId("_Q4wsESLxEeS91KOsP2gZVg")]
     [DisplayName("Tax Exemption")]
     [IsoXmlTag("TaxXmptn")]
-    public TaxExemptionReason1Choice_? TaxExemption { get; init; } 
-    
+    public TaxExemptionReason1Choice_? TaxExemption { get; init; }
+
     /// <summary>
     /// Frequency at which a statement is issued.
     /// </summary>
     [IsoId("_Q4wsEyLxEeS91KOsP2gZVg")]
     [DisplayName("Statement Frequency")]
     [IsoXmlTag("StmtFrqcy")]
-    public StatementFrequencyReason1Choice_? StatementFrequency { get; init; } 
-    
+    public StatementFrequencyReason1Choice_? StatementFrequency { get; init; }
+
     /// <summary>
     /// Currency chosen for reporting purposes by the account owner in agreement with the account servicer.
     /// </summary>
     [IsoId("_Q4wsFSLxEeS91KOsP2gZVg")]
     [DisplayName("Reference Currency")]
     [IsoXmlTag("RefCcy")]
-    public ActiveCurrencyCode? ReferenceCurrency { get; init; } 
-    
+    public ActiveCurrencyCode? ReferenceCurrency { get; init; }
+
     /// <summary>
     /// Language for all communication concerning the account.
     /// </summary>
     [IsoId("_Q4wsFyLxEeS91KOsP2gZVg")]
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public LanguageCode? Language { get; init; } 
-    
+    public LanguageCode? Language { get; init; }
+
     /// <summary>
     /// Dividend option chosen by the account owner based on the options offered in the prospectus.
     /// </summary>
     [IsoId("_Q4wsGSLxEeS91KOsP2gZVg")]
     [DisplayName("Income Preference")]
     [IsoXmlTag("IncmPref")]
-    public IncomePreference1Code? IncomePreference { get; init; } 
-    
+    public IncomePreference1Code? IncomePreference { get; init; }
+
     /// <summary>
     /// Specifies, for income on the fund that is to be reinvested, parameters for the reinvestment. If the reinvestment percentage is less than one hundred percent, the remaining percentage will be invested according to the investor’s subsequent instructions.
     /// </summary>
     [IsoId("_Q4wsGyLxEeS91KOsP2gZVg")]
     [DisplayName("Reinvestment Details")]
     [IsoXmlTag("RinvstmtDtls")]
-    public Reinvestment1? ReinvestmentDetails { get; init; } 
-    
+    public Reinvestment1? ReinvestmentDetails { get; init; }
+
     /// <summary>
     /// Method by which the tax (withholding tax) is to be processed i.e. either withheld at source or tax information reported to tax authorities or tax information is reported due to the provision of a tax certificate.
     /// </summary>
     [IsoId("_Q4wsHSLxEeS91KOsP2gZVg")]
     [DisplayName("Tax Withholding Method")]
     [IsoXmlTag("TaxWhldgMtd")]
-    public TaxWithholdingMethod2Code? TaxWithholdingMethod { get; init; } 
-    
+    public TaxWithholdingMethod2Code? TaxWithholdingMethod { get; init; }
+
     /// <summary>
     /// Details of the letter of intent.
     /// </summary>
     [IsoId("_Q4wsHyLxEeS91KOsP2gZVg")]
     [DisplayName("Letter Intent Details")]
     [IsoXmlTag("LttrInttDtls")]
-    public LetterIntent1? LetterIntentDetails { get; init; } 
-    
+    public LetterIntent1? LetterIntentDetails { get; init; }
+
     /// <summary>
     /// Reference of an accumulation rights program, in which sales commissions are based on a customer&apos;s present purchases of shares and the aggregate quantity previously purchased by the customer. An accumulation rights program is mainly used in the US market.
     /// </summary>
@@ -125,9 +123,9 @@ public partial record InvestmentAccount47
     [DisplayName("Accumulation Right Reference")]
     [IsoXmlTag("AcmltnRghtRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccumulationRightReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccumulationRightReference { get; init; }
+
     /// <summary>
     /// Number of account owners or related parties required to authorise transactions on the account.
     /// </summary>
@@ -135,8 +133,8 @@ public partial record InvestmentAccount47
     [DisplayName("Required Signatories Number")]
     [IsoXmlTag("ReqrdSgntriesNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? RequiredSignatoriesNumber { get; init; } 
-    
+    public IsoNumber? RequiredSignatoriesNumber { get; init; }
+
     /// <summary>
     /// Name of the investment fund family.
     /// </summary>
@@ -144,82 +142,78 @@ public partial record InvestmentAccount47
     [DisplayName("Fund Family Name")]
     [IsoXmlTag("FndFmlyNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? FundFamilyName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? FundFamilyName { get; init; }
+
     /// <summary>
     /// Detailed information about the investment fund associated to the account.
     /// </summary>
     [IsoId("_Q4wsJyLxEeS91KOsP2gZVg")]
     [DisplayName("Modified Fund Details")]
     [IsoXmlTag("ModfdFndDtls")]
-    public ModificationScope13? ModifiedFundDetails { get; init; } 
-    
+    public ModificationScope13? ModifiedFundDetails { get; init; }
+
     /// <summary>
     /// Parameters to be applied on deal amount for orders when the amount is a fractional number.
     /// </summary>
     [IsoId("_Q4wsKSLxEeS91KOsP2gZVg")]
     [DisplayName("Rounding Details")]
     [IsoXmlTag("RndgDtls")]
-    public RoundingParameters1? RoundingDetails { get; init; } 
-    
+    public RoundingParameters1? RoundingDetails { get; init; }
+
     /// <summary>
     /// Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.
     /// </summary>
     [IsoId("_Q4wsKyLxEeS91KOsP2gZVg")]
     [DisplayName("Account Servicer")]
     [IsoXmlTag("AcctSvcr")]
-    public PartyIdentification2Choice_? AccountServicer { get; init; } 
-    
+    public PartyIdentification2Choice_? AccountServicer { get; init; }
+
     /// <summary>
     /// Specifies information about blocked accounts.
     /// </summary>
     [IsoId("_Q4wsLSLxEeS91KOsP2gZVg")]
     [DisplayName("Blocked Status")]
     [IsoXmlTag("BlckdSts")]
-    public Blocked1? BlockedStatus { get; init; } 
-    
+    public Blocked1? BlockedStatus { get; init; }
+
     /// <summary>
     /// Specifies the type of usage of the account.
     /// </summary>
     [IsoId("_Q4wsLyLxEeS91KOsP2gZVg")]
     [DisplayName("Account Usage Type")]
     [IsoXmlTag("AcctUsgTp")]
-    public AccountUsageType1Choice_? AccountUsageType { get; init; } 
-    
+    public AccountUsageType1Choice_? AccountUsageType { get; init; }
+
     /// <summary>
     /// Specifies if documentary evidence has been provided for the foreign resident.
     /// </summary>
     [IsoId("_Q4wsMSLxEeS91KOsP2gZVg")]
     [DisplayName("Foreign Status Certification")]
     [IsoXmlTag("FrgnStsCertfctn")]
-    public Provided1Code? ForeignStatusCertification { get; init; } 
-    
+    public Provided1Code? ForeignStatusCertification { get; init; }
+
     /// <summary>
     /// Date the investor signs the open account form.
     /// </summary>
     [IsoId("_Q4wsMyLxEeS91KOsP2gZVg")]
     [DisplayName("Account Signature Date Time")]
     [IsoXmlTag("AcctSgntrDtTm")]
-    public DateAndDateTimeChoice_? AccountSignatureDateTime { get; init; } 
-    
+    public DateAndDateTimeChoice_? AccountSignatureDateTime { get; init; }
+
     /// <summary>
     /// Specifies the means by which the investor submits the open account form.
     /// </summary>
     [IsoId("_Q4wsNSLxEeS91KOsP2gZVg")]
     [DisplayName("Transaction Channel Type")]
     [IsoXmlTag("TxChanlTp")]
-    public TransactionChannelType1Choice_? TransactionChannelType { get; init; } 
-    
+    public TransactionChannelType1Choice_? TransactionChannelType { get; init; }
+
     /// <summary>
     /// Specifies the category of the investment account.
     /// </summary>
     [IsoId("_Q4wsNyLxEeS91KOsP2gZVg")]
     [DisplayName("Investment Account Category")]
     [IsoXmlTag("InvstmtAcctCtgy")]
-    public InvestmentAccountCategory1Choice_? InvestmentAccountCategory { get; init; } 
-    
-    
-    #nullable disable
-    
+    public InvestmentAccountCategory1Choice_? InvestmentAccountCategory { get; init; }
 }

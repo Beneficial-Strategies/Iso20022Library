@@ -6,12 +6,14 @@ using System.Runtime.Serialization;
 namespace BeneficialStrategies.Iso20022.Codesets;
 
 /// <summary>
-/// Specifies whether the event is an interim or a final event in a series of successive events. 
+/// Specifies whether the event is an interim or a final event in a series of successive events.
 /// </summary>
 [DataContract]
 [Serializable]
 [IsoId("_vPbyYLXHEeiTob_PrFFUxA")]
-[Description(@"Specifies whether the event is an interim or a final event in a series of successive events. ")]
+[Description(
+    @"Specifies whether the event is an interim or a final event in a series of successive events. "
+)]
 [Derivations(typeof(EventSequenceType1Code))]
 public enum EventSequenceTypeCode
 {
@@ -23,7 +25,7 @@ public enum EventSequenceTypeCode
     [IsoId("_LVpPILXIEeiTob_PrFFUxA")]
     [Description(@"Final event in a series of successive events.")]
     Final,
-    
+
     /// <summary>
     /// Interim event in a series of successive events.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,5 +34,4 @@ public enum EventSequenceTypeCode
     [IsoId("_O_xXgLXIEeiTob_PrFFUxA")]
     [Description(@"Interim event in a series of successive events.")]
     Interim,
-    
 }

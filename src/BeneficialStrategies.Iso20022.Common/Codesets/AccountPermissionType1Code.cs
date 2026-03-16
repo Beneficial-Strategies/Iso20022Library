@@ -23,7 +23,7 @@ public enum AccountPermissionType1Code
     [IsoId("_WMuDoZiyEeOuCKiE8vUpBQ")]
     [Description(@"No right to use the account.")]
     NoRight = AccountPermissionTypeCode.NoRight, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Right to use the account alone.
     /// Encoded/decoded by serializers as &quot;RIAL&quot;.
@@ -32,7 +32,7 @@ public enum AccountPermissionType1Code
     [IsoId("_WbHsAZiyEeOuCKiE8vUpBQ")]
     [Description(@"Right to use the account alone.")]
     RightToUseAlone = AccountPermissionTypeCode.RightToUseAlone, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Right to use the account together with another person.
     /// Encoded/decoded by serializers as &quot;RIWI&quot;.
@@ -41,5 +41,4 @@ public enum AccountPermissionType1Code
     [IsoId("_WoKCcZiyEeOuCKiE8vUpBQ")]
     [Description(@"Right to use the account together with another person.")]
     RightToUseWithOther = AccountPermissionTypeCode.RightToUseWithOther, // same ordinal as derivation source for type conversions
-    
 }

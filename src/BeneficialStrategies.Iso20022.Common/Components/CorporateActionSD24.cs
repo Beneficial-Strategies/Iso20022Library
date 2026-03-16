@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_0NQPoXGyEe6S2Llv74R19w")]
 [DisplayName("Corporate Action SD24")]
-public partial record CorporateActionSD24
+public record CorporateActionSD24
 {
-    #nullable enable
-
     /// <summary>
     /// Certificate Details.
     /// </summary>
@@ -30,191 +28,187 @@ public partial record CorporateActionSD24
     /// </summary>
     [DisplayName("Conditional Payment Applicable Flag")]
     [IsoXmlTag("CondlPmtAplblFlg")]
-    public IsoYesNoIndicator? ConditionalPaymentApplicableFlag { get; init; } 
+    public IsoYesNoIndicator? ConditionalPaymentApplicableFlag { get; init; }
 
     /// <summary>
     /// Cut Off Days.
     /// </summary>
     [DisplayName("Cut Off Days")]
     [IsoXmlTag("CutOffDays")]
-    public IsoMax3Number? CutOffDays { get; init; } 
+    public IsoMax3Number? CutOffDays { get; init; }
 
     /// <summary>
     /// Dissenter Rights Applicable Flag.
     /// </summary>
     [DisplayName("Dissenter Rights Applicable Flag")]
     [IsoXmlTag("DsstrRghtsAplblFlg")]
-    public IsoYesNoIndicator? DissenterRightsApplicableFlag { get; init; } 
+    public IsoYesNoIndicator? DissenterRightsApplicableFlag { get; init; }
 
     /// <summary>
     /// DTC Automated Offer Program.
     /// </summary>
     [DisplayName("DTC Automated Offer Program")]
     [IsoXmlTag("DTCAutomtdOfferPrgm")]
-    public DTCAutoOfferProgram1Code? DTCAutomatedOfferProgram { get; init; } 
+    public DTCAutoOfferProgram1Code? DTCAutomatedOfferProgram { get; init; }
 
     /// <summary>
     /// DTC Custody Eligible Flag.
     /// </summary>
     [DisplayName("DTC Custody Eligible Flag")]
     [IsoXmlTag("DTCCtdyElgblFlg")]
-    public IsoYesNoIndicator? DTCCustodyEligibleFlag { get; init; } 
+    public IsoYesNoIndicator? DTCCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// DTC Foreign Tax Election Flag.
     /// </summary>
     [DisplayName("DTC Foreign Tax Election Flag")]
     [IsoXmlTag("DTCFrgnTaxElctnFlg")]
-    public IsoYesNoIndicator? DTCForeignTaxElectionFlag { get; init; } 
+    public IsoYesNoIndicator? DTCForeignTaxElectionFlag { get; init; }
 
     /// <summary>
     /// DTC Instruction Lockout Indicator.
     /// </summary>
     [DisplayName("DTC Instruction Lockout Indicator")]
     [IsoXmlTag("DTCInstrLckoutInd")]
-    public InstructionLockoutType1Code? DTCInstructionLockoutIndicator { get; init; } 
+    public InstructionLockoutType1Code? DTCInstructionLockoutIndicator { get; init; }
 
     /// <summary>
     /// DTC Recycle Cut Off Indicator.
     /// </summary>
     [DisplayName("DTC Recycle Cut Off Indicator")]
     [IsoXmlTag("DTCRcyclCutOffInd")]
-    public CutOff1Code? DTCRecycleCutOffIndicator { get; init; } 
+    public CutOff1Code? DTCRecycleCutOffIndicator { get; init; }
 
     /// <summary>
     /// DTC Reorganisation Custody Eligible Flag.
     /// </summary>
     [DisplayName("DTC Reorganisation Custody Eligible Flag")]
     [IsoXmlTag("DTCReorgCtdyElgblFlg")]
-    public IsoYesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; } 
+    public IsoYesNoIndicator? DTCReorganisationCustodyEligibleFlag { get; init; }
 
     /// <summary>
     /// DTC Reorganisation Deposit Eligible Flag.
     /// </summary>
     [DisplayName("DTC Reorganisation Deposit Eligible Flag")]
     [IsoXmlTag("DTCReorgDpstElgblFlg")]
-    public IsoYesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; } 
+    public IsoYesNoIndicator? DTCReorganisationDepositEligibleFlag { get; init; }
 
     /// <summary>
     /// EDS Messaging Country Code.
     /// </summary>
     [DisplayName("EDS Messaging Country Code")]
     [IsoXmlTag("EDSMsggCtryCd")]
-    public CountryCode? EDSMessagingCountryCode { get; init; } 
+    public CountryCode? EDSMessagingCountryCode { get; init; }
 
     /// <summary>
     /// Event Cash Value.
     /// </summary>
     [DisplayName("Event Cash Value")]
     [IsoXmlTag("EvtCshVal")]
-    public RestrictedFINActiveCurrencyAnd13DecimalAmount? EventCashValue { get; init; } 
+    public RestrictedFINActiveCurrencyAnd13DecimalAmount? EventCashValue { get; init; }
 
     /// <summary>
     /// Long Short Payment Indicator.
     /// </summary>
     [DisplayName("Long Short Payment Indicator")]
     [IsoXmlTag("LngShrtPmtInd")]
-    public AccrualPeriodType1Code? LongShortPaymentIndicator { get; init; } 
+    public AccrualPeriodType1Code? LongShortPaymentIndicator { get; init; }
 
     /// <summary>
     /// Non Exempt Allowed Indicator.
     /// </summary>
     [DisplayName("Non Exempt Allowed Indicator")]
     [IsoXmlTag("NonXmptAllwdInd")]
-    public IsoYesNoIndicator? NonExemptAllowedIndicator { get; init; } 
+    public IsoYesNoIndicator? NonExemptAllowedIndicator { get; init; }
 
     /// <summary>
     /// Notice Type.
     /// </summary>
     [DisplayName("Notice Type")]
     [IsoXmlTag("NtceTp")]
-    public NoticeType1Code? NoticeType { get; init; } 
+    public NoticeType1Code? NoticeType { get; init; }
 
     /// <summary>
     /// Number Of Shares To Be Issued.
     /// </summary>
     [DisplayName("Number Of Shares To Be Issued")]
     [IsoXmlTag("NbOfShrsToBeIssd")]
-    public IsoDecimalNumber? NumberOfSharesToBeIssued { get; init; } 
+    public IsoDecimalNumber? NumberOfSharesToBeIssued { get; init; }
 
     /// <summary>
     /// Oversubscription Type.
     /// </summary>
     [DisplayName("Oversubscription Type")]
     [IsoXmlTag("OvrsbcptTp")]
-    public OversubscriptionType1Code? OversubscriptionType { get; init; } 
+    public OversubscriptionType1Code? OversubscriptionType { get; init; }
 
     /// <summary>
     /// Place And Name.
     /// </summary>
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
-    public IsoMax350Text? PlaceAndName { get; init; } 
+    public IsoMax350Text? PlaceAndName { get; init; }
 
     /// <summary>
     /// Proration Return Minimum Quantity Treatment.
     /// </summary>
     [DisplayName("Proration Return Minimum Quantity Treatment")]
     [IsoXmlTag("PrratnRtrMinQtyTrtmnt")]
-    public ProrationReturnQuantityTreatment1Code? ProrationReturnMinimumQuantityTreatment { get; init; } 
+    public ProrationReturnQuantityTreatment1Code? ProrationReturnMinimumQuantityTreatment { get; init; }
 
     /// <summary>
     /// RDP Reference Number.
     /// </summary>
     [DisplayName("RDP Reference Number")]
     [IsoXmlTag("RDPRefNb")]
-    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; } 
+    public IsoExact32AlphaNumericText? RDPReferenceNumber { get; init; }
 
     /// <summary>
     /// Rights Oversubscription Flag.
     /// </summary>
     [DisplayName("Rights Oversubscription Flag")]
     [IsoXmlTag("RghtsOvrsbcptFlg")]
-    public IsoYesNoIndicator? RightsOversubscriptionFlag { get; init; } 
+    public IsoYesNoIndicator? RightsOversubscriptionFlag { get; init; }
 
     /// <summary>
     /// Rights Round Up Privilege Flag.
     /// </summary>
     [DisplayName("Rights Round Up Privilege Flag")]
     [IsoXmlTag("RghtsRndUpPrvlgFlg")]
-    public IsoYesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; } 
+    public IsoYesNoIndicator? RightsRoundUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Rights Transferable Flag.
     /// </summary>
     [DisplayName("Rights Transferable Flag")]
     [IsoXmlTag("RghtsTrfblFlg")]
-    public IsoYesNoIndicator? RightsTransferableFlag { get; init; } 
+    public IsoYesNoIndicator? RightsTransferableFlag { get; init; }
 
     /// <summary>
     /// Solicitation Dealer Fee Flag.
     /// </summary>
     [DisplayName("Solicitation Dealer Fee Flag")]
     [IsoXmlTag("SlctnDealrFeeFlg")]
-    public IsoYesNoIndicator? SolicitationDealerFeeFlag { get; init; } 
+    public IsoYesNoIndicator? SolicitationDealerFeeFlag { get; init; }
 
     /// <summary>
     /// Step Up Privilege Flag.
     /// </summary>
     [DisplayName("Step Up Privilege Flag")]
     [IsoXmlTag("StepUpPrvlgFlg")]
-    public IsoYesNoIndicator? StepUpPrivilegeFlag { get; init; } 
+    public IsoYesNoIndicator? StepUpPrivilegeFlag { get; init; }
 
     /// <summary>
     /// Surrender Shares To Agent Flag.
     /// </summary>
     [DisplayName("Surrender Shares To Agent Flag")]
     [IsoXmlTag("SrrndrShrsToAgtFlg")]
-    public IsoYesNoIndicator? SurrenderSharesToAgentFlag { get; init; } 
+    public IsoYesNoIndicator? SurrenderSharesToAgentFlag { get; init; }
 
     /// <summary>
     /// Total Number Of Shares Offered.
     /// </summary>
     [DisplayName("Total Number Of Shares Offered")]
     [IsoXmlTag("TtlNbOfShrsOfferd")]
-    public IsoDecimalNumber? TotalNumberOfSharesOffered { get; init; } 
-
-    
-    #nullable disable
-    
+    public IsoDecimalNumber? TotalNumberOfSharesOffered { get; init; }
 }

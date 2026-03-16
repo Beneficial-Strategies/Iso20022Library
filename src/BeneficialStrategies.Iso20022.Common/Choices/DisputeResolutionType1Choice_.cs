@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DisputeResolutionType1Choice.Code))]
     [KnownType(typeof(DisputeResolutionType1Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(DisputeResolutionType1Choice.Code),nameof(DisputeResolutionType1Choice.Code))]
-    [JsonDerivedType(typeof(DisputeResolutionType1Choice.ProprietaryIdentification),nameof(DisputeResolutionType1Choice.ProprietaryIdentification))]
+    [JsonDerivedType(
+        typeof(DisputeResolutionType1Choice.Code),
+        nameof(DisputeResolutionType1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(DisputeResolutionType1Choice.ProprietaryIdentification),
+        nameof(DisputeResolutionType1Choice.ProprietaryIdentification)
+    )]
     [IsoId("_QmogNdp-Ed-ak6NoX_4Aeg_1282948020")]
     [DisplayName("Dispute Resolution Type 1 Choice")]
-    public abstract partial record DisputeResolutionType1Choice_
-    {
-    }
+    public abstract record DisputeResolutionType1Choice_ { }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_OTgzMTky-AOSNFX-8224490")]
 [DisplayName("Encapsulated Business Message")]
-public partial record EncapsulatedBusinessMessage1
+public record EncapsulatedBusinessMessage1
 {
-    #nullable enable
-    
     /// <summary>
     /// The Business Application Header associated to the encapsulated message if it exists.
     /// </summary>
     [IsoId("_NzE0NzI0-AOSNFX-5096924")]
     [DisplayName("Header")]
     [IsoXmlTag("Hdr")]
-    public BusinessApplicationHeader1? Header { get; init; } 
-    
+    public BusinessApplicationHeader1? Header { get; init; }
+
     /// <summary>
     /// Prefix of ID/IDREFs in the encapsulated message to be removed before signature verification.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record EncapsulatedBusinessMessage1
     [DisplayName("Prefix")]
     [IsoXmlTag("Prfx")]
     [IsoSimpleType(IsoSimpleType.ID)]
-    public IsoID? Prefix { get; init; } 
-    
+    public IsoID? Prefix { get; init; }
+
     /// <summary>
     /// If yes, the Msg element contains only a subset of the original message.
     /// </summary>
@@ -42,17 +40,13 @@ public partial record EncapsulatedBusinessMessage1
     [DisplayName("Partial")]
     [IsoXmlTag("Prtl")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Partial { get; init; } 
-    
+    public required IsoYesNoIndicator Partial { get; init; }
+
     /// <summary>
     /// The encapsulated ISO 20022 message.
     /// </summary>
     [IsoId("_NzE0NzI3-AOSNFX-5096924")]
     [DisplayName("Message")]
     [IsoXmlTag("Msg")]
-    public required StrictPayload Message { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required StrictPayload Message { get; init; }
 }

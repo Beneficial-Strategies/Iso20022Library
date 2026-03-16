@@ -11,8 +11,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ExternalCreditLineType1Code")]
-[Description(@"Specifies the external credit line type code in the format of character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the external credit line type code in the format of character string with a maximum length of 4 characters."
+)]
 [DerivedFrom(typeof(ExternalCreditLineTypeCode))]
-public enum ExternalCreditLineType1Code
-{
-}
+public enum ExternalCreditLineType1Code { }

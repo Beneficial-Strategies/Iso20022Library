@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
     /// </summary>
     [IsoId("_QapNsLVQEeadLcJesEbkTQ")]
     [DisplayName("Security")]
-    public partial record Security : Product1Choice_
+    public record Security : Product1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the ISIN of the collateral.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public required IsoISINOct2015Identifier Identification { get; init; } 
-        
+        public required IsoISINOct2015Identifier Identification { get; init; }
+
         /// <summary>
         /// Identifies the security issuer.
         /// </summary>
@@ -33,8 +31,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public required IsoLEIIdentifier Issuer { get; init; } 
-        
+        public required IsoLEIIdentifier Issuer { get; init; }
+
         /// <summary>
         /// Sector for the security issuer, for example, 0500.
         /// </summary>
@@ -42,10 +40,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Product1Choice
         [DisplayName("Sector")]
         [IsoXmlTag("Sctr")]
         [IsoSimpleType(IsoSimpleType.SNA2008SectorIdentifier)]
-        public IsoSNA2008SectorIdentifier? Sector { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoSNA2008SectorIdentifier? Sector { get; init; }
     }
 }

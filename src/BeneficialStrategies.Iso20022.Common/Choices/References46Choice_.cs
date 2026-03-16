@@ -18,18 +18,43 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References46Choice.CommonIdentification))]
     [KnownType(typeof(References46Choice.TradeIdentification))]
     [KnownType(typeof(References46Choice.OtherTransactionIdentification))]
-    [JsonDerivedType(typeof(References46Choice.SecuritiesSettlementTransactionIdentification),nameof(References46Choice.SecuritiesSettlementTransactionIdentification))]
-    [JsonDerivedType(typeof(References46Choice.IntraPositionMovementIdentification),nameof(References46Choice.IntraPositionMovementIdentification))]
-    [JsonDerivedType(typeof(References46Choice.IntraBalanceMovementIdentification),nameof(References46Choice.IntraBalanceMovementIdentification))]
-    [JsonDerivedType(typeof(References46Choice.AccountServicerTransactionIdentification),nameof(References46Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References46Choice.MarketInfrastructureTransactionIdentification),nameof(References46Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References46Choice.PoolIdentification),nameof(References46Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References46Choice.CommonIdentification),nameof(References46Choice.CommonIdentification))]
-    [JsonDerivedType(typeof(References46Choice.TradeIdentification),nameof(References46Choice.TradeIdentification))]
-    [JsonDerivedType(typeof(References46Choice.OtherTransactionIdentification),nameof(References46Choice.OtherTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References46Choice.SecuritiesSettlementTransactionIdentification),
+        nameof(References46Choice.SecuritiesSettlementTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.IntraPositionMovementIdentification),
+        nameof(References46Choice.IntraPositionMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.IntraBalanceMovementIdentification),
+        nameof(References46Choice.IntraBalanceMovementIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.AccountServicerTransactionIdentification),
+        nameof(References46Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References46Choice.MarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.PoolIdentification),
+        nameof(References46Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.CommonIdentification),
+        nameof(References46Choice.CommonIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.TradeIdentification),
+        nameof(References46Choice.TradeIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References46Choice.OtherTransactionIdentification),
+        nameof(References46Choice.OtherTransactionIdentification)
+    )]
     [IsoId("_1yo1ETt4EeW638lNyHKv7A")]
     [DisplayName("References 46 Choice")]
-    public abstract partial record References46Choice_
-    {
-    }
+    public abstract record References46Choice_ { }
 }

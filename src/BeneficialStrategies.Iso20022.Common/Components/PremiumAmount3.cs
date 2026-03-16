@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,34 +14,32 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_64s9gRF-EeSahYR-dAI4lQ")]
 [DisplayName("Premium Amount")]
-public partial record PremiumAmount3
+public record PremiumAmount3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the calculation method of the premium amount.
     /// </summary>
     [IsoId("_7SevcxF-EeSahYR-dAI4lQ")]
     [DisplayName("Premium Quote")]
     [IsoXmlTag("PrmQt")]
-    public required PremiumQuote1Choice_ PremiumQuote { get; init; } 
-    
+    public required PremiumQuote1Choice_ PremiumQuote { get; init; }
+
     /// <summary>
-    /// Identification of the premium currency in which the option is held. 
+    /// Identification of the premium currency in which the option is held.
     /// </summary>
     [IsoId("_mvqqIIaXEeSzIqahkBT6cQ")]
     [DisplayName("Premium Currency")]
     [IsoXmlTag("PrmCcy")]
-    public required ActiveOrHistoricCurrencyCode PremiumCurrency { get; init; } 
-    
+    public required ActiveOrHistoricCurrencyCode PremiumCurrency { get; init; }
+
     /// <summary>
     /// Result of the calculation of the premium amount on the basis of the premium quote and one of the amounts of the underlying foreign exchange trade.
     /// </summary>
     [IsoId("_7SevdRF-EeSahYR-dAI4lQ")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; } 
-    
+    public required ActiveCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Number of decimal places to which quantities of units/shares are rounded.
     /// </summary>
@@ -49,8 +47,8 @@ public partial record PremiumAmount3
     [DisplayName("Decimal Places")]
     [IsoXmlTag("DcmlPlcs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber DecimalPlaces { get; init; } 
-    
+    public required IsoNumber DecimalPlaces { get; init; }
+
     /// <summary>
     /// Date on which the premium must be settled.
     /// </summary>
@@ -58,8 +56,8 @@ public partial record PremiumAmount3
     [DisplayName("Premium Settlement Date")]
     [IsoXmlTag("PrmSttlmDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate PremiumSettlementDate { get; init; } 
-    
+    public required IsoISODate PremiumSettlementDate { get; init; }
+
     /// <summary>
     /// Premium fee payer related information.
     /// </summary>
@@ -67,9 +65,9 @@ public partial record PremiumAmount3
     [DisplayName("Payer Party Reference")]
     [IsoXmlTag("PyerPtyRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PayerPartyReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PayerPartyReference { get; init; }
+
     /// <summary>
     /// Premium fee receiver related information.
     /// </summary>
@@ -77,10 +75,6 @@ public partial record PremiumAmount3
     [DisplayName("Receiver Party Reference")]
     [IsoXmlTag("RcvrPtyRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text ReceiverPartyReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text ReceiverPartyReference { get; init; }
 }

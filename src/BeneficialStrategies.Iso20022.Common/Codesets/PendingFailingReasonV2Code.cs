@@ -11,8 +11,20 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_99WtQIl6EeavwKddCbm3hg")]
-[Description(@"Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing.")]
-[Derivations(typeof(PendingReason24Code),typeof(PendingReason23Code),typeof(FailingReason4Code),typeof(PendingReason18Code),typeof(PendingReason16Code),typeof(PendingReason20Code),typeof(PendingReason14Code),typeof(PendingReason22Code),typeof(PendingFailingReason1Code))]
+[Description(
+    @"Specifies the reason the transaction/instruction is pending or failing settlement. Settlement on the instructed settlement date is still possible, status is pending. Settlement on the instructed settlement date is no longer possible, status is failing."
+)]
+[Derivations(
+    typeof(PendingReason24Code),
+    typeof(PendingReason23Code),
+    typeof(FailingReason4Code),
+    typeof(PendingReason18Code),
+    typeof(PendingReason16Code),
+    typeof(PendingReason20Code),
+    typeof(PendingReason14Code),
+    typeof(PendingReason22Code),
+    typeof(PendingFailingReason1Code)
+)]
 public enum PendingFailingReasonV2Code
 {
     /// <summary>
@@ -21,18 +33,22 @@ public enum PendingFailingReasonV2Code
     /// </summary>
     [EnumMember(Value = "AWMO")]
     [IsoId("_99WtUIl6EeavwKddCbm3hg")]
-    [Description(@"Financial instruments are delivered, but still awaiting money from counterparty.")]
+    [Description(
+        @"Financial instruments are delivered, but still awaiting money from counterparty."
+    )]
     AwaitingMoney,
-    
+
     /// <summary>
     /// Instruction was received after the account servicer&apos;s deadline. Processed on best effort basis.
     /// Encoded/decoded by serializers as &quot;ADEA&quot;.
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_99WtX4l6EeavwKddCbm3hg")]
-    [Description(@"Instruction was received after the account servicer's deadline. Processed on best effort basis.")]
+    [Description(
+        @"Instruction was received after the account servicer's deadline. Processed on best effort basis."
+    )]
     AccountServicerDeadlineMissed,
-    
+
     /// <summary>
     /// Tax reclaim has been sent to the tax authorities.
     /// Encoded/decoded by serializers as &quot;AUTH&quot;.
@@ -41,34 +57,40 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtVol6EeavwKddCbm3hg")]
     [Description(@"Tax reclaim has been sent to the tax authorities.")]
     SentToTaxAuthorities,
-    
+
     /// <summary>
     /// Awaiting financial instruments from a corporate action or other procedure, for example, conversion, dematerialisation, exchange, registration, stamping, splitting.
     /// Encoded/decoded by serializers as &quot;CAIS&quot;.
     /// </summary>
     [EnumMember(Value = "CAIS")]
     [IsoId("_99WtZ4l6EeavwKddCbm3hg")]
-    [Description(@"Awaiting financial instruments from a corporate action or other procedure, for example, conversion, dematerialisation, exchange, registration, stamping, splitting.")]
+    [Description(
+        @"Awaiting financial instruments from a corporate action or other procedure, for example, conversion, dematerialisation, exchange, registration, stamping, splitting."
+    )]
     AwaitingSecurities,
-    
+
     /// <summary>
     /// Instruction has been refused or not recognised and is represented automatically.
     /// Encoded/decoded by serializers as &quot;REFU&quot;.
     /// </summary>
     [EnumMember(Value = "REFU")]
     [IsoId("_99Wtnol6EeavwKddCbm3hg")]
-    [Description(@"Instruction has been refused or not recognised and is represented automatically.")]
+    [Description(
+        @"Instruction has been refused or not recognised and is represented automatically."
+    )]
     InstructionRefusedOrNotRecognised,
-    
+
     /// <summary>
     /// Financial instruments have not yet been received from the counterparty (if receive against payment trade), the money has been delivered.
     /// Encoded/decoded by serializers as &quot;AWSH&quot;.
     /// </summary>
     [EnumMember(Value = "AWSH")]
     [IsoId("_99WtaIl6EeavwKddCbm3hg")]
-    [Description(@"Financial instruments have not yet been received from the counterparty (if receive against payment trade), the money has been delivered.")]
+    [Description(
+        @"Financial instruments have not yet been received from the counterparty (if receive against payment trade), the money has been delivered."
+    )]
     AwaitingSecuritiesFromCounterparty,
-    
+
     /// <summary>
     /// Settlement is physical. Financial instruments are being delivered.
     /// Encoded/decoded by serializers as &quot;PHSE&quot;.
@@ -77,7 +99,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtlYl6EeavwKddCbm3hg")]
     [Description(@"Settlement is physical. Financial instruments are being delivered.")]
     PhysicalDeliveryDelay,
-    
+
     /// <summary>
     /// Trade is being amended in the market.
     /// Encoded/decoded by serializers as &quot;TAMM&quot;.
@@ -86,7 +108,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtpIl6EeavwKddCbm3hg")]
     [Description(@"Trade is being amended in the market.")]
     TradeAmendedInMarket,
-    
+
     /// <summary>
     /// Awaiting documents or endorsements from you.
     /// Encoded/decoded by serializers as &quot;DOCY&quot;.
@@ -95,7 +117,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtSYl6EeavwKddCbm3hg")]
     [Description(@"Awaiting documents or endorsements from you.")]
     AwaitingDocumentsOrEndorsementsFromYou,
-    
+
     /// <summary>
     /// Awaiting documents or endorsements from counterparty.
     /// Encoded/decoded by serializers as &quot;DOCC&quot;.
@@ -104,7 +126,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtkol6EeavwKddCbm3hg")]
     [Description(@"Awaiting documents or endorsements from counterparty.")]
     AwaitingDocumentsOrEndorsementsFromCounterparty,
-    
+
     /// <summary>
     /// Your account is blocked, no instruction can settle over the account.
     /// Encoded/decoded by serializers as &quot;BLOC&quot;.
@@ -113,7 +135,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtl4l6EeavwKddCbm3hg")]
     [Description(@"Your account is blocked, no instruction can settle over the account.")]
     AccountBlocked,
-    
+
     /// <summary>
     /// A chaser/enquiry has been sent.
     /// Encoded/decoded by serializers as &quot;CHAS&quot;.
@@ -122,7 +144,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtgIl6EeavwKddCbm3hg")]
     [Description(@"A chaser/enquiry has been sent.")]
     EnquirySent,
-    
+
     /// <summary>
     /// Financial instrument is a new issue and not yet available/tradable.
     /// Encoded/decoded by serializers as &quot;NEWI&quot;.
@@ -131,25 +153,29 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtkIl6EeavwKddCbm3hg")]
     [Description(@"Financial instrument is a new issue and not yet available/tradable.")]
     NewIssues,
-    
+
     /// <summary>
     /// Insufficient deliverable financial instruments in counterparty&apos;s account or counterparty does not hold financial instruments.
     /// Encoded/decoded by serializers as &quot;CLAC&quot;.
     /// </summary>
     [EnumMember(Value = "CLAC")]
     [IsoId("_99WtiIl6EeavwKddCbm3hg")]
-    [Description(@"Insufficient deliverable financial instruments in counterparty's account or counterparty does not hold financial instruments.")]
+    [Description(
+        @"Insufficient deliverable financial instruments in counterparty's account or counterparty does not hold financial instruments."
+    )]
     CounterpartyInsufficientSecurities,
-    
+
     /// <summary>
     /// Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument.
     /// Encoded/decoded by serializers as &quot;MUNO&quot;.
     /// </summary>
     [EnumMember(Value = "MUNO")]
     [IsoId("_99WtRol6EeavwKddCbm3hg")]
-    [Description(@"Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument.")]
+    [Description(
+        @"Quantity instructed is not a multiple of an existing settlement quantity lot for the financial instrument."
+    )]
     MultipleSettlementAmount,
-    
+
     /// <summary>
     /// Settlement cannot be executed; financial instruments are in global form.
     /// Encoded/decoded by serializers as &quot;GLOB&quot;.
@@ -158,7 +184,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtXol6EeavwKddCbm3hg")]
     [Description(@"Settlement cannot be executed; financial instruments are in global form.")]
     GlobalFormSecurities,
-    
+
     /// <summary>
     /// Your instruction is a preadvice, that is, for matching only.
     /// Encoded/decoded by serializers as &quot;PREA&quot;.
@@ -167,7 +193,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtcYl6EeavwKddCbm3hg")]
     [Description(@"Your instruction is a preadvice, that is, for matching only.")]
     YourInstructionOnHold,
-    
+
     /// <summary>
     /// Guaranteed delivery indicator differs in the counterparty&apos;s instruction.
     /// Encoded/decoded by serializers as &quot;GUAD&quot;.
@@ -176,7 +202,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtbol6EeavwKddCbm3hg")]
     [Description(@"Guaranteed delivery indicator differs in the counterparty's instruction.")]
     GuaranteedDeliveryIndicatorDifference,
-    
+
     /// <summary>
     /// Trade will settle in partials.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -185,7 +211,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtoYl6EeavwKddCbm3hg")]
     [Description(@"Trade will settle in partials.")]
     TradeSettlesInPartials,
-    
+
     /// <summary>
     /// Instruction has not been matched; matching process is not required.
     /// Encoded/decoded by serializers as &quot;NMAS&quot;.
@@ -194,7 +220,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtTIl6EeavwKddCbm3hg")]
     [Description(@"Instruction has not been matched; matching process is not required.")]
     NoMatchingRequired,
-    
+
     /// <summary>
     /// Insufficient money in counterparty&apos;s account.
     /// Encoded/decoded by serializers as &quot;CMON&quot;.
@@ -203,7 +229,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtWol6EeavwKddCbm3hg")]
     [Description(@"Insufficient money in counterparty's account.")]
     CounterpartyInsufficientMoney,
-    
+
     /// <summary>
     /// Insufficient collateral in your account to execute the instruction.
     /// Encoded/decoded by serializers as &quot;YCOL&quot;.
@@ -212,7 +238,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtrIl6EeavwKddCbm3hg")]
     [Description(@"Insufficient collateral in your account to execute the instruction.")]
     CollateralShortage,
-    
+
     /// <summary>
     /// Financial instruments are not deliverable as they are pledged as collateral.
     /// Encoded/decoded by serializers as &quot;COLL&quot;.
@@ -221,25 +247,29 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtcIl6EeavwKddCbm3hg")]
     [Description(@"Financial instruments are not deliverable as they are pledged as collateral.")]
     SecuritiesPledgedAsCollateral,
-    
+
     /// <summary>
     /// Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction.
     /// Encoded/decoded by serializers as &quot;DEPO&quot;.
     /// </summary>
     [EnumMember(Value = "DEPO")]
     [IsoId("_99Wtj4l6EeavwKddCbm3hg")]
-    [Description(@"Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction.")]
+    [Description(
+        @"Deposit of shares for the issuing of depositary receipts has been refused. The allotment granted by the issuer is exceeded by your transaction."
+    )]
     RefusedDepositForIssueOfDepositaryReceipts,
-    
+
     /// <summary>
     /// Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached.
     /// Encoded/decoded by serializers as &quot;FLIM&quot;.
     /// </summary>
     [EnumMember(Value = "FLIM")]
     [IsoId("_99Wtqol6EeavwKddCbm3hg")]
-    [Description(@"Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached.")]
+    [Description(
+        @"Insufficient deliverable financial instruments in your account as maximum foreign limit has been reached."
+    )]
     MaximumForeignLimitReached,
-    
+
     /// <summary>
     /// A foreign exchange instruction from you is missing.
     /// Encoded/decoded by serializers as &quot;NOFX&quot;.
@@ -248,25 +278,29 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtiol6EeavwKddCbm3hg")]
     [Description(@"A foreign exchange instruction from you is missing.")]
     NoForeignExchangeInstruction,
-    
+
     /// <summary>
     /// Financial instruments require income adjustment, for example, dividend or interest.
     /// Encoded/decoded by serializers as &quot;INCA&quot;.
     /// </summary>
     [EnumMember(Value = "INCA")]
     [IsoId("_99Wtfol6EeavwKddCbm3hg")]
-    [Description(@"Financial instruments require income adjustment, for example, dividend or interest.")]
+    [Description(
+        @"Financial instruments require income adjustment, for example, dividend or interest."
+    )]
     IncomeAdjustementRequired,
-    
+
     /// <summary>
     /// Your instruction is pending settlement because the instruction linked to it is pending.
     /// Encoded/decoded by serializers as &quot;LINK&quot;.
     /// </summary>
     [EnumMember(Value = "LINK")]
     [IsoId("_99WtdIl6EeavwKddCbm3hg")]
-    [Description(@"Your instruction is pending settlement because the instruction linked to it is pending.")]
+    [Description(
+        @"Your instruction is pending settlement because the instruction linked to it is pending."
+    )]
     PendingLinkedInstruction,
-    
+
     /// <summary>
     /// Awaiting settlement date. No settlement problems to be reported.
     /// Encoded/decoded by serializers as &quot;FUTU&quot;.
@@ -275,7 +309,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtm4l6EeavwKddCbm3hg")]
     [Description(@"Awaiting settlement date. No settlement problems to be reported.")]
     AwaitingSettlementDate,
-    
+
     /// <summary>
     /// Insufficient financial instruments in your account.
     /// Encoded/decoded by serializers as &quot;LACK&quot;.
@@ -284,7 +318,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WteIl6EeavwKddCbm3hg")]
     [Description(@"Insufficient financial instruments in your account.")]
     LackOfSecurities,
-    
+
     /// <summary>
     /// Financial instruments are out on loan.
     /// Encoded/decoded by serializers as &quot;LALO&quot;.
@@ -293,7 +327,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtU4l6EeavwKddCbm3hg")]
     [Description(@"Financial instruments are out on loan.")]
     SecuritiesLoanedOut,
-    
+
     /// <summary>
     /// Insufficient money in your account.
     /// Encoded/decoded by serializers as &quot;MONY&quot;.
@@ -302,7 +336,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtWYl6EeavwKddCbm3hg")]
     [Description(@"Insufficient money in your account.")]
     InsufficientMoney,
-    
+
     /// <summary>
     /// Confirmation of settlement has not yet been received.
     /// Encoded/decoded by serializers as &quot;NCON&quot;.
@@ -311,16 +345,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtR4l6EeavwKddCbm3hg")]
     [Description(@"Confirmation of settlement has not yet been received.")]
     ConfirmationNotReceived,
-    
+
     /// <summary>
     /// Delivery/receipt was refused because physical financial instruments are not in good order.
     /// Encoded/decoded by serializers as &quot;REFS&quot;.
     /// </summary>
     [EnumMember(Value = "REFS")]
     [IsoId("_99WtVYl6EeavwKddCbm3hg")]
-    [Description(@"Delivery/receipt was refused because physical financial instruments are not in good order.")]
+    [Description(
+        @"Delivery/receipt was refused because physical financial instruments are not in good order."
+    )]
     NotInGoodOrder,
-    
+
     /// <summary>
     /// Stamp duty information is missing.
     /// Encoded/decoded by serializers as &quot;SDUT&quot;.
@@ -329,61 +365,73 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtRYl6EeavwKddCbm3hg")]
     [Description(@"Stamp duty information is missing.")]
     LackOfStampDutyInformation,
-    
+
     /// <summary>
     /// Processing batch differs in the counterparty&apos;s instruction, for example, daytime/real-time versus overnight.
     /// Encoded/decoded by serializers as &quot;BATC&quot;.
     /// </summary>
     [EnumMember(Value = "BATC")]
     [IsoId("_99WtZYl6EeavwKddCbm3hg")]
-    [Description(@"Processing batch differs in the counterparty's instruction, for example, daytime/real-time versus overnight.")]
+    [Description(
+        @"Processing batch differs in the counterparty's instruction, for example, daytime/real-time versus overnight."
+    )]
     ProcessingBatchDifference,
-    
+
     /// <summary>
     /// Your instruction is confirmed in the local market or is ready for settlement, awaiting next settlement cycle.
     /// Encoded/decoded by serializers as &quot;CYCL&quot;.
     /// </summary>
     [EnumMember(Value = "CYCL")]
     [IsoId("_99WtjYl6EeavwKddCbm3hg")]
-    [Description(@"Your instruction is confirmed in the local market or is ready for settlement, awaiting next settlement cycle.")]
+    [Description(
+        @"Your instruction is confirmed in the local market or is ready for settlement, awaiting next settlement cycle."
+    )]
     AwaitingNextSettlementCycle,
-    
+
     /// <summary>
     /// Financial instruments are blocked due to a corporate action event, realignment, etc.
     /// Encoded/decoded by serializers as &quot;SBLO&quot;.
     /// </summary>
     [EnumMember(Value = "SBLO")]
     [IsoId("_99Wtaol6EeavwKddCbm3hg")]
-    [Description(@"Financial instruments are blocked due to a corporate action event, realignment, etc.")]
+    [Description(
+        @"Financial instruments are blocked due to a corporate action event, realignment, etc."
+    )]
     SecuritiesBlocked,
-    
+
     /// <summary>
     /// Counterparty is in receivership (form of bankruptcy where a court appointed person - the receiver - manages the affairs of the business).
     /// Encoded/decoded by serializers as &quot;CPEC&quot;.
     /// </summary>
     [EnumMember(Value = "CPEC")]
     [IsoId("_99Wtd4l6EeavwKddCbm3hg")]
-    [Description(@"Counterparty is in receivership (form of bankruptcy where a court appointed person - the receiver - manages the affairs of the business).")]
+    [Description(
+        @"Counterparty is in receivership (form of bankruptcy where a court appointed person - the receiver - manages the affairs of the business)."
+    )]
     CounterpartyInReceivership,
-    
+
     /// <summary>
     /// Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument.
     /// Encoded/decoded by serializers as &quot;MINO&quot;.
     /// </summary>
     [EnumMember(Value = "MINO")]
     [IsoId("_99Wtlol6EeavwKddCbm3hg")]
-    [Description(@"Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument.")]
+    [Description(
+        @"Quantity instructed is lower than the minimum existing settlement quantity for the financial instrument."
+    )]
     MinimumSettlementAmount,
-    
+
     /// <summary>
     /// Payment is pending, and does not settle because the actual use of the risk management limit on the counterpart (bilateral limit) prevents settlement.
     /// Encoded/decoded by serializers as &quot;PCAP&quot;.
     /// </summary>
     [EnumMember(Value = "PCAP")]
     [IsoId("_99WtY4l6EeavwKddCbm3hg")]
-    [Description(@"Payment is pending, and does not settle because the actual use of the risk management limit on the counterpart (bilateral limit) prevents settlement.")]
+    [Description(
+        @"Payment is pending, and does not settle because the actual use of the risk management limit on the counterpart (bilateral limit) prevents settlement."
+    )]
     PendingCAP,
-    
+
     /// <summary>
     /// Pending reason being investigated.
     /// Encoded/decoded by serializers as &quot;IAAD&quot;.
@@ -392,7 +440,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtb4l6EeavwKddCbm3hg")]
     [Description(@"Pending reason being investigated.")]
     StatusReasonInvestigation,
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -401,16 +449,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtcol6EeavwKddCbm3hg")]
     [Description(@"Other. See Narrative.")]
     Other,
-    
+
     /// <summary>
     /// Physical financial instruments have been received and are being checked for authenticity.
     /// Encoded/decoded by serializers as &quot;PHCK&quot;.
     /// </summary>
     [EnumMember(Value = "PHCK")]
     [IsoId("_99WtgYl6EeavwKddCbm3hg")]
-    [Description(@"Physical financial instruments have been received and are being checked for authenticity.")]
+    [Description(
+        @"Physical financial instruments have been received and are being checked for authenticity."
+    )]
     PhysicalSecuritiesVerification,
-    
+
     /// <summary>
     /// Information, for example, telephone number, contact person, is missing.
     /// Encoded/decoded by serializers as &quot;MINF&quot;.
@@ -419,7 +469,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtq4l6EeavwKddCbm3hg")]
     [Description(@"Information, for example, telephone number, contact person, is missing.")]
     MissingInformation,
-    
+
     /// <summary>
     /// Account must already be opened in order to process the transfer.
     /// Encoded/decoded by serializers as &quot;ACOP&quot;.
@@ -428,7 +478,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtT4l6EeavwKddCbm3hg")]
     [Description(@"Account must already be opened in order to process the transfer.")]
     AccountNotOpen,
-    
+
     /// <summary>
     /// Intermediary is investigating the reason why the transfer is pending.
     /// Encoded/decoded by serializers as &quot;IINV&quot;.
@@ -437,7 +487,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtn4l6EeavwKddCbm3hg")]
     [Description(@"Intermediary is investigating the reason why the transfer is pending.")]
     UnderInvestigation,
-    
+
     /// <summary>
     /// Client has been informed of a problem and is investigating.
     /// Encoded/decoded by serializers as &quot;CINV&quot;.
@@ -446,7 +496,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtk4l6EeavwKddCbm3hg")]
     [Description(@"Client has been informed of a problem and is investigating.")]
     UnderClientInvestigation,
-    
+
     /// <summary>
     /// Transfer agent is investigating.
     /// Encoded/decoded by serializers as &quot;AINV&quot;.
@@ -455,16 +505,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtkYl6EeavwKddCbm3hg")]
     [Description(@"Transfer agent is investigating.")]
     UnderTransferAgentInvestigation,
-    
+
     /// <summary>
     /// Transfer is being processed by the transfer agent, awaiting status from transfer agent.
     /// Encoded/decoded by serializers as &quot;WTRF&quot;.
     /// </summary>
     [EnumMember(Value = "WTRF")]
     [IsoId("_99Wtdol6EeavwKddCbm3hg")]
-    [Description(@"Transfer is being processed by the transfer agent, awaiting status from transfer agent.")]
+    [Description(
+        @"Transfer is being processed by the transfer agent, awaiting status from transfer agent."
+    )]
     AwaitingTransferAgentStatus,
-    
+
     /// <summary>
     /// Usual transfer agent&apos;s processing timeframe.
     /// Encoded/decoded by serializers as &quot;USUA&quot;.
@@ -473,16 +525,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WthIl6EeavwKddCbm3hg")]
     [Description(@"Usual transfer agent's processing timeframe.")]
     UsualTransactionTime,
-    
+
     /// <summary>
     /// At your request, the Intermediary is checking the status of your instruction with the transfer agent.
     /// Encoded/decoded by serializers as &quot;ASTA&quot;.
     /// </summary>
     [EnumMember(Value = "ASTA")]
     [IsoId("_99WtXIl6EeavwKddCbm3hg")]
-    [Description(@"At your request, the Intermediary is checking the status of your instruction with the transfer agent.")]
+    [Description(
+        @"At your request, the Intermediary is checking the status of your instruction with the transfer agent."
+    )]
     AwaitingStatus,
-    
+
     /// <summary>
     /// Application form has been sent to the transfer agent.
     /// Encoded/decoded by serializers as &quot;AFST&quot;.
@@ -491,25 +545,29 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtrol6EeavwKddCbm3hg")]
     [Description(@"Application form has been sent to the transfer agent.")]
     ApplicationFormSent,
-    
+
     /// <summary>
     /// Stock transfer form has been sent to the counterparty to sign and forward to the transfer agent.
     /// Encoded/decoded by serializers as &quot;STST&quot;.
     /// </summary>
     [EnumMember(Value = "STST")]
     [IsoId("_99WtbYl6EeavwKddCbm3hg")]
-    [Description(@"Stock transfer form has been sent to the counterparty to sign and forward to the transfer agent.")]
+    [Description(
+        @"Stock transfer form has been sent to the counterparty to sign and forward to the transfer agent."
+    )]
     StockTransferFormSent,
-    
+
     /// <summary>
     /// Longer processing timeframe for this type of transfer, due to documentation requirements.
     /// Encoded/decoded by serializers as &quot;LPRO&quot;.
     /// </summary>
     [EnumMember(Value = "LPRO")]
     [IsoId("_99Wtp4l6EeavwKddCbm3hg")]
-    [Description(@"Longer processing timeframe for this type of transfer, due to documentation requirements.")]
+    [Description(
+        @"Longer processing timeframe for this type of transfer, due to documentation requirements."
+    )]
     LongerProcessing,
-    
+
     /// <summary>
     /// Additional documents have been requested by the transfer agent.
     /// Encoded/decoded by serializers as &quot;ADRQ&quot;.
@@ -518,7 +576,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtS4l6EeavwKddCbm3hg")]
     [Description(@"Additional documents have been requested by the transfer agent.")]
     AdditionalDocumentsRequested,
-    
+
     /// <summary>
     /// Additional documents have been sent.
     /// Encoded/decoded by serializers as &quot;ADS1&quot;.
@@ -527,16 +585,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtmol6EeavwKddCbm3hg")]
     [Description(@"Additional documents have been sent.")]
     AdditionalDocumentsSent1,
-    
+
     /// <summary>
     /// Upon request of the transfer agent, the intermediary has sent additional documents. The transfer agent has confirmed that all the necessary information is now in place.
     /// Encoded/decoded by serializers as &quot;ADS2&quot;.
     /// </summary>
     [EnumMember(Value = "ADS2")]
     [IsoId("_99WtV4l6EeavwKddCbm3hg")]
-    [Description(@"Upon request of the transfer agent, the intermediary has sent additional documents. The transfer agent has confirmed that all the necessary information is now in place.")]
+    [Description(
+        @"Upon request of the transfer agent, the intermediary has sent additional documents. The transfer agent has confirmed that all the necessary information is now in place."
+    )]
     AdditionalDocumentsSent2,
-    
+
     /// <summary>
     /// Documents are rejected by the transfer agent.
     /// Encoded/decoded by serializers as &quot;DRJC&quot;.
@@ -545,7 +605,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtYol6EeavwKddCbm3hg")]
     [Description(@"Documents are rejected by the transfer agent.")]
     DocumentsRejected,
-    
+
     /// <summary>
     /// Counterparty has not sent an instruction to receive. Check with counterparty.
     /// Encoded/decoded by serializers as &quot;CYIN&quot;.
@@ -554,16 +614,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtSIl6EeavwKddCbm3hg")]
     [Description(@"Counterparty has not sent an instruction to receive. Check with counterparty.")]
     AwaitingCounterpartyReceipt,
-    
+
     /// <summary>
     /// Counterparty has not sent an instruction to deliver or delivered the shares. Check with counterparty.
     /// Encoded/decoded by serializers as &quot;CYDV&quot;.
     /// </summary>
     [EnumMember(Value = "CYDV")]
     [IsoId("_99WtQYl6EeavwKddCbm3hg")]
-    [Description(@"Counterparty has not sent an instruction to deliver or delivered the shares. Check with counterparty.")]
+    [Description(
+        @"Counterparty has not sent an instruction to deliver or delivered the shares. Check with counterparty."
+    )]
     AwaitingCounterpartyDelivery,
-    
+
     /// <summary>
     /// The instructed position exceeds the eligible balance.
     /// Encoded/decoded by serializers as &quot;OVER&quot;.
@@ -572,7 +634,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtjol6EeavwKddCbm3hg")]
     [Description(@"The instructed position exceeds the eligible balance.")]
     NormalProcessingPeriodLapsed,
-    
+
     /// <summary>
     /// Wrong counterparty account details.
     /// Encoded/decoded by serializers as &quot;WCPA&quot;.
@@ -581,7 +643,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtjIl6EeavwKddCbm3hg")]
     [Description(@"Wrong counterparty account details.")]
     WrongCounterpartyAccount,
-    
+
     /// <summary>
     /// Transfer is being processed by transfer agent.
     /// Encoded/decoded by serializers as &quot;TAPR&quot;.
@@ -590,7 +652,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtXYl6EeavwKddCbm3hg")]
     [Description(@"Transfer is being processed by transfer agent.")]
     TransferAgentProcessing,
-    
+
     /// <summary>
     /// Confirmation is expected from transfer agent.
     /// Encoded/decoded by serializers as &quot;XCNF&quot;.
@@ -599,7 +661,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtdYl6EeavwKddCbm3hg")]
     [Description(@"Confirmation is expected from transfer agent.")]
     ExpectedConfirmation,
-    
+
     /// <summary>
     /// Special follow-up is taking place.
     /// Encoded/decoded by serializers as &quot;ESCA&quot;.
@@ -608,7 +670,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wthol6EeavwKddCbm3hg")]
     [Description(@"Special follow-up is taking place.")]
     Escalation,
-    
+
     /// <summary>
     /// Transfer agent claims non-receipt of physical shares.
     /// Encoded/decoded by serializers as &quot;NRCP&quot;.
@@ -617,7 +679,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtUol6EeavwKddCbm3hg")]
     [Description(@"Transfer agent claims non-receipt of physical shares.")]
     TransferAgentNonReceipt,
-    
+
     /// <summary>
     /// Confirmed but finality is to be verified.
     /// Encoded/decoded by serializers as &quot;FVER&quot;.
@@ -626,7 +688,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtnIl6EeavwKddCbm3hg")]
     [Description(@"Confirmed but finality is to be verified.")]
     FinalVerification,
-    
+
     /// <summary>
     /// Disagreement in beneficial ownership.
     /// Encoded/decoded by serializers as &quot;BENO&quot;.
@@ -635,52 +697,62 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtgol6EeavwKddCbm3hg")]
     [Description(@"Disagreement in beneficial ownership.")]
     BeneficialOwnershipDisagreement,
-    
+
     /// <summary>
     /// Counterparty&apos;s instruction and your instruction are on hold/frozen/ in a preadvice mode.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
     /// </summary>
     [EnumMember(Value = "BOTH")]
     [IsoId("_99WtqIl6EeavwKddCbm3hg")]
-    [Description(@"Counterparty's instruction and your instruction are on hold/frozen/ in a preadvice mode.")]
+    [Description(
+        @"Counterparty's instruction and your instruction are on hold/frozen/ in a preadvice mode."
+    )]
     BothInstructionsOnHold,
-    
+
     /// <summary>
     /// Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India.
     /// Encoded/decoded by serializers as &quot;CLHT&quot;.
     /// </summary>
     [EnumMember(Value = "CLHT")]
     [IsoId("_99Wti4l6EeavwKddCbm3hg")]
-    [Description(@"Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India.")]
+    [Description(
+        @"Instructed settlement date does not agree with the settlement date on the clearing house trade, that is, a specific type of trade in India."
+    )]
     ClearingHouseTrade,
-    
+
     /// <summary>
     /// Prior payment credited to account based contractual income collection agreement has been collected from issuer.
     /// Encoded/decoded by serializers as &quot;PCNF&quot;.
     /// </summary>
     [EnumMember(Value = "PCNF")]
     [IsoId("_99WtfYl6EeavwKddCbm3hg")]
-    [Description(@"Prior payment credited to account based contractual income collection agreement has been collected from issuer.")]
+    [Description(
+        @"Prior payment credited to account based contractual income collection agreement has been collected from issuer."
+    )]
     ConfirmationOfPayment,
-    
+
     /// <summary>
     /// Quantity instructed does not match the denomination available/deliverable. Physical securities need to be obtained in deliverable denominated quantities.
     /// Encoded/decoded by serializers as &quot;DENO&quot;.
     /// </summary>
     [EnumMember(Value = "DENO")]
     [IsoId("_99WtfIl6EeavwKddCbm3hg")]
-    [Description(@"Quantity instructed does not match the denomination available/deliverable. Physical securities need to be obtained in deliverable denominated quantities.")]
+    [Description(
+        @"Quantity instructed does not match the denomination available/deliverable. Physical securities need to be obtained in deliverable denominated quantities."
+    )]
     UnavailableDeliverableDenominatedQuantity,
-    
+
     /// <summary>
     /// Exceptional closing of all financial institutions due to natural disaster, for example, earthquake.
     /// Encoded/decoded by serializers as &quot;DISA&quot;.
     /// </summary>
     [EnumMember(Value = "DISA")]
     [IsoId("_99WtRIl6EeavwKddCbm3hg")]
-    [Description(@"Exceptional closing of all financial institutions due to natural disaster, for example, earthquake.")]
+    [Description(
+        @"Exceptional closing of all financial institutions due to natural disaster, for example, earthquake."
+    )]
     NaturalDisaster,
-    
+
     /// <summary>
     /// Counterparty has returned or refuses the securities.
     /// Encoded/decoded by serializers as &quot;DKNY&quot;.
@@ -689,7 +761,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WthYl6EeavwKddCbm3hg")]
     [Description(@"Counterparty has returned or refuses the securities.")]
     CounterpartyReturnedShares,
-    
+
     /// <summary>
     /// Quantity of financial instruments does not match.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -698,16 +770,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtQ4l6EeavwKddCbm3hg")]
     [Description(@"Quantity of financial instruments does not match.")]
     QuantityDisagreement,
-    
+
     /// <summary>
     /// Financial instruments are blocked at the Central Security Depository (CSD) following a corporate event.
     /// Encoded/decoded by serializers as &quot;FROZ&quot;.
     /// </summary>
     [EnumMember(Value = "FROZ")]
     [IsoId("_99WtZol6EeavwKddCbm3hg")]
-    [Description(@"Financial instruments are blocked at the Central Security Depository (CSD) following a corporate event.")]
+    [Description(
+        @"Financial instruments are blocked at the Central Security Depository (CSD) following a corporate event."
+    )]
     SecuritiesFrozenAtCSD,
-    
+
     /// <summary>
     /// Awaiting settlement of a purchase to cover failing positions.
     /// Encoded/decoded by serializers as &quot;LAAW&quot;.
@@ -716,7 +790,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wteol6EeavwKddCbm3hg")]
     [Description(@"Awaiting settlement of a purchase to cover failing positions.")]
     AwaitingOtherTransaction,
-    
+
     /// <summary>
     /// Instruction was received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -725,7 +799,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtf4l6EeavwKddCbm3hg")]
     [Description(@"Instruction was received after market deadline.")]
     MarketDeadlineMissed,
-    
+
     /// <summary>
     /// Central bank liquidity is insufficient.
     /// Encoded/decoded by serializers as &quot;LIQU&quot;.
@@ -734,7 +808,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtaYl6EeavwKddCbm3hg")]
     [Description(@"Central bank liquidity is insufficient.")]
     InsufficientCentralBankLiquidity,
-    
+
     /// <summary>
     /// Awaiting receipt of adequate certification.
     /// Encoded/decoded by serializers as &quot;MCER&quot;.
@@ -743,7 +817,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtQol6EeavwKddCbm3hg")]
     [Description(@"Awaiting receipt of adequate certification.")]
     MissingCertification,
-    
+
     /// <summary>
     /// Payment has not been made by issuer.
     /// Encoded/decoded by serializers as &quot;NPAY&quot;.
@@ -752,7 +826,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtTYl6EeavwKddCbm3hg")]
     [Description(@"Payment has not been made by issuer.")]
     NoPayment,
-    
+
     /// <summary>
     /// Financial instruments have not been delivered by the issuer.
     /// Encoded/decoded by serializers as &quot;NSEC&quot;.
@@ -761,16 +835,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtpol6EeavwKddCbm3hg")]
     [Description(@"Financial instruments have not been delivered by the issuer.")]
     NotDelivered,
-    
+
     /// <summary>
     /// The instruction is pending receipt of securities, for example, from a purchase or loan.
     /// Encoded/decoded by serializers as &quot;PENR&quot;.
     /// </summary>
     [EnumMember(Value = "PENR")]
     [IsoId("_99WtUYl6EeavwKddCbm3hg")]
-    [Description(@"The instruction is pending receipt of securities, for example, from a purchase or loan.")]
+    [Description(
+        @"The instruction is pending receipt of securities, for example, from a purchase or loan."
+    )]
     PendingReceipt,
-    
+
     /// <summary>
     /// Counterparty&apos;s instruction is a preadvice, that is, for matching only.
     /// Encoded/decoded by serializers as &quot;PRCY&quot;.
@@ -779,52 +855,62 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtmYl6EeavwKddCbm3hg")]
     [Description(@"Counterparty's instruction is a preadvice, that is, for matching only.")]
     CounterpartyInstructionOnHold,
-    
+
     /// <summary>
     /// Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached.
     /// Encoded/decoded by serializers as &quot;REGT&quot;.
     /// </summary>
     [EnumMember(Value = "REGT")]
     [IsoId("_99Wth4l6EeavwKddCbm3hg")]
-    [Description(@"Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached.")]
+    [Description(
+        @"Certificates have been lodged with the registrar but rejected due to incomplete documentation or foreign ownership limitation reached."
+    )]
     CertificatesRejected,
-    
+
     /// <summary>
     /// Settlement system/method has been modified at central securities depository to allow settlement.
     /// Encoded/decoded by serializers as &quot;SETS&quot;.
     /// </summary>
     [EnumMember(Value = "SETS")]
     [IsoId("_99WtTol6EeavwKddCbm3hg")]
-    [Description(@"Settlement system/method has been modified at central securities depository to allow settlement.")]
+    [Description(
+        @"Settlement system/method has been modified at central securities depository to allow settlement."
+    )]
     SettlementSystemMethodModified,
-    
+
     /// <summary>
     /// For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities.
     /// Encoded/decoded by serializers as &quot;VLDA&quot;.
     /// </summary>
     [EnumMember(Value = "VLDA")]
     [IsoId("_99WtVIl6EeavwKddCbm3hg")]
-    [Description(@"For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities.")]
+    [Description(
+        @"For tax reclaim, the event is pending, the tax reclaim is valid for the tax authorities."
+    )]
     ValidForTaxAuthorities,
-    
+
     /// <summary>
     /// Buy-in procedure has started on the market (on your behalf if your instruction is a receipt, by the counterparty if your instruction is a delivery).
     /// Encoded/decoded by serializers as &quot;BYIY&quot;.
     /// </summary>
     [EnumMember(Value = "BYIY")]
     [IsoId("_99WtmIl6EeavwKddCbm3hg")]
-    [Description(@"Buy-in procedure has started on the market (on your behalf if your instruction is a receipt, by the counterparty if your instruction is a delivery).")]
+    [Description(
+        @"Buy-in procedure has started on the market (on your behalf if your instruction is a receipt, by the counterparty if your instruction is a delivery)."
+    )]
     BuyInProcedure,
-    
+
     /// <summary>
     /// Instruction was in suspense. Suspense period is finished so your cancellation or confirmation of instruction is required.
     /// Encoded/decoded by serializers as &quot;CANR&quot;.
     /// </summary>
     [EnumMember(Value = "CANR")]
     [IsoId("_99WtqYl6EeavwKddCbm3hg")]
-    [Description(@"Instruction was in suspense. Suspense period is finished so your cancellation or confirmation of instruction is required.")]
+    [Description(
+        @"Instruction was in suspense. Suspense period is finished so your cancellation or confirmation of instruction is required."
+    )]
     CancellationConfirmationRequested,
-    
+
     /// <summary>
     /// Certificate number error.
     /// Encoded/decoded by serializers as &quot;CERT&quot;.
@@ -833,7 +919,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtbIl6EeavwKddCbm3hg")]
     [Description(@"Certificate number error.")]
     WrongCertificatesNumbers,
-    
+
     /// <summary>
     /// Financial instruments are stolen, in dispute, under objection etc.
     /// Encoded/decoded by serializers as &quot;OBJT&quot;.
@@ -842,7 +928,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtrYl6EeavwKddCbm3hg")]
     [Description(@"Financial instruments are stolen, in dispute, under objection etc.")]
     UnderObjection,
-    
+
     /// <summary>
     /// Discrepancy in the settlement confirmation.
     /// Encoded/decoded by serializers as &quot;STCD&quot;.
@@ -851,25 +937,29 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wta4l6EeavwKddCbm3hg")]
     [Description(@"Discrepancy in the settlement confirmation.")]
     ConfirmationDiscrepency,
-    
+
     /// <summary>
     /// Counterparty&apos;s instruction was too late for settlement, that is the matching or settlement problems was solved too late.
     /// Encoded/decoded by serializers as &quot;CLAT&quot;.
     /// </summary>
     [EnumMember(Value = "CLAT")]
     [IsoId("_99Wtc4l6EeavwKddCbm3hg")]
-    [Description(@"Counterparty's instruction was too late for settlement, that is the matching or settlement problems was solved too late.")]
+    [Description(
+        @"Counterparty's instruction was too late for settlement, that is the matching or settlement problems was solved too late."
+    )]
     CounterpartyTooLateForSettlement,
-    
+
     /// <summary>
     /// Covering money/financial instruments were received too late for completing settlement on a same day basis.
     /// Encoded/decoded by serializers as &quot;MLAT&quot;.
     /// </summary>
     [EnumMember(Value = "MLAT")]
     [IsoId("_99WtnYl6EeavwKddCbm3hg")]
-    [Description(@"Covering money/financial instruments were received too late for completing settlement on a same day basis.")]
+    [Description(
+        @"Covering money/financial instruments were received too late for completing settlement on a same day basis."
+    )]
     MoneySecuritiesTooLateForSettlement,
-    
+
     /// <summary>
     /// Next process is launched. No processing pending problems to be reported.
     /// Encoded/decoded by serializers as &quot;NEXT&quot;.
@@ -878,7 +968,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtSol6EeavwKddCbm3hg")]
     [Description(@"Next process is launched. No processing pending problems to be reported.")]
     NextProcess,
-    
+
     /// <summary>
     /// Awaiting confirmation from the counterparty.
     /// Encoded/decoded by serializers as &quot;CONF&quot;.
@@ -887,7 +977,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WteYl6EeavwKddCbm3hg")]
     [Description(@"Awaiting confirmation from the counterparty.")]
     AwaitingConfirmation,
-    
+
     /// <summary>
     /// Transaction was put on hold/frozen by the system.
     /// Encoded/decoded by serializers as &quot;PRSY&quot;.
@@ -896,25 +986,29 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtW4l6EeavwKddCbm3hg")]
     [Description(@"Transaction was put on hold/frozen by the system.")]
     SystemOnHold,
-    
+
     /// <summary>
     /// Execution is conditional to the execution of a process of realignment at the issuer CSD.
     /// Encoded/decoded by serializers as &quot;CDRE&quot;.
     /// </summary>
     [EnumMember(Value = "CDRE")]
     [IsoId("_99WtiYl6EeavwKddCbm3hg")]
-    [Description(@"Execution is conditional to the execution of a process of realignment at the issuer CSD.")]
+    [Description(
+        @"Execution is conditional to the execution of a process of realignment at the issuer CSD."
+    )]
     ConditionalRealignement,
-    
+
     /// <summary>
     /// Execution is conditional to the execution of a process linked to the currency of the transaction.
     /// Encoded/decoded by serializers as &quot;CDCY&quot;.
     /// </summary>
     [EnumMember(Value = "CDCY")]
     [IsoId("_99Wtr4l6EeavwKddCbm3hg")]
-    [Description(@"Execution is conditional to the execution of a process linked to the currency of the transaction.")]
+    [Description(
+        @"Execution is conditional to the execution of a process linked to the currency of the transaction."
+    )]
     ConditionalCurrency,
-    
+
     /// <summary>
     /// Execution is conditional to the execution of a process at the registrar.
     /// Encoded/decoded by serializers as &quot;CDRG&quot;.
@@ -923,7 +1017,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtool6EeavwKddCbm3hg")]
     [Description(@"Execution is conditional to the execution of a process at the registrar.")]
     ConditionalRegistrar,
-    
+
     /// <summary>
     /// Instruction has been processed and cannot be cancelled.
     /// Encoded/decoded by serializers as &quot;IPNC&quot;.
@@ -932,43 +1026,51 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtoIl6EeavwKddCbm3hg")]
     [Description(@"Instruction has been processed and cannot be cancelled.")]
     CancelNotPossible,
-    
+
     /// <summary>
     /// Central securities depository sets the instruction in a hold/frozen/preadvice mode.
     /// Encoded/decoded by serializers as &quot;CSDH&quot;.
     /// </summary>
     [EnumMember(Value = "CSDH")]
     [IsoId("_99Wto4l6EeavwKddCbm3hg")]
-    [Description(@"Central securities depository sets the instruction in a hold/frozen/preadvice mode.")]
+    [Description(
+        @"Central securities depository sets the instruction in a hold/frozen/preadvice mode."
+    )]
     CSDHold,
-    
+
     /// <summary>
     /// Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditional delivery rules in the market infrastructure platform for conditional delivery.
     /// Encoded/decoded by serializers as &quot;CDEL&quot;.
     /// </summary>
     [EnumMember(Value = "CDEL")]
     [IsoId("_99WtYYl6EeavwKddCbm3hg")]
-    [Description(@"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditional delivery rules in the market infrastructure platform for conditional delivery.")]
+    [Description(
+        @"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditional delivery rules in the market infrastructure platform for conditional delivery."
+    )]
     ConditionalDelivery,
-    
+
     /// <summary>
     /// Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.
     /// Encoded/decoded by serializers as &quot;CVAL&quot;.
     /// </summary>
     [EnumMember(Value = "CVAL")]
     [IsoId("_99WtWIl6EeavwKddCbm3hg")]
-    [Description(@"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform.")]
+    [Description(
+        @"Instruction is in a hold/frozen/preadvice mode as it fulfils predefined conditions of a restriction processing type in the market infrastructure platform."
+    )]
     CSDValidation,
-    
+
     /// <summary>
     /// Instruction is in a hold/frozen/preadvice mode. Market infrastructure platform is awaiting release.
     /// Encoded/decoded by serializers as &quot;CDLR&quot;.
     /// </summary>
     [EnumMember(Value = "CDLR")]
     [IsoId("_99WtZIl6EeavwKddCbm3hg")]
-    [Description(@"Instruction is in a hold/frozen/preadvice mode. Market infrastructure platform is awaiting release.")]
+    [Description(
+        @"Instruction is in a hold/frozen/preadvice mode. Market infrastructure platform is awaiting release."
+    )]
     ConditionalDeliveryAwaitingRelease,
-    
+
     /// <summary>
     /// Not all the instructions part of a pool have been received.
     /// Encoded/decoded by serializers as &quot;INBC&quot;.
@@ -977,7 +1079,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wte4l6EeavwKddCbm3hg")]
     [Description(@"Not all the instructions part of a pool have been received.")]
     IncompleteNumberCount,
-    
+
     /// <summary>
     /// Awaiting cancellation of one of the party.
     /// Encoded/decoded by serializers as &quot;CDAC&quot;.
@@ -986,16 +1088,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtpYl6EeavwKddCbm3hg")]
     [Description(@"Awaiting cancellation of one of the party.")]
     ConditionalDeliveryAwaitingCancellation,
-    
+
     /// <summary>
     /// Conditional Delivery is still pending awaiting the cancellation from at least another party.
     /// Encoded/decoded by serializers as &quot;CDLC&quot;.
     /// </summary>
     [EnumMember(Value = "CDLC")]
     [IsoId("_99WtlIl6EeavwKddCbm3hg")]
-    [Description(@"Conditional Delivery is still pending awaiting the cancellation from at least another party.")]
+    [Description(
+        @"Conditional Delivery is still pending awaiting the cancellation from at least another party."
+    )]
     ConditionalDeliveryCancellationPending,
-    
+
     /// <summary>
     /// Pending receipt of beneficiary owner details.
     /// Encoded/decoded by serializers as &quot;FULL&quot;.
@@ -1004,7 +1108,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99WtYIl6EeavwKddCbm3hg")]
     [Description(@"Pending receipt of beneficiary owner details.")]
     PendingBeneficiaryOwnerDetails,
-    
+
     /// <summary>
     /// Unrecognised or invalid instructed cash amount.
     /// Encoded/decoded by serializers as &quot;DQCS&quot;.
@@ -1013,7 +1117,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_99Wtg4l6EeavwKddCbm3hg")]
     [Description(@"Unrecognised or invalid instructed cash amount.")]
     DisagreementOnCashAmount,
-    
+
     /// <summary>
     /// Additional documents requested missing.
     /// Encoded/decoded by serializers as &quot;ADDM&quot;.
@@ -1022,7 +1126,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_sHebcLLJEemDyeh7tbvg1w")]
     [Description(@"Additional documents requested missing.")]
     AdditionalDocumentationMissing,
-    
+
     /// <summary>
     /// Deadline to register is missed.
     /// Encoded/decoded by serializers as &quot;DREM&quot;.
@@ -1031,7 +1135,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_82D4oLLJEemDyeh7tbvg1w")]
     [Description(@"Deadline to register is missed.")]
     DeadlineToRegisterMissed,
-    
+
     /// <summary>
     /// Missing or invalid power of attorney.
     /// Encoded/decoded by serializers as &quot;IPOA&quot;.
@@ -1040,7 +1144,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_QDiaILLKEemDyeh7tbvg1w")]
     [Description(@"Missing or invalid power of attorney.")]
     MissingOrInvalidPOA,
-    
+
     /// <summary>
     /// Position is less than required threshold.
     /// Encoded/decoded by serializers as &quot;IPOS&quot;.
@@ -1049,7 +1153,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_dpkyALLKEemDyeh7tbvg1w")]
     [Description(@"Position is less than required threshold.")]
     InsufficientThresholdPosition,
-    
+
     /// <summary>
     /// Invalid registration discrepancy.
     /// Encoded/decoded by serializers as &quot;IREG&quot;.
@@ -1058,7 +1162,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_p9okoLLKEemDyeh7tbvg1w")]
     [Description(@"Invalid registration discrepancy.")]
     RegistrationDiscrepancy,
-    
+
     /// <summary>
     /// Insufficient or no registered position.
     /// Encoded/decoded by serializers as &quot;NPOS&quot;.
@@ -1067,7 +1171,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_8fhLcLLKEemDyeh7tbvg1w")]
     [Description(@"Insufficient or no registered position.")]
     NoRegisteredPosition,
-    
+
     /// <summary>
     /// Invalid Proxy Information.
     /// Encoded/decoded by serializers as &quot;PRXY&quot;.
@@ -1076,7 +1180,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_M4iBQLLLEemDyeh7tbvg1w")]
     [Description(@"Invalid Proxy Information.")]
     ProxyCardDiscrepancy,
-    
+
     /// <summary>
     /// Tax rate is not consistent with the documentation in place.
     /// Encoded/decoded by serializers as &quot;NTAX&quot;.
@@ -1085,7 +1189,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_EgkW8eXzEemEj48jhmlA0Q")]
     [Description(@"Tax rate is not consistent with the documentation in place.")]
     InconsistentTaxRate,
-    
+
     /// <summary>
     /// Tax rate is missing.
     /// Encoded/decoded by serializers as &quot;MTAX&quot;.
@@ -1094,16 +1198,18 @@ public enum PendingFailingReasonV2Code
     [IsoId("_Jbh1EeXzEemEj48jhmlA0Q")]
     [Description(@"Tax rate is missing.")]
     MissingTaxRate,
-    
+
     /// <summary>
     /// Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.
     /// Encoded/decoded by serializers as &quot;ITAX&quot;.
     /// </summary>
     [EnumMember(Value = "ITAX")]
     [IsoId("_NKwf4eXzEemEj48jhmlA0Q")]
-    [Description(@"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.")]
+    [Description(
+        @"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country."
+    )]
     IncorrectTaxRate,
-    
+
     /// <summary>
     /// Instruction is submitted before instruction start date.
     /// Encoded/decoded by serializers as &quot;BSTR&quot;.
@@ -1112,7 +1218,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_d4zVMO6JEeqc-LCjwLsUVg")]
     [Description(@"Instruction is submitted before instruction start date.")]
     BeforeInstructionPeriod,
-    
+
     /// <summary>
     /// System is not available. Instruction is sent outside of business hours.
     /// Encoded/decoded by serializers as &quot;SNAV&quot;.
@@ -1121,7 +1227,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_rQ2UYO6JEeqc-LCjwLsUVg")]
     [Description(@"System is not available. Instruction is sent outside of business hours.")]
     SystemNotAvailable,
-    
+
     /// <summary>
     /// Required paperwork is invalid, incomplete or missing.
     /// Encoded/decoded by serializers as &quot;IPAW&quot;.
@@ -1130,7 +1236,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_ykPlMBnyEeyroI8qKgB7Mg")]
     [Description(@"Required paperwork is invalid, incomplete or missing.")]
     InvalidPaperwork,
-    
+
     /// <summary>
     /// Transaction has been partially released.
     /// Encoded/decoded by serializers as &quot;PREL&quot;.
@@ -1139,7 +1245,7 @@ public enum PendingFailingReasonV2Code
     [IsoId("_ZSxcMCW_EeygjNFjAlVoPA")]
     [Description(@"Transaction has been partially released.")]
     PartiallyReleased,
-    
+
     /// <summary>
     /// Disagreement on partial indicator preventing partial settlement.
     /// Encoded/decoded by serializers as &quot;PATD&quot;.
@@ -1157,5 +1263,4 @@ public enum PendingFailingReasonV2Code
     [IsoId("")]
     [Description(@"Instruction was received prior to entitlement date.")]
     InstructionPriorToEntitlementDate,
-
 }

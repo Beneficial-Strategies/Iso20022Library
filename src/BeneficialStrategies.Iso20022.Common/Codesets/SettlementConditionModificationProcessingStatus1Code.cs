@@ -21,9 +21,11 @@ public enum SettlementConditionModificationProcessingStatus1Code
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_ZK188dp-Ed-ak6NoX_4Aeg_-1146323136")]
-    [Description(@"Instruction has been acknowledged/accepted for further processing by the account servicer.")]
+    [Description(
+        @"Instruction has been acknowledged/accepted for further processing by the account servicer."
+    )]
     AcknowledgedAccepted = InstructionProcessingStatusCode.AcknowledgedAccepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been rejected for further processing.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,5 +34,4 @@ public enum SettlementConditionModificationProcessingStatus1Code
     [IsoId("_ZK188tp-Ed-ak6NoX_4Aeg_-1146323114")]
     [Description(@"Instruction has been rejected for further processing.")]
     Rejected = InstructionProcessingStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
 }

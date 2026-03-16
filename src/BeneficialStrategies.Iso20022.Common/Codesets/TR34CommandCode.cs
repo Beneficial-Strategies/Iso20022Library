@@ -23,7 +23,7 @@ public enum TR34CommandCode
     [IsoId("_0VRW4F2iEeekzJIz1JxYSQ")]
     [Description(@"TR34 bind operation.")]
     Bind,
-    
+
     /// <summary>
     /// TR34 unbind operation.
     /// Encoded/decoded by serializers as &quot;UBND&quot;.
@@ -32,7 +32,7 @@ public enum TR34CommandCode
     [IsoId("_3d7J4F2iEeekzJIz1JxYSQ")]
     [Description(@"TR34 unbind operation.")]
     Unbind,
-    
+
     /// <summary>
     /// TR34 rebind operation.
     /// Encoded/decoded by serializers as &quot;RBND&quot;.
@@ -41,7 +41,7 @@ public enum TR34CommandCode
     [IsoId("_6ZOdYF2iEeekzJIz1JxYSQ")]
     [Description(@"TR34 rebind operation.")]
     Rebind,
-    
+
     /// <summary>
     /// TR34 Higher Level unbind operation.
     /// Encoded/decoded by serializers as &quot;HILU&quot;.
@@ -50,7 +50,7 @@ public enum TR34CommandCode
     [IsoId("_9VGYoF2iEeekzJIz1JxYSQ")]
     [Description(@"TR34 Higher Level unbind operation.")]
     HigherLevelUnbind,
-    
+
     /// <summary>
     /// TR34 Higher Level rebind operation.
     /// Encoded/decoded by serializers as &quot;HILR&quot;.
@@ -59,5 +59,4 @@ public enum TR34CommandCode
     [IsoId("_B_ymIF2jEeekzJIz1JxYSQ")]
     [Description(@"TR34 Higher Level rebind operation.")]
     HigherLevelRebind,
-    
 }

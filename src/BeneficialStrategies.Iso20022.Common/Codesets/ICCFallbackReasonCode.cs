@@ -23,7 +23,7 @@ public enum ICCFallbackReasonCode
     [IsoId("_UmgI4DHJEeyTT91yHXSlSQ")]
     [Description(@"Choosing incorrect IC application.")]
     ChoosingIncorrectICApplication,
-    
+
     /// <summary>
     /// Error during IC app processing.
     /// Encoded/decoded by serializers as &quot;EDIP&quot;.
@@ -32,7 +32,7 @@ public enum ICCFallbackReasonCode
     [IsoId("_c46rADHJEeyTT91yHXSlSQ")]
     [Description(@"Error during IC app processing.|")]
     ErrorDuringICAppProcessing,
-    
+
     /// <summary>
     /// Terminal error reading IC data.
     /// Encoded/decoded by serializers as &quot;TERI&quot;.
@@ -41,7 +41,7 @@ public enum ICCFallbackReasonCode
     [IsoId("_tJRUEDHJEeyTT91yHXSlSQ")]
     [Description(@"Terminal error reading IC data.|")]
     TerminalErrorReadingICData,
-    
+
     /// <summary>
     /// Other ICC fallback reason defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum ICCFallbackReasonCode
     [IsoId("_0dWlsDHJEeyTT91yHXSlSQ")]
     [Description(@"Other ICC fallback reason defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other ICC fallback reason defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum ICCFallbackReasonCode
     [IsoId("_67REUDHJEeyTT91yHXSlSQ")]
     [Description(@"Other ICC fallback reason defined at private level.")]
     OtherPrivate,
-    
 }

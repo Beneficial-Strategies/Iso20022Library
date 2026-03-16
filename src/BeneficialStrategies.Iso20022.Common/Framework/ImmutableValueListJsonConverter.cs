@@ -26,7 +26,8 @@ public sealed class ImmutableValueListConverterFactory : JsonConverterFactory
     /// <inheritdoc/>
     public override bool CanConvert(Type typeToConvert)
     {
-        if (!typeToConvert.IsGenericType) return false;
+        if (!typeToConvert.IsGenericType)
+            return false;
         var def = typeToConvert.GetGenericTypeDefinition();
         return def == typeof(ImmutableValueList<>)
             || def == typeof(ValueList<>)
@@ -34,7 +35,10 @@ public sealed class ImmutableValueListConverterFactory : JsonConverterFactory
     }
 
     /// <inheritdoc/>
-    public override JsonConverter? CreateConverter(Type typeToConvert, JsonSerializerOptions options)
+    public override JsonConverter? CreateConverter(
+        Type typeToConvert,
+        JsonSerializerOptions options
+    )
     {
         var elementType = typeToConvert.GetGenericArguments()[0];
         var converterType = typeof(ImmutableValueListConverter<>).MakeGenericType(elementType);
@@ -55,27 +59,33 @@ internal sealed class ImmutableValueListConverter<T> : JsonConverter<ImmutableVa
     public override ImmutableValueList<T>? Read(
         ref Utf8JsonReader reader,
         Type typeToConvert,
-        JsonSerializerOptions options)
+        JsonSerializerOptions options
+    )
     {
-        if (reader.TokenType == JsonTokenType.Null) return null;
+        if (reader.TokenType == JsonTokenType.Null)
+            return null;
 
         if (reader.TokenType != JsonTokenType.StartArray)
             throw new JsonException(
-                $"Expected a JSON array to deserialize {typeToConvert.Name}, got {reader.TokenType}.");
+                $"Expected a JSON array to deserialize {typeToConvert.Name}, got {reader.TokenType}."
+            );
 
         var items = new List<T>();
         while (reader.Read() && reader.TokenType != JsonTokenType.EndArray)
             items.Add(JsonSerializer.Deserialize<T>(ref reader, options)!);
 
-        if (_concreteType == typeof(ValueList<T>))       return new ValueList<T>(items);
-        if (_concreteType == typeof(SimpleValueList<T>)) return new SimpleValueList<T>(items);
+        if (_concreteType == typeof(ValueList<T>))
+            return new ValueList<T>(items);
+        if (_concreteType == typeof(SimpleValueList<T>))
+            return new SimpleValueList<T>(items);
         return new ImmutableValueList<T>(items);
     }
 
     public override void Write(
         Utf8JsonWriter writer,
         ImmutableValueList<T> value,
-        JsonSerializerOptions options)
+        JsonSerializerOptions options
+    )
     {
         writer.WriteStartArray();
         foreach (var item in value)

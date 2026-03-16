@@ -23,7 +23,7 @@ public enum GoodsAndServicesSubTypeCode
     [IsoId("_Ltug8OkDEemeDPHh-U9b6w")]
     [Description(@"Sub type applied is securities.")]
     Securities,
-    
+
     /// <summary>
     /// Sub type applied is foreign exchange.
     /// Encoded/decoded by serializers as &quot;FORX&quot;.
@@ -32,7 +32,7 @@ public enum GoodsAndServicesSubTypeCode
     [IsoId("_o3JuMOkDEemeDPHh-U9b6w")]
     [Description(@"Sub type applied is foreign exchange.")]
     ForeignExchange,
-    
+
     /// <summary>
     /// Sub type applied is cryptocurrency.
     /// Encoded/decoded by serializers as &quot;CRCU&quot;.
@@ -41,7 +41,7 @@ public enum GoodsAndServicesSubTypeCode
     [IsoId("_zqKk0OkDEemeDPHh-U9b6w")]
     [Description(@"Sub type applied is cryptocurrency.")]
     CryptoCurrency,
-    
+
     /// <summary>
     /// Other sub type of goods and service at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum GoodsAndServicesSubTypeCode
     [IsoId("_B5UyMOkEEemeDPHh-U9b6w")]
     [Description(@"Other sub type of goods and service at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other sub type of goods and service at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum GoodsAndServicesSubTypeCode
     [IsoId("_bnpKgOkEEemeDPHh-U9b6w")]
     [Description(@"Other sub type of goods and service at private level.")]
     OtherPrivate,
-    
 }

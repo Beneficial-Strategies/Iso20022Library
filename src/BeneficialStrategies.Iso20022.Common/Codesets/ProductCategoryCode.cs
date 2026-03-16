@@ -23,7 +23,7 @@ public enum ProductCategoryCode
     [IsoId("_ZVRrUdp-Ed-ak6NoX_4Aeg_-1389799071")]
     [Description(@"Classification of goods as developed by the Customs Cooperation council.")]
     HarmonizedTariffCodeName,
-    
+
     /// <summary>
     /// Product identifier used by the retail industry.
     /// Encoded/decoded by serializers as &quot;QOTA&quot;.
@@ -32,7 +32,7 @@ public enum ProductCategoryCode
     [IsoId("_ZVRrUtp-Ed-ak6NoX_4Aeg_-1360248489")]
     [Description(@"Product identifier used by the retail industry.")]
     QuotaCategory,
-    
+
     /// <summary>
     /// Product Group Code.
     /// Encoded/decoded by serializers as &quot;PRGP&quot;.
@@ -41,7 +41,7 @@ public enum ProductCategoryCode
     [IsoId("_ZVRrU9p-Ed-ak6NoX_4Aeg_-1330694641")]
     [Description(@"Product Group Code.")]
     ProductGroup,
-    
+
     /// <summary>
     /// Line of business code.
     /// Encoded/decoded by serializers as &quot;LOBU&quot;.
@@ -50,7 +50,7 @@ public enum ProductCategoryCode
     [IsoId("_ZVRrVNp-Ed-ak6NoX_4Aeg_-1231879023")]
     [Description(@"Line of business code.")]
     LineOfBusiness,
-    
+
     /// <summary>
     /// Code for gender.
     /// Encoded/decoded by serializers as &quot;GNDR&quot;.
@@ -59,5 +59,4 @@ public enum ProductCategoryCode
     [IsoId("_ZVRrVdp-Ed-ak6NoX_4Aeg_-942816025")]
     [Description(@"Code for gender.")]
     Gender,
-    
 }

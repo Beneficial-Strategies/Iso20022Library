@@ -23,7 +23,7 @@ public enum RiskLevel1Code
     [IsoId("_Lx6w4RdxEeKYM7Bc71nDlA")]
     [Description(@"High.")]
     High = RiskLevelCode.High, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Low.
     /// Encoded/decoded by serializers as &quot;LOWW&quot;.
@@ -32,7 +32,7 @@ public enum RiskLevel1Code
     [IsoId("_L595oRdxEeKYM7Bc71nDlA")]
     [Description(@"Low.")]
     Low = RiskLevelCode.Low, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Medium.
     /// Encoded/decoded by serializers as &quot;MEDM&quot;.
@@ -41,5 +41,4 @@ public enum RiskLevel1Code
     [IsoId("_MDqBIRdxEeKYM7Bc71nDlA")]
     [Description(@"Medium.")]
     Medium = RiskLevelCode.Medium, // same ordinal as derivation source for type conversions
-    
 }

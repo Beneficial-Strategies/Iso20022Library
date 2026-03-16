@@ -23,7 +23,7 @@ public enum TypeOfPrice16Code
     [IsoId("_Yx9i49p-Ed-ak6NoX_4Aeg_-1009264882")]
     [Description(@"Price is the current market price.")]
     Market = TypeOfPriceCode.Market, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is the estimated indicative price.
     /// Encoded/decoded by serializers as &quot;INDC&quot;.
@@ -32,5 +32,4 @@ public enum TypeOfPrice16Code
     [IsoId("_Yx9i5Np-Ed-ak6NoX_4Aeg_-831146210")]
     [Description(@"Price is the estimated indicative price.")]
     Indicative = TypeOfPriceCode.Indicative, // same ordinal as derivation source for type conversions
-    
 }

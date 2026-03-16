@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-FthiHltEeG7BsjMvd1mEw_-1983093565")]
 [DisplayName("Undertaking")]
-public partial record Undertaking8
+public record Undertaking8
 {
-    #nullable enable
-    
     /// <summary>
     /// Unique and unambiguous identifier assigned by the issuer to the undertaking, for example the guarantee or standby number.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record Undertaking8
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Party that issues the undertaking.
     /// </summary>
     [IsoId("_-F3SgXltEeG7BsjMvd1mEw_444242760")]
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
-    public required PartyIdentification43 Issuer { get; init; } 
-    
+    public required PartyIdentification43 Issuer { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier assigned by the applicant to the undertaking.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record Undertaking8
     [DisplayName("Applicant Reference Number")]
     [IsoXmlTag("ApplcntRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ApplicantReferenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ApplicantReferenceNumber { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier assigned by the beneficiary to the undertaking.
     /// </summary>
@@ -53,10 +51,6 @@ public partial record Undertaking8
     [DisplayName("Beneficiary Reference Number")]
     [IsoXmlTag("BnfcryRefNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? BeneficiaryReferenceNumber { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? BeneficiaryReferenceNumber { get; init; }
 }

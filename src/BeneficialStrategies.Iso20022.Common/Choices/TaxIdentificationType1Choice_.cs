@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TaxIdentificationType1Choice.Code))]
     [KnownType(typeof(TaxIdentificationType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(TaxIdentificationType1Choice.Code),nameof(TaxIdentificationType1Choice.Code))]
-    [JsonDerivedType(typeof(TaxIdentificationType1Choice.Proprietary),nameof(TaxIdentificationType1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(TaxIdentificationType1Choice.Code),
+        nameof(TaxIdentificationType1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(TaxIdentificationType1Choice.Proprietary),
+        nameof(TaxIdentificationType1Choice.Proprietary)
+    )]
     [IsoId("_yWmpEAhIEeSUPbC7DbLJpQ")]
     [DisplayName("Tax Identification Type 1 Choice")]
-    public abstract partial record TaxIdentificationType1Choice_
-    {
-    }
+    public abstract record TaxIdentificationType1Choice_ { }
 }

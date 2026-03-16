@@ -23,7 +23,7 @@ public enum GeneralInvestmentAccountType2Code
     [IsoId("_PDJ8YZgJEemu1vK8dsrXIw")]
     [Description(@"Any type of general investment account.")]
     Any = GeneralInvestmentAccountTypeCode.Any, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// General shares or equity savings account.
     /// Encoded/decoded by serializers as &quot;EQUI&quot;.
@@ -32,5 +32,4 @@ public enum GeneralInvestmentAccountType2Code
     [IsoId("_PI9CYZgJEemu1vK8dsrXIw")]
     [Description(@"General shares or equity savings account.")]
     ShareSavingsAccount = GeneralInvestmentAccountTypeCode.ShareSavingsAccount, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum TimeUnitCode
     [IsoId("_YmCmwdp-Ed-ak6NoX_4Aeg_-1938121752")]
     [Description(@"Time unit is second.")]
     Second,
-    
+
     /// <summary>
     /// Time unit is minute.
     /// Encoded/decoded by serializers as &quot;MINU&quot;.
@@ -32,7 +32,7 @@ public enum TimeUnitCode
     [IsoId("_YmCmwtp-Ed-ak6NoX_4Aeg_-1937198231")]
     [Description(@"Time unit is minute.")]
     Minute,
-    
+
     /// <summary>
     /// Time unit is hour.
     /// Encoded/decoded by serializers as &quot;HOUR&quot;.
@@ -41,7 +41,7 @@ public enum TimeUnitCode
     [IsoId("_YmCmw9p-Ed-ak6NoX_4Aeg_-1936275233")]
     [Description(@"Time unit is hour.")]
     Hour,
-    
+
     /// <summary>
     /// Time unit is calendar day.
     /// Encoded/decoded by serializers as &quot;DAYC&quot;.
@@ -50,7 +50,7 @@ public enum TimeUnitCode
     [IsoId("_YmCmxNp-Ed-ak6NoX_4Aeg_-1927962536")]
     [Description(@"Time unit is calendar day.")]
     CalendarDay,
-    
+
     /// <summary>
     /// Time unit is week.
     /// Encoded/decoded by serializers as &quot;WEEK&quot;.
@@ -59,7 +59,7 @@ public enum TimeUnitCode
     [IsoId("_YmCmxdp-Ed-ak6NoX_4Aeg_-1927039439")]
     [Description(@"Time unit is week.")]
     Week,
-    
+
     /// <summary>
     /// Time unit is month.
     /// Encoded/decoded by serializers as &quot;MNTH&quot;.
@@ -68,7 +68,7 @@ public enum TimeUnitCode
     [IsoId("_YmCmxtp-Ed-ak6NoX_4Aeg_-1926116410")]
     [Description(@"Time unit is month.")]
     Month,
-    
+
     /// <summary>
     /// Time unit is year.
     /// Encoded/decoded by serializers as &quot;YEAR&quot;.
@@ -77,5 +77,4 @@ public enum TimeUnitCode
     [IsoId("_YmCmx9p-Ed-ak6NoX_4Aeg_-1925193661")]
     [Description(@"Time unit is year.")]
     Year,
-    
 }

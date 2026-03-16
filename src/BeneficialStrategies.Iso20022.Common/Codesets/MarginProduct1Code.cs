@@ -23,7 +23,7 @@ public enum MarginProduct1Code
     [IsoId("_YZq-tdp-Ed-ak6NoX_4Aeg_1188512534")]
     [Description(@"Specifies that the margin is related to equities.")]
     Equities = MarginProductCode.Equities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies that the margin is related to fixed income.
     /// Encoded/decoded by serializers as &quot;FIXI&quot;.
@@ -32,5 +32,4 @@ public enum MarginProduct1Code
     [IsoId("_YZq-ttp-Ed-ak6NoX_4Aeg_1074673468")]
     [Description(@"Specifies that the margin is related to fixed income.")]
     FixedIncome = MarginProductCode.FixedIncome, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementOrCorporateActionEvent1Choice.SecuritiesTransactionType))]
     [KnownType(typeof(SettlementOrCorporateActionEvent1Choice.CorporateActionEventType))]
-    [JsonDerivedType(typeof(SettlementOrCorporateActionEvent1Choice.SecuritiesTransactionType),nameof(SettlementOrCorporateActionEvent1Choice.SecuritiesTransactionType))]
-    [JsonDerivedType(typeof(SettlementOrCorporateActionEvent1Choice.CorporateActionEventType),nameof(SettlementOrCorporateActionEvent1Choice.CorporateActionEventType))]
+    [JsonDerivedType(
+        typeof(SettlementOrCorporateActionEvent1Choice.SecuritiesTransactionType),
+        nameof(SettlementOrCorporateActionEvent1Choice.SecuritiesTransactionType)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementOrCorporateActionEvent1Choice.CorporateActionEventType),
+        nameof(SettlementOrCorporateActionEvent1Choice.CorporateActionEventType)
+    )]
     [IsoId("_QwUApdp-Ed-ak6NoX_4Aeg_1179810715")]
     [DisplayName("Settlement Or Corporate Action Event 1 Choice")]
-    public abstract partial record SettlementOrCorporateActionEvent1Choice_
-    {
-    }
+    public abstract record SettlementOrCorporateActionEvent1Choice_ { }
 }

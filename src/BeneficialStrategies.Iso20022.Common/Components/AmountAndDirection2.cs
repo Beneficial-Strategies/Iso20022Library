@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_SUcs49p-Ed-ak6NoX_4Aeg_-2041884579")]
 [DisplayName("Amount And Direction")]
-public partial record AmountAndDirection2
+public record AmountAndDirection2
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether the net proceeds include interest accrued on the financial instrument.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record AmountAndDirection2
     [DisplayName("Accrued Interest Indicator")]
     [IsoXmlTag("AcrdIntrstInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? AccruedInterestIndicator { get; init; }
+
     /// <summary>
     /// Whether the net proceeds include stamp duty amount.
     /// </summary>
@@ -34,49 +32,45 @@ public partial record AmountAndDirection2
     [DisplayName("Stamp Duty Indicator")]
     [IsoXmlTag("StmpDtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public IsoYesNoIndicator? StampDutyIndicator { get; init; } 
-    
+    public IsoYesNoIndicator? StampDutyIndicator { get; init; }
+
     /// <summary>
     /// Amount of money in the cash entry.
     /// </summary>
     [IsoId("_SUcs5tp-Ed-ak6NoX_4Aeg_-2041884519")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required ActiveCurrencyAndAmount Amount { get; init; } 
-    
+    public required ActiveCurrencyAndAmount Amount { get; init; }
+
     /// <summary>
     /// Indicates whether an entry is a credit or a debit.
     /// </summary>
     [IsoId("_SUcs59p-Ed-ak6NoX_4Aeg_-2041884484")]
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
-    public required CreditDebitCode CreditDebitIndicator { get; init; } 
-    
+    public required CreditDebitCode CreditDebitIndicator { get; init; }
+
     /// <summary>
     /// Posting/settlement amount in its original currency when conversion from/into another currency has occurred.
     /// </summary>
     [IsoId("_SUcs6Np-Ed-ak6NoX_4Aeg_-2041884501")]
     [DisplayName("Original Currency And Ordered Amount")]
     [IsoXmlTag("OrgnlCcyAndOrdrdAmt")]
-    public ActiveOrHistoricCurrencyAndAmount? OriginalCurrencyAndOrderedAmount { get; init; } 
-    
+    public ActiveOrHistoricCurrencyAndAmount? OriginalCurrencyAndOrderedAmount { get; init; }
+
     /// <summary>
     /// Information needed to process a currency exchange or conversion.
     /// </summary>
     [IsoId("_SUcs6dp-Ed-ak6NoX_4Aeg_453780378")]
     [DisplayName("Foreign Exchange Details")]
     [IsoXmlTag("FXDtls")]
-    public ForeignExchangeTerms11? ForeignExchangeDetails { get; init; } 
-    
+    public ForeignExchangeTerms11? ForeignExchangeDetails { get; init; }
+
     /// <summary>
     /// Date and time at which the cash is at the disposal of the credit account owner, or ceases to be at the disposal of the debit account owner.
     /// </summary>
     [IsoId("_SUcs6tp-Ed-ak6NoX_4Aeg_-2001237107")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTimeChoice_? ValueDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateAndDateTimeChoice_? ValueDate { get; init; }
 }

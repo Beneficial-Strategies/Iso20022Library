@@ -23,7 +23,7 @@ public enum CCPMemberType1Code
     [IsoId("_oMEOYQIJEeutW5-TpeYJhA")]
     [Description(@"Agent Clearing Member.|")]
     AgentClearingMember = CCPMemberTypeCode.AgentClearingMember, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing House.
     /// Encoded/decoded by serializers as &quot;CCPX&quot;.
@@ -32,7 +32,7 @@ public enum CCPMemberType1Code
     [IsoId("_oVkIogIJEeutW5-TpeYJhA")]
     [Description(@"Clearing House.")]
     ClearingHouse = CCPMemberTypeCode.ClearingHouse, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Direct Clearing Member.
     /// Encoded/decoded by serializers as &quot;DCMB&quot;.
@@ -41,7 +41,7 @@ public enum CCPMemberType1Code
     [IsoId("_ofNM0gIJEeutW5-TpeYJhA")]
     [Description(@"Direct Clearing Member.|")]
     DirectClearingMember = CCPMemberTypeCode.DirectClearingMember, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Futures Commission Merchant.
     /// Encoded/decoded by serializers as &quot;FCMC&quot;.
@@ -50,7 +50,7 @@ public enum CCPMemberType1Code
     [IsoId("_oo9lwgIJEeutW5-TpeYJhA")]
     [Description(@"Futures Commission Merchant.||")]
     FuturesCommissionMerchant = CCPMemberTypeCode.FuturesCommissionMerchant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// General Clearing Member.
     /// Encoded/decoded by serializers as &quot;GCMB&quot;.
@@ -59,7 +59,7 @@ public enum CCPMemberType1Code
     [IsoId("_otx0UQIJEeutW5-TpeYJhA")]
     [Description(@"General Clearing Member.|")]
     GeneralClearingMember = CCPMemberTypeCode.GeneralClearingMember, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sponsored Clearing Member.
     /// Encoded/decoded by serializers as &quot;SCMB&quot;.
@@ -68,5 +68,4 @@ public enum CCPMemberType1Code
     [IsoId("_o53vkgIJEeutW5-TpeYJhA")]
     [Description(@"Sponsored Clearing Member.| ")]
     SponsoredClearingMember = CCPMemberTypeCode.SponsoredClearingMember, // same ordinal as derivation source for type conversions
-    
 }

@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(LinkageType3Choice.Code))]
     [KnownType(typeof(LinkageType3Choice.Proprietary))]
-    [JsonDerivedType(typeof(LinkageType3Choice.Code),nameof(LinkageType3Choice.Code))]
-    [JsonDerivedType(typeof(LinkageType3Choice.Proprietary),nameof(LinkageType3Choice.Proprietary))]
+    [JsonDerivedType(typeof(LinkageType3Choice.Code), nameof(LinkageType3Choice.Code))]
+    [JsonDerivedType(
+        typeof(LinkageType3Choice.Proprietary),
+        nameof(LinkageType3Choice.Proprietary)
+    )]
     [IsoId("_LBo-4Tt4EeW638lNyHKv7A")]
     [DisplayName("Linkage Type 3 Choice")]
-    public abstract partial record LinkageType3Choice_
-    {
-    }
+    public abstract record LinkageType3Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum CustomerOrderCapacity1Code
     [IsoId("_axz6wdp-Ed-ak6NoX_4Aeg_-1833251929")]
     [Description(@"Member trading for their own account.")]
     MemberOwnAccount = CustomerOrderCapacityCode.MemberOwnAccount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Clearing firm trading for its proprietary account.
     /// Encoded/decoded by serializers as &quot;CLAR&quot;.
@@ -32,7 +32,7 @@ public enum CustomerOrderCapacity1Code
     [IsoId("_axz6wtp-Ed-ak6NoX_4Aeg_-1833251887")]
     [Description(@"Clearing firm trading for its proprietary account.")]
     ClearingProprietary = CustomerOrderCapacityCode.ClearingProprietary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Member trading for another member.
     /// Encoded/decoded by serializers as &quot;OTHM&quot;.
@@ -41,5 +41,4 @@ public enum CustomerOrderCapacity1Code
     [IsoId("_axz6w9p-Ed-ak6NoX_4Aeg_-1833251869")]
     [Description(@"Member trading for another member.")]
     MemberOtherMember = CustomerOrderCapacityCode.MemberOtherMember, // same ordinal as derivation source for type conversions
-    
 }

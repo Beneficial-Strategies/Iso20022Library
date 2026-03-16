@@ -23,7 +23,7 @@ public enum RestrictionStatus1Code
     [IsoId("_yA_goSFnEeW9XJWqfgXIIA")]
     [Description(@"Status of the restriction is active.")]
     Active = RestrictionStatusCode.Active, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the restriction is inactive.
     /// Encoded/decoded by serializers as &quot;INAC&quot;.
@@ -32,5 +32,4 @@ public enum RestrictionStatus1Code
     [IsoId("_yH-5cSFnEeW9XJWqfgXIIA")]
     [Description(@"Status of the restriction is inactive.")]
     Inactive = RestrictionStatusCode.Inactive, // same ordinal as derivation source for type conversions
-    
 }

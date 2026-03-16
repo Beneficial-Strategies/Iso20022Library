@@ -23,7 +23,7 @@ public enum BuyInStateCode
     [IsoId("_bHt9IJwVEeqtp-LOti013g")]
     [Description(@"Buy-in was successful.")]
     Successful,
-    
+
     /// <summary>
     /// Buy-in was unsuccessful.
     /// Encoded/decoded by serializers as &quot;BSSN&quot;.
@@ -32,7 +32,7 @@ public enum BuyInStateCode
     [IsoId("_bOt9AJwVEeqtp-LOti013g")]
     [Description(@"Buy-in was unsuccessful.")]
     Unsuccesssful,
-    
+
     /// <summary>
     /// Buy-in was partially successful.
     /// Encoded/decoded by serializers as &quot;BSSP&quot;.
@@ -41,5 +41,4 @@ public enum BuyInStateCode
     [IsoId("_bUEXEJwVEeqtp-LOti013g")]
     [Description(@"Buy-in was partially successful.")]
     PartiallySuccessful,
-    
 }

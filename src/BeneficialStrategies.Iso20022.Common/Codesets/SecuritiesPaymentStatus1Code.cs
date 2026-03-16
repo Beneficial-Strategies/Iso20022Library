@@ -23,7 +23,7 @@ public enum SecuritiesPaymentStatus1Code
     [IsoId("_ZFoFx9p-Ed-ak6NoX_4Aeg_-1185567647")]
     [Description(@"Security is fully paid.")]
     FullyPaid = SecuritiesPaymentStatusCode.FullyPaid, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security is nill paid.
     /// Encoded/decoded by serializers as &quot;NILL&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesPaymentStatus1Code
     [IsoId("_ZFoFyNp-Ed-ak6NoX_4Aeg_-899273641")]
     [Description(@"Security is nill paid.")]
     NillPaid = SecuritiesPaymentStatusCode.NillPaid, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security is partially paid.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -41,5 +41,4 @@ public enum SecuritiesPaymentStatus1Code
     [IsoId("_ZFx2wNp-Ed-ak6NoX_4Aeg_-862334871")]
     [Description(@"Security is partially paid.")]
     PartiallyPaid = SecuritiesPaymentStatusCode.PartiallyPaid, // same ordinal as derivation source for type conversions
-    
 }

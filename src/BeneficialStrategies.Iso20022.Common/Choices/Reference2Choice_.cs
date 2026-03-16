@@ -20,20 +20,51 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(Reference2Choice.InterestPaymentRequestIdentification))]
     [KnownType(typeof(Reference2Choice.InterestPaymentResponseIdentification))]
     [KnownType(typeof(Reference2Choice.InterestPaymentStatementIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.MarginCallRequestIdentification),nameof(Reference2Choice.MarginCallRequestIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.MarginCallResponseIdentification),nameof(Reference2Choice.MarginCallResponseIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.CollateralProposalIdentification),nameof(Reference2Choice.CollateralProposalIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.CollateralProposalResponseIdentification),nameof(Reference2Choice.CollateralProposalResponseIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.DisputeNotificationIdentification),nameof(Reference2Choice.DisputeNotificationIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.CollateralSubstitutionRequestIdentification),nameof(Reference2Choice.CollateralSubstitutionRequestIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.CollateralSubstitutionResponseIdentification),nameof(Reference2Choice.CollateralSubstitutionResponseIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.CollateralSubstitutionConfirmationIdentification),nameof(Reference2Choice.CollateralSubstitutionConfirmationIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.InterestPaymentRequestIdentification),nameof(Reference2Choice.InterestPaymentRequestIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.InterestPaymentResponseIdentification),nameof(Reference2Choice.InterestPaymentResponseIdentification))]
-    [JsonDerivedType(typeof(Reference2Choice.InterestPaymentStatementIdentification),nameof(Reference2Choice.InterestPaymentStatementIdentification))]
+    [JsonDerivedType(
+        typeof(Reference2Choice.MarginCallRequestIdentification),
+        nameof(Reference2Choice.MarginCallRequestIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.MarginCallResponseIdentification),
+        nameof(Reference2Choice.MarginCallResponseIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.CollateralProposalIdentification),
+        nameof(Reference2Choice.CollateralProposalIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.CollateralProposalResponseIdentification),
+        nameof(Reference2Choice.CollateralProposalResponseIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.DisputeNotificationIdentification),
+        nameof(Reference2Choice.DisputeNotificationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.CollateralSubstitutionRequestIdentification),
+        nameof(Reference2Choice.CollateralSubstitutionRequestIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.CollateralSubstitutionResponseIdentification),
+        nameof(Reference2Choice.CollateralSubstitutionResponseIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.CollateralSubstitutionConfirmationIdentification),
+        nameof(Reference2Choice.CollateralSubstitutionConfirmationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.InterestPaymentRequestIdentification),
+        nameof(Reference2Choice.InterestPaymentRequestIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.InterestPaymentResponseIdentification),
+        nameof(Reference2Choice.InterestPaymentResponseIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(Reference2Choice.InterestPaymentStatementIdentification),
+        nameof(Reference2Choice.InterestPaymentStatementIdentification)
+    )]
     [IsoId("_TYNGkKerEeCq2KR6DaC1kQ_992102367")]
     [DisplayName("Reference 2 Choice")]
-    public abstract partial record Reference2Choice_
-    {
-    }
+    public abstract record Reference2Choice_ { }
 }

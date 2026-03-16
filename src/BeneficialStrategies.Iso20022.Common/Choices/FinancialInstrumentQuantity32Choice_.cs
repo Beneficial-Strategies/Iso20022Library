@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(FinancialInstrumentQuantity32Choice.Unit))]
     [KnownType(typeof(FinancialInstrumentQuantity32Choice.NominalValue))]
     [KnownType(typeof(FinancialInstrumentQuantity32Choice.MonetaryValue))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity32Choice.Unit),nameof(FinancialInstrumentQuantity32Choice.Unit))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity32Choice.NominalValue),nameof(FinancialInstrumentQuantity32Choice.NominalValue))]
-    [JsonDerivedType(typeof(FinancialInstrumentQuantity32Choice.MonetaryValue),nameof(FinancialInstrumentQuantity32Choice.MonetaryValue))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity32Choice.Unit),
+        nameof(FinancialInstrumentQuantity32Choice.Unit)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity32Choice.NominalValue),
+        nameof(FinancialInstrumentQuantity32Choice.NominalValue)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentQuantity32Choice.MonetaryValue),
+        nameof(FinancialInstrumentQuantity32Choice.MonetaryValue)
+    )]
     [IsoId("_Y6yLkZjgEeqkLZLH6DK3UQ")]
     [DisplayName("Financial Instrument Quantity 32 Choice")]
-    public abstract partial record FinancialInstrumentQuantity32Choice_
-    {
-    }
+    public abstract record FinancialInstrumentQuantity32Choice_ { }
 }

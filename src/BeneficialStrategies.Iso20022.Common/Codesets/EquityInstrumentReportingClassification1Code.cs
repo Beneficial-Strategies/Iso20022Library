@@ -23,7 +23,7 @@ public enum EquityInstrumentReportingClassification1Code
     [IsoId("_DpNkQQjtEeW36pGcc5RpFw")]
     [Description(@"Contract is of type shares.")]
     Share = FinancialInstrumentReportingClassificationCode.Share, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type other equity-like financial instrument.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,7 +32,7 @@ public enum EquityInstrumentReportingClassification1Code
     [IsoId("_DxPe4QjtEeW36pGcc5RpFw")]
     [Description(@"Contract is of type other equity-like financial instrument.")]
     Other = FinancialInstrumentReportingClassificationCode.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type electronic traded funds.
     /// Encoded/decoded by serializers as &quot;ETFS&quot;.
@@ -41,7 +41,7 @@ public enum EquityInstrumentReportingClassification1Code
     [IsoId("_D4hyoQjtEeW36pGcc5RpFw")]
     [Description(@"Contract is of type electronic traded funds.")]
     ElectronicTradedFund = FinancialInstrumentReportingClassificationCode.ElectronicTradedFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type depositary receipt.
     /// Encoded/decoded by serializers as &quot;DPRS&quot;.
@@ -50,7 +50,7 @@ public enum EquityInstrumentReportingClassification1Code
     [IsoId("_EFnzcQjtEeW36pGcc5RpFw")]
     [Description(@"Contract is of type depositary receipt.")]
     DepositaryReceipt = FinancialInstrumentReportingClassificationCode.DepositaryReceipt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract is of type certificates.
     /// Encoded/decoded by serializers as &quot;CRFT&quot;.
@@ -59,5 +59,4 @@ public enum EquityInstrumentReportingClassification1Code
     [IsoId("_EO2A4QjtEeW36pGcc5RpFw")]
     [Description(@"Contract is of type certificates.")]
     Certificate = FinancialInstrumentReportingClassificationCode.Certificate, // same ordinal as derivation source for type conversions
-    
 }

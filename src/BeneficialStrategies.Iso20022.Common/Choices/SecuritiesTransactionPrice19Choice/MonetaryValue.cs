@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
     /// </summary>
     [IsoId("_fx9HMMgqEeuGrNSsxk3B0A")]
     [DisplayName("Monetary Value")]
-    public partial record MonetaryValue : SecuritiesTransactionPrice19Choice_
+    public record MonetaryValue : SecuritiesTransactionPrice19Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Amount of money in the cash entry.
         /// </summary>
         [IsoId("_XYj_4Mz3EeufhKfUxzsnrQ")]
         [DisplayName("Amount")]
         [IsoXmlTag("Amt")]
-        public required ActiveOrHistoricCurrencyAnd20DecimalAmount Amount { get; init; } 
-        
+        public required ActiveOrHistoricCurrencyAnd20DecimalAmount Amount { get; init; }
+
         /// <summary>
         /// Indicates that the amount value is positive or negative.
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice19Choi
         [DisplayName("Sign")]
         [IsoXmlTag("Sgn")]
         [IsoSimpleType(IsoSimpleType.PlusOrMinusIndicator)]
-        public IsoPlusOrMinusIndicator? Sign { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoPlusOrMinusIndicator? Sign { get; init; }
     }
 }

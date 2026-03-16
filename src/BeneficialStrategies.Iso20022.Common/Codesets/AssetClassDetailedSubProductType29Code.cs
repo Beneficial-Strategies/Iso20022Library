@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType29Code
     [IsoId("_9fHl4bv2EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of type lampante.")]
     Lampante = AssetClassDetailedSubProductTypeCode.Lampante, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -32,5 +32,4 @@ public enum AssetClassDetailedSubProductType29Code
     [IsoId("__qqQYbv2EeiLRYqS-r-R-A")]
     [Description(@"Commodity attribute of other type.")]
     Other = AssetClassDetailedSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

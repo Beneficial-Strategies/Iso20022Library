@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(YieldedOrValueType1Choice.Yielded))]
     [KnownType(typeof(YieldedOrValueType1Choice.ValueType))]
-    [JsonDerivedType(typeof(YieldedOrValueType1Choice.Yielded),nameof(YieldedOrValueType1Choice.Yielded))]
-    [JsonDerivedType(typeof(YieldedOrValueType1Choice.ValueType),nameof(YieldedOrValueType1Choice.ValueType))]
+    [JsonDerivedType(
+        typeof(YieldedOrValueType1Choice.Yielded),
+        nameof(YieldedOrValueType1Choice.Yielded)
+    )]
+    [JsonDerivedType(
+        typeof(YieldedOrValueType1Choice.ValueType),
+        nameof(YieldedOrValueType1Choice.ValueType)
+    )]
     [IsoId("_RdBVptp-Ed-ak6NoX_4Aeg_510883553")]
     [DisplayName("Yielded Or Value Type 1 Choice")]
-    public abstract partial record YieldedOrValueType1Choice_
-    {
-    }
+    public abstract record YieldedOrValueType1Choice_ { }
 }

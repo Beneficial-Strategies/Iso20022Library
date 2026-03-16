@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ISAPortfolio2Choice.ISA))]
     [KnownType(typeof(ISAPortfolio2Choice.Portfolio))]
-    [JsonDerivedType(typeof(ISAPortfolio2Choice.ISA),nameof(ISAPortfolio2Choice.ISA))]
-    [JsonDerivedType(typeof(ISAPortfolio2Choice.Portfolio),nameof(ISAPortfolio2Choice.Portfolio))]
+    [JsonDerivedType(typeof(ISAPortfolio2Choice.ISA), nameof(ISAPortfolio2Choice.ISA))]
+    [JsonDerivedType(typeof(ISAPortfolio2Choice.Portfolio), nameof(ISAPortfolio2Choice.Portfolio))]
     [IsoId("_3fnhckXfEeGY6MkiuzuPOA_858119227")]
     [DisplayName("ISA Portfolio 2 Choice")]
-    public abstract partial record ISAPortfolio2Choice_
-    {
-    }
+    public abstract record ISAPortfolio2Choice_ { }
 }

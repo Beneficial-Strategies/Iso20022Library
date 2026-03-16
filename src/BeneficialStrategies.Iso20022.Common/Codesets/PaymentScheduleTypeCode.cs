@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_YyKVAQqPEeWqX7rjSIiMuQ")]
 [Description(@"Specifies a payment schedule type.")]
-[Derivations(typeof(PaymentScheduleType1Code),typeof(PaymentScheduleType2Code))]
+[Derivations(typeof(PaymentScheduleType1Code), typeof(PaymentScheduleType2Code))]
 public enum PaymentScheduleTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum PaymentScheduleTypeCode
     [IsoId("_bA1MAAqPEeWqX7rjSIiMuQ")]
     [Description(@"Payment schedule is defined as per contract.")]
     Contract,
-    
+
     /// <summary>
     /// Payment schedule is estimated.
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -32,7 +32,7 @@ public enum PaymentScheduleTypeCode
     [IsoId("_bWG4cAqPEeWqX7rjSIiMuQ")]
     [Description(@"Payment schedule is estimated.")]
     Estimated,
-    
+
     /// <summary>
     /// Contract Payment schedule is both defined as per Contract and estimated.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +41,4 @@ public enum PaymentScheduleTypeCode
     [IsoId("_0kZo8LbzEeu9Cp6InX88Vw")]
     [Description(@"Contract Payment schedule is both defined as per Contract and estimated.")]
     Both,
-    
 }

@@ -23,5 +23,4 @@ public enum AssetClassSubProductType39Code
     [IsoId("_OjQNoVr3EeWN79Bl6BUd3g")]
     [Description(@"Commodity of type ammonia.")]
     Ammonia = AssetClassSubProductTypeCode.Ammonia, // same ordinal as derivation source for type conversions
-    
 }

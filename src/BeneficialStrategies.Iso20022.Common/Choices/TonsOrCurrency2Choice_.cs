@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TonsOrCurrency2Choice.Number))]
     [KnownType(typeof(TonsOrCurrency2Choice.Amount))]
-    [JsonDerivedType(typeof(TonsOrCurrency2Choice.Number),nameof(TonsOrCurrency2Choice.Number))]
-    [JsonDerivedType(typeof(TonsOrCurrency2Choice.Amount),nameof(TonsOrCurrency2Choice.Amount))]
+    [JsonDerivedType(typeof(TonsOrCurrency2Choice.Number), nameof(TonsOrCurrency2Choice.Number))]
+    [JsonDerivedType(typeof(TonsOrCurrency2Choice.Amount), nameof(TonsOrCurrency2Choice.Amount))]
     [IsoId("_Z5jxEWlSEeaLAKoEUNsD9g")]
     [DisplayName("Tons Or Currency 2 Choice")]
-    public abstract partial record TonsOrCurrency2Choice_
-    {
-    }
+    public abstract record TonsOrCurrency2Choice_ { }
 }

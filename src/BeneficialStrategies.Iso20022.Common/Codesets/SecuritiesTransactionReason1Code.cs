@@ -23,16 +23,18 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExsNp-Ed-ak6NoX_4Aeg_503817342")]
     [Description(@"Specifies the reason why the instruction is cancelled.")]
     Cancellation = SecuritiesTransactionReasonCode.Cancellation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why a cancellation request sent for the related instruction is pending.
     /// Encoded/decoded by serializers as &quot;CANP&quot;.
     /// </summary>
     [EnumMember(Value = "CANP")]
     [IsoId("_ZGExsdp-Ed-ak6NoX_4Aeg_503817403")]
-    [Description(@"Specifies the reason why a cancellation request sent for the related instruction is pending.")]
+    [Description(
+        @"Specifies the reason why a cancellation request sent for the related instruction is pending."
+    )]
     PendingCancellation = SecuritiesTransactionReasonCode.PendingCancellation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why the transaction was generated.
     /// Encoded/decoded by serializers as &quot;CGEN&quot;.
@@ -41,7 +43,7 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExstp-Ed-ak6NoX_4Aeg_503817650")]
     [Description(@"Specifies the reason why the transaction was generated.")]
     Generated = SecuritiesTransactionReasonCode.Generated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why the instruction has an unmatched status.
     /// Encoded/decoded by serializers as &quot;NMAT&quot;.
@@ -50,7 +52,7 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExs9p-Ed-ak6NoX_4Aeg_503817681")]
     [Description(@"Specifies the reason why the instruction has an unmatched status.")]
     Unmatched = SecuritiesTransactionReasonCode.Unmatched, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies additional information about the processed instruction.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
@@ -59,7 +61,7 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExtNp-Ed-ak6NoX_4Aeg_503817742")]
     [Description(@"Specifies additional information about the processed instruction.")]
     Acknowledgement = SecuritiesTransactionReasonCode.Acknowledgement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why the instruction has a pending status.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -68,7 +70,7 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExtdp-Ed-ak6NoX_4Aeg_503817773")]
     [Description(@"Specifies the reason why the instruction has a pending status.")]
     Pending = SecuritiesTransactionReasonCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why the instruction has a failing settlement status.
     /// Encoded/decoded by serializers as &quot;PENF&quot;.
@@ -77,7 +79,7 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExttp-Ed-ak6NoX_4Aeg_503818082")]
     [Description(@"Specifies the reason why the instruction has a failing settlement status.")]
     Failing = SecuritiesTransactionReasonCode.Failing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why the instruction has a pending processing status.
     /// Encoded/decoded by serializers as &quot;PPRC&quot;.
@@ -86,7 +88,7 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExt9p-Ed-ak6NoX_4Aeg_503818113")]
     [Description(@"Specifies the reason why the instruction has a pending processing status.")]
     PendingProcessing = SecuritiesTransactionReasonCode.PendingProcessing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Specifies the reason why the instruction is in repair.
     /// Encoded/decoded by serializers as &quot;REPR&quot;.
@@ -95,5 +97,4 @@ public enum SecuritiesTransactionReason1Code
     [IsoId("_ZGExuNp-Ed-ak6NoX_4Aeg_503818143")]
     [Description(@"Specifies the reason why the instruction is in repair.")]
     Repair = SecuritiesTransactionReasonCode.Repair, // same ordinal as derivation source for type conversions
-    
 }

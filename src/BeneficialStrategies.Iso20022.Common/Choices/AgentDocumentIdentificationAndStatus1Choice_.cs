@@ -9,13 +9,25 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// <summary>
     /// Agent Document Identification And Status1Choice.
     /// </summary>
-    [KnownType(typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationAdviceIdentificationAndStatus))]
-    [KnownType(typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationCancellationRequestIdentificationAndStatus))]
-    [JsonDerivedType(typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationAdviceIdentificationAndStatus),nameof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationAdviceIdentificationAndStatus))]
-    [JsonDerivedType(typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationCancellationRequestIdentificationAndStatus),nameof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationCancellationRequestIdentificationAndStatus))]
+    [KnownType(
+        typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationAdviceIdentificationAndStatus)
+    )]
+    [KnownType(
+        typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationCancellationRequestIdentificationAndStatus)
+    )]
+    [JsonDerivedType(
+        typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationAdviceIdentificationAndStatus),
+        nameof(
+            AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationAdviceIdentificationAndStatus
+        )
+    )]
+    [JsonDerivedType(
+        typeof(AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationCancellationRequestIdentificationAndStatus),
+        nameof(
+            AgentDocumentIdentificationAndStatus1Choice.AgentCANotificationCancellationRequestIdentificationAndStatus
+        )
+    )]
     [IsoId("_p_Rg4FuGEe6gDOpEK7Q4ig")]
     [DisplayName("Agent Document Identification And Status1Choice")]
-    public abstract partial record AgentDocumentIdentificationAndStatus1Choice_
-    {
-    }
+    public abstract record AgentDocumentIdentificationAndStatus1Choice_ { }
 }

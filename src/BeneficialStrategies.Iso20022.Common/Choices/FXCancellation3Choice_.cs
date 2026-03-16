@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FXCancellation3Choice.Indicator))]
     [KnownType(typeof(FXCancellation3Choice.Proprietary))]
-    [JsonDerivedType(typeof(FXCancellation3Choice.Indicator),nameof(FXCancellation3Choice.Indicator))]
-    [JsonDerivedType(typeof(FXCancellation3Choice.Proprietary),nameof(FXCancellation3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FXCancellation3Choice.Indicator),
+        nameof(FXCancellation3Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(FXCancellation3Choice.Proprietary),
+        nameof(FXCancellation3Choice.Proprietary)
+    )]
     [IsoId("_IHRikT0EEeWjqIDN7tjEjQ")]
     [DisplayName("FX Cancellation 3 Choice")]
-    public abstract partial record FXCancellation3Choice_
-    {
-    }
+    public abstract record FXCancellation3Choice_ { }
 }

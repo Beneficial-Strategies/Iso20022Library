@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_s-PqYb5XEeexmbB7KsjCwA")]
 [DisplayName("Corporate Action Cancellation SD")]
-public partial record CorporateActionCancellationSD4
+public record CorporateActionCancellationSD4
 {
-    #nullable enable
-    
     /// <summary>
     /// Xpath to the element that is being extended.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record CorporateActionCancellationSD4
     [DisplayName("Place And Name")]
     [IsoXmlTag("PlcAndNm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? PlaceAndName { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? PlaceAndName { get; init; }
+
     /// <summary>
     /// Additional textual information regarding the cancelled event.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record CorporateActionCancellationSD4
     [DisplayName("External Comments")]
     [IsoXmlTag("XtrnlCmnts")]
     [IsoSimpleType(IsoSimpleType.Max8000Text)]
-    [StringLength(maximumLength: 8000 ,MinimumLength = 1)]
-    public IsoMax8000Text? ExternalComments { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 8000, MinimumLength = 1)]
+    public IsoMax8000Text? ExternalComments { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DZOUkVyuEeeve7Je9cXtkQ")]
 [DisplayName("Contact")]
-public partial record Contact2
+public record Contact2
 {
-    #nullable enable
-    
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Contact2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Name { get; init; }
+
     /// <summary>
     /// Home phone number of contact.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record Contact2
     [DisplayName("Home Phone Number")]
     [IsoXmlTag("HomePhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? HomePhoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? HomePhoneNumber { get; init; }
+
     /// <summary>
     /// Business phone number of contact.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record Contact2
     [DisplayName("Business Phone Number")]
     [IsoXmlTag("BizPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? BusinessPhoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? BusinessPhoneNumber { get; init; }
+
     /// <summary>
     /// Mobile phone number of contact.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record Contact2
     [DisplayName("Mobile Phone Number")]
     [IsoXmlTag("MobPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? MobilePhoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? MobilePhoneNumber { get; init; }
+
     /// <summary>
     /// Other phone number of contact.
     /// </summary>
@@ -62,8 +60,8 @@ public partial record Contact2
     [DisplayName("Other Phone Number")]
     [IsoXmlTag("OthrPhneNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? OtherPhoneNumber { get; init; } 
-    
+    public IsoPhoneNumber? OtherPhoneNumber { get; init; }
+
     /// <summary>
     /// Personal email address of contact.
     /// </summary>
@@ -71,9 +69,9 @@ public partial record Contact2
     [DisplayName("Personal Email Address")]
     [IsoXmlTag("PrsnlEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? PersonalEmailAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? PersonalEmailAddress { get; init; }
+
     /// <summary>
     /// Business email address of contact.
     /// </summary>
@@ -81,9 +79,9 @@ public partial record Contact2
     [DisplayName("Business Email Address")]
     [IsoXmlTag("BizEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? BusinessEmailAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? BusinessEmailAddress { get; init; }
+
     /// <summary>
     /// Other email address of contact.
     /// </summary>
@@ -91,9 +89,9 @@ public partial record Contact2
     [DisplayName("Other Email Address")]
     [IsoXmlTag("OthrEmailAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? OtherEmailAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? OtherEmailAddress { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a home FAX number, as defined by telecom services.
     /// </summary>
@@ -101,8 +99,8 @@ public partial record Contact2
     [DisplayName("Home Fax Number")]
     [IsoXmlTag("HomeFaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? HomeFaxNumber { get; init; } 
-    
+    public IsoPhoneNumber? HomeFaxNumber { get; init; }
+
     /// <summary>
     /// Collection of information that identifies a home FAX number, as defined by telecom services.
     /// </summary>
@@ -110,8 +108,8 @@ public partial record Contact2
     [DisplayName("Business Fax Number")]
     [IsoXmlTag("BizFaxNb")]
     [IsoSimpleType(IsoSimpleType.PhoneNumber)]
-    public IsoPhoneNumber? BusinessFaxNumber { get; init; } 
-    
+    public IsoPhoneNumber? BusinessFaxNumber { get; init; }
+
     /// <summary>
     /// Universal Resource Locator (URL) address.
     /// </summary>
@@ -119,18 +117,14 @@ public partial record Contact2
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? URLAddress { get; init; } 
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? URLAddress { get; init; }
+
     /// <summary>
     /// Language of the contact.
     /// </summary>
     [IsoId("_Jvq5QFyuEeeve7Je9cXtkQ")]
     [DisplayName("Language")]
     [IsoXmlTag("Lang")]
-    public ISO2ALanguageCode? Language { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ISO2ALanguageCode? Language { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.ChargeTaxBasisType1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.ChargeTaxBasisType1Choice
     /// </summary>
     [IsoId("_AdIdY9okEeC60axPepSq7g_-391783727")]
     [DisplayName("Code")]
-    public partial record Code : ChargeTaxBasisType1Choice_
+    public record Code : ChargeTaxBasisType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Define the Charges/tax basis for the trade being allocated.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required ChargeTaxBasis1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ChargeTaxBasis1Code Value { get; init; }
     }
 }

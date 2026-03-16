@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionStatus1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionStatus1Choice
     /// </summary>
     [IsoId("_RirRsdp-Ed-ak6NoX_4Aeg_15156423")]
     [DisplayName("Rejected Status")]
-    public partial record RejectedStatus : StandingInstructionStatus1Choice_
+    public record RejectedStatus : StandingInstructionStatus1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// The rejection reason.
         /// </summary>
@@ -24,8 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionStatus1Choice
         [DisplayName("Reason")]
         [IsoXmlTag("Rsn")]
         public ValueList<RejectionReason20FormatChoice_> Reason { get; init; } = [];
+
         // ID for the above is _RlD3U9p-Ed-ak6NoX_4Aeg_-484468439
-        
+
         /// <summary>
         /// Additional information about the status.
         /// </summary>
@@ -33,11 +32,7 @@ namespace BeneficialStrategies.Iso20022.Choices.StandingInstructionStatus1Choice
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
         [IsoSimpleType(IsoSimpleType.Max350Text)]
-        [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-        public IsoMax350Text? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 350, MinimumLength = 1)]
+        public IsoMax350Text? AdditionalInformation { get; init; }
     }
 }

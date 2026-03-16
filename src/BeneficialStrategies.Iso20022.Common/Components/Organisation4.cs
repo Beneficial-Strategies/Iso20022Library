@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QOfF89p-Ed-ak6NoX_4Aeg_737799108")]
 [DisplayName("Organisation")]
-public partial record Organisation4
+public record Organisation4
 {
-    #nullable enable
-    
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record Organisation4
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max140Text)]
-    [StringLength(maximumLength: 140 ,MinimumLength = 1)]
-    public required IsoMax140Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 140, MinimumLength = 1)]
+    public required IsoMax140Text Name { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier for an organisation that is allocated by an institution, eg, Dun &amp; Bradstreet Identification.
     /// </summary>
     [IsoId("_QOfF9dp-Ed-ak6NoX_4Aeg_738719554")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public PartyIdentification4Choice_? Identification { get; init; } 
-    
+    public PartyIdentification4Choice_? Identification { get; init; }
+
     /// <summary>
     /// Purpose of the organisation, eg, charity.
     /// </summary>
@@ -43,25 +41,25 @@ public partial record Organisation4
     [DisplayName("Purpose")]
     [IsoXmlTag("Purp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Purpose { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Purpose { get; init; }
+
     /// <summary>
     /// Country of taxation of an organisation.
     /// </summary>
     [IsoId("_QOfF99p-Ed-ak6NoX_4Aeg_738719684")]
     [DisplayName("Taxation Country")]
     [IsoXmlTag("TaxtnCtry")]
-    public CountryCode? TaxationCountry { get; init; } 
-    
+    public CountryCode? TaxationCountry { get; init; }
+
     /// <summary>
     /// Country in which the organisation is registered.
     /// </summary>
     [IsoId("_QOfF-Np-Ed-ak6NoX_4Aeg_738719761")]
     [DisplayName("Registration Country")]
     [IsoXmlTag("RegnCtry")]
-    public CountryCode? RegistrationCountry { get; init; } 
-    
+    public CountryCode? RegistrationCountry { get; init; }
+
     /// <summary>
     /// Date and time at which a given organisation was officially registered.
     /// </summary>
@@ -69,8 +67,8 @@ public partial record Organisation4
     [DisplayName("Registration Date")]
     [IsoXmlTag("RegnDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? RegistrationDate { get; init; } 
-    
+    public IsoISODate? RegistrationDate { get; init; }
+
     /// <summary>
     /// Number assigned by a tax authority to an entity.
     /// </summary>
@@ -78,9 +76,9 @@ public partial record Organisation4
     [DisplayName("Tax Identification Number")]
     [IsoXmlTag("TaxIdNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TaxIdentificationNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TaxIdentificationNumber { get; init; }
+
     /// <summary>
     /// Number assigned by a national registration authority to an entity.
     /// </summary>
@@ -88,18 +86,14 @@ public partial record Organisation4
     [DisplayName("National Registration Number")]
     [IsoXmlTag("NtlRegnNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? NationalRegistrationNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? NationalRegistrationNumber { get; init; }
+
     /// <summary>
     /// Postal address of a party.
     /// </summary>
     [IsoId("_QOo28Np-Ed-ak6NoX_4Aeg_361066042")]
     [DisplayName("Corporate Investor Address")]
     [IsoXmlTag("CorpInvstrAdr")]
-    public required PostalAddress1 CorporateInvestorAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PostalAddress1 CorporateInvestorAddress { get; init; }
 }

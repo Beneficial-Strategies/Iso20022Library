@@ -23,7 +23,7 @@ public enum CancellationReason4Code
     [IsoId("_bYQPtdp-Ed-ak6NoX_4Aeg_-834209191")]
     [Description(@"Cancellation requested by the Debtor.")]
     RequestedByCustomer = CancellationReasonCode.RequestedByCustomer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment is a duplicate of another payment.
     /// Encoded/decoded by serializers as &quot;DUPL&quot;.
@@ -32,7 +32,7 @@ public enum CancellationReason4Code
     [IsoId("_bYQPttp-Ed-ak6NoX_4Aeg_-834209170")]
     [Description(@"Payment is a duplicate of another payment.")]
     DuplicatePayment = CancellationReasonCode.DuplicatePayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Agent in the payment workflow is incorrect.
     /// Encoded/decoded by serializers as &quot;AGNT&quot;.
@@ -41,7 +41,7 @@ public enum CancellationReason4Code
     [IsoId("_bYQPt9p-Ed-ak6NoX_4Aeg_-834209140")]
     [Description(@"Agent in the payment workflow is incorrect.")]
     IncorrectAgent = CancellationReasonCode.IncorrectAgent, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Currency of the payment is incorrect.
     /// Encoded/decoded by serializers as &quot;CURR&quot;.
@@ -50,7 +50,7 @@ public enum CancellationReason4Code
     [IsoId("_bYQPuNp-Ed-ak6NoX_4Aeg_-834209109")]
     [Description(@"Currency of the payment is incorrect.")]
     IncorrectCurrency = CancellationReasonCode.IncorrectCurrency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment is not justified.
     /// Encoded/decoded by serializers as &quot;UPAY&quot;.
@@ -59,14 +59,15 @@ public enum CancellationReason4Code
     [IsoId("_bYQPudp-Ed-ak6NoX_4Aeg_-834209079")]
     [Description(@"Payment is not justified.")]
     UnduePayment = CancellationReasonCode.UnduePayment, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation requested because an investigation request has been received and no remediation is possible.
     /// Encoded/decoded by serializers as &quot;CUTA&quot;.
     /// </summary>
     [EnumMember(Value = "CUTA")]
     [IsoId("_bYaAsNp-Ed-ak6NoX_4Aeg_1991989224")]
-    [Description(@"Cancellation requested because an investigation request has been received and no remediation is possible.")]
+    [Description(
+        @"Cancellation requested because an investigation request has been received and no remediation is possible."
+    )]
     CancelUponUnableToApply = CancellationReasonCode.CancelUponUnableToApply, // same ordinal as derivation source for type conversions
-    
 }

@@ -21,9 +21,11 @@ public enum AccountStatusUpdateInstructionCode
     /// </summary>
     [EnumMember(Value = "REAC")]
     [IsoId("_IYG-YHi6EeaRm5xIK6nGuQ")]
-    [Description(@"Account is to be reactivated, any previous instruction to close the account is rescinded.")]
+    [Description(
+        @"Account is to be reactivated, any previous instruction to close the account is rescinded."
+    )]
     Reactive,
-    
+
     /// <summary>
     /// Account is to be closed.
     /// Encoded/decoded by serializers as &quot;CLOS&quot;.
@@ -32,5 +34,4 @@ public enum AccountStatusUpdateInstructionCode
     [IsoId("_Lh2WgHi6EeaRm5xIK6nGuQ")]
     [Description(@"Account is to be closed.")]
     Close,
-    
 }

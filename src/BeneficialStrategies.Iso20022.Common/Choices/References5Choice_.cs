@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References5Choice.AccountServicerTransactionIdentification))]
     [KnownType(typeof(References5Choice.PoolIdentification))]
     [KnownType(typeof(References5Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References5Choice.AccountOwnerTransactionIdentification),nameof(References5Choice.AccountOwnerTransactionIdentification))]
-    [JsonDerivedType(typeof(References5Choice.AccountServicerTransactionIdentification),nameof(References5Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References5Choice.PoolIdentification),nameof(References5Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References5Choice.MarketInfrastructureTransactionIdentification),nameof(References5Choice.MarketInfrastructureTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References5Choice.AccountOwnerTransactionIdentification),
+        nameof(References5Choice.AccountOwnerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References5Choice.AccountServicerTransactionIdentification),
+        nameof(References5Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References5Choice.PoolIdentification),
+        nameof(References5Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References5Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References5Choice.MarketInfrastructureTransactionIdentification)
+    )]
     [IsoId("_USg8Htp-Ed-ak6NoX_4Aeg_-283590354")]
     [DisplayName("References 5 Choice")]
-    public abstract partial record References5Choice_
-    {
-    }
+    public abstract record References5Choice_ { }
 }

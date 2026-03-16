@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RateAndAmountFormat38Choice.NotSpecifiedRate))]
     [KnownType(typeof(RateAndAmountFormat38Choice.Amount))]
     [KnownType(typeof(RateAndAmountFormat38Choice.IndexPoints))]
-    [JsonDerivedType(typeof(RateAndAmountFormat38Choice.Rate),nameof(RateAndAmountFormat38Choice.Rate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat38Choice.NotSpecifiedRate),nameof(RateAndAmountFormat38Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(RateAndAmountFormat38Choice.Amount),nameof(RateAndAmountFormat38Choice.Amount))]
-    [JsonDerivedType(typeof(RateAndAmountFormat38Choice.IndexPoints),nameof(RateAndAmountFormat38Choice.IndexPoints))]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat38Choice.Rate),
+        nameof(RateAndAmountFormat38Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat38Choice.NotSpecifiedRate),
+        nameof(RateAndAmountFormat38Choice.NotSpecifiedRate)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat38Choice.Amount),
+        nameof(RateAndAmountFormat38Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(RateAndAmountFormat38Choice.IndexPoints),
+        nameof(RateAndAmountFormat38Choice.IndexPoints)
+    )]
     [IsoId("_yF0j0UEEEeWVgfuHGaKtRQ")]
     [DisplayName("Rate And Amount Format 38 Choice")]
-    public abstract partial record RateAndAmountFormat38Choice_
-    {
-    }
+    public abstract record RateAndAmountFormat38Choice_ { }
 }

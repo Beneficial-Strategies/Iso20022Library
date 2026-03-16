@@ -16,16 +16,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(InvestigationDataRecord7Choice.TransactionData))]
     [KnownType(typeof(InvestigationDataRecord7Choice.TransactionStatus))]
     [KnownType(typeof(InvestigationDataRecord7Choice.Valuation))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.Compensation),nameof(InvestigationDataRecord7Choice.Compensation))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.Confirmation),nameof(InvestigationDataRecord7Choice.Confirmation))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.DebitAuthorisation),nameof(InvestigationDataRecord7Choice.DebitAuthorisation))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.ResponseNarrative),nameof(InvestigationDataRecord7Choice.ResponseNarrative))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.TransactionData),nameof(InvestigationDataRecord7Choice.TransactionData))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.TransactionStatus),nameof(InvestigationDataRecord7Choice.TransactionStatus))]
-    [JsonDerivedType(typeof(InvestigationDataRecord7Choice.Valuation),nameof(InvestigationDataRecord7Choice.Valuation))]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.Compensation),
+        nameof(InvestigationDataRecord7Choice.Compensation)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.Confirmation),
+        nameof(InvestigationDataRecord7Choice.Confirmation)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.DebitAuthorisation),
+        nameof(InvestigationDataRecord7Choice.DebitAuthorisation)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.ResponseNarrative),
+        nameof(InvestigationDataRecord7Choice.ResponseNarrative)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.TransactionData),
+        nameof(InvestigationDataRecord7Choice.TransactionData)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.TransactionStatus),
+        nameof(InvestigationDataRecord7Choice.TransactionStatus)
+    )]
+    [JsonDerivedType(
+        typeof(InvestigationDataRecord7Choice.Valuation),
+        nameof(InvestigationDataRecord7Choice.Valuation)
+    )]
     [IsoId("_oax_8zrQEe-thIfLZ94a1w")]
     [DisplayName("Investigation Data Record7Choice")]
-    public abstract partial record InvestigationDataRecord7Choice_
-    {
-    }
+    public abstract record InvestigationDataRecord7Choice_ { }
 }

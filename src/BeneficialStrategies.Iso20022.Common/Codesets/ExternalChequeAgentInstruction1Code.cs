@@ -12,8 +12,8 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ak80ebtoEeq_cfXrH83Rcw")]
-[Description(@"Specifies the external instruction code, as provided to a cheque agent for processing, in the format of character string with a maximum length of 4 characters.")]
+[Description(
+    @"Specifies the external instruction code, as provided to a cheque agent for processing, in the format of character string with a maximum length of 4 characters."
+)]
 [DerivedFrom(typeof(ExternalChequeAgentInstructionCode))]
-public enum ExternalChequeAgentInstruction1Code
-{
-}
+public enum ExternalChequeAgentInstruction1Code { }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_jWaXwYS2Ee-Pv9KR9bv9IA")]
-[Description(@"Specifies the underlying business area/type of trade causing the collateral movement.")]
+[Description(
+    @"Specifies the underlying business area/type of trade causing the collateral movement."
+)]
 [DerivedFrom(typeof(ExposureTypeV3Code))]
 public enum ExposureType15Code
 {
@@ -21,7 +23,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "BFWD")]
     [IsoId("")]
-    [Description(@"Any securities traded out beyond 3 days which include treasury notes, Japanese Government Bonds and US treasuries.")]
+    [Description(
+        @"Any securities traded out beyond 3 days which include treasury notes, Japanese Government Bonds and US treasuries."
+    )]
     BondForward = ExposureTypeV3Code.BondForward, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +43,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "CCIR")]
     [IsoId("")]
-    [Description(@"Cross currency agreement between two parties (known as counterparties) where one stream of future interest payments is exchanged for another based on a specified notional principal amount. The interest obligations are denominated in two different currencies.")]
+    [Description(
+        @"Cross currency agreement between two parties (known as counterparties) where one stream of future interest payments is exchanged for another based on a specified notional principal amount. The interest obligations are denominated in two different currencies."
+    )]
     CrossCurrencyIRS = ExposureTypeV3Code.CrossCurrencyIRS, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -48,7 +54,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "CCPC")]
     [IsoId("")]
-    [Description(@"Collateral covering the initial margin requirements for OTC trades cleared through a central counterparty.")]
+    [Description(
+        @"Collateral covering the initial margin requirements for OTC trades cleared through a central counterparty."
+    )]
     CCPCollateral = ExposureTypeV3Code.CCPCollateral, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -57,7 +65,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "COMM")]
     [IsoId("")]
-    [Description(@"Any good exchanged during commerce, which includes goods traded on a commodity exchange.")]
+    [Description(
+        @"Any good exchanged during commerce, which includes goods traded on a commodity exchange."
+    )]
     Commodities = ExposureTypeV3Code.Commodities, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -66,7 +76,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "CRDS")]
     [IsoId("")]
-    [Description(@"Swap designed to transfer the credit exposure of fixed income products between parties.")]
+    [Description(
+        @"Swap designed to transfer the credit exposure of fixed income products between parties."
+    )]
     CreditDefaultSwap = ExposureTypeV3Code.CreditDefaultSwap, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -111,7 +123,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "EQUS")]
     [IsoId("")]
-    [Description(@"Equity swap trades where the return of an equity is exchanged for either a fixed or floating rate.")]
+    [Description(
+        @"Equity swap trades where the return of an equity is exchanged for either a fixed or floating rate."
+    )]
     EquitySwap = ExposureTypeV3Code.EquitySwap, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -165,7 +179,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "FUTR")]
     [IsoId("")]
-    [Description(@"Agreement to buy or sell a specific amount of a commodity or financial instrument at a particular price on a stipulated future date.")]
+    [Description(
+        @"Agreement to buy or sell a specific amount of a commodity or financial instrument at a particular price on a stipulated future date."
+    )]
     Futures = ExposureTypeV3Code.Futures, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -183,7 +199,9 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "OPTN")]
     [IsoId("")]
-    [Description(@"A contract that grants the holder the right, but not the obligation, to buy or sell currency at a specified exchange rate during a specified period of time.")]
+    [Description(
+        @"A contract that grants the holder the right, but not the obligation, to buy or sell currency at a specified exchange rate during a specified period of time."
+    )]
     FXOption = ExposureTypeV3Code.FXOption, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -318,7 +336,8 @@ public enum ExposureType15Code
     /// </summary>
     [EnumMember(Value = "UDMS")]
     [IsoId("")]
-    [Description(@"Relates to uncleared derivative margin segregation. This could be for variation margin or initial margin.")]
+    [Description(
+        @"Relates to uncleared derivative margin segregation. This could be for variation margin or initial margin."
+    )]
     UnclearedDerivativeMarginSegregation = ExposureTypeV3Code.UnclearedDerivativeMarginSegregation, // same ordinal as derivation source for type conversions
-
 }

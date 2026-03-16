@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-312EToQEeabspMEjqY5TQ")]
 [DisplayName("Order Waiver")]
-public partial record OrderWaiver1
+public record OrderWaiver1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reason why the order has to be handled differently, probably in a manual fashion, because, for example, the investment manager has agreed a waiver to the terms.
     /// </summary>
     [IsoId("__Q1k4ToQEeabspMEjqY5TQ")]
     [DisplayName("Order Waiver Reason")]
     [IsoXmlTag("OrdrWvrRsn")]
-    public OrderWaiverReason3Choice_? OrderWaiverReason { get; init; } 
-    
+    public OrderWaiverReason3Choice_? OrderWaiverReason { get; init; }
+
     /// <summary>
     /// Additional information about the order waiver.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record OrderWaiver1
     [DisplayName("Information Value")]
     [IsoXmlTag("InfVal")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? InformationValue { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InformationValue { get; init; }
 }

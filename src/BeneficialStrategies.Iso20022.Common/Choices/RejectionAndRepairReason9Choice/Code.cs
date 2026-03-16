@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.RejectionAndRepairReason9Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.RejectionAndRepairReason9Choice
     /// </summary>
     [IsoId("_ekEaI-ZgEd-q8fx_Zl_34A")]
     [DisplayName("Code")]
-    public partial record Code : RejectionAndRepairReason9Choice_
+    public record Code : RejectionAndRepairReason9Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the reason why the instruction/cancellation request has a rejected status.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required RejectionReason21Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required RejectionReason21Code Value { get; init; }
     }
 }

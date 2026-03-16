@@ -21,27 +21,33 @@ public enum MeetingTypeClassification2Code
     /// </summary>
     [EnumMember(Value = "AMET")]
     [IsoId("_UKTYIa7NEemG7MmivSuE5g")]
-    [Description(@"Meeting held periodically to approve the financial statements and to elect the board members and the auditors.")]
+    [Description(
+        @"Meeting held periodically to approve the financial statements and to elect the board members and the auditors."
+    )]
     Annual = MeetingTypeClassificationCode.Annual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting for holders of a specific type of asset, for example, preferred shares, bonds.
     /// Encoded/decoded by serializers as &quot;CLAS&quot;.
     /// </summary>
     [EnumMember(Value = "CLAS")]
     [IsoId("_UUa9cq7NEemG7MmivSuE5g")]
-    [Description(@"Meeting for holders of a specific type of asset, for example, preferred shares, bonds.")]
+    [Description(
+        @"Meeting for holders of a specific type of asset, for example, preferred shares, bonds."
+    )]
     Class = MeetingTypeClassificationCode.Class, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting is the result of an obligation or a decision made by the issuer as opposed to voting rights holder initiated, for example, contested meeting.
     /// Encoded/decoded by serializers as &quot;ISSU&quot;.
     /// </summary>
     [EnumMember(Value = "ISSU")]
     [IsoId("_UcdfIq7NEemG7MmivSuE5g")]
-    [Description(@"Meeting is the result of an obligation or a decision made by the issuer as opposed to voting rights holder initiated, for example, contested meeting.")]
+    [Description(
+        @"Meeting is the result of an obligation or a decision made by the issuer as opposed to voting rights holder initiated, for example, contested meeting."
+    )]
     IssuerInitiated = MeetingTypeClassificationCode.IssuerInitiated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting which is planned in the by-laws.
     /// Encoded/decoded by serializers as &quot;OMET&quot;.
@@ -50,14 +56,15 @@ public enum MeetingTypeClassification2Code
     [IsoId("_Un6hMq7NEemG7MmivSuE5g")]
     [Description(@"Meeting which is planned in the by-laws.")]
     Ordinary = MeetingTypeClassificationCode.Ordinary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Meeting is the result of a request or an action of a voting right holder(s), for example, contested meeting.
     /// Encoded/decoded by serializers as &quot;VRHI&quot;.
     /// </summary>
     [EnumMember(Value = "VRHI")]
     [IsoId("_UvzR4q7NEemG7MmivSuE5g")]
-    [Description(@"Meeting is the result of a request or an action of a voting right holder(s), for example, contested meeting.")]
+    [Description(
+        @"Meeting is the result of a request or an action of a voting right holder(s), for example, contested meeting."
+    )]
     VotingRightsHolderInitiated = MeetingTypeClassificationCode.VotingRightsHolderInitiated, // same ordinal as derivation source for type conversions
-    
 }

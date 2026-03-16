@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jiCQcdtoEee9e6xduATmQg")]
 [DisplayName("Encrypted Content")]
-public partial record EncryptedContent4
+public record EncryptedContent4
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of data which have been encrypted.
     /// </summary>
     [IsoId("_jrB0YdtoEee9e6xduATmQg")]
     [DisplayName("Content Type")]
     [IsoXmlTag("CnttTp")]
-    public required ContentType2Code ContentType { get; init; } 
-    
+    public required ContentType2Code ContentType { get; init; }
+
     /// <summary>
     /// Algorithm used to encrypt the data.
     /// </summary>
     [IsoId("_jrB0Y9toEee9e6xduATmQg")]
     [DisplayName("Content Encryption Algorithm")]
     [IsoXmlTag("CnttNcrptnAlgo")]
-    public AlgorithmIdentification24? ContentEncryptionAlgorithm { get; init; } 
-    
+    public AlgorithmIdentification24? ContentEncryptionAlgorithm { get; init; }
+
     /// <summary>
     /// Encrypted data, result of the content encryption.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record EncryptedContent4
     [DisplayName("Encrypted Data")]
     [IsoXmlTag("NcrptdData")]
     [IsoSimpleType(IsoSimpleType.Max100KBinary)]
-    public required IsoMax100KBinary EncryptedData { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax100KBinary EncryptedData { get; init; }
 }

@@ -1,16 +1,14 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
-
-
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.auth;
 
@@ -22,94 +20,87 @@ namespace BeneficialStrategies.Iso20022.auth;
 /// Usage
 /// The message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport.
 /// </summary>
-[Description(@"Scope|A reporting institution, eg, an investment bank, sends the RegulatoryTransactionReportCancellationRequest to a regulator or to an intermediary (eg a reporting agent), to request a cancellation of a previously sent RegulatoryTransactionReport.|Usage|The message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport.")]
+[Description(
+    @"Scope|A reporting institution, eg, an investment bank, sends the RegulatoryTransactionReportCancellationRequest to a regulator or to an intermediary (eg a reporting agent), to request a cancellation of a previously sent RegulatoryTransactionReport.|Usage|The message definition can be used to cancel an entire RegulatoryTransactionReport or to cancel one or more individual transactions in a previously sent RegulatoryTransactionReport."
+)]
 [IsoId("_gJOkFMIFEeGllrOKQRUTYA_-2116922160")]
 [DisplayName("Regulatory Transaction Report Cancellation Request V")]
-public partial record RegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
+public record RegulatoryTransactionReportCancellationRequestV02 : IOuterRecord
 {
-    
     /// <summary>
     /// The official ISO 20022 designation for this version of this message.
     /// </summary>
     public const string IsoIdentifier = "auth.009.001.02";
-    
+
     /// <summary>
     /// The ISO specified XML tag that should be used for standardized serialization of this message.
     /// </summary>
     public const string XmlTag = "RgltryTxRptCxlReq";
-    
+
     /// <summary>
     /// The ISO specified XML namespace that should be used for standardized serialization of this message type.
     /// </summary>
     public const string DocumentNamespace = "urn:iso:std:iso:20022:tech:xsd:auth.009.001.02";
-    
+
     /// <summary>
     /// The ISO specified XML element name that must surround the inner content to achieve standardized serialization.
     /// </summary>
     public const string DocumentElementName = "Document";
-    
+
     /// <summary>
     /// The XML namespace in which this message is delivered.
     /// </summary>
     public static string IsoXmlNamspace => DocumentNamespace;
-    
-    #nullable enable
-    
+
     /// <summary>
     /// Identification of the RegulatoryTransactionReportCancellationRequest document.
     /// </summary>
     [IsoId("_gJYVEMIFEeGllrOKQRUTYA_-2116922142")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required DocumentIdentification8 Identification { get; init; } 
-    
+    public required DocumentIdentification8 Identification { get; init; }
+
     /// <summary>
     /// Identification of the firm that executed the transaction.|.
     /// </summary>
     [IsoId("_gJYVEcIFEeGllrOKQRUTYA_-2116922021")]
     [DisplayName("Reporting Institution")]
     [IsoXmlTag("RptgInstn")]
-    public required PartyIdentification23Choice_ ReportingInstitution { get; init; } 
-    
+    public required PartyIdentification23Choice_ ReportingInstitution { get; init; }
+
     /// <summary>
     /// Identifies the intermediary which is reporting on behalf on the reporting institution.
     /// </summary>
     [IsoId("_gJYVEsIFEeGllrOKQRUTYA_-2116921978")]
     [DisplayName("Reporting Agent")]
     [IsoXmlTag("RptgAgt")]
-    public PartyIdentification24Choice_? ReportingAgent { get; init; } 
-    
+    public PartyIdentification24Choice_? ReportingAgent { get; init; }
+
     /// <summary>
     /// Provides all the details of the transaction report that needs to be cancelled. More than one set of details can be provided.||.
     /// </summary>
     [IsoId("_gJYVE8IFEeGllrOKQRUTYA_-2116922081")]
     [DisplayName("Cancellation By Transaction Details")]
     [IsoXmlTag("CxlByTxDtls")]
-    public required TransactionDetails3 CancellationByTransactionDetails { get; init; } 
-    
+    public required TransactionDetails3 CancellationByTransactionDetails { get; init; }
+
     /// <summary>
     /// Provides the reference of the RegulatoryTransactionReport document that was previously sent and that needs to be cancelled in its entirety.
     /// </summary>
     [IsoId("_gJYVFMIFEeGllrOKQRUTYA_-2116922099")]
     [DisplayName("Previous Reference")]
     [IsoXmlTag("PrvsRef")]
-    public required DocumentIdentification9 PreviousReference { get; init; } 
-    
+    public required DocumentIdentification9 PreviousReference { get; init; }
+
     /// <summary>
     /// Provides the trade reference of the transaction report that needs to be cancelled. More than one reference may be provided.
     /// </summary>
     [IsoId("_gJiGEMIFEeGllrOKQRUTYA_-2116922038")]
     [DisplayName("Cancellation By Trade Reference")]
     [IsoXmlTag("CxlByTradRef")]
-    public required TransactionDetails2 CancellationByTradeReference { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required TransactionDetails2 CancellationByTradeReference { get; init; }
 }
 
-
-// Since RegulatoryTransactionReportCancellationRequestV02Document is not really part of the logical business domain model, 
+// Since RegulatoryTransactionReportCancellationRequestV02Document is not really part of the logical business domain model,
 // and only existed to facilitate implementation details of serialization, it has been appropriately removed.
 // Some of the constants previously declared there have been relocated to RegulatoryTransactionReportCancellationRequestV02.
-

@@ -23,7 +23,7 @@ public enum EncryptionFormat3Code
     [IsoId("_KlXRgX0lEemfrNOe0zHQyg")]
     [Description(@"Format of a cryptographic key specified by the ANSI X9 TR-34 standard.")]
     TR34 = EncryptionFormatCode.TR34, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Format of a cryptographic key specified by the ANSI X9 TR-31 standard.
     /// Encoded/decoded by serializers as &quot;TR31&quot;.
@@ -32,7 +32,7 @@ public enum EncryptionFormat3Code
     [IsoId("_KlXRg30lEemfrNOe0zHQyg")]
     [Description(@"Format of a cryptographic key specified by the ANSI X9 TR-31 standard.")]
     TR31 = EncryptionFormatCode.TR31, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// CTC encryption mode.
     /// Encoded/decoded by serializers as &quot;CTCE&quot;.
@@ -41,7 +41,7 @@ public enum EncryptionFormat3Code
     [IsoId("_KlXRhX0lEemfrNOe0zHQyg")]
     [Description(@"CTC encryption mode.")]
     CTCE = EncryptionFormatCode.CTCE, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cipher Block Chaining mode of encryption
     /// Encoded/decoded by serializers as &quot;CBCE&quot;.
@@ -50,5 +50,4 @@ public enum EncryptionFormat3Code
     [IsoId("_KlXRh30lEemfrNOe0zHQyg")]
     [Description(@"Cipher Block Chaining mode of encryption")]
     CBC = EncryptionFormatCode.CBC, // same ordinal as derivation source for type conversions
-    
 }

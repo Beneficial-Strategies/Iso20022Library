@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Qq8_gNp-Ed-ak6NoX_4Aeg_-2134324614")]
 [DisplayName("Statement")]
-public partial record Statement14
+public record Statement14
 {
-    #nullable enable
-    
     /// <summary>
     /// Sequential number of the report.
     /// </summary>
     [IsoId("_Qq8_gdp-Ed-ak6NoX_4Aeg_-2133403455")]
     [DisplayName("Report Number")]
     [IsoXmlTag("RptNb")]
-    public Number3Choice_? ReportNumber { get; init; } 
-    
+    public Number3Choice_? ReportNumber { get; init; }
+
     /// <summary>
     /// Identification of the SecuritiesStatementQuery message sent to request this statement.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record Statement14
     [DisplayName("Query Reference")]
     [IsoXmlTag("QryRef")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? QueryReference { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? QueryReference { get; init; }
+
     /// <summary>
     /// Reference common to all pages of a statement.
     /// </summary>
@@ -43,41 +41,41 @@ public partial record Statement14
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? StatementIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? StatementIdentification { get; init; }
+
     /// <summary>
     /// Date and time of the statement.
     /// </summary>
     [IsoId("_Qq8_hNp-Ed-ak6NoX_4Aeg_-2133403575")]
     [DisplayName("Statement Date Time")]
     [IsoXmlTag("StmtDtTm")]
-    public required DateAndDateTimeChoice_ StatementDateTime { get; init; } 
-    
+    public required DateAndDateTimeChoice_ StatementDateTime { get; init; }
+
     /// <summary>
     /// Frequency of the statement.
     /// </summary>
     [IsoId("_Qq8_hdp-Ed-ak6NoX_4Aeg_-2133403540")]
     [DisplayName("Frequency")]
     [IsoXmlTag("Frqcy")]
-    public Frequency4Choice_? Frequency { get; init; } 
-    
+    public Frequency4Choice_? Frequency { get; init; }
+
     /// <summary>
     /// Indicates whether the statement is complete or contains changes only.
     /// </summary>
     [IsoId("_Qq8_htp-Ed-ak6NoX_4Aeg_-2133403515")]
     [DisplayName("Update Type")]
     [IsoXmlTag("UpdTp")]
-    public UpdateType2Choice_? UpdateType { get; init; } 
-    
+    public UpdateType2Choice_? UpdateType { get; init; }
+
     /// <summary>
     /// Specifies whether the statement is sorted by status or transaction.
     /// </summary>
     [IsoId("_Qq8_h9p-Ed-ak6NoX_4Aeg_-2133403480")]
     [DisplayName("Statement Structure")]
     [IsoXmlTag("StmtStr")]
-    public required StatementStructure1Code StatementStructure { get; init; } 
-    
+    public required StatementStructure1Code StatementStructure { get; init; }
+
     /// <summary>
     /// Indicates whether there is activity or information update reported in the statement.
     /// </summary>
@@ -85,9 +83,5 @@ public partial record Statement14
     [DisplayName("Activity Indicator")]
     [IsoXmlTag("ActvtyInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator ActivityIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator ActivityIndicator { get; init; }
 }

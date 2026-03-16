@@ -23,7 +23,7 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_f8pxQc5AEeSc85GUbgBycw")]
     [Description(@"Commodity of type dairy.")]
     Dairy = AssetClassSubProductTypeCode.Dairy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type forestry.
     /// Encoded/decoded by serializers as &quot;FRST&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_gHrVgc5AEeSc85GUbgBycw")]
     [Description(@"Commodity of type forestry.")]
     Forestry = AssetClassSubProductTypeCode.Forestry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type grain oil seeds.
     /// Encoded/decoded by serializers as &quot;GROS&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_ginlEc5AEeSc85GUbgBycw")]
     [Description(@"Commodity of type grain oil seeds.")]
     GrainOilSeeds = AssetClassSubProductTypeCode.GrainOilSeeds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type livestock.
     /// Encoded/decoded by serializers as &quot;LSTK&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_hBSeEc5AEeSc85GUbgBycw")]
     [Description(@"Commodity of type livestock.")]
     Livestock = AssetClassSubProductTypeCode.Livestock, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type softs.
     /// Encoded/decoded by serializers as &quot;SOFT&quot;.
@@ -59,7 +59,7 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_pJ0EYc5AEeSc85GUbgBycw")]
     [Description(@"Commodity of type softs.")]
     Softs = AssetClassSubProductTypeCode.Softs, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of type seafood.
     /// Encoded/decoded by serializers as &quot;SEAF&quot;.
@@ -68,7 +68,7 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_iAuhoUDaEeWOL-OsSq2h6w")]
     [Description(@"Commodity of type seafood.")]
     Seafood = AssetClassSubProductTypeCode.Seafood, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -77,5 +77,4 @@ public enum AssetClassSubProductAgriculturalType1Code
     [IsoId("_3WT_IUDaEeWOL-OsSq2h6w")]
     [Description(@"Commodity of other type.")]
     Other = AssetClassSubProductTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

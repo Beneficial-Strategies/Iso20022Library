@@ -23,7 +23,7 @@ public enum TargetMarket1Code
     [IsoId("_9woHAdddEeibyvRfU9vJ7w")]
     [Description(@"Yes, is applicable.")]
     InScope = TargetMarketCode.InScope, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Neutral or has no impact.
     /// Encoded/decoded by serializers as &quot;NEUT&quot;.
@@ -32,7 +32,7 @@ public enum TargetMarket1Code
     [IsoId("_936awdddEeibyvRfU9vJ7w")]
     [Description(@"Neutral or has no impact.")]
     Neutral = TargetMarketCode.Neutral, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No, is not applicable.
     /// Encoded/decoded by serializers as &quot;NSCO&quot;.
@@ -41,5 +41,4 @@ public enum TargetMarket1Code
     [IsoId("_-SsSQdddEeibyvRfU9vJ7w")]
     [Description(@"No, is not applicable.")]
     NotInScope = TargetMarketCode.NotInScope, // same ordinal as derivation source for type conversions
-    
 }

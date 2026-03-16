@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PCM3wX5gEea2k7EBUopqxw")]
 [DisplayName("Debt Instrument")]
-public partial record DebtInstrument5
+public record DebtInstrument5
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of bond type.
     /// </summary>
     [IsoId("_PO2MoX5gEea2k7EBUopqxw")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required BondType1Code Type { get; init; } 
-    
+    public required BondType1Code Type { get; init; }
+
     /// <summary>
     /// Date on which a bond is issued and begins to accrue interest.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record DebtInstrument5
     [DisplayName("Issuance Date")]
     [IsoXmlTag("IssncDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate IssuanceDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODate IssuanceDate { get; init; }
 }

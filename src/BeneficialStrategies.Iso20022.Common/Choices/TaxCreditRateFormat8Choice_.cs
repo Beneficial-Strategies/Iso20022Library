@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TaxCreditRateFormat8Choice.Amount))]
     [KnownType(typeof(TaxCreditRateFormat8Choice.RateTypeAndAmountAndRateStatus))]
     [KnownType(typeof(TaxCreditRateFormat8Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat8Choice.Rate),nameof(TaxCreditRateFormat8Choice.Rate))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat8Choice.Amount),nameof(TaxCreditRateFormat8Choice.Amount))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat8Choice.RateTypeAndAmountAndRateStatus),nameof(TaxCreditRateFormat8Choice.RateTypeAndAmountAndRateStatus))]
-    [JsonDerivedType(typeof(TaxCreditRateFormat8Choice.NotSpecifiedRate),nameof(TaxCreditRateFormat8Choice.NotSpecifiedRate))]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat8Choice.Rate),
+        nameof(TaxCreditRateFormat8Choice.Rate)
+    )]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat8Choice.Amount),
+        nameof(TaxCreditRateFormat8Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat8Choice.RateTypeAndAmountAndRateStatus),
+        nameof(TaxCreditRateFormat8Choice.RateTypeAndAmountAndRateStatus)
+    )]
+    [JsonDerivedType(
+        typeof(TaxCreditRateFormat8Choice.NotSpecifiedRate),
+        nameof(TaxCreditRateFormat8Choice.NotSpecifiedRate)
+    )]
     [IsoId("_W5KBb0EIEeWVgfuHGaKtRQ")]
     [DisplayName("Tax Credit Rate Format 8 Choice")]
-    public abstract partial record TaxCreditRateFormat8Choice_
-    {
-    }
+    public abstract record TaxCreditRateFormat8Choice_ { }
 }

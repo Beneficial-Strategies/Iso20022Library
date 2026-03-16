@@ -23,5 +23,4 @@ public enum AssetClassProductType4Code
     [IsoId("_w4AMgQnzEeWnS-yHF1QhNQ")]
     [Description(@"Commodity of type freight.")]
     Freight = AssetClassProductTypeCode.Freight, // same ordinal as derivation source for type conversions
-    
 }

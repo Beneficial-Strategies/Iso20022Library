@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-clJMYtqEeSDLd7nI4Quzw")]
 [DisplayName("ATM Environment")]
-public partial record ATMEnvironment9
+public record ATMEnvironment9
 {
-    #nullable enable
-    
     /// <summary>
     /// Acquirer of the ATM transaction, in charge of the funds settlement with the issuer.
     /// </summary>
     [IsoId("_-pPsMYtqEeSDLd7nI4Quzw")]
     [DisplayName("Acquirer")]
     [IsoXmlTag("Acqrr")]
-    public Acquirer7? Acquirer { get; init; } 
-    
+    public Acquirer7? Acquirer { get; init; }
+
     /// <summary>
     /// Identification of the ATM manager.
     /// </summary>
@@ -33,18 +31,14 @@ public partial record ATMEnvironment9
     [DisplayName("ATM Manager Identification")]
     [IsoXmlTag("ATMMgrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ATMManagerIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ATMManagerIdentification { get; init; }
+
     /// <summary>
     /// ATM information.
     /// </summary>
     [IsoId("_-pPsN4tqEeSDLd7nI4Quzw")]
     [DisplayName("ATM")]
     [IsoXmlTag("ATM")]
-    public required AutomatedTellerMachine7 ATM { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required AutomatedTellerMachine7 ATM { get; init; }
 }

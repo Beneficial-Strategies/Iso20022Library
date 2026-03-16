@@ -23,7 +23,7 @@ public enum ConsentTypeCode
     [IsoId("_-6d_4CHmEeOQ7qT4JUI53A")]
     [Description(@"Change in the terms and conditions of the bond.")]
     ChangeInTerms,
-    
+
     /// <summary>
     /// Change in the due and payable conditions.
     /// Encoded/decoded by serializers as &quot;DUPY&quot;.
@@ -32,5 +32,4 @@ public enum ConsentTypeCode
     [IsoId("_LOQFsCHnEeOQ7qT4JUI53A")]
     [Description(@"Change in the due and payable conditions.")]
     DueAndPayable,
-    
 }

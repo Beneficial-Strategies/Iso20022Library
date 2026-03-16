@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RejectedCancellationStatusReason1Choice.Reason))]
     [KnownType(typeof(RejectedCancellationStatusReason1Choice.ExtendedReason))]
     [KnownType(typeof(RejectedCancellationStatusReason1Choice.DataSourceScheme))]
-    [JsonDerivedType(typeof(RejectedCancellationStatusReason1Choice.Reason),nameof(RejectedCancellationStatusReason1Choice.Reason))]
-    [JsonDerivedType(typeof(RejectedCancellationStatusReason1Choice.ExtendedReason),nameof(RejectedCancellationStatusReason1Choice.ExtendedReason))]
-    [JsonDerivedType(typeof(RejectedCancellationStatusReason1Choice.DataSourceScheme),nameof(RejectedCancellationStatusReason1Choice.DataSourceScheme))]
+    [JsonDerivedType(
+        typeof(RejectedCancellationStatusReason1Choice.Reason),
+        nameof(RejectedCancellationStatusReason1Choice.Reason)
+    )]
+    [JsonDerivedType(
+        typeof(RejectedCancellationStatusReason1Choice.ExtendedReason),
+        nameof(RejectedCancellationStatusReason1Choice.ExtendedReason)
+    )]
+    [JsonDerivedType(
+        typeof(RejectedCancellationStatusReason1Choice.DataSourceScheme),
+        nameof(RejectedCancellationStatusReason1Choice.DataSourceScheme)
+    )]
     [IsoId("_RXptdNp-Ed-ak6NoX_4Aeg_890850288")]
     [DisplayName("Rejected Cancellation Status Reason 1 Choice")]
-    public abstract partial record RejectedCancellationStatusReason1Choice_
-    {
-    }
+    public abstract record RejectedCancellationStatusReason1Choice_ { }
 }

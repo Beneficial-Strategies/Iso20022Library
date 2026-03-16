@@ -23,14 +23,15 @@ public enum AdditionalBusinessProcess3Code
     [IsoId("_bqbk1Np-Ed-ak6NoX_4Aeg_1334000184")]
     [Description(@"Relates to a claim on the associated corporate action event.")]
     ClaimOrCompensation = AdditionalBusinessProcessCode.ClaimOrCompensation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Relates to a tax refund from the authorities on the associated corporate action event.
     /// Encoded/decoded by serializers as &quot;TAXR&quot;.
     /// </summary>
     [EnumMember(Value = "TAXR")]
     [IsoId("_bqbk1dp-Ed-ak6NoX_4Aeg_1334000217")]
-    [Description(@"Relates to a tax refund from the authorities on the associated corporate action event.")]
+    [Description(
+        @"Relates to a tax refund from the authorities on the associated corporate action event."
+    )]
     TaxRefund = AdditionalBusinessProcessCode.TaxRefund, // same ordinal as derivation source for type conversions
-    
 }

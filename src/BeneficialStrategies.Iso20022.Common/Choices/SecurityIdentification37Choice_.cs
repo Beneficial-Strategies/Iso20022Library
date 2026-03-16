@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SecurityIdentification37Choice.ISIN))]
     [KnownType(typeof(SecurityIdentification37Choice.Name))]
     [KnownType(typeof(SecurityIdentification37Choice.Index))]
-    [JsonDerivedType(typeof(SecurityIdentification37Choice.ISIN),nameof(SecurityIdentification37Choice.ISIN))]
-    [JsonDerivedType(typeof(SecurityIdentification37Choice.Name),nameof(SecurityIdentification37Choice.Name))]
-    [JsonDerivedType(typeof(SecurityIdentification37Choice.Index),nameof(SecurityIdentification37Choice.Index))]
+    [JsonDerivedType(
+        typeof(SecurityIdentification37Choice.ISIN),
+        nameof(SecurityIdentification37Choice.ISIN)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification37Choice.Name),
+        nameof(SecurityIdentification37Choice.Name)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityIdentification37Choice.Index),
+        nameof(SecurityIdentification37Choice.Index)
+    )]
     [IsoId("_OtC8sTLlEeu9CrLaMVTofw")]
     [DisplayName("Security Identification 37 Choice")]
-    public abstract partial record SecurityIdentification37Choice_
-    {
-    }
+    public abstract record SecurityIdentification37Choice_ { }
 }

@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_K2bYsH6qEeePx-IqKegQ8Q")]
-[Description(@"Specifies the processing window in which the balance transfer will be processed on the switch date.")]
+[Description(
+    @"Specifies the processing window in which the balance transfer will be processed on the switch date."
+)]
 [DerivedFrom(typeof(BalanceTransferWindowCode))]
 public enum BalanceTransferWindow1Code
 {
@@ -23,7 +25,7 @@ public enum BalanceTransferWindow1Code
     [IsoId("_MQ4kgX6qEeePx-IqKegQ8Q")]
     [Description(@"Indicates in business hours processing.")]
     InHours = BalanceTransferWindowCode.InHours, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates out of business hours processing.
     /// Encoded/decoded by serializers as &quot;EARL&quot;.
@@ -32,5 +34,4 @@ public enum BalanceTransferWindow1Code
     [IsoId("_MYPwwX6qEeePx-IqKegQ8Q")]
     [Description(@"Indicates out of business hours processing.")]
     OutOfHours = BalanceTransferWindowCode.OutOfHours, // same ordinal as derivation source for type conversions
-    
 }

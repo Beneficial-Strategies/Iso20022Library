@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,51 +14,45 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_6nhacX3sEeibM9CPDGCw0g")]
 [DisplayName("Cash Balance")]
-public partial record CashBalance12
+public record CashBalance12
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the nature of a balance.
     /// </summary>
     [IsoId("_6yG5133sEeibM9CPDGCw0g")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public BalanceType11Choice_? Type { get; init; } 
-    
+    public BalanceType11Choice_? Type { get; init; }
+
     /// <summary>
     /// Specifies the type of counterparty for which the balance is calculated.
     /// </summary>
     [IsoId("_6yG52X3sEeibM9CPDGCw0g")]
     [DisplayName("Counterparty Type")]
     [IsoXmlTag("CtrPtyTp")]
-    public required BalanceCounterparty1Code CounterpartyType { get; init; } 
-    
+    public required BalanceCounterparty1Code CounterpartyType { get; init; }
+
     /// <summary>
     /// Specifies the counterparty for which the balance is calculated.
     /// </summary>
     [IsoId("_6yG5233sEeibM9CPDGCw0g")]
     [DisplayName("Counterparty Identification")]
     [IsoXmlTag("CtrPtyId")]
-    public BranchAndFinancialInstitutionIdentification6? CounterpartyIdentification { get; init; } 
-    
+    public BranchAndFinancialInstitutionIdentification6? CounterpartyIdentification { get; init; }
+
     /// <summary>
     /// Date and time at which the balance is or will be available.
     /// </summary>
     [IsoId("_6yG53X3sEeibM9CPDGCw0g")]
     [DisplayName("Value Date")]
     [IsoXmlTag("ValDt")]
-    public DateAndDateTimeSearch4Choice_? ValueDate { get; init; } 
-    
+    public DateAndDateTimeSearch4Choice_? ValueDate { get; init; }
+
     /// <summary>
     /// Date or date time when the balance was last updated following an entry posted to the account, in the books of the account servicing institution.
     /// </summary>
     [IsoId("_HyosAbwWEeioUZ07TzVRmA")]
     [DisplayName("Processing Date")]
     [IsoXmlTag("PrcgDt")]
-    public DateAndDateTimeSearch4Choice_? ProcessingDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateAndDateTimeSearch4Choice_? ProcessingDate { get; init; }
 }

@@ -23,7 +23,7 @@ public enum AddressType2Code
     [IsoId("_bm2sYdp-Ed-ak6NoX_4Aeg_878577717")]
     [Description(@"Address is the complete postal address.")]
     Postal = AddressTypeCode.Postal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Address is a postal office (PO) box.
     /// Encoded/decoded by serializers as &quot;PBOX&quot;.
@@ -32,7 +32,7 @@ public enum AddressType2Code
     [IsoId("_bm2sYtp-Ed-ak6NoX_4Aeg_878578132")]
     [Description(@"Address is a postal office (PO) box.")]
     POBox = AddressTypeCode.POBox, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Address is the home address.
     /// Encoded/decoded by serializers as &quot;HOME&quot;.
@@ -41,7 +41,7 @@ public enum AddressType2Code
     [IsoId("_bm2sY9p-Ed-ak6NoX_4Aeg_2106193409")]
     [Description(@"Address is the home address.")]
     Residential = AddressTypeCode.Residential, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Address is the business address.
     /// Encoded/decoded by serializers as &quot;BIZZ&quot;.
@@ -50,7 +50,7 @@ public enum AddressType2Code
     [IsoId("_bm2sZNp-Ed-ak6NoX_4Aeg_2106193529")]
     [Description(@"Address is the business address.")]
     Business = AddressTypeCode.Business, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Address is the address to which mail is sent.
     /// Encoded/decoded by serializers as &quot;MLTO&quot;.
@@ -59,7 +59,7 @@ public enum AddressType2Code
     [IsoId("_bm2sZdp-Ed-ak6NoX_4Aeg_2106193606")]
     [Description(@"Address is the address to which mail is sent.")]
     MailTo = AddressTypeCode.MailTo, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Address is the address to which delivery is to take place.
     /// Encoded/decoded by serializers as &quot;DLVY&quot;.
@@ -68,5 +68,4 @@ public enum AddressType2Code
     [IsoId("_bm2sZtp-Ed-ak6NoX_4Aeg_2106193624")]
     [Description(@"Address is the address to which delivery is to take place.")]
     DeliveryTo = AddressTypeCode.DeliveryTo, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum OperationCode
     [IsoId("_aPFoMNp-Ed-ak6NoX_4Aeg_336257262")]
     [Description(@"Indicates a range delimited by two variables.")]
     Till,
-    
+
     /// <summary>
     /// Indicates either of two variables is valid, but not both.
     /// Encoded/decoded by serializers as &quot;ORRR&quot;.
@@ -32,7 +32,7 @@ public enum OperationCode
     [IsoId("_aPFoMdp-Ed-ak6NoX_4Aeg_336257263")]
     [Description(@"Indicates either of two variables is valid, but not both.")]
     Or,
-    
+
     /// <summary>
     /// Indicates that only when both variables are given, the operation is valid.
     /// Encoded/decoded by serializers as &quot;ANDD&quot;.
@@ -41,5 +41,4 @@ public enum OperationCode
     [IsoId("_aPFoMtp-Ed-ak6NoX_4Aeg_336257264")]
     [Description(@"Indicates that only when both variables are given, the operation is valid.")]
     And,
-    
 }

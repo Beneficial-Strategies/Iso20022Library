@@ -21,7 +21,8 @@ public enum OptionNumber1Code
     /// </summary>
     [EnumMember(Value = "UNSO")]
     [IsoId("_aP1PGdp-Ed-ak6NoX_4Aeg_6858494")]
-    [Description(@"The corporate action instruction is unsolicited, that is, the instruction has not been preceded by a corporate action notification.")]
+    [Description(
+        @"The corporate action instruction is unsolicited, that is, the instruction has not been preceded by a corporate action notification."
+    )]
     Unsolicited = OptionNumberCode.Unsolicited, // same ordinal as derivation source for type conversions
-    
 }

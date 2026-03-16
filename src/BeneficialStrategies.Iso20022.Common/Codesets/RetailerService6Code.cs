@@ -22,15 +22,17 @@ public enum RetailerService6Code
     [EnumMember(Value = "RPTQ")]
     [IsoId("_potZgd6PEeiwsev40qZGEQ")]
     [Description(@"The Sale System requests to the POI System a report on a list of transactions.")]
-    AdministrativeReportTransactionRequest = RetailerServiceCode.AdministrativeReportTransactionRequest, // same ordinal as derivation source for type conversions
-    
+    AdministrativeReportTransactionRequest =
+        RetailerServiceCode.AdministrativeReportTransactionRequest, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// The Sale System requests to the POI System a report on the totals figures of the POI system.
     /// Encoded/decoded by serializers as &quot;RPAQ&quot;.
     /// </summary>
     [EnumMember(Value = "RPAQ")]
     [IsoId("_qOCUId6PEeiwsev40qZGEQ")]
-    [Description(@"The Sale System requests to the POI System a report on the totals figures of the POI system.")]
+    [Description(
+        @"The Sale System requests to the POI System a report on the totals figures of the POI system."
+    )]
     AdministrativeReportGetTotalsRequest = RetailerServiceCode.AdministrativeReportGetTotalsRequest, // same ordinal as derivation source for type conversions
-    
 }

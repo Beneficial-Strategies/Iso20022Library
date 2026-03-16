@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_5yEaVA_QEeejZrQVdmNFGg")]
 [DisplayName("Balance Transfer")]
-public partial record BalanceTransfer1
+public record BalanceTransfer1
 {
-    #nullable enable
-    
     /// <summary>
     /// Reference that enables the creditor to reconcile a payment received through a different payment channel with the payment request.
     /// </summary>
     [IsoId("_iFKDoA_REeejZrQVdmNFGg")]
     [DisplayName("Balance Transfer Reference")]
     [IsoXmlTag("BalTrfRef")]
-    public BalanceTransferReference1? BalanceTransferReference { get; init; } 
-    
+    public BalanceTransferReference1? BalanceTransferReference { get; init; }
+
     /// <summary>
     /// Contains details of the clearance and settlement method chosen to make the appropriate payment from account servicer to account servicer in order to transfer the positive or negative closing balance of the old account to the new account.
     /// </summary>
     [IsoId("_oziAIA_REeejZrQVdmNFGg")]
     [DisplayName("Balance Transfer Method")]
     [IsoXmlTag("BalTrfMtd")]
-    public SettlementMethod1Choice_? BalanceTransferMethod { get; init; } 
-    
+    public SettlementMethod1Choice_? BalanceTransferMethod { get; init; }
+
     /// <summary>
     /// Maximum value that the new account servicer will pay to the old account servicer when the closing balance on the old account is negative.
     /// </summary>
     [IsoId("_8O5MoA_REeejZrQVdmNFGg")]
     [DisplayName("Balance Transfer Funding Limit")]
     [IsoXmlTag("BalTrfFndgLmt")]
-    public BalanceTransferFundingLimit1? BalanceTransferFundingLimit { get; init; } 
-    
-    
-    #nullable disable
-    
+    public BalanceTransferFundingLimit1? BalanceTransferFundingLimit { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QCHd4tp-Ed-ak6NoX_4Aeg_-1362353308")]
 [DisplayName("Individual Person")]
-public partial record IndividualPerson8
+public record IndividualPerson8
 {
-    #nullable enable
-    
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record IndividualPerson8
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Name { get; init; }
+
     /// <summary>
     /// First name of a person.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record IndividualPerson8
     [DisplayName("Given Name")]
     [IsoXmlTag("GvnNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text GivenName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text GivenName { get; init; }
+
     /// <summary>
     /// Specifies the terms used to formally address a person.
     /// </summary>
     [IsoId("_QCHd5dp-Ed-ak6NoX_4Aeg_-1354042162")]
     [DisplayName("Name Prefix")]
     [IsoXmlTag("NmPrfx")]
-    public NamePrefix1Code? NamePrefix { get; init; } 
-    
+    public NamePrefix1Code? NamePrefix { get; init; }
+
     /// <summary>
     /// Additional information about a person that follows a person&apos;s name, for example, qualification such as Doctor of Philosophy (PhD).
     /// </summary>
@@ -53,17 +51,17 @@ public partial record IndividualPerson8
     [DisplayName("Name Suffix")]
     [IsoXmlTag("NmSfx")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? NameSuffix { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? NameSuffix { get; init; }
+
     /// <summary>
     /// Specifies the gender of the person.
     /// </summary>
     [IsoId("_QCHd59p-Ed-ak6NoX_4Aeg_-1354041947")]
     [DisplayName("Gender")]
     [IsoXmlTag("Gndr")]
-    public GenderCode? Gender { get; init; } 
-    
+    public GenderCode? Gender { get; init; }
+
     /// <summary>
     /// Date on which a person is born.
     /// </summary>
@@ -71,8 +69,8 @@ public partial record IndividualPerson8
     [DisplayName("Birth Date")]
     [IsoXmlTag("BirthDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? BirthDate { get; init; } 
-    
+    public IsoISODate? BirthDate { get; init; }
+
     /// <summary>
     /// Number assigned by a social security agency.
     /// </summary>
@@ -80,18 +78,14 @@ public partial record IndividualPerson8
     [DisplayName("Social Security Number")]
     [IsoXmlTag("SclSctyNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SocialSecurityNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SocialSecurityNumber { get; init; }
+
     /// <summary>
     /// Postal address of a party.
     /// </summary>
     [IsoId("_QCRO4tp-Ed-ak6NoX_4Aeg_349983267")]
     [DisplayName("Individual Investor Address")]
     [IsoXmlTag("IndvInvstrAdr")]
-    public required PostalAddress1 IndividualInvestorAddress { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required PostalAddress1 IndividualInvestorAddress { get; init; }
 }

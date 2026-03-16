@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TEFRARules3Choice.Code))]
     [KnownType(typeof(TEFRARules3Choice.Proprietary))]
-    [JsonDerivedType(typeof(TEFRARules3Choice.Code),nameof(TEFRARules3Choice.Code))]
-    [JsonDerivedType(typeof(TEFRARules3Choice.Proprietary),nameof(TEFRARules3Choice.Proprietary))]
+    [JsonDerivedType(typeof(TEFRARules3Choice.Code), nameof(TEFRARules3Choice.Code))]
+    [JsonDerivedType(typeof(TEFRARules3Choice.Proprietary), nameof(TEFRARules3Choice.Proprietary))]
     [IsoId("_ighyQeLcEeWFtOV72FbX9w")]
     [DisplayName("TEFRA Rules 3 Choice")]
-    public abstract partial record TEFRARules3Choice_
-    {
-    }
+    public abstract record TEFRARules3Choice_ { }
 }

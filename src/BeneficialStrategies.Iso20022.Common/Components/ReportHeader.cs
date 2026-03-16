@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RI5fwNp-Ed-ak6NoX_4Aeg_24374172")]
 [DisplayName("Report Header")]
-public partial record ReportHeader
+public record ReportHeader
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the report.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ReportHeader
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// Party reporting the status of the case.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record ReportHeader
     [DisplayName("From")]
     [IsoXmlTag("Fr")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier From { get; init; } 
-    
+    public required IsoAnyBICIdentifier From { get; init; }
+
     /// <summary>
     /// Party to which the status of the case is reported.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record ReportHeader
     [DisplayName("To")]
     [IsoXmlTag("To")]
     [IsoSimpleType(IsoSimpleType.AnyBICIdentifier)]
-    public required IsoAnyBICIdentifier To { get; init; } 
-    
+    public required IsoAnyBICIdentifier To { get; init; }
+
     /// <summary>
     /// Creation date and time of the report generation.
     /// </summary>
@@ -53,9 +51,5 @@ public partial record ReportHeader
     [DisplayName("Creation Date Time")]
     [IsoXmlTag("CreDtTm")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime CreationDateTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime CreationDateTime { get; init; }
 }

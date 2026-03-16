@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TradeData40Choice.DataSetAction))]
     [KnownType(typeof(TradeData40Choice.Report))]
-    [JsonDerivedType(typeof(TradeData40Choice.DataSetAction),nameof(TradeData40Choice.DataSetAction))]
-    [JsonDerivedType(typeof(TradeData40Choice.Report),nameof(TradeData40Choice.Report))]
+    [JsonDerivedType(
+        typeof(TradeData40Choice.DataSetAction),
+        nameof(TradeData40Choice.DataSetAction)
+    )]
+    [JsonDerivedType(typeof(TradeData40Choice.Report), nameof(TradeData40Choice.Report))]
     [IsoId("_zryFccg3EeuGrNSsxk3B0A")]
     [DisplayName("Trade Data 40 Choice")]
-    public abstract partial record TradeData40Choice_
-    {
-    }
+    public abstract record TradeData40Choice_ { }
 }

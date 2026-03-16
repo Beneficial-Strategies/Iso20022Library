@@ -23,7 +23,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_zjcKwYMfEeqqSpeC5JM2Mw")]
     [Description(@"Securitised derivative.")]
     SecuritisedDerivative = NonEquityAssetClassCode.SecuritisedDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Interest rate derivative.
     /// Encoded/decoded by serializers as &quot;IRDV&quot;.
@@ -32,7 +32,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_znlD4YMfEeqqSpeC5JM2Mw")]
     [Description(@"Interest rate derivative.")]
     InterestRateDerivative = NonEquityAssetClassCode.InterestRateDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Foreign exchange derivative.
     /// Encoded/decoded by serializers as &quot;FEXD&quot;.
@@ -41,7 +41,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_zrxAUYMfEeqqSpeC5JM2Mw")]
     [Description(@"Foreign exchange derivative.")]
     ForeignExchangeDerivative = NonEquityAssetClassCode.ForeignExchangeDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Equity derivative.
     /// Encoded/decoded by serializers as &quot;EQDV&quot;.
@@ -50,7 +50,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_zwV-UYMfEeqqSpeC5JM2Mw")]
     [Description(@"Equity derivative.")]
     EquityDerivative = NonEquityAssetClassCode.EquityDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Emission allowance derivative.
     /// Encoded/decoded by serializers as &quot;EADV&quot;.
@@ -59,7 +59,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_z0EAsYMfEeqqSpeC5JM2Mw")]
     [Description(@"Emission allowance derivative.")]
     EmissionAllowanceDerivative = NonEquityAssetClassCode.EmissionAllowanceDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Emission allowance.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -68,7 +68,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_z3jZkYMfEeqqSpeC5JM2Mw")]
     [Description(@"Emission allowance.")]
     EmissionAllowance = NonEquityAssetClassCode.EmissionAllowance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Credit derivative.
     /// Encoded/decoded by serializers as &quot;CRDV&quot;.
@@ -77,7 +77,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_z8F7UYMfEeqqSpeC5JM2Mw")]
     [Description(@"Credit derivative.")]
     CreditDerivative = NonEquityAssetClassCode.CreditDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Contract for difference.
     /// Encoded/decoded by serializers as &quot;CFDS&quot;.
@@ -86,7 +86,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_0AIGwYMfEeqqSpeC5JM2Mw")]
     [Description(@"Contract for difference.")]
     ContractForDifference = NonEquityAssetClassCode.ContractForDifference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity derivative.
     /// Encoded/decoded by serializers as &quot;COMD&quot;.
@@ -95,7 +95,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_0Er2oYMfEeqqSpeC5JM2Mw")]
     [Description(@"Commodity derivative.")]
     CommodityDerivative = NonEquityAssetClassCode.CommodityDerivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// C10 derivative.
     /// Encoded/decoded by serializers as &quot;C10D&quot;.
@@ -104,7 +104,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_0Jp2MYMfEeqqSpeC5JM2Mw")]
     [Description(@"C10 derivative.")]
     C10Derivative = NonEquityAssetClassCode.C10Derivative, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Bond.
     /// Encoded/decoded by serializers as &quot;BOND&quot;.
@@ -113,7 +113,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_fefhgYSaEequddKuwPSZfQ")]
     [Description(@"Bond.")]
     Bond = NonEquityAssetClassCode.Bond, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange traded commodities.
     /// Encoded/decoded by serializers as &quot;ETCS&quot;.
@@ -122,7 +122,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_flC1cYSaEequddKuwPSZfQ")]
     [Description(@"Exchange traded commodities.")]
     ExchangeTradedCommodities = NonEquityAssetClassCode.ExchangeTradedCommodities, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange traded note.
     /// Encoded/decoded by serializers as &quot;ETNS&quot;.
@@ -131,7 +131,7 @@ public enum NonEquityAssetClass1Code
     [IsoId("_fsL_QYSaEequddKuwPSZfQ")]
     [Description(@"Exchange traded note.")]
     ExchangeTradedNote = NonEquityAssetClassCode.ExchangeTradedNote, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Structured finance product.
     /// Encoded/decoded by serializers as &quot;SFPS&quot;.
@@ -140,5 +140,4 @@ public enum NonEquityAssetClass1Code
     [IsoId("_gBDcAYSaEequddKuwPSZfQ")]
     [Description(@"Structured finance product.")]
     StructuredFinanceProduct = NonEquityAssetClassCode.StructuredFinanceProduct, // same ordinal as derivation source for type conversions
-    
 }

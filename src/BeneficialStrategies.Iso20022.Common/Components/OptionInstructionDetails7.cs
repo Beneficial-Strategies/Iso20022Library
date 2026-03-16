@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Jo6I7xn1EeyroI8qKgB7Mg")]
 [DisplayName("Option Instruction Details")]
-public partial record OptionInstructionDetails7
+public record OptionInstructionDetails7
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the instruction or protect instruction.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record OptionInstructionDetails7
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max15Text)]
-    [StringLength(maximumLength: 15 ,MinimumLength = 1)]
-    public required IsoMax15Text InstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 15, MinimumLength = 1)]
+    public required IsoMax15Text InstructionIdentification { get; init; }
+
     /// <summary>
     /// Provides the sequence number of the instruction.
     /// </summary>
@@ -35,24 +33,24 @@ public partial record OptionInstructionDetails7
     [DisplayName("Instruction Sequence Number")]
     [IsoXmlTag("InstrSeqNb")]
     [IsoSimpleType(IsoSimpleType.Max3NumericText)]
-    public IsoMax3NumericText? InstructionSequenceNumber { get; init; } 
-    
+    public IsoMax3NumericText? InstructionSequenceNumber { get; init; }
+
     /// <summary>
     /// Indicates whether the instruction is a protect or a cover protect instruction.
     /// </summary>
     [IsoId("_J-0HVRn1EeyroI8qKgB7Mg")]
     [DisplayName("Protect Indicator")]
     [IsoXmlTag("PrtctInd")]
-    public ProtectTransactionType2Code? ProtectIndicator { get; init; } 
-    
+    public ProtectTransactionType2Code? ProtectIndicator { get; init; }
+
     /// <summary>
     /// Securities quantity instructed in the instruction.
     /// </summary>
     [IsoId("_J-0HVxn1EeyroI8qKgB7Mg")]
     [DisplayName("Instruction Quantity")]
     [IsoXmlTag("InstrQty")]
-    public required FinancialInstrumentQuantity33Choice_ InstructionQuantity { get; init; } 
-    
+    public required FinancialInstrumentQuantity33Choice_ InstructionQuantity { get; init; }
+
     /// <summary>
     /// Date of the instruction.
     /// </summary>
@@ -60,8 +58,8 @@ public partial record OptionInstructionDetails7
     [DisplayName("Instruction Date")]
     [IsoXmlTag("InstrDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate InstructionDate { get; init; } 
-    
+    public required IsoISODate InstructionDate { get; init; }
+
     /// <summary>
     /// Date of the client protect instruction.
     /// </summary>
@@ -69,8 +67,8 @@ public partial record OptionInstructionDetails7
     [DisplayName("Protect Date")]
     [IsoXmlTag("PrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? ProtectDate { get; init; } 
-    
+    public IsoISODate? ProtectDate { get; init; }
+
     /// <summary>
     /// Date of the cover protect Instruction
     /// </summary>
@@ -78,24 +76,24 @@ public partial record OptionInstructionDetails7
     [DisplayName("Cover Protect Date")]
     [IsoXmlTag("CoverPrtctDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? CoverProtectDate { get; init; } 
-    
+    public IsoISODate? CoverProtectDate { get; init; }
+
     /// <summary>
     /// Bid price of the instruction.
     /// </summary>
     [IsoId("_J-0HXxn1EeyroI8qKgB7Mg")]
     [DisplayName("Bid Price")]
     [IsoXmlTag("BidPric")]
-    public PriceFormat45Choice_? BidPrice { get; init; } 
-    
+    public PriceFormat45Choice_? BidPrice { get; init; }
+
     /// <summary>
     /// Conditional quantity of the instruction.
     /// </summary>
     [IsoId("_J-0HYRn1EeyroI8qKgB7Mg")]
     [DisplayName("Conditional Quantity")]
     [IsoXmlTag("CondlQty")]
-    public FinancialInstrumentQuantity33Choice_? ConditionalQuantity { get; init; } 
-    
+    public FinancialInstrumentQuantity33Choice_? ConditionalQuantity { get; init; }
+
     /// <summary>
     /// Customer related narrative information.
     /// </summary>
@@ -103,9 +101,9 @@ public partial record OptionInstructionDetails7
     [DisplayName("Customer Reference")]
     [IsoXmlTag("CstmrRef")]
     [IsoSimpleType(IsoSimpleType.Max50Text)]
-    [StringLength(maximumLength: 50 ,MinimumLength = 1)]
-    public IsoMax50Text? CustomerReference { get; init; } 
-    
+    [StringLength(maximumLength: 50, MinimumLength = 1)]
+    public IsoMax50Text? CustomerReference { get; init; }
+
     /// <summary>
     /// Narrative information from the submitted instruction.
     /// </summary>
@@ -113,18 +111,14 @@ public partial record OptionInstructionDetails7
     [DisplayName("Instruction Narrative")]
     [IsoXmlTag("InstrNrrtv")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? InstructionNarrative { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? InstructionNarrative { get; init; }
+
     /// <summary>
     /// Status of a particular instruction.
     /// </summary>
     [IsoId("_J-0HZxn1EeyroI8qKgB7Mg")]
     [DisplayName("Instruction Status")]
     [IsoXmlTag("InstrSts")]
-    public required InstructionProcessingStatus47Choice_ InstructionStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required InstructionProcessingStatus47Choice_ InstructionStatus { get; init; }
 }

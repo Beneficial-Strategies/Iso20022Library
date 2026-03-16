@@ -23,7 +23,7 @@ public enum LumpSumType1Code
     [IsoId("_ULDvsbKeEeiXL6Ccd-oU8g")]
     [Description(@"Lump sum is a death benefit lump sum.")]
     DeathBenefit = LumpSumTypeCode.DeathBenefit, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Lump sum is a pension commencement lump sum.
     /// Encoded/decoded by serializers as &quot;PCLS&quot;.
@@ -32,7 +32,7 @@ public enum LumpSumType1Code
     [IsoId("_UQQ_0bKeEeiXL6Ccd-oU8g")]
     [Description(@"Lump sum is a pension commencement lump sum.")]
     PensionCommencement = LumpSumTypeCode.PensionCommencement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Lump sum is an uncrystallised fund pension lump sum.
     /// Encoded/decoded by serializers as &quot;UFPL&quot;.
@@ -41,5 +41,4 @@ public enum LumpSumType1Code
     [IsoId("_UVKt8bKeEeiXL6Ccd-oU8g")]
     [Description(@"Lump sum is an uncrystallised fund pension lump sum.")]
     Uncrystallised = LumpSumTypeCode.Uncrystallised, // same ordinal as derivation source for type conversions
-    
 }

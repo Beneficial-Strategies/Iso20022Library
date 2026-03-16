@@ -23,7 +23,7 @@ public enum InstructionCancellationReason1Code
     [IsoId("_aXIw8dp-Ed-ak6NoX_4Aeg_-339028661")]
     [Description(@"Instruction has been cancelled as per your request.")]
     CancelledByYourselves = InstructionCancellationReasonCode.CancelledByYourselves, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been cancelled by the settlement system.
     /// Encoded/decoded by serializers as &quot;CANS&quot;.
@@ -32,7 +32,7 @@ public enum InstructionCancellationReason1Code
     [IsoId("_aXIw8tp-Ed-ak6NoX_4Aeg_-339028630")]
     [Description(@"Instruction has been cancelled by the settlement system.")]
     CancelledBySystem = InstructionCancellationReasonCode.CancelledBySystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been cancelled by the agent.
     /// Encoded/decoded by serializers as &quot;CSUB&quot;.
@@ -41,5 +41,4 @@ public enum InstructionCancellationReason1Code
     [IsoId("_aXIw89p-Ed-ak6NoX_4Aeg_-339028569")]
     [Description(@"Instruction has been cancelled by the agent.")]
     CancelledByAgent = InstructionCancellationReasonCode.CancelledByAgent, // same ordinal as derivation source for type conversions
-    
 }

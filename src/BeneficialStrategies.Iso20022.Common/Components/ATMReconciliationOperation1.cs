@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,16 +14,14 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_y2c5kJ2hEe-4seDr3Li2Ew")]
 [DisplayName("ATM Reconciliation Operation1")]
-public partial record ATMReconciliationOperation1
+public record ATMReconciliationOperation1
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Transaction Information.
     /// </summary>
     [DisplayName("Additional Transaction Information")]
     [IsoXmlTag("AddtlTxInf")]
-    public IsoMax140Text? AdditionalTransactionInformation { get; init; } 
+    public IsoMax140Text? AdditionalTransactionInformation { get; init; }
 
     /// <summary>
     /// ATM Totals.
@@ -51,21 +49,21 @@ public partial record ATMReconciliationOperation1
     /// </summary>
     [DisplayName("Reconciliation Identification")]
     [IsoXmlTag("RcncltnId")]
-    public required IsoMax35Text ReconciliationIdentification { get; init; } 
+    public required IsoMax35Text ReconciliationIdentification { get; init; }
 
     /// <summary>
     /// Retained Card.
     /// </summary>
     [DisplayName("Retained Card")]
     [IsoXmlTag("RtndCard")]
-    public IsoNumber? RetainedCard { get; init; } 
+    public IsoNumber? RetainedCard { get; init; }
 
     /// <summary>
     /// Transaction Identification.
     /// </summary>
     [DisplayName("Transaction Identification")]
     [IsoXmlTag("TxId")]
-    public required TransactionIdentifier3 TransactionIdentification { get; init; } 
+    public required TransactionIdentifier3 TransactionIdentification { get; init; }
 
     /// <summary>
     /// Transaction Totals.
@@ -79,9 +77,5 @@ public partial record ATMReconciliationOperation1
     /// </summary>
     [DisplayName("Type Of Operation")]
     [IsoXmlTag("TpOfOpr")]
-    public ATMOperation2Code? TypeOfOperation { get; init; } 
-
-    
-    #nullable disable
-    
+    public ATMOperation2Code? TypeOfOperation { get; init; }
 }

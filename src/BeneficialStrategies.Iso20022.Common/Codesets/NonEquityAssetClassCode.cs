@@ -23,7 +23,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_rG2DwHBZEeqTZuDtO9NgaQ")]
     [Description(@"Interest rate derivative.")]
     InterestRateDerivative,
-    
+
     /// <summary>
     /// Equity derivative.
     /// Encoded/decoded by serializers as &quot;EQDV&quot;.
@@ -32,7 +32,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_vfkXgHBZEeqTZuDtO9NgaQ")]
     [Description(@"Equity derivative.")]
     EquityDerivative,
-    
+
     /// <summary>
     /// Commodity derivative.
     /// Encoded/decoded by serializers as &quot;COMD&quot;.
@@ -41,7 +41,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_17-aQHBZEeqTZuDtO9NgaQ")]
     [Description(@"Commodity derivative.")]
     CommodityDerivative,
-    
+
     /// <summary>
     /// Foreign exchange derivative.
     /// Encoded/decoded by serializers as &quot;FEXD&quot;.
@@ -50,7 +50,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_4iFg4HBZEeqTZuDtO9NgaQ")]
     [Description(@"Foreign exchange derivative.")]
     ForeignExchangeDerivative,
-    
+
     /// <summary>
     /// Credit derivative.
     /// Encoded/decoded by serializers as &quot;CRDV&quot;.
@@ -59,7 +59,7 @@ public enum NonEquityAssetClassCode
     [IsoId("__v6ZgHBZEeqTZuDtO9NgaQ")]
     [Description(@"Credit derivative.")]
     CreditDerivative,
-    
+
     /// <summary>
     /// C10 derivative.
     /// Encoded/decoded by serializers as &quot;C10D&quot;.
@@ -68,7 +68,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_CVFE8HBaEeqTZuDtO9NgaQ")]
     [Description(@"C10 derivative.")]
     C10Derivative,
-    
+
     /// <summary>
     /// Contract for difference.
     /// Encoded/decoded by serializers as &quot;CFDS&quot;.
@@ -77,7 +77,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_Ev3FUHBaEeqTZuDtO9NgaQ")]
     [Description(@"Contract for difference.")]
     ContractForDifference,
-    
+
     /// <summary>
     /// Emission allowance.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -86,7 +86,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_G3tioHBaEeqTZuDtO9NgaQ")]
     [Description(@"Emission allowance.")]
     EmissionAllowance,
-    
+
     /// <summary>
     /// Emission allowance derivative.
     /// Encoded/decoded by serializers as &quot;EADV&quot;.
@@ -95,7 +95,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_KNbhQHBaEeqTZuDtO9NgaQ")]
     [Description(@"Emission allowance derivative.")]
     EmissionAllowanceDerivative,
-    
+
     /// <summary>
     /// Securitised derivative.
     /// Encoded/decoded by serializers as &quot;SDRV&quot;.
@@ -104,7 +104,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_Ng75YHBaEeqTZuDtO9NgaQ")]
     [Description(@"Securitised derivative.")]
     SecuritisedDerivative,
-    
+
     /// <summary>
     /// Bond.
     /// Encoded/decoded by serializers as &quot;BOND&quot;.
@@ -113,7 +113,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_vN9uEIR5EeqOnqlbcclX_g")]
     [Description(@"Bond.")]
     Bond,
-    
+
     /// <summary>
     /// Exchange traded commodities.
     /// Encoded/decoded by serializers as &quot;ETCS&quot;.
@@ -122,7 +122,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_C1r7kIR6EeqOnqlbcclX_g")]
     [Description(@"Exchange traded commodities.")]
     ExchangeTradedCommodities,
-    
+
     /// <summary>
     /// Exchange traded note.
     /// Encoded/decoded by serializers as &quot;ETNS&quot;.
@@ -131,7 +131,7 @@ public enum NonEquityAssetClassCode
     [IsoId("_FHQVkIR6EeqOnqlbcclX_g")]
     [Description(@"Exchange traded note.")]
     ExchangeTradedNote,
-    
+
     /// <summary>
     /// Structured finance product.
     /// Encoded/decoded by serializers as &quot;SFPS&quot;.
@@ -140,5 +140,4 @@ public enum NonEquityAssetClassCode
     [IsoId("_etfI4IR6EeqOnqlbcclX_g")]
     [Description(@"Structured finance product.")]
     StructuredFinanceProduct,
-    
 }

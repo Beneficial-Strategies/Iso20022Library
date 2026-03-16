@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_DNYFscW0EeuhguwJmlgagQ")]
 [DisplayName("Driver In Party")]
-public partial record DriverInParty2
+public record DriverInParty2
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of vehicle rental driver.
     /// </summary>
@@ -25,25 +23,25 @@ public partial record DriverInParty2
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Name { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Name { get; init; }
+
     /// <summary>
     /// Address of driver in party.
     /// </summary>
     [IsoId("_DSE_g8W0EeuhguwJmlgagQ")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public Address2? Address { get; init; } 
-    
+    public Address2? Address { get; init; }
+
     /// <summary>
     /// Contact details of driver in party.
     /// </summary>
     [IsoId("_DSE_hcW0EeuhguwJmlgagQ")]
     [DisplayName("Contact")]
     [IsoXmlTag("Ctct")]
-    public Contact6? Contact { get; init; } 
-    
+    public Contact6? Contact { get; init; }
+
     /// <summary>
     /// Date of birth of vehicle rental driver.
     /// </summary>
@@ -51,8 +49,8 @@ public partial record DriverInParty2
     [DisplayName("Date Of Birth")]
     [IsoXmlTag("DtOfBirth")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public IsoISODate? DateOfBirth { get; init; } 
-    
+    public IsoISODate? DateOfBirth { get; init; }
+
     /// <summary>
     /// Age of driver.
     /// </summary>
@@ -60,25 +58,21 @@ public partial record DriverInParty2
     [DisplayName("Age")]
     [IsoXmlTag("Age")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public IsoMax2NumericText? Age { get; init; } 
-    
+    public IsoMax2NumericText? Age { get; init; }
+
     /// <summary>
     /// Credential used by the driver for identification.
     /// </summary>
     [IsoId("_DSE_i8W0EeuhguwJmlgagQ")]
     [DisplayName("Driver Credential")]
     [IsoXmlTag("DrvrCrdntl")]
-    public TravelDocument2? DriverCredential { get; init; } 
-    
+    public TravelDocument2? DriverCredential { get; init; }
+
     /// <summary>
     /// Driving license details.
     /// </summary>
     [IsoId("_DSE_jcW0EeuhguwJmlgagQ")]
     [DisplayName("Driving License")]
     [IsoXmlTag("DrvgLic")]
-    public DrivingLicense2? DrivingLicense { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DrivingLicense2? DrivingLicense { get; init; }
 }

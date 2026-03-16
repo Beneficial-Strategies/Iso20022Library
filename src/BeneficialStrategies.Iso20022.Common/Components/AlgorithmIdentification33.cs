@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,25 +14,19 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_GFUmgY-FEe6oobnCtR50kw")]
 [DisplayName("Algorithm Identification33")]
-public partial record AlgorithmIdentification33
+public record AlgorithmIdentification33
 {
-    #nullable enable
-
     /// <summary>
     /// Algorithm.
     /// </summary>
     [DisplayName("Algorithm")]
     [IsoXmlTag("Algo")]
-    public required Algorithm29Code Algorithm { get; init; } 
+    public required Algorithm29Code Algorithm { get; init; }
 
     /// <summary>
     /// Parameter.
     /// </summary>
     [DisplayName("Parameter")]
     [IsoXmlTag("Param")]
-    public Parameter16? Parameter { get; init; } 
-
-    
-    #nullable disable
-    
+    public Parameter16? Parameter { get; init; }
 }

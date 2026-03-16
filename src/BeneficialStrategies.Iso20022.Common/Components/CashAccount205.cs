@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ol7pkdASEeuSBa1PsnseFg")]
 [DisplayName("Cash Account")]
-public partial record CashAccount205
+public record CashAccount205
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency of the settlement.
     /// </summary>
     [IsoId("_o68QQ9ASEeuSBa1PsnseFg")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Cash account for settlement.
     /// </summary>
     [IsoId("_o68QRdASEeuSBa1PsnseFg")]
     [DisplayName("Primary Account")]
     [IsoXmlTag("PmryAcct")]
-    public CashAccount206? PrimaryAccount { get; init; } 
-    
+    public CashAccount206? PrimaryAccount { get; init; }
+
     /// <summary>
     /// Sub-division of a master or omnibus cash account.
     /// </summary>
     [IsoId("_o68QR9ASEeuSBa1PsnseFg")]
     [DisplayName("Secondary Account")]
     [IsoXmlTag("ScndryAcct")]
-    public CashAccount206? SecondaryAccount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CashAccount206? SecondaryAccount { get; init; }
 }

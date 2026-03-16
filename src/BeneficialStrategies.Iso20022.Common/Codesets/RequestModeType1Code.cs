@@ -23,7 +23,7 @@ public enum RequestModeType1Code
     [IsoId("_qNDQwcm8EeWAGphE2LvqeA")]
     [Description(@"Forecast query type and mode.")]
     Forecast = RequestModeTypeCode.Forecast, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Day information query type, in on-demand mode.
     /// Encoded/decoded by serializers as &quot;ONDD&quot;.
@@ -32,7 +32,7 @@ public enum RequestModeType1Code
     [IsoId("_qcFLQsm8EeWAGphE2LvqeA")]
     [Description(@"Day information query type, in on-demand mode.")]
     OnDemandDayInformation = RequestModeTypeCode.OnDemandDayInformation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Future information query type, in on-demand mode.
     /// Encoded/decoded by serializers as &quot;ONDF&quot;.
@@ -41,7 +41,7 @@ public enum RequestModeType1Code
     [IsoId("_qfzNocm8EeWAGphE2LvqeA")]
     [Description(@"Future information query type, in on-demand mode.")]
     OnDemandFutureInformation = RequestModeTypeCode.OnDemandFutureInformation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Day information query type, in scheduled mode.
     /// Encoded/decoded by serializers as &quot;SCHD&quot;.
@@ -50,7 +50,7 @@ public enum RequestModeType1Code
     [IsoId("_qscigsm8EeWAGphE2LvqeA")]
     [Description(@"Day information query type, in scheduled mode.")]
     ScheduledDayInformation = RequestModeTypeCode.ScheduledDayInformation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Future information query type, in scheduled mode.
     /// Encoded/decoded by serializers as &quot;SCHF&quot;.
@@ -59,5 +59,4 @@ public enum RequestModeType1Code
     [IsoId("_qtfEUcm8EeWAGphE2LvqeA")]
     [Description(@"Future information query type, in scheduled mode.")]
     ScheduledFutureInformation = RequestModeTypeCode.ScheduledFutureInformation, // same ordinal as derivation source for type conversions
-    
 }

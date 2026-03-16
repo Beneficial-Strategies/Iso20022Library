@@ -23,14 +23,15 @@ public enum TerminalManagementErrorAction2Code
     [IsoId("_uWdDMx3YEeKKrOIoqWglDw")]
     [Description(@"Send a status report immediately.")]
     SendStatusReport = TerminalManagementErrorActionCode.SendStatusReport, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Stop the current sequence of terminal management actions without any action, and do not notice the error with a status report.
     /// Encoded/decoded by serializers as &quot;STOP&quot;.
     /// </summary>
     [EnumMember(Value = "STOP")]
     [IsoId("_ugRtkx3YEeKKrOIoqWglDw")]
-    [Description(@"Stop the current sequence of terminal management actions without any action, and do not notice the error with a status report.")]
+    [Description(
+        @"Stop the current sequence of terminal management actions without any action, and do not notice the error with a status report."
+    )]
     StopSequence = TerminalManagementErrorActionCode.StopSequence, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice
     /// </summary>
     [IsoId("_QYn5atp-Ed-ak6NoX_4Aeg_-1819529328")]
     [DisplayName("Quantity As DSS")]
-    public partial record QuantityAsDSS : SubBalanceQuantity1Choice_
+    public record QuantityAsDSS : SubBalanceQuantity1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Entity that assigns the identification.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
         [IsoSimpleType(IsoSimpleType.Max8Text)]
-        [StringLength(maximumLength: 8 ,MinimumLength = 1)]
-        public required IsoMax8Text Issuer { get; init; } 
-        
+        [StringLength(maximumLength: 8, MinimumLength = 1)]
+        public required IsoMax8Text Issuer { get; init; }
+
         /// <summary>
         /// Proprietary information, often a code, issued by the data source scheme issuer.
         /// </summary>
@@ -34,8 +32,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice
         [DisplayName("Information")]
         [IsoXmlTag("Inf")]
         [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-        public required IsoExact4AlphaNumericText Information { get; init; } 
-        
+        public required IsoExact4AlphaNumericText Information { get; init; }
+
         /// <summary>
         /// Value of the balance.
         /// </summary>
@@ -43,10 +41,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SubBalanceQuantity1Choice
         [DisplayName("Balance")]
         [IsoXmlTag("Bal")]
         [IsoSimpleType(IsoSimpleType.Number)]
-        public required IsoNumber Balance { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoNumber Balance { get; init; }
     }
 }

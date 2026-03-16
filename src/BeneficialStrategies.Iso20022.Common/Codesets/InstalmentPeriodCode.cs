@@ -23,7 +23,7 @@ public enum InstalmentPeriodCode
     [IsoId("_ji469duTEei2qvU6FBLZYA")]
     [Description(@"Monthly instalment period.")]
     Monthly,
-    
+
     /// <summary>
     /// Annual instalment period.
     /// Encoded/decoded by serializers as &quot;ANNU&quot;.
@@ -32,5 +32,4 @@ public enum InstalmentPeriodCode
     [IsoId("_ji469NuTEei2qvU6FBLZYA")]
     [Description(@"Annual instalment period.")]
     Annual,
-    
 }

@@ -23,7 +23,7 @@ public enum AttestationValueCode
     [IsoId("_tg4EUAMkEeujMs2LsB3mMw")]
     [Description(@"Attestation claimed.")]
     Claimed,
-    
+
     /// <summary>
     /// Attestation not claimed.
     /// Encoded/decoded by serializers as &quot;NCLA&quot;.
@@ -32,7 +32,7 @@ public enum AttestationValueCode
     [IsoId("_xlUxMAMkEeujMs2LsB3mMw")]
     [Description(@"Attestation not claimed.")]
     NotClaimed,
-    
+
     /// <summary>
     /// Attestation validated.
     /// Encoded/decoded by serializers as &quot;HONO&quot;.
@@ -41,7 +41,7 @@ public enum AttestationValueCode
     [IsoId("_4sJp8AMkEeujMs2LsB3mMw")]
     [Description(@"Attestation validated.")]
     Honored,
-    
+
     /// <summary>
     /// Attestation failed validation.
     /// Encoded/decoded by serializers as &quot;NHON&quot;.
@@ -50,5 +50,4 @@ public enum AttestationValueCode
     [IsoId("_91-DcAMkEeujMs2LsB3mMw")]
     [Description(@"Attestation failed validation.")]
     NotHonored,
-    
 }

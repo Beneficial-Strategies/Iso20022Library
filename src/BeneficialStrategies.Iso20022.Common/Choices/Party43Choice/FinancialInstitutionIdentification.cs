@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Party43Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.Party43Choice
     /// </summary>
     [IsoId("_Bp2Qk249EeiU9cctagi5ow")]
     [DisplayName("Financial Institution Identification")]
-    public partial record FinancialInstitutionIdentification : Party43Choice_
+    public record FinancialInstitutionIdentification : Party43Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Business identification code of the financial institution.
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.Party43Choice
         [DisplayName("BICFI")]
         [IsoXmlTag("BICFI")]
         [IsoSimpleType(IsoSimpleType.BICFIDec2014Identifier)]
-        public IsoBICFIDec2014Identifier? BICFI { get; init; } 
-        
+        public IsoBICFIDec2014Identifier? BICFI { get; init; }
+
         /// <summary>
         /// Information used to identify a member within a clearing system.
         /// </summary>
         [IsoId("_ODyZA25OEeiU9cctagi5ow")]
         [DisplayName("Clearing System Member Identification")]
         [IsoXmlTag("ClrSysMmbId")]
-        public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; } 
-        
+        public ClearingSystemMemberIdentification2? ClearingSystemMemberIdentification { get; init; }
+
         /// <summary>
         /// Legal entity identification as an alternate identification for a party.
         /// </summary>
@@ -41,18 +39,14 @@ namespace BeneficialStrategies.Iso20022.Choices.Party43Choice
         [DisplayName("LEI")]
         [IsoXmlTag("LEI")]
         [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-        public IsoLEIIdentifier? LEI { get; init; } 
-        
+        public IsoLEIIdentifier? LEI { get; init; }
+
         /// <summary>
         /// Unique identification of an agent, as assigned by an institution, using an identification scheme.
         /// </summary>
         [IsoId("_ODyZBW5OEeiU9cctagi5ow")]
         [DisplayName("Other")]
         [IsoXmlTag("Othr")]
-        public GenericFinancialIdentification1? Other { get; init; } 
-        
-        
-        #nullable disable
-        
+        public GenericFinancialIdentification1? Other { get; init; }
     }
 }

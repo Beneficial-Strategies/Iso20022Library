@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CorrectiveTransaction5Choice.Initiation))]
     [KnownType(typeof(CorrectiveTransaction5Choice.Interbank))]
-    [JsonDerivedType(typeof(CorrectiveTransaction5Choice.Initiation),nameof(CorrectiveTransaction5Choice.Initiation))]
-    [JsonDerivedType(typeof(CorrectiveTransaction5Choice.Interbank),nameof(CorrectiveTransaction5Choice.Interbank))]
+    [JsonDerivedType(
+        typeof(CorrectiveTransaction5Choice.Initiation),
+        nameof(CorrectiveTransaction5Choice.Initiation)
+    )]
+    [JsonDerivedType(
+        typeof(CorrectiveTransaction5Choice.Interbank),
+        nameof(CorrectiveTransaction5Choice.Interbank)
+    )]
     [IsoId("_tNTsINizEeq5MfBBxQig1Q")]
     [DisplayName("Corrective Transaction 5 Choice")]
-    public abstract partial record CorrectiveTransaction5Choice_
-    {
-    }
+    public abstract record CorrectiveTransaction5Choice_ { }
 }

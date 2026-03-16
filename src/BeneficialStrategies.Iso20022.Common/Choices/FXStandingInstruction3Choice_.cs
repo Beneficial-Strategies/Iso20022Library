@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FXStandingInstruction3Choice.Indicator))]
     [KnownType(typeof(FXStandingInstruction3Choice.Proprietary))]
-    [JsonDerivedType(typeof(FXStandingInstruction3Choice.Indicator),nameof(FXStandingInstruction3Choice.Indicator))]
-    [JsonDerivedType(typeof(FXStandingInstruction3Choice.Proprietary),nameof(FXStandingInstruction3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(FXStandingInstruction3Choice.Indicator),
+        nameof(FXStandingInstruction3Choice.Indicator)
+    )]
+    [JsonDerivedType(
+        typeof(FXStandingInstruction3Choice.Proprietary),
+        nameof(FXStandingInstruction3Choice.Proprietary)
+    )]
     [IsoId("_Aamt1NokEeC60axPepSq7g_1602416385")]
     [DisplayName("FX Standing Instruction 3 Choice")]
-    public abstract partial record FXStandingInstruction3Choice_
-    {
-    }
+    public abstract record FXStandingInstruction3Choice_ { }
 }

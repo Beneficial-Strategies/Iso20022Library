@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LUHs4D1hEeyA3eIPELln4g")]
 [DisplayName("Post Trade Risk Reduction Identifier")]
-public partial record PostTradeRiskReductionIdentifier1
+public record PostTradeRiskReductionIdentifier1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the structurer of the post trade risk reduction identifier.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record PostTradeRiskReductionIdentifier1
     [DisplayName("Structurer")]
     [IsoXmlTag("Strr")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier Structurer { get; init; } 
-    
+    public required IsoLEIIdentifier Structurer { get; init; }
+
     /// <summary>
     /// Post trade risk reduction identifier assigned by the structurer allowing to link the constituents.
     /// </summary>
@@ -34,10 +32,6 @@ public partial record PostTradeRiskReductionIdentifier1
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max52Text)]
-    [StringLength(maximumLength: 52 ,MinimumLength = 1)]
-    public required IsoMax52Text Identification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 52, MinimumLength = 1)]
+    public required IsoMax52Text Identification { get; init; }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_T5VABdp-Ed-ak6NoX_4Aeg_-129713306")]
 [DisplayName("Vote")]
-public partial record Vote5
+public record Vote5
 {
-    #nullable enable
-    
     /// <summary>
     /// Numbering of the resolution as specified by the issuer or its agent.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Vote5
     [DisplayName("Issuer Label")]
     [IsoXmlTag("IssrLabl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text IssuerLabel { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text IssuerLabel { get; init; }
+
     /// <summary>
     /// Specifies whether a resolution is accepted or not.
     /// </summary>
@@ -35,8 +33,8 @@ public partial record Vote5
     [DisplayName("Accepted")]
     [IsoXmlTag("Accptd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Accepted { get; init; } 
-    
+    public required IsoYesNoIndicator Accepted { get; init; }
+
     /// <summary>
     /// Number of votes in favour of one resolution.
     /// </summary>
@@ -44,8 +42,8 @@ public partial record Vote5
     [DisplayName("For")]
     [IsoXmlTag("For")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? For { get; init; } 
-    
+    public IsoNumber? For { get; init; }
+
     /// <summary>
     /// Number of votes against one resolution.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record Vote5
     [DisplayName("Against")]
     [IsoXmlTag("Agnst")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Against { get; init; } 
-    
+    public IsoNumber? Against { get; init; }
+
     /// <summary>
     /// Number of votes expressed as abstain.
     /// </summary>
@@ -62,8 +60,8 @@ public partial record Vote5
     [DisplayName("Abstain")]
     [IsoXmlTag("Abstn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Abstain { get; init; } 
-    
+    public IsoNumber? Abstain { get; init; }
+
     /// <summary>
     /// Total votes withheld, eg in the case where a shareholder wishes not to endorse the election of a board member.
     /// </summary>
@@ -71,8 +69,8 @@ public partial record Vote5
     [DisplayName("Withhold")]
     [IsoXmlTag("Wthhld")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? Withhold { get; init; } 
-    
+    public IsoNumber? Withhold { get; init; }
+
     /// <summary>
     /// Number of votes for which no action has been taken.
     /// </summary>
@@ -80,9 +78,5 @@ public partial record Vote5
     [DisplayName("No Action")]
     [IsoXmlTag("NoActn")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? NoAction { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoNumber? NoAction { get; init; }
 }

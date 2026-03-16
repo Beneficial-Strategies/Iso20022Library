@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_4g7KUTEyEe6g-ffJsqGiSA")]
 [DisplayName("Contract Registration Statement4")]
-public partial record ContractRegistrationStatement4
+public record ContractRegistrationStatement4
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Supporting Document Journal.
     /// </summary>
@@ -30,42 +28,43 @@ public partial record ContractRegistrationStatement4
     /// </summary>
     [DisplayName("Registered Contract")]
     [IsoXmlTag("RegdCtrct")]
-    public required RegisteredContract18 RegisteredContract { get; init; } 
+    public required RegisteredContract18 RegisteredContract { get; init; }
 
     /// <summary>
     /// Registration Agent.
     /// </summary>
     [DisplayName("Registration Agent")]
     [IsoXmlTag("RegnAgt")]
-    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; } 
+    public required BranchAndFinancialInstitutionIdentification8 RegistrationAgent { get; init; }
 
     /// <summary>
     /// Regulatory Rule Validation.
     /// </summary>
     [DisplayName("Regulatory Rule Validation")]
     [IsoXmlTag("RgltryRuleVldtn")]
-    public ValueList<GenericValidationRuleIdentification1> RegulatoryRuleValidation { get; init; } = [];
+    public ValueList<GenericValidationRuleIdentification1> RegulatoryRuleValidation { get; init; } =
+        [];
 
     /// <summary>
     /// Reporting Party.
     /// </summary>
     [DisplayName("Reporting Party")]
     [IsoXmlTag("RptgPty")]
-    public required TradeParty6 ReportingParty { get; init; } 
+    public required TradeParty6 ReportingParty { get; init; }
 
     /// <summary>
     /// Reporting Period.
     /// </summary>
     [DisplayName("Reporting Period")]
     [IsoXmlTag("RptgPrd")]
-    public required ReportingPeriod4 ReportingPeriod { get; init; } 
+    public required ReportingPeriod4 ReportingPeriod { get; init; }
 
     /// <summary>
     /// Statement Identification.
     /// </summary>
     [DisplayName("Statement Identification")]
     [IsoXmlTag("StmtId")]
-    public IsoMax35Text? StatementIdentification { get; init; } 
+    public IsoMax35Text? StatementIdentification { get; init; }
 
     /// <summary>
     /// Supplementary Data.
@@ -86,7 +85,7 @@ public partial record ContractRegistrationStatement4
     /// </summary>
     [DisplayName("Total Contract Turnover Sum")]
     [IsoXmlTag("TtlCtrctTrnvrSum")]
-    public required ActiveCurrencyAndAmount TotalContractTurnoverSum { get; init; } 
+    public required ActiveCurrencyAndAmount TotalContractTurnoverSum { get; init; }
 
     /// <summary>
     /// Transaction Journal.
@@ -94,8 +93,4 @@ public partial record ContractRegistrationStatement4
     [DisplayName("Transaction Journal")]
     [IsoXmlTag("TxJrnl")]
     public ValueList<TransactionCertificate4> TransactionJournal { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

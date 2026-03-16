@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_bf0RMUENEeWVgfuHGaKtRQ")]
 [DisplayName("Date Code And Time Format")]
-public partial record DateCodeAndTimeFormat3
+public record DateCodeAndTimeFormat3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the type of date.
     /// </summary>
     [IsoId("_btDb8UENEeWVgfuHGaKtRQ")]
     [DisplayName("Date Code")]
     [IsoXmlTag("DtCd")]
-    public required DateCode21Choice_ DateCode { get; init; } 
-    
+    public required DateCode21Choice_ DateCode { get; init; }
+
     /// <summary>
     /// Specifies the time.
     /// </summary>
@@ -33,9 +31,5 @@ public partial record DateCodeAndTimeFormat3
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public required IsoISOTime Time { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISOTime Time { get; init; }
 }

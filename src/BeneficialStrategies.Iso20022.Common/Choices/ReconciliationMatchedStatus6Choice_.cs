@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ReconciliationMatchedStatus6Choice.Matched))]
     [KnownType(typeof(ReconciliationMatchedStatus6Choice.NotMatched))]
-    [JsonDerivedType(typeof(ReconciliationMatchedStatus6Choice.Matched),nameof(ReconciliationMatchedStatus6Choice.Matched))]
-    [JsonDerivedType(typeof(ReconciliationMatchedStatus6Choice.NotMatched),nameof(ReconciliationMatchedStatus6Choice.NotMatched))]
+    [JsonDerivedType(
+        typeof(ReconciliationMatchedStatus6Choice.Matched),
+        nameof(ReconciliationMatchedStatus6Choice.Matched)
+    )]
+    [JsonDerivedType(
+        typeof(ReconciliationMatchedStatus6Choice.NotMatched),
+        nameof(ReconciliationMatchedStatus6Choice.NotMatched)
+    )]
     [IsoId("_C1J2hf_oEemm3skPVSMJQg")]
     [DisplayName("Reconciliation Matched Status 6 Choice")]
-    public abstract partial record ReconciliationMatchedStatus6Choice_
-    {
-    }
+    public abstract record ReconciliationMatchedStatus6Choice_ { }
 }

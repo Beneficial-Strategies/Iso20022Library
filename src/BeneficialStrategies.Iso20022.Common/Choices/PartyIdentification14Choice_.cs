@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(PartyIdentification14Choice.ProprietaryIdentification))]
     [KnownType(typeof(PartyIdentification14Choice.NameAndAddress))]
     [KnownType(typeof(PartyIdentification14Choice.Country))]
-    [JsonDerivedType(typeof(PartyIdentification14Choice.BICOrBEI),nameof(PartyIdentification14Choice.BICOrBEI))]
-    [JsonDerivedType(typeof(PartyIdentification14Choice.ProprietaryIdentification),nameof(PartyIdentification14Choice.ProprietaryIdentification))]
-    [JsonDerivedType(typeof(PartyIdentification14Choice.NameAndAddress),nameof(PartyIdentification14Choice.NameAndAddress))]
-    [JsonDerivedType(typeof(PartyIdentification14Choice.Country),nameof(PartyIdentification14Choice.Country))]
+    [JsonDerivedType(
+        typeof(PartyIdentification14Choice.BICOrBEI),
+        nameof(PartyIdentification14Choice.BICOrBEI)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification14Choice.ProprietaryIdentification),
+        nameof(PartyIdentification14Choice.ProprietaryIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification14Choice.NameAndAddress),
+        nameof(PartyIdentification14Choice.NameAndAddress)
+    )]
+    [JsonDerivedType(
+        typeof(PartyIdentification14Choice.Country),
+        nameof(PartyIdentification14Choice.Country)
+    )]
     [IsoId("_QP1Jxtp-Ed-ak6NoX_4Aeg_990739070")]
     [DisplayName("Party Identification 14 Choice")]
-    public abstract partial record PartyIdentification14Choice_
-    {
-    }
+    public abstract record PartyIdentification14Choice_ { }
 }

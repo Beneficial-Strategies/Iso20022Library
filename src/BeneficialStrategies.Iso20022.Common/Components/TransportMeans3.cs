@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_S5xucAEcEeCQm6a_G2yO_w_-1153183053")]
 [DisplayName("Transport Means")]
-public partial record TransportMeans3
+public record TransportMeans3
 {
-    #nullable enable
-    
     /// <summary>
     /// Code specifying the transport mode for the delivery of the consignment, such as by air, sea, rail, road or inland waterway. Reference UN/ECE Recommendation 19 - Code for Modes of Transport (www.unece.org/cefact/recommendations).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record TransportMeans3
     [DisplayName("Mode Code")]
     [IsoXmlTag("MdCd")]
     [IsoSimpleType(IsoSimpleType.Max4Text)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4Text? ModeCode { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4Text? ModeCode { get; init; }
+
     /// <summary>
     /// Unique identification of the means of transport, such as the International Maritime Organization number of a vessel.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record TransportMeans3
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Identification { get; init; }
+
     /// <summary>
     /// Name, expressed as text, of the means of transport.
     /// </summary>
@@ -45,10 +43,6 @@ public partial record TransportMeans3
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Name { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Name { get; init; }
 }

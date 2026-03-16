@@ -23,7 +23,7 @@ public enum ATMCommand5Code
     [IsoId("_mQuCga47EeWRfYPBaeOY8w")]
     [Description(@"Provide the ATM counters, resetting those that are applicable.")]
     ATMBalance = ATMCommandCode.ATMBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request the value of the ATM counters.
     /// Encoded/decoded by serializers as &quot;CCNT&quot;.
@@ -32,7 +32,7 @@ public enum ATMCommand5Code
     [IsoId("_mQuCg647EeWRfYPBaeOY8w")]
     [Description(@"Request the value of the ATM counters.")]
     CountersInquiry = ATMCommandCode.CountersInquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Provide the value of the ATM counters, no reinitialisation of the counters.
     /// Encoded/decoded by serializers as &quot;RPTC&quot;.
@@ -41,5 +41,4 @@ public enum ATMCommand5Code
     [IsoId("_p8M1wa47EeWRfYPBaeOY8w")]
     [Description(@"Provide the value of the ATM counters, no reinitialisation of the counters.")]
     CountersReport = ATMCommandCode.CountersReport, // same ordinal as derivation source for type conversions
-    
 }

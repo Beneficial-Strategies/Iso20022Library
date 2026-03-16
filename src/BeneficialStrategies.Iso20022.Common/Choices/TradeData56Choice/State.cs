@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
     /// </summary>
     [IsoId("_SBzrA152Ee2a_-MvhEjKmA")]
     [DisplayName("State")]
-    public partial record State : TradeData56Choice_
+    public record State : TradeData56Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date and time of submission of the report to the trade repository.
         /// </summary>
@@ -24,16 +22,16 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
         [DisplayName("Reporting Time Stamp")]
         [IsoXmlTag("RptgTmStmp")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public IsoISODateTime? ReportingTimeStamp { get; init; } 
-        
+        public IsoISODateTime? ReportingTimeStamp { get; init; }
+
         /// <summary>
         /// Data specific to counterparties and related fields.
         /// </summary>
         [IsoId("_SCx7Y152Ee2a_-MvhEjKmA")]
         [DisplayName("Counterparty Identification")]
         [IsoXmlTag("CtrPtyId")]
-        public required TradeCounterpartyReport20 CounterpartyIdentification { get; init; } 
-        
+        public required TradeCounterpartyReport20 CounterpartyIdentification { get; init; }
+
         /// <summary>
         /// Date on which the reportable event pertaining to the transaction and captured by the report took place.
         /// </summary>
@@ -41,40 +39,40 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
         [DisplayName("Event Date")]
         [IsoXmlTag("EvtDt")]
         [IsoSimpleType(IsoSimpleType.ISODate)]
-        public IsoISODate? EventDate { get; init; } 
-        
+        public IsoISODate? EventDate { get; init; }
+
         /// <summary>
-        /// Choice between a Unique Transaction Identifier (UTI) or a proprietary identifier as agreed with the counterparty. 
+        /// Choice between a Unique Transaction Identifier (UTI) or a proprietary identifier as agreed with the counterparty.
         /// </summary>
         [IsoId("_SCx7Z152Ee2a_-MvhEjKmA")]
         [DisplayName("Transaction Identification")]
         [IsoXmlTag("TxId")]
-        public UniqueTransactionIdentifier2Choice_? TransactionIdentification { get; init; } 
-        
+        public UniqueTransactionIdentifier2Choice_? TransactionIdentification { get; init; }
+
         /// <summary>
         /// Information related to collateral agreement existing between counterparties.
         /// </summary>
         [IsoId("_SCx7aV52Ee2a_-MvhEjKmA")]
         [DisplayName("Collateral")]
         [IsoXmlTag("Coll")]
-        public required MarginCollateralReport4 Collateral { get; init; } 
-        
+        public required MarginCollateralReport4 Collateral { get; init; }
+
         /// <summary>
         /// Information on posted collateral and margin.
         /// </summary>
         [IsoId("_SCx7a152Ee2a_-MvhEjKmA")]
         [DisplayName("Posted Margin Or Collateral")]
         [IsoXmlTag("PstdMrgnOrColl")]
-        public PostedMarginOrCollateral6? PostedMarginOrCollateral { get; init; } 
-        
+        public PostedMarginOrCollateral6? PostedMarginOrCollateral { get; init; }
+
         /// <summary>
         /// Information on received collateral and margin.
         /// </summary>
         [IsoId("_SCx7bV52Ee2a_-MvhEjKmA")]
         [DisplayName("Received Margin Or Collateral")]
         [IsoXmlTag("RcvdMrgnOrColl")]
-        public ReceivedMarginOrCollateral6? ReceivedMarginOrCollateral { get; init; } 
-        
+        public ReceivedMarginOrCollateral6? ReceivedMarginOrCollateral { get; init; }
+
         /// <summary>
         /// Indicates if a counterparty rating trigger is agreed by the counterparties for the collateral posted by the reporting counterparty.
         /// Usage: If the element is not present, the CounterpartyRatingTrigger is False.
@@ -83,8 +81,8 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
         [DisplayName("Counterparty Rating Trigger Indicator")]
         [IsoXmlTag("CtrPtyRatgTrggrInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; } 
-        
+        public IsoTrueFalseIndicator? CounterpartyRatingTriggerIndicator { get; init; }
+
         /// <summary>
         /// Indicates if a counterparty rating trigger includes a threshold that increases collateral requirements when the counterparty falls below the single-A rating or equivalent.
         /// Usage: If the CounterpartyRatingTrigger indicator is false, this element is omitted.
@@ -93,34 +91,30 @@ namespace BeneficialStrategies.Iso20022.Choices.TradeData56Choice
         [DisplayName("Counterparty Rating Threshold Indicator")]
         [IsoXmlTag("CtrPtyRatgThrshldInd")]
         [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-        public IsoTrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; } 
-        
+        public IsoTrueFalseIndicator? CounterpartyRatingThresholdIndicator { get; init; }
+
         /// <summary>
         /// Contract modification details expressed as an action type and a reporting level type.
         /// </summary>
         [IsoId("_SCx7c152Ee2a_-MvhEjKmA")]
         [DisplayName("Contract Modification")]
         [IsoXmlTag("CtrctMod")]
-        public ContractModification8? ContractModification { get; init; } 
-        
+        public ContractModification8? ContractModification { get; init; }
+
         /// <summary>
         /// Specifies technical attributes of the message.
         /// </summary>
         [IsoId("_SCx7dV52Ee2a_-MvhEjKmA")]
         [DisplayName("Technical Attributes")]
         [IsoXmlTag("TechAttrbts")]
-        public TechnicalAttributes6? TechnicalAttributes { get; init; } 
-        
+        public TechnicalAttributes6? TechnicalAttributes { get; init; }
+
         /// <summary>
         /// Additional information that can not be captured in the structured fields and/or any other specific block.
         /// </summary>
         [IsoId("_SCx7d152Ee2a_-MvhEjKmA")]
         [DisplayName("Supplementary Data")]
         [IsoXmlTag("SplmtryData")]
-        public SupplementaryData1? SupplementaryData { get; init; } 
-        
-        
-        #nullable disable
-        
+        public SupplementaryData1? SupplementaryData { get; init; }
     }
 }

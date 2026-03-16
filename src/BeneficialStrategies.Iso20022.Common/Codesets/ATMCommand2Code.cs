@@ -23,7 +23,7 @@ public enum ATMCommand2Code
     [IsoId("_y5cO4Yr2EeSvuOJS0mmL0g")]
     [Description(@"Provide the ATM counters, resetting those that are applicable.")]
     ATMBalance = ATMCommandCode.ATMBalance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Status of the ATM required by the ATM manager.
     /// Encoded/decoded by serializers as &quot;ASTS&quot;.
@@ -32,7 +32,7 @@ public enum ATMCommand2Code
     [IsoId("_zCoAE4r2EeSvuOJS0mmL0g")]
     [Description(@"Status of the ATM required by the ATM manager.")]
     ATMStatusUpdate = ATMCommandCode.ATMStatusUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the ATM configuration parameters.
     /// Encoded/decoded by serializers as &quot;CFGT&quot;.
@@ -41,7 +41,7 @@ public enum ATMCommand2Code
     [IsoId("_zH5hoYr2EeSvuOJS0mmL0g")]
     [Description(@"Update the ATM configuration parameters.")]
     ConfigurationUpdate = ATMCommandCode.ConfigurationUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request the value of the ATM counters.
     /// Encoded/decoded by serializers as &quot;CCNT&quot;.
@@ -50,7 +50,7 @@ public enum ATMCommand2Code
     [IsoId("_zRKLU4r2EeSvuOJS0mmL0g")]
     [Description(@"Request the value of the ATM counters.")]
     CountersInquiry = ATMCommandCode.CountersInquiry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Perform a disconnection followed by a reconnection.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -59,7 +59,7 @@ public enum ATMCommand2Code
     [IsoId("_zStqgYr2EeSvuOJS0mmL0g")]
     [Description(@"Perform a disconnection followed by a reconnection.")]
     Disconnect = ATMCommandCode.Disconnect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Activate cryptographic keys.
     /// Encoded/decoded by serializers as &quot;KACT&quot;.
@@ -68,7 +68,7 @@ public enum ATMCommand2Code
     [IsoId("_zcTEU4r2EeSvuOJS0mmL0g")]
     [Description(@"Activate cryptographic keys.")]
     KeyActivation = ATMCommandCode.KeyActivation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deactivate cryptographic keys.
     /// Encoded/decoded by serializers as &quot;KDAC&quot;.
@@ -77,7 +77,7 @@ public enum ATMCommand2Code
     [IsoId("_zd2jgYr2EeSvuOJS0mmL0g")]
     [Description(@"Deactivate cryptographic keys.")]
     KeyDeactivation = ATMCommandCode.KeyDeactivation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Start a cryptographic key download.
     /// Encoded/decoded by serializers as &quot;KDWL&quot;.
@@ -86,7 +86,7 @@ public enum ATMCommand2Code
     [IsoId("_zmgwQ4r2EeSvuOJS0mmL0g")]
     [Description(@"Start a cryptographic key download.")]
     KeyDownload = ATMCommandCode.KeyDownload, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Remove cryptographic keys.
     /// Encoded/decoded by serializers as &quot;KRMV&quot;.
@@ -95,7 +95,7 @@ public enum ATMCommand2Code
     [IsoId("_zsutAYr2EeSvuOJS0mmL0g")]
     [Description(@"Remove cryptographic keys.")]
     KeyRemove = ATMCommandCode.KeyRemove, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the configuration of the hardware security module on the ATM.
     /// Encoded/decoded by serializers as &quot;SCFU&quot;.
@@ -104,7 +104,7 @@ public enum ATMCommand2Code
     [IsoId("_z1YSs4r2EeSvuOJS0mmL0g")]
     [Description(@"Update the configuration of the hardware security module on the ATM.")]
     SecurityDeviceConfigurationUpdate = ATMCommandCode.SecurityDeviceConfigurationUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the security scheme of the hardware security module on the ATM.
     /// Encoded/decoded by serializers as &quot;SSCU&quot;.
@@ -113,7 +113,7 @@ public enum ATMCommand2Code
     [IsoId("_z6CJMYr2EeSvuOJS0mmL0g")]
     [Description(@"Update the security scheme of the hardware security module on the ATM.")]
     SecurityDeviceSchemeUpdate = ATMCommandCode.SecurityDeviceSchemeUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update the status of the hardware security module on the ATM.
     /// Encoded/decoded by serializers as &quot;SSTU&quot;.
@@ -122,7 +122,7 @@ public enum ATMCommand2Code
     [IsoId("_0EJHc4r2EeSvuOJS0mmL0g")]
     [Description(@"Update the status of the hardware security module on the ATM.")]
     SecurityDeviceStatusUpdate = ATMCommandCode.SecurityDeviceStatusUpdate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Send a specific message to initiate a process.
     /// Encoded/decoded by serializers as &quot;SNDM&quot;.
@@ -131,5 +131,4 @@ public enum ATMCommand2Code
     [IsoId("_0Mvp04r2EeSvuOJS0mmL0g")]
     [Description(@"Send a specific message to initiate a process.")]
     SendMessage = ATMCommandCode.SendMessage, // same ordinal as derivation source for type conversions
-    
 }

@@ -21,16 +21,19 @@ public enum ThresholdType1Code
     /// </summary>
     [EnumMember(Value = "SECU")]
     [IsoId("_YgYDo9p-Ed-ak6NoX_4Aeg_-1711823422")]
-    [Description(@"Means that once the threshold is breached, collateral must be posted to cover the full exposure.")]
+    [Description(
+        @"Means that once the threshold is breached, collateral must be posted to cover the full exposure."
+    )]
     Secured = ThresholdTypeCode.Secured, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Means that the threshold provides a predetermined level of free trading. Once the threshold is breached, collateral must be posted to cover the exposure over and above the threshold level.
     /// Encoded/decoded by serializers as &quot;UNSE&quot;.
     /// </summary>
     [EnumMember(Value = "UNSE")]
     [IsoId("_YgYDpNp-Ed-ak6NoX_4Aeg_-244674659")]
-    [Description(@"Means that the threshold provides a predetermined level of free trading. Once the threshold is breached, collateral must be posted to cover the exposure over and above the threshold level.")]
+    [Description(
+        @"Means that the threshold provides a predetermined level of free trading. Once the threshold is breached, collateral must be posted to cover the exposure over and above the threshold level."
+    )]
     Unsecured = ThresholdTypeCode.Unsecured, // same ordinal as derivation source for type conversions
-    
 }

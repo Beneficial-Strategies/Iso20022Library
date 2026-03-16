@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ModalityOfCounting1Choice.Code))]
     [KnownType(typeof(ModalityOfCounting1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ModalityOfCounting1Choice.Code),nameof(ModalityOfCounting1Choice.Code))]
-    [JsonDerivedType(typeof(ModalityOfCounting1Choice.Proprietary),nameof(ModalityOfCounting1Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ModalityOfCounting1Choice.Code),
+        nameof(ModalityOfCounting1Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ModalityOfCounting1Choice.Proprietary),
+        nameof(ModalityOfCounting1Choice.Proprietary)
+    )]
     [IsoId("_ZBJPkK-vEemJ1NnLPsTFaw")]
     [DisplayName("Modality Of Counting 1 Choice")]
-    public abstract partial record ModalityOfCounting1Choice_
-    {
-    }
+    public abstract record ModalityOfCounting1Choice_ { }
 }

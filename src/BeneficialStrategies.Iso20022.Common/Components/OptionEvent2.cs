@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_b29F0ZR0Eeeymf3kpbtgrA")]
 [DisplayName("Option Event")]
-public partial record OptionEvent2
+public record OptionEvent2
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of event in the life of the option.
     /// </summary>
     [IsoId("_cHKsEZR0Eeeymf3kpbtgrA")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public required OptionEventType1Choice_ Type { get; init; } 
-    
+    public required OptionEventType1Choice_ Type { get; init; }
+
     /// <summary>
     /// Description of the event.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record OptionEvent2
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Description { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Description { get; init; }
 }

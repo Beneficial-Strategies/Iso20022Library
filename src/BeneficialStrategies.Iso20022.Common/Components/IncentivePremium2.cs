@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_TjIGjtp-Ed-ak6NoX_4Aeg_-593608139")]
 [DisplayName("Incentive Premium")]
-public partial record IncentivePremium2
+public record IncentivePremium2
 {
-    #nullable enable
-    
     /// <summary>
     /// Description of the premium.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record IncentivePremium2
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? Description { get; init; }
+
     /// <summary>
     /// Cash premium paid per security, per vote or per attendee.
     /// </summary>
     [IsoId("_TjR3gdp-Ed-ak6NoX_4Aeg_-593607904")]
     [DisplayName("Amount")]
     [IsoXmlTag("Amt")]
-    public required PriceRateOrAmountChoice_ Amount { get; init; } 
-    
+    public required PriceRateOrAmountChoice_ Amount { get; init; }
+
     /// <summary>
     /// Number of securities giving right to a premium.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record IncentivePremium2
     [DisplayName("Per Security")]
     [IsoXmlTag("PerScty")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber PerSecurity { get; init; } 
-    
+    public required IsoNumber PerSecurity { get; init; }
+
     /// <summary>
     /// Number of votes giving right to a premium.
     /// </summary>
@@ -52,8 +50,8 @@ public partial record IncentivePremium2
     [DisplayName("Per Vote")]
     [IsoXmlTag("PerVote")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber PerVote { get; init; } 
-    
+    public required IsoNumber PerVote { get; init; }
+
     /// <summary>
     /// Indicates that the premium is given per attendee.
     /// </summary>
@@ -61,17 +59,13 @@ public partial record IncentivePremium2
     [DisplayName("Per Attendee")]
     [IsoXmlTag("PerAttndee")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator PerAttendee { get; init; } 
-    
+    public required IsoYesNoIndicator PerAttendee { get; init; }
+
     /// <summary>
     /// Date/time for the payment of the premium.
     /// </summary>
     [IsoId("_TjR3hdp-Ed-ak6NoX_4Aeg_-593607802")]
     [DisplayName("Payment Date")]
     [IsoXmlTag("PmtDt")]
-    public DateFormat3Choice_? PaymentDate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateFormat3Choice_? PaymentDate { get; init; }
 }

@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ExecutionType1Choice.Time))]
     [KnownType(typeof(ExecutionType1Choice.Event))]
-    [JsonDerivedType(typeof(ExecutionType1Choice.Time),nameof(ExecutionType1Choice.Time))]
-    [JsonDerivedType(typeof(ExecutionType1Choice.Event),nameof(ExecutionType1Choice.Event))]
+    [JsonDerivedType(typeof(ExecutionType1Choice.Time), nameof(ExecutionType1Choice.Time))]
+    [JsonDerivedType(typeof(ExecutionType1Choice.Event), nameof(ExecutionType1Choice.Event))]
     [IsoId("_75qQhqMgEeCJ6YNENx4h-w_354040007")]
     [DisplayName("Execution Type 1 Choice")]
-    public abstract partial record ExecutionType1Choice_
-    {
-    }
+    public abstract record ExecutionType1Choice_ { }
 }

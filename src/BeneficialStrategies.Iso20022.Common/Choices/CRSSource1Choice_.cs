@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CRSSource1Choice.Code))]
     [KnownType(typeof(CRSSource1Choice.Proprietary))]
-    [JsonDerivedType(typeof(CRSSource1Choice.Code),nameof(CRSSource1Choice.Code))]
-    [JsonDerivedType(typeof(CRSSource1Choice.Proprietary),nameof(CRSSource1Choice.Proprietary))]
+    [JsonDerivedType(typeof(CRSSource1Choice.Code), nameof(CRSSource1Choice.Code))]
+    [JsonDerivedType(typeof(CRSSource1Choice.Proprietary), nameof(CRSSource1Choice.Proprietary))]
     [IsoId("_JdcmcUNfEeamLdeYEZm56w")]
     [DisplayName("CRS Source 1 Choice")]
-    public abstract partial record CRSSource1Choice_
-    {
-    }
+    public abstract record CRSSource1Choice_ { }
 }

@@ -22,6 +22,6 @@ public enum ReorganisationTransactionType2Code
     [EnumMember(Value = "COVA")]
     [IsoId("_uO0ssecZEei5aPS232E3Mw")]
     [Description(@"Reorganisation is a cover protect directly to agent transaction type.")]
-    CoverProtectDirectlyToAgentHeaderTransaction = ReorganisationTransactionTypeCode.CoverProtectDirectlyToAgentHeaderTransaction, // same ordinal as derivation source for type conversions
-    
+    CoverProtectDirectlyToAgentHeaderTransaction =
+        ReorganisationTransactionTypeCode.CoverProtectDirectlyToAgentHeaderTransaction, // same ordinal as derivation source for type conversions
 }

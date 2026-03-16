@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ah3aSNp-Ed-ak6NoX_4Aeg_2042159796")]
-[Description(@"Error codes generated when the response to a query exceeds the maximum size or the data is not available.")]
+[Description(
+    @"Error codes generated when the response to a query exceeds the maximum size or the data is not available."
+)]
 [Derivations(typeof(ErrorHandling1Code))]
 public enum ErrorHandlingCode
 {
@@ -23,16 +25,18 @@ public enum ErrorHandlingCode
     [IsoId("_aiBLQNp-Ed-ak6NoX_4Aeg_-1881551578")]
     [Description(@"Specifies the error code when the data requested are not yet available.")]
     DataNotYetAvailable,
-    
+
     /// <summary>
     /// Specifies the error code when the data requested generates a message size that exceed the processing capacity.
     /// Encoded/decoded by serializers as &quot;X030&quot;.
     /// </summary>
     [EnumMember(Value = "X030")]
     [IsoId("_aiBLQdp-Ed-ak6NoX_4Aeg_-1825215686")]
-    [Description(@"Specifies the error code when the data requested generates a message size that exceed the processing capacity.")]
+    [Description(
+        @"Specifies the error code when the data requested generates a message size that exceed the processing capacity."
+    )]
     MessageSizeLimitExceeded,
-    
+
     /// <summary>
     /// Specifies the error code when the data requested have not been found.
     /// Encoded/decoded by serializers as &quot;X050&quot;.
@@ -41,5 +45,4 @@ public enum ErrorHandlingCode
     [IsoId("_aiBLQtp-Ed-ak6NoX_4Aeg_-1823370699")]
     [Description(@"Specifies the error code when the data requested have not been found.")]
     DataNotAvailable,
-    
 }

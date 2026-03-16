@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.SecurityIdentification41Choice
     /// </summary>
     [IsoId("_idD07Vo2Ee23K4GXSpBSeg")]
     [DisplayName("Identification Not Available")]
-    public partial record IdentificationNotAvailable : SecurityIdentification41Choice_
+    public record IdentificationNotAvailable : SecurityIdentification41Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the type of the underlying identification.
         /// </summary>
         [IsoXmlTag("IdNotAvlbl")]
-        public required UnderlyingIdentification1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required UnderlyingIdentification1Code Value { get; init; }
     }
 }

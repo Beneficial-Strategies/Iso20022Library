@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(GarnishmentType1Choice.Code))]
     [KnownType(typeof(GarnishmentType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(GarnishmentType1Choice.Code),nameof(GarnishmentType1Choice.Code))]
-    [JsonDerivedType(typeof(GarnishmentType1Choice.Proprietary),nameof(GarnishmentType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(GarnishmentType1Choice.Code), nameof(GarnishmentType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(GarnishmentType1Choice.Proprietary),
+        nameof(GarnishmentType1Choice.Proprietary)
+    )]
     [IsoId("_k8MIkYnnEeOORMXOfBk1Bw")]
     [DisplayName("Garnishment Type 1 Choice")]
-    public abstract partial record GarnishmentType1Choice_
-    {
-    }
+    public abstract record GarnishmentType1Choice_ { }
 }

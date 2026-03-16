@@ -23,7 +23,7 @@ public enum RoundingDirection2Code
     [IsoId("_Y-LZ8tp-Ed-ak6NoX_4Aeg_498412566")]
     [Description(@"Round up to the nearest whole number.")]
     RoundUp = RoundingDirectionCode.RoundUp, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Round down to the nearest whole number.
     /// Encoded/decoded by serializers as &quot;RDWN&quot;.
@@ -32,5 +32,4 @@ public enum RoundingDirection2Code
     [IsoId("_Y-LZ89p-Ed-ak6NoX_4Aeg_498413939")]
     [Description(@"Round down to the nearest whole number.")]
     RoundDown = RoundingDirectionCode.RoundDown, // same ordinal as derivation source for type conversions
-    
 }

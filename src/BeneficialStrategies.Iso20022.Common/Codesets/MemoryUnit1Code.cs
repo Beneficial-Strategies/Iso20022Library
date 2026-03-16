@@ -23,7 +23,7 @@ public enum MemoryUnit1Code
     [IsoId("_1rmBMQxzEeKa_56Jbsi1RQ")]
     [Description(@"Byte.")]
     Byte = MemoryUnitCode.Byte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exa byte.
     /// Encoded/decoded by serializers as &quot;EXAB&quot;.
@@ -32,7 +32,7 @@ public enum MemoryUnit1Code
     [IsoId("_1yuj8wxzEeKa_56Jbsi1RQ")]
     [Description(@"Exa byte.")]
     ExaByte = MemoryUnitCode.ExaByte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Giga byte.
     /// Encoded/decoded by serializers as &quot;GIGA&quot;.
@@ -41,7 +41,7 @@ public enum MemoryUnit1Code
     [IsoId("_17gsgwxzEeKa_56Jbsi1RQ")]
     [Description(@"Giga byte.")]
     GigaByte = MemoryUnitCode.GigaByte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Kilo byte.
     /// Encoded/decoded by serializers as &quot;KILO&quot;.
@@ -50,7 +50,7 @@ public enum MemoryUnit1Code
     [IsoId("_2AkLowxzEeKa_56Jbsi1RQ")]
     [Description(@"Kilo byte.")]
     KiloByte = MemoryUnitCode.KiloByte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Mega byte.
     /// Encoded/decoded by serializers as &quot;MEGA&quot;.
@@ -59,7 +59,7 @@ public enum MemoryUnit1Code
     [IsoId("_2HQpgQxzEeKa_56Jbsi1RQ")]
     [Description(@"Mega byte.")]
     MegaByte = MemoryUnitCode.MegaByte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Peta byte.
     /// Encoded/decoded by serializers as &quot;PETA&quot;.
@@ -68,7 +68,7 @@ public enum MemoryUnit1Code
     [IsoId("_2O_pMQxzEeKa_56Jbsi1RQ")]
     [Description(@"Peta byte.")]
     PetaByte = MemoryUnitCode.PetaByte, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tera byte.
     /// Encoded/decoded by serializers as &quot;TERA&quot;.
@@ -77,5 +77,4 @@ public enum MemoryUnit1Code
     [IsoId("_2fgxcQxzEeKa_56Jbsi1RQ")]
     [Description(@"Tera byte.")]
     TeraByte = MemoryUnitCode.TeraByte, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum FrequencyRateFixing1Code
     [IsoId("_Iq2REY9PEeqMo4JxiuZGSw")]
     [Description(@"No update of  the rate for the duration of the trade.")]
     None = FrequencyRateFixingCode.None, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Daily fixing according to the tenor of the index.
     /// Encoded/decoded by serializers as &quot;OVNG&quot;.
@@ -32,14 +32,15 @@ public enum FrequencyRateFixing1Code
     [IsoId("_IwpXEo9PEeqMo4JxiuZGSw")]
     [Description(@"Daily fixing according to the tenor of the index.")]
     Overnight = FrequencyRateFixingCode.Overnight, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Periodic fixing of the rate in line with   (according to) the Tenor of the rate.
     /// Encoded/decoded by serializers as &quot;PRDC&quot;.
     /// </summary>
     [EnumMember(Value = "PRDC")]
     [IsoId("_I4Fb0o9PEeqMo4JxiuZGSw")]
-    [Description(@"Periodic fixing of the rate in line with   (according to) the Tenor of the rate.")]
+    [Description(
+        @"Periodic fixing of the rate in line with   (according to) the Tenor of the rate."
+    )]
     Periodic = FrequencyRateFixingCode.Periodic, // same ordinal as derivation source for type conversions
-    
 }

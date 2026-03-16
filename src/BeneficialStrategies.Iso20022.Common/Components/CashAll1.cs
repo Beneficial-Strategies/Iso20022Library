@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_qTJdkJP9EemyZbjY08A1Vw")]
 [DisplayName("Cash All")]
-public partial record CashAll1
+public record CashAll1
 {
-    #nullable enable
-    
     /// <summary>
     /// Indicates whether all assets in the portfolio are to be liquidated and transferred as cash.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record CashAll1
     [DisplayName("Indicator")]
     [IsoXmlTag("Ind")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator Indicator { get; init; } 
-    
+    public required IsoYesNoIndicator Indicator { get; init; }
+
     /// <summary>
     /// Currency of the cash.
     /// </summary>
     [IsoId("_woQlgZP9EemyZbjY08A1Vw")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ActiveCurrencyCode? Currency { get; init; }
 }

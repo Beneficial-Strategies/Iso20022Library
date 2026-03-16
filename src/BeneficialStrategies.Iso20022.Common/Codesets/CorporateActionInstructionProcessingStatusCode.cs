@@ -23,7 +23,7 @@ public enum CorporateActionInstructionProcessingStatusCode
     [IsoId("_bKjK4tp-Ed-ak6NoX_4Aeg_86891368")]
     [Description(@"Instruction has been cancelled.")]
     Cancelled,
-    
+
     /// <summary>
     /// Default action is taken.
     /// Encoded/decoded by serializers as &quot;DFLA&quot;.
@@ -32,16 +32,18 @@ public enum CorporateActionInstructionProcessingStatusCode
     [IsoId("_bKjK49p-Ed-ak6NoX_4Aeg_1478052223")]
     [Description(@"Default action is taken.")]
     DefaultAction,
-    
+
     /// <summary>
     /// Instruction has been acknowledged/accepted for further processing. In other words, this means that the instruction has been received, is processable and has been validated for further processing.
     /// Encoded/decoded by serializers as &quot;PACK&quot;.
     /// </summary>
     [EnumMember(Value = "PACK")]
     [IsoId("_bKjK5Np-Ed-ak6NoX_4Aeg_1586320101")]
-    [Description(@"Instruction has been acknowledged/accepted for further processing. In other words, this means that the instruction has been received, is processable and has been validated for further processing.")]
+    [Description(
+        @"Instruction has been acknowledged/accepted for further processing. In other words, this means that the instruction has been received, is processable and has been validated for further processing."
+    )]
     Accepted,
-    
+
     /// <summary>
     /// Instruction&apos;s processing is pending.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -50,7 +52,7 @@ public enum CorporateActionInstructionProcessingStatusCode
     [IsoId("_bKjK5dp-Ed-ak6NoX_4Aeg_271390723")]
     [Description(@"Instruction's processing is pending.")]
     Pending,
-    
+
     /// <summary>
     /// Instruction has been rejected for further processing due to system reasons.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -59,7 +61,7 @@ public enum CorporateActionInstructionProcessingStatusCode
     [IsoId("_bKjK5tp-Ed-ak6NoX_4Aeg_363574550")]
     [Description(@"Instruction has been rejected for further processing due to system reasons.")]
     Rejected,
-    
+
     /// <summary>
     /// Standing instruction is applied.
     /// Encoded/decoded by serializers as &quot;STIN&quot;.
@@ -68,5 +70,4 @@ public enum CorporateActionInstructionProcessingStatusCode
     [IsoId("_bKsU0Np-Ed-ak6NoX_4Aeg_-721845566")]
     [Description(@"Standing instruction is applied.")]
     StandingInstruction,
-    
 }

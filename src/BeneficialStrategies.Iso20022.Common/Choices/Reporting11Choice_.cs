@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Reporting11Choice.Code))]
     [KnownType(typeof(Reporting11Choice.Proprietary))]
-    [JsonDerivedType(typeof(Reporting11Choice.Code),nameof(Reporting11Choice.Code))]
-    [JsonDerivedType(typeof(Reporting11Choice.Proprietary),nameof(Reporting11Choice.Proprietary))]
+    [JsonDerivedType(typeof(Reporting11Choice.Code), nameof(Reporting11Choice.Code))]
+    [JsonDerivedType(typeof(Reporting11Choice.Proprietary), nameof(Reporting11Choice.Proprietary))]
     [IsoId("_6sleB_fVEeiNZp_PtLohLw")]
     [DisplayName("Reporting 11 Choice")]
-    public abstract partial record Reporting11Choice_
-    {
-    }
+    public abstract record Reporting11Choice_ { }
 }

@@ -23,7 +23,7 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_iDXIoUesEeODR7vDcYOqmg")]
     [Description(@"Dynamic currency conversion may be offered to the cardholder.")]
     Allowed = CurrencyConversionResponseCode.Allowed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction authorised with dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;DCCA&quot;.
@@ -32,7 +32,7 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_iK9lc0esEeODR7vDcYOqmg")]
     [Description(@"Transaction authorised with dynamic currency conversion.")]
     Assumed = CurrencyConversionResponseCode.Assumed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The card is not valid for dynamic currency conversion.
     /// Encoded/decoded by serializers as &quot;ICRD&quot;.
@@ -41,7 +41,7 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_iOrn0UesEeODR7vDcYOqmg")]
     [Description(@"The card is not valid for dynamic currency conversion.")]
     InvalidCard = CurrencyConversionResponseCode.InvalidCard, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The card acceptor has not been recognised.
     /// Encoded/decoded by serializers as &quot;IMER&quot;.
@@ -50,7 +50,7 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_iYN-U0esEeODR7vDcYOqmg")]
     [Description(@"The card acceptor has not been recognised.")]
     InvalidMerchant = CurrencyConversionResponseCode.InvalidMerchant, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dynamic currency conversion service cannot be offered for this card product.
     /// Encoded/decoded by serializers as &quot;IPRD&quot;.
@@ -59,7 +59,7 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_ib8nwUesEeODR7vDcYOqmg")]
     [Description(@"Dynamic currency conversion service cannot be offered for this card product.")]
     InvalidProduct = CurrencyConversionResponseCode.InvalidProduct, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Exchange rates are not available.
     /// Encoded/decoded by serializers as &quot;IRAT&quot;.
@@ -68,7 +68,7 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_iipss0esEeODR7vDcYOqmg")]
     [Description(@"Exchange rates are not available.")]
     NoRate = CurrencyConversionResponseCode.NoRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dynamic currency conversion is not available for other reason.
     /// Encoded/decoded by serializers as &quot;NDCC&quot;.
@@ -77,5 +77,4 @@ public enum CurrencyConversionResponse1Code
     [IsoId("_ipWxo0esEeODR7vDcYOqmg")]
     [Description(@"Dynamic currency conversion is not available for other reason.")]
     NotAvailable = CurrencyConversionResponseCode.NotAvailable, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_F5BX4a46EeWRfYPBaeOY8w")]
 [DisplayName("ATM Key Download Response")]
-public partial record ATMKeyDownloadResponse2
+public record ATMKeyDownloadResponse2
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the key download.
     /// </summary>
     [IsoId("_GF1r4a46EeWRfYPBaeOY8w")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required ATMEnvironment7 Environment { get; init; } 
-    
+    public required ATMEnvironment7 Environment { get; init; }
+
     /// <summary>
     /// Context of the ATM for the key download.
     /// </summary>
     [IsoId("_GF1r4646EeWRfYPBaeOY8w")]
     [DisplayName("ATM Security Context")]
     [IsoXmlTag("ATMSctyCntxt")]
-    public required ATMSecurityContext2 ATMSecurityContext { get; init; } 
-    
+    public required ATMSecurityContext2 ATMSecurityContext { get; init; }
+
     /// <summary>
     /// Random value from the ATM provided during a previous exchange.
     /// </summary>
@@ -41,25 +39,21 @@ public partial record ATMKeyDownloadResponse2
     [DisplayName("ATM Challenge")]
     [IsoXmlTag("ATMChllng")]
     [IsoSimpleType(IsoSimpleType.Max140Binary)]
-    public IsoMax140Binary? ATMChallenge { get; init; } 
-    
+    public IsoMax140Binary? ATMChallenge { get; init; }
+
     /// <summary>
     /// Security parameters of the host downloading the key.
     /// </summary>
     [IsoId("_GF1r5646EeWRfYPBaeOY8w")]
     [DisplayName("Host Security Parameters")]
     [IsoXmlTag("HstSctyParams")]
-    public required SecurityParameters5 HostSecurityParameters { get; init; } 
-    
+    public required SecurityParameters5 HostSecurityParameters { get; init; }
+
     /// <summary>
     /// Maintenance command to perform on the ATM.
     /// </summary>
     [IsoId("_GF1r6a46EeWRfYPBaeOY8w")]
     [DisplayName("Command")]
     [IsoXmlTag("Cmd")]
-    public ATMCommand7? Command { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ATMCommand7? Command { get; init; }
 }

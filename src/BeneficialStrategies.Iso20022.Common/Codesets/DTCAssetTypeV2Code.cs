@@ -23,7 +23,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbyr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an equity.")]
     Equity,
-    
+
     /// <summary>
     /// Asset is a common stock.
     /// Encoded/decoded by serializers as &quot;S010&quot;.
@@ -32,7 +32,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb87_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a common stock.")]
     CommonStock,
-    
+
     /// <summary>
     /// Asset is a convertible common stock.
     /// Encoded/decoded by serializers as &quot;S011&quot;.
@@ -41,7 +41,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcBL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a convertible common stock.")]
     ConvertibleCommonStock,
-    
+
     /// <summary>
     /// Asset is a common stock real estate investment trust.
     /// Encoded/decoded by serializers as &quot;S012&quot;.
@@ -50,7 +50,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLby7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a common stock real estate investment trust.")]
     CommonStockREIT,
-    
+
     /// <summary>
     /// Asset is a preferred stock.
     /// Encoded/decoded by serializers as &quot;S020&quot;.
@@ -59,7 +59,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrKr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a preferred stock.")]
     PreferredStock,
-    
+
     /// <summary>
     /// Asset is a preferred stock real estate investment trust.
     /// Encoded/decoded by serializers as &quot;S022&quot;.
@@ -68,7 +68,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrJb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a preferred stock real estate investment trust.")]
     PreferredStockREIT,
-    
+
     /// <summary>
     /// Asset is a convertible preferred stock.
     /// Encoded/decoded by serializers as &quot;S023&quot;.
@@ -77,7 +77,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb5L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a convertible preferred stock.")]
     ConvertiblePreferredStock,
-    
+
     /// <summary>
     /// Asset is a tender rate preferred stock.
     /// Encoded/decoded by serializers as &quot;S024&quot;.
@@ -86,7 +86,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb5b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a tender rate preferred stock.")]
     TenderRatePreferredStock,
-    
+
     /// <summary>
     /// Asset is a limited partnership.
     /// Encoded/decoded by serializers as &quot;S030&quot;.
@@ -95,25 +95,29 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrKL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a limited partnership.")]
     LimitedPartnership,
-    
+
     /// <summary>
     /// Asset is a collateralized mortgage obligation denomination in &quot;Units&quot; or &quot;Undivided Interest&quot;.
     /// Encoded/decoded by serializers as &quot;S040&quot;.
     /// </summary>
     [EnumMember(Value = "S040")]
     [IsoId("_0hLbyL_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is a collateralized mortgage obligation denomination in ""Units"" or ""Undivided Interest"".")]
+    [Description(
+        @"Asset is a collateralized mortgage obligation denomination in ""Units"" or ""Undivided Interest""."
+    )]
     CMODenominationUnitsOrUndividedInterest,
-    
+
     /// <summary>
     /// Asset is an asset-backed security denomination in &quot;Units&quot; or &quot;Undivided Interest&quot;.
     /// Encoded/decoded by serializers as &quot;S041&quot;.
     /// </summary>
     [EnumMember(Value = "S041")]
     [IsoId("_0hLb4b_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is an asset-backed security denomination in ""Units"" or ""Undivided Interest"".")]
+    [Description(
+        @"Asset is an asset-backed security denomination in ""Units"" or ""Undivided Interest""."
+    )]
     ABSDenominationUnitsOrUndividedInterest,
-    
+
     /// <summary>
     /// Asset is an issue denomination in &quot;Units&quot; or &quot;Undivided Interest&quot;.
     /// Encoded/decoded by serializers as &quot;S042&quot;.
@@ -122,7 +126,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb_b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an issue denomination in ""Units"" or ""Undivided Interest"".")]
     IssueDenominationUnitsOrUndividedInterest,
-    
+
     /// <summary>
     /// Asset is an auction rate preferred stock (ARPS).
     /// Encoded/decoded by serializers as &quot;S102&quot;.
@@ -131,7 +135,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb6r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an auction rate preferred stock (ARPS).")]
     AuctionRatePreferredStock,
-    
+
     /// <summary>
     /// Asset is an American depositary receipt (ADR).
     /// Encoded/decoded by serializers as &quot;S110&quot;.
@@ -140,7 +144,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb97_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an American depositary receipt (ADR).")]
     AmericanDepositaryReceipt,
-    
+
     /// <summary>
     /// Asset is a depositary share.
     /// Encoded/decoded by serializers as &quot;S111&quot;.
@@ -149,7 +153,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcAr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a depositary share.")]
     DepositaryShare,
-    
+
     /// <summary>
     /// Asset is a municipal option call right.
     /// Encoded/decoded by serializers as &quot;S112&quot;.
@@ -158,7 +162,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrJ7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal option call right.")]
     MunicipalOptionCallRight,
-    
+
     /// <summary>
     /// Asset is an exchange traded funds.
     /// Encoded/decoded by serializers as &quot;S117&quot;.
@@ -167,7 +171,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcBb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an exchange traded funds.")]
     ExchangeTradedFunds,
-    
+
     /// <summary>
     /// Asset is a money market instrument preferred stock (in CP-like mode).
     /// Encoded/decoded by serializers as &quot;S120&quot;.
@@ -176,7 +180,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrKb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument preferred stock (in CP-like mode).")]
     MMIPreferredStockCPLike,
-    
+
     /// <summary>
     /// Asset is a sealed envelope.
     /// Encoded/decoded by serializers as &quot;S125&quot;.
@@ -185,7 +189,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcB7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a sealed envelope.")]
     SealedEnvelope,
-    
+
     /// <summary>
     /// Asset is a custody user CUSIP.
     /// Encoded/decoded by serializers as &quot;S126&quot;.
@@ -194,7 +198,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb7b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a custody user CUSIP.")]
     CustodyUserCUSIP,
-    
+
     /// <summary>
     /// Asset is a real estate investment trust (REIT).
     /// Encoded/decoded by serializers as &quot;S130&quot;.
@@ -203,7 +207,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb8L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a real estate investment trust (REIT).")]
     RealEstateInvestmentTrust,
-    
+
     /// <summary>
     /// Asset is a municipal bond.
     /// Encoded/decoded by serializers as &quot;S310&quot;.
@@ -212,7 +216,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrM7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal bond.")]
     MunicipalBond,
-    
+
     /// <summary>
     /// Asset is a municipal note.
     /// Encoded/decoded by serializers as &quot;S311&quot;.
@@ -221,7 +225,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrMb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal note.")]
     MunicipalNote,
-    
+
     /// <summary>
     /// Asset is a municipal auction rate note (ARN).
     /// Encoded/decoded by serializers as &quot;S312&quot;.
@@ -230,7 +234,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrL7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal auction rate note (ARN).")]
     MunicipalAuctionRateNote,
-    
+
     /// <summary>
     /// Asset is a municipal variable mode obligation (VMO).
     /// Encoded/decoded by serializers as &quot;S313&quot;.
@@ -239,7 +243,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrNL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal variable mode obligation (VMO).")]
     MunicipalVariableModeObligation,
-    
+
     /// <summary>
     /// Asset is a municipal variable rate demand obligation (VRDO).
     /// Encoded/decoded by serializers as &quot;S314&quot;.
@@ -248,7 +252,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb1r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal variable rate demand obligation (VRDO).")]
     MunicipalVariableRateDemandObligation,
-    
+
     /// <summary>
     /// Asset is a municipal insured custodial receipt.
     /// Encoded/decoded by serializers as &quot;S315&quot;.
@@ -257,16 +261,18 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrLL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal insured custodial receipt.")]
     MunicipalInsuredCustodialReceipt,
-    
+
     /// <summary>
     /// Asset is a money market instrument municipal variable rate demand obligation commercial paper.
     /// Encoded/decoded by serializers as &quot;S320&quot;.
     /// </summary>
     [EnumMember(Value = "S320")]
     [IsoId("_0hLbxb_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is a money market instrument municipal variable rate demand obligation commercial paper.")]
+    [Description(
+        @"Asset is a money market instrument municipal variable rate demand obligation commercial paper."
+    )]
     MMIMunicipalVariableRateDemandObligation,
-    
+
     /// <summary>
     /// Asset is a money market instrument municipal commercial paper.
     /// Encoded/decoded by serializers as &quot;S330&quot;.
@@ -275,7 +281,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb1b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument municipal commercial paper.")]
     MMIMunicipalCommercialPaper,
-    
+
     /// <summary>
     /// Asset is a bearer, callable zero coupon bond.
     /// Encoded/decoded by serializers as &quot;S340&quot;.
@@ -284,16 +290,18 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcCL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a bearer, callable zero coupon bond.")]
     BearerCallableZeroCouponBond,
-    
+
     /// <summary>
     /// Asset is a government national mortgage association real estate mortgage investment conduit security.
     /// Encoded/decoded by serializers as &quot;S450&quot;.
     /// </summary>
     [EnumMember(Value = "S450")]
     [IsoId("_0hLbwr_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is a government national mortgage association real estate mortgage investment conduit security.")]
+    [Description(
+        @"Asset is a government national mortgage association real estate mortgage investment conduit security."
+    )]
     GNMARealEstateMortgageInvestmentConduit,
-    
+
     /// <summary>
     /// Asset is a government national mortgage association pass-through security.
     /// Encoded/decoded by serializers as &quot;S451&quot;.
@@ -302,7 +310,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbzL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a government national mortgage association pass-through security.")]
     GNMAPassThroughSecurity,
-    
+
     /// <summary>
     /// Asset is a government national mortgage association serial note security.
     /// Encoded/decoded by serializers as &quot;S452&quot;.
@@ -311,7 +319,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb3r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a government national mortgage association serial note security.")]
     GNMASerialNoteSecurity,
-    
+
     /// <summary>
     /// Asset is a corporate bond (CB) Or a global corporate bond (GCB).
     /// Encoded/decoded by serializers as &quot;S500&quot;.
@@ -320,7 +328,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrIb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate bond (CB) Or a global corporate bond (GCB).")]
     CorporateBondOrGlobal,
-    
+
     /// <summary>
     /// Asset is a money market instrument bankers&apos; acceptance note (BA).
     /// Encoded/decoded by serializers as &quot;S502&quot;.
@@ -329,7 +337,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbxr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument bankers' acceptance note (BA).")]
     MMIBankersAcceptanceNote,
-    
+
     /// <summary>
     /// Asset is a money market instrument institutional certificates of deposit.
     /// Encoded/decoded by serializers as &quot;S504&quot;.
@@ -338,7 +346,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb8b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument institutional certificates of deposit.")]
     MMIInstitutionalCertificatesOfDeposit,
-    
+
     /// <summary>
     /// Asset is a certificated money market instrument.
     /// Encoded/decoded by serializers as &quot;S505&quot;.
@@ -347,7 +355,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcA7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a certificated money market instrument.")]
     CertificatedMoneyMarketInstrument,
-    
+
     /// <summary>
     /// Asset is a certificated money market - periodic payer.
     /// Encoded/decoded by serializers as &quot;S506&quot;.
@@ -356,7 +364,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbx7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a certificated money market - periodic payer.")]
     CertificatedMoneyMarketPeriodicPayer,
-    
+
     /// <summary>
     /// Asset is a certificates of deposit.
     /// Encoded/decoded by serializers as &quot;S507&quot;.
@@ -365,7 +373,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb5r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a certificates of deposit.")]
     CertificatesOfDeposit,
-    
+
     /// <summary>
     /// Asset is a consumer price index interest at maturity (IAM) commercial paper.
     /// Encoded/decoded by serializers as &quot;S510&quot;.
@@ -374,7 +382,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrIr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a consumer price index interest at maturity (IAM) commercial paper.")]
     ConsumerPriceIndexAtMaturityCP,
-    
+
     /// <summary>
     /// Asset is a periodic payment commercial paper.
     /// Encoded/decoded by serializers as &quot;S511&quot;.
@@ -383,7 +391,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb17_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a periodic payment commercial paper.")]
     PeriodicPaymentCommercialPaper,
-    
+
     /// <summary>
     /// Asset is a consumer price index discount commercial paper.
     /// Encoded/decoded by serializers as &quot;S520&quot;.
@@ -392,7 +400,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbwb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a consumer price index discount commercial paper.")]
     ConsumerPriceIndexDiscountCP,
-    
+
     /// <summary>
     /// Asset is a money market instrument corporate commercial paper.
     /// Encoded/decoded by serializers as &quot;S525&quot;.
@@ -401,16 +409,18 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbz7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument corporate commercial paper.")]
     MMICorporateCommercialPaper,
-    
+
     /// <summary>
     /// Asset is a money market instrument corporate variable rate demand obligation commercial paper.
     /// Encoded/decoded by serializers as &quot;S526&quot;.
     /// </summary>
     [EnumMember(Value = "S526")]
     [IsoId("_0hLb77_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is a money market instrument corporate variable rate demand obligation commercial paper.")]
+    [Description(
+        @"Asset is a money market instrument corporate variable rate demand obligation commercial paper."
+    )]
     MMICorporateVariableRateDemandObligation,
-    
+
     /// <summary>
     /// Asset is a medium term note (MTN).
     /// Encoded/decoded by serializers as &quot;S530&quot;.
@@ -419,7 +429,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb-L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a medium term note (MTN).")]
     MediumTermNote,
-    
+
     /// <summary>
     /// Asset is a money market instrument deposit note.
     /// Encoded/decoded by serializers as &quot;S531&quot;.
@@ -428,7 +438,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrML_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument deposit note.")]
     MMIDepositNote,
-    
+
     /// <summary>
     /// Asset is a money market instrument medium-term bank note.
     /// Encoded/decoded by serializers as &quot;S532&quot;.
@@ -437,7 +447,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb3L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument medium-term bank note.")]
     MMIMediumTermBankNote,
-    
+
     /// <summary>
     /// Asset is a money market instrument medium term note.
     /// Encoded/decoded by serializers as &quot;S533&quot;.
@@ -446,25 +456,29 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb_7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument medium term note.")]
     MMIMediumTermNote,
-    
+
     /// <summary>
     /// Asset is a collateralized mortgage obligation or global collateralized mortgage obligation.
     /// Encoded/decoded by serializers as &quot;S540&quot;.
     /// </summary>
     [EnumMember(Value = "S540")]
     [IsoId("_0hLb_r_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is a collateralized mortgage obligation or global collateralized mortgage obligation.")]
+    [Description(
+        @"Asset is a collateralized mortgage obligation or global collateralized mortgage obligation."
+    )]
     CollateralizedMortgageObligationOrGlobal,
-    
+
     /// <summary>
     /// Asset is an asset-backed security (ABS) or global asset backed security (GABS).
     /// Encoded/decoded by serializers as &quot;S541&quot;.
     /// </summary>
     [EnumMember(Value = "S541")]
     [IsoId("_0hLb9b_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is an asset-backed security (ABS) or global asset backed security (GABS).")]
+    [Description(
+        @"Asset is an asset-backed security (ABS) or global asset backed security (GABS)."
+    )]
     AssetBackedSecurityOrGlobal,
-    
+
     /// <summary>
     /// Asset is a non-collateralized mortgage obligation ABS amortizing issue.
     /// Encoded/decoded by serializers as &quot;S542&quot;.
@@ -473,7 +487,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbwL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a non-collateralized mortgage obligation ABS amortizing issue.")]
     NonCMOABSAmortizingIssue,
-    
+
     /// <summary>
     /// MMI Short-Term Bank Note.
     /// Encoded/decoded by serializers as &quot;S550&quot;.
@@ -482,7 +496,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb0r_VEeeb2ZBoAlSG1Q")]
     [Description(@"MMI Short-Term Bank Note.")]
     MMIShortTermBankNote,
-    
+
     /// <summary>
     /// Asset is a zero coupon denomination in initial principal amount.
     /// Encoded/decoded by serializers as &quot;S551&quot;.
@@ -491,7 +505,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbzb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a zero coupon denomination in initial principal amount.")]
     ZCPNDenominationInitialPrincipalAmount,
-    
+
     /// <summary>
     /// Asset is a money market instrument discount note.
     /// Encoded/decoded by serializers as &quot;S560&quot;.
@@ -500,7 +514,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb9r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a money market instrument discount note.")]
     MMIDiscountNote,
-    
+
     /// <summary>
     /// Asset is a corporate auction rate note.
     /// Encoded/decoded by serializers as &quot;S571&quot;.
@@ -509,7 +523,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb2r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate auction rate note.")]
     CorporateAuctionRateNote,
-    
+
     /// <summary>
     /// Asset is a convertible corporate debt.
     /// Encoded/decoded by serializers as &quot;S572&quot;.
@@ -518,7 +532,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcAL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a convertible corporate debt.")]
     ConvertibleCorporateDebt,
-    
+
     /// <summary>
     /// Asset is a corporate variable mode obligation (CVMO).
     /// Encoded/decoded by serializers as &quot;S573&quot;.
@@ -527,7 +541,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbyb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate variable mode obligation (CVMO).")]
     CorporateVariableModeObligation,
-    
+
     /// <summary>
     /// Asset is a corporate short-term note.
     /// Encoded/decoded by serializers as &quot;S574&quot;.
@@ -536,7 +550,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb07_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate short-term note.")]
     CorporateShortTermNote,
-    
+
     /// <summary>
     /// Asset is a corporate debenture.
     /// Encoded/decoded by serializers as &quot;S575&quot;.
@@ -545,16 +559,18 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb2L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate debenture.")]
     CorporateDebenture,
-    
+
     /// <summary>
     /// Asset is a corporate variable rate demand obligation or a municipal variable rate demand obligation (MMD).
     /// Encoded/decoded by serializers as &quot;S576&quot;.
     /// </summary>
     [EnumMember(Value = "S576")]
     [IsoId("_0hBrMr_VEeeb2ZBoAlSG1Q")]
-    [Description(@"Asset is a corporate variable rate demand obligation or a municipal variable rate demand obligation (MMD).")]
+    [Description(
+        @"Asset is a corporate variable rate demand obligation or a municipal variable rate demand obligation (MMD)."
+    )]
     CorporateOrMunicipalVariableRateDemandObligation,
-    
+
     /// <summary>
     /// Asset is a corporate insured custodial receipt.
     /// Encoded/decoded by serializers as &quot;S577&quot;.
@@ -563,7 +579,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb6b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate insured custodial receipt.")]
     CorporateInsuredCustodialReceipt,
-    
+
     /// <summary>
     /// Asset is a tender rate note.
     /// Encoded/decoded by serializers as &quot;S578&quot;.
@@ -572,7 +588,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb-b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a tender rate note.")]
     TenderRateNote,
-    
+
     /// <summary>
     /// Asset is a zero coupon bond.
     /// Encoded/decoded by serializers as &quot;S579&quot;.
@@ -581,7 +597,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbzr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a zero coupon bond.")]
     ZeroCouponBond,
-    
+
     /// <summary>
     /// Asset is a government national mortgage association government security.
     /// Encoded/decoded by serializers as &quot;S601&quot;.
@@ -590,7 +606,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb6L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a government national mortgage association government security.")]
     GovernmentSecurity,
-    
+
     /// <summary>
     /// Asset is a government trust certificate.
     /// Encoded/decoded by serializers as &quot;S602&quot;.
@@ -599,7 +615,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb4L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a government trust certificate.")]
     GovernmentTrustCertificate,
-    
+
     /// <summary>
     /// Asset is a junk and treasury growth receipt (JGR).
     /// Encoded/decoded by serializers as &quot;S603&quot;.
@@ -608,7 +624,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb-r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a junk and treasury growth receipt (JGR).")]
     JunkAndTreasuryGrowthReceipt,
-    
+
     /// <summary>
     /// Asset is a U.S. treasury security.
     /// Encoded/decoded by serializers as &quot;S610&quot;.
@@ -617,7 +633,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb67_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a U.S. treasury security.")]
     USTreasurySecurity,
-    
+
     /// <summary>
     /// Asset is a US treasury bill.
     /// Encoded/decoded by serializers as &quot;S611&quot;.
@@ -626,7 +642,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb27_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a US treasury bill.")]
     USTreasuryBill,
-    
+
     /// <summary>
     /// Asset is a US treasury note.
     /// Encoded/decoded by serializers as &quot;S612&quot;.
@@ -635,7 +651,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcAb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a US treasury note.")]
     USTreasuryNote,
-    
+
     /// <summary>
     /// Asset is a US treasury bond.
     /// Encoded/decoded by serializers as &quot;S613&quot;.
@@ -644,7 +660,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb37_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a US treasury bond.")]
     USTreasuryBond,
-    
+
     /// <summary>
     /// Asset is a U.S. government agency security.
     /// Encoded/decoded by serializers as &quot;S620&quot;.
@@ -653,7 +669,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbw7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a U.S. government agency security.")]
     USGovernmentAgencySecurity,
-    
+
     /// <summary>
     /// Asset is a government national mortgage association (GNMA).
     /// Encoded/decoded by serializers as &quot;S650&quot;.
@@ -662,7 +678,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcBr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a government national mortgage association (GNMA).")]
     GovernmentNationallMortgageAssociation,
-    
+
     /// <summary>
     /// Asset is a real estate mortgage investment conduit (REMIC).
     /// Encoded/decoded by serializers as &quot;S651&quot;.
@@ -671,7 +687,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb3b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a real estate mortgage investment conduit (REMIC).")]
     RealEstateMortgageInvestmentConduit,
-    
+
     /// <summary>
     /// Asset is a government national mortgage association serial note.
     /// Encoded/decoded by serializers as &quot;S652&quot;.
@@ -680,7 +696,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb8r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a government national mortgage association serial note.")]
     GNMASerialNote,
-    
+
     /// <summary>
     /// Asset is a package.
     /// Encoded/decoded by serializers as &quot;S700&quot;.
@@ -689,7 +705,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb2b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a package.")]
     Package,
-    
+
     /// <summary>
     /// Corporate Debt Derivative.
     /// Encoded/decoded by serializers as &quot;S704&quot;.
@@ -698,7 +714,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrK7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Corporate Debt Derivative.")]
     CorporateDebtDerivative,
-    
+
     /// <summary>
     /// Asset is an equity derivative.
     /// Encoded/decoded by serializers as &quot;S705&quot;.
@@ -707,7 +723,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcCb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an equity derivative.")]
     EquityDerivative,
-    
+
     /// <summary>
     /// Asset is a municipal derivative.
     /// Encoded/decoded by serializers as &quot;S706&quot;.
@@ -716,7 +732,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLcCr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal derivative.")]
     MunicipalDerivative,
-    
+
     /// <summary>
     /// Asset is a municipal amortized issue.
     /// Encoded/decoded by serializers as &quot;S708&quot;.
@@ -725,7 +741,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrJr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal amortized issue.")]
     MunicipalAmortizedIssue,
-    
+
     /// <summary>
     /// Asset is an option derivative.
     /// Encoded/decoded by serializers as &quot;S710&quot;.
@@ -734,7 +750,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrLb_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an option derivative.")]
     OptionDerivative,
-    
+
     /// <summary>
     /// Asset is a warrant.
     /// Encoded/decoded by serializers as &quot;S720&quot;.
@@ -743,7 +759,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb47_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a warrant.")]
     Warrant,
-    
+
     /// <summary>
     /// Asset is a right.
     /// Encoded/decoded by serializers as &quot;S730&quot;.
@@ -752,7 +768,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb1L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a right.")]
     Right,
-    
+
     /// <summary>
     /// Asset is a mutual fund.
     /// Encoded/decoded by serializers as &quot;S760&quot;.
@@ -761,7 +777,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb57_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a mutual fund.")]
     MutualFund,
-    
+
     /// <summary>
     /// Asset is a closed end fund.
     /// Encoded/decoded by serializers as &quot;S761&quot;.
@@ -770,7 +786,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrI7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a closed end fund.")]
     ClosedEndFund,
-    
+
     /// <summary>
     /// Asset is an institutional money market instrument mutual fund share.
     /// Encoded/decoded by serializers as &quot;S762&quot;.
@@ -779,7 +795,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLbxL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an institutional money market instrument mutual fund share.")]
     InstitutionalMMIMutualFundShare,
-    
+
     /// <summary>
     /// Asset is an equity unit.
     /// Encoded/decoded by serializers as &quot;S780&quot;.
@@ -788,7 +804,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb-7_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an equity unit.")]
     EquityUnit,
-    
+
     /// <summary>
     /// Asset is a debt unit.
     /// Encoded/decoded by serializers as &quot;S781&quot;.
@@ -797,7 +813,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb7r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a debt unit.")]
     DebtUnit,
-    
+
     /// <summary>
     /// Asset is a unit investment trust (UIT) nuveen only.
     /// Encoded/decoded by serializers as &quot;S790&quot;.
@@ -806,7 +822,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrJL_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a unit investment trust (UIT) nuveen only.")]
     UnitInvestmentTrustNuveenOnly,
-    
+
     /// <summary>
     /// Asset is a global unit trust.
     /// Encoded/decoded by serializers as &quot;S791&quot;.
@@ -815,7 +831,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hBrLr_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a global unit trust.")]
     GlobalUnitTrust,
-    
+
     /// <summary>
     /// Asset is a unit investment trust (UIT).
     /// Encoded/decoded by serializers as &quot;S795&quot;.
@@ -824,7 +840,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb0b_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a unit investment trust (UIT).")]
     UnitInvestmentTrust,
-    
+
     /// <summary>
     /// Asset is an equity, subject to 144a, designated investors.
     /// Encoded/decoded by serializers as &quot;S121&quot;.
@@ -833,7 +849,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb9L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is an equity, subject to 144a, designated investors.")]
     Equity144aDesignatedInvestors,
-    
+
     /// <summary>
     /// Asset is a municipal debt, classified as other, subject to tax exempt.
     /// Encoded/decoded by serializers as &quot;S346&quot;.
@@ -842,7 +858,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb4r_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a municipal debt, classified as other, subject to tax exempt.")]
     MunicipalOtherTaxExempt,
-    
+
     /// <summary>
     /// Asset is a corporate debt, classified as other, subject to tax exempt.
     /// Encoded/decoded by serializers as &quot;S546&quot;.
@@ -851,7 +867,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb7L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate debt, classified as other, subject to tax exempt.")]
     CorporateOtherTaxExempt,
-    
+
     /// <summary>
     /// Asset is a corporate debt, subject to 144a, designated investors.
     /// Encoded/decoded by serializers as &quot;S545&quot;.
@@ -860,7 +876,7 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb0L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a corporate debt, subject to 144a, designated investors.")]
     Corporate144aDesignatedInvestors,
-    
+
     /// <summary>
     /// Asset is a non standard asset user CUSIP.
     /// Encoded/decoded by serializers as &quot;S127&quot;.
@@ -869,5 +885,4 @@ public enum DTCAssetTypeV2Code
     [IsoId("_0hLb_L_VEeeb2ZBoAlSG1Q")]
     [Description(@"Asset is a non standard asset user CUSIP.")]
     NonStandardAssetUserCUSIP,
-    
 }

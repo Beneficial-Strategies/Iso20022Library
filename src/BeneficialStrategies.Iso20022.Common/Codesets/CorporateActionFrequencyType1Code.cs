@@ -23,7 +23,7 @@ public enum CorporateActionFrequencyType1Code
     [IsoId("_bJ8t-Np-Ed-ak6NoX_4Aeg_1457749703")]
     [Description(@"Payment of a dividend, less amounts already paid through interim dividends.")]
     Final = CorporateActionFrequencyTypeCode.Final, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend declared and paid before annual earnings have been determined.
     /// Encoded/decoded by serializers as &quot;INTE&quot;.
@@ -32,7 +32,7 @@ public enum CorporateActionFrequencyType1Code
     [IsoId("_bKGe8Np-Ed-ak6NoX_4Aeg_1457749980")]
     [Description(@"Dividend declared and paid before annual earnings have been determined.")]
     Interim = CorporateActionFrequencyTypeCode.Interim, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend paid at regular interval, for example, quarterly.
     /// Encoded/decoded by serializers as &quot;REGR&quot;.
@@ -41,7 +41,7 @@ public enum CorporateActionFrequencyType1Code
     [IsoId("_bKGe8dp-Ed-ak6NoX_4Aeg_1457749981")]
     [Description(@"Dividend paid at regular interval, for example, quarterly.")]
     Regular = CorporateActionFrequencyTypeCode.Regular, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend in addition to the regular dividend being paid by the company.
     /// Encoded/decoded by serializers as &quot;SPEC&quot;.
@@ -50,5 +50,4 @@ public enum CorporateActionFrequencyType1Code
     [IsoId("_bKGe8tp-Ed-ak6NoX_4Aeg_1457749982")]
     [Description(@"Dividend in addition to the regular dividend being paid by the company.")]
     Special = CorporateActionFrequencyTypeCode.Special, // same ordinal as derivation source for type conversions
-    
 }

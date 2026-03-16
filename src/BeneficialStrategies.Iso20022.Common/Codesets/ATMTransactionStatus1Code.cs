@@ -23,7 +23,7 @@ public enum ATMTransactionStatus1Code
     [IsoId("_VAzJoYqSEeSRT5rEzcAHEw")]
     [Description(@"Undetermined status, for instance possibly forgotten notes.")]
     Doubt = ATMTransactionStatusCode.Doubt, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction failed.
     /// Encoded/decoded by serializers as &quot;FAIL&quot;.
@@ -32,7 +32,7 @@ public enum ATMTransactionStatus1Code
     [IsoId("_VE0uAYqSEeSRT5rEzcAHEw")]
     [Description(@"Transaction failed.")]
     Failure = ATMTransactionStatusCode.Failure, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction was successfully completed.
     /// Encoded/decoded by serializers as &quot;SCSS&quot;.
@@ -41,5 +41,4 @@ public enum ATMTransactionStatus1Code
     [IsoId("_VMHo04qSEeSRT5rEzcAHEw")]
     [Description(@"Transaction was successfully completed.")]
     Success = ATMTransactionStatusCode.Success, // same ordinal as derivation source for type conversions
-    
 }

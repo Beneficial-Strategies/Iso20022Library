@@ -23,7 +23,7 @@ public enum StatusResponseCode
     [IsoId("_Oh2ljT2yEeGXQ7zxoAIFpQ")]
     [Description(@"Response not provided yet.")]
     NoResponseYet,
-    
+
     /// <summary>
     /// Response is partially provided.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -32,7 +32,7 @@ public enum StatusResponseCode
     [IsoId("_b9g5bT2yEeGXQ7zxoAIFpQ")]
     [Description(@"Response is partially provided.")]
     PartialResponse,
-    
+
     /// <summary>
     /// Response is complete.
     /// Encoded/decoded by serializers as &quot;COMP&quot;.
@@ -41,5 +41,4 @@ public enum StatusResponseCode
     [IsoId("_ilBY7T2yEeGXQ7zxoAIFpQ")]
     [Description(@"Response is complete.")]
     CompleteResponse,
-    
 }

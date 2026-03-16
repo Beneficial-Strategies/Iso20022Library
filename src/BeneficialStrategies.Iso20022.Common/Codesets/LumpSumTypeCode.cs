@@ -23,7 +23,7 @@ public enum LumpSumTypeCode
     [IsoId("_V_DSULKdEeiXL6Ccd-oU8g")]
     [Description(@"Lump sum is a death benefit lump sum.")]
     DeathBenefit,
-    
+
     /// <summary>
     /// Lump sum is a pension commencement lump sum.
     /// Encoded/decoded by serializers as &quot;PCLS&quot;.
@@ -32,7 +32,7 @@ public enum LumpSumTypeCode
     [IsoId("_10zi8LKdEeiXL6Ccd-oU8g")]
     [Description(@"Lump sum is a pension commencement lump sum.")]
     PensionCommencement,
-    
+
     /// <summary>
     /// Lump sum is an uncrystallised fund pension lump sum.
     /// Encoded/decoded by serializers as &quot;UFPL&quot;.
@@ -41,5 +41,4 @@ public enum LumpSumTypeCode
     [IsoId("_E5dN4LKeEeiXL6Ccd-oU8g")]
     [Description(@"Lump sum is an uncrystallised fund pension lump sum.")]
     Uncrystallised,
-    
 }

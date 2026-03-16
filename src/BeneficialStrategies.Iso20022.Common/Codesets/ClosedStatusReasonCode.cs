@@ -21,16 +21,19 @@ public enum ClosedStatusReasonCode
     /// </summary>
     [EnumMember(Value = "CLIN")]
     [IsoId("_zbGEwE_vEeaB8-OWTiMVrQ")]
-    [Description(@"Account is closed, following an instruction from the client, or an authorised party, to close the account.")]
+    [Description(
+        @"Account is closed, following an instruction from the client, or an authorised party, to close the account."
+    )]
     ClientInstruction,
-    
+
     /// <summary>
     /// Account is closed, following an instruction from the account servicer to close the account.
     /// Encoded/decoded by serializers as &quot;ASIN&quot;.
     /// </summary>
     [EnumMember(Value = "ASIN")]
     [IsoId("_DB_hIE_wEeaB8-OWTiMVrQ")]
-    [Description(@"Account is closed, following an instruction from the account servicer to close the account.")]
+    [Description(
+        @"Account is closed, following an instruction from the account servicer to close the account."
+    )]
     AccountServicerInstruction,
-    
 }

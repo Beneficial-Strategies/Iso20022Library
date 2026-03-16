@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio6Choice
 {
     /// <summary>
@@ -13,42 +13,40 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio6Choice
     /// </summary>
     [IsoId("_1n3_lZNMEemQB_8XA98K0Q")]
     [DisplayName("Pension")]
-    public partial record Pension : FundPortfolio6Choice_
+    public record Pension : FundPortfolio6Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Identification of the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_7lP0cTOTEeqLMcD_sEa8Xw")]
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
-        public PensionPolicy1? Identification { get; init; } 
-        
+        public PensionPolicy1? Identification { get; init; }
+
         /// <summary>
         /// Type of pension policy, plan or scheme.
         /// </summary>
         [IsoId("_7lP0czOTEeqLMcD_sEa8Xw")]
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
-        public PensionSchemeType2Choice_? Type { get; init; } 
-        
+        public PensionSchemeType2Choice_? Type { get; init; }
+
         /// <summary>
         /// Scope of the pension policy, plan or scheme transfer.
         /// </summary>
         [IsoId("_7lP0dTOTEeqLMcD_sEa8Xw")]
         [DisplayName("Transfer Scope")]
         [IsoXmlTag("TrfScp")]
-        public PensionTransferScope1Choice_? TransferScope { get; init; } 
-        
+        public PensionTransferScope1Choice_? TransferScope { get; init; }
+
         /// <summary>
         /// Tax reference issued to the pension policy, plan or scheme by a central organisation.
         /// </summary>
         [IsoId("_7lP0dzOTEeqLMcD_sEa8Xw")]
         [DisplayName("Tax Reference")]
         [IsoXmlTag("TaxRef")]
-        public TaxReference1? TaxReference { get; init; } 
-        
+        public TaxReference1? TaxReference { get; init; }
+
         /// <summary>
         /// Reference of the drawdown.
         /// </summary>
@@ -56,19 +54,15 @@ namespace BeneficialStrategies.Iso20022.Choices.FundPortfolio6Choice
         [DisplayName("Drawdown Tranche Identification")]
         [IsoXmlTag("DrwdwnTrchId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? DrawdownTrancheIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? DrawdownTrancheIdentification { get; init; }
+
         /// <summary>
         /// Additional information about the pension policy, plan or scheme.
         /// </summary>
         [IsoId("_7lP0ezOTEeqLMcD_sEa8Xw")]
         [DisplayName("Additional Information")]
         [IsoXmlTag("AddtlInf")]
-        public AdditionalInformation15? AdditionalInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        public AdditionalInformation15? AdditionalInformation { get; init; }
     }
 }

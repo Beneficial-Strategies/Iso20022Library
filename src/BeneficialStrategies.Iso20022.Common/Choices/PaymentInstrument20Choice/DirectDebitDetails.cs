@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
 {
     /// <summary>
@@ -13,26 +13,24 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
     /// </summary>
     [IsoId("_weKLHTbsEead9bDRE_1DAQ")]
     [DisplayName("Direct Debit Details")]
-    public partial record DirectDebitDetails : PaymentInstrument20Choice_
+    public record DirectDebitDetails : PaymentInstrument20Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unambiguous identification of the account of the debtor to which a debit entry will be made as a result of the transaction.
         /// </summary>
         [IsoId("_xQcjozbsEead9bDRE_1DAQ")]
         [DisplayName("Debtor Account")]
         [IsoXmlTag("DbtrAcct")]
-        public required AccountIdentificationAndName5 DebtorAccount { get; init; } 
-        
+        public required AccountIdentificationAndName5 DebtorAccount { get; init; }
+
         /// <summary>
         /// Party that owes the cash to the creditor/final party. The debtor is also the debit account owner.
         /// </summary>
         [IsoId("_xQcjpTbsEead9bDRE_1DAQ")]
         [DisplayName("Debtor")]
         [IsoXmlTag("Dbtr")]
-        public PartyIdentification113? Debtor { get; init; } 
-        
+        public PartyIdentification113? Debtor { get; init; }
+
         /// <summary>
         /// Number assigned by a tax authority to an entity.
         /// </summary>
@@ -40,9 +38,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [DisplayName("Debtor Tax Identification Number")]
         [IsoXmlTag("DbtrTaxIdNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? DebtorTaxIdentificationNumber { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? DebtorTaxIdentificationNumber { get; init; }
+
         /// <summary>
         /// Number assigned by a national registration authority to an entity.
         /// </summary>
@@ -50,49 +48,49 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [DisplayName("Debtor National Registration Number")]
         [IsoXmlTag("DbtrNtlRegnNb")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? DebtorNationalRegistrationNumber { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? DebtorNationalRegistrationNumber { get; init; }
+
         /// <summary>
         /// Party that receives an amount of money from the debtor. In the context of the payment model, the creditor is also the credit account owner.
         /// </summary>
         [IsoId("_xQcjqzbsEead9bDRE_1DAQ")]
         [DisplayName("Creditor")]
         [IsoXmlTag("Cdtr")]
-        public PartyIdentification113? Creditor { get; init; } 
-        
+        public PartyIdentification113? Creditor { get; init; }
+
         /// <summary>
         /// Financial institution that receives the direct debit instruction from the creditor or other authorised party.
         /// </summary>
         [IsoId("_xQcjrTbsEead9bDRE_1DAQ")]
         [DisplayName("Debtor Agent")]
         [IsoXmlTag("DbtrAgt")]
-        public required FinancialInstitutionIdentification10 DebtorAgent { get; init; } 
-        
+        public required FinancialInstitutionIdentification10 DebtorAgent { get; init; }
+
         /// <summary>
         /// Information identifying a specific branch of a financial institution.||Usage: this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
         /// </summary>
         [IsoId("_xQcjrzbsEead9bDRE_1DAQ")]
         [DisplayName("Debtor Agent Branch")]
         [IsoXmlTag("DbtrAgtBrnch")]
-        public BranchData? DebtorAgentBranch { get; init; } 
-        
+        public BranchData? DebtorAgentBranch { get; init; }
+
         /// <summary>
         /// Financial institution that receives the payment transaction on behalf of the creditor, or other nominated party, and credits the account.
         /// </summary>
         [IsoId("_xQcjsTbsEead9bDRE_1DAQ")]
         [DisplayName("Creditor Agent")]
         [IsoXmlTag("CdtrAgt")]
-        public FinancialInstitutionIdentification10? CreditorAgent { get; init; } 
-        
+        public FinancialInstitutionIdentification10? CreditorAgent { get; init; }
+
         /// <summary>
         /// Information identifying a specific branch of a financial institution.||Usage: this component should be used in case the identification information in the financial institution component does not provide identification up to branch level.
         /// </summary>
         [IsoId("_xQcjszbsEead9bDRE_1DAQ")]
         [DisplayName("Creditor Agent Branch")]
         [IsoXmlTag("CdtrAgtBrnch")]
-        public BranchData? CreditorAgentBranch { get; init; } 
-        
+        public BranchData? CreditorAgentBranch { get; init; }
+
         /// <summary>
         /// Reference assigned to a creditor by its financial institution, or relevant authority, authorising the creditor to take part in a direct debit scheme.
         /// </summary>
@@ -100,9 +98,9 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [DisplayName("Registration Identification")]
         [IsoXmlTag("RegnId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? RegistrationIdentification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? RegistrationIdentification { get; init; }
+
         /// <summary>
         /// Reference of the direct debit mandate that has been agreed upon by the debtor and creditor.
         /// </summary>
@@ -110,11 +108,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PaymentInstrument20Choice
         [DisplayName("Mandate Identification")]
         [IsoXmlTag("MndtId")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? MandateIdentification { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? MandateIdentification { get; init; }
     }
 }

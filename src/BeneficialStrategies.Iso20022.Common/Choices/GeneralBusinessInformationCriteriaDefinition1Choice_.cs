@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(GeneralBusinessInformationCriteriaDefinition1Choice.QueryName))]
     [KnownType(typeof(GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria))]
-    [JsonDerivedType(typeof(GeneralBusinessInformationCriteriaDefinition1Choice.QueryName),nameof(GeneralBusinessInformationCriteriaDefinition1Choice.QueryName))]
-    [JsonDerivedType(typeof(GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria),nameof(GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria))]
+    [JsonDerivedType(
+        typeof(GeneralBusinessInformationCriteriaDefinition1Choice.QueryName),
+        nameof(GeneralBusinessInformationCriteriaDefinition1Choice.QueryName)
+    )]
+    [JsonDerivedType(
+        typeof(GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria),
+        nameof(GeneralBusinessInformationCriteriaDefinition1Choice.NewCriteria)
+    )]
     [IsoId("_1VwUF5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("General Business Information Criteria Definition 1 Choice")]
-    public abstract partial record GeneralBusinessInformationCriteriaDefinition1Choice_
-    {
-    }
+    public abstract record GeneralBusinessInformationCriteriaDefinition1Choice_ { }
 }

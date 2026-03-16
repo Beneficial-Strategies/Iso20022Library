@@ -23,7 +23,7 @@ public enum TaxLiabilityCode
     [IsoId("_YiBCZdp-Ed-ak6NoX_4Aeg_-98912178")]
     [Description(@"Settlement party is acting as a principal for tax liability.")]
     TaxPrincipal,
-    
+
     /// <summary>
     /// Settlement party is acting as an agent for tax liability.
     /// Encoded/decoded by serializers as &quot;AGEN&quot;.
@@ -32,5 +32,4 @@ public enum TaxLiabilityCode
     [IsoId("_YiBCZtp-Ed-ak6NoX_4Aeg_-1274103203")]
     [Description(@"Settlement party is acting as an agent for tax liability.")]
     TaxAgent,
-    
 }

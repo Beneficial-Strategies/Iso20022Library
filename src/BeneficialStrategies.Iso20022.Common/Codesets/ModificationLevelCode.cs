@@ -23,7 +23,7 @@ public enum ModificationLevelCode
     [IsoId("_d8LDQA3mEeWc7_0KPiuk6w")]
     [Description(@"Modification applies to a position.")]
     Position,
-    
+
     /// <summary>
     /// Modification applies to a transaction.
     /// Encoded/decoded by serializers as &quot;TCTN&quot;.
@@ -32,5 +32,4 @@ public enum ModificationLevelCode
     [IsoId("_ea0uIA3mEeWc7_0KPiuk6w")]
     [Description(@"Modification applies to a transaction.")]
     Transaction,
-    
 }

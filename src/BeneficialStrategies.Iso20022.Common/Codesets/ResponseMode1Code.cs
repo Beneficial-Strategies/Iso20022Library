@@ -23,7 +23,7 @@ public enum ResponseMode1Code
     [IsoId("_Q6JkUd6rEeiwsev40qZGEQ")]
     [Description(@"The Message Response is immediate, after taking into account the request.")]
     Immediate = ResponseModeCode.Immediate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Message Response is not required, except in case of error.
     /// Encoded/decoded by serializers as &quot;NREQ&quot;.
@@ -32,7 +32,7 @@ public enum ResponseMode1Code
     [IsoId("_Q-JTgd6rEeiwsev40qZGEQ")]
     [Description(@"The Message Response is not required, except in case of error.")]
     NotRequired = ResponseModeCode.NotRequired, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Print Response is required at the end of print.
     /// Encoded/decoded by serializers as &quot;PEND&quot;.
@@ -41,7 +41,7 @@ public enum ResponseMode1Code
     [IsoId("_RCfA8d6rEeiwsev40qZGEQ")]
     [Description(@"The Print Response is required at the end of print.")]
     PrintEnd = ResponseModeCode.PrintEnd, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The Sound Response is required at the end of play.
     /// Encoded/decoded by serializers as &quot;SEND&quot;.
@@ -50,5 +50,4 @@ public enum ResponseMode1Code
     [IsoId("_Er0_EVDkEeu39vke54yxqA")]
     [Description(@"The Sound Response is required at the end of play.")]
     SoundEnd = ResponseModeCode.SoundEnd, // same ordinal as derivation source for type conversions
-    
 }

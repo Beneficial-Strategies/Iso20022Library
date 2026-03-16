@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-WZTUGjMEeiRg5NzP0jkQg")]
-[Description(@"Specifies the type of residence where the party has its permanent home or principal establishment.")]
+[Description(
+    @"Specifies the type of residence where the party has its permanent home or principal establishment."
+)]
 [Derivations(typeof(ResidenceType1Code))]
 public enum ResidenceTypeCode
 {
@@ -23,7 +25,7 @@ public enum ResidenceTypeCode
     [IsoId("_AyErkGjNEeiRg5NzP0jkQg")]
     [Description(@"Residence is domestic.")]
     Domestic,
-    
+
     /// <summary>
     /// Residence is foreign.
     /// Encoded/decoded by serializers as &quot;FRGN&quot;.
@@ -32,7 +34,7 @@ public enum ResidenceTypeCode
     [IsoId("_CC7PcGjNEeiRg5NzP0jkQg")]
     [Description(@"Residence is foreign.")]
     Foreign,
-    
+
     /// <summary>
     /// Residence is mixed
     /// Encoded/decoded by serializers as &quot;MXED&quot;.
@@ -41,5 +43,4 @@ public enum ResidenceTypeCode
     [IsoId("_DKcRIGjNEeiRg5NzP0jkQg")]
     [Description(@"Residence is mixed")]
     Mixed,
-    
 }

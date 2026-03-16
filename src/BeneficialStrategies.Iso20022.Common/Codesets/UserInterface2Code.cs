@@ -23,7 +23,7 @@ public enum UserInterface2Code
     [IsoId("_TUmCEwEcEeCQm6a_G2yO_w_-1877868390")]
     [Description(@"Merchant display or interface.")]
     MerchantDisplay = UserInterfaceCode.MerchantDisplay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cardholder display or interface.
     /// Encoded/decoded by serializers as &quot;CDSP&quot;.
@@ -32,5 +32,4 @@ public enum UserInterface2Code
     [IsoId("_TUmCFAEcEeCQm6a_G2yO_w_-44704637")]
     [Description(@"Cardholder display or interface.")]
     CardholderDisplay = UserInterfaceCode.CardholderDisplay, // same ordinal as derivation source for type conversions
-    
 }

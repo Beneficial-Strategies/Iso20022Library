@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_RDFystp-Ed-ak6NoX_4Aeg_1040851722")]
 [DisplayName("Detailed Instruction Status")]
-public partial record DetailedInstructionStatus9
+public record DetailedInstructionStatus9
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the detailed instruction with an instruction message.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record DetailedInstructionStatus9
     [DisplayName("Instruction Identification")]
     [IsoXmlTag("InstrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text InstructionIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text InstructionIdentification { get; init; }
+
     /// <summary>
     /// Identifies the safekeeping account.
     /// </summary>
@@ -35,17 +33,17 @@ public partial record DetailedInstructionStatus9
     [DisplayName("Account Identification")]
     [IsoXmlTag("AcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountIdentification { get; init; }
+
     /// <summary>
     /// Party that legally owns the account.
     /// </summary>
     [IsoId("_RDFytdp-Ed-ak6NoX_4Aeg_1917273126")]
     [DisplayName("Account Owner")]
     [IsoXmlTag("AcctOwnr")]
-    public PartyIdentification9Choice_? AccountOwner { get; init; } 
-    
+    public PartyIdentification9Choice_? AccountOwner { get; init; }
+
     /// <summary>
     /// Identifies the subaccount of the safekeeping account.
     /// </summary>
@@ -53,9 +51,9 @@ public partial record DetailedInstructionStatus9
     [DisplayName("Sub Account Identification")]
     [IsoXmlTag("SubAcctId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SubAccountIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SubAccountIdentification { get; init; }
+
     /// <summary>
     /// Owner of the voting rights.
     /// </summary>
@@ -65,7 +63,7 @@ public partial record DetailedInstructionStatus9
     [MinLength(0)]
     [MaxLength(10)]
     public ValueList<PartyIdentification9Choice_> RightsHolder { get; init; } = [];
-    
+
     /// <summary>
     /// Indicates whether standing instructions have been applied or not.
     /// </summary>
@@ -73,8 +71,8 @@ public partial record DetailedInstructionStatus9
     [DisplayName("Standing Instruction")]
     [IsoXmlTag("StgInstr")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator StandingInstruction { get; init; } 
-    
+    public required IsoYesNoIndicator StandingInstruction { get; init; }
+
     /// <summary>
     /// Details of the vote.
     /// </summary>
@@ -84,8 +82,4 @@ public partial record DetailedInstructionStatus9
     [MinLength(1)]
     [MaxLength(1000)]
     public ValueList<Vote4> VotePerResolution { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

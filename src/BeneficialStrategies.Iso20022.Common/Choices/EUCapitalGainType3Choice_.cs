@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(EUCapitalGainType3Choice.EUCapitalGain))]
     [KnownType(typeof(EUCapitalGainType3Choice.Proprietary))]
-    [JsonDerivedType(typeof(EUCapitalGainType3Choice.EUCapitalGain),nameof(EUCapitalGainType3Choice.EUCapitalGain))]
-    [JsonDerivedType(typeof(EUCapitalGainType3Choice.Proprietary),nameof(EUCapitalGainType3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(EUCapitalGainType3Choice.EUCapitalGain),
+        nameof(EUCapitalGainType3Choice.EUCapitalGain)
+    )]
+    [JsonDerivedType(
+        typeof(EUCapitalGainType3Choice.Proprietary),
+        nameof(EUCapitalGainType3Choice.Proprietary)
+    )]
     [IsoId("_XolpcZBhEeakHoV5BVecAQ")]
     [DisplayName("EU Capital Gain Type 3 Choice")]
-    public abstract partial record EUCapitalGainType3Choice_
-    {
-    }
+    public abstract record EUCapitalGainType3Choice_ { }
 }

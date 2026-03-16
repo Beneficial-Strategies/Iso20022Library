@@ -21,7 +21,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV3Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -39,7 +41,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "CANC")]
     [IsoId("")]
-    [Description(@"Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required.")]
+    [Description(
+        @"Option is not valid; it has been cancelled by the market or service provider, and cannot be responded to. Any responses already processed against this option are considered void and new responses will be required."
+    )]
     OptionCancelled = RejectionReasonV3Code.OptionCancelled, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -48,7 +52,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "CERT")]
     [IsoId("")]
-    [Description(@"Instruction is rejected since the provided certification is incorrect or incomplete.")]
+    [Description(
+        @"Instruction is rejected since the provided certification is incorrect or incomplete."
+    )]
     IncorrectCertification = RejectionReasonV3Code.IncorrectCertification, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -66,7 +72,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "DQAM")]
     [IsoId("")]
-    [Description(@"Invalid use of instructed amount (QCAS) or of instructed quantity (QINS) qualifiers.")]
+    [Description(
+        @"Invalid use of instructed amount (QCAS) or of instructed quantity (QINS) qualifiers."
+    )]
     InstructionTypeRejection = RejectionReasonV3Code.InstructionTypeRejection, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -75,7 +83,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "DQBI")]
     [IsoId("")]
-    [Description(@"Bid price / basis points / percentage increments rejected due to invalid bid increment for the event (generally used in Dutch Auctions or Bid Tenders).")]
+    [Description(
+        @"Bid price / basis points / percentage increments rejected due to invalid bid increment for the event (generally used in Dutch Auctions or Bid Tenders)."
+    )]
     InvalidBidIncrement = RejectionReasonV3Code.InvalidBidIncrement, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -84,7 +94,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "DQBV")]
     [IsoId("")]
-    [Description(@"Bid price / basis points / percentage falls outside of bid range for the event (generally used in Dutch Auctions or Bid Tenders).")]
+    [Description(
+        @"Bid price / basis points / percentage falls outside of bid range for the event (generally used in Dutch Auctions or Bid Tenders)."
+    )]
     InvalidBidValue = RejectionReasonV3Code.InvalidBidValue, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -156,7 +168,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "INTV")]
     [IsoId("")]
-    [Description(@"Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option.")]
+    [Description(
+        @"Option is not active and can no longer be responded to. Any responses already processed against this option will remain valid, for example, expired option."
+    )]
     OptionInactive = RejectionReasonV3Code.OptionInactive, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -192,7 +206,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "IRDQ")]
     [IsoId("")]
-    [Description(@"Instruction is rejected due to invalid use of the additional round up quantity.")]
+    [Description(
+        @"Instruction is rejected due to invalid use of the additional round up quantity."
+    )]
     InvalidUseRoundUpQuantity = RejectionReasonV3Code.InvalidUseRoundUpQuantity, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -210,7 +226,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "ITAX")]
     [IsoId("")]
-    [Description(@"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country.")]
+    [Description(
+        @"Tax rate provided is incorrect. It falls outside the acceptable values for that investment country."
+    )]
     IncorrectTaxRate = RejectionReasonV3Code.IncorrectTaxRate, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -354,7 +372,9 @@ public enum RejectionReason85Code
     /// </summary>
     [EnumMember(Value = "TRTI")]
     [IsoId("")]
-    [Description(@"Transaction type is missing or invalid for protect or cover protect instructions.")]
+    [Description(
+        @"Transaction type is missing or invalid for protect or cover protect instructions."
+    )]
     MissingTransactionType = RejectionReasonV3Code.MissingTransactionType, // same ordinal as derivation source for type conversions
 
     /// <summary>
@@ -365,5 +385,4 @@ public enum RejectionReason85Code
     [IsoId("")]
     [Description(@"Linked reference is unknown.")]
     InvalidReference = RejectionReasonV3Code.InvalidReference, // same ordinal as derivation source for type conversions
-
 }

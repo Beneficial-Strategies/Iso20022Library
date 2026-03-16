@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(TrackerParty2Choice.OrganisationIdentification))]
     [KnownType(typeof(TrackerParty2Choice.PrivateIdentification))]
     [KnownType(typeof(TrackerParty2Choice.FinancialInstitutionIdentification))]
-    [JsonDerivedType(typeof(TrackerParty2Choice.OrganisationIdentification),nameof(TrackerParty2Choice.OrganisationIdentification))]
-    [JsonDerivedType(typeof(TrackerParty2Choice.PrivateIdentification),nameof(TrackerParty2Choice.PrivateIdentification))]
-    [JsonDerivedType(typeof(TrackerParty2Choice.FinancialInstitutionIdentification),nameof(TrackerParty2Choice.FinancialInstitutionIdentification))]
+    [JsonDerivedType(
+        typeof(TrackerParty2Choice.OrganisationIdentification),
+        nameof(TrackerParty2Choice.OrganisationIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(TrackerParty2Choice.PrivateIdentification),
+        nameof(TrackerParty2Choice.PrivateIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(TrackerParty2Choice.FinancialInstitutionIdentification),
+        nameof(TrackerParty2Choice.FinancialInstitutionIdentification)
+    )]
     [IsoId("_dWHWv2OTEeq5Ar_w98FvsA")]
     [DisplayName("Tracker Party 2 Choice")]
-    public abstract partial record TrackerParty2Choice_
-    {
-    }
+    public abstract record TrackerParty2Choice_ { }
 }

@@ -23,25 +23,25 @@ public enum TypeOfAmount19Code
     [IsoId("_d9j_0X0mEemfrNOe0zHQyg")]
     [Description(@"Telephone connection-related charge")]
     Connect = TypeOfAmountCode.Connect, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Insurance charges 
+    /// Insurance charges
     /// Encoded/decoded by serializers as &quot;INSU&quot;.
     /// </summary>
     [EnumMember(Value = "INSU")]
     [IsoId("_d9j_030mEemfrNOe0zHQyg")]
     [Description(@"Insurance charges ")]
     Insurance = TypeOfAmountCode.Insurance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Charges related to a long distance call. 
+    /// Charges related to a long distance call.
     /// Encoded/decoded by serializers as &quot;LNDS&quot;.
     /// </summary>
     [EnumMember(Value = "LNDS")]
     [IsoId("_d9j_1X0mEemfrNOe0zHQyg")]
     [Description(@"Charges related to a long distance call. ")]
     LongDistance = TypeOfAmountCode.LongDistance, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Miscellaneous charges not elsewhere defined
     /// Encoded/decoded by serializers as &quot;MISC&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfAmount19Code
     [IsoId("_d9j_130mEemfrNOe0zHQyg")]
     [Description(@"Miscellaneous charges not elsewhere defined")]
     Miscellaneous = TypeOfAmountCode.Miscellaneous, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of amount defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum TypeOfAmount19Code
     [IsoId("_d9j_2X0mEemfrNOe0zHQyg")]
     [Description(@"Other type of amount defined at national level.")]
     OtherNational = TypeOfAmountCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of amount defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +68,7 @@ public enum TypeOfAmount19Code
     [IsoId("_d9j_230mEemfrNOe0zHQyg")]
     [Description(@"Other type of amount defined at private level.")]
     OtherPrivate = TypeOfAmountCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Telephone usage-related charge
     /// Encoded/decoded by serializers as &quot;USGE&quot;.
@@ -77,5 +77,4 @@ public enum TypeOfAmount19Code
     [IsoId("_d9j_3X0mEemfrNOe0zHQyg")]
     [Description(@"Telephone usage-related charge")]
     Usage = TypeOfAmountCode.Usage, // same ordinal as derivation source for type conversions
-    
 }

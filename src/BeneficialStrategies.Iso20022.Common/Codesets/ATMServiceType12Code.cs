@@ -30,7 +30,9 @@ public enum ATMServiceType12Code
     /// </summary>
     [EnumMember(Value = "ASTS")]
     [IsoId("_ATMServiceType12Code_AccountStatements")]
-    [Description(@"Request a full statement (that is a legal statement) related to a customer account.")]
+    [Description(
+        @"Request a full statement (that is a legal statement) related to a customer account."
+    )]
     AccountStatements = ATMServiceTypeV2Code.AccountStatements,
 
     /// <summary>
@@ -84,7 +86,9 @@ public enum ATMServiceType12Code
     /// </summary>
     [EnumMember(Value = "MINI")]
     [IsoId("_ATMServiceType12Code_MiniStatement")]
-    [Description(@"Request a mini-statement (i.e. partial statement) related to a customer account.")]
+    [Description(
+        @"Request a mini-statement (i.e. partial statement) related to a customer account."
+    )]
     MiniStatement = ATMServiceTypeV2Code.MiniStatement,
 
     /// <summary>
@@ -104,5 +108,4 @@ public enum ATMServiceType12Code
     [IsoId("_ATMServiceType12Code_ExchangeRateWithdrawal")]
     [Description(@"Ask for exchange rate for the ongoing withdrawal transaction.")]
     ExchangeRateWithdrawal = ATMServiceTypeV2Code.ExchangeRateWithdrawal,
-
 }

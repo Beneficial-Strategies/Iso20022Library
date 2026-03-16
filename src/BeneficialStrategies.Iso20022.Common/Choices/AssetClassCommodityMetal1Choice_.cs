@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AssetClassCommodityMetal1Choice.NonPrecious))]
     [KnownType(typeof(AssetClassCommodityMetal1Choice.Precious))]
-    [JsonDerivedType(typeof(AssetClassCommodityMetal1Choice.NonPrecious),nameof(AssetClassCommodityMetal1Choice.NonPrecious))]
-    [JsonDerivedType(typeof(AssetClassCommodityMetal1Choice.Precious),nameof(AssetClassCommodityMetal1Choice.Precious))]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityMetal1Choice.NonPrecious),
+        nameof(AssetClassCommodityMetal1Choice.NonPrecious)
+    )]
+    [JsonDerivedType(
+        typeof(AssetClassCommodityMetal1Choice.Precious),
+        nameof(AssetClassCommodityMetal1Choice.Precious)
+    )]
     [IsoId("_D1rdUw2rEeW72qLtWESimw")]
     [DisplayName("Asset Class Commodity Metal 1 Choice")]
-    public abstract partial record AssetClassCommodityMetal1Choice_
-    {
-    }
+    public abstract record AssetClassCommodityMetal1Choice_ { }
 }

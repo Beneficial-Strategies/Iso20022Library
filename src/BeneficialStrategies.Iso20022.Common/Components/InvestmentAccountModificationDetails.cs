@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_REb2gdp-Ed-ak6NoX_4Aeg_691417052")]
 [DisplayName("Investment Account Modification Details")]
-public partial record InvestmentAccountModificationDetails
+public record InvestmentAccountModificationDetails
 {
-    #nullable enable
-    
     /// <summary>
     /// Reason for the modification brought to the investment account information.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record InvestmentAccountModificationDetails
     [DisplayName("Modification Reason")]
     [IsoXmlTag("ModRsn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? ModificationReason { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? ModificationReason { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier of the account modification request.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record InvestmentAccountModificationDetails
     [DisplayName("Account Application Identification")]
     [IsoXmlTag("AcctApplId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AccountApplicationIdentification { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AccountApplicationIdentification { get; init; }
 }

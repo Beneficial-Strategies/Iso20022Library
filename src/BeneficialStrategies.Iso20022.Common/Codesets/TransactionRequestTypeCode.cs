@@ -23,7 +23,7 @@ public enum TransactionRequestTypeCode
     [IsoId("_890bXWKCEeGByYwyG-c4ow")]
     [Description(@"Request is the original receipt.")]
     OriginalReceipt,
-    
+
     /// <summary>
     /// Request is the date and time related to the original transaction numlber.
     /// Encoded/decoded by serializers as &quot;DTTX&quot;.
@@ -32,5 +32,4 @@ public enum TransactionRequestTypeCode
     [IsoId("_GMETnWKDEeGByYwyG-c4ow")]
     [Description(@"Request is the date and time related to the original transaction numlber.")]
     DateTimeTransaction,
-    
 }

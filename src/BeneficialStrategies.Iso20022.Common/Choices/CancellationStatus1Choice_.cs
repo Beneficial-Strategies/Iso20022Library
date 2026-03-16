@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CancellationStatus1Choice.ProcessingStatus))]
     [KnownType(typeof(CancellationStatus1Choice.RejectionStatus))]
-    [JsonDerivedType(typeof(CancellationStatus1Choice.ProcessingStatus),nameof(CancellationStatus1Choice.ProcessingStatus))]
-    [JsonDerivedType(typeof(CancellationStatus1Choice.RejectionStatus),nameof(CancellationStatus1Choice.RejectionStatus))]
+    [JsonDerivedType(
+        typeof(CancellationStatus1Choice.ProcessingStatus),
+        nameof(CancellationStatus1Choice.ProcessingStatus)
+    )]
+    [JsonDerivedType(
+        typeof(CancellationStatus1Choice.RejectionStatus),
+        nameof(CancellationStatus1Choice.RejectionStatus)
+    )]
     [IsoId("_RVa41dp-Ed-ak6NoX_4Aeg_-538392841")]
     [DisplayName("Cancellation Status 1 Choice")]
-    public abstract partial record CancellationStatus1Choice_
-    {
-    }
+    public abstract record CancellationStatus1Choice_ { }
 }

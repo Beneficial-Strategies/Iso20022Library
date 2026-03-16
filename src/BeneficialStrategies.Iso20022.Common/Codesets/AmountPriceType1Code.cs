@@ -23,7 +23,7 @@ public enum AmountPriceType1Code
     [IsoId("_begouNp-Ed-ak6NoX_4Aeg_150966940")]
     [Description(@"Price expressed as a currency and amount per unit or per share.")]
     ActualAmount = AmountPriceTypeCode.ActualAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price expressed as a discount amount.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,7 +32,7 @@ public enum AmountPriceType1Code
     [IsoId("_beqZsNp-Ed-ak6NoX_4Aeg_150966971")]
     [Description(@"Price expressed as a discount amount.")]
     Discount = AmountPriceTypeCode.Discount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price expressed as an amount of money per lot.
     /// Encoded/decoded by serializers as &quot;PLOT&quot;.
@@ -41,7 +41,7 @@ public enum AmountPriceType1Code
     [IsoId("_beqZsdp-Ed-ak6NoX_4Aeg_150966972")]
     [Description(@"Price expressed as an amount of money per lot.")]
     Lot = AmountPriceTypeCode.Lot, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price expressed as a premium.
     /// Encoded/decoded by serializers as &quot;PREM&quot;.
@@ -50,5 +50,4 @@ public enum AmountPriceType1Code
     [IsoId("_beqZstp-Ed-ak6NoX_4Aeg_150966973")]
     [Description(@"Price expressed as a premium.")]
     Premium = AmountPriceTypeCode.Premium, // same ordinal as derivation source for type conversions
-    
 }

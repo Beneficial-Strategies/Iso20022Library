@@ -23,7 +23,7 @@ public enum InstructionType1Code
     [IsoId("_aYn-ttp-Ed-ak6NoX_4Aeg_-8888673")]
     [Description(@"Instruction to lodge a baseline.")]
     Lodge = InstructionTypeCode.Lodge, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction to push full baseline information to the correspondent.
     /// Encoded/decoded by serializers as &quot;FPTR&quot;.
@@ -32,5 +32,4 @@ public enum InstructionType1Code
     [IsoId("_aYn-t9p-Ed-ak6NoX_4Aeg_-8888613")]
     [Description(@"Instruction to push full baseline information to the correspondent.")]
     FullPushThrough = InstructionTypeCode.FullPushThrough, // same ordinal as derivation source for type conversions
-    
 }

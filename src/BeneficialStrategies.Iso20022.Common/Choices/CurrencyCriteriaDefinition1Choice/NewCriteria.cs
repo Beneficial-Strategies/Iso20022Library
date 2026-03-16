@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
     /// </summary>
     [IsoId("_H5cuM5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("New Criteria")]
-    public partial record NewCriteria : CurrencyCriteriaDefinition1Choice_
+    public record NewCriteria : CurrencyCriteriaDefinition1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Name of the query defined by the search criteria and return criteria.
         /// </summary>
@@ -24,9 +22,9 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
         [DisplayName("New Query Name")]
         [IsoXmlTag("NewQryNm")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? NewQueryName { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? NewQueryName { get; init; }
+
         /// <summary>
         /// Defines the criteria based on which the information is extracted.
         /// </summary>
@@ -35,9 +33,5 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrencyCriteriaDefinition1Choic
         [IsoXmlTag("SchCrit")]
         public ValueList<CurrencyExchangeSearchCriteria1> SearchCriteria { get; init; } = [];
         // ID for the above is _IB7705lZEeeE1Ya-LgRsuQ
-        
-        
-        #nullable disable
-        
     }
 }

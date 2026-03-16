@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PendingStatus39Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus39Choice
     /// </summary>
     [IsoId("_jlj5WTq3EeWyoP0PbocV1Q")]
     [DisplayName("Reason")]
-    public partial record Reason : PendingStatus39Choice_
+    public record Reason : PendingStatus39Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies the reason why a cancellation request sent for the related instruction is pending.
         /// </summary>
         [IsoId("_kFQGATq3EeWyoP0PbocV1Q")]
         [DisplayName("Code")]
         [IsoXmlTag("Cd")]
-        public required PendingReason30Choice_ Code { get; init; } 
-        
+        public required PendingReason30Choice_ Code { get; init; }
+
         /// <summary>
         /// Provides additional reason information that cannot be provided in a structured field.
         /// </summary>
@@ -32,11 +30,7 @@ namespace BeneficialStrategies.Iso20022.Choices.PendingStatus39Choice
         [DisplayName("Additional Reason Information")]
         [IsoXmlTag("AddtlRsnInf")]
         [IsoSimpleType(IsoSimpleType.Max210Text)]
-        [StringLength(maximumLength: 210 ,MinimumLength = 1)]
-        public IsoMax210Text? AdditionalReasonInformation { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 210, MinimumLength = 1)]
+        public IsoMax210Text? AdditionalReasonInformation { get; init; }
     }
 }

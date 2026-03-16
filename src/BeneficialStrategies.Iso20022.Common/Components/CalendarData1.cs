@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dVcQ04m7Eeipw6hHPgB4Sw")]
 [DisplayName("Calendar Data")]
-public partial record CalendarData1
+public record CalendarData1
 {
-    #nullable enable
-    
     /// <summary>
     /// Date for which the calendar information is provided.
     /// </summary>
@@ -25,17 +23,13 @@ public partial record CalendarData1
     [DisplayName("System Date")]
     [IsoXmlTag("SysDt")]
     [IsoSimpleType(IsoSimpleType.ISODate)]
-    public required IsoISODate SystemDate { get; init; } 
-    
+    public required IsoISODate SystemDate { get; init; }
+
     /// <summary>
     /// Status of the system.
     /// </summary>
     [IsoId("_-zQEY4m7Eeipw6hHPgB4Sw")]
     [DisplayName("System Status")]
     [IsoXmlTag("SysSts")]
-    public required SystemStatus3Choice_ SystemStatus { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required SystemStatus3Choice_ SystemStatus { get; init; }
 }

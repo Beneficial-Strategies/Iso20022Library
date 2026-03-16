@@ -23,7 +23,7 @@ public enum AssetClassDetailedSubProductType6Code
     [IsoId("_2-AL0Q2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type GASPOOL.")]
     GasPool = AssetClassDetailedSubProductTypeCode.GasPool, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type liquid natural gas.
     /// Encoded/decoded by serializers as &quot;LNGG&quot;.
@@ -32,7 +32,7 @@ public enum AssetClassDetailedSubProductType6Code
     [IsoId("_3U63AQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type liquid natural gas.")]
     LNG = AssetClassDetailedSubProductTypeCode.LNG, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type NCG (NetConnect Germany).
     /// Encoded/decoded by serializers as &quot;NCGG&quot;.
@@ -41,7 +41,7 @@ public enum AssetClassDetailedSubProductType6Code
     [IsoId("_4n7-EQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type NCG (NetConnect Germany).")]
     NCG = AssetClassDetailedSubProductTypeCode.NCG, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type TTF (Dutch Title Transfer Facility).
     /// Encoded/decoded by serializers as &quot;TTFG&quot;.
@@ -50,7 +50,7 @@ public enum AssetClassDetailedSubProductType6Code
     [IsoId("_6EUcgQ2gEeW72qLtWESimw")]
     [Description(@"Commodity attribute of type TTF (Dutch Title Transfer Facility).")]
     TTF = AssetClassDetailedSubProductTypeCode.TTF, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Commodity attribute of type NBP (National Balancing Point).
     /// Encoded/decoded by serializers as &quot;NBPG&quot;.
@@ -59,5 +59,4 @@ public enum AssetClassDetailedSubProductType6Code
     [IsoId("_rv5EkVrDEeWN79Bl6BUd3g")]
     [Description(@"Commodity attribute of type NBP (National Balancing Point).")]
     NBP = AssetClassDetailedSubProductTypeCode.NBP, // same ordinal as derivation source for type conversions
-    
 }

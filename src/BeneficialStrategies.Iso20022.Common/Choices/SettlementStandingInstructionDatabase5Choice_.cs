@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SettlementStandingInstructionDatabase5Choice.Code))]
     [KnownType(typeof(SettlementStandingInstructionDatabase5Choice.Proprietary))]
-    [JsonDerivedType(typeof(SettlementStandingInstructionDatabase5Choice.Code),nameof(SettlementStandingInstructionDatabase5Choice.Code))]
-    [JsonDerivedType(typeof(SettlementStandingInstructionDatabase5Choice.Proprietary),nameof(SettlementStandingInstructionDatabase5Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(SettlementStandingInstructionDatabase5Choice.Code),
+        nameof(SettlementStandingInstructionDatabase5Choice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(SettlementStandingInstructionDatabase5Choice.Proprietary),
+        nameof(SettlementStandingInstructionDatabase5Choice.Proprietary)
+    )]
     [IsoId("_5myE3JNLEeWGlc8L7oPDIg")]
     [DisplayName("Settlement Standing Instruction Database 5 Choice")]
-    public abstract partial record SettlementStandingInstructionDatabase5Choice_
-    {
-    }
+    public abstract record SettlementStandingInstructionDatabase5Choice_ { }
 }

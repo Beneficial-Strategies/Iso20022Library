@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.Recipient5Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient5Choice
     /// </summary>
     [IsoId("_HdnNoGi1EeS87LmvcA55sg")]
     [DisplayName("Issuer And Serial Number")]
-    public partial record IssuerAndSerialNumber : Recipient5Choice_
+    public record IssuerAndSerialNumber : Recipient5Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Certificate issuer name (see X.509).
         /// </summary>
         [IsoId("_SxIvsgEcEeCQm6a_G2yO_w_1368507280")]
         [DisplayName("Issuer")]
         [IsoXmlTag("Issr")]
-        public required CertificateIssuer1 Issuer { get; init; } 
-        
+        public required CertificateIssuer1 Issuer { get; init; }
+
         /// <summary>
         /// Certificate serial number (see X.509).
         /// </summary>
@@ -32,10 +30,6 @@ namespace BeneficialStrategies.Iso20022.Choices.Recipient5Choice
         [DisplayName("Serial Number")]
         [IsoXmlTag("SrlNb")]
         [IsoSimpleType(IsoSimpleType.Max35Binary)]
-        public required IsoMax35Binary SerialNumber { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoMax35Binary SerialNumber { get; init; }
     }
 }

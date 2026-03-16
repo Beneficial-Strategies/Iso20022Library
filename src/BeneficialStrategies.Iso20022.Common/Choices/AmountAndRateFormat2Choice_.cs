@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(AmountAndRateFormat2Choice.Amount))]
     [KnownType(typeof(AmountAndRateFormat2Choice.NotSpecifiedRate))]
-    [JsonDerivedType(typeof(AmountAndRateFormat2Choice.Amount),nameof(AmountAndRateFormat2Choice.Amount))]
-    [JsonDerivedType(typeof(AmountAndRateFormat2Choice.NotSpecifiedRate),nameof(AmountAndRateFormat2Choice.NotSpecifiedRate))]
+    [JsonDerivedType(
+        typeof(AmountAndRateFormat2Choice.Amount),
+        nameof(AmountAndRateFormat2Choice.Amount)
+    )]
+    [JsonDerivedType(
+        typeof(AmountAndRateFormat2Choice.NotSpecifiedRate),
+        nameof(AmountAndRateFormat2Choice.NotSpecifiedRate)
+    )]
     [IsoId("_UH8Dydp-Ed-ak6NoX_4Aeg_568622010")]
     [DisplayName("Amount And Rate Format 2 Choice")]
-    public abstract partial record AmountAndRateFormat2Choice_
-    {
-    }
+    public abstract record AmountAndRateFormat2Choice_ { }
 }

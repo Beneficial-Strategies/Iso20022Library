@@ -23,7 +23,7 @@ public enum CollateralDirection1Code
     [IsoId("_x_VEQQMyEeutW5-TpeYJhA")]
     [Description(@"Collateral is due to party A.|")]
     CollateralDueToPartyA = CollateralDirectionCode.CollateralDueToPartyA, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral is due to party B.
     /// Encoded/decoded by serializers as &quot;CDPB&quot;.
@@ -32,5 +32,4 @@ public enum CollateralDirection1Code
     [IsoId("_yKB4YgMyEeutW5-TpeYJhA")]
     [Description(@"Collateral is due to party B.")]
     CollateralDueToPartyB = CollateralDirectionCode.CollateralDueToPartyB, // same ordinal as derivation source for type conversions
-    
 }

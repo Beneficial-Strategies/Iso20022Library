@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ChargeType8Choice.Code))]
     [KnownType(typeof(ChargeType8Choice.Proprietary))]
-    [JsonDerivedType(typeof(ChargeType8Choice.Code),nameof(ChargeType8Choice.Code))]
-    [JsonDerivedType(typeof(ChargeType8Choice.Proprietary),nameof(ChargeType8Choice.Proprietary))]
+    [JsonDerivedType(typeof(ChargeType8Choice.Code), nameof(ChargeType8Choice.Code))]
+    [JsonDerivedType(typeof(ChargeType8Choice.Proprietary), nameof(ChargeType8Choice.Proprietary))]
     [IsoId("_qPIXQZ9BEeqxTNfi5y7ywQ")]
     [DisplayName("Charge Type 8 Choice")]
-    public abstract partial record ChargeType8Choice_
-    {
-    }
+    public abstract record ChargeType8Choice_ { }
 }

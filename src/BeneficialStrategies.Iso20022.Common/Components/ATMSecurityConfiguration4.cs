@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_u0cgsYr8EeSvuOJS0mmL0g")]
 [DisplayName("ATM Security Configuration")]
-public partial record ATMSecurityConfiguration4
+public record ATMSecurityConfiguration4
 {
-    #nullable enable
-    
     /// <summary>
     /// Maximum number of certificates in a certificate path, the security module is able to manage.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record ATMSecurityConfiguration4
     [DisplayName("Maximum Certificates")]
     [IsoXmlTag("MaxCerts")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumCertificates { get; init; } 
-    
+    public IsoNumber? MaximumCertificates { get; init; }
+
     /// <summary>
     /// Maximum number of cosigners, the security module is able to manage in a digital signature.
     /// </summary>
@@ -34,17 +32,13 @@ public partial record ATMSecurityConfiguration4
     [DisplayName("Maximum Signatures")]
     [IsoXmlTag("MaxSgntrs")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public IsoNumber? MaximumSignatures { get; init; } 
-    
+    public IsoNumber? MaximumSignatures { get; init; }
+
     /// <summary>
     /// Digital signature algorithm the security module is able to manage.
     /// </summary>
     [IsoId("_vBzAOYr8EeSvuOJS0mmL0g")]
     [DisplayName("Digital Signature Algorithm")]
     [IsoXmlTag("DgtlSgntrAlgo")]
-    public Algorithm14Code? DigitalSignatureAlgorithm { get; init; } 
-    
-    
-    #nullable disable
-    
+    public Algorithm14Code? DigitalSignatureAlgorithm { get; init; }
 }

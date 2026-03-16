@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_Yc8VJtp-Ed-ak6NoX_4Aeg_-352735605")]
-[Description(@"Specifies whether the margin call request was sent on a non valuation day or was received after notification time.")]
+[Description(
+    @"Specifies whether the margin call request was sent on a non valuation day or was received after notification time."
+)]
 [DerivedFrom(typeof(MarginCallResponseCode))]
 public enum MarginCallResponse1Code
 {
@@ -23,7 +25,7 @@ public enum MarginCallResponse1Code
     [IsoId("_Yc8VJ9p-Ed-ak6NoX_4Aeg_661474467")]
     [Description(@"Indicates that the margin call request was sent on a non valuation day.")]
     NonValuationDay = MarginCallResponseCode.NonValuationDay, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Indicates that the margin call request was sent after the notification time.
     /// Encoded/decoded by serializers as &quot;RANT&quot;.
@@ -32,5 +34,4 @@ public enum MarginCallResponse1Code
     [IsoId("_Yc8VKNp-Ed-ak6NoX_4Aeg_-631136566")]
     [Description(@"Indicates that the margin call request was sent after the notification time.")]
     ReceivedAfterNotificationTime = MarginCallResponseCode.ReceivedAfterNotificationTime, // same ordinal as derivation source for type conversions
-    
 }

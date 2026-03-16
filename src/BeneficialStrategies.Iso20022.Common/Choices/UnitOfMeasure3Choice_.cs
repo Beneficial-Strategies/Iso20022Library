@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(UnitOfMeasure3Choice.UnitOfMeasureCode))]
     [KnownType(typeof(UnitOfMeasure3Choice.OtherUnitOfMeasure))]
-    [JsonDerivedType(typeof(UnitOfMeasure3Choice.UnitOfMeasureCode),nameof(UnitOfMeasure3Choice.UnitOfMeasureCode))]
-    [JsonDerivedType(typeof(UnitOfMeasure3Choice.OtherUnitOfMeasure),nameof(UnitOfMeasure3Choice.OtherUnitOfMeasure))]
+    [JsonDerivedType(
+        typeof(UnitOfMeasure3Choice.UnitOfMeasureCode),
+        nameof(UnitOfMeasure3Choice.UnitOfMeasureCode)
+    )]
+    [JsonDerivedType(
+        typeof(UnitOfMeasure3Choice.OtherUnitOfMeasure),
+        nameof(UnitOfMeasure3Choice.OtherUnitOfMeasure)
+    )]
     [IsoId("__YQFQBrZEeOVR9VN6fAMUg")]
     [DisplayName("Unit Of Measure 3 Choice")]
-    public abstract partial record UnitOfMeasure3Choice_
-    {
-    }
+    public abstract record UnitOfMeasure3Choice_ { }
 }

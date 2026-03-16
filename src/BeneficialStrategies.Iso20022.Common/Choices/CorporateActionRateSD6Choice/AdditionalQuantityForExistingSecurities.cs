@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD6Choice
 {
     /// <summary>
@@ -13,12 +13,5 @@ namespace BeneficialStrategies.Iso20022.Choices.CorporateActionRateSD6Choice
     /// </summary>
     [IsoId("_1kW2YDL3EeKU9IrkkToqcw_408025491")]
     [DisplayName("Additional Quantity For Existing Securities")]
-    public partial record AdditionalQuantityForExistingSecurities : CorporateActionRateSD6Choice_
-    {
-        #nullable enable
-        
-        
-        #nullable disable
-        
-    }
+    public record AdditionalQuantityForExistingSecurities : CorporateActionRateSD6Choice_ { }
 }

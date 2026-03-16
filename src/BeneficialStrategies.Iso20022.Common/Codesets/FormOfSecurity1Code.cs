@@ -21,16 +21,19 @@ public enum FormOfSecurity1Code
     /// </summary>
     [EnumMember(Value = "BEAR")]
     [IsoId("_1Gk9wN1OEeGAp99n2TKigg_1287612204")]
-    [Description(@"The financial instrument does not specify any registration of ownership, and is payable to whomever possesses the certificate.")]
+    [Description(
+        @"The financial instrument does not specify any registration of ownership, and is payable to whomever possesses the certificate."
+    )]
     Bearer = FormOfSecurityCode.Bearer, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Shareholder name of the financial instrument appears in the corporation/funds books.
     /// Encoded/decoded by serializers as &quot;REGD&quot;.
     /// </summary>
     [EnumMember(Value = "REGD")]
     [IsoId("_3TsVkN1OEeGAp99n2TKigg_1858924413")]
-    [Description(@"Shareholder name of the financial instrument appears in the corporation/funds books.")]
+    [Description(
+        @"Shareholder name of the financial instrument appears in the corporation/funds books."
+    )]
     Registered = FormOfSecurityCode.Registered, // same ordinal as derivation source for type conversions
-    
 }

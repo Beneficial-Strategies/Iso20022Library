@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(MatchingReason1Choice.Reason))]
     [KnownType(typeof(MatchingReason1Choice.NoSpecifiedReason))]
-    [JsonDerivedType(typeof(MatchingReason1Choice.Reason),nameof(MatchingReason1Choice.Reason))]
-    [JsonDerivedType(typeof(MatchingReason1Choice.NoSpecifiedReason),nameof(MatchingReason1Choice.NoSpecifiedReason))]
+    [JsonDerivedType(typeof(MatchingReason1Choice.Reason), nameof(MatchingReason1Choice.Reason))]
+    [JsonDerivedType(
+        typeof(MatchingReason1Choice.NoSpecifiedReason),
+        nameof(MatchingReason1Choice.NoSpecifiedReason)
+    )]
     [IsoId("_Az7z09okEeC60axPepSq7g_944348200")]
     [DisplayName("Matching Reason 1 Choice")]
-    public abstract partial record MatchingReason1Choice_
-    {
-    }
+    public abstract record MatchingReason1Choice_ { }
 }

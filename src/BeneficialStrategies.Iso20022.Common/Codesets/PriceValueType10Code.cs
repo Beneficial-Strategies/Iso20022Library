@@ -23,5 +23,4 @@ public enum PriceValueType10Code
     [IsoId("_q5RTNWtdEeCY4-KZ9JEyUQ_1587696077")]
     [Description(@"Price is unknown by the sender or has not been established.")]
     Unknown = PriceValueTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
 }

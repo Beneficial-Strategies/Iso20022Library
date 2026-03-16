@@ -23,7 +23,7 @@ public enum RepoTerminationOption1Code
     [IsoId("_JUfZoSy0Eea35M2x2c9PXw")]
     [Description(@"Evergreen termination option.")]
     Evergreen = RepoTerminationOptionCode.Evergreen, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Extendable termination option.
     /// Encoded/decoded by serializers as &quot;ETSB&quot;.
@@ -32,5 +32,4 @@ public enum RepoTerminationOption1Code
     [IsoId("_JmCcoSy0Eea35M2x2c9PXw")]
     [Description(@"Extendable termination option.")]
     Extendable = RepoTerminationOptionCode.Extendable, // same ordinal as derivation source for type conversions
-    
 }

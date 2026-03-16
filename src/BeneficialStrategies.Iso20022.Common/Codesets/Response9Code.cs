@@ -23,7 +23,7 @@ public enum Response9Code
     [IsoId("_7ORlMQ1PEeqjM-rxn3HuXQ")]
     [Description(@"Service has been successfuly provided.")]
     Approved = ResponseCode.Approved, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service is declined.
     /// Encoded/decoded by serializers as &quot;DECL&quot;.
@@ -32,7 +32,7 @@ public enum Response9Code
     [IsoId("_7ORlMw1PEeqjM-rxn3HuXQ")]
     [Description(@"Service is declined.")]
     Declined = ResponseCode.Declined, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service has been partialy provided.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -41,7 +41,7 @@ public enum Response9Code
     [IsoId("_7ORlNQ1PEeqjM-rxn3HuXQ")]
     [Description(@"Service has been partialy provided.")]
     PartialApproved = ResponseCode.PartialApproved, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction has been received but hasn&apos;t been processed.
     /// Encoded/decoded by serializers as &quot;SUSP&quot;.
@@ -50,14 +50,15 @@ public enum Response9Code
     [IsoId("_9uQ1sQ1PEeqjM-rxn3HuXQ")]
     [Description(@"Transaction has been received but hasn't been processed.")]
     Suspended = ResponseCode.Suspended, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem).
     /// Encoded/decoded by serializers as &quot;TECH&quot;.
     /// </summary>
     [EnumMember(Value = "TECH")]
     [IsoId("_92_68Q1PEeqjM-rxn3HuXQ")]
-    [Description(@"Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem).")]
+    [Description(
+        @"Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem)."
+    )]
     TechnicalError = ResponseCode.TechnicalError, // same ordinal as derivation source for type conversions
-    
 }

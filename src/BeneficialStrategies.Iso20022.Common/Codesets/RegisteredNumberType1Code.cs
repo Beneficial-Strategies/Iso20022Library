@@ -21,36 +21,44 @@ public enum RegisteredNumberType1Code
     /// </summary>
     [EnumMember(Value = "ABN")]
     [IsoId("_9Y56UVf7EeOuDtoQo1qilA")]
-    [Description(@"Australian Business Number (ABN) is a single identifier for use in business dealings with the Australian Taxation Office (ATO) and with other government agencies.")]
+    [Description(
+        @"Australian Business Number (ABN) is a single identifier for use in business dealings with the Australian Taxation Office (ATO) and with other government agencies."
+    )]
     AustralianBusinessNumber = RegisteredNumberTypeCode.AustralianBusinessNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Number identifying a company, issued by the Australian Securities &amp; Investments Commission (ASIC) upon registration.
     /// Encoded/decoded by serializers as &quot;ACN&quot;.
     /// </summary>
     [EnumMember(Value = "ACN")]
     [IsoId("_9eQUYVf7EeOuDtoQo1qilA")]
-    [Description(@"Number identifying a company, issued by the Australian Securities & Investments Commission (ASIC) upon registration.")]
+    [Description(
+        @"Number identifying a company, issued by the Australian Securities & Investments Commission (ASIC) upon registration."
+    )]
     AustralianCompanyNumber = RegisteredNumberTypeCode.AustralianCompanyNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN.
     /// Encoded/decoded by serializers as &quot;ARBN&quot;.
     /// </summary>
     [EnumMember(Value = "ARBN")]
     [IsoId("_9lGjQVf7EeOuDtoQo1qilA")]
-    [Description(@"ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN.")]
+    [Description(
+        @"ARBNs are issued to registrable Australian bodies and foreign companies. The ARBN is a unique identifier and no two bodies can have the same ARBN."
+    )]
     AustralianRegisteredBodyNumber = RegisteredNumberTypeCode.AustralianRegisteredBodyNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN.
     /// Encoded/decoded by serializers as &quot;ARSN&quot;.
     /// </summary>
     [EnumMember(Value = "ARSN")]
     [IsoId("_9r8LEVf7EeOuDtoQo1qilA")]
-    [Description(@"ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN.")]
+    [Description(
+        @"ARSNs are issued to Managed Investment Schemes. The ARSN is a unique identifier and no two bodies can have the same ARSN."
+    )]
     AustralianRegisteredSchemeNumber = RegisteredNumberTypeCode.AustralianRegisteredSchemeNumber, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other registered number type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -59,5 +67,4 @@ public enum RegisteredNumberType1Code
     [IsoId("_9xJbMVf7EeOuDtoQo1qilA")]
     [Description(@"Other registered number type.")]
     Other = RegisteredNumberTypeCode.Other, // same ordinal as derivation source for type conversions
-    
 }

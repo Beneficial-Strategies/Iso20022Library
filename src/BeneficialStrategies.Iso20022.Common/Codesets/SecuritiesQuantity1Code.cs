@@ -23,7 +23,7 @@ public enum SecuritiesQuantity1Code
     [IsoId("_V_Is5jFxEeGKkIZzgd38VA")]
     [Description(@"No Maximum / Minimum number provided.")]
     No = SecuritiesQuantityTypeCode.No, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Maximum / Minimum number is unknown or not decided.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -32,7 +32,7 @@ public enum SecuritiesQuantity1Code
     [IsoId("_WDAgRjFxEeGKkIZzgd38VA")]
     [Description(@"Maximum / Minimum number is unknown or not decided.")]
     Unknown = SecuritiesQuantityTypeCode.Unknown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Maximum / Minimum number provided.
     /// Encoded/decoded by serializers as &quot;SQYS&quot;.
@@ -41,5 +41,4 @@ public enum SecuritiesQuantity1Code
     [IsoId("_WJ3WNjFxEeGKkIZzgd38VA")]
     [Description(@"Maximum / Minimum number provided.")]
     Yes = SecuritiesQuantityTypeCode.Yes, // same ordinal as derivation source for type conversions
-    
 }

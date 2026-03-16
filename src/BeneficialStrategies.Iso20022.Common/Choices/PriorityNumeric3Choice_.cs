@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(PriorityNumeric3Choice.Numeric))]
     [KnownType(typeof(PriorityNumeric3Choice.Proprietary))]
-    [JsonDerivedType(typeof(PriorityNumeric3Choice.Numeric),nameof(PriorityNumeric3Choice.Numeric))]
-    [JsonDerivedType(typeof(PriorityNumeric3Choice.Proprietary),nameof(PriorityNumeric3Choice.Proprietary))]
+    [JsonDerivedType(
+        typeof(PriorityNumeric3Choice.Numeric),
+        nameof(PriorityNumeric3Choice.Numeric)
+    )]
+    [JsonDerivedType(
+        typeof(PriorityNumeric3Choice.Proprietary),
+        nameof(PriorityNumeric3Choice.Proprietary)
+    )]
     [IsoId("_AbMjtdokEeC60axPepSq7g_-1361106617")]
     [DisplayName("Priority Numeric 3 Choice")]
-    public abstract partial record PriorityNumeric3Choice_
-    {
-    }
+    public abstract record PriorityNumeric3Choice_ { }
 }

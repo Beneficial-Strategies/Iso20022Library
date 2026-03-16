@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.PoliticalExposureType1Choice
     /// </summary>
     [IsoId("_rL9LMBRvEeOKWo1NF21OVw")]
     [DisplayName("Code")]
-    public partial record Code : PoliticalExposureType1Choice_
+    public record Code : PoliticalExposureType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the political exposure type.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required PoliticalExposureType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required PoliticalExposureType1Code Value { get; init; }
     }
 }

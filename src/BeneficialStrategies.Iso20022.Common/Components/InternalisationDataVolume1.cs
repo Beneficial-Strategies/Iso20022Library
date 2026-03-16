@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_i6SKoO3sEeaWjpoyrnG6Rw")]
 [DisplayName("Internalisation Data Volume")]
-public partial record InternalisationDataVolume1
+public record InternalisationDataVolume1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the aggregated volume of internalised settlement instructions, in terms of:
     /// •	Failed transactions,
@@ -28,8 +26,8 @@ public partial record InternalisationDataVolume1
     [DisplayName("Volume")]
     [IsoXmlTag("Vol")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveNumber)]
-    public required IsoMax20PositiveNumber Volume { get; init; } 
-    
+    public required IsoMax20PositiveNumber Volume { get; init; }
+
     /// <summary>
     /// Specifies the aggregated value of internalised settlement instructions, in terms of:
     /// •	Failed transactions,
@@ -41,9 +39,5 @@ public partial record InternalisationDataVolume1
     [DisplayName("Value")]
     [IsoXmlTag("Val")]
     [IsoSimpleType(IsoSimpleType.Max20PositiveDecimalNumber)]
-    public required IsoMax20PositiveDecimalNumber Value { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoMax20PositiveDecimalNumber Value { get; init; }
 }

@@ -22,8 +22,9 @@ public enum TaxIdentificationNumberType1Code
     [EnumMember(Value = "GIIN")]
     [IsoId("_i_F3EQhJEeSUPbC7DbLJpQ")]
     [Description(@"Global intermediary tax identification number.")]
-    GlobalIntermediaryIdentificationNumber = TaxIdentificationNumberTypeCode.GlobalIntermediaryIdentificationNumber, // same ordinal as derivation source for type conversions
-    
+    GlobalIntermediaryIdentificationNumber =
+        TaxIdentificationNumberTypeCode.GlobalIntermediaryIdentificationNumber, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Tax identification number.
     /// Encoded/decoded by serializers as &quot;GTIN&quot;.
@@ -32,5 +33,4 @@ public enum TaxIdentificationNumberType1Code
     [IsoId("_jIUEgQhJEeSUPbC7DbLJpQ")]
     [Description(@"Tax identification number.")]
     TaxIdentificationNumber = TaxIdentificationNumberTypeCode.TaxIdentificationNumber, // same ordinal as derivation source for type conversions
-    
 }

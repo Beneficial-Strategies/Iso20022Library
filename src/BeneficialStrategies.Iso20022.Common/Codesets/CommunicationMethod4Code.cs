@@ -23,7 +23,7 @@ public enum CommunicationMethod4Code
     [IsoId("_-_hTkdL6EeSDLevdaFPXHw")]
     [Description(@"Transmission by e-mail.")]
     Email = CommunicationMethodCode.Email, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by fax.
     /// Encoded/decoded by serializers as &quot;FAXI&quot;.
@@ -32,7 +32,7 @@ public enum CommunicationMethod4Code
     [IsoId("__HQTQ9L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by fax.")]
     Fax = CommunicationMethodCode.Fax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by file transfer.
     /// Encoded/decoded by serializers as &quot;FILE&quot;.
@@ -41,7 +41,7 @@ public enum CommunicationMethod4Code
     [IsoId("__QCb09L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by file transfer.")]
     File = CommunicationMethodCode.File, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission on line, for example, in a web portal.
     /// Encoded/decoded by serializers as &quot;ONLI&quot;.
@@ -50,7 +50,7 @@ public enum CommunicationMethod4Code
     [IsoId("__XK-k9L6EeSDLevdaFPXHw")]
     [Description(@"Transmission on line, for example, in a web portal.")]
     Online = CommunicationMethodCode.Online, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by telephone.
     /// Encoded/decoded by serializers as &quot;PHON&quot;.
@@ -59,7 +59,7 @@ public enum CommunicationMethod4Code
     [IsoId("__ed5Y9L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by telephone.")]
     Phone = CommunicationMethodCode.Phone, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by postal service.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -68,7 +68,7 @@ public enum CommunicationMethod4Code
     [IsoId("__lAmQ9L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by postal service.")]
     PostalService = CommunicationMethodCode.PostalService, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by proprietary method.
     /// Encoded/decoded by serializers as &quot;PROP&quot;.
@@ -77,7 +77,7 @@ public enum CommunicationMethod4Code
     [IsoId("__r__E9L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by proprietary method.")]
     Proprietary = CommunicationMethodCode.Proprietary, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by Swift (FIN).
     /// Encoded/decoded by serializers as &quot;SWMT&quot;.
@@ -86,7 +86,7 @@ public enum CommunicationMethod4Code
     [IsoId("__y2N89L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by Swift (FIN).")]
     SWIFTMT = CommunicationMethodCode.SWIFTMT, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by SWIFTNET.
     /// Encoded/decoded by serializers as &quot;SWMX&quot;.
@@ -95,5 +95,4 @@ public enum CommunicationMethod4Code
     [IsoId("__5ir09L6EeSDLevdaFPXHw")]
     [Description(@"Transmission by SWIFTNET.")]
     SWIFTMX = CommunicationMethodCode.SWIFTMX, // same ordinal as derivation source for type conversions
-    
 }

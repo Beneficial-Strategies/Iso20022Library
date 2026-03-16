@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_LyqLI4lsEeePr-EGJjGYzQ")]
 [DisplayName("Modification Status Reason")]
-public partial record ModificationStatusReason1
+public record ModificationStatusReason1
 {
-    #nullable enable
-    
     /// <summary>
     /// Party that issues the cancellation status.
     /// </summary>
     [IsoId("_L89Wg4lsEeePr-EGJjGYzQ")]
     [DisplayName("Originator")]
     [IsoXmlTag("Orgtr")]
-    public PartyIdentification125? Originator { get; init; } 
-    
+    public PartyIdentification125? Originator { get; init; }
+
     /// <summary>
     /// Specifies the reason for the status report.
     /// </summary>
     [IsoId("_L89WhYlsEeePr-EGJjGYzQ")]
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
-    public ModificationStatusReason1Choice_? Reason { get; init; } 
-    
+    public ModificationStatusReason1Choice_? Reason { get; init; }
+
     /// <summary>
     /// Further details on the cancellation status reason.
     /// </summary>
@@ -41,10 +39,6 @@ public partial record ModificationStatusReason1
     [DisplayName("Additional Information")]
     [IsoXmlTag("AddtlInf")]
     [IsoSimpleType(IsoSimpleType.Max105Text)]
-    [StringLength(maximumLength: 105 ,MinimumLength = 1)]
-    public IsoMax105Text? AdditionalInformation { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 105, MinimumLength = 1)]
+    public IsoMax105Text? AdditionalInformation { get; init; }
 }

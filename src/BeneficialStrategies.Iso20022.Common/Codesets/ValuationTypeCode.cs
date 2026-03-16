@@ -23,7 +23,7 @@ public enum ValuationTypeCode
     [IsoId("_dEVfoPP4EeS_qLctCs2aRQ")]
     [Description(@"Mark to market valuation.||")]
     MarkToMarket,
-    
+
     /// <summary>
     /// Mark to model valuation.
     /// Encoded/decoded by serializers as &quot;MTMO&quot;.
@@ -32,7 +32,7 @@ public enum ValuationTypeCode
     [IsoId("_dKIloPP4EeS_qLctCs2aRQ")]
     [Description(@"Mark to model valuation.|")]
     MarkToModel,
-    
+
     /// <summary>
     /// Central counterparty (CCP) valuation.
     /// Encoded/decoded by serializers as &quot;CCPV&quot;.
@@ -41,7 +41,7 @@ public enum ValuationTypeCode
     [IsoId("_db2AsPP4EeS_qLctCs2aRQ")]
     [Description(@"Central counterparty (CCP) valuation.")]
     CCPValuation,
-    
+
     /// <summary>
     /// Amortised cost valuation.
     /// Encoded/decoded by serializers as &quot;AMCS&quot;.
@@ -50,5 +50,4 @@ public enum ValuationTypeCode
     [IsoId("_BQ7LEOZeEeiwYuOX3XC2zQ")]
     [Description(@"Amortised cost valuation.")]
     AmortisedCost,
-    
 }

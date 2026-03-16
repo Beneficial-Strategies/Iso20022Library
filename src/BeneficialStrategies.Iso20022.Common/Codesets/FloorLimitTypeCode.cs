@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_aqzT1tp-Ed-ak6NoX_4Aeg_611309431")]
-[Description(@"Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries.")]
+[Description(
+    @"Indicates whether the floor limit applies to credit, to debit or to both credit and debit entries."
+)]
 [Derivations(typeof(FloorLimitType1Code))]
 public enum FloorLimitTypeCode
 {
@@ -23,7 +25,7 @@ public enum FloorLimitTypeCode
     [IsoId("_aqzT19p-Ed-ak6NoX_4Aeg_611309456")]
     [Description(@"Floor limit applies to credit entries.")]
     Credit,
-    
+
     /// <summary>
     /// Floor limit applies to debit entries.
     /// Encoded/decoded by serializers as &quot;DEBT&quot;.
@@ -32,7 +34,7 @@ public enum FloorLimitTypeCode
     [IsoId("_aq9E0Np-Ed-ak6NoX_4Aeg_612229445")]
     [Description(@"Floor limit applies to debit entries.")]
     Debit,
-    
+
     /// <summary>
     /// Floor limit applies to both credit and debit entries.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +43,4 @@ public enum FloorLimitTypeCode
     [IsoId("_aq9E0dp-Ed-ak6NoX_4Aeg_612229462")]
     [Description(@"Floor limit applies to both credit and debit entries.")]
     Both,
-    
 }

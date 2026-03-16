@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
     /// </summary>
     [IsoId("_u_O2MKswEeayv9XxdmMwKQ")]
     [DisplayName("Strategy")]
-    public partial record Strategy : StressItem1Choice_
+    public record Strategy : StressItem1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Unique identifier for the strategy.
         /// </summary>
@@ -24,19 +22,15 @@ namespace BeneficialStrategies.Iso20022.Choices.StressItem1Choice
         [DisplayName("Identification")]
         [IsoXmlTag("Id")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public required IsoMax35Text Identification { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public required IsoMax35Text Identification { get; init; }
+
         /// <summary>
         /// Assumed stress move of the associated stress item under the scenario.
         /// </summary>
         [IsoId("_2XufAKs2Eeayv9XxdmMwKQ")]
         [DisplayName("Stress Size")]
         [IsoXmlTag("StrssSz")]
-        public required StressSize1Choice_ StressSize { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required StressSize1Choice_ StressSize { get; init; }
     }
 }

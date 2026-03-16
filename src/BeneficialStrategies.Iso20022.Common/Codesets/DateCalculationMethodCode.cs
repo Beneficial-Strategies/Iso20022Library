@@ -11,26 +11,27 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_oGUJ5lSUEempisJfoIfvvQ")]
-[Description(@"Indicates the calculation method to be used to caculate on which dates the shares have been acquired.")]
+[Description(
+    @"Indicates the calculation method to be used to caculate on which dates the shares have been acquired."
+)]
 [Derivations(typeof(DateCalculationMethod1Code))]
 public enum DateCalculationMethodCode
 {
     /// <summary>
-    /// First in, first out. 
+    /// First in, first out.
     /// Encoded/decoded by serializers as &quot;FIFO&quot;.
     /// </summary>
     [EnumMember(Value = "FIFO")]
     [IsoId("_oGUJ51SUEempisJfoIfvvQ")]
     [Description(@"First in, first out. ")]
     Fifo,
-    
+
     /// <summary>
-    /// Last in, first out. 
+    /// Last in, first out.
     /// Encoded/decoded by serializers as &quot;LIFO&quot;.
     /// </summary>
     [EnumMember(Value = "LIFO")]
     [IsoId("_oGUJ6FSUEempisJfoIfvvQ")]
     [Description(@"Last in, first out. ")]
     Lifo,
-    
 }

@@ -23,7 +23,7 @@ public enum DividendPolicy1Code
     [IsoId("_aw6i5tp-Ed-ak6NoX_4Aeg_119018465")]
     [Description(@"Dividend is paid in cash.")]
     Cash = DividendPolicyCode.Cash, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend is paid in units.
     /// Encoded/decoded by serializers as &quot;UNIT&quot;.
@@ -32,7 +32,7 @@ public enum DividendPolicy1Code
     [IsoId("_aw6i59p-Ed-ak6NoX_4Aeg_119018743")]
     [Description(@"Dividend is paid in units.")]
     Units = DividendPolicyCode.Units, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Dividend is paid in both Cash and Units.
     /// Encoded/decoded by serializers as &quot;BOTH&quot;.
@@ -41,5 +41,4 @@ public enum DividendPolicy1Code
     [IsoId("_axET4Np-Ed-ak6NoX_4Aeg_119018774")]
     [Description(@"Dividend is paid in both Cash and Units.")]
     Both = DividendPolicyCode.Both, // same ordinal as derivation source for type conversions
-    
 }

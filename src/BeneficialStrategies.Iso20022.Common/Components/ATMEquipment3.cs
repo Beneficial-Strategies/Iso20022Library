@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_jisRQYtMEeSxlKlAGYErFg")]
 [DisplayName("ATM Equipment")]
-public partial record ATMEquipment3
+public record ATMEquipment3
 {
-    #nullable enable
-    
     /// <summary>
     /// ATM Manufacturer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ATMEquipment3
     [DisplayName("Manufacturer")]
     [IsoXmlTag("Manfctr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Manufacturer { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Manufacturer { get; init; }
+
     /// <summary>
     /// Model of ATM.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ATMEquipment3
     [DisplayName("Model")]
     [IsoXmlTag("Mdl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Model { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Model { get; init; }
+
     /// <summary>
     /// Version of the device model.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record ATMEquipment3
     [DisplayName("Version")]
     [IsoXmlTag("Vrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Version { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Version { get; init; }
+
     /// <summary>
     /// Serial number of the ATM.
     /// </summary>
@@ -55,17 +53,17 @@ public partial record ATMEquipment3
     [DisplayName("Serial Number")]
     [IsoXmlTag("SrlNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SerialNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SerialNumber { get; init; }
+
     /// <summary>
     /// Signature of the serial number of the device. The signature may contain the serial number with the signature.
     /// </summary>
     [IsoId("_XcPAUItNEeSxlKlAGYErFg")]
     [DisplayName("Signed Serial Number")]
     [IsoXmlTag("SgndSrlNb")]
-    public ContentInformationType14? SignedSerialNumber { get; init; } 
-    
+    public ContentInformationType14? SignedSerialNumber { get; init; }
+
     /// <summary>
     /// Provider of the firmware.
     /// </summary>
@@ -73,9 +71,9 @@ public partial record ATMEquipment3
     [DisplayName("Firmware Provider")]
     [IsoXmlTag("FrmwrPrvdr")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirmwareProvider { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirmwareProvider { get; init; }
+
     /// <summary>
     /// Identification of the firmware.
     /// </summary>
@@ -83,9 +81,9 @@ public partial record ATMEquipment3
     [DisplayName("Firmware Identification")]
     [IsoXmlTag("FrmwrId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirmwareIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirmwareIdentification { get; init; }
+
     /// <summary>
     /// Version of the firmware.
     /// </summary>
@@ -93,10 +91,6 @@ public partial record ATMEquipment3
     [DisplayName("Firmware Version")]
     [IsoXmlTag("FrmwrVrsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? FirmwareVersion { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? FirmwareVersion { get; init; }
 }

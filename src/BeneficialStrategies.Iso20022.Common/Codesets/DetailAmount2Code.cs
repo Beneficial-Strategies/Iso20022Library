@@ -23,7 +23,7 @@ public enum DetailAmount2Code
     [IsoId("_ioqzEVjpEeiTlKUpxxSxEw")]
     [Description(@"Other type of amount defined at national level")]
     OtherNational = DetailAmountCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of amount defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -32,7 +32,7 @@ public enum DetailAmount2Code
     [IsoId("_ixNEAVjpEeiTlKUpxxSxEw")]
     [Description(@"Other type of amount defined at private level")]
     OtherPrivate = DetailAmountCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fee charged by the acceptor for the transaction.
     /// Encoded/decoded by serializers as &quot;SRCH&quot;.
@@ -41,5 +41,4 @@ public enum DetailAmount2Code
     [IsoId("_i-ZLcVjpEeiTlKUpxxSxEw")]
     [Description(@"Fee charged by the acceptor for the transaction.")]
     Surcharge = DetailAmountCode.Surcharge, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum MessageRejectedReason2Code
     [IsoId("_QFfXQUpJEe2Kv_AXFg3f7A")]
     [Description(@"Sending party is not allowed to send this request.")]
     NotAllowedRequest = RejectedStatusReasonV2Code.NotAllowedRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request contains an invalid or unrecognised business reference.
     /// Encoded/decoded by serializers as &quot;REFE&quot;.
@@ -32,5 +32,4 @@ public enum MessageRejectedReason2Code
     [IsoId("_Tb6ggUpJEe2Kv_AXFg3f7A")]
     [Description(@"Request contains an invalid or unrecognised business reference.")]
     InvalidOrUnrecognisedReference = RejectedStatusReasonV2Code.InvalidOrUnrecognisedReference, // same ordinal as derivation source for type conversions
-    
 }

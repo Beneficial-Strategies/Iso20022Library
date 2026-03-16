@@ -23,7 +23,7 @@ public enum RejectionReason77Code
     [IsoId("_4u9pIStYEeyF-PUIGuhxvA")]
     [Description(@"Unrecognised or invalid message sender's safekeeping account.")]
     SafekeepingAccountRejection = RejectionReasonV3Code.SafekeepingAccountRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unrecognised or invalid financial instrument identification.
     /// Encoded/decoded by serializers as &quot;DSEC&quot;.
@@ -32,7 +32,7 @@ public enum RejectionReason77Code
     [IsoId("_4u9pIytYEeyF-PUIGuhxvA")]
     [Description(@"Unrecognised or invalid financial instrument identification.")]
     InvalidSecurity = RejectionReasonV3Code.InvalidSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Received after market deadline.
     /// Encoded/decoded by serializers as &quot;LATE&quot;.
@@ -41,25 +41,29 @@ public enum RejectionReason77Code
     [IsoId("_4u9pJStYEeyF-PUIGuhxvA")]
     [Description(@"Received after market deadline.")]
     MarketDeadlineMissed = RejectionReasonV3Code.MarketDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has a reference identical to another previously received instruction.
     /// Encoded/decoded by serializers as &quot;REFE&quot;.
     /// </summary>
     [EnumMember(Value = "REFE")]
     [IsoId("_4u9pJytYEeyF-PUIGuhxvA")]
-    [Description(@"Instruction has a reference identical to another previously received instruction.")]
+    [Description(
+        @"Instruction has a reference identical to another previously received instruction."
+    )]
     ReferenceRejection = RejectionReasonV3Code.ReferenceRejection, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transaction/instruction received after the account servicer&apos;s specified deadline.
     /// Encoded/decoded by serializers as &quot;ADEA&quot;.
     /// </summary>
     [EnumMember(Value = "ADEA")]
     [IsoId("_4u9pKStYEeyF-PUIGuhxvA")]
-    [Description(@"Transaction/instruction received after the account servicer's specified deadline.")]
+    [Description(
+        @"Transaction/instruction received after the account servicer's specified deadline."
+    )]
     AccountServicerDeadlineMissed = RejectionReasonV3Code.AccountServicerDeadlineMissed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other. See Narrative.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -68,14 +72,15 @@ public enum RejectionReason77Code
     [IsoId("_4u9pKytYEeyF-PUIGuhxvA")]
     [Description(@"Other. See Narrative.")]
     Other = RejectionReasonV3Code.Other, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Statement/status advice request cannot be executed. The message type requested is not valid for the message reference or statement period concerned.
     /// Encoded/decoded by serializers as &quot;MISM&quot;.
     /// </summary>
     [EnumMember(Value = "MISM")]
     [IsoId("_4u9pLStYEeyF-PUIGuhxvA")]
-    [Description(@"Statement/status advice request cannot be executed. The message type requested is not valid for the message reference or statement period concerned.")]
+    [Description(
+        @"Statement/status advice request cannot be executed. The message type requested is not valid for the message reference or statement period concerned."
+    )]
     InvalidRequest = RejectionReasonV3Code.InvalidRequest, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,27 +14,21 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_2EZuFZ3DEeuwmdq0KtnICg")]
 [DisplayName("Swap Leg Identification")]
-public partial record SwapLegIdentification3
+public record SwapLegIdentification3
 {
-    #nullable enable
-    
     /// <summary>
     /// Instrument received by the buyer.
     /// </summary>
     [IsoId("_2fXy053DEeuwmdq0KtnICg")]
     [DisplayName("Swap In")]
     [IsoXmlTag("SwpIn")]
-    public FinancialInstrumentIdentification8Choice_? SwapIn { get; init; } 
-    
+    public FinancialInstrumentIdentification8Choice_? SwapIn { get; init; }
+
     /// <summary>
     /// Instrument paid by the buyer.
     /// </summary>
     [IsoId("_2fXy1Z3DEeuwmdq0KtnICg")]
     [DisplayName("Swap Out")]
     [IsoXmlTag("SwpOut")]
-    public FinancialInstrumentIdentification8Choice_? SwapOut { get; init; } 
-    
-    
-    #nullable disable
-    
+    public FinancialInstrumentIdentification8Choice_? SwapOut { get; init; }
 }

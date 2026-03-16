@@ -23,7 +23,7 @@ public enum DeliveryReturn1Code
     [IsoId("_azTIhNp-Ed-ak6NoX_4Aeg_-959595290")]
     [Description(@"Original delivery is not recognized.")]
     UnrecognisedDelivery = DeliveryReturnCode.UnrecognisedDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Wrong quantity delivered in the original instruction.
     /// Encoded/decoded by serializers as &quot;DQUA&quot;.
@@ -32,7 +32,7 @@ public enum DeliveryReturn1Code
     [IsoId("_azTIhdp-Ed-ak6NoX_4Aeg_-917110811")]
     [Description(@"Wrong quantity delivered in the original instruction.")]
     WrongQuantity = DeliveryReturnCode.WrongQuantity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Wrong settlement amount settled in the original delivery.
     /// Encoded/decoded by serializers as &quot;DMON&quot;.
@@ -41,16 +41,18 @@ public enum DeliveryReturn1Code
     [IsoId("_azTIhtp-Ed-ak6NoX_4Aeg_-872782203")]
     [Description(@"Wrong settlement amount settled in the original delivery.")]
     WrongSettlementAmount = DeliveryReturnCode.WrongSettlementAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD).
     /// Encoded/decoded by serializers as &quot;PART&quot;.
     /// </summary>
     [EnumMember(Value = "PART")]
     [IsoId("_azTIh9p-Ed-ak6NoX_4Aeg_-845078527")]
-    [Description(@"Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD).")]
+    [Description(
+        @"Only a portion of the original transaction quantity was delivered by the Central Securities Depository (CSD)."
+    )]
     PartialDelivery = DeliveryReturnCode.PartialDelivery, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Account information is missing in the original delivery.
     /// Encoded/decoded by serializers as &quot;SAFE&quot;.
@@ -59,7 +61,7 @@ public enum DeliveryReturn1Code
     [IsoId("_azc5gNp-Ed-ak6NoX_4Aeg_-829378346")]
     [Description(@"Account information is missing in the original delivery.")]
     AccountMissing = DeliveryReturnCode.AccountMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Due bill information missing in the original delivery.
     /// Encoded/decoded by serializers as &quot;DUEB&quot;.
@@ -68,7 +70,7 @@ public enum DeliveryReturn1Code
     [IsoId("_azc5gdp-Ed-ak6NoX_4Aeg_-573562488")]
     [Description(@"Due bill information missing in the original delivery.")]
     DueBiillMissing = DeliveryReturnCode.DueBiillMissing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Portion of the original transaction quantity was returned by the receiver.
     /// Encoded/decoded by serializers as &quot;PARD&quot;.
@@ -77,5 +79,4 @@ public enum DeliveryReturn1Code
     [IsoId("_azc5gtp-Ed-ak6NoX_4Aeg_-502450366")]
     [Description(@"Portion of the original transaction quantity was returned by the receiver.")]
     PartialReturn = DeliveryReturnCode.PartialReturn, // same ordinal as derivation source for type conversions
-    
 }

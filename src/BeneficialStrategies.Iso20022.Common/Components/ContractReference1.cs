@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_gxMLOs--EemV7s8E008B2w")]
 [DisplayName("Contract Reference")]
-public partial record ContractReference1
+public record ContractReference1
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of the contract referred to.
     /// </summary>
     [IsoId("_gxMLPc--EemV7s8E008B2w")]
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public DocumentType1Choice_? Type { get; init; } 
-    
+    public DocumentType1Choice_? Type { get; init; }
+
     /// <summary>
     /// Reference of the contract.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record ContractReference1
     [DisplayName("Reference")]
     [IsoXmlTag("Ref")]
     [IsoSimpleType(IsoSimpleType.Max500Text)]
-    [StringLength(maximumLength: 500 ,MinimumLength = 1)]
-    public required IsoMax500Text Reference { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 500, MinimumLength = 1)]
+    public required IsoMax500Text Reference { get; init; }
 }

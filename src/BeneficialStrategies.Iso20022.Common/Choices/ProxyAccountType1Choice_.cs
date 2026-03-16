@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ProxyAccountType1Choice.Code))]
     [KnownType(typeof(ProxyAccountType1Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProxyAccountType1Choice.Code),nameof(ProxyAccountType1Choice.Code))]
-    [JsonDerivedType(typeof(ProxyAccountType1Choice.Proprietary),nameof(ProxyAccountType1Choice.Proprietary))]
+    [JsonDerivedType(typeof(ProxyAccountType1Choice.Code), nameof(ProxyAccountType1Choice.Code))]
+    [JsonDerivedType(
+        typeof(ProxyAccountType1Choice.Proprietary),
+        nameof(ProxyAccountType1Choice.Proprietary)
+    )]
     [IsoId("_dyock3h3EeidzqjNEfehPg")]
     [DisplayName("Proxy Account Type 1 Choice")]
-    public abstract partial record ProxyAccountType1Choice_
-    {
-    }
+    public abstract record ProxyAccountType1Choice_ { }
 }

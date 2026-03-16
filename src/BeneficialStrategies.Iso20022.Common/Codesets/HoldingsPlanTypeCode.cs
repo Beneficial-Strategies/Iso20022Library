@@ -23,7 +23,7 @@ public enum HoldingsPlanTypeCode
     [IsoId("_Hu7LgAnxEeGRcv5_yGDZOA")]
     [Description(@"Holding to be transferred belongs to an investment plan.")]
     InvestmentPlan,
-    
+
     /// <summary>
     /// Holding to be transferred belongs to a switch plan.
     /// Encoded/decoded by serializers as &quot;SWIP&quot;.
@@ -32,7 +32,7 @@ public enum HoldingsPlanTypeCode
     [IsoId("_N0whUAnxEeGRcv5_yGDZOA")]
     [Description(@"Holding to be transferred belongs to a switch plan.")]
     SwitchPlan,
-    
+
     /// <summary>
     /// Holding to be transferred belongs to a withdrawal plan.
     /// Encoded/decoded by serializers as &quot;PLAR&quot;.
@@ -41,5 +41,4 @@ public enum HoldingsPlanTypeCode
     [IsoId("_SZt6QAnxEeGRcv5_yGDZOA")]
     [Description(@"Holding to be transferred belongs to a withdrawal plan.")]
     WithdrawalPlan,
-    
 }

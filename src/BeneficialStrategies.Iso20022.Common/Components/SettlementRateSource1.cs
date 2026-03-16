@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_CldIUJULEeak6e8_Fc5fQg")]
 [DisplayName("Settlement Rate Source")]
-public partial record SettlementRateSource1
+public record SettlementRateSource1
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies the rate source for the non deliverable trade.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SettlementRateSource1
     [DisplayName("Rate Source")]
     [IsoXmlTag("RateSrc")]
     [IsoSimpleType(IsoSimpleType.RateSourceText)]
-    public required IsoRateSourceText RateSource { get; init; } 
-    
+    public required IsoRateSourceText RateSource { get; init; }
+
     /// <summary>
     /// Specifies the time &quot;HHMM&quot; associated with the rate source.
     /// </summary>
@@ -34,16 +32,16 @@ public partial record SettlementRateSource1
     [DisplayName("Time")]
     [IsoXmlTag("Tm")]
     [IsoSimpleType(IsoSimpleType.Exact4NumericText)]
-    public IsoExact4NumericText? Time { get; init; } 
-    
+    public IsoExact4NumericText? Time { get; init; }
+
     /// <summary>
     /// Specifies the country code for the quoted rate source.
     /// </summary>
     [IsoId("_ISDz4JUNEeak6e8_Fc5fQg")]
     [DisplayName("Country Code")]
     [IsoXmlTag("CtryCd")]
-    public CountryCode? CountryCode { get; init; } 
-    
+    public CountryCode? CountryCode { get; init; }
+
     /// <summary>
     /// The location expressed as a 2 character code.
     /// </summary>
@@ -51,9 +49,5 @@ public partial record SettlementRateSource1
     [DisplayName("Location Code")]
     [IsoXmlTag("LctnCd")]
     [IsoSimpleType(IsoSimpleType.Exact2AlphaNumericText)]
-    public IsoExact2AlphaNumericText? LocationCode { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoExact2AlphaNumericText? LocationCode { get; init; }
 }

@@ -23,7 +23,7 @@ public enum DemandStatus1Code
     [IsoId("_wyDoAdryEeGuxusC7C-WeA")]
     [Description(@"Extend undertaking expiry date.")]
     Extend = DemandStatusCode.Extend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pay undertaking demand.
     /// Encoded/decoded by serializers as &quot;PAYD&quot;.
@@ -32,5 +32,4 @@ public enum DemandStatus1Code
     [IsoId("_w7l-gdryEeGuxusC7C-WeA")]
     [Description(@"Pay undertaking demand.")]
     PAY = DemandStatusCode.PAY, // same ordinal as derivation source for type conversions
-    
 }

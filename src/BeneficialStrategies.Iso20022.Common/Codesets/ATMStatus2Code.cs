@@ -23,7 +23,7 @@ public enum ATMStatus2Code
     [IsoId("_fZ82sYr-EeSvuOJS0mmL0g")]
     [Description(@"Component is activated and in operation.")]
     InOperation = ATMStatusCode.InOperation, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// ATM out of service.
     /// Encoded/decoded by serializers as &quot;OUTS&quot;.
@@ -32,5 +32,4 @@ public enum ATMStatus2Code
     [IsoId("_fkcPc4r-EeSvuOJS0mmL0g")]
     [Description(@"ATM out of service.")]
     OutOfService = ATMStatusCode.OutOfService, // same ordinal as derivation source for type conversions
-    
 }

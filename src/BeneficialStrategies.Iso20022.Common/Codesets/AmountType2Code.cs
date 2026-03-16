@@ -23,7 +23,7 @@ public enum AmountType2Code
     [IsoId("_aISmtn04EeGlwNeVP9egyg")]
     [Description(@"The amount represents a fixed value.")]
     FixedAmount = AmountTypeCode.FixedAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The amount represents the maximum value.
     /// Encoded/decoded by serializers as &quot;MAXI&quot;.
@@ -32,7 +32,7 @@ public enum AmountType2Code
     [IsoId("_aXoqRn04EeGlwNeVP9egyg")]
     [Description(@"The amount represents the maximum value.")]
     MaximumAmount = AmountTypeCode.MaximumAmount, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// The amount represents the minimum value.
     /// Encoded/decoded by serializers as &quot;MINI&quot;.
@@ -41,5 +41,4 @@ public enum AmountType2Code
     [IsoId("_ahLAxn04EeGlwNeVP9egyg")]
     [Description(@"The amount represents the minimum value.")]
     MinimumAmount = AmountTypeCode.MinimumAmount, // same ordinal as derivation source for type conversions
-    
 }

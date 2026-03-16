@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("__qxMVNojEeC60axPepSq7g_1753446814")]
-[Description(@"Specifies the reason the transaction, transfer or settlement instruction is unaffirmed.")]
+[Description(
+    @"Specifies the reason the transaction, transfer or settlement instruction is unaffirmed."
+)]
 [Derivations(typeof(UnaffirmedReason1Code))]
 public enum UnaffirmedReasonCode
 {
@@ -23,5 +25,4 @@ public enum UnaffirmedReasonCode
     [IsoId("__q6WQNojEeC60axPepSq7g_1606974359")]
     [Description(@"Specifies the reason the counterparty has not affirmed.")]
     CounterpartyNotAffirmed,
-    
 }

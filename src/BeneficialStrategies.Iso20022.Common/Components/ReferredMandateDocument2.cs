@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,39 +14,33 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_O661sTE0Ee62xuUQ2zyZww")]
 [DisplayName("Referred Mandate Document2")]
-public partial record ReferredMandateDocument2
+public record ReferredMandateDocument2
 {
-    #nullable enable
-
     /// <summary>
     /// Creditor Reference.
     /// </summary>
     [DisplayName("Creditor Reference")]
     [IsoXmlTag("CdtrRef")]
-    public IsoMax35Text? CreditorReference { get; init; } 
+    public IsoMax35Text? CreditorReference { get; init; }
 
     /// <summary>
     /// Number.
     /// </summary>
     [DisplayName("Number")]
     [IsoXmlTag("Nb")]
-    public IsoMax35Text? Number { get; init; } 
+    public IsoMax35Text? Number { get; init; }
 
     /// <summary>
     /// Related Date.
     /// </summary>
     [DisplayName("Related Date")]
     [IsoXmlTag("RltdDt")]
-    public DateAndType1? RelatedDate { get; init; } 
+    public DateAndType1? RelatedDate { get; init; }
 
     /// <summary>
     /// Type.
     /// </summary>
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
-    public DocumentType1? Type { get; init; } 
-
-    
-    #nullable disable
-    
+    public DocumentType1? Type { get; init; }
 }

@@ -23,7 +23,7 @@ public enum Action1Code
     [IsoId("_bpi0CNp-Ed-ak6NoX_4Aeg_722866594")]
     [Description(@"Request to submit a twin baseline.")]
     SubmitTwin = ActionCode.SubmitTwin, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to resubmit a twin baseline.
     /// Encoded/decoded by serializers as &quot;RSTW&quot;.
@@ -32,7 +32,7 @@ public enum Action1Code
     [IsoId("_bpr98Np-Ed-ak6NoX_4Aeg_722866612")]
     [Description(@"Request to resubmit a twin baseline.")]
     ReSubmitTwin = ActionCode.ReSubmitTwin, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to resubmit a baseline.
     /// Encoded/decoded by serializers as &quot;RSBS&quot;.
@@ -41,7 +41,7 @@ public enum Action1Code
     [IsoId("_bpr98dp-Ed-ak6NoX_4Aeg_722866637")]
     [Description(@"Request to resubmit a baseline.")]
     ReSubmitBaseline = ActionCode.ReSubmitBaseline, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to accept or reject mismatched data set(s).
     /// Encoded/decoded by serializers as &quot;ARDM&quot;.
@@ -50,7 +50,7 @@ public enum Action1Code
     [IsoId("_bpr98tp-Ed-ak6NoX_4Aeg_722866638")]
     [Description(@"Request to accept or reject mismatched data set(s).")]
     AcceptOrRejectDataSetMisMatches = ActionCode.AcceptOrRejectDataSetMisMatches, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to accept or reject a request for a change of status of the baseline.
     /// Encoded/decoded by serializers as &quot;ARCS&quot;.
@@ -59,16 +59,18 @@ public enum Action1Code
     [IsoId("_bpr989p-Ed-ak6NoX_4Aeg_722866655")]
     [Description(@"Request to accept or reject a request for a change of status of the baseline.")]
     AcceptOrRejectChangeOfStatus = ActionCode.AcceptOrRejectChangeOfStatus, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to accept or reject a request for an extension of the period of validity of the status of the baseline.
     /// Encoded/decoded by serializers as &quot;ARES&quot;.
     /// </summary>
     [EnumMember(Value = "ARES")]
     [IsoId("_bpr99Np-Ed-ak6NoX_4Aeg_722866672")]
-    [Description(@"Request to accept or reject a request for an extension of the period of validity of the status of the baseline.")]
+    [Description(
+        @"Request to accept or reject a request for an extension of the period of validity of the status of the baseline."
+    )]
     AcceptOrRejectExtensionOfStatus = ActionCode.AcceptOrRejectExtensionOfStatus, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to wait until the baseline is established.
     /// Encoded/decoded by serializers as &quot;WAIT&quot;.
@@ -77,7 +79,7 @@ public enum Action1Code
     [IsoId("_bpr99dp-Ed-ak6NoX_4Aeg_-394921817")]
     [Description(@"Request to wait until the baseline is established.")]
     WaitForBaselineEstablished = ActionCode.WaitForBaselineEstablished, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to update and resend.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -86,7 +88,7 @@ public enum Action1Code
     [IsoId("_bpr99tp-Ed-ak6NoX_4Aeg_-98474441")]
     [Description(@"Request to update and resend.")]
     UpdateAndResend = ActionCode.UpdateAndResend, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to submit data set(s).
     /// Encoded/decoded by serializers as &quot;SBDS&quot;.
@@ -95,7 +97,7 @@ public enum Action1Code
     [IsoId("_bpr999p-Ed-ak6NoX_4Aeg_-851340559")]
     [Description(@"Request to submit data set(s).")]
     SubmitDataSet = ActionCode.SubmitDataSet, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request to accept or reject a request for a baseline amendment.
     /// Encoded/decoded by serializers as &quot;ARBA&quot;.
@@ -104,5 +106,4 @@ public enum Action1Code
     [IsoId("_bpr9-Np-Ed-ak6NoX_4Aeg_1978739457")]
     [Description(@"Request to accept or reject a request for a baseline amendment.")]
     AcceptOrRejectBaselineAmendment = ActionCode.AcceptOrRejectBaselineAmendment, // same ordinal as derivation source for type conversions
-    
 }

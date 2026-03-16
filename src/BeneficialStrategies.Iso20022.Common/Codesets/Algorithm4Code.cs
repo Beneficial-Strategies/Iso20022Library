@@ -21,7 +21,8 @@ public enum Algorithm4Code
     /// </summary>
     [EnumMember(Value = "ERS2")]
     [IsoId("_3MPT4QiqEeKn9O5oyej_zw")]
-    [Description(@"Signature algorithms with RSA, using SHA-256 digest algorithm - (ASN.1 Object Identifier: sha256WithRSAEncryption).")]
+    [Description(
+        @"Signature algorithms with RSA, using SHA-256 digest algorithm - (ASN.1 Object Identifier: sha256WithRSAEncryption)."
+    )]
     SHA256WithRSA = AlgorithmCode.SHA256WithRSA, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_dhkbUI0UEemUAO64Q252gQ")]
 [DisplayName("Settlement Fails Participant")]
-public partial record SettlementFailsParticipant1
+public record SettlementFailsParticipant1
 {
-    #nullable enable
-    
     /// <summary>
     /// Legal entity identification of the participant in the securities settlement system.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SettlementFailsParticipant1
     [DisplayName("LEI")]
     [IsoXmlTag("LEI")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public required IsoLEIIdentifier LEI { get; init; } 
-    
+    public required IsoLEIIdentifier LEI { get; init; }
+
     /// <summary>
     /// Ranking of the top participants with the highest rate of settlement fails.
     /// </summary>
@@ -34,17 +32,13 @@ public partial record SettlementFailsParticipant1
     [DisplayName("Rank")]
     [IsoXmlTag("Rank")]
     [IsoSimpleType(IsoSimpleType.Max2NumericText)]
-    public required IsoMax2NumericText Rank { get; init; } 
-    
+    public required IsoMax2NumericText Rank { get; init; }
+
     /// <summary>
     /// Aggregated data of the settlement instructions.
     /// </summary>
     [IsoId("_4yoYwI0UEemUAO64Q252gQ")]
     [DisplayName("Aggregate")]
     [IsoXmlTag("Aggt")]
-    public required SettlementTotalData1 Aggregate { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required SettlementTotalData1 Aggregate { get; init; }
 }

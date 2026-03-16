@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_WecBFdp-Ed-ak6NoX_4Aeg_-1257120970")]
 [DisplayName("Generic Identification")]
-public partial record GenericIdentification25
+public record GenericIdentification25
 {
-    #nullable enable
-    
     /// <summary>
     /// Proprietary information, often a code, issued by the data source scheme issuer.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record GenericIdentification25
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Exact4AlphaNumericText)]
-    public required IsoExact4AlphaNumericText Identification { get; init; } 
-    
+    public required IsoExact4AlphaNumericText Identification { get; init; }
+
     /// <summary>
     /// Entity that assigns the identification.
     /// </summary>
@@ -34,9 +32,9 @@ public partial record GenericIdentification25
     [DisplayName("Issuer")]
     [IsoXmlTag("Issr")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public required IsoMax4AlphaNumericText Issuer { get; init; } 
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public required IsoMax4AlphaNumericText Issuer { get; init; }
+
     /// <summary>
     /// Short textual description of the scheme.
     /// </summary>
@@ -44,10 +42,6 @@ public partial record GenericIdentification25
     [DisplayName("Scheme Name")]
     [IsoXmlTag("SchmeNm")]
     [IsoSimpleType(IsoSimpleType.Max4AlphaNumericText)]
-    [StringLength(maximumLength: 4 ,MinimumLength = 1)]
-    public IsoMax4AlphaNumericText? SchemeName { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 4, MinimumLength = 1)]
+    public IsoMax4AlphaNumericText? SchemeName { get; init; }
 }

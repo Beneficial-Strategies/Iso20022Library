@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ChargeTypeFormat2Choice.Unstructured))]
     [KnownType(typeof(ChargeTypeFormat2Choice.Structured))]
-    [JsonDerivedType(typeof(ChargeTypeFormat2Choice.Unstructured),nameof(ChargeTypeFormat2Choice.Unstructured))]
-    [JsonDerivedType(typeof(ChargeTypeFormat2Choice.Structured),nameof(ChargeTypeFormat2Choice.Structured))]
+    [JsonDerivedType(
+        typeof(ChargeTypeFormat2Choice.Unstructured),
+        nameof(ChargeTypeFormat2Choice.Unstructured)
+    )]
+    [JsonDerivedType(
+        typeof(ChargeTypeFormat2Choice.Structured),
+        nameof(ChargeTypeFormat2Choice.Structured)
+    )]
     [IsoId("_UyQMF9p-Ed-ak6NoX_4Aeg_1822769667")]
     [DisplayName("Charge Type Format 2 Choice")]
-    public abstract partial record ChargeTypeFormat2Choice_
-    {
-    }
+    public abstract record ChargeTypeFormat2Choice_ { }
 }

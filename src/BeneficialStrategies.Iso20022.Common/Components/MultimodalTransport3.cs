@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_StCMANp-Ed-ak6NoX_4Aeg_1369687043")]
 [DisplayName("Multimodal Transport")]
-public partial record MultimodalTransport3
+public record MultimodalTransport3
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifies the location where the goods are take in charge for transportation.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record MultimodalTransport3
     [DisplayName("Taking In Charge")]
     [IsoXmlTag("TakngInChrg")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text TakingInCharge { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text TakingInCharge { get; init; }
+
     /// <summary>
     /// Identifies the location of the final destination of the goods.
     /// </summary>
@@ -35,10 +33,6 @@ public partial record MultimodalTransport3
     [DisplayName("Place Of Final Destination")]
     [IsoXmlTag("PlcOfFnlDstn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text PlaceOfFinalDestination { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text PlaceOfFinalDestination { get; init; }
 }

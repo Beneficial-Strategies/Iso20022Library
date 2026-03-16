@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(RetrievalDeliveryMethod1Choice.RequestedMethod))]
     [KnownType(typeof(RetrievalDeliveryMethod1Choice.EstablishedMethod))]
     [KnownType(typeof(RetrievalDeliveryMethod1Choice.ActualDeliveryMethod))]
-    [JsonDerivedType(typeof(RetrievalDeliveryMethod1Choice.RequestedMethod),nameof(RetrievalDeliveryMethod1Choice.RequestedMethod))]
-    [JsonDerivedType(typeof(RetrievalDeliveryMethod1Choice.EstablishedMethod),nameof(RetrievalDeliveryMethod1Choice.EstablishedMethod))]
-    [JsonDerivedType(typeof(RetrievalDeliveryMethod1Choice.ActualDeliveryMethod),nameof(RetrievalDeliveryMethod1Choice.ActualDeliveryMethod))]
+    [JsonDerivedType(
+        typeof(RetrievalDeliveryMethod1Choice.RequestedMethod),
+        nameof(RetrievalDeliveryMethod1Choice.RequestedMethod)
+    )]
+    [JsonDerivedType(
+        typeof(RetrievalDeliveryMethod1Choice.EstablishedMethod),
+        nameof(RetrievalDeliveryMethod1Choice.EstablishedMethod)
+    )]
+    [JsonDerivedType(
+        typeof(RetrievalDeliveryMethod1Choice.ActualDeliveryMethod),
+        nameof(RetrievalDeliveryMethod1Choice.ActualDeliveryMethod)
+    )]
     [IsoId("_wPBNlewhEeiMkKo2clXHdQ")]
     [DisplayName("Retrieval Delivery Method 1 Choice")]
-    public abstract partial record RetrievalDeliveryMethod1Choice_
-    {
-    }
+    public abstract record RetrievalDeliveryMethod1Choice_ { }
 }

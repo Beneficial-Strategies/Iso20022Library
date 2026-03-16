@@ -23,7 +23,7 @@ public enum AdjustmentTypeCode
     [IsoId("_bnTYVNp-Ed-ak6NoX_4Aeg_-617298628")]
     [Description(@"Adjustment is a rebate.")]
     Rebate,
-    
+
     /// <summary>
     /// Adjustment is a discount.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
@@ -32,7 +32,7 @@ public enum AdjustmentTypeCode
     [IsoId("_bnTYVdp-Ed-ak6NoX_4Aeg_-578510488")]
     [Description(@"Adjustment is a discount.")]
     Discount,
-    
+
     /// <summary>
     /// Adjustment is a credit note.
     /// Encoded/decoded by serializers as &quot;CREN&quot;.
@@ -41,7 +41,7 @@ public enum AdjustmentTypeCode
     [IsoId("_bnTYVtp-Ed-ak6NoX_4Aeg_-1523605775")]
     [Description(@"Adjustment is a credit note.")]
     CreditNote,
-    
+
     /// <summary>
     /// Adjustment is a surcharge.
     /// Encoded/decoded by serializers as &quot;SURC&quot;.
@@ -50,5 +50,4 @@ public enum AdjustmentTypeCode
     [IsoId("_bnTYV9p-Ed-ak6NoX_4Aeg_-570641076")]
     [Description(@"Adjustment is a surcharge.")]
     Surcharge,
-    
 }

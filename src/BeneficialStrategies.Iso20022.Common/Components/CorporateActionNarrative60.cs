@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_ouuasWH3Ee6R8rjBJai69w")]
 [DisplayName("Corporate Action Narrative60")]
-public partial record CorporateActionNarrative60
+public record CorporateActionNarrative60
 {
-    #nullable enable
-
     /// <summary>
     /// Additional Text.
     /// </summary>
@@ -79,7 +77,8 @@ public partial record CorporateActionNarrative60
     /// </summary>
     [DisplayName("Processing Text For Next Intermediary")]
     [IsoXmlTag("PrcgTxtForNxtIntrmy")]
-    public ValueList<UpdatedAdditionalInformation20> ProcessingTextForNextIntermediary { get; init; } = [];
+    public ValueList<UpdatedAdditionalInformation20> ProcessingTextForNextIntermediary { get; init; } =
+        [];
 
     /// <summary>
     /// Registration Details.
@@ -101,8 +100,4 @@ public partial record CorporateActionNarrative60
     [DisplayName("URL Address")]
     [IsoXmlTag("URLAdr")]
     public ValueList<UpdatedURLlnformation6> URLAddress { get; init; } = [];
-
-    
-    #nullable disable
-    
 }

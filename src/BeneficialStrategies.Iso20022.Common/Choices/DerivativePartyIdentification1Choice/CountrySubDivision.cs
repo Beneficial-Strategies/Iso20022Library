@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DerivativePartyIdentification1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.DerivativePartyIdentification1Ch
     /// </summary>
     [IsoId("_sN3rEEW8EeWaZZ6gWK8UVw")]
     [DisplayName("Country Sub Division")]
-    public partial record CountrySubDivision : DerivativePartyIdentification1Choice_
+    public record CountrySubDivision : DerivativePartyIdentification1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Code to identify a name of a unit resulting from the division of a country, dependency, or other area of special geopolitical interest contained in ISO 3166-1, on the basis of country names obtained from the United Nations (ISO 3166-2: Country subdivision code).
         /// </summary>
         [IsoXmlTag("CtrySubDvsn")]
-        public required CountrySubDivisionCode Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required CountrySubDivisionCode Value { get; init; }
     }
 }

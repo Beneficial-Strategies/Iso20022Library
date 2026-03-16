@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_PZvPQNp-Ed-ak6NoX_4Aeg_-611452366")]
 [DisplayName("Name And Address")]
-public partial record NameAndAddress8
+public record NameAndAddress8
 {
-    #nullable enable
-    
     /// <summary>
     /// Name by which a party is known and which is usually used to identify that party.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record NameAndAddress8
     [DisplayName("Name")]
     [IsoXmlTag("Nm")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public required IsoMax350Text Name { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public required IsoMax350Text Name { get; init; }
+
     /// <summary>
     /// Postal address of a party.
     /// </summary>
     [IsoId("_PZvPQtp-Ed-ak6NoX_4Aeg_-611452322")]
     [DisplayName("Address")]
     [IsoXmlTag("Adr")]
-    public PostalAddress1? Address { get; init; } 
-    
+    public PostalAddress1? Address { get; init; }
+
     /// <summary>
     /// Unique and unambiguous identifier, as assigned to a financial institution using a proprietary identification scheme.
     /// </summary>
@@ -46,8 +44,4 @@ public partial record NameAndAddress8
     [MinLength(0)]
     [MaxLength(10)]
     public SimpleValueList<System.String> AlternativeIdentifier { get; init; } = [];
-    
-    
-    #nullable disable
-    
 }

@@ -23,7 +23,7 @@ public enum ProformaStatusReasonCode
     [IsoId("_XJWtcE_vEeaB8-OWTiMVrQ")]
     [Description(@"Account opening is waiting for rights holder information.")]
     Rights,
-    
+
     /// <summary>
     /// Modification to the account data is in process.
     /// Encoded/decoded by serializers as &quot;MODI&quot;.
@@ -32,5 +32,4 @@ public enum ProformaStatusReasonCode
     [IsoId("_aKBpIE_vEeaB8-OWTiMVrQ")]
     [Description(@"Modification to the account data is in process.")]
     ModificationInProcess,
-    
 }

@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(IntraBalanceOrOperationalError11Choice.Movements))]
     [KnownType(typeof(IntraBalanceOrOperationalError11Choice.OperationalError))]
-    [JsonDerivedType(typeof(IntraBalanceOrOperationalError11Choice.Movements),nameof(IntraBalanceOrOperationalError11Choice.Movements))]
-    [JsonDerivedType(typeof(IntraBalanceOrOperationalError11Choice.OperationalError),nameof(IntraBalanceOrOperationalError11Choice.OperationalError))]
+    [JsonDerivedType(
+        typeof(IntraBalanceOrOperationalError11Choice.Movements),
+        nameof(IntraBalanceOrOperationalError11Choice.Movements)
+    )]
+    [JsonDerivedType(
+        typeof(IntraBalanceOrOperationalError11Choice.OperationalError),
+        nameof(IntraBalanceOrOperationalError11Choice.OperationalError)
+    )]
     [IsoId("_3qht0TEyEe6g-ffJsqGiSA")]
     [DisplayName("Intra Balance Or Operational Error11Choice")]
-    public abstract partial record IntraBalanceOrOperationalError11Choice_
-    {
-    }
+    public abstract record IntraBalanceOrOperationalError11Choice_ { }
 }

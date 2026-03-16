@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(OriginalEnrolment3Choice.OriginalCreditorIdentification))]
     [KnownType(typeof(OriginalEnrolment3Choice.OriginalEnrolmentData))]
-    [JsonDerivedType(typeof(OriginalEnrolment3Choice.OriginalCreditorIdentification),nameof(OriginalEnrolment3Choice.OriginalCreditorIdentification))]
-    [JsonDerivedType(typeof(OriginalEnrolment3Choice.OriginalEnrolmentData),nameof(OriginalEnrolment3Choice.OriginalEnrolmentData))]
+    [JsonDerivedType(
+        typeof(OriginalEnrolment3Choice.OriginalCreditorIdentification),
+        nameof(OriginalEnrolment3Choice.OriginalCreditorIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(OriginalEnrolment3Choice.OriginalEnrolmentData),
+        nameof(OriginalEnrolment3Choice.OriginalEnrolmentData)
+    )]
     [IsoId("_xDw1NTEyEe6g-ffJsqGiSA")]
     [DisplayName("Original Enrolment3Choice")]
-    public abstract partial record OriginalEnrolment3Choice_
-    {
-    }
+    public abstract record OriginalEnrolment3Choice_ { }
 }

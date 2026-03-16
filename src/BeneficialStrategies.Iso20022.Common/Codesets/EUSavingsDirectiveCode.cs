@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ai58Edp-Ed-ak6NoX_4Aeg_-428222749")]
-[Description(@"Indicates whether or not the fund is subject to reporting under the EU Savings Directive. Enter ""Variable"" if the status of the fund is likely to change from time to time.")]
+[Description(
+    @"Indicates whether or not the fund is subject to reporting under the EU Savings Directive. Enter ""Variable"" if the status of the fund is likely to change from time to time."
+)]
 [Derivations(typeof(EUSavingsDirective1Code))]
 public enum EUSavingsDirectiveCode
 {
@@ -23,7 +25,7 @@ public enum EUSavingsDirectiveCode
     [IsoId("_ai58Etp-Ed-ak6NoX_4Aeg_-1192571141")]
     [Description(@"Investment Fund is in the scope of the directive.")]
     EUSavingsInScope,
-    
+
     /// <summary>
     /// Investment Fund is out of the scope of the directive.
     /// Encoded/decoded by serializers as &quot;EUSO&quot;.
@@ -32,7 +34,7 @@ public enum EUSavingsDirectiveCode
     [IsoId("_ai58E9p-Ed-ak6NoX_4Aeg_-1192571140")]
     [Description(@"Investment Fund is out of the scope of the directive.")]
     EUSavingsOutScope,
-    
+
     /// <summary>
     /// Unknown whether capital gain is in or out of the scope fo the directive.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
@@ -41,7 +43,7 @@ public enum EUSavingsDirectiveCode
     [IsoId("_ai58FNp-Ed-ak6NoX_4Aeg_-1192571119")]
     [Description(@"Unknown whether capital gain is in or out of the scope fo the directive.")]
     EUSavingsUnknown,
-    
+
     /// <summary>
     /// Investment Fund may vary for inclusion in the scope of the directive.
     /// Encoded/decoded by serializers as &quot;VARI&quot;.
@@ -50,5 +52,4 @@ public enum EUSavingsDirectiveCode
     [IsoId("_ai58Fdp-Ed-ak6NoX_4Aeg_339285326")]
     [Description(@"Investment Fund may vary for inclusion in the scope of the directive.")]
     EUSavingsVariable,
-    
 }

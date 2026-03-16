@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,35 +14,29 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_-QovEdelEeiJyp_aycJaTw")]
 [DisplayName("Acceptor Currency Conversion Advice")]
-public partial record AcceptorCurrencyConversionAdvice3
+public record AcceptorCurrencyConversionAdvice3
 {
-    #nullable enable
-    
     /// <summary>
     /// Environment of the transaction.
     /// </summary>
     [IsoId("_-asC8delEeiJyp_aycJaTw")]
     [DisplayName("Environment")]
     [IsoXmlTag("Envt")]
-    public required CardPaymentEnvironment69 Environment { get; init; } 
-    
+    public required CardPaymentEnvironment69 Environment { get; init; }
+
     /// <summary>
     /// Currency conversion of a card payment transaction between an acceptor and a currency conversion provider.
     /// </summary>
     [IsoId("_-asC89elEeiJyp_aycJaTw")]
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required CardPaymentTransaction88 Transaction { get; init; } 
-    
+    public required CardPaymentTransaction88 Transaction { get; init; }
+
     /// <summary>
     /// Result of the currency conversion proposed to the cardholder and its result.
     /// </summary>
     [IsoId("_-asC9delEeiJyp_aycJaTw")]
     [DisplayName("Currency Conversion Result")]
     [IsoXmlTag("CcyConvsRslt")]
-    public CurrencyConversion15? CurrencyConversionResult { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CurrencyConversion15? CurrencyConversionResult { get; init; }
 }

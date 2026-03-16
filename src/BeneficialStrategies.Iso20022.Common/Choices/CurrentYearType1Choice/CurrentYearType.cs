@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType1Choice
 {
     /// <summary>
@@ -13,19 +13,13 @@ namespace BeneficialStrategies.Iso20022.Choices.CurrentYearType1Choice
     /// </summary>
     [IsoId("_3f6cYUXfEeGY6MkiuzuPOA_-2028918886")]
     [DisplayName("Current Year Type")]
-    public partial record CurrentYearType : CurrentYearType1Choice_
+    public record CurrentYearType : CurrentYearType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the type of the current year ISA.
         /// </summary>
         [IsoXmlTag("CurYrTp")]
-        public required ISAType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ISAType1Code Value { get; init; }
     }
 }

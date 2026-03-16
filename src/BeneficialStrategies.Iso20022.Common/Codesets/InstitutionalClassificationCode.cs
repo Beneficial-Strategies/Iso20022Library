@@ -20,18 +20,22 @@ public enum InstitutionalClassificationCode
     /// </summary>
     [EnumMember(Value = "SURV")]
     [IsoId("_D2jWAFIiEeGxk_7PmgdPEg")]
-    [Description(@"In the case of a merger, the Issuer or the Counterparty is the surviving company.")]
+    [Description(
+        @"In the case of a merger, the Issuer or the Counterparty is the surviving company."
+    )]
     SurvivingCompany,
-    
+
     /// <summary>
     /// In the case of a merger, the Issuer or the Counterparty is the discontinued company.
     /// Encoded/decoded by serializers as &quot;DISC&quot;.
     /// </summary>
     [EnumMember(Value = "DISC")]
     [IsoId("_SD0F8FIiEeGxk_7PmgdPEg")]
-    [Description(@"In the case of a merger, the Issuer or the Counterparty is the discontinued company.")]
+    [Description(
+        @"In the case of a merger, the Issuer or the Counterparty is the discontinued company."
+    )]
     DiscontinuedCompany,
-    
+
     /// <summary>
     /// In the case of a merger, the Issuer or the Counterparty is a subsidiary.
     /// Encoded/decoded by serializers as &quot;SUBS&quot;.
@@ -40,16 +44,18 @@ public enum InstitutionalClassificationCode
     [IsoId("_hV7lIFIiEeGxk_7PmgdPEg")]
     [Description(@"In the case of a merger, the Issuer or the Counterparty is a subsidiary.")]
     Subsidiary,
-    
+
     /// <summary>
     /// In the case of a merger, the classification of the Issuer or the Counterparty is unknown.
     /// Encoded/decoded by serializers as &quot;UKWN&quot;.
     /// </summary>
     [EnumMember(Value = "UKWN")]
     [IsoId("_2iiFwFIiEeGxk_7PmgdPEg")]
-    [Description(@"In the case of a merger, the classification of the Issuer or the Counterparty is unknown.")]
+    [Description(
+        @"In the case of a merger, the classification of the Issuer or the Counterparty is unknown."
+    )]
     Unknown,
-    
+
     /// <summary>
     /// In the case of a merger, the Issuer or the Counterparty is a parent company.
     /// Encoded/decoded by serializers as &quot;PRNT&quot;.
@@ -58,5 +64,4 @@ public enum InstitutionalClassificationCode
     [IsoId("_NJOBIHb2EeGgn5GmpWx6yw")]
     [Description(@"In the case of a merger, the Issuer or the Counterparty is a parent company.")]
     Parent,
-    
 }

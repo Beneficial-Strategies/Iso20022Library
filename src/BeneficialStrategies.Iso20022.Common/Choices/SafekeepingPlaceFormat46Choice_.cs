@@ -14,14 +14,27 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(SafekeepingPlaceFormat46Choice.Identification))]
     [KnownType(typeof(SafekeepingPlaceFormat46Choice.Proprietary))]
     [KnownType(typeof(SafekeepingPlaceFormat46Choice.TypeAndIdentification))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormat46Choice.Country),nameof(SafekeepingPlaceFormat46Choice.Country))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormat46Choice.DigitalLedgerIdentification),nameof(SafekeepingPlaceFormat46Choice.DigitalLedgerIdentification))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormat46Choice.Identification),nameof(SafekeepingPlaceFormat46Choice.Identification))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormat46Choice.Proprietary),nameof(SafekeepingPlaceFormat46Choice.Proprietary))]
-    [JsonDerivedType(typeof(SafekeepingPlaceFormat46Choice.TypeAndIdentification),nameof(SafekeepingPlaceFormat46Choice.TypeAndIdentification))]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormat46Choice.Country),
+        nameof(SafekeepingPlaceFormat46Choice.Country)
+    )]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormat46Choice.DigitalLedgerIdentification),
+        nameof(SafekeepingPlaceFormat46Choice.DigitalLedgerIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormat46Choice.Identification),
+        nameof(SafekeepingPlaceFormat46Choice.Identification)
+    )]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormat46Choice.Proprietary),
+        nameof(SafekeepingPlaceFormat46Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(SafekeepingPlaceFormat46Choice.TypeAndIdentification),
+        nameof(SafekeepingPlaceFormat46Choice.TypeAndIdentification)
+    )]
     [IsoId("_j2C9dZt3Ee-wQIOX0djF2w")]
     [DisplayName("Safekeeping Place Format46Choice")]
-    public abstract partial record SafekeepingPlaceFormat46Choice_
-    {
-    }
+    public abstract record SafekeepingPlaceFormat46Choice_ { }
 }

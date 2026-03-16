@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(CounterpartyIdentification3Choice.LEI))]
     [KnownType(typeof(CounterpartyIdentification3Choice.SectorAndLocation))]
     [KnownType(typeof(CounterpartyIdentification3Choice.NameAndLocation))]
-    [JsonDerivedType(typeof(CounterpartyIdentification3Choice.LEI),nameof(CounterpartyIdentification3Choice.LEI))]
-    [JsonDerivedType(typeof(CounterpartyIdentification3Choice.SectorAndLocation),nameof(CounterpartyIdentification3Choice.SectorAndLocation))]
-    [JsonDerivedType(typeof(CounterpartyIdentification3Choice.NameAndLocation),nameof(CounterpartyIdentification3Choice.NameAndLocation))]
+    [JsonDerivedType(
+        typeof(CounterpartyIdentification3Choice.LEI),
+        nameof(CounterpartyIdentification3Choice.LEI)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyIdentification3Choice.SectorAndLocation),
+        nameof(CounterpartyIdentification3Choice.SectorAndLocation)
+    )]
+    [JsonDerivedType(
+        typeof(CounterpartyIdentification3Choice.NameAndLocation),
+        nameof(CounterpartyIdentification3Choice.NameAndLocation)
+    )]
     [IsoId("_Zo-9QcEcEea7jLfvGi1PDw")]
     [DisplayName("Counterparty Identification 3 Choice")]
-    public abstract partial record CounterpartyIdentification3Choice_
-    {
-    }
+    public abstract record CounterpartyIdentification3Choice_ { }
 }

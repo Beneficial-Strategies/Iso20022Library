@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_Q7fV4dp-Ed-ak6NoX_4Aeg_321425004")]
 [DisplayName("Number And Sum Of Transactions")]
-public partial record NumberAndSumOfTransactions2
+public record NumberAndSumOfTransactions2
 {
-    #nullable enable
-    
     /// <summary>
     /// Number of individual entries included in the report.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record NumberAndSumOfTransactions2
     [DisplayName("Number Of Entries")]
     [IsoXmlTag("NbOfNtries")]
     [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-    public IsoMax15NumericText? NumberOfEntries { get; init; } 
-    
+    public IsoMax15NumericText? NumberOfEntries { get; init; }
+
     /// <summary>
     /// Total of all individual entries included in the report.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record NumberAndSumOfTransactions2
     [DisplayName("Sum")]
     [IsoXmlTag("Sum")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? Sum { get; init; } 
-    
+    public IsoDecimalNumber? Sum { get; init; }
+
     /// <summary>
     /// Resulting amount of the netted amounts for all debit and credit entries.
     /// </summary>
@@ -43,17 +41,13 @@ public partial record NumberAndSumOfTransactions2
     [DisplayName("Total Net Entry Amount")]
     [IsoXmlTag("TtlNetNtryAmt")]
     [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-    public IsoDecimalNumber? TotalNetEntryAmount { get; init; } 
-    
+    public IsoDecimalNumber? TotalNetEntryAmount { get; init; }
+
     /// <summary>
     /// Indicates whether the total net entry amount is a credit or a debit amount.
     /// </summary>
     [IsoId("_Q7fV5dp-Ed-ak6NoX_4Aeg_191865339")]
     [DisplayName("Credit Debit Indicator")]
     [IsoXmlTag("CdtDbtInd")]
-    public CreditDebitCode? CreditDebitIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public CreditDebitCode? CreditDebitIndicator { get; init; }
 }

@@ -23,7 +23,7 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwduF9p-Ed-ak6NoX_4Aeg_337179699")]
     [Description(@"Indicates that the offset value is related to displayed price.")]
     DisplayedPrice,
-    
+
     /// <summary>
     /// Indicates that the offset value is related to market price.
     /// Encoded/decoded by serializers as &quot;MRKT&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwduGNp-Ed-ak6NoX_4Aeg_337179700")]
     [Description(@"Indicates that the offset value is related to market price.")]
     MarketPrice,
-    
+
     /// <summary>
     /// Indicates that the offset value is related to primary price.
     /// Encoded/decoded by serializers as &quot;PRIM&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwnfENp-Ed-ak6NoX_4Aeg_337179701")]
     [Description(@"Indicates that the offset value is related to primary price.")]
     PrimaryPrice,
-    
+
     /// <summary>
     /// Indicates that the offset value is related to local primary price.
     /// Encoded/decoded by serializers as &quot;LPRI&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwnfEdp-Ed-ak6NoX_4Aeg_337179702")]
     [Description(@"Indicates that the offset value is related to local primary price.")]
     LocalPrimaryPrice,
-    
+
     /// <summary>
     /// Indicates that the offset value is related to midpoint price.
     /// Encoded/decoded by serializers as &quot;MIDP&quot;.
@@ -59,7 +59,7 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwnfEtp-Ed-ak6NoX_4Aeg_337179703")]
     [Description(@"Indicates that the offset value is related to midpoint price.")]
     MidpointPrice,
-    
+
     /// <summary>
     /// Indicates that the offset value is related to VWAP price.
     /// Encoded/decoded by serializers as &quot;VWAP&quot;.
@@ -68,7 +68,7 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwnfE9p-Ed-ak6NoX_4Aeg_-1352175476")]
     [Description(@"Indicates that the offset value is related to VWAP price.")]
     VolumeWeightedAveragePrice,
-    
+
     /// <summary>
     /// Indicates that the offset value is related to average price guarantee.
     /// Encoded/decoded by serializers as &quot;AVPG&quot;.
@@ -77,5 +77,4 @@ public enum TypeOfDiscretionPriceCode
     [IsoId("_YwnfFNp-Ed-ak6NoX_4Aeg_-1352175416")]
     [Description(@"Indicates that the offset value is related to average price guarantee.")]
     AveragePriceGuarantee,
-    
 }

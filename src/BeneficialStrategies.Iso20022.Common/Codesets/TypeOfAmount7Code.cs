@@ -23,7 +23,7 @@ public enum TypeOfAmount7Code
     [IsoId("_NBM3MYN-EeSNofOeou9G3A")]
     [Description(@"Fees.")]
     Fees = TypeOfAmountCode.Fees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Fees amount from the card issuer.
     /// Encoded/decoded by serializers as &quot;FEEI&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfAmount7Code
     [IsoId("_NWACgYN-EeSNofOeou9G3A")]
     [Description(@"Fees amount from the card issuer.")]
     IssuerFees = TypeOfAmountCode.IssuerFees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Interchange fees.
     /// Encoded/decoded by serializers as &quot;FEEH&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfAmount7Code
     [IsoId("_gi3gAYN-EeSNofOeou9G3A")]
     [Description(@"Interchange fees.")]
     InterchangeFees = TypeOfAmountCode.InterchangeFees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Processing fees.
     /// Encoded/decoded by serializers as &quot;FEEP&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfAmount7Code
     [IsoId("_nk6mcYN-EeSNofOeou9G3A")]
     [Description(@"Processing fees.")]
     ProcessingFees = TypeOfAmountCode.ProcessingFees, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// International service assessment fees.
     /// Encoded/decoded by serializers as &quot;FEEA&quot;.
@@ -59,5 +59,4 @@ public enum TypeOfAmount7Code
     [IsoId("_63UEMYN-EeSNofOeou9G3A")]
     [Description(@"International service assessment fees.")]
     InternationalServiceAssessmentFees = TypeOfAmountCode.InternationalServiceAssessmentFees, // same ordinal as derivation source for type conversions
-    
 }

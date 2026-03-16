@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_mBzOifJqEeiJn9rM2Znz2w")]
 [DisplayName("Adjustment")]
-public partial record Adjustment9
+public record Adjustment9
 {
-    #nullable enable
-    
     /// <summary>
     /// Type of adjustment.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record Adjustment9
     [DisplayName("Type")]
     [IsoXmlTag("Tp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Type { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Type { get; init; }
+
     /// <summary>
     /// Additional information to specify the type of adjustment.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record Adjustment9
     [DisplayName("Additional Type")]
     [IsoXmlTag("AddtlTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AdditionalType { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AdditionalType { get; init; }
+
     /// <summary>
     /// Description of the adjustment.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record Adjustment9
     [DisplayName("Description")]
     [IsoXmlTag("Desc")]
     [IsoSimpleType(IsoSimpleType.Max70Text)]
-    [StringLength(maximumLength: 70 ,MinimumLength = 1)]
-    public IsoMax70Text? Description { get; init; } 
-    
+    [StringLength(maximumLength: 70, MinimumLength = 1)]
+    public IsoMax70Text? Description { get; init; }
+
     /// <summary>
     /// Reason for the adjustment.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record Adjustment9
     [DisplayName("Reason")]
     [IsoXmlTag("Rsn")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? Reason { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? Reason { get; init; }
+
     /// <summary>
     /// Promotion or adjustment code.
     /// </summary>
@@ -65,9 +63,9 @@ public partial record Adjustment9
     [DisplayName("Promotion Code")]
     [IsoXmlTag("PrmtnCd")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? PromotionCode { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? PromotionCode { get; init; }
+
     /// <summary>
     /// Contains the percentage value of the discount (when applicable).
     /// </summary>
@@ -75,27 +73,23 @@ public partial record Adjustment9
     [DisplayName("Percentage")]
     [IsoXmlTag("Pctg")]
     [IsoSimpleType(IsoSimpleType.PercentageRate)]
-    public IsoPercentageRate? Percentage { get; init; } 
-    
+    public IsoPercentageRate? Percentage { get; init; }
+
     /// <summary>
     /// Contains amount of the adjustment, exclusive of tax.
     /// </summary>
     [IsoId("_mBzOjfJqEeiJn9rM2Znz2w")]
     [DisplayName("Adjustment Amount")]
     [IsoXmlTag("AdjstmntAmt")]
-    public ImpliedCurrencyAndAmount? AdjustmentAmount { get; init; } 
-    
+    public ImpliedCurrencyAndAmount? AdjustmentAmount { get; init; }
+
     /// <summary>
-    /// Indicates whether or not tax was calculated on the original amount of the transaction. 
+    /// Indicates whether or not tax was calculated on the original amount of the transaction.
     /// Note that false (or not present) indicates applicable taxes are based on adjusted amount.
     /// </summary>
     [IsoId("_mBzOkfJqEeiJn9rM2Znz2w")]
     [DisplayName("Tax Calculated On Original Amount")]
     [IsoXmlTag("TaxClctdOnOrgnlAmt")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoTrueFalseIndicator? TaxCalculatedOnOriginalAmount { get; init; }
 }

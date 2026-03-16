@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_WAtaIDcVEeiIxKQErQxblg")]
-[Description(@"Specifies the legal structure of a financial instrument as defined in the scope of European MiFID Template (EMT) reference 00060.")]
+[Description(
+    @"Specifies the legal structure of a financial instrument as defined in the scope of European MiFID Template (EMT) reference 00060."
+)]
 [DerivedFrom(typeof(LegalStructureFinancialInstrumentCode))]
 public enum LegalStructureFinancialInstrument1Code
 {
@@ -21,9 +23,11 @@ public enum LegalStructureFinancialInstrument1Code
     /// </summary>
     [EnumMember(Value = "NUCI")]
     [IsoId("_X3bEITcVEeiIxKQErQxblg")]
-    [Description(@"Legal structure is a not an Undertaking for Collective Investment in Transferable Securities (UCITS).")]
+    [Description(
+        @"Legal structure is a not an Undertaking for Collective Investment in Transferable Securities (UCITS)."
+    )]
     NonUCITS = LegalStructureFinancialInstrumentCode.NonUCITS, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a structured fund.
     /// Encoded/decoded by serializers as &quot;SFUN&quot;.
@@ -32,7 +36,7 @@ public enum LegalStructureFinancialInstrument1Code
     [IsoId("_X74tYTcVEeiIxKQErQxblg")]
     [Description(@"Legal structure is a structured fund.")]
     StructuredFund = LegalStructureFinancialInstrumentCode.StructuredFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a structured security.
     /// Encoded/decoded by serializers as &quot;SSEC&quot;.
@@ -41,16 +45,18 @@ public enum LegalStructureFinancialInstrument1Code
     [IsoId("_YANMsTcVEeiIxKQErQxblg")]
     [Description(@"Legal structure is a structured security.")]
     StructuredSecurity = LegalStructureFinancialInstrumentCode.StructuredSecurity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is an Undertaking for Collective Investment in Transferable Securities (UCITS).
     /// Encoded/decoded by serializers as &quot;UCIT&quot;.
     /// </summary>
     [EnumMember(Value = "UCIT")]
     [IsoId("_YE9w4TcVEeiIxKQErQxblg")]
-    [Description(@"Legal structure is an Undertaking for Collective Investment in Transferable Securities (UCITS).")]
+    [Description(
+        @"Legal structure is an Undertaking for Collective Investment in Transferable Securities (UCITS)."
+    )]
     UCITS = LegalStructureFinancialInstrumentCode.UCITS, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is an exchange traded commodity.
     /// Encoded/decoded by serializers as &quot;EXTC&quot;.
@@ -59,23 +65,26 @@ public enum LegalStructureFinancialInstrument1Code
     [IsoId("_atb8EYBgEei8Q7I_11BpAQ")]
     [Description(@"Legal structure is an exchange traded commodity.")]
     ExchangeTradedCommodity = LegalStructureFinancialInstrumentCode.ExchangeTradedCommodity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is an Undertaking for Collective Investment in Transferable Securities (UCITS) money market fund.
     /// Encoded/decoded by serializers as &quot;UCMM&quot;.
     /// </summary>
     [EnumMember(Value = "UCMM")]
     [IsoId("_azh9AYBgEei8Q7I_11BpAQ")]
-    [Description(@"Legal structure is an Undertaking for Collective Investment in Transferable Securities (UCITS) money market fund.")]
+    [Description(
+        @"Legal structure is an Undertaking for Collective Investment in Transferable Securities (UCITS) money market fund."
+    )]
     UCITSMoneyMarketFund = LegalStructureFinancialInstrumentCode.UCITSMoneyMarketFund, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legal structure is a money market fund that is not an Undertaking for Collective Investment in Transferable Securities (UCITS).
     /// Encoded/decoded by serializers as &quot;NUMM&quot;.
     /// </summary>
     [EnumMember(Value = "NUMM")]
     [IsoId("_LZpQ4YvwEeicrr-UkGlMQA")]
-    [Description(@"Legal structure is a money market fund that is not an Undertaking for Collective Investment in Transferable Securities (UCITS).")]
+    [Description(
+        @"Legal structure is a money market fund that is not an Undertaking for Collective Investment in Transferable Securities (UCITS)."
+    )]
     NonUCITSMoneyMarketFund = LegalStructureFinancialInstrumentCode.NonUCITSMoneyMarketFund, // same ordinal as derivation source for type conversions
-    
 }

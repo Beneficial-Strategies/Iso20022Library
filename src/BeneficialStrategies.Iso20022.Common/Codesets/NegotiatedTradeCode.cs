@@ -23,7 +23,7 @@ public enum NegotiatedTradeCode
     [IsoId("_aNJuidp-Ed-ak6NoX_4Aeg_1435150328")]
     [Description(@"Trade is negotiated.")]
     Negotiated,
-    
+
     /// <summary>
     /// Trade is not negotiated.
     /// Encoded/decoded by serializers as &quot;NNGO&quot;.
@@ -32,7 +32,7 @@ public enum NegotiatedTradeCode
     [IsoId("_aNTfgNp-Ed-ak6NoX_4Aeg_1468396094")]
     [Description(@"Trade is not negotiated.")]
     NotNegotiated,
-    
+
     /// <summary>
     /// Whether the trade is negotiated or not is unknown.
     /// Encoded/decoded by serializers as &quot;UNKW&quot;.
@@ -41,5 +41,4 @@ public enum NegotiatedTradeCode
     [IsoId("_aNTfgdp-Ed-ak6NoX_4Aeg_1480402761")]
     [Description(@"Whether the trade is negotiated or not is unknown.")]
     Unknown,
-    
 }

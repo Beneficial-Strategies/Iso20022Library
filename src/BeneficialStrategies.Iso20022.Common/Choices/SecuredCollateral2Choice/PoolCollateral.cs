@@ -1,31 +1,29 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
 {
     /// <summary>
-    /// Identifies the pooling of repos in which the collateral basket is identified by an ISIN. 
+    /// Identifies the pooling of repos in which the collateral basket is identified by an ISIN.
     /// Usage: When the collateral basket is identified by an ISIN, the basket ISIN shall be reported.
     /// </summary>
     [IsoId("_iZO6BaidEeWHO_l3hf2rlA")]
     [DisplayName("Pool Collateral")]
-    public partial record PoolCollateral : SecuredCollateral2Choice_
+    public record PoolCollateral : SecuredCollateral2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Nominal amount of the security pledged as collateral. Except for tri-party repos and any other transaction in which the security pledged is not identified via a single ISIN.
         /// </summary>
         [IsoId("_i2_NAaidEeWHO_l3hf2rlA")]
         [DisplayName("Nominal Amount")]
         [IsoXmlTag("NmnlAmt")]
-        public ActiveCurrencyAndAmount? NominalAmount { get; init; } 
-        
+        public ActiveCurrencyAndAmount? NominalAmount { get; init; }
+
         /// <summary>
         /// International Securities Identification Number (ISIN). A numbering system designed by the United Nation&apos;s International Organisation for Standardisation (ISO). The ISIN is composed of a 2-character prefix representing the country of issue, followed by the national security number (if one exists), and a check digit. Each country has a national numbering agency that assigns ISIN numbers for securities in that country.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuredCollateral2Choice
         [DisplayName("ISIN")]
         [IsoXmlTag("ISIN")]
         [IsoSimpleType(IsoSimpleType.ISINOct2015Identifier)]
-        public required IsoISINOct2015Identifier ISIN { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISINOct2015Identifier ISIN { get; init; }
     }
 }

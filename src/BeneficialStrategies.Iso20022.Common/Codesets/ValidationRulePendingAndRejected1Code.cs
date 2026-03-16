@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_3o5AU06KEeuOHsgMPq_2jQ")]
-[Description(@"Specifies the status for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets.")]
+[Description(
+    @"Specifies the status for the cross-element validation rules.||Usage: the code set is used when the formal validation rules make reference of an external code sets."
+)]
 [DerivedFrom(typeof(ValidationRuleCode))]
 public enum ValidationRulePendingAndRejected1Code
 {
@@ -24,7 +26,7 @@ public enum ValidationRulePendingAndRejected1Code
     [IsoId("_3o5AVU6KEeuOHsgMPq_2jQ")]
     [Description(@"Rejected.")]
     Rejected = ValidationRuleCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Pending.
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
@@ -33,5 +35,4 @@ public enum ValidationRulePendingAndRejected1Code
     [IsoId("_BRWvYU6LEeuOHsgMPq_2jQ")]
     [Description(@"Pending.")]
     Pending = ValidationRuleCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

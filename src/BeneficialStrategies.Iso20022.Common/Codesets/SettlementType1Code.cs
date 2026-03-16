@@ -23,7 +23,7 @@ public enum SettlementType1Code
     [IsoId("_ZOH6eNp-Ed-ak6NoX_4Aeg_506485993")]
     [Description(@"Option trade is settled as principal.")]
     Principal = SettlementTypeCode.Principal, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Option trade is netted off against another trade.
     /// Encoded/decoded by serializers as &quot;NETO&quot;.
@@ -32,5 +32,4 @@ public enum SettlementType1Code
     [IsoId("_ZOREYNp-Ed-ak6NoX_4Aeg_506486010")]
     [Description(@"Option trade is netted off against another trade.")]
     NettedOff = SettlementTypeCode.NettedOff, // same ordinal as derivation source for type conversions
-    
 }

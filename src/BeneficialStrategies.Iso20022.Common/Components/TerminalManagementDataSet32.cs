@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_BwZSkXJtEe299ZbWCkdR_w")]
 [DisplayName("Terminal Management Data Set")]
-public partial record TerminalManagementDataSet32
+public record TerminalManagementDataSet32
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the data set containing the management plan.
     /// </summary>
     [IsoId("_B2xAUXJtEe299ZbWCkdR_w")]
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
-    public required DataSetIdentification10 Identification { get; init; } 
-    
+    public required DataSetIdentification10 Identification { get; init; }
+
     /// <summary>
     /// Counter to identify a single data set within the whole transfer.
     /// </summary>
@@ -33,8 +31,8 @@ public partial record TerminalManagementDataSet32
     [DisplayName("Sequence Counter")]
     [IsoXmlTag("SeqCntr")]
     [IsoSimpleType(IsoSimpleType.Max9NumericText)]
-    public IsoMax9NumericText? SequenceCounter { get; init; } 
-    
+    public IsoMax9NumericText? SequenceCounter { get; init; }
+
     /// <summary>
     /// Indication of the last sequence in case of split messages.
     /// </summary>
@@ -42,17 +40,13 @@ public partial record TerminalManagementDataSet32
     [DisplayName("Last Sequence")]
     [IsoXmlTag("LastSeq")]
     [IsoSimpleType(IsoSimpleType.TrueFalseIndicator)]
-    public IsoTrueFalseIndicator? LastSequence { get; init; } 
-    
+    public IsoTrueFalseIndicator? LastSequence { get; init; }
+
     /// <summary>
     /// Content of the management plan.
     /// </summary>
     [IsoId("_B2xAV3JtEe299ZbWCkdR_w")]
     [DisplayName("Content")]
     [IsoXmlTag("Cntt")]
-    public ManagementPlanContent11? Content { get; init; } 
-    
-    
-    #nullable disable
-    
+    public ManagementPlanContent11? Content { get; init; }
 }

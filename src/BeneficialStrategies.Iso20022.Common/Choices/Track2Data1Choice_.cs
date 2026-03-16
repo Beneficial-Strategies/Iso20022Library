@@ -12,11 +12,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(Track2Data1Choice.TextValue))]
     [KnownType(typeof(Track2Data1Choice.HexadecimalBinaryValue))]
-    [JsonDerivedType(typeof(Track2Data1Choice.TextValue),nameof(Track2Data1Choice.TextValue))]
-    [JsonDerivedType(typeof(Track2Data1Choice.HexadecimalBinaryValue),nameof(Track2Data1Choice.HexadecimalBinaryValue))]
+    [JsonDerivedType(typeof(Track2Data1Choice.TextValue), nameof(Track2Data1Choice.TextValue))]
+    [JsonDerivedType(
+        typeof(Track2Data1Choice.HexadecimalBinaryValue),
+        nameof(Track2Data1Choice.HexadecimalBinaryValue)
+    )]
     [IsoId("_NkLQYEbbEeeIjf8aP9KbJA")]
     [DisplayName("Track 2 Data 1 Choice")]
-    public abstract partial record Track2Data1Choice_
-    {
-    }
+    public abstract record Track2Data1Choice_ { }
 }

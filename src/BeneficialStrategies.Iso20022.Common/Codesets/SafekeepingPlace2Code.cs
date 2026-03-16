@@ -21,9 +21,11 @@ public enum SafekeepingPlace2Code
     /// </summary>
     [EnumMember(Value = "SHHE")]
     [IsoId("_Y-oF5dp-Ed-ak6NoX_4Aeg_1256685256")]
-    [Description(@"Used for certain financial instruments, for example, US mutual funds, where settlement is internal only, that is, there is no external movement of securities.")]
+    [Description(
+        @"Used for certain financial instruments, for example, US mutual funds, where settlement is internal only, that is, there is no external movement of securities."
+    )]
     SharesHeldElsewhere = SafekeepingPlaceCode.SharesHeldElsewhere, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// All places of safekeeping where the financial instrument is held.
     /// Encoded/decoded by serializers as &quot;ALLP&quot;.
@@ -32,5 +34,4 @@ public enum SafekeepingPlace2Code
     [IsoId("_Y-oF5tp-Ed-ak6NoX_4Aeg_1256685274")]
     [Description(@"All places of safekeeping where the financial instrument is held.")]
     AllPlaces = SafekeepingPlaceCode.AllPlaces, // same ordinal as derivation source for type conversions
-    
 }

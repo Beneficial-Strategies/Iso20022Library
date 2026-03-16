@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_agObhtp-Ed-ak6NoX_4Aeg_1538718014")]
-[Description(@"Specifies the type of the document for example commercial invoice, credit note, debit note.")]
+[Description(
+    @"Specifies the type of the document for example commercial invoice, credit note, debit note."
+)]
 [DerivedFrom(typeof(DocumentTypeCode))]
 public enum DocumentType4Code
 {
@@ -23,5 +25,4 @@ public enum DocumentType4Code
     [IsoId("_agObh9p-Ed-ak6NoX_4Aeg_1538718054")]
     [Description(@"Document is an invoice.")]
     CommercialInvoice = DocumentTypeCode.CommercialInvoice, // same ordinal as derivation source for type conversions
-    
 }

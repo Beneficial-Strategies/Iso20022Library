@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(ProcessedStatus1FormatChoice.Code))]
     [KnownType(typeof(ProcessedStatus1FormatChoice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessedStatus1FormatChoice.Code),nameof(ProcessedStatus1FormatChoice.Code))]
-    [JsonDerivedType(typeof(ProcessedStatus1FormatChoice.Proprietary),nameof(ProcessedStatus1FormatChoice.Proprietary))]
+    [JsonDerivedType(
+        typeof(ProcessedStatus1FormatChoice.Code),
+        nameof(ProcessedStatus1FormatChoice.Code)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessedStatus1FormatChoice.Proprietary),
+        nameof(ProcessedStatus1FormatChoice.Proprietary)
+    )]
     [IsoId("_RnJiA9p-Ed-ak6NoX_4Aeg_-1353341900")]
     [DisplayName("Processed Status 1 Format Choice")]
-    public abstract partial record ProcessedStatus1FormatChoice_
-    {
-    }
+    public abstract record ProcessedStatus1FormatChoice_ { }
 }

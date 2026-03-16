@@ -23,7 +23,7 @@ public enum TargetMarket3Code
     [IsoId("_W8tJobVNEeqkjqDuFVh1-A")]
     [Description(@"Yes, is applicable.")]
     InScope = TargetMarketCode.InScope, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No, is not applicable.
     /// Encoded/decoded by serializers as &quot;NSCO&quot;.
@@ -32,5 +32,4 @@ public enum TargetMarket3Code
     [IsoId("_XqxwkbVNEeqkjqDuFVh1-A")]
     [Description(@"No, is not applicable.")]
     NotInScope = TargetMarketCode.NotInScope, // same ordinal as derivation source for type conversions
-    
 }

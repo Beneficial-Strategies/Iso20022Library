@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_loYSf609EemDtrWpq90Ckg")]
 [DisplayName("Power Of Attorney Requirements")]
-public partial record PowerOfAttorneyRequirements4
+public record PowerOfAttorneyRequirements4
 {
-    #nullable enable
-    
     /// <summary>
     /// Authority that must validate the power of attorney.
     /// </summary>
@@ -27,7 +25,7 @@ public partial record PowerOfAttorneyRequirements4
     [MinLength(0)]
     [MaxLength(4)]
     public SimpleValueList<PowerOfAttorneyLegalisation1Code> LegalRequirement { get; init; } = [];
-    
+
     /// <summary>
     /// Documents needed to obtain a valid power of attorney.
     /// </summary>
@@ -35,18 +33,14 @@ public partial record PowerOfAttorneyRequirements4
     [DisplayName("Other Documentation")]
     [IsoXmlTag("OthrDcmnttn")]
     [IsoSimpleType(IsoSimpleType.Max350Text)]
-    [StringLength(maximumLength: 350 ,MinimumLength = 1)]
-    public IsoMax350Text? OtherDocumentation { get; init; } 
-    
+    [StringLength(maximumLength: 350, MinimumLength = 1)]
+    public IsoMax350Text? OtherDocumentation { get; init; }
+
     /// <summary>
     /// Date by which the requested documents must be provided.
     /// </summary>
     [IsoId("_l-Zlqa09EemDtrWpq90Ckg")]
     [DisplayName("Document Submission Deadline")]
     [IsoXmlTag("DocSubmissnDdln")]
-    public DateFormat58Choice_? DocumentSubmissionDeadline { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DateFormat58Choice_? DocumentSubmissionDeadline { get; init; }
 }

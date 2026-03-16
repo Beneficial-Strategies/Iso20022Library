@@ -23,7 +23,7 @@ public enum MatchingProcess1Code
     [IsoId("_aU58V9p-Ed-ak6NoX_4Aeg_65054355")]
     [Description(@"The referenced transaction is requested to be unmatched.")]
     Unmatch = MatchingProcessCode.Unmatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Matching process is to be resumed for the referenced transaction.
     /// Encoded/decoded by serializers as &quot;MTRE&quot;.
@@ -32,5 +32,4 @@ public enum MatchingProcess1Code
     [IsoId("_aU58WNp-Ed-ak6NoX_4Aeg_65054356")]
     [Description(@"Matching process is to be resumed for the referenced transaction.")]
     ResumeMatching = MatchingProcessCode.ResumeMatching, // same ordinal as derivation source for type conversions
-    
 }

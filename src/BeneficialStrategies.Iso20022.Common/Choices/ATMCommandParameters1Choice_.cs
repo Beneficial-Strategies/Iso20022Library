@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ATMCommandParameters1Choice.ATMRequiredGlobalStatus))]
     [KnownType(typeof(ATMCommandParameters1Choice.ExpectedMessageFunction))]
     [KnownType(typeof(ATMCommandParameters1Choice.RequiredConfigurationParameter))]
-    [JsonDerivedType(typeof(ATMCommandParameters1Choice.ATMRequiredGlobalStatus),nameof(ATMCommandParameters1Choice.ATMRequiredGlobalStatus))]
-    [JsonDerivedType(typeof(ATMCommandParameters1Choice.ExpectedMessageFunction),nameof(ATMCommandParameters1Choice.ExpectedMessageFunction))]
-    [JsonDerivedType(typeof(ATMCommandParameters1Choice.RequiredConfigurationParameter),nameof(ATMCommandParameters1Choice.RequiredConfigurationParameter))]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters1Choice.ATMRequiredGlobalStatus),
+        nameof(ATMCommandParameters1Choice.ATMRequiredGlobalStatus)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters1Choice.ExpectedMessageFunction),
+        nameof(ATMCommandParameters1Choice.ExpectedMessageFunction)
+    )]
+    [JsonDerivedType(
+        typeof(ATMCommandParameters1Choice.RequiredConfigurationParameter),
+        nameof(ATMCommandParameters1Choice.RequiredConfigurationParameter)
+    )]
     [IsoId("_JTG3oIqLEeSRT5rEzcAHEw")]
     [DisplayName("ATM Command Parameters 1 Choice")]
-    public abstract partial record ATMCommandParameters1Choice_
-    {
-    }
+    public abstract record ATMCommandParameters1Choice_ { }
 }

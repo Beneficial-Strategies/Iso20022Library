@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(CurrencyCriteriaDefinition1Choice.QueryName))]
     [KnownType(typeof(CurrencyCriteriaDefinition1Choice.NewCriteria))]
-    [JsonDerivedType(typeof(CurrencyCriteriaDefinition1Choice.QueryName),nameof(CurrencyCriteriaDefinition1Choice.QueryName))]
-    [JsonDerivedType(typeof(CurrencyCriteriaDefinition1Choice.NewCriteria),nameof(CurrencyCriteriaDefinition1Choice.NewCriteria))]
+    [JsonDerivedType(
+        typeof(CurrencyCriteriaDefinition1Choice.QueryName),
+        nameof(CurrencyCriteriaDefinition1Choice.QueryName)
+    )]
+    [JsonDerivedType(
+        typeof(CurrencyCriteriaDefinition1Choice.NewCriteria),
+        nameof(CurrencyCriteriaDefinition1Choice.NewCriteria)
+    )]
     [IsoId("_HxiIV5lZEeeE1Ya-LgRsuQ")]
     [DisplayName("Currency Criteria Definition 1 Choice")]
-    public abstract partial record CurrencyCriteriaDefinition1Choice_
-    {
-    }
+    public abstract record CurrencyCriteriaDefinition1Choice_ { }
 }

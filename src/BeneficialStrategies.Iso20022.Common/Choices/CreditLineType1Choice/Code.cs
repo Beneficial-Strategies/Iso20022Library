@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CreditLineType1Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditLineType1Choice
     /// </summary>
     [IsoId("_2T3LxYZ5Eee8r9VKRbnJSg")]
     [DisplayName("Code")]
-    public partial record Code : CreditLineType1Choice_
+    public record Code : CreditLineType1Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Contains the main value for the container.
         /// Specifies the external credit line type code in the format of character string with a maximum length of 4 characters.
@@ -24,10 +22,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CreditLineType1Choice
         /// External code sets can be downloaded from www.iso20022.org.
         /// </summary>
         [IsoXmlTag("Cd")]
-        public required ExternalCreditLineType1Code Value { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required ExternalCreditLineType1Code Value { get; init; }
     }
 }

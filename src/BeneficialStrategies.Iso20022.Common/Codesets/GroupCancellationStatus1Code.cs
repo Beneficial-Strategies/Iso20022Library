@@ -23,7 +23,7 @@ public enum GroupCancellationStatus1Code
     [IsoId("_auruRNp-Ed-ak6NoX_4Aeg_-305868783")]
     [Description(@"Cancellation is partially accepted.")]
     PartiallyAcceptedCancellationRequest = PaymentStatusCode.PartiallyAcceptedCancellationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request is rejected
     /// Encoded/decoded by serializers as &quot;RJCR&quot;.
@@ -32,7 +32,7 @@ public enum GroupCancellationStatus1Code
     [IsoId("_auruRdp-Ed-ak6NoX_4Aeg_-305868753")]
     [Description(@"Cancellation request is rejected")]
     RejectedCancellationRequest = PaymentStatusCode.RejectedCancellationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation is accepted.
     /// Encoded/decoded by serializers as &quot;ACCR&quot;.
@@ -41,7 +41,7 @@ public enum GroupCancellationStatus1Code
     [IsoId("_auruRtp-Ed-ak6NoX_4Aeg_-305868752")]
     [Description(@"Cancellation is accepted.")]
     AcceptedCancellationRequest = PaymentStatusCode.AcceptedCancellationRequest, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Cancellation request is pending.
     /// Encoded/decoded by serializers as &quot;PDCR&quot;.
@@ -50,5 +50,4 @@ public enum GroupCancellationStatus1Code
     [IsoId("_auruR9p-Ed-ak6NoX_4Aeg_-91612397")]
     [Description(@"Cancellation request is pending.")]
     PendingCancellationRequest = PaymentStatusCode.PendingCancellationRequest, // same ordinal as derivation source for type conversions
-    
 }

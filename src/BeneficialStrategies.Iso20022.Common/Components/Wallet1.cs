@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_kmWJIEanEeeIjf8aP9KbJA")]
 [DisplayName("Wallet")]
-public partial record Wallet1
+public record Wallet1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the provider of the wallet.
     /// </summary>
     [IsoId("_LWrmQEaoEeeIjf8aP9KbJA")]
     [DisplayName("Provider")]
     [IsoXmlTag("Prvdr")]
-    public PartyIdentification197? Provider { get; init; } 
-    
+    public PartyIdentification197? Provider { get; init; }
+
     /// <summary>
     /// Additional data associated with wallet.
     /// </summary>
@@ -33,10 +31,6 @@ public partial record Wallet1
     [DisplayName("Additional Wallet Data")]
     [IsoXmlTag("AddtlWlltData")]
     [IsoSimpleType(IsoSimpleType.Max256Text)]
-    [StringLength(maximumLength: 256 ,MinimumLength = 1)]
-    public IsoMax256Text? AdditionalWalletData { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 256, MinimumLength = 1)]
+    public IsoMax256Text? AdditionalWalletData { get; init; }
 }

@@ -23,7 +23,7 @@ public enum Status2Code
     [IsoId("_ZQggENp-Ed-ak6NoX_4Aeg_-539683848")]
     [Description(@"Processing has been completed.")]
     Completed = StatusCode.Completed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is pending.
     /// Encoded/decoded by serializers as &quot;PDNG&quot;.
@@ -32,5 +32,4 @@ public enum Status2Code
     [IsoId("_ZQggEdp-Ed-ak6NoX_4Aeg_-475958869")]
     [Description(@"Instruction is pending.")]
     Pending = StatusCode.Pending, // same ordinal as derivation source for type conversions
-    
 }

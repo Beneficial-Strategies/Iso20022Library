@@ -23,7 +23,7 @@ public enum TransactionInitiatorCode
     [IsoId("_jfoDt2zfEemD24gVaMSpeA")]
     [Description(@"Merchant initiated transaction.")]
     Merchant,
-    
+
     /// <summary>
     /// Customer initiated transaction.
     /// Encoded/decoded by serializers as &quot;CUST&quot;.
@@ -32,5 +32,4 @@ public enum TransactionInitiatorCode
     [IsoId("_jfoDuGzfEemD24gVaMSpeA")]
     [Description(@"Customer initiated transaction.")]
     Customer,
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_X5F2IYp2EeS3NqNpgnMh2w")]
 [DisplayName("Automated Teller Machine")]
-public partial record AutomatedTellerMachine2
+public record AutomatedTellerMachine2
 {
-    #nullable enable
-    
     /// <summary>
     /// ATM terminal device identification for the acquirer and the issuer.
     /// </summary>
@@ -25,9 +23,9 @@ public partial record AutomatedTellerMachine2
     [DisplayName("Identification")]
     [IsoXmlTag("Id")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text Identification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text Identification { get; init; }
+
     /// <summary>
     /// ATM terminal device identification for the ATM manager.
     /// </summary>
@@ -35,9 +33,9 @@ public partial record AutomatedTellerMachine2
     [DisplayName("Additional Identification")]
     [IsoXmlTag("AddtlId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? AdditionalIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? AdditionalIdentification { get; init; }
+
     /// <summary>
     /// ATM terminal device identification for the branch.
     /// </summary>
@@ -45,26 +43,22 @@ public partial record AutomatedTellerMachine2
     [DisplayName("Sequence Number")]
     [IsoXmlTag("SeqNb")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SequenceNumber { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SequenceNumber { get; init; }
+
     /// <summary>
     /// Reference currency of the ATM.
     /// </summary>
     [IsoId("_YGDUF4p2EeS3NqNpgnMh2w")]
     [DisplayName("Base Currency")]
     [IsoXmlTag("BaseCcy")]
-    public ActiveCurrencyCode? BaseCurrency { get; init; } 
-    
+    public ActiveCurrencyCode? BaseCurrency { get; init; }
+
     /// <summary>
     /// Location of the ATM.
     /// </summary>
     [IsoId("_YGDUGYp2EeS3NqNpgnMh2w")]
     [DisplayName("Location")]
     [IsoXmlTag("Lctn")]
-    public PostalAddress17? Location { get; init; } 
-    
-    
-    #nullable disable
-    
+    public PostalAddress17? Location { get; init; }
 }

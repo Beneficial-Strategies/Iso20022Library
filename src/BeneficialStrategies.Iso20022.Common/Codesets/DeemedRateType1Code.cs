@@ -23,7 +23,7 @@ public enum DeemedRateType1Code
     [IsoId("_qLgTQZSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of dividend proceeds attributed to the security holder.")]
     DeemedDividendProceeds = DeemedRateTypeCode.DeemedDividendProceeds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deemed rate of fund proceeds attributed to the security holder.
     /// Encoded/decoded by serializers as &quot;DEFP&quot;.
@@ -32,7 +32,7 @@ public enum DeemedRateType1Code
     [IsoId("_qaYcwZSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of fund proceeds attributed to the security holder.")]
     DeemedFundProceeds = DeemedRateTypeCode.DeemedFundProceeds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deemed rate of interest proceeds attributed to the security holder.
     /// Encoded/decoded by serializers as &quot;DEIT&quot;.
@@ -41,7 +41,7 @@ public enum DeemedRateType1Code
     [IsoId("_qfvd4ZSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of interest proceeds attributed to the security holder.")]
     DeemedInterestProceeds = DeemedRateTypeCode.DeemedInterestProceeds, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Deemed rate of royalties proceeds attributed to the security holder.
     /// Encoded/decoded by serializers as &quot;DERY&quot;.
@@ -50,5 +50,4 @@ public enum DeemedRateType1Code
     [IsoId("_qm4AoZSlEeeh5JjedkaA_g")]
     [Description(@"Deemed rate of royalties proceeds attributed to the security holder.")]
     DeemedRoyaltiesProceeds = DeemedRateTypeCode.DeemedRoyaltiesProceeds, // same ordinal as derivation source for type conversions
-    
 }

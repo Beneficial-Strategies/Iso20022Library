@@ -23,7 +23,7 @@ public enum InvestorRestrictionType1Code
     [IsoId("_harytWliEeGaMcKyqKNRfQ_1492655760")]
     [Description(@"Restriction applies to a legal resident.")]
     LegalResident = InvestorRestrictionTypeCode.LegalResident, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Restriction applies to a citizen.
     /// Encoded/decoded by serializers as &quot;CITI&quot;.
@@ -32,7 +32,7 @@ public enum InvestorRestrictionType1Code
     [IsoId("_harytmliEeGaMcKyqKNRfQ_-1044474030")]
     [Description(@"Restriction applies to a citizen.")]
     Citizen = InvestorRestrictionTypeCode.Citizen, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Restriction applies to an individual.
     /// Encoded/decoded by serializers as &quot;INDV&quot;.
@@ -41,5 +41,4 @@ public enum InvestorRestrictionType1Code
     [IsoId("_haryt2liEeGaMcKyqKNRfQ_1166734162")]
     [Description(@"Restriction applies to an individual.")]
     Individual = InvestorRestrictionTypeCode.Individual, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum Response8Code
     [IsoId("_jM8mwZi4EeefZKJHxQTztg")]
     [Description(@"Advice message is processed.")]
     Processed = ResponseCode.Processed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Advice message could not be processed.
     /// Encoded/decoded by serializers as &quot;UNPR&quot;.
@@ -32,7 +32,7 @@ public enum Response8Code
     [IsoId("_kcIWspi4EeefZKJHxQTztg")]
     [Description(@"Advice message could not be processed.")]
     NotProcessed = ResponseCode.NotProcessed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service is under review.
     /// Encoded/decoded by serializers as &quot;UNRV&quot;.
@@ -41,7 +41,7 @@ public enum Response8Code
     [IsoId("_pd2kIZi4EeefZKJHxQTztg")]
     [Description(@"Service is under review.")]
     UnderReview = ResponseCode.UnderReview, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service was rejected.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -50,16 +50,18 @@ public enum Response8Code
     [IsoId("_pytZ0pi4EeefZKJHxQTztg")]
     [Description(@"Service was rejected.")]
     Rejected = ResponseCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem).
     /// Encoded/decoded by serializers as &quot;TECH&quot;.
     /// </summary>
     [EnumMember(Value = "TECH")]
     [IsoId("_tmwTMpi4EeefZKJHxQTztg")]
-    [Description(@"Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem).")]
+    [Description(
+        @"Service cannot be provided for technical reason (eg timeout contacting the Issuer, security problem)."
+    )]
     TechnicalError = ResponseCode.TechnicalError, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of processing result defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +70,7 @@ public enum Response8Code
     [IsoId("_2vGpgfB1EeelHbulxf2Z9A")]
     [Description(@"Other type of processing result defined at national level.")]
     OtherNational = ResponseCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of processing result defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,5 +79,4 @@ public enum Response8Code
     [IsoId("_25X_0fB1EeelHbulxf2Z9A")]
     [Description(@"Other type of processing result defined at private level.")]
     OtherPrivate = ResponseCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
 }

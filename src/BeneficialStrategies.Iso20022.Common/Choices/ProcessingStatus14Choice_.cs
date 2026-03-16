@@ -15,15 +15,31 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(ProcessingStatus14Choice.Denied))]
     [KnownType(typeof(ProcessingStatus14Choice.Proprietary))]
     [KnownType(typeof(ProcessingStatus14Choice.Pending))]
-    [JsonDerivedType(typeof(ProcessingStatus14Choice.AcknowledgedAccepted),nameof(ProcessingStatus14Choice.AcknowledgedAccepted))]
-    [JsonDerivedType(typeof(ProcessingStatus14Choice.Rejected),nameof(ProcessingStatus14Choice.Rejected))]
-    [JsonDerivedType(typeof(ProcessingStatus14Choice.Completed),nameof(ProcessingStatus14Choice.Completed))]
-    [JsonDerivedType(typeof(ProcessingStatus14Choice.Denied),nameof(ProcessingStatus14Choice.Denied))]
-    [JsonDerivedType(typeof(ProcessingStatus14Choice.Proprietary),nameof(ProcessingStatus14Choice.Proprietary))]
-    [JsonDerivedType(typeof(ProcessingStatus14Choice.Pending),nameof(ProcessingStatus14Choice.Pending))]
+    [JsonDerivedType(
+        typeof(ProcessingStatus14Choice.AcknowledgedAccepted),
+        nameof(ProcessingStatus14Choice.AcknowledgedAccepted)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus14Choice.Rejected),
+        nameof(ProcessingStatus14Choice.Rejected)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus14Choice.Completed),
+        nameof(ProcessingStatus14Choice.Completed)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus14Choice.Denied),
+        nameof(ProcessingStatus14Choice.Denied)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus14Choice.Proprietary),
+        nameof(ProcessingStatus14Choice.Proprietary)
+    )]
+    [JsonDerivedType(
+        typeof(ProcessingStatus14Choice.Pending),
+        nameof(ProcessingStatus14Choice.Pending)
+    )]
     [IsoId("_KXLkUfI4Ed-dOvqmSLSz5g")]
     [DisplayName("Processing Status 14 Choice")]
-    public abstract partial record ProcessingStatus14Choice_
-    {
-    }
+    public abstract record ProcessingStatus14Choice_ { }
 }

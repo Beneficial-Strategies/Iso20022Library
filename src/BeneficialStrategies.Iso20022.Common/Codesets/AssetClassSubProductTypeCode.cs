@@ -12,7 +12,55 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_KADecc49EeSc85GUbgBycw")]
 [Description(@"Defines the sub-product types for specific asset classes.")]
-[Derivations(typeof(AssetClassSubProductType10Code),typeof(AssetClassSubProductType3Code),typeof(AssetClassSubProductType39Code),typeof(AssetClassSubProductType29Code),typeof(AssetClassSubProductType35Code),typeof(AssetClassSubProductType7Code),typeof(AssetClassSubProductType6Code),typeof(AssetClassSubProductType43Code),typeof(AssetClassSubProductType28Code),typeof(AssetClassSubProductEnergyType1Code),typeof(AssetClassSubProductType21Code),typeof(AssetClassSubProductType41Code),typeof(AssetClassSubProductType45Code),typeof(AssetClassSubProductType25Code),typeof(AssetClassSubProductType33Code),typeof(AssetClassSubProductType1Code),typeof(AssetClassSubProductType2Code),typeof(AssetClassSubProductType36Code),typeof(AssetClassSubProductType37Code),typeof(AssetClassSubProductType18Code),typeof(AssetClassSubProductFreight1Code),typeof(AssetClassSubProductType15Code),typeof(AssetClassSubProductType34Code),typeof(AssetClassSubProductType44Code),typeof(AssetClassSubProductType32Code),typeof(AssetClassSubProductType30Code),typeof(AssetClassSubProductType22Code),typeof(AssetClassSubProductType38Code),typeof(AssetClassSubProductType8Code),typeof(AssetClassSubProductMetal1Code),typeof(AssetClassSubProductType24Code),typeof(AssetClassSubProductType26Code),typeof(AssetClassSubProductType42Code),typeof(AssetClassSubProductType19Code),typeof(AssetClassSubProductAgriculturalType1Code),typeof(AssetClassSubProductType23Code),typeof(AssetClassSubProductType47Code),typeof(AssetClassSubProductType20Code),typeof(AssetClassSubProductEnvironmentalType1Code),typeof(AssetClassSubProductType40Code),typeof(AssetClassSubProductType5Code),typeof(AssetClassSubProductType48Code),typeof(AssetClassSubProductType49Code),typeof(AssetClassSubProductType46Code),typeof(AssetClassSubProductType16Code),typeof(AssetClassSubProductType27Code),typeof(AssetClassSubProductType31Code))]
+[Derivations(
+    typeof(AssetClassSubProductType10Code),
+    typeof(AssetClassSubProductType3Code),
+    typeof(AssetClassSubProductType39Code),
+    typeof(AssetClassSubProductType29Code),
+    typeof(AssetClassSubProductType35Code),
+    typeof(AssetClassSubProductType7Code),
+    typeof(AssetClassSubProductType6Code),
+    typeof(AssetClassSubProductType43Code),
+    typeof(AssetClassSubProductType28Code),
+    typeof(AssetClassSubProductEnergyType1Code),
+    typeof(AssetClassSubProductType21Code),
+    typeof(AssetClassSubProductType41Code),
+    typeof(AssetClassSubProductType45Code),
+    typeof(AssetClassSubProductType25Code),
+    typeof(AssetClassSubProductType33Code),
+    typeof(AssetClassSubProductType1Code),
+    typeof(AssetClassSubProductType2Code),
+    typeof(AssetClassSubProductType36Code),
+    typeof(AssetClassSubProductType37Code),
+    typeof(AssetClassSubProductType18Code),
+    typeof(AssetClassSubProductFreight1Code),
+    typeof(AssetClassSubProductType15Code),
+    typeof(AssetClassSubProductType34Code),
+    typeof(AssetClassSubProductType44Code),
+    typeof(AssetClassSubProductType32Code),
+    typeof(AssetClassSubProductType30Code),
+    typeof(AssetClassSubProductType22Code),
+    typeof(AssetClassSubProductType38Code),
+    typeof(AssetClassSubProductType8Code),
+    typeof(AssetClassSubProductMetal1Code),
+    typeof(AssetClassSubProductType24Code),
+    typeof(AssetClassSubProductType26Code),
+    typeof(AssetClassSubProductType42Code),
+    typeof(AssetClassSubProductType19Code),
+    typeof(AssetClassSubProductAgriculturalType1Code),
+    typeof(AssetClassSubProductType23Code),
+    typeof(AssetClassSubProductType47Code),
+    typeof(AssetClassSubProductType20Code),
+    typeof(AssetClassSubProductEnvironmentalType1Code),
+    typeof(AssetClassSubProductType40Code),
+    typeof(AssetClassSubProductType5Code),
+    typeof(AssetClassSubProductType48Code),
+    typeof(AssetClassSubProductType49Code),
+    typeof(AssetClassSubProductType46Code),
+    typeof(AssetClassSubProductType16Code),
+    typeof(AssetClassSubProductType27Code),
+    typeof(AssetClassSubProductType31Code)
+)]
 public enum AssetClassSubProductTypeCode
 {
     /// <summary>
@@ -23,7 +71,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_SMFEsM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type dairy.")]
     Dairy,
-    
+
     /// <summary>
     /// Commodity of type forestry.
     /// Encoded/decoded by serializers as &quot;FRST&quot;.
@@ -32,7 +80,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_SjZYgM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type forestry.")]
     Forestry,
-    
+
     /// <summary>
     /// Commodity of type grain oil seeds.
     /// Encoded/decoded by serializers as &quot;GROS&quot;.
@@ -41,7 +89,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_SoALsM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type grain oil seeds.")]
     GrainOilSeeds,
-    
+
     /// <summary>
     /// Commodity of type livestock.
     /// Encoded/decoded by serializers as &quot;LSTK&quot;.
@@ -50,7 +98,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_StDDwM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type livestock.")]
     Livestock,
-    
+
     /// <summary>
     /// Commodity of type olive oil.
     /// Encoded/decoded by serializers as &quot;OOLI&quot;.
@@ -59,7 +107,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_SyZd0M49EeSc85GUbgBycw")]
     [Description(@"Commodity of type olive oil.")]
     OliveOil,
-    
+
     /// <summary>
     /// Commodity of type softs.
     /// Encoded/decoded by serializers as &quot;SOFT&quot;.
@@ -68,7 +116,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_S5XogM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type softs.")]
     Softs,
-    
+
     /// <summary>
     /// Commodity of type coal.
     /// Encoded/decoded by serializers as &quot;COAL&quot;.
@@ -77,7 +125,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TAgLQM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type coal.")]
     Coal,
-    
+
     /// <summary>
     /// Commodity of type electricity.
     /// Encoded/decoded by serializers as &quot;ELEC&quot;.
@@ -86,7 +134,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TF_vQM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type electricity.")]
     Electricity,
-    
+
     /// <summary>
     /// Commodity of type inter energy.
     /// Encoded/decoded by serializers as &quot;INRG&quot;.
@@ -95,7 +143,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TLCnUM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type inter energy.")]
     InterEnergy,
-    
+
     /// <summary>
     /// Commodity of type natural gas.
     /// Encoded/decoded by serializers as &quot;NGAS&quot;.
@@ -104,7 +152,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TR3oEM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type natural gas.")]
     NaturalGas,
-    
+
     /// <summary>
     /// Commodity of type oil.
     /// Encoded/decoded by serializers as &quot;OILP&quot;.
@@ -113,7 +161,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TYtP4M49EeSc85GUbgBycw")]
     [Description(@"Commodity of type oil.")]
     Oil,
-    
+
     /// <summary>
     /// Commodity of type precious metals.
     /// Encoded/decoded by serializers as &quot;PRME&quot;.
@@ -122,7 +170,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TiW7IM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type precious metals.")]
     Precious,
-    
+
     /// <summary>
     /// Commodity of type non precious metals.
     /// Encoded/decoded by serializers as &quot;NPRM&quot;.
@@ -131,7 +179,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_TqEssM49EeSc85GUbgBycw")]
     [Description(@"Commodity of type non precious metals.")]
     NonPrecious,
-    
+
     /// <summary>
     /// Commodity of type emission.
     /// Encoded/decoded by serializers as &quot;EMIS&quot;.
@@ -140,7 +188,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_MSUs8M5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type emission.")]
     Emission,
-    
+
     /// <summary>
     /// Commodity of type weather.
     /// Encoded/decoded by serializers as &quot;WTHR&quot;.
@@ -149,7 +197,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_PgrfUM5GEeSc85GUbgBycw")]
     [Description(@"Commodity of type weather.")]
     Weather,
-    
+
     /// <summary>
     /// Commodity of type freight.
     /// Encoded/decoded by serializers as &quot;FRGT&quot;.
@@ -158,7 +206,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_YTtgwNDvEeS8V88MH4oPOQ")]
     [Description(@"Commodity of type freight.")]
     Freight,
-    
+
     /// <summary>
     /// Commodity of type multi commodity exotic.
     /// Encoded/decoded by serializers as &quot;MCEX&quot;.
@@ -167,7 +215,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_YbcgcNDvEeS8V88MH4oPOQ")]
     [Description(@"Commodity of type multi commodity exotic.")]
     MultiCommodityExotic,
-    
+
     /// <summary>
     /// Commodity of type renewable energy.
     /// Encoded/decoded by serializers as &quot;RNNG&quot;.
@@ -176,7 +224,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_iq26sAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type renewable energy.")]
     RenewableEnergy,
-    
+
     /// <summary>
     /// Commodity of type light ends.
     /// Encoded/decoded by serializers as &quot;LGHT&quot;.
@@ -185,7 +233,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_ng5ckAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type light ends.")]
     LightEnds,
-    
+
     /// <summary>
     /// Commodity of type distillates.
     /// Encoded/decoded by serializers as &quot;DIST&quot;.
@@ -194,7 +242,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_p0oZwAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type distillates.")]
     Distillates,
-    
+
     /// <summary>
     /// Commodity of type carbon.
     /// Encoded/decoded by serializers as &quot;CRBN&quot;.
@@ -203,7 +251,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_t_FoAAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type carbon.")]
     Carbon,
-    
+
     /// <summary>
     /// Commodity of type ammonia.
     /// Encoded/decoded by serializers as &quot;AMMO&quot;.
@@ -212,7 +260,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_v6Q7QAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type ammonia.")]
     Ammonia,
-    
+
     /// <summary>
     /// Commodity of type diammonium phosphate.
     /// Encoded/decoded by serializers as &quot;DAPH&quot;.
@@ -221,7 +269,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_1r90IAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type diammonium phosphate.")]
     DiammoniumPhosphate,
-    
+
     /// <summary>
     /// Commodity of type potash.
     /// Encoded/decoded by serializers as &quot;PTSH&quot;.
@@ -230,7 +278,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_6ecEoAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type potash.")]
     Potash,
-    
+
     /// <summary>
     /// Commodity of type sulphur.
     /// Encoded/decoded by serializers as &quot;SLPH&quot;.
@@ -239,7 +287,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_9NP0QAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type sulphur.")]
     Sulphur,
-    
+
     /// <summary>
     /// Commodity of type urea.
     /// Encoded/decoded by serializers as &quot;UREA&quot;.
@@ -248,7 +296,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("___LwYAnaEeWa7rBfPECYsw")]
     [Description(@"Commodity of type urea.")]
     Urea,
-    
+
     /// <summary>
     /// Commodity of type urea and ammonium nitrite.
     /// Encoded/decoded by serializers as &quot;UAAN&quot;.
@@ -257,7 +305,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_DZSfwAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type urea and ammonium nitrite.")]
     UreaAndAmmoniumNitrite,
-    
+
     /// <summary>
     /// Commodity of type construction.
     /// Encoded/decoded by serializers as &quot;CSTR&quot;.
@@ -266,7 +314,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_HzW3UAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type construction.")]
     Construction,
-    
+
     /// <summary>
     /// Commodity of type manufacturing.
     /// Encoded/decoded by serializers as &quot;MFTG&quot;.
@@ -275,7 +323,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_K8fygAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type manufacturing.")]
     Manufacturing,
-    
+
     /// <summary>
     /// Commodity of type containerboard.
     /// Encoded/decoded by serializers as &quot;CBRD&quot;.
@@ -284,7 +332,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_S0__0AnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type containerboard.")]
     Containerboard,
-    
+
     /// <summary>
     /// Commodity of type newsprint.
     /// Encoded/decoded by serializers as &quot;NSPT&quot;.
@@ -293,7 +341,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_VzlQ0AnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type newsprint.")]
     Newsprint,
-    
+
     /// <summary>
     /// Commodity of type pulp.
     /// Encoded/decoded by serializers as &quot;PULP&quot;.
@@ -302,7 +350,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_ZtqgwAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type pulp.")]
     Pulp,
-    
+
     /// <summary>
     /// Commodity of type recovered paper.
     /// Encoded/decoded by serializers as &quot;RCVP&quot;.
@@ -311,7 +359,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_cAp3EAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type recovered paper.")]
     RecoveredPaper,
-    
+
     /// <summary>
     /// Commodity of type plastic.
     /// Encoded/decoded by serializers as &quot;PLST&quot;.
@@ -320,7 +368,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_fhm1UAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type plastic.")]
     Plastic,
-    
+
     /// <summary>
     /// Commodity of type carbon related.
     /// Encoded/decoded by serializers as &quot;CRBR&quot;.
@@ -329,7 +377,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_obtpkAnbEeWa7rBfPECYsw")]
     [Description(@"Commodity of type carbon related.")]
     CarbonRelated,
-    
+
     /// <summary>
     /// Commodity of type wet freight.
     /// Encoded/decoded by serializers as &quot;WETF&quot;.
@@ -338,7 +386,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_z41XsAncEeWa7rBfPECYsw")]
     [Description(@"Commodity of type wet freight.")]
     Wet,
-    
+
     /// <summary>
     /// Commodity of type dry freight.
     /// Encoded/decoded by serializers as &quot;DRYF&quot;.
@@ -347,7 +395,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_2VV2YAncEeWa7rBfPECYsw")]
     [Description(@"Commodity of type dry freight.")]
     Dry,
-    
+
     /// <summary>
     /// Commodity of type seafood.
     /// Encoded/decoded by serializers as &quot;SEAF&quot;.
@@ -356,7 +404,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_s-ISkAngEeWuVeNZDXyHtg")]
     [Description(@"Commodity of type seafood.")]
     Seafood,
-    
+
     /// <summary>
     /// Commodity of type grain.
     /// Encoded/decoded by serializers as &quot;GRIN&quot;.
@@ -365,7 +413,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_zaYkUAngEeWuVeNZDXyHtg")]
     [Description(@"Commodity of type grain.")]
     Grain,
-    
+
     /// <summary>
     /// Commodity of type deliverable.
     /// Encoded/decoded by serializers as &quot;DLVR&quot;.
@@ -374,7 +422,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_JelS0A3oEeWc7_0KPiuk6w")]
     [Description(@"Commodity of type deliverable.")]
     Deliverable,
-    
+
     /// <summary>
     /// Commodity of type non deliverable.
     /// Encoded/decoded by serializers as &quot;NDLV&quot;.
@@ -383,7 +431,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_LOULEA3oEeWc7_0KPiuk6w")]
     [Description(@"Commodity of type non deliverable.")]
     NonDeliverable,
-    
+
     /// <summary>
     /// Commodity of other type.
     /// Encoded/decoded by serializers as &quot;OTHR&quot;.
@@ -392,7 +440,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_p2-sMEDaEeWOL-OsSq2h6w")]
     [Description(@"Commodity of other type.")]
     Other,
-    
+
     /// <summary>
     /// Commodity of type potato.
     /// Encoded/decoded by serializers as &quot;POTA&quot;.
@@ -401,7 +449,7 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_DAEhgPwdEeW4Wthd0Ze_kA")]
     [Description(@"Commodity of type potato.")]
     Potato,
-    
+
     /// <summary>
     /// Commodity of type container ships.
     /// Encoded/decoded by serializers as &quot;CSHP&quot;.
@@ -410,5 +458,4 @@ public enum AssetClassSubProductTypeCode
     [IsoId("_ubydwPwfEeW4Wthd0Ze_kA")]
     [Description(@"Commodity of type container ships.")]
     ContainerShip,
-    
 }

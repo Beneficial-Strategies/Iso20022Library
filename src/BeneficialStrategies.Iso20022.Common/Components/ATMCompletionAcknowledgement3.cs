@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,32 +14,26 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_3BbREaEWEe-MRKYsaX6JDg")]
 [DisplayName("ATM Completion Acknowledgement3")]
-public partial record ATMCompletionAcknowledgement3
+public record ATMCompletionAcknowledgement3
 {
-    #nullable enable
-
     /// <summary>
     /// ATM.
     /// </summary>
     [DisplayName("ATM")]
     [IsoXmlTag("ATM")]
-    public required AutomatedTellerMachine3 ATM { get; init; } 
+    public required AutomatedTellerMachine3 ATM { get; init; }
 
     /// <summary>
     /// Context.
     /// </summary>
     [DisplayName("Context")]
     [IsoXmlTag("Cntxt")]
-    public required ATMContext13 Context { get; init; } 
+    public required ATMContext13 Context { get; init; }
 
     /// <summary>
     /// Transaction.
     /// </summary>
     [DisplayName("Transaction")]
     [IsoXmlTag("Tx")]
-    public required ATMTransaction45 Transaction { get; init; } 
-
-    
-    #nullable disable
-    
+    public required ATMTransaction45 Transaction { get; init; }
 }

@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_9p8WwFDqEee94_dUz-hvgw")]
-[Description(@"Determines the type of file action service.|ISO 8583:87 bit 91; ISO 8583:93/2003 bit 24")]
+[Description(
+    @"Determines the type of file action service.|ISO 8583:87 bit 91; ISO 8583:93/2003 bit 24"
+)]
 [DerivedFrom(typeof(FileActionTypeCode))]
 public enum FileActionType1Code
 {
@@ -24,7 +26,7 @@ public enum FileActionType1Code
     [IsoId("_EN-rgVDrEee94_dUz-hvgw")]
     [Description(@"Add a new record or file.")]
     Add = FileActionTypeCode.Add, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delete an existing record or file.
     /// Encoded/decoded by serializers as &quot;DELT&quot;.
@@ -33,7 +35,7 @@ public enum FileActionType1Code
     [IsoId("_EZL18lDrEee94_dUz-hvgw")]
     [Description(@"Delete an existing record or file.")]
     Delete = FileActionTypeCode.Delete, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Request the content of an existing record or file.
     /// Encoded/decoded by serializers as &quot;ENQR&quot;.
@@ -42,7 +44,7 @@ public enum FileActionType1Code
     [IsoId("_EllTMlDrEee94_dUz-hvgw")]
     [Description(@"Request the content of an existing record or file.")]
     Enquire = FileActionTypeCode.Enquire, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of file action defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -51,7 +53,7 @@ public enum FileActionType1Code
     [IsoId("_ExLfMlDrEee94_dUz-hvgw")]
     [Description(@"Other type of file action defined at national level.")]
     OtherNational = FileActionTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other type of file action defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -60,16 +62,18 @@ public enum FileActionType1Code
     [IsoId("_E_JCslDrEee94_dUz-hvgw")]
     [Description(@"Other type of file action defined at private level.")]
     OtherPrivate = FileActionTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Add a new record or file if none exists or replace an existing record or file if one exists.
     /// Encoded/decoded by serializers as &quot;REPL&quot;.
     /// </summary>
     [EnumMember(Value = "REPL")]
     [IsoId("_FHxaQlDrEee94_dUz-hvgw")]
-    [Description(@"Add a new record or file if none exists or replace an existing record or file if one exists.")]
+    [Description(
+        @"Add a new record or file if none exists or replace an existing record or file if one exists."
+    )]
     Replace = FileActionTypeCode.Replace, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Update an existing record or file.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -78,7 +82,7 @@ public enum FileActionType1Code
     [IsoId("_FUKQclDrEee94_dUz-hvgw")]
     [Description(@"Update an existing record or file.")]
     Update = FileActionTypeCode.Update, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Replacing  previously added records.
     /// Encoded/decoded by serializers as &quot;BRPT&quot;.
@@ -87,7 +91,7 @@ public enum FileActionType1Code
     [IsoId("_UkIbwekVEemeDPHh-U9b6w")]
     [Description(@"Replacing  previously added records.")]
     BulkReplacement = FileActionTypeCode.BulkReplacement, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// System purge.
     /// Encoded/decoded by serializers as &quot;DLSP&quot;.
@@ -96,5 +100,4 @@ public enum FileActionType1Code
     [IsoId("_Ux-DcukVEemeDPHh-U9b6w")]
     [Description(@"System purge.")]
     DeleteRecordSystemPurge = FileActionTypeCode.DeleteRecordSystemPurge, // same ordinal as derivation source for type conversions
-    
 }

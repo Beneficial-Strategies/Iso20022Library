@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_XpAh0NxiEeioifFt1dhnJA")]
 [DisplayName("Loyalty Transaction Totals")]
-public partial record LoyaltyTransactionTotals1
+public record LoyaltyTransactionTotals1
 {
-    #nullable enable
-    
     /// <summary>
     /// Identifier assigned by the merchant identifying a set of POI terminals performing some categories of transactions.
     /// </summary>
@@ -25,17 +23,17 @@ public partial record LoyaltyTransactionTotals1
     [DisplayName("POI Group Identification")]
     [IsoXmlTag("POIGrpId")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? POIGroupIdentification { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? POIGroupIdentification { get; init; }
+
     /// <summary>
     /// Unit of the amount, expressed in point or in a monetary value and a currency.
     /// </summary>
     [IsoId("_jRtDQNxiEeioifFt1dhnJA")]
     [DisplayName("Loyalty Unit")]
     [IsoXmlTag("LltyUnit")]
-    public AmountUnit1Code? LoyaltyUnit { get; init; } 
-    
+    public AmountUnit1Code? LoyaltyUnit { get; init; }
+
     /// <summary>
     /// Cards category related to the acceptance processing rules defined by the Loyalty provider.
     /// </summary>
@@ -43,25 +41,25 @@ public partial record LoyaltyTransactionTotals1
     [DisplayName("Card Product Profile")]
     [IsoXmlTag("CardPdctPrfl")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? CardProductProfile { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? CardProductProfile { get; init; }
+
     /// <summary>
     /// Currency associated with the transaction totals.
     /// </summary>
     [IsoId("_qL-GsNxiEeioifFt1dhnJA")]
     [DisplayName("Currency")]
     [IsoXmlTag("Ccy")]
-    public ActiveCurrencyCode? Currency { get; init; } 
-    
+    public ActiveCurrencyCode? Currency { get; init; }
+
     /// <summary>
     /// Type of Loyalty transaction for Report.
     /// </summary>
     [IsoId("_xggEQNxiEeioifFt1dhnJA")]
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
-    public required LoyaltyTypeTransactionTotals1Code TransactionType { get; init; } 
-    
+    public required LoyaltyTypeTransactionTotals1Code TransactionType { get; init; }
+
     /// <summary>
     /// Total number of transactions during a reconciliation period.
     /// </summary>
@@ -69,25 +67,21 @@ public partial record LoyaltyTransactionTotals1
     [DisplayName("Total Number")]
     [IsoXmlTag("TtlNb")]
     [IsoSimpleType(IsoSimpleType.Number)]
-    public required IsoNumber TotalNumber { get; init; } 
-    
+    public required IsoNumber TotalNumber { get; init; }
+
     /// <summary>
     /// Total amount of a collection of transactions.
     /// </summary>
     [IsoId("_XOIuQNxjEeioifFt1dhnJA")]
     [DisplayName("Cumulative Amount")]
     [IsoXmlTag("CmltvAmt")]
-    public required ImpliedCurrencyAndAmount CumulativeAmount { get; init; } 
-    
+    public required ImpliedCurrencyAndAmount CumulativeAmount { get; init; }
+
     /// <summary>
     /// Detailed amounts associated with the total amount of transactions.
     /// </summary>
     [IsoId("_a83CwNxjEeioifFt1dhnJA")]
     [DisplayName("Detailed Amount")]
     [IsoXmlTag("DtldAmt")]
-    public DetailedAmount15? DetailedAmount { get; init; } 
-    
-    
-    #nullable disable
-    
+    public DetailedAmount15? DetailedAmount { get; init; }
 }

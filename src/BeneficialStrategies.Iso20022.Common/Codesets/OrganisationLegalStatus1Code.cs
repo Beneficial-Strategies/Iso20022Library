@@ -22,8 +22,9 @@ public enum OrganisationLegalStatus1Code
     [EnumMember(Value = "CIOC")]
     [IsoId("_TbNnwX6rEeePx-IqKegQ8Q")]
     [Description(@"Charitable incorporated organisation (CIO)")]
-    CharitableIncorporatedOrganisation = OrganisationLegalStatusCode.CharitableIncorporatedOrganisation, // same ordinal as derivation source for type conversions
-    
+    CharitableIncorporatedOrganisation =
+        OrganisationLegalStatusCode.CharitableIncorporatedOrganisation, // same ordinal as derivation source for type conversions
+
     /// <summary>
     /// Charity
     /// Encoded/decoded by serializers as &quot;CHAR&quot;.
@@ -32,7 +33,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_Ti8ncX6rEeePx-IqKegQ8Q")]
     [Description(@"Charity")]
     Charity = OrganisationLegalStatusCode.Charity, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Community Interest Company (CIC)
     /// Encoded/decoded by serializers as &quot;CICC&quot;.
@@ -41,7 +42,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_To5ecX6rEeePx-IqKegQ8Q")]
     [Description(@"Community Interest Company (CIC)")]
     CommunityInterestCompany = OrganisationLegalStatusCode.CommunityInterestCompany, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// General partnership
     /// Encoded/decoded by serializers as &quot;GENP&quot;.
@@ -50,7 +51,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_T0zMcX6rEeePx-IqKegQ8Q")]
     [Description(@"General partnership")]
     GeneralPartnership = OrganisationLegalStatusCode.GeneralPartnership, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// For example a co-operative, which does include Ltd. or charity.
     /// Encoded/decoded by serializers as &quot;IAPS&quot;.
@@ -59,7 +60,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_T7fqUX6rEeePx-IqKegQ8Q")]
     [Description(@"For example a co-operative, which does include Ltd. or charity.")]
     IndustrialAndProvidentSociety = OrganisationLegalStatusCode.IndustrialAndProvidentSociety, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Limited liability partnership (LLP)
     /// Encoded/decoded by serializers as &quot;LLPP&quot;.
@@ -68,7 +69,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_UDE5AX6rEeePx-IqKegQ8Q")]
     [Description(@"Limited liability partnership (LLP)")]
     LimitedLiabilityPartnership = OrganisationLegalStatusCode.LimitedLiabilityPartnership, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Private company limited by guarantee (Ltd.)
     /// Encoded/decoded by serializers as &quot;PCLG&quot;.
@@ -77,7 +78,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_UI4mEX6rEeePx-IqKegQ8Q")]
     [Description(@"Private company limited by guarantee (Ltd.)")]
     PrivateCompanyLimitedByGuarantee = OrganisationLegalStatusCode.PrivateCompanyLimitedByGuarantee, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Limited partnership (LP)
     /// Encoded/decoded by serializers as &quot;LIMP&quot;.
@@ -86,7 +87,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_UUCtMX6rEeePx-IqKegQ8Q")]
     [Description(@"Limited partnership (LP)")]
     LimitedPartnership = OrganisationLegalStatusCode.LimitedPartnership, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Private company limited by shares (Ltd.)
     /// Encoded/decoded by serializers as &quot;PCLS&quot;.
@@ -95,7 +96,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_UkQTcX6rEeePx-IqKegQ8Q")]
     [Description(@"Private company limited by shares (Ltd.)")]
     PrivateCompanyLimitedByShares = OrganisationLegalStatusCode.PrivateCompanyLimitedByShares, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Public limited company (Plc.)
     /// Encoded/decoded by serializers as &quot;PCLC&quot;.
@@ -104,7 +105,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_UqW7cX6rEeePx-IqKegQ8Q")]
     [Description(@"Public limited company (Plc.)")]
     PublicLimitedCompany = OrganisationLegalStatusCode.PublicLimitedCompany, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Sole proprietorship/Sole trader
     /// Encoded/decoded by serializers as &quot;SOLE&quot;.
@@ -113,7 +114,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_UxWUQX6rEeePx-IqKegQ8Q")]
     [Description(@"Sole proprietorship/Sole trader")]
     SoleProprietorship = OrganisationLegalStatusCode.SoleProprietorship, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unlimited company
     /// Encoded/decoded by serializers as &quot;UNLC&quot;.
@@ -122,7 +123,7 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_U3JaQX6rEeePx-IqKegQ8Q")]
     [Description(@"Unlimited company")]
     UnlimitedCompany = OrganisationLegalStatusCode.UnlimitedCompany, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Unlimited trust
     /// Encoded/decoded by serializers as &quot;UNLT&quot;.
@@ -131,5 +132,4 @@ public enum OrganisationLegalStatus1Code
     [IsoId("_U89HUX6rEeePx-IqKegQ8Q")]
     [Description(@"Unlimited trust")]
     UnlimitedTrust = OrganisationLegalStatusCode.UnlimitedTrust, // same ordinal as derivation source for type conversions
-    
 }

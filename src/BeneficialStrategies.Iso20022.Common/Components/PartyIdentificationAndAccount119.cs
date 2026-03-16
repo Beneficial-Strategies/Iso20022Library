@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_o7MJQEUqEeSGWeX3z5zSZQ")]
 [DisplayName("Party Identification And Account")]
-public partial record PartyIdentificationAndAccount119
+public record PartyIdentificationAndAccount119
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of the party that legally owns the account.
     /// </summary>
@@ -25,8 +23,9 @@ public partial record PartyIdentificationAndAccount119
     [DisplayName("Party Identification")]
     [IsoXmlTag("PtyId")]
     public ValueList<PartyIdentification90> PartyIdentification { get; init; } = [];
+
     // ID for the above is _Bl2FIEUrEeSGWeX3z5zSZQ
-    
+
     /// <summary>
     /// Identification of the account owned by the party.
     /// </summary>
@@ -35,8 +34,4 @@ public partial record PartyIdentificationAndAccount119
     [IsoXmlTag("AcctId")]
     public ValueList<AccountIdentification30> AccountIdentification { get; init; } = [];
     // ID for the above is _kNHDAEVKEeSGWeX3z5zSZQ
-    
-    
-    #nullable disable
-    
 }

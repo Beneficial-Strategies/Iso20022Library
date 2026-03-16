@@ -13,17 +13,35 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(References75Choice.AccountServicerTransactionIdentification))]
     [KnownType(typeof(References75Choice.PoolIdentification))]
     [KnownType(typeof(References75Choice.MarketInfrastructureTransactionIdentification))]
-    [KnownType(typeof(References75Choice.CounterpartyMarketInfrastructureTransactionIdentification))]
+    [KnownType(
+        typeof(References75Choice.CounterpartyMarketInfrastructureTransactionIdentification)
+    )]
     [KnownType(typeof(References75Choice.ProcessorTransactionIdentification))]
-    [JsonDerivedType(typeof(References75Choice.AccountOwnerTransactionIdentification),nameof(References75Choice.AccountOwnerTransactionIdentification))]
-    [JsonDerivedType(typeof(References75Choice.AccountServicerTransactionIdentification),nameof(References75Choice.AccountServicerTransactionIdentification))]
-    [JsonDerivedType(typeof(References75Choice.PoolIdentification),nameof(References75Choice.PoolIdentification))]
-    [JsonDerivedType(typeof(References75Choice.MarketInfrastructureTransactionIdentification),nameof(References75Choice.MarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References75Choice.CounterpartyMarketInfrastructureTransactionIdentification),nameof(References75Choice.CounterpartyMarketInfrastructureTransactionIdentification))]
-    [JsonDerivedType(typeof(References75Choice.ProcessorTransactionIdentification),nameof(References75Choice.ProcessorTransactionIdentification))]
+    [JsonDerivedType(
+        typeof(References75Choice.AccountOwnerTransactionIdentification),
+        nameof(References75Choice.AccountOwnerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References75Choice.AccountServicerTransactionIdentification),
+        nameof(References75Choice.AccountServicerTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References75Choice.PoolIdentification),
+        nameof(References75Choice.PoolIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References75Choice.MarketInfrastructureTransactionIdentification),
+        nameof(References75Choice.MarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References75Choice.CounterpartyMarketInfrastructureTransactionIdentification),
+        nameof(References75Choice.CounterpartyMarketInfrastructureTransactionIdentification)
+    )]
+    [JsonDerivedType(
+        typeof(References75Choice.ProcessorTransactionIdentification),
+        nameof(References75Choice.ProcessorTransactionIdentification)
+    )]
     [IsoId("_ccpnozi8Eeydid5dcNPKvg")]
     [DisplayName("References 75 Choice")]
-    public abstract partial record References75Choice_
-    {
-    }
+    public abstract record References75Choice_ { }
 }

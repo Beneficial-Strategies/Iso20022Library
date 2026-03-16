@@ -23,7 +23,7 @@ public enum OrderDriverCode
     [IsoId("_aRBh4tp-Ed-ak6NoX_4Aeg_1502724820")]
     [Description(@"Order is buy driven.")]
     Buy = SideCode.Buy, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Order is sell driven.
     /// Encoded/decoded by serializers as &quot;SELL&quot;.
@@ -32,5 +32,4 @@ public enum OrderDriverCode
     [IsoId("_aRBh49p-Ed-ak6NoX_4Aeg_1502725190")]
     [Description(@"Order is sell driven.")]
     Sell = SideCode.Sell, // same ordinal as derivation source for type conversions
-    
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
     /// </summary>
     [IsoId("_3DBVNzANEeOKib24wnHaFg")]
     [DisplayName("Weight")]
-    public partial record Weight : CertifiedCharacteristics2Choice_
+    public record Weight : CertifiedCharacteristics2Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Specifies a unit of measure with a code or free text.
         /// </summary>
         [IsoId("_nbGTIBraEeOVR9VN6fAMUg")]
         [DisplayName("Unit Of Measure")]
         [IsoXmlTag("UnitOfMeasr")]
-        public required UnitOfMeasure3Choice_ UnitOfMeasure { get; init; } 
-        
+        public required UnitOfMeasure3Choice_ UnitOfMeasure { get; init; }
+
         /// <summary>
         /// Quantity of a product on a line specified by a number. For example, 100 (kgs), 50 (pieces).
         /// </summary>
@@ -32,8 +30,8 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
         [IsoSimpleType(IsoSimpleType.DecimalNumber)]
-        public required IsoDecimalNumber Value { get; init; } 
-        
+        public required IsoDecimalNumber Value { get; init; }
+
         /// <summary>
         /// Multiplication factor of measurement values. For example: goods that can be ordered by 36 pieces.
         /// </summary>
@@ -41,10 +39,6 @@ namespace BeneficialStrategies.Iso20022.Choices.CertifiedCharacteristics2Choice
         [DisplayName("Factor")]
         [IsoXmlTag("Fctr")]
         [IsoSimpleType(IsoSimpleType.Max15NumericText)]
-        public IsoMax15NumericText? Factor { get; init; } 
-        
-        
-        #nullable disable
-        
+        public IsoMax15NumericText? Factor { get; init; }
     }
 }

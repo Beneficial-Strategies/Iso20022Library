@@ -12,7 +12,7 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [Serializable]
 [IsoId("_vSNNoIqiEeS4a4abTJTSSw")]
 [Description(@"Type of ATM cassette counters.")]
-[Derivations(typeof(ATMCounterType1Code),typeof(ATMCounterType2Code))]
+[Derivations(typeof(ATMCounterType1Code), typeof(ATMCounterType2Code))]
 public enum ATMCounterTypeCode
 {
     /// <summary>
@@ -23,7 +23,7 @@ public enum ATMCounterTypeCode
     [IsoId("_zjMhsIqiEeS4a4abTJTSSw")]
     [Description(@"Counters since the last cut-off.")]
     CutOff,
-    
+
     /// <summary>
     /// Counters since the last update by an operator on the ATM.
     /// Encoded/decoded by serializers as &quot;OPER&quot;.
@@ -32,7 +32,7 @@ public enum ATMCounterTypeCode
     [IsoId("_3CFqcIqiEeS4a4abTJTSSw")]
     [Description(@"Counters since the last update by an operator on the ATM.")]
     OperatorAdjust,
-    
+
     /// <summary>
     /// Counters since the last counters inquiry.
     /// Encoded/decoded by serializers as &quot;INQU&quot;.
@@ -41,7 +41,7 @@ public enum ATMCounterTypeCode
     [IsoId("_iszAsOg2EeSbwP3G-MV9YA")]
     [Description(@"Counters since the last counters inquiry.")]
     CountersInquiry,
-    
+
     /// <summary>
     /// Counters for a customer transaction.
     /// Encoded/decoded by serializers as &quot;CTXN&quot;.
@@ -50,7 +50,7 @@ public enum ATMCounterTypeCode
     [IsoId("_nIHVcOg2EeSbwP3G-MV9YA")]
     [Description(@"Counters for a customer transaction.")]
     CustomerTransaction,
-    
+
     /// <summary>
     /// Counters since the beginning of the business day.
     /// Encoded/decoded by serializers as &quot;BDAY&quot;.
@@ -59,7 +59,7 @@ public enum ATMCounterTypeCode
     [IsoId("_q0zpoOg2EeSbwP3G-MV9YA")]
     [Description(@"Counters since the beginning of the business day.")]
     BusinessDay,
-    
+
     /// <summary>
     /// Counters for an operation performed by an operator on the ATM.
     /// Encoded/decoded by serializers as &quot;PRTN&quot;.
@@ -68,5 +68,4 @@ public enum ATMCounterTypeCode
     [IsoId("_uJyBYOg2EeSbwP3G-MV9YA")]
     [Description(@"Counters for an operation performed by an operator on the ATM.")]
     Operation,
-    
 }

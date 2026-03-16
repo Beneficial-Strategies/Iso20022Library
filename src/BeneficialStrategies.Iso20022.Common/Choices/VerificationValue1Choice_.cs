@@ -13,13 +13,23 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(VerificationValue1Choice.BinaryValue))]
     [KnownType(typeof(VerificationValue1Choice.HexadecimalBinaryValue))]
     [KnownType(typeof(VerificationValue1Choice.PINData))]
-    [JsonDerivedType(typeof(VerificationValue1Choice.TextValue),nameof(VerificationValue1Choice.TextValue))]
-    [JsonDerivedType(typeof(VerificationValue1Choice.BinaryValue),nameof(VerificationValue1Choice.BinaryValue))]
-    [JsonDerivedType(typeof(VerificationValue1Choice.HexadecimalBinaryValue),nameof(VerificationValue1Choice.HexadecimalBinaryValue))]
-    [JsonDerivedType(typeof(VerificationValue1Choice.PINData),nameof(VerificationValue1Choice.PINData))]
+    [JsonDerivedType(
+        typeof(VerificationValue1Choice.TextValue),
+        nameof(VerificationValue1Choice.TextValue)
+    )]
+    [JsonDerivedType(
+        typeof(VerificationValue1Choice.BinaryValue),
+        nameof(VerificationValue1Choice.BinaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(VerificationValue1Choice.HexadecimalBinaryValue),
+        nameof(VerificationValue1Choice.HexadecimalBinaryValue)
+    )]
+    [JsonDerivedType(
+        typeof(VerificationValue1Choice.PINData),
+        nameof(VerificationValue1Choice.PINData)
+    )]
     [IsoId("_4EhKpZaNEemfCcEf5rVTyg")]
     [DisplayName("Verification Value 1 Choice")]
-    public abstract partial record VerificationValue1Choice_
-    {
-    }
+    public abstract record VerificationValue1Choice_ { }
 }

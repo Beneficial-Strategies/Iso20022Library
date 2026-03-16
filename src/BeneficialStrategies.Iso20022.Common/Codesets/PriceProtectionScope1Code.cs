@@ -23,7 +23,7 @@ public enum PriceProtectionScope1Code
     [IsoId("_aIreN9p-Ed-ak6NoX_4Aeg_-469828845")]
     [Description(@"Price protection is local (for example, Exchange, ECN, ATS).")]
     Local = PriceProtectionScopeCode.Local, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price protection is national (across all national markets).
     /// Encoded/decoded by serializers as &quot;NATI&quot;.
@@ -32,7 +32,7 @@ public enum PriceProtectionScope1Code
     [IsoId("_aIreONp-Ed-ak6NoX_4Aeg_-469828551")]
     [Description(@"Price protection is national (across all national markets).")]
     National = PriceProtectionScopeCode.National, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price protection is global (across all markets).
     /// Encoded/decoded by serializers as &quot;GLOB&quot;.
@@ -41,5 +41,4 @@ public enum PriceProtectionScope1Code
     [IsoId("_aI1PMNp-Ed-ak6NoX_4Aeg_-469828498")]
     [Description(@"Price protection is global (across all markets).")]
     Global = PriceProtectionScopeCode.Global, // same ordinal as derivation source for type conversions
-    
 }

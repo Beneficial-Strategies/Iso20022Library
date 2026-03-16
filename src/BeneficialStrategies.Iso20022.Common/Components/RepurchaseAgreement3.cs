@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_aOU-QbcREeabfchHYoktpA")]
 [DisplayName("Repurchase Agreement")]
-public partial record RepurchaseAgreement3
+public record RepurchaseAgreement3
 {
-    #nullable enable
-    
     /// <summary>
     /// Specifies attributes of a derivative based on Final ISDA Taxonomy v1.0 and Final ISDA Taxonomy v2.0.
     /// </summary>
     [IsoId("_EBtPIDXHEemdWfjs3tykFQ")]
     [DisplayName("Product Classification")]
     [IsoXmlTag("PdctClssfctn")]
-    public required ProductClassification1 ProductClassification { get; init; } 
-    
+    public required ProductClassification1 ProductClassification { get; init; }
+
     /// <summary>
     /// Indicates whether the repo is a general collateral repo or specific repo.
     /// </summary>
     [IsoId("_aYveibcREeabfchHYoktpA")]
     [DisplayName("Repurchase Agreement Type")]
     [IsoXmlTag("RpAgrmtTp")]
-    public required RepurchaseAgreementType1Choice_ RepurchaseAgreementType { get; init; } 
-    
+    public required RepurchaseAgreementType1Choice_ RepurchaseAgreementType { get; init; }
+
     /// <summary>
     /// Identifier for triparty agent if applicable.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record RepurchaseAgreement3
     [DisplayName("Triparty Agent")]
     [IsoXmlTag("TrptyAgt")]
     [IsoSimpleType(IsoSimpleType.LEIIdentifier)]
-    public IsoLEIIdentifier? TripartyAgent { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoLEIIdentifier? TripartyAgent { get; init; }
 }

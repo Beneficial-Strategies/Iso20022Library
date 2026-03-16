@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_xhMHQa6XEees_ufOy2ci-g")]
 [DisplayName("Pagination")]
-public partial record Pagination1
+public record Pagination1
 {
-    #nullable enable
-    
     /// <summary>
     /// Page number.
     /// </summary>
@@ -25,8 +23,8 @@ public partial record Pagination1
     [DisplayName("Page Number")]
     [IsoXmlTag("PgNb")]
     [IsoSimpleType(IsoSimpleType.Max5NumericText)]
-    public required IsoMax5NumericText PageNumber { get; init; } 
-    
+    public required IsoMax5NumericText PageNumber { get; init; }
+
     /// <summary>
     /// Indicates the last page.
     /// </summary>
@@ -34,9 +32,5 @@ public partial record Pagination1
     [DisplayName("Last Page Indicator")]
     [IsoXmlTag("LastPgInd")]
     [IsoSimpleType(IsoSimpleType.YesNoIndicator)]
-    public required IsoYesNoIndicator LastPageIndicator { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoYesNoIndicator LastPageIndicator { get; init; }
 }

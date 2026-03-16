@@ -23,7 +23,7 @@ public enum TypeOfAmount1Code
     [IsoId("_TUJ9NAEcEeCQm6a_G2yO_w_1589618959")]
     [Description(@"Actual amount.")]
     Actual = TypeOfAmountCode.Actual, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Estimated amount (the final amount could be above or below).
     /// Encoded/decoded by serializers as &quot;ESTM&quot;.
@@ -32,7 +32,7 @@ public enum TypeOfAmount1Code
     [IsoId("_TUJ9NQEcEeCQm6a_G2yO_w_-630255646")]
     [Description(@"Estimated amount (the final amount could be above or below).")]
     Estimated = TypeOfAmountCode.Estimated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Maximum amount (the final amount must be less or equal).
     /// Encoded/decoded by serializers as &quot;MAXI&quot;.
@@ -41,7 +41,7 @@ public enum TypeOfAmount1Code
     [IsoId("_TUJ9NgEcEeCQm6a_G2yO_w_1200667523")]
     [Description(@"Maximum amount (the final amount must be less or equal).")]
     Maximum = TypeOfAmountCode.Maximum, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Default amount.
     /// Encoded/decoded by serializers as &quot;DFLT&quot;.
@@ -50,7 +50,7 @@ public enum TypeOfAmount1Code
     [IsoId("_TUJ9NwEcEeCQm6a_G2yO_w_-1157074600")]
     [Description(@"Default amount.")]
     Default = TypeOfAmountCode.Default, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Replacement amount.
     /// Encoded/decoded by serializers as &quot;RPLT&quot;.
@@ -59,5 +59,4 @@ public enum TypeOfAmount1Code
     [IsoId("_TUJ9OAEcEeCQm6a_G2yO_w_-952745682")]
     [Description(@"Replacement amount.")]
     Replacement = TypeOfAmountCode.Replacement, // same ordinal as derivation source for type conversions
-    
 }

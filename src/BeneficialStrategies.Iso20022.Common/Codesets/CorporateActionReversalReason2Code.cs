@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_WIh5kDQVEe2o-K1dwNg8Gg")]
-[Description(@"Specifies the reason why a reversal of payment is taking place in corporate action processing.")]
+[Description(
+    @"Specifies the reason why a reversal of payment is taking place in corporate action processing."
+)]
 [DerivedFrom(typeof(CorporateActionReversalReasonV2Code))]
 public enum CorporateActionReversalReason2Code
 {
@@ -23,7 +25,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_bu5sMTQVEe2o-K1dwNg8Gg")]
     [Description(@"Difference in day count basis.")]
     DayCountBasisDifference = CorporateActionReversalReasonV2Code.DayCountBasisDifference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Funds have not been received.
     /// Encoded/decoded by serializers as &quot;FNRC&quot;.
@@ -32,7 +34,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_b8T2EjQVEe2o-K1dwNg8Gg")]
     [Description(@"Funds have not been received.")]
     FundsNotReceived = CorporateActionReversalReasonV2Code.FundsNotReceived, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Entitlement date is incorrect.
     /// Encoded/decoded by serializers as &quot;IRED&quot;.
@@ -41,7 +43,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_cI-ZEjQVEe2o-K1dwNg8Gg")]
     [Description(@"Entitlement date is incorrect.")]
     IncorrectEntitlementDate = CorporateActionReversalReasonV2Code.IncorrectEntitlementDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Event level tax rate is incorrect.
     /// Encoded/decoded by serializers as &quot;IETR&quot;.
@@ -50,7 +52,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_cLqgsTQVEe2o-K1dwNg8Gg")]
     [Description(@"Event level tax rate is incorrect.")]
     IncorrectEventLevelTaxRate = CorporateActionReversalReasonV2Code.IncorrectEventLevelTaxRate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment currency is incorrect.
     /// Encoded/decoded by serializers as &quot;IPCU&quot;.
@@ -59,7 +61,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_cVDGMTQVEe2o-K1dwNg8Gg")]
     [Description(@"Payment currency is incorrect.")]
     IncorrectPaymentCurrency = CorporateActionReversalReasonV2Code.IncorrectPaymentCurrency, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Price is incorrect.
     /// Encoded/decoded by serializers as &quot;IPRI&quot;.
@@ -68,7 +70,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_celcsjQVEe2o-K1dwNg8Gg")]
     [Description(@"Price is incorrect.")]
     IncorrectPrice = CorporateActionReversalReasonV2Code.IncorrectPrice, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Value date is incorrect.
     /// Encoded/decoded by serializers as &quot;IVAD&quot;.
@@ -77,7 +79,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_chRkUTQVEe2o-K1dwNg8Gg")]
     [Description(@"Value date is incorrect.")]
     IncorrectValueDate = CorporateActionReversalReasonV2Code.IncorrectValueDate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment will occur outside of clearing system.
     /// Encoded/decoded by serializers as &quot;POCS&quot;.
@@ -86,7 +88,7 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_cj9E4TQVEe2o-K1dwNg8Gg")]
     [Description(@"Payment will occur outside of clearing system.")]
     PaymentOutsideClearingSystem = CorporateActionReversalReasonV2Code.PaymentOutsideClearingSystem, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Payment is not due.
     /// Encoded/decoded by serializers as &quot;UPAY&quot;.
@@ -95,5 +97,4 @@ public enum CorporateActionReversalReason2Code
     [IsoId("_cmyWcTQVEe2o-K1dwNg8Gg")]
     [Description(@"Payment is not due.")]
     UnduePayment = CorporateActionReversalReasonV2Code.UnduePayment, // same ordinal as derivation source for type conversions
-    
 }

@@ -23,7 +23,7 @@ public enum PlanOwnerCode
     [IsoId("_79-8YNuJEei2qvU6FBLZYA")]
     [Description(@"Plan owner is an acquirer.")]
     Acquirer,
-    
+
     /// <summary>
     /// Plan owner is an acceptor.
     /// Encoded/decoded by serializers as &quot;ACCP&quot;.
@@ -32,7 +32,7 @@ public enum PlanOwnerCode
     [IsoId("_799uQduJEei2qvU6FBLZYA")]
     [Description(@"Plan owner is an acceptor.")]
     Acceptor,
-    
+
     /// <summary>
     /// Plan owner is an issuer.
     /// Encoded/decoded by serializers as &quot;ISSR&quot;.
@@ -41,7 +41,7 @@ public enum PlanOwnerCode
     [IsoId("_7-AxkduJEei2qvU6FBLZYA")]
     [Description(@"Plan owner is an issuer.")]
     Issuer,
-    
+
     /// <summary>
     /// plan owner type is other national.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum PlanOwnerCode
     [IsoId("_7-AxkNuJEei2qvU6FBLZYA")]
     [Description(@"plan owner type is other national.")]
     OtherNational,
-    
+
     /// <summary>
     /// plan owner type is other private.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,5 +59,4 @@ public enum PlanOwnerCode
     [IsoId("_7-Axk9uJEei2qvU6FBLZYA")]
     [Description(@"plan owner type is other private.")]
     OtherPrivate,
-    
 }

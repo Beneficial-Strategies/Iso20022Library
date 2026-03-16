@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
     /// </summary>
     [IsoId("_gSTIjZjcEeqkLZLH6DK3UQ")]
     [DisplayName("Other")]
-    public partial record Other : SecuritiesTransactionPrice17Choice_
+    public record Other : SecuritiesTransactionPrice17Choice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Value of the price.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
         [DisplayName("Value")]
         [IsoXmlTag("Val")]
         [IsoSimpleType(IsoSimpleType.LongFraction19DecimalNumber)]
-        public IsoLongFraction19DecimalNumber? Value { get; init; } 
-        
+        public IsoLongFraction19DecimalNumber? Value { get; init; }
+
         /// <summary>
         /// Notation of the price.
         /// </summary>
@@ -33,11 +31,7 @@ namespace BeneficialStrategies.Iso20022.Choices.SecuritiesTransactionPrice17Choi
         [DisplayName("Type")]
         [IsoXmlTag("Tp")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Type { get; init; } 
-        
-        
-        #nullable disable
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Type { get; init; }
     }
 }

@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_QIrY6dp-Ed-ak6NoX_4Aeg_2050617089")]
 [DisplayName("Settlement Time Request")]
-public partial record SettlementTimeRequest2
+public record SettlementTimeRequest2
 {
-    #nullable enable
-    
     /// <summary>
     /// Time by which the amount of money must be credited, with confirmation, to the CLS Bank&apos;s account at the central bank.|Usage: Time must be expressed in Central European Time (CET).
     /// </summary>
@@ -25,8 +23,8 @@ public partial record SettlementTimeRequest2
     [DisplayName("CLS Time")]
     [IsoXmlTag("CLSTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? CLSTime { get; init; } 
-    
+    public IsoISOTime? CLSTime { get; init; }
+
     /// <summary>
     /// Time until when the payment may be settled.
     /// </summary>
@@ -34,8 +32,8 @@ public partial record SettlementTimeRequest2
     [DisplayName("Till Time")]
     [IsoXmlTag("TillTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? TillTime { get; init; } 
-    
+    public IsoISOTime? TillTime { get; init; }
+
     /// <summary>
     /// Time as from when the payment may be settled.
     /// </summary>
@@ -43,8 +41,8 @@ public partial record SettlementTimeRequest2
     [DisplayName("From Time")]
     [IsoXmlTag("FrTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? FromTime { get; init; } 
-    
+    public IsoISOTime? FromTime { get; init; }
+
     /// <summary>
     /// Time by when the payment must be settled to avoid rejection.
     /// </summary>
@@ -52,9 +50,5 @@ public partial record SettlementTimeRequest2
     [DisplayName("Reject Time")]
     [IsoXmlTag("RjctTm")]
     [IsoSimpleType(IsoSimpleType.ISOTime)]
-    public IsoISOTime? RejectTime { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoISOTime? RejectTime { get; init; }
 }

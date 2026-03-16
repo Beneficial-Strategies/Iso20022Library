@@ -23,7 +23,7 @@ public enum ReportPeriodActivity3Code
     [IsoId("_HW4DY8ESEea7jLfvGi1PDw")]
     [Description(@"No transaction has been identified during the period.")]
     NoTransaction = ReportPeriodActivityCode.NoTransaction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// No report has been received from reporting agent.
     /// Encoded/decoded by serializers as &quot;NORA&quot;.
@@ -32,5 +32,4 @@ public enum ReportPeriodActivity3Code
     [IsoId("_LTDlEcESEea7jLfvGi1PDw")]
     [Description(@"No report has been received from reporting agent.")]
     NoReportFromAgent = ReportPeriodActivityCode.NoReportFromAgent, // same ordinal as derivation source for type conversions
-    
 }

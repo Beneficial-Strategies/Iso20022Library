@@ -23,7 +23,7 @@ public enum FraudReportingActionCode
     [IsoId("_r0wFEHbBEeef9c2nwgY9Xw")]
     [Description(@"New fraud information not reported yet.")]
     New,
-    
+
     /// <summary>
     /// Fraud information already reported.
     /// Encoded/decoded by serializers as &quot;DUPL&quot;.
@@ -32,7 +32,7 @@ public enum FraudReportingActionCode
     [IsoId("_xA9rQHbBEeef9c2nwgY9Xw")]
     [Description(@"Fraud information already reported.")]
     Duplicate,
-    
+
     /// <summary>
     /// Update information about a fraud already reported.
     /// Encoded/decoded by serializers as &quot;UPDT&quot;.
@@ -41,7 +41,7 @@ public enum FraudReportingActionCode
     [IsoId("_4nmFcHbBEeef9c2nwgY9Xw")]
     [Description(@"Update information about a fraud already reported.")]
     Update,
-    
+
     /// <summary>
     /// Closing a previously reported fraud.
     /// Encoded/decoded by serializers as &quot;CLSE&quot;.
@@ -50,7 +50,7 @@ public enum FraudReportingActionCode
     [IsoId("_JaL44HbCEeef9c2nwgY9Xw")]
     [Description(@"Closing a previously reported fraud.")]
     Close,
-    
+
     /// <summary>
     /// Reopen a previously closed reported fraud case
     /// Encoded/decoded by serializers as &quot;REOP&quot;.
@@ -59,7 +59,7 @@ public enum FraudReportingActionCode
     [IsoId("_VzYqMHbCEeef9c2nwgY9Xw")]
     [Description(@"Reopen a previously closed reported fraud case")]
     Reopen,
-    
+
     /// <summary>
     /// Other process about a fraud already reported defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -68,7 +68,7 @@ public enum FraudReportingActionCode
     [IsoId("_d5f1sHbCEeef9c2nwgY9Xw")]
     [Description(@"Other process about a fraud already reported defined at national level.")]
     OtherNational,
-    
+
     /// <summary>
     /// Other process about a fraud already reported defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -77,5 +77,4 @@ public enum FraudReportingActionCode
     [IsoId("_meJ-YHbCEeef9c2nwgY9Xw")]
     [Description(@"Other process about a fraud already reported defined at private level.")]
     OtherPrivate,
-    
 }

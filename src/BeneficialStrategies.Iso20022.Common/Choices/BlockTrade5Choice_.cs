@@ -11,11 +11,9 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(BlockTrade5Choice.Code))]
     [KnownType(typeof(BlockTrade5Choice.Proprietary))]
-    [JsonDerivedType(typeof(BlockTrade5Choice.Code),nameof(BlockTrade5Choice.Code))]
-    [JsonDerivedType(typeof(BlockTrade5Choice.Proprietary),nameof(BlockTrade5Choice.Proprietary))]
+    [JsonDerivedType(typeof(BlockTrade5Choice.Code), nameof(BlockTrade5Choice.Code))]
+    [JsonDerivedType(typeof(BlockTrade5Choice.Proprietary), nameof(BlockTrade5Choice.Proprietary))]
     [IsoId("_5m6BcZNLEeWGlc8L7oPDIg")]
     [DisplayName("Block Trade 5 Choice")]
-    public abstract partial record BlockTrade5Choice_
-    {
-    }
+    public abstract record BlockTrade5Choice_ { }
 }

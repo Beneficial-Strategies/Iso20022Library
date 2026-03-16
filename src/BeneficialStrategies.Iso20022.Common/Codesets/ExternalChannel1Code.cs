@@ -12,7 +12,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_-MOeEG7iEeKo25nLKvGr8w_689018111")]
-[Description(@"Specifies the external submission or presentation channel code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external submission or presentation channel code in the format of a character string with a maximum length of 4 characters. The list of valid codes is an external code list published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [DerivedFrom(typeof(ExternalChannelCode))]
 public enum ExternalChannel1Code
 {
@@ -24,7 +26,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOZEXvRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by courier.")]
     Courier = ExternalChannelCode.Courier, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by e-mail.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -33,7 +35,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOi1UvRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by e-mail.")]
     Email = ExternalChannelCode.Email, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by fax.
     /// Encoded/decoded by serializers as &quot;FAXI&quot;.
@@ -42,7 +44,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOi1VfRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by fax.")]
     Fax = ExternalChannelCode.Fax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delivery by messenger.
     /// Encoded/decoded by serializers as &quot;MESS&quot;.
@@ -51,7 +53,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOi1WPRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by messenger.")]
     Messenger = ExternalChannelCode.Messenger, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delivery by postal service.
     /// Encoded/decoded by serializers as &quot;POST&quot;.
@@ -60,7 +62,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOi1W_RYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by postal service.")]
     Post = ExternalChannelCode.Post, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Delivery by registered mail services.
     /// Encoded/decoded by serializers as &quot;REGM&quot;.
@@ -69,7 +71,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOi1XvRYEeuLhpyIdtJzwg")]
     [Description(@"Delivery by registered mail services.")]
     RegisteredMail = ExternalChannelCode.RegisteredMail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transfer via secure e-mail.
     /// Encoded/decoded by serializers as &quot;SEMA&quot;.
@@ -78,7 +80,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOsmUvRYEeuLhpyIdtJzwg")]
     [Description(@"Transfer via secure e-mail.")]
     SecureEmail = ExternalChannelCode.SecureEmail, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by SWIFTNet FileAct.
     /// Encoded/decoded by serializers as &quot;SWFA&quot;.
@@ -87,16 +89,16 @@ public enum ExternalChannel1Code
     [IsoId("_uOsmVfRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFTNet FileAct.")]
     SWIFTNetFileAct = ExternalChannelCode.SWIFTNetFileAct, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
-    /// Transmission by SWIFTNet InterAct. 
+    /// Transmission by SWIFTNet InterAct.
     /// Encoded/decoded by serializers as &quot;SWIA&quot;.
     /// </summary>
     [EnumMember(Value = "SWIA")]
     [IsoId("_uOsmWPRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFTNet InterAct. ")]
     SWIFTNetInterAct = ExternalChannelCode.SWIFTNetInterAct, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by SWIFT (FIN).
     /// Encoded/decoded by serializers as &quot;SWMT&quot;.
@@ -105,7 +107,7 @@ public enum ExternalChannel1Code
     [IsoId("_uOsmW_RYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFT (FIN).")]
     SWIFTMT = ExternalChannelCode.SWIFTMT, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by SWIFTNet.
     /// Encoded/decoded by serializers as &quot;SWMX&quot;.
@@ -114,7 +116,7 @@ public enum ExternalChannel1Code
     [IsoId("_uO1wQvRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by SWIFTNet.")]
     SWIFTMX = ExternalChannelCode.SWIFTMX, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by telecommunications service.
     /// Encoded/decoded by serializers as &quot;TELE&quot;.
@@ -123,7 +125,7 @@ public enum ExternalChannel1Code
     [IsoId("_uO1wRfRYEeuLhpyIdtJzwg")]
     [Description(@"Transmission by telecommunications service.")]
     Telecommunication = ExternalChannelCode.Telecommunication, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Available via Web upload/download
     /// Encoded/decoded by serializers as &quot;WEBM&quot;.
@@ -132,5 +134,4 @@ public enum ExternalChannel1Code
     [IsoId("_uO_hQvRYEeuLhpyIdtJzwg")]
     [Description(@"Available via Web upload/download")]
     WebUploadDownload = ExternalChannelCode.WebUploadDownload, // same ordinal as derivation source for type conversions
-    
 }

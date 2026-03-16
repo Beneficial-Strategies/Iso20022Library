@@ -23,7 +23,7 @@ public enum ReconciliationActivityTypeCode
     [IsoId("_wAVlMCX_Eeym0KcvJF9aDQ")]
     [Description(@"Acquiring activity.")]
     Acquiring,
-    
+
     /// <summary>
     /// Issuing activity
     /// Encoded/decoded by serializers as &quot;ISSG&quot;.
@@ -32,7 +32,7 @@ public enum ReconciliationActivityTypeCode
     [IsoId("_HGWegCYAEeym0KcvJF9aDQ")]
     [Description(@"Issuing activity")]
     Issuing,
-    
+
     /// <summary>
     /// All types of activity.
     /// Encoded/decoded by serializers as &quot;CNSD&quot;.
@@ -41,16 +41,16 @@ public enum ReconciliationActivityTypeCode
     [IsoId("_TcHhUCYAEeym0KcvJF9aDQ")]
     [Description(@"All types of activity.")]
     Consolidated,
-    
+
     /// <summary>
-    /// Other reconciliation activity type defined at private level 
+    /// Other reconciliation activity type defined at private level
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
     /// </summary>
     [EnumMember(Value = "OTHP")]
     [IsoId("_ckuroCYAEeym0KcvJF9aDQ")]
     [Description(@"Other reconciliation activity type defined at private level ")]
     OtherPrivate,
-    
+
     /// <summary>
     /// Other reconciliation activity type defined at national level
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,5 +59,4 @@ public enum ReconciliationActivityTypeCode
     [IsoId("_uAjCQCYAEeym0KcvJF9aDQ")]
     [Description(@"Other reconciliation activity type defined at national level")]
     OtherNational,
-    
 }

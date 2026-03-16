@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,26 +14,24 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_g7QKsRRfEeOKWo1NF21OVw")]
 [DisplayName("Payment Instrument")]
-public partial record PaymentInstrument12
+public record PaymentInstrument12
 {
-    #nullable enable
-    
     /// <summary>
     /// Currency associated with the payment instrument.
     /// </summary>
     [IsoId("_hTMwoxRfEeOKWo1NF21OVw")]
     [DisplayName("Settlement Currency")]
     [IsoXmlTag("SttlmCcy")]
-    public required ActiveCurrencyCode SettlementCurrency { get; init; } 
-    
+    public required ActiveCurrencyCode SettlementCurrency { get; init; }
+
     /// <summary>
     /// Choice of payment instruments.
     /// </summary>
     [IsoId("_hTMwpRRfEeOKWo1NF21OVw")]
     [DisplayName("Payment Instrument")]
     [IsoXmlTag("PmtInstrm")]
-    public required PaymentInstrument16Choice_ PaymentInstrument { get; init; } 
-    
+    public required PaymentInstrument16Choice_ PaymentInstrument { get; init; }
+
     /// <summary>
     /// Percentage of the dividend payment not to be reinvested, that is, to be paid in cash.
     /// </summary>
@@ -41,9 +39,5 @@ public partial record PaymentInstrument12
     [DisplayName("Dividend Percentage")]
     [IsoXmlTag("DvddPctg")]
     [IsoSimpleType(IsoSimpleType.PercentageBoundedRate)]
-    public IsoPercentageBoundedRate? DividendPercentage { get; init; } 
-    
-    
-    #nullable disable
-    
+    public IsoPercentageBoundedRate? DividendPercentage { get; init; }
 }

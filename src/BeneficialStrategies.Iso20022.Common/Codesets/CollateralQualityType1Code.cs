@@ -23,7 +23,7 @@ public enum CollateralQualityType1Code
     [IsoId("_zUP6kckVEeeiAIB1i4AlQw")]
     [Description(@"Security that is classified as investment grade according to external ratings.")]
     InvestmentGrade = CollateralQualityTypeCode.InvestmentGrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security with a rating different than investment grade.
     /// Encoded/decoded by serializers as &quot;NIVG&quot;.
@@ -32,7 +32,7 @@ public enum CollateralQualityType1Code
     [IsoId("_zeO9AckVEeeiAIB1i4AlQw")]
     [Description(@"Security with a rating different than investment grade.")]
     NonInvestmentGrade = CollateralQualityTypeCode.NonInvestmentGrade, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Security without a rating assigned.
     /// Encoded/decoded by serializers as &quot;NOTR&quot;.
@@ -41,7 +41,7 @@ public enum CollateralQualityType1Code
     [IsoId("_zkWMEckVEeeiAIB1i4AlQw")]
     [Description(@"Security without a rating assigned.")]
     NotRated = CollateralQualityTypeCode.NotRated, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Collateral quality type is not applicable.
     /// Encoded/decoded by serializers as &quot;NOAP&quot;.
@@ -50,5 +50,4 @@ public enum CollateralQualityType1Code
     [IsoId("_xAID4dQuEee86YlULvwLbQ")]
     [Description(@"Collateral quality type is not applicable.")]
     NonApplicable = CollateralQualityTypeCode.NonApplicable, // same ordinal as derivation source for type conversions
-    
 }

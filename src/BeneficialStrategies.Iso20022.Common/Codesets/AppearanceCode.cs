@@ -23,7 +23,7 @@ public enum AppearanceCode
     [IsoId("_bfHFo9p-Ed-ak6NoX_4Aeg_-1137977785")]
     [Description(@"Physical certificates exist.")]
     Deliverable,
-    
+
     /// <summary>
     /// Not yet deliverable contract.
     /// Encoded/decoded by serializers as &quot;NDEL&quot;.
@@ -32,7 +32,7 @@ public enum AppearanceCode
     [IsoId("_bfHFpNp-Ed-ak6NoX_4Aeg_-1137977784")]
     [Description(@"Not yet deliverable contract.")]
     NotDeliverable,
-    
+
     /// <summary>
     /// Limited or partial deliverability.
     /// Encoded/decoded by serializers as &quot;LIMI&quot;.
@@ -41,16 +41,18 @@ public enum AppearanceCode
     [IsoId("_bfHFpdp-Ed-ak6NoX_4Aeg_-1137977783")]
     [Description(@"Limited or partial deliverability.")]
     Limited,
-    
+
     /// <summary>
     /// Security exists only as an electronic record, ie, there are no physical certificates representing the security.
     /// Encoded/decoded by serializers as &quot;BENT&quot;.
     /// </summary>
     [EnumMember(Value = "BENT")]
     [IsoId("_bfHFptp-Ed-ak6NoX_4Aeg_-1137977755")]
-    [Description(@"Security exists only as an electronic record, ie, there are no physical certificates representing the security.")]
+    [Description(
+        @"Security exists only as an electronic record, ie, there are no physical certificates representing the security."
+    )]
     BookEntry,
-    
+
     /// <summary>
     /// Deferred printing, book entry.
     /// Encoded/decoded by serializers as &quot;DFBE&quot;.
@@ -59,7 +61,7 @@ public enum AppearanceCode
     [IsoId("_bfHFp9p-Ed-ak6NoX_4Aeg_-1137977754")]
     [Description(@"Deferred printing, book entry.")]
     DeferredBookEntry,
-    
+
     /// <summary>
     /// Deliverable, book entry.
     /// Encoded/decoded by serializers as &quot;DLBE&quot;.
@@ -68,7 +70,7 @@ public enum AppearanceCode
     [IsoId("_bfQPkNp-Ed-ak6NoX_4Aeg_-1137977753")]
     [Description(@"Deliverable, book entry.")]
     DeliverableBookEntry,
-    
+
     /// <summary>
     /// Deferred printing, global certificate.
     /// Encoded/decoded by serializers as &quot;TMPG&quot;.
@@ -77,7 +79,7 @@ public enum AppearanceCode
     [IsoId("_bfQPkdp-Ed-ak6NoX_4Aeg_-1137977752")]
     [Description(@"Deferred printing, global certificate.")]
     TemporaryGlobal,
-    
+
     /// <summary>
     /// Not deliverable, global certificate.
     /// Encoded/decoded by serializers as &quot;GLOB&quot;.
@@ -86,5 +88,4 @@ public enum AppearanceCode
     [IsoId("_bfQPktp-Ed-ak6NoX_4Aeg_-1137977725")]
     [Description(@"Not deliverable, global certificate.")]
     Global,
-    
 }

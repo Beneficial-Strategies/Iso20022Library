@@ -13,7 +13,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_lY1lkZIgEeect698_YsnIA")]
-[Description(@"Specifies the external request type code for the enquiry on a position in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code set published separately.|External code sets can be downloaded from www.iso20022.org.")]
+[Description(
+    @"Specifies the external request type code for the enquiry on a position in the format of character string with a maximum length of 4 characters.|The list of valid codes is an external code set published separately.|External code sets can be downloaded from www.iso20022.org."
+)]
 [Derivations(typeof(ExternalEnquiryRequestType1Code))]
 public enum ExternalEnquiryRequestTypeCode
 {
@@ -25,7 +27,7 @@ public enum ExternalEnquiryRequestTypeCode
     [IsoId("_ud444PRYEeuLhpyIdtJzwg")]
     [Description(@"Type is an enquiry on the bank's position.")]
     BankPositionEnquiry,
-    
+
     /// <summary>
     /// Type is an enquiry on a specific transaction.
     /// Encoded/decoded by serializers as &quot;RT12&quot;.
@@ -34,7 +36,7 @@ public enum ExternalEnquiryRequestTypeCode
     [IsoId("_ud444_RYEeuLhpyIdtJzwg")]
     [Description(@"Type is an enquiry on a specific transaction.")]
     SpecificTransactionEnquiry,
-    
+
     /// <summary>
     /// Type is an enquiry on a queued transaction.
     /// Encoded/decoded by serializers as &quot;RT13&quot;.
@@ -43,7 +45,7 @@ public enum ExternalEnquiryRequestTypeCode
     [IsoId("_ueCp4PRYEeuLhpyIdtJzwg")]
     [Description(@"Type is an enquiry on a queued transaction.")]
     QueuedTransactionEnquiry,
-    
+
     /// <summary>
     /// Type is an enquiry on a suspicious transaction.
     /// Encoded/decoded by serializers as &quot;RT14&quot;.
@@ -52,7 +54,7 @@ public enum ExternalEnquiryRequestTypeCode
     [IsoId("_ueCp4_RYEeuLhpyIdtJzwg")]
     [Description(@"Type is an enquiry on a suspicious transaction.")]
     SuspiciousTransactionEnquiry,
-    
+
     /// <summary>
     /// Type is an enquiry on the system date and/or time.
     /// Encoded/decoded by serializers as &quot;RT16&quot;.
@@ -61,7 +63,7 @@ public enum ExternalEnquiryRequestTypeCode
     [IsoId("_ueCp5vRYEeuLhpyIdtJzwg")]
     [Description(@"Type is an enquiry on the system date and/or time.")]
     SytemTimeEnquiry,
-    
+
     /// <summary>
     /// Type is an enquiry on pending inward credits.
     /// Encoded/decoded by serializers as &quot;RT15&quot;.
@@ -70,5 +72,4 @@ public enum ExternalEnquiryRequestTypeCode
     [IsoId("_ueCp6fRYEeuLhpyIdtJzwg")]
     [Description(@"Type is an enquiry on pending inward credits.")]
     PendingInwardCreditsEnquiry,
-    
 }

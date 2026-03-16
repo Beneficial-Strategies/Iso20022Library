@@ -23,7 +23,7 @@ public enum Verification2Code
     [IsoId("_1vp8AX0mEemfrNOe0zHQyg")]
     [Description(@"Verification failed.")]
     Failed = VerificationCode.Failed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Further action required.
     /// Encoded/decoded by serializers as &quot;FUTA&quot;.
@@ -32,7 +32,7 @@ public enum Verification2Code
     [IsoId("_1vp8A30mEemfrNOe0zHQyg")]
     [Description(@"Further action required.")]
     FurtherAction = VerificationCode.FurtherAction, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Information required to perform the verification was missing.
     /// Encoded/decoded by serializers as &quot;MISS&quot;.
@@ -41,7 +41,7 @@ public enum Verification2Code
     [IsoId("_1vp8BX0mEemfrNOe0zHQyg")]
     [Description(@"Information required to perform the verification was missing.")]
     Missing = VerificationCode.Missing, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification has not been performed.
     /// Encoded/decoded by serializers as &quot;NOVF&quot;.
@@ -50,7 +50,7 @@ public enum Verification2Code
     [IsoId("_1vp8B30mEemfrNOe0zHQyg")]
     [Description(@"Verification has not been performed.")]
     NotPerformed = VerificationCode.NotPerformed, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other result of verification defined at national level.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -59,7 +59,7 @@ public enum Verification2Code
     [IsoId("_1vp8CX0mEemfrNOe0zHQyg")]
     [Description(@"Other result of verification defined at national level.")]
     OtherNational = VerificationCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other result of verification defined at private level.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -68,7 +68,7 @@ public enum Verification2Code
     [IsoId("_1vp8C30mEemfrNOe0zHQyg")]
     [Description(@"Other result of verification defined at private level.")]
     OtherPrivate = VerificationCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification was partially successful.
     /// Encoded/decoded by serializers as &quot;PART&quot;.
@@ -77,7 +77,7 @@ public enum Verification2Code
     [IsoId("_1vp8DX0mEemfrNOe0zHQyg")]
     [Description(@"Verification was partially successful.")]
     PartialMatch = VerificationCode.PartialMatch, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Verification was successful.
     /// Encoded/decoded by serializers as &quot;SUCC&quot;.
@@ -86,7 +86,7 @@ public enum Verification2Code
     [IsoId("_1vp8D30mEemfrNOe0zHQyg")]
     [Description(@"Verification was successful.")]
     Successful = VerificationCode.Successful, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Device or entity to perform the verification was unavailable.
     /// Encoded/decoded by serializers as &quot;ERRR&quot;.
@@ -95,5 +95,4 @@ public enum Verification2Code
     [IsoId("_1vp8EX0mEemfrNOe0zHQyg")]
     [Description(@"Device or entity to perform the verification was unavailable.")]
     TechnicalError = VerificationCode.TechnicalError, // same ordinal as derivation source for type conversions
-    
 }

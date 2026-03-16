@@ -11,11 +11,12 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(TimeHorizon2Choice.NumberOfYears))]
     [KnownType(typeof(TimeHorizon2Choice.TimeFrame))]
-    [JsonDerivedType(typeof(TimeHorizon2Choice.NumberOfYears),nameof(TimeHorizon2Choice.NumberOfYears))]
-    [JsonDerivedType(typeof(TimeHorizon2Choice.TimeFrame),nameof(TimeHorizon2Choice.TimeFrame))]
+    [JsonDerivedType(
+        typeof(TimeHorizon2Choice.NumberOfYears),
+        nameof(TimeHorizon2Choice.NumberOfYears)
+    )]
+    [JsonDerivedType(typeof(TimeHorizon2Choice.TimeFrame), nameof(TimeHorizon2Choice.TimeFrame))]
     [IsoId("_U38AEbVOEeqkjqDuFVh1-A")]
     [DisplayName("Time Horizon 2 Choice")]
-    public abstract partial record TimeHorizon2Choice_
-    {
-    }
+    public abstract record TimeHorizon2Choice_ { }
 }

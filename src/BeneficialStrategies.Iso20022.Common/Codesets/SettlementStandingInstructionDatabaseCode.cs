@@ -11,7 +11,9 @@ namespace BeneficialStrategies.Iso20022.Codesets;
 [DataContract]
 [Serializable]
 [IsoId("_ZMVKstp-Ed-ak6NoX_4Aeg_-276633824")]
-[Description(@"Indicates what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction.")]
+[Description(
+    @"Indicates what settlement standing instruction database is to be used to derive the settlement parties involved in the transaction."
+)]
 [Derivations(typeof(SettlementStandingInstructionDatabase1Code))]
 public enum SettlementStandingInstructionDatabaseCode
 {
@@ -21,25 +23,30 @@ public enum SettlementStandingInstructionDatabaseCode
     /// </summary>
     [EnumMember(Value = "INTE")]
     [IsoId("_ZMVKs9p-Ed-ak6NoX_4Aeg_-390472890")]
-    [Description(@"The settlement standing instruction database to be used is the receiver's internal database.")]
+    [Description(
+        @"The settlement standing instruction database to be used is the receiver's internal database."
+    )]
     InternalDatabase,
-    
+
     /// <summary>
     /// The settlement standing instruction database to be used is the broker&apos;s database.
     /// Encoded/decoded by serializers as &quot;BRKR&quot;.
     /// </summary>
     [EnumMember(Value = "BRKR")]
     [IsoId("_ZMVKtNp-Ed-ak6NoX_4Aeg_-1565663915")]
-    [Description(@"The settlement standing instruction database to be used is the broker's database.")]
+    [Description(
+        @"The settlement standing instruction database to be used is the broker's database."
+    )]
     BrokerDatabase,
-    
+
     /// <summary>
     /// The settlement standing instruction database to be used is the database of the vendor.
     /// Encoded/decoded by serializers as &quot;VEND&quot;.
     /// </summary>
     [EnumMember(Value = "VEND")]
     [IsoId("_ZMVKtdp-Ed-ak6NoX_4Aeg_2024188766")]
-    [Description(@"The settlement standing instruction database to be used is the database of the vendor.")]
+    [Description(
+        @"The settlement standing instruction database to be used is the database of the vendor."
+    )]
     VendorDatabase,
-    
 }

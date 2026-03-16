@@ -23,7 +23,7 @@ public enum DrawdownType2Code
     [IsoId("_i8LLEZNwEembCsVG-3f_AA")]
     [Description(@"Drawdown type is both flexi-access and capped.")]
     Both = DrawdownTypeCode.Both, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Drawdown type is capped.
     /// Encoded/decoded by serializers as &quot;CAPP&quot;.
@@ -32,7 +32,7 @@ public enum DrawdownType2Code
     [IsoId("_jBOqMZNwEembCsVG-3f_AA")]
     [Description(@"Drawdown type is capped.")]
     CappedIncomeDrawdown = DrawdownTypeCode.CappedIncomeDrawdown, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Drawdown type is flexi-access.
     /// Encoded/decoded by serializers as &quot;FLEX&quot;.
@@ -41,5 +41,4 @@ public enum DrawdownType2Code
     [IsoId("_jHLhMZNwEembCsVG-3f_AA")]
     [Description(@"Drawdown type is flexi-access.")]
     FlexibleAccessDrawdown = DrawdownTypeCode.FlexibleAccessDrawdown, // same ordinal as derivation source for type conversions
-    
 }

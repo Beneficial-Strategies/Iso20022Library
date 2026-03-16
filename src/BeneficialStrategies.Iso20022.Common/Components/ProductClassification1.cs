@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,10 +14,8 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_M00DgDXHEemdWfjs3tykFQ")]
 [DisplayName("Product Classification")]
-public partial record ProductClassification1
+public record ProductClassification1
 {
-    #nullable enable
-    
     /// <summary>
     /// Asset class of the underlying of the derivative (e.g. Interest Rate, Commodity, Equity).
     /// </summary>
@@ -25,9 +23,9 @@ public partial record ProductClassification1
     [DisplayName("Asset Class")]
     [IsoXmlTag("AsstClss")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public required IsoMax35Text AssetClass { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public required IsoMax35Text AssetClass { get; init; }
+
     /// <summary>
     /// Market of the underlying product (IR Swap, Freight, Precious/Non Precious).
     /// </summary>
@@ -35,9 +33,9 @@ public partial record ProductClassification1
     [DisplayName("Base Product")]
     [IsoXmlTag("BasePdct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? BaseProduct { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? BaseProduct { get; init; }
+
     /// <summary>
     /// Further details of the product type.
     /// </summary>
@@ -45,9 +43,9 @@ public partial record ProductClassification1
     [DisplayName("Sub Product")]
     [IsoXmlTag("SubPdct")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SubProduct { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SubProduct { get; init; }
+
     /// <summary>
     /// Further details if the asset class is commodity.
     /// </summary>
@@ -55,9 +53,9 @@ public partial record ProductClassification1
     [DisplayName("Sub Commodity")]
     [IsoXmlTag("SubCmmdty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? SubCommodity { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? SubCommodity { get; init; }
+
     /// <summary>
     /// Type of the transaction, for example, option, spot forward or exotic.
     /// </summary>
@@ -65,10 +63,6 @@ public partial record ProductClassification1
     [DisplayName("Transaction Type")]
     [IsoXmlTag("TxTp")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? TransactionType { get; init; } 
-    
-    
-    #nullable disable
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? TransactionType { get; init; }
 }

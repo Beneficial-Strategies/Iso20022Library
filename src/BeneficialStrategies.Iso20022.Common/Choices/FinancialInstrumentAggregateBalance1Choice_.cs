@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator))]
     [KnownType(typeof(FinancialInstrumentAggregateBalance1Choice.HoldingBalance))]
-    [JsonDerivedType(typeof(FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator),nameof(FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator))]
-    [JsonDerivedType(typeof(FinancialInstrumentAggregateBalance1Choice.HoldingBalance),nameof(FinancialInstrumentAggregateBalance1Choice.HoldingBalance))]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator),
+        nameof(FinancialInstrumentAggregateBalance1Choice.HoldingsIndicator)
+    )]
+    [JsonDerivedType(
+        typeof(FinancialInstrumentAggregateBalance1Choice.HoldingBalance),
+        nameof(FinancialInstrumentAggregateBalance1Choice.HoldingBalance)
+    )]
     [IsoId("_PW7ItqCCEeOEyO7fCl8lLA")]
     [DisplayName("Financial Instrument Aggregate Balance 1 Choice")]
-    public abstract partial record FinancialInstrumentAggregateBalance1Choice_
-    {
-    }
+    public abstract record FinancialInstrumentAggregateBalance1Choice_ { }
 }

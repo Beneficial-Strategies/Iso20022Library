@@ -23,7 +23,7 @@ public enum CommunicationMethod1Code
     [IsoId("_bAkIddp-Ed-ak6NoX_4Aeg_591608994")]
     [Description(@"Transmission by Swift (FIN).")]
     SWIFTMT = CommunicationMethodCode.SWIFTMT, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by SWIFTNET.
     /// Encoded/decoded by serializers as &quot;SWMX&quot;.
@@ -32,7 +32,7 @@ public enum CommunicationMethod1Code
     [IsoId("_bAkIdtp-Ed-ak6NoX_4Aeg_309468232")]
     [Description(@"Transmission by SWIFTNET.")]
     SWIFTMX = CommunicationMethodCode.SWIFTMX, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by fax.
     /// Encoded/decoded by serializers as &quot;FAXI&quot;.
@@ -41,7 +41,7 @@ public enum CommunicationMethod1Code
     [IsoId("_bAkId9p-Ed-ak6NoX_4Aeg_603616409")]
     [Description(@"Transmission by fax.")]
     Fax = CommunicationMethodCode.Fax, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by e-mail.
     /// Encoded/decoded by serializers as &quot;EMAL&quot;.
@@ -50,7 +50,7 @@ public enum CommunicationMethod1Code
     [IsoId("_bAkIeNp-Ed-ak6NoX_4Aeg_617470095")]
     [Description(@"Transmission by e-mail.")]
     Email = CommunicationMethodCode.Email, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Transmission by proprietary method.
     /// Encoded/decoded by serializers as &quot;PROP&quot;.
@@ -59,5 +59,4 @@ public enum CommunicationMethod1Code
     [IsoId("_bAtSYNp-Ed-ak6NoX_4Aeg_631321016")]
     [Description(@"Transmission by proprietary method.")]
     Proprietary = CommunicationMethodCode.Proprietary, // same ordinal as derivation source for type conversions
-    
 }

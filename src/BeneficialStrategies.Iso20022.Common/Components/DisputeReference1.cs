@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_sXZCwOCmEee9RadpHmUgYw")]
 [DisplayName("Dispute Reference")]
-public partial record DisputeReference1
+public record DisputeReference1
 {
-    #nullable enable
-    
     /// <summary>
     /// Name of the entity assigning the dispute reference.
     /// </summary>
     [IsoId("_8BhZUOCmEee9RadpHmUgYw")]
     [DisplayName("Assigner Entity")]
     [IsoXmlTag("AssgnrNtty")]
-    public PartyType32Code? AssignerEntity { get; init; } 
-    
+    public PartyType32Code? AssignerEntity { get; init; }
+
     /// <summary>
     /// Other assigner entity.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record DisputeReference1
     [DisplayName("Other Assigner Entity")]
     [IsoXmlTag("OthrAssgnrNtty")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? OtherAssignerEntity { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? OtherAssignerEntity { get; init; }
+
     /// <summary>
     /// Identification of the dispute.
     /// </summary>
@@ -44,8 +42,4 @@ public partial record DisputeReference1
     [IsoXmlTag("DsptId")]
     public ValueList<DisputeIdentification1> DisputeIdentification { get; init; } = [];
     // ID for the above is _NvLt4OCnEee9RadpHmUgYw
-    
-    
-    #nullable disable
-    
 }

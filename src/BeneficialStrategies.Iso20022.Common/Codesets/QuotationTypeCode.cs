@@ -23,7 +23,7 @@ public enum QuotationTypeCode
     [IsoId("_p8ndQNK4EeihtcVwfFPNlg")]
     [Description(@"Quotation is expressed as percentage.")]
     Percentage,
-    
+
     /// <summary>
     /// Quotation expressed as a currency and amount.
     /// Encoded/decoded by serializers as &quot;ACTU&quot;.
@@ -32,5 +32,4 @@ public enum QuotationTypeCode
     [IsoId("_zKp6INK4EeihtcVwfFPNlg")]
     [Description(@"Quotation expressed as a currency and amount.")]
     ActualAmount,
-    
 }

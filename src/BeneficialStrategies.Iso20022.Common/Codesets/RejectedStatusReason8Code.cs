@@ -23,7 +23,7 @@ public enum RejectedStatusReason8Code
     [IsoId("_ZfG8xNp-Ed-ak6NoX_4Aeg_-881859781")]
     [Description(@"Instruction has been received after the cut-off time.")]
     CutOffTime = RejectedStatusReasonCode.CutOffTime, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instructing party is not allowed to request a cancellation.
     /// Encoded/decoded by serializers as &quot;NALC&quot;.
@@ -32,7 +32,7 @@ public enum RejectedStatusReason8Code
     [IsoId("_ZfG8xdp-Ed-ak6NoX_4Aeg_-881859756")]
     [Description(@"Instructing party is not allowed to request a cancellation.")]
     NotAllowedToCancel = RejectedStatusReasonCode.NotAllowedToCancel, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction is not compliant with the service level agreement.
     /// Encoded/decoded by serializers as &quot;NSLA&quot;.
@@ -41,7 +41,7 @@ public enum RejectedStatusReason8Code
     [IsoId("_ZfG8xtp-Ed-ak6NoX_4Aeg_-881859686")]
     [Description(@"Instruction is not compliant with the service level agreement.")]
     NotCompliantWithSLA = RejectedStatusReasonCode.NotCompliantWithSLA, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Legally impossible to cancel.
     /// Encoded/decoded by serializers as &quot;LEGL&quot;.
@@ -50,5 +50,4 @@ public enum RejectedStatusReason8Code
     [IsoId("_ZfG8x9p-Ed-ak6NoX_4Aeg_-881859644")]
     [Description(@"Legally impossible to cancel.")]
     LegallyImpossible = RejectedStatusReasonCode.LegallyImpossible, // same ordinal as derivation source for type conversions
-    
 }

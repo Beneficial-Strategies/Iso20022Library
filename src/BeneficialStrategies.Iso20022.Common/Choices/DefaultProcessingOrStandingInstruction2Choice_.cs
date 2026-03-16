@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(DefaultProcessingOrStandingInstruction2Choice.DefaultOptionIndicator))]
     [KnownType(typeof(DefaultProcessingOrStandingInstruction2Choice.StandingInstructionIndicator))]
-    [JsonDerivedType(typeof(DefaultProcessingOrStandingInstruction2Choice.DefaultOptionIndicator),nameof(DefaultProcessingOrStandingInstruction2Choice.DefaultOptionIndicator))]
-    [JsonDerivedType(typeof(DefaultProcessingOrStandingInstruction2Choice.StandingInstructionIndicator),nameof(DefaultProcessingOrStandingInstruction2Choice.StandingInstructionIndicator))]
+    [JsonDerivedType(
+        typeof(DefaultProcessingOrStandingInstruction2Choice.DefaultOptionIndicator),
+        nameof(DefaultProcessingOrStandingInstruction2Choice.DefaultOptionIndicator)
+    )]
+    [JsonDerivedType(
+        typeof(DefaultProcessingOrStandingInstruction2Choice.StandingInstructionIndicator),
+        nameof(DefaultProcessingOrStandingInstruction2Choice.StandingInstructionIndicator)
+    )]
     [IsoId("_fiXWcYudEe-ia-YMBhg53w")]
     [DisplayName("Default Processing Or Standing Instruction2Choice")]
-    public abstract partial record DefaultProcessingOrStandingInstruction2Choice_
-    {
-    }
+    public abstract record DefaultProcessingOrStandingInstruction2Choice_ { }
 }

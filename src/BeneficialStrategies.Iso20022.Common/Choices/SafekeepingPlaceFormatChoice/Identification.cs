@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
 {
     /// <summary>
@@ -13,18 +13,16 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
     /// </summary>
     [IsoId("_RB5f5dp-Ed-ak6NoX_4Aeg_-334909529")]
     [DisplayName("Identification")]
-    public partial record Identification : SafekeepingPlaceFormatChoice_
+    public record Identification : SafekeepingPlaceFormatChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Place of safekeeping as a code.
         /// </summary>
         [IsoId("_SfoCJNp-Ed-ak6NoX_4Aeg_-1275917504")]
         [DisplayName("Place Safekeeping")]
         [IsoXmlTag("PlcSfkpg")]
-        public required SafekeepingPlace1Code PlaceSafekeeping { get; init; } 
-        
+        public required SafekeepingPlace1Code PlaceSafekeeping { get; init; }
+
         /// <summary>
         /// Additional information about the place of safekeeping.
         /// </summary>
@@ -32,19 +30,15 @@ namespace BeneficialStrategies.Iso20022.Choices.SafekeepingPlaceFormatChoice
         [DisplayName("Narrative")]
         [IsoXmlTag("Nrrtv")]
         [IsoSimpleType(IsoSimpleType.Max35Text)]
-        [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-        public IsoMax35Text? Narrative { get; init; } 
-        
+        [StringLength(maximumLength: 35, MinimumLength = 1)]
+        public IsoMax35Text? Narrative { get; init; }
+
         /// <summary>
         /// Place of safekeeping.
         /// </summary>
         [IsoId("_SfoCJtp-Ed-ak6NoX_4Aeg_-405959313")]
         [DisplayName("Party")]
         [IsoXmlTag("Pty")]
-        public PartyIdentification3? Party { get; init; } 
-        
-        
-        #nullable disable
-        
+        public PartyIdentification3? Party { get; init; }
     }
 }

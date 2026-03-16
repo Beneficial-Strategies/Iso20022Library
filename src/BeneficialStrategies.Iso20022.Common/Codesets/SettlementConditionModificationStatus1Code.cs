@@ -23,7 +23,7 @@ public enum SettlementConditionModificationStatus1Code
     [IsoId("_ZK189Np-Ed-ak6NoX_4Aeg_-858187374")]
     [Description(@"Instruction has been acknowledged/accepted by the account servicer.")]
     AcknowledgedAccepted = SettlementConditionModificationStatusStatusCode.AcknowledgedAccepted, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Instruction has been rejected for further processing.
     /// Encoded/decoded by serializers as &quot;REJT&quot;.
@@ -32,16 +32,18 @@ public enum SettlementConditionModificationStatus1Code
     [IsoId("_ZK189dp-Ed-ak6NoX_4Aeg_794440134")]
     [Description(@"Instruction has been rejected for further processing.")]
     Rejected = SettlementConditionModificationStatusStatusCode.Rejected, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modification is pending. At this time, it is unknown whether the modification can be affected.
     /// Encoded/decoded by serializers as &quot;MODP&quot;.
     /// </summary>
     [EnumMember(Value = "MODP")]
     [IsoId("_ZK189tp-Ed-ak6NoX_4Aeg_1133726791")]
-    [Description(@"Modification is pending. At this time, it is unknown whether the modification can be affected.")]
+    [Description(
+        @"Modification is pending. At this time, it is unknown whether the modification can be affected."
+    )]
     Pending = SettlementConditionModificationStatusStatusCode.Pending, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modification Request will not be executed.
     /// Encoded/decoded by serializers as &quot;DEND&quot;.
@@ -50,7 +52,7 @@ public enum SettlementConditionModificationStatus1Code
     [IsoId("_ZK1899p-Ed-ak6NoX_4Aeg_-155303300")]
     [Description(@"Modification Request will not be executed.")]
     Denied = SettlementConditionModificationStatusStatusCode.Denied, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Modification has been completed.
     /// Encoded/decoded by serializers as &quot;MODC&quot;.
@@ -59,5 +61,4 @@ public enum SettlementConditionModificationStatus1Code
     [IsoId("_ZK18-Np-Ed-ak6NoX_4Aeg_-974256981")]
     [Description(@"Modification has been completed.")]
     Completed = SettlementConditionModificationStatusStatusCode.Completed, // same ordinal as derivation source for type conversions
-    
 }

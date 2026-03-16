@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Components;
-using BeneficialStrategies.Iso20022.ExternalSchema;
+using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Components;
+using BeneficialStrategies.Iso20022.ExternalSchema;
 
-using System.ComponentModel.DataAnnotations;
 namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriodChoice
 {
     /// <summary>
@@ -13,10 +13,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriodChoice
     /// </summary>
     [IsoId("_T57c8dp-Ed-ak6NoX_4Aeg_1215657175")]
     [DisplayName("Date Time Range")]
-    public partial record DateTimeRange : DateTimePeriodChoice_
+    public record DateTimeRange : DateTimePeriodChoice_
     {
-        #nullable enable
-        
         /// <summary>
         /// Date and time at which the range starts.
         /// </summary>
@@ -24,8 +22,8 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriodChoice
         [DisplayName("From Date Time")]
         [IsoXmlTag("FrDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime FromDateTime { get; init; } 
-        
+        public required IsoISODateTime FromDateTime { get; init; }
+
         /// <summary>
         /// Date and time at which the range ends.
         /// </summary>
@@ -33,10 +31,6 @@ namespace BeneficialStrategies.Iso20022.Choices.DateTimePeriodChoice
         [DisplayName("To Date Time")]
         [IsoXmlTag("ToDtTm")]
         [IsoSimpleType(IsoSimpleType.ISODateTime)]
-        public required IsoISODateTime ToDateTime { get; init; } 
-        
-        
-        #nullable disable
-        
+        public required IsoISODateTime ToDateTime { get; init; }
     }
 }

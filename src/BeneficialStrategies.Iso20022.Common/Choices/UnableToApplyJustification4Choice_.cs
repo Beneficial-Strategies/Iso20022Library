@@ -12,12 +12,19 @@ namespace BeneficialStrategies.Iso20022.Choices
     [KnownType(typeof(UnableToApplyJustification4Choice.AnyInformation))]
     [KnownType(typeof(UnableToApplyJustification4Choice.MissingOrIncorrectInformation))]
     [KnownType(typeof(UnableToApplyJustification4Choice.PossibleDuplicateInstruction))]
-    [JsonDerivedType(typeof(UnableToApplyJustification4Choice.AnyInformation),nameof(UnableToApplyJustification4Choice.AnyInformation))]
-    [JsonDerivedType(typeof(UnableToApplyJustification4Choice.MissingOrIncorrectInformation),nameof(UnableToApplyJustification4Choice.MissingOrIncorrectInformation))]
-    [JsonDerivedType(typeof(UnableToApplyJustification4Choice.PossibleDuplicateInstruction),nameof(UnableToApplyJustification4Choice.PossibleDuplicateInstruction))]
+    [JsonDerivedType(
+        typeof(UnableToApplyJustification4Choice.AnyInformation),
+        nameof(UnableToApplyJustification4Choice.AnyInformation)
+    )]
+    [JsonDerivedType(
+        typeof(UnableToApplyJustification4Choice.MissingOrIncorrectInformation),
+        nameof(UnableToApplyJustification4Choice.MissingOrIncorrectInformation)
+    )]
+    [JsonDerivedType(
+        typeof(UnableToApplyJustification4Choice.PossibleDuplicateInstruction),
+        nameof(UnableToApplyJustification4Choice.PossibleDuplicateInstruction)
+    )]
     [IsoId("_7JifAdjKEeq5MfBBxQig1Q")]
     [DisplayName("Unable To Apply Justification 4 Choice")]
-    public abstract partial record UnableToApplyJustification4Choice_
-    {
-    }
+    public abstract record UnableToApplyJustification4Choice_ { }
 }

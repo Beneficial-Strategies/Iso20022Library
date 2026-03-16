@@ -23,5 +23,4 @@ public enum AssetClassDetailedSubProductType4Code
     [IsoId("_6BOAsVq5EeWN79Bl6BUd3g")]
     [Description(@"Commodity attribute of type lampante.")]
     Lampante = AssetClassDetailedSubProductTypeCode.Lampante, // same ordinal as derivation source for type conversions
-    
 }

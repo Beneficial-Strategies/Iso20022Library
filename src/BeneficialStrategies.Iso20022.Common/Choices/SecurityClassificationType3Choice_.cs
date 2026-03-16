@@ -11,11 +11,15 @@ namespace BeneficialStrategies.Iso20022.Choices
     /// </summary>
     [KnownType(typeof(SecurityClassificationType3Choice.CFI))]
     [KnownType(typeof(SecurityClassificationType3Choice.AlternateClassification))]
-    [JsonDerivedType(typeof(SecurityClassificationType3Choice.CFI),nameof(SecurityClassificationType3Choice.CFI))]
-    [JsonDerivedType(typeof(SecurityClassificationType3Choice.AlternateClassification),nameof(SecurityClassificationType3Choice.AlternateClassification))]
+    [JsonDerivedType(
+        typeof(SecurityClassificationType3Choice.CFI),
+        nameof(SecurityClassificationType3Choice.CFI)
+    )]
+    [JsonDerivedType(
+        typeof(SecurityClassificationType3Choice.AlternateClassification),
+        nameof(SecurityClassificationType3Choice.AlternateClassification)
+    )]
     [IsoId("_R_yWIf35EeimOuZbLgw0bg")]
     [DisplayName("Security Classification Type 3 Choice")]
-    public abstract partial record SecurityClassificationType3Choice_
-    {
-    }
+    public abstract record SecurityClassificationType3Choice_ { }
 }

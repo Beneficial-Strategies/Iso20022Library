@@ -23,7 +23,7 @@ public enum OutputFormat2Code
     [IsoId("_lPN6AYqHEeSRT5rEzcAHEw")]
     [Description(@"Predefined configured messages, identified by a reference.")]
     MessageReference = OutputFormatCode.MessageReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Screen to display identified by a reference.
     /// Encoded/decoded by serializers as &quot;SREF&quot;.
@@ -32,7 +32,7 @@ public enum OutputFormat2Code
     [IsoId("_lUIPMYqHEeSRT5rEzcAHEw")]
     [Description(@"Screen to display identified by a reference.")]
     ScreenReference = OutputFormatCode.ScreenReference, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Text without format attributes.
     /// Encoded/decoded by serializers as &quot;TEXT&quot;.
@@ -41,7 +41,7 @@ public enum OutputFormat2Code
     [IsoId("_lY5acYqHEeSRT5rEzcAHEw")]
     [Description(@"Text without format attributes.")]
     SimpleText = OutputFormatCode.SimpleText, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// XHTML document which includes a subset of the XHTML output tag.
     /// Encoded/decoded by serializers as &quot;HTML&quot;.
@@ -50,5 +50,4 @@ public enum OutputFormat2Code
     [IsoId("_ld0WsYqHEeSRT5rEzcAHEw")]
     [Description(@"XHTML document which includes a subset of the XHTML output tag.")]
     XHTML = OutputFormatCode.XHTML, // same ordinal as derivation source for type conversions
-    
 }

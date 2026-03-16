@@ -23,7 +23,7 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6BpRUZfREeuqNYk2TG3bTg")]
     [Description(@"Android operating system.")]
     Android = DeviceOperatingSystemTypeCode.Android, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Blackberry operating system.
     /// Encoded/decoded by serializers as &quot;BLCK&quot;.
@@ -32,7 +32,7 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6JoIoZfREeuqNYk2TG3bTg")]
     [Description(@"Blackberry operating system.")]
     Blackberry = DeviceOperatingSystemTypeCode.Blackberry, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// iOS operating system.
     /// Encoded/decoded by serializers as &quot;IOSS&quot;.
@@ -41,7 +41,7 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6sbTsZfREeuqNYk2TG3bTg")]
     [Description(@"iOS operating system.")]
     iOS = DeviceOperatingSystemTypeCode.iOS, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other nationally defined code.
     /// Encoded/decoded by serializers as &quot;OTHN&quot;.
@@ -50,7 +50,7 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6tJscZfREeuqNYk2TG3bTg")]
     [Description(@"Other nationally defined code.")]
     OtherNational = DeviceOperatingSystemTypeCode.OtherNational, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Other privately defined code.
     /// Encoded/decoded by serializers as &quot;OTHP&quot;.
@@ -59,7 +59,7 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6t2QAZfREeuqNYk2TG3bTg")]
     [Description(@"Other privately defined code.")]
     OtherPrivate = DeviceOperatingSystemTypeCode.OtherPrivate, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Tizen operating system.
     /// Encoded/decoded by serializers as &quot;TIZN&quot;.
@@ -68,7 +68,7 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6uizkZfREeuqNYk2TG3bTg")]
     [Description(@"Tizen operating system.")]
     Tizen = DeviceOperatingSystemTypeCode.Tizen, // same ordinal as derivation source for type conversions
-    
+
     /// <summary>
     /// Windows operating system.
     /// Encoded/decoded by serializers as &quot;WIND&quot;.
@@ -77,5 +77,4 @@ public enum DeviceOperatingSystemType1Code
     [IsoId("_6vU2sZfREeuqNYk2TG3bTg")]
     [Description(@"Windows operating system.")]
     Windows = DeviceOperatingSystemTypeCode.Windows, // same ordinal as derivation source for type conversions
-    
 }

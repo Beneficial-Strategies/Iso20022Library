@@ -1,11 +1,11 @@
 // Copyright 2026 Jeff Ward, Beneficial Strategies. Usage subject to license of enclosing library.
 
-using BeneficialStrategies.Iso20022.Choices;
-using BeneficialStrategies.Iso20022.ExternalSchema;
-using BeneficialStrategies.Iso20022.UserDefined;
 using System.ComponentModel.DataAnnotations;
 using System.Xml;
 using System.Xml.Linq;
+using BeneficialStrategies.Iso20022.Choices;
+using BeneficialStrategies.Iso20022.ExternalSchema;
+using BeneficialStrategies.Iso20022.UserDefined;
 
 namespace BeneficialStrategies.Iso20022.Components;
 
@@ -14,18 +14,16 @@ namespace BeneficialStrategies.Iso20022.Components;
 /// </summary>
 [IsoId("_crjSgQx6Eeqdx6buGpCCQw")]
 [DisplayName("Traceability")]
-public partial record Traceability8
+public record Traceability8
 {
-    #nullable enable
-    
     /// <summary>
     /// Identification of a partner of a message exchange.
     /// </summary>
     [IsoId("_c2fXMQx6Eeqdx6buGpCCQw")]
     [DisplayName("Relay Identification")]
     [IsoXmlTag("RlayId")]
-    public required GenericIdentification177 RelayIdentification { get; init; } 
-    
+    public required GenericIdentification177 RelayIdentification { get; init; }
+
     /// <summary>
     /// Name of the outgoing protocol used by the node.
     /// </summary>
@@ -33,9 +31,9 @@ public partial record Traceability8
     [DisplayName("Protocol Name")]
     [IsoXmlTag("PrtcolNm")]
     [IsoSimpleType(IsoSimpleType.Max35Text)]
-    [StringLength(maximumLength: 35 ,MinimumLength = 1)]
-    public IsoMax35Text? ProtocolName { get; init; } 
-    
+    [StringLength(maximumLength: 35, MinimumLength = 1)]
+    public IsoMax35Text? ProtocolName { get; init; }
+
     /// <summary>
     /// Version of the protocol.
     /// </summary>
@@ -43,9 +41,9 @@ public partial record Traceability8
     [DisplayName("Protocol Version")]
     [IsoXmlTag("PrtcolVrsn")]
     [IsoSimpleType(IsoSimpleType.Max6Text)]
-    [StringLength(maximumLength: 6 ,MinimumLength = 1)]
-    public IsoMax6Text? ProtocolVersion { get; init; } 
-    
+    [StringLength(maximumLength: 6, MinimumLength = 1)]
+    public IsoMax6Text? ProtocolVersion { get; init; }
+
     /// <summary>
     /// Date and time of incoming data exchange for relaying or processing.
     /// </summary>
@@ -53,8 +51,8 @@ public partial record Traceability8
     [DisplayName("Trace Date Time In")]
     [IsoXmlTag("TracDtTmIn")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TraceDateTimeIn { get; init; } 
-    
+    public required IsoISODateTime TraceDateTimeIn { get; init; }
+
     /// <summary>
     /// Date and time of the outgoing exchange for relaying or processing.
     /// </summary>
@@ -62,9 +60,5 @@ public partial record Traceability8
     [DisplayName("Trace Date Time Out")]
     [IsoXmlTag("TracDtTmOut")]
     [IsoSimpleType(IsoSimpleType.ISODateTime)]
-    public required IsoISODateTime TraceDateTimeOut { get; init; } 
-    
-    
-    #nullable disable
-    
+    public required IsoISODateTime TraceDateTimeOut { get; init; }
 }
